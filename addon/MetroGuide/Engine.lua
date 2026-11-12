@@ -183,7 +183,7 @@ local function questXP(q, lv)
   if not (info and info.xp) then return 0 end
   local d = lv - (info.lvl or lv)
   local f = d <= 5 and 1 or d == 6 and 0.8 or d == 7 and 0.6 or d == 8 and 0.4 or d == 9 and 0.2 or 0.1
-  return info.xp * f
+  return info.xp * f * (C.SleepBag() and 1.03 or 1) -- 睡袋增益：任務經驗 +3%
 end
 E.QuestXP = questXP
 

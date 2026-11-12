@@ -371,6 +371,9 @@ local function probe()
   L[#L + 1] = "  QUEST_TURNED_IN：" .. (trace.QUEST_TURNED_IN or "（本次登入尚未交任務）")
   L[#L + 1] = "-- 引擎"
   add("適用的站數 / 路線總站數", #E.stations, #R.stations)
+  local ratio, n = MG.Rec.XPRatio()
+  local bag = C.SleepBag()
+  add("任務經驗 實得/路線（中位數, 筆數，只診斷）, 睡袋增益", ratio and string.format("%.3f", ratio), n, bag and ((bag.name or "?") .. " " .. tostring(bag.spellId)) or "無")
   local off = 0
   for _ in pairs(R.offroute or {}) do off = off + 1 end
   add("路線外判定 / 本職業學技能步驟", off, #E.trainSteps)

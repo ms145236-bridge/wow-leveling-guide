@@ -190,6 +190,7 @@ const known = (s) => s === "0" || s === "1" || s === "CURRENT" || s === "REACHAB
 const nodes = {};
 for (const r of by("taxi")) {
   const [tm, nodeId, name, state] = r.k;
+  if (/^zzOLD/.test(name)) continue; // 遊戲裡的舊飛行點資料
   const n = ((nodes[tm] ??= {})[nodeId] ??= { name, known: false, x: r.x[0], y: r.x[1] });
   n.known ||= known(state);
 }

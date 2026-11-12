@@ -171,6 +171,22 @@ pick("GreenRange",
   end)
 
 -- 分享任務：選取後推送（要在隊伍中）
+-- 睡袋增益（任務經驗 +3%）：掃玩家增益找名字有「睡袋」的；秘密值就跳過。一次重算內只掃一次
+function C.SleepBag()
+  local m = C.memo
+  if m and m.bag ~= nil then return m.bag or nil end
+  local found = false
+  local get = C_UnitAuras and C_UnitAuras.GetAuraDataByIndex
+  for i = 1, get and 40 or 0 do
+    local a = get("player", i, "HELPFUL")
+    if not a then break end
+    local name = a.name
+    if name and not (issecretvalue and issecretvalue(name)) and name:find("睡袋", 1, true) then found = a; break end
+  end
+  if m then m.bag = found end
+  return found or nil
+end
+
 function C.ShareQuest(q)
   local QL = C_QuestLog
   MG.try("分享", function()

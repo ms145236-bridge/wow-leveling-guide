@@ -69,16 +69,40 @@ local function quest(kind, id, title, who)
   return who
 end
 
-local function objectives(silent)
+local function objAdvance(id, i, have, need, text)
+  local map, x, y = pos()
+  add("obj", { id, i, have, map, x ~= "" and math.floor(tonumber(x)) or "", y ~= "" and math.floor(tonumber(y)) or "" }, need, text, x, y)
+end
+-- 每個任務第一次讀到時只記基準（不算推進），之後數量變多就記一筆
+local function objectives()
   for _, id in ipairs(C.LogQuestIDs() or {}) do
     local list = C.Objectives(id) or {}
     local was = prev[id]
     prev[id] = {}
     for i, o in ipairs(list) do
-      prev[id][i] = o.have
-      if not silent and was and was[i] and o.have and o.have > was[i] then
-        local map, x, y = pos()
-        add("obj", { id, i, o.have, map, x ~= "" and math.floor(tonumber(x)) or "", y ~= "" and math.floor(tonumber(y)) or "" }, o.need, o.text, x, y)
+      local have = not secret(o.have) and o.have or nil
+      prev[id][i] = have
+      if was and was[i] and have and have > was[i] then objAdvance(id, i, have, o.need, o.text) end
+    end
+  end
+end
+-- 畫面上方的「怪名已殺死：3/10」：用文字對回日誌裡的任務目標
+local function infoMessage(msg)
+  if type(msg) ~= "string" or secret(msg) then return end
+  local text, have, need = msg:match("^(.-)%s*:%s*(%d+)%s*/%s*(%d+)")
+  if not text or text == "" then
+    -- 中文冒號是多位元組，Lua 5.1 的字元集吃不下：再用純文字找一次
+    local cut = msg:find("：", 1, true)
+    if not cut then return end
+    text = msg:sub(1, cut - 1)
+    have, need = msg:sub(cut + 3):match("(%d+)%s*/%s*(%d+)")
+    if not have then return end
+  end
+  for _, id in ipairs(C.LogQuestIDs() or {}) do
+    for i, o in ipairs(C.Objectives(id) or {}) do
+      if o.text and o.text ~= "" and (o.text == text or text:find(o.text, 1, true) or o.text:find(text, 1, true)) then
+        objAdvance(id, i, tonumber(have), tonumber(need), o.text)
+        return
       end
     end
   end
@@ -92,12 +116,14 @@ local function taxi()
   if C_TaxiMap and C_TaxiMap.GetAllTaxiNodes and tm then
     for _, n in ipairs(C_TaxiMap.GetAllTaxiNodes(tm) or {}) do
       local p = n.position
-      add("taxi", { tm, n.nodeID, n.name, n.state }, p and num(p.x * 100), p and num(p.y * 100))
+      local name = not secret(n.name) and n.name or ""
+      if not name:find("^zzOLD") then add("taxi", { tm, n.nodeID, name, n.state }, p and num(p.x * 100), p and num(p.y * 100)) end
     end
   elseif NumTaxiNodes then
     for i = 1, NumTaxiNodes() do
       local px, py = TaxiNodePosition(i)
-      add("taxi", { tm or "", i, TaxiNodeName(i), TaxiNodeGetType(i) }, num(px and px * 100), num(py and py * 100))
+      local name = TaxiNodeName(i) or ""
+      if not name:find("^zzOLD") then add("taxi", { tm or "", i, name, TaxiNodeGetType(i) }, num(px and px * 100), num(py and py * 100)) end
     end
   end
 end
@@ -120,7 +146,7 @@ local function xp() add("xp", { UnitLevel("player"), UnitXPMax("player") }) end
 
 local SHAPE = { QUEST_ACCEPTED = true, QUEST_TURNED_IN = true, QUEST_DETAIL = true, QUEST_COMPLETE = true, QUEST_REMOVED = true, PLAYER_LEVEL_UP = true, TAXIMAP_OPENED = true, HEARTHSTONE_BOUND = true }
 local f = CreateFrame("Frame")
-for _, e in ipairs({ "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_TURNED_IN", "QUEST_DETAIL", "QUEST_COMPLETE", "QUEST_REMOVED", "QUEST_LOG_UPDATE", "PLAYER_XP_UPDATE", "PLAYER_LEVEL_UP", "TAXIMAP_OPENED", "HEARTHSTONE_BOUND", "ZONE_CHANGED_NEW_AREA" }) do
+for _, e in ipairs({ "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_TURNED_IN", "QUEST_DETAIL", "QUEST_COMPLETE", "QUEST_REMOVED", "QUEST_LOG_UPDATE", "PLAYER_XP_UPDATE", "PLAYER_LEVEL_UP", "TAXIMAP_OPENED", "HEARTHSTONE_BOUND", "ZONE_CHANGED_NEW_AREA", "QUEST_WATCH_UPDATE", "UI_INFO_MESSAGE" }) do
   pcall(f.RegisterEvent, f, e)
 end
 f:SetScript("OnEvent", function(_, event, ...)
@@ -144,20 +170,22 @@ f:SetScript("OnEvent", function(_, event, ...)
       local n = select("#", ...)
       local id = n > 0 and select(n, ...) -- 經典式 (logIndex, questID)；新式 (questID)
       quest("accept", id, nil, npcCache[id])
-      objectives(true)
     elseif event == "QUEST_TURNED_IN" then
       local id, gain, money = ...
       local who = npcCache[id] or npc()
       local map, x, y = pos()
       add("turnin", { id, who.id ~= "" and who.id or who.name }, C.Title(id), who.name, who.kind, map, x, y, gain, money)
       npcCache[id], prev[id] = nil, nil
-    elseif event == "QUEST_LOG_UPDATE" then
+      local bag = C.SleepBag()
+      if bag then add("aura", { not secret(bag.spellId) and bag.spellId or "", bag.name }, not secret(bag.duration) and bag.duration or "") end
+    elseif event == "QUEST_LOG_UPDATE" or event == "QUEST_WATCH_UPDATE" then
       -- 一幀內多次只算一次
       if not objPending then
         objPending = true
-        local run = function() objPending = false; MG.try("記錄", objectives, next(prev) == nil) end
+        local run = function() objPending = false; MG.try("記錄", objectives) end
         if C_Timer and C_Timer.After then C_Timer.After(0, run) else run() end
       end
+    elseif event == "UI_INFO_MESSAGE" then infoMessage(select(2, ...))
     elseif event == "PLAYER_XP_UPDATE" or event == "PLAYER_LEVEL_UP" then xp()
     elseif event == "TAXIMAP_OPENED" then taxi()
     elseif event == "HEARTHSTONE_BOUND" then bind("bound")
@@ -166,6 +194,23 @@ f:SetScript("OnEvent", function(_, event, ...)
     end
   end, ...)
 end)
+
+function Rec.XPRatio()
+  local r = {}
+  for _, line in ipairs(db and db.log or {}) do
+    if line:find("^turnin\t") then
+      local key, rest = line:match("^(.-)\t@\t(.*)$")
+      local id = tonumber((key or ""):match("^turnin\t(%d+)"))
+      local f = {}
+      for v in ((rest or "") .. "\t"):gmatch("(.-)\t") do f[#f + 1] = v end
+      local lv, gain = tonumber(f[2]), tonumber(f[9])
+      local info = id and MG.Route.quests[id]
+      if info and info.xp and info.xp > 0 and gain and gain > 0 and lv and lv - (info.lvl or lv) <= 5 then r[#r + 1] = gain / info.xp end
+    end
+  end
+  table.sort(r)
+  return r[math.floor((#r + 1) / 2)], #r
+end
 
 local PATH = "WTF\\Account\\<帳號>\\SavedVariables\\MetroGuide.lua"
 function Rec.Slash(arg)
