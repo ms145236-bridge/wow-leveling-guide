@@ -61,6 +61,10 @@ local SPEC = {
   { key = "dPre", label = "順路接副本前置", def = true },
   { key = "dungeonHint", label = "提示副本", def = true },
   { key = "dungeonOnly", label = "副本中只顯示副本任務", def = true, hint = "在副本裡只列出這個副本的任務（一次全列），不顯示主線步驟、箭頭和地圖標點；對不到副本或沒有任務時整個隱藏，出副本後恢復。" },
+  { key = "showItem", label = "顯示任務物品按鈕", def = true },
+  { key = "itemPos", label = "任務物品位置", def = 1, choices = { "步驟列內", "左側", "右側" } },
+  { key = "itemSize", label = "任務物品大小（左右側）", min = 20, max = 48, step = 2, def = 32 },
+  { key = "itemMacro", label = "自動建立任務物品巨集", def = true, hint = "建立帳號巨集「任務物品」，內容自動改成使用目前步驟的任務物品（戰鬥中等脫離戰鬥再改）。" },
   { key = "minimap", label = "顯示小地圖按鈕", def = true },
   { key = "miniBtnAlpha", label = "小地圖按鈕透明度", min = 0, max = 100, step = 5, def = 100, unit = "%" },
   { key = "autoMacro", label = "自動建立目標巨集", def = true, hint = "登入時若沒有「任務目標」巨集就自動建立（帳號巨集有空位時）。刪掉後下次登入會再建立；關掉這項就不會。" },
@@ -1099,6 +1103,7 @@ function UI.Create()
   MG.try("小地圖按鈕", UI.CreateMinimap)
   MG.try("設定頁", UI.CreateOptions)
   MG.try("目標按鈕", MG.T.Create, bar)
+  MG.try("任務物品", MG.I.Create, bar)
   UI.ApplySettings()
 end
 
@@ -1425,7 +1430,7 @@ function UI.Render(S)
     right = "剩 " .. state.total .. (right ~= "" and ("   " .. right) or "")
   end
   bar.lv:SetText(right)
-  local gap = (MG.T and MG.T.Shown(state)) and 22 or 0
+  local gap = ((MG.T and MG.T.Shown(state)) and 22 or 0) + (MG.I and MG.I.InsideWidth() or 0)
   bar.lv:SetPoint("TOPRIGHT", -32 - gap, -13)
   bar.title:SetPoint("RIGHT", bar, "RIGHT", (right ~= "" and -(36 + bar.lv:GetStringWidth()) or -32) - gap, 0)
   bar.l2:SetText(l2 or "")

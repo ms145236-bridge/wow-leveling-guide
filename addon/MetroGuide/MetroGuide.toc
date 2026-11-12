@@ -13,5 +13,6 @@ Engine.lua
 Nav.lua
 UI.lua
 Target.lua
+Item.lua
 Map.lua
 Core.lua

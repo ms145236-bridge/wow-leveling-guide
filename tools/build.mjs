@@ -364,6 +364,7 @@ for (const st of stations) {
     if (!quests.has(id)) {
       quests.set(id, q
         ? { races: q.races && BigInt(q.races) !== HORDE ? q.races : undefined, xp: XP.get(id), mob: mobsOf(q), tgo: targetsOf(q),
+            items: [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))].length ? [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))] : undefined,
             d: q.obj.filter(Boolean).join("\n") || undefined,
             n: step.zh || q.zhTW || step.en || q.en, lvl: q.level, min: q.reqLevel, pg: q.preGroup, ps: q.preSingle, ex: q.exclusiveTo, next: q.next, st: st.id }
         : { n: step.zh || step.en, st: st.id });

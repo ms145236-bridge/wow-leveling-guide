@@ -137,6 +137,8 @@ export function openQuestieDB() {
       endNpcs: list(get(ends, 1)), endObjects: list(get(ends, 2)),
       preGroup: list(field("Quest", id, 12)), preSingle: list(field("Quest", id, 13)),
       exclusiveTo: list(field("Quest", id, 16)),
+      sourceItem: field("Quest", id, 11) || 0,
+      requiredSourceItems: list(field("Quest", id, 21)),
       zoneOrSort: field("Quest", id, 17) || 0,
       next: field("Quest", id, 22) || 0,
     };
