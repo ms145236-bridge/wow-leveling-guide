@@ -54,12 +54,9 @@ function T.Shown(state)
   return MG.UI.Get("showTarget") and #T.Targets(state) > 0
 end
 
--- /tm 對已有同一標記的目標會「取消」：同一步驟按過後 20 秒內不加 /tm（只靠自己記錄，不讀目標）
-local MARK_HOLD = 20
-local markedAt, markedStep = 0, ""
+-- 標記：一律加 /tm（對已有同一標記的目標再按會取消，主人接受）
 local function markLine()
   if not MG.UI.Get("markOn") then return nil end
-  if markedStep == stepKey and GetTime() - markedAt < MARK_HOLD then return nil end
   return "/tm [@target,exists,nodead] " .. MG.UI.Get("markIcon")
 end
 
@@ -172,17 +169,15 @@ function T.Update(state)
   T.Apply()
 end
 
--- 巨集最後一行 /run MGTP()：記錄「按了一次」→ 輪換下次優先的名字、這一步暫時不再加 /tm（避免取消標記），20 秒後恢復
+-- 巨集最後一行 /run MGTP()：記錄「按了一次」→ 輪換下次優先的名字
 function MGTP()
   T.stats.presses = T.stats.presses + 1
   T.stats.lastPress = GetTime()
   -- 巨集前面幾行剛換過目標（同一瞬間）→ 算一次成功
   if GetTime() - T.stats.lastTarget < 0.5 then T.stats.targetChanged = T.stats.targetChanged + 1 end
-  markedAt, markedStep = GetTime(), stepKey
   rot = rot + 1
   key = "" -- 下次 Update 一定重寫
   T.Apply()
-  if C_Timer and C_Timer.After then C_Timer.After(MARK_HOLD + 0.5, function() key = ""; T.Apply() end) end
 end
 
 function T.Diag()

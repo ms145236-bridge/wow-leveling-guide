@@ -277,3 +277,14 @@ function C.TooltipAlpha(tip, a)
     tip:SetBackdropColor(tipBgOld[1], tipBgOld[2], tipBgOld[3], a)
   end
 end
+
+-- 地圖名（遊戲的 zhTW 地區名）
+local mapNames = {}
+function C.MapName(map)
+  if not map then return nil end
+  if mapNames[map] == nil then
+    local info = C_Map and C_Map.GetMapInfo and MG.try("地圖名", C_Map.GetMapInfo, map)
+    mapNames[map] = info and info.name or false
+  end
+  return mapNames[map] or nil
+end

@@ -57,7 +57,7 @@ local SPEC = {
   { start = true },
   { key = "showTarget", label = "顯示目標按鈕", def = true },
   { key = "markOn", label = "選取時標上團隊標記", def = true },
-  { key = "markIcon", label = "標記圖示", def = 8, choices = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" } },
+  { key = "markIcon", label = "標記圖示", def = 1, choices = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" } },
   { key = "dPre", label = "順路接副本前置", def = true },
   { key = "dungeonHint", label = "提示副本", def = true },
   { key = "dungeonOnly", label = "副本中只顯示副本任務", def = true, hint = "在副本裡只列出這個副本的任務（一次全列），不顯示主線步驟、箭頭和地圖標點；對不到副本或沒有任務時整個隱藏，出副本後恢復。" },
@@ -282,7 +282,7 @@ function UI.StepTooltip(owner, s, prefix, side)
     if s.pickLv then bits[#bits + 1] = "接取等級 " .. s.pickLv end
     if s.recLv then bits[#bits + 1] = "建議等級 " .. s.recLv end
     if s.share == 1 then bits[#bits + 1] = "可共享" elseif s.share == 0 then bits[#bits + 1] = "不可共享" elseif s.share == 2 then bits[#bits + 1] = "共享未確認" end
-    GameTooltip:AddLine(table.concat(bits, "  "), DIM[1], DIM[2], DIM[3])
+    GameTooltip:AddLine(table.concat(bits, "   "), DIM[1], DIM[2], DIM[3])
   end
   if s.preText then GameTooltip:AddLine("前置：" .. s.preText, DIM[1], DIM[2], DIM[3], true) end
   if s.desc and UI.Get("tipDesc") then GameTooltip:AddLine("說明：" .. s.desc, AMBER[1], AMBER[2], AMBER[3], true) end
@@ -350,29 +350,63 @@ local function buildItems()
       if (not state.na[i] or MG.db.skip[step.key] or step.defer) and not hideDone then items[#items + 1] = { kind = "step", i = i, step = step } end
     end
   elseif tab == "dg" then
+    -- 副本分頁 v2（DUNGEON-TAB-SPEC.md）
+    UI.dPhase, UI.dChain, UI.dMore = UI.dPhase or {}, UI.dChain or {}, UI.dMore or {}
     for _, d in ipairs(E.dungeons) do
       items[#items + 1] = { kind = "dg", d = d }
       if UI.dOpen == d.id then
-        if d.entrance then items[#items + 1] = { kind = "dtext", text = "入口：" .. d.entrance } end
-        if d.pickup then
-          items[#items + 1] = { kind = "dhead", text = "前置接取路線" }
-          for _, t in ipairs(UI.Sentences(d.pickupS, bullets(d.pickup))) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
+        local inside = false
+        if state and state.instance then
+          local _, all = E.DungeonByInstance(GetInstanceInfo and select(8, GetInstanceInfo()))
+          for _, x in ipairs(all or {}) do if x == d then inside = true end end
         end
-        for _, tip in ipairs(d.tips or {}) do
-          items[#items + 1] = { kind = "dhead", text = tip.k }
-          for _, t in ipairs(UI.Sentences(tip.s, bullets(tip.text))) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
-        end
-        for _, ph in ipairs({ { "pre", "前置任務" }, { "in", "副本內" }, { "post", "出本後交" } }) do
-          local first = true
+        local nx = E.DungeonNext(d, inside)
+        if nx then items[#items + 1] = { kind = "dnext", d = d, nx = nx } end
+        local phase = UI.dPhase[d.id] or (nx and (nx.kind == "ent" and "in" or (nx.step and nx.step.s.ph))) or "pre"
+        items[#items + 1] = { kind = "dphase", d = d, phase = phase }
+        if phase == "pre" then
+          for _, t in ipairs(E.DungeonTargets(d)) do
+            items[#items + 1] = { kind = "dq", d = d, t = t }
+            if UI.dChain[t.q] and #t.chain > 0 then
+              -- 鏈：一個任務一列，連續同名合併
+              local k, nextSet = 1, false
+              while k <= #t.chain do
+                local step = t.chain[k]
+                local name = E.Title({ q = step.s.q, t = "accept" })
+                local n = 1
+                while t.chain[k + n] and E.Title({ q = t.chain[k + n].s.q, t = "accept" }) == name do n = n + 1 end
+                local group = { unpack(t.chain, k, k + n - 1) }
+                local all = true
+                for _, g in ipairs(group) do if not E.Turned(g.s.q) then all = false end end
+                items[#items + 1] = { kind = "dch", d = d, steps = group, name = name, count = n, isNext = not all and not nextSet }
+                if not all then nextSet = true end
+                k = k + n
+              end
+            end
+          end
+        else
+          local seen = {}
           for _, step in ipairs(d.list) do
-            if step.s.ph == ph[1] and step.s.t ~= "travel" and E.Applies(step.s.when) then
-              if first then items[#items + 1] = { kind = "dhead", text = ph[2] }; first = false end
-              items[#items + 1] = { kind = "dstep", d = d, step = step }
+            local s = step.s
+            if s.ph == phase and s.t ~= "travel" and s.t ~= "need" and E.Applies(s.when) then
+              local id = s.q or step.key
+              if not seen[id] then seen[id] = true; items[#items + 1] = { kind = "dqi", d = d, q = s.q, phase = phase, first = step } end
             end
           end
         end
-        items[#items + 1] = { kind = "dbtn", d = d, act = "run", text = "→ 設為目標" }
-        items[#items + 1] = { kind = "dbtn", d = d, act = "no", text = MG.db.dNo[d.id] and "改回要打這本" or "不打這本" }
+        if not (nx and nx.kind == "ent") and d.entrance then items[#items + 1] = { kind = "dent", d = d } end
+        items[#items + 1] = { kind = "dact", d = d }
+        if UI.dMore[d.id] then
+          for _, t in ipairs(UI.Sentences(d.pickupS, bullets(d.pickup or ""))) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
+          for _, tip in ipairs(d.tips or {}) do
+            if tip.k == "取捨" then
+              local list = UI.Sentences(tip.s, { tip.text })
+              if #list > 0 then items[#items + 1] = { kind = "dtext", text = "‧ " .. table.concat(list, "，") } end
+            elseif tip.k ~= "交通" then
+              for _, t in ipairs(UI.Sentences(tip.s, bullets(tip.text))) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
+            end
+          end
+        end
       end
     end
   else
@@ -389,11 +423,25 @@ local function fillRow(row, it)
   paint(row.name, TEXT); paint(row.verb, GOLD); paint(row.ck, GREEN); paint(row.prog, DIM)
   row.ck:SetText(""); row.verb:SetText(""); row.prog:SetText(""); row.no:SetText("")
   row.para:Hide(); row:SetHeight(ROW_H)
-  local PROG_W = { step = 64, miss = 1, misshead = 1, station = 92, start = 1, dg = 112, dtext = 1, dhead = 1, dstep = 120, dbtn = 1 }
+  row.bgx:Hide(); row.arrow:Hide(); row.lvt:Hide(); row.sub:Hide(); row.icon:Hide()
+  for _, b in ipairs(row.tabs) do b:Hide() end
+  for _, b in ipairs(row.acts) do b:Hide() end
+  row.name:SetFont(FONT, 13, "")
+  local top = it.kind == "dnext"
+  local function at(f, x, w)
+    f:ClearAllPoints()
+    if top then f:SetPoint("TOPLEFT", x, -6) else f:SetPoint("LEFT", x, 0) end
+    if w then f:SetWidth(w) end
+  end
+  at(row.ck, 8, 14); at(row.box, 9); at(row.no, 24, 20); at(row.verb, 48, 18)
+  row.prog:ClearAllPoints()
+  if top then row.prog:SetPoint("TOPRIGHT", -12, -7) else row.prog:SetPoint("RIGHT", -12, 0) end
+  local PROG_W = { step = 64, miss = 1, misshead = 1, station = 92, start = 1, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 110, dact = 1 }
   row.prog:SetWidth(PROG_W[it.kind] or 64)
+  local NAME_X = { dtext = 28, dhead = 28, dg = 26, dq = 28, dent = 28, dphase = 28, dact = 28 }
   row.name:ClearAllPoints()
-  row.name:SetPoint("LEFT", (it.kind == "dtext" or it.kind == "dhead" or it.kind == "dg" or it.kind == "dbtn") and 28 or 70, 0)
-  row.name:SetPoint("RIGHT", row.prog, "LEFT", -6, 0)
+  if top then row.name:SetPoint("TOPLEFT", 70, -5) else row.name:SetPoint("LEFT", NAME_X[it.kind] or 70, 0) end
+  row.name:SetPoint("RIGHT", it.kind == "dg" and row.lvt or row.prog, "LEFT", -6, 0)
   row.box:Hide(); row.ck:Show()
   if it.kind == "misshead" then
     row.ck:SetText(missOpen and "-" or "+"); paint(row.ck, AMBER)
@@ -442,40 +490,164 @@ local function fillRow(row, it)
     local label, kind = E.DungeonStatus(d)
     local lv = UnitLevel("player") or 1
     local fit = lv >= d.lv[1] - 2 and lv <= d.lv[2] and kind ~= "past"
-    row.ck:SetText(UI.dOpen == d.id and "-" or "+"); paint(row.ck, fit and GOLD or DIM)
-    row.name:SetText(d.name .. (MG.db.dNo[d.id] and "（不打）" or "")); paint(row.name, (kind == "past" or MG.db.dNo[d.id]) and FAINT or (fit and TEXT or DIM))
-    row.prog:SetText(d.lv[1] .. "-" .. d.lv[2] .. "  " .. label); paint(row.prog, fit and GOLD or DIM)
+    local open = UI.dOpen == d.id
+    row.ck:SetText("")
+    row.arrow:Show(); row.arrow:SetRotation(open and -math.pi / 2 or 0); row.arrow:SetVertexColor(unpack(fit and GOLD or DIM))
+    row.name:SetText(d.name); paint(row.name, (kind == "past" or MG.db.dNo[d.id]) and FAINT or (kind == "low" and DIM or TEXT))
+    row.lvt:SetText(d.lv[1] .. "-" .. d.lv[2]); paint(row.lvt, open and DIM or FAINT); row.lvt:Show()
+    if MG.db.dNo[d.id] then label = "不打" end
+    row.prog:SetText(label)
+    paint(row.prog, (kind == "past" or kind == "low" or MG.db.dNo[d.id]) and FAINT or (label == "可以去" and GREEN) or (kind == "pick" and AMBER) or GOLD)
     if state and state.st == d then row.cur:Show(); row.strip:Show() end
+  elseif it.kind == "dnext" then
+    local nx, d = it.nx, it.d
+    row.bgx:Show()
+    if nx.kind == "low" or nx.kind == "wait" then
+      row.name:SetText(nx.title); paint(row.name, FAINT)
+      row:SetHeight(26)
+    else
+      row.cur:Show(); row.strip:Show()
+      local s = nx.step and nx.step.s
+      local title, right, sub
+      if nx.kind == "ent" then
+        local ent = UI.Entrance(d)
+        title = d.name .. "入口"
+        row.verb:SetText("去")
+        right = ent.coord
+        sub = ent.zone .. (ent.door ~= "" and ("  " .. ent.door) or "")
+      else
+        row.box:Show(); row.ck:Hide()
+        row.box:SetState(nil)
+        row.verb:SetText(E.VERB[s.t] or "")
+        title = E.Title(s)
+        if nx.kind == "in" and s.q and C.IsOnQuest(s.q) then
+          for _, o in ipairs(C.Objectives(s.q) or {}) do if not o.done and o.need then right = o.have .. "/" .. o.need; break end end
+          sub = s.hint or s.text or ""
+        else
+          right = s.x and string.format("%.1f, %.1f", s.x, s.y) or ""
+          sub = (C.MapName(s.map) or "") .. "  " .. ((s.t == "accept" or s.t == "turnin") and (s.npc or "") or (s.hint or s.text or ""))
+        end
+      end
+      row.name:SetFont(FONT, 14, ""); row.name:SetText(title); paint(row.name, TEXT)
+      row.prog:SetText(right or ""); paint(row.prog, DIM)
+      row.sub:SetText(sub or ""); row.sub:Show()
+      row:SetHeight(sub and sub ~= "" and 43 or 26)
+    end
+  elseif it.kind == "dphase" then
+    local d = it.d
+    local got, total = E.DungeonTargetCount(d)
+    local function count(ph)
+      local seen, n = {}, 0
+      for _, step in ipairs(d.list) do
+        local s = step.s
+        if s.ph == ph and s.t ~= "travel" and s.t ~= "need" and E.Applies(s.when) and not seen[s.q or step.key] then seen[s.q or step.key] = true; n = n + 1 end
+      end
+      return n
+    end
+    local labels = {
+      { "pre", "前置 " .. (got >= total and "|cff6fbf73" .. got .. "/" .. total .. "|r" or (got .. "/" .. total)) },
+      { "in", "副本內 " .. count("in") },
+      { "post", "出本交 " .. count("post") },
+    }
+    row.name:SetText("")
+    row.bgx:Show()
+    for k, b in ipairs(row.tabs) do
+      b.phase = labels[k][1]
+      b.label:SetText(labels[k][2])
+      local on = it.phase == labels[k][1]
+      b.label:SetTextColor(unpack(on and TEXT or DIM))
+      b.under:SetShown(on)
+      b:SetWidth(b.label:GetStringWidth() + 12)
+      b:Show()
+    end
+    row:SetHeight(22)
+  elseif it.kind == "dq" then
+    local t = it.t
+    local s = t.step.s
+    local lv = UnitLevel("player") or 1
+    local done = C.IsOnQuest(t.q) or E.Turned(t.q) or MG.db.mark[t.step.key] == true
+    local low = s.pickLv and lv < s.pickLv
+    row.bgx:Show()
+    row.box:Show(); row.ck:Hide()
+    row.box:SetState(done and "check" or nil, MG.db.mark[t.step.key] and GOLD or GREEN)
+    row.name:SetText(E.Title({ q = t.q, t = "accept" })); paint(row.name, (done or low) and FAINT or TEXT)
+    local chainDone, chainN = 0, #t.chain
+    for _, step in ipairs(t.chain) do if E.Turned(step.s.q) then chainDone = chainDone + 1 end end
+    if low then row.prog:SetText(s.pickLv .. " 級")
+    elseif chainN > 0 and chainDone < chainN then row.prog:SetText("鏈 " .. chainDone .. "/" .. chainN .. (UI.dChain[t.q] and " -" or " +"))
+    else row.prog:SetText(C.MapName(s.map) or "") end
+  elseif it.kind == "dch" then
+    local step = it.steps[1]
+    local q = step.s.q
+    row.bgx:Show()
+    row.name:ClearAllPoints(); row.name:SetPoint("LEFT", 72, 0); row.name:SetPoint("RIGHT", row.prog, "LEFT", -6, 0)
+    local name = it.name .. (it.count > 1 and (" ×" .. it.count) or "")
+    local allDone = true
+    for _, x in ipairs(it.steps) do if not E.Turned(x.s.q) then allDone = false end end
+    if allDone then
+      row.ck:SetText("√"); paint(row.ck, GREEN); row.name:SetText(name); paint(row.name, FAINT)
+    elseif C.IsOnQuest(q) or (it.isNext) then
+      row.ck:SetText("→"); paint(row.ck, GOLD); row.name:SetText(name); paint(row.name, GOLD)
+      local obj = C.IsOnQuest(q) and C.Objectives(q) or {}
+      local prog = ""
+      for _, o in ipairs(obj) do if not o.done and o.need then prog = "做 " .. o.have .. "/" .. o.need; break end end
+      row.prog:SetText(prog ~= "" and prog or (C.IsOnQuest(q) and "交" or "接"))
+    else
+      row.ck:SetText("‧"); paint(row.ck, DIM); row.name:SetText(name); paint(row.name, DIM)
+      row.prog:SetText(C.MapName(step.s.map) or "")
+    end
+    row.ck:ClearAllPoints(); row.ck:SetPoint("LEFT", 54, 0)
+  elseif it.kind == "dqi" then
+    local d = it.d
+    row.bgx:Show()
+    -- 這一階段裡這個任務第一個沒完成的步驟
+    local cur
+    for _, step in ipairs(d.list) do
+      if step.s.ph == it.phase and ((it.q and step.s.q == it.q) or (not it.q and step == it.first)) and not E.QuickDone(step) then cur = step; break end
+    end
+    local show = cur or it.first
+    it.step = show
+    local s = show.s
+    row.box:Show(); row.ck:Hide()
+    row.box:SetState(cur and nil or "check", MG.db.mark[show.key] and GOLD or GREEN)
+    row.verb:SetText(E.VERB[s.t] or "")
+    row.name:SetText(s.q and E.Title({ q = s.q, t = "accept" }) or (s.text or s.hint or "")); paint(row.name, cur and TEXT or FAINT)
+    if s.q and C.IsOnQuest(s.q) then
+      local obj = C.Objectives(s.q) or {}
+      for _, o in ipairs(obj) do if o.need then row.prog:SetText((o.have or 0) .. "/" .. o.need); break end end
+    end
+  elseif it.kind == "dent" then
+    local ent = UI.Entrance(it.d)
+    row.bgx:Show()
+    row.icon:Show()
+    row.name:SetText(ent.zone .. "  " .. ent.coord); paint(row.name, DIM)
+    row.prog:SetText(ent.door); paint(row.prog, DIM)
+  elseif it.kind == "dact" then
+    local d = it.d
+    row.bgx:Show()
+    row.name:SetText("")
+    local running = state and state.st == d
+    local _, kind = E.DungeonStatus(d)
+    local inactive = kind == "past" or MG.db.dNo[d.id]
+    local b1, b2, b3 = row.acts[1], row.acts[2], row.acts[3]
+    b1:SetShown(not inactive or running)
+    b1.label:SetText(running and "回主線" or "設為目標")
+    b1.label:SetTextColor(unpack(running and TEXT or GOLD))
+    b1.fill:SetShown(not running)
+    b1:SetWidth(b1.label:GetStringWidth() + 28)
+    b1.act = running and "back" or "run"
+    b2.label:SetText(UI.dMore[d.id] and "詳細 -" or "詳細 +"); b2.label:SetTextColor(unpack(UI.dMore[d.id] and TEXT or DIM)); b2.act = "more"
+    b3.label:SetText(MG.db.dNo[d.id] and "改回要打" or "不打"); b3.label:SetTextColor(unpack(FAINT)); b3.act = "no"
+    for _, b in ipairs(row.acts) do b.d = d end
+    b2:Show(); b3:Show()
+    row:SetHeight(26)
   elseif it.kind == "dtext" then
     row.name:SetText("")
-    row.para:SetText(it.text); paint(row.para, DIM); row.para:Show()
+    row.bgx:Show()
+    row.para:SetFont(FONT, 12, "")
+    row.para:SetText((it.text:gsub("「(.-)」", "|cffd9b25f%1|r"))); paint(row.para, DIM); row.para:Show()
     row:SetHeight(math.max(ROW_H, (row.para:GetStringHeight() or 14) + 6))
   elseif it.kind == "dhead" then
-    row.name:SetText(it.text); paint(row.name, GOLD)
-  elseif it.kind == "dstep" then
-    local s, key = it.step.s, it.step.key
-    local mark = MG.db.mark[key]
-    local done = E.QuickDone(it.step)
-    row.ck:Hide(); row.box:Show()
-    if mark == false then row.box:SetState("dash", AMBER)
-    elseif done then row.box:SetState("check", mark and GOLD or GREEN)
-    else row.box:SetState(nil) end
-    row.verb:SetText(E.VERB[s.t] or "")
-    row.name:SetText(E.Title(s)); paint(row.name, done and FAINT or TEXT)
-    local bits = {}
-    if s.t ~= "do" then
-      if s.pickLv then bits[#bits + 1] = s.pickLv .. "級" end
-      if s.recLv then bits[#bits + 1] = "建議" .. s.recLv end
-      if s.share == 1 then bits[#bits + 1] = "可共享" end
-    end
-    if s.t == "do" and s.q and C.IsOnQuest(s.q) then
-      local obj = C.Objectives(s.q) or {}
-      local dn = 0
-      for _, o in ipairs(obj) do if o.done then dn = dn + 1 end end
-      if #obj > 0 then bits[#bits + 1] = dn .. "/" .. #obj .. " 項" end
-    end
-    row.prog:SetText(table.concat(bits, " "))
-  elseif it.kind == "dbtn" then
     row.name:SetText(it.text); paint(row.name, GOLD)
   elseif it.kind == "start" then
     row.ck:SetText(it.on and "●" or "○"); paint(row.ck, it.on and GOLD or DIM)
@@ -555,6 +727,42 @@ local function scrollToCur()
   end
 end
 
+-- 入口：座標取「前往入口」那一步；地區用遊戲地圖名；分區門＝入口文字括號內
+function UI.Entrance(d)
+  local x, y
+  for _, step in ipairs(d.list) do if step.s.t == "travel" and not step.s.ph and step.s.x then x, y = step.s.x, step.s.y; break end end
+  local door = (d.entrance or ""):match("（(.-)）") or ""
+  local zone = C.MapName(d.map) or ((d.entrance or ""):match("^(%S+)") or "")
+  return { x = x, y = y, coord = x and string.format("%.1f, %.1f", x, y) or "", zone = zone, door = door }
+end
+function UI.WaypointStep(s)
+  if s and s.x then MG.wpOverride = { map = s.map, x = s.x, y = s.y, name = E.Title(s) }; MG.Refresh(true) end
+end
+function UI.WaypointEntrance(d)
+  local ent = UI.Entrance(d)
+  if ent.x then MG.wpOverride = { map = d.map, x = ent.x, y = ent.y, name = d.name .. "入口" }; MG.Refresh(true) end
+end
+function UI.DungeonAction(act, d)
+  if act == "run" then E.RunDungeon(d); tab = "steps"; scroll = 0; lastCurKey = nil
+  elseif act == "back" then MG.db.station = MG.db.dungeonFrom; MG.db.dungeonFrom = nil; lastCurKey = nil
+  elseif act == "more" then UI.dMore[d.id] = not UI.dMore[d.id] or nil; UI.ScrollToDungeon(d)
+  elseif act == "no" then MG.db.dNo[d.id] = not MG.db.dNo[d.id] or nil; UI.dOpen = nil end
+  MG.Refresh(true)
+end
+-- 展開區超出面板時，把這本副本的列捲到最上面
+function UI.ScrollToDungeon(d)
+  buildItems()
+  local rowsFit = UI.Rows()
+  for k, it in ipairs(items) do
+    if it.kind == "dg" and it.d == d then
+      local n = 0
+      for j = k + 1, #items do if items[j].d == d and items[j].kind ~= "dg" then n = n + 1 else break end end
+      if k - scroll + n > rowsFit or k <= scroll then scroll = k - 1 end
+      return
+    end
+  end
+end
+
 local function setTab(t)
   tab = t
   scroll = 0
@@ -570,10 +778,23 @@ local function onRowClick(row, button)
   elseif it.kind == "step" then
     if button == "RightButton" then E.ToggleSkip(it.step.key) else E.PinIndex(state, it.i) end
   elseif it.kind == "dg" then
-    UI.dOpen = UI.dOpen ~= it.d.id and it.d.id or nil
-  elseif it.kind == "dbtn" then
-    if it.act == "run" then E.RunDungeon(it.d); tab = "steps"; scroll = 0; lastCurKey = nil
-    else MG.db.dNo[it.d.id] = not MG.db.dNo[it.d.id] or nil end
+    local d = it.d
+    if UI.dOpen == d.id then UI.dOpen = nil; UI.dPhase[d.id] = nil else UI.dOpen = d.id end
+    UI.ScrollToDungeon(d)
+  elseif it.kind == "dnext" then
+    if it.nx.kind == "ent" then UI.WaypointEntrance(it.d)
+    elseif it.nx.step then UI.WaypointStep(it.nx.step.s) end
+  elseif it.kind == "dq" then
+    local done = 0
+    for _, step in ipairs(it.t.chain) do if E.Turned(step.s.q) then done = done + 1 end end
+    if #it.t.chain > 0 and done < #it.t.chain then UI.dChain[it.t.q] = not UI.dChain[it.t.q] or nil
+    else UI.WaypointStep(it.t.step.s) end
+  elseif it.kind == "dch" then
+    UI.WaypointStep(it.steps[1].s)
+  elseif it.kind == "dqi" then
+    if it.step then UI.WaypointStep(it.step.s) end
+  elseif it.kind == "dent" then
+    UI.WaypointEntrance(it.d)
   elseif it.kind == "start" then
     setStart(it.s.key)
   elseif it.kind == "station" then
@@ -765,6 +986,14 @@ function UI.Create()
     row.box:RegisterForClicks("LeftButtonUp", "RightButtonUp")
     row.box:SetScript("OnClick", function(self, button)
       local it = row.it
+      if it and (it.kind == "dnext" or it.kind == "dq" or it.kind == "dqi") then
+        local step = it.kind == "dnext" and it.nx.step or (it.kind == "dq" and it.t.step) or it.step
+        if step then
+          if button == "RightButton" or MG.db.mark[step.key] ~= nil then E.SetMark(step.key, nil) else E.SetMark(step.key, true) end
+        end
+        MG.Refresh(true)
+        return
+      end
       if it and it.kind == "dstep" then
         local key = it.step.key
         if button == "RightButton" or MG.db.mark[key] ~= nil then E.SetMark(key, nil)
@@ -786,6 +1015,8 @@ function UI.Create()
     row.verb = text(row, 13, GOLD, "CENTER")
     row.verb:SetPoint("LEFT", 48, 0); row.verb:SetWidth(18)
     row.prog = text(row, 12, DIM, "RIGHT")
+    row.lvt = text(row, 12, FAINT, "RIGHT")
+    row.lvt:SetPoint("RIGHT", row.prog, "LEFT", -4, 0); row.lvt:SetWidth(38); row.lvt:Hide()
     row.prog:SetPoint("RIGHT", -12, 0)
     row.para = row:CreateFontString(nil, "OVERLAY")
     row.para:SetFont(FONT, 13, "")
@@ -796,6 +1027,43 @@ function UI.Create()
     if row.para.SetNonSpaceWrap then row.para:SetNonSpaceWrap(true) end -- 中文沒有空白也要能斷行
     if row.para.SetMaxLines then row.para:SetMaxLines(0) end
     row.para:Hide()
+    row.bgx = row:CreateTexture(nil, "BACKGROUND")
+    row.bgx:SetAllPoints(); row.bgx:SetColorTexture(1, 1, 1, 0.025); row.bgx:Hide()
+    row.arrow = row:CreateTexture(nil, "ARTWORK")
+    row.arrow:SetSize(12, 12); row.arrow:SetPoint("LEFT", 9, 0)
+    row.arrow:SetTexture("Interface\\ChatFrame\\ChatFrameExpandArrow"); row.arrow:Hide()
+    row.icon = row:CreateTexture(nil, "ARTWORK")
+    row.icon:SetSize(12, 12); row.icon:SetPoint("LEFT", 10, 0)
+    row.icon:SetTexture("Interface\\AddOns\\MetroGuide\\Media\\pin_circle_base"); row.icon:SetVertexColor(GOLD[1], GOLD[2], GOLD[3]); row.icon:Hide()
+    row.sub = text(row, 12, DIM)
+    row.sub:SetPoint("TOPLEFT", 50, -25); row.sub:SetPoint("RIGHT", -12, 0); row.sub:Hide()
+    row.tabs = {}
+    for k = 1, 3 do
+      local b = CreateFrame("Button", nil, row)
+      b:SetHeight(20)
+      if k == 1 then b:SetPoint("LEFT", 22, 0) else b:SetPoint("LEFT", row.tabs[k - 1], "RIGHT", 4, 0) end
+      b.label = text(b, 12, DIM, "CENTER"); b.label:SetPoint("CENTER", 0, 1)
+      b.under = b:CreateTexture(nil, "ARTWORK"); b.under:SetColorTexture(GOLD[1], GOLD[2], GOLD[3], 1)
+      b.under:SetPoint("BOTTOMLEFT", 6, 1); b.under:SetPoint("BOTTOMRIGHT", -6, 1); b.under:SetHeight(1)
+      b:SetScript("OnClick", function(self) local it = row.it; if it then UI.dPhase[it.d.id] = self.phase; drawPanel() end end)
+      b:Hide()
+      row.tabs[k] = b
+    end
+    row.acts = {}
+    for k = 1, 3 do
+      local b = CreateFrame("Button", nil, row)
+      b:SetSize(56, 22)
+      b.label = text(b, k == 1 and 13 or 12, DIM, "CENTER"); b.label:SetPoint("CENTER")
+      if k == 1 then
+        b:SetPoint("LEFT", 26, 0)
+        box(b, GOLD)
+        b.fill = b:CreateTexture(nil, "BACKGROUND", nil, 1); b.fill:SetAllPoints(); b.fill:SetColorTexture(GOLD[1], GOLD[2], GOLD[3], 0.16)
+      elseif k == 2 then b:SetPoint("RIGHT", -64, 0)
+      else b:SetPoint("RIGHT", -10, 0) end
+      b:SetScript("OnClick", function(self) UI.DungeonAction(self.act, self.d) end)
+      b:Hide()
+      row.acts[k] = b
+    end
     row.name = text(row, 13, TEXT)
     row.name:SetPoint("LEFT", 70, 0)
     row.name:SetPoint("RIGHT", row.prog, "LEFT", -6, 0)
@@ -805,7 +1073,11 @@ function UI.Create()
       local it = self.it
       if it and it.kind == "step" then UI.StepTooltip(self, it.step.s, nil, true)
       elseif it and it.kind == "miss" then UI.StepTooltip(self, state.steps[it.m.i].s, nil, true)
-      elseif it and it.kind == "dstep" then UI.StepTooltip(self, it.step.s, nil, true) end
+      elseif it and it.kind == "dstep" then UI.StepTooltip(self, it.step.s, nil, true)
+      elseif it and it.kind == "dnext" and it.nx.step then UI.StepTooltip(self, it.nx.step.s, nil, true)
+      elseif it and it.kind == "dq" then UI.StepTooltip(self, it.t.step.s, nil, true)
+      elseif it and it.kind == "dqi" and it.step then UI.StepTooltip(self, it.step.s, nil, true)
+      elseif it and it.kind == "dch" then UI.StepTooltip(self, it.steps[1].s, nil, true) end
     end)
     row:SetScript("OnLeave", function() GameTooltip:Hide() end)
     rows[r] = row

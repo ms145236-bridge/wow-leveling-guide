@@ -687,16 +687,18 @@ function E.DungeonStatus(d)
   if E.DungeonDone(d) or lv > d.lv[2] + 3 then return "已過", "past" end
   local minPick = d.lv[1]
   for _, step in ipairs(d.list) do if step.s.pickLv and step.s.pickLv < minPick then minPick = step.s.pickLv end end
-  if lv < minPick then return "等級未到", "low" end
+  if lv < minPick then return minPick .. " 級", "low" end
   local total, got = E.DungeonPre(d)
-  if total == 0 or got >= total then return lv >= d.lv[1] and "可以去" or "前置已接", "ready" end
-  if got > 0 then return "已接 " .. got .. "/" .. total, "some" end
+  if total == 0 or got >= total then return lv >= d.lv[1] and "可以去" or (d.lv[1] .. " 級再去"), "ready" end
+  local tg, tt = E.DungeonTargetCount(d)
+  if got > 0 then return "前置 " .. tg .. "/" .. tt, "some" end
   -- 前置任務本身還有前置（任務鏈沒做）→ 先做前置鏈（見前置接取路線）
   for _, step in ipairs(d.list) do
     local st = step.s
     if st.ph == "pre" and st.t == "accept" and st.q and E.Applies(st.when) and available(st.q) then return "前置可接", "pick" end
   end
-  return "先做前置鏈", "chain"
+  local tg, tt = E.DungeonTargetCount(d)
+  return "前置 " .. tg .. "/" .. tt, "chain"
 end
 
 -- 插進主線站的副本前置步驟
@@ -789,6 +791,78 @@ function E.InstanceState(d, all)
   end
   return { instance = true, st = d, steps = steps, done = done, na = na, autoDone = {}, num = num, total = #steps, cur = 1, auto = 1,
     group = group, inGroup = inGroup, fill = {}, missed = {}, complete = false }
+end
+
+
+-- ── 副本分頁 v2 用 ────────────────────────────────────────────────────────────
+-- 目標任務＝要帶進本的任務：pre 段的「接／需」，而且同一個任務在 pre 段沒有「交」。
+-- 鏈＝pre 段裡會在進本前交掉的任務；歸給清單中排在它後面的第一個目標任務。
+function E.DungeonTargets(d)
+  local preTurn = {}
+  for _, step in ipairs(d.list) do
+    local s = step.s
+    if s.ph == "pre" and s.t == "turnin" and s.q then preTurn[s.q] = true end
+  end
+  local targets, seenT, pending, seenC = {}, {}, {}, {}
+  for _, step in ipairs(d.list) do
+    local s = step.s
+    if s.ph == "pre" and s.q and E.Applies(s.when) and raceOK(s.q) then
+      if preTurn[s.q] then
+        if not seenC[s.q] then seenC[s.q] = true; pending[#pending + 1] = step end
+      elseif (s.t == "accept" or s.t == "need") and not seenT[s.q] then
+        seenT[s.q] = true
+        targets[#targets + 1] = { q = s.q, step = step, chain = pending }
+        pending = {}
+      end
+    end
+  end
+  return targets
+end
+
+-- 目標任務已接數／總數（在日誌或已交都算）
+function E.DungeonTargetCount(d)
+  local list = E.DungeonTargets(d)
+  local got = 0
+  for _, t in ipairs(list) do if C.IsOnQuest(t.q) or turned(t.q) then got = got + 1 end end
+  return got, #list
+end
+
+local function minPickLv(d)
+  local m = d.lv[1]
+  for _, step in ipairs(d.list) do if step.s.pickLv and step.s.pickLv < m then m = step.s.pickLv end end
+  return m
+end
+E.MinPickLv = minPickLv
+
+-- 下一步：{ kind = low/in/pre/wait/ent/post, step, title }；已過或不打回 nil
+function E.DungeonNext(d, inside)
+  local _, kind = E.DungeonStatus(d)
+  if kind == "past" or MG.db.dNo[d.id] then return nil end
+  local lv = UnitLevel("player") or 1
+  if kind == "low" then return { kind = "low", title = minPickLv(d) .. " 級可接前置" } end
+  local function first(ph, extra)
+    for _, step in ipairs(d.list) do
+      local s = step.s
+      if s.ph == ph and s.t ~= "travel" and s.t ~= "need" and E.Applies(s.when) and (not s.q or raceOK(s.q))
+        and not E.QuickDone(step) and (not extra or extra(step)) then return step end
+    end
+  end
+  if inside then
+    local step = first("in")
+    if step then return { kind = "in", step = step } end
+  end
+  local pre = first("pre", function(step)
+    local s = step.s
+    if s.pickLv and lv < s.pickLv then return false end
+    if s.t == "accept" and s.q and not available(s.q) then return false end
+    return true
+  end)
+  if pre then return { kind = "pre", step = pre } end
+  if lv < d.lv[1] then return { kind = "wait", title = d.lv[1] .. " 級再去" } end
+  if first("in") then return { kind = "ent" } end
+  local post = first("post")
+  if post then return { kind = "post", step = post } end
+  return nil
 end
 
 -- 步驟的顯示文字

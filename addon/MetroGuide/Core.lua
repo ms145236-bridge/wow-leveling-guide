@@ -13,6 +13,7 @@ local lastState
 -- ── 重算 ────────────────────────────────────────────────────────────────────
 -- 副本裡：只列這個副本的任務（一次全列），不顯示主線、箭頭、地圖標點；對不到就整個隱藏。出副本後回主線並重新對齊。
 local inInstance, enterLevel = false, nil
+local lastArrowKey
 local function instanceView()
   if not (IsInInstance and GetInstanceInfo) then return false end
   local inside, kind = IsInInstance()
@@ -79,7 +80,11 @@ local function refresh()
       if step.s.x and E.Applies(step.s.when) then s = step.s; break end
     end
   end
-  if s and s.x then N.Set(s.map, s.x, s.y, E.Title(s)) else N.Clear() end
+  local curKey = state and state.cur and state.steps[state.cur].key
+  if curKey ~= lastArrowKey then MG.wpOverride = nil; lastArrowKey = curKey end
+  local o = MG.wpOverride
+  if o then N.Set(o.map, o.x, o.y, o.name)
+  elseif s and s.x then N.Set(s.map, s.x, s.y, E.Title(s)) else N.Clear() end
 end
 
 function MG.Refresh(now)
