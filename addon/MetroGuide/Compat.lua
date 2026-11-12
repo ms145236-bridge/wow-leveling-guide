@@ -184,15 +184,22 @@ function C.Auras()
   return out
 end
 -- 任務經驗 +3% 的增益：主人確認名字是「充分休息」（和打怪的休息經驗不同）；法術 ID 從記錄報告找到後填進 XP_BUFFS
-C.XP_BUFF_NAME = "充分休息"
-C.XP_BUFFS = {}
--- 有已知的經驗增益就回傳它（一次重算內只掃一次）
+C.XP_BUFF_NAME = "充分休息" -- 名字開頭是這個就算
+C.XP_BUFFS = { 429960 } -- Wowhead：充分休息追蹤光環（實際顯示的增益可能是相鄰 ID，記錄器會記下看到的 ID）
+-- 有經驗增益就回傳 { name, id, how }（how＝「法術 ID」或「名稱」；一次重算內只查一次）
 function C.XPBuff()
   local m = C.memo
   if m and m.xpbuff ~= nil then return m.xpbuff or nil end
   local found = false
-  for _, a in ipairs(C.Auras()) do
-    if (a.id and C.XP_BUFFS[a.id]) or a.name == C.XP_BUFF_NAME then found = a; break end
+  local byId = C_UnitAuras and C_UnitAuras.GetPlayerAuraBySpellID
+  for _, id in ipairs(byId and C.XP_BUFFS or {}) do
+    local a = byId(id)
+    if a then found = { name = not (issecretvalue and issecretvalue(a.name)) and a.name or nil, id = id, how = "法術 ID" }; break end
+  end
+  if not found then
+    for _, a in ipairs(C.Auras()) do
+      if a.name and a.name:sub(1, #C.XP_BUFF_NAME) == C.XP_BUFF_NAME then found = { name = a.name, id = a.id, how = "名稱" }; break end
+    end
   end
   if m then m.xpbuff = found end
   return found or nil
