@@ -783,16 +783,6 @@ function E.Trained(name)
     if step.s.npc == name and step.s.lv <= lv then MG.db.latch[step.key] = true end
   end
 end
--- 副本好裝：本職業拿得到的（沒寫職業＝都可以）
-function E.LootFor(d)
-  local out = {}
-  for _, l in ipairs(d.loot or {}) do
-    local ok = not l.c
-    for _, c in ipairs(l.c or {}) do if c == me.class then ok = true end end
-    if ok then out[#out + 1] = l end
-  end
-  return out
-end
 -- 任務日誌滑鼠提示：在路線上 → 哪一站第幾步；不在 → 06 的判定，否則規則（灰 → 可放掉；路線任務的前置 → 值得做；其餘 → 之後順路）
 function E.QuestNote(q)
   for _, o in ipairs(questSt[q] or {}) do

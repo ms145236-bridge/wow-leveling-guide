@@ -490,7 +490,6 @@ local function buildItems()
           end
         end
         if not (nx and nx.kind == "ent") and d.entrance then items[#items + 1] = { kind = "dent", d = d } end
-        for _, l in ipairs(E.LootFor(d)) do items[#items + 1] = { kind = "dtext", text = "好裝：「" .. l.item .. "」" .. (l.boss and ("（" .. l.boss .. "）") or "") } end
         items[#items + 1] = { kind = "dact", d = d }
         if UI.dMore[d.id] then
           for _, t in ipairs(UI.Sentences(d.pickupS, bullets(d.pickup or ""))) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
@@ -602,9 +601,7 @@ local function fillRow(row, it)
     local open = UI.dOpen == d.id
     row.ck:SetText("")
     row.arrow:Show(); row.arrow:SetRotation(open and -math.pi / 2 or 0); row.arrow:SetVertexColor(unpack(fit and GOLD or DIM))
-    -- ★：目前該處理的副本（前置可接／前置進行中／可以去）且有本職業好裝
-    local live = kind == "some" or kind == "pick" or kind == "chain" or (kind == "ready" and lv >= d.lv[1])
-    row.name:SetText((live and #E.LootFor(d) > 0 and "|cffd9b25f★|r " or "") .. d.name); paint(row.name, (kind == "past" or MG.db.dNo[d.id]) and FAINT or (kind == "low" and DIM or TEXT))
+    row.name:SetText(d.name); paint(row.name, (kind == "past" or MG.db.dNo[d.id]) and FAINT or (kind == "low" and DIM or TEXT))
     row.lvt:SetText(d.lv[1] .. "-" .. d.lv[2]); paint(row.lvt, open and DIM or FAINT); row.lvt:Show()
     if MG.db.dNo[d.id] then label = "不打" end
     row.prog:SetText(label)

@@ -200,15 +200,8 @@ for (const file of files.filter((f) => !sideFile(f))) {
       else warn(where, "危險格式看不懂：" + dang[1].slice(0, 40));
       return;
     }
-    // 好裝｜物品名｜職業｜掉落首領（副本）
-    const loot = line.match(/^\s*-\s*好裝｜(.*)$/);
-    if (loot) {
-      const f = loot[1].replace(/【[^】]*】/g, "").split("｜").map((x) => x.trim());
-      const cls = (f[1] || "").split(/[／\/、,，]/).map((x) => CLASS[x.trim()]).filter(Boolean);
-      if (f[0]) (st.loot ||= []).push({ item: f[0], c: cls.length ? cls : undefined, boss: f[2] || undefined });
-      else warn(where, "好裝格式看不懂：" + loot[1].slice(0, 40));
-      return;
-    }
+    // 好裝｜…：不使用（副本好裝功能已拿掉），整行略過
+    if (/^\s*-\s*好裝｜/.test(line)) return;
     // 練怪｜怪名｜等級 a-b｜座標｜說明
     const gr = line.match(/^\s*-\s*練怪｜(.*)$/);
     if (gr) {
@@ -597,7 +590,7 @@ for (const s of stations) {
     const parts = short.slice(sp + 1).split(/與|／|、/);
     if (parts.length > 1) short = short.slice(0, sp + 1) + parts[0] + "等";
   }
-  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, short=${lua(short !== full ? short : undefined)}, visit=${lua(visit > 1 ? visit : undefined)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, grind=${lua(s.grind && s.grind.length ? s.grind.map((g) => ({ mob: g.mob, lv: g.lv, map: g.map, x: g.x, y: g.y, note: g.note })) : undefined)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)}, loot=${lua(s.loot)}, supply=${lua(s.supply)}, danger=${lua(s.danger)},\n      steps = {\n`;
+  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, short=${lua(short !== full ? short : undefined)}, visit=${lua(visit > 1 ? visit : undefined)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, grind=${lua(s.grind && s.grind.length ? s.grind.map((g) => ({ mob: g.mob, lv: g.lv, map: g.map, x: g.x, y: g.y, note: g.note })) : undefined)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)}, supply=${lua(s.supply)}, danger=${lua(s.danger)},\n      steps = {\n`;
   for (const step of s.steps) if (step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id) out += `        ${lua(stepOut(step, s))},\n`;
   out += `      } },\n`;
 }
