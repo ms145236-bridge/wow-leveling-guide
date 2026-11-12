@@ -10,6 +10,7 @@ local reported = {}
 local function after(where, ok, ...)
   if ok then return ... end
   local err = tostring((...))
+  MG.lastError = where .. "：" .. err
   if not reported[err] then
     reported[err] = true
     MG.msg("|cffff7b7b" .. where .. " 出錯：|r" .. err)

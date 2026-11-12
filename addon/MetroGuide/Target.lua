@@ -1,18 +1,20 @@
--- 選取目標按鈕：步驟列上的準星（也可綁快捷鍵）。按一下：
---   1. 把附近（看得到敵方名條的）所有任務怪標上不同的團隊標記（不搶別人已用的標記）
---   2. 選取一隻：巨集依序 /targetexact [noexists] 名字，第一個找得到的勝出（遊戲會挑最近的同名怪）；每按一次換一個名字排第一
--- 選取用安全按鈕＋巨集文字，只能在戰鬥外更新巨集；標記不受保護，在按下後的一般處理裡做。
+-- 選取任務目標：步驟列的準星按鈕（可綁快捷鍵）和動作條巨集「任務目標」用同一段巨集文字：
+--   /cleartarget、每個名字 /targetexact [noexists]、再 /target [noexists] 當備援、/tm 標記選到的那隻、/run MGTP()（記錄按下）
+-- 這個客戶端的限制：SetRaidTarget 是受保護函式；目標相關 API（GetRaidTargetIndex 等）回傳「秘密值」，插件不能比較。
+-- 所以插件只寫巨集文字，不讀目標狀態：標記、選取都由遊戲執行巨集完成。
+-- 巨集文字只能在戰鬥外更新（按鈕屬性與 EditMacro 都是），戰鬥中有變動就等脫離戰鬥。
 local _, MG = ...
 local C = MG.C
 local T = {}
 MG.T = T
 T.MARKS = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" }
-local MARK_ORDER = { 8, 7, 6, 5, 4, 3, 2, 1 } -- 骷髏、叉叉、方塊、月亮、三角、鑽石、圓圈、星星
 
 BINDING_HEADER_METROGUIDE = "地鐵升級"
 _G["BINDING_NAME_CLICK MetroGuideTargetButton:LeftButton"] = "選取任務目標"
 
-local btn, pending, rot, names, key, hinted = nil, false, 0, {}, "", false
+local btn, pending, rot, names, key = nil, false, 0, {}, ""
+local stepKey = "" -- 目前步驟（換步驟時名單和輪換重來）
+T.stats = { presses = 0, targetChanged = 0, lastPress = 0, lastTarget = -1 }
 
 -- 目前步驟要找的名字：做＝還沒完成的目標的怪（掉落物就是掉它的怪）；接／交＝NPC（物件、物品不算）
 local function mobsOf(q, out, seen)
@@ -52,139 +54,152 @@ function T.Shown(state)
   return MG.UI.Get("showTarget") and #T.Targets(state) > 0
 end
 
--- 巨集：先全部用完整名稱（/targetexact），再用部分比對（/target）當備援；
--- 超過 255 字元時先丟備援、再丟排在後面的名字
-local LIMIT = 255
-local skipMark = false
--- 標記：SetRaidTarget 在這個客戶端是受保護函式，插件不能直接呼叫（會被擋並報錯）。
--- 改在安全巨集最後加一行 /tm，只標選到的那隻。/tm 對已有同一標記的目標會取消，
--- 所以戰鬥外會在按下前（PreClick）檢查：目前目標就是要找的、而且已經有這個標記 → 這次巨集不加 /tm。
+-- /tm 對已有同一標記的目標會「取消」：同一步驟按過後 20 秒內不加 /tm（只靠自己記錄，不讀目標）
+local MARK_HOLD = 20
+local markedAt, markedStep = 0, ""
 local function markLine()
   if not MG.UI.Get("markOn") then return nil end
+  if markedStep == stepKey and GetTime() - markedAt < MARK_HOLD then return nil end
   return "/tm [@target,exists,nodead] " .. MG.UI.Get("markIcon")
 end
 
+-- 巨集文字（255 字元內）：先全部完整名稱，再部分比對當備援；超過時先丟備援、再丟後面的名字。標記與記錄那兩行一定保留。
+local LIMIT = 255
+local PRESS_LINE = "/run MGTP()"
 local function macro()
+  if #names == 0 then return "" end
   local order, n = {}, #names
   for k = 0, n - 1 do order[#order + 1] = names[(rot + k) % n + 1] end
   local lines, size = { "/cleartarget" }, #"/cleartarget"
+  local mark = markLine()
+  size = size + 1 + #PRESS_LINE + (mark and (1 + #mark) or 0)
   local function add(line)
     if size + 1 + #line > LIMIT then return false end
     lines[#lines + 1] = line
     size = size + 1 + #line
     return true
   end
-  local mark = not skipMark and markLine()
-  if mark then size = size + 1 + #mark end -- 標記那行一定要留位置
   for _, name in ipairs(order) do if not add("/targetexact [noexists] " .. name) then break end end
   for _, name in ipairs(order) do if not add("/target [noexists] " .. name) then break end end
   if mark then lines[#lines + 1] = mark end
+  lines[#lines + 1] = PRESS_LINE
   return table.concat(lines, "\n")
 end
+T.MacroText = macro
 
-function T.Apply()
-  if not btn then return end
-  if InCombatLockdown() then pending = true; return end
-  pending = false
-  btn:SetAttribute("type", "macro")
-  btn:SetAttribute("macrotext", #names > 0 and macro() or "")
-  btn:SetShown(T.visible and MetroGuideFrame and MetroGuideFrame:IsShown() or false)
-end
-
-function T.Update(state)
-  if not btn then return end
-  local list = T.Targets(state)
-  T.visible = MG.UI.Get("showTarget") and #list > 0
-  local k = table.concat(list, "|") .. tostring(T.visible) .. tostring(MetroGuideFrame and MetroGuideFrame:IsShown()) .. tostring(MG.UI.Get("markOn")) .. MG.UI.Get("markIcon")
-  if k == key and not pending then return end
-  if table.concat(list, "|") ~= table.concat(names, "|") then rot = 0 end
-  names, key = list, k
-  T.Apply()
-end
-
-
--- 「按下就施放」設定開著時，動作發生在按下；否則在放開
-local function keyDown() return GetCVarBool and GetCVarBool("ActionButtonUseKeyDown") or false end
-local lastAct = 0
-function T.Acts(down)
-  if (down and true or false) ~= keyDown() then return false end
-  local now = GetTime()
-  if now - lastAct < 0.25 then return false end
-  lastAct = now
-  return true
-end
-T.stats = { pre = 0, preDown = 0, post = 0, postDown = 0, acted = 0 }
-
--- 動作條巨集：/click 這顆按鈕。按下就施放開著時要加第三個參數，讓 /click 送「按下」
+-- 動作條巨集「任務目標」：內容就是同一段巨集文字（不經過 /click）
 local MACRO, OLD_MACRO = "任務目標", "地鐵目標"
-local function macroBody() return "/click MetroGuideTargetButton LeftButton 1\n/click MetroGuideTargetButton LeftButton" end
+local ICON = "Ability_Hunter_SniperShot"
+local EMPTY = "/run print(\"地鐵升級：目前步驟沒有要選的目標\")"
+local function macroBody()
+  local text = macro()
+  return text ~= "" and text or EMPTY
+end
 -- 舊名「地鐵目標」的巨集原地改名（保留它在快捷列上的位置），不另建第二個
 local function renameOld()
   local old = GetMacroIndexByName(OLD_MACRO)
   if old and old > 0 and (GetMacroIndexByName(MACRO) or 0) == 0 then
-    EditMacro(old, MACRO, "Ability_Hunter_SniperShot", macroBody())
+    EditMacro(old, MACRO, ICON, macroBody())
   end
 end
+local lastBody
+function T.SyncMacro()
+  if not GetMacroIndexByName or InCombatLockdown() then return false end
+  renameOld()
+  local index = GetMacroIndexByName(MACRO)
+  if index and index > 0 then
+    local body = macroBody()
+    if body ~= lastBody then EditMacro(index, MACRO, ICON, body); lastBody = body end
+  end
+  return true
+end
+
 function T.MakeMacro()
   if InCombatLockdown() then MG.msg("戰鬥中不能建立巨集，脫離戰鬥再試。"); return end
   renameOld()
   local index = GetMacroIndexByName(MACRO)
   if index and index > 0 then
-    EditMacro(index, MACRO, "Ability_Hunter_SniperShot", macroBody())
+    lastBody = nil
+    T.SyncMacro()
   else
-    local account = GetNumMacros()
-    if account >= (MAX_ACCOUNT_MACROS or 36) then MG.msg("帳號巨集已滿，請先刪掉一個再按「建立巨集」。"); return end
-    index = CreateMacro(MACRO, "Ability_Hunter_SniperShot", macroBody(), nil)
+    if GetNumMacros() >= (MAX_ACCOUNT_MACROS or 36) then MG.msg("帳號巨集已滿，請先刪掉一個再按「建立巨集」。"); return end
+    index = CreateMacro(MACRO, ICON, macroBody(), nil)
   end
   if index and index > 0 then
     PickupMacro(index)
     MG.msg("巨集「" .. MACRO .. "」已拿在滑鼠上，放到動作條即可。")
   end
 end
--- 遊戲的「按下就施放」設定改了：已有的巨集跟著改
-function T.SyncMacro()
-  if InCombatLockdown() or not GetMacroIndexByName then return end
-  renameOld()
-  local index = GetMacroIndexByName and GetMacroIndexByName(MACRO)
-  if index and index > 0 then EditMacro(index, MACRO, "Ability_Hunter_SniperShot", macroBody()) end
-end
 
 -- 自動建立：設定開著、還沒有這個巨集、帳號巨集還有空位 → 默默建立（不拿到滑鼠上），第一次在聊天框說一聲
-local autoPending = false
 function T.AutoMacro()
   if not GetMacroIndexByName then return end
-  if InCombatLockdown() then autoPending = true; return end
-  autoPending = false
+  if InCombatLockdown() then pending = true; return end
   renameOld() -- 改名不受「自動建立」設定影響
-  local existing = GetMacroIndexByName(MACRO)
-  if existing and existing > 0 then T.SyncMacro(); return end
-  if not MG.UI.Get("autoMacro") then return end
   local index = GetMacroIndexByName(MACRO)
-  if index and index > 0 then T.SyncMacro(); return end
+  if index and index > 0 then lastBody = nil; T.SyncMacro(); return end
+  if not MG.UI.Get("autoMacro") then return end
   if GetNumMacros() >= (MAX_ACCOUNT_MACROS or 36) then return end
-  index = CreateMacro(MACRO, "Ability_Hunter_SniperShot", macroBody(), nil)
+  index = CreateMacro(MACRO, ICON, macroBody(), nil)
   if index and index > 0 and not MetroGuideDB.macroNoted then
     MetroGuideDB.macroNoted = true
     MG.msg("已建立巨集『" .. MACRO .. "』，可在巨集視窗（/macro）拖到快捷列")
   end
 end
 
+-- 把巨集文字寫到按鈕和動作條巨集（戰鬥外）
+function T.Apply()
+  if not btn then return end
+  if InCombatLockdown() then pending = true; return end
+  pending = false
+  btn:SetAttribute("type", "macro")
+  btn:SetAttribute("macrotext", macro())
+  btn:SetShown(T.visible and MetroGuideFrame and MetroGuideFrame:IsShown() or false)
+  MG.try("目標巨集", T.SyncMacro)
+end
+
+function T.Update(state)
+  if not btn then return end
+  local list = T.Targets(state)
+  local step = state and state.cur and state.steps[state.cur]
+  local sk = step and step.key or ""
+  T.visible = MG.UI.Get("showTarget") and #list > 0
+  local k = sk .. "|" .. table.concat(list, "|") .. tostring(T.visible) .. tostring(MetroGuideFrame and MetroGuideFrame:IsShown()) .. tostring(MG.UI.Get("markOn")) .. MG.UI.Get("markIcon")
+  if k == key and not pending then return end
+  if sk ~= stepKey or table.concat(list, "|") ~= table.concat(names, "|") then rot = 0 end
+  stepKey = sk
+  names, key = list, k
+  T.Apply()
+end
+
+-- 巨集最後一行 /run MGTP()：記錄「按了一次」→ 輪換下次優先的名字、這一步暫時不再加 /tm（避免取消標記），20 秒後恢復
+function MGTP()
+  T.stats.presses = T.stats.presses + 1
+  T.stats.lastPress = GetTime()
+  -- 巨集前面幾行剛換過目標（同一瞬間）→ 算一次成功
+  if GetTime() - T.stats.lastTarget < 0.5 then T.stats.targetChanged = T.stats.targetChanged + 1 end
+  markedAt, markedStep = GetTime(), stepKey
+  rot = rot + 1
+  key = "" -- 下次 Update 一定重寫
+  T.Apply()
+  if C_Timer and C_Timer.After then C_Timer.After(MARK_HOLD + 0.5, function() key = ""; T.Apply() end) end
+end
+
 function T.Diag()
   local L = {}
   local index = GetMacroIndexByName and GetMacroIndexByName(MACRO) or 0
-  local body = index > 0 and select(3, GetMacroInfo(index)) or nil
+  local body = index > 0 and GetMacroInfo and select(3, GetMacroInfo(index)) or nil
   local old = GetMacroIndexByName and GetMacroIndexByName(OLD_MACRO) or 0
   L[#L + 1] = "巨集「" .. MACRO .. "」格位 " .. index .. "（舊名格位 " .. old .. "）內容：" .. (body and body:gsub("\n", " | ") or "無")
-  L[#L + 1] = "ActionButtonUseKeyDown：" .. tostring(GetCVar and GetCVar("ActionButtonUseKeyDown"))
+  L[#L + 1] = "ActionButtonUseKeyDown：" .. tostring(GetCVar and GetCVar("ActionButtonUseKeyDown")) .. "｜issecretvalue：" .. tostring(issecretvalue ~= nil)
   if btn then
-    L[#L + 1] = ("按鈕 %s 顯示 %s 可見 %s｜type=%s｜註冊點擊 AnyUp+AnyDown"):format(tostring((btn:GetName())), tostring((btn:IsShown())), tostring((btn:IsVisible())),
-      tostring((btn:GetAttribute("type"))))
-    L[#L + 1] = "巨集文字：" .. tostring((btn:GetAttribute("macrotext"))):gsub("\n", " | ")
+    L[#L + 1] = ("按鈕 顯示 %s 可見 %s｜type=%s"):format(tostring((btn:IsShown())), tostring((btn:IsVisible())), tostring((btn:GetAttribute("type"))))
+    L[#L + 1] = "按鈕巨集文字：" .. tostring((btn:GetAttribute("macrotext"))):gsub("\n", " | ")
   else
     L[#L + 1] = "按鈕：沒有建立"
   end
-  L[#L + 1] = ("點擊次數 PreClick %d（按下 %d）PostClick %d（按下 %d）實際處理 %d"):format(T.stats.pre, T.stats.preDown, T.stats.post, T.stats.postDown, T.stats.acted)
-  L[#L + 1] = "被遊戲擋下：" .. tostring(T.blocked or "無") .. "｜標記方式：巨集 /tm（" .. tostring(markLine()) .. "）"
+  L[#L + 1] = ("按下次數 %d｜按下後 0.5 秒內換了目標 %d 次"):format(T.stats.presses, T.stats.targetChanged)
+  L[#L + 1] = "被遊戲擋下：" .. tostring(T.blocked or "無") .. "｜最後錯誤：" .. tostring(MG.lastError or "無")
   L[#L + 1] = "目前目標名單：" .. (#names > 0 and table.concat(names, "、") or "無")
   return L
 end
@@ -209,45 +224,24 @@ function T.Create(bar)
     GameTooltip:Show()
   end)
   btn:HookScript("OnLeave", function(self) self:SetAlpha(0.6); GameTooltip:Hide() end)
-  -- 放開時（巨集已選好目標）：標記附近任務怪＋目標，再輪換下次優先的名字
-  btn:HookScript("PreClick", function(_, _, down)
-    if not InCombatLockdown() and #names > 0 then
-      local same = false
-      for _, n in ipairs(names) do if UnitExists("target") and UnitName("target") == n then same = true end end
-      local want = same and GetRaidTargetIndex("target") == MG.UI.Get("markIcon")
-      if want ~= skipMark then skipMark = want; btn:SetAttribute("macrotext", macro()) end
-    end
-    T.stats.pre = T.stats.pre + 1
-    if down then T.stats.preDown = T.stats.preDown + 1 end
-  end)
-  btn:HookScript("PostClick", function(_, _, down)
-    T.stats.post = T.stats.post + 1
-    if down then T.stats.postDown = T.stats.postDown + 1 end
-    if not T.Acts(down) then return end -- 一次按鍵只處理一次（按下或放開，看遊戲設定）
-    T.stats.acted = T.stats.acted + 1
-    rot = rot + 1
-    T.Apply()
-  end)
   btn:Hide()
   local f = CreateFrame("Frame")
-  pcall(f.RegisterEvent, f, "PLAYER_REGEN_ENABLED")
-  pcall(f.RegisterEvent, f, "CVAR_UPDATE")
-  pcall(f.RegisterEvent, f, "PLAYER_ENTERING_WORLD")
-  pcall(f.RegisterEvent, f, "ADDON_ACTION_FORBIDDEN")
-  pcall(f.RegisterEvent, f, "ADDON_ACTION_BLOCKED")
+  for _, e in ipairs({ "PLAYER_REGEN_ENABLED", "PLAYER_ENTERING_WORLD", "ADDON_ACTION_FORBIDDEN", "ADDON_ACTION_BLOCKED", "PLAYER_TARGET_CHANGED" }) do
+    pcall(f.RegisterEvent, f, e)
+  end
   f:SetScript("OnEvent", function(_, event, name, ...)
     if event == "ADDON_ACTION_FORBIDDEN" or event == "ADDON_ACTION_BLOCKED" then
       if name == "MetroGuide" and not T.blocked then
         T.blocked = (...) or "?"
         MG.msg("遊戲擋下了插件的動作（" .. tostring(T.blocked) .. "），請用 /metro probe 回報。")
       end
+    elseif event == "PLAYER_TARGET_CHANGED" then
+      T.stats.lastTarget = GetTime() -- 只記時間，不讀目標（目標的資料可能是秘密值）
     elseif event == "PLAYER_ENTERING_WORLD" then
       MG.try("目標巨集", T.AutoMacro)
-    elseif event == "CVAR_UPDATE" then
-      if name == "ActionButtonUseKeyDown" or name == "ACTION_BUTTON_USE_KEY_DOWN" then MG.try("目標巨集", T.SyncMacro) end
-    else
-      if pending then MG.try("目標按鈕", T.Apply) end
-      if autoPending then MG.try("目標巨集", T.AutoMacro) end
+    elseif pending then
+      MG.try("目標按鈕", T.Apply)
+      MG.try("目標巨集", T.AutoMacro)
     end
   end)
   C.impl.Target = "SecureActionButtonTemplate"
