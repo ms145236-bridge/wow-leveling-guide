@@ -1391,8 +1391,11 @@ function UI.Create()
   MG.try("目標按鈕", MG.T.Create, holder)
   MG.try("任務物品", MG.I.Create, holder)
   local regen = CreateFrame("Frame")
-  pcall(regen.RegisterEvent, regen, "PLAYER_REGEN_ENABLED")
-  regen:SetScript("OnEvent", function() if UI.holderPending or UI.settingsPending then UI.settingsPending = false; UI.PlaceHolder() end end)
+  for _, e in ipairs({ "PLAYER_REGEN_ENABLED", "UI_SCALE_CHANGED", "DISPLAY_SIZE_CHANGED" }) do pcall(regen.RegisterEvent, regen, e) end
+  regen:SetScript("OnEvent", function(_, event)
+    if event ~= "PLAYER_REGEN_ENABLED" or UI.holderPending or UI.settingsPending then UI.settingsPending = false; UI.holderTries = 0; UI.PlaceHolder() end
+  end)
+  root:HookScript("OnShow", function() UI.holderTries = 0; UI.PlaceHolder() end)
   UI.ApplySettings()
 end
 
@@ -1930,6 +1933,8 @@ end
 function UI.Toggle()
   MG.db.shown = not root:IsShown()
   root:SetShown(MG.db.shown)
+  UI.holderTries = 0
+  UI.PlaceHolder()
   MG.Refresh(true) -- 目標按鈕跟著顯示／隱藏（戰鬥中會等脫離戰鬥）
 end
 

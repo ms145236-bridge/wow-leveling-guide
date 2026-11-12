@@ -79,11 +79,17 @@ function E.Build()
         for _, s in ipairs(st.steps) do if s.x then first = s; break end end
         list[1] = { s = { t = "travel", text = "前往 " .. st.name, map = first and first.map, x = first and first.x, y = first and first.y, r = 5 }, key = st.id .. "#0", st = st }
       end
-      for i, s in ipairs(st.steps) do
+      local usedKey = {}
+      for _, s in ipairs(st.steps) do
         if s.t == "note" then
           note = s.text
         else
-          local key = QUEST[s.t] and (s.t:sub(1, 1) .. ":" .. s.q) or (st.id .. "#" .. i)
+          -- 鍵用內容：路線重建後存檔裡的勾選／略過／釘選不會跑到別步；同站重複的加 ~2、~3
+          local base = QUEST[s.t] and (s.t:sub(1, 1) .. ":" .. s.q)
+            or (st.id .. "#" .. s.t .. ":" .. tostring(s.node or s.bind or s.to or s.text or s.lv or "") .. (s.x and string.format("@%.0f,%.0f", s.x, s.y) or ""))
+          local key, k = base, 2
+          while usedKey[key] do key = base .. "~" .. k; k = k + 1 end
+          usedKey[key] = true
           list[#list + 1] = { s = s, key = key, note = note, st = st }
           note = nil
         end
@@ -370,7 +376,9 @@ local function stepDone(step, map, x, y)
     local b = C.Bind()
     return b ~= nil and s.bind ~= nil and (b == s.bind or b:find(s.bind, 1, true) ~= nil)
   elseif t == "goto" or (t == "travel" and s.x) then
-    return map ~= nil and map == s.map and x ~= nil and s.x ~= nil and math.sqrt((x - s.x) ^ 2 + (y - s.y) ^ 2) <= (s.r or 3)
+    local here = map ~= nil and map == s.map and x ~= nil and s.x ~= nil and math.sqrt((x - s.x) ^ 2 + (y - s.y) ^ 2) <= (s.r or 3)
+    if here then MG.db.latch[step.key] = true end
+    return here
   end
   return false
 end
@@ -383,10 +391,15 @@ local function stepsOf(st)
   if (not carry or #carry == 0) and not pre then return st.list end
   local out = {}
   carry = carry or {}
+  local here = {}
+  for _, step in ipairs(st.list) do if step.s.q then here[step.s.q] = true end end
+  for k = #carry, 1, -1 do if turned(carry[k]) then table.remove(carry, k) end end
   for _, q in ipairs(carry) do
-    for _, other in ipairs(E.stations) do
-      for _, step in ipairs(other ~= st and other.list or {}) do
-        if step.s.q == q then out[#out + 1] = { s = step.s, key = step.key, note = step.note, st = other, carry = true } end
+    for _, other in ipairs(not here[q] and questSt[q] or {}) do
+      if other ~= st and not other.dungeon then
+        for _, step in ipairs(other.list) do
+          if step.s.q == q then out[#out + 1] = { s = step.s, key = step.key, note = step.note, st = other, carry = true } end
+        end
       end
     end
   end
@@ -483,7 +496,7 @@ function E.Locate(st)
     for i, step in ipairs(steps) do
       if step.key == pin.key then found = i; break end
     end
-    if not found or (done[found] and not pin.wasDone) or found == auto then
+    if not found or (done[found] and not pin.wasDone) or found == auto or (pin.auto and (auto and steps[auto].key or "") ~= pin.auto) then
       db.pin[st.id] = nil
     else
       cur = found
@@ -683,13 +696,13 @@ function E.Move(state, delta)
   local step = state.steps[i]
   if not step then return end
   if i == state.auto then MG.db.pin[state.st.id] = nil
-  else MG.db.pin[state.st.id] = { key = step.key, wasDone = state.done[i] and true or false } end
+  else E.PinIndex(state, i) end
 end
 
 function E.PinIndex(state, i)
   local step = state.steps[i]
   if not step then return end
-  MG.db.pin[state.st.id] = { key = step.key, wasDone = state.done[i] and true or false }
+  MG.db.pin[state.st.id] = { key = step.key, wasDone = state.done[i] and true or false, auto = state.auto and state.steps[state.auto].key or "" }
 end
 
 -- 略過（連帶）：略過「接」或「做」→ 這個任務的接／做／交 ＋ 後續任務的全部步驟；略過「交」→ 只連帶後續任務。

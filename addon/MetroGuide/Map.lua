@@ -237,8 +237,14 @@ function P.Update(st, force)
 end
 
 -- 地圖換區、縮放、重整後：依新的畫面比例重新合併，再把層級拉到最上面（等這一幀其他提供者畫完）
+local pending = false
 local function reflow()
-  local run = function() MG.try("地圖標點", function() if state then P.Update(state, true) end; P.Raise() end) end
+  if pending then return end
+  pending = true
+  local run = function()
+    pending = false
+    MG.try("地圖標點", function() if state then P.Update(state) end; P.Raise() end)
+  end
   if C_Timer and C_Timer.After then C_Timer.After(0, run) else run() end
 end
 if WorldMapFrame then

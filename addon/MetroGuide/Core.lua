@@ -15,6 +15,7 @@ local lastState
 local inInstance, enterLevel = false, nil
 local lastArrowKey
 local lastDetour
+local onTaxi = false -- 失去控制時是不是在鳥上（下鳥才算「飛」完成）
 local function instanceView()
   if not (IsInInstance and GetInstanceInfo) then return false end
   local inside, kind = IsInInstance()
@@ -111,12 +112,14 @@ f:SetScript("OnUpdate", function(_, dt)
   -- 到達型步驟：每 0.5 秒檢查一次
   if tick >= 0.5 then
     tick = 0
-    local cur = lastState and lastState.cur and lastState.steps[lastState.cur].s
-    if cur and cur.t == "goto" then dirty = true end
-    -- 順路提醒、附近危險、沒開的飛行點：位置一變就要重看，結果有變才重畫
-    local danger, fp = E.Nearby(lastState and not lastState.instance and lastState.st)
-    local d = tostring((E.Detour(lastState))) .. tostring(danger) .. tostring(fp)
-    if d ~= lastDetour then lastDetour = d; dirty = true end
+    MG.try("位置檢查", function()
+      local cur = lastState and lastState.cur and lastState.steps[lastState.cur].s
+      if cur and (cur.t == "goto" or (cur.t == "travel" and cur.x)) then dirty = true end
+      -- 順路提醒、附近危險、沒開的飛行點：位置一變就要重看，結果有變才重畫
+      local danger, fp = E.Nearby(lastState and not lastState.instance and lastState.st)
+      local d = tostring((E.Detour(lastState))) .. tostring(danger) .. tostring(fp)
+      if d ~= lastDetour then lastDetour = d; dirty = true end
+    end)
   end
 end)
 
@@ -217,7 +220,7 @@ end
 -- ── 事件 ────────────────────────────────────────────────────────────────────
 local EVENTS = {
   "ADDON_LOADED", "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_REMOVED", "QUEST_TURNED_IN", "QUEST_LOG_UPDATE",
-  "UNIT_QUEST_LOG_CHANGED", "PLAYER_LEVEL_UP", "ZONE_CHANGED_NEW_AREA", "PLAYER_CONTROL_GAINED", "HEARTHSTONE_BOUND",
+  "UNIT_QUEST_LOG_CHANGED", "PLAYER_LEVEL_UP", "ZONE_CHANGED_NEW_AREA", "PLAYER_CONTROL_GAINED", "PLAYER_CONTROL_LOST", "HEARTHSTONE_BOUND",
   "TAXIMAP_OPENED", "QUEST_DETAIL", "QUEST_PROGRESS", "QUEST_COMPLETE", "GOSSIP_SHOW", "QUEST_GREETING",
   "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "TRAINER_SHOW", "UPDATE_INVENTORY_DURABILITY",
 }
@@ -261,11 +264,21 @@ local function onEvent(_, event, ...)
     MG.db.sugHide = nil
     wipe(MG.db.notNow)
   elseif event == "TAXIMAP_OPENED" then
-    latchCurrent("fp"); latchCurrent("travel")
+    latchCurrent("fp")
     local name = UnitName("npc")
     if name and not (issecretvalue and issecretvalue(name)) then MG.db.fpSeen[name] = true end
-  elseif event == "PLAYER_CONTROL_GAINED" then latchCurrent("fly")
-  elseif event == "ZONE_CHANGED_NEW_AREA" then latchCurrent("boat"); N.Forget()
+  elseif event == "PLAYER_CONTROL_LOST" then
+    onTaxi = UnitOnTaxi and UnitOnTaxi("player") or false
+    return
+  elseif event == "PLAYER_CONTROL_GAINED" then
+    if onTaxi then latchCurrent("fly") end
+    onTaxi = false
+  elseif event == "ZONE_CHANGED_NEW_AREA" then
+    -- 船：換到別的地圖（離開碼頭那張）才算到了
+    local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
+    local map = C.Position()
+    if cur and cur.s.t == "boat" and (not cur.s.map or (map and map ~= cur.s.map)) then MG.db.latch[cur.key] = true end
+    N.Forget()
   elseif AUTO[event] then
     if event ~= "QUEST_PROGRESS" and event ~= "QUEST_COMPLETE" then MG.try("接不到檢查", notOffered, event); dirty = true end
     if autoOn() then MG.try("自動接交", AUTO[event]) end
