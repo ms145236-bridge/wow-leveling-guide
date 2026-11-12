@@ -56,6 +56,9 @@ local SPEC = {
   { key = "auto", label = "自動接交任務", def = true, menu = true },
   { key = "optional", label = "帶上可跳過的任務", def = false, menu = true },
   { key = "trainOn", label = "提醒學技能", def = true },
+  { key = "supplyOn", label = "補給提醒（修裝、開飛行點）", def = true },
+  { key = "dangerOn", label = "危險提醒", def = true },
+  { key = "keepOn", label = "保留物品提示", def = true },
   { key = "detourOn", label = "順路提醒", def = true },
   { key = "detourDist", label = "順路距離（地圖 %）", min = 1, max = 8, step = 0.5, def = 3 },
   { start = true },
@@ -151,7 +154,7 @@ local function box(f, edge)
   return bg
 end
 
-local root, bar, chip, panel, menu, report, dhint, ghint, vhint, lhint
+local root, bar, chip, panel, menu, report, dhint, ghint, vhint, lhint, xhint, rhint, fhint
 local rows, items = {}, {}
 local scroll, tab, missOpen, lastCurKey = 0, "steps", false, nil
 local impOpen, preOpen, preSeen = false, false, nil
@@ -426,12 +429,20 @@ local function buildItems()
     end
     for i, step in ipairs(state.steps) do
       local hideDone = not UI.Get("showDone") and state.done[i] and i ~= state.cur
-      if (not state.na[i] or MG.db.skip[step.key] or step.defer) and not hideDone then items[#items + 1] = { kind = "step", i = i, step = step } end
+      if (not state.na[i] or MG.db.skip[step.key] or step.defer or MG.db.notNow[step.key]) and not hideDone then items[#items + 1] = { kind = "step", i = i, step = step } end
     end
     local grind = state.st and state.st.grind
     if grind and #grind > 0 then
       items[#items + 1] = { kind = "ghead", n = #grind }
       if UI.grindOpen then for _, g in ipairs(grind) do items[#items + 1] = { kind = "grind", g = g } end end
+    end
+    local sup, dan = E.SupplyFor(state.st), state.st.danger or {}
+    if #sup + #dan > 0 then
+      items[#items + 1] = { kind = "shead", n = #sup + #dan }
+      if UI.supOpen then
+        for _, d in ipairs(dan) do items[#items + 1] = { kind = "spot", p = d, label = "危險：" .. d.text, warn = true } end
+        for _, s in ipairs(sup) do items[#items + 1] = { kind = "spot", p = s, label = s.k .. (s.npc and ("：" .. s.npc) or "") } end
+      end
     end
   elseif tab == "dg" then
     -- 副本分頁 v2（DUNGEON-TAB-SPEC.md）
@@ -521,7 +532,7 @@ local function fillRow(row, it)
   at(row.ck, 8, 14); at(row.box, 9); at(row.no, 24, 20); at(row.verb, 48, 18)
   row.prog:ClearAllPoints()
   if top then row.prog:SetPoint("TOPRIGHT", -12, -7) else row.prog:SetPoint("RIGHT", -12, 0) end
-  local PROG_W = { prehead = 1, pre = 44, imphead = 1, imp = 1, step = 64, miss = 1, misshead = 1, station = 44, start = 1, ghead = 1, grind = 70, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 110, dact = 1 }
+  local PROG_W = { shead = 1, spot = 70, prehead = 1, pre = 44, imphead = 1, imp = 1, step = 64, miss = 1, misshead = 1, station = 44, start = 1, ghead = 1, grind = 70, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 110, dact = 1 }
   row.prog:SetWidth(PROG_W[it.kind] or 64)
   local NAME_X = { dtext = 28, dhead = 28, dg = 26, dq = 28, dent = 28, dphase = 28, dact = 28 }
   row.name:ClearAllPoints()
@@ -559,7 +570,7 @@ local function fillRow(row, it)
     elseif state.done[i] and not state.na[i] and not (state.passed and state.passed[i]) then row.box:SetState("check", mark and GOLD or GREEN)
     else row.box:SetState(nil) end
     row.verb:SetText(E.VERB[s.t] or "")
-    row.name:SetText((E.StarFor(s.q, s) and "|cffd9b25f★|r " or "") .. E.Title(s) .. (skipped and "（已略過）" or "") .. (it.step.defer and "（之後再接）" or ""))
+    row.name:SetText((E.StarFor(s.q, s) and "|cffd9b25f★|r " or "") .. E.Title(s) .. (skipped and "（已略過）" or "") .. (it.step.defer and "（之後再接）" or "") .. (MG.db.notNow[it.step.key] and "|cff8b8f98（暫時接不到）|r" or ""))
     if it.step.dungeon and not state.done[i] and row.prog:GetText() == "" then row.prog:SetText(it.step.defer and "之後" or "副本前置"); paint(row.prog, AMBER) end
     if s.q and state.fill[s.q] and not state.done[i] then row.prog:SetText("補經驗"); paint(row.prog, GOLD) end
     if state.inGroup[i] then row.strip:SetColorTexture(GOLD[1], GOLD[2], GOLD[3], 0.45); row.strip:Show() end
@@ -747,6 +758,12 @@ local function fillRow(row, it)
     row:SetHeight(math.max(ROW_H, (row.para:GetStringHeight() or 14) + 6))
   elseif it.kind == "dhead" then
     row.name:SetText(it.text); paint(row.name, GOLD)
+  elseif it.kind == "shead" then
+    row.ck:SetText(UI.supOpen and "-" or "+"); paint(row.ck, DIM)
+    row.name:SetText("補給 " .. it.n); paint(row.name, DIM)
+  elseif it.kind == "spot" then
+    row.name:SetText(it.label); paint(row.name, it.warn and AMBER or TEXT)
+    row.prog:SetText(string.format("%.1f, %.1f", it.p.x, it.p.y))
   elseif it.kind == "ghead" then
     row.ck:SetText(UI.grindOpen and "-" or "+"); paint(row.ck, DIM)
     row.name:SetText("練怪地點 " .. it.n); paint(row.name, DIM)
@@ -915,6 +932,10 @@ local function onRowClick(row, button)
   elseif it.kind == "miss" then E.PinIndex(state, it.m.i)
   elseif it.kind == "step" then
     if button == "RightButton" then E.ToggleSkip(it.step.key) else E.PinIndex(state, it.i) end
+  elseif it.kind == "shead" then
+    UI.supOpen = not UI.supOpen
+  elseif it.kind == "spot" then
+    MG.wpOverride = { map = it.p.map, x = it.p.x, y = it.p.y, name = it.label }
   elseif it.kind == "ghead" then
     UI.grindOpen = not UI.grindOpen
   elseif it.kind == "grind" then
@@ -1133,6 +1154,47 @@ function UI.Create()
     drawPanel()
   end)
   lhint:Hide()
+
+  -- 一列提示＋按鈕（危險、修裝、開飛行點共用）
+  local function hintRow(buttons)
+    local f = CreateFrame("Frame", nil, root)
+    f:SetSize(300, 24)
+    box(f, BRONZE)
+    f.label = text(f, 13, AMBER)
+    f.btns = {}
+    f.label:SetPoint("LEFT", 10, 0)
+    local right = -6
+    for k = #buttons, 1, -1 do
+      local b = buttons[k]
+      local btn = goldButton(f, b[1], b[2]); btn:SetHeight(18); btn:SetPoint("RIGHT", right, 0)
+      btn:SetScript("OnClick", function() b[3](f) end)
+      f.btns[k] = btn
+      right = right - b[2] - 4
+    end
+    f.label:SetPoint("RIGHT", right - 2, 0)
+    f:Hide()
+    return f
+  end
+  local function go(f) if f.p then MG.wpOverride = { map = f.p.map, x = f.p.x, y = f.p.y, name = f.p.npc or f.p.k }; MG.Refresh(true) end end
+  xhint = hintRow({})
+  rhint = hintRow({ { "去", 40, go } })
+  fhint = hintRow({ { "去", 40, go }, { "略過", 40, function(f) if f.p then MG.db.fpSkip[f.p.npc] = true end; MG.Refresh(true) end } })
+
+  -- 保留物品：背包物品提示加「別賣」
+  if TooltipDataProcessor and TooltipDataProcessor.AddTooltipPostCall and Enum and Enum.TooltipDataType and Enum.TooltipDataType.Item then
+    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(tip, data)
+      MG.try("保留物品提示", function()
+        local keep = MG.Route.keep
+        if tip ~= GameTooltip or not keep or not UI.Get("keepOn") then return end
+        local id = data and data.id
+        if not id or (issecretvalue and issecretvalue(id)) then return end
+        local k = keep[id]
+        if not k or (k.q and E.Turned(k.q)) then return end
+        local st = k.q and E.QuestStation(k.q)
+        tip:AddLine(k.q and ("別賣：" .. E.Title({ t = "accept", q = k.q }) .. (st and ("（" .. UI.StName(st) .. "）") or "") .. "會用到") or (k.use:find("^別賣") and k.use or ("別賣：" .. k.use)), AMBER[1], AMBER[2], AMBER[3], true)
+      end)
+    end)
+  end
 
   panel = CreateFrame("Frame", nil, root)
   panel:SetSize(320, 34 + 18 * ROW_H + 8)
@@ -1817,6 +1879,40 @@ function UI.Render(S)
     above = lhint
   end
   lhint:SetShown(#leave > 0)
+  -- 附近危險、該修裝、順路開飛行點
+  local function put(f, show)
+    if show then
+      f:SetWidth(UI.Get("barWidth"))
+      f:ClearAllPoints()
+      f:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
+      above = f
+    end
+    f:SetShown(show and true or false)
+  end
+  local st = state and not state.instance and state.st
+  local danger, fp = E.Nearby(st)
+  if danger then xhint.label:SetText("危險：" .. danger.text) end
+  put(xhint, danger)
+  local low = st and UI.Get("supplyOn") and E.Durability()
+  local repair
+  if low and low < 0.3 then
+    local map, x, y = C.Position()
+    local best
+    for _, s in ipairs(st.supply or {}) do
+      if s.k == "修理" then
+        local d = (s.map == map and x) and math.sqrt((s.x - x) ^ 2 + (s.y - y) ^ 2) or 999
+        if not best or d < best then best, repair = d, s end
+      end
+    end
+    rhint.p = repair
+    rhint.label:SetText(repair and ("該修裝：" .. (repair.npc or "修理") .. (best < 10 and "（就在附近）" or "")) or ("該修裝了（耐久 " .. math.floor(low * 100) .. "%）"))
+  end
+  rhint.btns[1]:SetShown(rhint.p ~= nil)
+  put(rhint, low and low < 0.3)
+  fhint.p = fp
+  if fp then fhint.label:SetText("順路開飛行點：" .. fp.npc) end
+  put(fhint, fp)
+
   panel:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
   drawPanel()
 end

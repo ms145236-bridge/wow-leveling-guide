@@ -416,7 +416,7 @@ function E.Locate(st)
   local done, na, autoDone = {}, {}, {}
   for i, step in ipairs(steps) do
     local s = step.s
-    na[i] = step.defer or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or false
+    na[i] = step.defer or db.notNow[step.key] or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or false
     local auto = stepDone(step, map, x, y)
     autoDone[i] = auto
     local mark = db.mark[step.key]
@@ -807,6 +807,48 @@ function E.QuestNote(q)
   local f = R.feeds and R.feeds[q]
   if f then return "不在路線上", "值得做", "接後續：" .. questName(f) end
   return "不在路線上", "之後順路", "順路再做"
+end
+
+-- 任務出現的第一站（保留物品提示用）
+function E.QuestStation(q) return questSt[q] and questSt[q][1] end
+-- 補給：本站的（職業材料只給對的職業）
+function E.SupplyFor(st)
+  local out = {}
+  for _, s in ipairs(st and st.supply or {}) do
+    local ok = not s.c
+    for _, c in ipairs(s.c or {}) do if c == me.class then ok = true end end
+    if ok then out[#out + 1] = s end
+  end
+  return out
+end
+-- 位置類提示（同地圖、5% 內）：附近的危險、還沒開過的飛行點
+function E.Nearby(st)
+  local map, x, y = C.Position()
+  if not (st and map and x) then return end
+  local function near(p) return p.map == map and p.x and (p.x - x) ^ 2 + (p.y - y) ^ 2 <= 25 end
+  local danger, fp
+  if MG.UI.Get("dangerOn") then
+    for _, d in ipairs(st.danger or {}) do if near(d) then danger = d; break end end
+  end
+  if MG.UI.Get("supplyOn") then
+    for _, s in ipairs(st.supply or {}) do
+      if s.k == "飛行管理員" and s.npc and near(s) and not MG.db.fpSeen[s.npc] and not MG.db.fpSkip[s.npc] then fp = s; break end
+    end
+  end
+  return danger, fp
+end
+-- 裝備耐久最低的比例（讀不到或是秘密值的格子不算）
+function E.Durability()
+  if not GetInventoryItemDurability then return end
+  local low
+  for slot = 1, 18 do
+    local cur, max = GetInventoryItemDurability(slot)
+    if cur and max and not (issecretvalue and (issecretvalue(cur) or issecretvalue(max))) and max > 0 then
+      local r = cur / max
+      if not low or r < low then low = r end
+    end
+  end
+  return low
 end
 
 function E.ToggleSkip(key)

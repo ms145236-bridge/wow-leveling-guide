@@ -117,7 +117,7 @@ const near = (spawns, map) => clusterCenter(spawns.filter((p) => p.map === map))
 // ── 讀檔 ─────────────────────────────────────────────────────────────────────
 const files = readdirSync(ROUTE).filter((f) => f.endsWith(".md")).sort((a, b) => (a.startsWith("_") - b.startsWith("_")) || a.localeCompare(b));
 let stations = [];
-const sideFile = (f) => /^0[67]-/.test(f) || f === "xp-table.md";
+const sideFile = (f) => /^0[6-9]-/.test(f) || f === "xp-table.md";
 for (const file of files.filter((f) => !sideFile(f))) {
   const test = file.startsWith("_");
   const prefix = test ? "t" + (file.match(/\d+/)?.[0] ?? "") : file.match(/^\d+/)?.[0] ?? file.replace(/\.md$/, "");
@@ -181,6 +181,25 @@ for (const file of files.filter((f) => !sideFile(f))) {
       const ph = line.match(/^\s*-?\s*(進本前要接|副本內|出本後交)/);
       if (ph) { st.phase = { 進本前要接: "pre", 副本內: "in", 出本後交: "post" }[ph[1]]; return; }
     }
+    // 補給｜類型｜NPC｜座標（職業材料可在類型或行尾寫職業）；危險｜說明｜座標
+    const sup = line.match(/^\s*-\s*補給｜(.*)$/);
+    if (sup) {
+      const f = sup[1].replace(/【[^】]*】/g, "").split("｜").map((x) => x.trim());
+      const c = parseCoord(f[2]);
+      const cls = Object.entries(CLASS).filter(([zh]) => sup[1].includes(zh)).map(([, tok]) => tok);
+      const k = (f[0] || "").replace(/[（(].*$/, "").trim();
+      if (k && c) (st.supply ||= []).push({ k, npc: f[1] || undefined, map: c.map || st.map, x: c.x, y: c.y, c: k === "職業材料" && cls.length ? [...new Set(cls)] : undefined });
+      else warn(where, "補給格式看不懂：" + sup[1].slice(0, 40));
+      return;
+    }
+    const dang = line.match(/^\s*-\s*危險｜(.*)$/);
+    if (dang) {
+      const f = dang[1].replace(/【[^】]*】/g, "").split("｜").map((x) => x.trim());
+      const c = parseCoord(f[1]);
+      if (f[0] && c) (st.danger ||= []).push({ text: f[0], map: c.map || st.map, x: c.x, y: c.y });
+      else warn(where, "危險格式看不懂：" + dang[1].slice(0, 40));
+      return;
+    }
     // 好裝｜物品名｜職業｜掉落首領（副本）
     const loot = line.match(/^\s*-\s*好裝｜(.*)$/);
     if (loot) {
@@ -220,7 +239,8 @@ for (const file of files.filter((f) => !sideFile(f))) {
     const step = { verb: sm[1], t: VERB[sm[1]], where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined,
       desc: tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")).join("；") || undefined,
-      star: starOf(tags), rate: (tags.map((t) => t.match(/^掉率\s*(\d+(?:\.\d+)?)\s*%/)).find(Boolean) || [])[1] };
+      star: starOf(tags), rate: (tags.map((t) => t.match(/^掉率\s*(\d+(?:\.\d+)?)\s*%/)).find(Boolean) || [])[1],
+      pre: tags.map((t) => t.match(/^前置[：:].*?(\d{2,6})\s*$/)).filter(Boolean).map((m) => +m[1]) };
     if (step.t === "accept" || step.t === "turnin" || step.t === "do") {
       Object.assign(step, splitName(f[0]));
       if (/^[?？]?$/.test(step.zh)) step.zh = ""; // 中文名未知：用 QuestieDB 的 zhTW，再不行用英文名
@@ -353,6 +373,7 @@ const used = new Set(); // `${t}:${id}`
 const lastByName = new Map(); // 名稱 → 最近接的任務 ID
 for (const st of stations) {
   st.map ||= ZONE_MAP[st.name.split(/[・·]/)[0]];
+  for (const p of [...(st.grind || []), ...(st.supply || []), ...(st.danger || [])]) p.map ||= st.map; // 解析當下站的地圖可能還沒定
   for (const step of st.steps) {
     if (!["accept", "do", "turnin"].includes(step.t)) {
       if (step.coord) step.coord.map ||= st.map;
@@ -400,6 +421,11 @@ for (const st of stations) {
         : { n: step.zh || step.en, st: st.id });
     }
     if (step.keep) quests.get(id).keep = true;
+    // 【前置：… ID】寫在任何一個檔的任何一步，都併進這個任務的前置（全部要做）
+    for (const p of step.pre || []) {
+      const e = quests.get(id);
+      if (!(e.pg || []).includes(p) && !(e.ps || []).includes(p)) e.pg = [...(e.pg || []), p];
+    }
     if (step.star) quests.get(id).star = step.star;
     if (+step.rate > 0) quests.get(id).rate = +step.rate / 100;
     if (step.t === "do" || !q) { if (step.coord) step.coord.map ||= st.map; continue; }
@@ -433,6 +459,32 @@ for (const st of stations) {
   const noCoord = st.steps.filter((s) => s.t === "do" && !s.coord).length;
   if (noCoord) warn(`${st.id} ${st.name}`, `${noCoord} 個「做」步驟沒有座標（不會出現箭頭）`);
   if (!st.map) hard(`${st.id} ${st.name}`, "沒有地圖 ID");
+}
+
+// 順序檢查：「接」的前置在同一站較後面才交 → 把這個接（和夾在中間的同任務步驟）移到那個交後面
+const orderFixes = [];
+for (const st of stations) {
+  if (st.dungeon) continue;
+  for (let guard = 0; guard < 100; guard++) {
+    let moved = false;
+    for (let i = 0; i < st.steps.length && !moved; i++) {
+      const a = st.steps[i];
+      if (a.t !== "accept" || !a.id) continue;
+      const e = quests.get(a.id) || {};
+      const pres = [...(e.pg || []), ...((e.ps || []).length === 1 ? e.ps : [])];
+      for (const p of pres) {
+        const j = st.steps.findIndex((x, k) => k > i && x.t === "turnin" && x.id === p);
+        if (j < 0) continue;
+        const mine = st.steps.filter((x, k) => k >= i && k < j && x.id === a.id);
+        st.steps = st.steps.filter((x, k) => !(k >= i && k < j && x.id === a.id));
+        st.steps.splice(st.steps.findIndex((x) => x.t === "turnin" && x.id === p) + 1, 0, ...mine);
+        orderFixes.push(`- ${st.id} ${st.name}：接「${e.n}」（${a.id}）原本排在前置「${quests.get(p)?.n || p}」（${p}）交之前，已移到交之後`);
+        moved = true;
+        break;
+      }
+    }
+    if (!moved) break;
+  }
 }
 
 // 副本前置鏈報告
@@ -545,7 +597,7 @@ for (const s of stations) {
     const parts = short.slice(sp + 1).split(/與|／|、/);
     if (parts.length > 1) short = short.slice(0, sp + 1) + parts[0] + "等";
   }
-  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, short=${lua(short !== full ? short : undefined)}, visit=${lua(visit > 1 ? visit : undefined)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, grind=${lua(s.grind && s.grind.length ? s.grind.map((g) => ({ mob: g.mob, lv: g.lv, map: g.map, x: g.x, y: g.y, note: g.note })) : undefined)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)}, loot=${lua(s.loot)},\n      steps = {\n`;
+  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, short=${lua(short !== full ? short : undefined)}, visit=${lua(visit > 1 ? visit : undefined)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, grind=${lua(s.grind && s.grind.length ? s.grind.map((g) => ({ mob: g.mob, lv: g.lv, map: g.map, x: g.x, y: g.y, note: g.note })) : undefined)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)}, loot=${lua(s.loot)}, supply=${lua(s.supply)}, danger=${lua(s.danger)},\n      steps = {\n`;
   for (const step of s.steps) if (step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id) out += `        ${lua(stepOut(step, s))},\n`;
   out += `      } },\n`;
 }
@@ -601,8 +653,18 @@ for (const file of files.filter((f) => /^07-/.test(f))) {
     trainers.push({ c: CLASS[m[1].trim()], lv, place, npc, map: map || main.find((x) => x.id === ids[0])?.map, x: c?.x, y: c?.y, st: ids });
   });
 }
+// ── 08 保留物品：物品名｜物品ID｜何時拿到｜何時用到（用到的任務 ID 寫在文字裡就會在任務交掉後不再提示） ──
+const keep = new Map();
+for (const file of files.filter((f) => /^08-/.test(f))) {
+  readFileSync(join(ROUTE, file), "utf8").split(/\r?\n/).forEach((line, li) => {
+    const f = line.replace(/^\s*-\s*/, "").split("｜").map((x) => x.trim());
+    if (f.length < 4 || !/^\d+$/.test(f[1])) return;
+    const q = [...f[3].matchAll(/\d{2,6}/g)].map((m) => +m[0]).find((n) => quests.has(n));
+    keep.set(+f[1], { n: f[0], use: f[3].replace(/【[^】]*】/g, "").trim(), q });
+  });
+}
 const luaMap = (m) => (m.size ? "{" + [...m].map(([k, v]) => `[${k}]=${lua(v)}`).join(", ") + "}" : "nil"); // 數字鍵（任務 ID）
-out += `  },\n  offroute = ${luaMap(offroute)},\n  feeds = ${luaMap(feeds)},\n  trainers = ${lua(trainers.length ? trainers : undefined)},\n`;
+out += `  },\n  offroute = ${luaMap(offroute)},\n  feeds = ${luaMap(feeds)},\n  trainers = ${lua(trainers.length ? trainers : undefined)},\n  keep = ${luaMap(keep)},\n`;
 out += `  quests = {\n`;
 for (const [id, q] of [...quests.entries()].sort((a, b) => a[0] - b[0])) {
   const { st, next, ...rest } = q;
@@ -614,9 +676,10 @@ const version = createHash("sha1").update(out).digest("hex").slice(0, 8);
 out = out.replace("@@BUILT@@", version);
 writeFileSync(OUT, out);
 
-const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 學技能站（候選站依序，遊戲取第一個本角色有的）\n\n${trainers.map((t) => `- ${t.c} ${t.lv} ${t.npc}（${t.place}）→ ${t.st.slice(0, 4).map((id) => id + " " + stations.find((x) => x.id === id).name).join("、")}`).join("\n") || "無"}\n`;
+const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 順序錯誤（已自動調整 ${orderFixes.length}）\n\n${orderFixes.join("\n") || "無"}\n\n## 學技能站（候選站依序，遊戲取第一個本角色有的）\n\n${trainers.map((t) => `- ${t.c} ${t.lv} ${t.npc}（${t.place}）→ ${t.st.slice(0, 4).map((id) => id + " " + stations.find((x) => x.id === id).name).join("、")}`).join("\n") || "無"}\n`;
 writeFileSync(REPORT, report);
-console.log(`路線外判定 ${offroute.size}、路線外前置 ${feeds.size}、訓練師 ${trainers.length}`);
+console.log(`順序錯誤已調整 ${orderFixes.length}`);
+console.log(`路線外判定 ${offroute.size}、路線外前置 ${feeds.size}、訓練師 ${trainers.length}、保留物品 ${keep.size}、補給 ${stations.reduce((n, x) => n + (x.supply?.length || 0), 0)}、危險 ${stations.reduce((n, x) => n + (x.danger?.length || 0), 0)}`);
 console.log(`站 ${stations.length}、任務 ${quests.size}、需要處理 ${issues.hard.length}、提醒 ${issues.warn.length}、名稱不一致 ${nameIssues.length}`);
 console.log("裸任務 ID 換成任務名：" + ([...idStats.entries()].map(([k, v]) => k + " " + v).join("、") || "0"));
 console.log(`→ ${OUT}\n→ ${REPORT}`);

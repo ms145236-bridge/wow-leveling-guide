@@ -3,7 +3,7 @@ local ADDON, MG = ...
 local E, C, N, UI = MG.E, MG.C, MG.N, MG.UI
 local R = MG.Route or { stations = {}, quests = {} }
 
-local DEFAULTS = { grindSkip = {}, dNo = {}, dDismiss = {}, mark = {}, pin = {}, skip = {}, latch = {}, drop = {}, carry = {}, shown = true } -- 其餘設定的預設在 UI.lua 的設定表
+local DEFAULTS = { notNow = {}, fpSeen = {}, fpSkip = {}, grindSkip = {}, dNo = {}, dDismiss = {}, mark = {}, pin = {}, skip = {}, latch = {}, drop = {}, carry = {}, shown = true } -- 其餘設定的預設在 UI.lua 的設定表
 local f = CreateFrame("Frame")
 local registered = {} -- 事件 → 是否註冊成功（probe 用）
 local trace = {} -- 事件參數紀錄（probe 用）
@@ -113,7 +113,9 @@ f:SetScript("OnUpdate", function(_, dt)
     tick = 0
     local cur = lastState and lastState.cur and lastState.steps[lastState.cur].s
     if cur and cur.t == "goto" then dirty = true end
-    local d = E.Detour(lastState) -- 順路提醒：位置一變就要重看，結果有變才重畫
+    -- 順路提醒、附近危險、沒開的飛行點：位置一變就要重看，結果有變才重畫
+    local danger, fp = E.Nearby(lastState and not lastState.instance and lastState.st)
+    local d = tostring((E.Detour(lastState))) .. tostring(danger) .. tostring(fp)
     if d ~= lastDetour then lastDetour = d; dirty = true end
   end
 end)
@@ -141,6 +143,39 @@ end
 -- 路線上的任務；可跳過的只在設定開啟或已在日誌時算
 local function inRoute(id)
   return id and id > 0 and R.quests[id] ~= nil and not (optQ[id] and not UI.Get("optional") and not C.IsOnQuest(id))
+end
+
+-- 安全網：打開目前「接」步驟的 NPC，卻沒有這個任務可接 → 先跳過（升級或交任務後再看）。
+-- 只直接跳出任務內容（沒有先開對話選單）才看 QUEST_DETAIL，避免自動接交選了別的任務時誤判。
+local lastMenu = 0
+local function notOffered(event)
+  if event ~= "QUEST_DETAIL" then lastMenu = GetTime() elseif GetTime() - lastMenu < 3 then return end
+  local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
+  local s = cur and cur.s
+  if not (s and s.t == "accept" and s.q) or C.IsOnQuest(s.q) or E.Turned(s.q) then return end
+  local name = UnitName("npc")
+  if not name or (issecretvalue and issecretvalue(name)) or (name ~= s.npc and name ~= s.tgt) then return end
+  local offered = false
+  if event == "QUEST_DETAIL" then
+    local id = GetQuestID and GetQuestID()
+    if not id or (issecretvalue and issecretvalue(id)) then return end
+    offered = id == s.q
+  elseif event == "GOSSIP_SHOW" then
+    local G = C_GossipInfo
+    if not (G and G.GetAvailableQuests) then return end
+    for _, q in ipairs(G.GetAvailableQuests() or {}) do
+      if issecretvalue and issecretvalue(q.questID) then return end
+      if q.questID == s.q then offered = true end
+    end
+  else
+    for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do
+      if routeQuestByTitle(GetAvailableTitle(i)) == s.q then offered = true end
+    end
+  end
+  if not offered then
+    MG.db.notNow[cur.key] = true
+    MG.msg("「" .. E.Title(s) .. "」現在接不到，先做下一步（升級或交任務後再看）")
+  end
 end
 
 local AUTO = {}
@@ -184,7 +219,7 @@ local EVENTS = {
   "ADDON_LOADED", "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_REMOVED", "QUEST_TURNED_IN", "QUEST_LOG_UPDATE",
   "UNIT_QUEST_LOG_CHANGED", "PLAYER_LEVEL_UP", "ZONE_CHANGED_NEW_AREA", "PLAYER_CONTROL_GAINED", "HEARTHSTONE_BOUND",
   "TAXIMAP_OPENED", "QUEST_DETAIL", "QUEST_PROGRESS", "QUEST_COMPLETE", "GOSSIP_SHOW", "QUEST_GREETING",
-  "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "TRAINER_SHOW",
+  "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "TRAINER_SHOW", "UPDATE_INVENTORY_DURABILITY",
 }
 for _, e in ipairs(EVENTS) do registered[e] = pcall(f.RegisterEvent, f, e) end
 
@@ -217,6 +252,7 @@ local function onEvent(_, event, ...)
     local id = ...
     if type(id) == "number" then
       E.session[id] = true
+      wipe(MG.db.notNow) -- 交了任務：暫時接不到的重新看
       trace.QUEST_TURNED_IN = id .. "，事件當下已標記完成：" .. tostring(C.IsTurnedIn(id))
     end
   elseif event == "TRAINER_SHOW" then
@@ -224,10 +260,15 @@ local function onEvent(_, event, ...)
     if name and not (issecretvalue and issecretvalue(name)) then E.Trained(name) end
   elseif event == "PLAYER_LEVEL_UP" then
     MG.db.sugHide = nil
-  elseif event == "TAXIMAP_OPENED" then latchCurrent("fp"); latchCurrent("travel")
+    wipe(MG.db.notNow)
+  elseif event == "TAXIMAP_OPENED" then
+    latchCurrent("fp"); latchCurrent("travel")
+    local name = UnitName("npc")
+    if name and not (issecretvalue and issecretvalue(name)) then MG.db.fpSeen[name] = true end
   elseif event == "PLAYER_CONTROL_GAINED" then latchCurrent("fly")
   elseif event == "ZONE_CHANGED_NEW_AREA" then latchCurrent("boat"); N.Forget()
   elseif AUTO[event] then
+    if event ~= "QUEST_PROGRESS" and event ~= "QUEST_COMPLETE" then MG.try("接不到檢查", notOffered, event); dirty = true end
     if autoOn() then MG.try("自動接交", AUTO[event]) end
     return
   end
