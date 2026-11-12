@@ -526,7 +526,16 @@ for (const s of stations) {
   idFile = s.file;
   refPrefix = s.dungeon ? s.after.split("-")[0] : s.id.split("-")[0];
   const start = s.when?.race && s.lv[0] <= 12 ? s.when.race.join("/") : undefined;
-  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, grind=${lua(s.grind && s.grind.length ? s.grind.map((g) => ({ mob: g.mob, lv: g.lv, map: g.map, x: g.x, y: g.y, note: g.note })) : undefined)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)},\n      steps = {\n`;
+  // 顯示用短名：去掉「第一次」，第二次起改成 visit＝2、3…（介面以淡色 (2) 顯示）；子區域有「與／、」只留第一個＋「等」
+  let visit;
+  const full = safeText(s.name);
+  let short = full.replace(/\s*第([一二三四五])次$/, (_, c) => { visit = "一二三四五".indexOf(c) + 1; return ""; });
+  const sp = short.indexOf(" ");
+  if (sp > 0) {
+    const parts = short.slice(sp + 1).split(/與|／|、/);
+    if (parts.length > 1) short = short.slice(0, sp + 1) + parts[0] + "等";
+  }
+  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, short=${lua(short !== full ? short : undefined)}, visit=${lua(visit > 1 ? visit : undefined)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, grind=${lua(s.grind && s.grind.length ? s.grind.map((g) => ({ mob: g.mob, lv: g.lv, map: g.map, x: g.x, y: g.y, note: g.note })) : undefined)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)},\n      steps = {\n`;
   for (const step of s.steps) if (step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id) out += `        ${lua(stepOut(step, s))},\n`;
   out += `      } },\n`;
 }

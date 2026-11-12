@@ -42,6 +42,7 @@ local SPEC = {
   { section = "展開清單" },
   { key = "listAlpha", label = "背景透明度", min = 0, max = 100, step = 5, def = 88, unit = "%" },
   { key = "listRows", label = "高度（行數）", min = 8, max = MAX_ROWS, step = 1, def = 18 },
+  { key = "listWidth", label = "寬度", min = 280, max = 600, step = 10, def = 320 },
   { key = "showDone", label = "顯示已完成步驟", def = true },
   { key = "showNum", label = "顯示步驟編號", def = true },
   { section = "地圖標點" },
@@ -102,6 +103,26 @@ function UI.InitDefaults()
   end
 end
 function UI.Rows() return UI.Get("listRows") end
+
+-- 站名（短名＋淡色的第幾次）；完整名字在滑鼠提示
+function UI.StName(st)
+  return (st.short or st.name) .. (st.visit and ("|cff8b8f98(" .. st.visit .. ")|r") or "")
+end
+-- 文字被截斷了嗎（被截才需要滑鼠提示）
+local function truncated(fs)
+  if fs.IsTruncated then return fs:IsTruncated() end
+  return fs:GetStringWidth() > fs:GetWidth() + 0.5
+end
+-- 站的完整資訊提示：全名、地區、等級、進度
+local function stationTip(owner, st, extra)
+  GameTooltip:SetOwner(owner, "ANCHOR_RIGHT")
+  GameTooltip:AddLine(st.name, GOLD[1], GOLD[2], GOLD[3])
+  local got, total = E.Progress(st)
+  local zone = st.map and C.MapName(st.map)
+  GameTooltip:AddLine((zone and (zone .. "  ") or "") .. st.lv[1] .. "-" .. st.lv[2] .. " 級" .. (total > 0 and ("  " .. got .. "/" .. total) or ""), DIM[1], DIM[2], DIM[3])
+  for _, l in ipairs(extra or {}) do GameTooltip:AddLine(l, AMBER[1], AMBER[2], AMBER[3], true) end
+  GameTooltip:Show()
+end
 
 local function text(parent, size, color, justify)
   local s = parent:CreateFontString(nil, "OVERLAY")
@@ -219,6 +240,9 @@ function UI.ApplySettings()
   bar.title:SetFont(FONT, fsz, "")
   for _, f in ipairs({ bar.l2, bar.l3, unpack(bar.objs) }) do f:SetFont(FONT, fsz - 2, "") end
   panel:SetHeight(34 + UI.Rows() * ROW_H + 8)
+  local lw = UI.Get("listWidth")
+  panel:SetWidth(lw)
+  for _, row in ipairs(rows) do row:SetWidth(lw - 2); row.para:SetWidth(lw - 2 - 28 - 12) end
   root:ClearAllPoints()
   local p = MG.db.pos
   if p and p.x and p.y then root:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", p.x, p.y)
@@ -737,7 +761,7 @@ local function fillRow(row, it)
     local st = it.st
     local got, total = E.Progress(st)
     local lv = UnitLevel("player") or 1
-    row.name:SetText(st.name .. (st.test and "（測試）" or ""))
+    row.name:SetText(UI.StName(st) .. (st.test and "（測試）" or ""))
     row.lvt:SetText(st.lv[1] .. "-" .. st.lv[2]); row.lvt:Show()
     paint(row.lvt, (lv >= st.lv[1] and lv <= st.lv[2]) and GOLD or FAINT)
     row.prog:SetText(got .. "/" .. total)
@@ -795,7 +819,7 @@ local function drawPanel()
       end
       panel.station:SetText(lv .. " 級可去 " .. n .. " 本")
     else
-      panel.station:SetText(st and (st.name .. "  " .. st.lv[1] .. "-" .. st.lv[2]) or "")
+      panel.station:SetText(st and (UI.StName(st) .. "  " .. st.lv[1] .. "-" .. st.lv[2]) or "")
     end
   end
 end
@@ -996,7 +1020,8 @@ function UI.Create()
   end)
   bar:SetScript("OnEnter", function(self)
     local cur = state and state.cur and state.steps[state.cur]
-    if cur then UI.StepTooltip(self, cur.s, nil, true) end
+    if cur then UI.StepTooltip(self, cur.s, nil, true)
+    elseif state and state.st and E.Next(state.st) then stationTip(self, E.Next(state.st)) end
   end)
   bar:SetScript("OnLeave", function() GameTooltip:Hide() end)
   bar:EnableMouseWheel(true)
@@ -1133,6 +1158,10 @@ function UI.Create()
   panel.station = text(st, 12, DIM, "RIGHT")
   panel.station:SetAllPoints()
   st:SetScript("OnClick", function() setTab("map") end)
+  st:SetScript("OnEnter", function(self)
+    if state and state.st and tab ~= "dg" and (truncated(panel.station) or state.st.short) then stationTip(self, state.st) end
+  end)
+  st:SetScript("OnLeave", function() GameTooltip:Hide() end)
   local div = panel:CreateTexture(nil, "BORDER")
   div:SetColorTexture(EDGE[1], EDGE[2], EDGE[3], 1)
   div:SetPoint("TOPLEFT", 1, -30); div:SetPoint("TOPRIGHT", -1, -30); div:SetHeight(1)
@@ -1249,12 +1278,11 @@ function UI.Create()
       elseif it and it.kind == "dqi" and it.step then UI.StepTooltip(self, it.step.s, nil, true)
       elseif it and it.kind == "dch" then UI.StepTooltip(self, it.steps[1].s, nil, true)
       elseif it and it.kind == "station" then
-        local pre = E.MissingPre(it.st)
-        if #pre > 0 then
-          GameTooltip:SetOwner(self, "ANCHOR_RIGHT"); GameTooltip:AddLine(it.st.name, GOLD[1], GOLD[2], GOLD[3])
-          for _, m in ipairs(pre) do GameTooltip:AddLine("少了前置：" .. E.Title({ t = "accept", q = m.p }) .. "（在 " .. m.pst.name .. " 接）→ 這裡的 " .. E.Title({ t = "accept", q = m.q }) .. " 不能做", AMBER[1], AMBER[2], AMBER[3], true) end
-          GameTooltip:Show()
-        end
+        local extra = {}
+        for _, m in ipairs(E.MissingPre(it.st)) do extra[#extra + 1] = "少了前置：" .. E.Title({ t = "accept", q = m.p }) .. "（在 " .. m.pst.name .. " 接）→ 這裡的 " .. E.Title({ t = "accept", q = m.q }) .. " 不能做" end
+        if #extra > 0 or truncated(self.name) or it.st.short then stationTip(self, it.st, extra) end
+      elseif it and truncated(self.name) then
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT"); GameTooltip:AddLine(self.name:GetText(), 1, 1, 1, true); GameTooltip:Show()
       elseif it and it.kind == "grind" and it.g.note then
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT"); GameTooltip:AddLine(it.g.mob, GOLD[1], GOLD[2], GOLD[3]); GameTooltip:AddLine(it.g.note, DIM[1], DIM[2], DIM[3], true); GameTooltip:Show() end
     end)
@@ -1594,7 +1622,7 @@ function UI.Render(S)
   else
     local nxt = S.nextSt
     verb = "→"
-    title = nxt and ("前往 " .. nxt.name) or "路線已走完"
+    title = nxt and ("前往 " .. UI.StName(nxt)) or "路線已走完"
     right = nxt and (nxt.lv[1] .. "-" .. nxt.lv[2]) or ""
     l2 = state.tail
     for _, tip in ipairs(state.st.tips or {}) do
@@ -1714,10 +1742,10 @@ function UI.Render(S)
   chip.sug, chip.next = nil, nil
   if S.sug and db.sugHide ~= lv then
     chip.sug = S.sug
-    chip.label:SetText("→ " .. S.sug.name .. "  " .. S.sug.lv[1] .. "-" .. S.sug.lv[2])
+    chip.label:SetText("→ " .. UI.StName(S.sug) .. "  " .. S.sug.lv[1] .. "-" .. S.sug.lv[2])
   elseif state and not state.cur and S.nextSt then
     chip.next = S.nextSt
-    chip.label:SetText("→ " .. S.nextSt.name .. "  " .. S.nextSt.lv[1] .. "-" .. S.nextSt.lv[2])
+    chip.label:SetText("→ " .. UI.StName(S.nextSt) .. "  " .. S.nextSt.lv[1] .. "-" .. S.nextSt.lv[2])
   end
   chip:SetShown(chip.sug ~= nil or chip.next ~= nil)
   if chip:IsShown() then chip:SetWidth(math.min(UI.Get("barWidth"), chip.label:GetStringWidth() + 28)) end
