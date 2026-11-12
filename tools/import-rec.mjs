@@ -230,5 +230,5 @@ out.push(``, `## 事件參數形狀`, ``);
 for (const r of by("args")) out.push(`- ${r.k[0]}(${r.k[1]})：例 ${r.x[0]}`);
 out.push(``, `## 建議修改（不會自動改 route/*.md）`, ``, ...(patches.length ? patches : ["（無）"]), ``);
 
-writeFileSync(join(ROOT, "tools", "rec-report.md"), out.join("\n"));
+writeFileSync(process.env.OUT_REPORT || join(ROOT, "tools", "rec-report.md"), out.join("\n")); // 測試時用 OUT_REPORT 寫到別處
 console.log(`記錄 ${rows.length} 筆；任務 ${Object.keys(seenQ).length}；不一致 ${issues.length}；經驗表 ${Object.keys(xpTable).length} 級；建議 ${patches.length} 項 → tools/rec-report.md`);

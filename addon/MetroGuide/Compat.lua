@@ -183,15 +183,16 @@ function C.Auras()
   end
   return out
 end
--- 任務經驗 +3% 的增益法術 ID（還沒確認是哪個，先留空；記錄報告找出來後填進來）
+-- 任務經驗 +3% 的增益：主人確認名字是「充分休息」（和打怪的休息經驗不同）；法術 ID 從記錄報告找到後填進 XP_BUFFS
+C.XP_BUFF_NAME = "充分休息"
 C.XP_BUFFS = {}
 -- 有已知的經驗增益就回傳它（一次重算內只掃一次）
 function C.XPBuff()
   local m = C.memo
   if m and m.xpbuff ~= nil then return m.xpbuff or nil end
   local found = false
-  if next(C.XP_BUFFS) then
-    for _, a in ipairs(C.Auras()) do if a.id and C.XP_BUFFS[a.id] then found = a; break end end
+  for _, a in ipairs(C.Auras()) do
+    if (a.id and C.XP_BUFFS[a.id]) or a.name == C.XP_BUFF_NAME then found = a; break end
   end
   if m then m.xpbuff = found end
   return found or nil
