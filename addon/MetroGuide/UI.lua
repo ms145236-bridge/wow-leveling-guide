@@ -308,6 +308,16 @@ local function cycleStart()
   end
 end
 
+-- 建置時切好的句子（{文字, 條件}），只留適用本角色的（職業／種族）
+function UI.Sentences(list, fallback)
+  local out = {}
+  if list then
+    for _, x in ipairs(list) do if E.Applies(x[2]) then out[#out + 1] = x[1] end end
+    return out
+  end
+  return fallback or {}
+end
+
 -- 段落：依「；」「。」切成條列，每條一段（由字串自己換行）
 local function bullets(t)
   local out, from = {}, 1
@@ -346,11 +356,11 @@ local function buildItems()
         if d.entrance then items[#items + 1] = { kind = "dtext", text = "入口：" .. d.entrance } end
         if d.pickup then
           items[#items + 1] = { kind = "dhead", text = "前置接取路線" }
-          for _, t in ipairs(bullets(d.pickup)) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
+          for _, t in ipairs(UI.Sentences(d.pickupS, bullets(d.pickup))) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
         end
         for _, tip in ipairs(d.tips or {}) do
           items[#items + 1] = { kind = "dhead", text = tip.k }
-          for _, t in ipairs(bullets(tip.text)) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
+          for _, t in ipairs(UI.Sentences(tip.s, bullets(tip.text))) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
         end
         for _, ph in ipairs({ { "pre", "前置任務" }, { "in", "副本內" }, { "post", "出本後交" } }) do
           local first = true
@@ -1130,7 +1140,7 @@ function UI.Render(S)
     right = nxt and (nxt.lv[1] .. "-" .. nxt.lv[2]) or ""
     l2 = state.tail
     for _, tip in ipairs(state.st.tips or {}) do
-      if tip.k == "交通" and not l2 then l2 = tip.text end
+      if tip.k == "交通" and not l2 then l2 = table.concat(UI.Sentences(tip.s, { tip.text }), "，") end
     end
     if #state.missed > 0 then l3, l3warn = "漏掉 " .. #state.missed .. " 個任務（展開查看）", true end
   end

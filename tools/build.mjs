@@ -160,6 +160,7 @@ for (const file of files) {
       // 前置接取路線：一行文字；其中「0X-第N站」或「第N站」當建議提早接的站
       const pk = line.match(/^\s*-\s*前置接取路線[｜：:]\s*(.+)$/);
       if (pk) {
+        st.pickupRaw = pk[1].trim();
         st.pickup = pk[1].replace(/【[^】]*】/g, "").trim();
         const at = pk[1].match(/(?:(\d+)\s*-\s*)?第(\d+)站/);
         if (at) st.pickAt = (at[1] || st.after.split("-")[0]) + "-" + at[2];
@@ -178,7 +179,7 @@ for (const file of files) {
       else if (key === "二選一" && v !== "無") st.alt = v;
       else if (key.startsWith("地圖")) st.map = +v || undefined;
       else if (key === "未完") warn(`${st.id} ${st.name}`, `未完：${v}`);
-      else if (key !== "限定" && key !== "二選一") st.tips.push({ k: key, text: v.replace(/【[^】]*】/g, "").trim() });
+      else if (key !== "限定" && key !== "二選一") st.tips.push({ k: key, raw: v, text: v.replace(/【[^】]*】/g, "").trim() });
       return;
     }
     const sm = line.match(/^\s*(?:\d+\s*[.、)]\s*|[-*]\s*)?(交通|接|做|交|到|鳥|爐|飛|船|練|註)｜(.*)$/);
@@ -421,7 +422,45 @@ for (const [id, q] of quests) {
 const idStats = new Map(); // 檔案 → 換掉的裸 ID 數
 let idFile = "";
 const MAP_IDS = new Set(Object.values(ZONE_MAP).concat([1458, 1454, 1456, 2521, 2548]));
-const replaceIds = (text) => text.replace(/(?<![\d.\w])(\d{3,6})(?![\d.,]|\s*[個隻只根張份塊件頭名條把顆片枚級%]|\s+\d+[.,]\d)/g, (all, num, at, whole) => {
+const CLASS_RE = new RegExp("^(" + Object.keys(CLASS).join("|") + ")");
+const RACE_ZH = { ...RACE, 天裔: "天裔" };
+const RACE_RE = new RegExp("^(" + Object.keys(RACE_ZH).join("|") + ")");
+const sentences = (raw) => {
+  const out = [];
+  for (let piece of String(raw || "").split(/[；。]/)) {
+    piece = piece.trim();
+    if (!piece) continue;
+    const tags = [...piece.matchAll(/【([^】]*)】/g)].map((m) => m[1]);
+    let text = piece.replace(/【[^】]*】/g, "").trim();
+    if (!text) continue;
+    let when = parseWhen(tags) || {};
+    // 句首的職業／種族名
+    let head = text.replace(/^[‧\-\s]+/, ""), neg = false;
+    if (head.startsWith("非")) { neg = true; head = head.slice(1); }
+    let m, found = false;
+    while ((m = head.match(RACE_RE) || head.match(CLASS_RE))) {
+      const zh = m[1];
+      if (CLASS[zh]) (when[neg ? "notClass" : "class"] ||= []).push(CLASS[zh]);
+      else (when[neg ? "notRace" : "race"] ||= []).push(RACE_ZH[zh]);
+      head = head.slice(zh.length).replace(/^[／\/、和與]/, "");
+      found = true;
+    }
+    out.push(Object.keys(when).length ? [text, when] : [text]);
+  }
+  return out;
+};
+let refPrefix = "";
+const stationName = (id) => {
+  const st = stations.find((x) => x.id === id);
+  if (!st) return null;
+  const twin = stations.filter((x) => x.name === st.name).length > 1;
+  return "「" + st.name + (twin ? " " + st.lv[0] + "-" + st.lv[1] : "") + "」"; // 用引號框起來，接在句子裡才看得清楚
+};
+const replaceStations = (text) => text
+  .replace(/(\d{2})\s*-\s*第(\d+)站/g, (all, p, n) => stationName(p + "-" + n) || all)
+  .replace(/第(\d+)\s*[–\-~－到或]\s*第?(\d+)站/g, (all, a, b) => { const x = stationName(refPrefix + "-" + a), y = stationName(refPrefix + "-" + b); return x && y ? x + "或" + y : all; })
+  .replace(/第(\d+)站/g, (all, n) => stationName(refPrefix + "-" + n) || all);
+const replaceIds = (text) => replaceStations(text).replace(/(?<![\d.\w])(\d{3,6})(?![\d.,]|\s*[個隻只根張份塊件頭名條把顆片枚級%]|\s+\d+[.,]\d)/g, (all, num, at, whole) => {
   const id = +num;
   if (MAP_IDS.has(id)) return all;
   const q = db.quest(id);
@@ -462,8 +501,9 @@ const stepOut = (s, st) => ({
 let out = `-- 由 tools/build.mjs 產生，勿手改。來源：route/*.md\nlocal _, MG = ...\nMG.Route = {\n  built = "@@BUILT@@",\n  stations = {\n`;
 for (const s of stations) {
   idFile = s.file;
+  refPrefix = s.dungeon ? s.after.split("-")[0] : s.id.split("-")[0];
   const start = s.when?.race && s.lv[0] <= 12 ? s.when.race.join("/") : undefined;
-  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips)}, dungeon=${lua(s.dungeon)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)},\n      steps = {\n`;
+  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)},\n      steps = {\n`;
   for (const step of s.steps) if (step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id) out += `        ${lua(stepOut(step, s))},\n`;
   out += `      } },\n`;
 }
