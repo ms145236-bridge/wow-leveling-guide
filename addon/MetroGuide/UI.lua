@@ -54,6 +54,8 @@ local SPEC = {
   { key = "arrow", label = "箭頭與地圖標點", def = true, menu = true },
   { key = "auto", label = "自動接交任務", def = true, menu = true },
   { key = "optional", label = "帶上可跳過的任務", def = false, menu = true },
+  { key = "detourOn", label = "順路提醒", def = true },
+  { key = "detourDist", label = "順路距離（地圖 %）", min = 1, max = 8, step = 0.5, def = 3 },
   { start = true },
   { key = "showTarget", label = "顯示目標按鈕", def = true },
   { key = "markOn", label = "選取時標上團隊標記", def = true },
@@ -127,7 +129,7 @@ local function box(f, edge)
   return bg
 end
 
-local root, bar, chip, panel, menu, report, dhint, ghint
+local root, bar, chip, panel, menu, report, dhint, ghint, vhint
 local rows, items = {}, {}
 local scroll, tab, missOpen, lastCurKey = 0, "steps", false, nil
 local state -- 最近一次 Render 的引擎結果
@@ -1018,6 +1020,27 @@ function UI.Create()
   end)
   ghint:Hide()
 
+  -- 順路提醒：「順路：先做 交 某某（就在旁邊）」＋ 切過去／略過
+  vhint = CreateFrame("Frame", nil, root)
+  vhint:SetSize(300, 24)
+  box(vhint, BRONZE)
+  vhint.label = text(vhint, 13, AMBER)
+  vhint.label:SetPoint("LEFT", 10, 0)
+  vhint.label:SetPoint("RIGHT", -112, 0)
+  vhint.go = goldButton(vhint, "切過去", 56); vhint.go:SetHeight(18); vhint.go:SetPoint("RIGHT", -50, 0)
+  vhint.skip = goldButton(vhint, "略過", 40); vhint.skip:SetHeight(18); vhint.skip:SetPoint("RIGHT", -6, 0)
+  vhint.go:SetScript("OnClick", function()
+    if not vhint.i then return end
+    E.PinIndex(state, vhint.i)
+    MG.wpOverride, MG.grindActive = nil, nil
+    MG.Refresh(true)
+  end)
+  vhint.skip:SetScript("OnClick", function()
+    if vhint.i then E.DetourNo(state.steps[vhint.i].key) end
+    MG.Refresh(true)
+  end)
+  vhint:Hide()
+
   panel = CreateFrame("Frame", nil, root)
   panel:SetSize(320, 34 + 18 * ROW_H + 8)
   panel.bg = box(panel)
@@ -1653,6 +1676,18 @@ function UI.Render(S)
     above = ghint
   end
   ghint:SetShown(g ~= nil)
+  -- 順路提醒
+  local vi = E.Detour(state)
+  vhint.i = vi
+  if vi then
+    local s = state.steps[vi].s
+    vhint.label:SetText("順路：先做 " .. E.VERB[s.t] .. " " .. ((s.t ~= "do" and s.npc and not s.npc:find("物品", 1, true)) and s.npc or E.Title(s)) .. "（就在旁邊）")
+    vhint:SetWidth(UI.Get("barWidth"))
+    vhint:ClearAllPoints()
+    vhint:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
+    above = vhint
+  end
+  vhint:SetShown(vi ~= nil)
   panel:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
   drawPanel()
 end

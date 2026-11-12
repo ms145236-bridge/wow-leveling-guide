@@ -14,6 +14,7 @@ local lastState
 -- 副本裡：只列這個副本的任務（一次全列），不顯示主線、箭頭、地圖標點；對不到就整個隱藏。出副本後回主線並重新對齊。
 local inInstance, enterLevel = false, nil
 local lastArrowKey
+local lastDetour
 local function instanceView()
   if not (IsInInstance and GetInstanceInfo) then return false end
   local inside, kind = IsInInstance()
@@ -112,6 +113,8 @@ f:SetScript("OnUpdate", function(_, dt)
     tick = 0
     local cur = lastState and lastState.cur and lastState.steps[lastState.cur].s
     if cur and cur.t == "goto" then dirty = true end
+    local d = E.Detour(lastState) -- 順路提醒：位置一變就要重看，結果有變才重畫
+    if d ~= lastDetour then lastDetour = d; dirty = true end
   end
 end)
 

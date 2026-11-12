@@ -279,6 +279,44 @@ function E.StarFor(q, s)
   return star[1]
 end
 
+-- 順路提醒：本站裡現在就能做（接得到、在日誌未完成、可交）、離玩家比目前步驟近很多的步驟。
+-- 條件：同地圖、距離 ≤ 設定值、且 < 目前步驟距離的 25%；不在「附近一起做」裡；同一步連續 3 秒都成立才提示；略過後 2 分鐘不再提。
+local detourKey, detourSince, detourNo = nil, 0, {}
+function E.Detour(state)
+  if not (state and state.cur and not state.instance and MG.UI.Get("detourOn")) then return end
+  local map, x, y = C.Position()
+  if not (map and x) then return end
+  local function dist(s)
+    local best
+    local pts = { s.x and { s.map, s.x, s.y } or nil }
+    for _, p in ipairs(s.more or {}) do pts[#pts + 1] = p end
+    for _, p in ipairs(pts) do
+      if p[1] == map then
+        local d = math.sqrt((p[2] - x) ^ 2 + (p[3] - y) ^ 2)
+        if not best or d < best then best = d end
+      end
+    end
+    return best
+  end
+  local now, lim, lv = GetTime(), MG.UI.Get("detourDist"), UnitLevel("player") or 0
+  local cd = dist(state.steps[state.cur].s) or math.huge
+  local best, bd
+  for i, step in ipairs(state.steps) do
+    local s, q = step.s, step.s.q
+    if i ~= state.cur and q and not state.done[i] and not state.na[i] and not state.inGroup[i] and now - (detourNo[step.key] or -999) >= 120 then
+      local onQ = C.IsOnQuest(q)
+      local ok = (s.t == "accept" and not onQ and lv >= ((R.quests[q] or {}).min or 0))
+        or (s.t == "do" and onQ and not ready(q)) or (s.t == "turnin" and onQ and ready(q))
+      local d = ok and dist(s)
+      if d and d <= lim and d < cd * 0.25 and (not bd or d < bd) then best, bd = i, d end
+    end
+  end
+  local key = best and state.steps[best].key
+  if key ~= detourKey then detourKey, detourSince = key, now end
+  if key and now - detourSince >= 3 then return best end
+end
+function E.DetourNo(key) detourNo[key] = GetTime() end
+
 -- 練怪地點建議：補完可跳過任務後經驗仍不夠到下一站，或等級低於本站範圍 → 挑本站一個不會灰的練怪點
 -- 怪的等級最接近玩家（高最多 2 級）的優先
 function E.GrindSuggest(st, fillInfo)
