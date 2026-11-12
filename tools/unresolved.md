@@ -1,7 +1,7 @@
-# 建置報告（資料版本 cc708b45）
+# 建置報告（資料版本 eb12bae8）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
-站數：94　任務數：1490
+站數：94　任務數：1493
 
 ## 需要處理（0）
 
@@ -218,7 +218,7 @@
 - 01-第一段-1到12級.md：…84, 66.20）接 364。若薩維… → 無腦的僵屍
 - 01-第一段-1到12級.md：…從墓穴內的 363 開始… → 突然醒來
 
-## 名稱不一致（236）
+## 名稱不一致（239）
 
 - 01-第一段-1到12級.md:1110 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
 - 01-第一段-1到12級.md:1134 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
@@ -230,155 +230,158 @@
 - 任務 1068：目標怪 QuestieDB 沒有繁中名（XT:4）
 - 任務 1068：目標怪 QuestieDB 沒有繁中名（XT:9）
 - 任務 95773：目標怪 QuestieDB 沒有繁中名（Brinescale Skirmisher）
+- 03-30到45級.md:323 交｜亡命之徒：QuestieDB 沒有繁中名（Tokal），用「托卡」
+- 03-30到45級.md:324 接｜你在想櫻桃酒嗎？：QuestieDB 沒有繁中名（Tokal），用「托卡」
+- 03-30到45級.md:326 交｜你在想櫻桃酒嗎？：QuestieDB 沒有繁中名（Tokal），用「托卡」
 - 任務 78830：目標怪 QuestieDB 沒有繁中名（Gharrik）
 - 任務 96781：目標怪 QuestieDB 沒有繁中名（Barton）
-- 03-30到45級.md:1261 交｜偽裝大師：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
-- 03-30到45級.md:1262 接｜：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
-- 03-30到45級.md:1264 交｜：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
-- 03-30到45級.md:1265 接｜辛迪加奇襲：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
-- 03-30到45級.md:729 交｜到羅格瑪報到：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:730 交｜尋找譚加尼：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
+- 03-30到45級.md:1272 交｜偽裝大師：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
+- 03-30到45級.md:1273 接｜：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
+- 03-30到45級.md:1275 交｜：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
+- 03-30到45級.md:1276 接｜辛迪加奇襲：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
+- 03-30到45級.md:740 交｜到羅格瑪報到：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:741 交｜尋找譚加尼：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
 - 任務 93786：目標怪 QuestieDB 沒有繁中名（Meadowsbrook Farmhand）
-- 03-30到45級.md:731 接｜血訊：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:732 接｜任人奪取的食物：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:742 接｜血訊：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:743 接｜任人奪取的食物：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
 - 任務 94532：目標怪 QuestieDB 沒有繁中名（Redridge Mystic）
-- 03-30到45級.md:733 接｜豺狼人出沒：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:744 接｜豺狼人出沒：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
 - 任務 94535：目標怪 QuestieDB 沒有繁中名（赤脊山蠻卒、Redridge Mystic、赤脊山陷捕者）
-- 03-30到45級.md:734 接｜鬃丘強盜：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
+- 03-30到45級.md:745 接｜鬃丘強盜：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
 - 任務 94672：目標怪 QuestieDB 沒有繁中名（Twilight Raider）
 - 任務 94672：目標怪 QuestieDB 沒有繁中名（Twilight Shadowmancer）
 - 任務 94672：目標怪 QuestieDB 沒有繁中名（Twilight Neophyte）
-- 03-30到45級.md:735 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:746 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
 - 任務 94680：目標怪 QuestieDB 沒有繁中名（Twilight Shadowmancer）
-- 03-30到45級.md:736 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:747 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
 - 任務 93788：目標怪 QuestieDB 沒有繁中名（Turner's Mill Lumberjack）
-- 03-30到45級.md:737 接｜借來的刀刃：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
-- 03-30到45級.md:738 接｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
-- 03-30到45級.md:744 交｜血訊：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:745 交｜任人奪取的食物：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:746 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:748 交｜：QuestieDB 沒有繁中名（Gorg），用「高格」
+- 03-30到45級.md:748 接｜借來的刀刃：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
+- 03-30到45級.md:749 接｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
+- 03-30到45級.md:755 交｜血訊：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:756 交｜任人奪取的食物：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:757 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:759 交｜：QuestieDB 沒有繁中名（Gorg），用「高格」
 - 任務 94481：目標怪 QuestieDB 沒有繁中名（Rog'mar Trainee）
-- 03-30到45級.md:749 接｜補充能量：QuestieDB 沒有繁中名（Gorg），用「高格」
-- 03-30到45級.md:751 交｜補充能量：QuestieDB 沒有繁中名（Gorg），用「高格」
+- 03-30到45級.md:760 接｜補充能量：QuestieDB 沒有繁中名（Gorg），用「高格」
+- 03-30到45級.md:762 交｜補充能量：QuestieDB 沒有繁中名（Gorg），用「高格」
 - 任務 94483：目標怪 QuestieDB 沒有繁中名（Farholde Priest）
 - 任務 94483：目標怪 QuestieDB 沒有繁中名（Farholde Scout）
-- 03-30到45級.md:752 接｜給他們一點顏色瞧瞧：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:754 交｜給他們一點顏色瞧瞧：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:757 交｜豺狼人出沒：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:758 交｜鬃丘強盜：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
+- 03-30到45級.md:763 接｜給他們一點顏色瞧瞧：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:765 交｜給他們一點顏色瞧瞧：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:768 交｜豺狼人出沒：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:769 交｜鬃丘強盜：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
 - 任務 94533：目標怪 QuestieDB 沒有繁中名（Snargl）
-- 03-30到45級.md:759 接｜史納戈的鼻子：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:761 交｜史納戈的鼻子：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:767 交｜借來的刀刃：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
-- 03-30到45級.md:768 交｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
+- 03-30到45級.md:770 接｜史納戈的鼻子：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:772 交｜史納戈的鼻子：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:778 交｜借來的刀刃：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
+- 03-30到45級.md:779 交｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
 - 任務 95955：目標怪 QuestieDB 沒有繁中名（Freshwater Crocolisk）
-- 03-30到45級.md:769 接｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
-- 03-30到45級.md:771 交｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
-- 03-30到45級.md:774 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:775 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:776 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:778 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:779 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:781 交｜：QuestieDB 沒有繁中名（Twilight Brute），用「Twilight Brute」
+- 03-30到45級.md:780 接｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
+- 03-30到45級.md:782 交｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
+- 03-30到45級.md:785 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:786 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:787 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:789 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:790 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:792 交｜：QuestieDB 沒有繁中名（Twilight Brute），用「Twilight Brute」
 - 任務 95601：目標怪 QuestieDB 沒有繁中名（Empowered Brute）
 - 任務 95601：目標怪 QuestieDB 沒有繁中名（Twilight Ritualist）
-- 03-30到45級.md:782 接｜：QuestieDB 沒有繁中名（Twilight Brute），用「Twilight Brute」
-- 03-30到45級.md:783 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:786 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:787 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:793 接｜：QuestieDB 沒有繁中名（Twilight Brute），用「Twilight Brute」
+- 03-30到45級.md:794 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:797 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:798 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
 - 任務 95427：目標怪 QuestieDB 沒有繁中名（Chogg'Zac）
 - 任務 95427：目標怪 QuestieDB 沒有繁中名（Chogg'Zac）
-- 03-30到45級.md:788 接｜暮光不再！：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:790 交｜暮光不再！：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:791 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:793 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:794 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:798 接｜：QuestieDB 沒有繁中名（Picked Carcass），用「挑選的屍體」
-- 03-30到45級.md:800 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 任務 96104：目標怪 QuestieDB 沒有繁中名（Roving Tallstrider）
-- 03-30到45級.md:801 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:803 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 任務 96107：目標怪 QuestieDB 沒有繁中名（Low Plains Buzzard）
-- 03-30到45級.md:804 接｜箭矢之羽：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 任務 96108：目標怪 QuestieDB 沒有繁中名（Glade Viper）
-- 03-30到45級.md:805 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 任務 96109：目標怪 QuestieDB 沒有繁中名（Wildplains Patriarch、Wildplains Huntress）
-- 03-30到45級.md:806 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:810 交｜箭矢之羽：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:799 接｜暮光不再！：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:801 交｜暮光不再！：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:802 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:804 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:805 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:809 接｜：QuestieDB 沒有繁中名（Picked Carcass），用「挑選的屍體」
 - 03-30到45級.md:811 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:812 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:817 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:818 接｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
+- 任務 96104：目標怪 QuestieDB 沒有繁中名（Roving Tallstrider）
+- 03-30到45級.md:812 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:814 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 任務 96107：目標怪 QuestieDB 沒有繁中名（Low Plains Buzzard）
+- 03-30到45級.md:815 接｜箭矢之羽：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 任務 96108：目標怪 QuestieDB 沒有繁中名（Glade Viper）
+- 03-30到45級.md:816 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 任務 96109：目標怪 QuestieDB 沒有繁中名（Wildplains Patriarch、Wildplains Huntress）
+- 03-30到45級.md:817 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:821 交｜箭矢之羽：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:822 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:823 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:828 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:829 接｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
 - 任務 95163：目標怪 QuestieDB 沒有繁中名（Young Paletusk）
-- 03-30到45級.md:819 接｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
-- 03-30到45級.md:820 接｜：QuestieDB 沒有繁中名（Gorgegut），用「Gorgegut」
-- 03-30到45級.md:824 交｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
-- 03-30到45級.md:825 交｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
-- 03-30到45級.md:826 交｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
-- 03-30到45級.md:827 接｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
-- 03-30到45級.md:829 交｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
+- 03-30到45級.md:830 接｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
+- 03-30到45級.md:831 接｜：QuestieDB 沒有繁中名（Gorgegut），用「Gorgegut」
+- 03-30到45級.md:835 交｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
+- 03-30到45級.md:836 交｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
+- 03-30到45級.md:837 交｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
+- 03-30到45級.md:838 接｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
+- 03-30到45級.md:840 交｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
 - 任務 96105：目標怪 QuestieDB 沒有繁中名（Ombassa）
-- 03-30到45級.md:830 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:832 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:841 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:843 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
 - 任務 617：目標怪 QuestieDB 沒有繁中名（納迦探險者、Brinescale Skirmisher）
-- 03-30到45級.md:1066 接｜吾血之血：QuestieDB 沒有繁中名（Karana），用「卡拉納」
-- 03-30到45級.md:1067 接｜：QuestieDB 沒有繁中名（Pelluk），用「佩魯克」
-- 03-30到45級.md:1083 交｜吾血之血：QuestieDB 沒有繁中名（Karana），用「卡拉納」
-- 03-30到45級.md:1084 交｜：QuestieDB 沒有繁中名（Pelluk），用「佩魯克」
-- 03-30到45級.md:1115 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:1117 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1077 接｜吾血之血：QuestieDB 沒有繁中名（Karana），用「卡拉納」
+- 03-30到45級.md:1078 接｜：QuestieDB 沒有繁中名（Pelluk），用「佩魯克」
+- 03-30到45級.md:1094 交｜吾血之血：QuestieDB 沒有繁中名（Karana），用「卡拉納」
+- 03-30到45級.md:1095 交｜：QuestieDB 沒有繁中名（Pelluk），用「佩魯克」
+- 03-30到45級.md:1126 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:1128 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
 - 任務 94745：目標怪 QuestieDB 沒有繁中名（Twilight Fanatic）
 - 任務 94745：目標怪 QuestieDB 沒有繁中名（Twilight Corrupter）
 - 任務 94745：目標怪 QuestieDB 沒有繁中名（Twilight Champion）
-- 03-30到45級.md:1118 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1129 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
 - 任務 94748：目標怪 QuestieDB 沒有繁中名（Rog'mar Scout）
-- 03-30到45級.md:1119 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1130 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
 - 任務 94768：目標怪 QuestieDB 沒有繁中名（Overlord Kilgar）
-- 03-30到45級.md:1120 接｜把他的頭帶來：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
-- 03-30到45級.md:1124 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
-- 03-30到45級.md:1125 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
-- 03-30到45級.md:1126 交｜把他的頭帶來：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
-- 03-30到45級.md:1127 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
-- 03-30到45級.md:1129 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:1131 接｜把他的頭帶來：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1135 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1136 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1137 交｜把他的頭帶來：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1138 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1140 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
 - 任務 95424：目標怪 QuestieDB 沒有繁中名（Twilight Mauler）
 - 任務 95424：目標怪 QuestieDB 沒有繁中名（Twilight Firecaller）
-- 03-30到45級.md:1134 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:1136 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1145 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1147 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
 - 任務 95425：目標怪 QuestieDB 沒有繁中名（Klunk）
-- 03-30到45級.md:1137 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:1139 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:1140 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:1142 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:1143 接｜：QuestieDB 沒有繁中名（Jom-jom），用「Jom-jom」
-- 03-30到45級.md:1145 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:1150 交｜：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1148 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1150 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1151 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1153 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:1154 接｜：QuestieDB 沒有繁中名（Jom-jom），用「Jom-jom」
+- 03-30到45級.md:1156 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1161 交｜：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
 - 任務 95118：目標怪 QuestieDB 沒有繁中名（Murloc Warrior）
-- 03-30到45級.md:1151 接｜鹹水蠻族：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1162 接｜鹹水蠻族：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
 - 任務 95119：目標怪 QuestieDB 沒有繁中名（Eastsea Buccaneer）
 - 任務 95119：目標怪 QuestieDB 沒有繁中名（Eastsea Musketeer）
-- 03-30到45級.md:1152 接｜不友好競爭：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1163 接｜不友好競爭：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
 - 任務 95121：目標怪 QuestieDB 沒有繁中名（魚人神諭者、魚人奪潮者、Murloc Warrior）
 - 任務 95121：目標怪 QuestieDB 沒有繁中名（沙行蟹、Shore Crawler）
-- 03-30到45級.md:1153 接｜：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
+- 03-30到45級.md:1164 接｜：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
 - 任務 95254：目標怪 QuestieDB 沒有繁中名（Trapclaw）
-- 03-30到45級.md:1155 接｜走私者特別快遞：QuestieDB 沒有繁中名（Friz Frazzlespark），用「佛利茲‧焦炫」
+- 03-30到45級.md:1166 接｜走私者特別快遞：QuestieDB 沒有繁中名（Friz Frazzlespark），用「佛利茲‧焦炫」
 - 任務 95882：目標怪 QuestieDB 沒有繁中名（Scoutmaster Vargas）
-- 03-30到45級.md:1162 交｜鹹水蠻族：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
-- 03-30到45級.md:1163 交｜不友好競爭：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
-- 03-30到45級.md:1164 交｜：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
-- 03-30到45級.md:1165 交｜懸賞：陷爪：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
-- 03-30到45級.md:1166 交｜走私者特別快遞：QuestieDB 沒有繁中名（Captain Bentcoin），用「曲幣船長」
-- 03-30到45級.md:1168 交｜懸賞：偵察大師伐加斯：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:1169 接｜再見啦，海上無賴！：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
-- 03-30到45級.md:1171 交｜再見啦，海上無賴！：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1173 交｜鹹水蠻族：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1174 交｜不友好競爭：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1175 交｜：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
+- 03-30到45級.md:1176 交｜懸賞：陷爪：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
+- 03-30到45級.md:1177 交｜走私者特別快遞：QuestieDB 沒有繁中名（Captain Bentcoin），用「曲幣船長」
+- 03-30到45級.md:1179 交｜懸賞：偵察大師伐加斯：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:1180 接｜再見啦，海上無賴！：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1182 交｜再見啦，海上無賴！：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
 - 任務 95267：目標怪 QuestieDB 沒有繁中名（Monstrous Threshadon）
-- 03-30到45級.md:1172 接｜怪物浮現：QuestieDB 沒有繁中名（Argo Brinewhistle），用「阿古‧鹽哨」
-- 03-30到45級.md:1174 交｜怪物浮現：QuestieDB 沒有繁中名（Argo Brinewhistle），用「阿古‧鹽哨」
-- 03-30到45級.md:1178 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:1179 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:1182 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:1183 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:1183 接｜怪物浮現：QuestieDB 沒有繁中名（Argo Brinewhistle），用「阿古‧鹽哨」
+- 03-30到45級.md:1185 交｜怪物浮現：QuestieDB 沒有繁中名（Argo Brinewhistle），用「阿古‧鹽哨」
+- 03-30到45級.md:1189 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:1190 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:1193 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:1194 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
 - 任務 79366：目標怪 QuestieDB 沒有繁中名（Ravaging Tempest）
 - 05-副本.md:922 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
 - 05-副本.md:923 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
