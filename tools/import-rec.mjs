@@ -100,7 +100,9 @@ const rows = lines.map((l) => {
 });
 const by = (kind) => rows.filter((r) => r.kind === kind);
 
-const out = [`# 遊戲內記錄報告`, ``, `來源：${src}｜${rows.length} 筆`, ``];
+// 來源路徑不寫帳號資料夾名（報告可能被分享）
+const shownSrc = src.replace(/([\\/]Account[\\/])[^\\/]+/i, "$1<帳號>");
+const out = [`# 遊戲內記錄報告`, ``, `來源：${shownSrc}｜${rows.length} 筆`, ``];
 const patches = [];
 
 // 任務：接／交

@@ -2,3 +2,9 @@ node_modules/
 *.log
 .DS_Store
 Thumbs.db
+
+# 遊戲內記錄（含帳號資料夾名等個人資料，不進 repo）
+tools/rec-report.md
+tools/rec-*.txt
+*.rec.txt
+rec-export*.txt

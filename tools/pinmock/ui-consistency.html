@@ -1,0 +1,168 @@
+<!doctype html><meta charset="utf-8"><title>ui consistency</title>
+<style>
+:root{--bg:rgba(14,15,18,.9);--edge:#2a2d34;--edge2:#434853;--text:#e8e4d8;--dim:#8b8f98;--faint:#555962;--gold:#d9b25f;--bronze:#6d5a2f;--amber:#e0913a;--green:#6fbf73;--red:#d9614f}
+*{box-sizing:border-box}
+body{margin:0;width:1180px;color:var(--text);font:13px/18px "Microsoft JhengHei",sans-serif;
+ background:radial-gradient(700px 500px at 15% 10%,#2c3a26 0,transparent 70%),radial-gradient(700px 600px at 85% 85%,#3a2c1c 0,transparent 70%),#14160f}
+.wrap{display:flex;gap:26px;padding:20px 26px 22px;align-items:flex-start}
+.col{width:320px;flex:none}
+h2{margin:0 0 10px;font:400 14px/18px "Microsoft JhengHei";color:var(--gold)}
+h2 i{font-style:normal;color:var(--dim);font-size:12px;margin-left:8px}
+.notes{flex:1;font-size:12px;line-height:19px;color:var(--dim);padding-top:28px}
+.notes b{font-weight:400;color:var(--text)}
+.notes p{margin:0 0 7px;padding-left:26px;position:relative}
+.notes h3{margin:14px 0 6px;font:400 12px/18px "Microsoft JhengHei";color:var(--gold)}
+.n{position:absolute;left:0;top:2px;width:18px;height:15px;border:1px solid var(--bronze);color:var(--gold);font-size:10px;line-height:13px;text-align:center}
+.tag{position:absolute;right:-22px;top:3px;width:18px;height:15px;border:1px solid var(--bronze);background:#14160f;color:var(--gold);font-size:10px;line-height:13px;text-align:center;z-index:2}
+
+/* 步驟列 */
+.bar{position:relative;width:300px;background:var(--bg);border:1px solid var(--edge);padding:11px 10px 6px 40px}
+.bar:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold)}
+.vb{position:absolute;left:12px;top:10px;width:20px;height:20px;border:1px solid #4b4f59;color:var(--gold);font-size:12px;line-height:18px;text-align:center}
+.t{font-size:15px;line-height:20px}
+.l2{color:var(--dim);margin-top:2px}
+.o{display:flex;flex-wrap:wrap}.o span{width:50%}
+.done{color:var(--faint)}
+.l3{color:var(--amber)}
+.ic{position:absolute;top:7px;width:18px;height:18px;border-radius:50%}
+.gear{right:7px;border:3px dotted var(--dim);opacity:.45}
+.tgt{right:30px;border:2px solid #e0a040;opacity:.75}
+.tgt:after{content:"";position:absolute;left:5px;top:5px;width:4px;height:4px;background:#e0a040;border-radius:50%}
+.after .gear{top:13px;right:9px;width:14px;height:14px;opacity:.55}
+.after .tgt{top:13px;right:30px;width:14px;height:14px;border-color:var(--dim);opacity:.55}
+.after .tgt:after{left:3px;top:3px;background:var(--dim)}
+
+/* 舊提示 */
+.h{position:relative;width:300px;height:24px;margin-top:6px;background:var(--bg);border:1px solid var(--bronze);display:flex;align-items:center;padding:0 6px 0 10px;color:var(--amber);white-space:nowrap}
+.h .x{flex:1;overflow:hidden;text-overflow:ellipsis}
+.h.two{height:40px;display:block;padding-top:4px;color:var(--gold)}
+.h.two s{display:block;text-decoration:none;color:var(--dim);font-size:12px;line-height:16px}
+.h.two u{position:absolute;right:8px;top:10px;text-decoration:none;color:var(--dim)}
+.chip{width:auto;display:inline-flex;padding:0 14px;color:var(--gold)}
+.b{flex:none;height:18px;margin-left:4px;padding:0 7px;min-width:40px;border:1px solid var(--bronze);background:rgba(14,15,18,.9);color:var(--gold);line-height:16px;text-align:center}
+
+/* 新提示 */
+.k{position:relative;width:300px;height:24px;margin-top:2px;background:var(--bg);border:1px solid var(--edge);display:flex;align-items:center;padding:0 4px 0 12px;white-space:nowrap}
+.k:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c)}
+.k em{font-style:normal;color:var(--c);margin-right:8px;flex:none}
+.k .x{flex:1;overflow:hidden;text-overflow:ellipsis}
+.k .x i{font-style:normal;color:var(--dim);margin-left:6px;font-size:12px}
+.k .b{min-width:28px;padding:0 6px}
+.k .q{flex:none;width:20px;text-align:center;color:var(--dim)}
+.k .q.no{visibility:hidden}
+.more{width:300px;height:16px;font-size:11px;line-height:16px;color:var(--dim);text-align:center}
+.red{--c:var(--red)}.amb{--c:var(--amber)}.gld{--c:var(--gold)}
+
+/* 面板 */
+.panel{width:320px;margin-top:6px;background:var(--bg);border:1px solid var(--edge);padding-bottom:8px}
+.tabs{height:30px;display:flex;align-items:center;border-bottom:1px solid var(--edge);margin-bottom:3px;padding:0 12px 0 18px;font-size:14px;color:var(--dim)}
+.tabs span{margin-right:26px;height:30px;line-height:30px}
+.tabs .on{color:var(--text);box-shadow:inset 0 -2px var(--gold)}
+.tabs em{margin-left:auto;font-style:normal;font-size:12px}
+.r{position:relative;height:20px;display:flex;align-items:center;padding-right:12px;white-space:nowrap}
+.r .g{position:absolute;left:8px;width:14px;text-align:center;font-size:12px}
+.r .no{position:absolute;left:24px;width:20px;text-align:right;font-size:11px;color:var(--faint)}
+.r .v{position:absolute;left:48px;width:18px;text-align:center;color:var(--gold)}
+.r .nm{margin-left:70px;flex:1;overflow:hidden;text-overflow:ellipsis}
+.r .nm.i1{margin-left:28px}
+.r .p{flex:none;margin-left:6px;font-size:12px;color:var(--dim)}
+.box{position:absolute;left:9px;width:13px;height:13px;border:1px solid var(--bronze);background:rgba(14,15,18,.9)}
+.box.ok:after{content:"";position:absolute;left:3px;top:0;width:4px;height:8px;border:solid var(--green);border-width:0 2px 2px 0;transform:rotate(40deg)}
+.cur{background:rgba(217,178,95,.09)}
+.cur:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold)}
+.fa .nm,.fa .v{color:var(--faint)}
+.am{color:var(--amber)}.di{color:var(--dim)}.go{color:var(--gold)}.fn{color:var(--faint)}
+.arr{position:absolute;left:11px;width:0;height:0;border:4px solid transparent;border-left:6px solid currentColor;border-right:0}
+.arr.dn{left:9px;border:4px solid transparent;border-top:6px solid currentColor;border-bottom:0;top:8px}
+.mb{flex:none;height:16px;margin-left:6px;padding:0 6px;border:1px solid var(--bronze);color:var(--gold);font-size:12px;line-height:14px}
+</style>
+<div class="wrap">
+
+<div class="col">
+<h2>現在<i>最糟情況：9 條提示疊在步驟列下</i></h2>
+<div class="bar"><div class="vb">做</div><i class="ic tgt"></i><i class="ic gear"></i>
+ <div class="t">憎恨怨怒</div><div class="l2">殺死 怨怒…</div>
+ <div class="o"><span>欺詐者  0/2</span><span>喚魔者  0/2</span><span>巡影者  0/2</span><span class="done">√ 魔僕  2/2</span></div>
+ <div class="l3">本站建議 33 級</div></div>
+<div class="h chip">→ 塔倫米爾  20-25</div>
+<div class="h two">可以下 血色修道院 圖書館（29-39）<s>前置 3/7 未接</s><u>×</u><b class="tag">1</b></div>
+<div class="h"><span class="x">經驗不夠：去希爾斯布萊德丘陵 打 灰熊（30-32）</span><span class="b">去</span><span class="b">略過</span></div>
+<div class="h"><span class="x">順路：先做 交 智者烏泰克（就在旁邊）</span><span class="b" style="min-width:56px">切過去</span><span class="b">略過</span><b class="tag">5</b></div>
+<div class="h"><span class="x">離開前：還有 2 個任務會影響後續</span><span class="b" style="min-width:44px">查看</span></div>
+<div class="h"><span class="x">危險：路上有 40 級精英巡邏</span><b class="tag">3</b></div>
+<div class="h"><span class="x">該修裝：鐵匠格魯克（就在附近）</span><span class="b">去</span></div>
+<div class="h"><span class="x">順路開飛行點：扎爾夫</span><span class="b">去</span><span class="b">略過</span></div>
+<div class="h"><span class="x">學技能（32 級）</span><span class="b">去</span><span class="b">略過</span><b class="tag">4</b></div>
+<div class="panel"><div class="tabs"><span class="on">步驟</span><span>路線</span><span>副本</span><em>剩 14 步</em></div>
+ <div class="r am"><span class="g">-</span><span class="nm">少了前置 1</span><b class="tag">12</b></div>
+ <div class="r"><span class="no am">缺</span><span class="nm di">食人妖之敵（在 03-第14站 塔倫米爾 接）→ 這裡的 惡性競爭 不能做</span><span class="p go">補做</span><b class="tag">13</b></div>
+ <div class="r am"><span class="g">-</span><span class="nm">影響後續 2</span></div>
+ <div class="r am"><span class="no">留</span><span class="nm">集骨者｜後面 2 個任務接不到</span></div>
+ <div class="r am"><span class="no">留</span><span class="nm">墮落者｜下一站 1 個任務接不到</span></div>
+ <div class="r am"><span class="g">+</span><span class="nm">漏掉 1</span></div>
+ <div class="r fa"><i class="box ok"></i><span class="no">19</span><span class="v">接</span><span class="nm">上古之書</span></div>
+ <div class="r cur"><i class="box"></i><span class="no">20</span><span class="v">做</span><span class="nm">憎恨怨怒</span><span class="p" style="color:var(--text)">1/4 項</span></div>
+ <div class="r fa"><i class="box"></i><span class="no">21</span><span class="v">接</span><span class="nm">墮落者（已略過）</span><b class="tag">14</b></div>
+ <div class="r"><i class="box"></i><span class="no">22</span><span class="v">接</span><span class="nm">信仰的試煉</span><span class="p am">副本前置</span></div>
+ <div class="r"><i class="box"></i><span class="no">23</span><span class="v">接</span><span class="nm">知識試煉（之後再接）</span><span class="p am">之後</span></div>
+ <div class="r"><i class="box"></i><span class="no">24</span><span class="v">接</span><span class="nm">血頂族的耳朵<span class="di">（暫時接不到）</span></span></div>
+ <div class="r"><i class="box"></i><span class="no">25</span><span class="v">做</span><span class="nm"><span class="go">★</span> 集骨者</span><span class="p go">補經驗</span></div>
+ <div class="r"><i class="box"></i><span class="no">26</span><span class="v">交</span><span class="nm">+ 藍色歌唱水晶碎片</span></div>
+ <div class="r di"><span class="g">+</span><span class="nm">練怪地點 2</span></div>
+ <div class="r di"><span class="g">+</span><span class="nm">補給 3</span></div>
+</div>
+</div>
+
+<div class="col after">
+<h2>之後<i>同一情況：最多 2 條，其餘收起</i></h2>
+<div class="bar"><div class="vb">做</div><i class="ic tgt"></i><i class="ic gear"></i>
+ <div class="t">憎恨怨怒</div><div class="l2">殺死 怨怒…</div>
+ <div class="o"><span>欺詐者  0/2</span><span>喚魔者  0/2</span><span>巡影者  0/2</span><span class="done">√ 魔僕  2/2</span></div>
+ <div class="l3">建議 33 級</div></div>
+<div class="k red"><em>危險</em><span class="x">路上有 40 級精英巡邏</span><span class="q no">×</span></div>
+<div class="k amb"><em>離開前</em><span class="x">還有 2 個任務</span><span class="b">看</span><span class="q no">×</span></div>
+<div class="more">▾ +7</div>
+<div class="panel"><div class="tabs"><span class="on">步驟</span><span>路線</span><span>副本</span><em>剩 14 步</em></div>
+ <div class="r am"><i class="arr dn"></i><span class="nm i1">少了前置 1</span></div>
+ <div class="r"><span class="nm i1 di">食人妖之敵 → 惡性競爭</span><span class="mb">補做</span></div>
+ <div class="r am"><i class="arr dn"></i><span class="nm i1">影響後續 2</span></div>
+ <div class="r"><span class="nm i1">集骨者</span><span class="p am">後面 2 個接不到</span></div>
+ <div class="r"><span class="nm i1">墮落者</span><span class="p am">下一站 1 個接不到</span></div>
+ <div class="r am"><i class="arr"></i><span class="nm i1">漏掉 1</span></div>
+ <div class="r fa"><i class="box ok"></i><span class="no">19</span><span class="v">接</span><span class="nm">上古之書</span></div>
+ <div class="r cur"><i class="box"></i><span class="no">20</span><span class="v">做</span><span class="nm">憎恨怨怒</span><span class="p" style="color:var(--text)">1/4</span></div>
+ <div class="r fa"><i class="box"></i><span class="no">21</span><span class="v">接</span><span class="nm">墮落者</span><span class="p fn">略過</span></div>
+ <div class="r"><i class="box"></i><span class="no">22</span><span class="v">接</span><span class="nm">信仰的試煉</span><span class="p">副本</span></div>
+ <div class="r"><i class="box"></i><span class="no">23</span><span class="v">接</span><span class="nm">知識試煉</span><span class="p">之後</span></div>
+ <div class="r"><i class="box"></i><span class="no">24</span><span class="v">接</span><span class="nm">血頂族的耳朵</span><span class="p">接不到</span></div>
+ <div class="r"><i class="box"></i><span class="no">25</span><span class="v">做</span><span class="nm"><span class="go">★</span> 集骨者</span><span class="p">補經驗</span></div>
+ <div class="r"><i class="box"></i><span class="no">26</span><span class="v">交</span><span class="nm">藍色歌唱水晶碎片</span><span class="p">補做</span></div>
+ <div class="r di"><i class="arr"></i><span class="nm i1">練怪地點 2</span></div>
+ <div class="r di"><i class="arr"></i><span class="nm i1">補給 3</span></div>
+</div>
+</div>
+
+<div class="notes">
+<h3 style="margin-top:0">提示</h3>
+<p><b class="n">1</b><b>一個元件。</b>九種框（置中鈕、兩行、× 、一到兩顆鈕）合成一種：色條＋標籤＋內容＋一顆動作鈕＋ ×。</p>
+<p><b class="n">2</b><b>最多 2 條</b>，其餘收在「▾ +n」，點一下暫時全開。提示貼著步驟列（間距 6→2、灰框），不再比步驟列搶眼。</p>
+<p><b class="n">3</b><b>顏色分輕重。</b>危險紅、會出事的琥珀、建議金；內容一律白字。現在全是琥珀。</p>
+<p><b class="n">4</b><b>標籤開頭。</b>危險／離開前／修裝／下一站／順路／飛行點／學技能／練等／副本，後面只放名字。</p>
+<p><b class="n">5</b><b>按鈕只有三個詞。</b>去（箭頭指過去）、看（打開清單）、×（不再提醒）。「切過去／查看／略過／右鍵」退場；「略過」只留給步驟。</p>
+<p style="padding-left:0;margin-top:10px">展開後的樣子（全部九條）：</p>
+<div class="k red"><em>危險</em><span class="x">路上有 40 級精英巡邏</span><span class="q no">×</span></div>
+<div class="k amb"><em>離開前</em><span class="x">還有 2 個任務</span><span class="b">看</span><span class="q no">×</span></div>
+<div class="k amb"><em>修裝</em><span class="x">鐵匠格魯克<i>附近</i></span><span class="b">去</span><span class="q no">×</span></div>
+<div class="k gld"><em>下一站</em><span class="x">塔倫米爾<i>20-25</i></span><span class="b">去</span><span class="q">×</span></div>
+<div class="k gld"><em>順路</em><span class="x">交 智者烏泰克</span><span class="b">去</span><span class="q">×</span></div>
+<div class="k gld"><em>飛行點</em><span class="x">扎爾夫</span><span class="b">去</span><span class="q">×</span></div>
+<div class="k gld"><em>學技能</em><span class="x">32 級</span><span class="b">去</span><span class="q">×</span></div>
+<div class="k gld"><em>練等</em><span class="x">灰熊<i>30-32 希爾斯布萊德丘陵</i></span><span class="b">去</span><span class="q">×</span></div>
+<div class="k gld"><em>副本</em><span class="x">血色修道院 圖書館<i>29-39 前置 3/7</i></span><span class="b">看</span><span class="q">×</span></div>
+<h3>清單</h3>
+<p><b class="n">12</b>可收合的標題統一用箭頭、靠左對齊（現在「+」在最左、字在 70px）。</p>
+<p><b class="n">13</b>缺前置只寫「A → B」，「補做」做成看得出能按的小鈕；完整說明放滑鼠提示。</p>
+<p><b class="n">14</b>狀態（略過／之後／接不到／副本／補經驗／補做）全部移到右欄、同一灰色，任務名不再夾括號。</p>
+<p><b class="n">9</b>目標鈕與齒輪同大小、同亮度、和標題同一行高。</p>
+</div>
+</div>
