@@ -15,6 +15,7 @@ local lastState
 local inInstance, enterLevel = false, nil
 local lastArrowKey
 local lastDetour
+local lastPos
 local onTaxi = false -- 失去控制時是不是在鳥上（下鳥才算「飛」完成）
 local function instanceView()
   if not (IsInInstance and GetInstanceInfo) then return false end
@@ -73,7 +74,7 @@ local function refresh()
   end
   lastState = state
   local nextSt = st and E.Next(st)
-  UI.Render({ state = state, sug = E.Suggest(st), nextSt = nextSt })
+  if UI.Visible() then UI.Render({ state = state, sug = E.Suggest(st), nextSt = nextSt }) end -- 步驟列關著就不畫（打開時會重算）
   MG.try("地圖標點", MG.P.Update, state)
   MG.try("目標按鈕", MG.T.Update, state)
   MG.try("任務物品", MG.I.Update, state)
@@ -95,7 +96,11 @@ end
 function MG.Refresh(now)
   if now then
     dirty = false
-    if ready and started then MG.try("重算", refresh) end
+    if ready and started then
+      MG.C.memo = {}
+      MG.try("重算", refresh)
+      MG.C.memo = nil
+    end
   else
     dirty = true
   end
@@ -105,21 +110,29 @@ f:SetScript("OnUpdate", function(_, dt)
   since = since + dt
   tick = tick + dt
   if not ready and started and GetTime() - started > 3 then ready = true; dirty = true end -- 等不到 QUEST_LOG_UPDATE 也開始
-  if dirty and since >= 0.1 then
+  if dirty and since >= 0.25 then
     since = 0
     MG.Refresh(true)
   end
   -- 到達型步驟：每 0.5 秒檢查一次
   if tick >= 0.5 then
     tick = 0
-    MG.try("位置檢查", function()
+    -- 沒移動（< 0.2%）而且沒有等待中的順路提醒就不用重看
+    local map, x, y = C.Position()
+    local moved = not (lastPos and map == lastPos[1] and x and lastPos[2] and math.abs(x - lastPos[2]) + math.abs(y - lastPos[3]) < 0.2)
+    lastPos = { map, x, y }
+    if moved or E.DetourPending() then
+      MG.C.memo = {}
+      MG.try("位置檢查", function()
       local cur = lastState and lastState.cur and lastState.steps[lastState.cur].s
       if cur and (cur.t == "goto" or (cur.t == "travel" and cur.x)) then dirty = true end
       -- 順路提醒、附近危險、沒開的飛行點：位置一變就要重看，結果有變才重畫
       local danger, fp = E.Nearby(lastState and not lastState.instance and lastState.st)
       local d = tostring((E.Detour(lastState))) .. tostring(danger) .. tostring(fp)
       if d ~= lastDetour then lastDetour = d; dirty = true end
-    end)
+      end)
+      MG.C.memo = nil
+    end
   end
 end)
 
@@ -224,7 +237,10 @@ local EVENTS = {
   "TAXIMAP_OPENED", "QUEST_DETAIL", "QUEST_PROGRESS", "QUEST_COMPLETE", "GOSSIP_SHOW", "QUEST_GREETING",
   "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "TRAINER_SHOW", "UPDATE_INVENTORY_DURABILITY",
 }
-for _, e in ipairs(EVENTS) do registered[e] = pcall(f.RegisterEvent, f, e) end
+for _, e in ipairs(EVENTS) do
+  if e == "UNIT_QUEST_LOG_CHANGED" and f.RegisterUnitEvent then registered[e] = pcall(f.RegisterUnitEvent, f, e, "player")
+  else registered[e] = pcall(f.RegisterEvent, f, e) end
+end
 
 local function onEvent(_, event, ...)
   if event == "ADDON_LOADED" then
@@ -242,7 +258,7 @@ local function onEvent(_, event, ...)
   end
   if not MG.db then return end
   if event == "PLAYER_ENTERING_WORLD" then
-    E.Build()
+    if not E.built then E.Build(); E.built = true end -- 每次登入建一次（換起點時 UI 會自己重建）
     N.Forget()
     started = started or GetTime()
   elseif event == "QUEST_LOG_UPDATE" then

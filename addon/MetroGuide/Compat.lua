@@ -22,13 +22,26 @@ function MG.try(where, fn, ...) return after(where, pcall(fn, ...)) end
 
 local QL = C_QuestLog
 local function fn(t, k) return type(t) == "table" and type(t[k]) == "function" and t[k] or nil end
+-- 一次重算內重複查同一個任務的結果共用（C.memo 由 MG.Refresh／位置檢查開關）
+local MEMO = { IsOnQuest = true, IsTurnedIn = true, IsReady = true, Objectives = true, Title = true, QuestLevel = true }
 local function pick(name, ...)
   local list, n = { ... }, select("#", ...) -- 中間可能有 nil，不能用 #list
   for i = 1, n, 2 do
     if list[i + 1] then
       C.impl[name] = list[i]
       local f = list[i + 1]
-      C[name] = function(...) return MG.try(name, f, ...) end
+      if MEMO[name] then
+        C[name] = function(a)
+          local m = C.memo
+          if not m then return MG.try(name, f, a) end
+          local k = name .. ":" .. tostring(a)
+          local hit = m[k]
+          if not hit then hit = { MG.try(name, f, a) }; m[k] = hit end
+          return hit[1]
+        end
+      else
+        C[name] = function(...) return MG.try(name, f, ...) end
+      end
       return
     end
   end

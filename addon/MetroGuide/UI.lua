@@ -1930,6 +1930,7 @@ function UI.SetHidden(hidden)
   root:SetShown(not hidden and MG.db.shown ~= false)
 end
 
+function UI.Visible() return root ~= nil and root:IsShown() end
 function UI.Toggle()
   MG.db.shown = not root:IsShown()
   root:SetShown(MG.db.shown)

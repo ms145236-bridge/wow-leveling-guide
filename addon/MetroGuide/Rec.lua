@@ -10,6 +10,7 @@ local MAX = 5000
 local SEP = "\t@\t"
 local db, seen = nil, {}
 local prev = {} -- 任務 → 各目標上次進度
+local objPending = false
 local npcCache = {} -- 任務 → 對話框當下的 NPC（接受／交件事件時 NPC 視窗可能已關）
 
 local function on() return UI.Get("rec") end
@@ -150,7 +151,13 @@ f:SetScript("OnEvent", function(_, event, ...)
       local map, x, y = pos()
       add("turnin", { id, who.id ~= "" and who.id or who.name }, C.Title(id), who.name, who.kind, map, x, y, gain, money)
       npcCache[id], prev[id] = nil, nil
-    elseif event == "QUEST_LOG_UPDATE" then objectives(next(prev) == nil)
+    elseif event == "QUEST_LOG_UPDATE" then
+      -- 一幀內多次只算一次
+      if not objPending then
+        objPending = true
+        local run = function() objPending = false; MG.try("記錄", objectives, next(prev) == nil) end
+        if C_Timer and C_Timer.After then C_Timer.After(0, run) else run() end
+      end
     elseif event == "PLAYER_XP_UPDATE" or event == "PLAYER_LEVEL_UP" then xp()
     elseif event == "TAXIMAP_OPENED" then taxi()
     elseif event == "HEARTHSTONE_BOUND" then bind("bound")

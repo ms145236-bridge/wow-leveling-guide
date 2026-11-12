@@ -345,6 +345,7 @@ function E.Detour(state)
   if key and now - detourSince >= 3 then return best end
 end
 function E.DetourNo(key) detourNo[key] = GetTime() end
+function E.DetourPending() return detourKey ~= nil end
 
 -- 練怪地點建議：補完可跳過任務後經驗仍不夠到下一站，或等級低於本站範圍 → 挑本站一個不會灰的練怪點
 -- 怪的等級最接近玩家（高最多 2 級）的優先
