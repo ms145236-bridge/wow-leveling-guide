@@ -192,7 +192,7 @@ local function killXP(q, lv)
     local left = m[2]
     if obj and #obj == #info.mob and obj[k].need then left = obj[k].need - (obj[k].have or 0) end
     if left > 0 then
-      local kills = m[3] == 2 and left / DROP_RATE or left
+      local kills = m[3] == 2 and left / (info.rate or DROP_RATE) or left
       total = total + kills * mobXP(m[1], lv, m[4] == 1)
     end
   end
