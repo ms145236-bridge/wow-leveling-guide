@@ -9,6 +9,7 @@ E.session = {} -- 本次登入收到 QUEST_TURNED_IN 的任務
 E.stations = {} -- 適用本角色的站（依路線順序）
 E.dungeons = {} -- 副本站（依建議等級排序；不在主線）
 E.byId = {}
+E.trainSteps = {} -- 本職業的「學技能」步驟（Build 時插進建議站）
 
 local QUEST = { accept = true, ["do"] = true, turnin = true }
 local SOFT = { ["goto"] = true, fp = true, fly = true, boat = true, travel = true }
@@ -106,6 +107,19 @@ function E.Build()
     end
   end
   table.sort(E.dungeons, function(a, b) return a.lv[1] < b.lv[1] or (a.lv[1] == b.lv[1] and a.lv[2] < b.lv[2]) end)
+  -- 訓練師：本職業的「學」步驟插在建議站的站尾交通前
+  wipe(E.trainSteps)
+  for _, t in ipairs(R.trainers or {}) do
+    local st
+    for _, id in ipairs(t.st) do st = st or E.byId[id] end -- 候選站：取第一個本角色有的
+    if t.c == me.class and st and not st.dungeon then
+      local step = { s = { t = "train", npc = t.npc, tgt = t.npc, place = t.place, lv = t.lv, map = t.map, x = t.x, y = t.y }, key = "tr:" .. t.lv .. ":" .. t.npc, st = st }
+      local list, cut = st.list, #st.list
+      while cut > 0 and SOFT[list[cut].s.t] do cut = cut - 1 end
+      table.insert(list, cut + 1, step)
+      E.trainSteps[#E.trainSteps + 1] = step
+    end
+  end
 end
 E.me = me
 
@@ -402,7 +416,7 @@ function E.Locate(st)
   local done, na, autoDone = {}, {}, {}
   for i, step in ipairs(steps) do
     local s = step.s
-    na[i] = step.defer or s.t == "need" or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or false
+    na[i] = step.defer or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or false
     local auto = stepDone(step, map, x, y)
     autoDone[i] = auto
     local mark = db.mark[step.key]
@@ -762,6 +776,39 @@ function E.MakeUp(st, p)
   MG.msg("補做 " .. questName(p) .. "：排在本站最前面，做完回原路線")
 end
 
+-- 開了訓練師視窗：同名訓練師、等級已到的「學」步驟都算做完
+function E.Trained(name)
+  local lv = UnitLevel("player") or 0
+  for _, step in ipairs(E.trainSteps) do
+    if step.s.npc == name and step.s.lv <= lv then MG.db.latch[step.key] = true end
+  end
+end
+-- 副本好裝：本職業拿得到的（沒寫職業＝都可以）
+function E.LootFor(d)
+  local out = {}
+  for _, l in ipairs(d.loot or {}) do
+    local ok = not l.c
+    for _, c in ipairs(l.c or {}) do if c == me.class then ok = true end end
+    if ok then out[#out + 1] = l end
+  end
+  return out
+end
+-- 任務日誌滑鼠提示：在路線上 → 哪一站第幾步；不在 → 06 的判定，否則規則（灰 → 可放掉；路線任務的前置 → 值得做；其餘 → 之後順路）
+function E.QuestNote(q)
+  for _, o in ipairs(questSt[q] or {}) do
+    for i, step in ipairs(o.list) do
+      if step.s.q == q then return o.dungeon and ("路線：" .. o.name .. " 副本") or ("路線：" .. MG.UI.StName(o) .. " 第 " .. i .. " 步") end
+    end
+  end
+  local off = R.offroute and R.offroute[q]
+  if off then return "不在路線上", off.v, off.why end
+  local qlv = C.QuestLevel(q)
+  if qlv and qlv > 0 and (UnitLevel("player") or 0) - qlv > (C.GreenRange() or 8) then return "不在路線上", "可放掉", "等級已過" end
+  local f = R.feeds and R.feeds[q]
+  if f then return "不在路線上", "值得做", "接後續：" .. questName(f) end
+  return "不在路線上", "之後順路", "順路再做"
+end
+
 function E.ToggleSkip(key)
   local skip = MG.db.skip
   local root = skip[key]
@@ -1037,7 +1084,7 @@ function E.DungeonNext(d, inside)
 end
 
 -- 步驟的顯示文字
-local VERB = { accept = "接", ["do"] = "做", turnin = "交", ["goto"] = "到", fp = "鳥", hearth = "爐", fly = "飛", boat = "船", level = "練", travel = "行", need = "需" }
+local VERB = { train = "學", accept = "接", ["do"] = "做", turnin = "交", ["goto"] = "到", fp = "鳥", hearth = "爐", fly = "飛", boat = "船", level = "練", travel = "行", need = "需" }
 E.VERB = VERB
 -- 交通文字切成「第一句」與「其餘」（以全形逗號或句號；不能用 Lua 字元集，會切壞 UTF-8）
 function E.Clause(text)
@@ -1059,6 +1106,7 @@ function E.Title(s)
   elseif s.t == "hearth" then return "綁爐石：" .. (s.bind or "")
   elseif s.t == "fly" then return "飛往 " .. (s.to or "")
   elseif s.t == "boat" then return "搭船／飛艇往 " .. (s.to or "")
-  elseif s.t == "level" then return "練到 " .. (s.lv or "?") .. " 級" end
+  elseif s.t == "level" then return "練到 " .. (s.lv or "?") .. " 級"
+  elseif s.t == "train" then return "去學技能：" .. s.npc .. (s.place and ("（" .. s.place .. "）") or "") end
   return s.text or ""
 end

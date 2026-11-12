@@ -34,7 +34,7 @@ function T.Targets(state)
   if MG.grindActive then out[1] = MG.grindActive.mob; seen[MG.grindActive.mob] = true end
   if s.t == "do" and s.q then
     mobsOf(s.q, out, seen)
-  elseif (s.t == "accept" or s.t == "turnin") and (s.tgt or s.npc) and not (s.npc or ""):find("^物件") and not (s.npc or ""):find("^物品") then
+  elseif (s.t == "accept" or s.t == "turnin" or s.t == "train") and (s.tgt or s.npc) and not (s.npc or ""):find("^物件") and not (s.npc or ""):find("^物品") then
     -- 用建置時從 QuestieDB 取的遊戲名（tgt）；沒有才用路線上的名字，去掉引號類符號
     local n = s.tgt
     if not n then

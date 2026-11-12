@@ -184,7 +184,7 @@ local EVENTS = {
   "ADDON_LOADED", "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_REMOVED", "QUEST_TURNED_IN", "QUEST_LOG_UPDATE",
   "UNIT_QUEST_LOG_CHANGED", "PLAYER_LEVEL_UP", "ZONE_CHANGED_NEW_AREA", "PLAYER_CONTROL_GAINED", "HEARTHSTONE_BOUND",
   "TAXIMAP_OPENED", "QUEST_DETAIL", "QUEST_PROGRESS", "QUEST_COMPLETE", "GOSSIP_SHOW", "QUEST_GREETING",
-  "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED",
+  "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "TRAINER_SHOW",
 }
 for _, e in ipairs(EVENTS) do registered[e] = pcall(f.RegisterEvent, f, e) end
 
@@ -219,6 +219,9 @@ local function onEvent(_, event, ...)
       E.session[id] = true
       trace.QUEST_TURNED_IN = id .. "，事件當下已標記完成：" .. tostring(C.IsTurnedIn(id))
     end
+  elseif event == "TRAINER_SHOW" then
+    local name = UnitName("npc")
+    if name and not (issecretvalue and issecretvalue(name)) then E.Trained(name) end
   elseif event == "PLAYER_LEVEL_UP" then
     MG.db.sugHide = nil
   elseif event == "TAXIMAP_OPENED" then latchCurrent("fp"); latchCurrent("travel")
@@ -295,6 +298,9 @@ local function probe()
   L[#L + 1] = "  QUEST_TURNED_IN：" .. (trace.QUEST_TURNED_IN or "（本次登入尚未交任務）")
   L[#L + 1] = "-- 引擎"
   add("適用的站數 / 路線總站數", #E.stations, #R.stations)
+  local off = 0
+  for _ in pairs(R.offroute or {}) do off = off + 1 end
+  add("路線外判定 / 本職業學技能步驟", off, #E.trainSteps)
   local st = lastState and lastState.st
   if st then
     local s = lastState.cur and lastState.steps[lastState.cur]

@@ -55,6 +55,7 @@ local SPEC = {
   { key = "arrow", label = "箭頭與地圖標點", def = true, menu = true },
   { key = "auto", label = "自動接交任務", def = true, menu = true },
   { key = "optional", label = "帶上可跳過的任務", def = false, menu = true },
+  { key = "trainOn", label = "提醒學技能", def = true },
   { key = "detourOn", label = "順路提醒", def = true },
   { key = "detourDist", label = "順路距離（地圖 %）", min = 1, max = 8, step = 0.5, def = 3 },
   { start = true },
@@ -478,6 +479,7 @@ local function buildItems()
           end
         end
         if not (nx and nx.kind == "ent") and d.entrance then items[#items + 1] = { kind = "dent", d = d } end
+        for _, l in ipairs(E.LootFor(d)) do items[#items + 1] = { kind = "dtext", text = "好裝：「" .. l.item .. "」" .. (l.boss and ("（" .. l.boss .. "）") or "") } end
         items[#items + 1] = { kind = "dact", d = d }
         if UI.dMore[d.id] then
           for _, t in ipairs(UI.Sentences(d.pickupS, bullets(d.pickup or ""))) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
@@ -589,7 +591,7 @@ local function fillRow(row, it)
     local open = UI.dOpen == d.id
     row.ck:SetText("")
     row.arrow:Show(); row.arrow:SetRotation(open and -math.pi / 2 or 0); row.arrow:SetVertexColor(unpack(fit and GOLD or DIM))
-    row.name:SetText(d.name); paint(row.name, (kind == "past" or MG.db.dNo[d.id]) and FAINT or (kind == "low" and DIM or TEXT))
+    row.name:SetText((#E.LootFor(d) > 0 and "|cffd9b25f★|r " or "") .. d.name); paint(row.name, (kind == "past" or MG.db.dNo[d.id]) and FAINT or (kind == "low" and DIM or TEXT))
     row.lvt:SetText(d.lv[1] .. "-" .. d.lv[2]); paint(row.lvt, open and DIM or FAINT); row.lvt:Show()
     if MG.db.dNo[d.id] then label = "不打" end
     row.prog:SetText(label)
@@ -1304,6 +1306,22 @@ function UI.Create()
   menu:Hide()
 
   MG.try("小地圖按鈕", UI.CreateMinimap)
+  -- 任務日誌（L）滑鼠提示：路線位置或路線外判定
+  if QuestMapLogTitleButton_OnEnter and hooksecurefunc then
+    hooksecurefunc("QuestMapLogTitleButton_OnEnter", function(self)
+      MG.try("任務日誌提示", function()
+        local q = self.questID
+        if not q or q == 0 then return end
+        local where, v, why = E.QuestNote(q)
+        GameTooltip:AddLine(where, GOLD[1], GOLD[2], GOLD[3])
+        if v then
+          local col = v == "值得做" and GREEN or (v == "可放掉" and DIM or AMBER)
+          GameTooltip:AddLine(v .. (why and ("：" .. why) or ""), col[1], col[2], col[3], true)
+        end
+        GameTooltip:Show()
+      end)
+    end)
+  end
   MG.try("設定頁", UI.CreateOptions)
   UI.Holder()
   MG.try("目標按鈕", MG.T.Create, holder)

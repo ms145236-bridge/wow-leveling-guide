@@ -105,6 +105,18 @@ pick("Objectives",
 pick("Title",
   "C_QuestLog.GetTitleForQuestID", fn(QL, "GetTitleForQuestID") and function(id) return QL.GetTitleForQuestID(id) end)
 
+-- 任務等級（日誌中才有）
+pick("QuestLevel",
+  "C_QuestLog.GetInfo", fn(QL, "GetInfo") and function(id)
+    local i = logIndex(id)
+    local info = i and QL.GetInfo(i)
+    return info and info.level
+  end,
+  "GetQuestLogTitle", GetQuestLogTitle and function(id)
+    local i = logIndex(id)
+    return i and (select(2, GetQuestLogTitle(i)))
+  end)
+
 -- 任務日誌中的任務 ID 清單
 pick("LogQuestIDs",
   "C_QuestLog.GetInfo", fn(QL, "GetInfo") and fn(QL, "GetNumQuestLogEntries") and function()
