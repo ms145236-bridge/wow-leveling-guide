@@ -147,7 +147,10 @@ local nameToQuest
 local function routeQuestByTitle(title)
   if not nameToQuest then
     nameToQuest = {}
-    for id, q in pairs(R.quests) do if q.n then nameToQuest[q.n] = id end end
+    for id, q in pairs(R.quests) do
+      if q.n then nameToQuest[q.n] = id end
+      if q.zt then nameToQuest[q.zt] = id end -- 遊戲內 zhTW 名（和路線寫的名字不同時）
+    end
   end
   return title and nameToQuest[title]
 end
@@ -195,9 +198,10 @@ local function notOffered(event)
 end
 
 local AUTO = {}
+local function plain(v) return v ~= nil and not (issecretvalue and issecretvalue(v)) end
 function AUTO.QUEST_DETAIL()
   local id = GetQuestID and GetQuestID()
-  if inRoute(id) then AcceptQuest() end
+  if plain(id) and inRoute(id) then AcceptQuest() end
 end
 function AUTO.QUEST_PROGRESS()
   local id = GetQuestID and GetQuestID()
@@ -213,10 +217,10 @@ function AUTO.GOSSIP_SHOW()
   local G = C_GossipInfo
   if not G then return end
   for _, q in ipairs(G.GetActiveQuests and G.GetActiveQuests() or {}) do
-    if q.isComplete and inRoute(q.questID) then G.SelectActiveQuest(q.questID); return end
+    if plain(q.questID) and q.isComplete and inRoute(q.questID) then G.SelectActiveQuest(q.questID); return end
   end
   for _, q in ipairs(G.GetAvailableQuests and G.GetAvailableQuests() or {}) do
-    if inRoute(q.questID) then G.SelectAvailableQuest(q.questID); return end
+    if plain(q.questID) and inRoute(q.questID) then G.SelectAvailableQuest(q.questID); return end
   end
 end
 function AUTO.QUEST_GREETING()

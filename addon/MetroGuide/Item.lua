@@ -72,6 +72,7 @@ end
 -- 動作條巨集「任務物品」：/use 第一個物品
 local MACRO, ICON = "任務物品", "INV_Misc_Bag_08"
 local lastBody
+local triedCreate = false
 local function macroBody()
   return items[1] and ("/use item:" .. items[1]) or "/run print(\"地鐵升級：目前步驟沒有任務物品\")"
 end
@@ -81,10 +82,11 @@ function I.SyncMacro()
   local body = macroBody()
   if index and index > 0 then
     if body ~= lastBody then EditMacro(index, MACRO, ICON, body); lastBody = body end
-  elseif GetNumMacros() < (MAX_ACCOUNT_MACROS or 36) then
+  elseif not triedCreate and GetNumMacros() < (MAX_ACCOUNT_MACROS or 36) then
     CreateMacro(MACRO, ICON, body, nil)
     lastBody = body
   end
+  triedCreate = true
 end
 
 function I.Apply()

@@ -195,6 +195,7 @@ function C.RegisterOptions(frame, name)
   end
 end
 function C.OpenOptions(frame)
+  if InCombatLockdown and InCombatLockdown() then MG.msg("戰鬥中不能開設定，脫離戰鬥後再開。"); return end
   if category and Settings and Settings.OpenToCategory then
     MG.try("設定頁", Settings.OpenToCategory, category.GetID and category:GetID() or category.ID)
   elseif InterfaceOptionsFrame_OpenToCategory then

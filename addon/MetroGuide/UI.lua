@@ -301,9 +301,15 @@ end
 -- ── 步驟提示（步驟列、清單、地圖標點共用） ────────────────────────────────
 -- 提示框：大小（只在我們顯示時改，關閉時還原）
 local tipScaled, tipOld
+local function tipRestore()
+  if tipScaled then GameTooltip:SetScale(tipOld); C.TooltipAlpha(GameTooltip, nil); tipScaled = false end
+end
 local function tipScale()
   if not tipScaled then
-    if not tipOld then GameTooltip:HookScript("OnHide", function() if tipScaled then GameTooltip:SetScale(tipOld); C.TooltipAlpha(GameTooltip, nil); tipScaled = false end end) end
+    if not tipOld then
+      GameTooltip:HookScript("OnHide", tipRestore)
+      if hooksecurefunc then hooksecurefunc(GameTooltip, "SetOwner", tipRestore) end
+    end
     tipOld = GameTooltip:GetScale()
   end
   GameTooltip:SetScale((tipOld or 1) * UI.Get("tipScale") / 100)
@@ -1258,13 +1264,6 @@ function UI.Create()
         MG.Refresh(true)
         return
       end
-      if it and it.kind == "dstep" then
-        local key = it.step.key
-        if button == "RightButton" or MG.db.mark[key] ~= nil then E.SetMark(key, nil)
-        else E.SetMark(key, not E.QuickDone(it.step)) end
-        MG.Refresh(true)
-        return
-      end
       if not (it and it.kind == "step") then return end
       local i, key = it.i, it.step.key
       if button == "RightButton" then E.SetMark(key, nil)
@@ -1338,7 +1337,6 @@ function UI.Create()
       local it = self.it
       if it and it.kind == "step" then UI.StepTooltip(self, it.step.s, nil, true)
       elseif it and it.kind == "miss" then UI.StepTooltip(self, state.steps[it.m.i].s, nil, true)
-      elseif it and it.kind == "dstep" then UI.StepTooltip(self, it.step.s, nil, true)
       elseif it and it.kind == "dnext" and it.nx.step then UI.StepTooltip(self, it.nx.step.s, nil, true)
       elseif it and it.kind == "dq" then UI.StepTooltip(self, it.t.step.s, nil, true)
       elseif it and it.kind == "dqi" and it.step then UI.StepTooltip(self, it.step.s, nil, true)

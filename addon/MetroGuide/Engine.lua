@@ -1023,7 +1023,8 @@ end
 
 -- 設為目標：步驟列改走這個副本的流程；打完（或離開副本）再回主線
 function E.RunDungeon(d)
-  MG.db.dungeonFrom = MG.db.station
+  local from = MG.db.station and E.byId[MG.db.station]
+  if not (from and from.dungeon) then MG.db.dungeonFrom = MG.db.station end -- 已在副本流程中換副本：保留原本的主線站
   MG.db.station = d.id
 end
 

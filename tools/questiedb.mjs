@@ -3,7 +3,7 @@
 import { readFileSync } from "node:fs";
 import { inflateSync } from "node:zlib";
 
-const ADDONS = "C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns";
+const ADDONS = process.env.WOW_ADDONS || "C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns"; // 可用 WOW_ADDONS 指到別的安裝
 const TOC = `${ADDONS}/QuestieDB/QuestieDB_Forever.toc`;
 const AREA_MAP = `${ADDONS}/QuestieDB/support/Forever/Zones/areaIdToUiMapId.lua`;
 
@@ -195,6 +195,11 @@ export function openQuestieDB() {
     for (const c of list(get(obj, 1))) {
       const m = mobLevel(get(c, 1));
       out.push(m ? { ...m, kind: "kill", names: [m.name], zhMissing: m.zhMissing } : null);
+    }
+    // 物件目標（第 2 群）：遊戲內目標順序是 怪、物件、物品，留位置才對得上
+    for (const o of list(get(obj, 2))) {
+      const name = localName("Object", get(o, 1), "zhTW") || field("Object", get(o, 1), 1);
+      out.push(name ? { kind: "object", objects: [name] } : null);
     }
     for (const it of list(get(obj, 3))) {
       const drops = list(field("Item", get(it, 1), 2)).map(mobLevel).filter(Boolean);
