@@ -55,6 +55,15 @@ end
 -- 巨集：先全部用完整名稱（/targetexact），再用部分比對（/target）當備援；
 -- 超過 255 字元時先丟備援、再丟排在後面的名字
 local LIMIT = 255
+local skipMark = false
+-- 標記：SetRaidTarget 在這個客戶端是受保護函式，插件不能直接呼叫（會被擋並報錯）。
+-- 改在安全巨集最後加一行 /tm，只標選到的那隻。/tm 對已有同一標記的目標會取消，
+-- 所以戰鬥外會在按下前（PreClick）檢查：目前目標就是要找的、而且已經有這個標記 → 這次巨集不加 /tm。
+local function markLine()
+  if not MG.UI.Get("markOn") then return nil end
+  return "/tm [@target,exists,nodead] " .. MG.UI.Get("markIcon")
+end
+
 local function macro()
   local order, n = {}, #names
   for k = 0, n - 1 do order[#order + 1] = names[(rot + k) % n + 1] end
@@ -65,8 +74,11 @@ local function macro()
     size = size + 1 + #line
     return true
   end
+  local mark = not skipMark and markLine()
+  if mark then size = size + 1 + #mark end -- 標記那行一定要留位置
   for _, name in ipairs(order) do if not add("/targetexact [noexists] " .. name) then break end end
   for _, name in ipairs(order) do if not add("/target [noexists] " .. name) then break end end
+  if mark then lines[#lines + 1] = mark end
   return table.concat(lines, "\n")
 end
 
@@ -83,54 +95,13 @@ function T.Update(state)
   if not btn then return end
   local list = T.Targets(state)
   T.visible = MG.UI.Get("showTarget") and #list > 0
-  local k = table.concat(list, "|") .. tostring(T.visible) .. tostring(MetroGuideFrame and MetroGuideFrame:IsShown())
+  local k = table.concat(list, "|") .. tostring(T.visible) .. tostring(MetroGuideFrame and MetroGuideFrame:IsShown()) .. tostring(MG.UI.Get("markOn")) .. MG.UI.Get("markIcon")
   if k == key and not pending then return end
   if table.concat(list, "|") ~= table.concat(names, "|") then rot = 0 end
   names, key = list, k
   T.Apply()
 end
 
--- 標記：附近名條上的任務怪，各給一個沒人用的標記（從設定的起始標記開始，照骷髏→叉叉→方塊…的順序）
-function T.Mark()
-  if #names == 0 or not SetRaidTarget then return end
-  if IsInRaid and IsInRaid() and not (UnitIsGroupLeader("player") or UnitIsGroupAssistant("player")) then return end -- 沒權限就不標
-  if not hinted and GetCVar and GetCVar("nameplateShowEnemies") ~= "1" then
-    hinted = true
-    MG.msg("要開啟「敵方名條」（V 鍵）才標得到附近的任務怪；目前只會標記選到的目標。")
-  end
-  local want = {}
-  for _, n in ipairs(names) do want[n] = true end
-  local units, used = {}, {}
-  local plates = C_NamePlate and C_NamePlate.GetNamePlates and C_NamePlate.GetNamePlates() or {}
-  for _, plate in ipairs(plates) do
-    local u = plate.namePlateUnitToken or (plate.UnitFrame and plate.UnitFrame.unit)
-    if u then units[#units + 1] = u end
-  end
-  units[#units + 1] = "target"
-  for _, u in ipairs(units) do
-    local idx = UnitExists(u) and GetRaidTargetIndex(u)
-    if idx then used[idx] = true end
-  end
-  -- 起始標記在順序中的位置
-  local start = 1
-  for k, m in ipairs(MARK_ORDER) do if m == MG.UI.Get("markIcon") then start = k end end
-  local function nextMark()
-    for k = 0, #MARK_ORDER - 1 do
-      local m = MARK_ORDER[(start - 1 + k) % #MARK_ORDER + 1]
-      if not used[m] then used[m] = true; return m end
-    end
-  end
-  local done = {}
-  for _, u in ipairs(units) do
-    if UnitExists(u) and want[UnitName(u)] and not UnitIsDead(u) and not (UnitIsTapDenied and UnitIsTapDenied(u))
-      and not GetRaidTargetIndex(u) and not done[UnitGUID(u) or u] then
-      local m = nextMark()
-      if not m then break end
-      SetRaidTarget(u, m)
-      done[UnitGUID(u) or u] = true
-    end
-  end
-end
 
 -- 「按下就施放」設定開著時，動作發生在按下；否則在放開
 local function keyDown() return GetCVarBool and GetCVarBool("ActionButtonUseKeyDown") or false end
@@ -185,6 +156,8 @@ function T.AutoMacro()
   if InCombatLockdown() then autoPending = true; return end
   autoPending = false
   renameOld() -- 改名不受「自動建立」設定影響
+  local existing = GetMacroIndexByName(MACRO)
+  if existing and existing > 0 then T.SyncMacro(); return end
   if not MG.UI.Get("autoMacro") then return end
   local index = GetMacroIndexByName(MACRO)
   if index and index > 0 then T.SyncMacro(); return end
@@ -211,6 +184,7 @@ function T.Diag()
     L[#L + 1] = "按鈕：沒有建立"
   end
   L[#L + 1] = ("點擊次數 PreClick %d（按下 %d）PostClick %d（按下 %d）實際處理 %d"):format(T.stats.pre, T.stats.preDown, T.stats.post, T.stats.postDown, T.stats.acted)
+  L[#L + 1] = "被遊戲擋下：" .. tostring(T.blocked or "無") .. "｜標記方式：巨集 /tm（" .. tostring(markLine()) .. "）"
   L[#L + 1] = "目前目標名單：" .. (#names > 0 and table.concat(names, "、") or "無")
   return L
 end
@@ -237,6 +211,12 @@ function T.Create(bar)
   btn:HookScript("OnLeave", function(self) self:SetAlpha(0.6); GameTooltip:Hide() end)
   -- 放開時（巨集已選好目標）：標記附近任務怪＋目標，再輪換下次優先的名字
   btn:HookScript("PreClick", function(_, _, down)
+    if not InCombatLockdown() and #names > 0 then
+      local same = false
+      for _, n in ipairs(names) do if UnitExists("target") and UnitName("target") == n then same = true end end
+      local want = same and GetRaidTargetIndex("target") == MG.UI.Get("markIcon")
+      if want ~= skipMark then skipMark = want; btn:SetAttribute("macrotext", macro()) end
+    end
     T.stats.pre = T.stats.pre + 1
     if down then T.stats.preDown = T.stats.preDown + 1 end
   end)
@@ -245,7 +225,6 @@ function T.Create(bar)
     if down then T.stats.postDown = T.stats.postDown + 1 end
     if not T.Acts(down) then return end -- 一次按鍵只處理一次（按下或放開，看遊戲設定）
     T.stats.acted = T.stats.acted + 1
-    MG.try("標記", T.Mark)
     rot = rot + 1
     T.Apply()
   end)
@@ -254,8 +233,15 @@ function T.Create(bar)
   pcall(f.RegisterEvent, f, "PLAYER_REGEN_ENABLED")
   pcall(f.RegisterEvent, f, "CVAR_UPDATE")
   pcall(f.RegisterEvent, f, "PLAYER_ENTERING_WORLD")
-  f:SetScript("OnEvent", function(_, event, name)
-    if event == "PLAYER_ENTERING_WORLD" then
+  pcall(f.RegisterEvent, f, "ADDON_ACTION_FORBIDDEN")
+  pcall(f.RegisterEvent, f, "ADDON_ACTION_BLOCKED")
+  f:SetScript("OnEvent", function(_, event, name, ...)
+    if event == "ADDON_ACTION_FORBIDDEN" or event == "ADDON_ACTION_BLOCKED" then
+      if name == "MetroGuide" and not T.blocked then
+        T.blocked = (...) or "?"
+        MG.msg("遊戲擋下了插件的動作（" .. tostring(T.blocked) .. "），請用 /metro probe 回報。")
+      end
+    elseif event == "PLAYER_ENTERING_WORLD" then
       MG.try("目標巨集", T.AutoMacro)
     elseif event == "CVAR_UPDATE" then
       if name == "ActionButtonUseKeyDown" or name == "ACTION_BUTTON_USE_KEY_DOWN" then MG.try("目標巨集", T.SyncMacro) end

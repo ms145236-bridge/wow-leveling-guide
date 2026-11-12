@@ -1,0 +1,150 @@
+<!doctype html><meta charset="utf-8"><title>dungeon tab v2</title>
+<style>
+:root{--text:#e8e4d8;--dim:#8b8f98;--faint:#555962;--gold:#d9b25f;--amber:#e0913a;--green:#6fbf73;--edge:#4a3f2a}
+*{box-sizing:border-box}
+body{margin:0;width:1500px;color:var(--text);font:13px/20px "Microsoft JhengHei",sans-serif;
+ background:radial-gradient(900px 500px at 20% 10%,#2c3a26 0,transparent 70%),radial-gradient(800px 600px at 85% 80%,#3a2c1c 0,transparent 70%),#14160f}
+.wrap{display:flex;gap:28px;padding:22px 28px 10px;align-items:flex-start}
+.col h2{margin:0 0 8px;font:400 13px/18px "Microsoft JhengHei";color:var(--gold)}
+.col h2 i{font-style:normal;color:var(--dim);margin-left:8px;font-size:12px}
+.before{display:block;border:1px solid #222}
+.panel{width:320px;background:rgba(14,15,18,.9);border:1px solid var(--edge);padding:0 0 8px}
+.tabs{height:30px;display:flex;align-items:center;border-bottom:1px solid var(--edge);margin-bottom:3px;padding:0 12px 0 18px;font-size:14px;color:var(--dim)}
+.tabs span{margin-right:26px;height:30px;line-height:30px}
+.tabs .on{color:var(--text);box-shadow:inset 0 -2px var(--gold)}
+.tabs em{margin-left:auto;font-style:normal;font-size:12px}
+.r{height:20px;display:flex;align-items:center;padding:0 12px 0 0;position:relative;white-space:nowrap}
+.r .g{width:28px;text-align:center;color:var(--dim);font-size:11px;flex:none}
+.r .n{flex:1;overflow:hidden;text-overflow:ellipsis}
+.m{font-size:12px;color:var(--dim);margin-left:8px;flex:none}
+.r .lv{font-size:12px;color:var(--faint);margin-left:8px;width:38px;text-align:right;flex:none}
+.r .st{font-size:12px;width:62px;text-align:right;flex:none}
+.past .n,.past .st,.past .g{color:var(--faint)}
+.go{color:var(--green)} .some{color:var(--gold)} .pick{color:var(--amber)} .low{color:var(--faint)}
+.open{background:rgba(217,178,95,.05)}
+.card{background:rgba(255,255,255,.025);border-top:1px solid rgba(74,63,42,.6);border-bottom:1px solid rgba(74,63,42,.6);padding:4px 0 6px;margin-bottom:2px}
+.next{position:relative;background:rgba(217,178,95,.10);padding:3px 12px 3px 0;margin:0 0 4px}
+.next:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold)}
+.next .l1{display:flex;align-items:center;height:20px;font-size:14px}
+.next .l1 .n{flex:1}
+.next .l2{padding-left:50px;font-size:12px;line-height:17px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.box{width:13px;height:13px;border:1px solid #7a6a45;margin:0 6px 0 9px;flex:none;position:relative;background:rgba(0,0,0,.35)}
+.box.none{visibility:hidden}
+.v{width:18px;margin-right:4px;text-align:center;color:var(--gold);flex:none}
+.ph{display:flex;height:22px;align-items:center;padding-left:28px;font-size:12px;color:var(--dim);margin-bottom:1px}
+.ph span{margin-right:18px;height:22px;line-height:22px}
+.ph .on{color:var(--text);box-shadow:inset 0 -1px var(--gold)}
+.ph b{font-weight:400;color:var(--gold);margin-left:4px}
+.done .n{color:var(--faint)}
+.sub{padding-left:22px}
+.sub .dot{width:28px;text-align:center;flex:none;color:var(--faint);font-size:11px}
+.sub.cur .dot,.sub.cur .n{color:var(--gold)}
+.hr{height:1px;background:rgba(74,63,42,.6);margin:4px 12px 4px 28px}
+.act{display:flex;align-items:center;height:26px;padding:0 12px 0 28px;margin-top:4px}
+.btn{height:22px;line-height:20px;padding:0 14px;border:1px solid var(--gold);background:rgba(217,178,95,.16);color:var(--gold);font-size:13px}
+.act .t{margin-left:auto;font-size:12px;color:var(--dim)}
+.act .t+.t{margin-left:16px;color:var(--faint)}
+.para{padding:2px 12px 0 28px;font-size:12px;line-height:18px;color:var(--dim)}
+.para p{margin:0 0 3px;padding-left:10px;text-indent:-10px}
+.para p:before{content:"·";display:inline-block;width:10px;text-indent:0;color:var(--faint)}
+.para u{text-decoration:none;color:var(--gold)}
+.states{padding:6px 28px 24px}
+.states h2{margin:0 0 8px;font:400 13px/18px "Microsoft JhengHei";color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(4,320px);gap:10px 28px}
+.grid .panel{padding:0}
+.grid .next{margin:0}
+.cap{font-size:11px;color:var(--dim);line-height:16px;margin-bottom:2px}
+.lowrow{height:26px;display:flex;align-items:center;padding-left:50px;color:var(--faint)}
+</style>
+<body>
+<div class="wrap">
+ <div class="col"><h2>現在</h2><img class="before" src="dungeon-before.png"></div>
+
+ <div class="col"><h2>新版<i>展開後 9 行</i></h2>
+ <div class="panel">
+  <div class="tabs"><span>步驟</span><span>路線</span><span class="on">副本</span><em>34 級可去 5 本</em></div>
+  <div class="r past"><span class="g">›</span><span class="n">影牙城堡</span><span class="lv">22–30</span><span class="st">已過</span></div>
+  <div class="r past"><span class="g">›</span><span class="n">黑暗深淵</span><span class="lv">24–32</span><span class="st">已過</span></div>
+  <div class="r"><span class="g">›</span><span class="n">達拉然城</span><span class="lv">28–33</span><span class="st some">前置 2/4</span></div>
+  <div class="r past"><span class="g">›</span><span class="n">血色修道院 墓地</span><span class="lv">28–38</span><span class="st">已過</span></div>
+  <div class="r open"><span class="g" style="color:var(--gold)">⌄</span><span class="n">血色修道院 圖書館</span><span class="lv" style="color:var(--dim)">29–39</span><span class="st some">前置 0/3</span></div>
+  <div class="card">
+   <div class="next"><div class="l1"><span class="box"></span><span class="v">做</span><span class="n">耐力的試煉</span><span class="m">26.8, 55.4</span></div>
+    <div class="l2">千針石林 · 鷹身人洞穴破壞補給箱，取爪子</div></div>
+   <div class="ph"><span class="on">前置<b>0/3</b></span><span>副本內 3</span><span>出本交 2</span></div>
+   <div class="r"><span class="box"></span><span class="n">知識試煉</span><span class="m">鏈 1/7 ›</span></div>
+   <div class="r"><span class="box"></span><span class="n">墮落者綱要</span><span class="m">雷霆崖</span></div>
+   <div class="r"><span class="box"></span><span class="n">深入血色修道院</span><span class="m">幽暗城</span></div>
+   <div class="hr"></div>
+   <div class="r"><span class="g">⌖</span><span class="n" style="color:var(--dim)">提里斯法林地 85.2, 32.1</span><span class="m">最右側門</span></div>
+   <div class="act"><span class="btn">設為目標</span><span class="t">詳細 ›</span><span class="t">不打</span></div>
+  </div>
+  <div class="r"><span class="g">›</span><span class="n">剃刀沼澤</span><span class="lv">30–40</span><span class="st go">可以去</span></div>
+  <div class="r"><span class="g">›</span><span class="n">諾莫瑞根</span><span class="lv">29–38</span><span class="st pick">前置可接</span></div>
+  <div class="r"><span class="g">›</span><span class="n">血色修道院 軍械庫</span><span class="lv">32–42</span><span class="st pick">前置可接</span></div>
+  <div class="r past"><span class="g">›</span><span class="n" style="color:var(--dim)">沉沒之城</span><span class="lv">35–40</span><span class="st low">35 級</span></div>
+ </div></div>
+
+ <div class="col"><h2>點開<i>「鏈」和「詳細」</i></h2>
+ <div class="panel">
+  <div class="tabs"><span>步驟</span><span>路線</span><span class="on">副本</span><em>34 級可去 5 本</em></div>
+  <div class="r open"><span class="g" style="color:var(--gold)">⌄</span><span class="n">血色修道院 圖書館</span><span class="lv" style="color:var(--dim)">29–39</span><span class="st some">前置 0/3</span></div>
+  <div class="card">
+   <div class="next"><div class="l1"><span class="box"></span><span class="v">做</span><span class="n">耐力的試煉</span><span class="m">26.8, 55.4</span></div>
+    <div class="l2">千針石林 · 鷹身人洞穴破壞補給箱，取爪子</div></div>
+   <div class="ph"><span class="on">前置<b>0/3</b></span><span>副本內 3</span><span>出本交 2</span></div>
+   <div class="r"><span class="box"></span><span class="n">知識試煉</span><span class="m">鏈 1/7 ⌄</span></div>
+   <div class="r sub done"><span class="dot" style="color:var(--green)">✓</span><span class="n">信仰的試煉</span></div>
+   <div class="r sub cur"><span class="dot">▸</span><span class="n">耐力的試煉</span><span class="m" style="color:var(--text)">做 0/1</span></div>
+   <div class="r sub"><span class="dot">·</span><span class="n" style="color:var(--dim)">力量的試煉</span><span class="m">千針石林</span></div>
+   <div class="r sub"><span class="dot">·</span><span class="n" style="color:var(--dim)">知識試煉 ×4</span><span class="m">石爪山脈</span></div>
+   <div class="r"><span class="box"></span><span class="n">墮落者綱要</span><span class="m">雷霆崖</span></div>
+   <div class="r"><span class="box"></span><span class="n">深入血色修道院</span><span class="m">幽暗城</span></div>
+   <div class="hr"></div>
+   <div class="r"><span class="g">⌖</span><span class="n" style="color:var(--dim)">提里斯法林地 85.2, 32.1</span><span class="m">最右側門</span></div>
+   <div class="act"><span class="btn">設為目標</span><span class="t" style="color:var(--text)">詳細 ⌄</span><span class="t">不打</span></div>
+   <div class="para">
+    <p><u>03-第16站</u>回幽暗城再去圖書館</p>
+    <p><u>02-第13站</u>先做多恩 1149→1150→1151</p>
+    <p>已走過<u>第11站</u>時，可在<u>第14站</u>梣谷南線由隧道去布勞格，再到幽暗城找帕科瓦</p>
+    <p>非不死族可從雷霆崖順接 1049</p>
+    <p>先取血色鑰匙，可接著開軍械庫與大教堂；書類任務可一起拾</p>
+    <p>1048 橫跨三翼，完整做／交列在大教堂</p>
+   </div>
+  </div>
+  <div class="r"><span class="g">›</span><span class="n">剃刀沼澤</span><span class="lv">30–40</span><span class="st go">可以去</span></div>
+ </div></div>
+
+ <div class="col"><h2>可以去<i>剃刀沼澤</i></h2>
+ <div class="panel">
+  <div class="tabs"><span>步驟</span><span>路線</span><span class="on">副本</span><em>34 級可去 5 本</em></div>
+  <div class="r"><span class="g">›</span><span class="n">血色修道院 圖書館</span><span class="lv">29–39</span><span class="st some">前置 0/3</span></div>
+  <div class="r open"><span class="g" style="color:var(--gold)">⌄</span><span class="n">剃刀沼澤</span><span class="lv" style="color:var(--dim)">30–40</span><span class="st go">可以去</span></div>
+  <div class="card">
+   <div class="next"><div class="l1"><span class="box none"></span><span class="v">去</span><span class="n">剃刀沼澤入口</span><span class="m">42.3, 89.9</span></div>
+    <div class="l2">貧瘠之地 · 荊棘通道的副本門附近</div></div>
+   <div class="ph"><span>前置<b style="color:var(--green)">3/3</b></span><span class="on">副本內 5</span><span>出本交 4</span></div>
+   <div class="r"><span class="box"></span><span class="v">做</span><span class="n">藍葉薯</span><span class="m">0/6</span></div>
+   <div class="r"><span class="box"></span><span class="v">接</span><span class="n">進口商威利克斯</span></div>
+   <div class="r"><span class="box"></span><span class="v">做</span><span class="n">蝙蝠的糞便</span><span class="m">0/1</span></div>
+   <div class="r"><span class="box"></span><span class="v">做</span><span class="n">奧爾德的報復</span><span class="m">0/1</span></div>
+   <div class="r"><span class="box"></span><span class="v">接</span><span class="n">邪惡的盟友</span></div>
+   <div class="act"><span class="btn">設為目標</span><span class="t">詳細 ›</span><span class="t">不打</span></div>
+  </div>
+  <div class="r"><span class="g">›</span><span class="n">諾莫瑞根</span><span class="lv">29–38</span><span class="st pick">前置可接</span></div>
+  <div class="r"><span class="g">›</span><span class="n">血色修道院 軍械庫</span><span class="lv">32–42</span><span class="st pick">前置可接</span></div>
+  <div class="r past"><span class="g">›</span><span class="n" style="color:var(--dim)">沉沒之城</span><span class="lv">35–40</span><span class="st low">35 級</span></div>
+ </div></div>
+</div>
+
+<div class="states"><h2>下一步，各狀態</h2>
+<div class="grid">
+ <div><div class="cap">前置可接</div><div class="panel"><div class="next"><div class="l1"><span class="box"></span><span class="v">接</span><span class="n">墮落者綱要</span><span class="m">34.4, 46.9</span></div><div class="l2">雷霆崖 · 賢者圖希克</div></div></div></div>
+ <div><div class="cap">前置齊了</div><div class="panel"><div class="next"><div class="l1"><span class="box none"></span><span class="v">去</span><span class="n">圖書館入口</span><span class="m">85.2, 32.1</span></div><div class="l2">提里斯法林地 · 最右側門</div></div></div></div>
+ <div><div class="cap">在副本裡</div><div class="panel"><div class="next"><div class="l1"><span class="box"></span><span class="v">做</span><span class="n">知識試煉</span><span class="m">0/1</span></div><div class="l2">進入畫廊後左側的小房桌上取《亡靈的起源》</div></div></div></div>
+ <div><div class="cap">出本</div><div class="panel"><div class="next"><div class="l1"><span class="box"></span><span class="v">交</span><span class="n">知識試煉</span><span class="m">57.8, 65.4</span></div><div class="l2">幽暗城 · 帕科瓦·芬塔拉斯</div></div></div></div>
+ <div><div class="cap">前置齊了、等級不夠</div><div class="panel"><div class="lowrow">29 級再去</div></div></div>
+ <div><div class="cap">等級未到</div><div class="panel"><div class="lowrow">25 級可接前置</div></div></div>
+ <div><div class="cap">已是目標</div><div class="panel"><div class="act" style="margin:0"><span class="btn" style="background:none;border-color:var(--edge);color:var(--text)">回主線</span><span class="t">詳細 ›</span><span class="t">不打</span></div></div></div>
+ <div><div class="cap">已過／不打</div><div class="panel"><div class="r past" style="height:26px"><span class="g">›</span><span class="n">血色修道院 墓地</span><span class="lv">28–38</span><span class="st">已過</span></div></div></div>
+</div></div>

@@ -726,7 +726,15 @@ end
 function E.DungeonPrompt()
   if not MG.UI.Get("dungeonHint") then return nil end
   local lv = UnitLevel("player") or 1
-  for _, d in ipairs(E.dungeons) do
+  -- 先挑等級落在建議範圍內、下限最高的（最合適的那本），沒有才挑超過一點的
+  local list = {}
+  for _, d in ipairs(E.dungeons) do list[#list + 1] = d end
+  table.sort(list, function(a, b)
+    local fa, fb = lv <= a.lv[2], lv <= b.lv[2]
+    if fa ~= fb then return fa end
+    return a.lv[1] > b.lv[1]
+  end)
+  for _, d in ipairs(list) do
     if lv >= d.lv[1] and not MG.db.dDismiss[d.id] and not MG.db.dNo[d.id] then
       local _, kind = E.DungeonStatus(d)
       if kind ~= "past" then
