@@ -134,11 +134,19 @@ end
 
 -- 「按下就施放」設定開著時，動作發生在按下；否則在放開
 local function keyDown() return GetCVarBool and GetCVarBool("ActionButtonUseKeyDown") or false end
-function T.Acts(down) return (down and true or false) == keyDown() end
+local lastAct = 0
+function T.Acts(down)
+  if (down and true or false) ~= keyDown() then return false end
+  local now = GetTime()
+  if now - lastAct < 0.25 then return false end
+  lastAct = now
+  return true
+end
+T.stats = { pre = 0, preDown = 0, post = 0, postDown = 0, acted = 0 }
 
 -- 動作條巨集：/click 這顆按鈕。按下就施放開著時要加第三個參數，讓 /click 送「按下」
 local MACRO, OLD_MACRO = "任務目標", "地鐵目標"
-local function macroBody() return "/click MetroGuideTargetButton LeftButton" .. (keyDown() and " 1" or "") end
+local function macroBody() return "/click MetroGuideTargetButton LeftButton 1\n/click MetroGuideTargetButton LeftButton" end
 -- 舊名「地鐵目標」的巨集原地改名（保留它在快捷列上的位置），不另建第二個
 local function renameOld()
   local old = GetMacroIndexByName(OLD_MACRO)
@@ -188,6 +196,25 @@ function T.AutoMacro()
   end
 end
 
+function T.Diag()
+  local L = {}
+  local index = GetMacroIndexByName and GetMacroIndexByName(MACRO) or 0
+  local body = index > 0 and select(3, GetMacroInfo(index)) or nil
+  local old = GetMacroIndexByName and GetMacroIndexByName(OLD_MACRO) or 0
+  L[#L + 1] = "巨集「" .. MACRO .. "」格位 " .. index .. "（舊名格位 " .. old .. "）內容：" .. (body and body:gsub("\n", " | ") or "無")
+  L[#L + 1] = "ActionButtonUseKeyDown：" .. tostring(GetCVar and GetCVar("ActionButtonUseKeyDown"))
+  if btn then
+    L[#L + 1] = ("按鈕 %s 顯示 %s 可見 %s｜type=%s｜註冊點擊 AnyUp+AnyDown"):format(tostring((btn:GetName())), tostring((btn:IsShown())), tostring((btn:IsVisible())),
+      tostring((btn:GetAttribute("type"))))
+    L[#L + 1] = "巨集文字：" .. tostring((btn:GetAttribute("macrotext"))):gsub("\n", " | ")
+  else
+    L[#L + 1] = "按鈕：沒有建立"
+  end
+  L[#L + 1] = ("點擊次數 PreClick %d（按下 %d）PostClick %d（按下 %d）實際處理 %d"):format(T.stats.pre, T.stats.preDown, T.stats.post, T.stats.postDown, T.stats.acted)
+  L[#L + 1] = "目前目標名單：" .. (#names > 0 and table.concat(names, "、") or "無")
+  return L
+end
+
 function T.Create(bar)
   btn = CreateFrame("Button", "MetroGuideTargetButton", UIParent, "SecureActionButtonTemplate")
   btn:SetSize(20, 20)
@@ -209,8 +236,15 @@ function T.Create(bar)
   end)
   btn:HookScript("OnLeave", function(self) self:SetAlpha(0.6); GameTooltip:Hide() end)
   -- 放開時（巨集已選好目標）：標記附近任務怪＋目標，再輪換下次優先的名字
+  btn:HookScript("PreClick", function(_, _, down)
+    T.stats.pre = T.stats.pre + 1
+    if down then T.stats.preDown = T.stats.preDown + 1 end
+  end)
   btn:HookScript("PostClick", function(_, _, down)
+    T.stats.post = T.stats.post + 1
+    if down then T.stats.postDown = T.stats.postDown + 1 end
     if not T.Acts(down) then return end -- 一次按鍵只處理一次（按下或放開，看遊戲設定）
+    T.stats.acted = T.stats.acted + 1
     MG.try("標記", T.Mark)
     rot = rot + 1
     T.Apply()

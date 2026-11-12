@@ -307,24 +307,20 @@ local function cycleStart()
   end
 end
 
--- 長文字拆成多列（詳細資料用）；寬度＝清單列名稱欄（從 x=28 到右緣）
-local measure
-function UI.Wrap(t, width)
-  width = width or 318 - 28 - 12
-  measure = measure or UIParent:CreateFontString(nil, "OVERLAY")
-  measure:SetFont(FONT, 13, "")
-  local lines, line = {}, ""
-  for ch in t:gmatch("[\1-\127\194-\244][\128-\191]*") do
-    measure:SetText(line .. ch)
-    if line ~= "" and (measure:GetStringWidth() or 0) > width then
-      lines[#lines + 1] = line
-      line = "  " .. ch
-    else
-      line = line .. ch
-    end
+-- 段落：依「；」「。」切成條列，每條一段（由字串自己換行）
+local function bullets(t)
+  local out, from = {}, 1
+  t = t .. "；"
+  while true do
+    local i, j = t:find("；", from, true)
+    local k, l = t:find("。", from, true)
+    if k and (not i or k < i) then i, j = k, l end
+    if not i then break end
+    local piece = t:sub(from, i - 1):gsub("^%s+", ""):gsub("%s+$", "")
+    if piece ~= "" then out[#out + 1] = piece end
+    from = j + 1
   end
-  if line ~= "" then lines[#lines + 1] = line end
-  return lines
+  return out
 end
 
 -- ── 面板 ────────────────────────────────────────────────────────────────────
@@ -346,8 +342,15 @@ local function buildItems()
     for _, d in ipairs(E.dungeons) do
       items[#items + 1] = { kind = "dg", d = d }
       if UI.dOpen == d.id then
-        for _, t in ipairs(d.entrance and UI.Wrap("入口：" .. d.entrance) or {}) do items[#items + 1] = { kind = "dtext", text = t } end
-        for _, t in ipairs(d.pickup and UI.Wrap("前置接取路線：" .. d.pickup) or {}) do items[#items + 1] = { kind = "dtext", text = t } end
+        if d.entrance then items[#items + 1] = { kind = "dtext", text = "入口：" .. d.entrance } end
+        if d.pickup then
+          items[#items + 1] = { kind = "dhead", text = "前置接取路線" }
+          for _, t in ipairs(bullets(d.pickup)) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
+        end
+        for _, tip in ipairs(d.tips or {}) do
+          items[#items + 1] = { kind = "dhead", text = tip.k }
+          for _, t in ipairs(bullets(tip.text)) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
+        end
         for _, ph in ipairs({ { "pre", "前置任務" }, { "in", "副本內" }, { "post", "出本後交" } }) do
           local first = true
           for _, step in ipairs(d.list) do
@@ -374,6 +377,7 @@ local function fillRow(row, it)
   row.strip:SetColorTexture(GOLD[1], GOLD[2], GOLD[3], 1)
   paint(row.name, TEXT); paint(row.verb, GOLD); paint(row.ck, GREEN); paint(row.prog, DIM)
   row.ck:SetText(""); row.verb:SetText(""); row.prog:SetText(""); row.no:SetText("")
+  row.para:Hide(); row:SetHeight(ROW_H)
   local PROG_W = { step = 64, miss = 1, misshead = 1, station = 92, start = 1, dg = 112, dtext = 1, dhead = 1, dstep = 120, dbtn = 1 }
   row.prog:SetWidth(PROG_W[it.kind] or 64)
   row.name:ClearAllPoints()
@@ -431,8 +435,12 @@ local function fillRow(row, it)
     row.name:SetText(d.name .. (MG.db.dNo[d.id] and "（不打）" or "")); paint(row.name, (kind == "past" or MG.db.dNo[d.id]) and FAINT or (fit and TEXT or DIM))
     row.prog:SetText(d.lv[1] .. "-" .. d.lv[2] .. "  " .. label); paint(row.prog, fit and GOLD or DIM)
     if state and state.st == d then row.cur:Show(); row.strip:Show() end
-  elseif it.kind == "dtext" or it.kind == "dhead" then
-    row.name:SetText(it.text); paint(row.name, it.kind == "dhead" and GOLD or DIM)
+  elseif it.kind == "dtext" then
+    row.name:SetText("")
+    row.para:SetText(it.text); paint(row.para, DIM); row.para:Show()
+    row:SetHeight(math.max(ROW_H, (row.para:GetStringHeight() or 14) + 6))
+  elseif it.kind == "dhead" then
+    row.name:SetText(it.text); paint(row.name, GOLD)
   elseif it.kind == "dstep" then
     local s, key = it.step.s, it.step.key
     local mark = MG.db.mark[key]
@@ -484,11 +492,24 @@ end
 local function drawPanel()
   if not panel:IsShown() then return end
   buildItems()
-  local maxScroll = math.max(0, #items - UI.Rows())
+  local maxScroll = math.max(0, #items - 1)
   if scroll > maxScroll then scroll = maxScroll end
+  local y, room = -34, UI.Rows() * ROW_H
   for r = 1, MAX_ROWS do
-    local it = r <= UI.Rows() and items[scroll + r]
-    if it then fillRow(rows[r], it) else rows[r]:Hide() end
+    local it = items[scroll + r]
+    local row = rows[r]
+    if it and room > 0 then
+      fillRow(row, it)
+      local h = row:GetHeight() or ROW_H
+      if h > room and r > 1 then row:Hide(); room = 0
+      else
+        row:ClearAllPoints()
+        row:SetPoint("TOPLEFT", 1, y)
+        y, room = y - h, room - h
+      end
+    else
+      row:Hide()
+    end
   end
   panel.tabSteps.label:SetTextColor(unpack(tab == "steps" and TEXT or DIM))
   panel.tabMap.label:SetTextColor(unpack(tab == "map" and TEXT or DIM))
@@ -755,6 +776,15 @@ function UI.Create()
     row.verb:SetPoint("LEFT", 48, 0); row.verb:SetWidth(18)
     row.prog = text(row, 12, DIM, "RIGHT")
     row.prog:SetPoint("RIGHT", -12, 0)
+    row.para = row:CreateFontString(nil, "OVERLAY")
+    row.para:SetFont(FONT, 13, "")
+    row.para:SetPoint("TOPLEFT", 28, -3)
+    row.para:SetWidth(318 - 28 - 12)
+    row.para:SetJustifyH("LEFT")
+    row.para:SetWordWrap(true)
+    if row.para.SetNonSpaceWrap then row.para:SetNonSpaceWrap(true) end -- 中文沒有空白也要能斷行
+    if row.para.SetMaxLines then row.para:SetMaxLines(0) end
+    row.para:Hide()
     row.name = text(row, 13, TEXT)
     row.name:SetPoint("LEFT", 70, 0)
     row.name:SetPoint("RIGHT", row.prog, "LEFT", -6, 0)

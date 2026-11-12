@@ -293,6 +293,8 @@ local function probe()
     L[#L + 1] = "  沒有目前站"
   end
   add("地圖標點 世界地圖, 小地圖, HBD-Pins", MG.P.count and MG.P.count.world, MG.P.count and MG.P.count.minimap, LibStub and LibStub("HereBeDragons-Pins-2.0", true) ~= nil)
+  L[#L + 1] = "-- 任務目標巨集／按鈕"
+  for _, line in ipairs(MG.try("目標診斷", MG.T.Diag) or {}) do L[#L + 1] = "  " .. line end
   L[#L + 1] = "-- 地圖標點（請先打開世界地圖再打 /metro probe）"
   for _, line in ipairs(MG.try("地圖診斷", MG.P.Diag) or {}) do L[#L + 1] = "  " .. line end
   do
