@@ -1894,7 +1894,7 @@ function UI.Render(S)
   end
   local st = state and not state.instance and state.st
   local danger, fp = E.Nearby(st)
-  if danger then xhint.label:SetText("危險：" .. danger.text) end
+  if danger then xhint.label:SetText("危險：" .. (E.Clause(danger.text))) end -- 步驟列只放第一句，清單有全文
   put(xhint, danger)
   local low = st and UI.Get("supplyOn") and E.Durability()
   local repair

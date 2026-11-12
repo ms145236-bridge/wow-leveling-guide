@@ -188,7 +188,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
       const c = parseCoord(f[2]);
       const cls = Object.entries(CLASS).filter(([zh]) => sup[1].includes(zh)).map(([, tok]) => tok);
       const k = (f[0] || "").replace(/[（(].*$/, "").trim();
-      if (k && c) (st.supply ||= []).push({ k, npc: f[1] || undefined, map: c.map || st.map, x: c.x, y: c.y, c: k === "職業材料" && cls.length ? [...new Set(cls)] : undefined });
+      if (k && c) (st.supply ||= []).push({ k, npc: f[1] || undefined, map: c.map || st.map, x: c.x, y: c.y, c: cls.length ? [...new Set(cls)] : undefined }); // 寫了職業（類型或【僅…】）就只給這些職業
       else warn(where, "補給格式看不懂：" + sup[1].slice(0, 40));
       return;
     }
@@ -634,9 +634,12 @@ for (const file of files.filter((f) => /^07-/.test(f))) {
     const text = (when || "") + " " + (place || "");
     const near = (a, b) => Math.abs(a.lv[0] - lv) - Math.abs(b.lv[0] - lv);
     const main = stations.filter((x) => !x.dungeon);
-    const cands = [
+    // 有明確對到（站號或站名）就只用這些：起點區的訓練師只會出現在該起點站，不會借用到別族的起點
+    const named = [
       ...(ref ? main.filter((x) => x.id === `${ref[1]}-${ref[2]}`) : []),
       ...main.filter((x) => x.name.split(/[・·與／\s]/).some((t) => t.length >= 2 && text.includes(t))).sort(near),
+    ];
+    const cands = named.length ? named : [
       ...main.filter((x) => x.map === map && x.lv[0] <= lv && lv <= x.lv[1]),
       ...main.filter((x) => x.lv[0] <= lv && lv <= x.lv[1]),
     ];

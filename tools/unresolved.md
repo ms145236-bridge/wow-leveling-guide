@@ -1,6 +1,6 @@
-# 建置報告（資料版本 11ece7c4）
+# 建置報告（資料版本 cc708b45）
 
-來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、xp-table.md
+來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
 站數：94　任務數：1490
 
 ## 需要處理（0）
@@ -10,11 +10,11 @@
 ## 提醒（128）
 
 - 01-第一段-1到12級.md:33 接｜歡迎！：缺座標（QuestieDB 也沒有）
-- 01-第一段-1到12級.md:253 接｜歡迎！：缺座標（QuestieDB 也沒有）
+- 01-第一段-1到12級.md:269 接｜歡迎！：缺座標（QuestieDB 也沒有）
 - 05-副本.md:37 交｜尋找背包：缺座標（QuestieDB 也沒有）
 - 05-副本.md:38 接｜歸還背包：缺座標（QuestieDB 也沒有）
 - 05-d1 怒焰裂谷：5 個「做」步驟沒有座標（不會出現箭頭）
-- 02-12到30級.md:295 交｜影牙城堡裏的亡靈哨兵：缺座標（QuestieDB 也沒有）
+- 02-12到30級.md:306 交｜影牙城堡裏的亡靈哨兵：缺座標（QuestieDB 也沒有）
 - 05-副本.md:133 接｜無盡的折磨：缺座標（QuestieDB 也沒有）
 - 05-副本.md:134 接｜羅德隆紋章：缺座標（QuestieDB 也沒有）
 - 05-d3 羅德隆廢墟：4 個「做」步驟沒有座標（不會出現箭頭）
@@ -220,165 +220,165 @@
 
 ## 名稱不一致（236）
 
-- 01-第一段-1到12級.md:1050 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
-- 01-第一段-1到12級.md:1074 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
+- 01-第一段-1到12級.md:1110 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
+- 01-第一段-1到12級.md:1134 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
 - 任務 97257：目標怪 QuestieDB 沒有繁中名（Brazier of Offering）
 - 任務 880：目標怪 QuestieDB 沒有繁中名（綠洲鉗嘴龜、Oasis Snapjaw Hatchling）
 - 任務 1526：目標怪 QuestieDB 沒有繁中名（小型火焰之靈體、Manifestation of Flames）
-- 02-12到30級.md:487 接｜肅清原野：QuestieDB 沒有繁中名（Sulhasa），用「蘇哈莎」
-- 02-12到30級.md:489 交｜肅清原野：QuestieDB 沒有繁中名（Sulhasa），用「蘇哈莎」
+- 02-12到30級.md:513 接｜肅清原野：QuestieDB 沒有繁中名（Sulhasa），用「蘇哈莎」
+- 02-12到30級.md:515 交｜肅清原野：QuestieDB 沒有繁中名（Sulhasa），用「蘇哈莎」
 - 任務 1068：目標怪 QuestieDB 沒有繁中名（XT:4）
 - 任務 1068：目標怪 QuestieDB 沒有繁中名（XT:9）
 - 任務 95773：目標怪 QuestieDB 沒有繁中名（Brinescale Skirmisher）
 - 任務 78830：目標怪 QuestieDB 沒有繁中名（Gharrik）
 - 任務 96781：目標怪 QuestieDB 沒有繁中名（Barton）
-- 03-30到45級.md:1123 交｜偽裝大師：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
-- 03-30到45級.md:1124 接｜：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
-- 03-30到45級.md:1126 交｜：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
-- 03-30到45級.md:1127 接｜辛迪加奇襲：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
-- 03-30到45級.md:641 交｜到羅格瑪報到：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:642 交｜尋找譚加尼：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
+- 03-30到45級.md:1261 交｜偽裝大師：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
+- 03-30到45級.md:1262 接｜：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
+- 03-30到45級.md:1264 交｜：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
+- 03-30到45級.md:1265 接｜辛迪加奇襲：QuestieDB 沒有繁中名（Anastasia Miller），用「安娜斯塔西婭‧米勒」
+- 03-30到45級.md:729 交｜到羅格瑪報到：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:730 交｜尋找譚加尼：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
 - 任務 93786：目標怪 QuestieDB 沒有繁中名（Meadowsbrook Farmhand）
-- 03-30到45級.md:643 接｜血訊：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:644 接｜任人奪取的食物：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:731 接｜血訊：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:732 接｜任人奪取的食物：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
 - 任務 94532：目標怪 QuestieDB 沒有繁中名（Redridge Mystic）
-- 03-30到45級.md:645 接｜豺狼人出沒：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:733 接｜豺狼人出沒：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
 - 任務 94535：目標怪 QuestieDB 沒有繁中名（赤脊山蠻卒、Redridge Mystic、赤脊山陷捕者）
-- 03-30到45級.md:646 接｜鬃丘強盜：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
+- 03-30到45級.md:734 接｜鬃丘強盜：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
 - 任務 94672：目標怪 QuestieDB 沒有繁中名（Twilight Raider）
 - 任務 94672：目標怪 QuestieDB 沒有繁中名（Twilight Shadowmancer）
 - 任務 94672：目標怪 QuestieDB 沒有繁中名（Twilight Neophyte）
-- 03-30到45級.md:647 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:735 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
 - 任務 94680：目標怪 QuestieDB 沒有繁中名（Twilight Shadowmancer）
-- 03-30到45級.md:648 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:736 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
 - 任務 93788：目標怪 QuestieDB 沒有繁中名（Turner's Mill Lumberjack）
-- 03-30到45級.md:649 接｜借來的刀刃：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
-- 03-30到45級.md:650 接｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
-- 03-30到45級.md:656 交｜血訊：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:657 交｜任人奪取的食物：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:658 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:660 交｜：QuestieDB 沒有繁中名（Gorg），用「高格」
+- 03-30到45級.md:737 接｜借來的刀刃：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
+- 03-30到45級.md:738 接｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
+- 03-30到45級.md:744 交｜血訊：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:745 交｜任人奪取的食物：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:746 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:748 交｜：QuestieDB 沒有繁中名（Gorg），用「高格」
 - 任務 94481：目標怪 QuestieDB 沒有繁中名（Rog'mar Trainee）
-- 03-30到45級.md:661 接｜補充能量：QuestieDB 沒有繁中名（Gorg），用「高格」
-- 03-30到45級.md:663 交｜補充能量：QuestieDB 沒有繁中名（Gorg），用「高格」
+- 03-30到45級.md:749 接｜補充能量：QuestieDB 沒有繁中名（Gorg），用「高格」
+- 03-30到45級.md:751 交｜補充能量：QuestieDB 沒有繁中名（Gorg），用「高格」
 - 任務 94483：目標怪 QuestieDB 沒有繁中名（Farholde Priest）
 - 任務 94483：目標怪 QuestieDB 沒有繁中名（Farholde Scout）
-- 03-30到45級.md:664 接｜給他們一點顏色瞧瞧：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:666 交｜給他們一點顏色瞧瞧：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:669 交｜豺狼人出沒：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:670 交｜鬃丘強盜：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
+- 03-30到45級.md:752 接｜給他們一點顏色瞧瞧：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:754 交｜給他們一點顏色瞧瞧：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:757 交｜豺狼人出沒：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:758 交｜鬃丘強盜：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
 - 任務 94533：目標怪 QuestieDB 沒有繁中名（Snargl）
-- 03-30到45級.md:671 接｜史納戈的鼻子：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:673 交｜史納戈的鼻子：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:679 交｜借來的刀刃：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
-- 03-30到45級.md:680 交｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
+- 03-30到45級.md:759 接｜史納戈的鼻子：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:761 交｜史納戈的鼻子：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:767 交｜借來的刀刃：QuestieDB 沒有繁中名（Kreza Darkthorn），用「克瑞莎‧黑棘」
+- 03-30到45級.md:768 交｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
 - 任務 95955：目標怪 QuestieDB 沒有繁中名（Freshwater Crocolisk）
-- 03-30到45級.md:681 接｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
-- 03-30到45級.md:683 交｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
-- 03-30到45級.md:686 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:687 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:688 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:690 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:691 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:693 交｜：QuestieDB 沒有繁中名（Twilight Brute），用「Twilight Brute」
+- 03-30到45級.md:769 接｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
+- 03-30到45級.md:771 交｜：QuestieDB 沒有繁中名（Tan'jani），用「譚加尼」
+- 03-30到45級.md:774 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:775 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:776 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:778 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:779 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:781 交｜：QuestieDB 沒有繁中名（Twilight Brute），用「Twilight Brute」
 - 任務 95601：目標怪 QuestieDB 沒有繁中名（Empowered Brute）
 - 任務 95601：目標怪 QuestieDB 沒有繁中名（Twilight Ritualist）
-- 03-30到45級.md:694 接｜：QuestieDB 沒有繁中名（Twilight Brute），用「Twilight Brute」
-- 03-30到45級.md:695 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:698 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:699 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:782 接｜：QuestieDB 沒有繁中名（Twilight Brute），用「Twilight Brute」
+- 03-30到45級.md:783 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:786 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:787 交｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
 - 任務 95427：目標怪 QuestieDB 沒有繁中名（Chogg'Zac）
 - 任務 95427：目標怪 QuestieDB 沒有繁中名（Chogg'Zac）
-- 03-30到45級.md:700 接｜暮光不再！：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:702 交｜暮光不再！：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:703 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
-- 03-30到45級.md:705 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:706 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:710 接｜：QuestieDB 沒有繁中名（Picked Carcass），用「挑選的屍體」
-- 03-30到45級.md:712 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:788 接｜暮光不再！：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:790 交｜暮光不再！：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:791 接｜：QuestieDB 沒有繁中名（Clubtoe），用「棒趾」
+- 03-30到45級.md:793 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:794 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:798 接｜：QuestieDB 沒有繁中名（Picked Carcass），用「挑選的屍體」
+- 03-30到45級.md:800 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
 - 任務 96104：目標怪 QuestieDB 沒有繁中名（Roving Tallstrider）
-- 03-30到45級.md:713 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:715 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:801 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:803 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
 - 任務 96107：目標怪 QuestieDB 沒有繁中名（Low Plains Buzzard）
-- 03-30到45級.md:716 接｜箭矢之羽：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:804 接｜箭矢之羽：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
 - 任務 96108：目標怪 QuestieDB 沒有繁中名（Glade Viper）
-- 03-30到45級.md:717 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:805 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
 - 任務 96109：目標怪 QuestieDB 沒有繁中名（Wildplains Patriarch、Wildplains Huntress）
-- 03-30到45級.md:718 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:722 交｜箭矢之羽：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:723 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:724 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:729 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:730 接｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
+- 03-30到45級.md:806 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:810 交｜箭矢之羽：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:811 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:812 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:817 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:818 接｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
 - 任務 95163：目標怪 QuestieDB 沒有繁中名（Young Paletusk）
-- 03-30到45級.md:731 接｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
-- 03-30到45級.md:732 接｜：QuestieDB 沒有繁中名（Gorgegut），用「Gorgegut」
-- 03-30到45級.md:736 交｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
-- 03-30到45級.md:737 交｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
-- 03-30到45級.md:738 交｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
-- 03-30到45級.md:739 接｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
-- 03-30到45級.md:741 交｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
+- 03-30到45級.md:819 接｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
+- 03-30到45級.md:820 接｜：QuestieDB 沒有繁中名（Gorgegut），用「Gorgegut」
+- 03-30到45級.md:824 交｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
+- 03-30到45級.md:825 交｜：QuestieDB 沒有繁中名（Na'zok），用「Na'zok」
+- 03-30到45級.md:826 交｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
+- 03-30到45級.md:827 接｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
+- 03-30到45級.md:829 交｜：QuestieDB 沒有繁中名（Hamur），用「Hamur」
 - 任務 96105：目標怪 QuestieDB 沒有繁中名（Ombassa）
-- 03-30到45級.md:742 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:744 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:830 接｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:832 交｜：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
 - 任務 617：目標怪 QuestieDB 沒有繁中名（納迦探險者、Brinescale Skirmisher）
-- 03-30到45級.md:946 接｜吾血之血：QuestieDB 沒有繁中名（Karana），用「卡拉納」
-- 03-30到45級.md:947 接｜：QuestieDB 沒有繁中名（Pelluk），用「佩魯克」
-- 03-30到45級.md:963 交｜吾血之血：QuestieDB 沒有繁中名（Karana），用「卡拉納」
-- 03-30到45級.md:964 交｜：QuestieDB 沒有繁中名（Pelluk），用「佩魯克」
-- 03-30到45級.md:987 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:989 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1066 接｜吾血之血：QuestieDB 沒有繁中名（Karana），用「卡拉納」
+- 03-30到45級.md:1067 接｜：QuestieDB 沒有繁中名（Pelluk），用「佩魯克」
+- 03-30到45級.md:1083 交｜吾血之血：QuestieDB 沒有繁中名（Karana），用「卡拉納」
+- 03-30到45級.md:1084 交｜：QuestieDB 沒有繁中名（Pelluk），用「佩魯克」
+- 03-30到45級.md:1115 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:1117 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
 - 任務 94745：目標怪 QuestieDB 沒有繁中名（Twilight Fanatic）
 - 任務 94745：目標怪 QuestieDB 沒有繁中名（Twilight Corrupter）
 - 任務 94745：目標怪 QuestieDB 沒有繁中名（Twilight Champion）
-- 03-30到45級.md:990 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1118 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
 - 任務 94748：目標怪 QuestieDB 沒有繁中名（Rog'mar Scout）
-- 03-30到45級.md:991 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1119 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
 - 任務 94768：目標怪 QuestieDB 沒有繁中名（Overlord Kilgar）
-- 03-30到45級.md:992 接｜把他的頭帶來：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
-- 03-30到45級.md:996 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
-- 03-30到45級.md:997 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
-- 03-30到45級.md:998 交｜把他的頭帶來：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
-- 03-30到45級.md:999 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
-- 03-30到45級.md:1001 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:1120 接｜把他的頭帶來：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1124 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1125 交｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1126 交｜把他的頭帶來：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1127 接｜：QuestieDB 沒有繁中名（Da'grosh），用「達羅許」
+- 03-30到45級.md:1129 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
 - 任務 95424：目標怪 QuestieDB 沒有繁中名（Twilight Mauler）
 - 任務 95424：目標怪 QuestieDB 沒有繁中名（Twilight Firecaller）
-- 03-30到45級.md:1006 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:1008 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1134 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1136 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
 - 任務 95425：目標怪 QuestieDB 沒有繁中名（Klunk）
-- 03-30到45級.md:1009 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:1011 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:1012 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:1014 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:1015 接｜：QuestieDB 沒有繁中名（Jom-jom），用「Jom-jom」
-- 03-30到45級.md:1017 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
-- 03-30到45級.md:1022 交｜：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1137 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1139 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1140 接｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1142 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:1143 接｜：QuestieDB 沒有繁中名（Jom-jom），用「Jom-jom」
+- 03-30到45級.md:1145 交｜：QuestieDB 沒有繁中名（Clugfist），用「鈍拳」
+- 03-30到45級.md:1150 交｜：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
 - 任務 95118：目標怪 QuestieDB 沒有繁中名（Murloc Warrior）
-- 03-30到45級.md:1023 接｜鹹水蠻族：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1151 接｜鹹水蠻族：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
 - 任務 95119：目標怪 QuestieDB 沒有繁中名（Eastsea Buccaneer）
 - 任務 95119：目標怪 QuestieDB 沒有繁中名（Eastsea Musketeer）
-- 03-30到45級.md:1024 接｜不友好競爭：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1152 接｜不友好競爭：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
 - 任務 95121：目標怪 QuestieDB 沒有繁中名（魚人神諭者、魚人奪潮者、Murloc Warrior）
 - 任務 95121：目標怪 QuestieDB 沒有繁中名（沙行蟹、Shore Crawler）
-- 03-30到45級.md:1025 接｜：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
+- 03-30到45級.md:1153 接｜：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
 - 任務 95254：目標怪 QuestieDB 沒有繁中名（Trapclaw）
-- 03-30到45級.md:1027 接｜走私者特別快遞：QuestieDB 沒有繁中名（Friz Frazzlespark），用「佛利茲‧焦炫」
+- 03-30到45級.md:1155 接｜走私者特別快遞：QuestieDB 沒有繁中名（Friz Frazzlespark），用「佛利茲‧焦炫」
 - 任務 95882：目標怪 QuestieDB 沒有繁中名（Scoutmaster Vargas）
-- 03-30到45級.md:1034 交｜鹹水蠻族：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
-- 03-30到45級.md:1035 交｜不友好競爭：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
-- 03-30到45級.md:1036 交｜：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
-- 03-30到45級.md:1037 交｜懸賞：陷爪：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
-- 03-30到45級.md:1038 交｜走私者特別快遞：QuestieDB 沒有繁中名（Captain Bentcoin），用「曲幣船長」
-- 03-30到45級.md:1040 交｜懸賞：偵察大師伐加斯：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
-- 03-30到45級.md:1041 接｜再見啦，海上無賴！：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
-- 03-30到45級.md:1043 交｜再見啦，海上無賴！：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1162 交｜鹹水蠻族：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1163 交｜不友好競爭：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1164 交｜：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
+- 03-30到45級.md:1165 交｜懸賞：陷爪：QuestieDB 沒有繁中名（Fimbo Greasemitz），用「芬博‧油蜜」
+- 03-30到45級.md:1166 交｜走私者特別快遞：QuestieDB 沒有繁中名（Captain Bentcoin），用「曲幣船長」
+- 03-30到45級.md:1168 交｜懸賞：偵察大師伐加斯：QuestieDB 沒有繁中名（Neza Bloodsnout），用「妮莎‧血鼻」
+- 03-30到45級.md:1169 接｜再見啦，海上無賴！：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
+- 03-30到45級.md:1171 交｜再見啦，海上無賴！：QuestieDB 沒有繁中名（Wharfmaster Whizzbuzz），用「碼頭管理員惠茲巴茲」
 - 任務 95267：目標怪 QuestieDB 沒有繁中名（Monstrous Threshadon）
-- 03-30到45級.md:1044 接｜怪物浮現：QuestieDB 沒有繁中名（Argo Brinewhistle），用「阿古‧鹽哨」
-- 03-30到45級.md:1046 交｜怪物浮現：QuestieDB 沒有繁中名（Argo Brinewhistle），用「阿古‧鹽哨」
-- 03-30到45級.md:1050 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:1051 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
-- 03-30到45級.md:1054 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
-- 03-30到45級.md:1055 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:1172 接｜怪物浮現：QuestieDB 沒有繁中名（Argo Brinewhistle），用「阿古‧鹽哨」
+- 03-30到45級.md:1174 交｜怪物浮現：QuestieDB 沒有繁中名（Argo Brinewhistle），用「阿古‧鹽哨」
+- 03-30到45級.md:1178 接｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:1179 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
+- 03-30到45級.md:1182 交｜：QuestieDB 沒有繁中名（Krom'rosh），用「克隆羅許」
+- 03-30到45級.md:1183 交｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
 - 任務 79366：目標怪 QuestieDB 沒有繁中名（Ravaging Tempest）
 - 05-副本.md:922 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
 - 05-副本.md:923 接｜：QuestieDB 沒有繁中名（Tran'gul），用「特朗古爾」
@@ -445,10 +445,10 @@
 - 任務 8425：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro）
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Magister Hawkhelm）
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Ranger Lydrea）
-- 04-45到60級.md:556 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
-- 04-45到60級.md:558 交｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
-- 04-45到60級.md:559 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
-- 04-45到60級.md:802 接｜聖光研究：路線寫「物件 書籍」，QuestieDB 是「詹妮亞·坎農」
+- 04-45到60級.md:630 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 04-45到60級.md:632 交｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 04-45到60級.md:633 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 04-45到60級.md:915 接｜聖光研究：路線寫「物件 書籍」，QuestieDB 是「詹妮亞·坎農」
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher）
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku）
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro）
@@ -469,50 +469,142 @@
 
 ## 學技能站（候選站依序，遊戲取第一個本角色有的）
 
-- WARRIOR 4 弗朗恩（試煉谷）→ 01-1 試煉谷、01-3 納拉其營地、01-5 喪鐘鎮、01-7 微風島
-- WARRIOR 10 塔紹爾·鋸痕（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺、01-4 莫高雷・血蹄村、01-6 提里斯法林地・布瑞爾、01-7 微風島
+- WARRIOR 4 弗朗恩（試煉谷）→ 01-1 試煉谷
+- WARRIOR 6 弗朗恩（試煉谷）→ 01-1 試煉谷
+- WARRIOR 8 塔紹爾·鋸痕（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- WARRIOR 10 塔紹爾·鋸痕（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- WARRIOR 12 塔紹爾·鋸痕（杜洛塔 剃刀嶺）→ 02-8 貧瘠之地・十字路口、01-2 杜洛塔・森金村／剃刀嶺、02-10 貧瘠之地・棘齒城／陶拉祖營地、04-49 貧瘠之地・棘齒城短訪
+- WARRIOR 4 哈魯特·雷角（納拉其營地）→ 01-3 納拉其營地
+- WARRIOR 6 哈魯特·雷角（納拉其營地）→ 01-3 納拉其營地
+- WARRIOR 8 克朗·石蹄（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- WARRIOR 10 克朗·石蹄（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- WARRIOR 12 克朗·石蹄（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- WARRIOR 4 丹納爾·斯特恩（喪鐘鎮）→ 01-5 喪鐘鎮
+- WARRIOR 6 丹納爾·斯特恩（喪鐘鎮）→ 01-5 喪鐘鎮
+- WARRIOR 8 奧斯蒂爾·德·蒙（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- WARRIOR 10 奧斯蒂爾·德·蒙（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- WARRIOR 12 奧斯蒂爾·德·蒙（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- WARRIOR 4 大劍師蕾（微風島 坦德爾林地）→ 01-7 微風島
+- WARRIOR 6 大劍師蕾（微風島 坦德爾林地）→ 01-7 微風島
+- WARRIOR 8 寇桑‧剃地者（微風島 申德村）→ 01-7 微風島
+- WARRIOR 10 席娜‧破天者（微風島 瓦拉納爾）→ 01-7 微風島
+- WARRIOR 12 席娜‧破天者（微風島 瓦拉納爾）→ 01-4 莫高雷・血蹄村、01-7 微風島
 - WARRIOR 20 索瑞克（奧格瑪 榮譽谷）→ 02-10 貧瘠之地・棘齒城／陶拉祖營地、02-11 石爪山脈、02-8 貧瘠之地・十字路口、04-49 貧瘠之地・棘齒城短訪
-- WARRIOR 30 索瑞克（奧格瑪 榮譽谷）→ 03-15 希爾斯布萊德丘陵、02-12 希爾斯布萊德丘陵、02-14 梣谷、03-16 阿拉希高地・落錘鎮第一次
-- WARRIOR 42 馬爾羅什（悲傷沼澤 斯通納德）→ 03-27 悲傷沼澤・斯通納德、04-31 悲傷沼澤・斯通納德與東風海岸第二次、03-25 荒蕪之地・卡加斯、03-26 荊棘谷・第二次
-- WARRIOR 50 克里斯多夫·沃克（幽暗城 軍事區）→ 04-35 辛特蘭・惡齒村與辛薩羅、04-33 塔納利斯・加基森與砂槌營地第二次、04-34 灼熱峽谷・瑟銀哨塔、04-36 詛咒之地・血法師營地
-- PALADIN 4 阿拉米斯‧錘手（喪鐘鎮）→ 01-5 喪鐘鎮、01-1 試煉谷、01-3 納拉其營地、01-7 微風島
-- PALADIN 10 夏莉‧斯迪威爾（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾、01-2 杜洛塔・森金村／剃刀嶺、01-4 莫高雷・血蹄村、01-7 微風島
-- PALADIN 20 嘉瑞‧拉苟（幽暗城 軍事區）→ 02-9 銀松森林、02-12 希爾斯布萊德丘陵、03-15 希爾斯布萊德丘陵、02-10 貧瘠之地・棘齒城／陶拉祖營地
-- PALADIN 40 嘉瑞‧拉苟（幽暗城 軍事區）→ 03-25 荒蕪之地・卡加斯、03-22 奧特蘭克山脈、03-23 阿拉希高地・落錘鎮第二次、03-24 大河林地・羅格瑪第一次
+- WARRIOR 30 索瑞克（奧格瑪 榮譽谷）→ 03-15 希爾斯布萊德丘陵、02-12 希爾斯布萊德丘陵
+- WARRIOR 42 馬爾羅什（悲傷沼澤 斯通納德）→ 03-27 悲傷沼澤・斯通納德、04-31 悲傷沼澤・斯通納德與東風海岸第二次
+- WARRIOR 50 克里斯多夫·沃克（幽暗城 軍事區）→ 04-35 辛特蘭・惡齒村與辛薩羅
+- PALADIN 4 阿拉米斯‧錘手（喪鐘鎮）→ 01-5 喪鐘鎮
+- PALADIN 6 阿拉米斯‧錘手（喪鐘鎮）→ 01-5 喪鐘鎮
+- PALADIN 8 夏莉‧斯迪威爾（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- PALADIN 10 夏莉‧斯迪威爾（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- PALADIN 12 夏莉‧斯迪威爾（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- PALADIN 20 嘉瑞‧拉苟（幽暗城 軍事區）→ 02-9 銀松森林、02-12 希爾斯布萊德丘陵、03-15 希爾斯布萊德丘陵
+- PALADIN 40 嘉瑞‧拉苟（幽暗城 軍事區）→ 03-25 荒蕪之地・卡加斯、03-22 奧特蘭克山脈
 - PALADIN 50 『希望者』阿洛丹（雷霆崖 靈魂高地）→ 04-39 菲拉斯・莫沙徹營地回訪、04-32 菲拉斯・莫沙徹營地與怒痕堡第二次、04-30 菲拉斯・莫沙徹營地第一次、04-48 菲拉斯・莫沙徹營地短訪
-- HUNTER 4 基沙（試煉谷）→ 01-1 試煉谷、01-3 納拉其營地、01-5 喪鐘鎮、01-7 微風島
-- HUNTER 10 索塔爾（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺、01-4 莫高雷・血蹄村、01-7 微風島、01-6 提里斯法林地・布瑞爾
+- HUNTER 4 基沙（試煉谷）→ 01-1 試煉谷
+- HUNTER 6 基沙（試煉谷）→ 01-1 試煉谷
+- HUNTER 8 索塔爾（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- HUNTER 10 索塔爾（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- HUNTER 12 索塔爾（杜洛塔 剃刀嶺）→ 02-8 貧瘠之地・十字路口、01-2 杜洛塔・森金村／剃刀嶺、02-10 貧瘠之地・棘齒城／陶拉祖營地、04-49 貧瘠之地・棘齒城短訪
+- HUNTER 4 蘭卡·遠箭（納拉其營地）→ 01-3 納拉其營地
+- HUNTER 6 蘭卡·遠箭（納拉其營地）→ 01-3 納拉其營地
+- HUNTER 8 雅文·刺鬃（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- HUNTER 10 雅文·刺鬃（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- HUNTER 12 雅文·刺鬃（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- HUNTER 4 泰芮‧遠目（微風島 坦德爾林地）→ 01-7 微風島
+- HUNTER 6 泰芮‧遠目（微風島 坦德爾林地）→ 01-7 微風島
+- HUNTER 8 伊菈雅‧輕風（微風島 申德村）→ 01-7 微風島
+- HUNTER 10 奎爾安娜‧快颺（微風島 瓦拉納爾）→ 01-7 微風島
+- HUNTER 12 奎爾安娜‧快颺（微風島 瓦拉納爾）→ 01-4 莫高雷・血蹄村、01-7 微風島
 - HUNTER 20 奧瑪克（奧格瑪 榮譽谷）→ 02-10 貧瘠之地・棘齒城／陶拉祖營地、02-11 石爪山脈、02-14 梣谷、02-8 貧瘠之地・十字路口
-- HUNTER 34 克拉格（荊棘谷 格羅姆高營地）→ 03-19 荊棘谷・第一次、03-26 荊棘谷・第二次、04-37 荊棘谷・藏寶海灣回訪、03-17 千針石林・亂風崗與閃光平原
-- HUNTER 42 歐格魯姆（悲傷沼澤 斯通納德）→ 03-27 悲傷沼澤・斯通納德、04-31 悲傷沼澤・斯通納德與東風海岸第二次、03-25 荒蕪之地・卡加斯、03-26 荊棘谷・第二次
+- HUNTER 34 克拉格（荊棘谷 格羅姆高營地）→ 03-19 荊棘谷・第一次、03-26 荊棘谷・第二次、04-37 荊棘谷・藏寶海灣回訪
+- HUNTER 42 歐格魯姆（悲傷沼澤 斯通納德）→ 03-27 悲傷沼澤・斯通納德、04-31 悲傷沼澤・斯通納德與東風海岸第二次
 - HUNTER 52 奧瑪克（奧格瑪 榮譽谷）→ 04-37 荊棘谷・藏寶海灣回訪、04-38 艾薩拉・瓦羅莫克與阿克科蘭神殿、03-26 荊棘谷・第二次、03-19 荊棘谷・第一次
-- ROGUE 4 魯瓦格（試煉谷）→ 01-1 試煉谷、01-5 喪鐘鎮、03-19 荊棘谷・第一次、04-52 月光林地・第一次
-- ROGUE 10 卡普拉克（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺、01-6 提里斯法林地・布瑞爾、01-4 莫高雷・血蹄村、01-7 微風島
+- ROGUE 4 魯瓦格（試煉谷）→ 01-1 試煉谷
+- ROGUE 6 魯瓦格（試煉谷）→ 01-1 試煉谷
+- ROGUE 8 卡普拉克（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- ROGUE 10 卡普拉克（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- ROGUE 12 卡普拉克（杜洛塔 剃刀嶺）→ 02-8 貧瘠之地・十字路口、01-2 杜洛塔・森金村／剃刀嶺、02-10 貧瘠之地・棘齒城／陶拉祖營地、04-49 貧瘠之地・棘齒城短訪
+- ROGUE 4 大衛·提亞斯（喪鐘鎮）→ 01-5 喪鐘鎮
+- ROGUE 6 大衛·提亞斯（喪鐘鎮）→ 01-5 喪鐘鎮
+- ROGUE 8 馬里恩·考爾（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- ROGUE 10 馬里恩·考爾（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- ROGUE 12 馬里恩·考爾（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- ROGUE 4 阿克里‧暮刃（微風島 坦德爾林地）→ 01-7 微風島
+- ROGUE 6 阿克里‧暮刃（微風島 坦德爾林地）→ 01-7 微風島
+- ROGUE 8 蜜莉安‧霧刃（微風島 申德村）→ 01-7 微風島
+- ROGUE 10 伊瑟恩‧夜風（微風島 瓦拉納爾）→ 01-7 微風島
+- ROGUE 12 伊瑟恩‧夜風（微風島 瓦拉納爾）→ 01-4 莫高雷・血蹄村、01-7 微風島
 - ROGUE 20 申蘇爾（奧格瑪 暗巷區）→ 02-10 貧瘠之地・棘齒城／陶拉祖營地、02-14 梣谷、02-8 貧瘠之地・十字路口、04-49 貧瘠之地・棘齒城短訪
-- ROGUE 34 伊安·斯托姆（荊棘谷 藏寶海灣）→ 03-19 荊棘谷・第一次、03-26 荊棘谷・第二次、04-37 荊棘谷・藏寶海灣回訪、03-17 千針石林・亂風崗與閃光平原
+- ROGUE 34 伊安·斯托姆（荊棘谷 藏寶海灣）→ 03-19 荊棘谷・第一次、03-26 荊棘谷・第二次、04-37 荊棘谷・藏寶海灣回訪
 - ROGUE 50 卡洛琳·瓦德（幽暗城 盜賊區）→ 04-35 辛特蘭・惡齒村與辛薩羅、04-44 西瘟疫之地・亡靈壁壘第一次、04-50 西瘟疫之地・第二次、04-57 西瘟疫之地・第三次
-- PRIEST 4 黑暗教士杜斯滕（喪鐘鎮）→ 01-1 試煉谷、01-5 喪鐘鎮、01-3 納拉其營地、01-7 微風島
-- PRIEST 8 黑暗教士貝里爾（提里斯法林地 布瑞爾）→ 01-2 杜洛塔・森金村／剃刀嶺、01-6 提里斯法林地・布瑞爾、01-4 莫高雷・血蹄村、01-7 微風島
+- PRIEST 4 肯傑（試煉谷）→ 01-1 試煉谷
+- PRIEST 6 肯傑（試煉谷）→ 01-1 試煉谷
+- PRIEST 8 泰金（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- PRIEST 10 泰金（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- PRIEST 12 泰金（杜洛塔 剃刀嶺）→ 02-8 貧瘠之地・十字路口、01-2 杜洛塔・森金村／剃刀嶺、02-10 貧瘠之地・棘齒城／陶拉祖營地、04-49 貧瘠之地・棘齒城短訪
+- PRIEST 4 黑暗教士杜斯滕（喪鐘鎮）→ 01-5 喪鐘鎮
+- PRIEST 6 黑暗教士杜斯滕（喪鐘鎮）→ 01-5 喪鐘鎮
+- PRIEST 8 黑暗教士貝里爾（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- PRIEST 10 黑暗教士貝里爾（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- PRIEST 12 黑暗教士貝里爾（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
 - PRIEST 20 蘭克斯特神父（幽暗城 軍事區）→ 02-9 銀松森林、02-12 希爾斯布萊德丘陵、03-15 希爾斯布萊德丘陵、03-22 奧特蘭克山脈
 - PRIEST 40 烏爾庫（奧格瑪 精神谷）→ 03-25 荒蕪之地・卡加斯、04-29 塔納利斯・熱砂港與加基森第一次、04-30 菲拉斯・莫沙徹營地第一次、04-32 菲拉斯・莫沙徹營地與怒痕堡第二次
 - PRIEST 52 烏爾庫（奧格瑪 精神谷）→ 04-37 荊棘谷・藏寶海灣回訪、04-38 艾薩拉・瓦羅莫克與阿克科蘭神殿、03-26 荊棘谷・第二次、03-19 荊棘谷・第一次
-- SHAMAN 4 史克里克（試煉谷）→ 01-1 試煉谷、01-3 納拉其營地、01-7 微風島、01-5 喪鐘鎮
-- SHAMAN 10 斯瓦特（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺、01-4 莫高雷・血蹄村、01-6 提里斯法林地・布瑞爾、01-7 微風島
+- SHAMAN 4 史克里克（試煉谷）→ 01-1 試煉谷
+- SHAMAN 6 史克里克（試煉谷）→ 01-1 試煉谷
+- SHAMAN 8 斯瓦特（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- SHAMAN 10 斯瓦特（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- SHAMAN 12 斯瓦特（杜洛塔 剃刀嶺）→ 02-8 貧瘠之地・十字路口、01-2 杜洛塔・森金村／剃刀嶺、02-10 貧瘠之地・棘齒城／陶拉祖營地、04-49 貧瘠之地・棘齒城短訪
+- SHAMAN 4 米拉·晨行者（納拉其營地）→ 01-3 納拉其營地
+- SHAMAN 6 米拉·晨行者（納拉其營地）→ 01-3 納拉其營地
+- SHAMAN 8 納姆·逐星（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- SHAMAN 10 納姆·逐星（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- SHAMAN 12 納姆·逐星（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- SHAMAN 4 塑風者玻羅（微風島 坦德爾林地）→ 01-7 微風島
+- SHAMAN 6 塑風者玻羅（微風島 坦德爾林地）→ 01-7 微風島
+- SHAMAN 8 阿諾爾‧颺擊（微風島 申德村）→ 01-7 微風島
+- SHAMAN 10 瑟莎莉雅‧天行（微風島 瓦拉納爾）→ 01-7 微風島
+- SHAMAN 12 瑟莎莉雅‧天行（微風島 瓦拉納爾）→ 01-4 莫高雷・血蹄村、01-7 微風島
 - SHAMAN 20 卡德里斯（奧格瑪 智慧谷）→ 02-10 貧瘠之地・棘齒城／陶拉祖營地、02-14 梣谷、02-8 貧瘠之地・十字路口、03-18 淒涼之地・葬影村第一次
-- SHAMAN 42 哈洛姆（悲傷沼澤 斯通納德）→ 03-27 悲傷沼澤・斯通納德、04-31 悲傷沼澤・斯通納德與東風海岸第二次、03-25 荒蕪之地・卡加斯、03-26 荊棘谷・第二次
+- SHAMAN 42 哈洛姆（悲傷沼澤 斯通納德）→ 03-27 悲傷沼澤・斯通納德、04-31 悲傷沼澤・斯通納德與東風海岸第二次
 - SHAMAN 52 卡德里斯（奧格瑪 智慧谷）→ 04-37 荊棘谷・藏寶海灣回訪、04-38 艾薩拉・瓦羅莫克與阿克科蘭神殿、03-26 荊棘谷・第二次、03-19 荊棘谷・第一次
-- MAGE 4 伊莎貝拉（喪鐘鎮）→ 01-1 試煉谷、01-5 喪鐘鎮、01-7 微風島、01-3 納拉其營地
-- MAGE 8 安蘇瓦（杜洛塔 森金村）→ 01-2 杜洛塔・森金村／剃刀嶺、01-6 提里斯法林地・布瑞爾、01-4 莫高雷・血蹄村、01-7 微風島
-- MAGE 20 安娜斯塔西婭·哈特威爾（幽暗城 魔法區）→ 02-9 銀松森林、02-12 希爾斯布萊德丘陵、03-15 希爾斯布萊德丘陵、02-10 貧瘠之地・棘齒城／陶拉祖營地
-- MAGE 40 尤塞爾奈（奧格瑪 精神谷）→ 03-25 荒蕪之地・卡加斯、03-21 淒涼之地・葬影村第二次、03-18 淒涼之地・葬影村第一次、03-22 奧特蘭克山脈
+- MAGE 4 邁安（試煉谷）→ 01-1 試煉谷
+- MAGE 6 邁安（試煉谷）→ 01-1 試煉谷
+- MAGE 8 安蘇瓦（杜洛塔 森金村）→ 01-2 杜洛塔・森金村／剃刀嶺
+- MAGE 10 安蘇瓦（杜洛塔 森金村）→ 01-2 杜洛塔・森金村／剃刀嶺
+- MAGE 12 安蘇瓦（杜洛塔 森金村）→ 01-2 杜洛塔・森金村／剃刀嶺
+- MAGE 4 伊莎貝拉（喪鐘鎮）→ 01-5 喪鐘鎮
+- MAGE 6 伊莎貝拉（喪鐘鎮）→ 01-5 喪鐘鎮
+- MAGE 8 凱恩·火歌（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- MAGE 10 凱恩·火歌（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- MAGE 12 凱恩·火歌（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- MAGE 20 安娜斯塔西婭·哈特威爾（幽暗城 魔法區）→ 02-9 銀松森林、02-12 希爾斯布萊德丘陵、03-15 希爾斯布萊德丘陵
+- MAGE 40 尤塞爾奈（奧格瑪 精神谷）→ 03-25 荒蕪之地・卡加斯、03-21 淒涼之地・葬影村第二次、03-18 淒涼之地・葬影村第一次
 - MAGE 52 尤塞爾奈（奧格瑪 精神谷）→ 04-37 荊棘谷・藏寶海灣回訪、04-38 艾薩拉・瓦羅莫克與阿克科蘭神殿、03-26 荊棘谷・第二次、03-19 荊棘谷・第一次
-- WARLOCK 4 納托克（試煉谷）→ 01-1 試煉谷、01-5 喪鐘鎮、01-3 納拉其營地、01-7 微風島
-- WARLOCK 8 杜格魯·血怒（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺、01-6 提里斯法林地・布瑞爾、01-4 莫高雷・血蹄村、01-7 微風島
+- WARLOCK 4 納托克（試煉谷）→ 01-1 試煉谷
+- WARLOCK 6 納托克（試煉谷）→ 01-1 試煉谷
+- WARLOCK 8 杜格魯·血怒（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- WARLOCK 10 杜格魯·血怒（杜洛塔 剃刀嶺）→ 01-2 杜洛塔・森金村／剃刀嶺
+- WARLOCK 12 杜格魯·血怒（杜洛塔 剃刀嶺）→ 02-8 貧瘠之地・十字路口、01-2 杜洛塔・森金村／剃刀嶺、02-10 貧瘠之地・棘齒城／陶拉祖營地、04-49 貧瘠之地・棘齒城短訪
+- WARLOCK 4 馬克希米林（喪鐘鎮）→ 01-5 喪鐘鎮
+- WARLOCK 6 馬克希米林（喪鐘鎮）→ 01-5 喪鐘鎮
+- WARLOCK 8 魯伯特·鮑什（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- WARLOCK 10 魯伯特·鮑什（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
+- WARLOCK 12 魯伯特·鮑什（提里斯法林地 布瑞爾）→ 01-6 提里斯法林地・布瑞爾
 - WARLOCK 20 格羅達爾（奧格瑪 暗巷區）→ 02-10 貧瘠之地・棘齒城／陶拉祖營地、02-14 梣谷、02-8 貧瘠之地・十字路口、03-18 淒涼之地・葬影村第一次
-- WARLOCK 42 卡托什（悲傷沼澤 斯通納德）→ 03-27 悲傷沼澤・斯通納德、04-31 悲傷沼澤・斯通納德與東風海岸第二次、02-10 貧瘠之地・棘齒城／陶拉祖營地、03-25 荒蕪之地・卡加斯
+- WARLOCK 42 卡托什（悲傷沼澤 斯通納德）→ 03-27 悲傷沼澤・斯通納德、04-31 悲傷沼澤・斯通納德與東風海岸第二次、02-10 貧瘠之地・棘齒城／陶拉祖營地
 - WARLOCK 50 卡爾·噬靈（幽暗城 魔法區）→ 04-35 辛特蘭・惡齒村與辛薩羅、04-44 西瘟疫之地・亡靈壁壘第一次、04-50 西瘟疫之地・第二次、04-57 西瘟疫之地・第三次
-- DRUID 4 加爾特·迷霧行者（納拉其營地）→ 01-3 納拉其營地、01-7 微風島、01-1 試煉谷、01-5 喪鐘鎮
-- DRUID 8 根妮亞·符文圖騰（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村、01-7 微風島、01-2 杜洛塔・森金村／剃刀嶺、01-6 提里斯法林地・布瑞爾
+- DRUID 4 加爾特·迷霧行者（納拉其營地）→ 01-3 納拉其營地
+- DRUID 6 加爾特·迷霧行者（納拉其營地）→ 01-3 納拉其營地
+- DRUID 8 根妮亞·符文圖騰（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- DRUID 10 根妮亞·符文圖騰（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- DRUID 12 根妮亞·符文圖騰（莫高雷 血蹄村）→ 01-4 莫高雷・血蹄村
+- DRUID 4 希頓‧銀風（微風島 坦德爾林地）→ 01-7 微風島
+- DRUID 6 希頓‧銀風（微風島 坦德爾林地）→ 01-7 微風島
+- DRUID 8 奈露娜‧迅癒（微風島 申德村）→ 01-7 微風島
+- DRUID 10 洛瑟倫‧星風（微風島 瓦拉納爾）→ 01-7 微風島
+- DRUID 12 洛瑟倫‧星風（微風島 瓦拉納爾）→ 01-4 莫高雷・血蹄村、01-7 微風島
 - DRUID 20 圖拉克·符文圖騰（雷霆崖 長者高地）→ 02-10 貧瘠之地・棘齒城／陶拉祖營地、02-9 銀松森林、02-14 梣谷、02-8 貧瘠之地・十字路口
 - DRUID 38 圖拉克·符文圖騰（雷霆崖 長者高地）→ 03-21 淒涼之地・葬影村第二次、03-26 荊棘谷・第二次、03-18 淒涼之地・葬影村第一次、04-50 西瘟疫之地・第二次
 - DRUID 48 加諾斯·輕蹄（菲拉斯 莫沙徹營地）→ 04-32 菲拉斯・莫沙徹營地與怒痕堡第二次、04-30 菲拉斯・莫沙徹營地第一次、04-39 菲拉斯・莫沙徹營地回訪、04-48 菲拉斯・莫沙徹營地短訪
