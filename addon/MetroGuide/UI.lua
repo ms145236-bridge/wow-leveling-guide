@@ -129,9 +129,10 @@ local function box(f, edge)
   return bg
 end
 
-local root, bar, chip, panel, menu, report, dhint, ghint, vhint
+local root, bar, chip, panel, menu, report, dhint, ghint, vhint, lhint
 local rows, items = {}, {}
 local scroll, tab, missOpen, lastCurKey = 0, "steps", false, nil
+local impOpen, preOpen, preSeen = false, false, nil
 local state -- 最近一次 Render 的引擎結果
 
 local BRONZE = { 0.427, 0.353, 0.184 }
@@ -379,6 +380,19 @@ local function buildItems()
   wipe(items)
   if not state then return end
   if tab == "steps" then
+    -- 少了前置（到站時自動展開一次）
+    local pre = E.MissingPre(state.st)
+    if #pre > 0 then
+      if preSeen ~= state.st.id then preSeen, preOpen = state.st.id, true end
+      items[#items + 1] = { kind = "prehead", n = #pre }
+      if preOpen then for _, m in ipairs(pre) do items[#items + 1] = { kind = "pre", m = m } end end
+    end
+    -- 離站前：還有會影響後續的任務
+    local leave = UI.Leaving(state)
+    if #leave > 0 then
+      items[#items + 1] = { kind = "imphead", n = #leave }
+      if impOpen then for _, m in ipairs(leave) do items[#items + 1] = { kind = "imp", m = m } end end
+    end
     if #state.missed > 0 then
       items[#items + 1] = { kind = "misshead" }
       if missOpen then
@@ -481,20 +495,33 @@ local function fillRow(row, it)
   at(row.ck, 8, 14); at(row.box, 9); at(row.no, 24, 20); at(row.verb, 48, 18)
   row.prog:ClearAllPoints()
   if top then row.prog:SetPoint("TOPRIGHT", -12, -7) else row.prog:SetPoint("RIGHT", -12, 0) end
-  local PROG_W = { step = 64, miss = 1, misshead = 1, station = 44, start = 1, ghead = 1, grind = 70, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 110, dact = 1 }
+  local PROG_W = { prehead = 1, pre = 44, imphead = 1, imp = 1, step = 64, miss = 1, misshead = 1, station = 44, start = 1, ghead = 1, grind = 70, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 110, dact = 1 }
   row.prog:SetWidth(PROG_W[it.kind] or 64)
   local NAME_X = { dtext = 28, dhead = 28, dg = 26, dq = 28, dent = 28, dphase = 28, dact = 28 }
   row.name:ClearAllPoints()
   if top then row.name:SetPoint("TOPLEFT", 70, -5) else row.name:SetPoint("LEFT", NAME_X[it.kind] or 70, 0) end
   row.name:SetPoint("RIGHT", (it.kind == "dg" or it.kind == "station") and row.lvt or row.prog, "LEFT", -6, 0)
   row.box:Hide(); row.ck:Show()
-  if it.kind == "misshead" then
+  if it.kind == "prehead" or it.kind == "imphead" then
+    local open = it.kind == "prehead" and preOpen or impOpen
+    row.ck:SetText(open and "-" or "+"); paint(row.ck, AMBER)
+    row.name:SetText((it.kind == "prehead" and "少了前置 " or "影響後續 ") .. it.n); paint(row.name, AMBER)
+  elseif it.kind == "pre" then
+    local m = it.m
+    row.no:SetText("缺"); paint(row.no, AMBER)
+    row.name:SetText(E.Title({ t = "accept", q = m.p }) .. "（在 " .. m.pst.name .. " 接）→ 這裡的 " .. E.Title({ t = "accept", q = m.q }) .. " 不能做"); paint(row.name, DIM)
+    if m.can then row.prog:SetText("補做"); paint(row.prog, GOLD) end
+  elseif it.kind == "imp" then
+    row.no:SetText("留"); paint(row.no, AMBER)
+    row.name:SetText(E.Title({ t = "accept", q = it.m.q }) .. "｜" .. E.ImpactText(it.m.imp, state.st)); paint(row.name, AMBER)
+  elseif it.kind == "misshead" then
     row.ck:SetText(missOpen and "-" or "+"); paint(row.ck, AMBER)
     row.name:SetText("漏掉 " .. #state.missed); paint(row.name, AMBER)
   elseif it.kind == "miss" then
     local q = it.m.q
     row.no:SetText("漏"); paint(row.no, AMBER)
-    row.name:SetText(C.Title(q) or (MG.Route.quests[q] and MG.Route.quests[q].n) or q); paint(row.name, AMBER)
+    local imp = E.Impact(q, state.st)
+    row.name:SetText((C.Title(q) or (MG.Route.quests[q] and MG.Route.quests[q].n) or q) .. (#imp > 0 and ("｜" .. E.ImpactText(imp, state.st)) or "")); paint(row.name, AMBER)
   elseif it.kind == "step" then
     local i, s = it.i, it.step.s
     local skipped = MG.db.skip[it.step.key]
@@ -791,6 +818,25 @@ function UI.Entrance(d)
   local zone = C.MapName(d.map) or ((d.entrance or ""):match("^(%S+)") or "")
   return { x = x, y = y, coord = x and string.format("%.1f, %.1f", x, y) or "", zone = zone, door = door }
 end
+-- 「要離站」：本站做完、輪到站尾交通，或目前是交通／爐石而後面只剩被跳過的任務（同任務前面有沒做的步驟）
+local MOVE = { travel = true, fly = true, boat = true, hearth = true }
+function UI.Leaving(S)
+  if not S or S.instance or not S.steps then return {} end
+  local i = S.cur
+  if i and not (S.tails and S.tails[i]) then
+    if not MOVE[S.steps[i].s.t] then return {} end
+    local behind = {}
+    for k = 1, i - 1 do
+      local q = S.steps[k].s.q
+      if q and not S.done[k] and not S.na[k] then behind[q] = true end
+    end
+    for j = i + 1, #S.steps do
+      local q = S.steps[j].s.q
+      if q and not S.done[j] and not S.na[j] and not behind[q] then return {} end
+    end
+  end
+  return E.Leaving(S)
+end
 function UI.GoGrind(g)
   MG.grindActive = g
   MG.wpOverride = { map = g.map, x = g.x, y = g.y, name = "打 " .. g.mob }
@@ -834,7 +880,12 @@ end
 local function onRowClick(row, button)
   local it = row.it
   if not it then return end
-  if it.kind == "misshead" then missOpen = not missOpen
+  if it.kind == "prehead" then preOpen = not preOpen
+  elseif it.kind == "imphead" then impOpen = not impOpen
+  elseif it.kind == "pre" then if it.m.can then E.MakeUp(state.st, it.m.p) end
+  elseif it.kind == "imp" then
+    if button == "RightButton" then E.ToggleSkip(state.steps[it.m.i].key) else E.PinIndex(state, it.m.i) end
+  elseif it.kind == "misshead" then missOpen = not missOpen
   elseif it.kind == "miss" then E.PinIndex(state, it.m.i)
   elseif it.kind == "step" then
     if button == "RightButton" then E.ToggleSkip(it.step.key) else E.PinIndex(state, it.i) end
@@ -1041,6 +1092,21 @@ function UI.Create()
   end)
   vhint:Hide()
 
+  -- 離站前提醒：「離開前：還有 n 個任務會影響後續」＋ 查看
+  lhint = CreateFrame("Frame", nil, root)
+  lhint:SetSize(300, 24)
+  box(lhint, BRONZE)
+  lhint.label = text(lhint, 13, AMBER)
+  lhint.label:SetPoint("LEFT", 10, 0)
+  lhint.label:SetPoint("RIGHT", -56, 0)
+  lhint.go = goldButton(lhint, "查看", 44); lhint.go:SetHeight(18); lhint.go:SetPoint("RIGHT", -6, 0)
+  lhint.go:SetScript("OnClick", function()
+    impOpen = true
+    panel:Show(); setTab("steps"); scroll = 0
+    drawPanel()
+  end)
+  lhint:Hide()
+
   panel = CreateFrame("Frame", nil, root)
   panel:SetSize(320, 34 + 18 * ROW_H + 8)
   panel.bg = box(panel)
@@ -1182,6 +1248,13 @@ function UI.Create()
       elseif it and it.kind == "dq" then UI.StepTooltip(self, it.t.step.s, nil, true)
       elseif it and it.kind == "dqi" and it.step then UI.StepTooltip(self, it.step.s, nil, true)
       elseif it and it.kind == "dch" then UI.StepTooltip(self, it.steps[1].s, nil, true)
+      elseif it and it.kind == "station" then
+        local pre = E.MissingPre(it.st)
+        if #pre > 0 then
+          GameTooltip:SetOwner(self, "ANCHOR_RIGHT"); GameTooltip:AddLine(it.st.name, GOLD[1], GOLD[2], GOLD[3])
+          for _, m in ipairs(pre) do GameTooltip:AddLine("少了前置：" .. E.Title({ t = "accept", q = m.p }) .. "（在 " .. m.pst.name .. " 接）→ 這裡的 " .. E.Title({ t = "accept", q = m.q }) .. " 不能做", AMBER[1], AMBER[2], AMBER[3], true) end
+          GameTooltip:Show()
+        end
       elseif it and it.kind == "grind" and it.g.note then
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT"); GameTooltip:AddLine(it.g.mob, GOLD[1], GOLD[2], GOLD[3]); GameTooltip:AddLine(it.g.note, DIM[1], DIM[2], DIM[3], true); GameTooltip:Show() end
     end)
@@ -1688,6 +1761,16 @@ function UI.Render(S)
     above = vhint
   end
   vhint:SetShown(vi ~= nil)
+  -- 離站前提醒：輪到站尾交通（或本站做完）時
+  local leave = UI.Leaving(state)
+  if #leave > 0 then
+    lhint.label:SetText("離開前：還有 " .. #leave .. " 個任務會影響後續")
+    lhint:SetWidth(UI.Get("barWidth"))
+    lhint:ClearAllPoints()
+    lhint:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
+    above = lhint
+  end
+  lhint:SetShown(#leave > 0)
   panel:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
   drawPanel()
 end

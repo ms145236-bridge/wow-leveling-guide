@@ -12,6 +12,7 @@ E.byId = {}
 
 local QUEST = { accept = true, ["do"] = true, turnin = true }
 local SOFT = { ["goto"] = true, fp = true, fly = true, boat = true, travel = true }
+local questSt = {} -- 任務 → 有它步驟的站（主線站與副本，Build 時建）
 E.QUEST, E.SOFT = QUEST, SOFT
 
 -- ── 角色與條件 ──────────────────────────────────────────────────────────────
@@ -66,7 +67,7 @@ end
 function E.Build()
   me.raceL, me.race, me.raceID = UnitRace("player")
   me.class = select(2, UnitClass("player"))
-  wipe(E.stations); wipe(E.byId); wipe(E.dungeons)
+  wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt)
   local startKey = E.StartKey()
   for _, st in ipairs(R.stations) do
     if st.dungeon or (st.start and st.start == startKey) or (not st.start and E.Applies(st.when)) then
@@ -87,6 +88,14 @@ function E.Build()
         end
       end
       st.list = list
+      for _, step in ipairs(list) do
+        local q = step.s.q
+        if q then
+          local l = questSt[q] or {}
+          questSt[q] = l
+          if l[#l] ~= st then l[#l + 1] = st end
+        end
+      end
       if st.dungeon then
         E.dungeons[#E.dungeons + 1] = st
       else
@@ -670,6 +679,89 @@ end
 -- 略過（連帶）：略過「接」或「做」→ 這個任務的接／做／交 ＋ 後續任務的全部步驟；略過「交」→ 只連帶後續任務。
 -- 存法：skip[key] = 起點的 key（起點自己也存自己），取消時把同一個起點的全部還原。
 local function questName(q) return C.Title(q) or (R.quests[q] and R.quests[q].n) or tostring(q) end
+-- ── 跨站提醒 ──────────────────────────────────────────────────────────────────
+local function place(o, st)
+  if o.dungeon then return o.name .. " 副本" end
+  return o.name .. ((st and o ~= st and o.map == st.map) and "，第二次來" or "")
+end
+-- 這個任務（含後續鏈）在 st 之後的站或副本還有步驟 → { {q, st}... }，每站列一次
+function E.Impact(q, st)
+  local out, seen, seenSt, queue = {}, { [q] = true }, {}, { q }
+  while #queue > 0 do
+    local cur = table.remove(queue, 1)
+    for _, o in ipairs(questSt[cur] or {}) do
+      if o ~= st and not seenSt[o] and (o.dungeon or (o.index and st.index and o.index > st.index)) then
+        seenSt[o] = true
+        out[#out + 1] = { q = cur, st = o }
+      end
+    end
+    for _, f in ipairs((R.quests[cur] or {}).fol or {}) do
+      if not seen[f] then seen[f] = true; queue[#queue + 1] = f end
+    end
+  end
+  return out
+end
+function E.ImpactText(imp, st)
+  local parts = {}
+  for k, x in ipairs(imp) do
+    if k > 2 then parts[#parts] = parts[#parts] .. " 等 " .. #imp .. " 處"; break end
+    parts[#parts + 1] = questName(x.q) .. "（" .. place(x.st, st) .. "）"
+  end
+  return "影響後續：" .. table.concat(parts, "、")
+end
+-- 離站前：本站還沒做完（或略過）的任務中，會影響後續站的
+function E.Leaving(state)
+  local out, seen = {}, {}
+  if state.instance or state.st.dungeon then return out end
+  for i, step in ipairs(state.steps) do
+    local q = step.s.q
+    local skipped = MG.db.skip[step.key]
+    if q and not seen[q] and not step.carry and not turned(q) and (skipped or not (state.done[i] or state.na[i])) then
+      seen[q] = true
+      local imp = E.Impact(q, state.st)
+      if #imp > 0 then out[#out + 1] = { i = i, q = q, imp = imp } end
+    end
+  end
+  return out
+end
+-- 到站：因為前面站的前置沒做而接不到的本站任務 → { {q, p, pst, can}... }；can＝前置還接得到（可補做）
+function E.MissingPre(st)
+  local out, seen = {}, {}
+  if st.dungeon or not st.index then return out end
+  local lv = UnitLevel("player") or 0
+  for _, step in ipairs(st.list) do
+    local q = step.s.q
+    if q and not seen[q] and not MG.db.skip[step.key] and E.Applies(step.s.when) and not available(q) then
+      seen[q] = true
+      local info = R.quests[q]
+      local cands = {}
+      for _, p in ipairs(info.pg or {}) do if not turned(p) then cands[#cands + 1] = p end end
+      for _, p in ipairs(info.ps or {}) do cands[#cands + 1] = p end
+      for _, p in ipairs(cands) do
+        local here, earlier = false, nil
+        for _, o in ipairs(questSt[p] or {}) do
+          if o == st then here = true elseif o.index and o.index < st.index then earlier = earlier or o end
+        end
+        if earlier and not here then
+          local pi = R.quests[p] or {}
+          local can = not turned(p) and (C.IsOnQuest(p) or (lv >= (pi.min or 0) and not gray(p) and available(p) and not excluded(p)))
+          out[#out + 1] = { q = q, p = p, pst = earlier, can = can or false }
+          break
+        end
+      end
+    end
+  end
+  return out
+end
+-- 補做：把前置任務帶進本站最前面（做完自動回原路線）
+function E.MakeUp(st, p)
+  local carry = MG.db.carry[st.id] or {}
+  MG.db.carry[st.id] = carry
+  for _, q in ipairs(carry) do if q == p then return end end
+  carry[#carry + 1] = p
+  MG.msg("補做 " .. questName(p) .. "：排在本站最前面，做完回原路線")
+end
+
 function E.ToggleSkip(key)
   local skip = MG.db.skip
   local root = skip[key]
@@ -684,6 +776,7 @@ function E.ToggleSkip(key)
   skip[key] = key
   if not q then return end
   local names, later = { questName(q) }, {}
+  local here = MG.db.station and E.byId[MG.db.station]
   if t ~= "t" then
     for _, p in ipairs({ "a", "d", "t" }) do if not skip[p .. ":" .. q] then skip[p .. ":" .. q] = key end end
   end
@@ -695,12 +788,15 @@ function E.ToggleSkip(key)
       if not seen[f] then
         seen[f] = true
         queue[#queue + 1] = f
-        later[#later + 1] = questName(f)
+        local o -- 後續任務在別站時標地名（本站的不標）
+        for _, x in ipairs(questSt[f] or {}) do if x ~= here then o = o or x end end
+        later[#later + 1] = questName(f) .. (o and ("（" .. place(o, here) .. "）") or "")
         for _, p in ipairs({ "a", "d", "t" }) do if not skip[p .. ":" .. f] then skip[p .. ":" .. f] = key end end
       end
     end
   end
-  MG.msg("已略過：" .. names[1] .. (#later > 0 and ("、後續 " .. table.concat(later, "、")) or ""))
+  local imp = here and E.Impact(q, here) or {}
+  MG.msg("已略過：" .. names[1] .. (#later > 0 and ("、後續 " .. table.concat(later, "、")) or "") .. (#imp > 0 and ("。" .. E.ImpactText(imp, here)) or ""))
 end
 
 -- 手動勾選：val = true／false；nil＝回到自動
