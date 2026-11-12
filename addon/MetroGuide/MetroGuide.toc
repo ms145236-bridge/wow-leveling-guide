@@ -1,0 +1,17 @@
+## Interface: 16001
+## Title: 地鐵升級
+## Notes: 部落升級路線：一次只顯示一步，任務狀態一變就自動對齊。/metro 開關、/metro probe 檢查報告
+## Author: MetroGuide
+## Version: 0.1.0
+## OptionalDeps: WaypointUI
+## SavedVariables: MetroGuideDB
+## SavedVariablesPerCharacter: MetroGuideCharDB
+
+Compat.lua
+Data\Route.lua
+Engine.lua
+Nav.lua
+UI.lua
+Target.lua
+Map.lua
+Core.lua

@@ -1,0 +1,88 @@
+<!doctype html><meta charset="utf-8"><title>pins v2</title>
+<style>
+@font-face{font-family:Num;src:url("file:///C:/Windows/Fonts/ARIALNB.TTF")}
+body{margin:0;background:#0e0f12;color:#e8e4d8;font:14px "Microsoft JhengHei",sans-serif;width:1500px}
+h2{font-size:14px;font-weight:400;color:#d9b25f;margin:0;padding:10px 24px 8px}
+.row{display:flex;align-items:center;padding:0 24px;position:relative}
+.parch{background:radial-gradient(ellipse at 30% 30%,#e6c98c,#cfa868 55%,#a67c45)}
+.cell{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.cap{font-size:11px;color:#3a2a14;margin-top:2px;white-space:nowrap}
+.sep{width:1px;align-self:stretch;background:rgba(60,40,15,.35);margin:0 14px}
+.pin{position:relative;display:block}
+.pin svg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:visible}
+.pin b{position:absolute;left:-10px;right:-10px;top:0;bottom:0;display:flex;align-items:center;justify-content:center;font-family:Num;font-weight:700;color:#fff8e6;letter-spacing:-.2px;
+  text-shadow:1px 0 0 #1a0f06,-1px 0 0 #1a0f06,0 1px 0 #1a0f06,0 -1px 0 #1a0f06,1px 1px 0 #1a0f06,-1px 1px 0 #1a0f06,1px -1px 0 #1a0f06,-1px -1px 0 #1a0f06}
+.old{border-radius:50%;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font:13px Arial;color:#120f0d;box-shadow:inset 0 0 0 2.5px #f5edd9,inset 0 0 0 3.5px #1a140f}
+.game{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#5a3a26,#2a170d 70%);border:2px solid #120a05;box-sizing:border-box;color:#e8c27a;font:bold 9px Arial;display:flex;align-items:center;justify-content:center}
+.map{position:relative;width:695px;height:460px;background:url(map.webp) -10px -75px no-repeat;overflow:hidden;flex:none}
+.zoom{position:relative;width:740px;height:460px;overflow:hidden;flex:none;margin-left:16px}
+.zoom .map{transform:scale(2.5);transform-origin:0 0;position:absolute}
+.mini{width:150px;height:150px;border-radius:50%;border:3px solid #5a4a2c;background:radial-gradient(circle at 40% 40%,#6b5a3a,#4a3c2a 50%,#2c2a22);position:relative;flex:none}
+</style>
+<body>
+<h2 id="t1"></h2>
+<div class="row parch" id="r1" style="height:74px"></div>
+<h2>3×</h2>
+<div class="row parch" id="r3" style="height:170px"></div>
+<h2>實際地圖截圖 1:1，20 個標點｜右：同圖 2.5×</h2>
+<div class="row"><div class="map" id="map"></div><div class="zoom"><div class="map" id="map2"></div></div></div>
+<h2>小地圖（目前步驟 18px＋後兩步 15px）、3×，以及貼圖分層</h2>
+<div class="row" style="padding-bottom:20px;gap:30px;align-items:flex-start"><div class="mini" id="mini"></div><div style="width:456px;height:456px;position:relative"><div class="mini" id="mini3" style="transform:scale(3);transform-origin:0 0"></div></div>
+<div class="parch" style="padding:14px 18px;display:flex;flex-wrap:wrap;gap:14px;border-radius:4px;width:640px" id="layers"></div></div>
+<script>
+t1.textContent="1:1 羊皮紙 — 左：遊戲內建「…」、舊版平面圓點｜右：v2 接(圓) 做(方) 交(菱) 交通(灰,小)｜目前步驟 ×3｜合併｜小地圖 18、15";
+const COL={accept:"#f2b90f",do:"#e8641a",turnin:"#2fae4e",travel:"#8d97a8"};
+const SHAPE={accept:"circle",do:"square",turnin:"diamond",travel:"circle"};
+let uid=0;
+// 128 畫布，輪廓基準 96；inset 以畫布單位向內縮
+function shape(kind,inset,attrs){
+  if(kind==="circle") return `<circle cx="64" cy="64" r="${48-inset}" ${attrs}/>`;
+  if(kind==="square"){const h=44-inset;return `<rect x="${64-h}" y="${64-h}" width="${2*h}" height="${2*h}" rx="${Math.max(3,16-inset*.8)}" ${attrs}/>`;}
+  const h=39-inset;return `<rect x="${64-h}" y="${64-h}" width="${2*h}" height="${2*h}" rx="${Math.max(2,9-inset*.6)}" transform="rotate(45 64 64)" ${attrs}/>`;
+}
+function svg(type,px,cur,layers){
+  const k=SHAPE[type],c=COL[type],id="g"+(uid++),L=layers||["glow","base","rim"];
+  const on=n=>L.includes(n);
+  let s=`<svg width="${px*128/96}" height="${px*128/96}" viewBox="0 0 128 128"><defs>
+  <filter id="${id}s" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3.2"/></filter>
+  <filter id="${id}g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+  <radialGradient id="${id}b" cx=".5" cy=".3" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".42"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".38"/></radialGradient>
+  <linearGradient id="${id}r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3bd"/><stop offset=".35" stop-color="#eec25a"/><stop offset=".7" stop-color="#b9862c"/><stop offset="1" stop-color="#7a531a"/></linearGradient>
+  <linearGradient id="${id}q" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a6a3a"/><stop offset="1" stop-color="#d9b56a"/></linearGradient></defs>`;
+  if(cur&&on("glow")) s+=`<circle cx="64" cy="64" r="56" fill="#ffd866" opacity=".9" filter="url(#${id}g)"/>`;
+  if(on("base")) s+=shape(k,10,`fill="${layers&&!L.includes("rim")?"#fff":c}"`)+shape(k,10,`fill="url(#${id}b)"`);
+  if(on("rim")){
+    const m=`m${id}`;
+    s+=`<mask id="${m}"><rect width="128" height="128" fill="#fff"/>${shape(k,11.5,'fill="#000"')}</mask><g mask="url(#${m})" ${cur?"":'style="filter:saturate(.8) brightness(.9)"'}>`
+      +`<g filter="url(#${id}s)" opacity=".6" transform="translate(0 4)">${shape(k,-1,'fill="#000"')}</g>`
+      +shape(k,0,'fill="#1c1208"')+shape(k,3.5,`fill="url(#${id}r)"`)+shape(k,7.5,`fill="url(#${id}q)"`)+shape(k,9.5,'fill="#1c1208"')+`</g>`;
+  }
+  return s+"</svg>";
+}
+function pin(type,label,px,cur){
+  const n=String(label).length;
+  const fs = px<=15?9 : px<=18?10 : n>=3?(cur?12:10) : cur?15 : 12;
+  return `<span class="pin" style="width:${px}px;height:${px}px">${svg(type,px,cur)}<b style="font-size:${fs}px">${label}</b></span>`;
+}
+const old=(c,l,px,cur)=>`<span class="old" style="width:${px}px;height:${px}px;background:${c};${cur?"box-shadow:inset 0 0 0 2.5px #ffeb8c,inset 0 0 0 3.5px #1a140f":""}">${l}</span>`;
+function strip(z){
+  const W=z===3?132:52, w=h=>`<div class="cell" style="width:${W}px"><div style="transform:scale(${z})">${h}</div></div>`;
+  return [w(`<span class="game">•••</span>`),w(old("#ffdb1a","3",28)),w(old("#ff8c0d","7",28)),w(old("#33e659","12",28)),w(old("#ff8c0d","5",32,1)),
+  `<div class="sep"></div>`,
+  w(pin("accept",3,24)),w(pin("do",7,24)),w(pin("turnin",12,24)),w(pin("travel",9,20)),
+  ...(z===3?[w(pin("do",5,30,1))]:[`<div class="sep"></div>`,w(pin("accept",4,30,1)),w(pin("do",5,30,1)),w(pin("turnin",16,30,1)),`<div class="sep"></div>`]),
+  w(pin("accept","3+",24)),...(z===3?[]:[w(pin("turnin","12+",24)),`<div class="sep"></div>`]),w(pin("do",5,18,1)),w(pin("turnin",6,15))].join("");
+}
+r1.innerHTML=strip(1); r3.innerHTML=strip(3);
+const at=(x,y,h)=>`<span style="position:absolute;left:${x}px;top:${y}px"><span style="position:absolute;transform:translate(-50%,-50%)">${h}</span></span>`;
+const P=[["accept",1,150,95],["accept",2,172,112],["do",3,235,150],["do","4+",300,105],["turnin",5,340,70,1],["accept",6,410,60],["do",7,455,120],["do",8,585,105],["turnin",9,600,160],["travel",10,560,215],
+["accept",11,520,300],["do",12,470,345],["do","13+",420,410],["turnin",14,330,385],["accept",15,215,330],["do",16,120,300],["do",17,95,215],["turnin",18,250,240],["travel",19,640,330],["do",20,385,215]];
+const scene=P.map(([t,l,x,y,c])=>at(x,y,pin(t,l,c?30:t==="travel"?20:24,c))).join("");
+map.innerHTML=scene; map2.innerHTML=scene; map2.style.left="-560px"; map2.style.top="-60px";
+const mm=at(96,52,pin("do",5,18,1))+at(52,84,pin("turnin",6,15))+at(104,108,pin("accept",7,15));
+mini.innerHTML=mm; mini3.innerHTML=mm;
+const lay=(t,cur,L,cap)=>`<div class="cell"><span class="pin" style="width:96px;height:112px">${svg(t,84,cur,L)}</span><div class="cap">${cap}</div></div>`;
+layers.innerHTML=lay("accept",0,["base"],"pin_circle_base（白，染色）")+lay("accept",1,["rim"],"pin_circle_rim（含陰影）")+lay("accept",0,["base","rim"],"合成：接")
+ +lay("do",0,["base"],"pin_square_base")+lay("do",1,["rim"],"pin_square_rim")+lay("do",0,["base","rim"],"合成：做")
+ +lay("turnin",0,["base"],"pin_diamond_base")+lay("turnin",1,["rim"],"pin_diamond_rim")+lay("turnin",1,["glow","base","rim"],"目前步驟（＋pin_glow）");
+</script>
