@@ -77,7 +77,8 @@ local function refresh()
   MG.try("任務物品", MG.I.Update, state)
   -- 箭頭：目前步驟的座標；本站完成時指向下一站第一個有座標的步驟
   local s = state and state.cur and state.steps[state.cur].s
-  if state and not state.cur and nextSt then
+  -- 本站完成，或目前是站尾交通但沒有座標 → 指向下一站第一個有座標的步驟
+  if state and nextSt and (not state.cur or (state.tails and state.tails[state.cur] and not (s and s.x))) then
     for _, step in ipairs(nextSt.list) do
       if step.s.x and E.Applies(step.s.when) then s = step.s; break end
     end

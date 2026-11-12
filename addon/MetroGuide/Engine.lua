@@ -338,17 +338,23 @@ function E.Locate(st)
   end
   -- 軟步驟（交通、到達、鳥點、飛行、船）：後面任一任務步驟已完成就算過了；
   -- 後面已沒有任務步驟的（往下一站的交通）不擋路，文字留給「前往下一站」顯示
-  local tail
+  -- passed：被後面任務帶過的軟步驟（當作過了，但清單不打勾）；tails：站尾往下一站的交通（任務都做完才輪到它）
+  local tail, tails, passed = nil, {}, {}
+  local nxt = E.Next(st)
   for i, step in ipairs(steps) do
     if not done[i] and SOFT[step.s.t] then
       local later = false
       for j = i + 1, n do
         if steps[j].s.q and not na[j] then
           later = true
-          if done[j] then done[i] = true; break end
+          if done[j] then done[i] = true; passed[i] = true; break end
         end
       end
-      if not later then done[i] = true; tail = tail or step.s.text end
+      if not later then
+        tails[i] = true
+        tail = tail or step.s.text
+        if nxt and map and map == nxt.map then done[i] = true end -- 已經到下一站的地圖
+      end
     end
   end
 
@@ -356,7 +362,9 @@ function E.Locate(st)
   local auto, missedIdx, missedQ = nil, {}, {}
   for i = 1, n do
     local q = steps[i].s.q
-    if not done[i] and q and missedQ[q] then
+    if tails[i] then
+      -- 站尾交通先跳過，任務步驟都處理完才輪到
+    elseif not done[i] and q and missedQ[q] then
       missedIdx[#missedIdx + 1] = i -- 同一任務前面的步驟已漏掉（例如沒接就輪到交）
     elseif not done[i] then
       local seen, d, j = 0, 0, i + 1
@@ -375,6 +383,9 @@ function E.Locate(st)
         auto = i; break
       end
     end
+  end
+  if not auto then
+    for i = 1, n do if tails[i] and not done[i] and not na[i] then auto = i; break end end
   end
 
   -- 手動釘住的步驟：原本未完成、後來完成了就放掉；釘回自動位置也放掉
@@ -459,7 +470,7 @@ function E.Locate(st)
       end
     end
   end
-  return { group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail }
+  return { group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
 end
 
 -- ── 站 ──────────────────────────────────────────────────────────────────────

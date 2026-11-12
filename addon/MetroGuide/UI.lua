@@ -462,7 +462,7 @@ local function fillRow(row, it)
     row.no:SetText(UI.Get("showNum") and state.num[i] or ""); paint(row.no, FAINT)
     -- 勾選框：自動完成＝綠勾、手動完成＝金勾、手動未完成＝空框加琥珀短線
     if mark == false then row.box:SetState("dash", AMBER)
-    elseif state.done[i] and not state.na[i] then row.box:SetState("check", mark and GOLD or GREEN)
+    elseif state.done[i] and not state.na[i] and not (state.passed and state.passed[i]) then row.box:SetState("check", mark and GOLD or GREEN)
     else row.box:SetState(nil) end
     row.verb:SetText(E.VERB[s.t] or "")
     row.name:SetText(E.Title(s) .. (skipped and "（已略過）" or "") .. (it.step.defer and "（之後再接）" or ""))
@@ -1382,6 +1382,7 @@ function UI.Render(S)
     local info = s.q and MG.Route.quests[s.q]
     verb = E.VERB[s.t] or ""
     title = E.Title(s)
+    if state.tails and state.tails[state.cur] then title = "前往下一站：" .. title end
     right = UI.Get("showLevel") and info and info.lvl and tostring(info.lvl) or ""
     if s.t == "accept" or s.t == "turnin" then l2 = s.npc
     elseif s.t == "do" then

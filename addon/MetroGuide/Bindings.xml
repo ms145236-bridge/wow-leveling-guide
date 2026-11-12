@@ -1,6 +1,6 @@
 <Bindings>
   <Binding name="CLICK MetroGuideTargetButton:LeftButton" header="METROGUIDE" category="ADDONS">
   </Binding>
-  <Binding name="CLICK MetroGuideItemButton1:LeftButton" header="METROGUIDE" category="ADDONS">
+  <Binding name="CLICK MetroGuideItemButton1:LeftButton" category="ADDONS">
   </Binding>
 </Bindings>
