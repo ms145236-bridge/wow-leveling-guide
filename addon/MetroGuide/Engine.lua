@@ -183,7 +183,7 @@ local function questXP(q, lv)
   if not (info and info.xp) then return 0 end
   local d = lv - (info.lvl or lv)
   local f = d <= 5 and 1 or d == 6 and 0.8 or d == 7 and 0.6 or d == 8 and 0.4 or d == 9 and 0.2 or 0.1
-  return info.xp * f * (C.SleepBag() and 1.03 or 1) -- 睡袋增益：任務經驗 +3%
+  return info.xp * f * (C.XPBuff() and 1.03 or 1) -- 已知的經驗增益：任務經驗 +3%（清單在 Compat 的 C.XP_BUFFS）
 end
 E.QuestXP = questXP
 

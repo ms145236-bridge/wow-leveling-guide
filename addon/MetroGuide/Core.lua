@@ -372,8 +372,11 @@ local function probe()
   L[#L + 1] = "-- 引擎"
   add("適用的站數 / 路線總站數", #E.stations, #R.stations)
   local ratio, n = MG.Rec.XPRatio()
-  local bag = C.SleepBag()
-  add("任務經驗 實得/路線（中位數, 筆數，只診斷）, 睡袋增益", ratio and string.format("%.3f", ratio), n, bag and ((bag.name or "?") .. " " .. tostring(bag.spellId)) or "無")
+  local buff = C.XPBuff()
+  add("任務經驗 實得/路線（中位數, 筆數，只診斷）, 已知經驗增益", ratio and string.format("%.3f", ratio), n, buff and ((buff.name or "?") .. " " .. tostring(buff.id)) or "無")
+  local auras = {}
+  for _, a in ipairs(C.Auras()) do auras[#auras + 1] = (a.name or "?") .. " " .. tostring(a.id or "?") end
+  L[#L + 1] = "  身上的增益：" .. (#auras > 0 and table.concat(auras, "｜") or "無")
   local off = 0
   for _ in pairs(R.offroute or {}) do off = off + 1 end
   add("路線外判定 / 本職業學技能步驟", off, #E.trainSteps)

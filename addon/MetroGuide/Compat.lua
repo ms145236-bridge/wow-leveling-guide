@@ -171,19 +171,29 @@ pick("GreenRange",
   end)
 
 -- 分享任務：選取後推送（要在隊伍中）
--- 睡袋增益（任務經驗 +3%）：掃玩家增益找名字有「睡袋」的；秘密值就跳過。一次重算內只掃一次
-function C.SleepBag()
-  local m = C.memo
-  if m and m.bag ~= nil then return m.bag or nil end
-  local found = false
+-- 玩家身上的增益：{ { name, id, dur }... }；秘密值的欄位留空
+function C.Auras()
+  local out = {}
   local get = C_UnitAuras and C_UnitAuras.GetAuraDataByIndex
+  local function plain(v) return v ~= nil and not (issecretvalue and issecretvalue(v)) and v or nil end
   for i = 1, get and 40 or 0 do
     local a = get("player", i, "HELPFUL")
     if not a then break end
-    local name = a.name
-    if name and not (issecretvalue and issecretvalue(name)) and name:find("睡袋", 1, true) then found = a; break end
+    out[#out + 1] = { name = plain(a.name), id = plain(a.spellId), dur = plain(a.duration) }
   end
-  if m then m.bag = found end
+  return out
+end
+-- 任務經驗 +3% 的增益法術 ID（還沒確認是哪個，先留空；記錄報告找出來後填進來）
+C.XP_BUFFS = {}
+-- 有已知的經驗增益就回傳它（一次重算內只掃一次）
+function C.XPBuff()
+  local m = C.memo
+  if m and m.xpbuff ~= nil then return m.xpbuff or nil end
+  local found = false
+  if next(C.XP_BUFFS) then
+    for _, a in ipairs(C.Auras()) do if a.id and C.XP_BUFFS[a.id] then found = a; break end end
+  end
+  if m then m.xpbuff = found end
   return found or nil
 end
 

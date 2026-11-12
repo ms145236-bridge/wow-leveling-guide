@@ -161,6 +161,26 @@ if (xpDiff.length) {
   out.push(``);
 }
 
+// 經驗增益：交件時實得÷預期 ≈1.03 的那幾次都有、≈1.00 的都沒有的增益
+{
+  const hi = [], lo = [];
+  for (const r of by("auras")) {
+    const ratio = +r.x[0];
+    const auras = (r.x[1] || "").split(";").filter(Boolean).map((a) => a.split("#"));
+    if (ratio >= 1.02 && ratio <= 1.05) hi.push(auras); else if (ratio >= 0.99 && ratio <= 1.01) lo.push(auras);
+  }
+  const ids = new Map();
+  for (const list of [...hi, ...lo]) for (const [name, id] of list) ids.set(id || name, name);
+  const cands = [...ids].map(([key, name]) => ({ key, name,
+    inHi: hi.filter((l) => l.some(([n, i]) => (i || n) === key)).length,
+    inLo: lo.filter((l) => l.some(([n, i]) => (i || n) === key)).length }))
+    .filter((c) => c.inHi > 0).sort((a, b) => (b.inHi - b.inLo) - (a.inHi - a.inLo));
+  out.push(`## 經驗增益候選（交件 ≈1.03 有 ${hi.length} 次、≈1.00 有 ${lo.length} 次）`, ``);
+  for (const c of cands.slice(0, 10)) out.push(`- ${c.name || "?"}（法術 ${c.key}）：≈1.03 時 ${c.inHi}/${hi.length} 次在身上，≈1.00 時 ${c.inLo}/${lo.length} 次${c.inHi === hi.length && c.inLo === 0 ? "　← 最可能" : ""}`);
+  if (!cands.length) out.push("（還沒有資料）");
+  out.push(``);
+}
+
 // 目標進度位置
 const objs = {};
 for (const r of by("obj")) {

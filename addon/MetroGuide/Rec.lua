@@ -176,8 +176,11 @@ f:SetScript("OnEvent", function(_, event, ...)
       local map, x, y = pos()
       add("turnin", { id, who.id ~= "" and who.id or who.name }, C.Title(id), who.name, who.kind, map, x, y, gain, money)
       npcCache[id], prev[id] = nil, nil
-      local bag = C.SleepBag()
-      if bag then add("aura", { not secret(bag.spellId) and bag.spellId or "", bag.name }, not secret(bag.duration) and bag.duration or "") end
+      -- 交件時身上全部增益＋實得÷預期，用來找出經驗增益是哪個法術（tools/import-rec.mjs 比對）
+      local expect = MG.E.QuestXP(id, UnitLevel("player") or 0)
+      local list = {}
+      for _, a in ipairs(C.Auras()) do list[#list + 1] = (a.name or "") .. "#" .. tostring(a.id or "") end
+      add("auras", { id }, type(gain) == "number" and expect > 0 and string.format("%.4f", gain / expect) or "", table.concat(list, ";"))
     elseif event == "QUEST_LOG_UPDATE" or event == "QUEST_WATCH_UPDATE" then
       -- 一幀內多次只算一次
       if not objPending then
