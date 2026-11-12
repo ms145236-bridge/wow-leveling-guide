@@ -337,6 +337,7 @@ SlashCmdList.METROGUIDE = function(msg)
   elseif msg == "config" then UI.OpenOptions()
   elseif msg == "macro" then MG.try("目標巨集", MG.T.MakeMacro)
   elseif msg == "minimap" then UI.Set("minimap", true); UI.ApplySettings()
+  elseif msg:sub(1, 3) == "rec" then MG.Rec.Slash(msg:sub(4))
   elseif msg == "" then UI.Toggle()
-  else MG.msg("/metro 開關｜/metro probe 檢查報告｜/metro reset 重新對齊｜/metro config 設定｜/metro macro 建立目標巨集｜/metro minimap 顯示小地圖按鈕") end
+  else MG.msg("/metro 開關｜/metro probe 檢查報告｜/metro reset 重新對齊｜/metro config 設定｜/metro macro 建立目標巨集｜/metro minimap 顯示小地圖按鈕｜/metro rec 遊戲內記錄") end
 end

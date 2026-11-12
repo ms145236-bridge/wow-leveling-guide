@@ -67,6 +67,7 @@ local SPEC = {
   { key = "itemMacro", label = "自動建立任務物品巨集", def = true, hint = "建立帳號巨集「任務物品」，內容自動改成使用目前步驟的任務物品（戰鬥中等脫離戰鬥再改）。" },
   { key = "minimap", label = "顯示小地圖按鈕", def = true },
   { key = "miniBtnAlpha", label = "小地圖按鈕透明度", min = 0, max = 100, step = 5, def = 100, unit = "%" },
+  { key = "rec", label = "遊戲內記錄", def = true, acct = true, hint = "記下任務 NPC 與座標、經驗表、飛行點，用來修正路線。/metro rec export 匯出。" },
   { key = "autoMacro", label = "自動建立目標巨集", def = true, hint = "登入時若沒有「任務目標」巨集就自動建立（帳號巨集有空位時）。刪掉後下次登入會再建立；關掉這項就不會。" },
   { button = "建立巨集", run = function() MG.T.MakeMacro() end },
   { button = "重新對齊", run = function() E.Realign() end },
@@ -1667,7 +1668,7 @@ function UI.Toggle()
 end
 
 -- ── 檢查報告（可複製） ──────────────────────────────────────────────────────
-function UI.ShowReport(body)
+function UI.ShowReport(body, title)
   if not report then
     report = CreateFrame("Frame", "MetroGuideReport", UIParent)
     report:SetSize(600, 440)
@@ -1681,7 +1682,7 @@ function UI.ShowReport(body)
     box(report)
     local head = text(report, 13, DIM)
     head:SetPoint("TOPLEFT", 12, -10)
-    head:SetText("地鐵升級 檢查報告：Ctrl+A 全選、Ctrl+C 複製，貼回給開發者")
+    report.head = head
     local close = CreateFrame("Button", nil, report)
     close:SetSize(48, 22); close:SetPoint("TOPRIGHT", -8, -6)
     close.label = text(close, 13, GOLD, "CENTER"); close.label:SetPoint("CENTER"); close.label:SetText("關閉")
@@ -1705,6 +1706,7 @@ function UI.ShowReport(body)
   end
   local _, lines = body:gsub("\n", "")
   report.eb:SetHeight((lines + 2) * 15)
+  report.head:SetText(title or "地鐵升級 檢查報告：Ctrl+A 全選、Ctrl+C 複製，貼回給開發者")
   report.eb:SetText(body)
   report:Show()
   report.eb:SetFocus()
