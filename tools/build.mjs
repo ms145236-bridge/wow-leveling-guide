@@ -567,13 +567,19 @@ for (const file of files.filter((f) => /^06-/.test(f))) {
 const feeds = new Map();
 for (const [id, q] of quests) for (const p of [...(q.pg || []), ...(q.ps || [])]) if (!quests.has(p) && !feeds.has(p)) feeds.set(p, id);
 // ── 07 訓練師：職業｜等級｜地點｜NPC｜座標｜順路時機 ──
+// 只讀「建議回訪等級」那一節（其他節是主城訓練師一覽、專項、武器技能，當參考）；等級欄取第一個數字（「4、6」「10–12」→ 4、10）
 const trainers = [];
 for (const file of files.filter((f) => /^07-/.test(f))) {
+  let inStops = false;
   readFileSync(join(ROUTE, file), "utf8").split(/\r?\n/).forEach((line, li) => {
-    const m = line.match(/^\s*-\s*(.+?)｜\s*(\d+)\s*級?\s*｜(.*)$/);
+    if (/^##\s/.test(line)) inStops = /建議回訪等級/.test(line);
+    if (!inStops) return;
+    const m = line.match(/^\s*-\s*(.+?)｜\s*(\d+)[^｜]*｜(.*)$/);
     if (!m || !CLASS[m[1].trim()]) return;
     const where = `${file}:${li + 1}`;
-    const [place, npc, coordText, when] = m[3].split("｜").map((x) => x.trim());
+    const [place, rawNpc, coordText, rawWhen] = m[3].split("｜").map((x) => x.trim());
+    const npc = (rawNpc || "").replace(/\s*[（(][^（）()]*[）)]\s*$/, "").trim(); // 去掉英文名，才對得上遊戲裡的 NPC 名
+    const when = (rawWhen || "").replace(/【[^】]*】/g, "");
     const lv = +m[2];
     const c = parseCoord(coordText);
     const map = c?.map || ZONE_MAP[(place || "").split(/[ ・·]/)[0]];
@@ -608,7 +614,7 @@ const version = createHash("sha1").update(out).digest("hex").slice(0, 8);
 out = out.replace("@@BUILT@@", version);
 writeFileSync(OUT, out);
 
-const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n`;
+const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 學技能站（候選站依序，遊戲取第一個本角色有的）\n\n${trainers.map((t) => `- ${t.c} ${t.lv} ${t.npc}（${t.place}）→ ${t.st.slice(0, 4).map((id) => id + " " + stations.find((x) => x.id === id).name).join("、")}`).join("\n") || "無"}\n`;
 writeFileSync(REPORT, report);
 console.log(`路線外判定 ${offroute.size}、路線外前置 ${feeds.size}、訓練師 ${trainers.length}`);
 console.log(`站 ${stations.length}、任務 ${quests.size}、需要處理 ${issues.hard.length}、提醒 ${issues.warn.length}、名稱不一致 ${nameIssues.length}`);
