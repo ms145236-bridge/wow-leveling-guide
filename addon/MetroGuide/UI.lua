@@ -176,7 +176,37 @@ end
 local function savePos()
   MG.db.pos = { x = root:GetLeft(), y = root:GetTop() }
 end
+-- 安全按鈕（目標、任務物品）不能錨在會變大小的步驟列上，否則戰鬥中步驟列一變高就會被遊戲擋。
+-- 改錨在這個固定底座：掛在 UIParent，戰鬥外才跟著步驟列的位置、縮放、寬度對齊。
+local holder
+function UI.Holder()
+  if not holder then
+    holder = CreateFrame("Frame", "MetroGuideSecureHolder", UIParent)
+    holder:SetSize(300, 44)
+  end
+  return holder
+end
+function UI.PlaceHolder()
+  if not holder or not root then return end
+  if InCombatLockdown() then UI.holderPending = true; return end
+  UI.holderPending = false
+  holder:SetScale(root:GetScale())
+  holder:SetFrameStrata(root:GetFrameStrata())
+  holder:SetWidth(UI.Get("barWidth"))
+  holder:ClearAllPoints()
+  local l, t = root:GetLeft(), root:GetTop()
+  if l and t then
+    holder:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", l, t)
+  else
+    -- 剛載入還沒排版：先放預設位置，下一格再對齊（不要錨在步驟列上）
+    holder:SetPoint("TOPRIGHT", UIParent, "TOPRIGHT", -40, -240)
+    UI.holderTries = (UI.holderTries or 0) + 1
+    if C_Timer and C_Timer.After and UI.holderTries <= 10 then C_Timer.After(0.2, UI.PlaceHolder) end
+  end
+end
+
 function UI.ApplySettings()
+  if InCombatLockdown() then UI.settingsPending = true end -- 位置、縮放之後再對齊底座
   root:SetScale(UI.Get("barScale") / 100)
   local w, a, fsz = UI.Get("barWidth"), UI.Get("barAlpha") / 100, UI.Get("fontSize")
   bar:SetWidth(w)
@@ -192,6 +222,7 @@ function UI.ApplySettings()
   root:SetShown(MG.db.shown ~= false)
   if UI.PlaceMinimap then UI.PlaceMinimap() end
   if UI.RefreshOptions then UI.RefreshOptions() end
+  UI.PlaceHolder()
 end
 
 -- ── 設定（右鍵選單、設定頁共用） ─────────────────────────────────────────
@@ -873,8 +904,8 @@ function UI.Create()
 
   bar:RegisterForClicks("LeftButtonUp", "RightButtonUp")
   bar:RegisterForDrag("LeftButton")
-  bar:SetScript("OnDragStart", function() if not UI.Get("locked") then root:StartMoving() end end)
-  bar:SetScript("OnDragStop", function() root:StopMovingOrSizing(); savePos() end)
+  bar:SetScript("OnDragStart", function() if not UI.Get("locked") and not InCombatLockdown() then root:StartMoving() end end)
+  bar:SetScript("OnDragStop", function() root:StopMovingOrSizing(); savePos(); UI.PlaceHolder() end)
   bar:SetScript("OnClick", function(_, button)
     if button == "RightButton" then openMenu(bar); return end
     menu:Hide()
@@ -1102,8 +1133,12 @@ function UI.Create()
 
   MG.try("小地圖按鈕", UI.CreateMinimap)
   MG.try("設定頁", UI.CreateOptions)
-  MG.try("目標按鈕", MG.T.Create, bar)
-  MG.try("任務物品", MG.I.Create, bar)
+  UI.Holder()
+  MG.try("目標按鈕", MG.T.Create, holder)
+  MG.try("任務物品", MG.I.Create, holder)
+  local regen = CreateFrame("Frame")
+  pcall(regen.RegisterEvent, regen, "PLAYER_REGEN_ENABLED")
+  regen:SetScript("OnEvent", function() if UI.holderPending or UI.settingsPending then UI.settingsPending = false; UI.PlaceHolder() end end)
   UI.ApplySettings()
 end
 

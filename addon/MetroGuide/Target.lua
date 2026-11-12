@@ -47,6 +47,12 @@ function T.Targets(state)
     local g = state.steps[i].s
     if g.t == "do" and g.q then mobsOf(g.q, out, seen) end
   end
+  -- 沒有怪可選、目標是地上的物件（箱子、植物…）→ 巨集印說明
+  T.objNote = nil
+  if #out == 0 and s.t == "do" and s.q then
+    local objs = (MG.Route.quests[s.q] or {}).objs
+    if objs then T.objNote = table.concat(objs, "、") end
+  end
   return out
 end
 
@@ -87,10 +93,13 @@ T.MacroText = macro
 -- 動作條巨集「任務目標」：內容就是同一段巨集文字（不經過 /click）
 local MACRO, OLD_MACRO = "任務目標", "地鐵目標"
 local ICON = "Ability_Hunter_SniperShot"
-local EMPTY = "/run print(\"地鐵升級：目前步驟沒有要選的目標\")"
+local function emptyText()
+  if T.objNote then return "/run print(\"地鐵升級：目標是地上的物件（" .. T.objNote .. "），無法選取\")" end
+  return "/run print(\"地鐵升級：目前步驟沒有要選的目標\")"
+end
 local function macroBody()
   local text = macro()
-  return text ~= "" and text or EMPTY
+  return text ~= "" and text or emptyText()
 end
 -- 舊名「地鐵目標」的巨集原地改名（保留它在快捷列上的位置），不另建第二個
 local function renameOld()
@@ -204,7 +213,7 @@ function T.Create(bar)
   btn:SetSize(20, 20)
   btn:SetPoint("TOPRIGHT", bar, "TOPRIGHT", -28, -5)
   btn:SetFrameStrata(bar:GetFrameStrata())
-  btn:SetFrameLevel((bar:GetFrameLevel() or 1) + 5)
+  btn:SetFrameLevel((bar:GetFrameLevel() or 1) + 20)
   btn:RegisterForClicks("AnyUp", "AnyDown")
   local icon = btn:CreateTexture(nil, "ARTWORK")
   icon:SetPoint("CENTER")

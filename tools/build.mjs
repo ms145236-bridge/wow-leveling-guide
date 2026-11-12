@@ -67,7 +67,7 @@ const mobsOf = (q) => {
   const mobs = db.questMobs(q.id);
   if (!mobs.length) return undefined;
   const nums = [...q.obj.join(" ").matchAll(/(\d+)\s*[個只隻根張份塊件頭名條把顆片枚]/g)].map((m) => +m[1]);
-  return mobs.map((m, k) => m
+  return mobs.map((m, k) => m && m.kind !== "object"
     ? [Math.round(m.lvl * 10) / 10, nums.length ? (nums[k] ?? 1) : 6, m.kind === "drop" ? 2 : 1, m.elite ? 1 : 0]
     : [0, 0, 1, 0]);
 };
@@ -363,7 +363,7 @@ for (const st of stations) {
     const q = db.quest(id);
     if (!quests.has(id)) {
       quests.set(id, q
-        ? { races: q.races && BigInt(q.races) !== HORDE ? q.races : undefined, xp: XP.get(id), mob: mobsOf(q), tgo: targetsOf(q),
+        ? { races: q.races && BigInt(q.races) !== HORDE ? q.races : undefined, xp: XP.get(id), mob: mobsOf(q), tgo: targetsOf(q), objs: (() => { const o = [...new Set(db.questMobs(q.id).filter((m) => m && m.kind === "object").flatMap((m) => m.objects))]; return o.length ? o : undefined; })(),
             items: [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))].length ? [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))] : undefined,
             d: q.obj.filter(Boolean).join("\n") || undefined,
             n: step.zh || q.zhTW || step.en || q.en, lvl: q.level, min: q.reqLevel, pg: q.preGroup, ps: q.preSingle, ex: q.exclusiveTo, next: q.next, st: st.id }

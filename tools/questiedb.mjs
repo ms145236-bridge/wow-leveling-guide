@@ -198,7 +198,13 @@ export function openQuestieDB() {
     }
     for (const it of list(get(obj, 3))) {
       const drops = list(field("Item", get(it, 1), 2)).map(mobLevel).filter(Boolean);
-      out.push(drops.length ? { lvl: drops.reduce((a, d) => a + d.lvl, 0) / drops.length, elite: drops.every((d) => d.elite), kind: "drop", names: drops.slice(0, 3).map((d) => d.name), zhMissing: drops.slice(0, 3).some((d) => d.zhMissing) } : null);
+      if (drops.length) {
+        out.push({ lvl: drops.reduce((a, d) => a + d.lvl, 0) / drops.length, elite: drops.every((d) => d.elite), kind: "drop", names: drops.slice(0, 3).map((d) => d.name), zhMissing: drops.slice(0, 3).some((d) => d.zhMissing) });
+      } else {
+        // 不是怪物掉的：看是不是地上的物件（箱子、植物…）
+        const objs = list(field("Item", get(it, 1), 3)).map((o) => localName("Object", o, "zhTW") || field("Object", o, 1)).filter(Boolean);
+        out.push(objs.length ? { kind: "object", objects: [...new Set(objs)].slice(0, 3) } : null);
+      }
     }
     return out;
   };
