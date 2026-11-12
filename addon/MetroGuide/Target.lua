@@ -31,6 +31,7 @@ function T.Targets(state)
   if not step then return {} end
   local s = step.s
   local out, seen = {}, {}
+  if MG.grindActive then out[1] = MG.grindActive.mob; seen[MG.grindActive.mob] = true end
   if s.t == "do" and s.q then
     mobsOf(s.q, out, seen)
   elseif (s.t == "accept" or s.t == "turnin") and (s.tgt or s.npc) and not (s.npc or ""):find("^物件") and not (s.npc or ""):find("^物品") then
@@ -40,7 +41,7 @@ function T.Targets(state)
       n = s.npc
       for _, mark in ipairs({ "『", "』", "「", "」", "《", "》" }) do n = n:gsub(mark, "") end -- 逐個去（不能用字元集，會切壞 UTF-8）
     end
-    out[1] = n; seen[n] = true
+    if not seen[n] then out[#out + 1] = n; seen[n] = true end
   end
   -- 同組（附近一起做）的「做」步驟的怪也算進來
   for _, i in ipairs(state.group or {}) do

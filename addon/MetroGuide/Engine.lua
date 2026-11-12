@@ -238,7 +238,7 @@ function E.FillPlan(st)
         if r.map == p.map then detour = math.min(detour, math.sqrt((r.x - p.x) ^ 2 + (r.y - p.y) ^ 2)) end
       end
     end
-    c.score = c.xp / (1 + detour)
+    c.score = c.xp / (1 + detour) * (E.StarFor(c.q) and 2 or 1)
     if c.xp > 0 then list[#list + 1] = c end
   end
   table.sort(list, function(a, b) return a.score > b.score end)
@@ -270,6 +270,32 @@ function E.FillPlan(st)
   return info
 end
 E.Fill = fill
+
+-- ★ 好獎勵：本職業拿得到才算（沒寫職業＝全職業）
+function E.StarFor(q, s)
+  local star = (s and s.star) or (q and R.quests[q] and R.quests[q].star)
+  if not star then return nil end
+  if star[2] and not inList(star[2], me.class) then return nil end
+  return star[1]
+end
+
+-- 練怪地點建議：補完可跳過任務後經驗仍不夠到下一站，或等級低於本站範圍 → 挑本站一個不會灰的練怪點
+-- 怪的等級最接近玩家（高最多 2 級）的優先
+function E.GrindSuggest(st, fillInfo)
+  if not (st and st.grind) or MG.db.grindSkip[st.id] == UnitLevel("player") then return nil end
+  local lv = UnitLevel("player") or 1
+  local short = fillInfo and fillInfo.need > 0 and fillInfo.projected < fillInfo.need
+  if not short and lv >= st.lv[1] then return nil end
+  local best, bestD
+  for _, g in ipairs(st.grind) do
+    local top = g.lv[2]
+    if mobXP(top, lv, false) > 0 and g.lv[1] <= lv + 2 then
+      local d = math.abs((g.lv[1] + g.lv[2]) / 2 - lv)
+      if not best or d < bestD then best, bestD = g, d end
+    end
+  end
+  return best
+end
 
 local function stepDone(step, map, x, y)
   local s = step.s

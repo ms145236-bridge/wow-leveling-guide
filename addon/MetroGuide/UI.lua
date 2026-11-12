@@ -126,7 +126,7 @@ local function box(f, edge)
   return bg
 end
 
-local root, bar, chip, panel, menu, report, dhint
+local root, bar, chip, panel, menu, report, dhint, ghint
 local rows, items = {}, {}
 local scroll, tab, missOpen, lastCurKey = 0, "steps", false, nil
 local state -- 最近一次 Render 的引擎結果
@@ -320,6 +320,8 @@ function UI.StepTooltip(owner, s, prefix, side)
     GameTooltip:AddLine(table.concat(bits, "   "), DIM[1], DIM[2], DIM[3])
   end
   if s.preText then GameTooltip:AddLine("前置：" .. s.preText, DIM[1], DIM[2], DIM[3], true) end
+  local star = E.StarFor(s.q, s)
+  if star then GameTooltip:AddLine("★ 獎勵：" .. star, GOLD[1], GOLD[2], GOLD[3], true) end
   if s.desc and UI.Get("tipDesc") then GameTooltip:AddLine("說明：" .. s.desc, AMBER[1], AMBER[2], AMBER[3], true) end
   GameTooltip:Show()
 end
@@ -383,6 +385,11 @@ local function buildItems()
     for i, step in ipairs(state.steps) do
       local hideDone = not UI.Get("showDone") and state.done[i] and i ~= state.cur
       if (not state.na[i] or MG.db.skip[step.key] or step.defer) and not hideDone then items[#items + 1] = { kind = "step", i = i, step = step } end
+    end
+    local grind = state.st and state.st.grind
+    if grind and #grind > 0 then
+      items[#items + 1] = { kind = "ghead", n = #grind }
+      if UI.grindOpen then for _, g in ipairs(grind) do items[#items + 1] = { kind = "grind", g = g } end end
     end
   elseif tab == "dg" then
     -- 副本分頁 v2（DUNGEON-TAB-SPEC.md）
@@ -471,12 +478,12 @@ local function fillRow(row, it)
   at(row.ck, 8, 14); at(row.box, 9); at(row.no, 24, 20); at(row.verb, 48, 18)
   row.prog:ClearAllPoints()
   if top then row.prog:SetPoint("TOPRIGHT", -12, -7) else row.prog:SetPoint("RIGHT", -12, 0) end
-  local PROG_W = { step = 64, miss = 1, misshead = 1, station = 92, start = 1, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 110, dact = 1 }
+  local PROG_W = { step = 64, miss = 1, misshead = 1, station = 44, start = 1, ghead = 1, grind = 70, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 110, dact = 1 }
   row.prog:SetWidth(PROG_W[it.kind] or 64)
   local NAME_X = { dtext = 28, dhead = 28, dg = 26, dq = 28, dent = 28, dphase = 28, dact = 28 }
   row.name:ClearAllPoints()
   if top then row.name:SetPoint("TOPLEFT", 70, -5) else row.name:SetPoint("LEFT", NAME_X[it.kind] or 70, 0) end
-  row.name:SetPoint("RIGHT", it.kind == "dg" and row.lvt or row.prog, "LEFT", -6, 0)
+  row.name:SetPoint("RIGHT", (it.kind == "dg" or it.kind == "station") and row.lvt or row.prog, "LEFT", -6, 0)
   row.box:Hide(); row.ck:Show()
   if it.kind == "misshead" then
     row.ck:SetText(missOpen and "-" or "+"); paint(row.ck, AMBER)
@@ -496,7 +503,7 @@ local function fillRow(row, it)
     elseif state.done[i] and not state.na[i] and not (state.passed and state.passed[i]) then row.box:SetState("check", mark and GOLD or GREEN)
     else row.box:SetState(nil) end
     row.verb:SetText(E.VERB[s.t] or "")
-    row.name:SetText(E.Title(s) .. (skipped and "（已略過）" or "") .. (it.step.defer and "（之後再接）" or ""))
+    row.name:SetText((E.StarFor(s.q, s) and "|cffd9b25f★|r " or "") .. E.Title(s) .. (skipped and "（已略過）" or "") .. (it.step.defer and "（之後再接）" or ""))
     if it.step.dungeon and not state.done[i] and row.prog:GetText() == "" then row.prog:SetText(it.step.defer and "之後" or "副本前置"); paint(row.prog, AMBER) end
     if s.q and state.fill[s.q] and not state.done[i] then row.prog:SetText("補經驗"); paint(row.prog, GOLD) end
     if state.inGroup[i] then row.strip:SetColorTexture(GOLD[1], GOLD[2], GOLD[3], 0.45); row.strip:Show() end
@@ -684,6 +691,15 @@ local function fillRow(row, it)
     row:SetHeight(math.max(ROW_H, (row.para:GetStringHeight() or 14) + 6))
   elseif it.kind == "dhead" then
     row.name:SetText(it.text); paint(row.name, GOLD)
+  elseif it.kind == "ghead" then
+    row.ck:SetText(UI.grindOpen and "-" or "+"); paint(row.ck, DIM)
+    row.name:SetText("練怪地點 " .. it.n); paint(row.name, DIM)
+  elseif it.kind == "grind" then
+    local g = it.g
+    local active = MG.grindActive == g
+    row.verb:SetText("打"); paint(row.verb, active and GOLD or DIM)
+    row.name:SetText(g.mob .. "（" .. g.lv[1] .. "-" .. g.lv[2] .. "）"); paint(row.name, active and GOLD or TEXT)
+    row.prog:SetText(string.format("%.1f, %.1f", g.x, g.y))
   elseif it.kind == "start" then
     row.ck:SetText(it.on and "●" or "○"); paint(row.ck, it.on and GOLD or DIM)
     row.name:SetText("起點：" .. it.s.name); paint(row.name, it.on and TEXT or DIM)
@@ -692,7 +708,9 @@ local function fillRow(row, it)
     local got, total = E.Progress(st)
     local lv = UnitLevel("player") or 1
     row.name:SetText(st.name .. (st.test and "（測試）" or ""))
-    row.prog:SetText(st.lv[1] .. "-" .. st.lv[2] .. "  " .. got .. "/" .. total)
+    row.lvt:SetText(st.lv[1] .. "-" .. st.lv[2]); row.lvt:Show()
+    paint(row.lvt, (lv >= st.lv[1] and lv <= st.lv[2]) and GOLD or FAINT)
+    row.prog:SetText(got .. "/" .. total)
     if lv >= st.lv[1] and lv <= st.lv[2] then paint(row.prog, GOLD) end
     if state and st == state.st then
       row.ck:SetText("◎"); paint(row.ck, GOLD); row.cur:Show(); row.strip:Show()
@@ -770,6 +788,11 @@ function UI.Entrance(d)
   local zone = C.MapName(d.map) or ((d.entrance or ""):match("^(%S+)") or "")
   return { x = x, y = y, coord = x and string.format("%.1f, %.1f", x, y) or "", zone = zone, door = door }
 end
+function UI.GoGrind(g)
+  MG.grindActive = g
+  MG.wpOverride = { map = g.map, x = g.x, y = g.y, name = "打 " .. g.mob }
+  MG.Refresh(true)
+end
 function UI.WaypointStep(s)
   if s and s.x then MG.wpOverride = { map = s.map, x = s.x, y = s.y, name = E.Title(s) }; MG.Refresh(true) end
 end
@@ -812,6 +835,10 @@ local function onRowClick(row, button)
   elseif it.kind == "miss" then E.PinIndex(state, it.m.i)
   elseif it.kind == "step" then
     if button == "RightButton" then E.ToggleSkip(it.step.key) else E.PinIndex(state, it.i) end
+  elseif it.kind == "ghead" then
+    UI.grindOpen = not UI.grindOpen
+  elseif it.kind == "grind" then
+    UI.GoGrind(it.g)
   elseif it.kind == "dg" then
     local d = it.d
     if UI.dOpen == d.id then UI.dOpen = nil; UI.dPhase[d.id] = nil else UI.dOpen = d.id end
@@ -973,6 +1000,23 @@ function UI.Create()
   end)
   dhint:Hide()
 
+  -- 練怪提示：「經驗不夠：去 地點 打 怪（a-b）」＋ 去／略過
+  ghint = CreateFrame("Frame", nil, root)
+  ghint:SetSize(300, 24)
+  box(ghint, BRONZE)
+  ghint.label = text(ghint, 13, AMBER)
+  ghint.label:SetPoint("LEFT", 10, 0)
+  ghint.label:SetPoint("RIGHT", -96, 0)
+  ghint.go = goldButton(ghint, "去", 40); ghint.go:SetHeight(18); ghint.go:SetPoint("RIGHT", -50, 0)
+  ghint.skip = goldButton(ghint, "略過", 40); ghint.skip:SetHeight(18); ghint.skip:SetPoint("RIGHT", -6, 0)
+  ghint.go:SetScript("OnClick", function() if ghint.g then UI.GoGrind(ghint.g) end end)
+  ghint.skip:SetScript("OnClick", function()
+    if state and state.st then MG.db.grindSkip[state.st.id] = UnitLevel("player") end
+    MG.grindActive = nil
+    MG.Refresh(true)
+  end)
+  ghint:Hide()
+
   panel = CreateFrame("Frame", nil, root)
   panel:SetSize(320, 34 + 18 * ROW_H + 8)
   panel.bg = box(panel)
@@ -1051,7 +1095,8 @@ function UI.Create()
     row.verb:SetPoint("LEFT", 48, 0); row.verb:SetWidth(18)
     row.prog = text(row, 12, DIM, "RIGHT")
     row.lvt = text(row, 12, FAINT, "RIGHT")
-    row.lvt:SetPoint("RIGHT", row.prog, "LEFT", -4, 0); row.lvt:SetWidth(38); row.lvt:Hide()
+    row.lvt:SetPoint("RIGHT", row.prog, "LEFT", -4, 0)
+    row.lvt:SetText("00-00"); row.lvt:SetWidth(math.ceil((row.lvt:GetStringWidth() or 34) + 4)); row.lvt:SetText(""); row.lvt:Hide()
     row.prog:SetPoint("RIGHT", -12, 0)
     row.para = row:CreateFontString(nil, "OVERLAY")
     row.para:SetFont(FONT, 13, "")
@@ -1112,7 +1157,9 @@ function UI.Create()
       elseif it and it.kind == "dnext" and it.nx.step then UI.StepTooltip(self, it.nx.step.s, nil, true)
       elseif it and it.kind == "dq" then UI.StepTooltip(self, it.t.step.s, nil, true)
       elseif it and it.kind == "dqi" and it.step then UI.StepTooltip(self, it.step.s, nil, true)
-      elseif it and it.kind == "dch" then UI.StepTooltip(self, it.steps[1].s, nil, true) end
+      elseif it and it.kind == "dch" then UI.StepTooltip(self, it.steps[1].s, nil, true)
+      elseif it and it.kind == "grind" and it.g.note then
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT"); GameTooltip:AddLine(it.g.mob, GOLD[1], GOLD[2], GOLD[3]); GameTooltip:AddLine(it.g.note, DIM[1], DIM[2], DIM[3], true); GameTooltip:Show() end
     end)
     row:SetScript("OnLeave", function() GameTooltip:Hide() end)
     rows[r] = row
@@ -1418,6 +1465,7 @@ function UI.Render(S)
     verb = E.VERB[s.t] or ""
     title = E.Title(s)
     if state.tails and state.tails[state.cur] then title = "前往下一站：" .. title end
+    if E.StarFor(s.q, s) then title = "|cffd9b25f★|r " .. title end
     right = UI.Get("showLevel") and info and info.lvl and tostring(info.lvl) or ""
     if s.t == "accept" or s.t == "turnin" then l2 = s.npc
     elseif s.t == "do" then
@@ -1591,6 +1639,19 @@ function UI.Render(S)
   end
   dhint:SetShown(d ~= nil)
   local above = dhint:IsShown() and dhint or (chip:IsShown() and chip or bar)
+  -- 練怪建議
+  local g = state and not state.instance and E.GrindSuggest(state.st, state.fillInfo)
+  if not g then MG.grindActive = nil end
+  ghint.g = g
+  if g then
+    local zone = C.MapName(g.map)
+    ghint.label:SetText("經驗不夠：" .. (zone and ("去" .. zone .. " ") or "") .. "打 " .. g.mob .. "（" .. g.lv[1] .. "-" .. g.lv[2] .. "）")
+    ghint:SetWidth(UI.Get("barWidth"))
+    ghint:ClearAllPoints()
+    ghint:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
+    above = ghint
+  end
+  ghint:SetShown(g ~= nil)
   panel:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
   drawPanel()
 end

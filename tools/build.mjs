@@ -18,7 +18,16 @@ const RACE = { 獸人: "Orc", 食人妖: "Troll", 牛頭人: "Tauren", 不死族
 const ZONE_MAP = { 杜洛塔: 1411, 莫高雷: 1412, 貧瘠之地: 1413, 提里斯法林地: 1420, 銀松森林: 1421, 石爪山脈: 1442, 梣谷: 1440, 灰谷: 1440, 千針石林: 1441, 希爾斯布萊德丘陵: 1424, 奧特蘭克山脈: 1416, 阿拉希高地: 1417, 塵泥沼澤: 1445, 荊棘谷: 1434, 淒涼之地: 1443, 菲拉斯: 1444, 塔納利斯: 1446, 辛特蘭: 1425, 悲傷沼澤: 1435, 荒蕪之地: 1418, 灼熱峽谷: 1427, 艾薩拉: 1447, 奧格瑪: 1454, 幽暗城: 1458, 雷霆崖: 1456 };
 const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel" };
 // 行尾標籤：這些不顯示；其餘（可跳過、有隊伍再做…）顯示在步驟第 3 行
-const HIDDEN_TAG = /^(QuestieDB|補充|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★)/;
+// 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
+const starOf = (tags) => {
+  for (const t of tags) {
+    const m = t.match(/^★\s*獎勵[：:]\s*(.+?)(?:[（(]([^）)]*)[）)])?\s*$/);
+    if (!m) continue;
+    const cls = (m[2] || "").split(/[／\/、,，]/).map((x) => CLASS[x.trim()]).filter(Boolean);
+    return cls.length ? [m[1].trim(), cls] : [m[1].trim()];
+  }
+};
 // 副本前置的標記：【接取等級 N】【建議等級 M】【可共享】／【不可共享】／【共享?】【前置：任務名 ID】
 const dungeonTags = (tags) => {
   const out = {};
@@ -116,7 +125,7 @@ for (const file of files) {
     const where = `${file}:${li + 1}`;
     const h = line.match(/^##\s*第(\d+)站｜(.+?)[（(]\s*(\d+)\s*[–\-~－到]\s*(\d+)\s*[）)](?:｜影片\s*([\d:]+))?/);
     if (h) {
-      st = { id: `${prefix}-${h[1]}`, name: h[2].trim(), lv: [+h[3], +h[4]], video: h[5], test, steps: [], tips: [], file, where };
+      st = { id: `${prefix}-${h[1]}`, name: h[2].trim(), lv: [+h[3], +h[4]], video: h[5], test, steps: [], tips: [], grind: [], file, where };
       stations.push(st);
       return;
     }
@@ -171,6 +180,16 @@ for (const file of files) {
       const ph = line.match(/^\s*-?\s*(進本前要接|副本內|出本後交)/);
       if (ph) { st.phase = { 進本前要接: "pre", 副本內: "in", 出本後交: "post" }[ph[1]]; return; }
     }
+    // 練怪｜怪名｜等級 a-b｜座標｜說明
+    const gr = line.match(/^\s*-\s*練怪｜(.*)$/);
+    if (gr) {
+      const f = gr[1].replace(/【[^】]*】/g, "").split("｜").map((x) => x.trim());
+      const lv = (f[1] || "").match(/(\d+)\s*[-–~－]\s*(\d+)/);
+      const c = parseCoord(f[2]);
+      if (lv && c) (st.grind ||= []).push({ mob: f[0], lv: [+lv[1], +lv[2]], map: c.map || st.map, x: c.x, y: c.y, note: f[3] });
+      else warn(where, "練怪格式看不懂：" + gr[1].slice(0, 40));
+      return;
+    }
     const meta = line.match(/^\s*-\s*(限定|二選一|地圖\s*ID|交通|取捨|提醒|未完|說明)｜(.*)$/);
     if (meta) {
       const [, key, val] = meta;
@@ -190,7 +209,8 @@ for (const file of files) {
     const f = body.replace(/★/g, "").split("｜").map((s) => s.trim());
     const step = { verb: sm[1], t: VERB[sm[1]], where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined,
-      desc: tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")).join("；") || undefined };
+      desc: tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")).join("；") || undefined,
+      star: starOf(tags) };
     if (step.t === "accept" || step.t === "turnin" || step.t === "do") {
       Object.assign(step, splitName(f[0]));
       if (/^[?？]?$/.test(step.zh)) step.zh = ""; // 中文名未知：用 QuestieDB 的 zhTW，再不行用英文名
@@ -370,6 +390,7 @@ for (const st of stations) {
         : { n: step.zh || step.en, st: st.id });
     }
     if (step.keep) quests.get(id).keep = true;
+    if (step.star) quests.get(id).star = step.star;
     if (step.t === "do" || !q) { if (step.coord) step.coord.map ||= st.map; continue; }
     // 接/交：NPC 名與座標
     const npcIds = step.t === "accept" ? q.startNpcs : q.endNpcs;
@@ -496,7 +517,7 @@ const stepWhen = (w, sw) => {
   return Object.keys(out).length ? out : undefined;
 };
 const stepOut = (s, st) => ({
-  t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt, desc: s.desc, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
+  star: s.star, t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt, desc: s.desc, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
   map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, when: stepWhen(s.when, st.when), video: s.video,
 });
 let out = `-- 由 tools/build.mjs 產生，勿手改。來源：route/*.md\nlocal _, MG = ...\nMG.Route = {\n  built = "@@BUILT@@",\n  stations = {\n`;
@@ -504,7 +525,7 @@ for (const s of stations) {
   idFile = s.file;
   refPrefix = s.dungeon ? s.after.split("-")[0] : s.id.split("-")[0];
   const start = s.when?.race && s.lv[0] <= 12 ? s.when.race.join("/") : undefined;
-  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)},\n      steps = {\n`;
+  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, grind=${lua(s.grind && s.grind.length ? s.grind.map((g) => ({ mob: g.mob, lv: g.lv, map: g.map, x: g.x, y: g.y, note: g.note })) : undefined)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)},\n      steps = {\n`;
   for (const step of s.steps) if (step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id) out += `        ${lua(stepOut(step, s))},\n`;
   out += `      } },\n`;
 }
