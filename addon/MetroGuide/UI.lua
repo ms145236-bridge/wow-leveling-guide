@@ -154,7 +154,7 @@ local function box(f, edge)
   return bg
 end
 
-local root, bar, chip, panel, menu, report, dhint, ghint, vhint, lhint, xhint, rhint, fhint
+local root, bar, chip, panel, menu, report, dhint, ghint, vhint, lhint, xhint, rhint, fhint, thint
 local rows, items = {}, {}
 local scroll, tab, missOpen, lastCurKey = 0, "steps", false, nil
 local impOpen, preOpen, preSeen = false, false, nil
@@ -1178,6 +1178,9 @@ function UI.Create()
   xhint = hintRow({})
   rhint = hintRow({ { "去", 40, go } })
   fhint = hintRow({ { "去", 40, go }, { "略過", 40, function(f) if f.p then MG.db.fpSkip[f.p.npc] = true end; MG.Refresh(true) end } })
+  -- 學技能提醒：去＝切成目前步驟（做完回原順序）；略過＝當作學過
+  thint = hintRow({ { "去", 40, function(f) if f.i then E.PinIndex(state, f.i); MG.wpOverride = nil; MG.Refresh(true) end end },
+    { "略過", 40, function(f) if f.i then MG.db.latch[state.steps[f.i].key] = true end; MG.Refresh(true) end } })
 
   -- 保留物品：背包物品提示加「別賣」
   if TooltipDataProcessor and TooltipDataProcessor.AddTooltipPostCall and Enum and Enum.TooltipDataType and Enum.TooltipDataType.Item then
@@ -1911,6 +1914,10 @@ function UI.Render(S)
   fhint.p = fp
   if fp then fhint.label:SetText("順路開飛行點：" .. fp.npc) end
   put(fhint, fp)
+  local ti = state and not state.instance and state.train or false
+  thint.i = ti
+  if ti then thint.label:SetText(E.Title(state.steps[ti].s)) end
+  put(thint, ti)
 
   panel:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
   drawPanel()

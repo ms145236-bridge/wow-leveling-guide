@@ -256,8 +256,7 @@ local function onEvent(_, event, ...)
       trace.QUEST_TURNED_IN = id .. "，事件當下已標記完成：" .. tostring(C.IsTurnedIn(id))
     end
   elseif event == "TRAINER_SHOW" then
-    local name = UnitName("npc")
-    if name and not (issecretvalue and issecretvalue(name)) then E.Trained(name) end
+    E.Trained()
   elseif event == "PLAYER_LEVEL_UP" then
     MG.db.sugHide = nil
     wipe(MG.db.notNow)

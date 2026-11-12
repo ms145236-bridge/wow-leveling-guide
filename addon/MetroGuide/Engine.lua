@@ -416,7 +416,7 @@ function E.Locate(st)
   local done, na, autoDone = {}, {}, {}
   for i, step in ipairs(steps) do
     local s = step.s
-    na[i] = step.defer or db.notNow[step.key] or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or false
+    na[i] = step.defer or (s.q and db.notNow["a:" .. s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or false
     local auto = stepDone(step, map, x, y)
     autoDone[i] = auto
     local mark = db.mark[step.key]
@@ -449,8 +449,8 @@ function E.Locate(st)
   local auto, missedIdx, missedQ = nil, {}, {}
   for i = 1, n do
     local q = steps[i].s.q
-    if tails[i] then
-      -- 站尾交通先跳過，任務步驟都處理完才輪到
+    if tails[i] or steps[i].s.t == "train" then
+      -- 站尾交通先跳過，任務步驟都處理完才輪到；學技能只當提醒（步驟列下方），不擋路
     elseif not done[i] and q and missedQ[q] then
       missedIdx[#missedIdx + 1] = i -- 同一任務前面的步驟已漏掉（例如沒接就輪到交）
     elseif not done[i] then
@@ -557,7 +557,9 @@ function E.Locate(st)
       end
     end
   end
-  return { group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
+  local train
+  for i = 1, n do if steps[i].s.t == "train" and not done[i] and not na[i] and i ~= cur then train = train or i end end
+  return { train = train, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
 end
 
 -- ── 站 ──────────────────────────────────────────────────────────────────────
@@ -776,11 +778,12 @@ function E.MakeUp(st, p)
   MG.msg("補做 " .. questName(p) .. "：排在本站最前面，做完回原路線")
 end
 
--- 開了訓練師視窗：同名訓練師、等級已到的「學」步驟都算做完
-function E.Trained(name)
+-- 開了本職業訓練師（不是專業技能訓練師）：等級已到的「學」步驟都算做完，不管是哪一位訓練師
+function E.Trained()
+  if IsTradeskillTrainer and IsTradeskillTrainer() then return end
   local lv = UnitLevel("player") or 0
   for _, step in ipairs(E.trainSteps) do
-    if step.s.npc == name and step.s.lv <= lv then MG.db.latch[step.key] = true end
+    if step.s.lv <= lv then MG.db.latch[step.key] = true end
   end
 end
 -- 任務日誌滑鼠提示：在路線上 → 哪一站第幾步；不在 → 06 的判定，否則規則（灰 → 可放掉；路線任務的前置 → 值得做；其餘 → 之後順路）
