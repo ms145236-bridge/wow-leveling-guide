@@ -13,7 +13,12 @@ local FAINT = { 0.333, 0.349, 0.384 }
 local GOLD = { 0.851, 0.698, 0.373 }
 local AMBER = { 0.878, 0.569, 0.227 }
 local GREEN = { 0.435, 0.749, 0.451 }
+local EDGE2 = { 0.263, 0.282, 0.325 } -- 步驟列內分隔線、動詞方框
+local BRONZE = { 0.427, 0.353, 0.184 } -- 可按的東西
+local RED = { 0.851, 0.380, 0.310 } -- 只給「危險」
 local ROW_H, MAX_ROWS = 20, 30
+-- 字串內上色：|cffrrggbb
+local function hex(c) return string.format("|cff%02x%02x%02x", math.floor(c[1] * 255 + 0.5), math.floor(c[2] * 255 + 0.5), math.floor(c[3] * 255 + 0.5)) end
 
 -- 設定表：設定頁、右鍵選單、套用都讀這裡。acct＝帳號共用（其餘每角色）。預設值＝原本的樣子。
 local SPEC = {
@@ -21,14 +26,14 @@ local SPEC = {
   { key = "barScale", label = "縮放", min = 70, max = 150, step = 5, def = 100, unit = "%" },
   { key = "barWidth", label = "寬度", min = 240, max = 480, step = 10, def = 300 },
   { key = "barAlpha", label = "背景透明度", min = 0, max = 100, step = 5, def = 88, unit = "%" },
-  { key = "barOpacity", label = "整體透明度（含文字）", min = 0, max = 100, step = 5, def = 100, unit = "%" },
+  { key = "barOpacity", label = "整體透明度", hint = "包含文字。", min = 0, max = 100, step = 5, def = 100, unit = "%" },
   { key = "fadeOn", label = "滑鼠不在上面或戰鬥中時淡出", def = false },
   { key = "fadeAlpha", label = "淡出時透明度", min = 0, max = 100, step = 5, def = 40, unit = "%" },
   { key = "fontSize", label = "字體大小", min = 11, max = 20, step = 1, def = 15 },
   { key = "objRows", label = "最多顯示目標行數", min = 1, max = 5, step = 1, def = 5 },
   { key = "groupOn", label = "同時顯示附近任務", def = true },
   { key = "groupMax", label = "最多同時顯示", min = 1, max = 5, step = 1, def = 3 },
-  { key = "groupDist", label = "附近距離（地圖 %）", min = 2, max = 20, step = 1, def = 8 },
+  { key = "groupDist", label = "附近距離", hint = "以地圖寬度的 % 計。", min = 2, max = 20, step = 1, def = 8 },
   { key = "showCount", label = "顯示剩餘步數", def = false },
   { key = "showLevel", label = "顯示任務等級", def = false },
   { key = "locked", label = "鎖定位置", def = false, menu = true },
@@ -50,33 +55,36 @@ local SPEC = {
   { key = "miniPinSize", label = "小地圖標點大小", min = 10, max = 30, step = 1, def = 15 },
   { key = "miniSteps", label = "小地圖顯示幾步", min = 0, max = 5, step = 1, def = 3 },
   { key = "pinAlpha", label = "標點透明度", min = 30, max = 100, step = 5, def = 100, unit = "%" },
-  { key = "pinMergeX", label = "合併距離（標點大小倍數）", min = 0, max = 3, step = 0.1, def = 1.1 },
-  { section = "導航與任務" },
-  { key = "arrow", label = "箭頭與地圖標點", def = true, menu = true },
-  { key = "auto", label = "自動接交任務", def = true, menu = true },
-  { key = "optional", label = "帶上可跳過的任務", def = false, menu = true },
-  { key = "trainOn", label = "提醒學技能", def = true },
-  { key = "supplyOn", label = "補給提醒（修裝、開飛行點）", def = true },
-  { key = "dangerOn", label = "危險提醒", def = true },
-  { key = "keepOn", label = "保留物品提示", def = true },
-  { key = "detourOn", label = "順路提醒", def = true },
-  { key = "detourDist", label = "順路距離（地圖 %）", min = 1, max = 8, step = 0.5, def = 3 },
-  { start = true },
+  { key = "pinMergeX", label = "合併距離", hint = "標點大小的幾倍內合成一個。", min = 0, max = 3, step = 0.1, def = 1.1 },
+  { section = "提醒" },
+  { key = "trainOn", label = "學技能", def = true },
+  { key = "supplyOn", label = "修裝與飛行點", def = true, hint = "耐久低時提醒修裝；經過還沒開的飛行管理員時提醒。" },
+  { key = "dangerOn", label = "危險", def = true },
+  { key = "detourOn", label = "順路", def = true },
+  { key = "detourDist", label = "順路距離", min = 1, max = 8, step = 0.5, def = 3, hint = "以地圖寬度的 % 計。" },
+  { key = "keepOn", label = "別賣的物品", def = true, hint = "背包物品的滑鼠提示加一行之後任務會用到。" },
+  { key = "dungeonHint", label = "可以下副本", def = true },
+  { section = "目標與物品" },
   { key = "showTarget", label = "顯示目標按鈕", def = true },
   { key = "markOn", label = "選取時標上團隊標記", def = true },
   { key = "markIcon", label = "標記圖示", def = 1, choices = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" } },
-  { key = "dPre", label = "順路接副本前置", def = true },
-  { key = "dungeonHint", label = "提示副本", def = true },
-  { key = "dungeonOnly", label = "副本中只顯示副本任務", def = true, hint = "在副本裡只列出這個副本的任務（一次全列），不顯示主線步驟、箭頭和地圖標點；對不到副本或沒有任務時整個隱藏，出副本後恢復。" },
   { key = "showItem", label = "顯示任務物品按鈕", def = true },
   { key = "itemPos", label = "任務物品位置", def = 1, choices = { "步驟列內", "左側", "右側" } },
-  { key = "itemSize", label = "任務物品大小（左右側）", min = 20, max = 48, step = 2, def = 32 },
+  { key = "itemSize", label = "任務物品大小", min = 20, max = 48, step = 2, def = 32, hint = "放在左側或右側時的大小。" },
   { key = "itemMacro", label = "自動建立任務物品巨集", def = true, hint = "建立帳號巨集「任務物品」，內容自動改成使用目前步驟的任務物品（戰鬥中等脫離戰鬥再改）。" },
+  { key = "autoMacro", label = "自動建立目標巨集", def = true, hint = "登入時若沒有「任務目標」巨集就自動建立（帳號巨集有空位時）。刪掉後下次登入會再建立；關掉這項就不會。" },
+  { button = "建立巨集", run = function() MG.T.MakeMacro() end },
+  { section = "副本" },
+  { key = "dPre", label = "順路接副本前置", def = true },
+  { key = "dungeonOnly", label = "副本中只顯示副本任務", def = true, hint = "在副本裡只列出這個副本的任務（一次全列），不顯示主線步驟、箭頭和地圖標點；對不到副本或沒有任務時整個隱藏，出副本後恢復。" },
+  { section = "其他" },
+  { key = "arrow", label = "箭頭與地圖標點", def = true, menu = true },
+  { key = "auto", label = "自動接交任務", def = true, menu = true },
+  { key = "optional", label = "帶上可跳過的任務", def = false, menu = true },
+  { start = true },
   { key = "minimap", label = "顯示小地圖按鈕", def = true },
   { key = "miniBtnAlpha", label = "小地圖按鈕透明度", min = 0, max = 100, step = 5, def = 100, unit = "%" },
   { key = "rec", label = "遊戲內記錄", def = true, acct = true, hint = "記下任務 NPC 與座標、經驗表、飛行點，用來修正路線。/metro rec export 匯出。" },
-  { key = "autoMacro", label = "自動建立目標巨集", def = true, hint = "登入時若沒有「任務目標」巨集就自動建立（帳號巨集有空位時）。刪掉後下次登入會再建立；關掉這項就不會。" },
-  { button = "建立巨集", run = function() MG.T.MakeMacro() end },
   { button = "重新對齊", run = function() E.Realign() end },
   { section = "" },
   { button = "全部重設為預設", all = true },
@@ -110,22 +118,12 @@ function UI.Rows() return UI.Get("listRows") end
 
 -- 站名（短名＋淡色的第幾次）；完整名字在滑鼠提示
 function UI.StName(st)
-  return (st.short or st.name) .. (st.visit and ("|cff8b8f98(" .. st.visit .. ")|r") or "")
+  return (st.short or st.name) .. (st.visit and (hex(DIM) .. "(" .. st.visit .. ")|r") or "")
 end
 -- 文字被截斷了嗎（被截才需要滑鼠提示）
 local function truncated(fs)
   if fs.IsTruncated then return fs:IsTruncated() end
   return fs:GetStringWidth() > fs:GetWidth() + 0.5
-end
--- 站的完整資訊提示：全名、地區、等級、進度
-local function stationTip(owner, st, extra)
-  GameTooltip:SetOwner(owner, "ANCHOR_RIGHT")
-  GameTooltip:AddLine(st.name, GOLD[1], GOLD[2], GOLD[3])
-  local got, total = E.Progress(st)
-  local zone = st.map and C.MapName(st.map)
-  GameTooltip:AddLine((zone and (zone .. "  ") or "") .. st.lv[1] .. "-" .. st.lv[2] .. " 級" .. (total > 0 and ("  " .. got .. "/" .. total) or ""), DIM[1], DIM[2], DIM[3])
-  for _, l in ipairs(extra or {}) do GameTooltip:AddLine(l, AMBER[1], AMBER[2], AMBER[3], true) end
-  GameTooltip:Show()
 end
 
 local function text(parent, size, color, justify)
@@ -154,13 +152,13 @@ local function box(f, edge)
   return bg
 end
 
-local root, bar, chip, panel, menu, report, dhint, ghint, vhint, lhint, xhint, rhint, fhint, thint
+local root, bar, panel, menu, report, more
+local hints = {} -- 提示列（同一個元件，最多顯示 2 條）
 local rows, items = {}, {}
 local scroll, tab, missOpen, lastCurKey = 0, "steps", false, nil
 local impOpen, preOpen, preSeen = false, false, nil
 local state -- 最近一次 Render 的引擎結果
 
-local BRONZE = { 0.427, 0.353, 0.184 }
 -- state：nil＝空、"check"＝勾（color 指定顏色）、"dash"＝短線（手動未完成）
 function UI.Checkbox(parent, size)
   local b = CreateFrame("Button", nil, parent)
@@ -243,6 +241,11 @@ function UI.ApplySettings()
   panel.bg:SetColorTexture(BG[1], BG[2], BG[3], UI.Get("listAlpha") / 100)
   bar.title:SetFont(FONT, fsz, "")
   for _, f in ipairs({ bar.l2, bar.l3, unpack(bar.objs) }) do f:SetFont(FONT, fsz - 2, "") end
+  bar.verb:SetFont(FONT, fsz - 3, ""); bar.lv:SetFont(FONT, fsz - 3, "")
+  for _, h in ipairs(hints) do
+    for _, f in ipairs({ h.tag, h.label, h.act.label, h.x.label }) do f:SetFont(FONT, fsz - 2, "") end
+    h.sub:SetFont(FONT, fsz - 3, "")
+  end
   panel:SetHeight(34 + UI.Rows() * ROW_H + 8)
   local lw = UI.Get("listWidth")
   panel:SetWidth(lw)
@@ -258,7 +261,6 @@ function UI.ApplySettings()
 end
 
 -- ── 設定（右鍵選單、設定頁共用） ─────────────────────────────────────────
-local function settingLabel(sp) return (UI.Get(sp.key) and "√ " or "   ") .. sp.label end
 local function toggleSetting(sp) UI.Set(sp.key, not UI.Get(sp.key)) end
 
 local function openMenu(anchor)
@@ -271,9 +273,9 @@ local function openMenu(anchor)
   end
   entries[#entries + 1] = { "重新對齊", function() E.Realign() end }
   for _, sp in ipairs(SPEC) do
-    if sp.menu then entries[#entries + 1] = { settingLabel(sp), function() toggleSetting(sp) end } end
+    if sp.menu then entries[#entries + 1] = { sp.label, function() toggleSetting(sp) end, UI.Get(sp.key) } end
   end
-  entries[#entries + 1] = { "   設定頁", function() UI.OpenOptions() end }
+  entries[#entries + 1] = { "設定", function() UI.OpenOptions() end }
   for i, e in ipairs(entries) do
     local b = menu.buttons[i]
     if not b then
@@ -281,12 +283,17 @@ local function openMenu(anchor)
       b:SetSize(150, 22)
       b:SetPoint("TOPLEFT", 6, -6 - (i - 1) * 22)
       b.label = text(b, 13, TEXT)
-      b.label:SetPoint("LEFT", 6, 0)
+      b.label:SetPoint("LEFT", 26, 0)
+      b.cb = UI.Checkbox(b, 13)
+      b.cb:SetPoint("LEFT", 6, 0)
+      b.cb:EnableMouse(false)
       local hl = b:CreateTexture(nil, "HIGHLIGHT")
       hl:SetAllPoints(); hl:SetColorTexture(1, 1, 1, 0.06)
       menu.buttons[i] = b
     end
     b.label:SetText(e[1])
+    b.cb:SetShown(e[3] ~= nil)
+    b.cb:SetState(e[3] and "check" or nil)
     b:SetScript("OnClick", function() menu:Hide(); e[2](); UI.ApplySettings(); MG.Refresh(true) end)
     b:Show()
   end
@@ -315,6 +322,25 @@ local function tipScale()
   GameTooltip:SetScale((tipOld or 1) * UI.Get("tipScale") / 100)
   C.TooltipAlpha(GameTooltip, UI.Get("tipAlpha") / 100)
   tipScaled = true
+end
+
+-- 一般提示框：金色標題＋內文／補充（顏色、大小、透明度統一）
+local function tipOpen(owner, title, anchor)
+  GameTooltip:SetOwner(owner, anchor or "ANCHOR_RIGHT")
+  tipScale()
+  GameTooltip:AddLine(title, GOLD[1], GOLD[2], GOLD[3])
+end
+UI.TipOpen = tipOpen
+local function tipLine(t, c, wrap) c = c or TEXT; GameTooltip:AddLine(t, c[1], c[2], c[3], wrap) end
+UI.TipLine = tipLine
+-- 站的完整資訊提示：全名、地區、等級、進度
+local function stationTip(owner, st, extra)
+  tipOpen(owner, st.name)
+  local got, total = E.Progress(st)
+  local zone = st.map and C.MapName(st.map)
+  tipLine((zone and (zone .. "  ") or "") .. st.lv[1] .. "-" .. st.lv[2] .. (total > 0 and ("  " .. got .. "/" .. total) or ""), DIM)
+  for _, l in ipairs(extra or {}) do tipLine(l, AMBER, true) end
+  GameTooltip:Show()
 end
 
 -- side = true（步驟列、清單）：貼著框架左或右邊（依螢幕位置；靠底部放上方），再加設定的偏移；地圖標點貼著標點
@@ -352,15 +378,15 @@ function UI.StepTooltip(owner, s, prefix, side)
   end
   if s.pickLv or s.recLv or s.share then
     local bits = {}
-    if s.pickLv then bits[#bits + 1] = "接取等級 " .. s.pickLv end
-    if s.recLv then bits[#bits + 1] = "建議等級 " .. s.recLv end
+    if s.pickLv then bits[#bits + 1] = s.pickLv .. " 級可接" end
+    if s.recLv then bits[#bits + 1] = "建議 " .. s.recLv .. " 級" end
     if s.share == 1 then bits[#bits + 1] = "可共享" elseif s.share == 0 then bits[#bits + 1] = "不可共享" elseif s.share == 2 then bits[#bits + 1] = "共享未確認" end
-    GameTooltip:AddLine(table.concat(bits, "   "), DIM[1], DIM[2], DIM[3])
+    GameTooltip:AddLine(table.concat(bits, "  "), DIM[1], DIM[2], DIM[3])
   end
-  if s.preText then GameTooltip:AddLine("前置：" .. s.preText, DIM[1], DIM[2], DIM[3], true) end
+  if s.preText then GameTooltip:AddLine("前置 " .. s.preText, DIM[1], DIM[2], DIM[3], true) end
   local star = E.StarFor(s.q, s)
-  if star then GameTooltip:AddLine("★ 獎勵：" .. star, GOLD[1], GOLD[2], GOLD[3], true) end
-  if s.desc and UI.Get("tipDesc") then GameTooltip:AddLine("說明：" .. s.desc, AMBER[1], AMBER[2], AMBER[3], true) end
+  if star then GameTooltip:AddLine("★ " .. star, GOLD[1], GOLD[2], GOLD[3], true) end
+  if s.desc and UI.Get("tipDesc") then GameTooltip:AddLine(s.desc, TEXT[1], TEXT[2], TEXT[3], true) end
   GameTooltip:Show()
 end
 
@@ -446,8 +472,8 @@ local function buildItems()
     if #sup + #dan > 0 then
       items[#items + 1] = { kind = "shead", n = #sup + #dan }
       if UI.supOpen then
-        for _, d in ipairs(dan) do items[#items + 1] = { kind = "spot", p = d, label = "危險：" .. d.text, warn = true } end
-        for _, s in ipairs(sup) do items[#items + 1] = { kind = "spot", p = s, label = s.k .. (s.npc and ("：" .. s.npc) or "") } end
+        for _, d in ipairs(dan) do items[#items + 1] = { kind = "spot", p = d, label = "危險 " .. d.text, warn = true } end
+        for _, s in ipairs(sup) do items[#items + 1] = { kind = "spot", p = s, label = s.k .. (s.npc and (" " .. s.npc) or "") } end
       end
     end
   elseif tab == "dg" then
@@ -527,6 +553,7 @@ local function fillRow(row, it)
   row.bgx:Hide(); row.arrow:Hide(); row.lvt:Hide(); row.sub:Hide(); row.icon:Hide()
   for _, b in ipairs(row.tabs) do b:Hide() end
   for _, b in ipairs(row.acts) do b:Hide() end
+  row.mini:Hide()
   row.name:SetFont(FONT, 13, "")
   local top = it.kind == "dnext"
   local function at(f, x, w)
@@ -537,33 +564,40 @@ local function fillRow(row, it)
   at(row.ck, 8, 14); at(row.box, 9); at(row.no, 24, 20); at(row.verb, 48, 18)
   row.prog:ClearAllPoints()
   if top then row.prog:SetPoint("TOPRIGHT", -12, -7) else row.prog:SetPoint("RIGHT", -12, 0) end
-  local PROG_W = { shead = 1, spot = 70, prehead = 1, pre = 44, imphead = 1, imp = 1, step = 64, miss = 1, misshead = 1, station = 44, start = 1, ghead = 1, grind = 70, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 110, dact = 1 }
+  local PROG_W = { shead = 1, spot = 70, prehead = 1, pre = 1, imphead = 1, imp = 120, step = 64, miss = 120, misshead = 1, station = 44, start = 1, ghead = 1, grind = 70, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 110, dact = 1 }
   row.prog:SetWidth(PROG_W[it.kind] or 64)
-  local NAME_X = { dtext = 28, dhead = 28, dg = 26, dq = 28, dent = 28, dphase = 28, dact = 28 }
+  local NAME_X = { dtext = 28, dhead = 28, dg = 26, dq = 28, dent = 28, dphase = 28, dact = 28, prehead = 28, imphead = 28, misshead = 28, shead = 28, ghead = 28, pre = 28, imp = 28, miss = 28, spot = 28 }
   row.name:ClearAllPoints()
   if top then row.name:SetPoint("TOPLEFT", 70, -5) else row.name:SetPoint("LEFT", NAME_X[it.kind] or 70, 0) end
   row.name:SetPoint("RIGHT", (it.kind == "dg" or it.kind == "station") and row.lvt or row.prog, "LEFT", -6, 0)
   row.box:Hide(); row.ck:Show()
-  if it.kind == "prehead" or it.kind == "imphead" then
-    local open = it.kind == "prehead" and preOpen or impOpen
-    row.ck:SetText(open and "-" or "+"); paint(row.ck, AMBER)
-    row.name:SetText((it.kind == "prehead" and "少了前置 " or "影響後續 ") .. it.n); paint(row.name, AMBER)
+  -- 收合標題：箭頭（和副本列同一個圖）
+  local HEAD = { prehead = { "少了前置", preOpen, AMBER }, imphead = { "影響後續", impOpen, AMBER }, misshead = { "漏掉", missOpen, AMBER },
+    ghead = { "練怪地點", UI.grindOpen, DIM }, shead = { "補給", UI.supOpen, DIM } }
+  -- 影響後續的短說明（右欄）：下一站或後面幾個接不到
+  local function impShort(imp)
+    local nx = E.Next(state.st)
+    local onlyNext = true
+    for _, x in ipairs(imp) do if x.st ~= nx then onlyNext = false end end
+    return (onlyNext and "下一站 " or "後面 ") .. #imp .. " 個接不到"
+  end
+  local head = HEAD[it.kind]
+  if head then
+    row.ck:SetText("")
+    row.arrow:Show(); row.arrow:SetRotation(head[2] and -math.pi / 2 or 0); row.arrow:SetVertexColor(head[3][1], head[3][2], head[3][3])
+    row.name:SetText(head[1] .. " " .. (it.n or #state.missed)); paint(row.name, head[3])
   elseif it.kind == "pre" then
     local m = it.m
-    row.no:SetText("缺"); paint(row.no, AMBER)
-    row.name:SetText(E.Title({ t = "accept", q = m.p }) .. "（在 " .. m.pst.name .. " 接）→ 這裡的 " .. E.Title({ t = "accept", q = m.q }) .. " 不能做"); paint(row.name, DIM)
-    if m.can then row.prog:SetText("補做"); paint(row.prog, GOLD) end
+    row.name:SetText(E.Title({ t = "accept", q = m.p }) .. " → " .. E.Title({ t = "accept", q = m.q })); paint(row.name, DIM)
+    if m.can then row.mini.label:SetText("補做"); row.mini:SetWidth(row.mini.label:GetStringWidth() + 12); row.mini.m = m; row.mini:Show(); row.name:SetPoint("RIGHT", row.mini, "LEFT", -6, 0) end
   elseif it.kind == "imp" then
-    row.no:SetText("留"); paint(row.no, AMBER)
-    row.name:SetText(E.Title({ t = "accept", q = it.m.q }) .. "｜" .. E.ImpactText(it.m.imp, state.st)); paint(row.name, AMBER)
-  elseif it.kind == "misshead" then
-    row.ck:SetText(missOpen and "-" or "+"); paint(row.ck, AMBER)
-    row.name:SetText("漏掉 " .. #state.missed); paint(row.name, AMBER)
+    row.name:SetText(E.Title({ t = "accept", q = it.m.q })); paint(row.name, TEXT)
+    row.prog:SetText(impShort(it.m.imp)); paint(row.prog, AMBER)
   elseif it.kind == "miss" then
     local q = it.m.q
-    row.no:SetText("漏"); paint(row.no, AMBER)
     local imp = E.Impact(q, state.st)
-    row.name:SetText((C.Title(q) or (MG.Route.quests[q] and MG.Route.quests[q].n) or q) .. (#imp > 0 and ("｜" .. E.ImpactText(imp, state.st)) or "")); paint(row.name, AMBER)
+    row.name:SetText(C.Title(q) or (MG.Route.quests[q] and MG.Route.quests[q].n) or q); paint(row.name, TEXT)
+    if #imp > 0 then row.prog:SetText(impShort(imp)); paint(row.prog, AMBER) end
   elseif it.kind == "step" then
     local i, s = it.i, it.step.s
     local skipped = MG.db.skip[it.step.key]
@@ -575,9 +609,18 @@ local function fillRow(row, it)
     elseif state.done[i] and not state.na[i] and not (state.passed and state.passed[i]) then row.box:SetState("check", mark and GOLD or GREEN)
     else row.box:SetState(nil) end
     row.verb:SetText(E.VERB[s.t] or "")
-    row.name:SetText((E.StarFor(s.q, s) and "|cffd9b25f★|r " or "") .. E.Title(s) .. (skipped and "（已略過）" or "") .. (it.step.defer and "（之後再接）" or "") .. (MG.db.notNow[it.step.key] and "|cff8b8f98（暫時接不到）|r" or ""))
-    if it.step.dungeon and not state.done[i] and row.prog:GetText() == "" then row.prog:SetText(it.step.defer and "之後" or "副本前置"); paint(row.prog, AMBER) end
-    if s.q and state.fill[s.q] and not state.done[i] then row.prog:SetText("補經驗"); paint(row.prog, GOLD) end
+    row.name:SetText((E.StarFor(s.q, s) and (hex(GOLD) .. "★|r ") or "") .. E.Title(s))
+    -- 狀態一律放右欄（灰）；目前步驟的進度優先
+    local status
+    if skipped then status = "略過"
+    elseif MG.db.notNow[it.step.key] then status = "接不到"
+    elseif it.step.defer then status = "之後"
+    elseif not state.done[i] then
+      if it.step.carry then status = "補做"
+      elseif s.q and state.fill[s.q] then status = "補經驗"
+      elseif it.step.dungeon then status = "副本" end
+    end
+    if status then row.prog:SetText(status); paint(row.prog, skipped and FAINT or DIM) end
     if state.inGroup[i] then row.strip:SetColorTexture(GOLD[1], GOLD[2], GOLD[3], 0.45); row.strip:Show() end
     if i == state.cur then
       row.cur:Show(); row.strip:Show()
@@ -586,7 +629,7 @@ local function fillRow(row, it)
         if #obj > 1 then
           local d = 0
           for _, o in ipairs(obj) do if o.done then d = d + 1 end end
-          row.prog:SetText(d .. "/" .. #obj .. " 項"); paint(row.prog, TEXT)
+          row.prog:SetText(d .. "/" .. #obj); paint(row.prog, TEXT)
         end
         for _, o in ipairs(#obj == 1 and obj or {}) do
           if not o.done and o.need then row.prog:SetText(o.have .. "/" .. o.need); paint(row.prog, TEXT); break end
@@ -596,8 +639,6 @@ local function fillRow(row, it)
       paint(row.name, FAINT); paint(row.verb, FAINT)
     elseif state.done[i] then
       paint(row.name, FAINT); paint(row.verb, FAINT)
-    elseif it.step.carry then
-      paint(row.verb, GOLD); row.name:SetText("+ " .. E.Title(s))
     end
   elseif it.kind == "dg" then
     local d = it.d
@@ -659,7 +700,7 @@ local function fillRow(row, it)
       return n
     end
     local labels = {
-      { "pre", "前置 " .. (got >= total and "|cff6fbf73" .. got .. "/" .. total .. "|r" or (got .. "/" .. total)) },
+      { "pre", "前置 " .. (got >= total and hex(GREEN) .. got .. "/" .. total .. "|r" or (got .. "/" .. total)) },
       { "in", "副本內 " .. count("in") },
       { "post", "出本交 " .. count("post") },
     }
@@ -699,7 +740,8 @@ local function fillRow(row, it)
     local allDone = true
     for _, x in ipairs(it.steps) do if not E.Turned(x.s.q) then allDone = false end end
     if allDone then
-      row.ck:SetText("√"); paint(row.ck, GREEN); row.name:SetText(name); paint(row.name, FAINT)
+      row.ck:SetText(""); row.box:Show(); row.box:SetState("check", GREEN); row.box:ClearAllPoints(); row.box:SetPoint("LEFT", 54, 0)
+      row.name:SetText(name); paint(row.name, FAINT)
     elseif C.IsOnQuest(q) or (it.isNext) then
       row.ck:SetText("→"); paint(row.ck, GOLD); row.name:SetText(name); paint(row.name, GOLD)
       local obj = C.IsOnQuest(q) and C.Objectives(q) or {}
@@ -710,7 +752,7 @@ local function fillRow(row, it)
       row.ck:SetText("‧"); paint(row.ck, DIM); row.name:SetText(name); paint(row.name, DIM)
       row.prog:SetText(C.MapName(step.s.map) or "")
     end
-    row.ck:ClearAllPoints(); row.ck:SetPoint("LEFT", 54, 0)
+    if not allDone then row.ck:ClearAllPoints(); row.ck:SetPoint("LEFT", 54, 0) end
   elseif it.kind == "dqi" then
     local d = it.d
     row.bgx:Show()
@@ -750,8 +792,9 @@ local function fillRow(row, it)
     b1.fill:SetShown(not running)
     b1:SetWidth(b1.label:GetStringWidth() + 28)
     b1.act = running and "back" or "run"
-    b2.label:SetText(UI.dMore[d.id] and "詳細 -" or "詳細 +"); b2.label:SetTextColor(unpack(UI.dMore[d.id] and TEXT or DIM)); b2.act = "more"
-    b3.label:SetText(MG.db.dNo[d.id] and "改回要打" or "不打"); b3.label:SetTextColor(unpack(FAINT)); b3.act = "no"
+    b2.label:SetText("詳細"); b2.label:SetTextColor(unpack(UI.dMore[d.id] and TEXT or DIM)); b2.act = "more"
+    b2.arrow:SetRotation(UI.dMore[d.id] and -math.pi / 2 or 0); b2.arrow:SetVertexColor(unpack(UI.dMore[d.id] and TEXT or DIM))
+    b3.label:SetText(MG.db.dNo[d.id] and "要打" or "不打"); b3.label:SetTextColor(unpack(DIM)); b3.act = "no"
     for _, b in ipairs(row.acts) do b.d = d end
     b2:Show(); b3:Show()
     row:SetHeight(26)
@@ -759,7 +802,7 @@ local function fillRow(row, it)
     row.name:SetText("")
     row.bgx:Show()
     row.para:SetFont(FONT, 12, "")
-    row.para:SetText((it.text:gsub("「(.-)」", "|cffd9b25f%1|r"))); paint(row.para, DIM); row.para:Show()
+    row.para:SetText((it.text:gsub("「(.-)」", hex(GOLD) .. "%1|r"))); paint(row.para, DIM); row.para:Show()
     row:SetHeight(math.max(ROW_H, (row.para:GetStringHeight() or 14) + 6))
   elseif it.kind == "dhead" then
     row.name:SetText(it.text); paint(row.name, GOLD)
@@ -767,7 +810,7 @@ local function fillRow(row, it)
     row.ck:SetText(UI.supOpen and "-" or "+"); paint(row.ck, DIM)
     row.name:SetText("補給 " .. it.n); paint(row.name, DIM)
   elseif it.kind == "spot" then
-    row.name:SetText(it.label); paint(row.name, it.warn and AMBER or TEXT)
+    row.name:SetText(it.label); paint(row.name, it.warn and RED or TEXT)
     row.prog:SetText(string.format("%.1f, %.1f", it.p.x, it.p.y))
   elseif it.kind == "ghead" then
     row.ck:SetText(UI.grindOpen and "-" or "+"); paint(row.ck, DIM)
@@ -776,7 +819,7 @@ local function fillRow(row, it)
     local g = it.g
     local active = MG.grindActive == g
     row.verb:SetText("打"); paint(row.verb, active and GOLD or DIM)
-    row.name:SetText(g.mob .. "（" .. g.lv[1] .. "-" .. g.lv[2] .. "）"); paint(row.name, active and GOLD or TEXT)
+    row.name:SetText(g.mob .. " " .. g.lv[1] .. "-" .. g.lv[2]); paint(row.name, active and GOLD or TEXT)
     row.prog:SetText(string.format("%.1f, %.1f", g.x, g.y))
   elseif it.kind == "start" then
     row.ck:SetText(it.on and "●" or "○"); paint(row.ck, it.on and GOLD or DIM)
@@ -930,7 +973,6 @@ local function onRowClick(row, button)
   if not it then return end
   if it.kind == "prehead" then preOpen = not preOpen
   elseif it.kind == "imphead" then impOpen = not impOpen
-  elseif it.kind == "pre" then if it.m.can then E.MakeUp(state.st, it.m.p) end
   elseif it.kind == "imp" then
     if button == "RightButton" then E.ToggleSkip(state.steps[it.m.i].key) else E.PinIndex(state, it.m.i) end
   elseif it.kind == "misshead" then missOpen = not missOpen
@@ -988,7 +1030,7 @@ function UI.Create()
   bar.verbBox = CreateFrame("Frame", nil, bar)
   bar.verbBox:SetSize(20, 20)
   bar.verbBox:SetPoint("TOPLEFT", 12, -10)
-  local vb = box(bar.verbBox, { 0.294, 0.31, 0.349 })
+  local vb = box(bar.verbBox, EDGE2)
   vb:SetColorTexture(0, 0, 0, 0)
   bar.verb = text(bar.verbBox, 12, GOLD, "CENTER")
   bar.verb:SetPoint("CENTER", 0, 0)
@@ -996,21 +1038,19 @@ function UI.Create()
   bar.lv:SetPoint("TOPRIGHT", -32, -13)
   -- 右上角齒輪：開設定頁
   local gear = CreateFrame("Button", nil, bar)
-  gear:SetSize(22, 22) -- 點擊範圍
-  gear:SetPoint("TOPRIGHT", -5, -5)
+  gear:SetSize(20, 20) -- 點擊範圍（和目標鈕一樣大、同一行）
+  gear:SetPoint("TOPRIGHT", -6, -9)
   gear.icon = gear:CreateTexture(nil, "ARTWORK")
-  gear.icon:SetSize(18, 18)
-  gear.icon:SetPoint("CENTER")
+  gear.icon:SetSize(16, 16)
   gear.icon:SetPoint("CENTER")
   C.GearIcon(gear.icon, 16)
-  gear:SetAlpha(0.45)
+  gear:SetAlpha(0.5)
   gear:SetScript("OnEnter", function(self)
     self:SetAlpha(1)
-    GameTooltip:SetOwner(self, "ANCHOR_TOP")
-    GameTooltip:AddLine("設定")
+    tipOpen(self, "設定", "ANCHOR_TOP")
     GameTooltip:Show()
   end)
-  gear:SetScript("OnLeave", function(self) self:SetAlpha(0.45); GameTooltip:Hide() end)
+  gear:SetScript("OnLeave", function(self) self:SetAlpha(0.5); GameTooltip:Hide() end)
   gear:SetScript("OnClick", function() UI.OpenOptions() end)
   bar.title = text(bar, 15, TEXT)
   bar.title:SetPoint("TOPLEFT", 40, -12)
@@ -1024,7 +1064,7 @@ function UI.Create()
   for k = 1, 40 do bar.extra[k] = text(bar, 13, TEXT); bar.extra[k]:Hide() end
   for k = 1, 4 do
     local d = bar:CreateTexture(nil, "ARTWORK")
-    d:SetColorTexture(EDGE[1] * 1.6, EDGE[2] * 1.6, EDGE[3] * 1.6, 1)
+    d:SetColorTexture(EDGE2[1], EDGE2[2], EDGE2[3], 1)
     d:SetHeight(1)
     d:Hide()
     bar.divs[k] = d
@@ -1067,126 +1107,37 @@ function UI.Create()
   end)
   function UI.Animate(done) fade = 0; if done then flash = 1 end end
 
-  chip = CreateFrame("Button", nil, root)
-  chip:SetSize(200, 24)
-  chip:SetPoint("TOPLEFT", bar, "BOTTOMLEFT", 0, -6)
-  box(chip, { 0.427, 0.353, 0.184 })
-  chip.label = text(chip, 13, GOLD, "CENTER")
-  chip.label:SetPoint("CENTER")
-  chip:RegisterForClicks("LeftButtonUp", "RightButtonUp")
-  chip:SetScript("OnClick", function(self, button)
-    if button == "RightButton" then
-      if self.sug then MG.db.sugHide = UnitLevel("player") end
-    elseif self.sug then E.Jump(self.sug)
-    elseif self.next then E.Select(self.next) end
-    lastCurKey = nil
-    MG.Refresh(true)
-  end)
-  chip:Hide()
-
-  -- 副本提示：「可以下 副本名（a–b）」＋缺什麼；點文字開副本分頁，× 不再提示這本
-  dhint = CreateFrame("Button", nil, root)
-  dhint:SetSize(300, 40)
-  box(dhint, BRONZE)
-  dhint.label = text(dhint, 13, GOLD)
-  dhint.label:SetPoint("TOPLEFT", 10, -6)
-  dhint.label:SetPoint("RIGHT", -26, 0)
-  dhint.sub = text(dhint, 12, DIM)
-  dhint.sub:SetPoint("TOPLEFT", 10, -23)
-  dhint.sub:SetPoint("RIGHT", -26, 0)
-  local x = CreateFrame("Button", nil, dhint)
-  x:SetSize(20, 20); x:SetPoint("RIGHT", -2, 0)
-  x.label = text(x, 13, DIM, "CENTER"); x.label:SetPoint("CENTER"); x.label:SetText("×")
-  x:SetScript("OnClick", function() if dhint.d then MG.db.dDismiss[dhint.d.id] = true end; MG.Refresh(true) end)
-  dhint:SetScript("OnClick", function(self)
-    if not self.d then return end
-    UI.dOpen = self.d.id
-    panel:Show(); setTab("dg")
-    for k, it in ipairs(items) do if it.kind == "dg" and it.d == self.d then scroll = math.max(0, k - 1) end end
-    drawPanel()
-  end)
-  dhint:Hide()
-
-  -- 練怪提示：「經驗不夠：去 地點 打 怪（a-b）」＋ 去／略過
-  ghint = CreateFrame("Frame", nil, root)
-  ghint:SetSize(300, 24)
-  box(ghint, BRONZE)
-  ghint.label = text(ghint, 13, AMBER)
-  ghint.label:SetPoint("LEFT", 10, 0)
-  ghint.label:SetPoint("RIGHT", -96, 0)
-  ghint.go = goldButton(ghint, "去", 40); ghint.go:SetHeight(18); ghint.go:SetPoint("RIGHT", -50, 0)
-  ghint.skip = goldButton(ghint, "略過", 40); ghint.skip:SetHeight(18); ghint.skip:SetPoint("RIGHT", -6, 0)
-  ghint.go:SetScript("OnClick", function() if ghint.g then UI.GoGrind(ghint.g) end end)
-  ghint.skip:SetScript("OnClick", function()
-    if state and state.st then MG.db.grindSkip[state.st.id] = UnitLevel("player") end
-    MG.grindActive = nil
-    MG.Refresh(true)
-  end)
-  ghint:Hide()
-
-  -- 順路提醒：「順路：先做 交 某某（就在旁邊）」＋ 切過去／略過
-  vhint = CreateFrame("Frame", nil, root)
-  vhint:SetSize(300, 24)
-  box(vhint, BRONZE)
-  vhint.label = text(vhint, 13, AMBER)
-  vhint.label:SetPoint("LEFT", 10, 0)
-  vhint.label:SetPoint("RIGHT", -112, 0)
-  vhint.go = goldButton(vhint, "切過去", 56); vhint.go:SetHeight(18); vhint.go:SetPoint("RIGHT", -50, 0)
-  vhint.skip = goldButton(vhint, "略過", 40); vhint.skip:SetHeight(18); vhint.skip:SetPoint("RIGHT", -6, 0)
-  vhint.go:SetScript("OnClick", function()
-    if not vhint.i then return end
-    E.PinIndex(state, vhint.i)
-    MG.wpOverride, MG.grindActive = nil, nil
-    MG.Refresh(true)
-  end)
-  vhint.skip:SetScript("OnClick", function()
-    if vhint.i then E.DetourNo(state.steps[vhint.i].key) end
-    MG.Refresh(true)
-  end)
-  vhint:Hide()
-
-  -- 離站前提醒：「離開前：還有 n 個任務會影響後續」＋ 查看
-  lhint = CreateFrame("Frame", nil, root)
-  lhint:SetSize(300, 24)
-  box(lhint, BRONZE)
-  lhint.label = text(lhint, 13, AMBER)
-  lhint.label:SetPoint("LEFT", 10, 0)
-  lhint.label:SetPoint("RIGHT", -56, 0)
-  lhint.go = goldButton(lhint, "查看", 44); lhint.go:SetHeight(18); lhint.go:SetPoint("RIGHT", -6, 0)
-  lhint.go:SetScript("OnClick", function()
-    impOpen = true
-    panel:Show(); setTab("steps"); scroll = 0
-    drawPanel()
-  end)
-  lhint:Hide()
-
-  -- 一列提示＋按鈕（危險、修裝、開飛行點共用）
-  local function hintRow(buttons)
+  -- 提示：┃標籤 內容 補充        [動作] ×（色條＋標籤同色；動作與 × 固定在右側，沒有就留空）
+  local function hintRow()
     local f = CreateFrame("Frame", nil, root)
     f:SetSize(300, 24)
-    box(f, BRONZE)
-    f.label = text(f, 13, AMBER)
-    f.btns = {}
-    f.label:SetPoint("LEFT", 10, 0)
-    local right = -6
-    for k = #buttons, 1, -1 do
-      local b = buttons[k]
-      local btn = goldButton(f, b[1], b[2]); btn:SetHeight(18); btn:SetPoint("RIGHT", right, 0)
-      btn:SetScript("OnClick", function() b[3](f) end)
-      f.btns[k] = btn
-      right = right - b[2] - 4
-    end
-    f.label:SetPoint("RIGHT", right - 2, 0)
+    box(f)
+    f.strip = f:CreateTexture(nil, "ARTWORK")
+    f.strip:SetPoint("TOPLEFT", 1, -1); f.strip:SetPoint("BOTTOMLEFT", 1, 1); f.strip:SetWidth(3)
+    f.tag = text(f, 13, GOLD)
+    f.tag:SetPoint("LEFT", 10, 0)
+    f.label = text(f, 13, TEXT)
+    f.label:SetPoint("LEFT", f.tag, "RIGHT", 8, 0)
+    f.sub = text(f, 12, DIM)
+    f.sub:SetPoint("LEFT", f.label, "RIGHT", 6, 0)
+    f.sub:SetPoint("RIGHT", -56, 0)
+    f.act = goldButton(f, "", 28)
+    f.act:SetHeight(18); f.act:SetPoint("RIGHT", -24, 0)
+    f.act:SetScript("OnClick", function() if f.h and f.h.act then f.h.act() end end)
+    f.x = CreateFrame("Button", nil, f)
+    f.x:SetSize(20, 20); f.x:SetPoint("RIGHT", -2, 0)
+    f.x.label = text(f.x, 13, DIM, "CENTER"); f.x.label:SetPoint("CENTER"); f.x.label:SetText("×")
+    f.x:SetScript("OnClick", function() if f.h and f.h.close then f.h.close(); MG.Refresh(true) end end)
     f:Hide()
     return f
   end
-  local function go(f) if f.p then MG.wpOverride = { map = f.p.map, x = f.p.x, y = f.p.y, name = f.p.npc or f.p.k }; MG.Refresh(true) end end
-  xhint = hintRow({})
-  rhint = hintRow({ { "去", 40, go } })
-  fhint = hintRow({ { "去", 40, go }, { "略過", 40, function(f) if f.p then MG.db.fpSkip[f.p.npc] = true end; MG.Refresh(true) end } })
-  -- 學技能提醒：去＝切成目前步驟（做完回原順序）；略過＝當作學過
-  thint = hintRow({ { "去", 40, function(f) if f.i then E.PinIndex(state, f.i); MG.wpOverride = nil; MG.Refresh(true) end end },
-    { "略過", 40, function(f) if f.i then MG.db.latch[state.steps[f.i].key] = true end; MG.Refresh(true) end } })
+  for k = 1, 9 do hints[k] = hintRow() end
+  more = CreateFrame("Button", nil, root)
+  more:SetSize(60, 16)
+  more.label = text(more, 11, DIM)
+  more.label:SetPoint("LEFT", 2, 0)
+  more:SetScript("OnClick", function() UI.hintsAll = true; MG.Refresh(true) end)
+  more:Hide()
 
   -- 保留物品：背包物品提示加「別賣」
   if TooltipDataProcessor and TooltipDataProcessor.AddTooltipPostCall and Enum and Enum.TooltipDataType and Enum.TooltipDataType.Item then
@@ -1322,12 +1273,21 @@ function UI.Create()
         b:SetPoint("LEFT", 26, 0)
         box(b, GOLD)
         b.fill = b:CreateTexture(nil, "BACKGROUND", nil, 1); b.fill:SetAllPoints(); b.fill:SetColorTexture(GOLD[1], GOLD[2], GOLD[3], 0.16)
-      elseif k == 2 then b:SetPoint("RIGHT", -64, 0)
+      elseif k == 2 then
+        b:SetPoint("RIGHT", -64, 0)
+        b.arrow = b:CreateTexture(nil, "ARTWORK")
+        b.arrow:SetSize(10, 10); b.arrow:SetPoint("LEFT", b.label, "RIGHT", 2, 0)
+        b.arrow:SetTexture("Interface\\ChatFrame\\ChatFrameExpandArrow")
       else b:SetPoint("RIGHT", -10, 0) end
       b:SetScript("OnClick", function(self) UI.DungeonAction(self.act, self.d) end)
       b:Hide()
       row.acts[k] = b
     end
+    -- 列內小鈕（補做）
+    row.mini = goldButton(row, "", 40)
+    row.mini:SetHeight(18); row.mini:SetPoint("RIGHT", -10, 0)
+    row.mini:SetScript("OnClick", function(self) if self.m and state then E.MakeUp(state.st, self.m.p); MG.Refresh(true) end end)
+    row.mini:Hide()
     row.name = text(row, 13, TEXT)
     row.name:SetPoint("LEFT", 70, 0)
     row.name:SetPoint("RIGHT", row.prog, "LEFT", -6, 0)
@@ -1336,19 +1296,30 @@ function UI.Create()
     row:SetScript("OnEnter", function(self)
       local it = self.it
       if it and it.kind == "step" then UI.StepTooltip(self, it.step.s, nil, true)
-      elseif it and it.kind == "miss" then UI.StepTooltip(self, state.steps[it.m.i].s, nil, true)
       elseif it and it.kind == "dnext" and it.nx.step then UI.StepTooltip(self, it.nx.step.s, nil, true)
       elseif it and it.kind == "dq" then UI.StepTooltip(self, it.t.step.s, nil, true)
       elseif it and it.kind == "dqi" and it.step then UI.StepTooltip(self, it.step.s, nil, true)
       elseif it and it.kind == "dch" then UI.StepTooltip(self, it.steps[1].s, nil, true)
+      elseif it and it.kind == "pre" then
+        local m = it.m
+        tipOpen(self, E.Title({ t = "accept", q = m.p }))
+        tipLine("在 " .. m.pst.name .. " 接；沒做的話這裡的「" .. E.Title({ t = "accept", q = m.q }) .. "」不能做", TEXT, true)
+        if not m.can then tipLine("現在接不到（等級或前置不足）", DIM) end
+        GameTooltip:Show()
+      elseif it and (it.kind == "imp" or it.kind == "miss") then
+        local q = it.m.q
+        local imp = it.kind == "imp" and it.m.imp or E.Impact(q, state.st)
+        if it.kind == "miss" then UI.StepTooltip(self, state.steps[it.m.i].s, nil, true) else tipOpen(self, E.Title({ t = "accept", q = q })) end
+        if #imp > 0 then tipLine(E.ImpactText(imp, state.st), AMBER, true) end
+        GameTooltip:Show()
       elseif it and it.kind == "station" then
         local extra = {}
         for _, m in ipairs(E.MissingPre(it.st)) do extra[#extra + 1] = "少了前置：" .. E.Title({ t = "accept", q = m.p }) .. "（在 " .. m.pst.name .. " 接）→ 這裡的 " .. E.Title({ t = "accept", q = m.q }) .. " 不能做" end
         if #extra > 0 or truncated(self.name) or it.st.short then stationTip(self, it.st, extra) end
       elseif it and truncated(self.name) then
-        GameTooltip:SetOwner(self, "ANCHOR_RIGHT"); GameTooltip:AddLine(self.name:GetText(), 1, 1, 1, true); GameTooltip:Show()
+        tipOpen(self, self.name:GetText()); GameTooltip:Show()
       elseif it and it.kind == "grind" and it.g.note then
-        GameTooltip:SetOwner(self, "ANCHOR_RIGHT"); GameTooltip:AddLine(it.g.mob, GOLD[1], GOLD[2], GOLD[3]); GameTooltip:AddLine(it.g.note, DIM[1], DIM[2], DIM[3], true); GameTooltip:Show() end
+        tipOpen(self, it.g.mob); tipLine(it.g.note, TEXT, true); GameTooltip:Show() end
     end)
     row:SetScript("OnLeave", function() GameTooltip:Hide() end)
     rows[r] = row
@@ -1443,11 +1414,10 @@ function UI.CreateMinimap()
   end)
   mini:SetScript("OnDragStop", function(self) self:SetScript("OnUpdate", nil) end)
   mini:SetScript("OnEnter", function(self)
-    GameTooltip:SetOwner(self, "ANCHOR_LEFT")
-    GameTooltip:AddLine("地鐵升級")
+    tipOpen(self, "地鐵升級", "ANCHOR_LEFT")
     local st = state and state.st
     local cur = state and state.cur and state.steps[state.cur]
-    GameTooltip:AddLine(st and (st.name .. "  " .. st.lv[1] .. "-" .. st.lv[2]) or "沒有路線", 1, 1, 1)
+    tipLine(st and (st.name .. "  " .. st.lv[1] .. "-" .. st.lv[2]) or "沒有路線", TEXT)
     if st then GameTooltip:AddLine(cur and ((E.VERB[cur.s.t] or "") .. " " .. E.Title(cur.s)) or "本站完成", DIM[1], DIM[2], DIM[3]) end
     GameTooltip:Show()
   end)
@@ -1549,6 +1519,10 @@ function UI.CreateOptions()
         changed(sp)
       end)
       slider:SetPoint("TOPLEFT", COL_CTRL, y - 4)
+      if sp.hint and slider.HookScript then
+        slider:HookScript("OnEnter", function(self) tipOpen(self, sp.label); tipLine(sp.hint, TEXT, true); GameTooltip:Show() end)
+        slider:HookScript("OnLeave", function() GameTooltip:Hide() end)
+      end
       slider:SetWidth(COL_VALUE - COL_CTRL - 14)
       options.widgets[#options.widgets + 1] = { refresh = function()
         syncing = true; C.SliderSet(slider, UI.Get(sp.key)); syncing = false
@@ -1563,9 +1537,8 @@ function UI.CreateOptions()
       cb:SetScript("OnClick", function() toggleSetting(sp); changed(sp); UI.RefreshOptions() end)
       if sp.hint then
         cb:SetScript("OnEnter", function(self)
-          GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-          GameTooltip:AddLine(sp.label)
-          GameTooltip:AddLine(sp.hint, DIM[1], DIM[2], DIM[3], true)
+          tipOpen(self, sp.label)
+          tipLine(sp.hint, TEXT, true)
           GameTooltip:Show()
         end)
         cb:SetScript("OnLeave", function() GameTooltip:Hide() end)
@@ -1621,7 +1594,7 @@ local function objectiveLines(q)
   local function count(o) return o.need and ("  " .. (o.have or 0) .. "/" .. o.need) or "" end
   if #obj == 1 then
     local o = obj[1]
-    return (o.text ~= "" and o.text or "目標") .. (o.need and ("  |cffe8e4d8" .. (o.have or 0) .. "/" .. o.need .. "|r") or "")
+    return (o.text ~= "" and o.text or "目標") .. (o.need and ("  " .. hex(TEXT) .. (o.have or 0) .. "/" .. o.need .. "|r") or "")
   end
   -- 共同動詞與共同字首（例：殺死 怨怒… → 欺詐者、喚魔者）
   local texts = {}
@@ -1673,7 +1646,7 @@ function UI.Render(S)
     verb = E.VERB[s.t] or ""
     title = E.Title(s)
     if state.tails and state.tails[state.cur] then title = "前往下一站：" .. title end
-    if E.StarFor(s.q, s) then title = "|cffd9b25f★|r " .. title end
+    if E.StarFor(s.q, s) then title = hex(GOLD) .. "★|r " .. title end
     right = UI.Get("showLevel") and info and info.lvl and tostring(info.lvl) or ""
     if s.t == "accept" or s.t == "turnin" then l2 = s.npc
     elseif s.t == "do" then
@@ -1687,9 +1660,9 @@ function UI.Render(S)
     if info and info.min and lv < info.min then
       l3, l3warn = "差 " .. (info.min - lv) .. " 級", true
     elseif step.defer then
-      l3, l3warn = "之後再接（任務日誌快滿）", true
+      l3, l3warn = "之後再接", true
     elseif step.dungeon then
-      l3 = "副本前置：" .. step.dungeon.name .. (s.share == 1 and "  可共享" or "")
+      l3 = "副本 " .. step.dungeon.name
     elseif s.q and state.fill[s.q] then
       l3 = "補經驗"
     elseif step.note then
@@ -1697,9 +1670,9 @@ function UI.Render(S)
     elseif s.tag then
       l3 = s.tag
     elseif step.carry then
-      l3 = "順路補（" .. step.st.name .. "）"
+      l3 = "補做 " .. UI.StName(step.st)
     elseif lv < state.st.lv[1] then
-      l3, l3warn = "本站建議 " .. state.st.lv[1] .. " 級", true
+      l3, l3warn = "建議 " .. state.st.lv[1] .. " 級", true
     end
     if state.cur ~= state.auto then strip = DIM end
   else
@@ -1711,7 +1684,7 @@ function UI.Render(S)
     for _, tip in ipairs(state.st.tips or {}) do
       if tip.k == "交通" and not l2 then l2 = table.concat(UI.Sentences(tip.s, { tip.text }), "，") end
     end
-    if #state.missed > 0 then l3, l3warn = "漏掉 " .. #state.missed .. " 個任務（展開查看）", true end
+    if #state.missed > 0 then l3, l3warn = "漏掉 " .. #state.missed .. " 個任務", true end
   end
 
   bar.verb:SetText(verb)
@@ -1782,13 +1755,13 @@ function UI.Render(S)
       d:SetPoint("TOPLEFT", 40, y - 2); d:SetPoint("TOPRIGHT", -10, y - 2)
       d:Show()
     end
-    y = y - 7
-    line((E.VERB[s.t] or "") .. "  " .. E.Title(s), TEXT)
-    y = y - 17
+    y = y - 6
+    line((E.VERB[s.t] or "") .. " " .. E.Title(s), TEXT)
+    y = y - 18
     if s.t == "do" and s.q then
       local one, header, lines = objectiveLines(s.q)
       if lines then
-        if header then line(header, DIM); y = y - 16 end
+        if header then line(header, DIM); y = y - 18 end
         local maxRows = UI.Get("objRows")
         local n = math.min(#lines, maxRows)
         local cols = n >= 4 and 2 or 1
@@ -1798,16 +1771,16 @@ function UI.Render(S)
           local text = (#lines > maxRows and j == maxRows) and ("…還有 " .. (#lines - maxRows + 1) .. " 項") or o.text
           local r, c = math.floor((j - 1) / cols), (j - 1) % cols
           local yy = y
-          y = y - r * 16
+          y = y - r * 18
           line(text, o.done and FAINT or DIM, 40 + c * colW, colW - 6)
           y = yy
         end
-        y = y - math.ceil(n / cols) * 16
+        y = y - math.ceil(n / cols) * 18
       elseif one or s.hint then
-        line(one or s.hint, DIM); y = y - 16
+        line(one or s.hint, DIM); y = y - 18
       end
     elseif s.npc then
-      line(s.npc, DIM); y = y - 16
+      line(s.npc, DIM); y = y - 18
     end
   end
   for k = used + 1, #bar.extra do bar.extra[k]:Hide() end
@@ -1818,108 +1791,113 @@ function UI.Render(S)
   if key ~= lastCurKey then
     if lastCurKey then UI.Animate(state ~= nil and state.cur == state.auto) end
     lastCurKey = key
+    UI.hintsAll = false -- 換步驟：提示收回成 2 條
     if panel:IsShown() and state then scrollToCur() end
   end
 
-  -- 建議鈕：超等建議優先，其次「本站完成 → 下一站」
-  chip.sug, chip.next = nil, nil
-  if S.sug and db.sugHide ~= lv then
-    chip.sug = S.sug
-    chip.label:SetText("→ " .. UI.StName(S.sug) .. "  " .. S.sug.lv[1] .. "-" .. S.sug.lv[2])
-  elseif state and not state.cur and S.nextSt then
-    chip.next = S.nextSt
-    chip.label:SetText("→ " .. UI.StName(S.nextSt) .. "  " .. S.nextSt.lv[1] .. "-" .. S.nextSt.lv[2])
-  end
-  chip:SetShown(chip.sug ~= nil or chip.next ~= nil)
-  if chip:IsShown() then chip:SetWidth(math.min(UI.Get("barWidth"), chip.label:GetStringWidth() + 28)) end
-  panel:ClearAllPoints()
-  -- 副本提示（不在副本流程中才顯示）
-  local d, missing
-  if not (state and (state.st.dungeon or state.instance)) then d, missing = E.DungeonPrompt() end
-  dhint.d = d
-  if d then
-    dhint.label:SetText("可以下 " .. d.name .. "（" .. d.lv[1] .. "-" .. d.lv[2] .. "）")
-    dhint.sub:SetText(missing or "")
-    dhint:SetHeight(missing and 40 or 24)
-    dhint:SetWidth(UI.Get("barWidth"))
-    dhint:ClearAllPoints()
-    dhint:SetPoint("TOPLEFT", chip:IsShown() and chip or bar, "BOTTOMLEFT", 0, -6)
-  end
-  dhint:SetShown(d ~= nil)
-  local above = dhint:IsShown() and dhint or (chip:IsShown() and chip or bar)
-  -- 練怪建議
-  local g = state and not state.instance and E.GrindSuggest(state.st, state.fillInfo)
-  if not g then MG.grindActive = nil end
-  ghint.g = g
-  if g then
-    local zone = C.MapName(g.map)
-    ghint.label:SetText("經驗不夠：" .. (zone and ("去" .. zone .. " ") or "") .. "打 " .. g.mob .. "（" .. g.lv[1] .. "-" .. g.lv[2] .. "）")
-    ghint:SetWidth(UI.Get("barWidth"))
-    ghint:ClearAllPoints()
-    ghint:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
-    above = ghint
-  end
-  ghint:SetShown(g ~= nil)
-  -- 順路提醒
-  local vi = E.Detour(state)
-  vhint.i = vi
-  if vi then
-    local s = state.steps[vi].s
-    vhint.label:SetText("順路：先做 " .. E.VERB[s.t] .. " " .. ((s.t ~= "do" and s.npc and not s.npc:find("物品", 1, true)) and s.npc or E.Title(s)) .. "（就在旁邊）")
-    vhint:SetWidth(UI.Get("barWidth"))
-    vhint:ClearAllPoints()
-    vhint:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
-    above = vhint
-  end
-  vhint:SetShown(vi ~= nil)
-  -- 離站前提醒：輪到站尾交通（或本站做完）時
-  local leave = UI.Leaving(state)
-  if #leave > 0 then
-    lhint.label:SetText("離開前：還有 " .. #leave .. " 個任務會影響後續")
-    lhint:SetWidth(UI.Get("barWidth"))
-    lhint:ClearAllPoints()
-    lhint:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
-    above = lhint
-  end
-  lhint:SetShown(#leave > 0)
-  -- 附近危險、該修裝、順路開飛行點
-  local function put(f, show)
-    if show then
-      f:SetWidth(UI.Get("barWidth"))
-      f:ClearAllPoints()
-      f:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
-      above = f
-    end
-    f:SetShown(show and true or false)
-  end
+  -- 提示：安全 ＞ 走了就來不及 ＞ 人在附近 ＞ 隨時能做。副本中全部不顯示
+  local H = {}
   local st = state and not state.instance and state.st
-  local danger, fp = E.Nearby(st)
-  if danger then xhint.label:SetText("危險：" .. (E.Clause(danger.text))) end -- 步驟列只放第一句，清單有全文
-  put(xhint, danger)
-  local low = st and UI.Get("supplyOn") and E.Durability()
-  local repair
-  if low and low < 0.3 then
-    local map, x, y = C.Position()
-    local best
-    for _, s in ipairs(st.supply or {}) do
-      if s.k == "修理" then
-        local d = (s.map == map and x) and math.sqrt((s.x - x) ^ 2 + (s.y - y) ^ 2) or 999
-        if not best or d < best then best, repair = d, s end
+  local function goTo(p, name) MG.wpOverride = { map = p.map, x = p.x, y = p.y, name = name }; MG.Refresh(true) end
+  local function pin(i) return function() E.PinIndex(state, i); MG.wpOverride, MG.grindActive = nil, nil; MG.Refresh(true) end end
+  local g
+  if st then
+    local danger, fp = E.Nearby(st)
+    if danger then H[#H + 1] = { tag = "危險", color = RED, text = (E.Clause(danger.text)) } end
+    local leave = UI.Leaving(state)
+    if #leave > 0 then
+      H[#H + 1] = { tag = "離開前", color = AMBER, text = "還有 " .. #leave .. " 個任務", actLabel = "看",
+        act = function() impOpen = true; panel:Show(); setTab("steps"); scroll = 0; drawPanel() end }
+    end
+    local low = UI.Get("supplyOn") and E.Durability()
+    if low and low < 0.3 then
+      local map, x, y = C.Position()
+      local best, repair
+      for _, p in ipairs(st.supply or {}) do
+        if p.k == "修理" then
+          local d = (p.map == map and x) and math.sqrt((p.x - x) ^ 2 + (p.y - y) ^ 2) or 999
+          if not best or d < best then best, repair = d, p end
+        end
+      end
+      H[#H + 1] = { tag = "修裝", color = AMBER, text = repair and (repair.npc or "修理") or ("耐久 " .. math.floor(low * 100) .. "%"),
+        sub = repair and best < 10 and "附近" or nil, actLabel = repair and "去" or nil, act = repair and function() goTo(repair, repair.npc or "修理") end or nil }
+    end
+    if S.sug and db.sugHide ~= lv then
+      local sug = S.sug
+      H[#H + 1] = { tag = "下一站", color = GOLD, text = UI.StName(sug), sub = sug.lv[1] .. "-" .. sug.lv[2], actLabel = "去",
+        act = function() E.Jump(sug); lastCurKey = nil; MG.Refresh(true) end, close = function() MG.db.sugHide = UnitLevel("player") end }
+    elseif not state.cur and S.nextSt then
+      local nx = S.nextSt
+      H[#H + 1] = { tag = "下一站", color = GOLD, text = UI.StName(nx), sub = nx.lv[1] .. "-" .. nx.lv[2], actLabel = "去",
+        act = function() E.Select(nx); lastCurKey = nil; MG.Refresh(true) end }
+    end
+    local vi = E.Detour(state)
+    if vi then
+      local vs = state.steps[vi].s
+      H[#H + 1] = { tag = "順路", color = GOLD, text = (E.VERB[vs.t] or "") .. " " .. ((vs.t ~= "do" and vs.npc and not vs.npc:find("物品", 1, true)) and vs.npc or E.Title(vs)),
+        actLabel = "去", act = pin(vi), close = function() E.DetourNo(state.steps[vi].key) end }
+    end
+    if fp then
+      H[#H + 1] = { tag = "飛行點", color = GOLD, text = fp.npc, actLabel = "去", act = function() goTo(fp, fp.npc) end,
+        close = function() MG.db.fpSkip[fp.npc] = true end }
+    end
+    if state.train then
+      local ts = state.steps[state.train]
+      H[#H + 1] = { tag = "學技能", color = GOLD, text = ts.s.npc, sub = ts.s.lv .. " 級", actLabel = "去", act = pin(state.train),
+        close = function() MG.db.latch[ts.key] = true end }
+    end
+    g = E.GrindSuggest(st, state.fillInfo)
+    if g then
+      local zone = C.MapName(g.map)
+      H[#H + 1] = { tag = "練等", color = GOLD, text = g.mob, sub = g.lv[1] .. "-" .. g.lv[2] .. (zone and (" " .. zone) or ""), actLabel = "去",
+        act = function() UI.GoGrind(g) end, close = function() MG.db.grindSkip[st.id] = UnitLevel("player"); MG.grindActive = nil end }
+    end
+    if not st.dungeon then
+      local d, missing = E.DungeonPrompt()
+      if d then
+        H[#H + 1] = { tag = "副本", color = GOLD, text = d.name, sub = d.lv[1] .. "-" .. d.lv[2] .. (missing and (" " .. missing) or ""), actLabel = "看",
+          act = function()
+            UI.dOpen = d.id
+            panel:Show(); setTab("dg")
+            for k, it in ipairs(items) do if it.kind == "dg" and it.d == d then scroll = math.max(0, k - 1) end end
+            drawPanel()
+          end,
+          close = function() MG.db.dDismiss[d.id] = true end }
       end
     end
-    rhint.p = repair
-    rhint.label:SetText(repair and ("該修裝：" .. (repair.npc or "修理") .. (best < 10 and "（就在附近）" or "")) or ("該修裝了（耐久 " .. math.floor(low * 100) .. "%）"))
   end
-  rhint.btns[1]:SetShown(rhint.p ~= nil)
-  put(rhint, low and low < 0.3)
-  fhint.p = fp
-  if fp then fhint.label:SetText("順路開飛行點：" .. fp.npc) end
-  put(fhint, fp)
-  local ti = state and not state.instance and state.train or false
-  thint.i = ti
-  if ti then thint.label:SetText(E.Title(state.steps[ti].s)) end
-  put(thint, ti)
-
+  if not g then MG.grindActive = nil end
+  local w = UI.Get("barWidth")
+  local showN = (UI.hintsAll or #H <= 2) and #H or 2
+  local above = bar
+  for k, f in ipairs(hints) do
+    local h = k <= showN and H[k] or false
+    f.h = h
+    if h then
+      f:SetWidth(w)
+      f.strip:SetColorTexture(h.color[1], h.color[2], h.color[3], 1)
+      f.tag:SetText(h.tag); paint(f.tag, h.color)
+      f.label:SetText(h.text or "")
+      f.label:SetWidth(math.max(1, math.min((f.label:GetStringWidth() or 0) + 2, w - 10 - (f.tag:GetStringWidth() or 0) - 8 - 60)))
+      f.sub:SetText(h.sub or "")
+      f.act.label:SetText(h.actLabel or "")
+      f.act:SetShown(h.act ~= nil)
+      f.x:SetShown(h.close ~= nil)
+      f:ClearAllPoints()
+      f:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -2)
+      above = f
+    end
+    f:SetShown(h and true or false)
+  end
+  if #H > showN then
+    more.label:SetText("▾ +" .. (#H - showN))
+    more:SetWidth((more.label:GetStringWidth() or 30) + 8)
+    more:ClearAllPoints()
+    more:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -2)
+    above = more
+  end
+  more:SetShown(#H > showN)
+  panel:ClearAllPoints()
   panel:SetPoint("TOPLEFT", above, "BOTTOMLEFT", 0, -6)
   drawPanel()
 end

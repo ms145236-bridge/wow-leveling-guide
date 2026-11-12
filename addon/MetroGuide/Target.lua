@@ -212,23 +212,23 @@ end
 function T.Create(bar)
   btn = CreateFrame("Button", "MetroGuideTargetButton", UIParent, "SecureActionButtonTemplate")
   btn:SetSize(20, 20)
-  btn:SetPoint("TOPRIGHT", bar, "TOPRIGHT", -28, -5)
+  btn:SetPoint("TOPRIGHT", bar, "TOPRIGHT", -28, -9) -- 和齒輪同一行
   btn:SetFrameStrata(bar:GetFrameStrata())
   btn:SetFrameLevel((bar:GetFrameLevel() or 1) + 20)
   btn:RegisterForClicks("AnyUp", "AnyDown")
   local icon = btn:CreateTexture(nil, "ARTWORK")
   icon:SetPoint("CENTER")
-  icon:SetSize(18, 18)
+  icon:SetSize(16, 16)
   icon:SetTexture("Interface\\Cursor\\Crosshairs")
-  btn:SetAlpha(0.6)
+  icon:SetDesaturated(true) -- 和齒輪同色調
+  btn:SetAlpha(0.5)
   btn:HookScript("OnEnter", function(self)
     self:SetAlpha(1)
-    GameTooltip:SetOwner(self, "ANCHOR_TOP")
-    GameTooltip:AddLine("選取任務目標")
-    if #names > 0 then GameTooltip:AddLine(table.concat(names, "、"), 0.8, 0.8, 0.8, true) end
+    MG.UI.TipOpen(self, "選取任務目標", "ANCHOR_TOP")
+    if #names > 0 then MG.UI.TipLine(table.concat(names, "、"), nil, true) end
     GameTooltip:Show()
   end)
-  btn:HookScript("OnLeave", function(self) self:SetAlpha(0.6); GameTooltip:Hide() end)
+  btn:HookScript("OnLeave", function(self) self:SetAlpha(0.5); GameTooltip:Hide() end)
   btn:Hide()
   local f = CreateFrame("Frame")
   for _, e in ipairs({ "PLAYER_REGEN_ENABLED", "PLAYER_ENTERING_WORLD", "ADDON_ACTION_FORBIDDEN", "ADDON_ACTION_BLOCKED", "PLAYER_TARGET_CHANGED" }) do
