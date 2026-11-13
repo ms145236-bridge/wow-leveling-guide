@@ -1,4 +1,4 @@
-# 建置報告（資料版本 51251316）
+# 建置報告（資料版本 af08d42f）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
 站數：94　任務數：1502
@@ -176,14 +176,14 @@
 
 - 01-第一段-1到12級.md：…先完成 1485／149… → 邪靈劣魔
 - 01-第一段-1到12級.md：…先完成 1485／1499 的小鬼… → 邪靈劣魔
-- 01-第一段-1到12級.md：…e Medallion）794。… → 火刃獎章
-- 01-第一段-1到12級.md：…e Medallion）794… → 火刃獎章
+- 01-第一段-1到12級.md：…e Medallion）794。… → 燃刃勳章
+- 01-第一段-1到12級.md：…e Medallion）794… → 燃刃勳章
 - 01-第一段-1到12級.md：…完成前置 788 後接職… → 小試身手
 - 01-第一段-1到12級.md：…先交 788 小試身… → 小試身手
 - 01-第一段-1到12級.md：…e Betrayers）784，才接得… → 背信棄義的人類
-- 01-第一段-1到12級.md：…reckage....）825。把沉船… → 海底沈船
+- 01-第一段-1到12級.md：…reckage....）825。把沉船… → 海底沉船
 - 01-第一段-1到12級.md：…vent Spirit）818 排成同… → 沃納爾大師
-- 01-第一段-1到12級.md：…reckage....）825… → 海底沈船
+- 01-第一段-1到12級.md：…reckage....）825… → 海底沉船
 - 01-第一段-1到12級.md：…den Enemies）5726→572… → 隱藏的敵人
 - 01-第一段-1到12級.md：…nemies）5726→5727→572… → 隱藏的敵人
 - 01-第一段-1到12級.md：…s）5726→5727→5728。572… → 隱藏的敵人
@@ -210,12 +210,12 @@
 - 01-第一段-1到12級.md：…血蹄村起始。1524→152… → 火焰的召喚
 - 01-第一段-1到12級.md：…血蹄村起始。1524→1527 在貧瘠… → 火焰的召喚
 - 01-第一段-1到12級.md：…從墓穴內的 363 開始。… → 突然醒來
-- 01-第一段-1到12級.md：…84, 66.20）接 364。若薩維… → 無腦的僵屍
+- 01-第一段-1到12級.md：…84, 66.20）接 364。若薩維… → 無腦的殭屍
 - 01-第一段-1到12級.md：…從墓穴內的 363 開始… → 突然醒來
-- 01-第一段-1到12級.md：…84, 66.20）接 364… → 無腦的僵屍
+- 01-第一段-1到12級.md：…84, 66.20）接 364… → 無腦的殭屍
 - 01-第一段-1到12級.md：… 3 級才接瑪拉的遺願 6395。到 6… → 瑪拉的遺願
 
-## 名稱不一致（60）
+## 名稱不一致（46）
 
 - 01-第一段-1到12級.md:1110 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
 - 01-第一段-1到12級.md:1134 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
@@ -227,19 +227,6 @@
 - 任務 1068：目標怪 QuestieDB 沒有繁中名（XT:4）
 - 任務 1068：目標怪 QuestieDB 沒有繁中名（XT:9）
 - 任務 78830：目標怪 QuestieDB 沒有繁中名（Gharrik）
-- 03-30到45級.md:800 交｜：路線寫「Twilight Brute」，QuestieDB 是「暮光蠻卒」
-- 03-30到45級.md:801 接｜：路線寫「Twilight Brute」，QuestieDB 是「暮光蠻卒」
-- 03-30到45級.md:837 接｜：路線寫「Na'zok」，QuestieDB 是「納佐克」
-- 03-30到45級.md:838 接｜：路線寫「Na'zok」，QuestieDB 是「納佐克」
-- 03-30到45級.md:839 接｜：路線寫「Gorgegut」，QuestieDB 是「吞腸」
-- 03-30到45級.md:843 交｜：路線寫「Na'zok」，QuestieDB 是「納佐克」
-- 03-30到45級.md:844 交｜：路線寫「Na'zok」，QuestieDB 是「納佐克」
-- 03-30到45級.md:845 交｜：路線寫「Hamur」，QuestieDB 是「哈穆爾」
-- 03-30到45級.md:846 接｜：路線寫「Hamur」，QuestieDB 是「哈穆爾」
-- 03-30到45級.md:848 交｜：路線寫「Hamur」，QuestieDB 是「哈穆爾」
-- 03-30到45級.md:1140 接｜：路線寫「Jom-jom」，QuestieDB 是「忠忠」
-- 05-副本.md:971 交｜：路線寫「Twilight Brute」，QuestieDB 是「暮光蠻卒」
-- 05-副本.md:972 接｜：路線寫「Twilight Brute」，QuestieDB 是「暮光蠻卒」
 - 05-副本.md:1078 交｜：QuestieDB 沒有繁中名（Magister Kirandis），用「Magister Kirandis」
 - 05-副本.md:1042 接｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
 - 05-副本.md:1042 交｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
@@ -248,13 +235,13 @@
 - 任務 93404：目標怪 QuestieDB 沒有繁中名（Woodwyrd）
 - 05-副本.md:1082 接｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
 - 05-副本.md:1111 交｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
-- 05-副本.md:1189 交｜精英中的精英：QuestieDB 沒有繁中名（Sergeant Ulka），用「Sergeant Ulka」
-- 05-副本.md:1190 接｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「Sergeant Ulka」
-- 05-副本.md:1192 交｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「Sergeant Ulka」
-- 05-副本.md:1193 接｜不放棄任何一個獸人：QuestieDB 沒有繁中名（Sergeant Ulka），用「Sergeant Ulka」
-- 05-副本.md:1194 接｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「Sergeant Ulka」
-- 05-副本.md:1195 接｜血紅頭巾：QuestieDB 沒有繁中名（Sergeant Ulka），用「Sergeant Ulka」
-- 05-副本.md:1213 交｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「Sergeant Ulka」
+- 05-副本.md:1189 交｜精英中的精英：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1190 接｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1192 交｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1193 接｜不放棄任何一個獸人：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1194 接｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1195 接｜血紅頭巾：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1213 交｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
 - 任務 8234：目標怪 QuestieDB 沒有繁中名（木喉薩滿、Blackmaw Shaman）
 - 任務 8425：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher）
 - 任務 8425：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku）
@@ -265,7 +252,7 @@
 - 04-45到60級.md:634 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
 - 04-45到60級.md:636 交｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
 - 04-45到60級.md:637 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
-- 04-45到60級.md:920 接｜聖光研究：路線寫「物件 書籍」，QuestieDB 是「詹妮亞·坎農」
+- 04-45到60級.md:920 接｜聖光研究：路線寫「物件 書籍」，QuestieDB／遊戲名是「詹妮亞·坎農」
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher）
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku）
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro）
@@ -273,22 +260,15 @@
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku）
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro）
 - 任務 4289：目標怪 QuestieDB 沒有繁中名（安戈洛猩猩、Un'Goro Gorilla）
-- 05-副本.md:1670 接｜結晶元素：路線寫「大地探尋者瑪耶娜（Mayena Earthseeker）」，QuestieDB 是「瑪雅娜‧尋地者」
 - 任務 97327：目標怪 QuestieDB 沒有繁中名（Blackmaw Headhunter、Swarming Imp、Legashi Slayer）
 - 05-副本.md:1770 接｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
 - 05-副本.md:1782 交｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
 
-## 順序錯誤（已自動調整 9）
+## 順序錯誤（已自動調整 3）
 
-- 02-9 銀松森林：接「法師的頭領」（480）原本排在前置「監視道路」（95981）交之前，已移到交之後
-- 03-19 荊棘谷・第一次：接「水中的敵人」（95773）原本排在前置「暗礁海」（629）交之前，已移到交之後
 - 03-24 大河林地・羅格瑪第一次：接「豺狼人出沒」（94532）原本排在前置「獵人的箭袋」（96109）交之前，已移到交之後
 - 03-24 大河林地・羅格瑪第一次：接「鬃丘強盜」（94535）原本排在前置「獵人的箭袋」（96109）交之前，已移到交之後
-- 03-24 大河林地・羅格瑪第一次：接「侵略暮光」（94672）原本排在前置「給他們一點顏色瞧瞧」（94483）交之前，已移到交之後
-- 03-24 大河林地・羅格瑪第一次：接「暮光信函」（94680）原本排在前置「給他們一點顏色瞧瞧」（94483）交之前，已移到交之後
 - 03-24 大河林地・羅格瑪第一次：接「史納戈的鼻子」（94533）原本排在前置「獵人的箭袋」（96109）交之前，已移到交之後
-- 03-24 大河林地・羅格瑪第一次：接「毒液小撇步」（96108）原本排在前置「箭矢之羽」（96107）交之前，已移到交之後
-- 03-24 大河林地・羅格瑪第一次：接「獵人的箭袋」（96109）原本排在前置「毒液小撇步」（96108）交之前，已移到交之後
 
 ## 學技能站（候選站依序，遊戲取第一個本角色有的）
 

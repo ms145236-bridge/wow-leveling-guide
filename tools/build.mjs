@@ -47,7 +47,7 @@ const dungeonTags = (tags) => {
     else if (t === "可共享") out.share = 1;
     else if (t === "不可共享") out.share = 0;
     else if (/^共享[?？]$/.test(t)) out.share = 2;
-    else if ((m = t.match(/^前置[：:]\s*(.+)$/))) out.preText = m[1].trim();
+    else if ((m = t.match(/^前置[：:]\s*(.+)$/))) out.preText = (out.preText ? out.preText + "，" : "") + m[1].trim();
   }
   return out;
 };
@@ -58,9 +58,37 @@ const XP = new Map();
 for (const m of readFileSync("C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns/QuestieDB/support/Forever/QuestXP/xpDB-classic.lua", "utf8").matchAll(/\[(\d+)\] = \{(\d+), (\d+)\}/g)) XP.set(+m[1], +m[3]);
 const classBlocks = [];
 // 名稱整理：去掉引號類符號、<副標>、「物件／物品」前綴、前後空白，全形空白換半形
-// 遊戲內實際名稱跟 QuestieDB 不同的 NPC（玩家在遊戲裡看到的為準）：QuestieDB 名｜遊戲名
-const GAME_NAME = { "小赫米特·奈辛瓦里": "赫米特·奈辛瓦里" };
+// 遊戲內實際名稱跟 QuestieDB 不同的 NPC（玩家在遊戲裡看到的為準，阿莫比玩家紀錄）：QuestieDB 名（cleanName 後）｜遊戲名
+const GAME_NAME = {
+  "小赫米特·奈辛瓦里": "赫米特·奈辛瓦里", "札爾提": "克薩爾迪", "祖母鷹風": "鷹風酋長的母親", "先知智慧行者": "先知奧薩迪·智慧行者", "小型大地之靈體": "大地之魂", "先知鴉羽": "鴉羽先知", "黑暗教士杜斯滕": "黑暗牧師杜斯滕",
+  "黑暗教士貝里爾": "黑暗牧師貝里爾", "蠻兵勞格瑪": "步兵勞格瑪", "大地束縳者馬格蘭": "馬格蘭", "瑞什·長跑者": "瑞什·遠行者", "波卡·捷山": "波卡·雨山", "維茲羅·擦軸人": "維茲羅", "戰歌偵察騎兵": "戰歌偵查騎兵", "監工費蘇勒": "工頭費蘇勒",
+  "希爾恩·火衛": "希爾恩·火結", "蠻兵多格蘭": "步兵多格蘭", "魔導師沃迪恩·虛無之光": "大法師沃迪恩·伍德格賴爾", "克拉維爾·濃鬚": "克拉維爾·濃須", "碎泥·杜特非": "馬德克拉什", "沼澤之眼加爾": "「沼澤之眼」加爾",
+  "海狼馬克基雷": "「海狼」馬克基雷", "私掠者布勞茲": "海盜布勞茲", "病鬼菲力浦": "「病鬼」菲力浦", "普拉特·雲眼": "普拉特·白雲", "梅納拉·虛無撕裂者": "梅納拉·沃倫德", "隨從溫圖拉": "助手溫圖拉", "隨從瑪迦茲": "助手瑪迦茲",
+  "魔導師提爾斯": "大法師提爾斯", "安全主管比格維茲": "安全主管吉羅姆·比格維茲", "首席工程師比格維茲": "首席工程師沙克斯·比格維茲", "威士忌·狡黠": "威士卡斯利姆", "卡拉然·溫布雷": "維拉若克‧溫布雷", "垂釣者卡圖姆": "釣魚者卡圖姆",
+  "獵人馬克霍爾": "獵戶馬克霍爾", "薩特拉克·長齒": "薩特拉克", "祭師塞朵拉·穆瓦丹尼": "塞朵拉·穆瓦丹尼", "皇家監督者巴哈烏斯": "皇家管理人巴哈烏斯", "提里恩·弗丁": "提里奧·弗丁", "林格": "林哥", "奧蘭·蛇繞": "奧蘭·斯內克威瑟",
+  "莫尼卡·森古斯": "莫尼卡·森古特斯", "馬丁·費爾本醫生": "馬丁·費爾本", "賢者圖希克": "聖者圖希克", "派翠克·加勒特": "派翠克·加瑞特", "暗影法師薇薇安·拉格雷": "暗法師薇薇安·拉格雷", "可敬的萊尼德·巴薩羅梅": "萊尼德·巴薩羅梅",
+};
+// 遊戲內任務名跟路線／QuestieDB 不同的任務（阿莫比玩家紀錄）：任務 ID｜遊戲名
+const QUEST_NAME = {
+  23: "烏薩苟斯的爪子", 27: "一堂必修的課程", 264: "直到死亡把我們分離", 364: "無腦的殭屍", 382: "十字軍信差", 398: "通緝：蛆眼", 421: "證明你的價值", 439: "腐皮線索", 442: "突襲芬里斯島", 447: "致命配方",
+  450: "致命配方", 451: "致命配方", 544: "入室偷竊", 580: "威士卡斯利姆的酒", 752: "一件瑣事", 753: "一件瑣事", 754: "淨化冰蹄之井", 758: "淨化雷角之井", 760: "淨化蠻鬃之井", 794: "燃刃勳章", 825: "海底沉船",
+  826: "札拉贊恩", 842: "十字路口的徵兵行動", 852: "赫茲盧爾·血印", 853: "藥劑師札瑪", 869: "迅猛龍小偷", 893: "選擇武器", 894: "什麼什麼平衡器", 900: "什麼什麼平衡器", 901: "什麼什麼平衡器", 902: "什麼什麼平衡器",
+  1062: "哥布林侵略者", 1098: "影牙城堡裡的亡靈哨兵", 1444: "向費澤盧爾覆命", 1506: "甘盧爾的召喚", 1840: "歐姆·石蹄和野蠻頭盔", 1918: "被污染的水元素", 1943: "食人妖法師迪諾", 2605: "口渴的哥布林",
+  2822: "品質的保證", 2843: "出發！諾姆瑞根！", 2903: "作戰計畫", 2904: "一團混亂", 2945: "髒兮兮的戒指", 2973: "新斗篷的光輝", 2975: "菲拉斯的巨魔", 2980: "菲拉斯的巨魔", 3042: "食人妖調和劑",
+  3090: "被污染的羊皮紙", 3099: "被污染的卷軸", 3122: "向巫醫尤克里回覆", 3221: "與倫法洛會面", 3376: "打斷尖牙！", 3380: "沉沒的神廟", 3523: "剃刀高地的天譴軍團", 3783: "雪怪計畫！", 3822: "克羅格盧爾",
+  4102: "淨化費伍德", 4120: "腐化的力量", 4136: "雷布里·斯庫比格特", 4145: "拉里安和莫爾金", 4147: "瑪爾馮的工坊", 4641: "你在世上的定位", 4767: "雙足飛龍", 4881: "暗殺計畫", 4961: "奧拉赫寶珠的淨化",
+  4976: "歸還淨化過的寶珠", 5041: "十字路口的補給物資", 5051: "合二為一", 5052: "阿迦瑪甘的血岩碎片", 5062: "聖火", 5064: "偵察恐怖圖騰族", 5083: "冬泉火水", 5214: "偉大的艾茲拉‧格里姆", 5251: "文獻管理員",
+  5534: "基姆加爾「丟失」的裝備", 5863: "砂槌巨魔", 5901: "瘟疫與你", 5928: "回應召喚", 6162: "最後一戰", 6283: "血怒一族", 6382: "梣谷狩獵", 6383: "梣谷狩獵", 6421: "滾岩峽谷", 6462: "食人妖符咒",
+  6482: "盧爾的自由", 6503: "梣谷先驅者", 6545: "戰歌信差的報告", 6546: "戰歌偵查騎兵的報告", 6561: "黑澗深淵中的惡魔", 6564: "上古之神的僕從", 6565: "上古之神的僕從", 7029: "維利塔恩的污染", 7064: "大地的污染",
+  7723: "該死的胖手指！", 7724: "熔岩蜘蛛的威脅！", 7727: "燻火龍", 7816: "加莫里塔！", 8254: "幫助塞納里奧", 93430: "取回誘餌", 93680: "城市鑰匙", 94480: "敵人的禮物", 94556: "逃脫的忠忠",
+  94672: "侵略暮光", 94680: "暮光信函", 94727: "發掘答案", 94744: "迷途的戰士", 94745: "開闢道路", 94748: "斷開鎖鏈", 94968: "馬戈之眼", 94971: "聖騎士的戰騎", 94972: "暮光典籍", 95121: "美味海味",
+  95162: "收集白牙豬肉", 95163: "把牠們趕回去", 95183: "第一步：石頭", 95278: "是時候了，兄弟…", 95417: "紫色傢伙們", 95418: "散播傳言", 95420: "巨人之地", 95424: "以力服人", 95425: "不夠格的勇士",
+  95428: "鈍拳的命令", 95601: "紫色傢伙們", 95602: "惱人光芒", 95748: "古拉巴什古代傳說", 95770: "定位失落之城", 95951: "現拿現削", 95955: "捅個痛快", 96026: "第二步：更多石頭", 96103: "禿鷲饗宴",
+  96104: "陸行鳥之歌", 96105: "野原之王", 96108: "毒液小撇步", 96109: "獵人的箭袋", 96997: "死馬和活馬一樣強", 97022: "向丹妮莎報告", 97332: "二度落空的信任", 97530: "清算流沙之槌", 97534: "殘骸任務",
+};
 const cleanName = (n) => String(n || "").replace(/<[^>]*>/g, "").replace(/[『』「」《》“”"]/g, "").replace(/^(物件|物品)\s*/, "").replace(/　/g, " ").trim();
+const gameName = (n) => GAME_NAME[cleanName(n)] || cleanName(n);
+const questName = (q) => QUEST_NAME[q.id] || q.zhTW || q.en;
 const nameIssues = []; // 名稱不一致（建置報告）
 const dungeons = []; // 副本站：插在指定的站後面，引擎當成可選站
 // 副本區域（QuestieDB support/Forever/Zones）：areaId → { name, alts }；instanceID → areaId
@@ -322,7 +350,7 @@ for (const d of dungeons) {
     if (m && db.quest(+m[1])) {
       const q = db.quest(+m[1]);
       const where = (x.text.match(/依(.+?)段/) || x.text.match(/詳見(.+?)[。；，]/) || [])[1];
-      Object.assign(x, { t: "need", id: +m[1], zh: q.zhTW || q.en, text: "前置：" + (q.zhTW || q.en) + (where ? "（在" + where.replace(/[。；，]$/, "") + (/段$/.test(where) ? "" : "段") + "接）" : ""), coord: undefined });
+      Object.assign(x, { t: "need", id: +m[1], zh: questName(q), text: "前置：" + questName(q) + (where ? "（在" + where.replace(/[。；，]$/, "") + (/段$/.test(where) ? "" : "段") + "接）" : ""), coord: undefined });
     }
   }
   d.steps = [...pick("pre"), ...go, ...pick("in"), ...pick("post")];
@@ -344,7 +372,7 @@ for (const d of dungeons) {
       seen.add(p);
       out = out.concat(chainSteps(p, seen));
       const when = classWhen(pq.classes);
-      const base = { id: p, zh: pq.zhTW || pq.en, en: pq.en, ph: "pre", tag: "副本前置鏈", chainOf: qid, where: d.where, when };
+      const base = { id: p, zh: questName(pq), en: pq.en, ph: "pre", tag: "副本前置鏈", chainOf: qid, where: d.where, when };
       out.push({ ...base, t: "accept", verb: "接" });
       if (db.questMobs(p).length) out.push({ ...base, t: "do", verb: "做", hint: pq.obj.filter(Boolean).join(" ") });
       out.push({ ...base, t: "turnin", verb: "交" });
@@ -437,8 +465,8 @@ for (const st of stations) {
         ? { races: q.races && BigInt(q.races) !== HORDE ? q.races : undefined, xp: XP.get(id), mob: mobsOf(q), tgo: targetsOf(q), objs: (() => { const o = [...new Set(db.questMobs(q.id).filter((m) => m && m.kind === "object").flatMap((m) => m.objects))]; return o.length ? o : undefined; })(),
             items: [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))].length ? [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))] : undefined,
             d: q.obj.filter(Boolean).join("\n") || undefined,
-            n: step.zh || q.zhTW || step.en || q.en, zt: q.zhTW && q.zhTW !== (step.zh || q.zhTW) ? q.zhTW : undefined, lvl: q.level, min: q.reqLevel, pg: q.preGroup, ps: q.preSingle, ex: q.exclusiveTo, next: q.next, st: st.id }
-        : { n: step.zh || step.en, st: st.id });
+            n: QUEST_NAME[id] || step.zh || q.zhTW || step.en || q.en, zt: q.zhTW && q.zhTW !== (QUEST_NAME[id] || step.zh || q.zhTW) ? q.zhTW : undefined, lvl: q.level, min: q.reqLevel, pg: q.preGroup, ps: q.preSingle, ex: q.exclusiveTo, next: q.next, st: st.id }
+        : { n: QUEST_NAME[id] || step.zh || step.en, st: st.id });
     }
     if (step.keep) quests.get(id).keep = true;
     // 【部落可接】：實測部落能接，但 QuestieDB 的種族遮罩寫成聯盟限定
@@ -455,16 +483,16 @@ for (const st of stations) {
     const npcIds = step.t === "accept" ? q.startNpcs : q.endNpcs;
     const objIds = step.t === "accept" ? q.startObjects : q.endObjects;
     const npcs = npcIds.map((n) => db.npc(n)).filter(Boolean);
-    const namedNpc = step.npc && npcs.find((npc) => [npc.zhTW, npc.en].some((name) => name && db.norm(cleanName(name)) === db.norm(cleanName(step.npc))));
+    const namedNpc = step.npc && npcs.find((npc) => [npc.zhTW, npc.zhTW && gameName(npc.zhTW), npc.en].some((name) => name && db.norm(cleanName(name)) === db.norm(cleanName(step.npc))));
     const giver = namedNpc || npcs[0] || objIds.map((o) => db.object(o)).find(Boolean);
-    if (!step.npc && giver) step.npc = giver.zhTW || giver.en;
+    if (!step.npc && giver) step.npc = npcs.length && giver.zhTW ? gameName(giver.zhTW) : giver.zhTW || giver.en;
     const isNpc = npcs.length > 0;
     if (isNpc && giver) {
-      const dbName = giver.zhTW ? (GAME_NAME[cleanName(giver.zhTW)] || cleanName(giver.zhTW)) : null;
+      const dbName = giver.zhTW ? gameName(giver.zhTW) : null;
       if (dbName) {
         step.tgt = dbName;
-        if (step.npc && cleanName(step.npc) === dbName) step.npc = dbName; // 只差裝飾（引號等）→ 用遊戲名
-        else if (step.npc && cleanName(step.npc) !== dbName) nameIssues.push(`- ${at}：路線寫「${step.npc}」，QuestieDB 是「${dbName}」`);
+        if (step.npc && cleanName(step.npc) === cleanName(dbName)) step.npc = dbName; // 只差裝飾（引號等）→ 用遊戲名
+        else if (step.npc) nameIssues.push(`- ${at}：路線寫「${step.npc}」，QuestieDB／遊戲名是「${dbName}」`);
       } else {
         step.tgt = cleanName(!step.npc || /^[?？]/.test(step.npc) ? giver.en : step.npc);
         nameIssues.push(`- ${at}：QuestieDB 沒有繁中名（${giver.en}），用「${step.tgt}」`);
@@ -572,13 +600,13 @@ const replaceIds = (text) => replaceStations(text).replace(/(?<![\d.\w])(\d{3,6}
   if (MAP_IDS.has(id)) return all;
   const q = db.quest(id);
   if (!q) return all;
-  const name = q.zhTW || q.en;
+  const name = questName(q);
   idStats.set(idFile, (idStats.get(idFile) || 0) + 1);
   const before = whole.slice(0, at).replace(/[\s（(「]+$/, "");
   const after = whole.slice(at + num.length).replace(/^[\s（(「]+/, "");
   const sample = idFile + "：…" + whole.slice(Math.max(0, at - 12), at + num.length + 4) + "… → " + name;
   if (idSamples.length < 40 && !idSamples.includes(sample)) idSamples.push(sample);
-  return before.endsWith(name) || after.startsWith(name) ? "" : name; // 名字已寫在 ID 前或後 → 只拿掉 ID
+  return [name, q.zhTW].some((n) => n && (before.endsWith(n) || after.startsWith(n))) ? "" : name; // 名字已寫在 ID 前或後 → 只拿掉 ID
 }).replace(/(?<![\d.])(\d{4})\s+(?=約?\s*\d{1,2}(?:\.\d+)?\s*[,，])/g, (all, num) => (MAP_IDS.has(+num) ? "" : all)) // 座標前的地圖 ID 不顯示
   .replace(/\s+([）)，。；])/g, "$1").replace(/（\s*）|\(\s*\)/g, "").replace(/\s+$/, "");
 const idSamples = [];
