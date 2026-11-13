@@ -36,6 +36,16 @@ local function set(map, x, y, name)
   if key == last then return end
   if not force and not free() then return end -- 玩家自己放了點：等它清掉（每次重算會再試）
   force = nil
+  -- 地圖上的航點已經是這個位置：不重放（避免箭頭、音效重來一次）
+  local p = C_Map and C_Map.HasUserWaypoint and C_Map.HasUserWaypoint() and C_Map.GetUserWaypoint and C_Map.GetUserWaypoint()
+  if p and p.uiMapID == map and p.position then
+    local px, py = p.position:GetXY()
+    if math.abs(px * 100 - x) < 0.2 and math.abs(py * 100 - y) < 0.2 then
+      MG.db.wp = { map = map, x = x, y = y }
+      last = key
+      return
+    end
+  end
   local api = wpui()
   if api then
     api.NewUserNavigation({ name = name, mapID = map, x = x, y = y, flags = FLAG, suppressAudio = true })
