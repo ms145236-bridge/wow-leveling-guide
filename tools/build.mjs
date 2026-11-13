@@ -49,6 +49,8 @@ const XP = new Map();
 for (const m of readFileSync("C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns/QuestieDB/support/Forever/QuestXP/xpDB-classic.lua", "utf8").matchAll(/\[(\d+)\] = \{(\d+), (\d+)\}/g)) XP.set(+m[1], +m[3]);
 const classBlocks = [];
 // 名稱整理：去掉引號類符號、<副標>、「物件／物品」前綴、前後空白，全形空白換半形
+// 遊戲內實際名稱跟 QuestieDB 不同的 NPC（玩家在遊戲裡看到的為準）：QuestieDB 名｜遊戲名
+const GAME_NAME = { "小赫米特·奈辛瓦里": "赫米特·奈辛瓦里" };
 const cleanName = (n) => String(n || "").replace(/<[^>]*>/g, "").replace(/[『』「」《》“”"]/g, "").replace(/^(物件|物品)\s*/, "").replace(/　/g, " ").trim();
 const nameIssues = []; // 名稱不一致（建置報告）
 const dungeons = []; // 副本站：插在指定的站後面，引擎當成可選站
@@ -442,7 +444,7 @@ for (const st of stations) {
     if (!step.npc && giver) step.npc = giver.zhTW || giver.en;
     const isNpc = npcs.length > 0;
     if (isNpc && giver) {
-      const dbName = giver.zhTW ? cleanName(giver.zhTW) : null;
+      const dbName = giver.zhTW ? (GAME_NAME[cleanName(giver.zhTW)] || cleanName(giver.zhTW)) : null;
       if (dbName) {
         step.tgt = dbName;
         if (step.npc && cleanName(step.npc) === dbName) step.npc = dbName; // 只差裝飾（引號等）→ 用遊戲名
