@@ -1093,7 +1093,7 @@ function UI.Create()
     menu:Hide()
     -- 點一下也把航點拉回目前任務（取消「去」設的臨時點、強制重放，玩家手動清掉的也會補回）
     MG.wpOverride, MG.grindActive = nil, nil
-    MG.N.Forget()
+    MG.N.Forget(true)
     MG.Refresh(true)
     panel:SetShown(not panel:IsShown())
     if panel:IsShown() and state then scrollToCur() end

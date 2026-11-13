@@ -4,6 +4,7 @@ local N = {}
 MG.N = N
 local FLAG = "MetroGuide"
 local last -- 目前我們放的點 "map:x:y"
+local force -- 玩家點了步驟列：這次連別人放的點也蓋掉
 
 local function wpui()
   local api = WaypointUIAPI and WaypointUIAPI.Navigation
@@ -33,7 +34,8 @@ end
 local function set(map, x, y, name)
   local key = map .. ":" .. x .. ":" .. y
   if key == last then return end
-  if not free() then return end -- 玩家自己放了點：等它清掉（每次重算會再試）
+  if not force and not free() then return end -- 玩家自己放了點：等它清掉（每次重算會再試）
+  force = nil
   local api = wpui()
   if api then
     api.NewUserNavigation({ name = name, mapID = map, x = x, y = y, flags = FLAG, suppressAudio = true })
@@ -63,4 +65,4 @@ function N.Set(map, x, y, name)
   MG.try("航點", set, map, x, y, name)
 end
 function N.Clear() MG.try("航點", clear) end
-function N.Forget() last = nil end -- 下次重算強制重放（例如 /reload 後）
+function N.Forget(takeOver) last = nil; force = takeOver or nil end -- 下次重算強制重放（例如 /reload 後）
