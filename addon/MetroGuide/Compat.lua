@@ -11,6 +11,18 @@ local function after(where, ok, ...)
   if ok then return ... end
   local err = tostring((...))
   MG.lastError = where .. "：" .. err
+  -- 錯誤存進存檔（登出後開發者讀得到），同一種錯誤只記一筆、算次數，最多 50 種
+  if type(MetroGuideDB) == "table" then
+    local log = MetroGuideDB.errors or {}
+    MetroGuideDB.errors = log
+    local key = where .. "：" .. err
+    if log[key] then log[key].n = log[key].n + 1; log[key].t = date("%m/%d %H:%M")
+    elseif #(log.keys or {}) < 50 then
+      log.keys = log.keys or {}
+      log.keys[#log.keys + 1] = key
+      log[key] = { n = 1, t = date("%m/%d %H:%M") }
+    end
+  end
   if not reported[err] then
     reported[err] = true
     MG.msg("|cffff7b7b" .. where .. " 出錯：|r" .. err)
