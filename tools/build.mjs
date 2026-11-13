@@ -215,7 +215,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
     const route = st.dungeon && line.match(/^\s*動線[：:](.*)$/);
     if (route) {
       // 去掉來源標籤和「（12）」這類步驟編號
-      const text = route[1].replace(/【[^】]*】/g, "").replace(/[（(]\d+(?:\s*[–-]\s*\d+)?[）)]/g, "").trim();
+      const text = route[1].replace(/【[^】]*】/g, "").replace(/[（(]第?\s*\d+(?:\s*[–-]\s*\d+)?\s*步?[）)]/g, "").trim();
       if (text) st.tips.push({ k: "動線", raw: text, text });
       return;
     }
@@ -678,6 +678,13 @@ for (const [id, q] of [...quests.entries()].sort((a, b) => a[0] - b[0])) {
   out += `    [${id}] = ${lua(rest)},\n`;
 }
 out += `  },\n}\n`;
+// 台服用詞（tools/用詞.md）：只改說明文字欄位與句子陣列，任務名／NPC／怪名保持和遊戲一致
+const wording = readFileSync(join(ROOT, "tools", "用詞.md"), "utf8").split(/\r?\n/)
+  .map((l) => l.match(/^-\s*([^｜]+)｜(.*)$/)).filter(Boolean).map((m) => [m[1].trim(), m[2].trim()]);
+const reword = (text) => wording.reduce((t, [from, to]) => t.split(from).join(to), text);
+out = out
+  .replace(/\b(d|desc|hint|pickup|text|why|use|note|entrance)="(?:[^"\\]|\\.)*"/g, reword)
+  .replace(/\b(s|pickupS)=\{(?:[^{}"]|"(?:[^"\\]|\\.)*")*\}/g, reword);
 // 資料版本＝內容雜湊（不放時間，內容沒變就不會產生差異）
 const version = createHash("sha1").update(out).digest("hex").slice(0, 8);
 out = out.replace("@@BUILT@@", version);

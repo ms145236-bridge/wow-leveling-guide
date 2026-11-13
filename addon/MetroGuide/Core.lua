@@ -143,16 +143,22 @@ local function latchCurrent(t)
 end
 
 -- ── 自動接交任務（設定預設開；按住 Shift 暫停） ─────────────────────────────
+-- 同名任務很多（例如「馴服野獸」有 10 個 ID），所以標題對到的是 ID 清單
 local nameToQuest
-local function routeQuestByTitle(title)
+local function routeQuestsByTitle(title)
   if not nameToQuest then
     nameToQuest = {}
+    local function put(name, id)
+      local list = nameToQuest[name] or {}
+      list[#list + 1] = id
+      nameToQuest[name] = list
+    end
     for id, q in pairs(R.quests) do
-      if q.n then nameToQuest[q.n] = id end
-      if q.zt then nameToQuest[q.zt] = id end -- 遊戲內 zhTW 名（和路線寫的名字不同時）
+      if q.n then put(q.n, id) end
+      if q.zt and q.zt ~= q.n then put(q.zt, id) end -- 遊戲內 zhTW 名（和路線寫的名字不同時）
     end
   end
-  return title and nameToQuest[title]
+  return title and nameToQuest[title] or {}
 end
 local function autoOn() return UI.Get("auto") and not IsShiftKeyDown() end
 local optQ = {} -- 接任務那步標了「可跳過」的任務
@@ -188,7 +194,7 @@ local function notOffered(event)
     end
   else
     for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do
-      if routeQuestByTitle(GetAvailableTitle(i)) == s.q then offered = true end
+      for _, id in ipairs(routeQuestsByTitle(GetAvailableTitle(i))) do if id == s.q then offered = true end end
     end
   end
   if not offered then
@@ -225,12 +231,15 @@ function AUTO.GOSSIP_SHOW()
 end
 function AUTO.QUEST_GREETING()
   for i = 1, (GetNumActiveQuests and GetNumActiveQuests() or 0) do
-    local id = routeQuestByTitle(GetActiveTitle(i))
-    if id and C.IsOnQuest(id) and E.Ready(id) then SelectActiveQuest(i); return end
+    for _, id in ipairs(routeQuestsByTitle(GetActiveTitle(i))) do
+      if C.IsOnQuest(id) and E.Ready(id) then SelectActiveQuest(i); return end
+    end
   end
   for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do
-    local id = routeQuestByTitle(GetAvailableTitle(i))
-    if id and not E.Turned(id) then SelectAvailableQuest(i); return end
+    -- 只是打開任務內容；真正接不接由 QUEST_DETAIL 用遊戲給的 ID 判斷，選到同名的別環也不會接錯
+    for _, id in ipairs(routeQuestsByTitle(GetAvailableTitle(i))) do
+      if inRoute(id) and not E.Turned(id) and not C.IsOnQuest(id) then SelectAvailableQuest(i); return end
+    end
   end
 end
 
