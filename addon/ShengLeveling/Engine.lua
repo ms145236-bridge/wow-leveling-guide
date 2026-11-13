@@ -1141,9 +1141,15 @@ function E.DungeonByInstance(id)
   -- 同一個副本 ID 有好幾區（例如血色修道院：墓地、圖書館、軍械庫、大教堂）：用目前區域文字挑出所在的那一區
   if #all > 1 then
     local here = table.concat({ GetSubZoneText and GetSubZoneText() or "", GetMinimapZoneText and GetMinimapZoneText() or "", GetZoneText and GetZoneText() or "" }, " ")
+    -- 遊戲裡的區域名跟路線寫的區名不一定一樣（例如軍械庫在遊戲裡叫「十字軍武器庫」）
+    local ALIAS = { ["軍械庫"] = { "武器庫" }, ["圖書館"] = { "圖書", "藏書" }, ["大教堂"] = { "教堂" } }
+    local function inHere(wing)
+      if here:find(wing, 1, true) then return true end
+      for _, a in ipairs(ALIAS[wing] or {}) do if here:find(a, 1, true) then return true end end
+    end
     for k, d in ipairs(all) do
       local wing = tostring(d.name or ""):match("(%S+)$")
-      if wing and wing ~= d.name and here:find(wing, 1, true) then
+      if wing and wing ~= d.name and inHere(wing) then
         table.remove(all, k); table.insert(all, 1, d); break
       end
     end
