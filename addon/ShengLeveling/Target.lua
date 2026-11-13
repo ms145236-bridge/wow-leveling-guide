@@ -83,8 +83,13 @@ local function macro()
     size = size + 1 + #line
     return true
   end
+  -- 選到屍體就清掉再選：/targetexact 挑最近的同名怪，可能是屍體；清掉後用部分比對再試一次，最後還是屍體就不留目標
+  local DEAD = "/cleartarget [@target,dead]"
+  size = size + 2 * (1 + #DEAD)
   for _, name in ipairs(order) do if not add("/targetexact [noexists] " .. name) then break end end
+  lines[#lines + 1] = DEAD
   for _, name in ipairs(order) do if not add("/target [noexists] " .. name) then break end end
+  lines[#lines + 1] = DEAD
   if mark then lines[#lines + 1] = mark end
   lines[#lines + 1] = PRESS_LINE
   return table.concat(lines, "\n")
