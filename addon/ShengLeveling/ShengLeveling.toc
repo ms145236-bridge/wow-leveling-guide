@@ -5,16 +5,32 @@
 ## Notes-zhTW: 部落 1–60 練等路線：一次只顯示一步，任務狀態一變就自動對齊。/lv 開關、/lv probe 檢查報告
 ## Author: ms145236-bridge
 ## IconTexture: Interface\AddOns\ShengLeveling\Media\Logo
-## Version: 1.1.0
+## Version: 1.2.0
 ## X-Series: Sheng
 ## OptionalDeps: WaypointUI
 ## SavedVariables: MetroGuideDB, MetroGuideRecDB
 ## SavedVariablesPerCharacter: MetroGuideCharDB
 
 Locales\enUS.lua
+Locales\zhCN.lua
+Locales\deDE.lua
+Locales\frFR.lua
+Locales\esES.lua
+Locales\esMX.lua
+Locales\ruRU.lua
+Locales\koKR.lua
+Locales\ptBR.lua
 Compat.lua
 Data\Route.lua
 Data\Route_enUS.lua
+Data\Route_zhCN.lua
+Data\Route_deDE.lua
+Data\Route_frFR.lua
+Data\Route_esES.lua
+Data\Route_esMX.lua
+Data\Route_ruRU.lua
+Data\Route_koKR.lua
+Data\Route_ptBR.lua
 Engine.lua
 Nav.lua
 UI.lua

@@ -378,13 +378,13 @@ local function probe()
     try("SetSelectedQuest, GetQuestLogQuestText 存在", function() return QL.SetSelectedQuest ~= nil, GetQuestLogQuestText ~= nil end)
     try("任務文字（描述前 40 字 / 目標）", function() local d, o = C.QuestText(qid); return d and d:sub(1, 120), o end)
     local obj = C.Objectives(qid)
-    if obj then for i, o in ipairs(obj) do add(L["  目標 "] .. i, o.text, o.have, o.need, o.done) end else out[#out + 1] = L["  目標 = nil"] end
+    if obj then for i, o in ipairs(obj) do out[#out + 1] = L["  目標 "] .. i .. " = " .. table.concat({ tostring(o.text), tostring(o.have), tostring(o.need), tostring(o.done) }, ", ") end else out[#out + 1] = L["  目標 = nil"] end
     if GetQuestLogTitle then try("GetQuestLogTitle(log index) 第 6 回傳", function() local i = C.LogIndex(qid); return i, i and select(6, GetQuestLogTitle(i)) end) end
   end
   local all = C.AllTurnedIn() or {}
   local n, anyDone = 0, nil
   for id in pairs(all) do n = n + 1; anyDone = anyDone or id end
-  add(L["已完成任務數（%s）"]:format(L[C.impl.AllTurnedIn]), n)
+  out[#out + 1] = L["已完成任務數（%s）"]:format(L[C.impl.AllTurnedIn]) .. " = " .. n -- 已翻好，不再過 add 的 L[]
   if anyDone then try("DONE " .. anyDone .. " IsQuestFlaggedCompleted(C_), 全域存在", function() return QL.IsQuestFlaggedCompleted and QL.IsQuestFlaggedCompleted(anyDone), IsQuestFlaggedCompleted ~= nil end) end
   add("GetQuestDifficultyLevel, GetTrivialRange, GetMaxNumQuestsCanAccept, GetQuestGreenRange", QL.GetQuestDifficultyLevel ~= nil, QL.GetTrivialRange ~= nil, QL.GetMaxNumQuestsCanAccept ~= nil, GetQuestGreenRange ~= nil)
   add("綠色範圍", C.GreenRange())
@@ -478,15 +478,15 @@ SlashCmdList.METROGUIDE = function(msg)
   elseif msg == "macro" then MG.try("目標巨集", MG.T.MakeMacro)
   elseif msg == "minimap" then UI.Set("minimap", true); UI.ApplySettings()
   elseif msg:match("^lang") then
-    -- 介面語言預覽：en／zh／auto（跟客戶端）／stress（英文加長約 35%，檢查版面）。選目標、比對遊戲文字仍跟客戶端語言
+    -- 介面語言預覽：語言代碼（MG.LANGS）／auto（跟客戶端）／stress（英文加長約 35%，檢查版面）。選目標、比對遊戲文字仍跟客戶端語言
     local v = msg:match("^lang%s+(%a+)")
-    if v == "en" or v == "zh" or v == "auto" or v == "stress" then
+    if v == "auto" or v == "stress" or MG.LANGS[v] then
       MetroGuideDB.lang = v ~= "auto" and v or nil
       MG.msg(L["介面語言設為 %s，/reload 後生效"]:format(v))
     else
-      MG.msg(L["介面語言：%s（/slv lang en｜zh｜auto｜stress，/reload 後生效）"]:format(MetroGuideDB.lang or "auto"))
+      MG.msg(L["介面語言：%s（/slv lang auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR｜stress，/reload 後生效）"]:format(MetroGuideDB.lang or "auto"))
     end
   elseif msg:sub(1, 3) == "rec" then MG.Rec.Slash(msg:sub(4))
   elseif msg == "" then UI.Toggle()
-  else MG.msg(L["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言（en｜zh｜auto；stress＝英文加長 35% 檢查版面）"]) end
+  else MG.msg(L["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言（auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR；stress＝英文加長 35% 檢查版面）"]) end
 end

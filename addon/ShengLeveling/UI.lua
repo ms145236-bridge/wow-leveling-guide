@@ -6,7 +6,7 @@ local UI = {}
 MG.UI = UI
 
 -- 客戶端的標準字型（中文客戶端是中文字型；英文客戶端沒有中文字，所以顯示的字串一律過 MG.Clean）
-local FONT = STANDARD_TEXT_FONT or (MG.gameZh and "Fonts\\bLEI00D.ttf") or "Fonts\\FRIZQT__.TTF"
+local FONT = STANDARD_TEXT_FONT or (GameFontNormal and GameFontNormal:GetFont()) or "Fonts\\FRIZQT__.TTF"
 local BG = { 0.055, 0.059, 0.071, 0.88 }
 local EDGE = { 0.165, 0.176, 0.204 }
 local TEXT = { 0.91, 0.894, 0.847 }
@@ -420,7 +420,7 @@ function UI.StepTooltip(owner, s, prefix, side)
   if s.npc then addLine(s.npc, TEXT[1], TEXT[2], TEXT[3]) end
   if s.t == "travel" and s.text then addLine(s.text, TEXT[1], TEXT[2], TEXT[3], true) end
   if s.q then
-    local same = MG.uiZh == MG.gameZh -- 任務日誌的文字是客戶端語言：和介面同語言才用
+    local same = MG.sameLang -- 任務日誌的文字是客戶端語言：和介面同語言才用
     local objText
     if same then objText = select(2, C.QuestText(s.q)) end
     local info = MG.Route.quests[s.q]
@@ -1199,7 +1199,7 @@ function UI.Create()
     if cur then
       UI.StepTooltip(self, cur.s, nil, true)
       -- 附近一起做的任務（步驟列上可能被截）：完整標題與目標
-      local same = MG.uiZh == MG.gameZh
+      local same = MG.sameLang
       for _, i in ipairs(state.group or {}) do
         local s = state.steps[i].s
         addLine(" ", 1, 1, 1)
@@ -1783,7 +1783,7 @@ local function objectiveLines(q)
   local obj = C.Objectives(q)
   if not obj or #obj == 0 then return nil end
   local function count(o) return o.need and ((o.have or 0) .. "/" .. o.need) or nil end
-  local same = MG.uiZh == MG.gameZh -- 目標文字是客戶端語言：和介面不同語言（預覽）時只顯示「目標 n/m」
+  local same = MG.sameLang -- 目標文字是客戶端語言：和介面不同語言（預覽）時只顯示「目標 n/m」
   if #obj == 1 then
     local o = obj[1]
     return (o.text ~= "" and same and o.text or L["目標"]), nil, nil, count(o)

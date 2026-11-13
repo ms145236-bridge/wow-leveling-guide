@@ -11,8 +11,8 @@ MG.T = T
 T.MARKS = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" }
 
 -- 按鍵設定在載入時就要有名字：跟客戶端語言（介面語言要等存檔載入才知道）
-BINDING_HEADER_METROGUIDE = MG.gameZh and "阿聖練等幫手" or "Sheng Leveling"
-_G["BINDING_NAME_CLICK MetroGuideTargetButton:LeftButton"] = MG.gameZh and "選取任務目標" or "Target quest mob"
+BINDING_HEADER_METROGUIDE = MG.gameCJK and "阿聖練等幫手" or "Sheng Leveling"
+_G["BINDING_NAME_CLICK MetroGuideTargetButton:LeftButton"] = MG.gameCJK and "選取任務目標" or "Target quest mob"
 
 local btn, pending, rot, names, key = nil, false, 0, {}, ""
 local stepKey = "" -- 目前步驟（換步驟時名單和輪換重來）
@@ -111,7 +111,7 @@ T.MacroText = macro
 
 -- 動作條巨集「任務目標」：內容就是同一段巨集文字（不經過 /click）
 -- 巨集名跟客戶端語言（介面語言預覽時不會多建一個巨集）
-local MACRO, OLD_MACRO = MG.gameZh and "任務目標" or "Quest Target", "地鐵目標"
+local MACRO, OLD_MACRO = MG.gameCJK and "任務目標" or "Quest Target", "地鐵目標"
 local ICON = "Ability_Hunter_SniperShot"
 local function emptyText()
   if T.objNote then return "/run ShengLv_Msg(\"" .. L["目標是地上的物件（%s），無法選取"]:format((T.objNote:gsub("\"", "'"))) .. "\")" end

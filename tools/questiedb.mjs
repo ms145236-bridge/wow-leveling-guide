@@ -232,7 +232,22 @@ export function openQuestieDB() {
     return id === undefined ? undefined : field(type, id, 1);
   };
   const itemEn = (id) => field("Item", id, 1);
-  return { quest, npc, object, questsByName, questMobs, allQuestIds: () => loadType("Quest").idList, norm, enByZh, itemEn };
+  // 其他語系（Route_<locale>.lua 用）：名稱（第 1 欄）與任務目標文字（第 2 欄）；英文名 → ID（同名取第一個）
+  const locCols = {};
+  const locCol = (type, loc, k) => {
+    const key = type + loc;
+    if (!(key in locCols)) locCols[key] = l10n(type, loc);
+    return get(locCols[key], k);
+  };
+  const l10nAt = (type, id, loc, k) => { const p = loadType(type).pos.get(id); const col = locCol(type, loc, k); return p === undefined || !col ? undefined : get(col, p + 1) ?? undefined; };
+  const l10nName = (type, id, loc) => { const v = l10nAt(type, id, loc, 1); return typeof v === "string" && v ? v : undefined; };
+  const l10nObj = (id, loc) => list(l10nAt("Quest", id, loc, 2)).filter((x) => typeof x === "string" && x);
+  const enIds = {};
+  const idByEn = (type, en) => {
+    if (!enIds[type]) { enIds[type] = new Map(); for (const id of loadType(type).idList) { const n = field(type, id, 1); if (typeof n === "string" && !enIds[type].has(n)) enIds[type].set(n, id); } }
+    return enIds[type].get(en);
+  };
+  return { quest, npc, object, questsByName, questMobs, allQuestIds: () => loadType("Quest").idList, norm, enByZh, itemEn, l10nName, l10nObj, idByEn };
 }
 
 // 一群點取最密集一群的中心（同地圖、距離 5 以內算一群）

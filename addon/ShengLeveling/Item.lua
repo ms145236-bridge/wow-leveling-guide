@@ -7,7 +7,7 @@ local L = MG.L
 local I = {}
 MG.I = I
 
-_G["BINDING_NAME_CLICK MetroGuideItemButton1:LeftButton"] = MG.gameZh and "使用任務物品" or "Use quest item"
+_G["BINDING_NAME_CLICK MetroGuideItemButton1:LeftButton"] = MG.gameCJK and "使用任務物品" or "Use quest item"
 
 local MAX = 3
 local buttons, pending, items, key = {}, false, {}, ""
@@ -71,7 +71,7 @@ local function layout(bar)
 end
 
 -- 動作條巨集「任務物品」：/use 第一個物品
-local MACRO, ICON = MG.gameZh and "任務物品" or "Quest Item", "INV_Misc_Bag_08" -- 巨集名跟客戶端語言
+local MACRO, ICON = MG.gameCJK and "任務物品" or "Quest Item", "INV_Misc_Bag_08" -- 巨集名跟客戶端語言
 local lastBody
 local triedCreate = false
 local function macroBody()
@@ -141,7 +141,7 @@ function I.Create(bar)
     b.icon:SetAllPoints()
     b.icon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
     b.count = b:CreateFontString(nil, "OVERLAY")
-    b.count:SetFont(STANDARD_TEXT_FONT or (MG.gameZh and "Fonts\\bLEI00D.ttf") or "Fonts\\FRIZQT__.TTF", 10, "OUTLINE")
+    b.count:SetFont(STANDARD_TEXT_FONT or (GameFontNormal and GameFontNormal:GetFont()) or "Fonts\\FRIZQT__.TTF", 10, "OUTLINE")
     b.count:SetPoint("BOTTOMRIGHT", -1, 1)
     local ok, cd = pcall(CreateFrame, "Cooldown", nil, b, "CooldownFrameTemplate")
     if ok and cd then cd:SetAllPoints(); b.cd = cd end

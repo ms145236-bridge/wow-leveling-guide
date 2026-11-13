@@ -10,10 +10,28 @@ MG.E = E
 -- 路線資料換語言（ADDON_LOADED 時呼叫一次，語言設定讀到之後）。Route.lua 是中文底稿；Data\Route_<locale>.lua 依站 ID＋步驟序號、任務 ID 對上。
 -- 顯示用欄位跟介面語言；選取目標（tgt、tgo、objs）和要跟遊戲文字比對的名字（nG、npcG、mobG）跟客戶端語言。
 -- 說明文字（desc、站的提醒、練怪說明、危險說明…）用翻譯；沒有翻譯的非中文介面拿掉不顯示。
+-- 站名、鳥點的 nameA／shortA／nodeA 裡的 {a:地區ID}：換成遊戲的地區名（客戶端語言）；有一個查不到就整個不用（改用不含城鎮的 name）
+local function areas(t)
+  if not t then return nil end
+  local ok = true
+  t = t:gsub("{a:(%d+)}", function(id)
+    local n = C.AreaName(tonumber(id))
+    if not n then ok = false end
+    return n or ""
+  end)
+  return ok and t or nil
+end
 function E.Localize()
+  -- 每個語系的路線資料是一個函式（呼叫才建表）：只建介面和客戶端要用的，其餘連同 MG.RouteL 丟掉
   local RL = MG.RouteL or {}
-  local D = not MG.uiZh and (RL[MG.uiLoc] or RL.enUS) or nil
-  local G = not MG.gameZh and (RL[MG.gameLoc] or RL.enUS) or nil
+  MG.RouteL = nil
+  local function get(loc)
+    local v = RL[loc]
+    if type(v) == "function" then v = v(); RL[loc] = v end
+    return v
+  end
+  local D = not MG.uiZh and (get(MG.uiLoc) or get("enUS")) or nil
+  local G = not MG.gameZh and (get(MG.gameLoc) or (MG.gameLoc == "esMX" and get("esES")) or get("enUS")) or nil
   local en = not MG.uiZh
   local P = MG.Pad -- /slv lang stress：顯示文字加長（平常原樣）
   if not en and not G then return end
@@ -26,7 +44,7 @@ function E.Localize()
       s.npcG = s.npc
       if G then s.npcG, s.tgt = g.npc or s.npc, g.tgt; s.npcObj = g.npcObj end
       if en then
-        s.npc, s.hint, s.text, s.node, s.preText, s.star = P(d.npc), P(d.hint), P(d.text), P(d.node), P(d.preText), d.star
+        s.npc, s.hint, s.text, s.node, s.preText, s.star = P(d.npc), P(d.hint), P(d.text), P(areas(d.nodeA) or d.node), P(d.preText), d.star
         s.npcObj = d.npcObj
         s.desc, s.bind, s.to, s.from = P(d.desc), nil, nil, nil
         s.tagL = d.tag -- tag 本身是判斷用（怪多、副本前置鏈），顯示用 tagL
@@ -44,9 +62,10 @@ function E.Localize()
       if en then p.npc = P(ds.supply and ds.supply[i] and ds.supply[i].npc) end
     end
     if en then
-      st.name = P(ds.name or (st.map and C.MapName(st.map)) or st.id)
-      -- 英文短站名（建置時產生，清單與站名列用；全名在滑鼠提示）
-      st.short, st.tips, st.pickup, st.pickupS, st.alt = P(ds.short), ds.tips or {}, P(ds.pickup), ds.pickupS, nil
+      local nameA = areas(ds.nameA)
+      st.name = P(nameA or ds.name or (st.map and C.MapName(st.map)) or st.id)
+      -- 短站名（建置時產生，清單與站名列用；全名在滑鼠提示）
+      st.short, st.tips, st.pickup, st.pickupS, st.alt = P(nameA and areas(ds.shortA) or ds.short), ds.tips or {}, P(ds.pickup), ds.pickupS, nil
       if st.entrance then st.entrance = ds.entrance or "" end
       for i, x in ipairs(st.danger or none) do x.text = P(ds.danger and ds.danger[i]) end
     end
@@ -71,7 +90,7 @@ function E.Localize()
 end
 -- 任務名：遊戲給的（和介面同語言時）＞路線資料
 function E.QName(q)
-  return (MG.uiZh == MG.gameZh and C.Title(q)) or (R.quests[q] and R.quests[q].n) or (L["任務 "] .. q)
+  return (MG.sameLang and C.Title(q)) or (R.quests[q] and R.quests[q].n) or (L["任務 "] .. q)
 end
 E.session = {} -- 本次登入收到 QUEST_TURNED_IN 的任務
 E.stations = {} -- 適用本角色的站（依路線順序）

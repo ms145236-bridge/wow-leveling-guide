@@ -526,9 +526,9 @@ for (const st of stations) {
       const tgoEn = mobs.map((m) => (m && m.namesEn ? [...new Set(m.namesEn.filter(Boolean).map(cleanName))] : []));
       const objsEn = [...new Set(mobs.filter((m) => m && m.kind === "object").flatMap((m) => m.objectsEn || []))];
       // 沒有英文目標文字：用目標怪／物件湊一句
+      const kill = mobs.filter((m) => m && m.kind === "kill").flatMap((m) => m.namesEn || []);
+      const drop = mobs.filter((m) => m && m.kind === "drop").flatMap((m) => m.namesEn || []);
       const gen = () => {
-        const kill = mobs.filter((m) => m && m.kind === "kill").flatMap((m) => m.namesEn || []);
-        const drop = mobs.filter((m) => m && m.kind === "drop").flatMap((m) => m.namesEn || []);
         const parts = [kill.length && "Kill: " + [...new Set(kill)].join(", "), drop.length && "Loot from: " + [...new Set(drop)].slice(0, 3).join(", "), objsEn.length && "Use/collect: " + objsEn.join(", ")].filter(Boolean);
         return parts.length ? parts.join(". ") : undefined;
       };
@@ -538,7 +538,7 @@ for (const st of stations) {
       const tgo = e.tgo && e.tgo.map((list, g) => list.map((zh, k) => { const m = mdEnt(id, zh); if (m && tgoEn[g]?.[k] && m !== tgoEn[g][k]) enDiff.tgt++; return m || tgoEn[g]?.[k]; }).filter(Boolean));
       const objs = e.objs && e.objs.map((zh, k) => mdEnt(id, zh) || objsEn[k]).filter(Boolean);
       if (MD_QUEST.has(id) && q.en && MD_QUEST.get(id) !== q.en) enDiff.quest++;
-      e.en = { n: MD_QUEST.get(id) || step.en || q.en, d: objEn.join("\n") || undefined, gen: objEn.length ? undefined : gen(), tgo: tgo && tgo.some((n) => n.length) ? tgo : undefined, objs: objs && objs.length ? objs : undefined };
+      e.en = { n: MD_QUEST.get(id) || step.en || q.en, d: objEn.join("\n") || undefined, gen: objEn.length ? undefined : gen(), tgo: tgo && tgo.some((n) => n.length) ? tgo : undefined, objs: objs && objs.length ? objs : undefined, mk: { kill, drop, objsEn } };
     } else if (!q && !quests.get(id).en) quests.get(id).en = { n: MD_QUEST.get(id) || step.en || undefined };
     if (step.keep) quests.get(id).keep = true;
     // 【部落可接】：實測部落能接，但 QuestieDB 的種族遮罩寫成聯盟限定
@@ -858,13 +858,14 @@ for (const line of readFileSync(join(ROOT, "tools", "route-text-enUS.md"), "utf8
   TX_AT.set(row.at + "|" + row.zh, row.en);
   if (!TX.has(row.zh)) TX.set(row.zh, row.en);
 }
-// 英文裡的任務 ID → 英文任務名（名字已寫在旁邊就只拿掉 ID）；「02-Stop 8」→ 英文站名；座標前的地圖 ID 拿掉
-const enIds = (t) => t
+// 英文裡的任務 ID → 英文任務名（名字已寫在旁邊就只拿掉 ID）；「02-Stop 8」→ 英文站名；座標前的地圖 ID 拿掉（hit：記下換掉的任務 ID，其他語系照著換）
+const enIds = (t, hit) => t
   .replace(/\b(\d{2})-Stop (\d+)/g, (all, p, n) => { const x = stations.find((s) => s.id === p + "-" + n); return (x && (STATION_EN[safeText(x.name)] || x.en)) || all; })
   .replace(/(?<![\d.\w×]|level |Level |lv\.? )(\d{3,6})(?![\d%]|[.,]\d|\s*(?:×|x\d)|\s*(?:experience|exp|xp|XP|gold|g)\b|\s+(?:[Aa]bout|[Aa]pprox\w*\.? )?\d+[.,]\d)/g, (all, num, at, whole) => {
     const id = +num;
     const name = !MAP_IDS.has(id) && db.quest(id) && questEn(id);
     if (!name) return all;
+    if (hit) hit.add(id);
     const before = whole.slice(0, at).replace(/[\s("]+$/, ""), after = whole.slice(at + num.length).replace(/^[\s("]+/, "");
     return before.endsWith(name) || after.startsWith(name) ? "" : name;
   })
@@ -880,11 +881,11 @@ const tx = (where, zh) => {
 };
 // 英文句子（站的提醒、前置接取路線）：中文每句有種族／職業條件時，句數相同就逐句對上；全部同條件就整段套；對不上就不帶條件
 const enSplit = (t) => t.split(/(?<=[.;!?])\s+(?=[A-Z0-9"'(])/).map((x) => x.replace(/[.;]$/, "").trim()).filter(Boolean);
-const enSents = (zhRaw, en, join) => {
+const enSents = (zhRaw, en, join, split = enSplit) => {
   const whens = sentences(zhRaw).map((x) => x[1]);
   const same = whens.every((w) => JSON.stringify(w) === JSON.stringify(whens[0]));
   if (join && same) return whens[0] ? [[en, whens[0]]] : undefined; // 交通、取捨：介面整段接成一句
-  const es = enSplit(en);
+  const es = split(en);
   if (es.length === whens.length) return es.map((x, i) => (whens[i] ? [x, whens[i]] : [x]));
   if (!same) cov.whenLost++;
   return es.map((x) => (same && whens[0] ? [x, whens[0]] : [x]));
@@ -892,114 +893,145 @@ const enSents = (zhRaw, en, join) => {
 const cov = { steps: 0, hint: 0, hintGen: 0, tgtNeed: 0, tgt: 0, npcNeed: 0, npc: 0, stName: 0, stations: 0, quests: 0, qName: 0, qObj: 0, whenLost: 0, zhOnly: { desc: 0, tips: 0, travelText: 0, note: 0, grindNote: 0, danger: 0, offrouteWhy: 0, pickup: 0, entrance: 0, keepUse: 0, tag: 0, star: 0 } };
 const leftAt = []; // 翻了之後仍只有中文的步驟欄位（TX_MISS 報告用）
 const left = Object.fromEntries(Object.keys(cov.zhOnly).map((k) => [k, 0])); // 翻了之後仍只有中文（英文介面不顯示）
-let en = `-- 由 tools/build.mjs 產生，勿手改。Route.lua 的英文名稱與說明（站 ID→步驟序號、任務 ID）\nlocal _, MG = ...\nMG.RouteL = MG.RouteL or {}\nMG.RouteL.enUS = {\n  stations = {\n`;
-for (const s of stations) {
-  cov.stations++;
-  const name = STATION_EN[safeText(s.name)] || (s.dungeon ? s.en && safeText(s.en) : undefined);
-  if (name) cov.stName++;
-  const steps = {};
-  let k = 0;
-  for (const step of s.steps) {
-    if (!(step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id)) continue;
-    k++;
-    cov.steps++;
-    const e = {};
-    const q = step.id && quests.get(step.id);
-    if (step.t === "accept" || step.t === "turnin") {
-      e.npc = step.npcEn || mdEnt(step.id, step.npc); e.tgt = step.tgtEn || (step.tgt && mdEnt(step.id, step.tgt)); e.npcObj = step.npcObj || (/^(物件|物品)/.test(step.npc || "") || undefined);
-      cov.npcNeed++; if (e.npc) cov.npc++; else missNpc.push(`${step.id} ${step.npc}`);
-      if (step.tgt) { cov.tgtNeed++; if (e.tgt) cov.tgt++; }
-    } else if (step.t === "do") {
-      cov.hint++;
-      e.hint = q?.en?.d?.split("\n")[0] || q?.en?.gen;
-      if (!q?.en?.d && q?.en?.gen) cov.hintGen++;
-      if (!e.hint) { cov.hint--; e.hint = "Complete the quest objectives."; }
-    } else if (step.t === "need") e.text = "Prerequisite: " + (questEn(step.id) || "quest " + step.id);
-    else if (step.t === "travel" && /^前往 .+ 入口$/.test(step.text || "")) e.text = (name || "Dungeon") + " entrance";
-    else if (step.t === "travel" || step.t === "goto" || step.t === "note") {
-      const kind = step.t === "note" ? "note" : "travelText";
-      cov.zhOnly[kind]++;
-      e.text = step.text && tx(step.where, step.text);
-      if (!e.text) left[kind]++;
-    }
-    if (step.t === "fp") e.node = NODE_EN[step.node] || tx(step.where, step.node);
-    if (step.tag) {
-      // 標籤：固定對照（TAG_EN）＞翻譯檔；「目標：…」「提醒：…」翻內容
-      const parts = step.tag.split(/\s*・\s*/).map((t) => t.trim()).filter(Boolean).map((t) => {
-        if (TAG_EN[t]) return TAG_EN[t];
-        const m = t.match(/^(目標|提醒)[：:]\s*(.+)$/);
-        const x = tx(step.where, m ? m[2] : t);
-        return x && (m && m[1] === "目標" ? "Target: " + x : x);
-      });
-      if (!tagEn(step.tag)) cov.zhOnly.tag++;
-      if (parts.some((x) => !x)) { left.tag++; leftAt.push(step.where + "｜標籤｜" + step.tag); }
-      e.tag = parts.some(Boolean) ? [...new Set(parts.filter(Boolean))].join(", ") : undefined;
-    }
-    if (step.desc) {
-      // 說明是【說明：】【位置：】【順序：】用「；」接起來的（每段自己也可能有「；」）：從頭找最長對得上的一段
-      cov.zhOnly.desc++;
-      const segs = step.desc.split("；"), parts = [];
-      for (let i = 0; i < segs.length;) {
-        let j = segs.length, hit;
-        for (; j > i && !hit; j--) {
-          const d = segs.slice(i, j).join("；"), m = d.match(/^(位置|順序)：(.*)$/s);
-          const x = tx(step.where, m ? m[2] : d);
-          hit = x && (m ? (m[1] === "位置" ? "Location: " : "Order: ") : "") + x;
-        }
-        parts.push(hit);
-        i = hit ? j + 1 : i + 1;
+const newCov = () => JSON.parse(JSON.stringify(cov));
+// Route_<locale>.lua 一份：X 給這個語系的換字函式（英文全是原樣）
+// T 說明文字、N 名稱（選取目標要和遊戲內一字不差）、F 固定字、station 站名、node 鳥點、qn 任務名、qd 任務目標文字、item 物品名
+const emitRoute = (X) => {
+  const { loc, T, N, F, cov, left, leftAt, missNpc } = X;
+  let en = `-- 由 tools/build.mjs 產生，勿手改。Route.lua 的${X.title}名稱與說明（站 ID→步驟序號、任務 ID）\n-- 包成函式：只有介面、客戶端用到的語系才建表（Engine.lua E.Localize），其餘載入後就丟掉\nlocal _, MG = ...\nMG.RouteL = MG.RouteL or {}\nMG.RouteL.${loc} = function() return {\n  stations = {\n`;
+  for (const s of stations) {
+    cov.stations++;
+    const nm = X.station(s);
+    const name = nm.name;
+    if (name) cov.stName++;
+    const steps = {};
+    let k = 0;
+    for (const step of s.steps) {
+      if (!(step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id)) continue;
+      k++;
+      cov.steps++;
+      const e = {};
+      const q = step.id && quests.get(step.id);
+      if (step.t === "accept" || step.t === "turnin") {
+        e.npc = N(step.npcEn || mdEnt(step.id, step.npc)); e.tgt = N(step.tgtEn || (step.tgt && mdEnt(step.id, step.tgt))); e.npcObj = step.npcObj || (/^(物件|物品)/.test(step.npc || "") || undefined);
+        cov.npcNeed++; if (e.npc) cov.npc++; else missNpc.push(`${step.id} ${step.npc}`);
+        if (step.tgt) { cov.tgtNeed++; if (e.tgt) cov.tgt++; }
+      } else if (step.t === "do") {
+        cov.hint++;
+        e.hint = X.hint(q, step.id);
+        if (!q?.en?.d && q?.en?.gen) cov.hintGen++;
+        if (!e.hint) { cov.hint--; e.hint = F.complete; }
+      } else if (step.t === "need") e.text = F.prereq + (X.qn(step.id) || F.quest + step.id);
+      else if (step.t === "travel" && /^前往 .+ 入口$/.test(step.text || "")) e.text = F.entrance.replace("%s", () => name || F.dungeon);
+      else if (step.t === "travel" || step.t === "goto" || step.t === "note") {
+        const kind = step.t === "note" ? "note" : "travelText";
+        cov.zhOnly[kind]++;
+        e.text = step.text && T(step.where, step.text);
+        if (!e.text) left[kind]++;
       }
-      if (parts.some((x) => !x)) { left.desc++; leftAt.push(step.where + "｜說明｜" + step.desc); }
-      e.desc = parts.some(Boolean) ? parts.filter(Boolean).map((x) => (/[.!?)]$/.test(x) ? x : x + ".")).join(" ") : undefined;
+      if (step.t === "fp") Object.assign(e, X.node(step));
+      if (step.tag) {
+        // 標籤：固定對照（TAG_EN）＞翻譯檔；「目標：…」「提醒：…」翻內容
+        const parts = step.tag.split(/\s*・\s*/).map((t) => t.trim()).filter(Boolean).map((t) => {
+          const fixed = X.tag(t, step.where);
+          if (fixed) return fixed;
+          const m = t.match(/^(目標|提醒)[：:]\s*(.+)$/);
+          const x = T(step.where, m ? m[2] : t);
+          return x && (m && m[1] === "目標" ? F.target + x : x);
+        });
+        if (!tagEn(step.tag)) cov.zhOnly.tag++;
+        if (parts.some((x) => !x)) { left.tag++; leftAt.push(step.where + "｜標籤｜" + step.tag); }
+        e.tag = parts.some(Boolean) ? [...new Set(parts.filter(Boolean))].join(F.sep) : undefined;
+      }
+      if (step.desc) {
+        // 說明是【說明：】【位置：】【順序：】用「；」接起來的（每段自己也可能有「；」）：從頭找最長對得上的一段
+        cov.zhOnly.desc++;
+        const segs = step.desc.split("；"), parts = [];
+        for (let i = 0; i < segs.length;) {
+          let j = segs.length, hit;
+          for (; j > i && !hit; j--) {
+            const d = segs.slice(i, j).join("；"), m = d.match(/^(位置|順序)：(.*)$/s);
+            const x = T(step.where, m ? m[2] : d);
+            hit = x && (m ? (m[1] === "位置" ? F.loc : F.order) : "") + x;
+          }
+          parts.push(hit);
+          i = hit ? j + 1 : i + 1;
+        }
+        if (parts.some((x) => !x)) { left.desc++; leftAt.push(step.where + "｜說明｜" + step.desc); }
+        e.desc = parts.some(Boolean) ? parts.filter(Boolean).map(X.endDot).join(F.join) : undefined;
+      }
+      if (step.preText) { const ids = [...step.preText.matchAll(/\d{2,6}/g)].map((m) => +m[0]).filter((x) => db.quest(x)); e.preText = ids.length ? ids.map(X.qn).join(F.sep) : undefined; }
+      if (step.star) {
+        const n = db.enByZh("Item", step.star[0]);
+        if (!n) cov.zhOnly.star++;
+        const n2 = X.item(n) || T(step.where, step.star[0]);
+        if (!n2) { left.star++; leftAt.push(step.where + "｜★｜" + step.star[0]); }
+        e.star = n2 ? [n2, ...step.star.slice(1)] : undefined;
+      }
+      steps[k] = e;
     }
-    if (step.preText) { const ids = [...step.preText.matchAll(/\d{2,6}/g)].map((m) => +m[0]).filter((x) => db.quest(x)); e.preText = ids.length ? ids.map(questEn).join(", ") : undefined; }
-    if (step.star) {
-      const n = db.enByZh("Item", step.star[0]);
-      if (!n) cov.zhOnly.star++;
-      const n2 = n || tx(step.where, step.star[0]);
-      if (!n2) { left.star++; leftAt.push(step.where + "｜★｜" + step.star[0]); }
-      e.star = n2 ? [n2, ...step.star.slice(1)] : undefined;
-    }
-    steps[k] = e;
+    cov.zhOnly.tips += s.tips.length; cov.zhOnly.pickup += s.pickup ? 1 : 0; cov.zhOnly.entrance += s.entrance ? 1 : 0;
+    cov.zhOnly.grindNote += (s.grind || []).filter((g) => g.note).length;
+    cov.zhOnly.danger += (s.danger || []).length;
+    // 站的提醒／交通／取捨／說明／動線（k 是判斷用，保持中文）；翻不到的整條不放
+    const tips = s.tips.map((t) => {
+      const text = T(t.where, t.raw) || (t.src && T(t.where, t.src));
+      if (!text) { left.tips++; return undefined; }
+      if (t.k === "動線") return { k: t.k, text: X.route(text) };
+      return { k: t.k, text, s: enSents(t.raw, text, t.k === "交通" || t.k === "取捨", X.split) };
+    }).filter(Boolean);
+    const pickup = s.pickupRaw && T(s.pickupAt, s.pickupRaw);
+    if (s.pickup && !pickup) left.pickup++;
+    // 入口：介面只用括號裡的分區門說明（區域、座標另外取）；地圖 ID 由 enIds 拿掉
+    const entrance = s.entrance && T(s.entrance.where, s.entrance.raw);
+    if (s.entrance && !entrance) left.entrance++;
+    const danger = {}; (s.danger || []).forEach((d, i) => { danger[i + 1] = T(s.dangerAt[i], d.text); if (!danger[i + 1]) left.danger++; });
+    const grind = {}; (s.grind || []).forEach((g, i) => { const note = g.note && T(g.where, g.note); if (g.note && !note) left.grindNote++; grind[i + 1] = { mob: N(npcEn(g.mob)), note }; });
+    const supply = {}; (s.supply || []).forEach((x, i) => { supply[i + 1] = { npc: x.npc && N(npcEn(x.npc)) }; });
+    en += `    [${JSON.stringify(s.id)}] = ${plain({ name, nameA: nm.nameA, short: nm.short, shortA: nm.shortA, entrance, pickup, pickupS: pickup && enSents(s.pickupRaw, pickup, false, X.split), tips, danger, grind, supply, steps })},\n`;
   }
-  cov.zhOnly.tips += s.tips.length; cov.zhOnly.pickup += s.pickup ? 1 : 0; cov.zhOnly.entrance += s.entrance ? 1 : 0;
-  cov.zhOnly.grindNote += (s.grind || []).filter((g) => g.note).length;
-  cov.zhOnly.danger += (s.danger || []).length;
-  // 站的提醒／交通／取捨／說明／動線（k 是判斷用，保持中文）；翻不到的整條不放
-  const tips = s.tips.map((t) => {
-    const text = tx(t.where, t.raw) || (t.src && tx(t.where, t.src));
-    if (!text) { left.tips++; return undefined; }
-    if (t.k === "動線") return { k: t.k, text: text.replace(/\s*\((?:steps? )?\d+(?:\s*[–-]\s*\d+)?\)/gi, "") };
-    return { k: t.k, text, s: enSents(t.raw, text, t.k === "交通" || t.k === "取捨") };
-  }).filter(Boolean);
-  const pickup = s.pickupRaw && tx(s.pickupAt, s.pickupRaw);
-  if (s.pickup && !pickup) left.pickup++;
-  // 入口：介面只用括號裡的分區門說明（區域、座標另外取）；地圖 ID 由 enIds 拿掉
-  const entrance = s.entrance && tx(s.entrance.where, s.entrance.raw);
-  if (s.entrance && !entrance) left.entrance++;
-  const danger = {}; (s.danger || []).forEach((d, i) => { danger[i + 1] = tx(s.dangerAt[i], d.text); if (!danger[i + 1]) left.danger++; });
-  const grind = {}; (s.grind || []).forEach((g, i) => { const note = g.note && tx(g.where, g.note); if (g.note && !note) left.grindNote++; grind[i + 1] = { mob: npcEn(g.mob), note }; });
-  const supply = {}; (s.supply || []).forEach((x, i) => { supply[i + 1] = { npc: x.npc && npcEn(x.npc) }; });
-  en += `    [${JSON.stringify(s.id)}] = ${plain({ name, short: s.dungeon ? undefined : shortEn(name), entrance, pickup, pickupS: pickup && enSents(s.pickupRaw, pickup), tips, danger, grind, supply, steps })},\n`;
-}
-en += `  },\n  quests = {\n`;
-for (const [id, q] of [...quests.entries()].sort((a, b) => a[0] - b[0])) {
-  cov.quests++;
-  const e = q.en || {};
-  if (e.n) cov.qName++;
-  if (e.d) cov.qObj++;
-  let star;
-  if (q.star) { const n = db.enByZh("Item", q.star[0]) || tx("", q.star[0]); star = n ? [n, ...q.star.slice(1)] : undefined; }
-  en += `    [${id}] = ${plain({ n: e.n, d: e.d || e.gen, tgo: e.tgo, objs: e.objs, star })},\n`;
-}
-en += `  },\n  trainers = ${plain(Object.fromEntries(trainers.map((t, i) => [i + 1, { npc: npcEn(t.npc) }])))},\n`;
-const keepEn = (id, k) => { if (k.q) return undefined; const x = tx(keepAt.get(id), k.use); if (!x) left.keepUse++; return x || "Needed for a later quest"; };
-en += `  keep = ${plain(Object.fromEntries([...keep].map(([id, k]) => [id, { n: db.itemEn(id), use: keepEn(id, k) }])))},\n`;
-const offEn = (id, o) => { const x = o.why && tx(offAt.get(id), o.why); if (o.why && !x) left.offrouteWhy++; return x; };
-en += `  offroute = ${plain(Object.fromEntries([...offroute].map(([id, o]) => [id, { why: offEn(id, o) }])))},\n}\n`;
+  en += `  },\n  quests = {\n`;
+  for (const [id, q] of [...quests.entries()].sort((a, b) => a[0] - b[0])) {
+    cov.quests++;
+    const e = q.en || {};
+    if (e.n) cov.qName++;
+    if (e.d) cov.qObj++;
+    let star;
+    if (q.star) { const n = X.item(db.enByZh("Item", q.star[0])) || T("", q.star[0]); star = n ? [n, ...q.star.slice(1)] : undefined; }
+    en += `    [${id}] = ${plain({ n: X.qName(id, e), d: X.qd(id, e), tgo: e.tgo && e.tgo.map((l) => l.map(N)), objs: e.objs && e.objs.map(N), star })},\n`;
+  }
+  en += `  },\n  trainers = ${plain(Object.fromEntries(trainers.map((t, i) => [i + 1, { npc: N(npcEn(t.npc)) }])))},\n`;
+  const keepEn = (id, k) => { if (k.q) return undefined; const x = T(keepAt.get(id), k.use); if (!x) left.keepUse++; return x || F.later; };
+  en += `  keep = ${plain(Object.fromEntries([...keep].map(([id, k]) => [id, { n: X.itemId(id), use: keepEn(id, k) }])))},\n`;
+  const offEn = (id, o) => { const x = o.why && T(offAt.get(id), o.why); if (o.why && !x) left.offrouteWhy++; return x; };
+  en += `  offroute = ${plain(Object.fromEntries([...offroute].map(([id, o]) => [id, { why: offEn(id, o) }])))},\n} end\n`;
+  return en;
+};
+const FIX = {
+  enUS: { complete: "Complete the quest objectives.", prereq: "Prerequisite: ", quest: "quest ", entrance: "%s entrance", dungeon: "Dungeon", loc: "Location: ", order: "Order: ", target: "Target: ", later: "Needed for a later quest", qobj: "Quest object", kill: "Kill: ", loot: "Loot from: ", use: "Use/collect: ", sep: ", ", join: " ", dot: ".", sent: ". " },
+  zhCN: { tags: { 副本前置鏈: "副本前置链" }, complete: "完成任务目标。", prereq: "前置：", quest: "任务 ", entrance: "%s 入口", dungeon: "副本", loc: "位置：", order: "顺序：", target: "目标：", later: "之后的任务会用到", qobj: "任务物件", kill: "击杀：", loot: "掉落自：", use: "使用／收集：", sep: "、", join: "", dot: "。", sent: "。" },
+  deDE: { tags: { 副本前置鏈: "Dungeon-Vorquest" }, complete: "Questziele erfüllen.", prereq: "Voraussetzung: ", quest: "Quest ", entrance: "Eingang: %s", dungeon: "Dungeon", loc: "Ort: ", order: "Reihenfolge: ", target: "Ziel: ", later: "Für eine spätere Quest benötigt", qobj: "Questobjekt", kill: "Töten: ", loot: "Beute von: ", use: "Benutzen/Sammeln: " },
+  frFR: { tags: { 副本前置鏈: "Prérequis de donjon" }, complete: "Remplissez les objectifs de la quête.", prereq: "Prérequis : ", quest: "quête ", entrance: "Entrée : %s", dungeon: "Donjon", loc: "Lieu : ", order: "Ordre : ", target: "Cible : ", later: "Nécessaire pour une quête ultérieure", qobj: "Objet de quête", kill: "Tuer : ", loot: "Butin sur : ", use: "Utiliser/ramasser : " },
+  esES: { tags: { 副本前置鏈: "Requisito de mazmorra" }, complete: "Completa los objetivos de la misión.", prereq: "Requisito previo: ", quest: "misión ", entrance: "Entrada: %s", dungeon: "Mazmorra", loc: "Ubicación: ", order: "Orden: ", target: "Objetivo: ", later: "Necesario para una misión posterior", qobj: "Objeto de misión", kill: "Matar: ", loot: "Botín de: ", use: "Usar/recoger: " },
+  ptBR: { tags: { 副本前置鏈: "Pré-requisito de masmorra" }, complete: "Complete os objetivos da missão.", prereq: "Pré-requisito: ", quest: "missão ", entrance: "Entrada: %s", dungeon: "Masmorra", loc: "Local: ", order: "Ordem: ", target: "Alvo: ", later: "Necessário para uma missão posterior", qobj: "Objeto de missão", kill: "Matar: ", loot: "Saque de: ", use: "Usar/coletar: " },
+  ruRU: { tags: { 副本前置鏈: "Подготовка к подземелью" }, complete: "Выполните задачи задания.", prereq: "Требуется: ", quest: "задание ", entrance: "Вход: %s", dungeon: "Подземелье", loc: "Место: ", order: "Порядок: ", target: "Цель: ", later: "Понадобится для следующего задания", qobj: "Объект задания", kill: "Убить: ", loot: "Добыча с: ", use: "Использовать/собрать: " },
+  koKR: { tags: { 副本前置鏈: "던전 선행" }, complete: "퀘스트 목표를 완료하세요.", prereq: "선행 퀘스트: ", quest: "퀘스트 ", entrance: "%s 입구", dungeon: "던전", loc: "위치: ", order: "순서: ", target: "대상: ", later: "이후 퀘스트에 필요", qobj: "퀘스트 물체", kill: "처치: ", loot: "획득처: ", use: "사용/수집: " },
+};
+FIX.esMX = FIX.esES;
+for (const loc of Object.keys(FIX)) FIX[loc] = { ...FIX.enUS, ...FIX[loc] };
+const routeEn = emitRoute({
+  loc: "enUS", title: "英文", T: tx, N: (n) => n, F: FIX.enUS, cov, left, leftAt, missNpc,
+  station: (s) => { const name = STATION_EN[safeText(s.name)] || (s.dungeon ? s.en && safeText(s.en) : undefined); return { name, short: s.dungeon ? undefined : shortEn(name) }; },
+  node: (step) => ({ node: NODE_EN[step.node] || tx(step.where, step.node) }),
+  tag: (t) => TAG_EN[t],
+  hint: (q) => q?.en?.d?.split("\n")[0] || q?.en?.gen,
+  qn: questEn, qName: (id, e) => e.n, qd: (id, e) => e.d || e.gen, item: (n) => n, itemId: (id) => db.itemEn(id),
+  endDot: (x) => (/[.!?)]$/.test(x) ? x : x + "."), split: enSplit,
+  route: (text) => text.replace(/\s*\((?:steps? )?\d+(?:\s*[–-]\s*\d+)?\)/gi, ""),
+});
 cov.zhOnly.offrouteWhy = [...offroute.values()].filter((o) => o.why).length;
 cov.zhOnly.keepUse = [...keep.values()].filter((k) => !k.q).length;
-writeFileSync(join(dirname(OUT), "Route_enUS.lua"), en);
+writeFileSync(join(dirname(OUT), "Route_enUS.lua"), routeEn);
 const pct = (a, b) => (b ? Math.round((a / b) * 1000) / 10 : 100) + "%";
 console.log(`英文：站名 ${cov.stName}/${cov.stations}（${pct(cov.stName, cov.stations)}）、接交 NPC ${cov.npc}/${cov.npcNeed}（${pct(cov.npc, cov.npcNeed)}）、選取目標 tgt ${cov.tgt}/${cov.tgtNeed}（${pct(cov.tgt, cov.tgtNeed)}）、做步驟提示 ${cov.hint}（其中湊句 ${cov.hintGen}）、任務名 ${cov.qName}/${cov.quests}、任務目標文字 ${cov.qObj}/${cov.quests}`);
 console.log("說明文字英文（route-text-enUS.md，翻到／原本只有中文）：" + Object.entries(cov.zhOnly).map(([k, v]) => `${k} ${v - left[k]}/${v}`).join("、") + `；條件對不上改為不帶條件 ${cov.whenLost}`);
@@ -1008,6 +1040,215 @@ console.log(`翻譯列 ${TX_ROWS.length}，用到 ${TX_ROWS.length - txMiss.leng
 if (process.env.TX_MISS) writeFileSync(process.env.TX_MISS, leftAt.concat(txMiss.map((r) => `${r.at}｜${r.type}｜${r.zh}`)).join("\n"));
 console.log("英文缺接交 NPC：" + missNpc.join("、"));
 console.log(`english-names.md：任務 ${MD_QUEST.size}、實體 ${MD_ENT.size}、名稱 ${MD_NAME.size}；和 QuestieDB 英文不同：任務名 ${enDiff.quest}、接交 NPC ${enDiff.npc}、選取目標 ${enDiff.tgt}`);
+
+// ── 其他語系：Data/Route_<locale>.lua，結構同 Route_enUS.lua，每一欄翻不到就用英文 ──
+// 名稱：tools/names-<locale>.md（英文名 → 該語系，Codex 查的永恆客戶端名）＞ QuestieDB 該語系＞英文
+// 說明文字：tools/route-text-<locale>.md（格式同 enUS）＞英文；任務名、任務目標文字：QuestieDB 該語系＞英文（遊戲內的任務名執行時另由 API 取）
+// 站名：區域名用 Questie 的區域翻譯；城鎮寫成 {a:地區ID}（執行時換成遊戲的地區名），換不到就用只有區域的 name
+const QZ = join(dirname(ZONES.replace(/\/$/, "")), "..", "..", "..", "Questie", "Localization", "Translations", "Zones");
+const ZONE_L = new Map(); // 英文區域名 → { deDE: …, … }
+for (const f of readdirSync(QZ)) for (const m of readFileSync(join(QZ, f), "utf8").matchAll(/\["([^"]+)"\]\s*=\s*\{([^}]*)\}/g)) {
+  if (ZONE_L.has(m[1])) continue;
+  // true＝和英文同名；(Expansions.Current == Expansions.Era and "舊名") or "新名" 取舊版（永恆是經典版）
+  ZONE_L.set(m[1], Object.fromEntries([...m[2].matchAll(/\["(\w{4})"\]\s*=\s*(?:"([^"]*)"|true|\(Expansions\.Current == Expansions\.Era and (?:"([^"]*)"|true)\))/g)].map((x) => [x[1], x[2] ?? x[3] ?? m[1]])));
+}
+const AREA_ID = new Map(); // 英文地區名 → [{ id, parent }]（QuestieDB 的註解）
+const AREA_NAMES = new Map(); // ID → 註解裡出現過的名字；兩個檔名字不同的 ID（永恆改用過的）不用
+for (const f of ["subZoneToParentZone.lua", "areaIdToUiMapId.lua"]) {
+  for (const m of readFileSync(ZONES + f, "utf8").matchAll(/\[(\d+)\]\s*=\s*\d+,\s*--\s*(.+?)\s*->\s*(.+?)\s*$/gm)) {
+    AREA_NAMES.set(+m[1], (AREA_NAMES.get(+m[1]) || new Set()).add(m[2]));
+    if (!AREA_ID.has(m[2])) AREA_ID.set(m[2], []);
+    AREA_ID.get(m[2]).push({ id: +m[1], parent: m[3] });
+  }
+}
+for (const [name, list] of AREA_ID) {
+  const ok = list.filter((x) => AREA_NAMES.get(x.id).size === 1);
+  if (ok.length) AREA_ID.set(name, ok); else AREA_ID.delete(name);
+}
+const AREA_ALIAS = { "Sen'jin": "Sen'jin Village", Crossroads: "The Crossroads", "Shimmering Flats": "The Shimmering Flats", Revantusk: "Revantusk Village" };
+// 站名裡 Questie 與地區表都沒有的字（副本分區、短訪／回訪）
+const PLACE_WORDS = {
+  zhCN: { "short visit": "短访", return: "回访", "Sandfury camp": "沙怒营地", "Temple of Arkkoroc": "阿克科兰神殿", South: "南段", Graveyard: "墓地", Library: "图书馆", Armory: "武器库", Cathedral: "大教堂", Live: "血色区", Undead: "亡灵区", East: "东", West: "西", North: "北" },
+  deDE: { "short visit": "kurzer Besuch", return: "Rückkehr", "Sandfury camp": "Lager der Sandwüter", "Temple of Arkkoroc": "Tempel von Arkkoroc", South: "Süden", Graveyard: "Friedhof", Library: "Bibliothek", Armory: "Waffenkammer", Cathedral: "Kathedrale", Live: "Lebende", Undead: "Untote", East: "Ost", West: "West", North: "Nord" },
+  frFR: { "short visit": "courte visite", return: "retour", "Sandfury camp": "camp Furie-des-Sables", "Temple of Arkkoroc": "temple d'Arkkoroc", South: "sud", Graveyard: "Cimetière", Library: "Bibliothèque", Armory: "Armurerie", Cathedral: "Cathédrale", Live: "Vivants", Undead: "Morts-vivants", East: "Est", West: "Ouest", North: "Nord" },
+  esES: { "short visit": "visita corta", return: "regreso", "Sandfury camp": "campamento Furiarena", "Temple of Arkkoroc": "Templo de Arkkoroc", South: "sur", Graveyard: "Cementerio", Library: "Biblioteca", Armory: "Armería", Cathedral: "Catedral", Live: "Vivos", Undead: "No-muertos", East: "Este", West: "Oeste", North: "Norte" },
+  ptBR: { "short visit": "visita curta", return: "retorno", "Sandfury camp": "acampamento Fúria-da-areia", "Temple of Arkkoroc": "Templo de Arkkoroc", South: "sul", Graveyard: "Cemitério", Library: "Biblioteca", Armory: "Arsenal", Cathedral: "Catedral", Live: "Vivos", Undead: "Mortos-vivos", East: "Leste", West: "Oeste", North: "Norte" },
+  ruRU: { "short visit": "коротко", return: "возвращение", "Sandfury camp": "лагерь племени Песчаной Бури", "Temple of Arkkoroc": "Храм Арккорока", South: "юг", Graveyard: "Кладбище", Library: "Библиотека", Armory: "Оружейная", Cathedral: "Собор", Live: "Живые", Undead: "Нежить", East: "Восток", West: "Запад", North: "Север" },
+  koKR: { "short visit": "짧은 방문", return: "재방문", "Sandfury camp": "모래폭풍 야영지", "Temple of Arkkoroc": "아르코록 사원", South: "남부", Graveyard: "묘지", Library: "도서관", Armory: "무기고", Cathedral: "대성당", Live: "생존자 구역", Undead: "언데드 구역", East: "동쪽", West: "서쪽", North: "북쪽" },
+};
+PLACE_WORDS.esMX = PLACE_WORDS.esES;
+// 翻譯列不用：審稿標記拿掉；有 ⁇／�（亂碼）的整列不用；字型顯示不了的字（中文介面的韓文、韓文介面的漢字、其他介面的中日韓字）整列不用
+// 非中文語系：全形標點先換半形再檢查
+const HALF = { "（": " (", "）": ")", "：": ": ", "，": ", ", "、": ", ", "；": "; ", "。": ". ", "／": "/", "｜": " | ", "「": "\"", "」": "\"", "　": " ", "！": "!", "？": "?" };
+const badScript = { zhCN: /[가-힯ᄀ-ᇿ]/, koKR: /[぀-ヿ㐀-鿿＀-￯]/ };
+const NOT_LATIN = /[぀-ヿ㐀-鿿가-힯＀-￯]/;
+const NAME_LOC = { zhCN: "zhCN", deDE: "deDE", frFR: "frFR", esES: "esES", esMX: "esMX", ruRU: "ruRU", koKR: "koKR", ptBR: "ptBR" };
+const locCov = [];
+for (const loc of Object.keys(NAME_LOC)) {
+  const F = FIX[loc], W = PLACE_WORDS[loc], zh = loc === "zhCN", bad = badScript[loc] || NOT_LATIN;
+  const c = { text: 0, textLoc: 0, textEn: 0, names: 0, namesLoc: 0, namesEn: new Set(), qn: 0, qnLoc: 0, qd: 0, qdLoc: 0, rejected: { mark: 0, garbled: 0, script: 0 }, tags: 0, tagsEn: 0 };
+  // 說明文字
+  const AT = new Map(), ANY = new Map();
+  for (const line of readFileSync(join(ROOT, "tools", `route-text-${loc}.md`), "utf8").split(/\r?\n/)) {
+    const f = line.split("｜");
+    if (f.length < 4 || !/\.md:\d+$/.test(f[0])) continue;
+    const k = txKey(f.slice(2, -1).join("｜"));
+    let v = f[f.length - 1];
+    if (/【[^】]*】/.test(v)) c.rejected.mark++;
+    v = v.replace(/【[^】]*】/g, "");
+    if (!zh) v = v.replace(/[（）：，、；。／｜「」　！？]/g, (ch) => HALF[ch]);
+    v = v.replace(/\s+/g, " ").replace(/\s+([),.;!?])/g, "$1").trim();
+    if (!k || !v) continue;
+    if (/[⁇�]/.test(v)) { c.rejected.garbled++; continue; }
+    if (bad.test(v)) { c.rejected.script++; continue; }
+    AT.set(f[0] + "|" + k, v);
+    if (!ANY.has(k)) ANY.set(k, v);
+  }
+  // 名稱
+  // esMX 查不到的名字先用 esES（兩邊大多相同），再退英文
+  const NM = new Map();
+  for (const nl of loc === "esMX" ? ["esMX", "esES"] : [loc]) {
+    let sec = "";
+    for (const line of readFileSync(join(ROOT, "tools", `names-${nl}.md`), "utf8").split(/\r?\n/)) {
+      if (line.startsWith("## ")) sec = line.trim();
+      if (sec !== "## 已查到" || !line.startsWith("| ") || line.startsWith("| 類型")) continue;
+      const cells = line.split("|").slice(1, -1).map((x) => x.trim());
+      // 英文名在路線資料裡已去掉引號（cleanName），對照表的兩邊也一樣去掉
+      if (cells.length === 5 && cells[2] && cells[3] && !NM.has(cleanName(cells[2]))) NM.set(cleanName(cells[2]), cleanName(cells[3]));
+    }
+  }
+  const fromDb = (en) => { for (const type of ["Npc", "Object", "Item"]) { const id = db.idByEn(type, en); const v = id !== undefined && db.l10nName(type, id, loc); if (v) return cleanName(v); } };
+  const N = (en) => {
+    if (!en) return en;
+    if (en === "Quest object") return F.qobj;
+    c.names++;
+    const one = (x) => NM.get(x) ?? fromDb(x);
+    const v = one(en) ?? (en.includes("/") && en.split("/").map(one).every(Boolean) ? en.split("/").map(one).join("/") : undefined); // 「A/B」兩個名字
+    if (v) { c.namesLoc++; return v; }
+    c.namesEn.add(en);
+    return en;
+  };
+  const qnL = (id) => { const v = db.l10nName("Quest", id, loc); return v || questEn(id); };
+  const zoneL = (en) => { const z = ZONE_L.get(en); return z && typeof z[loc] === "string" ? z[loc] : undefined; };
+  // 站名：{ name（不靠執行時查表的版本）, nameA（含 {a:ID}）, short, shortA }
+  const stCache = new Map();
+  const station = (s) => {
+    if (stCache.has(s)) return stCache.get(s);
+    const out = {};
+    stCache.set(s, out);
+    const en = STATION_EN[safeText(s.name)] || (s.dungeon ? s.en && safeText(s.en) : undefined);
+    if (!en) return out;
+    const [, body, qual] = en.match(/^(.*?)(?: \(([^)]*)\))?$/);
+    const i = body.indexOf(": ");
+    const zoneEn = i > 0 ? body.slice(0, i) : body, rest = i > 0 ? body.slice(i + 2) : "";
+    const zone = zoneL(zoneEn) || W[zoneEn];
+    if (!zone) {
+      // 永恆新增的副本：Questie 沒有翻譯，用副本的地區 ID 在執行時查名字；查不到就用英文
+      const area = [...DUNGEON_AREA].find(([id, d]) => d.name === en && [...(AREA_NAMES.get(id) || [en])].every((x) => x === en))?.[0] ?? AREA_ID.get(en)?.[0].id;
+      if (s.dungeon) out.name = en;
+      if (s.dungeon && area) out.nameA = `{a:${area}}`; else (c.stMiss ||= []).push(en);
+      return out;
+    }
+    const q = qual && W[qual];
+    const toks = rest ? rest.split(/ (&|to) /) : []; // 地點、分隔、地點…
+    const places = [], seps = [];
+    let fixedOnly = true;
+    for (let t = 0; t < toks.length; t += 2) {
+      if (t) seps.push(toks[t - 1]);
+      const p = toks[t];
+      const v = zoneL(p) || W[p];
+      if (v) { places.push(v); continue; }
+      const a = (AREA_ID.get(AREA_ALIAS[p] || p) || []);
+      const hit = a.find((x) => x.parent === zoneEn) || a[0];
+      if (hit) { places.push(`{a:${hit.id}}`); fixedOnly = false; } else { c.stPartMiss = (c.stPartMiss || 0) + 1; }
+    }
+    const fmt = (ps) => (zh
+      ? zone + (ps.length ? " " + ps.map((p, n) => (n ? (seps[n - 1] === "to" ? "至" : "／") : "") + p).join("") : "") + (q ? "（" + q + "）" : "")
+      : zone + (ps.length ? ": " + ps.map((p, n) => (n ? (seps[n - 1] === "to" ? " – " : " & ") : "") + p).join("") : "") + (q ? " (" + q + ")" : ""));
+    const full = fmt(places);
+    if (fixedOnly) out.name = full;
+    else { out.nameA = full; out.name = fmt(places.filter((p) => !p.startsWith("{a:"))); }
+    if (places.length > 1 && !s.dungeon) {
+      const sh = fmt(places.slice(0, 1)) + " +";
+      if (sh.includes("{a:")) out.shortA = sh; else out.short = sh;
+    }
+    return out;
+  };
+  // 文字裡的任務 ID：只換英文版也換掉的那些（英文的判斷有前後文，避免把經驗值、金額當任務）
+  const locIds = (v, enRaw) => {
+    const hit = new Set();
+    if (enRaw) enIds(enRaw, hit);
+    return v
+      .replace(/(?<!\d)(\d{2})-(?:第\s*(\d+)\s*站|[^\s\d,.;:()（）]+ ?(\d+))/g, (all, p, a, b) => { const x = stations.find((s) => s.id === p + "-" + (a || b)); return (x && station(x).name) || all; })
+      .replace(/(?<![\d.,])(\d{3,6})(?![\d%]|[.,]\d)/g, (all, num, at, whole) => {
+        if (!hit.has(+num)) return all;
+        const name = qnL(+num);
+        return whole.includes(name) ? "" : name;
+      })
+      .replace(/(?<![\d.,])(\d{4})\s+(?=\D{0,8}?\d{1,2}(?:[.,]\d+)?\s*[,，])/g, (all, num) => (MAP_IDS.has(+num) || (+num >= 1400 && +num < 3000) ? "" : all))
+      .replace(/[(（]\s*[)）]/g, "").replace(/\s+([),.;）])/g, "$1").replace(/ {2,}/g, " ").trim();
+  };
+  const TL = (where, zhText) => {
+    const k = txKey(zhText);
+    const v = k && (AT.get(where + "|" + k) ?? ANY.get(k));
+    return v && locIds(v, TX_AT.get(where + "|" + k) ?? TX.get(k));
+  };
+  const T = (where, zhText) => {
+    const k = txKey(zhText);
+    if (!k) return undefined;
+    if (!CJK.test(k.replace(/／/g, "/"))) return N(k.replace(/／/g, "/")); // 原文本來就是英文（目標怪名、物品名）
+    c.text++;
+    const v = TL(where, zhText);
+    if (v) { c.textLoc++; return v; }
+    const e = tx(where, zhText);
+    if (e) c.textEn++;
+    return e;
+  };
+  const clean = (t) => t.replace(/\$[Gg]\s*([^:;]*):[^;]*;/g, "$1").replace(/\$[Bb]/g, " ").replace(/\$[NnCcRr]/g, "").replace(/\s+/g, " ").trim();
+  const genL = (q) => {
+    const mk = q?.en?.mk;
+    if (!mk) return undefined;
+    const parts = [mk.kill.length && F.kill + [...new Set(mk.kill)].map(N).join(F.sep), mk.drop.length && F.loot + [...new Set(mk.drop)].slice(0, 3).map(N).join(F.sep), mk.objsEn.length && F.use + mk.objsEn.map(N).join(F.sep)].filter(Boolean);
+    return parts.length ? parts.join(F.sent) : undefined;
+  };
+  const qd = (id) => {
+    c.qd++;
+    const d = db.l10nObj(id, loc).map(clean).filter(Boolean).join("\n");
+    if (d) { c.qdLoc++; return d; }
+    const q = quests.get(id);
+    return genL(q) || q?.en?.d || q?.en?.gen;
+  };
+  const itemL = (en) => { if (!en) return undefined; const id = db.idByEn("Item", en); return (id !== undefined && db.l10nName("Item", id, loc)) || en; };
+  const routeL = emitRoute({
+    loc, title: ` ${loc} `, T, N, F, cov: newCov(), left: { ...left }, leftAt: [], missNpc: [],
+    station,
+    node: (step) => {
+      const en = NODE_EN[step.node];
+      if (!en) return { node: T(step.where, step.node) };
+      const z = zoneL(en);
+      if (z) return { node: z };
+      const a = AREA_ID.get(en);
+      return a ? { nodeA: `{a:${a[0].id}}` } : { node: en };
+    },
+    tag: (t, where) => { c.tags++; const v = TL(where, t) || F.tags?.[t]; if (v) return v; if (TAG_EN[t]) c.tagsEn++; return TAG_EN[t]; },
+    hint: (q, id) => q && (q.en ? qd(id)?.split("\n")[0] : undefined),
+    qn: (id) => { c.qn++; const v = db.l10nName("Quest", id, loc); if (v) { c.qnLoc++; return v; } return questEn(id); },
+    qName: (id, e) => db.l10nName("Quest", id, loc) || e.n,
+    qd: (id) => qd(id),
+    item: itemL, itemId: (id) => db.l10nName("Item", id, loc) || db.itemEn(id),
+    endDot: zh ? (x) => (/[。！？）.!?)]$/.test(x) ? x : x + "。") : (x) => (/[.!?)]$/.test(x) ? x : x + "."),
+    split: zh
+      ? (t) => t.split(/(?<=[。；！？])|(?<=[.;!?])\s+(?=[A-Z0-9"'(])/).map((x) => x.replace(/[.;。；]$/, "").trim()).filter(Boolean)
+      : (t) => t.split(/(?<=[.;!?])\s+(?=[\p{Lu}\p{Lo}\d"'(«„¿¡])/u).map((x) => x.replace(/[.;]$/, "").trim()).filter(Boolean),
+    route: (text) => text.replace(/\s*[(（][^\d()（）]{0,14}\d+(?:\s*[–\-~～]\s*\d+)?\s*[)）]/g, ""),
+  });
+  writeFileSync(join(dirname(OUT), `Route_${loc}.lua`), routeL);
+  locCov.push([loc, c]);
+}
+for (const [loc, c] of locCov) {
+  console.log(`${loc}：名稱 ${c.namesLoc}/${c.names}（英文 ${c.namesEn.size} 種）、說明文字 ${c.textLoc}/${c.text}（用英文 ${c.textEn}）、任務名 ${c.qnLoc}/${c.qn}、任務目標文字 ${c.qdLoc}/${c.qd}、標籤用英文 ${c.tagsEn}/${c.tags}、站名缺 ${(c.stMiss || []).join("、") || 0}／地點缺 ${c.stPartMiss || 0}；翻譯列不用：亂碼 ${c.rejected.garbled}、字型顯示不了 ${c.rejected.script}（另有審稿標記拿掉 ${c.rejected.mark}）`);
+  if (process.env.LOC_REPORT) writeFileSync(join(process.env.LOC_REPORT, `names-en-${loc}.txt`), [...c.namesEn].sort().join("\n"));
+}
 const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 順序錯誤（已自動調整 ${orderFixes.length}）\n\n${orderFixes.join("\n") || "無"}\n\n## 學技能站（候選站依序，遊戲取第一個本角色有的）\n\n${trainers.map((t) => `- ${t.c} ${t.lv} ${t.npc}（${t.place}）→ ${t.st.slice(0, 4).map((id) => id + " " + stations.find((x) => x.id === id).name).join("、")}`).join("\n") || "無"}\n`;
 writeFileSync(REPORT, report);
 console.log(`順序錯誤已調整 ${orderFixes.length}`);

@@ -7,11 +7,12 @@ C.impl = {} -- 挑到哪個實作（/slv probe 會印）
 -- ── 語系（只在這裡選）─────────────────────────────────────────────────────────
 -- 兩種語言分開：介面語言 uiLoc（字串表 L、路線的顯示文字；/slv lang 可預覽，/reload 後生效）
 -- 和客戶端語言 gameLoc（選取目標的名字、和遊戲文字比對的任務名／NPC 名，一律跟 GetLocale()）。
--- 中文是底稿：L 的鍵就是中文原文，查不到就回傳鍵；其他語言＝ Locales\<locale>.lua 一個檔。
+-- 繁中是底稿：L 的鍵就是繁中原文，查不到就回傳鍵；其他語言（含簡中）＝ Locales\<locale>.lua 一個檔＋ Data\Route_<locale>.lua。
 local CJK = { zhTW = true, zhCN = true }
 MG.Locales = MG.Locales or {}
 MG.gameLoc = GetLocale and GetLocale() or "enUS"
-MG.gameZh = CJK[MG.gameLoc] or false
+MG.gameZh = MG.gameLoc == "zhTW" -- 客戶端就是底稿語言：遊戲裡的名字直接用 Route.lua 的
+MG.gameCJK = CJK[MG.gameLoc] or false -- 客戶端字型有中文字
 local strings
 MG.missingL = {} -- 非中文介面卻查不到翻譯的鍵（/slv probe 會列出）
 MG.L = setmetatable({}, { __index = function(_, k)
@@ -30,12 +31,20 @@ function MG.Pad(s)
   while #fill < n do fill = fill .. FILL end
   return s .. fill:sub(1, n)
 end
--- pref：auto（跟客戶端）／en／zh／stress；沒有該語言的字串表就用英文
+-- /slv lang 接受的代碼（小寫比對）→ 語系
+MG.LANGS = { en = "enUS", enus = "enUS", zh = "zhTW", zhtw = "zhTW", zhcn = "zhCN", dede = "deDE", frfr = "frFR", eses = "esES", esmx = "esMX", ruru = "ruRU", kokr = "koKR", ptbr = "ptBR" }
+-- 沒有字串表的語系：esMX 用 esES，其餘用英文
+local function resolve(loc)
+  if loc == "zhTW" or MG.Locales[loc] then return loc end
+  return loc == "esMX" and MG.Locales.esES and "esES" or "enUS"
+end
+-- pref：auto（跟客戶端）／語言代碼（MG.LANGS）／stress
 function MG.SetLang(pref)
+  pref = type(pref) == "string" and pref:lower() or "auto"
   MG.stress = pref == "stress"
-  local loc = (pref == "en" or MG.stress) and "enUS" or pref == "zh" and "zhTW" or MG.gameLoc
-  if not CJK[loc] and not MG.Locales[loc] then loc = "enUS" end
-  MG.uiLoc, MG.uiZh = loc, CJK[loc] or false
+  local loc = resolve(MG.stress and "enUS" or MG.LANGS[pref] or MG.gameLoc)
+  MG.uiLoc, MG.uiZh, MG.uiCJK, MG.uiKo = loc, loc == "zhTW", CJK[loc] or false, loc == "koKR"
+  MG.sameLang = loc == resolve(MG.gameLoc) -- 介面和客戶端同語言：遊戲給的文字（任務名、目標）可以直接顯示
   strings = not MG.uiZh and MG.Locales[loc] or nil
   if MG.stress and strings then
     local base = strings
@@ -49,21 +58,29 @@ end
 MG.SetLang("auto")
 local L = MG.L
 
--- 非中文介面：任何要顯示的字串都過這裡。漏網的中文字（客戶端字型沒有字，會變方框）拿掉並記下來（/slv probe 列出）；
--- 全形標點換半形；非中文客戶端的字型也缺 ★→●… 這些符號，換成字型有的。
+-- 任何要顯示的字串都過這裡。介面語言顯示不了的字（非中文介面的中文字、非韓文介面的韓文字：字型沒有字，會變方框）拿掉並記下來（/slv probe 列出）；
+-- 非中文介面的全形標點換半形；非中文客戶端的字型也缺 ★→●… 這些符號，換成字型有的。
 local FULL = { ["（"] = " (", ["）"] = ")", ["："] = ": ", ["，"] = ", ", ["、"] = ", ", ["；"] = "; ", ["。"] = ". ", ["／"] = "/", ["｜"] = " | ", ["「"] = "\"", ["」"] = "\"", ["　"] = " " }
 local SYM = { ["★"] = "*", ["→"] = "->", ["●"] = "\226\128\162", ["○"] = "o", ["◎"] = "\194\187", ["‧"] = "\226\128\162", ["√"] = "+", ["▾"] = "", ["┃"] = "|" }
 MG.leaks = {} -- 原文 → true（最多 30 筆）
 local leakN = 0
 function MG.Clean(s)
-  if type(s) ~= "string" or (MG.uiZh and MG.gameZh) or not s:find("[\226-\239]") then return s end
+  if type(s) ~= "string" or (MG.uiCJK and MG.gameCJK) or not s:find("[\226-\239]") then return s end
   local leaked = false
   local out = s:gsub("([\226-\239][\128-\191][\128-\191])", function(c)
-    if not MG.uiZh and FULL[c] then return FULL[c] end
-    if not MG.gameZh and SYM[c] then return SYM[c] end
-    if MG.uiZh then return nil end
+    if not MG.uiCJK and FULL[c] then return FULL[c] end
+    if not MG.gameCJK and SYM[c] then return SYM[c] end
     local b1, b2 = c:byte(1, 2)
-    if (b1 >= 227 and b1 <= 233) or (b1 == 239 and (b2 == 188 or b2 == 189)) then leaked = true; return "" end
+    -- 中日韓漢字、標點、全形字（韓文介面留下韓文相容字母 U+3100–31BF）
+    if (b1 >= 227 and b1 <= 233) or (b1 == 239 and (b2 == 188 or b2 == 189)) then
+      if MG.uiCJK or (MG.uiKo and b1 == 227 and b2 >= 132 and b2 <= 134) then return nil end
+      leaked = true; return ""
+    end
+    -- 韓文音節 U+AC00–D7AF
+    if (b1 == 234 and b2 >= 176) or b1 == 235 or b1 == 236 or (b1 == 237 and b2 <= 158) then
+      if MG.uiKo then return nil end
+      leaked = true; return ""
+    end
   end)
   if leaked and not MG.leaks[s] and leakN < 30 then MG.leaks[s] = true; leakN = leakN + 1 end
   return out
@@ -441,4 +458,14 @@ function C.MapName(map)
     mapNames[map] = info and info.name or false
   end
   return mapNames[map] or nil
+end
+-- 地區名（AreaTable ID，客戶端語言；城鎮、副本）
+local areaNames = {}
+function C.AreaName(id)
+  if not id then return nil end
+  if areaNames[id] == nil then
+    local name = C_Map and C_Map.GetAreaInfo and MG.try("地區名", C_Map.GetAreaInfo, id)
+    areaNames[id] = type(name) == "string" and name ~= "" and name or false
+  end
+  return areaNames[id] or nil
 end
