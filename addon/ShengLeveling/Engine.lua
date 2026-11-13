@@ -1032,10 +1032,14 @@ function E.QuickDone(step)
 end
 
 function E.DungeonDone(d)
+  local any = false
   for _, step in ipairs(d.list) do
-    if step.s.ph == "post" and step.s.q and not turned(step.s.q) then return false end
+    if step.s.ph == "post" and step.s.q then
+      any = true
+      if not turned(step.s.q) then return false end
+    end
   end
-  return true
+  return any -- 沒有出本要交的任務（例如厄運之槌北區）就不算「已過」，交給等級判斷
 end
 
 -- 前置任務：{ total, accepted }（接受或已交都算）
