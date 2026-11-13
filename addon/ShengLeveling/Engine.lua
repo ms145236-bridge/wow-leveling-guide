@@ -1138,6 +1138,16 @@ function E.DungeonByInstance(id)
   for _, d in ipairs(E.dungeons) do
     for _, i in ipairs(d.inst or {}) do if i == id then all[#all + 1] = d; break end end
   end
+  -- 同一個副本 ID 有好幾區（例如血色修道院：墓地、圖書館、軍械庫、大教堂）：用目前區域文字挑出所在的那一區
+  if #all > 1 then
+    local here = table.concat({ GetSubZoneText and GetSubZoneText() or "", GetMinimapZoneText and GetMinimapZoneText() or "", GetZoneText and GetZoneText() or "" }, " ")
+    for k, d in ipairs(all) do
+      local wing = tostring(d.name or ""):match("(%S+)$")
+      if wing and wing ~= d.name and here:find(wing, 1, true) then
+        table.remove(all, k); table.insert(all, 1, d); break
+      end
+    end
+  end
   return all[1], all
 end
 
