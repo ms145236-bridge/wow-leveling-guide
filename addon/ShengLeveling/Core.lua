@@ -167,7 +167,7 @@ for _, st in ipairs(R.stations) do
 end
 -- 路線上的任務；可跳過的只在設定開啟或已在日誌時算
 local function inRoute(id)
-  return id and id > 0 and R.quests[id] ~= nil and not (optQ[id] and not UI.Get("optional") and not C.IsOnQuest(id))
+  return id and not (issecretvalue and issecretvalue(id)) and id > 0 and R.quests[id] ~= nil and not (optQ[id] and not UI.Get("optional") and not C.IsOnQuest(id))
 end
 
 -- 安全網：打開目前「接」步驟的 NPC，卻沒有這個任務可接 → 先跳過（升級或交任務後再看）。
@@ -278,11 +278,14 @@ local function onEvent(_, event, ...)
     ready = true
   elseif event == "QUEST_ACCEPTED" then
     local args = {}
-    for i = 1, select("#", ...) do args[i] = tostring((select(i, ...))) end
+    for i = 1, select("#", ...) do
+      local v = select(i, ...)
+      args[i] = issecretvalue and issecretvalue(v) and "secret" or tostring(v)
+    end
     trace.QUEST_ACCEPTED = table.concat(args, ", ")
   elseif event == "QUEST_TURNED_IN" then
     local id = ...
-    if type(id) == "number" then
+    if type(id) == "number" and not (issecretvalue and issecretvalue(id)) then
       E.session[id] = true
       wipe(MG.db.notNow) -- 交了任務：暫時接不到的重新看
       trace.QUEST_TURNED_IN = id .. "，事件當下已標記完成：" .. tostring(C.IsTurnedIn(id))

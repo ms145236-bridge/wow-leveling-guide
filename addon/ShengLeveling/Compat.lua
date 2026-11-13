@@ -161,14 +161,15 @@ pick("LogQuestIDs",
     return out
   end)
 
--- 回 map, x, y（x/y 為 0–100）
+-- 回 map, x, y（x/y 為 0–100）；副本或限制中讀到秘密值就當讀不到
 pick("Position",
   "C_Map.GetPlayerMapPosition", fn(C_Map, "GetBestMapForUnit") and fn(C_Map, "GetPlayerMapPosition") and function()
     local map = C_Map.GetBestMapForUnit("player")
-    if not map then return nil end
+    if not map or (issecretvalue and issecretvalue(map)) then return nil end
     local pos = C_Map.GetPlayerMapPosition(map, "player")
     if not pos then return map end
     local x, y = pos:GetXY()
+    if issecretvalue and (issecretvalue(x) or issecretvalue(y)) then return map end
     return map, x and x * 100, y and y * 100
   end)
 

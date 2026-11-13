@@ -164,14 +164,18 @@ f:SetScript("OnEvent", function(_, event, ...)
   MG.try("記錄", function(...)
     if event == "QUEST_DETAIL" or event == "QUEST_COMPLETE" then
       local id = GetQuestID and GetQuestID()
+      if secret(id) then return end
       local title = GetTitleText and GetTitleText()
       npcCache[id or 0] = quest(event == "QUEST_DETAIL" and "detail" or "complete", id, title)
     elseif event == "QUEST_ACCEPTED" then
       local n = select("#", ...)
       local id = n > 0 and select(n, ...) -- 經典式 (logIndex, questID)；新式 (questID)
+      if secret(id) then return end
       quest("accept", id, nil, npcCache[id])
     elseif event == "QUEST_TURNED_IN" then
       local id, gain, money = ...
+      if secret(id) then return end
+      if secret(gain) then gain = nil end
       local who = npcCache[id] or npc()
       local map, x, y = pos()
       add("turnin", { id, who.id ~= "" and who.id or who.name }, C.Title(id), who.name, who.kind, map, x, y, gain, money)
