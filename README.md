@@ -12,8 +12,11 @@
 
 ## 安裝
 
-把 `addon/MetroGuide` 複製到
-`World of Warcraft\_forever_\Interface\AddOns\MetroGuide`，完整重開遊戲。
+1. 下載 [MetroGuide.zip](https://github.com/ms145236-bridge/wow-leveling-guide/releases/latest/download/MetroGuide.zip)（每次更新自動重新打包）
+2. 解壓縮，把 `MetroGuide` 資料夾放進 `World of Warcraft\_forever_\Interface\AddOns\`
+3. 完整重開遊戲
+
+建議一併安裝 Questie（世界地圖標點）和 WaypointUI（箭頭）；沒裝也能用，只是少了這兩項。
 
 遊戲內指令：`/metro`、`/metro config`、`/metro probe`、`/metro macro`。
 

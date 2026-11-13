@@ -1,0 +1,34 @@
+name: 打包插件
+
+on:
+  push:
+    branches: [main]
+    paths: ["addon/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 壓縮
+        run: |
+          cd addon
+          zip -r ../MetroGuide.zip MetroGuide
+      - name: 更新「最新版」發佈
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ver=$(grep -m1 '^## Version:' addon/MetroGuide/MetroGuide.toc | cut -d' ' -f3 | tr -d '\r')
+          notes="版本 ${ver}（${GITHUB_SHA::7}）。解壓縮後把 MetroGuide 資料夾放進 World of Warcraft\\_forever_\\Interface\\AddOns，完整重開遊戲。"
+          if gh release view latest >/dev/null 2>&1; then
+            gh release upload latest MetroGuide.zip --clobber
+            gh release edit latest --title "最新版 ${ver}" --notes "$notes"
+          else
+            gh release create latest MetroGuide.zip --title "最新版 ${ver}" --notes "$notes" --latest
+          fi
+          git tag -f latest
+          git push -f origin latest
