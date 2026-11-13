@@ -2,9 +2,9 @@
 local _, MG = ...
 local C = {}
 MG.C = C
-C.impl = {} -- 挑到哪個實作（/metro probe 會印）
+C.impl = {} -- 挑到哪個實作（/lv probe 會印）
 
-function MG.msg(s) DEFAULT_CHAT_FRAME:AddMessage("|cffd9b25f地鐵升級|r " .. tostring(s)) end
+function MG.msg(s) DEFAULT_CHAT_FRAME:AddMessage("|cffd9b25f布里居練等幫手|r " .. tostring(s)) end
 
 local reported = {}
 local function after(where, ok, ...)

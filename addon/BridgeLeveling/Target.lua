@@ -3,13 +3,13 @@
 -- 這個客戶端的限制：SetRaidTarget 是受保護函式；目標相關 API（GetRaidTargetIndex 等）回傳「秘密值」，插件不能比較。
 -- 所以插件只寫巨集文字，不讀目標狀態：標記、選取都由遊戲執行巨集完成。
 -- 巨集文字只能在戰鬥外更新（按鈕屬性與 EditMacro 都是），戰鬥中有變動就等脫離戰鬥。
-local _, MG = ...
+local ADDON_NAME, MG = ...
 local C = MG.C
 local T = {}
 MG.T = T
 T.MARKS = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" }
 
-BINDING_HEADER_METROGUIDE = "地鐵升級"
+BINDING_HEADER_METROGUIDE = "布里居練等幫手"
 _G["BINDING_NAME_CLICK MetroGuideTargetButton:LeftButton"] = "選取任務目標"
 
 local btn, pending, rot, names, key = nil, false, 0, {}, ""
@@ -95,8 +95,8 @@ T.MacroText = macro
 local MACRO, OLD_MACRO = "任務目標", "地鐵目標"
 local ICON = "Ability_Hunter_SniperShot"
 local function emptyText()
-  if T.objNote then return "/run print(\"地鐵升級：目標是地上的物件（" .. T.objNote .. "），無法選取\")" end
-  return "/run print(\"地鐵升級：目前步驟沒有要選的目標\")"
+  if T.objNote then return "/run print(\"布里居練等幫手：目標是地上的物件（" .. T.objNote .. "），無法選取\")" end
+  return "/run print(\"布里居練等幫手：目前步驟沒有要選的目標\")"
 end
 local function macroBody()
   local text = macro()
@@ -236,9 +236,9 @@ function T.Create(bar)
   end
   f:SetScript("OnEvent", function(_, event, name, ...)
     if event == "ADDON_ACTION_FORBIDDEN" or event == "ADDON_ACTION_BLOCKED" then
-      if name == "MetroGuide" and not T.blocked then
+      if name == ADDON_NAME and not T.blocked then
         T.blocked = (...) or "?"
-        MG.msg("遊戲擋下了插件的動作（" .. tostring(T.blocked) .. "），請用 /metro probe 回報。")
+        MG.msg("遊戲擋下了插件的動作（" .. tostring(T.blocked) .. "），請用 /lv probe 回報。")
       end
     elseif event == "PLAYER_TARGET_CHANGED" then
       T.stats.lastTarget = GetTime() -- 只記時間，不讀目標（目標的資料可能是秘密值）

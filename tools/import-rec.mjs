@@ -1,5 +1,5 @@
 // 讀遊戲內記錄 → tools/rec-report.md。不改路線 md，只列建議。
-// 用法：node tools/import-rec.mjs <MetroGuide.lua 存檔 或 /metro rec export 貼出的文字檔>
+// 用法：node tools/import-rec.mjs <BridgeLeveling.lua 存檔 或 /lv rec export 貼出的文字檔>
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const src = process.argv[2];
 if (!src) {
-  console.error("用法：node tools/import-rec.mjs <WTF\\Account\\<帳號>\\SavedVariables\\MetroGuide.lua 或匯出文字檔>");
+  console.error("用法：node tools/import-rec.mjs <WTF\\Account\\<帳號>\\SavedVariables\\BridgeLeveling.lua 或匯出文字檔>");
   process.exit(1);
 }
 
@@ -81,7 +81,7 @@ if (at >= 0) {
   lines = raw.split(/\r?\n/).filter((l) => l.includes("\t@\t")).map((l) => l.replace(/\|\|/g, "|"));
 }
 
-const routeText = readFileSync(join(ROOT, "addon", "MetroGuide", "Data", "Route.lua"), "utf8");
+const routeText = readFileSync(join(ROOT, "addon", "BridgeLeveling", "Data", "Route.lua"), "utf8");
 const route = parseLua(routeText, routeText.indexOf("{", routeText.indexOf("MG.Route")));
 const quests = {};
 for (const [k, v] of Object.entries(route.quests)) if (k !== "_") quests[k] = v;

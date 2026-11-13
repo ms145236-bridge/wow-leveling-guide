@@ -1,0 +1,22 @@
+## Interface: 16001
+## Title: |cff4fc3f7Bridge|rLeveling
+## Title-zhTW: |cff4fc3f7布里居|r練等幫手
+## Notes: Horde 1-60 leveling route guide: one step at a time, auto-syncs with your quest log. /lv
+## Notes-zhTW: 部落 1–60 練等路線：一次只顯示一步，任務狀態一變就自動對齊。/lv 開關、/lv probe 檢查報告
+## Author: ms145236-bridge
+## Version: 0.2.0
+## X-Series: Bridge
+## OptionalDeps: WaypointUI
+## SavedVariables: MetroGuideDB, MetroGuideRecDB
+## SavedVariablesPerCharacter: MetroGuideCharDB
+
+Compat.lua
+Data\Route.lua
+Engine.lua
+Nav.lua
+UI.lua
+Target.lua
+Item.lua
+Map.lua
+Core.lua
+Rec.lua
