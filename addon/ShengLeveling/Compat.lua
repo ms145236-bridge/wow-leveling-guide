@@ -20,12 +20,31 @@ MG.L = setmetatable({}, { __index = function(_, k)
   if strings and type(k) == "string" and k:find("[\227-\233]") then MG.missingL[k] = true end -- 只記中文鍵
   return k
 end })
--- pref：auto（跟客戶端）／en／zh；沒有該語言的字串表就用英文
+-- 壓力語言（/slv lang stress）：英文字串後面補約 35% 長度的填充字，用來檢查版面放不放得下
+local FILL = " xxxx yyyyy zzz wwwwww xxx yyyy zzzzz wwww xxxxx yyy zzzz wwwww"
+function MG.Pad(s)
+  if not MG.stress or type(s) ~= "string" then return s end
+  local n = math.ceil(#s:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", "") * 0.35)
+  if n < 2 then return s end
+  local fill = FILL
+  while #fill < n do fill = fill .. FILL end
+  return s .. fill:sub(1, n)
+end
+-- pref：auto（跟客戶端）／en／zh／stress；沒有該語言的字串表就用英文
 function MG.SetLang(pref)
-  local loc = pref == "en" and "enUS" or pref == "zh" and "zhTW" or MG.gameLoc
+  MG.stress = pref == "stress"
+  local loc = (pref == "en" or MG.stress) and "enUS" or pref == "zh" and "zhTW" or MG.gameLoc
   if not CJK[loc] and not MG.Locales[loc] then loc = "enUS" end
   MG.uiLoc, MG.uiZh = loc, CJK[loc] or false
   strings = not MG.uiZh and MG.Locales[loc] or nil
+  if MG.stress and strings then
+    local base = strings
+    strings = setmetatable({}, { __index = function(t, k)
+      local v = base[k]
+      if v then v = MG.Pad(v); t[k] = v end
+      return v
+    end })
+  end
 end
 MG.SetLang("auto")
 local L = MG.L
@@ -308,7 +327,10 @@ function C.OpenOptions(frame)
     MG.try("設定頁", InterfaceOptionsFrame_OpenToCategory, frame)
     MG.try("設定頁", InterfaceOptionsFrame_OpenToCategory, frame) -- 舊版第一次常開錯頁
   else
-    frame:SetParent(UIParent); frame:SetSize(300, 340); frame:ClearAllPoints(); frame:SetPoint("CENTER"); frame:Show()
+    -- 沒有設定 API：直接顯示，大小夾在螢幕內（設定頁顯示時會照這個寬度排版）
+    frame:SetParent(UIParent)
+    frame:SetSize(math.min(640, (UIParent:GetWidth() or 680) - 40), math.min(560, (UIParent:GetHeight() or 600) - 40))
+    frame:ClearAllPoints(); frame:SetPoint("CENTER"); frame:Show()
   end
 end
 

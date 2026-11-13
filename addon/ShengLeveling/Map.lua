@@ -50,7 +50,7 @@ local function getPin()
       MG.UI.StepTooltip(self, first.step.s, MG.L["第 %s 步｜"]:format(table.concat(nums, MG.L["、"])))
       for k = 2, #self.group do
         local s = self.group[k].step.s
-        MG.UI.TipLine(self.group[k].n .. "  " .. (E.VERB[s.t] or "") .. " " .. E.Title(s))
+        MG.UI.TipLine(self.group[k].n .. "  " .. E.VerbTitle(s))
       end
       GameTooltip:Show()
     end)

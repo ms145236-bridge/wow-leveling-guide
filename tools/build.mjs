@@ -255,13 +255,14 @@ for (const file of files.filter((f) => !sideFile(f))) {
       if (ent) {
         const c = parseCoord(ent[1]);
         const zone = Object.keys(ZONE_MAP).find((z) => ent[1].includes(z));
-        st.entrance = { text: ent[1].replace(/【[^】]*】/g, "").replace(/(^|\s)\d{3,5}\s+(?=約?\s*\d)/, "$1").replace(/\s+/g, " ").trim(), map: c?.map || (zone && ZONE_MAP[zone]), x: c?.x, y: c?.y };
+        st.entrance = { raw: ent[1], where, text: ent[1].replace(/【[^】]*】/g, "").replace(/(^|\s)\d{3,5}\s+(?=約?\s*\d)/, "$1").replace(/\s+/g, " ").trim(), map: c?.map || (zone && ZONE_MAP[zone]), x: c?.x, y: c?.y };
         return;
       }
       // 前置接取路線：一行文字；其中「0X-第N站」或「第N站」當建議提早接的站
       const pk = line.match(/^\s*-\s*前置接取路線[｜：:]\s*(.+)$/);
       if (pk) {
         st.pickupRaw = pk[1].trim();
+        st.pickupAt = where;
         st.pickup = pk[1].replace(/【[^】]*】/g, "").trim();
         const at = pk[1].match(/(?:(\d+)\s*-\s*)?第(\d+)站/);
         if (at) st.pickAt = (at[1] || st.after.split("-")[0]) + "-" + at[2];
@@ -287,7 +288,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
     if (dang) {
       const f = dang[1].replace(/【[^】]*】/g, "").split("｜").map((x) => x.trim());
       const c = parseCoord(f[1]);
-      if (f[0] && c) (st.danger ||= []).push({ text: f[0], map: c.map || st.map, x: c.x, y: c.y });
+      if (f[0] && c) { (st.danger ||= []).push({ text: f[0], map: c.map || st.map, x: c.x, y: c.y }); (st.dangerAt ||= []).push(where); } // danger 整個輸出到 Route.lua，出處另記
       else warn(where, "危險格式看不懂：" + dang[1].slice(0, 40));
       return;
     }
@@ -299,7 +300,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
       const f = gr[1].replace(/【[^】]*】/g, "").split("｜").map((x) => x.trim());
       const lv = (f[1] || "").match(/(\d+)\s*[-–~－]\s*(\d+)/);
       const c = parseCoord(f[2]);
-      if (lv && c) (st.grind ||= []).push({ mob: f[0], lv: [+lv[1], +lv[2]], map: c.map || st.map, x: c.x, y: c.y, note: f[3] });
+      if (lv && c) (st.grind ||= []).push({ mob: f[0], lv: [+lv[1], +lv[2]], map: c.map || st.map, x: c.x, y: c.y, note: f[3], where });
       else warn(where, "練怪格式看不懂：" + gr[1].slice(0, 40));
       return;
     }
@@ -307,7 +308,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
     if (route) {
       // 去掉來源標籤和「（12）」這類步驟編號
       const text = route[1].replace(/【[^】]*】/g, "").replace(/[（(]第?\s*\d+(?:\s*[–-]\s*\d+)?\s*步?[）)]/g, "").trim();
-      if (text) st.tips.push({ k: "動線", raw: text, text });
+      if (text) st.tips.push({ k: "動線", raw: text, text, where, src: route[1] });
       return;
     }
     const meta = line.match(/^\s*-\s*(限定|二選一|地圖\s*ID|交通|取捨|提醒|未完|說明)｜(.*)$/);
@@ -318,7 +319,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
       else if (key === "二選一" && v !== "無") st.alt = v;
       else if (key.startsWith("地圖")) st.map = +v || undefined;
       else if (key === "未完") warn(`${st.id} ${st.name}`, `未完：${v}`);
-      else if (key !== "限定" && key !== "二選一") st.tips.push({ k: key, raw: v, text: v.replace(/【[^】]*】/g, "").trim() });
+      else if (key !== "限定" && key !== "二選一") st.tips.push({ k: key, raw: v, text: v.replace(/【[^】]*】/g, "").trim(), where });
       return;
     }
     const sm = line.match(/^\s*(?:\d+\s*[.、)]\s*|[-*]\s*)?(交通|接|做|交|到|鳥|爐|飛|船|練|註)｜(.*)$/);
@@ -730,6 +731,7 @@ idFile = "任務表";
 // ── 06 路線外任務：任務ID｜任務名｜等級｜區域｜判定｜理由 ──
 const VERDICT = new Set(["值得做", "之後順路", "可放掉"]);
 const offroute = new Map();
+const offAt = new Map(); // 任務 ID → 出處（英文理由用；offroute 整個輸出到 Route.lua）
 for (const file of files.filter((f) => /^06-/.test(f))) {
   readFileSync(join(ROUTE, file), "utf8").split(/\r?\n/).forEach((line, li) => {
     const m = line.match(/^\s*-?\s*(\d+)｜(.*)$/);
@@ -738,6 +740,7 @@ for (const file of files.filter((f) => /^06-/.test(f))) {
     if (!VERDICT.has(f[3])) return warn(`${file}:${li + 1}`, "判定看不懂：" + f[3]);
     if (quests.has(+m[1])) warn(`${file}:${li + 1}`, `任務 ${m[1]} 在路線上，路線外判定不會用到`);
     offroute.set(+m[1], { v: f[3], why: f[4] || undefined });
+    offAt.set(+m[1], `${file}:${li + 1}`);
   });
 }
 // 路線外但是路線任務的前置 → 值得做（接後續）
@@ -783,12 +786,14 @@ for (const file of files.filter((f) => /^07-/.test(f))) {
 }
 // ── 08 保留物品：物品名｜物品ID｜何時拿到｜何時用到（用到的任務 ID 寫在文字裡就會在任務交掉後不再提示） ──
 const keep = new Map();
+const keepAt = new Map(); // 物品 ID → 出處（英文用途用）
 for (const file of files.filter((f) => /^08-/.test(f))) {
   readFileSync(join(ROUTE, file), "utf8").split(/\r?\n/).forEach((line, li) => {
     const f = line.replace(/^\s*-\s*/, "").split("｜").map((x) => x.trim());
     if (f.length < 4 || !/^\d+$/.test(f[1])) return;
     const q = [...f[3].matchAll(/\d{2,6}/g)].map((m) => +m[0]).find((n) => quests.has(n));
     keep.set(+f[1], { n: f[0], use: f[3].replace(/【[^】]*】/g, "").trim(), q });
+    keepAt.set(+f[1], `${file}:${li + 1}`);
   });
 }
 const luaMap = (m) => (m.size ? "{" + [...m].map(([k, v]) => `[${k}]=${lua(v)}`).join(", ") + "}" : "nil"); // 數字鍵（任務 ID）
@@ -825,7 +830,68 @@ const reverseGame = Object.fromEntries(Object.entries(GAME_NAME).map(([a, b]) =>
 const npcEn = (n) => { const c = cleanName(n); return c ? mdName(c) || db.enByZh("Npc", c) || (reverseGame[c] && db.enByZh("Npc", reverseGame[c])) : undefined; };
 const questEn = (id) => quests.get(id)?.en?.n || db.quest(id)?.en;
 const missNpc = [];
-const cov = { steps: 0, hint: 0, hintGen: 0, tgtNeed: 0, tgt: 0, npcNeed: 0, npc: 0, stName: 0, stations: 0, quests: 0, qName: 0, qObj: 0, zhOnly: { desc: 0, tips: 0, travelText: 0, note: 0, grindNote: 0, danger: 0, offrouteWhy: 0, pickup: 0, keepUse: 0, tag: 0, star: 0 } };
+// 英文短站名（清單、站名列用；全名在滑鼠提示）：24 字內用全名；否則「區域: 地點」依序去掉開頭 The、括號說明、「&」之後的地點（留「+」），再不行只留地點
+const SHORT_MAX = 24;
+const shortEn = (n) => {
+  if (!n || n.length <= SHORT_MAX) return undefined;
+  const noThe = (x) => x.replace(/^The /, "");
+  const bare = (x) => x.replace(/\s*\(.*\)$/, "");
+  const sep = n.indexOf(": ");
+  const zone = sep > 0 ? noThe(n.slice(0, sep)) + ": " : "";
+  const place = sep > 0 ? n.slice(sep + 2) : n;
+  const parts = bare(place).split(/ & | to /);
+  const first = parts[0] + (parts.length > 1 ? " +" : "");
+  const tries = [noThe(n), zone + bare(place), zone + first, bare(place), first, parts[0]];
+  return tries.find((x) => x.length <= SHORT_MAX) || parts[0];
+};
+// 說明文字英文（tools/route-text-enUS.md，Codex 翻）：檔名:行號｜類型｜中文原文｜英文（原文裡有｜時，前兩個和最後一個｜切欄）
+// 先比對「檔名:行號＋原文」，再只比對原文；比對時去掉【】標記與多餘空白。英文還有中日韓字的列不用（英文介面不顯示）
+const txKey = (s) => String(s || "").replace(/【[^】]*】/g, "").replace(/\s+/g, " ").trim();
+const CJK = /[　-〿぀-ヿ㐀-鿿가-힯＀-￯]/;
+const TX_ROWS = [], TX_AT = new Map(), TX = new Map(), txUsed = new Set();
+for (const line of readFileSync(join(ROOT, "tools", "route-text-enUS.md"), "utf8").split(/\r?\n/)) {
+  const f = line.split("｜");
+  if (f.length < 4 || !/\.md:\d+$/.test(f[0])) continue;
+  const row = { at: f[0], type: f[1], zh: txKey(f.slice(2, -1).join("｜")), en: f[f.length - 1].trim() };
+  TX_ROWS.push(row);
+  if (!row.zh || !row.en || CJK.test(row.en)) continue;
+  TX_AT.set(row.at + "|" + row.zh, row.en);
+  if (!TX.has(row.zh)) TX.set(row.zh, row.en);
+}
+// 英文裡的任務 ID → 英文任務名（名字已寫在旁邊就只拿掉 ID）；「02-Stop 8」→ 英文站名；座標前的地圖 ID 拿掉
+const enIds = (t) => t
+  .replace(/\b(\d{2})-Stop (\d+)/g, (all, p, n) => { const x = stations.find((s) => s.id === p + "-" + n); return (x && (STATION_EN[safeText(x.name)] || x.en)) || all; })
+  .replace(/(?<![\d.\w×]|level |Level |lv\.? )(\d{3,6})(?![\d%]|[.,]\d|\s*(?:×|x\d)|\s*(?:experience|exp|xp|XP|gold|g)\b|\s+(?:[Aa]bout|[Aa]pprox\w*\.? )?\d+[.,]\d)/g, (all, num, at, whole) => {
+    const id = +num;
+    const name = !MAP_IDS.has(id) && db.quest(id) && questEn(id);
+    if (!name) return all;
+    const before = whole.slice(0, at).replace(/[\s("]+$/, ""), after = whole.slice(at + num.length).replace(/^[\s("]+/, "");
+    return before.endsWith(name) || after.startsWith(name) ? "" : name;
+  })
+  .replace(/(?<![\d.])(\d{4})\s+(?=(?:about |approx\w*\.? )?\d{1,2}(?:\.\d+)?\s*,)/gi, (all, num) => (MAP_IDS.has(+num) || (+num >= 1400 && +num < 3000) ? "" : all))
+  .replace(/\(\s*\)/g, "").replace(/\s+([),.;])/g, "$1").replace(/ {2,}/g, " ").trim();
+const tx = (where, zh) => {
+  const k = txKey(zh);
+  if (k && !CJK.test(k.replace(/／/g, "/"))) return k.replace(/／/g, "/"); // 原文本來就是英文（目標怪名、物品名）
+  const en = k && (TX_AT.get(where + "|" + k) ?? TX.get(k));
+  if (!en) return undefined;
+  txUsed.add(k);
+  return enIds(en);
+};
+// 英文句子（站的提醒、前置接取路線）：中文每句有種族／職業條件時，句數相同就逐句對上；全部同條件就整段套；對不上就不帶條件
+const enSplit = (t) => t.split(/(?<=[.;!?])\s+(?=[A-Z0-9"'(])/).map((x) => x.replace(/[.;]$/, "").trim()).filter(Boolean);
+const enSents = (zhRaw, en, join) => {
+  const whens = sentences(zhRaw).map((x) => x[1]);
+  const same = whens.every((w) => JSON.stringify(w) === JSON.stringify(whens[0]));
+  if (join && same) return whens[0] ? [[en, whens[0]]] : undefined; // 交通、取捨：介面整段接成一句
+  const es = enSplit(en);
+  if (es.length === whens.length) return es.map((x, i) => (whens[i] ? [x, whens[i]] : [x]));
+  if (!same) cov.whenLost++;
+  return es.map((x) => (same && whens[0] ? [x, whens[0]] : [x]));
+};
+const cov = { steps: 0, hint: 0, hintGen: 0, tgtNeed: 0, tgt: 0, npcNeed: 0, npc: 0, stName: 0, stations: 0, quests: 0, qName: 0, qObj: 0, whenLost: 0, zhOnly: { desc: 0, tips: 0, travelText: 0, note: 0, grindNote: 0, danger: 0, offrouteWhy: 0, pickup: 0, entrance: 0, keepUse: 0, tag: 0, star: 0 } };
+const leftAt = []; // 翻了之後仍只有中文的步驟欄位（TX_MISS 報告用）
+const left = Object.fromEntries(Object.keys(cov.zhOnly).map((k) => [k, 0])); // 翻了之後仍只有中文（英文介面不顯示）
 let en = `-- 由 tools/build.mjs 產生，勿手改。Route.lua 的英文名稱與說明（站 ID→步驟序號、任務 ID）\nlocal _, MG = ...\nMG.RouteL = MG.RouteL or {}\nMG.RouteL.enUS = {\n  stations = {\n`;
 for (const s of stations) {
   cov.stations++;
@@ -850,21 +916,71 @@ for (const s of stations) {
       if (!e.hint) { cov.hint--; e.hint = "Complete the quest objectives."; }
     } else if (step.t === "need") e.text = "Prerequisite: " + (questEn(step.id) || "quest " + step.id);
     else if (step.t === "travel" && /^前往 .+ 入口$/.test(step.text || "")) e.text = (name || "Dungeon") + " entrance";
-    else if (step.t === "travel" || step.t === "goto") cov.zhOnly.travelText++;
-    else if (step.t === "note") cov.zhOnly.note++;
-    if (step.t === "fp") e.node = NODE_EN[step.node];
-    if (step.tag) { e.tag = tagEn(step.tag); if (!e.tag) cov.zhOnly.tag++; }
-    if (step.desc) cov.zhOnly.desc++;
+    else if (step.t === "travel" || step.t === "goto" || step.t === "note") {
+      const kind = step.t === "note" ? "note" : "travelText";
+      cov.zhOnly[kind]++;
+      e.text = step.text && tx(step.where, step.text);
+      if (!e.text) left[kind]++;
+    }
+    if (step.t === "fp") e.node = NODE_EN[step.node] || tx(step.where, step.node);
+    if (step.tag) {
+      // 標籤：固定對照（TAG_EN）＞翻譯檔；「目標：…」「提醒：…」翻內容
+      const parts = step.tag.split(/\s*・\s*/).map((t) => t.trim()).filter(Boolean).map((t) => {
+        if (TAG_EN[t]) return TAG_EN[t];
+        const m = t.match(/^(目標|提醒)[：:]\s*(.+)$/);
+        const x = tx(step.where, m ? m[2] : t);
+        return x && (m && m[1] === "目標" ? "Target: " + x : x);
+      });
+      if (!tagEn(step.tag)) cov.zhOnly.tag++;
+      if (parts.some((x) => !x)) { left.tag++; leftAt.push(step.where + "｜標籤｜" + step.tag); }
+      e.tag = parts.some(Boolean) ? [...new Set(parts.filter(Boolean))].join(", ") : undefined;
+    }
+    if (step.desc) {
+      // 說明是【說明：】【位置：】【順序：】用「；」接起來的（每段自己也可能有「；」）：從頭找最長對得上的一段
+      cov.zhOnly.desc++;
+      const segs = step.desc.split("；"), parts = [];
+      for (let i = 0; i < segs.length;) {
+        let j = segs.length, hit;
+        for (; j > i && !hit; j--) {
+          const d = segs.slice(i, j).join("；"), m = d.match(/^(位置|順序)：(.*)$/s);
+          const x = tx(step.where, m ? m[2] : d);
+          hit = x && (m ? (m[1] === "位置" ? "Location: " : "Order: ") : "") + x;
+        }
+        parts.push(hit);
+        i = hit ? j + 1 : i + 1;
+      }
+      if (parts.some((x) => !x)) { left.desc++; leftAt.push(step.where + "｜說明｜" + step.desc); }
+      e.desc = parts.some(Boolean) ? parts.filter(Boolean).map((x) => (/[.!?)]$/.test(x) ? x : x + ".")).join(" ") : undefined;
+    }
     if (step.preText) { const ids = [...step.preText.matchAll(/\d{2,6}/g)].map((m) => +m[0]).filter((x) => db.quest(x)); e.preText = ids.length ? ids.map(questEn).join(", ") : undefined; }
-    if (step.star) { const n = db.enByZh("Item", step.star[0]); e.star = n ? [n, ...step.star.slice(1)] : undefined; if (!n) cov.zhOnly.star++; }
+    if (step.star) {
+      const n = db.enByZh("Item", step.star[0]);
+      if (!n) cov.zhOnly.star++;
+      const n2 = n || tx(step.where, step.star[0]);
+      if (!n2) { left.star++; leftAt.push(step.where + "｜★｜" + step.star[0]); }
+      e.star = n2 ? [n2, ...step.star.slice(1)] : undefined;
+    }
     steps[k] = e;
   }
-  cov.zhOnly.tips += s.tips.length; cov.zhOnly.pickup += s.pickup ? 1 : 0;
+  cov.zhOnly.tips += s.tips.length; cov.zhOnly.pickup += s.pickup ? 1 : 0; cov.zhOnly.entrance += s.entrance ? 1 : 0;
   cov.zhOnly.grindNote += (s.grind || []).filter((g) => g.note).length;
   cov.zhOnly.danger += (s.danger || []).length;
-  const grind = {}; (s.grind || []).forEach((g, i) => { grind[i + 1] = { mob: npcEn(g.mob) }; });
+  // 站的提醒／交通／取捨／說明／動線（k 是判斷用，保持中文）；翻不到的整條不放
+  const tips = s.tips.map((t) => {
+    const text = tx(t.where, t.raw) || (t.src && tx(t.where, t.src));
+    if (!text) { left.tips++; return undefined; }
+    if (t.k === "動線") return { k: t.k, text: text.replace(/\s*\((?:steps? )?\d+(?:\s*[–-]\s*\d+)?\)/gi, "") };
+    return { k: t.k, text, s: enSents(t.raw, text, t.k === "交通" || t.k === "取捨") };
+  }).filter(Boolean);
+  const pickup = s.pickupRaw && tx(s.pickupAt, s.pickupRaw);
+  if (s.pickup && !pickup) left.pickup++;
+  // 入口：介面只用括號裡的分區門說明（區域、座標另外取）；地圖 ID 由 enIds 拿掉
+  const entrance = s.entrance && tx(s.entrance.where, s.entrance.raw);
+  if (s.entrance && !entrance) left.entrance++;
+  const danger = {}; (s.danger || []).forEach((d, i) => { danger[i + 1] = tx(s.dangerAt[i], d.text); if (!danger[i + 1]) left.danger++; });
+  const grind = {}; (s.grind || []).forEach((g, i) => { const note = g.note && tx(g.where, g.note); if (g.note && !note) left.grindNote++; grind[i + 1] = { mob: npcEn(g.mob), note }; });
   const supply = {}; (s.supply || []).forEach((x, i) => { supply[i + 1] = { npc: x.npc && npcEn(x.npc) }; });
-  en += `    [${JSON.stringify(s.id)}] = ${plain({ name, grind, supply, steps })},\n`;
+  en += `    [${JSON.stringify(s.id)}] = ${plain({ name, short: s.dungeon ? undefined : shortEn(name), entrance, pickup, pickupS: pickup && enSents(s.pickupRaw, pickup), tips, danger, grind, supply, steps })},\n`;
 }
 en += `  },\n  quests = {\n`;
 for (const [id, q] of [...quests.entries()].sort((a, b) => a[0] - b[0])) {
@@ -873,17 +989,23 @@ for (const [id, q] of [...quests.entries()].sort((a, b) => a[0] - b[0])) {
   if (e.n) cov.qName++;
   if (e.d) cov.qObj++;
   let star;
-  if (q.star) { const n = db.enByZh("Item", q.star[0]); star = n ? [n, ...q.star.slice(1)] : undefined; }
+  if (q.star) { const n = db.enByZh("Item", q.star[0]) || tx("", q.star[0]); star = n ? [n, ...q.star.slice(1)] : undefined; }
   en += `    [${id}] = ${plain({ n: e.n, d: e.d || e.gen, tgo: e.tgo, objs: e.objs, star })},\n`;
 }
 en += `  },\n  trainers = ${plain(Object.fromEntries(trainers.map((t, i) => [i + 1, { npc: npcEn(t.npc) }])))},\n`;
-en += `  keep = ${plain(Object.fromEntries([...keep].map(([id, k]) => [id, { n: db.itemEn(id), use: k.q ? undefined : "Needed for a later quest" }])))},\n}\n`;
+const keepEn = (id, k) => { if (k.q) return undefined; const x = tx(keepAt.get(id), k.use); if (!x) left.keepUse++; return x || "Needed for a later quest"; };
+en += `  keep = ${plain(Object.fromEntries([...keep].map(([id, k]) => [id, { n: db.itemEn(id), use: keepEn(id, k) }])))},\n`;
+const offEn = (id, o) => { const x = o.why && tx(offAt.get(id), o.why); if (o.why && !x) left.offrouteWhy++; return x; };
+en += `  offroute = ${plain(Object.fromEntries([...offroute].map(([id, o]) => [id, { why: offEn(id, o) }])))},\n}\n`;
 cov.zhOnly.offrouteWhy = [...offroute.values()].filter((o) => o.why).length;
 cov.zhOnly.keepUse = [...keep.values()].filter((k) => !k.q).length;
 writeFileSync(join(dirname(OUT), "Route_enUS.lua"), en);
 const pct = (a, b) => (b ? Math.round((a / b) * 1000) / 10 : 100) + "%";
 console.log(`英文：站名 ${cov.stName}/${cov.stations}（${pct(cov.stName, cov.stations)}）、接交 NPC ${cov.npc}/${cov.npcNeed}（${pct(cov.npc, cov.npcNeed)}）、選取目標 tgt ${cov.tgt}/${cov.tgtNeed}（${pct(cov.tgt, cov.tgtNeed)}）、做步驟提示 ${cov.hint}（其中湊句 ${cov.hintGen}）、任務名 ${cov.qName}/${cov.quests}、任務目標文字 ${cov.qObj}/${cov.quests}`);
-console.log("英文介面不顯示（只有中文）：" + Object.entries(cov.zhOnly).map(([k, v]) => k + " " + v).join("、"));
+console.log("說明文字英文（route-text-enUS.md，翻到／原本只有中文）：" + Object.entries(cov.zhOnly).map(([k, v]) => `${k} ${v - left[k]}/${v}`).join("、") + `；條件對不上改為不帶條件 ${cov.whenLost}`);
+const txMiss = TX_ROWS.filter((r) => !txUsed.has(r.zh));
+console.log(`翻譯列 ${TX_ROWS.length}，用到 ${TX_ROWS.length - txMiss.length}；英文含中日韓字（不用）${TX_ROWS.filter((r) => CJK.test(r.en)).length}；沒用到（依類型）：` + Object.entries(Object.groupBy(txMiss, (r) => r.type)).map(([k, v]) => k + " " + v.length).join("、"));
+if (process.env.TX_MISS) writeFileSync(process.env.TX_MISS, leftAt.concat(txMiss.map((r) => `${r.at}｜${r.type}｜${r.zh}`)).join("\n"));
 console.log("英文缺接交 NPC：" + missNpc.join("、"));
 console.log(`english-names.md：任務 ${MD_QUEST.size}、實體 ${MD_ENT.size}、名稱 ${MD_NAME.size}；和 QuestieDB 英文不同：任務名 ${enDiff.quest}、接交 NPC ${enDiff.npc}、選取目標 ${enDiff.tgt}`);
 const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 順序錯誤（已自動調整 ${orderFixes.length}）\n\n${orderFixes.join("\n") || "無"}\n\n## 學技能站（候選站依序，遊戲取第一個本角色有的）\n\n${trainers.map((t) => `- ${t.c} ${t.lv} ${t.npc}（${t.place}）→ ${t.st.slice(0, 4).map((id) => id + " " + stations.find((x) => x.id === id).name).join("、")}`).join("\n") || "無"}\n`;

@@ -62,6 +62,7 @@ MG.Locales.enUS = {
   ["剩 "] = "Left ",
   ["剩 %d 步"] = "%d steps left",
   ["%d 級可去 %d 本"] = "Level %d: %d available",
+  ["%d 級：%d 本"] = "Lv %d: %d",
 
   -- status (right column)
   ["略過"] = "Skipped",
@@ -253,8 +254,8 @@ MG.Locales.enUS = {
   ["已清除 %d 個手動勾選"] = "Cleared %d manual check(s).",
   ["重新對齊："] = "Realigned: ",
   ["介面語言設為 %s，/reload 後生效"] = "UI language set to %s. /reload to apply.",
-  ["介面語言：%s（/slv lang en｜zh｜auto，/reload 後生效）"] = "UI language: %s (/slv lang en | zh | auto, then /reload).",
-  ["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言"] = "/slv toggle | /slv probe diagnostics | /slv reset realign | /slv config settings | /slv macro target macro | /slv minimap minimap button | /slv rec recorder | /slv lang en|zh|auto UI language",
+  ["介面語言：%s（/slv lang en｜zh｜auto｜stress，/reload 後生效）"] = "UI language: %s (/slv lang en | zh | auto | stress, then /reload).",
+  ["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言（en｜zh｜auto；stress＝英文加長 35% 檢查版面）"] = "/slv toggle | /slv probe diagnostics | /slv reset realign | /slv config settings | /slv macro target macro | /slv minimap minimap button | /slv rec recorder | /slv lang en|zh|auto UI language (stress = English padded 35% to check layouts)",
   ["目標是地上的物件（%s），無法選取"] = "Objective is an object (%s); it can't be targeted",
   ["目前步驟沒有要選的目標"] = "Nothing to target for this step",
   ["目前步驟沒有任務物品"] = "No quest item for this step",

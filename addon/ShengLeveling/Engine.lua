@@ -9,12 +9,13 @@ MG.E = E
 
 -- 路線資料換語言（ADDON_LOADED 時呼叫一次，語言設定讀到之後）。Route.lua 是中文底稿；Data\Route_<locale>.lua 依站 ID＋步驟序號、任務 ID 對上。
 -- 顯示用欄位跟介面語言；選取目標（tgt、tgo、objs）和要跟遊戲文字比對的名字（nG、npcG、mobG）跟客戶端語言。
--- 非中文介面沒有翻譯的中文說明（desc、站的提醒、練怪說明、危險說明…）拿掉不顯示。
+-- 說明文字（desc、站的提醒、練怪說明、危險說明…）用翻譯；沒有翻譯的非中文介面拿掉不顯示。
 function E.Localize()
   local RL = MG.RouteL or {}
   local D = not MG.uiZh and (RL[MG.uiLoc] or RL.enUS) or nil
   local G = not MG.gameZh and (RL[MG.gameLoc] or RL.enUS) or nil
   local en = not MG.uiZh
+  local P = MG.Pad -- /slv lang stress：顯示文字加長（平常原樣）
   if not en and not G then return end
   local none = {}
   for _, st in ipairs(R.stations) do
@@ -25,43 +26,47 @@ function E.Localize()
       s.npcG = s.npc
       if G then s.npcG, s.tgt = g.npc or s.npc, g.tgt; s.npcObj = g.npcObj end
       if en then
-        s.npc, s.hint, s.text, s.node, s.preText, s.star = d.npc, d.hint, d.text, d.node, d.preText, d.star
+        s.npc, s.hint, s.text, s.node, s.preText, s.star = P(d.npc), P(d.hint), P(d.text), P(d.node), P(d.preText), d.star
         s.npcObj = d.npcObj
-        s.desc, s.bind, s.to, s.from = nil, nil, nil, nil
+        s.desc, s.bind, s.to, s.from = P(d.desc), nil, nil, nil
         s.tagL = d.tag -- tag 本身是判斷用（怪多、副本前置鏈），顯示用 tagL
       end
     end
     for i, g in ipairs(st.grind or none) do
       g.mobG = G and (gs.grind and gs.grind[i] and gs.grind[i].mob) or g.mob
-      if en then g.mob = ds.grind and ds.grind[i] and ds.grind[i].mob or "?"; g.note = nil end
+      if en then
+        local dg = ds.grind and ds.grind[i] or none
+        g.mob, g.note = P(dg.mob or "?"), P(dg.note)
+      end
     end
     for i, p in ipairs(st.supply or none) do
       p.npcG = G and (gs.supply and gs.supply[i] and gs.supply[i].npc) or p.npc
-      if en then p.npc = ds.supply and ds.supply[i] and ds.supply[i].npc end
+      if en then p.npc = P(ds.supply and ds.supply[i] and ds.supply[i].npc) end
     end
     if en then
-      st.name = ds.name or (st.map and C.MapName(st.map)) or st.id
-      st.short, st.tips, st.pickup, st.pickupS, st.alt = nil, {}, nil, nil, nil
-      if st.entrance then st.entrance = "" end
-      for _, x in ipairs(st.danger or none) do x.text = nil end
+      st.name = P(ds.name or (st.map and C.MapName(st.map)) or st.id)
+      -- 英文短站名（建置時產生，清單與站名列用；全名在滑鼠提示）
+      st.short, st.tips, st.pickup, st.pickupS, st.alt = P(ds.short), ds.tips or {}, P(ds.pickup), ds.pickupS, nil
+      if st.entrance then st.entrance = ds.entrance or "" end
+      for i, x in ipairs(st.danger or none) do x.text = P(ds.danger and ds.danger[i]) end
     end
   end
   for id, q in pairs(R.quests) do
     local d, g = D and D.quests[id] or none, G and G.quests[id] or none
     q.nG = q.n
     if G then q.nG, q.zt, q.tgo, q.objs = g.n or q.n, nil, g.tgo, g.objs end
-    if en then q.n, q.d, q.star = d.n or q.n, d.d, d.star end
+    if en then q.n, q.d, q.star = P(d.n or q.n), P(d.d), d.star end
   end
   for i, t in ipairs(R.trainers or none) do
     t.npcK, t.npcG = t.npc, G and G.trainers and G.trainers[i] and G.trainers[i].npc or t.npc
-    if en then t.npc = D.trainers and D.trainers[i] and D.trainers[i].npc or t.npcG; t.place = nil end
+    if en then t.npc = P(D.trainers and D.trainers[i] and D.trainers[i].npc or t.npcG); t.place = nil end
   end
   if en then
     for id, k in pairs(R.keep or none) do
       local d = D.keep and D.keep[id] or none
       k.n, k.use = d.n, d.use or (not k.q and L["之後的任務會用到"] or nil)
     end
-    for _, o in pairs(R.offroute or none) do o.why = nil end
+    for id, o in pairs(R.offroute or none) do o.why = P(D.offroute and D.offroute[id] and D.offroute[id].why) end
   end
 end
 -- 任務名：遊戲給的（和介面同語言時）＞路線資料
@@ -1218,12 +1223,31 @@ local VERB = setmetatable({}, { __index = function(_, t)
   return zh and L[zh]
 end })
 E.VERB = VERB
+-- 動詞：非中文介面的交通／前往步驟，說明本身已是祈使句（Leave…、Take…）就不再加「Go」
+local IMPERATIVE = { Go = true, Leave = true, Take = true, Fly = true, Ride = true, Run = true, Head = true, Return = true, Enter = true, Use = true,
+  Hearth = true, Travel = true, Follow = true, Swim = true, Walk = true, Cross = true, Board = true, Exit = true, Get = true, Continue = true, Back = true, From = true, At = true, After = true, If = true }
+function E.Verb(s)
+  if not MG.uiZh and (s.t == "travel" or s.t == "goto") and IMPERATIVE[(E.Title(s) or ""):match("^(%a+)") or ""] then return "" end
+  return VERB[s.t] or ""
+end
+-- 動詞＋標題（動詞空的時候不留前導空白）
+function E.VerbTitle(s)
+  local v = E.Verb(s)
+  return v ~= "" and (v .. " " .. E.Title(s)) or E.Title(s)
+end
 -- 交通文字切成「第一句」與「其餘」（以全形逗號或句號；不能用 Lua 字元集，會切壞 UTF-8）
 function E.Clause(text)
   text = text or ""
   local a = text:find("，", 1, true)
   local b = text:find("。", 1, true)
   local cut = a and b and math.min(a, b) or a or b
+  if not cut and not MG.uiZh then
+    -- 英文說明：第一句（到「. 」或「; 」），句尾的句點拿掉
+    local e = text:find("[%.;] ")
+    if not e then return (text:gsub("%.$", "")), nil end
+    local rest = strtrim(text:sub(e + 2))
+    return text:sub(1, e - 1), rest ~= "" and rest or nil
+  end
   if not cut then return text, nil end
   local rest = text:sub(cut + 3)
   return text:sub(1, cut - 1), rest ~= "" and rest or nil

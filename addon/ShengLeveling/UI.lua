@@ -98,6 +98,7 @@ function UI.Get(key)
   local sp = SPEC_BY[key]
   local v = store(sp)[key]
   if v == nil then return sp.def end
+  if sp.choices and type(v) ~= "number" then return sp.def end -- 舊版設定頁把選項畫成勾選框，可能存了 true/false
   return v
 end
 function UI.Set(key, v) store(SPEC_BY[key])[key] = v end
@@ -152,6 +153,7 @@ function UI.VerbWidth()
   if not verbW then
     verbW = 18
     for _, t in ipairs({ "accept", "do", "turnin", "goto", "fp", "hearth", "fly", "boat", "level", "travel", "need", "train" }) do verbW = math.max(verbW, textWidth(E.VERB[t] or "", 13) + 2) end
+    for _, v in ipairs({ L["打"], L["去"] }) do verbW = math.max(verbW, textWidth(v, 13) + 2) end -- 練怪列、副本入口列也用這欄
   end
   return verbW
 end
@@ -162,6 +164,24 @@ local function text(parent, size, color, justify)
   s:SetJustifyH(justify or "LEFT")
   s:SetWordWrap(false)
   return s
+end
+-- 會換行的字：最多 n 行；中文沒有空白也要能斷行
+local function wrapLines(fs, n)
+  fs:SetWordWrap(true)
+  if fs.SetNonSpaceWrap then fs:SetNonSpaceWrap(true) end
+  if fs.SetMaxLines then fs:SetMaxLines(n) end
+end
+-- 臨時航點（不是目前步驟）：tab＝從清單哪個分頁設的（換到別的分頁就收回）；keep＝走到了也不收（練怪點）；done()＝目的達成就收回
+-- 收回時箭頭回到目前步驟；步驟列的「原本 … 返回」與點步驟列都能手動收回
+function UI.SetOverride(o) MG.wpOverride = o; MG.Refresh(true) end
+function UI.ClearOverride()
+  MG.wpOverride, MG.grindActive = nil, nil
+  MG.N.Forget(true)
+  MG.Refresh(true)
+end
+local function clearTabOverride(t)
+  local o = MG.wpOverride
+  if o and o.tab and o.tab ~= t then UI.ClearOverride() end
 end
 local function paint(s, color) s:SetTextColor(color[1], color[2], color[3]) end
 
@@ -269,7 +289,8 @@ function UI.ApplySettings()
   bar.bg:SetColorTexture(BG[1], BG[2], BG[3], a)
   panel.bg:SetColorTexture(BG[1], BG[2], BG[3], UI.Get("listAlpha") / 100)
   bar.title:SetFont(FONT, fsz, "")
-  for _, f in ipairs({ bar.l2, bar.l3, unpack(bar.objs) }) do f:SetFont(FONT, fsz - 2, "") end
+  for _, f in ipairs({ bar.l2, bar.l2n, bar.l3, unpack(bar.objs) }) do f:SetFont(FONT, fsz - 2, "") end
+  for _, f in ipairs(bar.objN) do f:SetFont(FONT, fsz - 2, "") end
   bar.verb:SetFont(FONT, fsz - 3, ""); bar.lv:SetFont(FONT, fsz - 3, "")
   for _, h in ipairs(hints) do
     for _, f in ipairs({ h.tag, h.label, h.act.label, h.x.label }) do f:SetFont(FONT, fsz - 2, "") end
@@ -395,7 +416,7 @@ function UI.StepTooltip(owner, s, prefix, side)
     GameTooltip:SetOwner(owner, "ANCHOR_RIGHT")
   end
   tipScale()
-  addLine((prefix or "") .. (E.VERB[s.t] or "") .. " " .. E.Title(s), GOLD[1], GOLD[2], GOLD[3])
+  addLine((prefix or "") .. E.VerbTitle(s), GOLD[1], GOLD[2], GOLD[3])
   if s.npc then addLine(s.npc, TEXT[1], TEXT[2], TEXT[3]) end
   if s.t == "travel" and s.text then addLine(s.text, TEXT[1], TEXT[2], TEXT[3], true) end
   if s.q then
@@ -611,9 +632,11 @@ local function fillRow(row, it)
   at(row.ck, 8, 14); at(row.box, 9); at(row.no, 24, 20); at(row.verb, 48, vw)
   row.prog:ClearAllPoints()
   if top then row.prog:SetPoint("TOPRIGHT", -12, -7) else row.prog:SetPoint("RIGHT", -12, 0) end
-  local PROG_W = { shead = 1, spot = 70, prehead = 1, pre = 1, imphead = 1, imp = 120, step = 64, miss = 120, misshead = 1, station = 44, start = 1, ghead = 1, grind = 70, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 110, dact = 1 }
+  -- 右欄最小寬（對齊用）；有字才佔位，實際寬在最後照字量
+  local PROG_W = { shead = 1, spot = 70, prehead = 1, pre = 1, imphead = 1, imp = 120, step = 1, miss = 120, misshead = 1, station = 44, start = 1, ghead = 1, grind = 70, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 70, dact = 1 }
   row.prog:SetWidth(PROG_W[it.kind] or 64)
-  local NAME_X = { dtext = 28, dhead = 28, dg = 26, dq = 28, dent = 28, dphase = 28, dact = 28, prehead = 28, imphead = 28, misshead = 28, shead = 28, ghead = 28, pre = 28, imp = 28, miss = 28, spot = 28 }
+  -- 沒有動詞欄的列：名稱從 28 開始
+  local NAME_X = { dtext = 28, dhead = 28, dg = 26, dq = 28, dent = 28, dphase = 28, dact = 28, prehead = 28, imphead = 28, misshead = 28, shead = 28, ghead = 28, pre = 28, imp = 28, miss = 28, spot = 28, station = 28, start = 28 }
   row.name:ClearAllPoints()
   if top then row.name:SetPoint("TOPLEFT", 52 + vw, -5) else row.name:SetPoint("LEFT", NAME_X[it.kind] or (52 + vw), 0) end
   row.name:SetPoint("RIGHT", (it.kind == "dg" or it.kind == "station") and row.lvt or row.prog, "LEFT", -6, 0)
@@ -655,7 +678,7 @@ local function fillRow(row, it)
     if mark == false then row.box:SetState("dash", AMBER)
     elseif state.done[i] and not state.na[i] and not (state.passed and state.passed[i]) then row.box:SetState("check", mark and GOLD or GREEN)
     else row.box:SetState(nil) end
-    row.verb:SetText(E.VERB[s.t] or "")
+    row.verb:SetText(E.Verb(s))
     row.name:SetText((E.StarFor(s.q, s) and (hex(GOLD) .. "★|r ") or "") .. E.Title(s))
     -- 狀態一律放右欄（灰）；目前步驟的進度優先
     local status
@@ -720,7 +743,7 @@ local function fillRow(row, it)
       else
         row.box:Show(); row.ck:Hide()
         row.box:SetState(nil)
-        row.verb:SetText(E.VERB[s.t] or "")
+        row.verb:SetText(E.Verb(s))
         title = E.Title(s)
         if nx.kind == "in" and s.q and C.IsOnQuest(s.q) then
           for _, o in ipairs(C.Objectives(s.q) or {}) do if not o.done and o.need then right = o.have .. "/" .. o.need; break end end
@@ -753,16 +776,23 @@ local function fillRow(row, it)
     }
     row.name:SetText("")
     row.bgx:Show()
+    -- 分頁依字寬排；一列放不下就換到下一列（列跟著變高）
+    local rowW, x, line = UI.Get("listWidth") - 2, 22, 0
     for k, b in ipairs(row.tabs) do
       b.phase = labels[k][1]
       b.label:SetText(labels[k][2])
       local on = it.phase == labels[k][1]
       b.label:SetTextColor(unpack(on and TEXT or DIM))
       b.under:SetShown(on)
-      b:SetWidth(b.label:GetStringWidth() + 12)
+      local bw = math.ceil(b.label:GetStringWidth() or 0) + 12
+      b:SetWidth(bw)
+      if x > 22 and x + bw > rowW - 10 then x, line = 22, line + 1 end
+      b:ClearAllPoints()
+      b:SetPoint("TOPLEFT", x, -1 - line * 20)
+      x = x + bw + 4
       b:Show()
     end
-    row:SetHeight(22)
+    row:SetHeight(22 + line * 20)
   elseif it.kind == "dq" then
     local t = it.t
     local s = t.step.s
@@ -813,7 +843,7 @@ local function fillRow(row, it)
     local s = show.s
     row.box:Show(); row.ck:Hide()
     row.box:SetState(cur and nil or "check", MG.db.mark[show.key] and GOLD or GREEN)
-    row.verb:SetText(E.VERB[s.t] or "")
+    row.verb:SetText(E.Verb(s))
     row.name:SetText(s.q and E.Title({ q = s.q, t = "accept" }) or (s.text or s.hint or "")); paint(row.name, cur and TEXT or FAINT)
     if s.q and C.IsOnQuest(s.q) then
       local obj = C.Objectives(s.q) or {}
@@ -823,8 +853,9 @@ local function fillRow(row, it)
     local ent = UI.Entrance(it.d)
     row.bgx:Show()
     row.icon:Show()
-    row.name:SetText(ent.zone .. "  " .. ent.coord); paint(row.name, DIM)
-    row.prog:SetText(ent.door); paint(row.prog, DIM)
+    -- 座標獨立放右欄（不會被截）；區域＋分區門是可截的文字（滑鼠提示看全文）
+    row.name:SetText(ent.zone .. (ent.door ~= "" and ("  " .. ent.door) or "")); paint(row.name, DIM)
+    row.prog:SetText(ent.coord); paint(row.prog, DIM)
   elseif it.kind == "dact" then
     local d = it.d
     row.bgx:Show()
@@ -845,10 +876,15 @@ local function fillRow(row, it)
     -- 按鈕依字寬（「詳細」接在「不打」左邊）
     b3:SetWidth(math.max(56, b3.label:GetStringWidth() + 16))
     b2:SetWidth(math.max(56, b2.label:GetStringWidth() + 26))
+    -- 三顆一列放不下（英文、窄清單）：第一顆獨立放上一行，不互相重疊
+    local stack = b1:IsShown() and 26 + b1:GetWidth() + 8 + b2:GetWidth() - 2 + b3:GetWidth() + 10 > UI.Get("listWidth") - 2
+    b1:ClearAllPoints(); b3:ClearAllPoints()
+    if stack then b1:SetPoint("TOPLEFT", 26, -3); b3:SetPoint("BOTTOMRIGHT", -10, 3)
+    else b1:SetPoint("LEFT", 26, 0); b3:SetPoint("RIGHT", -10, 0) end
     b2:ClearAllPoints(); b2:SetPoint("RIGHT", b3, "LEFT", 2, 0)
     for _, b in ipairs(row.acts) do b.d = d end
     b2:Show(); b3:Show()
-    row:SetHeight(26)
+    row:SetHeight(stack and 52 or 26)
   elseif it.kind == "dtext" then
     row.name:SetText("")
     row.bgx:Show()
@@ -894,9 +930,9 @@ local function fillRow(row, it)
       row.ck:SetText("○"); paint(row.ck, DIM)
     end
   end
-  -- 右欄放得下實際的字（英文較寬）
-  local pw = PROG_W[it.kind] or 64
-  if pw > 1 then row.prog:SetWidth(math.max(pw, math.ceil(row.prog:GetStringWidth() or 0) + 2)) end
+  -- 右欄放得下實際的字（英文較寬）；空的不佔位；最多列寬 45%，再長就截斷（滑鼠提示看全文）
+  local tw = (row.prog:GetText() or "") ~= "" and math.ceil(row.prog:GetStringWidth() or 0) + 2 or 0
+  row.prog:SetWidth(tw > 0 and math.min(math.max(PROG_W[it.kind] or 64, tw), math.floor((UI.Get("listWidth") - 2) * 0.45)) or 1)
   row:Show()
 end
 
@@ -928,21 +964,27 @@ local function drawPanel()
   panel.tabMap.under:SetShown(tab == "map")
   panel.tabDg.label:SetTextColor(unpack(tab == "dg" and TEXT or DIM))
   panel.tabDg.under:SetShown(tab == "dg")
+  -- 右上角：文字可截（有滑鼠提示）；站的等級範圍獨立一欄（不會被截）
   local st = state and state.st
+  local full, short, lvText = "", nil, ""
   if tab == "steps" and state and state.total > 0 then
-    panel.station:SetText(L["剩 %d 步"]:format(state.total))
-  else
-    if tab == "dg" then
-      local n, lv = 0, UnitLevel("player") or 1
-      for _, d in ipairs(E.dungeons) do
-        local _, kind = E.DungeonStatus(d)
-        if kind ~= "past" and kind ~= "low" and lv >= d.lv[1] - 2 and not MG.db.dNo[d.id] then n = n + 1 end
-      end
-      panel.station:SetText(L["%d 級可去 %d 本"]:format(lv, n))
-    else
-      panel.station:SetText(st and (UI.StName(st) .. "  " .. st.lv[1] .. "-" .. st.lv[2]) or "")
+    full = L["剩 %d 步"]:format(state.total)
+  elseif tab == "dg" then
+    local n, lv = 0, UnitLevel("player") or 1
+    for _, d in ipairs(E.dungeons) do
+      local _, kind = E.DungeonStatus(d)
+      if kind ~= "past" and kind ~= "low" and lv >= d.lv[1] - 2 and not MG.db.dNo[d.id] then n = n + 1 end
     end
+    full, short = L["%d 級可去 %d 本"]:format(lv, n), L["%d 級：%d 本"]:format(lv, n)
+  elseif st then
+    full, lvText = UI.StName(st), st.lv[1] .. "-" .. st.lv[2]
   end
+  panel.stationLv:SetText(lvText)
+  panel.stationLv:SetWidth(lvText ~= "" and math.ceil(panel.stationLv:GetStringWidth() or 0) + 2 or 1)
+  panel.station:SetPoint("RIGHT", panel.stationLv, "LEFT", lvText ~= "" and -6 or 0, 0)
+  panel.station.full, panel.station.isSt, panel.station.short = full, lvText ~= "", false
+  panel.station:SetText(full)
+  if short and truncated(panel.station) then panel.station:SetText(short); panel.station.short = true end
 end
 
 local function scrollToCur()
@@ -959,7 +1001,7 @@ end
 function UI.Entrance(d)
   local x, y
   for _, step in ipairs(d.list) do if step.s.t == "travel" and not step.s.ph and step.s.x then x, y = step.s.x, step.s.y; break end end
-  local door = (d.entrance or ""):match("（(.-)）") or ""
+  local door = (d.entrance or ""):match("（(.-)）") or (not MG.uiZh and (d.entrance or ""):match("%((.-)%)")) or ""
   local zone = C.MapName(d.map) or ((d.entrance or ""):match("^(%S+)") or "")
   return { x = x, y = y, coord = x and string.format("%.1f, %.1f", x, y) or "", zone = zone, door = door }
 end
@@ -982,23 +1024,25 @@ function UI.Leaving(S)
   end
   return E.Leaving(S)
 end
+-- 練怪點：走到了不收（在那裡打），升過這個點的等級就收回
 function UI.GoGrind(g)
   MG.grindActive = g
-  MG.wpOverride = { map = g.map, x = g.x, y = g.y, name = MG.Clean(L["打 "] .. g.mob) }
-  MG.Refresh(true)
+  UI.SetOverride({ map = g.map, x = g.x, y = g.y, name = MG.Clean(L["打 "] .. g.mob), keep = true, grind = true,
+    done = function() return (UnitLevel("player") or 1) > g.lv[2] end })
 end
+-- 副本分頁設的點：換回步驟／路線分頁、收起這本副本、出副本、走到了都收回
 function UI.WaypointStep(s)
-  if s and s.x then MG.wpOverride = { map = s.map, x = s.x, y = s.y, name = MG.Clean(E.Title(s)) }; MG.Refresh(true) end
+  if s and s.x then UI.SetOverride({ map = s.map, x = s.x, y = s.y, name = MG.Clean(E.Title(s)), tab = "dg" }) end
 end
 function UI.WaypointEntrance(d)
   local ent = UI.Entrance(d)
-  if ent.x then MG.wpOverride = { map = d.map, x = ent.x, y = ent.y, name = MG.Clean(L["%s入口"]:format(d.name)) }; MG.Refresh(true) end
+  if ent.x then UI.SetOverride({ map = d.map, x = ent.x, y = ent.y, name = MG.Clean(L["%s入口"]:format(d.name)), tab = "dg" }) end
 end
 function UI.DungeonAction(act, d)
-  if act == "run" then E.RunDungeon(d); tab = "steps"; scroll = 0; lastCurKey = nil
-  elseif act == "back" then MG.db.station = MG.db.dungeonFrom; MG.db.dungeonFrom = nil; lastCurKey = nil
+  if act == "run" then E.RunDungeon(d); tab = "steps"; scroll = 0; lastCurKey = nil; MG.wpOverride = nil; MG.N.Forget(true)
+  elseif act == "back" then MG.db.station = MG.db.dungeonFrom; MG.db.dungeonFrom = nil; lastCurKey = nil; MG.wpOverride = nil; MG.N.Forget(true)
   elseif act == "more" then UI.dMore[d.id] = not UI.dMore[d.id] or nil; UI.ScrollToDungeon(d)
-  elseif act == "no" then MG.db.dNo[d.id] = not MG.db.dNo[d.id] or nil; UI.dOpen = nil end
+  elseif act == "no" then MG.db.dNo[d.id] = not MG.db.dNo[d.id] or nil; UI.dOpen = nil; clearTabOverride() end
   MG.Refresh(true)
 end
 -- 展開區超出面板時，把這本副本的列捲到最上面
@@ -1016,6 +1060,7 @@ function UI.ScrollToDungeon(d)
 end
 
 local function setTab(t)
+  clearTabOverride(t) -- 離開設點的分頁（例如副本分頁）：箭頭回到目前步驟
   tab = t
   scroll = 0
   if state then scrollToCur() end
@@ -1036,14 +1081,14 @@ local function onRowClick(row, button)
   elseif it.kind == "shead" then
     UI.supOpen = not UI.supOpen
   elseif it.kind == "spot" then
-    MG.wpOverride = { map = it.p.map, x = it.p.x, y = it.p.y, name = MG.Clean(it.label) }
+    MG.wpOverride = { map = it.p.map, x = it.p.x, y = it.p.y, name = MG.Clean(it.label) } -- 走到了就收回
   elseif it.kind == "ghead" then
     UI.grindOpen = not UI.grindOpen
   elseif it.kind == "grind" then
     UI.GoGrind(it.g)
   elseif it.kind == "dg" then
     local d = it.d
-    if UI.dOpen == d.id then UI.dOpen = nil; UI.dPhase[d.id] = nil else UI.dOpen = d.id end
+    if UI.dOpen == d.id then UI.dOpen = nil; UI.dPhase[d.id] = nil; clearTabOverride() else UI.dOpen = d.id end
     UI.ScrollToDungeon(d)
   elseif it.kind == "dnext" then
     if it.nx.kind == "ent" then UI.WaypointEntrance(it.d)
@@ -1106,16 +1151,21 @@ function UI.Create()
   end)
   gear:SetScript("OnLeave", function(self) self:SetAlpha(0.5); GameTooltip:Hide() end)
   gear:SetScript("OnClick", function() UI.OpenOptions() end)
+  -- 標題最多兩行（寬度在 Render 照右側元件算）
   bar.title = text(bar, 15, TEXT)
   bar.title:SetPoint("TOPLEFT", 40, -12)
-  bar.title:SetPoint("RIGHT", bar, "RIGHT", -32, 0)
+  wrapLines(bar.title, 2)
   bar.l2 = text(bar, 13, DIM)
   bar.l2:SetPoint("TOPLEFT", 40, -34)
-  bar.l2:SetPoint("RIGHT", -10, 0)
-  bar.objs = {}
-  for k = 1, 5 do bar.objs[k] = text(bar, 13, TEXT) end
-  bar.extra, bar.divs = {}, {}
-  for k = 1, 40 do bar.extra[k] = text(bar, 13, TEXT); bar.extra[k]:Hide() end
+  -- 目標的數字（3/8）各自一欄：右對齊、量寬，文字截斷時數字還在
+  bar.l2n = text(bar, 13, TEXT, "RIGHT")
+  bar.objs, bar.objN = {}, {}
+  for k = 1, 5 do bar.objs[k] = text(bar, 13, TEXT); bar.objN[k] = text(bar, 13, TEXT, "RIGHT") end
+  bar.extra, bar.extraN, bar.divs = {}, {}, {}
+  for k = 1, 40 do
+    bar.extra[k] = text(bar, 13, TEXT); bar.extra[k]:Hide()
+    bar.extraN[k] = text(bar, 13, TEXT, "RIGHT"); bar.extraN[k]:Hide()
+  end
   for k = 1, 4 do
     local d = bar:CreateTexture(nil, "ARTWORK")
     d:SetColorTexture(EDGE2[1], EDGE2[2], EDGE2[3], 1)
@@ -1146,7 +1196,21 @@ function UI.Create()
   end)
   bar:SetScript("OnEnter", function(self)
     local cur = state and state.cur and state.steps[state.cur]
-    if cur then UI.StepTooltip(self, cur.s, nil, true)
+    if cur then
+      UI.StepTooltip(self, cur.s, nil, true)
+      -- 附近一起做的任務（步驟列上可能被截）：完整標題與目標
+      local same = MG.uiZh == MG.gameZh
+      for _, i in ipairs(state.group or {}) do
+        local s = state.steps[i].s
+        addLine(" ", 1, 1, 1)
+        addLine(E.VerbTitle(s), TEXT[1], TEXT[2], TEXT[3], true)
+        if s.t == "do" and s.q then
+          for _, o in ipairs(C.Objectives(s.q) or {}) do
+            if o.need then addLine((same and o.text or L["目標"]) .. "  " .. (o.have or 0) .. "/" .. o.need, DIM[1], DIM[2], DIM[3], true) end
+          end
+        elseif s.npc then addLine(s.npc, DIM[1], DIM[2], DIM[3], true) end
+      end
+      GameTooltip:Show()
     elseif state and state.st and E.Next(state.st) then stationTip(self, E.Next(state.st)) end
   end)
   bar:SetScript("OnLeave", function() GameTooltip:Hide() end)
@@ -1176,9 +1240,9 @@ function UI.Create()
     f.tag:SetPoint("LEFT", 10, 0)
     f.label = text(f, 13, TEXT)
     f.label:SetPoint("LEFT", f.tag, "RIGHT", 8, 0)
-    f.sub = text(f, 12, DIM)
+    wrapLines(f.label, 2) -- 太長就換到第二行（最多兩行），列跟著變高
+    f.sub = text(f, 12, DIM) -- 補充（等級範圍、前置數量）：位置與寬度在 Render 量
     f.sub:SetPoint("LEFT", f.label, "RIGHT", 6, 0)
-    f.sub:SetPoint("RIGHT", -56, 0)
     f.act = goldButton(f, "", 28)
     f.act:SetHeight(18); f.act:SetPoint("RIGHT", -24, 0)
     f.act:SetScript("OnClick", function() if f.h and f.h.act then f.h.act() end end)
@@ -1192,10 +1256,12 @@ function UI.Create()
       local h = self.h
       if not h then return end
       local full = h.full or h.text
-      if not full or (full == h.text and not self.label:IsTruncated()) then return end
+      local sub = h.sub ~= "" and h.sub or nil
+      if not full or (full == h.text and not truncated(self.label) and not (sub and truncated(self.sub))) then return end
       GameTooltip:SetOwner(self, "ANCHOR_BOTTOMLEFT", 0, 0)
       GameTooltip:SetText(MG.Clean(h.tag), h.color[1], h.color[2], h.color[3])
       addLine(full, 1, 1, 1, true)
+      if sub then addLine(sub, DIM[1], DIM[2], DIM[3], true) end
       GameTooltip:Show()
     end)
     f:SetScript("OnLeave", function() GameTooltip:Hide() end)
@@ -1250,11 +1316,19 @@ function UI.Create()
   st:SetHeight(30)
   st:SetPoint("TOPLEFT", panel.tabDg, "TOPRIGHT", 6, 0)
   st:SetPoint("TOPRIGHT", -8, 0)
+  panel.stationLv = text(st, 12, DIM, "RIGHT")
+  panel.stationLv:SetPoint("TOPRIGHT"); panel.stationLv:SetPoint("BOTTOMRIGHT")
   panel.station = text(st, 12, DIM, "RIGHT")
-  panel.station:SetAllPoints()
+  panel.station:SetPoint("TOPLEFT"); panel.station:SetPoint("BOTTOMLEFT")
+  panel.station:SetPoint("RIGHT", panel.stationLv, "LEFT", 0, 0)
   st:SetScript("OnClick", function() setTab("map") end)
   st:SetScript("OnEnter", function(self)
-    if state and state.st and tab ~= "dg" and (truncated(panel.station) or state.st.short) then stationTip(self, state.st) end
+    local s = panel.station
+    if s.isSt then
+      if state and state.st and (truncated(s) or state.st.short) then stationTip(self, state.st) end
+    elseif s.full and s.full ~= "" and (s.short or truncated(s)) then
+      tipOpen(self, s.full); GameTooltip:Show()
+    end
   end)
   st:SetScript("OnLeave", function() GameTooltip:Hide() end)
   local div = panel:CreateTexture(nil, "BORDER")
@@ -1388,8 +1462,12 @@ function UI.Create()
         local extra = {}
         for _, m in ipairs(E.MissingPre(it.st)) do extra[#extra + 1] = L["少了前置：%s（在 %s 接）→ 這裡的 %s 不能做"]:format(E.Title({ t = "accept", q = m.p }), m.pst.name, E.Title({ t = "accept", q = m.q })) end
         if #extra > 0 or truncated(self.name) or it.st.short then stationTip(self, it.st, extra) end
-      elseif it and truncated(self.name) then
-        tipOpen(self, self.name:GetText()); GameTooltip:Show()
+      elseif it and (truncated(self.name) or truncated(self.prog) or (self.sub:IsShown() and truncated(self.sub))) then
+        -- 被截的列：名稱、右欄、副行都放進提示
+        tipOpen(self, self.name:GetText() or "")
+        if (self.prog:GetText() or "") ~= "" then tipLine(self.prog:GetText(), DIM, true) end
+        if self.sub:IsShown() and (self.sub:GetText() or "") ~= "" then tipLine(self.sub:GetText(), DIM, true) end
+        GameTooltip:Show()
       elseif it and it.kind == "grind" and it.g.note then
         tipOpen(self, it.g.mob); tipLine(it.g.note, TEXT, true); GameTooltip:Show() end
     end)
@@ -1491,7 +1569,7 @@ function UI.CreateMinimap()
     local st = state and state.st
     local cur = state and state.cur and state.steps[state.cur]
     tipLine(st and ((st.name or "") .. "  " .. st.lv[1] .. "-" .. st.lv[2]) or L["沒有路線"], TEXT)
-    if st then addLine(cur and ((E.VERB[cur.s.t] or "") .. " " .. E.Title(cur.s)) or L["本站完成"], DIM[1], DIM[2], DIM[3]) end
+    if st then addLine(cur and E.VerbTitle(cur.s) or L["本站完成"], DIM[1], DIM[2], DIM[3]) end
     GameTooltip:Show()
   end)
   mini:SetScript("OnLeave", function() GameTooltip:Hide() end)
@@ -1505,23 +1583,18 @@ function UI.PreviewTip()
   UI.StepTooltip(bar, cur and cur.s or { t = "do", text = L["範例"], desc = L["這是說明行"] }, nil, true)
 end
 
--- 版面格線：標籤欄、控制欄（勾選框／滑桿／按鈕同一個 x）、數值欄
-local COL_LABEL, COL_CTRL, COL_VALUE, ROW, PAGE_W = 28, 220, 432, 26, 520
+-- 版面：左邊標籤欄、控制欄（勾選框／滑桿／按鈕同一個 x）、數值欄與「重設」貼著內容右緣。
+-- 寬度一律在顯示時照遊戲給的面板寬（options:GetWidth()）重排：標籤欄最多佔 45%，太長的標籤換行（列跟著變高），
+-- 不會把右側元件推出面板；說明一律在滑鼠提示裡。
+local COL_LABEL, ROW = 28, 26
 
 function UI.CreateOptions()
-  -- 控制欄放在最長的標籤後面（英文較寬）；滑桿寬度不變，數值欄、頁寬跟著移
-  local lw = 0
-  for _, sp in ipairs(SPEC) do if sp.label then lw = math.max(lw, textWidth(L[sp.label], 13)) end end
-  lw = math.max(lw, textWidth(L["起點"], 13))
-  COL_CTRL = math.max(220, COL_LABEL + lw + 16)
-  COL_VALUE = COL_CTRL + 212
-  PAGE_W = COL_VALUE + 88
   options = CreateFrame("Frame", "MetroGuideOptions", UIParent)
   options:Hide()
   local sf = CreateFrame("ScrollFrame", nil, options)
   sf:SetPoint("TOPLEFT", 0, -6); sf:SetPoint("BOTTOMRIGHT", -6, 6)
   local content = CreateFrame("Frame", nil, sf)
-  content:SetSize(PAGE_W + 40, 100)
+  content:SetSize(560, 100)
   sf:SetScrollChild(content)
   sf:EnableMouseWheel(true)
   sf:SetScript("OnMouseWheel", function(self, delta)
@@ -1536,23 +1609,23 @@ function UI.CreateOptions()
     UI.ApplySettings(); MG.Refresh(true)
     if sp and sp.tip then UI.PreviewTip() end
   end
-  local function label(y, t)
+  local lines = {} -- 依序的每一列，layout() 照面板寬排
+  local lw, valueW = 0, textWidth("-000%", 13) + 4 -- 最長標籤、最寬數值
+  local function label(t)
     local l = text(content, 13, TEXT)
-    l:SetPoint("TOPLEFT", COL_LABEL, y - 5)
-    l:SetWidth(COL_CTRL - COL_LABEL - 8)
+    wrapLines(l, 3)
     l:SetText(L[t])
+    lw = math.max(lw, textWidth(L[t], 13))
     return l
   end
-  local y = -44
-  local section, actions
-  -- 一區結束：把該區的動作按鈕排成一列
+  local actions
+  local section = { keys = {} }
+  -- 一區結束：該區的動作按鈕排成一列（放不下就換行）
   local function flush()
     if actions and #actions > 0 then
-      local x = COL_LABEL
+      local btns = {}
       for _, sp in ipairs(actions) do
         local btn = goldButton(content, L[sp.button], math.max(120, textWidth(L[sp.button], 13) + 20))
-        btn:SetPoint("TOPLEFT", x, y - 2)
-        x = x + btn:GetWidth() + 8
         btn:SetScript("OnClick", function()
           if sp.all then
             for _, other in ipairs(SPEC) do if other.key then UI.Reset(other.key) end end
@@ -1562,60 +1635,53 @@ function UI.CreateOptions()
           end
           changed(); UI.RefreshOptions()
         end)
+        btns[#btns + 1] = btn
       end
-      y = y - ROW - 4
+      lines[#lines + 1] = { kind = "actions", btns = btns }
     end
     actions = {}
   end
   for _, sp in ipairs(SPEC) do
     if sp.section then
       flush()
-      y = y - 12
       section = { keys = {} }
+      local e = { kind = "section" }
       if sp.section ~= "" then
-        local h = text(content, 14, GOLD)
-        h:SetPoint("TOPLEFT", 16, y)
-        h:SetText(L[sp.section])
-        local line = content:CreateTexture(nil, "ARTWORK")
-        line:SetColorTexture(BRONZE[1], BRONZE[2], BRONZE[3], 0.8)
-        line:SetPoint("TOPLEFT", 16, y - 20); line:SetSize(PAGE_W, 1)
+        e.h = text(content, 14, GOLD)
+        e.h:SetText(L[sp.section])
+        e.line = content:CreateTexture(nil, "ARTWORK")
+        e.line:SetColorTexture(BRONZE[1], BRONZE[2], BRONZE[3], 0.8)
         local sec = section
-        local r = goldButton(content, L["重設"], math.max(52, textWidth(L["重設"], 13) + 16))
-        r:SetHeight(18)
-        r:SetPoint("TOPRIGHT", content, "TOPLEFT", 16 + PAGE_W, y + 1)
-        r:SetScript("OnClick", function()
+        e.reset = goldButton(content, L["重設"], math.max(52, textWidth(L["重設"], 13) + 16))
+        e.reset:SetHeight(18)
+        e.reset:SetScript("OnClick", function()
           for _, k in ipairs(sec.keys) do UI.Reset(k) end
           changed(); UI.RefreshOptions()
         end)
-        y = y - 28
       end
+      lines[#lines + 1] = e
     elseif sp.min then
       section.keys[#section.keys + 1] = sp.key
-      label(y, sp.label)
       local v = text(content, 13, DIM)
-      v:SetPoint("TOPLEFT", COL_VALUE, y - 5)
+      for _, x in ipairs({ sp.min, sp.max, sp.def }) do valueW = math.max(valueW, textWidth(x .. (sp.unit or ""), 13) + 4) end
       local slider = C.Slider(content, sp.min, sp.max, sp.step, UI.Get(sp.key), function(val)
         if syncing then return end
         UI.Set(sp.key, val)
         v:SetText(val .. (sp.unit or ""))
         changed(sp)
       end)
-      slider:SetPoint("TOPLEFT", COL_CTRL, y - 4)
       if sp.hint and slider.HookScript then
         slider:HookScript("OnEnter", function(self) tipOpen(self, L[sp.label]); tipLine(L[sp.hint], TEXT, true); GameTooltip:Show() end)
         slider:HookScript("OnLeave", function() GameTooltip:Hide() end)
       end
-      slider:SetWidth(COL_VALUE - COL_CTRL - 14)
       options.widgets[#options.widgets + 1] = { refresh = function()
         syncing = true; C.SliderSet(slider, UI.Get(sp.key)); syncing = false
         v:SetText(UI.Get(sp.key) .. (sp.unit or ""))
       end }
-      y = y - ROW
-    elseif sp.key then
+      lines[#lines + 1] = { kind = "slider", label = label(sp.label), ctrl = slider, value = v, dy = 4 }
+    elseif sp.key and not sp.choices then
       section.keys[#section.keys + 1] = sp.key
-      label(y, sp.label)
       local cb = UI.Checkbox(content, 16)
-      cb:SetPoint("TOPLEFT", COL_CTRL, y - 4)
       cb:SetScript("OnClick", function() toggleSetting(sp); changed(sp); UI.RefreshOptions() end)
       if sp.hint then
         cb:SetScript("OnEnter", function(self)
@@ -1626,33 +1692,72 @@ function UI.CreateOptions()
         cb:SetScript("OnLeave", function() GameTooltip:Hide() end)
       end
       options.widgets[#options.widgets + 1] = { refresh = function() cb:SetState(UI.Get(sp.key) and "check" or nil) end }
-      y = y - ROW
+      lines[#lines + 1] = { kind = "check", label = label(sp.label), ctrl = cb, dy = 4 }
     elseif sp.choices then
       section.keys[#section.keys + 1] = sp.key
-      label(y, sp.label)
       local cw = 160
       for _, c in ipairs(sp.choices) do cw = math.max(cw, textWidth(L[c], 13) + 20) end
       local btn = goldButton(content, "", cw)
-      btn:SetPoint("TOPLEFT", COL_CTRL, y - 2)
       btn:SetScript("OnClick", function() UI.Set(sp.key, UI.Get(sp.key) % #sp.choices + 1); changed(sp); UI.RefreshOptions() end)
       options.widgets[#options.widgets + 1] = { refresh = function() btn.label:SetText(L[sp.choices[UI.Get(sp.key)] or ""]) end }
-      y = y - ROW
+      lines[#lines + 1] = { kind = "button", label = label(sp.label), ctrl = btn, want = cw, dy = 2 }
     elseif sp.start then
-      label(y, "起點")
       local sw = 160
       for _, s in ipairs(E.Starts()) do sw = math.max(sw, textWidth(s.name, 13) + 20) end
       local btn = goldButton(content, "", sw)
-      btn:SetPoint("TOPLEFT", COL_CTRL, y - 2)
       btn:SetScript("OnClick", function() cycleStart(); changed(); UI.RefreshOptions() end)
       options.widgets[#options.widgets + 1] = { refresh = function() btn.label:SetText(startLabel()) end }
-      y = y - ROW
+      lines[#lines + 1] = { kind = "button", label = label("起點"), ctrl = btn, want = sw, dy = 2 }
     elseif sp.button then
       actions[#actions + 1] = sp
     end
   end
   flush()
-  content:SetHeight(-y + 20)
-  options:SetScript("OnShow", function() UI.RefreshOptions() end)
+  local function layout()
+    local W = options:GetWidth() or 0
+    if W < 300 then W = 600 end -- 還沒拿到面板寬（建立時）：先照常見寬度排，顯示時再照實際寬重排
+    local R = W - 6 - 16 -- 內容右緣：ScrollFrame 右邊留 6，再留 16 邊距
+    local valueX = R - valueW
+    local labelW = math.min(math.max(lw, 176), math.floor((R - COL_LABEL) * 0.45))
+    local ctrlX = COL_LABEL + labelW + 16
+    head:SetWidth(R - 16)
+    local y = -44
+    for _, e in ipairs(lines) do
+      if e.kind == "section" then
+        y = y - 12
+        if e.h then
+          e.reset:ClearAllPoints(); e.reset:SetPoint("TOPRIGHT", content, "TOPLEFT", R, y + 1)
+          e.h:ClearAllPoints(); e.h:SetPoint("TOPLEFT", 16, y); e.h:SetWidth(math.max(1, R - 16 - e.reset:GetWidth() - 8))
+          e.line:ClearAllPoints(); e.line:SetPoint("TOPLEFT", 16, y - 20); e.line:SetSize(R - 16, 1)
+          y = y - 28
+        end
+      elseif e.kind == "actions" then
+        local x = COL_LABEL
+        for _, b in ipairs(e.btns) do
+          if x > COL_LABEL and x + b:GetWidth() > R then x, y = COL_LABEL, y - ROW end
+          b:ClearAllPoints(); b:SetPoint("TOPLEFT", x, y - 2)
+          x = x + b:GetWidth() + 8
+        end
+        y = y - ROW - 4
+      else
+        e.label:ClearAllPoints(); e.label:SetPoint("TOPLEFT", COL_LABEL, y - 5)
+        e.label:SetWidth(labelW); e.label:SetText(e.label:GetText()) -- 改寬後重設文字，行高才會照新寬算
+        e.ctrl:ClearAllPoints(); e.ctrl:SetPoint("TOPLEFT", ctrlX, y - e.dy)
+        if e.kind == "slider" then
+          e.ctrl:SetWidth(math.max(60, valueX - 8 - ctrlX))
+          e.value:ClearAllPoints(); e.value:SetPoint("TOPLEFT", valueX, y - 5); e.value:SetWidth(valueW)
+        elseif e.want then
+          local bw = math.min(e.want, R - ctrlX)
+          e.ctrl:SetWidth(bw); e.ctrl.label:SetWidth(bw - 8)
+        end
+        y = y - math.max(ROW, math.ceil(e.label:GetStringHeight() or 0) + 10)
+      end
+    end
+    content:SetSize(R + 16, -y + 20)
+  end
+  layout()
+  options:SetScript("OnShow", function() layout(); UI.RefreshOptions() end)
+  options:SetScript("OnSizeChanged", function(self) if self:IsShown() then layout() end end)
   options:SetScript("OnHide", function() if GameTooltip:GetOwner() == bar then GameTooltip:Hide() end end)
   C.RegisterOptions(options, MG.Clean(L["阿聖練等幫手"]))
 end
@@ -1673,15 +1778,15 @@ local function chars(t)
 end
 local VERBS = { "殺死", "殺掉", "擊殺", "擊敗", "收集", "取得", "拿到", "找到", "摧毀", "消滅" }
 
--- 目標：只有一項時回傳一行文字；多項時回傳 header 與每項 { text, done }（未完成在前）
+-- 目標：只有一項時回傳一行文字與數字；多項時回傳 header 與每項 { text, num, done }（未完成在前）。數字（3/8）另外放，排版時獨立一欄
 local function objectiveLines(q)
   local obj = C.Objectives(q)
   if not obj or #obj == 0 then return nil end
-  local function count(o) return o.need and ("  " .. (o.have or 0) .. "/" .. o.need) or "" end
+  local function count(o) return o.need and ((o.have or 0) .. "/" .. o.need) or nil end
   local same = MG.uiZh == MG.gameZh -- 目標文字是客戶端語言：和介面不同語言（預覽）時只顯示「目標 n/m」
   if #obj == 1 then
     local o = obj[1]
-    return (o.text ~= "" and same and o.text or L["目標"]) .. (o.need and ("  " .. hex(TEXT) .. (o.have or 0) .. "/" .. o.need .. "|r") or "")
+    return (o.text ~= "" and same and o.text or L["目標"]), nil, nil, count(o)
   end
   -- 共同動詞與共同字首（例：殺死 怨怒… → 欺詐者、喚魔者）
   local texts = {}
@@ -1709,7 +1814,7 @@ local function objectiveLines(q)
   local header = (verb or "") .. ((verb and common > 0) and " " or "") .. prefix
   local lines = {}
   for i, o in ipairs(obj) do
-    lines[#lines + 1] = { text = (o.done and "√ " or "") .. (texts[i] ~= "" and texts[i] or L["目標"]) .. count(o), done = o.done, i = i }
+    lines[#lines + 1] = { text = (o.done and "√ " or "") .. (texts[i] ~= "" and texts[i] or L["目標"]), num = count(o), done = o.done, i = i }
   end
   table.sort(lines, function(x, y) if x.done ~= y.done then return not x.done end return x.i < y.i end)
   return nil, header ~= "" and (header .. "…") or nil, lines
@@ -1722,7 +1827,7 @@ function UI.Render(S)
   local db = MG.db
   local lv = UnitLevel("player") or 1
   local verb, title, right, l2, l3, l3warn, titleColor = "", "", "", nil, nil, false, TEXT
-  local objList
+  local objList, l2num
   local strip = GOLD
   if not state then
     title = L["這個角色沒有路線"]
@@ -1730,15 +1835,15 @@ function UI.Render(S)
     local step = state.steps[state.cur]
     local s = step.s
     local info = s.q and MG.Route.quests[s.q]
-    verb = E.VERB[s.t] or ""
+    verb = E.Verb(s)
     title = E.Title(s)
     if state.tails and state.tails[state.cur] then title = L["前往下一站："] .. title end
     if E.StarFor(s.q, s) then title = hex(GOLD) .. "★|r " .. title end
     right = UI.Get("showLevel") and info and info.lvl and tostring(info.lvl) or ""
     if s.t == "accept" or s.t == "turnin" then l2 = s.npc
     elseif s.t == "do" then
-      local one, header, lines = objectiveLines(s.q)
-      if lines then l2, objList = header, lines else l2 = one or s.hint end
+      local one, header, lines, num = objectiveLines(s.q)
+      if lines then l2, objList = header, lines else l2, l2num = one or s.hint, one and num end
     elseif s.t == "level" then l2 = L["目前 %d 級"]:format(lv)
     elseif s.t == "hearth" then l2 = L["找旅店老闆"]
     elseif s.t == "fp" then l2 = L["找飛行管理員"]
@@ -1780,63 +1885,88 @@ function UI.Render(S)
   local vbw = MG.uiZh and 20 or math.max(20, math.ceil(bar.verb:GetStringWidth() or 0) + 8)
   bar.verbBox:SetWidth(vbw)
   local x0 = 12 + vbw + 8
-  bar.title:SetPoint("TOPLEFT", x0, -12)
-  bar.title:SetText(title)
-  paint(bar.title, titleColor)
+  local barW = UI.Get("barWidth")
+  local avail = barW - x0 - 10 -- 標題以下各行的寬
   if UI.Get("showCount") and state and state.cur then
     right = L["剩 "] .. state.total .. (right ~= "" and ("   " .. right) or "")
   end
   bar.lv:SetText(right)
   local gap = ((MG.T and MG.T.Shown(state)) and 22 or 0) + (MG.I and MG.I.InsideWidth() or 0)
   bar.lv:SetPoint("TOPRIGHT", -32 - gap, -13)
-  bar.title:SetPoint("RIGHT", bar, "RIGHT", (right ~= "" and -(36 + bar.lv:GetStringWidth()) or -32) - gap, 0)
-  bar.l2:SetText(l2 or "")
+  -- 標題：寬度先定（右邊讓出等級／目標鈕），最多兩行；下面各行跟著標題的實際高度往下
+  bar.title:ClearAllPoints()
+  bar.title:SetPoint("TOPLEFT", x0, -12)
+  bar.title:SetWidth(math.max(1, barW - x0 - (right ~= "" and (36 + math.ceil(bar.lv:GetStringWidth() or 0)) or 32) - gap))
+  bar.title:SetText(title)
+  paint(bar.title, titleColor)
   bar.l3:SetText(l3 or "")
   paint(bar.l3, l3warn and AMBER or GOLD)
   bar.strip:SetColorTexture(strip[1], strip[2], strip[3], 1)
-  local y = -34
-  if l2 then bar.l2:SetPoint("TOPLEFT", x0, y); y = y - 18 end
-  -- 多目標：最多 5 行（多的話最後一行「…還有 n 項」）；4 項以上排兩欄
+  local y = math.min(-34, -12 - math.ceil(bar.title:GetStringHeight() or 0) - 6)
+  local fsz = UI.Get("fontSize")
+  -- 文字＋數字：數字（3/8）獨立一欄（右對齊、量寬，不會被截），文字用剩下的寬度（截斷時滑鼠提示有全文）
+  local function place(fs, nfs, x, w, t, num)
+    fs:ClearAllPoints(); fs:SetPoint("TOPLEFT", x, y)
+    local nw = 0
+    nfs:SetText(num or "")
+    if num then
+      nw = math.ceil(nfs:GetStringWidth() or 0) + 2
+      nfs:ClearAllPoints(); nfs:SetPoint("TOPLEFT", x + w - nw, y); nfs:SetWidth(nw); nfs:Show()
+    else
+      nfs:Hide()
+    end
+    fs:SetWidth(math.max(1, w - (num and nw + 6 or 0)))
+    fs:SetText(t)
+  end
+  -- 4 項以上排兩欄；有任何一項在半欄放不下（含數字）就退回單欄
+  local function colsFor(list, n)
+    if n < 4 then return 1 end
+    local half = math.floor(avail / 2) - 6
+    for j = 1, n do
+      local o = list[j]
+      if textWidth(o.text, fsz - 2) + (o.num and textWidth(o.num, fsz - 2) + 8 or 0) > half then return 1 end
+    end
+    return 2
+  end
+  bar.l2:SetShown(l2 ~= nil)
+  if l2 then place(bar.l2, bar.l2n, x0, avail, l2, l2num); y = y - 18 else bar.l2n:Hide() end
+  -- 多目標：最多 objRows 行（多的話最後一行「…還有 n 項」）
   local shown = {}
   if objList then
+    local maxRows = UI.Get("objRows")
     for k, o in ipairs(objList) do
-      local maxRows = UI.Get("objRows")
       if #objList > maxRows and k == maxRows then shown[k] = { text = L["…還有 %d 項"]:format(#objList - maxRows + 1) }; break end
       shown[k] = o
       if k == maxRows then break end
     end
   end
-  local cols = #shown >= 4 and 2 or 1
+  local cols = colsFor(shown, #shown)
+  local colW = math.floor(avail / cols)
   for k = 1, #bar.objs do
     local fs, o = bar.objs[k], shown[k]
     if o then
       local row, col = math.floor((k - 1) / cols), (k - 1) % cols
-      fs:ClearAllPoints()
-      local colW = math.floor((UI.Get("barWidth") - x0 - 10) / cols)
-      fs:SetPoint("TOPLEFT", x0 + col * colW, y - row * 18)
-      fs:SetWidth(colW - 6)
-      fs:SetText(o.text)
-      paint(fs, o.done and FAINT or TEXT)
+      local yy = y
+      y = y - row * 18
+      place(fs, bar.objN[k], x0 + col * colW, colW - 6, o.text, o.num)
+      y = yy
+      paint(fs, o.done and FAINT or TEXT); paint(bar.objN[k], o.done and FAINT or TEXT)
       fs:Show()
     else
-      fs:Hide()
+      fs:Hide(); bar.objN[k]:Hide()
     end
   end
   if #shown > 0 then y = y - math.ceil(#shown / cols) * 18 end
   if l3 then bar.l3:SetPoint("TOPLEFT", x0, y); y = y - 18 end
-  -- 附近可一起做的步驟：每步一個小區塊（分隔線＋動詞任務名＋目標）
+  -- 附近可一起做的步驟：每步一個小區塊（分隔線＋動詞任務名＋目標）；完整內容在步驟列的滑鼠提示
   local used = 0
-  local fsz = UI.Get("fontSize")
-  local function line(t, color, x, w)
+  local function line(t, color, x, w, num)
     used = used + 1
-    local f = bar.extra[used]
+    local f, nf = bar.extra[used], bar.extraN[used]
     if not f then return end
-    f:SetFont(FONT, fsz - 2, "")
-    f:ClearAllPoints()
-    f:SetPoint("TOPLEFT", x or x0, y)
-    f:SetWidth(w or (UI.Get("barWidth") - x0 - 10))
-    f:SetText(t)
-    paint(f, color)
+    f:SetFont(FONT, fsz - 2, ""); nf:SetFont(FONT, fsz - 2, "")
+    place(f, nf, x or x0, w or avail, t, num)
+    paint(f, color); paint(nf, color)
     f:Show()
   end
   for k, i in ipairs(state and state.group or {}) do
@@ -1848,34 +1978,37 @@ function UI.Render(S)
       d:Show()
     end
     y = y - 6
-    line((E.VERB[s.t] or "") .. " " .. E.Title(s), TEXT)
+    line(E.VerbTitle(s), TEXT)
     y = y - 18
     if s.t == "do" and s.q then
-      local one, header, lines = objectiveLines(s.q)
+      local one, header, lines, num = objectiveLines(s.q)
       if lines then
         if header then line(header, DIM); y = y - 18 end
         local maxRows = UI.Get("objRows")
         local n = math.min(#lines, maxRows)
-        local cols = n >= 4 and 2 or 1
-        local colW = math.floor((UI.Get("barWidth") - x0 - 10) / cols)
+        local disp = {}
         for j = 1, n do
-          local o = lines[j]
-          local text = (#lines > maxRows and j == maxRows) and L["…還有 %d 項"]:format(#lines - maxRows + 1) or o.text
-          local r, c = math.floor((j - 1) / cols), (j - 1) % cols
+          disp[j] = (#lines > maxRows and j == maxRows) and { text = L["…還有 %d 項"]:format(#lines - maxRows + 1) } or lines[j]
+        end
+        local gc = colsFor(disp, n)
+        local gw = math.floor(avail / gc)
+        for j = 1, n do
+          local o = disp[j]
+          local r, c = math.floor((j - 1) / gc), (j - 1) % gc
           local yy = y
           y = y - r * 18
-          line(text, o.done and FAINT or DIM, x0 + c * colW, colW - 6)
+          line(o.text, o.done and FAINT or DIM, x0 + c * gw, gw - 6, o.num)
           y = yy
         end
-        y = y - math.ceil(n / cols) * 18
+        y = y - math.ceil(n / gc) * 18
       elseif one or s.hint then
-        line(one or s.hint, DIM); y = y - 18
+        line(one or s.hint, DIM, nil, nil, one and num); y = y - 18
       end
     elseif s.npc then
       line(s.npc, DIM); y = y - 18
     end
   end
-  for k = used + 1, #bar.extra do bar.extra[k]:Hide() end
+  for k = used + 1, #bar.extra do bar.extra[k]:Hide(); bar.extraN[k]:Hide() end
   for k = #(state and state.group or {}) + 1, #bar.divs do bar.divs[k]:Hide() end
   bar:SetHeight(math.max(44, -y + 6))
 
@@ -1890,12 +2023,22 @@ function UI.Render(S)
   -- 提示：安全 ＞ 走了就來不及 ＞ 人在附近 ＞ 隨時能做。副本中全部不顯示
   local H = {}
   local st = state and not state.instance and state.st
-  local function goTo(p, name) MG.wpOverride = { map = p.map, x = p.x, y = p.y, name = name }; MG.Refresh(true) end
+  -- 臨時航點：走到了或 done() 成立（修好裝、開了飛行點）就收回
+  local function goTo(p, name, done) UI.SetOverride({ map = p.map, x = p.x, y = p.y, name = name, done = done }) end
   local function pin(i) return function() E.PinIndex(state, i); MG.wpOverride, MG.grindActive = nil, nil; MG.Refresh(true) end end
   local g
   if st then
     local danger, fp = E.Nearby(st)
     if danger then H[#H + 1] = { tag = L["危險"], color = RED, text = danger.text and (E.Clause(danger.text)) or L["危險區域"], full = danger.text } end
+    -- 箭頭不在原本該做的那步（點了「去」、清單改做別步、副本分頁／補給／練怪點等臨時航點）：顯示原本那步，按「返回」回到目前步驟
+    local pinned = state.cur and state.auto and state.cur ~= state.auto and MG.db.pin[st.id]
+    if pinned or MG.wpOverride then
+      local back = state.steps[pinned and state.auto or state.cur or 0]
+      local nx = S.nextSt
+      H[#H + 1] = { tag = L["原本"], color = GOLD, actLabel = L["返回"],
+        text = back and E.VerbTitle(back.s) or (nx and L["前往 %s"]:format(UI.StName(nx))) or "",
+        act = function() if pinned then MG.db.pin[st.id] = nil end; UI.ClearOverride() end }
+    end
     local leave = UI.Leaving(state)
     if #leave > 0 then
       H[#H + 1] = { tag = L["離開前"], color = AMBER, text = L["還有 %d 個任務"]:format(#leave), actLabel = L["看"],
@@ -1912,7 +2055,7 @@ function UI.Render(S)
         end
       end
       H[#H + 1] = { tag = L["修裝"], color = AMBER, text = repair and (repair.npc or L["修理"]) or (L["耐久 "] .. math.floor(low * 100) .. "%"),
-        sub = repair and best < 10 and L["附近"] or nil, actLabel = repair and L["去"] or nil, act = repair and function() goTo(repair, MG.Clean(repair.npc or L["修理"])) end or nil }
+        sub = repair and best < 10 and L["附近"] or nil, actLabel = repair and L["去"] or nil, act = repair and function() goTo(repair, MG.Clean(repair.npc or L["修理"]), function() return (E.Durability() or 1) >= 0.3 end) end or nil }
     end
     if S.sug and db.sugHide ~= lv then
       local sug = S.sug
@@ -1923,20 +2066,14 @@ function UI.Render(S)
       H[#H + 1] = { tag = L["下一站"], color = GOLD, text = UI.StName(nx), sub = nx.lv[1] .. "-" .. nx.lv[2], actLabel = L["去"],
         act = function() E.Select(nx); lastCurKey = nil; MG.Refresh(true) end }
     end
-    -- 點了「去」或步驟清單改做別步：顯示原本該做的那步，按「返回」回到路線順序
-    if state.cur and state.auto and state.cur ~= state.auto and MG.db.pin[st.id] then
-      local as = state.steps[state.auto].s
-      H[#H + 1] = { tag = L["原本"], color = GOLD, text = (E.VERB[as.t] or "") .. " " .. E.Title(as), actLabel = L["返回"],
-        act = function() MG.db.pin[st.id] = nil; MG.wpOverride, MG.grindActive = nil, nil; MG.N.Forget(true); MG.Refresh(true) end }
-    end
     local vi = E.Detour(state)
     if vi then
       local vs = state.steps[vi].s
-      H[#H + 1] = { tag = L["順路"], color = GOLD, text = (E.VERB[vs.t] or "") .. " " .. ((vs.t ~= "do" and vs.npc and not vs.npcObj and not vs.npc:find("物品", 1, true)) and vs.npc or E.Title(vs)),
+      H[#H + 1] = { tag = L["順路"], color = GOLD, text = (vs.t ~= "do" and vs.npc and not vs.npcObj and not vs.npc:find("物品", 1, true)) and (E.Verb(vs) .. " " .. vs.npc) or E.VerbTitle(vs),
         actLabel = L["去"], act = pin(vi), close = function() E.DetourNo(state.steps[vi].key) end }
     end
     if fp then
-      H[#H + 1] = { tag = L["飛行點"], color = GOLD, text = fp.npc or L["飛行管理員"], actLabel = L["去"], act = function() goTo(fp, MG.Clean(fp.npc or L["飛行管理員"])) end,
+      H[#H + 1] = { tag = L["飛行點"], color = GOLD, text = fp.npc or L["飛行管理員"], actLabel = L["去"], act = function() goTo(fp, MG.Clean(fp.npc or L["飛行管理員"]), function() return MG.db.fpSeen[fp.npcG or fp.npc] end) end,
         close = function() MG.db.fpSkip[fp.npcG or fp.npc] = true end }
     end
     if state.train then
@@ -1976,18 +2113,31 @@ function UI.Render(S)
       f.strip:SetColorTexture(h.color[1], h.color[2], h.color[3], 1)
       f.tag:SetText(h.tag); paint(f.tag, h.color)
       f.label:SetText(h.text or "")
-      -- 太長就換到第二行（最多兩行），列跟著變高
-      f.label:SetWordWrap(true); f.label:SetMaxLines(2)
       -- 右側保留：動作鈕實際寬度＋× 鈕
       f.act.label:SetText(h.actLabel or "")
       local aw = math.max(28, math.ceil(f.act.label:GetStringWidth() or 0) + 12)
       f.act:SetWidth(aw)
       local reserve = 32 + aw
       local room = w - 10 - (f.tag:GetStringWidth() or 0) - 8 - reserve
-      f.label:SetWidth(math.max(1, math.min((f.label.GetUnboundedStringWidth and f.label:GetUnboundedStringWidth() or f.label:GetStringWidth() or 0) + 2, room)))
-      f:SetHeight(math.max(24, math.ceil(f.label:GetStringHeight() or 0) + 10))
+      -- 補充（等級範圍、前置數量）先量：不超過列寬 40% 就排在主文字右邊（從主文字的寬扣掉）；太長就放到第二行
       f.sub:SetText(h.sub or "")
-      f.sub:SetPoint("RIGHT", -(reserve - 4), 0)
+      local sw = (h.sub or "") ~= "" and math.ceil(f.sub:GetStringWidth() or 0) + 2 or 0
+      local inline = sw <= w * 0.4
+      if inline and sw > 0 then room = room - sw - 6 end
+      f.label:SetWidth(math.max(1, math.min((f.label.GetUnboundedStringWidth and f.label:GetUnboundedStringWidth() or f.label:GetStringWidth() or 0) + 2, room)))
+      f.label:SetText(h.text or "") -- 改寬後重設文字，行高才會照新寬算
+      f.tag:ClearAllPoints(); f.label:ClearAllPoints(); f.sub:ClearAllPoints()
+      if inline then
+        f.tag:SetPoint("LEFT", 10, 0)
+        f.label:SetPoint("LEFT", f.tag, "RIGHT", 8, 0)
+        f.sub:SetPoint("LEFT", f.label, "RIGHT", 6, 0); f.sub:SetWidth(math.max(1, sw))
+        f:SetHeight(math.max(24, math.ceil(f.label:GetStringHeight() or 0) + 10))
+      else
+        f.tag:SetPoint("TOPLEFT", 10, -6)
+        f.label:SetPoint("TOPLEFT", f.tag, "TOPRIGHT", 8, 0)
+        f.sub:SetPoint("TOPLEFT", f.label, "BOTTOMLEFT", 0, -2); f.sub:SetWidth(math.max(1, room))
+        f:SetHeight(math.ceil(f.label:GetStringHeight() or 0) + math.ceil(f.sub:GetStringHeight() or 0) + 14)
+      end
       f.act:SetShown(h.act ~= nil)
       f.x:SetShown(h.close ~= nil)
       f:ClearAllPoints()
@@ -2035,15 +2185,18 @@ function UI.ShowReport(body, title)
     report:SetScript("OnDragStart", report.StartMoving)
     report:SetScript("OnDragStop", report.StopMovingOrSizing)
     box(report)
+    -- 關閉鈕照字寬；標題夾在左邊和關閉鈕之間，最多兩行，內文區跟著標題高度往下
+    local close = CreateFrame("Button", nil, report)
+    close.label = text(close, 13, GOLD, "CENTER"); close.label:SetPoint("CENTER"); close.label:SetText(L["關閉"])
+    close:SetSize(math.max(48, math.ceil(close.label:GetStringWidth() or 0) + 16), 22); close:SetPoint("TOPRIGHT", -8, -6)
+    close:SetScript("OnClick", function() report:Hide() end)
     local head = text(report, 13, DIM)
     head:SetPoint("TOPLEFT", 12, -10)
+    head:SetWidth(600 - 12 - close:GetWidth() - 8 - 8)
+    wrapLines(head, 2)
     report.head = head
-    local close = CreateFrame("Button", nil, report)
-    close:SetSize(48, 22); close:SetPoint("TOPRIGHT", -8, -6)
-    close.label = text(close, 13, GOLD, "CENTER"); close.label:SetPoint("CENTER"); close.label:SetText(L["關閉"])
-    close:SetScript("OnClick", function() report:Hide() end)
     local sf = CreateFrame("ScrollFrame", nil, report)
-    sf:SetPoint("TOPLEFT", 12, -34); sf:SetPoint("BOTTOMRIGHT", -12, 12)
+    report.sf = sf
     local eb = CreateFrame("EditBox", nil, sf)
     eb:SetMultiLine(true)
     eb:SetAutoFocus(false)
@@ -2062,6 +2215,8 @@ function UI.ShowReport(body, title)
   local _, lines = body:gsub("\n", "")
   report.eb:SetHeight((lines + 2) * 15)
   report.head:SetText(title or L["阿聖練等幫手 檢查報告：Ctrl+A 全選、Ctrl+C 複製，貼回給開發者"])
+  report.sf:ClearAllPoints()
+  report.sf:SetPoint("TOPLEFT", 12, math.min(-34, -10 - math.ceil(report.head:GetStringHeight() or 0) - 8)); report.sf:SetPoint("BOTTOMRIGHT", -12, 12)
   report.eb:SetText(body)
   report:Show()
   report.eb:SetFocus()

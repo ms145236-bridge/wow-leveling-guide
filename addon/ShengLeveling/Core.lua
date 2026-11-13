@@ -46,6 +46,9 @@ local function refresh()
     -- 剛出副本：在跑副本流程或升級了 → 重新對齊主線（等級超過時會出現跳站建議）
     inInstance = false
     UI.SetHidden(false)
+    -- 出副本：臨時航點（副本分頁設的入口等）收回，箭頭回到目前步驟
+    MG.wpOverride, MG.grindActive = nil, nil
+    N.Forget()
     local cur = MG.db.station and E.byId[MG.db.station]
     if (cur and cur.dungeon) or (UnitLevel("player") or 0) > (enterLevel or 99) then
       MG.db.station = MG.db.dungeonFrom
@@ -88,8 +91,22 @@ local function refresh()
     end
   end
   local curKey = state and state.cur and state.steps[state.cur].key
-  if curKey ~= lastArrowKey then MG.wpOverride = nil; lastArrowKey = curKey end
+  if curKey ~= lastArrowKey then
+    if MG.wpOverride then dirty = true end -- 步驟列的「原本 … 返回」要跟著收
+    MG.wpOverride = nil; lastArrowKey = curKey
+  end
+  -- 臨時航點（不是目前步驟）：走到了（keep 的除外，例如練怪點）或目的達成（done）就收回
   local o = MG.wpOverride
+  if o then
+    local map, x, y = C.Position()
+    local reached = not o.keep and map == o.map and x and y and math.abs(x - o.x) + math.abs(y - o.y) < 0.6
+    if reached or (o.done and o.done()) then
+      if o.grind then MG.grindActive = nil end
+      MG.wpOverride, o = nil, nil
+      N.Forget()
+      dirty = true -- 步驟列的「原本 … 返回」要跟著收
+    end
+  end
   if o then N.Set(o.map, o.x, o.y, o.name)
   elseif s and s.x then N.Set(s.map, s.x, s.y, MG.Clean(E.Title(s))) else N.Clear() end
 end
@@ -127,6 +144,7 @@ f:SetScript("OnUpdate", function(_, dt)
       MG.try("位置檢查", function()
       local cur = lastState and lastState.cur and lastState.steps[lastState.cur].s
       if cur and (cur.t == "goto" or (cur.t == "travel" and cur.x)) then dirty = true end
+      if MG.wpOverride then dirty = true end -- 臨時航點：走到了要收回
       -- 順路提醒、附近危險、沒開的飛行點：位置一變就要重看，結果有變才重畫
       local danger, fp = E.Nearby(lastState and not lastState.instance and lastState.st)
       local d = tostring((E.Detour(lastState))) .. tostring(danger) .. tostring(fp)
@@ -307,7 +325,12 @@ local function onEvent(_, event, ...)
     onTaxi = UnitOnTaxi and UnitOnTaxi("player") or false
     return
   elseif event == "PLAYER_CONTROL_GAINED" then
-    if onTaxi then latchCurrent("fly") end
+    if onTaxi then
+      latchCurrent("fly")
+      -- 下飛行：臨時航點收回，箭頭回到目前步驟
+      MG.wpOverride = nil
+      N.Forget()
+    end
     onTaxi = false
   elseif event == "ZONE_CHANGED_NEW_AREA" then
     -- 船：換到別的地圖（離開碼頭那張）才算到了
@@ -455,15 +478,15 @@ SlashCmdList.METROGUIDE = function(msg)
   elseif msg == "macro" then MG.try("目標巨集", MG.T.MakeMacro)
   elseif msg == "minimap" then UI.Set("minimap", true); UI.ApplySettings()
   elseif msg:match("^lang") then
-    -- 介面語言預覽：en／zh／auto（跟客戶端）。選目標、比對遊戲文字仍跟客戶端語言
+    -- 介面語言預覽：en／zh／auto（跟客戶端）／stress（英文加長約 35%，檢查版面）。選目標、比對遊戲文字仍跟客戶端語言
     local v = msg:match("^lang%s+(%a+)")
-    if v == "en" or v == "zh" or v == "auto" then
+    if v == "en" or v == "zh" or v == "auto" or v == "stress" then
       MetroGuideDB.lang = v ~= "auto" and v or nil
       MG.msg(L["介面語言設為 %s，/reload 後生效"]:format(v))
     else
-      MG.msg(L["介面語言：%s（/slv lang en｜zh｜auto，/reload 後生效）"]:format(MetroGuideDB.lang or "auto"))
+      MG.msg(L["介面語言：%s（/slv lang en｜zh｜auto｜stress，/reload 後生效）"]:format(MetroGuideDB.lang or "auto"))
     end
   elseif msg:sub(1, 3) == "rec" then MG.Rec.Slash(msg:sub(4))
   elseif msg == "" then UI.Toggle()
-  else MG.msg(L["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言"]) end
+  else MG.msg(L["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言（en｜zh｜auto；stress＝英文加長 35% 檢查版面）"]) end
 end
