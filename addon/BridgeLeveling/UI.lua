@@ -1423,7 +1423,7 @@ function UI.CreateMinimap()
   end)
   mini:SetScript("OnDragStop", function(self) self:SetScript("OnUpdate", nil) end)
   mini:SetScript("OnEnter", function(self)
-    tipOpen(self, "布里居練等幫手", "ANCHOR_LEFT")
+    tipOpen(self, "阿聖練等幫手", "ANCHOR_LEFT")
     local st = state and state.st
     local cur = state and state.cur and state.steps[state.cur]
     tipLine(st and (st.name .. "  " .. st.lv[1] .. "-" .. st.lv[2]) or "沒有路線", TEXT)
@@ -1458,7 +1458,7 @@ function UI.CreateOptions()
   end)
   local head = text(content, 18, GOLD)
   head:SetPoint("TOPLEFT", 16, -10)
-  head:SetText("布里居練等幫手")
+  head:SetText("阿聖練等幫手")
   options.widgets = {}
   local syncing = false
   local function changed(sp)
@@ -1577,7 +1577,7 @@ function UI.CreateOptions()
   content:SetHeight(-y + 20)
   options:SetScript("OnShow", function() UI.RefreshOptions() end)
   options:SetScript("OnHide", function() if GameTooltip:GetOwner() == bar then GameTooltip:Hide() end end)
-  C.RegisterOptions(options, "布里居練等幫手")
+  C.RegisterOptions(options, "阿聖練等幫手")
 end
 
 function UI.RefreshOptions()
@@ -1963,7 +1963,7 @@ function UI.ShowReport(body, title)
   end
   local _, lines = body:gsub("\n", "")
   report.eb:SetHeight((lines + 2) * 15)
-  report.head:SetText(title or "布里居練等幫手 檢查報告：Ctrl+A 全選、Ctrl+C 複製，貼回給開發者")
+  report.head:SetText(title or "阿聖練等幫手 檢查報告：Ctrl+A 全選、Ctrl+C 複製，貼回給開發者")
   report.eb:SetText(body)
   report:Show()
   report.eb:SetFocus()

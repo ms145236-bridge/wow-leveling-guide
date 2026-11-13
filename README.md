@@ -1,4 +1,4 @@
-# 布里居練等幫手（BridgeLeveling）
+# 阿聖練等幫手（BridgeLeveling）
 
 《魔獸世界：永恆》（WoW Forever，zhTW 1.60.1）部落 1–60 練級路線指示插件。
 

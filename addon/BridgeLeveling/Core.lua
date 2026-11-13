@@ -332,7 +332,7 @@ local function probe()
     if res[1] then add(label, unpack(res, 2, res.n)) else L[#L + 1] = label .. " = 錯誤：" .. tostring(res[2]) end
   end
   local QL = C_QuestLog or {}
-  L[#L + 1] = "== 布里居練等幫手 probe " .. (C_AddOns and C_AddOns.GetAddOnMetadata and C_AddOns.GetAddOnMetadata(ADDON, "Version") or "") .. "｜路線 " .. tostring(R.built) .. " =="
+  L[#L + 1] = "== 阿聖練等幫手 probe " .. (C_AddOns and C_AddOns.GetAddOnMetadata and C_AddOns.GetAddOnMetadata(ADDON, "Version") or "") .. "｜路線 " .. tostring(R.built) .. " =="
   try("locale, interface, build", function() local v, b, _, i = GetBuildInfo(); return GetLocale(), i, v, b end)
   L[#L + 1] = "-- 相容層選用"
   for k, v in pairs(C.impl) do L[#L + 1] = "  " .. k .. " → " .. v end

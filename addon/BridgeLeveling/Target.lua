@@ -9,7 +9,7 @@ local T = {}
 MG.T = T
 T.MARKS = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" }
 
-BINDING_HEADER_METROGUIDE = "布里居練等幫手"
+BINDING_HEADER_METROGUIDE = "阿聖練等幫手"
 _G["BINDING_NAME_CLICK MetroGuideTargetButton:LeftButton"] = "選取任務目標"
 
 local btn, pending, rot, names, key = nil, false, 0, {}, ""
@@ -95,8 +95,8 @@ T.MacroText = macro
 local MACRO, OLD_MACRO = "任務目標", "地鐵目標"
 local ICON = "Ability_Hunter_SniperShot"
 local function emptyText()
-  if T.objNote then return "/run print(\"布里居練等幫手：目標是地上的物件（" .. T.objNote .. "），無法選取\")" end
-  return "/run print(\"布里居練等幫手：目前步驟沒有要選的目標\")"
+  if T.objNote then return "/run print(\"阿聖練等幫手：目標是地上的物件（" .. T.objNote .. "），無法選取\")" end
+  return "/run print(\"阿聖練等幫手：目前步驟沒有要選的目標\")"
 end
 local function macroBody()
   local text = macro()
