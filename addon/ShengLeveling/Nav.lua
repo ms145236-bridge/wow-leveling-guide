@@ -6,6 +6,12 @@ local FLAG = "MetroGuide"
 local last -- 目前我們放的點 "map:x:y"
 local force -- 玩家點了步驟列：這次連別人放的點也蓋掉
 
+-- 航點座標：有的客戶端 position 是 Vector2D（有 GetXY），有的是一般表格 {x, y}
+local function xy(pos)
+  if type(pos.GetXY) == "function" then return pos:GetXY() end
+  return pos.x, pos.y
+end
+
 local function wpui()
   local api = WaypointUIAPI and WaypointUIAPI.Navigation
   return api and type(api.NewUserNavigation) == "function" and api or nil
@@ -19,8 +25,8 @@ local function free()
   local p = C_Map.GetUserWaypoint and C_Map.GetUserWaypoint()
   local mine = MG.db.wp -- 我們上次放的點（存檔，/reload 後仍認得）
   if p and mine and p.uiMapID == mine.map and p.position then
-    local x, y = p.position:GetXY()
-    if math.abs(x * 100 - mine.x) < 0.2 and math.abs(y * 100 - mine.y) < 0.2 then return true end
+    local x, y = xy(p.position)
+    if x and y and math.abs(x * 100 - mine.x) < 0.2 and math.abs(y * 100 - mine.y) < 0.2 then return true end
   end
   return false
 end
@@ -39,8 +45,8 @@ local function set(map, x, y, name)
   -- 地圖上的航點已經是這個位置：不重放（避免箭頭、音效重來一次）
   local p = C_Map and C_Map.HasUserWaypoint and C_Map.HasUserWaypoint() and C_Map.GetUserWaypoint and C_Map.GetUserWaypoint()
   if p and p.uiMapID == map and p.position then
-    local px, py = p.position:GetXY()
-    if math.abs(px * 100 - x) < 0.2 and math.abs(py * 100 - y) < 0.2 then
+    local px, py = xy(p.position)
+    if px and py and math.abs(px * 100 - x) < 0.2 and math.abs(py * 100 - y) < 0.2 then
       MG.db.wp = { map = map, x = x, y = y }
       last = key
       return
