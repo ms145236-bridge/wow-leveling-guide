@@ -7,7 +7,7 @@ local P = {}
 MG.P = P
 local REF = "MetroGuide"
 -- 標點 v2（PIN-SPEC.md）：外形＝動詞（色盲輔助），色面用 SetVertexColor 染色，金框疊在上面，目前步驟加光暈
-local MEDIA = "Interface\\AddOns\\MetroGuide\\Media\\"
+local MEDIA = "Interface\\AddOns\\ShengLeveling\\Media\\"
 local SHAPE = { accept = "circle", ["do"] = "square", turnin = "diamond" }
 local COLOR = { accept = { 0.95, 0.73, 0.06 }, ["do"] = { 0.91, 0.39, 0.10 }, turnin = { 0.18, 0.68, 0.31 } }
 local GREY = { 0.55, 0.59, 0.66 }

@@ -1258,7 +1258,7 @@ function UI.Create()
     row.arrow:SetTexture("Interface\\ChatFrame\\ChatFrameExpandArrow"); row.arrow:Hide()
     row.icon = row:CreateTexture(nil, "ARTWORK")
     row.icon:SetSize(12, 12); row.icon:SetPoint("LEFT", 10, 0)
-    row.icon:SetTexture("Interface\\AddOns\\MetroGuide\\Media\\pin_circle_base"); row.icon:SetVertexColor(GOLD[1], GOLD[2], GOLD[3]); row.icon:Hide()
+    row.icon:SetTexture("Interface\\AddOns\\ShengLeveling\\Media\\pin_circle_base"); row.icon:SetVertexColor(GOLD[1], GOLD[2], GOLD[3]); row.icon:Hide()
     row.sub = text(row, 12, DIM)
     row.sub:SetPoint("TOPLEFT", 50, -25); row.sub:SetPoint("RIGHT", -12, 0); row.sub:Hide()
     row.tabs = {}
