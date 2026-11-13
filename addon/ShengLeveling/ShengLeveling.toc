@@ -1,18 +1,20 @@
 ## Interface: 16001
-## Title: |cff4fc3f7Sheng|rLeveling
+## Title: |cff4fc3f7Sheng|r|cffd9b25fLeveling|r
 ## Title-zhTW: |cff4fc3f7阿聖|r練等幫手
-## Notes: Horde 1-60 leveling route guide: one step at a time, auto-syncs with your quest log. /slv
+## Notes: Horde 1-60 leveling route: one step at a time, synced with your quest log. /slv to toggle, /slv probe for diagnostics
 ## Notes-zhTW: 部落 1–60 練等路線：一次只顯示一步，任務狀態一變就自動對齊。/lv 開關、/lv probe 檢查報告
 ## Author: ms145236-bridge
 ## IconTexture: Interface\AddOns\ShengLeveling\Media\Logo
-## Version: 1.0.23
+## Version: 1.1.0-beta1
 ## X-Series: Sheng
 ## OptionalDeps: WaypointUI
 ## SavedVariables: MetroGuideDB, MetroGuideRecDB
 ## SavedVariablesPerCharacter: MetroGuideCharDB
 
+Locales\enUS.lua
 Compat.lua
 Data\Route.lua
+Data\Route_enUS.lua
 Engine.lua
 Nav.lua
 UI.lua

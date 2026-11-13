@@ -3,10 +3,11 @@
 -- 按鈕是安全按鈕（type = item），屬性與顯示只在戰鬥外改；動作條巨集「任務物品」內容是 /use item:ID，也只在戰鬥外改寫。
 local _, MG = ...
 local C = MG.C
+local L = MG.L
 local I = {}
 MG.I = I
 
-_G["BINDING_NAME_CLICK MetroGuideItemButton1:LeftButton"] = "使用任務物品"
+_G["BINDING_NAME_CLICK MetroGuideItemButton1:LeftButton"] = MG.gameZh and "使用任務物品" or "Use quest item"
 
 local MAX = 3
 local buttons, pending, items, key = {}, false, {}, ""
@@ -70,11 +71,11 @@ local function layout(bar)
 end
 
 -- 動作條巨集「任務物品」：/use 第一個物品
-local MACRO, ICON = "任務物品", "INV_Misc_Bag_08"
+local MACRO, ICON = MG.gameZh and "任務物品" or "Quest Item", "INV_Misc_Bag_08" -- 巨集名跟客戶端語言
 local lastBody
 local triedCreate = false
 local function macroBody()
-  return items[1] and ("/use item:" .. items[1]) or "/run ShengLv_Msg(\"目前步驟沒有任務物品\")"
+  return items[1] and ("/use item:" .. items[1]) or ("/run ShengLv_Msg(\"" .. L["目前步驟沒有任務物品"] .. "\")")
 end
 function I.SyncMacro()
   if not GetMacroIndexByName or InCombatLockdown() or not MG.UI.Get("itemMacro") then return end
@@ -140,7 +141,7 @@ function I.Create(bar)
     b.icon:SetAllPoints()
     b.icon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
     b.count = b:CreateFontString(nil, "OVERLAY")
-    b.count:SetFont(STANDARD_TEXT_FONT or "Fonts\\bLEI00D.ttf", 10, "OUTLINE")
+    b.count:SetFont(STANDARD_TEXT_FONT or (MG.gameZh and "Fonts\\bLEI00D.ttf") or "Fonts\\FRIZQT__.TTF", 10, "OUTLINE")
     b.count:SetPoint("BOTTOMRIGHT", -1, 1)
     local ok, cd = pcall(CreateFrame, "Cooldown", nil, b, "CooldownFrameTemplate")
     if ok and cd then cd:SetAllPoints(); b.cd = cd end
@@ -164,13 +165,13 @@ function I.Create(bar)
 end
 
 function I.Diag()
-  local L = {}
-  L[#L + 1] = "GetQuestLogSpecialItemInfo：" .. tostring(GetQuestLogSpecialItemInfo ~= nil) .. "｜目前物品：" .. (#items > 0 and table.concat(items, ", ") or "無")
+  local out = {}
+  out[#out + 1] = "GetQuestLogSpecialItemInfo: " .. tostring(GetQuestLogSpecialItemInfo ~= nil) .. L["｜目前物品："] .. (#items > 0 and table.concat(items, ", ") or L["無"])
   local shown = {}
   for k, b in ipairs(buttons) do shown[#shown + 1] = k .. "=" .. tostring((b:IsShown())) .. "/" .. tostring((b:GetAttribute("item"))) end
-  L[#L + 1] = "按鈕：" .. table.concat(shown, "  ")
+  out[#out + 1] = L["按鈕："] .. table.concat(shown, "  ")
   local index = GetMacroIndexByName and GetMacroIndexByName(MACRO) or 0
   local body = index > 0 and GetMacroInfo and select(3, GetMacroInfo(index)) or nil
-  L[#L + 1] = "巨集「任務物品」格位 " .. index .. "：" .. tostring(body)
-  return L
+  out[#out + 1] = L["巨集「%s」格位 %d："]:format(MACRO, index) .. tostring(body)
+  return out
 end

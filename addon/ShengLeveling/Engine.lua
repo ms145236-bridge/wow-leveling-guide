@@ -2,9 +2,72 @@
 -- 進度不存：只存 pin/skip/latch/drop/carry 這些查不到的東西（MG.db）。
 local _, MG = ...
 local C = MG.C
+local L = MG.L
 local R = MG.Route or { stations = {}, quests = {} }
 local E = {}
 MG.E = E
+
+-- 路線資料換語言（ADDON_LOADED 時呼叫一次，語言設定讀到之後）。Route.lua 是中文底稿；Data\Route_<locale>.lua 依站 ID＋步驟序號、任務 ID 對上。
+-- 顯示用欄位跟介面語言；選取目標（tgt、tgo、objs）和要跟遊戲文字比對的名字（nG、npcG、mobG）跟客戶端語言。
+-- 非中文介面沒有翻譯的中文說明（desc、站的提醒、練怪說明、危險說明…）拿掉不顯示。
+function E.Localize()
+  local RL = MG.RouteL or {}
+  local D = not MG.uiZh and (RL[MG.uiLoc] or RL.enUS) or nil
+  local G = not MG.gameZh and (RL[MG.gameLoc] or RL.enUS) or nil
+  local en = not MG.uiZh
+  if not en and not G then return end
+  local none = {}
+  for _, st in ipairs(R.stations) do
+    local ds, gs = D and D.stations[st.id] or none, G and G.stations[st.id] or none
+    for i, s in ipairs(st.steps) do
+      s.key0 = tostring(s.node or s.bind or s.to or s.text or s.lv or "") -- 存檔用的步驟鍵不跟語言變
+      local d, g = ds.steps and ds.steps[i] or none, gs.steps and gs.steps[i] or none
+      s.npcG = s.npc
+      if G then s.npcG, s.tgt = g.npc or s.npc, g.tgt; s.npcObj = g.npcObj end
+      if en then
+        s.npc, s.hint, s.text, s.node, s.preText, s.star = d.npc, d.hint, d.text, d.node, d.preText, d.star
+        s.npcObj = d.npcObj
+        s.desc, s.bind, s.to, s.from = nil, nil, nil, nil
+        s.tagL = d.tag -- tag 本身是判斷用（怪多、副本前置鏈），顯示用 tagL
+      end
+    end
+    for i, g in ipairs(st.grind or none) do
+      g.mobG = G and (gs.grind and gs.grind[i] and gs.grind[i].mob) or g.mob
+      if en then g.mob = ds.grind and ds.grind[i] and ds.grind[i].mob or "?"; g.note = nil end
+    end
+    for i, p in ipairs(st.supply or none) do
+      p.npcG = G and (gs.supply and gs.supply[i] and gs.supply[i].npc) or p.npc
+      if en then p.npc = ds.supply and ds.supply[i] and ds.supply[i].npc end
+    end
+    if en then
+      st.name = ds.name or (st.map and C.MapName(st.map)) or st.id
+      st.short, st.tips, st.pickup, st.pickupS, st.alt = nil, {}, nil, nil, nil
+      if st.entrance then st.entrance = "" end
+      for _, x in ipairs(st.danger or none) do x.text = nil end
+    end
+  end
+  for id, q in pairs(R.quests) do
+    local d, g = D and D.quests[id] or none, G and G.quests[id] or none
+    q.nG = q.n
+    if G then q.nG, q.zt, q.tgo, q.objs = g.n or q.n, nil, g.tgo, g.objs end
+    if en then q.n, q.d, q.star = d.n or q.n, d.d, d.star end
+  end
+  for i, t in ipairs(R.trainers or none) do
+    t.npcK, t.npcG = t.npc, G and G.trainers and G.trainers[i] and G.trainers[i].npc or t.npc
+    if en then t.npc = D.trainers and D.trainers[i] and D.trainers[i].npc or t.npcG; t.place = nil end
+  end
+  if en then
+    for id, k in pairs(R.keep or none) do
+      local d = D.keep and D.keep[id] or none
+      k.n, k.use = d.n, d.use or (not k.q and L["之後的任務會用到"] or nil)
+    end
+    for _, o in pairs(R.offroute or none) do o.why = nil end
+  end
+end
+-- 任務名：遊戲給的（和介面同語言時）＞路線資料
+function E.QName(q)
+  return (MG.uiZh == MG.gameZh and C.Title(q)) or (R.quests[q] and R.quests[q].n) or (L["任務 "] .. q)
+end
 E.session = {} -- 本次登入收到 QUEST_TURNED_IN 的任務
 E.stations = {} -- 適用本角色的站（依路線順序）
 E.dungeons = {} -- 副本站（依建議等級排序；不在主線）
@@ -77,7 +140,7 @@ function E.Build()
       if st.start and not raceMatch(st.when.race) and not (E.stations[#E.stations] and E.stations[#E.stations].start == st.start) then
         local first
         for _, s in ipairs(st.steps) do if s.x then first = s; break end end
-        list[1] = { s = { t = "travel", text = "前往 " .. st.name, map = first and first.map, x = first and first.x, y = first and first.y, r = 5 }, key = st.id .. "#0", st = st }
+        list[1] = { s = { t = "travel", text = MG.uiZh and ("前往 " .. st.name) or st.name, map = first and first.map, x = first and first.x, y = first and first.y, r = 5 }, key = st.id .. "#0", st = st }
       end
       local usedKey = {}
       for _, s in ipairs(st.steps) do
@@ -86,7 +149,7 @@ function E.Build()
         else
           -- 鍵用內容：路線重建後存檔裡的勾選／略過／釘選不會跑到別步；同站重複的加 ~2、~3
           local base = QUEST[s.t] and (s.t:sub(1, 1) .. ":" .. s.q)
-            or (st.id .. "#" .. s.t .. ":" .. tostring(s.node or s.bind or s.to or s.text or s.lv or "") .. (s.x and string.format("@%.0f,%.0f", s.x, s.y) or ""))
+            or (st.id .. "#" .. s.t .. ":" .. (s.key0 or tostring(s.node or s.bind or s.to or s.text or s.lv or "")) .. (s.x and string.format("@%.0f,%.0f", s.x, s.y) or ""))
           local key, k = base, 2
           while usedKey[key] do key = base .. "~" .. k; k = k + 1 end
           usedKey[key] = true
@@ -119,7 +182,7 @@ function E.Build()
     local st
     for _, id in ipairs(t.st) do st = st or E.byId[id] end -- 候選站：取第一個本角色有的
     if t.c == me.class and st and not st.dungeon then
-      local step = { s = { t = "train", npc = t.npc, tgt = t.npc, place = t.place, lv = t.lv, map = t.map, x = t.x, y = t.y }, key = "tr:" .. t.lv .. ":" .. t.npc, st = st }
+      local step = { s = { t = "train", npc = t.npc, tgt = t.npcG or t.npc, place = t.place, lv = t.lv, map = t.map, x = t.x, y = t.y }, key = "tr:" .. t.lv .. ":" .. (t.npcK or t.npc), st = st }
       local list, cut = st.list, #st.list
       while cut > 0 and SOFT[list[cut].s.t] do cut = cut - 1 end
       table.insert(list, cut + 1, step)
@@ -696,7 +759,7 @@ function E.Jump(target)
   if #carry > 0 or dropN > 0 then
     local names = {}
     for _, q in ipairs(carry) do names[#names + 1] = (R.quests[q] and R.quests[q].n) or tostring(q) end
-    MG.msg(("跳到 %s。順路補 %d 個%s；可放掉 %d 個"):format(target.name, #carry, #names > 0 and ("：" .. table.concat(names, "、")) or "", dropN))
+    MG.msg(L["跳到 %s。順路補 %d 個%s；可放掉 %d 個"]:format(target.name, #carry, #names > 0 and (L["："] .. table.concat(names, L["、"])) or "", dropN))
   end
 end
 
@@ -723,11 +786,11 @@ end
 
 -- 略過（連帶）：略過「接」或「做」→ 這個任務的接／做／交 ＋ 後續任務的全部步驟；略過「交」→ 只連帶後續任務。
 -- 存法：skip[key] = 起點的 key（起點自己也存自己），取消時把同一個起點的全部還原。
-local function questName(q) return C.Title(q) or (R.quests[q] and R.quests[q].n) or tostring(q) end
+local function questName(q) return E.QName(q) end
 -- ── 跨站提醒 ──────────────────────────────────────────────────────────────────
 local function place(o, st)
-  if o.dungeon then return o.name .. " 副本" end
-  return o.name .. ((st and o ~= st and o.map == st.map) and "，第二次來" or "")
+  if o.dungeon then return L["%s 副本"]:format(o.name) end
+  return o.name .. ((st and o ~= st and o.map == st.map) and L["，第二次來"] or "")
 end
 -- 這個任務（含後續鏈）在 st 之後的站或副本還有步驟 → { {q, st}... }，每站列一次
 function E.Impact(q, st)
@@ -749,10 +812,10 @@ end
 function E.ImpactText(imp, st)
   local parts = {}
   for k, x in ipairs(imp) do
-    if k > 2 then parts[#parts] = parts[#parts] .. " 等 " .. #imp .. " 處"; break end
-    parts[#parts + 1] = questName(x.q) .. "（" .. place(x.st, st) .. "）"
+    if k > 2 then parts[#parts] = parts[#parts] .. L[" 等 %d 處"]:format(#imp); break end
+    parts[#parts + 1] = questName(x.q) .. L["（%s）"]:format(place(x.st, st))
   end
-  return "影響後續：" .. table.concat(parts, "、")
+  return L["影響後續："] .. table.concat(parts, L["、"])
 end
 -- 離站前：本站還沒做完（或略過）的任務中，會影響後續站的
 function E.Leaving(state)
@@ -804,7 +867,7 @@ function E.MakeUp(st, p)
   MG.db.carry[st.id] = carry
   for _, q in ipairs(carry) do if q == p then return end end
   carry[#carry + 1] = p
-  MG.msg("補做 " .. questName(p) .. "：排在本站最前面，做完回原路線")
+  MG.msg(L["補做 %s：排在本站最前面，做完回原路線"]:format(questName(p)))
 end
 
 -- 開了本職業訓練師（不是專業技能訓練師）：等級已到的「學」步驟都算做完，不管是哪一位訓練師
@@ -819,16 +882,16 @@ end
 function E.QuestNote(q)
   for _, o in ipairs(questSt[q] or {}) do
     for i, step in ipairs(o.list) do
-      if step.s.q == q then return o.dungeon and ("路線：" .. o.name .. " 副本") or ("路線：" .. MG.UI.StName(o) .. " 第 " .. i .. " 步") end
+      if step.s.q == q then return o.dungeon and (L["路線："] .. L["%s 副本"]:format(o.name)) or (L["路線："] .. L["%s 第 %d 步"]:format(MG.UI.StName(o), i)) end
     end
   end
   local off = R.offroute and R.offroute[q]
-  if off then return "不在路線上", off.v, off.why end
+  if off then return L["不在路線上"], off.v, off.why end
   local qlv = C.QuestLevel(q)
-  if qlv and qlv > 0 and (UnitLevel("player") or 0) - qlv > (C.GreenRange() or 8) then return "不在路線上", "可放掉", "等級已過" end
+  if qlv and qlv > 0 and (UnitLevel("player") or 0) - qlv > (C.GreenRange() or 8) then return L["不在路線上"], "可放掉", L["等級已過"] end
   local f = R.feeds and R.feeds[q]
-  if f then return "不在路線上", "值得做", "接後續：" .. questName(f) end
-  return "不在路線上", "之後順路", "順路再做"
+  if f then return L["不在路線上"], "值得做", L["接後續："] .. questName(f) end
+  return L["不在路線上"], "之後順路", L["順路再做"]
 end
 
 -- 任務出現的第一站（保留物品提示用）
@@ -854,7 +917,8 @@ function E.Nearby(st)
   end
   if MG.UI.Get("supplyOn") then
     for _, s in ipairs(st.supply or {}) do
-      if s.k == "飛行管理員" and s.npc and near(s) and not MG.db.fpSeen[s.npc] and not MG.db.fpSkip[s.npc] then fp = s; break end
+      local n = s.npcG or s.npc -- 開鳥點時記的是遊戲裡的 NPC 名（客戶端語言）
+      if s.k == "飛行管理員" and n and near(s) and not MG.db.fpSeen[n] and not MG.db.fpSkip[n] then fp = s; break end
     end
   end
   return danger, fp
@@ -879,7 +943,7 @@ function E.ToggleSkip(key)
   if root then
     if root == true then root = key end
     for k, v in pairs(skip) do if k == root or v == root then skip[k] = nil end end
-    MG.msg("已取消略過")
+    MG.msg(L["已取消略過"])
     return
   end
   local t, q = key:match("^(%a):(%d+)$")
@@ -901,13 +965,13 @@ function E.ToggleSkip(key)
         queue[#queue + 1] = f
         local o -- 後續任務在別站時標地名（本站的不標）
         for _, x in ipairs(questSt[f] or {}) do if x ~= here then o = o or x end end
-        later[#later + 1] = questName(f) .. (o and ("（" .. place(o, here) .. "）") or "")
+        later[#later + 1] = questName(f) .. (o and L["（%s）"]:format(place(o, here)) or "")
         for _, p in ipairs({ "a", "d", "t" }) do if not skip[p .. ":" .. f] then skip[p .. ":" .. f] = key end end
       end
     end
   end
   local imp = here and E.Impact(q, here) or {}
-  MG.msg("已略過：" .. names[1] .. (#later > 0 and ("、後續 " .. table.concat(later, "、")) or "") .. (#imp > 0 and ("。" .. E.ImpactText(imp, here)) or ""))
+  MG.msg(L["已略過："] .. names[1] .. (#later > 0 and (L["、後續 "] .. table.concat(later, L["、"])) or "") .. (#imp > 0 and (L["。"] .. E.ImpactText(imp, here)) or ""))
 end
 
 -- 手動勾選：val = true／false；nil＝回到自動
@@ -921,10 +985,10 @@ function E.Realign()
   for _, step in ipairs(old and old.list or {}) do
     if MG.db.mark[step.key] ~= nil then MG.db.mark[step.key] = nil; n = n + 1 end
   end
-  if n > 0 then MG.msg("已清除 " .. n .. " 個手動勾選") end
+  if n > 0 then MG.msg(L["已清除 %d 個手動勾選"]:format(n)) end
   MG.db.station = nil
   local st = E.Current()
-  if st then MG.msg("重新對齊：" .. st.name) end
+  if st then MG.msg(L["重新對齊："] .. st.name) end
 end
 
 
@@ -966,21 +1030,21 @@ end
 
 function E.DungeonStatus(d)
   local lv = UnitLevel("player") or 1
-  if E.DungeonDone(d) or lv > d.lv[2] + 3 then return "已過", "past" end
+  if E.DungeonDone(d) or lv > d.lv[2] + 3 then return L["已過"], "past" end
   local minPick = d.lv[1]
   for _, step in ipairs(d.list) do if step.s.pickLv and step.s.pickLv < minPick then minPick = step.s.pickLv end end
-  if lv < minPick then return minPick .. " 級", "low" end
+  if lv < minPick then return L["%d 級"]:format(minPick), "low" end
   local total, got = E.DungeonPre(d)
-  if total == 0 or got >= total then return lv >= d.lv[1] and "可以去" or (d.lv[1] .. " 級再去"), "ready" end
+  if total == 0 or got >= total then return lv >= d.lv[1] and L["可以去"] or L["%d 級再去"]:format(d.lv[1]), "ready" end
   local tg, tt = E.DungeonTargetCount(d)
-  if got > 0 then return "前置 " .. tg .. "/" .. tt, "some" end
+  if got > 0 then return L["前置 "] .. tg .. "/" .. tt, "some" end
   -- 前置任務本身還有前置（任務鏈沒做）→ 先做前置鏈（見前置接取路線）
   for _, step in ipairs(d.list) do
     local st = step.s
-    if st.ph == "pre" and st.t == "accept" and st.q and E.Applies(st.when) and available(st.q) then return "前置可接", "pick" end
+    if st.ph == "pre" and st.t == "accept" and st.q and E.Applies(st.when) and available(st.q) then return L["前置可接"], "pick" end
   end
   local tg, tt = E.DungeonTargetCount(d)
-  return "前置 " .. tg .. "/" .. tt, "chain"
+  return L["前置 "] .. tg .. "/" .. tt, "chain"
 end
 
 -- 插進主線站的副本前置步驟
@@ -1028,9 +1092,9 @@ function E.DungeonPrompt()
           local s = step.s
           if s.tag == "副本前置鏈" and E.Applies(s.when) and (not s.q or raceOK(s.q)) and not E.QuickDone(step) then left = left + 1 end
         end
-        if left > 0 then return d, "先做前置鏈（" .. left .. " 步）" end
+        if left > 0 then return d, L["先做前置鏈（%d 步）"]:format(left) end
         local total, got = E.DungeonPre(d)
-        return d, total > got and ("前置 " .. (total - got) .. "/" .. total .. " 未接") or nil
+        return d, total > got and L["前置 %d/%d 未接"]:format(total - got, total) or nil
       end
     end
   end
@@ -1122,7 +1186,7 @@ function E.DungeonNext(d, inside)
   local _, kind = E.DungeonStatus(d)
   if kind == "past" or MG.db.dNo[d.id] then return nil end
   local lv = UnitLevel("player") or 1
-  if kind == "low" then return { kind = "low", title = minPickLv(d) .. " 級可接前置" } end
+  if kind == "low" then return { kind = "low", title = L["%d 級可接前置"]:format(minPickLv(d)) } end
   local function first(ph, extra)
     for _, step in ipairs(d.list) do
       local s = step.s
@@ -1141,7 +1205,7 @@ function E.DungeonNext(d, inside)
     return true
   end)
   if pre then return { kind = "pre", step = pre } end
-  if lv < d.lv[1] then return { kind = "wait", title = d.lv[1] .. " 級再去" } end
+  if lv < d.lv[1] then return { kind = "wait", title = L["%d 級再去"]:format(d.lv[1]) } end
   if first("in") then return { kind = "ent" } end
   local post = first("post")
   if post then return { kind = "post", step = post } end
@@ -1149,7 +1213,10 @@ function E.DungeonNext(d, inside)
 end
 
 -- 步驟的顯示文字
-local VERB = { train = "學", accept = "接", ["do"] = "做", turnin = "交", ["goto"] = "到", fp = "鳥", hearth = "爐", fly = "飛", boat = "船", level = "練", travel = "行", need = "需" }
+local VERB = setmetatable({}, { __index = function(_, t)
+  local zh = ({ train = "學", accept = "接", ["do"] = "做", turnin = "交", ["goto"] = "到", fp = "鳥", hearth = "爐", fly = "飛", boat = "船", level = "練", travel = "行", need = "需" })[t]
+  return zh and L[zh]
+end })
 E.VERB = VERB
 -- 交通文字切成「第一句」與「其餘」（以全形逗號或句號；不能用 Lua 字元集，會切壞 UTF-8）
 function E.Clause(text)
@@ -1162,16 +1229,22 @@ function E.Clause(text)
   return text:sub(1, cut - 1), rest ~= "" and rest or nil
 end
 
+-- 沒有文字（非中文介面、路線只寫了中文）時：用地圖名＋座標
+local function where(s)
+  local zone = s.map and C.MapName(s.map)
+  return (zone or "") .. (s.x and string.format(" %.0f, %.0f", s.x, s.y) or "")
+end
 function E.Title(s)
   if s.t == "need" then return s.text or "" end
-  if s.q then return C.Title(s.q) or (R.quests[s.q] and R.quests[s.q].n) or ("任務 " .. s.q) end
-  if s.t == "travel" then return (E.Clause(s.text)) or ""
-  elseif s.t == "goto" then return s.text or "前往"
-  elseif s.t == "fp" then return "開鳥點：" .. (s.node or "")
-  elseif s.t == "hearth" then return "綁爐石：" .. (s.bind or "")
-  elseif s.t == "fly" then return "飛往 " .. (s.to or "")
-  elseif s.t == "boat" then return "搭船／飛艇往 " .. (s.to or "")
-  elseif s.t == "level" then return "練到 " .. (s.lv or "?") .. " 級"
-  elseif s.t == "train" then return "去學技能：" .. s.npc .. (s.place and ("（" .. s.place .. "）") or "") end
+  if s.q then return E.QName(s.q) end
+  -- 交通／到達沒有文字：只寫地點（動詞框已經是「去」）
+  if s.t == "travel" then return s.text and (E.Clause(s.text)) or (s.map and where(s)) or L["交通"]
+  elseif s.t == "goto" then return s.text or (s.map and where(s)) or L["前往"]
+  elseif s.t == "fp" then return L["開鳥點："] .. (s.node or (s.map and C.MapName(s.map)) or "")
+  elseif s.t == "hearth" then return L["綁爐石："] .. (s.bind or (s.map and C.MapName(s.map)) or "")
+  elseif s.t == "fly" then return L["飛往 "] .. (s.to or "")
+  elseif s.t == "boat" then return L["搭船／飛艇往 "] .. (s.to or "")
+  elseif s.t == "level" then return L["練到 %s 級"]:format(s.lv or "?")
+  elseif s.t == "train" then return L["去學技能："] .. (s.npc or "") .. (s.place and L["（%s）"]:format(s.place) or "") end
   return s.text or ""
 end

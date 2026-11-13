@@ -4,7 +4,53 @@ local C = {}
 MG.C = C
 C.impl = {} -- 挑到哪個實作（/slv probe 會印）
 
-function MG.msg(s) DEFAULT_CHAT_FRAME:AddMessage("|cff4fc3f7阿聖|r|cffd9b25f練等幫手|r " .. tostring(s)) end
+-- ── 語系（只在這裡選）─────────────────────────────────────────────────────────
+-- 兩種語言分開：介面語言 uiLoc（字串表 L、路線的顯示文字；/slv lang 可預覽，/reload 後生效）
+-- 和客戶端語言 gameLoc（選取目標的名字、和遊戲文字比對的任務名／NPC 名，一律跟 GetLocale()）。
+-- 中文是底稿：L 的鍵就是中文原文，查不到就回傳鍵；其他語言＝ Locales\<locale>.lua 一個檔。
+local CJK = { zhTW = true, zhCN = true }
+MG.Locales = MG.Locales or {}
+MG.gameLoc = GetLocale and GetLocale() or "enUS"
+MG.gameZh = CJK[MG.gameLoc] or false
+local strings
+MG.missingL = {} -- 非中文介面卻查不到翻譯的鍵（/slv probe 會列出）
+MG.L = setmetatable({}, { __index = function(_, k)
+  local v = strings and strings[k]
+  if v then return v end
+  if strings and type(k) == "string" and k:find("[\227-\233]") then MG.missingL[k] = true end -- 只記中文鍵
+  return k
+end })
+-- pref：auto（跟客戶端）／en／zh；沒有該語言的字串表就用英文
+function MG.SetLang(pref)
+  local loc = pref == "en" and "enUS" or pref == "zh" and "zhTW" or MG.gameLoc
+  if not CJK[loc] and not MG.Locales[loc] then loc = "enUS" end
+  MG.uiLoc, MG.uiZh = loc, CJK[loc] or false
+  strings = not MG.uiZh and MG.Locales[loc] or nil
+end
+MG.SetLang("auto")
+local L = MG.L
+
+-- 非中文介面：任何要顯示的字串都過這裡。漏網的中文字（客戶端字型沒有字，會變方框）拿掉並記下來（/slv probe 列出）；
+-- 全形標點換半形；非中文客戶端的字型也缺 ★→●… 這些符號，換成字型有的。
+local FULL = { ["（"] = " (", ["）"] = ")", ["："] = ": ", ["，"] = ", ", ["、"] = ", ", ["；"] = "; ", ["。"] = ". ", ["／"] = "/", ["｜"] = " | ", ["「"] = "\"", ["」"] = "\"", ["　"] = " " }
+local SYM = { ["★"] = "*", ["→"] = "->", ["●"] = "\226\128\162", ["○"] = "o", ["◎"] = "\194\187", ["‧"] = "\226\128\162", ["√"] = "+", ["▾"] = "", ["┃"] = "|" }
+MG.leaks = {} -- 原文 → true（最多 30 筆）
+local leakN = 0
+function MG.Clean(s)
+  if type(s) ~= "string" or (MG.uiZh and MG.gameZh) or not s:find("[\226-\239]") then return s end
+  local leaked = false
+  local out = s:gsub("([\226-\239][\128-\191][\128-\191])", function(c)
+    if not MG.uiZh and FULL[c] then return FULL[c] end
+    if not MG.gameZh and SYM[c] then return SYM[c] end
+    if MG.uiZh then return nil end
+    local b1, b2 = c:byte(1, 2)
+    if (b1 >= 227 and b1 <= 233) or (b1 == 239 and (b2 == 188 or b2 == 189)) then leaked = true; return "" end
+  end)
+  if leaked and not MG.leaks[s] and leakN < 30 then MG.leaks[s] = true; leakN = leakN + 1 end
+  return out
+end
+
+function MG.msg(s) DEFAULT_CHAT_FRAME:AddMessage(MG.Clean(L["|cff4fc3f7阿聖|r|cffd9b25f練等幫手|r "] .. tostring(s))) end
 ShengLv_Msg = MG.msg -- 給巨集的 /run 用，開頭顏色跟系列一致
 
 local reported = {}
@@ -26,7 +72,7 @@ local function after(where, ok, ...)
   end
   if not reported[err] then
     reported[err] = true
-    MG.msg("|cffff7b7b" .. where .. " 出錯：|r" .. err)
+    MG.msg("|cffff7b7b" .. L[where] .. L[" 出錯：|r"] .. err)
   end
   return nil
 end
@@ -255,7 +301,7 @@ function C.RegisterOptions(frame, name)
   end
 end
 function C.OpenOptions(frame)
-  if InCombatLockdown and InCombatLockdown() then MG.msg("戰鬥中不能開設定，脫離戰鬥後再開。"); return end
+  if InCombatLockdown and InCombatLockdown() then MG.msg(L["戰鬥中不能開設定，脫離戰鬥後再開。"]); return end
   if category and Settings and Settings.OpenToCategory then
     MG.try("設定頁", Settings.OpenToCategory, category.GetID and category:GetID() or category.ID)
   elseif InterfaceOptionsFrame_OpenToCategory then
@@ -364,7 +410,7 @@ function C.TooltipAlpha(tip, a)
   end
 end
 
--- 地圖名（遊戲的 zhTW 地區名）
+-- 地圖名（遊戲客戶端語言的地區名）
 local mapNames = {}
 function C.MapName(map)
   if not map then return nil end

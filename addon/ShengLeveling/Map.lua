@@ -47,7 +47,7 @@ local function getPin()
       local first = self.group[1]
       local nums = {}
       for _, g in ipairs(self.group) do nums[#nums + 1] = g.n end
-      MG.UI.StepTooltip(self, first.step.s, "第 " .. table.concat(nums, "、") .. " 步｜")
+      MG.UI.StepTooltip(self, first.step.s, MG.L["第 %s 步｜"]:format(table.concat(nums, MG.L["、"])))
       for k = 2, #self.group do
         local s = self.group[k].step.s
         MG.UI.TipLine(self.group[k].n .. "  " .. (E.VERB[s.t] or "") .. " " .. E.Title(s))
@@ -256,24 +256,24 @@ end
 
 -- /slv probe 用
 function P.Diag()
-  local L = {}
+  local L, out = MG.L, {}
   local mgr = levelManager()
   local names = {}
   if mgr and type(mgr.definitions) == "table" then for k in pairs(mgr.definitions) do names[#names + 1] = k end end
   table.sort(names)
-  L[#L + 1] = "地圖層級種類（" .. #names .. "）：" .. (#names > 0 and table.concat(names, " ") or "讀不到")
-  L[#L + 1] = "PIN_FRAME_LEVEL_TOPMOST：" .. tostring(P.TopLevel() ~= nil) .. "｜地圖 strata：" .. tostring(WorldMapFrame and WorldMapFrame:GetFrameStrata())
+  out[#out + 1] = L["地圖層級種類（%d）："]:format(#names) .. (#names > 0 and table.concat(names, " ") or L["讀不到"])
+  out[#out + 1] = "PIN_FRAME_LEVEL_TOPMOST: " .. tostring(P.TopLevel() ~= nil) .. L["｜地圖 strata："] .. tostring(WorldMapFrame and WorldMapFrame:GetFrameStrata())
   local first
   for k = 1, used do if pool[k].world then first = pool[k]; break end end
   if first then
     local parent = first:GetParent()
-    L[#L + 1] = ("我們的標點 strata/level：%s / %s｜父框架 level：%s｜其他標點最高 level：%s"):format(
+    out[#out + 1] = L["我們的標點 strata/level：%s / %s｜父框架 level：%s｜其他標點最高 level：%s"]:format(
       tostring((first:GetFrameStrata())), tostring((first:GetFrameLevel())), tostring(parent and (parent:GetFrameLevel())), tostring((maxOtherLevel())))
   else
-    L[#L + 1] = "我們的標點：目前沒有"
+    out[#out + 1] = L["我們的標點：目前沒有"]
   end
   local _, _, ce, cs = scales()
-  L[#L + 1] = ("合併門檻 %.1f px｜地圖 1%% = %.1f px｜畫布有效 scale %.2f｜畫布縮放 %.2f｜標點 scale %.2f"):format(P.diag.thresholdPx or 0, P.diag.pxPerPct or 0, ce or 0, cs or 0, P.diag.pinScale or 0)
+  out[#out + 1] = L["合併門檻 %.1f px｜地圖 1%% = %.1f px｜畫布有效 scale %.2f｜畫布縮放 %.2f｜標點 scale %.2f"]:format(P.diag.thresholdPx or 0, P.diag.pxPerPct or 0, ce or 0, cs or 0, P.diag.pinScale or 0)
   -- 我們的標點之間最近的距離（地圖開著時才量得到）
   local best, pair
   for k = 1, used do
@@ -288,11 +288,11 @@ function P.Diag()
         if bx then
           local e = a:GetEffectiveScale()
           local d = math.sqrt(((ax - bx) * e) ^ 2 + ((ay - by) * e) ^ 2)
-          if not best or d < best then best, pair = d, tostring(a.num:GetText()) .. " 和 " .. tostring(b.num:GetText()) end
+          if not best or d < best then best, pair = d, tostring(a.num:GetText()) .. L[" 和 "] .. tostring(b.num:GetText()) end
         end
       end
     end
   end
-  L[#L + 1] = best and ("最近的兩個標點：%s，相距 %.1f px"):format(pair, best) or "最近的兩個標點：地圖沒開，量不到"
-  return L
+  out[#out + 1] = best and L["最近的兩個標點：%s，相距 %.1f px"]:format(pair, best) or L["最近的兩個標點：地圖沒開，量不到"]
+  return out
 end

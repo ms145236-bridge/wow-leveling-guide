@@ -5,12 +5,14 @@
 -- 巨集文字只能在戰鬥外更新（按鈕屬性與 EditMacro 都是），戰鬥中有變動就等脫離戰鬥。
 local ADDON_NAME, MG = ...
 local C = MG.C
+local L = MG.L
 local T = {}
 MG.T = T
 T.MARKS = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" }
 
-BINDING_HEADER_METROGUIDE = "阿聖練等幫手"
-_G["BINDING_NAME_CLICK MetroGuideTargetButton:LeftButton"] = "選取任務目標"
+-- 按鍵設定在載入時就要有名字：跟客戶端語言（介面語言要等存檔載入才知道）
+BINDING_HEADER_METROGUIDE = MG.gameZh and "阿聖練等幫手" or "Sheng Leveling"
+_G["BINDING_NAME_CLICK MetroGuideTargetButton:LeftButton"] = MG.gameZh and "選取任務目標" or "Target quest mob"
 
 local btn, pending, rot, names, key = nil, false, 0, {}, ""
 local stepKey = "" -- 目前步驟（換步驟時名單和輪換重來）
@@ -31,14 +33,15 @@ function T.Targets(state)
   if not step then return {} end
   local s = step.s
   local out, seen = {}, {}
-  if MG.grindActive then out[1] = MG.grindActive.mob; seen[MG.grindActive.mob] = true end
+  local gm = MG.grindActive and (MG.grindActive.mobG or MG.grindActive.mob) -- 客戶端語言的怪名
+  if gm then out[1] = gm; seen[gm] = true end
   if s.t == "do" and s.q then
     mobsOf(s.q, out, seen)
-  elseif (s.t == "accept" or s.t == "turnin" or s.t == "train") and (s.tgt or s.npc) and not (s.npc or ""):find("^物件") and not (s.npc or ""):find("^物品") then
-    -- 用建置時從 QuestieDB 取的遊戲名（tgt）；沒有才用路線上的名字，去掉引號類符號
+  elseif (s.t == "accept" or s.t == "turnin" or s.t == "train") and (s.tgt or s.npcG or s.npc) and not s.npcObj and not (s.npcG or s.npc or ""):find("^物件") and not (s.npcG or s.npc or ""):find("^物品") then
+    -- 用建置時從 QuestieDB 取的遊戲名（tgt，客戶端語言）；沒有才用路線上的名字，去掉引號類符號
     local n = s.tgt
     if not n then
-      n = s.npc
+      n = s.npcG or s.npc
       for _, mark in ipairs({ "『", "』", "「", "」", "《", "》" }) do n = n:gsub(mark, "") end -- 逐個去（不能用字元集，會切壞 UTF-8）
     end
     if not seen[n] then out[#out + 1] = n; seen[n] = true end
@@ -52,7 +55,12 @@ function T.Targets(state)
   T.objNote = nil
   if #out == 0 and s.t == "do" and s.q then
     local objs = (MG.Route.quests[s.q] or {}).objs
-    if objs then T.objNote = table.concat(objs, "、") end
+    if objs then
+      -- 巨集上限 255 位元組：名字太長就只列前幾個
+      local list = {}
+      for _, o in ipairs(objs) do if #table.concat(list, ", ") + #o > 90 then break end; list[#list + 1] = o end
+      T.objNote = table.concat(list, L["、"])
+    end
   end
   return out
 end
@@ -102,11 +110,12 @@ end
 T.MacroText = macro
 
 -- 動作條巨集「任務目標」：內容就是同一段巨集文字（不經過 /click）
-local MACRO, OLD_MACRO = "任務目標", "地鐵目標"
+-- 巨集名跟客戶端語言（介面語言預覽時不會多建一個巨集）
+local MACRO, OLD_MACRO = MG.gameZh and "任務目標" or "Quest Target", "地鐵目標"
 local ICON = "Ability_Hunter_SniperShot"
 local function emptyText()
-  if T.objNote then return "/run ShengLv_Msg(\"目標是地上的物件（" .. T.objNote .. "），無法選取\")" end
-  return "/run ShengLv_Msg(\"目前步驟沒有要選的目標\")"
+  if T.objNote then return "/run ShengLv_Msg(\"" .. L["目標是地上的物件（%s），無法選取"]:format((T.objNote:gsub("\"", "'"))) .. "\")" end
+  return "/run ShengLv_Msg(\"" .. L["目前步驟沒有要選的目標"] .. "\")"
 end
 local function macroBody()
   local text = macro()
@@ -132,19 +141,19 @@ function T.SyncMacro()
 end
 
 function T.MakeMacro()
-  if InCombatLockdown() then MG.msg("戰鬥中不能建立巨集，脫離戰鬥再試。"); return end
+  if InCombatLockdown() then MG.msg(L["戰鬥中不能建立巨集，脫離戰鬥再試。"]); return end
   renameOld()
   local index = GetMacroIndexByName(MACRO)
   if index and index > 0 then
     lastBody = nil
     T.SyncMacro()
   else
-    if GetNumMacros() >= (MAX_ACCOUNT_MACROS or 36) then MG.msg("帳號巨集已滿，請先刪掉一個再按「建立巨集」。"); return end
+    if GetNumMacros() >= (MAX_ACCOUNT_MACROS or 36) then MG.msg(L["帳號巨集已滿，請先刪掉一個再按「建立巨集」。"]); return end
     index = CreateMacro(MACRO, ICON, macroBody(), nil)
   end
   if index and index > 0 then
     PickupMacro(index)
-    MG.msg("巨集「" .. MACRO .. "」已拿在滑鼠上，放到動作條即可。")
+    MG.msg(L["巨集「%s」已拿在滑鼠上，放到動作條即可。"]:format(MACRO))
   end
 end
 
@@ -160,7 +169,7 @@ function T.AutoMacro()
   index = CreateMacro(MACRO, ICON, macroBody(), nil)
   if index and index > 0 and not MetroGuideDB.macroNoted then
     MetroGuideDB.macroNoted = true
-    MG.msg("已建立巨集『" .. MACRO .. "』，可在巨集視窗（/macro）拖到快捷列")
+    MG.msg(L["已建立巨集『%s』，可在巨集視窗（/macro）拖到快捷列"]:format(MACRO))
   end
 end
 
@@ -202,22 +211,22 @@ function MGTP()
 end
 
 function T.Diag()
-  local L = {}
+  local out = {}
   local index = GetMacroIndexByName and GetMacroIndexByName(MACRO) or 0
   local body = index > 0 and GetMacroInfo and select(3, GetMacroInfo(index)) or nil
   local old = GetMacroIndexByName and GetMacroIndexByName(OLD_MACRO) or 0
-  L[#L + 1] = "巨集「" .. MACRO .. "」格位 " .. index .. "（舊名格位 " .. old .. "）內容：" .. (body and body:gsub("\n", " | ") or "無")
-  L[#L + 1] = "ActionButtonUseKeyDown：" .. tostring(GetCVar and GetCVar("ActionButtonUseKeyDown")) .. "｜issecretvalue：" .. tostring(issecretvalue ~= nil)
+  out[#out + 1] = L["巨集「%s」格位 %d（舊名格位 %d）內容："]:format(MACRO, index, old) .. (body and body:gsub("\n", " | ") or L["無"])
+  out[#out + 1] = "ActionButtonUseKeyDown: " .. tostring(GetCVar and GetCVar("ActionButtonUseKeyDown")) .. " | issecretvalue: " .. tostring(issecretvalue ~= nil)
   if btn then
-    L[#L + 1] = ("按鈕 顯示 %s 可見 %s｜type=%s"):format(tostring((btn:IsShown())), tostring((btn:IsVisible())), tostring((btn:GetAttribute("type"))))
-    L[#L + 1] = "按鈕巨集文字：" .. tostring((btn:GetAttribute("macrotext"))):gsub("\n", " | ")
+    out[#out + 1] = L["按鈕 顯示 %s 可見 %s｜type=%s"]:format(tostring((btn:IsShown())), tostring((btn:IsVisible())), tostring((btn:GetAttribute("type"))))
+    out[#out + 1] = L["按鈕巨集文字："] .. tostring((btn:GetAttribute("macrotext"))):gsub("\n", " | ")
   else
-    L[#L + 1] = "按鈕：沒有建立"
+    out[#out + 1] = L["按鈕：沒有建立"]
   end
-  L[#L + 1] = ("按下次數 %d｜按下後 0.5 秒內換了目標 %d 次"):format(T.stats.presses, T.stats.targetChanged)
-  L[#L + 1] = "被遊戲擋下：" .. tostring(T.blocked or "無") .. "｜最後錯誤：" .. tostring(MG.lastError or "無")
-  L[#L + 1] = "目前目標名單：" .. (#names > 0 and table.concat(names, "、") or "無")
-  return L
+  out[#out + 1] = L["按下次數 %d｜按下後 0.5 秒內換了目標 %d 次"]:format(T.stats.presses, T.stats.targetChanged)
+  out[#out + 1] = L["被遊戲擋下："] .. tostring(T.blocked or L["無"]) .. L["｜最後錯誤："] .. tostring(MG.lastError or L["無"])
+  out[#out + 1] = L["目前目標名單："] .. (#names > 0 and table.concat(names, L["、"]) or L["無"])
+  return out
 end
 
 function T.Create(bar)
@@ -235,8 +244,8 @@ function T.Create(bar)
   btn:SetAlpha(0.5)
   btn:HookScript("OnEnter", function(self)
     self:SetAlpha(1)
-    MG.UI.TipOpen(self, "選取任務目標", "ANCHOR_TOP")
-    if #names > 0 then MG.UI.TipLine(table.concat(names, "、"), nil, true) end
+    MG.UI.TipOpen(self, L["選取任務目標"], "ANCHOR_TOP")
+    if #names > 0 then MG.UI.TipLine(table.concat(names, L["、"]), nil, true) end
     GameTooltip:Show()
   end)
   btn:HookScript("OnLeave", function(self) self:SetAlpha(0.5); GameTooltip:Hide() end)
@@ -249,7 +258,7 @@ function T.Create(bar)
     if event == "ADDON_ACTION_FORBIDDEN" or event == "ADDON_ACTION_BLOCKED" then
       if name == ADDON_NAME and not T.blocked then
         T.blocked = (...) or "?"
-        MG.msg("遊戲擋下了插件的動作（" .. tostring(T.blocked) .. "），請用 /slv probe 回報。")
+        MG.msg(L["遊戲擋下了插件的動作（%s），請用 /slv probe 回報。"]:format(tostring(T.blocked)))
       end
     elseif event == "PLAYER_TARGET_CHANGED" then
       T.stats.lastTarget = GetTime() -- 只記時間，不讀目標（目標的資料可能是秘密值）

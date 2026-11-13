@@ -25,6 +25,37 @@ const HORDE = 8589934770n; // QuestieDB 的部落種族遮罩（含永恆新種�
 const CLASS = { 戰士: "WARRIOR", 獵人: "HUNTER", 薩滿: "SHAMAN", 薩滿祭司: "SHAMAN", 法師: "MAGE", 術士: "WARLOCK", 盜賊: "ROGUE", 德魯伊: "DRUID", 牧師: "PRIEST", 聖騎士: "PALADIN" };
 const RACE = { 獸人: "Orc", 食人妖: "Troll", 牛頭人: "Tauren", 不死族: "Scourge", 亡靈: "Scourge", 被遺忘者: "Scourge", 血精靈: "BloodElf" };
 const ZONE_MAP = { 杜洛塔: 1411, 莫高雷: 1412, 貧瘠之地: 1413, 提里斯法林地: 1420, 銀松森林: 1421, 石爪山脈: 1442, 梣谷: 1440, 灰谷: 1440, 千針石林: 1441, 希爾斯布萊德丘陵: 1424, 奧特蘭克山脈: 1416, 阿拉希高地: 1417, 塵泥沼澤: 1445, 荊棘谷: 1434, 淒涼之地: 1443, 菲拉斯: 1444, 塔納利斯: 1446, 辛特蘭: 1425, 悲傷沼澤: 1435, 荒蕪之地: 1418, 灼熱峽谷: 1427, 艾薩拉: 1447, 奧格瑪: 1454, 幽暗城: 1458, 雷霆崖: 1456 };
+// ── 英文介面（Data/Route_enUS.lua）用的對照：站名、鳥點、步驟標籤。沒有對照的站名在遊戲裡用地圖名 ──
+const STATION_EN = {
+  試煉谷: "Valley of Trials", "杜洛塔 森金村／剃刀嶺": "Durotar: Sen'jin & Razor Hill", 納拉其營地: "Camp Narache", "莫高雷 血蹄村": "Mulgore: Bloodhoof Village",
+  喪鐘鎮: "Deathknell", "提里斯法林地 布瑞爾": "Tirisfal Glades: Brill", 銀松森林: "Silverpine Forest", "貧瘠之地 十字路口": "The Barrens: Crossroads",
+  "貧瘠之地 棘齒城短訪": "The Barrens: Ratchet (short visit)", "貧瘠之地 棘齒城／陶拉祖營地": "The Barrens: Ratchet & Camp Taurajo", 石爪山脈: "Stonetalon Mountains",
+  梣谷: "Ashenvale", 希爾斯布萊德丘陵: "Hillsbrad Foothills", 千針石林: "Thousand Needles", "千針石林 亂風崗與閃光平原": "Thousand Needles: Freewind Post & Shimmering Flats",
+  奧特蘭克山脈: "Alterac Mountains", 阿拉希高地: "Arathi Highlands", "阿拉希高地 落錘鎮第一次": "Arathi Highlands: Hammerfall", "阿拉希高地 落錘鎮第二次": "Arathi Highlands: Hammerfall",
+  "塵泥沼澤 蕨牆村": "Dustwallow Marsh: Brackenwall Village", "荊棘谷 第一次": "Stranglethorn Vale", "荊棘谷 第二次": "Stranglethorn Vale", "荊棘谷 藏寶海灣回訪": "Stranglethorn Vale: Booty Bay (return)",
+  "淒涼之地 葬影村第一次": "Desolace: Shadowprey Village", "淒涼之地 葬影村第二次": "Desolace: Shadowprey Village",
+  "荒蕪之地 卡加斯": "Badlands: Kargath", "灼熱峽谷 瑟銀哨塔": "Searing Gorge: Thorium Point", "燃燒平原 烈焰峰與黑石山": "Burning Steppes: Flame Crest & Blackrock Mountain",
+  "悲傷沼澤 斯通納德": "Swamp of Sorrows: Stonard", "悲傷沼澤 斯通納德與東風海岸第二次": "Swamp of Sorrows: Stonard",
+  "塔納利斯 熱砂港與加基森第一次": "Tanaris: Steamwheedle Port & Gadgetzan", "塔納利斯 加基森與破碎石柱": "Tanaris: Gadgetzan & Broken Pillar", "塔納利斯 加基森與砂槌營地第二次": "Tanaris: Gadgetzan & Sandfury camp",
+  "菲拉斯 莫沙徹營地第一次": "Feralas: Camp Mojache", "菲拉斯 莫沙徹營地與怒痕堡第二次": "Feralas: Camp Mojache & Dire Maul", "菲拉斯 莫沙徹營地短訪": "Feralas: Camp Mojache (short visit)",
+  "菲拉斯 莫沙徹營地回訪": "Feralas: Camp Mojache (return)", "菲拉斯 第四次": "Feralas", "辛特蘭 惡齒村與辛薩羅": "The Hinterlands: Revantusk & Jintha'Alor",
+  "艾薩拉 瓦羅莫克與阿克科蘭神殿": "Azshara: Valormok & Temple of Arkkoroc", "安戈洛環形山 馬紹爾營地第一次": "Un'Goro Crater: Marshal's Refuge", "安戈洛環形山 第二次": "Un'Goro Crater",
+  "費伍德森林 南段與血毒崗哨": "Felwood: South & Bloodvenom Post", "費伍德森林 血毒崗哨至木喉要塞": "Felwood: Bloodvenom Post to Timbermaw Hold", "費伍德森林 第三次": "Felwood",
+  "月光林地 第一次": "Moonglade", "月光林地 第二次": "Moonglade", "冬泉谷 永望鎮第一次": "Winterspring: Everlook", "冬泉谷 第二次": "Winterspring", "冬泉谷 第三次": "Winterspring",
+  希利蘇斯: "Silithus", "西瘟疫之地 亡靈壁壘第一次": "Western Plaguelands: The Bulwark", "西瘟疫之地 第二次": "Western Plaguelands", "西瘟疫之地 第三次": "Western Plaguelands",
+  "東瘟疫之地 聖光之願禮拜堂第一次": "Eastern Plaguelands: Light's Hope Chapel", "東瘟疫之地 第二次": "Eastern Plaguelands", "詛咒之地 血法師營地": "Blasted Lands",
+  "血色修道院 墓地": "Scarlet Monastery: Graveyard", "血色修道院 圖書館": "Scarlet Monastery: Library", "血色修道院 軍械庫": "Scarlet Monastery: Armory", "血色修道院 大教堂": "Scarlet Monastery: Cathedral",
+  "斯坦索姆 血色區": "Stratholme: Live", "斯坦索姆 亡靈區": "Stratholme: Undead", "厄運之槌 東區": "Dire Maul: East", "厄運之槌 西區": "Dire Maul: West", "厄運之槌 北區": "Dire Maul: North",
+};
+const NODE_EN = { 蕨牆村: "Brackenwall Village", 斯通納德: "Stonard", 卡加斯: "Kargath", 莫沙徹營地: "Camp Mojache", 瑟銀哨塔: "Thorium Point", 惡齒村: "Revantusk Village", 瓦羅莫克: "Valormok",
+  馬紹爾營地: "Marshal's Refuge", 烈焰峰: "Flame Crest", 聖光之願禮拜堂: "Light's Hope Chapel", 血毒崗哨: "Bloodvenom Post", 永望鎮: "Everlook", 月光林地: "Moonglade", 塞納里奧城堡: "Cenarion Hold" };
+// 步驟標籤（第 3 行）：整段對得上才翻，對不上的英文介面不顯示
+const TAG_EN = { 可跳過: "Optional", 需遊戲實測: "Unverified", 有隊伍再做: "Group", 怪多: "Crowded", 副本前置鏈: "Dungeon prereq", 精英: "Elite", 護送: "Escort", 組隊: "Group",
+  副本: "Dungeon", 組隊護送: "Group escort", 有隊伍才下: "Group only", 有隊伍或能單刷: "Group or solo", 有掉落才做: "If it drops", 掉落時才做: "If it drops", 掉落觸發: "Drop starts it",
+  巡邏掉落觸發: "Drop starts it", 掉落才接: "If it drops", 之後順路: "Later, on the way", 路過才做: "If passing by", 有餘力再做: "If time allows", 有遇到才做: "If you see it", 已遇到才做: "If you see it",
+  能打高階怪再做: "Hard", 低等怪補缺口: "Fills an XP gap", 日後順路或有隊伍: "Later or with a group", 見到獵物才接: "If you see it", 材料齊才做: "When you have the items" };
+const tagEn = (tag) => { const out = (tag || "").split(/\s*・\s*/).map((t) => TAG_EN[t.trim()]).filter(Boolean); return out.length ? [...new Set(out)].join(", ") : undefined; };
+const enText = (t) => String(t || "").replace(/\$[Bb]/g, " ").replace(/\$[Nn]/g, "you").replace(/\$[CcRr]/g, "adventurer").replace(/\s+/g, " ").trim();
 const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel" };
 // 行尾標籤：這些不顯示；其餘（可跳過、有隊伍再做…）顯示在步驟第 3 行
 const HIDDEN_TAG = /^(QuestieDB|補充|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接)/;
@@ -89,6 +120,27 @@ const QUEST_NAME = {
 const cleanName = (n) => String(n || "").replace(/<[^>]*>/g, "").replace(/[『』「」《》“”"]/g, "").replace(/^(物件|物品)\s*/, "").replace(/　/g, " ").trim();
 const gameName = (n) => GAME_NAME[cleanName(n)] || cleanName(n);
 const questName = (q) => QUEST_NAME[q.id] || q.zhTW || q.en;
+const enDiff = { quest: 0, npc: 0, tgt: 0 };
+// 永恆 enUS 名稱查核表（tools/english-names.md，Codex 依任務／NPC／物件 ID 查 Wowhead Forever 與客戶端資料）：英文名以它為準，QuestieDB 是備援
+// 任務表：任務ID｜中文名｜英文名｜NPC中文｜NPC英文｜來源；訓練師表：職業｜等級｜原文｜英文｜…；補給表：原文｜英文｜…
+const MD_QUEST = new Map(); // 任務 ID → 英文任務名
+const MD_ENT = new Map(); // "任務ID|名稱" → 英文（"?" 開頭＝查無）
+const MD_NAME = new Map(); // 名稱 → 英文（訓練師、補給、練怪用）
+{
+  const key = (n) => db.norm(cleanName(n));
+  for (const line of readFileSync(join(ROOT, "tools", "english-names.md"), "utf8").split(/\r?\n/)) {
+    if (!line.startsWith("|")) continue;
+    const c = line.split("|").slice(1, -1).map((x) => x.trim());
+    if (c.length === 6 && /^\d+$/.test(c[0])) {
+      MD_QUEST.set(+c[0], c[2]);
+      MD_ENT.set(c[0] + "|" + key(c[3]), c[4]);
+      if (!c[4].startsWith("?") && !MD_NAME.has(key(c[3]))) MD_NAME.set(key(c[3]), c[4]);
+    } else if (c.length === 8 && /^[A-Z]+$/.test(c[0])) MD_NAME.set(key(c[2]), c[3]);
+    else if (c.length === 5 && /^\d+$/.test(c[2]) && /^L\d+/.test(c[3])) MD_NAME.set(key(c[0]), c[1]);
+  }
+}
+const mdEnt = (id, zh) => { const v = zh && MD_ENT.get(id + "|" + db.norm(cleanName(zh))); return v && (v.startsWith("?") ? "Quest object" : v); }; // 查無：中性的說法
+const mdName = (zh) => zh && MD_NAME.get(db.norm(cleanName(zh)));
 const nameIssues = []; // 名稱不一致（建置報告）
 const dungeons = []; // 副本站：插在指定的站後面，引擎當成可選站
 // 副本區域（QuestieDB support/Forever/Zones）：areaId → { name, alts }；instanceID → areaId
@@ -468,6 +520,25 @@ for (const st of stations) {
             n: QUEST_NAME[id] || step.zh || q.zhTW || step.en || q.en, zt: q.zhTW && q.zhTW !== (QUEST_NAME[id] || step.zh || q.zhTW) ? q.zhTW : undefined, lvl: q.level, min: q.reqLevel, pg: q.preGroup, ps: q.preSingle, ex: q.exclusiveTo, next: q.next, st: st.id }
         : { n: QUEST_NAME[id] || step.zh || step.en, st: st.id });
     }
+    if (q && !quests.get(id).en) {
+      const mobs = db.questMobs(id);
+      const tgoEn = mobs.map((m) => (m && m.namesEn ? [...new Set(m.namesEn.filter(Boolean).map(cleanName))] : []));
+      const objsEn = [...new Set(mobs.filter((m) => m && m.kind === "object").flatMap((m) => m.objectsEn || []))];
+      // 沒有英文目標文字：用目標怪／物件湊一句
+      const gen = () => {
+        const kill = mobs.filter((m) => m && m.kind === "kill").flatMap((m) => m.namesEn || []);
+        const drop = mobs.filter((m) => m && m.kind === "drop").flatMap((m) => m.namesEn || []);
+        const parts = [kill.length && "Kill: " + [...new Set(kill)].join(", "), drop.length && "Loot from: " + [...new Set(drop)].slice(0, 3).join(", "), objsEn.length && "Use/collect: " + objsEn.join(", ")].filter(Boolean);
+        return parts.length ? parts.join(". ") : undefined;
+      };
+      const objEn = q.objEn.map(enText).filter(Boolean);
+      // 選取目標：照中文 tgo／objs 的形狀逐一換英文（查核表＞QuestieDB 同位置）
+      const e = quests.get(id);
+      const tgo = e.tgo && e.tgo.map((list, g) => list.map((zh, k) => { const m = mdEnt(id, zh); if (m && tgoEn[g]?.[k] && m !== tgoEn[g][k]) enDiff.tgt++; return m || tgoEn[g]?.[k]; }).filter(Boolean));
+      const objs = e.objs && e.objs.map((zh, k) => mdEnt(id, zh) || objsEn[k]).filter(Boolean);
+      if (MD_QUEST.has(id) && q.en && MD_QUEST.get(id) !== q.en) enDiff.quest++;
+      e.en = { n: MD_QUEST.get(id) || step.en || q.en, d: objEn.join("\n") || undefined, gen: objEn.length ? undefined : gen(), tgo: tgo && tgo.some((n) => n.length) ? tgo : undefined, objs: objs && objs.length ? objs : undefined };
+    } else if (!q && !quests.get(id).en) quests.get(id).en = { n: MD_QUEST.get(id) || step.en || undefined };
     if (step.keep) quests.get(id).keep = true;
     // 【部落可接】：實測部落能接，但 QuestieDB 的種族遮罩寫成聯盟限定
     if (anyRace) quests.get(id).races = undefined;
@@ -486,6 +557,10 @@ for (const st of stations) {
     const namedNpc = step.npc && npcs.find((npc) => [npc.zhTW, npc.zhTW && gameName(npc.zhTW), npc.en].some((name) => name && db.norm(cleanName(name)) === db.norm(cleanName(step.npc))));
     const giver = namedNpc || npcs[0] || objIds.map((o) => db.object(o)).find(Boolean);
     if (!step.npc && giver) step.npc = npcs.length && giver.zhTW ? gameName(giver.zhTW) : giver.zhTW || giver.en;
+    // 英文：給任務的 NPC／物件英文名；從物品開始的任務用物品英文名（物件、物品不當選取目標）
+    if (giver) { step.npcEn = mdEnt(id, step.npc) || cleanName(giver.en); if (step.npcEn !== cleanName(giver.en)) enDiff.npc++; if (!npcs.length) step.npcObj = true; }
+    else if (step.t === "accept" && q.startItems.length) { step.npcEn = mdEnt(id, step.npc) || db.itemEn(q.startItems[0]); step.npcObj = true; }
+    if (npcs.length && giver) step.tgtEn = mdEnt(id, step.tgt) || cleanName(giver.en);
     const isNpc = npcs.length > 0;
     if (isNpc && giver) {
       const dbName = giver.zhTW ? gameName(giver.zhTW) : null;
@@ -720,7 +795,7 @@ const luaMap = (m) => (m.size ? "{" + [...m].map(([k, v]) => `[${k}]=${lua(v)}`)
 out += `  },\n  offroute = ${luaMap(offroute)},\n  feeds = ${luaMap(feeds)},\n  trainers = ${lua(trainers.length ? trainers : undefined)},\n  keep = ${luaMap(keep)},\n`;
 out += `  quests = {\n`;
 for (const [id, q] of [...quests.entries()].sort((a, b) => a[0] - b[0])) {
-  const { st, next, ...rest } = q;
+  const { st, next, en, ...rest } = q;
   out += `    [${id}] = ${lua(rest)},\n`;
 }
 out += `  },\n}\n`;
@@ -736,6 +811,81 @@ const version = createHash("sha1").update(out).digest("hex").slice(0, 8);
 out = out.replace("@@BUILT@@", version);
 writeFileSync(OUT, out);
 
+// ── Data/Route_enUS.lua：英文介面／英文客戶端用的名稱與說明（站 ID＋步驟序號、任務 ID 對到 Route.lua）──
+// 之後加語言：再產生一個 Route_<locale>.lua，結構相同
+const plain = (v) => {
+  if (v === undefined || v === null) return "nil";
+  if (typeof v === "boolean" || typeof v === "number") return String(v);
+  if (typeof v === "string") return JSON.stringify(safeText(v));
+  if (Array.isArray(v)) return "{" + v.map(plain).join(", ") + "}";
+  const e = Object.entries(v).filter(([, x]) => x !== undefined && !(Array.isArray(x) && !x.length) && !(x && typeof x === "object" && !Array.isArray(x) && !Object.keys(x).length));
+  return "{" + e.map(([k, x]) => `${/^[A-Za-z_]\w*$/.test(k) ? k : /^\d+$/.test(k) ? "[" + k + "]" : "[" + JSON.stringify(k) + "]"}=${plain(x)}`).join(", ") + "}";
+};
+const reverseGame = Object.fromEntries(Object.entries(GAME_NAME).map(([a, b]) => [b, a]));
+const npcEn = (n) => { const c = cleanName(n); return c ? mdName(c) || db.enByZh("Npc", c) || (reverseGame[c] && db.enByZh("Npc", reverseGame[c])) : undefined; };
+const questEn = (id) => quests.get(id)?.en?.n || db.quest(id)?.en;
+const missNpc = [];
+const cov = { steps: 0, hint: 0, hintGen: 0, tgtNeed: 0, tgt: 0, npcNeed: 0, npc: 0, stName: 0, stations: 0, quests: 0, qName: 0, qObj: 0, zhOnly: { desc: 0, tips: 0, travelText: 0, note: 0, grindNote: 0, danger: 0, offrouteWhy: 0, pickup: 0, keepUse: 0, tag: 0, star: 0 } };
+let en = `-- 由 tools/build.mjs 產生，勿手改。Route.lua 的英文名稱與說明（站 ID→步驟序號、任務 ID）\nlocal _, MG = ...\nMG.RouteL = MG.RouteL or {}\nMG.RouteL.enUS = {\n  stations = {\n`;
+for (const s of stations) {
+  cov.stations++;
+  const name = STATION_EN[safeText(s.name)] || (s.dungeon ? s.en && safeText(s.en) : undefined);
+  if (name) cov.stName++;
+  const steps = {};
+  let k = 0;
+  for (const step of s.steps) {
+    if (!(step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id)) continue;
+    k++;
+    cov.steps++;
+    const e = {};
+    const q = step.id && quests.get(step.id);
+    if (step.t === "accept" || step.t === "turnin") {
+      e.npc = step.npcEn || mdEnt(step.id, step.npc); e.tgt = step.tgtEn || (step.tgt && mdEnt(step.id, step.tgt)); e.npcObj = step.npcObj || (/^(物件|物品)/.test(step.npc || "") || undefined);
+      cov.npcNeed++; if (e.npc) cov.npc++; else missNpc.push(`${step.id} ${step.npc}`);
+      if (step.tgt) { cov.tgtNeed++; if (e.tgt) cov.tgt++; }
+    } else if (step.t === "do") {
+      cov.hint++;
+      e.hint = q?.en?.d?.split("\n")[0] || q?.en?.gen;
+      if (!q?.en?.d && q?.en?.gen) cov.hintGen++;
+      if (!e.hint) { cov.hint--; e.hint = "Complete the quest objectives."; }
+    } else if (step.t === "need") e.text = "Prerequisite: " + (questEn(step.id) || "quest " + step.id);
+    else if (step.t === "travel" && /^前往 .+ 入口$/.test(step.text || "")) e.text = (name || "Dungeon") + " entrance";
+    else if (step.t === "travel" || step.t === "goto") cov.zhOnly.travelText++;
+    else if (step.t === "note") cov.zhOnly.note++;
+    if (step.t === "fp") e.node = NODE_EN[step.node];
+    if (step.tag) { e.tag = tagEn(step.tag); if (!e.tag) cov.zhOnly.tag++; }
+    if (step.desc) cov.zhOnly.desc++;
+    if (step.preText) { const ids = [...step.preText.matchAll(/\d{2,6}/g)].map((m) => +m[0]).filter((x) => db.quest(x)); e.preText = ids.length ? ids.map(questEn).join(", ") : undefined; }
+    if (step.star) { const n = db.enByZh("Item", step.star[0]); e.star = n ? [n, ...step.star.slice(1)] : undefined; if (!n) cov.zhOnly.star++; }
+    steps[k] = e;
+  }
+  cov.zhOnly.tips += s.tips.length; cov.zhOnly.pickup += s.pickup ? 1 : 0;
+  cov.zhOnly.grindNote += (s.grind || []).filter((g) => g.note).length;
+  cov.zhOnly.danger += (s.danger || []).length;
+  const grind = {}; (s.grind || []).forEach((g, i) => { grind[i + 1] = { mob: npcEn(g.mob) }; });
+  const supply = {}; (s.supply || []).forEach((x, i) => { supply[i + 1] = { npc: x.npc && npcEn(x.npc) }; });
+  en += `    [${JSON.stringify(s.id)}] = ${plain({ name, grind, supply, steps })},\n`;
+}
+en += `  },\n  quests = {\n`;
+for (const [id, q] of [...quests.entries()].sort((a, b) => a[0] - b[0])) {
+  cov.quests++;
+  const e = q.en || {};
+  if (e.n) cov.qName++;
+  if (e.d) cov.qObj++;
+  let star;
+  if (q.star) { const n = db.enByZh("Item", q.star[0]); star = n ? [n, ...q.star.slice(1)] : undefined; }
+  en += `    [${id}] = ${plain({ n: e.n, d: e.d || e.gen, tgo: e.tgo, objs: e.objs, star })},\n`;
+}
+en += `  },\n  trainers = ${plain(Object.fromEntries(trainers.map((t, i) => [i + 1, { npc: npcEn(t.npc) }])))},\n`;
+en += `  keep = ${plain(Object.fromEntries([...keep].map(([id, k]) => [id, { n: db.itemEn(id), use: k.q ? undefined : "Needed for a later quest" }])))},\n}\n`;
+cov.zhOnly.offrouteWhy = [...offroute.values()].filter((o) => o.why).length;
+cov.zhOnly.keepUse = [...keep.values()].filter((k) => !k.q).length;
+writeFileSync(join(dirname(OUT), "Route_enUS.lua"), en);
+const pct = (a, b) => (b ? Math.round((a / b) * 1000) / 10 : 100) + "%";
+console.log(`英文：站名 ${cov.stName}/${cov.stations}（${pct(cov.stName, cov.stations)}）、接交 NPC ${cov.npc}/${cov.npcNeed}（${pct(cov.npc, cov.npcNeed)}）、選取目標 tgt ${cov.tgt}/${cov.tgtNeed}（${pct(cov.tgt, cov.tgtNeed)}）、做步驟提示 ${cov.hint}（其中湊句 ${cov.hintGen}）、任務名 ${cov.qName}/${cov.quests}、任務目標文字 ${cov.qObj}/${cov.quests}`);
+console.log("英文介面不顯示（只有中文）：" + Object.entries(cov.zhOnly).map(([k, v]) => k + " " + v).join("、"));
+console.log("英文缺接交 NPC：" + missNpc.join("、"));
+console.log(`english-names.md：任務 ${MD_QUEST.size}、實體 ${MD_ENT.size}、名稱 ${MD_NAME.size}；和 QuestieDB 英文不同：任務名 ${enDiff.quest}、接交 NPC ${enDiff.npc}、選取目標 ${enDiff.tgt}`);
 const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 順序錯誤（已自動調整 ${orderFixes.length}）\n\n${orderFixes.join("\n") || "無"}\n\n## 學技能站（候選站依序，遊戲取第一個本角色有的）\n\n${trainers.map((t) => `- ${t.c} ${t.lv} ${t.npc}（${t.place}）→ ${t.st.slice(0, 4).map((id) => id + " " + stations.find((x) => x.id === id).name).join("、")}`).join("\n") || "無"}\n`;
 writeFileSync(REPORT, report);
 console.log(`順序錯誤已調整 ${orderFixes.length}`);

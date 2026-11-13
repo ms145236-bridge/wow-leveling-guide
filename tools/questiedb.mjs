@@ -139,6 +139,7 @@ export function openQuestieDB() {
       exclusiveTo: list(field("Quest", id, 16)),
       sourceItem: field("Quest", id, 11) || 0,
       requiredSourceItems: list(field("Quest", id, 21)),
+      objEn: list(field("Quest", id, 8)).filter((x) => typeof x === "string"), // enUS 目標文字（英文介面用）
       zoneOrSort: field("Quest", id, 17) || 0,
       next: field("Quest", id, 22) || 0,
     };
@@ -187,34 +188,51 @@ export function openQuestieDB() {
     const lo = field("Npc", id, 4), hi = field("Npc", id, 5);
     if (typeof lo !== "number") return null;
     const zh = localName("Npc", id, "zhTW");
-    return { lvl: (lo + (typeof hi === "number" ? hi : lo)) / 2, elite: [1, 2].includes(field("Npc", id, 6)), name: zh || field("Npc", id, 1), zhMissing: !zh };
+    return { lvl: (lo + (typeof hi === "number" ? hi : lo)) / 2, elite: [1, 2].includes(field("Npc", id, 6)), name: zh || field("Npc", id, 1), en: field("Npc", id, 1), zhMissing: !zh };
   };
   const questMobs = (id) => {
     const obj = field("Quest", id, 10);
     const out = [];
     for (const c of list(get(obj, 1))) {
       const m = mobLevel(get(c, 1));
-      out.push(m ? { ...m, kind: "kill", names: [m.name], zhMissing: m.zhMissing } : null);
+      out.push(m ? { ...m, kind: "kill", names: [m.name], namesEn: [m.en], zhMissing: m.zhMissing } : null);
     }
     // 物件目標（第 2 群）：遊戲內目標順序是 怪、物件、物品，留位置才對得上
     for (const o of list(get(obj, 2))) {
       const name = localName("Object", get(o, 1), "zhTW") || field("Object", get(o, 1), 1);
-      out.push(name ? { kind: "object", objects: [name] } : null);
+      out.push(name ? { kind: "object", objects: [name], objectsEn: [field("Object", get(o, 1), 1)].filter(Boolean) } : null);
     }
     for (const it of list(get(obj, 3))) {
       const drops = list(field("Item", get(it, 1), 2)).map(mobLevel).filter(Boolean);
       if (drops.length) {
-        out.push({ lvl: drops.reduce((a, d) => a + d.lvl, 0) / drops.length, elite: drops.every((d) => d.elite), kind: "drop", names: drops.slice(0, 3).map((d) => d.name), zhMissing: drops.slice(0, 3).some((d) => d.zhMissing) });
+        out.push({ lvl: drops.reduce((a, d) => a + d.lvl, 0) / drops.length, elite: drops.every((d) => d.elite), kind: "drop", names: drops.slice(0, 3).map((d) => d.name), namesEn: drops.slice(0, 3).map((d) => d.en), zhMissing: drops.slice(0, 3).some((d) => d.zhMissing) });
       } else {
         // 不是怪物掉的：看是不是地上的物件（箱子、植物…）
-        const objs = list(field("Item", get(it, 1), 3)).map((o) => localName("Object", o, "zhTW") || field("Object", o, 1)).filter(Boolean);
-        out.push(objs.length ? { kind: "object", objects: [...new Set(objs)].slice(0, 3) } : null);
+        const oids = list(field("Item", get(it, 1), 3));
+        const objs = oids.map((o) => localName("Object", o, "zhTW") || field("Object", o, 1)).filter(Boolean);
+        const objsEn = oids.map((o) => field("Object", o, 1)).filter(Boolean);
+        out.push(objs.length ? { kind: "object", objects: [...new Set(objs)].slice(0, 3), objectsEn: [...new Set(objsEn)].slice(0, 3) } : null);
       }
     }
     return out;
   };
 
-  return { quest, npc, object, questsByName, questMobs, allQuestIds: () => loadType("Quest").idList, norm };
+  // 繁中名 → 英文名（NPC、物品；英文介面用）。同名多筆取第一個有英文名的
+  const enIndex = {};
+  const enByZh = (type, zh) => {
+    if (!enIndex[type]) {
+      enIndex[type] = new Map();
+      const t = loadType(type);
+      for (const loc of ["zhTW", "zhCN"]) {
+        const col = get(t.cols[loc], 1);
+        if (col) t.idList.forEach((id, p) => { const n = get(col, p + 1); if (n && !enIndex[type].has(norm(n))) enIndex[type].set(norm(n), id); });
+      }
+    }
+    const id = enIndex[type].get(norm(zh));
+    return id === undefined ? undefined : field(type, id, 1);
+  };
+  const itemEn = (id) => field("Item", id, 1);
+  return { quest, npc, object, questsByName, questMobs, allQuestIds: () => loadType("Quest").idList, norm, enByZh, itemEn };
 }
 
 // 一群點取最密集一群的中心（同地圖、距離 5 以內算一群）

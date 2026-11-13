@@ -225,11 +225,11 @@ function Rec.Slash(arg)
   if arg == "on" or arg == "off" then UI.Set("rec", arg == "on") end
   local n = db and #db.log or 0
   if arg == "export" then
-    local L = { "#MGREC1 " .. n .. " 筆｜存檔：" .. PATH .. "（登出或 /reload 後寫入）" }
-    for _, line in ipairs(db and db.log or {}) do L[#L + 1] = (line:gsub("|", "||")) end
-    UI.ShowReport(table.concat(L, "\n"), "遊戲內記錄：Ctrl+A 全選、Ctrl+C 複製，貼回給開發者")
+    local out = { "#MGREC1 " .. n .. MG.L[" 筆｜存檔："] .. MG.L[PATH] .. MG.L["（登出或 /reload 後寫入）"] }
+    for _, line in ipairs(db and db.log or {}) do out[#out + 1] = (line:gsub("|", "||")) end
+    UI.ShowReport(table.concat(out, "\n"), MG.L["遊戲內記錄：Ctrl+A 全選、Ctrl+C 複製，貼回給開發者"])
     return
   end
   if arg == "clear" and db then db.log, seen, prev = {}, {}, {}; n = 0 end
-  MG.msg("遊戲內記錄：" .. (UI.Get("rec") and "開" or "關") .. "，" .. n .. " 筆。/slv rec on|off｜export 匯出｜clear 清空｜存檔 " .. PATH)
+  MG.msg(MG.L["遊戲內記錄：%s，%d 筆。/slv rec on|off｜export 匯出｜clear 清空｜存檔 %s"]:format(UI.Get("rec") and MG.L["開"] or MG.L["關"], n, MG.L[PATH]))
 end

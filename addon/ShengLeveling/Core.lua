@@ -1,6 +1,7 @@
 -- 事件、節流重算、slash、自動接交任務、/slv probe。
 local ADDON, MG = ...
 local E, C, N, UI = MG.E, MG.C, MG.N, MG.UI
+local L = MG.L
 local R = MG.Route or { stations = {}, quests = {} }
 
 local DEFAULTS = { notNow = {}, fpSeen = {}, fpSkip = {}, grindSkip = {}, dNo = {}, dDismiss = {}, mark = {}, pin = {}, skip = {}, latch = {}, drop = {}, carry = {}, shown = true } -- 其餘設定的預設在 UI.lua 的設定表
@@ -90,7 +91,7 @@ local function refresh()
   if curKey ~= lastArrowKey then MG.wpOverride = nil; lastArrowKey = curKey end
   local o = MG.wpOverride
   if o then N.Set(o.map, o.x, o.y, o.name)
-  elseif s and s.x then N.Set(s.map, s.x, s.y, E.Title(s)) else N.Clear() end
+  elseif s and s.x then N.Set(s.map, s.x, s.y, MG.Clean(E.Title(s))) else N.Clear() end
 end
 
 function MG.Refresh(now)
@@ -154,8 +155,9 @@ local function routeQuestsByTitle(title)
       nameToQuest[name] = list
     end
     for id, q in pairs(R.quests) do
-      if q.n then put(q.n, id) end
-      if q.zt and q.zt ~= q.n then put(q.zt, id) end -- 遊戲內 zhTW 名（和路線寫的名字不同時）
+      local n = q.nG or q.n -- 客戶端語言的任務名（遊戲給的標題是這個語言）
+      if n then put(n, id) end
+      if q.zt and q.zt ~= n then put(q.zt, id) end -- 遊戲內 zhTW 名（和路線寫的名字不同時）
     end
   end
   return title and nameToQuest[title] or {}
@@ -179,7 +181,7 @@ local function notOffered(event)
   local s = cur and cur.s
   if not (s and s.t == "accept" and s.q) or C.IsOnQuest(s.q) or E.Turned(s.q) then return end
   local name = UnitName("npc")
-  if not name or (issecretvalue and issecretvalue(name)) or (name ~= s.npc and name ~= s.tgt) then return end
+  if not name or (issecretvalue and issecretvalue(name)) or (name ~= (s.npcG or s.npc) and name ~= s.tgt) then return end
   local offered = false
   if event == "QUEST_DETAIL" then
     local id = GetQuestID and GetQuestID()
@@ -199,7 +201,7 @@ local function notOffered(event)
   end
   if not offered then
     MG.db.notNow[cur.key] = true
-    MG.msg("「" .. E.Title(s) .. "」現在接不到，先做下一步（升級或交任務後再看）")
+    MG.msg(L["「%s」現在接不到，先做下一步（升級或交任務後再看）"]:format(E.Title(s)))
   end
 end
 
@@ -217,7 +219,7 @@ function AUTO.QUEST_COMPLETE()
   local id = GetQuestID and GetQuestID()
   if not inRoute(id) then return end
   local n = GetNumQuestChoices and GetNumQuestChoices() or 0
-  if n <= 1 then GetQuestReward(n) else MG.msg("有 " .. n .. " 個獎勵可選，請自己挑") end
+  if n <= 1 then GetQuestReward(n) else MG.msg(L["有 %d 個獎勵可選，請自己挑"]:format(n)) end
 end
 function AUTO.GOSSIP_SHOW()
   local G = C_GossipInfo
@@ -265,6 +267,8 @@ local function onEvent(_, event, ...)
     MG.db = MetroGuideCharDB
     MetroGuideDB = MetroGuideDB or {} -- 帳號共用：小地圖按鈕角度
     MetroGuideDB.angle = MetroGuideDB.angle or 200
+    MG.SetLang(MetroGuideDB.lang) -- 介面語言（/slv lang，/reload 後生效）
+    MG.try("語言", E.Localize)
     UI.InitDefaults()
     MG.try("介面", UI.Create)
     return
@@ -288,7 +292,7 @@ local function onEvent(_, event, ...)
     if type(id) == "number" and not (issecretvalue and issecretvalue(id)) then
       E.session[id] = true
       wipe(MG.db.notNow) -- 交了任務：暫時接不到的重新看
-      trace.QUEST_TURNED_IN = id .. "，事件當下已標記完成：" .. tostring(C.IsTurnedIn(id))
+      trace.QUEST_TURNED_IN = id .. L["，事件當下已標記完成："] .. tostring(C.IsTurnedIn(id))
     end
   elseif event == "TRAINER_SHOW" then
     E.Trained()
@@ -322,25 +326,26 @@ f:SetScript("OnEvent", function(...) MG.try(select(2, ...), onEvent, ...) end)
 
 -- ── /slv probe ────────────────────────────────────────────────────────────
 local function probe()
-  local L = {}
+  local out = {}
   local function add(label, ...)
     local parts = {}
     for i = 1, select("#", ...) do
       parts[#parts + 1] = tostring((select(i, ...)))
     end
-    L[#L + 1] = label .. " = " .. table.concat(parts, ", ")
+    out[#out + 1] = L[label] .. " = " .. table.concat(parts, ", ")
   end
   local function try(label, fn)
     local res = (function(...) return { n = select("#", ...), ... } end)(pcall(fn))
-    if res[1] then add(label, unpack(res, 2, res.n)) else L[#L + 1] = label .. " = 錯誤：" .. tostring(res[2]) end
+    if res[1] then add(label, unpack(res, 2, res.n)) else out[#out + 1] = L[label] .. L[" = 錯誤："] .. tostring(res[2]) end
   end
   local QL = C_QuestLog or {}
-  L[#L + 1] = "== 阿聖練等幫手 probe " .. (C_AddOns and C_AddOns.GetAddOnMetadata and C_AddOns.GetAddOnMetadata(ADDON, "Version") or "") .. "｜路線 " .. tostring(R.built) .. " =="
+  out[#out + 1] = L["== 阿聖練等幫手 probe "] .. (C_AddOns and C_AddOns.GetAddOnMetadata and C_AddOns.GetAddOnMetadata(ADDON, "Version") or "") .. L["｜路線 "] .. tostring(R.built) .. " =="
   try("locale, interface, build", function() local v, b, _, i = GetBuildInfo(); return GetLocale(), i, v, b end)
-  L[#L + 1] = "-- 相容層選用"
-  for k, v in pairs(C.impl) do L[#L + 1] = "  " .. k .. " → " .. v end
-  L[#L + 1] = "  航點 → " .. N.Method()
-  L[#L + 1] = "-- 任務 API"
+  add("ui locale, game locale, lang setting", MG.uiLoc, MG.gameLoc, MetroGuideDB.lang or "auto")
+  out[#out + 1] = L["-- 相容層選用"]
+  for k, v in pairs(C.impl) do out[#out + 1] = "  " .. k .. " → " .. L[v] end
+  out[#out + 1] = L["  航點 → "] .. L[N.Method()]
+  out[#out + 1] = L["-- 任務 API"]
   add("C_QuestLog.GetInfo/GetNumQuestLogEntries, GetQuestLogTitle/GetNumQuestLogEntries", QL.GetInfo ~= nil, QL.GetNumQuestLogEntries ~= nil, GetQuestLogTitle ~= nil, GetNumQuestLogEntries ~= nil)
   local log = C.LogQuestIDs() or {}
   add("日誌任務數, 前 5 個 ID", #log, table.concat({ log[1], log[2], log[3], log[4], log[5] }, " "))
@@ -350,45 +355,45 @@ local function probe()
     try("SetSelectedQuest, GetQuestLogQuestText 存在", function() return QL.SetSelectedQuest ~= nil, GetQuestLogQuestText ~= nil end)
     try("任務文字（描述前 40 字 / 目標）", function() local d, o = C.QuestText(qid); return d and d:sub(1, 120), o end)
     local obj = C.Objectives(qid)
-    if obj then for i, o in ipairs(obj) do add("  目標 " .. i, o.text, o.have, o.need, o.done) end else L[#L + 1] = "  目標 = nil" end
+    if obj then for i, o in ipairs(obj) do add(L["  目標 "] .. i, o.text, o.have, o.need, o.done) end else out[#out + 1] = L["  目標 = nil"] end
     if GetQuestLogTitle then try("GetQuestLogTitle(log index) 第 6 回傳", function() local i = C.LogIndex(qid); return i, i and select(6, GetQuestLogTitle(i)) end) end
   end
   local all = C.AllTurnedIn() or {}
   local n, anyDone = 0, nil
   for id in pairs(all) do n = n + 1; anyDone = anyDone or id end
-  add("已完成任務數（" .. C.impl.AllTurnedIn .. "）", n)
+  add(L["已完成任務數（%s）"]:format(L[C.impl.AllTurnedIn]), n)
   if anyDone then try("DONE " .. anyDone .. " IsQuestFlaggedCompleted(C_), 全域存在", function() return QL.IsQuestFlaggedCompleted and QL.IsQuestFlaggedCompleted(anyDone), IsQuestFlaggedCompleted ~= nil end) end
   add("GetQuestDifficultyLevel, GetTrivialRange, GetMaxNumQuestsCanAccept, GetQuestGreenRange", QL.GetQuestDifficultyLevel ~= nil, QL.GetTrivialRange ~= nil, QL.GetMaxNumQuestsCanAccept ~= nil, GetQuestGreenRange ~= nil)
   add("綠色範圍", C.GreenRange())
-  L[#L + 1] = "-- 地圖／航點"
+  out[#out + 1] = L["-- 地圖／航點"]
   try("BestMap, x, y", function() return C.Position() end)
   try("CanSetUserWaypointOnMap, SetSuperTrackedUserWaypoint, HasUserWaypoint", function() local m = C_Map.GetBestMapForUnit("player"); return C_Map.CanSetUserWaypointOnMap and C_Map.CanSetUserWaypointOnMap(m), C_SuperTrack and C_SuperTrack.SetSuperTrackedUserWaypoint ~= nil, C_Map.HasUserWaypoint and C_Map.HasUserWaypoint() end)
   try("WaypointUIAPI, 目前航點是我們的", function() local api = WaypointUIAPI and WaypointUIAPI.Navigation; return api ~= nil and api.NewUserNavigation ~= nil, api and api.IsUserNavigationFlagged and api.IsUserNavigationFlagged("MetroGuide") end)
   try("C_SuperTrack.IsSuperTrackingAnything", function() return C_SuperTrack and C_SuperTrack.IsSuperTrackingAnything and C_SuperTrack.IsSuperTrackingAnything() end)
-  L[#L + 1] = "-- 角色／交通／函式庫"
+  out[#out + 1] = L["-- 角色／交通／函式庫"]
   try("UnitRace 第 3 回傳 raceID, 起點", function() return select(3, UnitRace("player")), E.StartKey(), MG.db.start end)
   try("UnitRace, UnitClass, UnitLevel, GetBindLocation", function() local r1, r2 = UnitRace("player"); local c1, c2 = UnitClass("player"); return r1, r2, c1, c2, UnitLevel("player"), C.Bind() end)
   try("QuestDB, NpcDB, HBD, HBD-Pins", function() return type(QuestDB), type(NpcDB), LibStub and LibStub("HereBeDragons-2.0", true) ~= nil, LibStub and LibStub("HereBeDragons-Pins-2.0", true) ~= nil end)
   try("WorldMapFrame.AddDataProvider, C_TaxiMap, UnitOnTaxi", function() return WorldMapFrame and WorldMapFrame.AddDataProvider ~= nil, C_TaxiMap ~= nil, UnitOnTaxi ~= nil end)
-  L[#L + 1] = "-- 任務日誌框"
+  out[#out + 1] = L["-- 任務日誌框"]
   try("QuestLogFrame, QuestMapFrame, QuestScrollFrame", function() return QuestLogFrame ~= nil, QuestMapFrame ~= nil, QuestScrollFrame ~= nil end)
   try("QuestMapLogTitleButton_OnEnter, QuestLogTitleButton_OnEnter, QuestLogTitle1", function() return QuestMapLogTitleButton_OnEnter ~= nil, QuestLogTitleButton_OnEnter ~= nil, QuestLogTitle1 ~= nil end)
   try("TooltipDataProcessor, Enum.TooltipDataType.Quest", function() return TooltipDataProcessor ~= nil, Enum and Enum.TooltipDataType and Enum.TooltipDataType.Quest end)
   try("GetQuestID, GetQuestLogIndexByID, C_GossipInfo, GetNumQuestChoices", function() return GetQuestID ~= nil, GetQuestLogIndexByID ~= nil, C_GossipInfo ~= nil, GetNumQuestChoices ~= nil end)
-  L[#L + 1] = "-- 事件註冊（false 的要拿掉）"
+  out[#out + 1] = L["-- 事件註冊（false 的要拿掉）"]
   local bad = {}
   for _, e in ipairs(EVENTS) do if not registered[e] then bad[#bad + 1] = e end end
-  L[#L + 1] = "  失敗：" .. (#bad > 0 and table.concat(bad, " ") or "無")
-  L[#L + 1] = "  QUEST_ACCEPTED 參數：" .. (trace.QUEST_ACCEPTED or "（本次登入尚未接任務）")
-  L[#L + 1] = "  QUEST_TURNED_IN：" .. (trace.QUEST_TURNED_IN or "（本次登入尚未交任務）")
-  L[#L + 1] = "-- 引擎"
+  out[#out + 1] = L["  失敗："] .. (#bad > 0 and table.concat(bad, " ") or L["無"])
+  out[#out + 1] = L["  QUEST_ACCEPTED 參數："] .. (trace.QUEST_ACCEPTED or L["（本次登入尚未接任務）"])
+  out[#out + 1] = L["  QUEST_TURNED_IN："] .. (trace.QUEST_TURNED_IN or L["（本次登入尚未交任務）"])
+  out[#out + 1] = L["-- 引擎"]
   add("適用的站數 / 路線總站數", #E.stations, #R.stations)
   local ratio, n = MG.Rec.XPRatio()
   local buff = C.XPBuff()
-  add("任務經驗 實得/路線（中位數, 筆數，只診斷）, 已知經驗增益", ratio and string.format("%.3f", ratio), n, buff and ((buff.name or "?") .. " " .. tostring(buff.id) .. "（依" .. buff.how .. "）") or "無")
+  add("任務經驗 實得/路線（中位數, 筆數，只診斷）, 已知經驗增益", ratio and string.format("%.3f", ratio), n, buff and ((buff.name or "?") .. " " .. tostring(buff.id) .. L["（依%s）"]:format(L[buff.how])) or L["無"])
   local auras = {}
   for _, a in ipairs(C.Auras()) do auras[#auras + 1] = (a.name or "?") .. " " .. tostring(a.id or "?") end
-  L[#L + 1] = "  身上的增益：" .. (#auras > 0 and table.concat(auras, "｜") or "無")
+  out[#out + 1] = L["  身上的增益："] .. (#auras > 0 and table.concat(auras, " | ") or L["無"])
   local off = 0
   for _ in pairs(R.offroute or {}) do off = off + 1 end
   add("路線外判定 / 本職業學技能步驟", off, #E.trainSteps)
@@ -396,36 +401,46 @@ local function probe()
   if st then
     local s = lastState.cur and lastState.steps[lastState.cur]
     add("目前站, 地圖, 進度", st.id .. " " .. st.name, st.map, (function() local g, t = E.Progress(st); return g .. "/" .. t end)())
-    add("目前步驟, 自動位置, 漏掉", s and (s.key .. " " .. E.Title(s.s)) or "本站完成", tostring(lastState.auto), #lastState.missed)
+    add("目前步驟, 自動位置, 漏掉", s and (s.key .. " " .. E.Title(s.s)) or L["本站完成"], tostring(lastState.auto), #lastState.missed)
   else
-    L[#L + 1] = "  沒有目前站"
+    out[#out + 1] = L["  沒有目前站"]
   end
   add("地圖標點 世界地圖, 小地圖, HBD-Pins", MG.P.count and MG.P.count.world, MG.P.count and MG.P.count.minimap, LibStub and LibStub("HereBeDragons-Pins-2.0", true) ~= nil)
-  L[#L + 1] = "-- 任務目標巨集／按鈕"
-  for _, line in ipairs(MG.try("目標診斷", MG.T.Diag) or {}) do L[#L + 1] = "  " .. line end
-  L[#L + 1] = "-- 任務物品"
-  for _, line in ipairs(MG.try("物品診斷", MG.I.Diag) or {}) do L[#L + 1] = "  " .. line end
-  L[#L + 1] = "-- 地圖標點（請先打開世界地圖再打 /slv probe）"
-  for _, line in ipairs(MG.try("地圖診斷", MG.P.Diag) or {}) do L[#L + 1] = "  " .. line end
+  out[#out + 1] = L["-- 任務目標巨集／按鈕"]
+  for _, line in ipairs(MG.try("目標診斷", MG.T.Diag) or {}) do out[#out + 1] = "  " .. line end
+  out[#out + 1] = L["-- 任務物品"]
+  for _, line in ipairs(MG.try("物品診斷", MG.I.Diag) or {}) do out[#out + 1] = "  " .. line end
+  out[#out + 1] = L["-- 地圖標點（請先打開世界地圖再打 /slv probe）"]
+  for _, line in ipairs(MG.try("地圖診斷", MG.P.Diag) or {}) do out[#out + 1] = "  " .. line end
+  if not MG.uiZh then
+    -- 非中文介面：漏網的中文字串（顯示時已拿掉）和缺的翻譯
+    local leaks, miss = {}, {}
+    for s in pairs(MG.leaks) do leaks[#leaks + 1] = s end
+    for k in pairs(MG.missingL) do miss[#miss + 1] = k end
+    out[#out + 1] = "-- CJK leaks (" .. #leaks .. ") / missing translations (" .. #miss .. ")"
+    -- 中文字改寫成位元組跳脫（報告整份會過 MG.Clean，英文客戶端也顯示不了中文）
+    for _, s in ipairs(leaks) do out[#out + 1] = "  leak: " .. s:gsub("[\128-\255]", function(c) return "\\" .. c:byte() end) end
+    for _, s in ipairs(miss) do out[#out + 1] = "  missing: " .. s:gsub("[\128-\255]", function(c) return "\\" .. c:byte() end) end
+  end
   do
     local inside, kind
     if IsInInstance then inside, kind = IsInInstance() end
     local iid = GetInstanceInfo and select(8, GetInstanceInfo())
     local d = E.DungeonByInstance(iid)
     local pd, miss = E.DungeonPrompt()
-    add("副本 數量, 在副本, 類型, instanceID, 對到", #E.dungeons, inside, kind, iid, d and d.name or "無")
-    add("副本提示", pd and (pd.name .. (miss and ("  " .. miss) or "")) or "無")
+    add("副本 數量, 在副本, 類型, instanceID, 對到", #E.dungeons, inside, kind, iid, d and d.name or L["無"])
+    add("副本提示", pd and (pd.name .. (miss and ("  " .. miss) or "")) or L["無"])
   end
   local fi = lastState and lastState.fillInfo
   if fi then
     local names = {}
     for _, q in ipairs(fi.added) do names[#names + 1] = q .. " " .. ((R.quests[q] and R.quests[q].n) or "") end
     add("經驗 任務, 打怪, 休息加成, 合計, 需要", math.floor(fi.questXP), math.floor(fi.killXP), math.floor(fi.rested), math.floor(fi.projected), math.floor(fi.need))
-    add("補經驗 補回", #names > 0 and table.concat(names, "、") or "無")
+    add("補經驗 補回", #names > 0 and table.concat(names, L["、"]) or L["無"])
   end
   add("設定 箭頭, 自動接交, 帶上可跳過, 鎖定, 縮放, 寬度, 小地圖按鈕", UI.Get("arrow"), UI.Get("auto"), UI.Get("optional"), UI.Get("locked"), UI.Get("barScale"), UI.Get("barWidth"), UI.Get("minimap"))
   add("提示框 大小, 水平, 垂直；滑桿", UI.Get("tipScale"), UI.Get("tipX"), UI.Get("tipY"), C.impl.Slider)
-  UI.ShowReport(table.concat(L, "\n"))
+  UI.ShowReport(MG.Clean(table.concat(out, "\n")))
 end
 
 SLASH_METROGUIDE1 = "/slv"
@@ -439,7 +454,16 @@ SlashCmdList.METROGUIDE = function(msg)
   elseif msg == "config" then UI.OpenOptions()
   elseif msg == "macro" then MG.try("目標巨集", MG.T.MakeMacro)
   elseif msg == "minimap" then UI.Set("minimap", true); UI.ApplySettings()
+  elseif msg:match("^lang") then
+    -- 介面語言預覽：en／zh／auto（跟客戶端）。選目標、比對遊戲文字仍跟客戶端語言
+    local v = msg:match("^lang%s+(%a+)")
+    if v == "en" or v == "zh" or v == "auto" then
+      MetroGuideDB.lang = v ~= "auto" and v or nil
+      MG.msg(L["介面語言設為 %s，/reload 後生效"]:format(v))
+    else
+      MG.msg(L["介面語言：%s（/slv lang en｜zh｜auto，/reload 後生效）"]:format(MetroGuideDB.lang or "auto"))
+    end
   elseif msg:sub(1, 3) == "rec" then MG.Rec.Slash(msg:sub(4))
   elseif msg == "" then UI.Toggle()
-  else MG.msg("/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄") end
+  else MG.msg(L["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言"]) end
 end
