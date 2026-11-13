@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - name: 壓縮
         run: |
           cd addon
@@ -32,3 +34,20 @@ jobs:
           fi
           git tag -f latest
           git push -f origin latest
+      - name: 版本號有變就上傳 CurseForge
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_GAME_VERSION: ${{ vars.CF_GAME_VERSION }}
+          CF_PROJECT: ${{ vars.CF_PROJECT_LEVELING }}
+          FORCE: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          if [ -z "$CF_API_TOKEN" ] || [ -z "$CF_GAME_VERSION" ] || [ -z "$CF_PROJECT" ]; then echo "還沒設定 CurseForge，跳過"; exit 0; fi
+          toc=addon/BridgeLeveling/BridgeLeveling.toc
+          ver=$(grep -m1 '^## Version:' "$toc" | cut -d' ' -f3 | tr -d '\r')
+          old=$(git show "HEAD~1:$toc" 2>/dev/null | grep -m1 '^## Version:' | cut -d' ' -f3 | tr -d '\r' || true)
+          if [ "$ver" = "$old" ] && [ "$FORCE" != "true" ]; then echo "版本 $ver 沒變，跳過"; exit 0; fi
+          cp BridgeLeveling.zip "BridgeLeveling-$ver.zip"
+          jq -n --arg log "$(git log -1 --format=%B)" --arg name "BridgeLeveling $ver" --argjson gv "[$CF_GAME_VERSION]" \
+            '{changelog: $log, changelogType: "markdown", displayName: $name, gameVersions: $gv, releaseType: "beta"}' > meta.json
+          curl -sS -f -H "X-Api-Token: $CF_API_TOKEN" -F "metadata=<meta.json" -F "file=@BridgeLeveling-$ver.zip" \
+            "https://wow.curseforge.com/api/projects/$CF_PROJECT/upload-file"
