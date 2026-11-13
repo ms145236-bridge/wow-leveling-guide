@@ -1140,19 +1140,40 @@ function E.DungeonByInstance(id)
   end
   -- 同一個副本 ID 有好幾區（例如血色修道院：墓地、圖書館、軍械庫、大教堂）：用目前區域文字挑出所在的那一區
   if #all > 1 then
-    local here = table.concat({ GetSubZoneText and GetSubZoneText() or "", GetMinimapZoneText and GetMinimapZoneText() or "", GetZoneText and GetZoneText() or "" }, " ")
-    -- 遊戲裡的區域名跟路線寫的區名不一定一樣（例如軍械庫在遊戲裡叫「十字軍武器庫」）
-    local ALIAS = { ["軍械庫"] = { "武器庫" }, ["圖書館"] = { "圖書", "藏書" }, ["大教堂"] = { "教堂" } }
-    local function inHere(wing)
-      if here:find(wing, 1, true) then return true end
-      for _, a in ipairs(ALIAS[wing] or {}) do if here:find(a, 1, true) then return true end end
-    end
+    -- 遊戲回傳的區域名（各語系）對照 Data\Wings.lua（客戶端 AreaTable 的各區房間名，例如軍械庫＝十字軍武器庫、勇士大廳…）
+    local texts = { GetSubZoneText and GetSubZoneText() or "", GetMinimapZoneText and GetMinimapZoneText() or "" }
+    local loc = GetLocale and GetLocale() or "zhTW"
+    local pick
     for k, d in ipairs(all) do
-      local wing = tostring(d.name or ""):match("(%S+)$")
-      if wing and wing ~= d.name and inHere(wing) then
-        table.remove(all, k); table.insert(all, 1, d); break
+      local names = MG.Wings and MG.Wings[d.id] and (MG.Wings[d.id][loc] or MG.Wings[d.id].enUS)
+      for _, n in ipairs(names or {}) do
+        for _, t in ipairs(texts) do if t ~= "" and t == n then pick = k end end
+      end
+      if pick then break end
+    end
+    -- 對照表沒有時退回比對路線站名的最後一個詞（例如「血色修道院 墓地」的「墓地」）
+    if not pick then
+      local here = table.concat(texts, " ")
+      for k, d in ipairs(all) do
+        local wing = tostring(d.name or ""):match("(%S+)$")
+        if wing and wing ~= d.name and here:find(wing, 1, true) then pick = k; break end
       end
     end
+    -- 還是認不出來：只有一區有日誌裡的任務時就選那一區
+    if not pick and not (E.lastWing and E.lastWing[id]) then
+      local only
+      for k, d in ipairs(all) do
+        local has = false
+        for _, step in ipairs(d.list or {}) do if step.s.q and C.IsOnQuest(step.s.q) then has = true; break end end
+        if has then if only then only = nil; break end; only = k end
+      end
+      pick = only
+    end
+    -- 走廊等沒有區域名的地方：沿用這個副本上一次認出的區
+    E.lastWing = E.lastWing or {}
+    if pick then E.lastWing[id] = all[pick].id
+    else for k, d in ipairs(all) do if d.id == E.lastWing[id] then pick = k; break end end end
+    if pick then local d = table.remove(all, pick); table.insert(all, 1, d) end
   end
   return all[1], all
 end
