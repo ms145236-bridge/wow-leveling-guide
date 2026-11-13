@@ -526,7 +526,16 @@ local function buildItems()
         if UI.dMore[d.id] then
           for _, t in ipairs(UI.Sentences(d.pickupS, bullets(d.pickup or ""))) do items[#items + 1] = { kind = "dtext", text = "‧ " .. t } end
           for _, tip in ipairs(d.tips or {}) do
-            if tip.k == "取捨" then
+            if tip.k == "動線" then
+              -- 「→」是多位元組字，用純文字搜尋切開，不能放進樣式字元類別
+              local n, rest = 0, tip.text
+              while rest do
+                local a, b = rest:find("→", 1, true)
+                local part = strtrim(a and rest:sub(1, a - 1) or rest)
+                rest = b and rest:sub(b + 1)
+                if part ~= "" then n = n + 1; items[#items + 1] = { kind = "dtext", text = n .. ". " .. part } end
+              end
+            elseif tip.k == "取捨" then
               local list = UI.Sentences(tip.s, { tip.text })
               if #list > 0 then items[#items + 1] = { kind = "dtext", text = "‧ " .. table.concat(list, "，") } end
             elseif tip.k ~= "交通" then

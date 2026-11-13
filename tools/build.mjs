@@ -18,7 +18,7 @@ const RACE = { 獸人: "Orc", 食人妖: "Troll", 牛頭人: "Tauren", 不死族
 const ZONE_MAP = { 杜洛塔: 1411, 莫高雷: 1412, 貧瘠之地: 1413, 提里斯法林地: 1420, 銀松森林: 1421, 石爪山脈: 1442, 梣谷: 1440, 灰谷: 1440, 千針石林: 1441, 希爾斯布萊德丘陵: 1424, 奧特蘭克山脈: 1416, 阿拉希高地: 1417, 塵泥沼澤: 1445, 荊棘谷: 1434, 淒涼之地: 1443, 菲拉斯: 1444, 塔納利斯: 1446, 辛特蘭: 1425, 悲傷沼澤: 1435, 荒蕪之地: 1418, 灼熱峽谷: 1427, 艾薩拉: 1447, 奧格瑪: 1454, 幽暗城: 1458, 雷霆崖: 1456 };
 const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel" };
 // 行尾標籤：這些不顯示；其餘（可跳過、有隊伍再做…）顯示在步驟第 3 行
-const HIDDEN_TAG = /^(QuestieDB|補充|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率)/;
+const HIDDEN_TAG = /^(QuestieDB|補充|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序)/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -212,6 +212,13 @@ for (const file of files.filter((f) => !sideFile(f))) {
       else warn(where, "練怪格式看不懂：" + gr[1].slice(0, 40));
       return;
     }
+    const route = st.dungeon && line.match(/^\s*動線[：:](.*)$/);
+    if (route) {
+      // 去掉來源標籤和「（12）」這類步驟編號
+      const text = route[1].replace(/【[^】]*】/g, "").replace(/[（(]\d+(?:\s*[–-]\s*\d+)?[）)]/g, "").trim();
+      if (text) st.tips.push({ k: "動線", raw: text, text });
+      return;
+    }
     const meta = line.match(/^\s*-\s*(限定|二選一|地圖\s*ID|交通|取捨|提醒|未完|說明)｜(.*)$/);
     if (meta) {
       const [, key, val] = meta;
@@ -231,7 +238,8 @@ for (const file of files.filter((f) => !sideFile(f))) {
     const f = body.replace(/★/g, "").split("｜").map((s) => s.trim());
     const step = { verb: sm[1], t: VERB[sm[1]], where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined,
-      desc: tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")).join("；") || undefined,
+      desc: [...tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")),
+        ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
       star: starOf(tags), rate: (tags.map((t) => t.match(/^掉率\s*(\d+(?:\.\d+)?)\s*%/)).find(Boolean) || [])[1],
       pre: tags.map((t) => t.match(/^前置[：:].*?(\d{2,6})\s*$/)).filter(Boolean).map((m) => +m[1]) };
     if (step.t === "accept" || step.t === "turnin" || step.t === "do") {
