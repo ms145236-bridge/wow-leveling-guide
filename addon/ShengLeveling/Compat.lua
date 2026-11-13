@@ -4,7 +4,8 @@ local C = {}
 MG.C = C
 C.impl = {} -- 挑到哪個實作（/slv probe 會印）
 
-function MG.msg(s) DEFAULT_CHAT_FRAME:AddMessage("|cffd9b25f阿聖練等幫手|r " .. tostring(s)) end
+function MG.msg(s) DEFAULT_CHAT_FRAME:AddMessage("|cff4fc3f7阿聖|r|cffd9b25f練等幫手|r " .. tostring(s)) end
+ShengLv_Msg = MG.msg -- 給巨集的 /run 用，開頭顏色跟系列一致
 
 local reported = {}
 local function after(where, ok, ...)

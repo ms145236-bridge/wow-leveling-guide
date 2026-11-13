@@ -105,8 +105,8 @@ T.MacroText = macro
 local MACRO, OLD_MACRO = "任務目標", "地鐵目標"
 local ICON = "Ability_Hunter_SniperShot"
 local function emptyText()
-  if T.objNote then return "/run print(\"阿聖練等幫手：目標是地上的物件（" .. T.objNote .. "），無法選取\")" end
-  return "/run print(\"阿聖練等幫手：目前步驟沒有要選的目標\")"
+  if T.objNote then return "/run ShengLv_Msg(\"目標是地上的物件（" .. T.objNote .. "），無法選取\")" end
+  return "/run ShengLv_Msg(\"目前步驟沒有要選的目標\")"
 end
 local function macroBody()
   local text = macro()

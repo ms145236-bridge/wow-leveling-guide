@@ -74,7 +74,7 @@ local MACRO, ICON = "任務物品", "INV_Misc_Bag_08"
 local lastBody
 local triedCreate = false
 local function macroBody()
-  return items[1] and ("/use item:" .. items[1]) or "/run print(\"阿聖練等幫手：目前步驟沒有任務物品\")"
+  return items[1] and ("/use item:" .. items[1]) or "/run ShengLv_Msg(\"目前步驟沒有任務物品\")"
 end
 function I.SyncMacro()
   if not GetMacroIndexByName or InCombatLockdown() or not MG.UI.Get("itemMacro") then return end
