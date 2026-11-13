@@ -101,10 +101,19 @@ local SPEC = {
 local SPEC_BY = {}
 for _, sp in ipairs(SPEC) do if sp.key then SPEC_BY[sp.key] = sp end end
 local function store(sp) return sp.acct and MetroGuideDB or MG.db end
+-- 字較長的介面語言：步驟列、清單的預設寬加大，平常任務名、站名不用截斷（只改預設；玩家調過的值照用）
+local LOCALE_DEF = {
+  deDE = { barWidth = 330, listWidth = 420 },
+  frFR = { barWidth = 310, listWidth = 370 },
+  esES = { barWidth = 310, listWidth = 380 },
+  esMX = { barWidth = 310, listWidth = 390 },
+  ruRU = { barWidth = 350, listWidth = 450 },
+  ptBR = { barWidth = 310, listWidth = 380 },
+}
 function UI.Get(key)
   local sp = SPEC_BY[key]
   local v = store(sp)[key]
-  if v == nil then return sp.def end
+  if v == nil then return LOCALE_DEF[MG.uiLoc] and LOCALE_DEF[MG.uiLoc][key] or sp.def end
   if sp.choices and type(v) ~= "number" then return sp.def end -- 舊版設定頁把選項畫成勾選框，可能存了 true/false
   return v
 end
