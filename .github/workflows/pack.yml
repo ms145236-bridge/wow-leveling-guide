@@ -19,18 +19,18 @@ jobs:
       - name: 壓縮
         run: |
           cd addon
-          zip -r ../BridgeLeveling.zip BridgeLeveling
+          zip -r ../ShengLeveling.zip ShengLeveling
       - name: 更新「最新版」發佈
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          ver=$(grep -m1 '^## Version:' addon/BridgeLeveling/BridgeLeveling.toc | cut -d' ' -f3 | tr -d '\r')
-          notes="版本 ${ver}（${GITHUB_SHA::7}）。解壓縮後把 BridgeLeveling 資料夾放進 World of Warcraft\\_forever_\\Interface\\AddOns，完整重開遊戲。"
+          ver=$(grep -m1 '^## Version:' addon/ShengLeveling/ShengLeveling.toc | cut -d' ' -f3 | tr -d '\r')
+          notes="版本 ${ver}（${GITHUB_SHA::7}）。解壓縮後把 ShengLeveling 資料夾放進 World of Warcraft\\_forever_\\Interface\\AddOns，完整重開遊戲。"
           if gh release view latest >/dev/null 2>&1; then
-            gh release upload latest BridgeLeveling.zip --clobber
+            gh release upload latest ShengLeveling.zip --clobber
             gh release edit latest --title "最新版 ${ver}" --notes "$notes"
           else
-            gh release create latest BridgeLeveling.zip --title "最新版 ${ver}" --notes "$notes" --latest
+            gh release create latest ShengLeveling.zip --title "最新版 ${ver}" --notes "$notes" --latest
           fi
           git tag -f latest
           git push -f origin latest
@@ -42,12 +42,12 @@ jobs:
           FORCE: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
           if [ -z "$CF_API_TOKEN" ] || [ -z "$CF_GAME_VERSION" ] || [ -z "$CF_PROJECT" ]; then echo "還沒設定 CurseForge，跳過"; exit 0; fi
-          toc=addon/BridgeLeveling/BridgeLeveling.toc
+          toc=addon/ShengLeveling/ShengLeveling.toc
           ver=$(grep -m1 '^## Version:' "$toc" | cut -d' ' -f3 | tr -d '\r')
           old=$(git show "HEAD~1:$toc" 2>/dev/null | grep -m1 '^## Version:' | cut -d' ' -f3 | tr -d '\r' || true)
           if [ "$ver" = "$old" ] && [ "$FORCE" != "true" ]; then echo "版本 $ver 沒變，跳過"; exit 0; fi
-          cp BridgeLeveling.zip "BridgeLeveling-$ver.zip"
-          jq -n --arg log "$(git log -1 --format=%B)" --arg name "BridgeLeveling $ver" --argjson gv "[$CF_GAME_VERSION]" \
+          cp ShengLeveling.zip "ShengLeveling-$ver.zip"
+          jq -n --arg log "$(git log -1 --format=%B)" --arg name "ShengLeveling $ver" --argjson gv "[$CF_GAME_VERSION]" \
             '{changelog: $log, changelogType: "markdown", displayName: $name, gameVersions: $gv, releaseType: "beta"}' > meta.json
-          curl -sS -f -H "X-Api-Token: $CF_API_TOKEN" -F "metadata=<meta.json" -F "file=@BridgeLeveling-$ver.zip" \
+          curl -sS -f -H "X-Api-Token: $CF_API_TOKEN" -F "metadata=<meta.json" -F "file=@ShengLeveling-$ver.zip" \
             "https://wow.curseforge.com/api/projects/$CF_PROJECT/upload-file"

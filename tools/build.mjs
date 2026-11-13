@@ -1,4 +1,4 @@
-// 離線建置：route/*.md → addon/BridgeLeveling/Data/Route.lua + tools/unresolved.md
+// 離線建置：route/*.md → addon/ShengLeveling/Data/Route.lua + tools/unresolved.md
 // 用法：node tools/build.mjs
 // 缺任務 ID／座標時查 QuestieDB（zhTW、zhCN、enUS 名稱）。有「找不到／多個候選」時以結束碼 1 結束（輸出仍會寫出）。
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
@@ -9,7 +9,7 @@ import { openQuestieDB, clusterCenter } from "./questiedb.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ROUTE = process.env.ROUTE_DIR || join(ROOT, "route"); // 測試時可指到別的資料夾
-const OUT = process.env.OUT_LUA || join(ROOT, "addon", "BridgeLeveling", "Data", "Route.lua");
+const OUT = process.env.OUT_LUA || join(ROOT, "addon", "ShengLeveling", "Data", "Route.lua");
 const REPORT = process.env.OUT_REPORT || join(ROOT, "tools", "unresolved.md");
 
 const HORDE = 8589934770n; // QuestieDB 的部落種族遮罩（含永恆新種族位元）

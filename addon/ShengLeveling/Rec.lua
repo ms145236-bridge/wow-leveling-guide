@@ -215,7 +215,7 @@ function Rec.XPRatio()
   return r[math.floor((#r + 1) / 2)], #r
 end
 
-local PATH = "WTF\\Account\\<帳號>\\SavedVariables\\MetroGuide.lua"
+local PATH = "WTF\\Account\\<帳號>\\SavedVariables\\ShengLeveling.lua"
 function Rec.Slash(arg)
   arg = arg:gsub("^%s+", "")
   if arg == "on" or arg == "off" then UI.Set("rec", arg == "on") end

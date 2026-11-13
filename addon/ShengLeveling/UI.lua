@@ -1401,7 +1401,7 @@ function UI.CreateMinimap()
   bg:SetVertexColor(BG[1], BG[2], BG[3], 1)
   local icon = mini:CreateTexture(nil, "ARTWORK")
   icon:SetPoint("CENTER"); icon:SetSize(18, 18)
-  icon:SetTexture("Interface\\AddOns\\BridgeLeveling\\Media\\Logo")
+  icon:SetTexture("Interface\\AddOns\\ShengLeveling\\Media\\Logo")
   icon:SetTexCoord(0.1, 0.9, 0.1, 0.9) -- 裁掉外框，圓形按鈕裡只留主體
   local ring = mini:CreateTexture(nil, "OVERLAY")
   ring:SetPoint("TOPLEFT"); ring:SetSize(48, 48)

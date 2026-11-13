@@ -1,6 +1,6 @@
 # 地鐵升級 v0.1 遊戲內測試（34 級）
 
-插件已裝在 `_forever_\Interface\AddOns\BridgeLeveling`。路線資料目前是 `route/03-30到45級.md`（第 15–28 站）＋ 1–12 級起始區。
+插件已裝在 `_forever_\Interface\AddOns\ShengLeveling`。路線資料目前是 `route/03-30到45級.md`（第 15–28 站）＋ 1–12 級起始區。
 
 ## 1. 載入
 
