@@ -241,6 +241,7 @@ MG.Locales.frFR = {
   ["遊戲內記錄"] = "Enregistreur en jeu",
   ["記下任務 NPC 與座標、經驗表、飛行點，用來修正路線。/slv rec export 匯出。"] = "Enregistre les PNJ de quête, les coordonnées, l'XP et les trajectoires de vol pour améliorer l'itinéraire. Exportez avec /slv rec export.",
   ["全部重設為預設"] = "Réinitialiser tout aux valeurs par défaut",
+  ["進階"] = "Avancé",
   ["滑鼠移開或進入戰鬥時，步驟列變淡；滑鼠移上去就恢復。"] = "La barre d'étapes s'estompe quand la souris est ailleurs ou en combat, et revient au survol.",
   ["接下來幾步裡地點相近的任務一起列出，順手一起做。"] = "Affiche ensemble les prochaines quêtes au même endroit pour les faire d'une traite.",
   ["一起列出的任務最多幾個（含目前這步）。"] = "Nombre maximal de quêtes affichées ensemble, étape actuelle comprise.",

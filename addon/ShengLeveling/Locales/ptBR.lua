@@ -241,6 +241,7 @@ MG.Locales.ptBR = {
   ["遊戲內記錄"] = "Gravador no jogo",
   ["記下任務 NPC 與座標、經驗表、飛行點，用來修正路線。/slv rec export 匯出。"] = "Registra NPCs de missões, coordenadas, XP e rotas de voo para melhorar a rota. Exporte com /slv rec export.",
   ["全部重設為預設"] = "Redefinir tudo para os padrões",
+  ["進階"] = "Avançado",
   ["滑鼠移開或進入戰鬥時，步驟列變淡；滑鼠移上去就恢復。"] = "A barra de passos esmaece quando o mouse está em outro lugar ou você está em combate, e volta ao passar o mouse.",
   ["接下來幾步裡地點相近的任務一起列出，順手一起做。"] = "Mostra juntas as próximas missões no mesmo local para fazê-las de uma vez.",
   ["一起列出的任務最多幾個（含目前這步）。"] = "Máximo de missões mostradas juntas, incluindo o passo atual.",

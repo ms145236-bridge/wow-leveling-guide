@@ -27,54 +27,28 @@ local SPEC = {
   { section = "步驟列" },
   { key = "barScale", label = "縮放", min = 70, max = 150, step = 5, def = 100, unit = "%" },
   { key = "barWidth", label = "寬度", min = 240, max = 480, step = 10, def = 300 },
-  { key = "barAlpha", label = "背景透明度", min = 0, max = 100, step = 5, def = 88, unit = "%" },
-  { key = "barOpacity", label = "整體透明度", hint = "包含文字。", min = 0, max = 100, step = 5, def = 100, unit = "%" },
   { key = "fadeOn", label = "滑鼠不在上面或戰鬥中時淡出", def = false, hint = "滑鼠移開或進入戰鬥時，步驟列變淡；滑鼠移上去就恢復。" },
-  { key = "fadeAlpha", label = "淡出時透明度", min = 0, max = 100, step = 5, def = 40, unit = "%" },
   { key = "fontSize", label = "字體大小", min = 11, max = 20, step = 1, def = 15 },
-  { key = "objRows", label = "最多顯示目標行數", min = 1, max = 5, step = 1, def = 5 },
   { key = "groupOn", label = "同時顯示附近任務", def = true, hint = "接下來幾步裡地點相近的任務一起列出，順手一起做。" },
   { key = "groupMax", label = "最多同時顯示", min = 1, max = 5, step = 1, def = 3, hint = "一起列出的任務最多幾個（含目前這步）。" },
-  { key = "groupDist", label = "附近距離", hint = "以地圖寬度的 % 計。", min = 2, max = 20, step = 1, def = 8 },
-  { key = "showCount", label = "顯示剩餘步數", def = false, hint = "步驟列右上角顯示這一站還剩幾步。" },
-  { key = "showLevel", label = "顯示任務等級", def = false },
   { key = "locked", label = "鎖定位置", def = false, menu = true },
   { button = "重設位置", run = function() MG.db.pos = nil end },
-  { section = "提示框" },
-  { key = "tipScale", label = "大小", min = 70, max = 150, step = 5, def = 100, unit = "%", acct = true, tip = true },
-  { key = "tipX", label = "水平位置", min = -300, max = 300, step = 5, def = 0, acct = true, tip = true, hint = "步驟提示框相對步驟列和清單的偏移。" },
-  { key = "tipY", label = "垂直位置", min = -300, max = 300, step = 5, def = 0, acct = true, tip = true, hint = "步驟提示框相對步驟列和清單的偏移。" },
-  { key = "tipAlpha", label = "背景透明度", min = 0, max = 100, step = 5, def = 100, unit = "%", acct = true, tip = true },
-  { key = "tipDesc", label = "顯示說明行", def = true, acct = true, tip = true, hint = "步驟提示框最後加上這步的補充說明。" },
   { section = "展開清單" },
-  { key = "listAlpha", label = "背景透明度", min = 0, max = 100, step = 5, def = 88, unit = "%" },
-  { key = "listRows", label = "高度（行數）", min = 8, max = MAX_ROWS, step = 1, def = 18 },
   { key = "listWidth", label = "寬度", min = 280, max = 600, step = 10, def = 320 },
   { key = "showDone", label = "顯示已完成步驟", def = true },
-  { key = "showNum", label = "顯示步驟編號", def = true },
   { section = "地圖標點" },
   { key = "pinSize", label = "世界地圖標點大小", min = 14, max = 40, step = 1, def = 24 },
-  { key = "miniPinSize", label = "小地圖標點大小", min = 10, max = 30, step = 1, def = 15 },
-  { key = "miniSteps", label = "小地圖顯示幾步", min = 0, max = 5, step = 1, def = 3, hint = "小地圖標出從目前這步起的幾個位置；0 不標。" },
-  { key = "pinAlpha", label = "標點透明度", min = 30, max = 100, step = 5, def = 100, unit = "%" },
-  { key = "pinMergeX", label = "合併距離", hint = "標點大小的幾倍內合成一個。", min = 0, max = 3, step = 0.1, def = 1.1 },
   { section = "提醒" },
   { key = "trainOn", label = "學技能", def = true, hint = "到了職業訓練師有新技能的等級時，在路線中插入「去學技能」步驟。" },
   { key = "supplyOn", label = "修裝與飛行點", def = true, hint = "耐久低時提醒修裝；經過還沒開的飛行管理員時提醒。" },
   { key = "dangerOn", label = "危險", def = true, hint = "走近容易拉到一堆怪的地點時，在步驟列下方提醒怎麼應對。" },
   { key = "detourOn", label = "順路", def = true, hint = "附近有比目前步驟近很多、現在就能接、做或交的任務時，提醒你順路處理。" },
-  { key = "detourDist", label = "順路距離", min = 1, max = 8, step = 0.5, def = 3, hint = "以地圖寬度的 % 計。" },
   { key = "keepOn", label = "別賣的物品", def = true, hint = "背包物品的滑鼠提示加一行之後任務會用到。" },
   { key = "dungeonHint", label = "可以下副本", def = true, hint = "等級到了副本建議等級時，提示可以去哪個副本，以及前置還差多少。" },
   { section = "目標與物品" },
   { key = "showTarget", label = "顯示目標按鈕", def = true, hint = "步驟列上的準星按鈕：點一下選取這步要找的怪或 NPC，也能綁快捷鍵。" },
   { key = "markOn", label = "選取時標上團隊標記", def = true, hint = "用目標按鈕或巨集選到目標時，順便標上團隊標記。" },
-  { key = "markIcon", label = "標記圖示", def = 1, choices = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" } },
   { key = "showItem", label = "顯示任務物品按鈕", def = true, hint = "目前任務有可使用的物品時，在步驟列旁顯示物品按鈕，點了就使用。" },
-  { key = "itemPos", label = "任務物品位置", def = 1, choices = { "步驟列內", "左側", "右側" } },
-  { key = "itemSize", label = "任務物品大小", min = 20, max = 48, step = 2, def = 32, hint = "放在左側或右側時的大小。" },
-  { key = "itemMacro", label = "自動建立任務物品巨集", def = true, hint = "建立帳號巨集「任務物品」，內容自動改成使用目前步驟的任務物品（戰鬥中等脫離戰鬥再改）。" },
-  { key = "autoMacro", label = "自動建立目標巨集", def = true, hint = "登入時若沒有「任務目標」巨集就自動建立（帳號巨集有空位時）。刪掉後下次登入會再建立；關掉這項就不會。" },
   { button = "建立巨集", run = function() MG.T.MakeMacro() end, hint = "建立「任務目標」巨集並拿在滑鼠上，放到快捷列就能一鍵選取目標。" },
   { section = "副本" },
   { key = "dPre", label = "順路接副本前置", def = true, hint = "把副本的前置任務排進主線，在附近的站順路接、做、交。" },
@@ -85,9 +59,42 @@ local SPEC = {
   { key = "optional", label = "帶上可跳過的任務", def = false, menu = true, hint = "路線也帶上標為可跳過的任務；已接的不論開關都會列出。" },
   { start = true, hint = "選擇從哪個新手區開始的路線，預設是你種族的那條。" },
   { key = "minimap", label = "顯示小地圖按鈕", def = true },
+  { button = "重新對齊", run = function() E.Realign() end, hint = "依目前的等級和任務重新找所在的站，並清掉這站的手動勾選。" },
+  { section = "進階", fold = true },
+  { sub = "步驟列" },
+  { key = "barAlpha", label = "背景透明度", min = 0, max = 100, step = 5, def = 88, unit = "%" },
+  { key = "barOpacity", label = "整體透明度", hint = "包含文字。", min = 0, max = 100, step = 5, def = 100, unit = "%" },
+  { key = "fadeAlpha", label = "淡出時透明度", min = 0, max = 100, step = 5, def = 40, unit = "%" },
+  { key = "objRows", label = "最多顯示目標行數", min = 1, max = 5, step = 1, def = 5 },
+  { key = "showCount", label = "顯示剩餘步數", def = false, hint = "步驟列右上角顯示這一站還剩幾步。" },
+  { key = "showLevel", label = "顯示任務等級", def = false },
+  { key = "groupDist", label = "附近距離", hint = "以地圖寬度的 % 計。", min = 2, max = 20, step = 1, def = 8 },
+  { sub = "提示框" },
+  { key = "tipScale", label = "大小", min = 70, max = 150, step = 5, def = 100, unit = "%", acct = true, tip = true },
+  { key = "tipX", label = "水平位置", min = -300, max = 300, step = 5, def = 0, acct = true, tip = true, hint = "步驟提示框相對步驟列和清單的偏移。" },
+  { key = "tipY", label = "垂直位置", min = -300, max = 300, step = 5, def = 0, acct = true, tip = true, hint = "步驟提示框相對步驟列和清單的偏移。" },
+  { key = "tipAlpha", label = "背景透明度", min = 0, max = 100, step = 5, def = 100, unit = "%", acct = true, tip = true },
+  { key = "tipDesc", label = "顯示說明行", def = true, acct = true, tip = true, hint = "步驟提示框最後加上這步的補充說明。" },
+  { sub = "展開清單" },
+  { key = "listAlpha", label = "背景透明度", min = 0, max = 100, step = 5, def = 88, unit = "%" },
+  { key = "listRows", label = "高度（行數）", min = 8, max = MAX_ROWS, step = 1, def = 18 },
+  { key = "showNum", label = "顯示步驟編號", def = true },
+  { sub = "地圖標點" },
+  { key = "miniPinSize", label = "小地圖標點大小", min = 10, max = 30, step = 1, def = 15 },
+  { key = "miniSteps", label = "小地圖顯示幾步", min = 0, max = 5, step = 1, def = 3, hint = "小地圖標出從目前這步起的幾個位置；0 不標。" },
+  { key = "pinAlpha", label = "標點透明度", min = 30, max = 100, step = 5, def = 100, unit = "%" },
+  { key = "pinMergeX", label = "合併距離", hint = "標點大小的幾倍內合成一個。", min = 0, max = 3, step = 0.1, def = 1.1 },
+  { sub = "提醒" },
+  { key = "detourDist", label = "順路距離", min = 1, max = 8, step = 0.5, def = 3, hint = "以地圖寬度的 % 計。" },
+  { sub = "目標與物品" },
+  { key = "markIcon", label = "標記圖示", def = 1, choices = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" } },
+  { key = "itemPos", label = "任務物品位置", def = 1, choices = { "步驟列內", "左側", "右側" } },
+  { key = "itemSize", label = "任務物品大小", min = 20, max = 48, step = 2, def = 32, hint = "放在左側或右側時的大小。" },
+  { key = "itemMacro", label = "自動建立任務物品巨集", def = true, hint = "建立帳號巨集「任務物品」，內容自動改成使用目前步驟的任務物品（戰鬥中等脫離戰鬥再改）。" },
+  { key = "autoMacro", label = "自動建立目標巨集", def = true, hint = "登入時若沒有「任務目標」巨集就自動建立（帳號巨集有空位時）。刪掉後下次登入會再建立；關掉這項就不會。" },
+  { sub = "其他" },
   { key = "miniBtnAlpha", label = "小地圖按鈕透明度", min = 0, max = 100, step = 5, def = 100, unit = "%" },
   { key = "rec", label = "遊戲內記錄", def = true, acct = true, hint = "記下任務 NPC 與座標、經驗表、飛行點，用來修正路線。/slv rec export 匯出。" },
-  { button = "重新對齊", run = function() E.Realign() end, hint = "依目前的等級和任務重新找所在的站，並清掉這站的手動勾選。" },
   { section = "" },
   { button = "全部重設為預設", all = true },
 }
@@ -1620,6 +1627,7 @@ function UI.CreateOptions()
     local function hide() GameTooltip:Hide() end
     for _, f in ipairs({ ... }) do f:HookScript("OnEnter", show); f:HookScript("OnLeave", hide) end
   end
+  local hits, layout = {}, nil -- 標籤 → 說明用的透明框；layout 在下面定義
   local function label(t, hint)
     local l = text(content, 13, TEXT)
     wrapLines(l, 3)
@@ -1629,6 +1637,7 @@ function UI.CreateOptions()
       local hit = CreateFrame("Frame", nil, content)
       hit:SetAllPoints(l); hit:EnableMouse(true)
       explain(L[t], hint, hit)
+      hits[l] = hit
     end
     return l
   end
@@ -1673,7 +1682,18 @@ function UI.CreateOptions()
           for _, k in ipairs(sec.keys) do UI.Reset(k) end
           changed(); UI.RefreshOptions()
         end)
+        if sp.fold then -- 摺疊區：點標題開合，開合記在帳號存檔
+          e.fold = CreateFrame("Button", nil, content)
+          e.fold:SetHeight(22)
+          e.icon = e.fold:CreateTexture(nil, "ARTWORK")
+          e.icon:SetSize(14, 14); e.icon:SetPoint("LEFT", 0, 0)
+          e.fold:SetScript("OnClick", function() MetroGuideDB.advOpen = not MetroGuideDB.advOpen or nil; layout() end)
+        end
       end
+      lines[#lines + 1] = e
+    elseif sp.sub then
+      local e = { kind = "sub", h = text(content, 12, GOLD) }
+      e.h:SetText(L[sp.sub])
       lines[#lines + 1] = e
     elseif sp.min then
       section.keys[#section.keys + 1] = sp.key
@@ -1720,7 +1740,14 @@ function UI.CreateOptions()
     end
   end
   flush()
-  local function layout()
+  -- 摺疊區裡的列（到下一個區塊為止）
+  local inFold = false
+  for _, e in ipairs(lines) do
+    if e.kind == "section" then inFold = e.fold ~= nil
+    elseif inFold then e.adv = true end
+  end
+  function layout()
+    local open = MetroGuideDB.advOpen
     local W = options:GetWidth() or 0
     if W < 300 then W = 600 end -- 還沒拿到面板寬（建立時）：先照常見寬度排，顯示時再照實際寬重排
     local R = W - 6 - 16 -- 內容右緣：ScrollFrame 右邊留 6，再留 16 邊距
@@ -1730,14 +1757,27 @@ function UI.CreateOptions()
     head:SetWidth(R - 16)
     local y = -44
     for _, e in ipairs(lines) do
-      if e.kind == "section" then
+      local shown = not e.adv or open
+      for _, r in pairs({ e.h, e.label, hits[e.label], e.ctrl, e.value }) do r:SetShown(shown) end
+      for _, b in ipairs(e.btns or {}) do b:SetShown(shown) end
+      if not shown then -- 收起的列不佔位置
+      elseif e.kind == "section" then
         y = y - 12
         if e.h then
+          local x = e.fold and 16 + 18 or 16
           e.reset:ClearAllPoints(); e.reset:SetPoint("TOPRIGHT", content, "TOPLEFT", R, y + 1)
-          e.h:ClearAllPoints(); e.h:SetPoint("TOPLEFT", 16, y); e.h:SetWidth(math.max(1, R - 16 - e.reset:GetWidth() - 8))
+          e.h:ClearAllPoints(); e.h:SetPoint("TOPLEFT", x, y); e.h:SetWidth(math.max(1, R - x - e.reset:GetWidth() - 8))
           e.line:ClearAllPoints(); e.line:SetPoint("TOPLEFT", 16, y - 20); e.line:SetSize(R - 16, 1)
+          if e.fold then
+            e.icon:SetTexture(open and "Interface\\Buttons\\UI-MinusButton-Up" or "Interface\\Buttons\\UI-PlusButton-Up")
+            e.fold:ClearAllPoints(); e.fold:SetPoint("TOPLEFT", 16, y + 3); e.fold:SetWidth(math.max(1, R - 16 - e.reset:GetWidth() - 8))
+          end
           y = y - 28
         end
+      elseif e.kind == "sub" then
+        y = y - 6
+        e.h:ClearAllPoints(); e.h:SetPoint("TOPLEFT", 16, y); e.h:SetWidth(R - 16)
+        y = y - 20
       elseif e.kind == "actions" then
         local x = COL_LABEL
         for _, b in ipairs(e.btns) do

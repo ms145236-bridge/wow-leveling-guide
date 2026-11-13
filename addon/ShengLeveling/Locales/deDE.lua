@@ -241,6 +241,7 @@ MG.Locales.deDE = {
   ["遊戲內記錄"] = "Rekorder im Spiel",
   ["記下任務 NPC 與座標、經驗表、飛行點，用來修正路線。/slv rec export 匯出。"] = "Zeichnet Quest-NPCs, Koordinaten, XP und Flugrouten auf, um die Route zu verbessern. Exportieren mit /slv rec export.",
   ["全部重設為預設"] = "Alles auf die Standardeinstellungen zurücksetzen",
+  ["進階"] = "Erweitert",
   ["滑鼠移開或進入戰鬥時，步驟列變淡；滑鼠移上去就恢復。"] = "Die Schrittleiste verblasst, wenn die Maus woanders ist oder du im Kampf bist, und kehrt beim Darüberfahren zurück.",
   ["接下來幾步裡地點相近的任務一起列出，順手一起做。"] = "Zeigt kommende Quests am selben Ort gemeinsam an, damit du sie in einem Rutsch erledigst.",
   ["一起列出的任務最多幾個（含目前這步）。"] = "Höchstens so viele Quests werden gemeinsam angezeigt, der aktuelle Schritt eingeschlossen.",

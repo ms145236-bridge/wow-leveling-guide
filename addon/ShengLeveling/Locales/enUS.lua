@@ -241,6 +241,7 @@ MG.Locales.enUS = {
   ["遊戲內記錄"] = "In-game recorder",
   ["記下任務 NPC 與座標、經驗表、飛行點，用來修正路線。/slv rec export 匯出。"] = "Records quest NPCs, coordinates, XP and flight paths to improve the route. Export with /slv rec export.",
   ["全部重設為預設"] = "Reset all to defaults",
+  ["進階"] = "Advanced",
   ["滑鼠移開或進入戰鬥時，步驟列變淡；滑鼠移上去就恢復。"] = "The step bar fades when the mouse is elsewhere or you're in combat, and comes back when you hover it.",
   ["接下來幾步裡地點相近的任務一起列出，順手一起做。"] = "Lists upcoming quests in the same spot together so you can do them in one go.",
   ["一起列出的任務最多幾個（含目前這步）。"] = "Most quests listed together, including the current step.",
