@@ -49,9 +49,10 @@ jobs:
           # 版本號帶 beta（例如 0.3.0-beta）才發測試版，其餘都發正式版
           case "$ver" in *beta*) rt=beta;; *) rt=release;; esac
           cp ShengLeveling.zip "ShengLeveling-$ver.zip"
-          # 每一行變成一個項目（CurseForge 的 markdown 會把單一換行併成同一段）
-          log=$(git log -1 --format=%B | sed -E '/^[[:space:]]*$/b; /^(#|- |\* )/b; s/^/- /')
+          # 用 HTML：每一行換行顯示、空一行分段（CurseForge 的 markdown 會把行併成一段，清單又會多出空行）
+          git log -1 --format=%B > changelog.txt
+          log=$(node -e 'const s=require("fs").readFileSync("changelog.txt","utf8").replace(/\r/g,"").trim();const e=t=>t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");process.stdout.write(s.split(/\n\s*\n/).map(p=>"<p>"+p.split("\n").map(l=>e(l.trim())).join("<br>")+"</p>").join(""))')
           jq -n --arg log "$log" --arg name "ShengLeveling $ver" --argjson gv "[$CF_GAME_VERSION]" --arg rt "$rt" \
-            '{changelog: $log, changelogType: "markdown", displayName: $name, gameVersions: $gv, releaseType: $rt}' > meta.json
+            '{changelog: $log, changelogType: "html", displayName: $name, gameVersions: $gv, releaseType: $rt}' > meta.json
           curl -sS -f -H "X-Api-Token: $CF_API_TOKEN" -F "metadata=<meta.json" -F "file=@ShengLeveling-$ver.zip" \
             "https://wow.curseforge.com/api/projects/$CF_PROJECT/upload-file"
