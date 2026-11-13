@@ -467,6 +467,8 @@ function E.Locate(st)
       -- 站尾交通先跳過，任務步驟都處理完才輪到；學技能只當提醒（步驟列下方），不擋路
     elseif not done[i] and q and missedQ[q] then
       missedIdx[#missedIdx + 1] = i -- 同一任務前面的步驟已漏掉（例如沒接就輪到交）
+    elseif not done[i] and q and steps[i].s.t ~= "accept" and not steps[i].s.opt and C.IsOnQuest(q) then
+      auto = i; break -- 任務還在日誌裡（例如做到一半）：不算漏掉，就是目前要做的；順路先做了後面的步驟也不會被跳過去
     elseif not done[i] then
       local seen, d, j = 0, 0, i + 1
       while j <= n and seen < 8 do
