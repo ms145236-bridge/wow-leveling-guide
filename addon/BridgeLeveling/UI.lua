@@ -84,7 +84,7 @@ local SPEC = {
   { start = true },
   { key = "minimap", label = "顯示小地圖按鈕", def = true },
   { key = "miniBtnAlpha", label = "小地圖按鈕透明度", min = 0, max = 100, step = 5, def = 100, unit = "%" },
-  { key = "rec", label = "遊戲內記錄", def = true, acct = true, hint = "記下任務 NPC 與座標、經驗表、飛行點，用來修正路線。/lv rec export 匯出。" },
+  { key = "rec", label = "遊戲內記錄", def = true, acct = true, hint = "記下任務 NPC 與座標、經驗表、飛行點，用來修正路線。/slv rec export 匯出。" },
   { button = "重新對齊", run = function() E.Realign() end },
   { section = "" },
   { button = "全部重設為預設", all = true },

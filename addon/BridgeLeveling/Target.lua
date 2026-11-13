@@ -238,7 +238,7 @@ function T.Create(bar)
     if event == "ADDON_ACTION_FORBIDDEN" or event == "ADDON_ACTION_BLOCKED" then
       if name == ADDON_NAME and not T.blocked then
         T.blocked = (...) or "?"
-        MG.msg("遊戲擋下了插件的動作（" .. tostring(T.blocked) .. "），請用 /lv probe 回報。")
+        MG.msg("遊戲擋下了插件的動作（" .. tostring(T.blocked) .. "），請用 /slv probe 回報。")
       end
     elseif event == "PLAYER_TARGET_CHANGED" then
       T.stats.lastTarget = GetTime() -- 只記時間，不讀目標（目標的資料可能是秘密值）

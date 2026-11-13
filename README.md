@@ -18,7 +18,7 @@
 
 建議一併安裝 Questie（世界地圖標點）和 WaypointUI（箭頭）；沒裝也能用，只是少了這兩項。
 
-遊戲內指令：`/lv`、`/lv config`、`/lv probe`、`/lv macro`。
+遊戲內指令：`/slv`、`/slv config`、`/slv probe`、`/slv macro`。
 
 ## 專案結構
 

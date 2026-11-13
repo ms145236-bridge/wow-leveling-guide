@@ -254,7 +254,7 @@ if WorldMapFrame then
   WorldMapFrame:HookScript("OnShow", reflow)
 end
 
--- /lv probe 用
+-- /slv probe 用
 function P.Diag()
   local L = {}
   local mgr = levelManager()

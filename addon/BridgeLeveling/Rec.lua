@@ -227,5 +227,5 @@ function Rec.Slash(arg)
     return
   end
   if arg == "clear" and db then db.log, seen, prev = {}, {}, {}; n = 0 end
-  MG.msg("遊戲內記錄：" .. (UI.Get("rec") and "開" or "關") .. "，" .. n .. " 筆。/lv rec on|off｜export 匯出｜clear 清空｜存檔 " .. PATH)
+  MG.msg("遊戲內記錄：" .. (UI.Get("rec") and "開" or "關") .. "，" .. n .. " 筆。/slv rec on|off｜export 匯出｜clear 清空｜存檔 " .. PATH)
 end

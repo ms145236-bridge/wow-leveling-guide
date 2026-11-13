@@ -1,4 +1,4 @@
--- 事件、節流重算、slash、自動接交任務、/lv probe。
+-- 事件、節流重算、slash、自動接交任務、/slv probe。
 local ADDON, MG = ...
 local E, C, N, UI = MG.E, MG.C, MG.N, MG.UI
 local R = MG.Route or { stations = {}, quests = {} }
@@ -317,7 +317,7 @@ local function onEvent(_, event, ...)
 end
 f:SetScript("OnEvent", function(...) MG.try(select(2, ...), onEvent, ...) end)
 
--- ── /lv probe ────────────────────────────────────────────────────────────
+-- ── /slv probe ────────────────────────────────────────────────────────────
 local function probe()
   local L = {}
   local function add(label, ...)
@@ -402,7 +402,7 @@ local function probe()
   for _, line in ipairs(MG.try("目標診斷", MG.T.Diag) or {}) do L[#L + 1] = "  " .. line end
   L[#L + 1] = "-- 任務物品"
   for _, line in ipairs(MG.try("物品診斷", MG.I.Diag) or {}) do L[#L + 1] = "  " .. line end
-  L[#L + 1] = "-- 地圖標點（請先打開世界地圖再打 /lv probe）"
+  L[#L + 1] = "-- 地圖標點（請先打開世界地圖再打 /slv probe）"
   for _, line in ipairs(MG.try("地圖診斷", MG.P.Diag) or {}) do L[#L + 1] = "  " .. line end
   do
     local inside, kind
@@ -425,8 +425,9 @@ local function probe()
   UI.ShowReport(table.concat(L, "\n"))
 end
 
-SLASH_METROGUIDE1 = "/lv"
-SLASH_METROGUIDE2 = "/metro" -- 舊指令保留
+SLASH_METROGUIDE1 = "/slv"
+SLASH_METROGUIDE2 = "/lv" -- 舊指令保留
+SLASH_METROGUIDE3 = "/metro"
 SlashCmdList.METROGUIDE = function(msg)
   msg = (msg or ""):lower():gsub("^%s+", ""):gsub("%s+$", "")
   if not MG.db then return end
@@ -437,5 +438,5 @@ SlashCmdList.METROGUIDE = function(msg)
   elseif msg == "minimap" then UI.Set("minimap", true); UI.ApplySettings()
   elseif msg:sub(1, 3) == "rec" then MG.Rec.Slash(msg:sub(4))
   elseif msg == "" then UI.Toggle()
-  else MG.msg("/lv 開關｜/lv probe 檢查報告｜/lv reset 重新對齊｜/lv config 設定｜/lv macro 建立目標巨集｜/lv minimap 顯示小地圖按鈕｜/lv rec 遊戲內記錄") end
+  else MG.msg("/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄") end
 end

@@ -2,7 +2,7 @@
 local _, MG = ...
 local C = {}
 MG.C = C
-C.impl = {} -- 挑到哪個實作（/lv probe 會印）
+C.impl = {} -- 挑到哪個實作（/slv probe 會印）
 
 function MG.msg(s) DEFAULT_CHAT_FRAME:AddMessage("|cffd9b25f阿聖練等幫手|r " .. tostring(s)) end
 
