@@ -390,7 +390,7 @@ local function probe()
   add("綠色範圍", C.GreenRange())
   out[#out + 1] = L["-- 地圖／航點"]
   try("BestMap, x, y", function() return C.Position() end)
-  try("CanSetUserWaypointOnMap, SetSuperTrackedUserWaypoint, HasUserWaypoint", function() local m = C_Map.GetBestMapForUnit("player"); return C_Map.CanSetUserWaypointOnMap and C_Map.CanSetUserWaypointOnMap(m), C_SuperTrack and C_SuperTrack.SetSuperTrackedUserWaypoint ~= nil, C_Map.HasUserWaypoint and C_Map.HasUserWaypoint() end)
+  try("CanSetUserWaypointOnMap, SetSuperTrackedUserWaypoint, HasUserWaypoint", function() local m = C_Map.GetBestMapForUnit("player"); return m and C_Map.CanSetUserWaypointOnMap and C_Map.CanSetUserWaypointOnMap(m), C_SuperTrack and C_SuperTrack.SetSuperTrackedUserWaypoint ~= nil, C_Map.HasUserWaypoint and C_Map.HasUserWaypoint() end)
   try("WaypointUIAPI, 目前航點是我們的", function() local api = WaypointUIAPI and WaypointUIAPI.Navigation; return api ~= nil and api.NewUserNavigation ~= nil, api and api.IsUserNavigationFlagged and api.IsUserNavigationFlagged("MetroGuide") end)
   try("C_SuperTrack.IsSuperTrackingAnything", function() return C_SuperTrack and C_SuperTrack.IsSuperTrackingAnything and C_SuperTrack.IsSuperTrackingAnything() end)
   out[#out + 1] = L["-- 角色／交通／函式庫"]
