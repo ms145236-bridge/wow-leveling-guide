@@ -1403,6 +1403,7 @@ function UI.CreateMinimap()
   icon:SetPoint("CENTER"); icon:SetSize(18, 18)
   icon:SetTexture("Interface\\AddOns\\ShengLeveling\\Media\\Logo")
   icon:SetTexCoord(0.1, 0.9, 0.1, 0.9) -- 裁掉外框，圓形按鈕裡只留主體
+  mini.icon, mini.Icon = icon, icon -- 小地圖按鈕收納插件會找這個欄位當圖示
   local ring = mini:CreateTexture(nil, "OVERLAY")
   ring:SetPoint("TOPLEFT"); ring:SetSize(48, 48)
   ring:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder")
