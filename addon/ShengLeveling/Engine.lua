@@ -544,31 +544,44 @@ function E.Locate(st)
   local cs = cur and steps[cur].s
   if cur and UI.Get("groupOn") and cs.x then
     local maxN, dist = UI.Get("groupMax") - 1, UI.Get("groupDist")
-    local spots = {}
-    local function addSpots(s)
-      if s.x then spots[#spots + 1] = { s.map, s.x, s.y } end
-      for _, p in ipairs(s.more or {}) do spots[#spots + 1] = p end
-    end
-    local function near(s)
+    -- 一個步驟的所有點（主座標＋目標點）
+    local function ptsOf(s)
       local pts = { s.x and { s.map, s.x, s.y } or nil }
       for _, p in ipairs(s.more or {}) do pts[#pts + 1] = p end
+      return pts
+    end
+    -- 錨點：目前步驟離玩家最近的那個點（目標點散在整區時，只看玩家要去的那一處）
+    local function nearest(pts, m, px, py)
+      local best, bd
       for _, p in ipairs(pts) do
-        for _, q in ipairs(spots) do
-          if p[1] == q[1] and (p[2] - q[2]) ^ 2 + (p[3] - q[3]) ^ 2 <= dist * dist then return true end
+        if p[1] == m then
+          local d = (p[2] - px) ^ 2 + (p[3] - py) ^ 2
+          if not bd or d < bd then best, bd = p, d end
         end
       end
+      return best, bd
     end
-    addSpots(cs)
+    local spots = {}
+    local anchor = (map and x and nearest(ptsOf(cs), map, x, y)) or { cs.map, cs.x, cs.y }
+    spots[1] = anchor
+    -- 候選步驟：取它離任一已選點最近的那個點，在距離內就併入，並把那個點加進來
+    local function near(s)
+      for _, q in ipairs(spots) do
+        local p, d = nearest(ptsOf(s), q[1], q[2], q[3])
+        if p and d <= dist * dist then return p end
+      end
+    end
     for i = cur + 1, n do
       if #group >= maxN or (num[i] and num[i] > 9) then break end
       local s = steps[i].s
       if not done[i] and not na[i] then
         if s.t == "travel" or s.t == "hearth" or s.t == "fly" or s.t == "boat" or s.t == "fp" then break end
         local ok = (s.t == "do" and s.q and C.IsOnQuest(s.q)) or s.t == "accept" or (s.t == "turnin" and s.q and C.IsOnQuest(s.q) and ready(s.q))
-        if ok and near(s) then
+        local p = ok and near(s)
+        if p then
           group[#group + 1] = i
           inGroup[i] = true
-          addSpots(s)
+          spots[#spots + 1] = p
         end
       end
     end
