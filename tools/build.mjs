@@ -8,6 +8,15 @@ import { fileURLToPath } from "node:url";
 import { openQuestieDB, clusterCenter } from "./questiedb.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+// 任務目標座標（tools/objective-coords.md，Codex 查的 Wowhead 永恆版／QuestieDB 點位）：補到「做」步驟的 more
+const OBJ = new Map();
+let objAdded = 0;
+for (const line of readFileSync(join(ROOT, "tools", "objective-coords.md"), "utf8").split(/\r?\n/)) {
+  const f = line.split("｜");
+  if (f.length < 5 || !/^\d+$/.test(f[0]) || !/^\d+$/.test(f[3])) continue;
+  const pts = f[4].split(";").map((p) => p.split(",").map(Number)).filter((p) => p.length === 2 && p.every(Number.isFinite)).map(([x, y]) => ({ map: +f[3], x, y }));
+  OBJ.set(+f[0], [...(OBJ.get(+f[0]) || []), ...pts]);
+}
 const ROUTE = process.env.ROUTE_DIR || join(ROOT, "route"); // 測試時可指到別的資料夾
 const OUT = process.env.OUT_LUA || join(ROOT, "addon", "ShengLeveling", "Data", "Route.lua");
 const REPORT = process.env.OUT_REPORT || join(ROOT, "tools", "unresolved.md");
@@ -383,6 +392,13 @@ for (const st of stations) {
       continue;
     }
     for (const p of step.more || []) p.map ||= st.map;
+    // 目標座標補充：同地圖、跟既有點距離 0.8 以上才加；太多就平均取樣到 40 個
+    if (step.t === "do" && OBJ.has(step.id)) {
+      const have = [step.coord, ...(step.more || [])].filter(Boolean);
+      let add = OBJ.get(step.id).filter((p) => !have.some((h) => (h.map || st.map) === p.map && Math.hypot(h.x - p.x, h.y - p.y) < 0.8));
+      if (add.length > 40) add = Array.from({ length: 40 }, (_, i) => add[Math.floor((i * add.length) / 40)]);
+      if (add.length) { step.more = [...(step.more || []), ...add]; objAdded++; }
+    }
     const at = `${step.where} ${step.verb}｜${step.zh}`;
     let id = step.id;
     if (id) {
