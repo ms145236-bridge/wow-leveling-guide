@@ -89,6 +89,22 @@ end
 function MG.msg(s) DEFAULT_CHAT_FRAME:AddMessage(MG.Clean(L["|cff4fc3f7阿聖|r|cffd9b25f練等幫手|r "] .. tostring(s))) end
 ShengLv_Msg = MG.msg -- 給巨集的 /run 用，開頭顏色跟系列一致
 
+-- 換版本時清掉舊版本留下的錯誤紀錄（修好的錯誤不用留著）
+do
+  local f = CreateFrame("Frame")
+  f:RegisterEvent("ADDON_LOADED")
+  f:SetScript("OnEvent", function(self, _, name)
+    if name ~= "ShengLeveling" then return end
+    self:UnregisterEvent("ADDON_LOADED")
+    local meta = (C_AddOns and C_AddOns.GetAddOnMetadata) or GetAddOnMetadata
+    local ver = meta and meta("ShengLeveling", "Version")
+    if type(MetroGuideDB) == "table" and ver and type(MetroGuideDB.errors) == "table" and MetroGuideDB.errors.ver ~= ver then
+      MetroGuideDB.errors = { ver = ver }
+    elseif type(MetroGuideDB) == "table" and ver and MetroGuideDB.errors == nil then
+      MetroGuideDB.errors = { ver = ver }
+    end
+  end)
+end
 local reported = {}
 local function after(where, ok, ...)
   if ok then return ... end

@@ -29,23 +29,23 @@ local SPEC = {
   { key = "barWidth", label = "寬度", min = 240, max = 480, step = 10, def = 300 },
   { key = "barAlpha", label = "背景透明度", min = 0, max = 100, step = 5, def = 88, unit = "%" },
   { key = "barOpacity", label = "整體透明度", hint = "包含文字。", min = 0, max = 100, step = 5, def = 100, unit = "%" },
-  { key = "fadeOn", label = "滑鼠不在上面或戰鬥中時淡出", def = false },
+  { key = "fadeOn", label = "滑鼠不在上面或戰鬥中時淡出", def = false, hint = "滑鼠移開或進入戰鬥時，步驟列變淡；滑鼠移上去就恢復。" },
   { key = "fadeAlpha", label = "淡出時透明度", min = 0, max = 100, step = 5, def = 40, unit = "%" },
   { key = "fontSize", label = "字體大小", min = 11, max = 20, step = 1, def = 15 },
   { key = "objRows", label = "最多顯示目標行數", min = 1, max = 5, step = 1, def = 5 },
-  { key = "groupOn", label = "同時顯示附近任務", def = true },
-  { key = "groupMax", label = "最多同時顯示", min = 1, max = 5, step = 1, def = 3 },
+  { key = "groupOn", label = "同時顯示附近任務", def = true, hint = "接下來幾步裡地點相近的任務一起列出，順手一起做。" },
+  { key = "groupMax", label = "最多同時顯示", min = 1, max = 5, step = 1, def = 3, hint = "一起列出的任務最多幾個（含目前這步）。" },
   { key = "groupDist", label = "附近距離", hint = "以地圖寬度的 % 計。", min = 2, max = 20, step = 1, def = 8 },
-  { key = "showCount", label = "顯示剩餘步數", def = false },
+  { key = "showCount", label = "顯示剩餘步數", def = false, hint = "步驟列右上角顯示這一站還剩幾步。" },
   { key = "showLevel", label = "顯示任務等級", def = false },
   { key = "locked", label = "鎖定位置", def = false, menu = true },
   { button = "重設位置", run = function() MG.db.pos = nil end },
   { section = "提示框" },
   { key = "tipScale", label = "大小", min = 70, max = 150, step = 5, def = 100, unit = "%", acct = true, tip = true },
-  { key = "tipX", label = "水平位置", min = -300, max = 300, step = 5, def = 0, acct = true, tip = true },
-  { key = "tipY", label = "垂直位置", min = -300, max = 300, step = 5, def = 0, acct = true, tip = true },
+  { key = "tipX", label = "水平位置", min = -300, max = 300, step = 5, def = 0, acct = true, tip = true, hint = "步驟提示框相對步驟列和清單的偏移。" },
+  { key = "tipY", label = "垂直位置", min = -300, max = 300, step = 5, def = 0, acct = true, tip = true, hint = "步驟提示框相對步驟列和清單的偏移。" },
   { key = "tipAlpha", label = "背景透明度", min = 0, max = 100, step = 5, def = 100, unit = "%", acct = true, tip = true },
-  { key = "tipDesc", label = "顯示說明行", def = true, acct = true, tip = true },
+  { key = "tipDesc", label = "顯示說明行", def = true, acct = true, tip = true, hint = "步驟提示框最後加上這步的補充說明。" },
   { section = "展開清單" },
   { key = "listAlpha", label = "背景透明度", min = 0, max = 100, step = 5, def = 88, unit = "%" },
   { key = "listRows", label = "高度（行數）", min = 8, max = MAX_ROWS, step = 1, def = 18 },
@@ -55,39 +55,39 @@ local SPEC = {
   { section = "地圖標點" },
   { key = "pinSize", label = "世界地圖標點大小", min = 14, max = 40, step = 1, def = 24 },
   { key = "miniPinSize", label = "小地圖標點大小", min = 10, max = 30, step = 1, def = 15 },
-  { key = "miniSteps", label = "小地圖顯示幾步", min = 0, max = 5, step = 1, def = 3 },
+  { key = "miniSteps", label = "小地圖顯示幾步", min = 0, max = 5, step = 1, def = 3, hint = "小地圖標出從目前這步起的幾個位置；0 不標。" },
   { key = "pinAlpha", label = "標點透明度", min = 30, max = 100, step = 5, def = 100, unit = "%" },
   { key = "pinMergeX", label = "合併距離", hint = "標點大小的幾倍內合成一個。", min = 0, max = 3, step = 0.1, def = 1.1 },
   { section = "提醒" },
-  { key = "trainOn", label = "學技能", def = true },
+  { key = "trainOn", label = "學技能", def = true, hint = "到了職業訓練師有新技能的等級時，在路線中插入「去學技能」步驟。" },
   { key = "supplyOn", label = "修裝與飛行點", def = true, hint = "耐久低時提醒修裝；經過還沒開的飛行管理員時提醒。" },
-  { key = "dangerOn", label = "危險", def = true },
-  { key = "detourOn", label = "順路", def = true },
+  { key = "dangerOn", label = "危險", def = true, hint = "走近容易拉到一堆怪的地點時，在步驟列下方提醒怎麼應對。" },
+  { key = "detourOn", label = "順路", def = true, hint = "附近有比目前步驟近很多、現在就能接、做或交的任務時，提醒你順路處理。" },
   { key = "detourDist", label = "順路距離", min = 1, max = 8, step = 0.5, def = 3, hint = "以地圖寬度的 % 計。" },
   { key = "keepOn", label = "別賣的物品", def = true, hint = "背包物品的滑鼠提示加一行之後任務會用到。" },
-  { key = "dungeonHint", label = "可以下副本", def = true },
+  { key = "dungeonHint", label = "可以下副本", def = true, hint = "等級到了副本建議等級時，提示可以去哪個副本，以及前置還差多少。" },
   { section = "目標與物品" },
-  { key = "showTarget", label = "顯示目標按鈕", def = true },
-  { key = "markOn", label = "選取時標上團隊標記", def = true },
+  { key = "showTarget", label = "顯示目標按鈕", def = true, hint = "步驟列上的準星按鈕：點一下選取這步要找的怪或 NPC，也能綁快捷鍵。" },
+  { key = "markOn", label = "選取時標上團隊標記", def = true, hint = "用目標按鈕或巨集選到目標時，順便標上團隊標記。" },
   { key = "markIcon", label = "標記圖示", def = 1, choices = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" } },
-  { key = "showItem", label = "顯示任務物品按鈕", def = true },
+  { key = "showItem", label = "顯示任務物品按鈕", def = true, hint = "目前任務有可使用的物品時，在步驟列旁顯示物品按鈕，點了就使用。" },
   { key = "itemPos", label = "任務物品位置", def = 1, choices = { "步驟列內", "左側", "右側" } },
   { key = "itemSize", label = "任務物品大小", min = 20, max = 48, step = 2, def = 32, hint = "放在左側或右側時的大小。" },
   { key = "itemMacro", label = "自動建立任務物品巨集", def = true, hint = "建立帳號巨集「任務物品」，內容自動改成使用目前步驟的任務物品（戰鬥中等脫離戰鬥再改）。" },
   { key = "autoMacro", label = "自動建立目標巨集", def = true, hint = "登入時若沒有「任務目標」巨集就自動建立（帳號巨集有空位時）。刪掉後下次登入會再建立；關掉這項就不會。" },
-  { button = "建立巨集", run = function() MG.T.MakeMacro() end },
+  { button = "建立巨集", run = function() MG.T.MakeMacro() end, hint = "建立「任務目標」巨集並拿在滑鼠上，放到快捷列就能一鍵選取目標。" },
   { section = "副本" },
-  { key = "dPre", label = "順路接副本前置", def = true },
+  { key = "dPre", label = "順路接副本前置", def = true, hint = "把副本的前置任務排進主線，在附近的站順路接、做、交。" },
   { key = "dungeonOnly", label = "副本中只顯示副本任務", def = true, hint = "在副本裡只列出這個副本的任務（一次全列），不顯示主線步驟、箭頭和地圖標點；對不到副本或沒有任務時整個隱藏，出副本後恢復。" },
   { section = "其他" },
-  { key = "arrow", label = "箭頭與地圖標點", def = true, menu = true },
-  { key = "auto", label = "自動接交任務", def = true, menu = true },
-  { key = "optional", label = "帶上可跳過的任務", def = false, menu = true },
-  { start = true },
+  { key = "arrow", label = "箭頭與地圖標點", def = true, menu = true, hint = "顯示指向目前步驟的箭頭，以及世界地圖和小地圖上的路線標點。" },
+  { key = "auto", label = "自動接交任務", def = true, menu = true, hint = "和 NPC 對話時自動接、交路線上的任務。按住 Shift 可暫停。" },
+  { key = "optional", label = "帶上可跳過的任務", def = false, menu = true, hint = "路線也帶上標為可跳過的任務；已接的不論開關都會列出。" },
+  { start = true, hint = "選擇從哪個新手區開始的路線，預設是你種族的那條。" },
   { key = "minimap", label = "顯示小地圖按鈕", def = true },
   { key = "miniBtnAlpha", label = "小地圖按鈕透明度", min = 0, max = 100, step = 5, def = 100, unit = "%" },
   { key = "rec", label = "遊戲內記錄", def = true, acct = true, hint = "記下任務 NPC 與座標、經驗表、飛行點，用來修正路線。/slv rec export 匯出。" },
-  { button = "重新對齊", run = function() E.Realign() end },
+  { button = "重新對齊", run = function() E.Realign() end, hint = "依目前的等級和任務重新找所在的站，並清掉這站的手動勾選。" },
   { section = "" },
   { button = "全部重設為預設", all = true },
 }
@@ -1552,7 +1552,7 @@ function UI.CreateMinimap()
   mini:RegisterForClicks("LeftButtonUp", "RightButtonUp")
   mini:RegisterForDrag("LeftButton")
   mini:SetScript("OnClick", function(self, button)
-    if button == "RightButton" then openMenu(self) else UI.Toggle() end
+    if button == "RightButton" then UI.OpenOptions() else UI.Toggle() end
   end)
   mini:SetScript("OnDragStart", function(self)
     self:SetScript("OnUpdate", function()
@@ -1566,6 +1566,8 @@ function UI.CreateMinimap()
   mini:SetScript("OnDragStop", function(self) self:SetScript("OnUpdate", nil) end)
   mini:SetScript("OnEnter", function(self)
     tipOpen(self, L["阿聖練等幫手"], "ANCHOR_LEFT")
+    tipLine(L["左鍵：開啟／關閉"], TEXT)
+    tipLine(L["右鍵：設定"], TEXT)
     local st = state and state.st
     local cur = state and state.cur and state.steps[state.cur]
     tipLine(st and ((st.name or "") .. "  " .. st.lv[1] .. "-" .. st.lv[2]) or L["沒有路線"], TEXT)
@@ -1611,11 +1613,23 @@ function UI.CreateOptions()
   end
   local lines = {} -- 依序的每一列，layout() 照面板寬排
   local lw, valueW = 0, textWidth("-000%", 13) + 4 -- 最長標籤、最寬數值
-  local function label(t)
+  -- 整列說明：滑鼠移到標籤或控制項上，標題＝標籤，內文＝說明
+  local function explain(title, hint, ...)
+    if not hint then return end
+    local function show(self) tipOpen(self, title); tipLine(L[hint], TEXT, true); GameTooltip:Show() end
+    local function hide() GameTooltip:Hide() end
+    for _, f in ipairs({ ... }) do f:HookScript("OnEnter", show); f:HookScript("OnLeave", hide) end
+  end
+  local function label(t, hint)
     local l = text(content, 13, TEXT)
     wrapLines(l, 3)
     l:SetText(L[t])
     lw = math.max(lw, textWidth(L[t], 13))
+    if hint then -- 文字本身收不到滑鼠：蓋一層透明框
+      local hit = CreateFrame("Frame", nil, content)
+      hit:SetAllPoints(l); hit:EnableMouse(true)
+      explain(L[t], hint, hit)
+    end
     return l
   end
   local actions
@@ -1635,6 +1649,7 @@ function UI.CreateOptions()
           end
           changed(); UI.RefreshOptions()
         end)
+        explain(L[sp.button], sp.hint, btn)
         btns[#btns + 1] = btn
       end
       lines[#lines + 1] = { kind = "actions", btns = btns }
@@ -1670,44 +1685,36 @@ function UI.CreateOptions()
         v:SetText(val .. (sp.unit or ""))
         changed(sp)
       end)
-      if sp.hint and slider.HookScript then
-        slider:HookScript("OnEnter", function(self) tipOpen(self, L[sp.label]); tipLine(L[sp.hint], TEXT, true); GameTooltip:Show() end)
-        slider:HookScript("OnLeave", function() GameTooltip:Hide() end)
-      end
+      explain(L[sp.label], sp.hint, slider, slider.kind == "minimal" and slider.Slider or nil)
       options.widgets[#options.widgets + 1] = { refresh = function()
         syncing = true; C.SliderSet(slider, UI.Get(sp.key)); syncing = false
         v:SetText(UI.Get(sp.key) .. (sp.unit or ""))
       end }
-      lines[#lines + 1] = { kind = "slider", label = label(sp.label), ctrl = slider, value = v, dy = 4 }
+      lines[#lines + 1] = { kind = "slider", label = label(sp.label, sp.hint), ctrl = slider, value = v, dy = 4 }
     elseif sp.key and not sp.choices then
       section.keys[#section.keys + 1] = sp.key
       local cb = UI.Checkbox(content, 16)
       cb:SetScript("OnClick", function() toggleSetting(sp); changed(sp); UI.RefreshOptions() end)
-      if sp.hint then
-        cb:SetScript("OnEnter", function(self)
-          tipOpen(self, L[sp.label])
-          tipLine(L[sp.hint], TEXT, true)
-          GameTooltip:Show()
-        end)
-        cb:SetScript("OnLeave", function() GameTooltip:Hide() end)
-      end
+      explain(L[sp.label], sp.hint, cb)
       options.widgets[#options.widgets + 1] = { refresh = function() cb:SetState(UI.Get(sp.key) and "check" or nil) end }
-      lines[#lines + 1] = { kind = "check", label = label(sp.label), ctrl = cb, dy = 4 }
+      lines[#lines + 1] = { kind = "check", label = label(sp.label, sp.hint), ctrl = cb, dy = 4 }
     elseif sp.choices then
       section.keys[#section.keys + 1] = sp.key
       local cw = 160
       for _, c in ipairs(sp.choices) do cw = math.max(cw, textWidth(L[c], 13) + 20) end
       local btn = goldButton(content, "", cw)
       btn:SetScript("OnClick", function() UI.Set(sp.key, UI.Get(sp.key) % #sp.choices + 1); changed(sp); UI.RefreshOptions() end)
+      explain(L[sp.label], sp.hint, btn)
       options.widgets[#options.widgets + 1] = { refresh = function() btn.label:SetText(L[sp.choices[UI.Get(sp.key)] or ""]) end }
-      lines[#lines + 1] = { kind = "button", label = label(sp.label), ctrl = btn, want = cw, dy = 2 }
+      lines[#lines + 1] = { kind = "button", label = label(sp.label, sp.hint), ctrl = btn, want = cw, dy = 2 }
     elseif sp.start then
       local sw = 160
       for _, s in ipairs(E.Starts()) do sw = math.max(sw, textWidth(s.name, 13) + 20) end
       local btn = goldButton(content, "", sw)
       btn:SetScript("OnClick", function() cycleStart(); changed(); UI.RefreshOptions() end)
+      explain(L["起點"], sp.hint, btn)
       options.widgets[#options.widgets + 1] = { refresh = function() btn.label:SetText(startLabel()) end }
-      lines[#lines + 1] = { kind = "button", label = label("起點"), ctrl = btn, want = sw, dy = 2 }
+      lines[#lines + 1] = { kind = "button", label = label("起點", sp.hint), ctrl = btn, want = sw, dy = 2 }
     elseif sp.button then
       actions[#actions + 1] = sp
     end
