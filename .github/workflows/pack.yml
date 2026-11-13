@@ -46,8 +46,10 @@ jobs:
           ver=$(grep -m1 '^## Version:' "$toc" | cut -d' ' -f3 | tr -d '\r')
           old=$(git show "HEAD~1:$toc" 2>/dev/null | grep -m1 '^## Version:' | cut -d' ' -f3 | tr -d '\r' || true)
           if [ "$ver" = "$old" ] && [ "$FORCE" != "true" ]; then echo "版本 $ver 沒變，跳過"; exit 0; fi
+          # 版本號帶 beta（例如 0.3.0-beta）才發測試版，其餘都發正式版
+          case "$ver" in *beta*) rt=beta;; *) rt=release;; esac
           cp ShengLeveling.zip "ShengLeveling-$ver.zip"
-          jq -n --arg log "$(git log -1 --format=%B)" --arg name "ShengLeveling $ver" --argjson gv "[$CF_GAME_VERSION]" \
-            '{changelog: $log, changelogType: "markdown", displayName: $name, gameVersions: $gv, releaseType: "beta"}' > meta.json
+          jq -n --arg log "$(git log -1 --format=%B)" --arg name "ShengLeveling $ver" --argjson gv "[$CF_GAME_VERSION]" --arg rt "$rt" \
+            '{changelog: $log, changelogType: "markdown", displayName: $name, gameVersions: $gv, releaseType: $rt}' > meta.json
           curl -sS -f -H "X-Api-Token: $CF_API_TOKEN" -F "metadata=<meta.json" -F "file=@ShengLeveling-$ver.zip" \
             "https://wow.curseforge.com/api/projects/$CF_PROJECT/upload-file"
