@@ -1137,6 +1137,19 @@ function UI.Create()
     f.x:SetSize(20, 20); f.x:SetPoint("RIGHT", -2, 0)
     f.x.label = text(f.x, 13, DIM, "CENTER"); f.x.label:SetPoint("CENTER"); f.x.label:SetText("×")
     f.x:SetScript("OnClick", function() if f.h and f.h.close then f.h.close(); MG.Refresh(true) end end)
+    -- 滑鼠移上去看完整內容（太長換行後還放不下、或只顯示了第一句時）
+    f:EnableMouse(true)
+    f:SetScript("OnEnter", function(self)
+      local h = self.h
+      if not h then return end
+      local full = h.full or h.text
+      if not full or (full == h.text and not self.label:IsTruncated()) then return end
+      GameTooltip:SetOwner(self, "ANCHOR_BOTTOMLEFT", 0, 0)
+      GameTooltip:SetText(h.tag, h.color[1], h.color[2], h.color[3])
+      GameTooltip:AddLine(full, 1, 1, 1, true)
+      GameTooltip:Show()
+    end)
+    f:SetScript("OnLeave", function() GameTooltip:Hide() end)
     f:Hide()
     return f
   end
@@ -1813,7 +1826,7 @@ function UI.Render(S)
   local g
   if st then
     local danger, fp = E.Nearby(st)
-    if danger then H[#H + 1] = { tag = "危險", color = RED, text = (E.Clause(danger.text)) } end
+    if danger then H[#H + 1] = { tag = "危險", color = RED, text = (E.Clause(danger.text)), full = danger.text } end
     local leave = UI.Leaving(state)
     if #leave > 0 then
       H[#H + 1] = { tag = "離開前", color = AMBER, text = "還有 " .. #leave .. " 個任務", actLabel = "看",
@@ -1888,7 +1901,11 @@ function UI.Render(S)
       f.strip:SetColorTexture(h.color[1], h.color[2], h.color[3], 1)
       f.tag:SetText(h.tag); paint(f.tag, h.color)
       f.label:SetText(h.text or "")
-      f.label:SetWidth(math.max(1, math.min((f.label:GetStringWidth() or 0) + 2, w - 10 - (f.tag:GetStringWidth() or 0) - 8 - 60)))
+      -- 太長就換到第二行（最多兩行），列跟著變高
+      f.label:SetWordWrap(true); f.label:SetMaxLines(2)
+      local room = w - 10 - (f.tag:GetStringWidth() or 0) - 8 - 60
+      f.label:SetWidth(math.max(1, math.min((f.label.GetUnboundedStringWidth and f.label:GetUnboundedStringWidth() or f.label:GetStringWidth() or 0) + 2, room)))
+      f:SetHeight(math.max(24, math.ceil(f.label:GetStringHeight() or 0) + 10))
       f.sub:SetText(h.sub or "")
       f.act.label:SetText(h.actLabel or "")
       f.act:SetShown(h.act ~= nil)
