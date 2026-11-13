@@ -184,29 +184,40 @@ pick("GreenRange",
 
 -- 分享任務：選取後推送（要在隊伍中）
 -- 玩家身上的增益：{ { name, id, dur }... }；秘密值的欄位留空
+-- 戰鬥中（或其他限制啟動時）遊戲不讓插件讀增益，硬讀會報錯：那時沿用上次讀到的結果
+local lastAuras = {}
+local function auraLocked() return InCombatLockdown and InCombatLockdown() end
 function C.Auras()
-  local out = {}
+  if auraLocked() then return lastAuras end
   local get = C_UnitAuras and C_UnitAuras.GetAuraDataByIndex
+  if not get then return lastAuras end
   local function plain(v) return v ~= nil and not (issecretvalue and issecretvalue(v)) and v or nil end
-  for i = 1, get and 40 or 0 do
-    local a = get("player", i, "HELPFUL")
-    if not a then break end
-    out[#out + 1] = { name = plain(a.name), id = plain(a.spellId), dur = plain(a.duration) }
-  end
-  return out
+  local ok, out = pcall(function()
+    local list = {}
+    for i = 1, 40 do
+      local a = get("player", i, "HELPFUL")
+      if not a then break end
+      list[#list + 1] = { name = plain(a.name), id = plain(a.spellId), dur = plain(a.duration) }
+    end
+    return list
+  end)
+  if ok then lastAuras = out end
+  return lastAuras
 end
 -- 任務經驗 +3% 的增益：主人確認名字是「充分休息」（和打怪的休息經驗不同）；法術 ID 從記錄報告找到後填進 XP_BUFFS
 C.XP_BUFF_NAME = "充分休息" -- 名字開頭是這個就算
 C.XP_BUFFS = { 429960 } -- Wowhead：充分休息追蹤光環（實際顯示的增益可能是相鄰 ID，記錄器會記下看到的 ID）
 -- 有經驗增益就回傳 { name, id, how }（how＝「法術 ID」或「名稱」；一次重算內只查一次）
+local lastXPBuff = false
 function C.XPBuff()
   local m = C.memo
   if m and m.xpbuff ~= nil then return m.xpbuff or nil end
+  if auraLocked() then return lastXPBuff or nil end -- 戰鬥中讀不到增益，用戰鬥前的結果
   local found = false
   local byId = C_UnitAuras and C_UnitAuras.GetPlayerAuraBySpellID
   for _, id in ipairs(byId and C.XP_BUFFS or {}) do
-    local a = byId(id)
-    if a then found = { name = not (issecretvalue and issecretvalue(a.name)) and a.name or nil, id = id, how = "法術 ID" }; break end
+    local ok, a = pcall(byId, id)
+    if ok and a then found = { name = not (issecretvalue and issecretvalue(a.name)) and a.name or nil, id = id, how = "法術 ID" }; break end
   end
   if not found then
     for _, a in ipairs(C.Auras()) do
@@ -214,6 +225,7 @@ function C.XPBuff()
     end
   end
   if m then m.xpbuff = found end
+  lastXPBuff = found
   return found or nil
 end
 

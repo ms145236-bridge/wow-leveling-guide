@@ -5,7 +5,7 @@
 ## Notes-zhTW: 部落 1–60 練等路線：一次只顯示一步，任務狀態一變就自動對齊。/lv 開關、/lv probe 檢查報告
 ## Author: ms145236-bridge
 ## IconTexture: Interface\AddOns\ShengLeveling\Media\Logo
-## Version: 1.0.2
+## Version: 1.0.3
 ## X-Series: Sheng
 ## OptionalDeps: WaypointUI
 ## SavedVariables: MetroGuideDB, MetroGuideRecDB
