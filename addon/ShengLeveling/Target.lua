@@ -197,7 +197,8 @@ function MGTP()
   if GetTime() - T.stats.lastTarget < 0.5 then T.stats.targetChanged = T.stats.targetChanged + 1 end
   rot = rot + 1
   key = "" -- 下次 Update 一定重寫
-  T.Apply()
+  -- 不能當場改寫巨集：這時巨集還在執行，遊戲會從改寫後的內容接著讀，讀到半行字就當成聊天說出來
+  if C_Timer and C_Timer.After then C_Timer.After(0.3, T.Apply) else T.Apply() end
 end
 
 function T.Diag()
