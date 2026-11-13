@@ -1858,6 +1858,12 @@ function UI.Render(S)
       H[#H + 1] = { tag = "下一站", color = GOLD, text = UI.StName(nx), sub = nx.lv[1] .. "-" .. nx.lv[2], actLabel = "去",
         act = function() E.Select(nx); lastCurKey = nil; MG.Refresh(true) end }
     end
+    -- 點了「去」或步驟清單改做別步：顯示原本該做的那步，按「返回」回到路線順序
+    if state.cur and state.auto and state.cur ~= state.auto and MG.db.pin[st.id] then
+      local as = state.steps[state.auto].s
+      H[#H + 1] = { tag = "原本", color = GOLD, text = (E.VERB[as.t] or "") .. " " .. E.Title(as), actLabel = "返回",
+        act = function() MG.db.pin[st.id] = nil; MG.wpOverride, MG.grindActive = nil, nil; MG.N.Forget(true); MG.Refresh(true) end }
+    end
     local vi = E.Detour(state)
     if vi then
       local vs = state.steps[vi].s
@@ -1912,6 +1918,7 @@ function UI.Render(S)
       f:SetHeight(math.max(24, math.ceil(f.label:GetStringHeight() or 0) + 10))
       f.sub:SetText(h.sub or "")
       f.act.label:SetText(h.actLabel or "")
+      f.act:SetWidth(math.max(28, math.ceil(f.act.label:GetStringWidth() or 0) + 12))
       f.act:SetShown(h.act ~= nil)
       f.x:SetShown(h.close ~= nil)
       f:ClearAllPoints()
