@@ -122,19 +122,25 @@ local function macro()
     end
     g.line = "/tar [noexists] " .. line
   end
-  -- 有共同開頭的那一行先留位子（它涵蓋最多種），剩下的空間放完整名稱
-  local reserve = 0
-  for _, g in ipairs(fallbacks) do if #g.names > 1 then reserve = 1 + #g.line + 1 + #DEAD; break end end
-  size = size + reserve
-  for _, name in ipairs(order) do if not add("/targetexact [noexists] " .. name) then break end end
-  size = size - reserve
+  -- 同開頭的一群只放共同開頭那一行（省位子，同時做別的任務也塞得下）；單獨一種的用完整名稱
+  for _, g in ipairs(fallbacks) do
+    local grouped = #g.names > 1 and g.line ~= "/tar [noexists] " .. g.names[1]
+    g.first = grouped and g.line or ("/targetexact [noexists] " .. g.names[1])
+    g.grouped = grouped
+  end
+  local full = false
+  for _, g in ipairs(fallbacks) do
+    if g.grouped then full = not add(g.first)
+    else for _, n in ipairs(g.names) do full = not add("/targetexact [noexists] " .. n); if full then break end end end
+    if full then break end
+  end
   lines[#lines + 1] = DEAD
-  local prio = {}
-  for _, g in ipairs(fallbacks) do if #g.names > 1 then prio[#prio + 1] = g end end
-  for _, g in ipairs(fallbacks) do if #g.names == 1 then prio[#prio + 1] = g end end
-  for _, g in ipairs(prio) do
-    if size + 1 + #DEAD + 1 + #g.line > LIMIT then break end
-    add(g.line); partial = true
+  -- 完整名稱選到屍體時，再用部分比對試一次
+  for _, g in ipairs(fallbacks) do
+    if not g.grouped then
+      if size + 1 + #DEAD + 1 + #g.line > LIMIT then break end
+      add(g.line); partial = true
+    end
   end
   if partial then add(DEAD) end
   if mark then lines[#lines + 1] = mark end
