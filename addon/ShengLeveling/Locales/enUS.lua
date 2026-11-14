@@ -115,6 +115,8 @@ MG.Locales.enUS = {
   -- hint rows
   ["危險"] = "Danger",
   ["離開前"] = "Leave before",
+  ["待交"] = "Turn in later",
+  ["%s 等 %d 個"] = "%s (%d)",
   ["還有 %d 個任務"] = "%d quest(s) left",
   ["修裝"] = "Repair",
   ["耐久 "] = "Durability ",
