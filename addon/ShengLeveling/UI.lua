@@ -188,7 +188,7 @@ local function wrapLines(fs, n)
   if fs.SetMaxLines then fs:SetMaxLines(n) end
 end
 -- 臨時航點（不是目前步驟）：tab＝從清單哪個分頁設的（換到別的分頁就收回）；keep＝走到了也不收（練怪點）；done()＝目的達成就收回
--- 收回時箭頭回到目前步驟；步驟列的「原本 … 返回」與點步驟列都能手動收回
+-- 收回時箭頭回到目前步驟；手動收回只走提示列「前往 … 返回」（點步驟列只開關清單）
 function UI.SetOverride(o) MG.wpOverride = o; MG.Refresh(true) end
 function UI.ClearOverride()
   MG.wpOverride, MG.grindActive = nil, nil
@@ -312,7 +312,6 @@ function UI.ApplySettings()
     for _, f in ipairs({ h.tag, h.label, h.act.label, h.x.label }) do f:SetFont(FONT, fsz - 2, "") end
     h.sub:SetFont(FONT, fsz - 3, "")
   end
-  panel:SetHeight(34 + UI.Rows() * ROW_H + 8)
   local lw = UI.Get("listWidth")
   panel:SetWidth(lw)
   for _, row in ipairs(rows) do row:SetWidth(lw - 2); row.para:SetWidth(lw - 2 - 28 - 12) end
@@ -552,8 +551,13 @@ local function buildItems()
   elseif tab == "dg" then
     -- 副本分頁 v2（DUNGEON-TAB-SPEC.md）
     UI.dPhase, UI.dChain, UI.dMore = UI.dPhase or {}, UI.dChain or {}, UI.dMore or {}
+    -- 已過的副本收成最上面一列「▸ 已過 N」（正在跑或展開中的不收）
+    local function folded(d) return select(2, E.DungeonStatus(d)) == "past" and UI.dOpen ~= d.id and not (state.st == d) end
+    local past = 0
+    for _, d in ipairs(E.dungeons) do if folded(d) then past = past + 1 end end
+    if past > 0 then items[#items + 1] = { kind = "dpast", n = past } end
     for _, d in ipairs(E.dungeons) do
-      items[#items + 1] = { kind = "dg", d = d }
+      if not folded(d) or UI.dPastOpen then items[#items + 1] = { kind = "dg", d = d } end
       if UI.dOpen == d.id then
         local inside = false
         if state and state.instance then
@@ -649,17 +653,17 @@ local function fillRow(row, it)
   row.prog:ClearAllPoints()
   if top then row.prog:SetPoint("TOPRIGHT", -12, -7) else row.prog:SetPoint("RIGHT", -12, 0) end
   -- 右欄最小寬（對齊用）；有字才佔位，實際寬在最後照字量
-  local PROG_W = { shead = 1, spot = 70, prehead = 1, pre = 1, imphead = 1, imp = 120, step = 1, miss = 120, misshead = 1, station = 44, start = 1, ghead = 1, grind = 70, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 70, dact = 1 }
+  local PROG_W = { shead = 1, spot = 70, prehead = 1, pre = 1, imphead = 1, imp = 120, step = 1, miss = 120, misshead = 1, station = 44, start = 1, ghead = 1, grind = 70, dg = 62, dtext = 1, dhead = 1, dnext = 84, dphase = 1, dq = 96, dch = 90, dqi = 50, dent = 70, dact = 1, dpast = 1 }
   row.prog:SetWidth(PROG_W[it.kind] or 64)
   -- 沒有動詞欄的列：名稱從 28 開始
-  local NAME_X = { dtext = 28, dhead = 28, dg = 26, dq = 28, dent = 28, dphase = 28, dact = 28, prehead = 28, imphead = 28, misshead = 28, shead = 28, ghead = 28, pre = 28, imp = 28, miss = 28, spot = 28, station = 28, start = 28 }
+  local NAME_X = { dtext = 28, dhead = 28, dg = 26, dq = 28, dent = 28, dphase = 28, dact = 28, prehead = 28, imphead = 28, misshead = 28, shead = 28, ghead = 28, dpast = 28, pre = 28, imp = 28, miss = 28, spot = 28, station = 28, start = 28 }
   row.name:ClearAllPoints()
   if top then row.name:SetPoint("TOPLEFT", 52 + vw, -5) else row.name:SetPoint("LEFT", NAME_X[it.kind] or (52 + vw), 0) end
   row.name:SetPoint("RIGHT", (it.kind == "dg" or it.kind == "station") and row.lvt or row.prog, "LEFT", -6, 0)
   row.box:Hide(); row.ck:Show()
   -- 收合標題：箭頭（和副本列同一個圖）
   local HEAD = { prehead = { L["少了前置"], preOpen, AMBER }, imphead = { L["影響後續"], impOpen, AMBER }, misshead = { L["漏掉"], missOpen, AMBER },
-    ghead = { L["練怪地點"], UI.grindOpen, DIM }, shead = { L["補給"], UI.supOpen, DIM } }
+    ghead = { L["練怪地點"], UI.grindOpen, DIM }, shead = { L["補給"], UI.supOpen, DIM }, dpast = { L["已過"], UI.dPastOpen, DIM } }
   -- 影響後續的短說明（右欄）：下一站或後面幾個接不到
   local function impShort(imp)
     local nx = E.Next(state.st)
@@ -689,7 +693,7 @@ local function fillRow(row, it)
     local skipped = MG.db.skip[it.step.key]
     local mark = MG.db.mark[it.step.key]
     row.ck:Hide(); row.box:Show()
-    row.no:SetText(UI.Get("showNum") and state.num[i] or ""); paint(row.no, FAINT)
+    row.no:SetText(UI.Get("showNum") and state.num[i] or ""); paint(row.no, DIM)
     -- 勾選框：自動完成＝綠勾、手動完成＝金勾、手動未完成＝空框加琥珀短線
     if mark == false then row.box:SetState("dash", AMBER)
     elseif state.done[i] and not state.na[i] and not (state.passed and state.passed[i]) then row.box:SetState("check", mark and GOLD or GREEN)
@@ -955,9 +959,23 @@ end
 local function drawPanel()
   if not panel:IsShown() then return end
   buildItems()
-  local maxScroll = math.max(0, #items - 1)
+  -- 捲動上限＝最後一列剛好貼底：從最後一列往回量，量到放不下為止（副本分頁幾種列高度不一，要實際填過才知道）
+  local full = UI.Rows() * ROW_H
+  local maxScroll, fit = #items, 0
+  local TALL = { dnext = true, dphase = true, dact = true, dtext = true }
+  while maxScroll > 0 do
+    local h = ROW_H
+    if TALL[items[maxScroll].kind] then fillRow(rows[1], items[maxScroll]); h = rows[1]:GetHeight() or ROW_H end
+    if fit + h > full then break end
+    fit, maxScroll = fit + h, maxScroll - 1
+  end
+  if maxScroll == #items and maxScroll > 0 then maxScroll = maxScroll - 1 end -- 最後一列本身就比一頁高
   if scroll > maxScroll then scroll = maxScroll end
-  local y, room = -34, UI.Rows() * ROW_H
+  -- 清單高度＝內容高度（最少 6 行，最多設定的行數）
+  local listH = maxScroll > 0 and full or math.max(6 * ROW_H, math.min(full, fit))
+  panel:SetHeight(34 + listH + 8)
+  local y, room = -34, listH
+  local shown, curShown = 0, false
   for r = 1, MAX_ROWS do
     local it = items[scroll + r]
     local row = rows[r]
@@ -969,10 +987,20 @@ local function drawPanel()
         row:ClearAllPoints()
         row:SetPoint("TOPLEFT", 1, y)
         y, room = y - h, room - h
+        shown = shown + 1
+        if it.kind == "step" and state and it.i == state.cur then curShown = true end
       end
     else
       row:Hide()
     end
+  end
+  -- 右緣 2 px 捲動條（內容不滿一頁不畫）
+  panel.sbar:SetShown(maxScroll > 0)
+  if maxScroll > 0 then
+    local th = math.max(12, math.floor(listH * shown / #items))
+    panel.sbar:ClearAllPoints()
+    panel.sbar:SetPoint("TOPRIGHT", -2, -34 - math.floor((listH - th) * scroll / maxScroll))
+    panel.sbar:SetHeight(th)
   end
   panel.tabSteps.label:SetTextColor(unpack(tab == "steps" and TEXT or DIM))
   panel.tabMap.label:SetTextColor(unpack(tab == "map" and TEXT or DIM))
@@ -1001,10 +1029,30 @@ local function drawPanel()
   panel.station.full, panel.station.isSt, panel.station.short = full, lvText ~= "", false
   panel.station:SetText(full)
   if short and truncated(panel.station) then panel.station:SetText(short); panel.station.short = true end
+  -- 目前步驟捲出畫面：「剩 N 步」變金色，點了捲回
+  panel.station.back = tab == "steps" and state and state.cur and not curShown or false
+  paint(panel.station, panel.station.back and GOLD or DIM)
 end
 
 local function scrollToCur()
   buildItems()
+  if tab == "dg" then
+    -- 副本：正在跑的那本，否則第一本還沒過、沒標「不打」的；上一列是「已過 N」就連它一起露出
+    local target
+    for k, it in ipairs(items) do
+      if it.kind == "dg" and state.st == it.d then target = k; break end
+    end
+    if not target then
+      for k, it in ipairs(items) do
+        if it.kind == "dg" and select(2, E.DungeonStatus(it.d)) ~= "past" and not MG.db.dNo[it.d.id] then target = k; break end
+      end
+    end
+    if target then
+      scroll = target - 1
+      if items[scroll] and items[scroll].kind == "dpast" then scroll = scroll - 1 end
+    end
+    return
+  end
   for k, it in ipairs(items) do
     if (tab == "steps" and it.kind == "step" and it.i == state.cur) or (tab == "map" and it.kind == "station" and it.st == state.st) then
       scroll = math.max(0, k - math.floor(UI.Rows() / 2))
@@ -1100,6 +1148,8 @@ local function onRowClick(row, button)
     MG.wpOverride = { map = it.p.map, x = it.p.x, y = it.p.y, name = MG.Clean(it.label) } -- 走到了就收回
   elseif it.kind == "ghead" then
     UI.grindOpen = not UI.grindOpen
+  elseif it.kind == "dpast" then
+    UI.dPastOpen = not UI.dPastOpen
   elseif it.kind == "grind" then
     UI.GoGrind(it.g)
   elseif it.kind == "dg" then
@@ -1159,13 +1209,12 @@ function UI.Create()
   gear.icon:SetSize(16, 16)
   gear.icon:SetPoint("CENTER")
   C.GearIcon(gear.icon, 16)
-  gear:SetAlpha(0.5)
+  gear:SetAlpha(0.3) -- 亮度在步驟列的 OnUpdate 依滑鼠位置調
   gear:SetScript("OnEnter", function(self)
-    self:SetAlpha(1)
     tipOpen(self, L["設定"], "ANCHOR_TOP")
     GameTooltip:Show()
   end)
-  gear:SetScript("OnLeave", function(self) self:SetAlpha(0.5); GameTooltip:Hide() end)
+  gear:SetScript("OnLeave", function() GameTooltip:Hide() end)
   gear:SetScript("OnClick", function() UI.OpenOptions() end)
   -- 標題最多兩行（寬度在 Render 照右側元件算）
   bar.title = text(bar, 15, TEXT)
@@ -1202,10 +1251,8 @@ function UI.Create()
   bar:SetScript("OnClick", function(_, button)
     if button == "RightButton" then openMenu(bar); return end
     menu:Hide()
-    -- 點一下也把航點拉回目前任務（取消「去」設的臨時點、強制重放，玩家手動清掉的也會補回）
-    MG.wpOverride, MG.grindActive = nil, nil
-    MG.N.Forget(true)
-    MG.Refresh(true)
+    -- 只開關清單；臨時航點只由提示列的「返回」收回。沒有臨時航點時順便重放目前步驟的航點（玩家手動清掉的會補回）
+    if not MG.wpOverride then MG.N.Forget(true); MG.Refresh(true) end
     panel:SetShown(not panel:IsShown())
     if panel:IsShown() and state then scrollToCur() end
     drawPanel()
@@ -1230,9 +1277,11 @@ function UI.Create()
     elseif state and state.st and E.Next(state.st) then stationTip(self, E.Next(state.st)) end
   end)
   bar:SetScript("OnLeave", function() GameTooltip:Hide() end)
-  bar:EnableMouseWheel(true)
+  -- Shift＋滾輪換步驟；沒按 Shift 時不接滾輪（滾輪照常拉鏡頭）
+  local wheelOn, gearA = false, 0.3
+  bar:EnableMouseWheel(false)
   bar:SetScript("OnMouseWheel", function(_, delta)
-    if state and state.st then E.Move(state, delta > 0 and -1 or 1); MG.Refresh(true) end
+    if IsShiftKeyDown() and state and state.st then E.Move(state, delta > 0 and -1 or 1); MG.Refresh(true) end
   end)
   -- 步驟切換：0.15 秒淡入；完成：綠光一閃
   local fade, flash = 1, 0
@@ -1240,6 +1289,12 @@ function UI.Create()
     local alpha = UI.Get("barOpacity") / 100
     if UI.Get("fadeOn") and (InCombatLockdown() or not root:IsMouseOver()) then alpha = UI.Get("fadeAlpha") / 100 end
     if root:GetAlpha() ~= alpha then root:SetAlpha(alpha) end
+    local shift = IsShiftKeyDown()
+    -- 步驟列掛著安全按鈕：戰鬥中不能改滑鼠設定，等脫離戰鬥再切
+    if shift ~= wheelOn and not InCombatLockdown() then wheelOn = shift; bar:EnableMouseWheel(shift) end
+    -- 齒輪少用：平常 30%，滑鼠在步驟列上 70%，指著齒輪 100%
+    local ga = gear:IsMouseOver() and 1 or (bar:IsMouseOver() and 0.7 or 0.3)
+    if ga ~= gearA then gearA = ga; gear:SetAlpha(ga) end
     if fade < 1 then fade = math.min(1, fade + dt / 0.15); bar.title:SetAlpha(fade); bar.l2:SetAlpha(fade); bar.l3:SetAlpha(fade); bar.verb:SetAlpha(fade) end
     if flash > 0 then flash = math.max(0, flash - dt / 0.35); bar.flash:SetAlpha(flash) end
   end)
@@ -1271,6 +1326,7 @@ function UI.Create()
     f:SetScript("OnEnter", function(self)
       local h = self.h
       if not h then return end
+      if h.tip then h.tip(self); return end
       local full = h.full or h.text
       local sub = h.sub ~= "" and h.sub or nil
       if not full or (full == h.text and not truncated(self.label) and not (sub and truncated(self.sub))) then return end
@@ -1337,7 +1393,9 @@ function UI.Create()
   panel.station = text(st, 12, DIM, "RIGHT")
   panel.station:SetPoint("TOPLEFT"); panel.station:SetPoint("BOTTOMLEFT")
   panel.station:SetPoint("RIGHT", panel.stationLv, "LEFT", 0, 0)
-  st:SetScript("OnClick", function() setTab("map") end)
+  st:SetScript("OnClick", function()
+    if panel.station.back then scrollToCur(); drawPanel() else setTab("map") end
+  end)
   st:SetScript("OnEnter", function(self)
     local s = panel.station
     if s.isSt then
@@ -1347,6 +1405,10 @@ function UI.Create()
     end
   end)
   st:SetScript("OnLeave", function() GameTooltip:Hide() end)
+  panel.sbar = panel:CreateTexture(nil, "OVERLAY")
+  panel.sbar:SetColorTexture(GOLD[1], GOLD[2], GOLD[3], 0.5)
+  panel.sbar:SetWidth(2)
+  panel.sbar:Hide()
   local div = panel:CreateTexture(nil, "BORDER")
   div:SetColorTexture(EDGE[1], EDGE[2], EDGE[3], 1)
   div:SetPoint("TOPLEFT", 1, -30); div:SetPoint("TOPRIGHT", -1, -30); div:SetHeight(1)
@@ -1366,6 +1428,7 @@ function UI.Create()
     -- 勾選框：左鍵切換手動勾選，右鍵回到自動
     row.box = UI.Checkbox(row, 13)
     row.box:SetPoint("LEFT", 9, 0)
+    row.box:SetHitRectInsets(-4, -4, -4, -4) -- 點擊範圍約 21×21，外觀不變（旁邊整列是「改做這一步」）
     row.box:RegisterForClicks("LeftButtonUp", "RightButtonUp")
     row.box:SetScript("OnClick", function(self, button)
       local it = row.it
@@ -1386,7 +1449,7 @@ function UI.Create()
       end
       MG.Refresh(true)
     end)
-    row.no = text(row, 11, FAINT, "RIGHT")
+    row.no = text(row, 11, DIM, "RIGHT")
     row.no:SetPoint("LEFT", 24, 0); row.no:SetWidth(20)
     row.verb = text(row, 13, GOLD, "CENTER")
     row.verb:SetPoint("LEFT", 48, 0); row.verb:SetWidth(UI.VerbWidth())
@@ -1497,12 +1560,19 @@ function UI.Create()
   end)
   panel:Hide()
 
-  menu = CreateFrame("Frame", nil, UIParent)
+  menu = CreateFrame("Frame", "MetroGuideMenu", UIParent)
   menu:SetSize(162, 100)
   menu:SetFrameStrata("DIALOG")
   box(menu)
   menu.buttons = {}
   menu:Hide()
+  -- 關選單：Esc（UISpecialFrames）、點選單以外的地方、步驟列隱藏
+  table.insert(UISpecialFrames, "MetroGuideMenu")
+  pcall(menu.RegisterEvent, menu, "GLOBAL_MOUSE_DOWN")
+  menu:SetScript("OnEvent", function()
+    if menu:IsShown() and not menu:IsMouseOver() and not bar:IsMouseOver() then menu:Hide() end -- 步驟列上的右鍵自己會開關
+  end)
+  root:HookScript("OnHide", function() menu:Hide() end)
 
   MG.try("小地圖按鈕", UI.CreateMinimap)
   -- 任務日誌（L）滑鼠提示：路線位置或路線外判定
@@ -1539,7 +1609,7 @@ local mini
 function UI.PlaceMinimap()
   if not mini then return end
   local a = math.rad(MetroGuideDB.angle or 200)
-  local r = (Minimap:GetWidth() or 140) / 2 + 8
+  local r = (Minimap:GetWidth() or 140) / 2 + 5 -- 系列統一：31 px、半徑 +5；預設角度 練等 200／專業 225／治療 250
   mini:ClearAllPoints()
   mini:SetPoint("CENTER", Minimap, "CENTER", math.cos(a) * r, math.sin(a) * r)
   mini:SetShown(UI.Get("minimap"))
@@ -1549,20 +1619,20 @@ end
 function UI.CreateMinimap()
   if not Minimap then return end
   mini = CreateFrame("Button", "MetroGuideMinimapButton", Minimap)
-  mini:SetSize(28, 28)
+  mini:SetSize(31, 31)
   mini:SetFrameStrata("MEDIUM")
   mini:SetFrameLevel((Minimap:GetFrameLevel() or 1) + 8)
   local bg = mini:CreateTexture(nil, "BACKGROUND")
-  bg:SetPoint("CENTER"); bg:SetSize(24, 24)
+  bg:SetPoint("TOPLEFT", 7, -5); bg:SetSize(20, 20)
   bg:SetTexture("Interface\\Minimap\\UI-Minimap-Background")
   bg:SetVertexColor(BG[1], BG[2], BG[3], 1)
   local icon = mini:CreateTexture(nil, "ARTWORK")
-  icon:SetPoint("CENTER"); icon:SetSize(18, 18)
+  icon:SetPoint("TOPLEFT", 6, -5); icon:SetSize(21, 21)
   icon:SetTexture("Interface\\AddOns\\ShengLeveling\\Media\\Logo")
   icon:SetTexCoord(0.1, 0.9, 0.1, 0.9) -- 裁掉外框，圓形按鈕裡只留主體
   mini.icon, mini.Icon = icon, icon -- 小地圖按鈕收納插件會找這個欄位當圖示
   local ring = mini:CreateTexture(nil, "OVERLAY")
-  ring:SetPoint("TOPLEFT"); ring:SetSize(48, 48)
+  ring:SetPoint("TOPLEFT"); ring:SetSize(53, 53)
   ring:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder")
   mini:SetHighlightTexture("Interface\\Minimap\\UI-Minimap-ZoomButton-Highlight")
   mini:RegisterForClicks("LeftButtonUp", "RightButtonUp")
@@ -2034,7 +2104,8 @@ function UI.Render(S)
       d:Show()
     end
     y = y - 6
-    line(E.VerbTitle(s), TEXT)
+    local v = E.Verb(s)
+    line(v ~= "" and (hex(GOLD) .. v .. "|r " .. E.Title(s)) or E.Title(s), TEXT) -- 動詞金色（和清單、主標題一致）
     y = y - 18
     if s.t == "do" and s.q then
       local one, header, lines, num = objectiveLines(s.q)
@@ -2073,7 +2144,7 @@ function UI.Render(S)
     if lastCurKey then UI.Animate(state ~= nil and state.cur == state.auto) end
     lastCurKey = key
     UI.hintsAll = false -- 換步驟：提示收回成 2 條
-    if panel:IsShown() and state then scrollToCur() end
+    if panel:IsShown() and state and tab ~= "dg" then scrollToCur() end -- 副本分頁只在打開時捲
   end
 
   -- 提示：安全 ＞ 走了就來不及 ＞ 人在附近 ＞ 隨時能做。副本中全部不顯示
@@ -2086,14 +2157,16 @@ function UI.Render(S)
   if st then
     local danger, fp = E.Nearby(st)
     if danger then H[#H + 1] = { tag = L["危險"], color = RED, text = danger.text and (E.Clause(danger.text)) or L["危險區域"], full = danger.text } end
-    -- 箭頭不在原本該做的那步（點了「去」、清單改做別步、副本分頁／補給／練怪點等臨時航點）：顯示原本那步，按「返回」回到目前步驟
+    -- 臨時航點（修裝、飛行點、練怪、副本分頁、補給的「去」）：寫箭頭現在指去哪，「返回」收回
+    -- 只是清單改做別步：寫原本那步，「返回」回到原本那步。兩者同時成立只顯示「前往」
     local pinned = state.cur and state.auto and state.cur ~= state.auto and MG.db.pin[st.id]
-    if pinned or MG.wpOverride then
-      local back = state.steps[pinned and state.auto or state.cur or 0]
-      local nx = S.nextSt
-      H[#H + 1] = { tag = L["原本"], color = GOLD, actLabel = L["返回"],
-        text = back and E.VerbTitle(back.s) or (nx and L["前往 %s"]:format(UI.StName(nx))) or "",
-        act = function() if pinned then MG.db.pin[st.id] = nil end; UI.ClearOverride() end }
+    local o = MG.wpOverride
+    if o then
+      H[#H + 1] = { tag = L["前往"], color = GOLD, actLabel = L["返回"], text = o.name or string.format("%.1f, %.1f", o.x, o.y),
+        act = function() UI.ClearOverride() end }
+    elseif pinned then
+      H[#H + 1] = { tag = L["原本"], color = GOLD, actLabel = L["返回"], text = E.VerbTitle(state.steps[state.auto].s),
+        act = function() MG.db.pin[st.id] = nil; UI.ClearOverride() end }
     end
     local leave = UI.Leaving(state)
     if #leave > 0 then
@@ -2116,7 +2189,20 @@ function UI.Render(S)
     if S.sug and db.sugHide ~= lv then
       local sug = S.sug
       H[#H + 1] = { tag = L["下一站"], color = GOLD, text = UI.StName(sug), sub = sug.lv[1] .. "-" .. sug.lv[2], actLabel = L["去"],
-        act = function() E.Jump(sug); lastCurKey = nil; MG.Refresh(true) end, close = function() MG.db.sugHide = UnitLevel("player") end }
+        act = function() E.Jump(sug); lastCurKey = nil; MG.Refresh(true) end, close = function() MG.db.sugHide = UnitLevel("player") end,
+        -- 按「去」之前就看得到：跳過去會順路補哪些、可放掉幾個
+        tip = function(owner)
+          local carry, dropN = E.JumpPlan(sug)
+          tipOpen(owner, sug.name or "", "ANCHOR_BOTTOMLEFT")
+          tipLine(sug.lv[1] .. "-" .. sug.lv[2], DIM)
+          if #carry > 0 then
+            local names = {}
+            for _, q in ipairs(carry) do names[#names + 1] = E.QName(q) end
+            tipLine(L["順路補 %d 個"]:format(#carry) .. L["："] .. table.concat(names, L["、"]), TEXT, true)
+          end
+          if dropN > 0 then tipLine(L["可放掉 %d 個"]:format(dropN), DIM) end
+          GameTooltip:Show()
+        end }
     elseif not state.cur and S.nextSt then
       local nx = S.nextSt
       H[#H + 1] = { tag = L["下一站"], color = GOLD, text = UI.StName(nx), sub = nx.lv[1] .. "-" .. nx.lv[2], actLabel = L["去"],

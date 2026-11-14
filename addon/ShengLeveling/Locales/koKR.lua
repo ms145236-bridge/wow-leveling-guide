@@ -31,7 +31,7 @@ MG.Locales.koKR = {
   ["打 "] = "죽여라 ",
   ["去"] = "이동",
   ["看"] = "보기",
-  ["返回"] = "등",
+  ["返回"] = "돌아가기",
 
   -- step titles
   ["任務 "] = "퀘스트 ",
@@ -268,15 +268,9 @@ MG.Locales.koKR = {
 
   -- chat messages
   ["戰鬥中不能開設定，脫離戰鬥後再開。"] = "전투 중에는 설정을 열 수 없습니다.",
-  ["「%s」現在接不到，先做下一步（升級或交任務後再看）"] = "\"%s\"는 아직 사용할 수 없습니다. 계속 진행합니다(레벨 업 또는 반납 후 다시 확인).",
   ["有 %d 個獎勵可選，請自己挑"] = "선택할 수 있는 %d 보상 - 직접 선택하세요.",
-  ["跳到 %s。順路補 %d 個%s；可放掉 %d 個"] = "%s(으)로 이동. 함께 할 퀘스트 %d개%s. 포기 가능 %d개.",
-  ["補做 %s：排在本站最前面，做完回原路線"] = "따라잡기 %s: 이 정류장의 상단에 추가된 후 경로로 돌아갑니다.",
-  ["已取消略過"] = "건너뛰기를 취소했습니다.",
-  ["已略過："] = "건너뛴 항목: ",
-  ["、後續 "] = ", 후속 조치: ",
-  ["已清除 %d 個手動勾選"] = "%d 수동 확인을 삭제했습니다.",
-  ["重新對齊："] = "재정렬됨: ",
+  ["順路補 %d 個"] = "이어서 할 퀘스트 %d개",
+  ["可放掉 %d 個"] = "포기 가능 %d개",
   ["介面語言設為 %s，/reload 後生效"] = "UI 언어를 %s(으)로 설정했습니다. /reload 후 적용됩니다.",
   ["介面語言：%s（/slv lang auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR｜stress，/reload 後生效）"] = "UI 언어: %s (/slv lang auto | en | zh | zhCN | deDE | frFR | esES | esMX | ruRU | koKR | ptBR | stress 후 /reload).",
   ["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言（auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR；stress＝英文加長 35% 檢查版面）"] = "/slv 켜기/끄기 | /slv probe 진단 | /slv reset 경로 재설정 | /slv config 설정 | /slv macro 대상 매크로 | /slv minimap 미니맵 버튼 | /slv rec 기록 | /slv lang auto/en/zh/zhCN/deDE/frFR/esES/esMX/ruRU/koKR/ptBR UI 언어 (stress: 영문 35% 확장)",

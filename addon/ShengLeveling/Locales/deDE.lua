@@ -31,7 +31,7 @@ MG.Locales.deDE = {
   ["打 "] = "Töte ",
   ["去"] = "Geh",
   ["看"] = "Betrachten",
-  ["返回"] = "Rücken",
+  ["返回"] = "Zurück",
 
   -- step titles
   ["任務 "] = "Suche ",
@@ -268,15 +268,9 @@ MG.Locales.deDE = {
 
   -- chat messages
   ["戰鬥中不能開設定，脫離戰鬥後再開。"] = "Die Einstellungen im Kampf können nicht geöffnet werden.",
-  ["「%s」現在接不到，先做下一步（升級或交任務後再看）"] = "„%s“ ist noch nicht verfügbar; Weitergehen (wird nach einem Levelaufstieg oder Einwechseln erneut überprüft).",
   ["有 %d 個獎勵可選，請自己挑"] = "%d-Prämien zur Auswahl – wählen Sie selbst eine aus.",
-  ["跳到 %s。順路補 %d 個%s；可放掉 %d 個"] = "Zu %s gesprungen. Tragen %d Quest(s) %s ;  %d kann gelöscht werden.",
-  ["補做 %s：排在本站最前面，做完回原路線"] = "%s einholen: oben an dieser Haltestelle hinzugefügt, dann zurück zur Route.",
-  ["已取消略過"] = "Überspringen rückgängig gemacht.",
-  ["已略過："] = "Übersprungen: ",
-  ["、後續 "] = ", Follow-ups: ",
-  ["已清除 %d 個手動勾選"] = "Manuelle Prüfung(en) %d abgeschlossen.",
-  ["重新對齊："] = "Neu ausgerichtet: ",
+  ["順路補 %d 個"] = "%d Quest(s) mitnehmen",
+  ["可放掉 %d 個"] = "%d verzichtbar",
   ["介面語言設為 %s，/reload 後生效"] = "UI-Sprache auf %s eingestellt. /reload zum Anwenden.",
   ["介面語言：%s（/slv lang auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR｜stress，/reload 後生效）"] = "UI-Sprache: %s (/slv lang auto | en | zh | zhCN | deDE | frFR | esES | esMX | ruRU | koKR | ptBR | stress, dann /reload).",
   ["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言（auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR；stress＝英文加長 35% 檢查版面）"] = "/slv umschalten | /slv probe Diagnose | /slv reset neu abgleichen | /slv config Einstellungen | /slv macro Zielmakro | /slv minimap Minikartenknopf | /slv rec Aufzeichnung | /slv lang auto/en/zh/zhCN/deDE/frFR/esES/esMX/ruRU/koKR/ptBR UI-Sprache (stress: Englisch 35 % länger)",

@@ -755,36 +755,35 @@ function E.Suggest(st)
   end
 end
 
--- 跳站：中間略過的站未交任務分「順路補」與「可放掉」
-function E.Jump(target)
-  local db = MG.db
+-- 跳站：中間略過的站未交任務分「順路補」與「可放掉」。JumpPlan 只算不改（「下一站」提示列的滑鼠提示先給玩家看）
+function E.JumpPlan(target)
   local from = E.Current()
   local carry, dropN = {}, 0
   if from and from.index and target.index > from.index then
     for k = from.index, target.index - 1 do
-      local st = E.stations[k]
       local seen = {}
-      for _, step in ipairs(st.list) do
+      for _, step in ipairs(E.stations[k].list) do
         local q = step.s.q
         if q and not seen[q] and E.Applies(step.s.when) and not turned(q) then
           seen[q] = true
           local info = R.quests[q] or {}
-          local onQ = C.IsOnQuest(q)
-          if info.chain or info.keep or (onQ and not gray(q)) then carry[#carry + 1] = q else dropN = dropN + 1 end
+          if info.chain or info.keep or (C.IsOnQuest(q) and not gray(q)) then carry[#carry + 1] = q else dropN = dropN + 1 end
         end
       end
-      if k ~= from.index then db.drop[st.id] = true end
     end
+  end
+  return carry, dropN, from
+end
+function E.Jump(target)
+  local db = MG.db
+  local carry, _, from = E.JumpPlan(target)
+  if from and from.index and target.index > from.index then
+    for k = from.index + 1, target.index - 1 do db.drop[E.stations[k].id] = true end
   end
   db.carry[target.id] = #carry > 0 and carry or nil
   db.drop[target.id] = nil
   db.station = target.id
   db.pin[target.id] = nil
-  if #carry > 0 or dropN > 0 then
-    local names = {}
-    for _, q in ipairs(carry) do names[#names + 1] = (R.quests[q] and R.quests[q].n) or tostring(q) end
-    MG.msg(L["跳到 %s。順路補 %d 個%s；可放掉 %d 個"]:format(target.name, #carry, #names > 0 and (L["："] .. table.concat(names, L["、"])) or "", dropN))
-  end
 end
 
 function E.Select(st)
@@ -891,7 +890,6 @@ function E.MakeUp(st, p)
   MG.db.carry[st.id] = carry
   for _, q in ipairs(carry) do if q == p then return end end
   carry[#carry + 1] = p
-  MG.msg(L["補做 %s：排在本站最前面，做完回原路線"]:format(questName(p)))
 end
 
 -- 開了本職業訓練師（不是專業技能訓練師）：等級已到的「學」步驟都算做完，不管是哪一位訓練師
@@ -967,15 +965,12 @@ function E.ToggleSkip(key)
   if root then
     if root == true then root = key end
     for k, v in pairs(skip) do if k == root or v == root then skip[k] = nil end end
-    MG.msg(L["已取消略過"])
     return
   end
   local t, q = key:match("^(%a):(%d+)$")
   q = tonumber(q)
   skip[key] = key
   if not q then return end
-  local names, later = { questName(q) }, {}
-  local here = MG.db.station and E.byId[MG.db.station]
   if t ~= "t" then
     for _, p in ipairs({ "a", "d", "t" }) do if not skip[p .. ":" .. q] then skip[p .. ":" .. q] = key end end
   end
@@ -987,15 +982,10 @@ function E.ToggleSkip(key)
       if not seen[f] then
         seen[f] = true
         queue[#queue + 1] = f
-        local o -- 後續任務在別站時標地名（本站的不標）
-        for _, x in ipairs(questSt[f] or {}) do if x ~= here then o = o or x end end
-        later[#later + 1] = questName(f) .. (o and L["（%s）"]:format(place(o, here)) or "")
         for _, p in ipairs({ "a", "d", "t" }) do if not skip[p .. ":" .. f] then skip[p .. ":" .. f] = key end end
       end
     end
   end
-  local imp = here and E.Impact(q, here) or {}
-  MG.msg(L["已略過："] .. names[1] .. (#later > 0 and (L["、後續 "] .. table.concat(later, L["、"])) or "") .. (#imp > 0 and (L["。"] .. E.ImpactText(imp, here)) or ""))
 end
 
 -- 手動勾選：val = true／false；nil＝回到自動
@@ -1005,14 +995,9 @@ function E.Realign()
   wipe(MG.db.pin)
   -- 一併清掉目前站的手動勾選
   local old = MG.db.station and E.byId[MG.db.station]
-  local n = 0
-  for _, step in ipairs(old and old.list or {}) do
-    if MG.db.mark[step.key] ~= nil then MG.db.mark[step.key] = nil; n = n + 1 end
-  end
-  if n > 0 then MG.msg(L["已清除 %d 個手動勾選"]:format(n)) end
+  for _, step in ipairs(old and old.list or {}) do MG.db.mark[step.key] = nil end
   MG.db.station = nil
-  local st = E.Current()
-  if st then MG.msg(L["重新對齊："] .. st.name) end
+  E.Current()
 end
 
 

@@ -268,15 +268,9 @@ MG.Locales.zhCN = {
 
   -- chat messages
   ["戰鬥中不能開設定，脫離戰鬥後再開。"] = "战斗中不能开设置，脱离战斗后再开。",
-  ["「%s」現在接不到，先做下一步（升級或交任務後再看）"] = "「%s」现在接不到，先做下一步（升级或交任务后再看）",
   ["有 %d 個獎勵可選，請自己挑"] = "有 %d 个奖励可选，请自己挑",
-  ["跳到 %s。順路補 %d 個%s；可放掉 %d 個"] = "跳到 %s。顺路补 %d 个%s；可放掉 %d 个",
-  ["補做 %s：排在本站最前面，做完回原路線"] = "补做 %s：排在本站最前面，做完回原路线",
-  ["已取消略過"] = "已取消略过",
-  ["已略過："] = "已略过： ",
-  ["、後續 "] = "、后续 ",
-  ["已清除 %d 個手動勾選"] = "已清除 %d 个手动勾选",
-  ["重新對齊："] = "重新对齐： ",
+  ["順路補 %d 個"] = "顺路补 %d 个",
+  ["可放掉 %d 個"] = "可放掉 %d 个",
   ["介面語言設為 %s，/reload 後生效"] = "界面语言设为 %s，/reload 后生效",
   ["介面語言：%s（/slv lang auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR｜stress，/reload 後生效）"] = "界面语言：%s（/slv lang auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR｜stress，/reload 后生效）",
   ["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言（auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR；stress＝英文加長 35% 檢查版面）"] = "/slv 开关｜/slv probe 检查报告｜/slv reset 重新对齐｜/slv config 设置｜/slv macro 创建目标宏｜/slv minimap 显示小地图按钮｜/slv rec 游戏内记录｜/slv lang 界面语言（auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR；stress＝英文加长 35% 检查版面）",

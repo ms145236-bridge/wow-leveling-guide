@@ -240,15 +240,16 @@ function T.Create(bar)
   icon:SetPoint("CENTER")
   icon:SetSize(16, 16)
   icon:SetTexture("Interface\\Cursor\\Crosshairs")
-  icon:SetDesaturated(true) -- 和齒輪同色調
-  btn:SetAlpha(0.5)
+  icon:SetDesaturated(true)
+  icon:SetVertexColor(0.851, 0.698, 0.373) -- 金色（步驟列的 GOLD）：每一步都會用，比齒輪醒目
+  btn:SetAlpha(0.85)
   btn:HookScript("OnEnter", function(self)
     self:SetAlpha(1)
     MG.UI.TipOpen(self, L["選取任務目標"], "ANCHOR_TOP")
     if #names > 0 then MG.UI.TipLine(table.concat(names, L["、"]), nil, true) end
     GameTooltip:Show()
   end)
-  btn:HookScript("OnLeave", function(self) self:SetAlpha(0.5); GameTooltip:Hide() end)
+  btn:HookScript("OnLeave", function(self) self:SetAlpha(0.85); GameTooltip:Hide() end)
   btn:Hide()
   local f = CreateFrame("Frame")
   for _, e in ipairs({ "PLAYER_REGEN_ENABLED", "PLAYER_ENTERING_WORLD", "ADDON_ACTION_FORBIDDEN", "ADDON_ACTION_BLOCKED", "PLAYER_TARGET_CHANGED" }) do

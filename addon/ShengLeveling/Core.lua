@@ -218,8 +218,7 @@ local function notOffered(event)
     end
   end
   if not offered then
-    MG.db.notNow[cur.key] = true
-    MG.msg(L["「%s」現在接不到，先做下一步（升級或交任務後再看）"]:format(E.Title(s)))
+    MG.db.notNow[cur.key] = true -- 清單右欄會寫「接不到」
   end
 end
 

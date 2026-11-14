@@ -31,7 +31,7 @@ MG.Locales.ptBR = {
   ["打 "] = "Matar ",
   ["去"] = "Vá",
   ["看"] = "Visualizar",
-  ["返回"] = "Costas",
+  ["返回"] = "Voltar",
 
   -- step titles
   ["任務 "] = "Missão ",
@@ -120,7 +120,7 @@ MG.Locales.ptBR = {
   ["耐久 "] = "Durabilidade ",
   ["附近"] = "nas proximidades",
   ["下一站"] = "Próxima parada",
-  ["原本"] = "Originais",
+  ["原本"] = "Original",
   ["順路"] = "No caminho",
   ["飛行點"] = "Trajetória de voo",
   ["學技能"] = "Treinar",
@@ -268,15 +268,9 @@ MG.Locales.ptBR = {
 
   -- chat messages
   ["戰鬥中不能開設定，脫離戰鬥後再開。"] = "Não é possível abrir as configurações em combate.",
-  ["「%s」現在接不到，先做下一步（升級或交任務後再看）"] = "\"%s\" ainda não está disponível; seguir em frente (verificado novamente após subir de nível ou entrar).",
   ["有 %d 個獎勵可選，請自己挑"] = "Recompensas %d para escolher - escolha uma você mesmo.",
-  ["跳到 %s。順路補 %d 個%s；可放掉 %d 個"] = "Saltou para %s. Realizando missão(s) %d %s ;  %d pode ser descartado.",
-  ["補做 %s：排在本站最前面，做完回原路線"] = "Alcance %s: adicionado ao topo desta parada e depois de volta à rota.",
-  ["已取消略過"] = "Pular desfeito.",
-  ["已略過："] = "Ignorado: ",
-  ["、後續 "] = ", acompanhamentos: ",
-  ["已清除 %d 個手動勾選"] = "Verificações manuais %d apagadas.",
-  ["重新對齊："] = "Realinhado: ",
+  ["順路補 %d 個"] = "Retomar %d missão(ões)",
+  ["可放掉 %d 個"] = "%d dispensável(is)",
   ["介面語言設為 %s，/reload 後生效"] = "Idioma da interface: %s. Use /reload para aplicar.",
   ["介面語言：%s（/slv lang auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR｜stress，/reload 後生效）"] = "Idioma da interface: %s (/slv lang auto | en | zh | zhCN | deDE | frFR | esES | esMX | ruRU | koKR | ptBR | stress e depois /reload).",
   ["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言（auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR；stress＝英文加長 35% 檢查版面）"] = "/slv ativar/desativar | /slv probe diagnóstico | /slv reset realinhar | /slv config ajustes | /slv macro macro de alvo | /slv minimap botão do minimapa | /slv rec registro | /slv lang auto/en/zh/zhCN/deDE/frFR/esES/esMX/ruRU/koKR/ptBR idioma (stress: inglês 35% mais longo)",
