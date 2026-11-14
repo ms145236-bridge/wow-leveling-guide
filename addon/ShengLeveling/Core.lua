@@ -336,6 +336,16 @@ local function onEvent(_, event, ...)
     latchCurrent("fp")
     local name = UnitName("npc")
     if name and not (issecretvalue and issecretvalue(name)) then MG.db.fpSeen[name] = true end
+    -- 名字可能和路線寫的不同（譯名、稱號）：人旁邊的飛行管理員也一律記成開過
+    local map, x, y = C.Position()
+    if map and x then
+      for _, st in ipairs(E.stations) do
+        for _, s in ipairs(st.supply or {}) do
+          local n = s.npcG or s.npc
+          if s.k == "飛行管理員" and n and s.map == map and s.x and (s.x - x) ^ 2 + (s.y - y) ^ 2 <= 4 then MG.db.fpSeen[n] = true end
+        end
+      end
+    end
   elseif event == "PLAYER_CONTROL_LOST" then
     onTaxi = UnitOnTaxi and UnitOnTaxi("player") or false
     return
