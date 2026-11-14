@@ -1,4 +1,4 @@
-# 建置報告（資料版本 64fb8c9d）
+# 建置報告（資料版本 a7e3e146）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
 站數：94　任務數：1502
@@ -215,13 +215,15 @@
 - 01-第一段-1到12級.md：…84, 66.20）接 364… → 無腦的殭屍
 - 01-第一段-1到12級.md：… 3 級才接瑪拉的遺願 6395。到 6… → 瑪拉的遺願
 
-## 名稱不一致（44）
+## 名稱不一致（48）
 
+- 任務 92551：目標怪 QuestieDB 沒有繁中名（奧拉凱斯風暴召喚者、奧拉凱斯治療者、『颶語者』特戴歐爾、Galemender Delanea）
 - 01-第一段-1到12級.md:1112 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
 - 01-第一段-1到12級.md:1136 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
 - 任務 97257：目標怪 QuestieDB 沒有繁中名（Brazier of Offering）
 - 任務 880：目標怪 QuestieDB 沒有繁中名（綠洲鉗嘴龜、Oasis Snapjaw Hatchling）
 - 任務 1526：目標怪 QuestieDB 沒有繁中名（火之靈體、Manifestation of Flames）
+- 任務 671：目標怪 QuestieDB 沒有繁中名（辛迪加路霸、辛迪加巡路者、辛迪加雇傭兵、Syndicate Smuggler）
 - 任務 78830：目標怪 QuestieDB 沒有繁中名（Gharrik）
 - 03-30到45級.md:1087 交｜向赫格拉姆報到：路線寫「迅捷的赫格拉姆」，QuestieDB／遊戲名是「赫格拉姆」
 - 05-副本.md:1078 交｜：QuestieDB 沒有繁中名（Magister Kirandis），用「Magister Kirandis」
@@ -240,25 +242,27 @@
 - 05-副本.md:1195 接｜血紅頭巾：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
 - 05-副本.md:1213 交｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
 - 任務 8234：目標怪 QuestieDB 沒有繁中名（木喉薩滿、Blackmaw Shaman）
-- 任務 8425：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher）
-- 任務 8425：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku）
-- 任務 8425：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro）
+- 任務 8425：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）
+- 任務 8425：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku、Mijan）
+- 任務 8425：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro、Zolo）
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Lieutenant Suncrest）
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Magister Hawkhelm）
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Ranger Lydrea）
 - 04-45到60級.md:634 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
 - 04-45到60級.md:636 交｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
 - 04-45到60級.md:637 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 任務 8251：目標怪 QuestieDB 沒有繁中名（血精靈勘測員、血精靈搜尋者、血精靈防衛者、Blood Elf Arcanist、伊文‧修密特、露蜜娜‧風詠）
 - 04-45到60級.md:920 接｜聖光研究：路線寫「物件 書籍」，QuestieDB／遊戲名是「詹妮亞·坎農」
-- 任務 8413：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher）
-- 任務 8413：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku）
-- 任務 8413：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro）
-- 任務 8422：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher）
-- 任務 8422：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku）
-- 任務 8422：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro）
+- 任務 8413：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）
+- 任務 8413：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku、Mijan）
+- 任務 8413：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro、Zolo）
+- 任務 7602：目標怪 QuestieDB 沒有繁中名（雷加斯薩特、雷加斯盜賊、雷加斯喚魔者、Legashi Soulstealer、Legashi Hellraiser、Legashi Blackguard）
+- 任務 8422：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）
+- 任務 8422：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku、Mijan）
+- 任務 8422：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro、Zolo）
 - 04-45到60級.md:1354 接｜奪回希利蘇斯：路線寫「塞納里奧使者黑蹄」，QuestieDB／遊戲名是「塞納里奧使者托爾·黑蹄」
 - 任務 4289：目標怪 QuestieDB 沒有繁中名（安戈洛猩猩、Un'Goro Gorilla）
-- 任務 97327：目標怪 QuestieDB 沒有繁中名（Blackmaw Berserker、Blackmaw Thrall、Blackmaw Headhunter）
+- 任務 97327：目標怪 QuestieDB 沒有繁中名（Blackmaw Berserker、Blackmaw Thrall、Blackmaw Headhunter、Swarming Imp、Legashi Slayer、Blackmaw Champion）
 - 05-副本.md:1770 接｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
 - 05-副本.md:1782 交｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
 
