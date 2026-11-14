@@ -23,7 +23,16 @@ local function mobsOf(q, out, seen)
   local per = (MG.Route.quests[q] or {}).tgo or {}
   local obj = C.IsOnQuest(q) and C.Objectives(q)
   for k, list in ipairs(per) do
-    if not (obj and #obj == #per and obj[k].done) then
+    -- 遊戲任務日誌的目標順序可能和資料不同：先用目標文字裡的怪名對，對不到才照位置
+    local o
+    if obj then
+      for _, x in ipairs(obj) do
+        for _, n in ipairs(list) do if x.text and x.text:find(n, 1, true) then o = x; break end end
+        if o then break end
+      end
+      if not o and #obj == #per then o = obj[k] end
+    end
+    if not (o and o.done) then
       for _, n in ipairs(list) do if not seen[n] then seen[n] = true; out[#out + 1] = n end end
     end
   end
@@ -122,11 +131,27 @@ local function macro()
     end
     g.line = "/tar [noexists] " .. line
   end
-  -- 同開頭的一群只放共同開頭那一行（省位子，同時做別的任務也塞得下）；單獨一種的用完整名稱
+  -- 準確優先：全部用完整名稱塞得下就都用完整名稱（部分比對會選到目標已完成的同開頭怪）；
+  -- 塞不下才把最省位子的一群改成共同開頭那一行，一群一群收，收到塞得下為止
+  local function exactLen(g) local t = 0; for _, nm in ipairs(g.names) do t = t + 1 + #("/targetexact [noexists] " .. nm) end; return t end
+  local total = size
   for _, g in ipairs(fallbacks) do
-    local grouped = #g.names > 1 and g.line ~= "/tar [noexists] " .. g.names[1]
-    g.first = grouped and g.line or ("/targetexact [noexists] " .. g.names[1])
-    g.grouped = grouped
+    g.grouped = false
+    g.canGroup = #g.names > 1 and g.line ~= "/tar [noexists] " .. g.names[1]
+    total = total + exactLen(g)
+  end
+  while total > LIMIT do
+    local best, save = nil, 0
+    for _, g in ipairs(fallbacks) do
+      if g.canGroup and not g.grouped then
+        local s = exactLen(g) - (1 + #g.line)
+        if s > save then best, save = g, s end
+      end
+    end
+    if not best then break end
+    best.grouped = true
+    best.first = best.line
+    total = total - save
   end
   local full = false
   for _, g in ipairs(fallbacks) do
@@ -138,8 +163,11 @@ local function macro()
   -- 完整名稱選到屍體時，再用部分比對試一次
   for _, g in ipairs(fallbacks) do
     if not g.grouped then
-      if size + 1 + #DEAD + 1 + #g.line > LIMIT then break end
-      add(g.line); partial = true
+      for _, nm in ipairs(g.names) do
+        local line = "/tar [noexists] " .. nm
+        if size + 1 + #DEAD + 1 + #line > LIMIT then break end
+        add(line); partial = true
+      end
     end
   end
   if partial then add(DEAD) end
