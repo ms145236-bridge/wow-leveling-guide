@@ -2212,9 +2212,11 @@ function UI.Render(S)
     end
     local vi = E.Detour(state)
     if vi then
-      local vs = state.steps[vi].s
+      local ext = type(vi) == "table" and vi -- 出本交的副本任務：不在本站，「去」設臨時航點
+      local vs = ext and vi.s or state.steps[vi].s
       H[#H + 1] = { tag = L["順路"], color = GOLD, text = (vs.t ~= "do" and vs.npc and not vs.npcObj and not vs.npc:find("物品", 1, true)) and (E.Verb(vs) .. " " .. vs.npc) or E.VerbTitle(vs),
-        actLabel = L["去"], act = pin(vi), close = function() E.DetourNo(state.steps[vi].key) end }
+        actLabel = L["去"], act = ext and function() goTo(vs, MG.Clean(vs.npc or E.Title(vs)), function() return not C.IsOnQuest(vs.q) end) end or pin(vi),
+        close = function() E.DetourNo(ext and vi.key or state.steps[vi].key) end }
     end
     if fp then
       H[#H + 1] = { tag = L["飛行點"], color = GOLD, text = fp.npc or L["飛行管理員"], actLabel = L["去"], act = function() goTo(fp, MG.Clean(fp.npc or L["飛行管理員"]), function() return MG.db.fpSeen[fp.npcG or fp.npc] end) end,

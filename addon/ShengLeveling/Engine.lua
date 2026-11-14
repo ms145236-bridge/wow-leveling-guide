@@ -395,7 +395,7 @@ function E.StarFor(q, s)
   return star[1]
 end
 
--- 順路提醒：本站裡現在就能做（接得到、在日誌未完成、可交）、離玩家比目前步驟近很多的步驟。
+-- 順路提醒（回傳步驟序號，或出本交的那一步）：本站裡現在就能做（接得到、在日誌未完成、可交）、離玩家比目前步驟近很多的步驟。
 -- 條件：同地圖、距離 ≤ 設定值、且 < 目前步驟距離的 25%；不在「附近一起做」裡；同一步連續 3 秒都成立才提示；略過後 2 分鐘不再提。
 local detourKey, detourSince, detourNo = nil, 0, {}
 function E.Detour(state)
@@ -427,7 +427,19 @@ function E.Detour(state)
       if d and d <= lim and d < cd * 0.25 and (not bd or d < bd) then best, bd = i, d end
     end
   end
-  local key = best and state.steps[best].key
+  -- 出本才交的副本任務（不在主線）：做完了、人走到交的人附近也提示；回傳那一步本身
+  local here = {}
+  for _, step in ipairs(state.steps) do if step.s.q then here[step.s.q] = true end end
+  for _, dg in ipairs(E.dungeons) do
+    for _, step in ipairs(dg.list) do
+      local s, q = step.s, step.s.q
+      if s.ph == "post" and s.t == "turnin" and q and not here[q] and C.IsOnQuest(q) and ready(q) and now - (detourNo[step.key] or -999) >= 120 then
+        local d = dist(s)
+        if d and d <= lim and d < cd * 0.25 and (not bd or d < bd) then best, bd = step, d end
+      end
+    end
+  end
+  local key = best and (type(best) == "table" and best.key or state.steps[best].key)
   if key ~= detourKey then detourKey, detourSince = key, now end
   if key and now - detourSince >= 3 then return best end
 end
