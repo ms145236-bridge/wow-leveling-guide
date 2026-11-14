@@ -23,7 +23,7 @@ const ROUTE = process.env.ROUTE_DIR || join(ROOT, ALLY ? "route-alliance" : "rou
 const OUT = process.env.OUT_LUA || join(ROOT, "addon", "ShengLeveling", "Data", ALLY ? "RouteA.lua" : "Route.lua");
 const REPORT = process.env.OUT_REPORT || join(ROOT, "tools", ALLY ? "unresolved-alliance.md" : "unresolved.md");
 const LUA_PREFIX = ALLY ? "RouteA" : "Route"; // 語系檔：Route_<loc>.lua／RouteA_<loc>.lua
-// 只載入自己陣營的路線（中立的天裔精靈出生時算部落；選好陣營後 /reload）
+// 只載入自己陣營的路線（天裔精靈創角時就選好陣營，分聯盟、部落兩個種族 ID）
 const GUARD = ALLY ? 'if UnitFactionGroup("player") ~= "Alliance" then return end\n' : 'if UnitFactionGroup("player") == "Alliance" then return end\n';
 
 const HORDE = ALLY ? 4294967373n : 8589934770n; // QuestieDB 的本陣營種族遮罩（含永恆新種族位元；聯盟 0x10000004d、部落 0x2000000b2）
