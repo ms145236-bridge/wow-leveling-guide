@@ -89,6 +89,12 @@ local function refresh()
     for _, step in ipairs(nextSt.list) do
       if step.s.x and E.Applies(step.s.when) then s = step.s; break end
     end
+  elseif state and state.cur and s and not s.x and not s.q then
+    -- 沒座標的交通、提醒：指向本站後面第一個還沒完成、有座標的步驟（走到就算到了，見 E.Locate）
+    for i = state.cur + 1, #state.steps do
+      local sj = state.steps[i].s
+      if sj.x and not state.done[i] and not state.na[i] then s = sj; break end
+    end
   end
   local curKey = state and state.cur and state.steps[state.cur].key
   if curKey ~= lastArrowKey then
