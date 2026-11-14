@@ -397,4 +397,5 @@ MG.Locales.deDE = {
   ["重新載入"] = "Neu laden",
   ["稍後"] = "Später",
   ["介面語言改成 %s，重新載入介面後生效。"] = "Sprache auf %s gestellt. Oberfläche neu laden, um sie zu übernehmen.",
+  ["已完成"] = "Abgeschlossen",
 }

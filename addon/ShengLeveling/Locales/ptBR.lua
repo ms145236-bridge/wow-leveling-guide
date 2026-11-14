@@ -397,4 +397,5 @@ MG.Locales.ptBR = {
   ["重新載入"] = "Recarregar",
   ["稍後"] = "Depois",
   ["介面語言改成 %s，重新載入介面後生效。"] = "Idioma definido como %s. Recarregue a interface para aplicar.",
+  ["已完成"] = "Concluída",
 }

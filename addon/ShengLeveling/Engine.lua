@@ -1027,12 +1027,14 @@ function E.QuickDone(step)
   return stepDone(step) and true or false
 end
 
+-- 這本的任務都交了（出本交和副本內交；可跳過的、不適用本角色的不算）
 function E.DungeonDone(d)
   local any = false
   for _, step in ipairs(d.list) do
-    if step.s.ph == "post" and step.s.q then
+    local s = step.s
+    if s.t == "turnin" and (s.ph == "post" or s.ph == "in") and s.q and not s.opt and E.Applies(s.when) and raceOK(s.q) then
       any = true
-      if not turned(step.s.q) then return false end
+      if not turned(s.q) then return false end
     end
   end
   return any -- 沒有出本要交的任務（例如厄運之槌北區）就不算「已過」，交給等級判斷
@@ -1054,7 +1056,8 @@ end
 
 function E.DungeonStatus(d)
   local lv = UnitLevel("player") or 1
-  if E.DungeonDone(d) or lv > d.lv[2] + 3 then return L["已過"], "past" end
+  if E.DungeonDone(d) then return L["已完成"], "past" end
+  if lv > d.lv[2] + 3 then return L["已過"], "past" end
   local minPick = d.lv[1]
   for _, step in ipairs(d.list) do if step.s.pickLv and step.s.pickLv < minPick then minPick = step.s.pickLv end end
   if lv < minPick then return L["%d 級"]:format(minPick), "low" end

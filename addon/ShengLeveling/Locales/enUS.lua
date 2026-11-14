@@ -397,4 +397,5 @@ MG.Locales.enUS = {
   ["重新載入"] = "Reload",
   ["稍後"] = "Later",
   ["介面語言改成 %s，重新載入介面後生效。"] = "Interface language set to %s. Reload the interface to apply.",
+  ["已完成"] = "Completed",
 }

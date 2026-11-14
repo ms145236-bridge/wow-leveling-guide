@@ -397,4 +397,5 @@ MG.Locales.esMX = {
   ["重新載入"] = "Recargar",
   ["稍後"] = "Más tarde",
   ["介面語言改成 %s，重新載入介面後生效。"] = "Idioma cambiado a %s. Recarga la interfaz para aplicarlo.",
+  ["已完成"] = "Completada",
 }
