@@ -605,9 +605,9 @@ local function buildItems()
     UI.dPhase, UI.dChain, UI.dMore = UI.dPhase or {}, UI.dChain or {}, UI.dMore or {}
     -- 已過的副本收成最上面一列「▸ 已過 N」（正在跑或展開中的不收）
     local function folded(d) return select(2, E.DungeonStatus(d)) == "past" and UI.dOpen ~= d.id and not (state.st == d) end
-    local past = 0
-    for _, d in ipairs(E.dungeons) do if folded(d) then past = past + 1 end end
-    if past > 0 then items[#items + 1] = { kind = "dpast", n = past } end
+    local done, past = 0, 0 -- 收合列分開寫：任務都交完的「已完成」、等級超過的「已過」
+    for _, d in ipairs(E.dungeons) do if folded(d) then if E.DungeonDone(d) then done = done + 1 else past = past + 1 end end end
+    if done + past > 0 then items[#items + 1] = { kind = "dpast", done = done, past = past } end
     for _, d in ipairs(E.dungeons) do
       if not folded(d) or UI.dPastOpen then items[#items + 1] = { kind = "dg", d = d } end
       if UI.dOpen == d.id then
@@ -727,7 +727,15 @@ local function fillRow(row, it)
   if head then
     row.ck:SetText("")
     row.arrow:Show(); row.arrow:SetRotation(head[2] and -math.pi / 2 or 0); row.arrow:SetVertexColor(head[3][1], head[3][2], head[3][3])
-    row.name:SetText(head[1] .. " " .. (it.n or #state.missed)); paint(row.name, head[3])
+    if it.kind == "dpast" then
+      local parts = {}
+      if it.done > 0 then parts[#parts + 1] = L["已完成"] .. " " .. it.done end
+      if it.past > 0 then parts[#parts + 1] = L["已過"] .. " " .. it.past end
+      row.name:SetText(table.concat(parts, "・"))
+    else
+      row.name:SetText(head[1] .. " " .. (it.n or #state.missed))
+    end
+    paint(row.name, head[3])
   elseif it.kind == "pre" then
     local m = it.m
     row.name:SetText(E.Title({ t = "accept", q = m.p }) .. " → " .. E.Title({ t = "accept", q = m.q })); paint(row.name, DIM)
