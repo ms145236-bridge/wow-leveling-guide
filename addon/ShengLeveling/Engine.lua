@@ -533,9 +533,12 @@ function E.Locate(st)
   local n = #steps
   local map, x, y = C.Position()
   local done, na, autoDone = {}, {}, {}
+  -- 本站有接取步驟的任務；沒有的（在之前的站接）不在日誌就不能做也不能交，不排進來
+  local acc = {}
+  for _, step in ipairs(steps) do if step.s.t == "accept" and step.s.q then acc[step.s.q] = true end end
   for i, step in ipairs(steps) do
     local s = step.s
-    na[i] = step.defer or (s.q and db.notNow["a:" .. s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or (s.fq and (excluded(s.fq) or not raceOK(s.fq) or turned(s.fq))) or false
+    na[i] = ((s.t == "do" or s.t == "turnin") and s.q and not acc[s.q] and not C.IsOnQuest(s.q) and not turned(s.q)) or step.defer or (s.q and db.notNow["a:" .. s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or (s.fq and (excluded(s.fq) or not raceOK(s.fq) or turned(s.fq))) or false
     local auto = stepDone(step, map, x, y)
     autoDone[i] = auto
     local mark = db.mark[step.key]
