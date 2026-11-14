@@ -392,4 +392,6 @@ MG.Locales.esMX = {
   [" 和 "] = " y ",
   ["最近的兩個標點：%s，相距 %.1f px"] = "dos pines más cercanos: %s, %.1f px de distancia",
   ["最近的兩個標點：地圖沒開，量不到"] = "dos pines más cercanos: mapa cerrado",
+  ["介面語言"] = "Idioma de la interfaz",
+  ["跟隨客戶端"] = "Igual que el cliente",
 }

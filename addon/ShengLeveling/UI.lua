@@ -58,6 +58,7 @@ local SPEC = {
   { key = "auto", label = "自動接交任務", def = true, menu = true, hint = "和 NPC 對話時自動接、交路線上的任務。按住 Shift 可暫停。" },
   { key = "optional", label = "帶上可跳過的任務", def = false, menu = true, hint = "路線也帶上標為可跳過的任務；已接的不論開關都會列出。" },
   { start = true, hint = "選擇從哪個新手區開始的路線，預設是你種族的那條。" },
+  { lang = true, label = "介面語言" },
   { key = "minimap", label = "顯示小地圖按鈕", def = true },
   { button = "重新對齊", run = function() E.Realign() end, hint = "依目前的等級和任務重新找所在的站，並清掉這站的手動勾選。" },
   { section = "進階", fold = true },
@@ -328,6 +329,24 @@ end
 -- ── 設定（右鍵選單、設定頁共用） ─────────────────────────────────────────
 local function toggleSetting(sp) UI.Set(sp.key, not UI.Get(sp.key)) end
 
+local showMenu
+-- 介面語言：跟隨客戶端，或客戶端字型顯示得出來的語言（中文、韓文、俄文字型以外都是拉丁字母；英文到處都能顯示）
+local SCRIPT = { zhTW = "zh", zhCN = "zh", koKR = "ko", ruRU = "ru" }
+local function langOpts()
+  local all = { { nil, L["跟隨客戶端"] }, { "zh", "繁體中文", "zhTW" }, { "zhcn", "简体中文", "zhCN" }, { "en", "English", "enUS" }, { "dede", "Deutsch", "deDE" },
+    { "frfr", "Français", "frFR" }, { "eses", "Español (EU)", "esES" }, { "esmx", "Español (AL)", "esMX" }, { "ptbr", "Português (BR)", "ptBR" },
+    { "ruru", "Русский", "ruRU" }, { "kokr", "한국어", "koKR" } }
+  local cur = MetroGuideDB.lang and MG.LANGS[MetroGuideDB.lang:lower()]
+  local out = {}
+  for _, o in ipairs(all) do
+    if not o[3] or o[3] == "enUS" or (SCRIPT[o[3]] or "latin") == (SCRIPT[MG.gameLoc] or "latin") then
+      out[#out + 1] = { code = o[1], name = o[2], on = o[3] == cur }
+    end
+  end
+  if not cur then out[1].on = true end
+  return out
+end
+
 local function openMenu(anchor)
   if menu:IsShown() then menu:Hide(); return end
   local entries = {}
@@ -341,6 +360,11 @@ local function openMenu(anchor)
     if sp.menu then entries[#entries + 1] = { L[sp.label], function() toggleSetting(sp) end, UI.Get(sp.key) } end
   end
   entries[#entries + 1] = { L["設定"], function() UI.OpenOptions() end }
+  showMenu(anchor, entries)
+end
+
+-- 選單：entries = { { 文字, 動作, 勾選狀態（nil＝沒有勾選框） } }；from＝設定頁的按鈕時開在按鈕下方
+function showMenu(anchor, entries, below)
   -- 選單寬度跟著最長的字
   local mw = 150
   for _, e in ipairs(entries) do mw = math.max(mw, textWidth(e[1], 13) + 26 + 12) end
@@ -370,7 +394,8 @@ local function openMenu(anchor)
   menu:SetHeight(12 + #entries * 22)
   menu:SetWidth(mw + 12)
   menu:ClearAllPoints()
-  if anchor == bar then menu:SetPoint("TOPLEFT", bar, "TOPRIGHT", 4, 0)
+  if below then menu:SetPoint("TOPLEFT", anchor, "BOTTOMLEFT", 0, -2)
+  elseif anchor == bar then menu:SetPoint("TOPLEFT", bar, "TOPRIGHT", 4, 0)
   else menu:SetPoint("TOPRIGHT", anchor, "BOTTOMLEFT", 0, 0) end
   menu:Show()
 end
@@ -1562,7 +1587,7 @@ function UI.Create()
 
   menu = CreateFrame("Frame", "MetroGuideMenu", UIParent)
   menu:SetSize(162, 100)
-  menu:SetFrameStrata("DIALOG")
+  menu:SetFrameStrata("FULLSCREEN_DIALOG") -- 設定頁上的語言選單也要蓋得過
   box(menu)
   menu.buttons = {}
   menu:Hide()
@@ -1814,6 +1839,21 @@ function UI.CreateOptions()
       explain(L["起點"], sp.hint, btn)
       options.widgets[#options.widgets + 1] = { refresh = function() btn.label:SetText(startLabel()) end }
       lines[#lines + 1] = { kind = "button", label = label("起點", sp.hint), ctrl = btn, want = sw, dy = 2 }
+    elseif sp.lang then
+      -- 選了就重新載入介面（語言在載入時決定）
+      local opts = langOpts()
+      local lw2 = 160
+      for _, o in ipairs(opts) do lw2 = math.max(lw2, textWidth(o.name, 13) + 20) end
+      local btn = goldButton(content, "", lw2)
+      btn:SetScript("OnClick", function(self)
+        local es = {}
+        for _, o in ipairs(langOpts()) do es[#es + 1] = { o.name, function() if not o.on then MetroGuideDB.lang = o.code; ReloadUI() end end, o.on } end
+        showMenu(self, es, true)
+      end)
+      options.widgets[#options.widgets + 1] = { refresh = function()
+        for _, o in ipairs(langOpts()) do if o.on then btn.label:SetText(o.name) end end
+      end }
+      lines[#lines + 1] = { kind = "button", label = label(sp.label), ctrl = btn, want = lw2, dy = 2 }
     elseif sp.button then
       actions[#actions + 1] = sp
     end

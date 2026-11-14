@@ -392,4 +392,6 @@ MG.Locales.ptBR = {
   [" 和 "] = " e ",
   ["最近的兩個標點：%s，相距 %.1f px"] = "dois pinos mais próximos: %s , %.1f px separados",
   ["最近的兩個標點：地圖沒開，量不到"] = "dois pinos mais próximos: mapa fechado",
+  ["介面語言"] = "Idioma da interface",
+  ["跟隨客戶端"] = "Igual ao cliente",
 }

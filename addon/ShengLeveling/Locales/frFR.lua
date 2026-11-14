@@ -392,4 +392,6 @@ MG.Locales.frFR = {
   [" 和 "] = " et ",
   ["最近的兩個標點：%s，相距 %.1f px"] = "deux broches les plus proches : %s, %.1f px espacées",
   ["最近的兩個標點：地圖沒開，量不到"] = "deux épingles les plus proches : carte fermée",
+  ["介面語言"] = "Langue de l’interface",
+  ["跟隨客戶端"] = "Comme le client",
 }

@@ -392,4 +392,6 @@ MG.Locales.deDE = {
   [" 和 "] = " und ",
   ["最近的兩個標點：%s，相距 %.1f px"] = "Die nächsten zwei Pins: %s , %.1f px voneinander entfernt",
   ["最近的兩個標點：地圖沒開，量不到"] = "Die nächsten zwei Pins: Karte geschlossen",
+  ["介面語言"] = "Sprache der Oberfläche",
+  ["跟隨客戶端"] = "Wie Spielclient",
 }

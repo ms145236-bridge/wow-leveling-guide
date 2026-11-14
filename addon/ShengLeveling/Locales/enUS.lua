@@ -392,4 +392,6 @@ MG.Locales.enUS = {
   [" 和 "] = " and ",
   ["最近的兩個標點：%s，相距 %.1f px"] = "closest two pins: %s, %.1f px apart",
   ["最近的兩個標點：地圖沒開，量不到"] = "closest two pins: map closed",
+  ["介面語言"] = "Interface language",
+  ["跟隨客戶端"] = "Follow client",
 }
