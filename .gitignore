@@ -8,3 +8,6 @@ tools/rec-report.md
 tools/rec-*.txt
 *.rec.txt
 rec-export*.txt
+
+# 翻譯草稿（不進 repo）
+addon/*/Locales/_draft/
