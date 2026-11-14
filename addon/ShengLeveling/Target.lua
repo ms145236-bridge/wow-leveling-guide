@@ -1,5 +1,5 @@
 -- 選取任務目標：步驟列的準星按鈕（可綁快捷鍵）和動作條巨集「任務目標」用同一段巨集文字：
---   /cleartarget、每個名字 /targetexact [noexists]、再 /target [noexists] 當備援、/tm 標記選到的那隻、/run MGTP()（記錄按下）
+--   /cleartarget、每個名字 /targetexact [noexists]（塞不下時同開頭的一群改成 /tar [noexists] 共同開頭）、/tm 標記選到的那隻、/run MGTP()（記錄按下）
 -- 這個客戶端的限制：SetRaidTarget 是受保護函式；目標相關 API（GetRaidTargetIndex 等）回傳「秘密值」，插件不能比較。
 -- 所以插件只寫巨集文字，不讀目標狀態：標記、選取都由遊戲執行巨集完成。
 -- 巨集文字只能在戰鬥外更新（按鈕屬性與 EditMacro 都是），戰鬥中有變動就等脫離戰鬥。
@@ -100,11 +100,10 @@ local function macro()
     size = size + 1 + #line
     return true
   end
-  -- 選到屍體就清掉再選：/targetexact 挑最近的同名怪，可能是屍體；清掉後用部分比對再試一次，最後還是屍體就不留目標
+  -- 選到屍體就清掉：/targetexact 挑最近的同名怪，可能是剛打死的屍體
   local DEAD = "/cleartarget [dead]"
   size = size + 1 + #DEAD
-  -- 部分比對的備援：同開頭的一群怪（黑鰭魚人、黑鰭戰士…）用共同開頭一行涵蓋，完整名稱塞不下的那幾種也選得到
-  local partial = false
+  -- 同開頭的一群怪（黑鰭魚人、黑鰭戰士…）：完整名稱塞不下時用共同開頭一行涵蓋
   local fallbacks, groupOf = {}, {}
   local function chars(str) local t = {}; for ch in str:gmatch("[%z\1-\127\194-\244][\128-\191]*") do t[#t + 1] = ch end; return t end
   for _, name in ipairs(order) do
@@ -160,17 +159,6 @@ local function macro()
     if full then break end
   end
   lines[#lines + 1] = DEAD
-  -- 完整名稱選到屍體時，再用部分比對試一次
-  for _, g in ipairs(fallbacks) do
-    if not g.grouped then
-      for _, nm in ipairs(g.names) do
-        local line = "/tar [noexists] " .. nm
-        if size + 1 + #DEAD + 1 + #line > LIMIT then break end
-        add(line); partial = true
-      end
-    end
-  end
-  if partial then add(DEAD) end
   if mark then lines[#lines + 1] = mark end
   lines[#lines + 1] = PRESS_LINE
   return table.concat(lines, "\n")
