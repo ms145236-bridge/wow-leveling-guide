@@ -474,6 +474,7 @@ local function stepDone(step, map, x, y)
   elseif t == "hearth" then
     local b = C.Bind()
     return b ~= nil and s.bind ~= nil and (b == s.bind or b:find(s.bind, 1, true) ~= nil)
+  elseif t == "fp" then return s.node ~= nil and MG.db.fpNodes ~= nil and MG.db.fpNodes[s.node] == true -- 飛行地圖上已經有這個鳥點
   elseif t == "goto" or (t == "travel" and s.x) then
     local here = map ~= nil and map == s.map and x ~= nil and s.x ~= nil and math.sqrt((x - s.x) ^ 2 + (y - s.y) ^ 2) <= (s.r or 3)
     if here then MG.db.latch[step.key] = true end

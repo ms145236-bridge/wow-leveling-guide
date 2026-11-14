@@ -336,6 +336,58 @@ local function onEvent(_, event, ...)
     latchCurrent("fp")
     local name = UnitName("npc")
     if name and not (issecretvalue and issecretvalue(name)) then MG.db.fpSeen[name] = true end
+    -- 飛行地圖列出所有開過的鳥點：對到路線的「開鳥點」步驟和飛行管理員，都記成開過。
+    -- 先比位置（路線座標換算到飛行地圖上），再比名稱（步驟有寫鳥點名時）
+    local known = {}
+    local tm = GetTaxiMapID and GetTaxiMapID()
+    if C_TaxiMap and C_TaxiMap.GetAllTaxiNodes and tm then
+      for _, nd in ipairs(C_TaxiMap.GetAllTaxiNodes(tm) or {}) do
+        local p = nd.position
+        if nd.state ~= 2 and type(nd.name) == "string" and not (issecretvalue and issecretvalue(nd.name)) then known[#known + 1] = { name = nd.name, x = p and p.x, y = p and p.y } end
+      end
+    elseif NumTaxiNodes then
+      for i = 1, NumTaxiNodes() do
+        local kind = TaxiNodeGetType(i)
+        local px, py = TaxiNodePosition(i)
+        if kind == "CURRENT" or kind == "REACHABLE" then known[#known + 1] = { name = TaxiNodeName(i) or "", x = px, y = py } end
+      end
+    end
+    local function onTaxiMap(m, px, py)
+      if not (tm and C_Map and C_Map.GetWorldPosFromMapPos and C_Map.GetMapPosFromWorldPos and CreateVector2D) then return end
+      local ok, cont, wp = pcall(C_Map.GetWorldPosFromMapPos, m, CreateVector2D(px / 100, py / 100))
+      if not (ok and wp) then return end
+      local ok2, _, p = pcall(C_Map.GetMapPosFromWorldPos, cont, wp, tm)
+      if ok2 and p then return p.x, p.y end
+    end
+    local function isKnown(m, px, py, node)
+      local tx, ty = onTaxiMap(m, px, py)
+      for _, k in ipairs(known) do
+        if tx and k.x and (k.x - tx) ^ 2 + (k.y - ty) ^ 2 <= 0.0002 then return true end
+        if node and k.name:find(node, 1, true) then return true end
+      end
+      return false
+    end
+    if #known > 0 then
+      MG.db.fpNodes = MG.db.fpNodes or {}
+      for _, st in ipairs(E.stations) do
+        for _, step in ipairs(st.list) do
+          local s = step.s
+          if s.t == "fp" and s.x and not MG.db.latch[step.key] and isKnown(s.map, s.x, s.y, s.node) then
+            MG.db.latch[step.key] = true
+            if s.node then MG.db.fpNodes[s.node] = true end
+            for _, st2 in ipairs(E.stations) do -- 這個鳥點旁邊的飛行管理員
+              for _, sp in ipairs(st2.supply or {}) do
+                if sp.k == "飛行管理員" and sp.map == s.map and sp.x and (sp.x - s.x) ^ 2 + (sp.y - s.y) ^ 2 <= 9 then MG.db.fpSeen[sp.npcG or sp.npc] = true end
+              end
+            end
+          end
+        end
+        for _, sp in ipairs(st.supply or {}) do
+          local n = sp.npcG or sp.npc
+          if sp.k == "飛行管理員" and n and sp.x and not MG.db.fpSeen[n] and isKnown(sp.map, sp.x, sp.y) then MG.db.fpSeen[n] = true end
+        end
+      end
+    end
     -- 名字可能和路線寫的不同（譯名、稱號）：人旁邊的飛行管理員也一律記成開過
     local map, x, y = C.Position()
     if map and x then
