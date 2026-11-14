@@ -428,12 +428,10 @@ function E.Detour(state)
     end
   end
   -- 出本才交的副本任務（不在主線）：做完了、人走到交的人附近也提示；回傳那一步本身
-  local here = {}
-  for _, step in ipairs(state.steps) do if step.s.q then here[step.s.q] = true end end
   for _, dg in ipairs(E.dungeons) do
     for _, step in ipairs(dg.list) do
       local s, q = step.s, step.s.q
-      if s.ph == "post" and s.t == "turnin" and q and not here[q] and C.IsOnQuest(q) and ready(q) and now - (detourNo[step.key] or -999) >= 120 then
+      if s.ph == "post" and s.t == "turnin" and q and C.IsOnQuest(q) and ready(q) and now - (detourNo[step.key] or -999) >= 120 then
         local d = dist(s)
         -- 不在主線上，不比目前步驟近不近：人在附近就提示（交的人常就在下一步旁邊）
         if d and d <= lim and (not bd or d < bd) then best, bd = step, d end
