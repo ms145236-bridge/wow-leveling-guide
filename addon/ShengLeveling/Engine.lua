@@ -1255,6 +1255,8 @@ function E.DungeonTargets(d)
       end
     end
   end
+  -- 後面已經沒有要帶進本的任務（例如剃刀高地門口的邪惡之地）：自己列一行
+  for _, step in ipairs(pending) do targets[#targets + 1] = { q = step.s.q, step = step, chain = {} } end
   return targets
 end
 
