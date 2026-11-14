@@ -3421,6 +3421,10 @@
 03-30到45級.md:661｜標籤｜有前置｜Has prerequisite
 03-30到45級.md:662｜標籤｜可跳過｜Optional
 03-30到45級.md:663｜標籤｜掉率 50%｜Drop rate: 50%
+03-30到45級.md:663｜步驟說明｜洞外山坡和洞裡的枯鬚狗頭人都會掉，掉率低、會逃跑，約要殺 30 隻；冰霜法師打很痛。最後幾隻在洞底打，集滿直接交。｜Drywhisker kobolds on the hillside and in the cave both drop them. Low drop rate and they flee, so expect about 30 kills; the frost mages hit hard. Kill the last few at the back of the cave and turn in right away.
+03-30到45級.md:663｜步驟說明｜上山小路藏在落錘鎮東邊 80, 40 附近的大石頭和樹後面，往東再轉北，洞口在 82.3, 36.7。｜The hill path is hidden behind a big rock and tree near 80, 40, east of Hammerfall. Go east, then north; the cave entrance is at 82.3, 36.7.
+03-30到45級.md:663｜標籤｜需遊戲實測｜Needs in-game check
+03-30到45級.md:664｜步驟說明｜進洞走左邊的路，繞到最裡面的平台，粉紅色水晶就是交件點。｜Take the left tunnel and follow it around to the ledge at the back; the pink crystal is the turn-in.
 03-30到45級.md:666｜標籤｜有前置｜Has prerequisite
 03-30到45級.md:666｜標籤｜掉率 33%｜Drop rate: 33%
 03-30到45級.md:667｜標籤｜有前置｜Has prerequisite
