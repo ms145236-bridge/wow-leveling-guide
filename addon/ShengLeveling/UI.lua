@@ -1840,14 +1840,14 @@ function UI.CreateOptions()
       options.widgets[#options.widgets + 1] = { refresh = function() btn.label:SetText(startLabel()) end }
       lines[#lines + 1] = { kind = "button", label = label("起點", sp.hint), ctrl = btn, want = sw, dy = 2 }
     elseif sp.lang then
-      -- 選了就重新載入介面（語言在載入時決定）
+      -- 語言在載入時決定：選好後要 /reload（插件不能自己重新載入，會被遊戲擋下）
       local opts = langOpts()
       local lw2 = 160
       for _, o in ipairs(opts) do lw2 = math.max(lw2, textWidth(o.name, 13) + 20) end
       local btn = goldButton(content, "", lw2)
       btn:SetScript("OnClick", function(self)
         local es = {}
-        for _, o in ipairs(langOpts()) do es[#es + 1] = { o.name, function() if not o.on then MetroGuideDB.lang = o.code; ReloadUI() end end, o.on } end
+        for _, o in ipairs(langOpts()) do es[#es + 1] = { o.name, function() if not o.on then MetroGuideDB.lang = o.code; MG.msg(L["介面語言設為 %s，/reload 後生效"]:format(o.name)); UI.RefreshOptions() end end, o.on } end
         showMenu(self, es, true)
       end)
       options.widgets[#options.widgets + 1] = { refresh = function()
@@ -2255,7 +2255,9 @@ function UI.Render(S)
       local ext = type(vi) == "table" and vi -- 出本交的副本任務：不在本站，「去」設臨時航點
       local vs = ext and vi.s or state.steps[vi].s
       H[#H + 1] = { tag = L["順路"], color = GOLD, text = (vs.t ~= "do" and vs.npc and not vs.npcObj and not vs.npc:find("物品", 1, true)) and (E.Verb(vs) .. " " .. vs.npc) or E.VerbTitle(vs),
-        actLabel = L["去"], act = ext and function() goTo(vs, MG.Clean(vs.npc or E.Title(vs)), function() return not C.IsOnQuest(vs.q) end) end or pin(vi),
+        actLabel = L["去"], act = ext and function() -- 交任務的人通常就在附近：航點留到任務交掉（或按返回），不因為走到了就收
+          UI.SetOverride({ map = vs.map, x = vs.x, y = vs.y, name = MG.Clean(vs.npc or E.Title(vs)), keep = true, done = function() return not C.IsOnQuest(vs.q) end })
+        end or pin(vi),
         close = function() E.DetourNo(ext and vi.key or state.steps[vi].key) end }
     end
     if fp then
