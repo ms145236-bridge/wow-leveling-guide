@@ -549,6 +549,16 @@ function E.Locate(st)
           if done[j] then done[i] = true; passed[i] = true; break end
         end
       end
+      -- 沒座標的交通：人已經走到下一個有座標的步驟附近就算到了（記住，走開也不退回）
+      if not done[i] and later and not step.s.x and map and x then
+        for j = i + 1, n do
+          local sj = steps[j].s
+          if sj.x then
+            if sj.map == map and math.sqrt((sj.x - x) ^ 2 + (sj.y - y) ^ 2) <= 3 then done[i] = true; db.latch[step.key] = true end
+            break
+          end
+        end
+      end
       if not later then
         tails[i] = true
         tail = tail or step.s.text
