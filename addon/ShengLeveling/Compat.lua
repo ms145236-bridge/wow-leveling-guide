@@ -13,6 +13,28 @@ MG.Locales = MG.Locales or {}
 MG.gameLoc = GetLocale and GetLocale() or "enUS"
 MG.gameZh = MG.gameLoc == "zhTW" -- 客戶端就是底稿語言：遊戲裡的名字直接用 Route.lua 的
 MG.gameCJK = CJK[MG.gameLoc] or false -- 客戶端字型有中文字
+
+-- 巨集只留一個：另一種語言或舊名的同功能巨集，沒有現名的就改名沿用（保留快捷列位置）；兩個都在就刪掉沒放在快捷列上的那個
+function MG.MergeMacro(cur, alts, icon, body)
+  if not GetMacroIndexByName or InCombatLockdown() then return end
+  local function onBar(index)
+    if not GetActionInfo then return false end
+    for slot = 1, 180 do
+      local t, id = GetActionInfo(slot)
+      if t == "macro" and id == index then return true end
+    end
+    return false
+  end
+  for _, name in ipairs(alts) do
+    local o = GetMacroIndexByName(name) or 0
+    if o > 0 then
+      local c = GetMacroIndexByName(cur) or 0
+      if c == 0 then EditMacro(o, cur, icon, body)
+      elseif onBar(o) and not onBar(c) then DeleteMacro(c); EditMacro(GetMacroIndexByName(name), cur, icon, body)
+      else DeleteMacro(o) end
+    end
+  end
+end
 local strings
 MG.missingL = {} -- 非中文介面卻查不到翻譯的鍵（/slv probe 會列出）
 MG.L = setmetatable({}, { __index = function(_, k)

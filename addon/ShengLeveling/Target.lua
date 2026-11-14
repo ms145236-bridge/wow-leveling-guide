@@ -177,12 +177,9 @@ local function macroBody()
   local text = macro()
   return text ~= "" and text or emptyText()
 end
--- 舊名「地鐵目標」的巨集原地改名（保留它在快捷列上的位置），不另建第二個
+-- 舊名「地鐵目標」和另一種語言的同一個巨集併成一個（見 MG.MergeMacro）
 local function renameOld()
-  local old = GetMacroIndexByName(OLD_MACRO)
-  if old and old > 0 and (GetMacroIndexByName(MACRO) or 0) == 0 then
-    EditMacro(old, MACRO, ICON, macroBody())
-  end
+  MG.MergeMacro(MACRO, { MG.gameCJK and "Quest Target" or "任務目標", OLD_MACRO }, ICON, macroBody())
 end
 local lastBody
 function T.SyncMacro()

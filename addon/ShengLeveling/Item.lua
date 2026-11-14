@@ -79,8 +79,9 @@ local function macroBody()
 end
 function I.SyncMacro()
   if not GetMacroIndexByName or InCombatLockdown() or not MG.UI.Get("itemMacro") then return end
-  local index = GetMacroIndexByName(MACRO)
   local body = macroBody()
+  MG.MergeMacro(MACRO, { MG.gameCJK and "Quest Item" or "任務物品" }, ICON, body)
+  local index = GetMacroIndexByName(MACRO)
   if index and index > 0 then
     if body ~= lastBody then EditMacro(index, MACRO, ICON, body); lastBody = body end
   elseif not triedCreate and GetNumMacros() < (MAX_ACCOUNT_MACROS or 36) then
