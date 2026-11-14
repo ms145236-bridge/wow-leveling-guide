@@ -17,13 +17,18 @@ for (const line of readFileSync(join(ROOT, "tools", "objective-coords.md"), "utf
   const pts = f[4].split(";").map((p) => p.split(",").map(Number)).filter((p) => p.length === 2 && p.every(Number.isFinite)).map(([x, y]) => ({ map: +f[3], x, y }));
   OBJ.set(+f[0], [...(OBJ.get(+f[0]) || []), ...pts]);
 }
-const ROUTE = process.env.ROUTE_DIR || join(ROOT, "route"); // 測試時可指到別的資料夾
-const OUT = process.env.OUT_LUA || join(ROOT, "addon", "ShengLeveling", "Data", "Route.lua");
-const REPORT = process.env.OUT_REPORT || join(ROOT, "tools", "unresolved.md");
+// 陣營：FACTION=A 建聯盟（route-alliance → Data/RouteA*.lua），預設部落
+const ALLY = process.env.FACTION === "A";
+const ROUTE = process.env.ROUTE_DIR || join(ROOT, ALLY ? "route-alliance" : "route"); // 測試時可指到別的資料夾
+const OUT = process.env.OUT_LUA || join(ROOT, "addon", "ShengLeveling", "Data", ALLY ? "RouteA.lua" : "Route.lua");
+const REPORT = process.env.OUT_REPORT || join(ROOT, "tools", ALLY ? "unresolved-alliance.md" : "unresolved.md");
+const LUA_PREFIX = ALLY ? "RouteA" : "Route"; // 語系檔：Route_<loc>.lua／RouteA_<loc>.lua
+// 只載入自己陣營的路線（中立的天裔精靈出生時算部落；選好陣營後 /reload）
+const GUARD = ALLY ? 'if UnitFactionGroup("player") ~= "Alliance" then return end\n' : 'if UnitFactionGroup("player") == "Alliance" then return end\n';
 
-const HORDE = 8589934770n; // QuestieDB 的部落種族遮罩（含永恆新種族位元）
+const HORDE = ALLY ? 4294967373n : 8589934770n; // QuestieDB 的本陣營種族遮罩（含永恆新種族位元；聯盟 0x10000004d、部落 0x2000000b2）
 const CLASS = { 戰士: "WARRIOR", 獵人: "HUNTER", 薩滿: "SHAMAN", 薩滿祭司: "SHAMAN", 法師: "MAGE", 術士: "WARLOCK", 盜賊: "ROGUE", 德魯伊: "DRUID", 牧師: "PRIEST", 聖騎士: "PALADIN" };
-const RACE = { 獸人: "Orc", 食人妖: "Troll", 牛頭人: "Tauren", 不死族: "Scourge", 亡靈: "Scourge", 被遺忘者: "Scourge", 血精靈: "BloodElf" };
+const RACE = { 獸人: "Orc", 食人妖: "Troll", 牛頭人: "Tauren", 不死族: "Scourge", 亡靈: "Scourge", 被遺忘者: "Scourge", 血精靈: "BloodElf", 人類: "Human", 矮人: "Dwarf", 夜精靈: "NightElf", 地精: "Gnome", 德萊尼: "Draenei" };
 const ZONE_MAP = { 杜洛塔: 1411, 莫高雷: 1412, 貧瘠之地: 1413, 提里斯法林地: 1420, 銀松森林: 1421, 石爪山脈: 1442, 梣谷: 1440, 灰谷: 1440, 千針石林: 1441, 希爾斯布萊德丘陵: 1424, 奧特蘭克山脈: 1416, 阿拉希高地: 1417, 塵泥沼澤: 1445, 荊棘谷: 1434, 淒涼之地: 1443, 菲拉斯: 1444, 塔納利斯: 1446, 辛特蘭: 1425, 悲傷沼澤: 1435, 荒蕪之地: 1418, 灼熱峽谷: 1427, 艾薩拉: 1447, 奧格瑪: 1454, 幽暗城: 1458, 雷霆崖: 1456 };
 // ── 英文介面（Data/Route_enUS.lua）用的對照：站名、鳥點、步驟標籤。沒有對照的站名在遊戲裡用地圖名 ──
 const STATION_EN = {
@@ -194,7 +199,7 @@ const parseWhen = (tags) => {
     if (lv) when.lvMin = +lv[1];
     if (!m) continue;
     for (const raw of m[2].split(/[／\/、,，]/).map((s) => s.trim()).filter(Boolean)) {
-      if (raw === "部落") continue;
+      if (raw === "部落" || raw === "聯盟") continue;
       const neg = m[1] === "非";
       if (CLASS[raw]) put(neg ? "notClass" : "class", CLASS[raw]);
       else put(neg ? "notRace" : "race", RACE[raw] || raw);
@@ -734,7 +739,7 @@ const stepOut = (s, st) => ({
   star: s.star, t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt, desc: s.desc, spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
   map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, when: stepWhen(s.when, st.when), video: s.video,
 });
-let out = `-- 由 tools/build.mjs 產生，勿手改。來源：route/*.md\nlocal _, MG = ...\nMG.Route = {\n  built = "@@BUILT@@",\n  stations = {\n`;
+let out = GUARD + `-- 由 tools/build.mjs 產生，勿手改。來源：${ALLY ? "route-alliance" : "route"}/*.md\nlocal _, MG = ...\nMG.Route = {\n  built = "@@BUILT@@",\n  stations = {\n`;
 for (const s of stations) {
   idFile = s.file;
   refPrefix = s.dungeon ? s.after.split("-")[0] : s.id.split("-")[0];
@@ -923,7 +928,7 @@ const newCov = () => JSON.parse(JSON.stringify(cov));
 // T 說明文字、N 名稱（選取目標要和遊戲內一字不差）、F 固定字、station 站名、node 鳥點、qn 任務名、qd 任務目標文字、item 物品名
 const emitRoute = (X) => {
   const { loc, T, N, F, cov, left, leftAt, missNpc } = X;
-  let en = `-- 由 tools/build.mjs 產生，勿手改。Route.lua 的${X.title}名稱與說明（站 ID→步驟序號、任務 ID）\n-- 包成函式：只有介面、客戶端用到的語系才建表（Engine.lua E.Localize），其餘載入後就丟掉\nlocal _, MG = ...\nMG.RouteL = MG.RouteL or {}\nMG.RouteL.${loc} = function() return {\n  stations = {\n`;
+  let en = GUARD + `-- 由 tools/build.mjs 產生，勿手改。${LUA_PREFIX}.lua 的${X.title}名稱與說明（站 ID→步驟序號、任務 ID）\n-- 包成函式：只有介面、客戶端用到的語系才建表（Engine.lua E.Localize），其餘載入後就丟掉\nlocal _, MG = ...\nMG.RouteL = MG.RouteL or {}\nMG.RouteL.${loc} = function() return {\n  stations = {\n`;
   for (const s of stations) {
     cov.stations++;
     const nm = X.station(s);
@@ -1062,7 +1067,7 @@ const routeEn = emitRoute({
 });
 cov.zhOnly.offrouteWhy = [...offroute.values()].filter((o) => o.why).length;
 cov.zhOnly.keepUse = [...keep.values()].filter((k) => !k.q).length;
-writeFileSync(join(dirname(OUT), "Route_enUS.lua"), routeEn);
+writeFileSync(join(dirname(OUT), `${LUA_PREFIX}_enUS.lua`), routeEn);
 const pct = (a, b) => (b ? Math.round((a / b) * 1000) / 10 : 100) + "%";
 console.log(`英文：站名 ${cov.stName}/${cov.stations}（${pct(cov.stName, cov.stations)}）、接交 NPC ${cov.npc}/${cov.npcNeed}（${pct(cov.npc, cov.npcNeed)}）、選取目標 tgt ${cov.tgt}/${cov.tgtNeed}（${pct(cov.tgt, cov.tgtNeed)}）、做步驟提示 ${cov.hint}（其中湊句 ${cov.hintGen}）、任務名 ${cov.qName}/${cov.quests}、任務目標文字 ${cov.qObj}/${cov.quests}`);
 console.log("說明文字英文（route-text-enUS.md，翻到／原本只有中文）：" + Object.entries(cov.zhOnly).map(([k, v]) => `${k} ${v - left[k]}/${v}`).join("、") + `；條件對不上改為不帶條件 ${cov.whenLost}`);
@@ -1273,7 +1278,7 @@ for (const loc of Object.keys(NAME_LOC)) {
       : (t) => t.split(/(?<=[.;!?])\s+(?=[\p{Lu}\p{Lo}\d"'(«„¿¡])/u).map((x) => x.replace(/[.;]$/, "").trim()).filter(Boolean),
     route: (text) => text.replace(/\s*[(（][^\d()（）]{0,14}\d+(?:\s*[–\-~～]\s*\d+)?\s*[)）]/g, ""),
   });
-  writeFileSync(join(dirname(OUT), `Route_${loc}.lua`), routeL);
+  writeFileSync(join(dirname(OUT), `${LUA_PREFIX}_${loc}.lua`), routeL);
   locCov.push([loc, c]);
 }
 for (const [loc, c] of locCov) {

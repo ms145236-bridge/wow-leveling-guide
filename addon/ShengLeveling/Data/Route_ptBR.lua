@@ -1,3 +1,4 @@
+if UnitFactionGroup("player") == "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。Route.lua 的 ptBR 名稱與說明（站 ID→步驟序號、任務 ID）
 -- 包成函式：只有介面、客戶端用到的語系才建表（Engine.lua E.Localize），其餘載入後就丟掉
 local _, MG = ...

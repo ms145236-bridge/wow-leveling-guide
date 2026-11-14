@@ -1,11 +1,11 @@
 ## Interface: 16001
 ## Title: |cff4fc3f7Sheng|r|cffd9b25fLeveling|r
 ## Title-zhTW: |cff4fc3f7阿聖|r練等幫手
-## Notes: Horde 1-60 leveling route: one step at a time, synced with your quest log. /slv to toggle, /slv probe for diagnostics
-## Notes-zhTW: 部落 1–60 練等路線：一次只顯示一步，任務狀態一變就自動對齊。/lv 開關、/lv probe 檢查報告
+## Notes: Horde & Alliance 1-60 leveling route: one step at a time, synced with your quest log. /slv to toggle, /slv probe for diagnostics
+## Notes-zhTW: 部落與聯盟 1–60 練等路線：一次只顯示一步，任務狀態一變就自動對齊。/lv 開關、/lv probe 檢查報告
 ## Author: ms145236-bridge
 ## IconTexture: Interface\AddOns\ShengLeveling\Media\Logo
-## Version: 1.7.11
+## Version: 1.8.0-beta1
 ## X-Series: Sheng
 ## OptionalDeps: WaypointUI
 ## SavedVariables: MetroGuideDB, MetroGuideRecDB
@@ -31,6 +31,16 @@ Data\Route_esMX.lua
 Data\Route_ruRU.lua
 Data\Route_koKR.lua
 Data\Route_ptBR.lua
+Data\RouteA.lua
+Data\RouteA_enUS.lua
+Data\RouteA_zhCN.lua
+Data\RouteA_deDE.lua
+Data\RouteA_frFR.lua
+Data\RouteA_esES.lua
+Data\RouteA_esMX.lua
+Data\RouteA_ruRU.lua
+Data\RouteA_koKR.lua
+Data\RouteA_ptBR.lua
 Data\Wings.lua
 Engine.lua
 Nav.lua
