@@ -394,4 +394,7 @@ MG.Locales.deDE = {
   ["最近的兩個標點：地圖沒開，量不到"] = "Die nächsten zwei Pins: Karte geschlossen",
   ["介面語言"] = "Sprache der Oberfläche",
   ["跟隨客戶端"] = "Wie Spielclient",
+  ["重新載入"] = "Neu laden",
+  ["稍後"] = "Später",
+  ["介面語言改成 %s，重新載入介面後生效。"] = "Sprache auf %s gestellt. Oberfläche neu laden, um sie zu übernehmen.",
 }

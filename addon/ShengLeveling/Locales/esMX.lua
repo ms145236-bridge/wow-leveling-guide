@@ -394,4 +394,7 @@ MG.Locales.esMX = {
   ["最近的兩個標點：地圖沒開，量不到"] = "dos pines más cercanos: mapa cerrado",
   ["介面語言"] = "Idioma de la interfaz",
   ["跟隨客戶端"] = "Igual que el cliente",
+  ["重新載入"] = "Recargar",
+  ["稍後"] = "Más tarde",
+  ["介面語言改成 %s，重新載入介面後生效。"] = "Idioma cambiado a %s. Recarga la interfaz para aplicarlo.",
 }

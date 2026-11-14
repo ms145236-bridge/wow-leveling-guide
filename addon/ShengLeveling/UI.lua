@@ -329,6 +329,33 @@ end
 -- ── 設定（右鍵選單、設定頁共用） ─────────────────────────────────────────
 local function toggleSetting(sp) UI.Set(sp.key, not UI.Get(sp.key)) end
 
+-- 改了要重新載入才生效：跳出確認框。「重新載入」是安全按鈕，執行 /reload（插件直接呼叫重新載入會被遊戲擋下）；戰鬥中只在聊天框提示
+local reloadPop
+local function reloadPrompt(msgText)
+  if InCombatLockdown() then MG.msg(msgText); return end
+  if not reloadPop then
+    local p = CreateFrame("Frame", "MetroGuideReloadPopup", UIParent)
+    p:SetFrameStrata("FULLSCREEN_DIALOG"); p:EnableMouse(true); p:SetPoint("CENTER", 0, 120)
+    box(p, EDGE2)
+    p.text = text(p, 13, TEXT, "CENTER"); p.text:SetWordWrap(true); p.text:SetWidth(280); p.text:SetPoint("TOP", 0, -16)
+    local bw = math.max(textWidth(L["重新載入"], 13), textWidth(L["稍後"], 13)) + 28
+    local ok = CreateFrame("Button", nil, p, "SecureActionButtonTemplate")
+    ok:SetAttribute("type", "macro"); ok:SetAttribute("macrotext", "/reload"); ok:RegisterForClicks("AnyUp", "AnyDown")
+    ok:SetSize(bw, 22); box(ok, BRONZE)
+    ok.label = text(ok, 13, GOLD, "CENTER"); ok.label:SetPoint("CENTER", 0, 0); ok.label:SetText(L["重新載入"])
+    local hl = ok:CreateTexture(nil, "HIGHLIGHT")
+    hl:SetPoint("TOPLEFT", 1, -1); hl:SetPoint("BOTTOMRIGHT", -1, 1); hl:SetColorTexture(GOLD[1], GOLD[2], GOLD[3], 0.12)
+    ok:SetPoint("BOTTOMRIGHT", p, "BOTTOM", -4, 14)
+    local later = goldButton(p, L["稍後"], bw)
+    later:SetScript("OnClick", function() p:Hide() end)
+    later:SetPoint("BOTTOMLEFT", p, "BOTTOM", 4, 14)
+    table.insert(UISpecialFrames, "MetroGuideReloadPopup")
+    reloadPop = p
+  end
+  reloadPop.text:SetText(msgText)
+  reloadPop:SetSize(312, math.ceil(reloadPop.text:GetStringHeight()) + 16 + 16 + 22 + 14)
+  reloadPop:Show()
+end
 local showMenu
 -- 介面語言：跟隨客戶端，或客戶端字型顯示得出來的語言（中文、韓文、俄文字型以外都是拉丁字母；英文到處都能顯示）
 local SCRIPT = { zhTW = "zh", zhCN = "zh", koKR = "ko", ruRU = "ru" }
@@ -1840,14 +1867,14 @@ function UI.CreateOptions()
       options.widgets[#options.widgets + 1] = { refresh = function() btn.label:SetText(startLabel()) end }
       lines[#lines + 1] = { kind = "button", label = label("起點", sp.hint), ctrl = btn, want = sw, dy = 2 }
     elseif sp.lang then
-      -- 語言在載入時決定：選好後要 /reload（插件不能自己重新載入，會被遊戲擋下）
+      -- 語言在載入時決定：選好後跳出確認框重新載入
       local opts = langOpts()
       local lw2 = 160
       for _, o in ipairs(opts) do lw2 = math.max(lw2, textWidth(o.name, 13) + 20) end
       local btn = goldButton(content, "", lw2)
       btn:SetScript("OnClick", function(self)
         local es = {}
-        for _, o in ipairs(langOpts()) do es[#es + 1] = { o.name, function() if not o.on then MetroGuideDB.lang = o.code; MG.msg(L["介面語言設為 %s，/reload 後生效"]:format(o.name)); UI.RefreshOptions() end end, o.on } end
+        for _, o in ipairs(langOpts()) do es[#es + 1] = { o.name, function() if not o.on then MetroGuideDB.lang = o.code; UI.RefreshOptions(); reloadPrompt(L["介面語言改成 %s，重新載入介面後生效。"]:format(o.name)) end end, o.on } end
         showMenu(self, es, true)
       end)
       options.widgets[#options.widgets + 1] = { refresh = function()
@@ -2254,7 +2281,10 @@ function UI.Render(S)
     if vi then
       local ext = type(vi) == "table" and vi -- 出本交的副本任務：不在本站，「去」設臨時航點
       local vs = ext and vi.s or state.steps[vi].s
-      H[#H + 1] = { tag = L["順路"], color = GOLD, text = (vs.t ~= "do" and vs.npc and not vs.npcObj and not vs.npc:find("物品", 1, true)) and (E.Verb(vs) .. " " .. vs.npc) or E.VerbTitle(vs),
+      -- 交：寫任務名，交給誰放小字；接：寫找誰接
+      local byNpc = vs.npc and not vs.npcObj and not vs.npc:find("物品", 1, true)
+      H[#H + 1] = { tag = L["順路"], color = GOLD, text = (vs.t == "accept" and byNpc) and (E.Verb(vs) .. " " .. vs.npc) or E.VerbTitle(vs),
+        sub = vs.t == "turnin" and byNpc and vs.npc or nil,
         actLabel = L["去"], act = ext and function() -- 交任務的人通常就在附近：航點留到任務交掉（或按返回），不因為走到了就收
           UI.SetOverride({ map = vs.map, x = vs.x, y = vs.y, name = MG.Clean(vs.npc or E.Title(vs)), keep = true, done = function() return not C.IsOnQuest(vs.q) end })
         end or pin(vi),
