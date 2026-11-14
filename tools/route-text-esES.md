@@ -13274,3 +13274,5 @@
 - 08-保留物品.md:231 保留物品用途｜厄運之槌北區及西區，開門
 - 08-保留物品.md:245 保留物品用途｜晉升印章（4743），黑石塔下層維埃蘭
 - 08-保留物品.md:259 保留物品用途｜熔火之心的傳送門（7848），黑石山洛索斯
+01-第一段-1到12級.md:1205｜步驟說明｜目標巡邏，先沿路查看；找到後先跟他對話選激怒，他才會開打。｜Patrulla: revisa el camino. Al encontrarlo, háblale y elige provocarlo o no luchará.
+06-路線外任務.md:120｜路線外理由｜已打算學對應專業或紮營時順手做；11/10 起改在申德村交。｜Hazla de paso si vas a aprender la profesión o acampar; desde el 11/10 se entrega en Shen'dar.

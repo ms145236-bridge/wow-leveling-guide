@@ -12727,3 +12727,5 @@
 - 祝福珠串 / Blessed Prayer Beads（19990）。[Wowhead Forever](https://nether.wowhead.com/forever/tooltip/item/19990?locale=0)
 
 原文把「充能烈焰圖騰」標為獎勵，英文照該物品的官方名 Totem of Charged Flames。任務 1527、97257 的獎勵資料則指向 Fire Totem。 [Fire Totem](https://www.wowhead.com/forever/item=5176)
+01-第一段-1到12級.md:1205｜步驟說明｜目標巡邏，先沿路查看；找到後先跟他對話選激怒，他才會開打。｜He patrols, so check the road. When you find him, talk to him and pick the option that provokes him, or he won't fight.
+06-路線外任務.md:120｜路線外理由｜已打算學對應專業或紮營時順手做；11/10 起改在申德村交。｜Do it on the way if you plan to learn the profession or camp; since 11/10 it is turned in at Shen'dar Village.

@@ -13109,3 +13109,5 @@
 - 08-保留物品.md:65 保留物品用途｜水之召喚（1534），梣谷星塵廢墟取水
 - 08-保留物品.md:100 保留物品用途｜木棒諾博魯（1392），悲傷沼澤避難營地
 - 08-保留物品.md:212 保留物品用途｜奧達曼的能量源（1956），塵泥沼澤塔貝薩的小屋
+01-第一段-1到12級.md:1205｜步驟說明｜目標巡邏，先沿路查看；找到後先跟他對話選激怒，他才會開打。｜Ele patrulha: verifique a estrada. Ao encontrá-lo, fale e escolha provocá-lo, senão ele não luta.
+06-路線外任務.md:120｜路線外理由｜已打算學對應專業或紮營時順手做；11/10 起改在申德村交。｜Faça de passagem se for aprender a profissão ou acampar; desde 11/10 é entregue em Shen'dar.

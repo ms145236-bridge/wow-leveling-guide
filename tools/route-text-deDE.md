@@ -12886,3 +12886,5 @@
 - 07-訓練師.md:310 訓練時機｜布瑞爾離站、銀松森林、塔倫米爾或辛特蘭出入東部王國時。
 - 07-訓練師.md:311 訓練時機｜布瑞爾離站、銀松森林、塔倫米爾或辛特蘭出入東部王國時。
 - 07-訓練師.md:344 訓練時機｜布瑞爾離站、銀松森林、塔倫米爾或辛特蘭出入東部王國時。分別學該主城的傳送與傳送門。
+01-第一段-1到12級.md:1205｜步驟說明｜目標巡邏，先沿路查看；找到後先跟他對話選激怒，他才會開打。｜Er patrouilliert, also die Straße absuchen. Sprich ihn an und provoziere ihn, sonst kämpft er nicht.
+06-路線外任務.md:120｜路線外理由｜已打算學對應專業或紮營時順手做；11/10 起改在申德村交。｜Nebenbei erledigen, wenn du den Beruf lernen oder campen willst; seit 11/10 wird sie in Shen'dar abgegeben.
