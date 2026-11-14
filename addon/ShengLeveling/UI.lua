@@ -731,7 +731,7 @@ local function fillRow(row, it)
       local parts = {}
       if it.done > 0 then parts[#parts + 1] = L["已完成"] .. " " .. it.done end
       if it.past > 0 then parts[#parts + 1] = L["已過"] .. " " .. it.past end
-      row.name:SetText(table.concat(parts, "・"))
+      row.name:SetText(table.concat(parts, L["、"]))
     else
       row.name:SetText(head[1] .. " " .. (it.n or #state.missed))
     end
