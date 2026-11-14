@@ -1167,11 +1167,11 @@ function E.DungeonByInstance(id)
   return all[1], all
 end
 
--- 副本裡的步驟列：這個副本的任務（路線上的＋QuestieDB 屬於這個副本區域的），只列日誌中的，一次全列
+-- 副本裡的步驟列：這個副本的任務（路線上的＋QuestieDB 屬於這個副本區域的），只列日誌中還沒完成的，一次全列
 function E.InstanceState(d, all)
   local steps, seen = {}, {}
   local function add(q)
-    if q and not seen[q] and C.IsOnQuest(q) then
+    if q and not seen[q] and C.IsOnQuest(q) and not C.IsReady(q) then
       seen[q] = true
       steps[#steps + 1] = { s = { t = "do", q = q }, key = "d:" .. q, st = d }
     end
