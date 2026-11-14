@@ -27,6 +27,7 @@ MG.Locales.deDE = {
   ["練"] = "Schleifen",
   ["行"] = "Geh",
   ["需"] = "Bedarf",
+  ["買"] = "Kaufen",
   ["打"] = "Sieg",
   ["打 "] = "Töte ",
   ["去"] = "Geh",

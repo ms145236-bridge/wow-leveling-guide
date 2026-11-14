@@ -27,6 +27,7 @@ MG.Locales.frFR = {
   ["練"] = "Broyer",
   ["行"] = "Allez",
   ["需"] = "Besoin",
+  ["買"] = "Acheter",
   ["打"] = "Mort",
   ["打 "] = "Tuer ",
   ["去"] = "Allez",

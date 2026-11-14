@@ -1,4 +1,4 @@
-# 建置報告（資料版本 17a09363）
+# 建置報告（資料版本 64fb8c9d）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
 站數：94　任務數：1502
@@ -217,13 +217,13 @@
 
 ## 名稱不一致（44）
 
-- 01-第一段-1到12級.md:1110 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
-- 01-第一段-1到12級.md:1134 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
+- 01-第一段-1到12級.md:1112 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
+- 01-第一段-1到12級.md:1136 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
 - 任務 97257：目標怪 QuestieDB 沒有繁中名（Brazier of Offering）
 - 任務 880：目標怪 QuestieDB 沒有繁中名（綠洲鉗嘴龜、Oasis Snapjaw Hatchling）
 - 任務 1526：目標怪 QuestieDB 沒有繁中名（火之靈體、Manifestation of Flames）
 - 任務 78830：目標怪 QuestieDB 沒有繁中名（Gharrik）
-- 03-30到45級.md:1086 交｜向赫格拉姆報到：路線寫「迅捷的赫格拉姆」，QuestieDB／遊戲名是「赫格拉姆」
+- 03-30到45級.md:1087 交｜向赫格拉姆報到：路線寫「迅捷的赫格拉姆」，QuestieDB／遊戲名是「赫格拉姆」
 - 05-副本.md:1078 交｜：QuestieDB 沒有繁中名（Magister Kirandis），用「Magister Kirandis」
 - 05-副本.md:1042 接｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
 - 05-副本.md:1042 交｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
@@ -256,7 +256,7 @@
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher）
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku）
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro）
-- 04-45到60級.md:1353 接｜奪回希利蘇斯：路線寫「塞納里奧使者黑蹄」，QuestieDB／遊戲名是「塞納里奧使者托爾·黑蹄」
+- 04-45到60級.md:1354 接｜奪回希利蘇斯：路線寫「塞納里奧使者黑蹄」，QuestieDB／遊戲名是「塞納里奧使者托爾·黑蹄」
 - 任務 4289：目標怪 QuestieDB 沒有繁中名（安戈洛猩猩、Un'Goro Gorilla）
 - 任務 97327：目標怪 QuestieDB 沒有繁中名（Blackmaw Berserker、Blackmaw Thrall、Blackmaw Headhunter）
 - 05-副本.md:1770 接｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」

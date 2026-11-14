@@ -27,6 +27,7 @@ MG.Locales.esMX = {
   ["練"] = "moler",
   ["行"] = "ir",
   ["需"] = "Necesidad",
+  ["買"] = "Comprar",
   ["打"] = "Muerte",
   ["打 "] = "matar ",
   ["去"] = "ir",

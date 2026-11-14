@@ -27,6 +27,7 @@ MG.Locales.ptBR = {
   ["練"] = "Moer",
   ["行"] = "Vá",
   ["需"] = "Necessidade",
+  ["買"] = "Comprar",
   ["打"] = "Abate",
   ["打 "] = "Matar ",
   ["去"] = "Vá",

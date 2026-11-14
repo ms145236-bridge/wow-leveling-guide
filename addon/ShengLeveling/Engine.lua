@@ -463,6 +463,11 @@ function E.GrindSuggest(st, fillInfo)
   return best
 end
 
+function E.ItemCount(id)
+  if C_Item and C_Item.GetItemCount then return C_Item.GetItemCount(id) or 0 end
+  return GetItemCount and GetItemCount(id) or 0
+end
+
 local function stepDone(step, map, x, y)
   local s = step.s
   if MG.db.latch[step.key] then return true end
@@ -470,6 +475,7 @@ local function stepDone(step, map, x, y)
   if t == "accept" or t == "need" then return C.IsOnQuest(q) or turned(q)
   elseif t == "do" then return turned(q) or (C.IsOnQuest(q) and ready(q))
   elseif t == "turnin" then return turned(q)
+  elseif t == "buy" then return E.ItemCount(s.item) >= (s.n or 1) or (s.fq ~= nil and (turned(s.fq) or (C.IsOnQuest(s.fq) and ready(s.fq))))
   elseif t == "level" then return (UnitLevel("player") or 0) >= (s.lv or 0)
   elseif t == "hearth" then
     local b = C.Bind()
@@ -529,7 +535,7 @@ function E.Locate(st)
   local done, na, autoDone = {}, {}, {}
   for i, step in ipairs(steps) do
     local s = step.s
-    na[i] = step.defer or (s.q and db.notNow["a:" .. s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or false
+    na[i] = step.defer or (s.q and db.notNow["a:" .. s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or (s.fq and (excluded(s.fq) or not raceOK(s.fq) or turned(s.fq))) or false
     local auto = stepDone(step, map, x, y)
     autoDone[i] = auto
     local mark = db.mark[step.key]
@@ -1297,7 +1303,7 @@ end
 
 -- 步驟的顯示文字
 local VERB = setmetatable({}, { __index = function(_, t)
-  local zh = ({ train = "學", accept = "接", ["do"] = "做", turnin = "交", ["goto"] = "到", fp = "鳥", hearth = "爐", fly = "飛", boat = "船", level = "練", travel = "行", need = "需" })[t]
+  local zh = ({ train = "學", accept = "接", ["do"] = "做", turnin = "交", ["goto"] = "到", fp = "鳥", hearth = "爐", fly = "飛", boat = "船", level = "練", travel = "行", need = "需", buy = "買" })[t]
   return zh and L[zh]
 end })
 E.VERB = VERB
@@ -1342,6 +1348,7 @@ function E.Title(s)
   -- 交通／到達沒有文字：只寫地點（動詞框已經是「去」）
   if s.t == "travel" then return s.text and (E.Clause(s.text)) or (s.map and where(s)) or L["交通"]
   elseif s.t == "goto" then return s.text or (s.map and where(s)) or L["前往"]
+  elseif s.t == "buy" then return (s.text or "") .. ((s.n or 1) > 1 and (" ×" .. s.n) or "")
   elseif s.t == "fp" then return L["開鳥點："] .. (s.node or (s.map and C.MapName(s.map)) or "")
   elseif s.t == "hearth" then return L["綁爐石："] .. (s.bind or (s.map and C.MapName(s.map)) or "")
   elseif s.t == "fly" then return L["飛往 "] .. (s.to or "")

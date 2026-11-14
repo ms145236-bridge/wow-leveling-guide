@@ -169,7 +169,7 @@ function UI.VerbWidth()
   if MG.uiZh then return 18 end
   if not verbW then
     verbW = 18
-    for _, t in ipairs({ "accept", "do", "turnin", "goto", "fp", "hearth", "fly", "boat", "level", "travel", "need", "train" }) do verbW = math.max(verbW, textWidth(E.VERB[t] or "", 13) + 2) end
+    for _, t in ipairs({ "accept", "do", "turnin", "goto", "fp", "hearth", "fly", "boat", "level", "travel", "need", "train", "buy" }) do verbW = math.max(verbW, textWidth(E.VERB[t] or "", 13) + 2) end
     for _, v in ipairs({ L["打"], L["去"] }) do verbW = math.max(verbW, textWidth(v, 13) + 2) end -- 練怪列、副本入口列也用這欄
   end
   return verbW
@@ -2042,6 +2042,7 @@ function UI.Render(S)
     if E.StarFor(s.q, s) then title = hex(GOLD) .. "★|r " .. title end
     right = UI.Get("showLevel") and info and info.lvl and tostring(info.lvl) or ""
     if s.t == "accept" or s.t == "turnin" then l2 = s.npc
+    elseif s.t == "buy" then l2, l2num = s.npc, math.min(E.ItemCount(s.item), s.n or 1) .. "/" .. (s.n or 1)
     elseif s.t == "do" then
       local one, header, lines, num = objectiveLines(s.q)
       if lines then l2, objList = header, lines else l2, l2num = one or s.hint, one and num end

@@ -56,7 +56,7 @@ const TAG_EN = { 可跳過: "Optional", 需遊戲實測: "Unverified", 有隊伍
   能打高階怪再做: "Hard", 低等怪補缺口: "Fills an XP gap", 日後順路或有隊伍: "Later or with a group", 見到獵物才接: "If you see it", 材料齊才做: "When you have the items" };
 const tagEn = (tag) => { const out = (tag || "").split(/\s*・\s*/).map((t) => TAG_EN[t.trim()]).filter(Boolean); return out.length ? [...new Set(out)].join(", ") : undefined; };
 const enText = (t) => String(t || "").replace(/\$[Bb]/g, " ").replace(/\$[Nn]/g, "you").replace(/\$[CcRr]/g, "adventurer").replace(/\s+/g, " ").trim();
-const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel" };
+const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel", 買: "buy" };
 // 行尾標籤：這些不顯示；其餘（可跳過、有隊伍再做…）顯示在步驟第 3 行
 const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接)/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
@@ -322,7 +322,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
       else if (key !== "限定" && key !== "二選一") st.tips.push({ k: key, raw: v, text: v.replace(/【[^】]*】/g, "").trim(), where });
       return;
     }
-    const sm = line.match(/^\s*(?:\d+\s*[.、)]\s*|[-*]\s*)?(交通|接|做|交|到|鳥|爐|飛|船|練|註)｜(.*)$/);
+    const sm = line.match(/^\s*(?:\d+\s*[.、)]\s*|[-*]\s*)?(交通|接|做|交|到|鳥|爐|飛|船|練|註|買)｜(.*)$/);
     if (!sm) return;
     const tags = [...sm[2].matchAll(/【([^】]*)】/g)].map((m) => m[1]);
     const body = sm[2].replace(/【[^】]*】/g, "").trim();
@@ -348,6 +348,12 @@ for (const file of files.filter((f) => !sideFile(f))) {
       }
       else { step.npc = rest[0] && !/^[?？]$/.test(rest[0]) ? rest[0] : undefined; step.coord = parseCoord(rest[1]); }
     } else if (step.t === "goto") { step.text = f[0]; step.coord = parseCoord(f[1]); }
+    // 買｜物品名 ×數量｜物品ID｜任務ID｜商人｜座標：背包裡夠了（或任務已完成）就勾掉
+    else if (step.t === "buy") {
+      const m = f[0].match(/^(.*?)\s*[×x]\s*(\d+)$/);
+      Object.assign(step, { text: m ? m[1] : f[0], n: m ? +m[2] : 1, item: +f[1], fq: +f[2] || undefined, npc: f[3] || undefined, coord: parseCoord(f[4]) });
+      if (!step.item) warn(step.where, "買：物品 ID 看不懂");
+    }
     else if (step.t === "fp") { step.node = f[0]; step.coord = parseCoord(f[1]); }
     else if (step.t === "hearth") step.bind = f[0];
     else if (step.t === "fly") step.to = f[0];
@@ -709,7 +715,7 @@ const stepWhen = (w, sw) => {
   return Object.keys(out).length ? out : undefined;
 };
 const stepOut = (s, st) => ({
-  star: s.star, t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt, desc: s.desc, spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
+  star: s.star, t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt, desc: s.desc, spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
   map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, when: stepWhen(s.when, st.when), video: s.video,
 });
 let out = `-- 由 tools/build.mjs 產生，勿手改。來源：route/*.md\nlocal _, MG = ...\nMG.Route = {\n  built = "@@BUILT@@",\n  stations = {\n`;
@@ -932,6 +938,7 @@ const emitRoute = (X) => {
         e.text = step.text && T(step.where, step.text);
         if (!e.text) left[kind]++;
       }
+      if (step.t === "buy") { e.text = cleanName(db.l10nName("Item", step.item, loc) || db.itemEn(step.item) || "") || undefined; e.npc = N(npcEn(step.npc)); }
       if (step.t === "fp") Object.assign(e, X.node(step));
       if (step.tag) {
         // 標籤：固定對照（TAG_EN）＞翻譯檔；「目標：…」「提醒：…」翻內容

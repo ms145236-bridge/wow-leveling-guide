@@ -27,6 +27,7 @@ MG.Locales.enUS = {
   ["練"] = "Grind",
   ["行"] = "Go",
   ["需"] = "Need",
+  ["買"] = "Buy",
   ["打"] = "Kill",
   ["打 "] = "Kill ",
   ["去"] = "Go",
