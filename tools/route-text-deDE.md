@@ -12924,3 +12924,62 @@
 05-副本.md:1574｜步驟所在｜圖書館裡的辛德拉古靈｜Bibliothek: Shen'dralar-Ahne
 05-副本.md:1577｜步驟所在｜圖書館樓梯下的辛德拉寶箱｜Shen'dralar-Truhe unter der Bibliothekstreppe
 05-副本.md:1824｜步驟所在｜達基薩斯王座後方的烙印｜Brandzeichen von Drakkisath hinter seinem Thron
+01-第一段-1到12級.md:462｜步驟說明｜到雷霆崖交材料；輕皮可剝低等野獸，也可交易取得。｜Gib die Materialien in Donnerfels ab. Leichtes Leder erhältst du durch das Häuten niedrigstufiger Bestien oder per Handel.
+01-第一段-1到12級.md:465｜步驟說明｜到雷霆崖交材料；輕皮可剝皮或交易取得，粗線向商人購買。｜Gib die Materialien in Donnerfels ab. Leichtes Leder besorgst du durch Häuten oder Handel; Groben Faden kaufst du bei einem Händler.
+02-12到30級.md:305｜步驟說明｜影牙城堡入口；進去後找兩位亡靈哨兵。｜Eingang zu Burg Schattenfang. Finde drinnen die beiden Todespirscher.
+02-12到30級.md:306｜步驟說明｜交給副本內的亡靈哨兵文森特。｜Gib die Quest bei Todespirscher Vincent in der Instanz ab.
+02-12到30級.md:590｜步驟說明｜設計圖由風險投資公司操作員掉落。｜Der Bauplan wird von Betreibern der Venture Co. fallen gelassen.
+02-12到30級.md:955｜步驟說明｜格雷蘇在高架上。｜Gerenzo Wrenchwhistle steht auf der erhöhten Plattform.
+02-12到30級.md:1266｜步驟說明｜前兩處為靈珠可能出現的位置；取到立刻游至雷姆洛斯神殿使用。｜Die ersten beiden Markierungen sind mögliche Fundorte der Kugel. Schwimm sofort nach dem Erhalt zum Remulos-Schrein und benutze sie dort.
+03-30到45級.md:856｜步驟說明｜到 Hamur 處交材料；重平衡石由鍛造製作，也可交易取得。｜Bringe die Materialien zu Hamur. Der Schwere Gewichtsstein wird mit Schmiedekunst hergestellt und kann auch gehandelt werden.
+03-30到45級.md:900｜步驟說明｜到此交材料；冰霜之油可由煉金師製作。｜Gib hier ab. Frostöl kann von einem Alchemisten hergestellt werden.
+03-30到45級.md:1219｜步驟說明｜東海海盜在岸邊；上船後找第二層火炮旁的砲彈堆。｜Die Ostmeer-Piraten halten sich am Ufer auf. Suche an Bord die Kanonenkugelhaufen neben den Kanonen auf dem zweiten Deck.
+03-30到45級.md:1230｜步驟說明｜書由副本首領納古克掉落。｜Das Buch wird vom Instanzboss Nar'gurk fallen gelassen.
+03-30到45級.md:1315｜步驟說明｜貨物由兩名守衛看管。｜Zwei Wachen bewachen die Fracht.
+03-30到45級.md:1495｜步驟說明｜進入血色修道院後走圖書館區。｜Nimm nach dem Betreten des Scharlachroten Klosters den Bibliotheksflügel.
+03-30到45級.md:1513｜步驟說明｜從奧達曼後門進入，找黑曜石哨兵。｜Betritt Uldaman durch den Hintereingang und suche die Obsidianschildwache.
+04-45到60級.md:632｜步驟說明｜數量以任務日誌為準。｜Die genauen Anzahlen stehen in deinem Questlog.
+04-45到60級.md:923｜步驟說明｜奧蘭與歐文·薩得（1458 73.40, 33.00）都在幽暗城法師區；先依遊戲可交提示。｜Oran und Owen Thadd (1458 73.40, 33.00) befinden sich beide im Magierviertel von Undercity; richte dich zuerst nach dem Abgabehinweis im Spiel.
+04-45到60級.md:1892｜步驟說明｜木喉與黑喉薩滿都會掉落；優先打黑喉，避免降低木喉聲望。｜Timbermaw- und Blackmaw-Schamanen lassen es fallen; bekämpfe bevorzugt die Blackmaw-Schamanen, um keinen Ruf bei den Timbermaw zu verlieren.
+05-副本.md:217｜步驟說明｜毒蛇花在副本門前的外洞。｜Schlangenflaum wächst in der äußeren Höhle vor dem Instanzeingang.
+05-副本.md:218｜步驟說明｜變異殺戮者在副本門前的外洞。｜Die Deviate Slayer halten sich in der äußeren Höhle vor dem Instanzeingang auf.
+05-副本.md:220｜步驟說明｜可在副本門外打吞噬軟漿怪。｜Du kannst Verschlingende Ektoplasmen vor dem Instanzeingang töten.
+05-副本.md:717｜步驟說明｜部落請用藏寶海灣的傳送器進入，位於斯庫提的工作區。｜Die Horde betritt die Instanz über den Teleporter in Booty Bay, bei Scootys Werkstatt.
+05-副本.md:837｜步驟說明｜永恆版新增任務。｜Neue Quest in Forever.
+05-副本.md:905｜步驟說明｜紫色蘑菇生長在副本門外。｜Magenta Kappengruppen wachsen vor dem Instanzeingang.
+05-副本.md:975｜步驟說明｜沿洞穴尋找。｜Suche entlang der Höhle.
+05-副本.md:1063｜步驟說明｜半人馬賤民在淒涼之地南部巡邏。｜Zentaurenpariah patrouilliert im Süden von Desolace.
+05-副本.md:1071｜步驟說明｜上神殿最高一層取篩，共收 8 份法力，每塔 4 份。西塔與東塔可在潛行下互動。｜Hol das Sieb auf der obersten Ebene des oberen Tempels. Insgesamt sammelst du 8 Mana, 4 pro Turm. Westlicher und östlicher Turm lassen sich im Verstohlenheitsmodus benutzen.
+05-副本.md:1091｜步驟說明｜數量以任務日誌為準。｜Die genauen Anzahlen stehen in deinem Questlog.
+05-副本.md:1094｜步驟說明｜擊敗後向房內的贖罪者交付。｜Gib die Quest nach dem Sieg bei dem Erlösten im selben Raum ab.
+05-副本.md:1095｜步驟說明｜贖罪者在首領房內；儀式中跟隨他。｜Der Erlöste befindet sich im Raum des Bosses; folge ihm während des Rituals.
+05-副本.md:1099｜步驟說明｜洛特格里普在水池巡游；小噴泉在同一水池水面。｜Faulschnapper patrouilliert am Becken; die kleine Quelle befindet sich an der Wasseroberfläche.
+05-副本.md:1329｜步驟說明｜與酒桌旁的雷布裏·斯庫比格特交談開始戰鬥。｜Sprich mit Ribbly Screwspigot an den Tischen, um den Kampf zu beginnen.
+05-副本.md:1330｜步驟說明｜兩陣營都由同一敵人掉落秘方。｜Beide Fraktionen erbeuten das Rezept vom selben Gegner.
+05-副本.md:1384｜步驟說明｜文件可能出現在任一首領房間，逐間查看。｜Die Dokumente können in einem beliebigen Bossraum auftauchen; sieh dir jeden Raum an.
+05-副本.md:1449｜步驟說明｜血色檔案位於檔案管理員所在的檔案室。｜Das Scharlachrote Archiv befindet sich im selben Archivraum wie der Archivar.
+05-副本.md:1450｜步驟說明｜雙月畫就在檔案室首領所在的房間。｜Das Gemälde der Zwillingsmonde hängt im selben Raum wie der Boss des Archivs.
+05-副本.md:1495｜步驟說明｜擊敗後在同一房間與奧里克斯交談。｜Sprich nach dem Sieg im selben Raum mit Aurius.
+05-副本.md:1496｜步驟說明｜完成時奧里克斯會移到尾王房間；接取仍在亡靈區入口旁的小教堂。｜Nach Abschluss wechselt Aurius in den Raum des letzten Bosses; angenommen wird die Quest weiterhin in der kleinen Kapelle neben dem Eingang zum Untoten-Bereich.
+05-副本.md:1536｜步驟說明｜依序與普希林交談，追到最後一站。｜Sprich an jeder Station mit Pusillin, um ihm bis zum Ende zu folgen.
+05-副本.md:1538｜步驟說明｜魔藤碎片就在奧茲恩附近。｜Der Teufelsrankensplitter liegt in der Nähe von Alzzin.
+05-副本.md:1573｜步驟說明｜先清除五座水晶塔。｜Beseitige zuerst alle fünf Pylonen.
+05-副本.md:1613｜步驟說明｜踐踏者克雷格在戈多克平民區；取得國王狀態後才與他對話。｜Stampfer Kreeg ist im Bürgerviertel der Gordok; sprich erst mit ihm, nachdem du König geworden bist.
+05-副本.md:1736｜步驟說明｜艾瓦與盧森的遺骸在教授房內。｜Evas und Luciens sterbliche Überreste liegen im Raum des Professors.
+05-副本.md:1823｜步驟說明｜烙印在達基薩斯身後。｜Das Brandmal befindet sich hinter Drakkisath.
+01-第一段-1到12級.md:971｜站內提醒｜離島兩個銜接任務 93090、95349 顯示為 13 級，7 級就能接，主線跑完就接。｜Die Inselquests 93090 und 95349 zeigen Stufe 13, sind aber ab Stufe 7 verfügbar. Nach der Hauptreihe annehmen.
+05-副本.md:814｜站內說明｜副本門在格羅姆高以西的水下洞窟。帶水下呼吸藥劑，或請有技能的隊友施放。｜Das Portal liegt in einer Unterwasserhöhle westlich von Grom'gol. Nimm Wasseratmungstränke mit oder lass einen Gruppenmitglied den Zauber wirken.
+05-副本.md:1040｜站內說明｜入口在 Sunnyglade 正北，城門旁另有要塞傳送門。｜Der Eingang liegt nördlich von Sonnengrund, ein weiteres Portal steht beim Festungstor.
+04-45到60級.md:1740｜站內提醒｜未滿 60 級就照影片在霜語峽谷北側打熊，打一般的瘋狂的裂齒熊（約 57.63, 70.83／66.68, 70.57），避開谷底精英。｜Unter Stufe 60? Folge dem Video und jage Bären nördlich der Frostwhisperschlucht: normale wahnsinnige Splitterzähne um 57.63, 70.83 und 66.68, 70.57. Meide die Elitegegner unten.
+01-第一段-1到12級.md:1324｜步驟說明｜前置是 6062，第二隻為海浪蟹。｜Voraussetzung: 6062. Das zweite Ziel ist ein Brandungskriecher.
+01-第一段-1到12級.md:1327｜步驟說明｜前置是 6083，第三隻為硬甲蠍。｜Voraussetzung: 6083. Zähme als Drittes einen Gepanzerten Skorpid.
+02-12到30級.md:740｜標籤｜高等怪｜Hochstufige Mobs.
+05-副本.md:83｜站內說明｜96391、96393、96394、96395、96403、98423 是聯盟任務，部落接不到。｜96391, 96393, 96394, 96395, 96403 und 98423 sind Allianz-Quests; die Horde kann sie nicht annehmen.
+05-副本.md:121｜步驟說明｜前置 99156 有種族限制；其他種族看克里斯多夫身上有沒有這個任務。｜Die Voraussetzung 99156 hat Rassenbeschränkungen. Prüfe bei anderen Völkern, ob Kristof dir diese Quest anbietet.
+05-副本.md:403｜步驟說明｜前置是 6562；同時讓 6563 保持已接。若刷不到便箋，整組不必等待。｜Voraussetzung: 6562. Behalte 6563 gleichzeitig im Questlog. Lass die Gruppe nicht warten, falls die Notiz nicht fällt.
+05-副本.md:449｜副本入口｜由大堂朝四門看，最左側；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Von der Halle aus gesehen nimm von den vier Türen die ganz linke. Der Pfeil zeigt zum Außeneingang des Klosters; finde in der Halle das Portal anhand der Türreihenfolge.
+05-副本.md:542｜副本入口｜由大堂朝四門看，最右側；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Von der Halle aus gesehen nimm von den vier Türen die ganz rechte. Der Pfeil zeigt zum Außeneingang des Klosters; finde in der Halle das Portal anhand der Türreihenfolge.
+05-副本.md:611｜副本入口｜由大堂朝四門看，右數第二道鎖門；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Von der Halle aus gesehen nimm von den vier Türen die zweite verschlossene von rechts. Der Pfeil zeigt zum Außeneingang des Klosters; finde in der Halle das Portal anhand der Türreihenfolge.
+05-副本.md:642｜副本入口｜由大堂朝四門看，左數第二道鎖門；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Von der Halle aus gesehen nimm von den vier Türen die zweite verschlossene von links. Der Pfeil zeigt zum Außeneingang des Klosters; finde in der Halle das Portal anhand der Türreihenfolge.
+05-副本.md:1054｜站內前置接取路線｜前往淒涼之地 葬影村前，可從奧格瑪尤塞爾奈接暗影殘片，但最低 39 級。離開菲拉斯 莫沙徹營地後往淒涼之地 葬影村，先找瓦克與瑟琳德拉，再繞維洛、半人馬賤民。想做永恆版水瓶支線先到東南辛德拉，完成水晶塔與魔導師引導後到遺忘花園接 93594→93404。辛德拉任務最低 35 級。進瑪拉頓橙門之前接凱雯德拉。｜Nehmen Sie auf Level 39 Schattensplitter von Uthel'nay in Orgrimmar vor Shadowprey. Gehen Sie von Camp Mojache zu Shadowprey und sehen Sie sich Warug und Selendra an. Besuchen Sie dann Willow und Zentaurenpariah. Für die Forever-Wasserfläschchen-Kette nehmen Sie die Zugänge zum Kristallturm und zum Magister im Südosten Shen'dralas und nehmen Sie dann 93594 → 93404 bei den Vergessenen Gärten. Die Shen'dralas-Quests erfordern Level 35. Abholung bei Cavindra vor dem orangefarbenen Portal.
+05-副本.md:1116｜站內說明｜29.10, 62.50 是荒野洞口，橙與紫兩道實例門要沿對應顏色洞道尋找。紫線與橙線在毒水瀑布附近會合。｜Die äußere Höhle befindet sich bei 29.10, 62.50. Folgen Sie dem orangefarbenen oder violetten Tunnel bis zu seinem Portal. Beide Routen treffen sich am Giftwasserfall.

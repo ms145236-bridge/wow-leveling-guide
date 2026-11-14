@@ -5770,7 +5770,7 @@
 05-副本.md:69｜副本入口｜鐵爐堡 1455 27.63, 47.83｜Ironforge 1455 27.63, 47.83
 05-副本.md:78｜站內前置接取路線｜從貧瘠之地轉往東部王國後，只有專程成就隊才從幽暗城經銀松、希爾斯布萊德、阿拉希南下濕地，經丹奧加茲到丹莫羅再進鐵爐堡。部落前置接取點未查到。｜Only make the Ironforge trip for an organized achievement run. From Undercity, travel through Silverpine, Hillsbrad, and Arathi, then south through the Wetlands and Dun Algaz into Dun Morogh. Horde prerequisite pickups are unverified.
 05-副本.md:78｜標籤｜接取錨點 02-第8站｜Pick up anchor point 02-Stop 8
-05-副本.md:83｜站內說明｜本機永恆版的 96391、96393、96394、96395、96403、98423 都標聯盟；部落沒有可核實的接取路線。｜QuestieDB Forever lists 96391, 96393, 96394, 96395, 96403, and 98423 as Alliance. No Horde pickup route is verified.
+05-副本.md:83｜站內說明｜本機永恆版的 96391、96393、96394、96395、96403、98423 都標聯盟；部落沒有可核實的接取路線。｜96391, 96393, 96394, 96395, 96403, and 98423 are Alliance quests; the Horde has no confirmed way to pick them up.
 05-副本.md:87｜站內說明｜可進本打法德林·安威瑪、瑪格瑪圖斯、掠奪者、杜爾根·喪鐘錘等首領。這趟以掉落或成就為主。｜Run for loot or achievements. Bosses include Faldrim Anvilmar, Magmatus, Plunder, and Durgen Dirgehammer.
 05-副本.md:91｜站內說明｜部落交件未查到。｜Horde turn-in location unverified.
 05-副本.md:93｜站內取捨｜練級可略過。若要做傳承成就，先約隊再去，聯盟首都守衛與 PvP 規則會增加進門難度。｜Skip while leveling. For the Legacy achievement, form your group before heading in. Alliance capital guards and PvP rules make entry harder.
@@ -12765,3 +12765,62 @@
 05-副本.md:1574｜步驟所在｜圖書館裡的辛德拉古靈｜Library: Shen'dralar Ancient
 05-副本.md:1577｜步驟所在｜圖書館樓梯下的辛德拉寶箱｜Shen'dralar chest below the library stairs
 05-副本.md:1824｜步驟所在｜達基薩斯王座後方的烙印｜Brand of Drakkisath behind his throne
+01-第一段-1到12級.md:462｜步驟說明｜到雷霆崖交材料；輕皮可剝低等野獸，也可交易取得。｜Turn in at Thunder Bluff. Skin low-level beasts for Light Leather, or get it by trading.
+01-第一段-1到12級.md:465｜步驟說明｜到雷霆崖交材料；輕皮可剝皮或交易取得，粗線向商人購買。｜Turn in at Thunder Bluff. Get Light Leather by skinning or trading; buy Coarse Thread from a vendor.
+02-12到30級.md:305｜步驟說明｜影牙城堡入口；進去後找兩位亡靈哨兵。｜Shadowfang Keep entrance. Inside, find the two Deathstalkers.
+02-12到30級.md:306｜步驟說明｜交給副本內的亡靈哨兵文森特。｜Turn in to Deathstalker Vincent inside the instance.
+02-12到30級.md:590｜步驟說明｜設計圖由風險投資公司操作員掉落。｜The plans drop from Venture Co. Operators.
+02-12到30級.md:955｜步驟說明｜格雷蘇在高架上。｜Gerenzo is on the raised platform.
+02-12到30級.md:1266｜步驟說明｜前兩處為靈珠可能出現的位置；取到立刻游至雷姆洛斯神殿使用。｜The first two pins are possible orb spawns. As soon as you have it, swim straight to the Shrine of Remulos and use it.
+03-30到45級.md:856｜步驟說明｜到 Hamur 處交材料；重平衡石由鍛造製作，也可交易取得。｜Bring the materials to Hamur. Heavy Weightstone is made by blacksmithing and can also be bought from players.
+03-30到45級.md:900｜步驟說明｜到此交材料；冰霜之油可由煉金師製作。｜Turn in here. Frost Oil can be made by an alchemist.
+03-30到45級.md:1219｜步驟說明｜東海海盜在岸邊；上船後找第二層火炮旁的砲彈堆。｜Eastsea pirates are along the shore. Once aboard, look for the cannonball piles by the second-deck cannons.
+03-30到45級.md:1230｜步驟說明｜書由副本首領納古克掉落。｜The book drops from the instance boss Nar'gurk.
+03-30到45級.md:1315｜步驟說明｜貨物由兩名守衛看管。｜Two guards watch over the cargo.
+03-30到45級.md:1495｜步驟說明｜進入血色修道院後走圖書館區。｜After entering Scarlet Monastery, take the Library wing.
+03-30到45級.md:1513｜步驟說明｜從奧達曼後門進入，找黑曜石哨兵。｜Enter Uldaman through the back door and find the Obsidian Sentinel.
+04-45到60級.md:632｜步驟說明｜數量以任務日誌為準。｜Follow your quest log for the exact counts.
+04-45到60級.md:923｜步驟說明｜奧蘭與歐文·薩得（1458 73.40, 33.00）都在幽暗城法師區；先依遊戲可交提示。｜Oran and Owen Thadd (1458 73.40, 33.00) are both in the Undercity Magic Quarter; go by the game's turn-in prompt first.
+04-45到60級.md:1892｜步驟說明｜木喉與黑喉薩滿都會掉落；優先打黑喉，避免降低木喉聲望。｜Both Timbermaw and Blackmaw shamans drop it; prioritize the Blackmaw ones to avoid losing Timbermaw reputation.
+05-副本.md:217｜步驟說明｜毒蛇花在副本門前的外洞。｜Serpentbloom grows in the outer cave in front of the instance entrance.
+05-副本.md:218｜步驟說明｜變異殺戮者在副本門前的外洞。｜Deviate Slayers are in the outer cave in front of the instance entrance.
+05-副本.md:220｜步驟說明｜可在副本門外打吞噬軟漿怪。｜You can kill Devouring Ectoplasms outside the instance entrance.
+05-副本.md:717｜步驟說明｜部落請用藏寶海灣的傳送器進入，位於斯庫提的工作區。｜Horde enter through the Booty Bay teleporter, located at Scooty's workshop.
+05-副本.md:837｜步驟說明｜永恆版新增任務。｜New quest in Forever.
+05-副本.md:905｜步驟說明｜紫色蘑菇生長在副本門外。｜Magenta Cap Clusters grow outside the instance entrance.
+05-副本.md:975｜步驟說明｜沿洞穴尋找。｜Search along the cave.
+05-副本.md:1063｜步驟說明｜半人馬賤民在淒涼之地南部巡邏。｜Centaur Pariah patrols southern Desolace.
+05-副本.md:1071｜步驟說明｜上神殿最高一層取篩，共收 8 份法力，每塔 4 份。西塔與東塔可在潛行下互動。｜Get the sieve on the highest level of the upper temple. Collect 8 mana in total, 4 per tower. Both the west and east towers can be used while Stealthed.
+05-副本.md:1091｜步驟說明｜數量以任務日誌為準。｜Follow your quest log for the exact counts.
+05-副本.md:1094｜步驟說明｜擊敗後向房內的贖罪者交付。｜After defeating Celebras, turn in to the Redeemed in the same room.
+05-副本.md:1095｜步驟說明｜贖罪者在首領房內；儀式中跟隨他。｜The Redeemed is in the boss's room; follow him during the ritual.
+05-副本.md:1099｜步驟說明｜洛特格里普在水池巡游；小噴泉在同一水池水面。｜Rotgrip patrols the pool; the small fountain is on the pool's surface.
+05-副本.md:1329｜步驟說明｜與酒桌旁的雷布裏·斯庫比格特交談開始戰鬥。｜Talk to Ribbly Screwspigot by the tables to start the fight.
+05-副本.md:1330｜步驟說明｜兩陣營都由同一敵人掉落秘方。｜Both factions loot the recipe from the same enemy.
+05-副本.md:1384｜步驟說明｜文件可能出現在任一首領房間，逐間查看。｜The documents may appear in any of the boss rooms; check each one.
+05-副本.md:1449｜步驟說明｜血色檔案位於檔案管理員所在的檔案室。｜The Scarlet Archive is in the same archive room as the Archivist.
+05-副本.md:1450｜步驟說明｜雙月畫就在檔案室首領所在的房間。｜The Twin Moons painting is in the same room as the archive's boss.
+05-副本.md:1495｜步驟說明｜擊敗後在同一房間與奧里克斯交談。｜After defeating him, talk to Aurius in the same room.
+05-副本.md:1496｜步驟說明｜完成時奧里克斯會移到尾王房間；接取仍在亡靈區入口旁的小教堂。｜When the quest is complete, Aurius moves to the final boss's room; you still pick it up at the small chapel beside the Undead side entrance.
+05-副本.md:1536｜步驟說明｜依序與普希林交談，追到最後一站。｜Talk to Pusillin at each stop to chase him down to the end.
+05-副本.md:1538｜步驟說明｜魔藤碎片就在奧茲恩附近。｜The Felvine Shard is near Alzzin.
+05-副本.md:1573｜步驟說明｜先清除五座水晶塔。｜Clear all five pylons first.
+05-副本.md:1613｜步驟說明｜踐踏者克雷格在戈多克平民區；取得國王狀態後才與他對話。｜Stomper Kreeg is in the Gordok commons; talk to him only after you become king.
+05-副本.md:1736｜步驟說明｜艾瓦與盧森的遺骸在教授房內。｜Eva's and Lucien's remains are in the professor's room.
+05-副本.md:1823｜步驟說明｜烙印在達基薩斯身後。｜The Brand is behind Drakkisath.
+01-第一段-1到12級.md:971｜站內提醒｜離島兩個銜接任務 93090、95349 顯示為 13 級，7 級就能接，主線跑完就接。｜Island follow-ups 93090 and 95349 show as level 13 but open at level 7. Pick them up after the main chain.
+05-副本.md:814｜站內說明｜副本門在格羅姆高以西的水下洞窟。帶水下呼吸藥劑，或請有技能的隊友施放。｜The portal is in an underwater cave west of Grom'gol. Bring Water Breathing potions or ask a teammate to cast it.
+05-副本.md:1040｜站內說明｜入口在 Sunnyglade 正北，城門旁另有要塞傳送門。｜The entrance is north of Sunnyglade, with another portal by the stronghold gate.
+04-45到60級.md:1740｜站內提醒｜未滿 60 級就照影片在霜語峽谷北側打熊，打一般的瘋狂的裂齒熊（約 57.63, 70.83／66.68, 70.57），避開谷底精英。｜Below level 60? Follow the video and grind bears north of Frostwhisper Gorge: normal Crazed Shardtooth around 57.63, 70.83 and 66.68, 70.57. Avoid the elites at the bottom.
+01-第一段-1到12級.md:1324｜步驟說明｜前置是 6062，第二隻為海浪蟹。｜Prerequisite: 6062. The second target is a Surf Crawler.
+01-第一段-1到12級.md:1327｜步驟說明｜前置是 6083，第三隻為硬甲蠍。｜Prerequisite: 6083. Tame an Armored Scorpid third.
+02-12到30級.md:740｜標籤｜高等怪｜High-level mobs.
+05-副本.md:83｜站內說明｜96391、96393、96394、96395、96403、98423 是聯盟任務，部落接不到。｜96391, 96393, 96394, 96395, 96403, and 98423 are Alliance quests; the Horde cannot pick them up.
+05-副本.md:121｜步驟說明｜前置 99156 有種族限制；其他種族看克里斯多夫身上有沒有這個任務。｜Prerequisite 99156 has race restrictions. For other races, check whether Kristof offers you this quest.
+05-副本.md:403｜步驟說明｜前置是 6562；同時讓 6563 保持已接。若刷不到便箋，整組不必等待。｜Prerequisite: 6562. Keep 6563 in your log at the same time. Don't make the group wait if the note doesn't drop.
+05-副本.md:449｜副本入口｜由大堂朝四門看，最左側；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Facing the four doors from the hall, take the far-left one. The arrow points to the outdoor monastery entrance; once in the hall, find the portal by door order.
+05-副本.md:542｜副本入口｜由大堂朝四門看，最右側；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Facing the four doors from the hall, take the far-right one. The arrow points to the outdoor monastery entrance; once in the hall, find the portal by door order.
+05-副本.md:611｜副本入口｜由大堂朝四門看，右數第二道鎖門；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Facing the four doors from the hall, take the second locked door from the right. The arrow points to the outdoor monastery entrance; once in the hall, find the portal by door order.
+05-副本.md:642｜副本入口｜由大堂朝四門看，左數第二道鎖門；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Facing the four doors from the hall, take the second locked door from the left. The arrow points to the outdoor monastery entrance; once in the hall, find the portal by door order.
+05-副本.md:1054｜站內前置接取路線｜前往淒涼之地 葬影村前，可從奧格瑪尤塞爾奈接暗影殘片，但最低 39 級。離開菲拉斯 莫沙徹營地後往淒涼之地 葬影村，先找瓦克與瑟琳德拉，再繞維洛、半人馬賤民。想做永恆版水瓶支線先到東南辛德拉，完成水晶塔與魔導師引導後到遺忘花園接 93594→93404。辛德拉任務最低 35 級。進瑪拉頓橙門之前接凱雯德拉。｜At level 39, take Shadowshard Fragments from Uthel'nay in Orgrimmar before Shadowprey Village. From Camp Mojache, head to Shadowprey Village and see Warug and Selendra, then visit Willow and the Centaur Pariah. For the Forever water-vial chain, do the crystal-tower and Magister lead-ins in southeast Shen'dralas, then take 93594 → 93404 at the Forgotten Gardens. The Shen'dralas quests require level 35. Pick up from Cavindra before the orange portal.
+05-副本.md:1116｜站內說明｜29.10, 62.50 是荒野洞口，橙與紫兩道實例門要沿對應顏色洞道尋找。紫線與橙線在毒水瀑布附近會合。｜The outer cave is at 29.10, 62.50. Follow the orange or purple tunnel to its portal. Both routes meet by the poison waterfall.

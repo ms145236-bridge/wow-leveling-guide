@@ -13312,3 +13312,62 @@
 05-副本.md:1574｜步驟所在｜圖書館裡的辛德拉古靈｜Biblioteca: Antiguo Shen'dralar
 05-副本.md:1577｜步驟所在｜圖書館樓梯下的辛德拉寶箱｜Cofre Shen'dralar bajo las escaleras de la biblioteca
 05-副本.md:1824｜步驟所在｜達基薩斯王座後方的烙印｜Marca de Drakkisath tras su trono
+01-第一段-1到12級.md:462｜步驟說明｜到雷霆崖交材料；輕皮可剝低等野獸，也可交易取得。｜Entrega los materiales en Cima del Trueno. Puedes conseguir Cuero ligero desollando bestias de bajo nivel o comerciando.
+01-第一段-1到12級.md:465｜步驟說明｜到雷霆崖交材料；輕皮可剝皮或交易取得，粗線向商人購買。｜Entrega los materiales en Cima del Trueno. Consigue Cuero ligero desollando o comerciando; compra Hilo burdo a un vendedor.
+02-12到30級.md:305｜步驟說明｜影牙城堡入口；進去後找兩位亡靈哨兵。｜Entrada del Castillo de Colmillo Oscuro. Dentro, encuentra a los dos Acechamuertes.
+02-12到30級.md:306｜步驟說明｜交給副本內的亡靈哨兵文森特。｜Entrega la misión a Acechamuertes Vincent dentro de la mazmorra.
+02-12到30級.md:590｜步驟說明｜設計圖由風險投資公司操作員掉落。｜Los planos los sueltan los Operarios de Venture Co.
+02-12到30級.md:955｜步驟說明｜格雷蘇在高架上。｜Gerenzo Silbillave está en la plataforma elevada.
+02-12到30級.md:1266｜步驟說明｜前兩處為靈珠可能出現的位置；取到立刻游至雷姆洛斯神殿使用。｜Los dos primeros puntos son posibles ubicaciones del orbe. En cuanto lo consigas, nada directo al Santuario de Remulos y úsalo.
+03-30到45級.md:856｜步驟說明｜到 Hamur 處交材料；重平衡石由鍛造製作，也可交易取得。｜Lleva los materiales a Hamur. La Piedrafuerte pesada se fabrica con Herrería y también se puede comprar a otros jugadores.
+03-30到45級.md:900｜步驟說明｜到此交材料；冰霜之油可由煉金師製作。｜Entrega aquí. El Aceite de escarcha lo puede fabricar un alquimista.
+03-30到45級.md:1219｜步驟說明｜東海海盜在岸邊；上船後找第二層火炮旁的砲彈堆。｜Los piratas de Eastsea están en la orilla. Una vez a bordo, busca las pilas de balas de cañón junto a los cañones de la segunda cubierta.
+03-30到45級.md:1230｜步驟說明｜書由副本首領納古克掉落。｜El libro lo suelta el jefe de la mazmorra, Nar'gurk.
+03-30到45級.md:1315｜步驟說明｜貨物由兩名守衛看管。｜Dos guardias vigilan la carga.
+03-30到45級.md:1495｜步驟說明｜進入血色修道院後走圖書館區。｜Tras entrar en el Monasterio Escarlata, ve al ala de la Biblioteca.
+03-30到45級.md:1513｜步驟說明｜從奧達曼後門進入，找黑曜石哨兵。｜Entra en Uldaman por la puerta trasera y busca al Centinela obsidiano.
+04-45到60級.md:632｜步驟說明｜數量以任務日誌為準。｜Guíate por el registro de misiones para las cantidades exactas.
+04-45到60級.md:923｜步驟說明｜奧蘭與歐文·薩得（1458 73.40, 33.00）都在幽暗城法師區；先依遊戲可交提示。｜Oran y Owen Thadd (1458 73.40, 33.00) están en el Barrio de la Magia de Entrañas; guíate primero por el aviso de entrega del juego.
+04-45到60級.md:1892｜步驟說明｜木喉與黑喉薩滿都會掉落；優先打黑喉，避免降低木喉聲望。｜Los chamanes Timbermaw y Blackmaw lo sueltan; ataca primero a los Blackmaw para no perder reputación con los Timbermaw.
+05-副本.md:217｜步驟說明｜毒蛇花在副本門前的外洞。｜Reptilia crece en la cueva exterior frente a la entrada de la mazmorra.
+05-副本.md:218｜步驟說明｜變異殺戮者在副本門前的外洞。｜Los Deviate Slayers están en la cueva exterior frente a la entrada de la mazmorra.
+05-副本.md:220｜步驟說明｜可在副本門外打吞噬軟漿怪。｜Puedes matar ectoplasmas devoradores fuera de la entrada de la mazmorra.
+05-副本.md:717｜步驟說明｜部落請用藏寶海灣的傳送器進入，位於斯庫提的工作區。｜La Horda entra por el teletransportador de Bahía del Botín, en el taller de Scooty.
+05-副本.md:837｜步驟說明｜永恆版新增任務。｜Misión nueva en Forever.
+05-副本.md:905｜步驟說明｜紫色蘑菇生長在副本門外。｜Las Setas magenta crecen fuera de la entrada de la mazmorra.
+05-副本.md:975｜步驟說明｜沿洞穴尋找。｜Busca a lo largo de la cueva.
+05-副本.md:1063｜步驟說明｜半人馬賤民在淒涼之地南部巡邏。｜El Paria centauro patrulla el sur de Desolace.
+05-副本.md:1071｜步驟說明｜上神殿最高一層取篩，共收 8 份法力，每塔 4 份。西塔與東塔可在潛行下互動。｜Recoge el colador en el nivel más alto del templo superior. Reúne 8 de maná en total, 4 por torre. Las torres oeste y este se pueden usar en Sigilo.
+05-副本.md:1091｜步驟說明｜數量以任務日誌為準。｜Guíate por el registro de misiones para las cantidades exactas.
+05-副本.md:1094｜步驟說明｜擊敗後向房內的贖罪者交付。｜Tras derrotarlo, entrega la misión al Redimido de la misma sala.
+05-副本.md:1095｜步驟說明｜贖罪者在首領房內；儀式中跟隨他。｜El Redimido está en la sala del jefe; síguelo durante el ritual.
+05-副本.md:1099｜步驟說明｜洛特格里普在水池巡游；小噴泉在同一水池水面。｜Escamapodrida patrulla la charca; la pequeña fuente está en la superficie del agua.
+05-副本.md:1329｜步驟說明｜與酒桌旁的雷布裏·斯庫比格特交談開始戰鬥。｜Habla con Ribbly Screwspigot junto a las mesas para empezar el combate.
+05-副本.md:1330｜步驟說明｜兩陣營都由同一敵人掉落秘方。｜Ambas facciones obtienen la receta del mismo enemigo.
+05-副本.md:1384｜步驟說明｜文件可能出現在任一首領房間，逐間查看。｜Los documentos pueden aparecer en cualquiera de las salas de los jefes; revísalas todas.
+05-副本.md:1449｜步驟說明｜血色檔案位於檔案管理員所在的檔案室。｜El Archivo Escarlata está en la misma sala de archivos que el Archivero.
+05-副本.md:1450｜步驟說明｜雙月畫就在檔案室首領所在的房間。｜El cuadro de las lunas gemelas está en la misma sala que el jefe del archivo.
+05-副本.md:1495｜步驟說明｜擊敗後在同一房間與奧里克斯交談。｜Tras derrotarlo, habla con Aurius en la misma sala.
+05-副本.md:1496｜步驟說明｜完成時奧里克斯會移到尾王房間；接取仍在亡靈區入口旁的小教堂。｜Al completarla, Aurius se traslada a la sala del jefe final; la misión se sigue aceptando en la pequeña capilla junto a la entrada de la zona de los no-muertos.
+05-副本.md:1536｜步驟說明｜依序與普希林交談，追到最後一站。｜Habla con Pusillín en cada parada para perseguirlo hasta el final.
+05-副本.md:1538｜步驟說明｜魔藤碎片就在奧茲恩附近。｜El Fragmento de gangrevid está cerca de Alzzin.
+05-副本.md:1573｜步驟說明｜先清除五座水晶塔。｜Primero elimina los cinco pilones.
+05-副本.md:1613｜步驟說明｜踐踏者克雷格在戈多克平民區；取得國王狀態後才與他對話。｜Vapuleador Kreeg está en la zona común de los Gordok; habla con él solo después de convertirte en rey.
+05-副本.md:1736｜步驟說明｜艾瓦與盧森的遺骸在教授房內。｜Los restos de Eva y Lucien están en la sala del profesor.
+05-副本.md:1823｜步驟說明｜烙印在達基薩斯身後。｜La Marca está detrás de Drakkisath.
+01-第一段-1到12級.md:971｜站內提醒｜離島兩個銜接任務 93090、95349 顯示為 13 級，7 級就能接，主線跑完就接。｜Las misiones 93090 y 95349 de la isla aparecen como nivel 13, pero se pueden aceptar desde el nivel 7. Acéptalas al terminar la cadena principal.
+05-副本.md:814｜站內說明｜副本門在格羅姆高以西的水下洞窟。帶水下呼吸藥劑，或請有技能的隊友施放。｜El portal está en una cueva submarina al oeste de Grom'gol. Lleva pociones de respiración acuática o pide a un compañero que la lance.
+05-副本.md:1040｜站內說明｜入口在 Sunnyglade 正北，城門旁另有要塞傳送門。｜La entrada está al norte de Clarosol, con otro portal junto a la puerta de la fortaleza.
+04-45到60級.md:1740｜站內提醒｜未滿 60 級就照影片在霜語峽谷北側打熊，打一般的瘋狂的裂齒熊（約 57.63, 70.83／66.68, 70.57），避開谷底精英。｜¿Por debajo del nivel 60? Sigue el vídeo y caza osos al norte del Cañón Levescarcha: Dientefragmentado enloquecido normal en 57.63, 70.83 y 66.68, 70.57. Evita los élites del fondo.
+01-第一段-1到12級.md:1324｜步驟說明｜前置是 6062，第二隻為海浪蟹。｜Requisito previo: 6062. El segundo objetivo es un Reptador de espuma.
+01-第一段-1到12級.md:1327｜步驟說明｜前置是 6083，第三隻為硬甲蠍。｜Requisito previo: 6083. Domina en tercer lugar un Escórpido acorazado.
+02-12到30級.md:740｜標籤｜高等怪｜Mobs de alto nivel.
+05-副本.md:83｜站內說明｜96391、96393、96394、96395、96403、98423 是聯盟任務，部落接不到。｜96391, 96393, 96394, 96395, 96403 y 98423 son misiones de la Alianza; la Horda no puede aceptarlas.
+05-副本.md:121｜步驟說明｜前置 99156 有種族限制；其他種族看克里斯多夫身上有沒有這個任務。｜El requisito previo 99156 tiene restricciones de raza. Con otras razas, comprueba si Kristof te ofrece esta misión.
+05-副本.md:403｜步驟說明｜前置是 6562；同時讓 6563 保持已接。若刷不到便箋，整組不必等待。｜Requisito previo: 6562. Mantén 6563 aceptada a la vez. Si no cae la nota, el grupo no tiene que esperar.
+05-副本.md:449｜副本入口｜由大堂朝四門看，最左側；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Mirando las cuatro puertas desde el vestíbulo, es la del extremo izquierdo. La flecha señala la entrada exterior del monasterio; dentro del vestíbulo, localiza el portal según el orden de las puertas.
+05-副本.md:542｜副本入口｜由大堂朝四門看，最右側；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Mirando las cuatro puertas desde el vestíbulo, es la del extremo derecho. La flecha señala la entrada exterior del monasterio; dentro del vestíbulo, localiza el portal según el orden de las puertas.
+05-副本.md:611｜副本入口｜由大堂朝四門看，右數第二道鎖門；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Mirando las cuatro puertas desde el vestíbulo, es la segunda puerta cerrada desde la derecha. La flecha señala la entrada exterior del monasterio; dentro del vestíbulo, localiza el portal según el orden de las puertas.
+05-副本.md:642｜副本入口｜由大堂朝四門看，左數第二道鎖門；箭頭指到室外修道院入口，進大堂後照門序找傳送門。｜Mirando las cuatro puertas desde el vestíbulo, es la segunda puerta cerrada desde la izquierda. La flecha señala la entrada exterior del monasterio; dentro del vestíbulo, localiza el portal según el orden de las puertas.
+05-副本.md:1054｜站內前置接取路線｜前往淒涼之地 葬影村前，可從奧格瑪尤塞爾奈接暗影殘片，但最低 39 級。離開菲拉斯 莫沙徹營地後往淒涼之地 葬影村，先找瓦克與瑟琳德拉，再繞維洛、半人馬賤民。想做永恆版水瓶支線先到東南辛德拉，完成水晶塔與魔導師引導後到遺忘花園接 93594→93404。辛德拉任務最低 35 級。進瑪拉頓橙門之前接凱雯德拉。｜En el nivel 39, toma Fragmentos Oscuros de Uthel'nay en Orgrimmar antes de Aldea Cazasombras. Desde Campamento Mojache, diríjase a Aldea Cazasombras y vea Warug y Selendra, luego visite Willow y Paria Centauro. Para la cadena de viales de agua Forever, realice las introducciones a la torre de cristal y Magister en el sureste Shen'dralas, luego tome 93594 → 93404 en Forgotten Gardens. Las misiones de Shen'dralas requieren nivel 35. Recogida en Cavindra antes del portal naranja.
+05-副本.md:1116｜站內說明｜29.10, 62.50 是荒野洞口，橙與紫兩道實例門要沿對應顏色洞道尋找。紫線與橙線在毒水瀑布附近會合。｜La cueva exterior está en 29.10, 62.50. Sigue el túnel naranja o morado hasta su portal. Ambas rutas se encuentran junto a la cascada del veneno.

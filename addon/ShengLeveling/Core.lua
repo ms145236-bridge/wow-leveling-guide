@@ -222,11 +222,21 @@ local function notOffered(event)
   end
 end
 
+-- 自動接：灰名（太低等）的任務不接，除非就是這一站路線上要接的（例如回低等區交任務時，NPC 身上的舊任務）
+local function wantAccept(id)
+  local lv, q = UnitLevel("player") or 1, R.quests[id]
+  local range = (UnitQuestTrivialLevelRange and UnitQuestTrivialLevelRange("player")) or (GetQuestGreenRange and GetQuestGreenRange()) or 8
+  if not (q and q.lvl) or q.lvl >= lv - range then return true end
+  for _, step in ipairs(lastState and not lastState.instance and lastState.steps or {}) do
+    if step.s.t == "accept" and step.s.q == id then return true end
+  end
+  return false
+end
 local AUTO = {}
 local function plain(v) return v ~= nil and not (issecretvalue and issecretvalue(v)) end
 function AUTO.QUEST_DETAIL()
   local id = GetQuestID and GetQuestID()
-  if plain(id) and inRoute(id) then AcceptQuest() end
+  if plain(id) and inRoute(id) and wantAccept(id) then AcceptQuest() end
 end
 function AUTO.QUEST_PROGRESS()
   local id = GetQuestID and GetQuestID()
@@ -245,7 +255,7 @@ function AUTO.GOSSIP_SHOW()
     if plain(q.questID) and q.isComplete and inRoute(q.questID) then G.SelectActiveQuest(q.questID); return end
   end
   for _, q in ipairs(G.GetAvailableQuests and G.GetAvailableQuests() or {}) do
-    if plain(q.questID) and inRoute(q.questID) then G.SelectAvailableQuest(q.questID); return end
+    if plain(q.questID) and inRoute(q.questID) and wantAccept(q.questID) then G.SelectAvailableQuest(q.questID); return end
   end
 end
 function AUTO.QUEST_GREETING()
@@ -257,7 +267,7 @@ function AUTO.QUEST_GREETING()
   for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do
     -- 只是打開任務內容；真正接不接由 QUEST_DETAIL 用遊戲給的 ID 判斷，選到同名的別環也不會接錯
     for _, id in ipairs(routeQuestsByTitle(GetAvailableTitle(i))) do
-      if inRoute(id) and not E.Turned(id) and not C.IsOnQuest(id) then SelectAvailableQuest(i); return end
+      if inRoute(id) and wantAccept(id) and not E.Turned(id) and not C.IsOnQuest(id) then SelectAvailableQuest(i); return end
     end
   end
 end
