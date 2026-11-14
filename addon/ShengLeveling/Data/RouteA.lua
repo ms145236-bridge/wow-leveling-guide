@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "2decf339",
+  built = "e4bb1205",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -1392,7 +1392,7 @@ MG.Route = {
         {t="fly", to="暴風城"},
         {t="turnin", q=69, npc="旅店老闆法雷", tgt="旅店老闆法雷", map=1429, x=43.8, y=65.8},
         {t="accept", q=70, npc="旅店老闆法雷", tgt="旅店老闆法雷", map=1429, x=43.77, y=65.8},
-        {t="buy", desc="上樓拾取箱子。", npc="拍賣場", text="青銅管", item=4371, n=1},
+        {t="buy", npc="拍賣場", text="青銅管", item=4371, n=1},
         {t="buy", npc="拍賣場", text="粘糊的蜘蛛腿", item=2251, n=6},
         {t="turnin", q=70, npc="管理員弗索姆", tgt="管理員弗索姆", map=1453, x=42.5, y=72.4},
         {t="accept", q=72, npc="管理員弗索姆", tgt="管理員弗索姆", map=1453, x=42.53, y=72.36},

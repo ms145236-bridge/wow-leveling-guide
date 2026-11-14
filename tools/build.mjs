@@ -1,7 +1,7 @@
 // 離線建置：route/*.md → addon/ShengLeveling/Data/Route.lua + tools/unresolved.md
 // 用法：node tools/build.mjs
 // 缺任務 ID／座標時查 QuestieDB（zhTW、zhCN、enUS 名稱）。有「找不到／多個候選」時以結束碼 1 結束（輸出仍會寫出）。
-import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -879,13 +879,19 @@ const shortEn = (n) => {
 const txKey = (s) => String(s || "").replace(/【[^】]*】/g, "").replace(/\s+/g, " ").trim();
 const CJK = /[　-〿぀-ヿ㐀-鿿가-힯＀-￯]/;
 const TX_ROWS = [], TX_AT = new Map(), TX = new Map(), txUsed = new Set();
-for (const line of readFileSync(join(ROOT, "tools", "route-text-enUS.md"), "utf8").split(/\r?\n/)) {
+// 聯盟另有 tools/route-text-alliance-<loc>.md：先讀，同檔名同行號時優先
+const txLines = (loc) => {
+  const own = join(ROOT, "tools", `route-text-alliance-${loc}.md`);
+  return (ALLY && existsSync(own) ? readFileSync(own, "utf8").split(/\r?\n/) : []).concat(readFileSync(join(ROOT, "tools", `route-text-${loc}.md`), "utf8").split(/\r?\n/));
+};
+const txNeed = new Map(); // 英文翻不到的中文（TX_NEED=檔案 時輸出，拿去翻）
+for (const line of txLines("enUS")) {
   const f = line.split("｜");
   if (f.length < 4 || !/\.md:\d+$/.test(f[0])) continue;
   const row = { at: f[0], type: f[1], zh: txKey(f.slice(2, -1).join("｜")), en: f[f.length - 1].trim() };
   TX_ROWS.push(row);
   if (!row.zh || !row.en || CJK.test(row.en)) continue;
-  TX_AT.set(row.at + "|" + row.zh, row.en);
+  if (!TX_AT.has(row.at + "|" + row.zh)) TX_AT.set(row.at + "|" + row.zh, row.en);
   if (!TX.has(row.zh)) TX.set(row.zh, row.en);
 }
 // 英文裡的任務 ID → 英文任務名（名字已寫在旁邊就只拿掉 ID）；「02-Stop 8」→ 英文站名；座標前的地圖 ID 拿掉（hit：記下換掉的任務 ID，其他語系照著換）
@@ -905,7 +911,7 @@ const tx = (where, zh) => {
   const k = txKey(zh);
   if (k && !CJK.test(k.replace(/／/g, "/"))) return k.replace(/／/g, "/"); // 原文本來就是英文（目標怪名、物品名）
   const en = k && (TX_AT.get(where + "|" + k) ?? TX.get(k));
-  if (!en) return undefined;
+  if (!en) { if (k && !txNeed.has(k)) txNeed.set(k, where); return undefined; }
   txUsed.add(k);
   return enIds(en);
 };
@@ -1075,6 +1081,7 @@ const txMiss = TX_ROWS.filter((r) => !txUsed.has(r.zh));
 console.log(`翻譯列 ${TX_ROWS.length}，用到 ${TX_ROWS.length - txMiss.length}；英文含中日韓字（不用）${TX_ROWS.filter((r) => CJK.test(r.en)).length}；沒用到（依類型）：` + Object.entries(Object.groupBy(txMiss, (r) => r.type)).map(([k, v]) => k + " " + v.length).join("、"));
 if (process.env.TX_MISS) writeFileSync(process.env.TX_MISS, leftAt.concat(txMiss.map((r) => `${r.at}｜${r.type}｜${r.zh}`)).join("\n"));
 console.log("英文缺接交 NPC：" + missNpc.join("、"));
+if (process.env.TX_NEED) writeFileSync(process.env.TX_NEED, [...txNeed].map(([k, w]) => `${w}｜說明｜${k}｜`).join("\n"));
 console.log(`english-names.md：任務 ${MD_QUEST.size}、實體 ${MD_ENT.size}、名稱 ${MD_NAME.size}；和 QuestieDB 英文不同：任務名 ${enDiff.quest}、接交 NPC ${enDiff.npc}、選取目標 ${enDiff.tgt}`);
 
 // ── 其他語系：Data/Route_<locale>.lua，結構同 Route_enUS.lua，每一欄翻不到就用英文 ──
@@ -1125,7 +1132,7 @@ for (const loc of Object.keys(NAME_LOC)) {
   const c = { text: 0, textLoc: 0, textEn: 0, names: 0, namesLoc: 0, namesEn: new Set(), qn: 0, qnLoc: 0, qd: 0, qdLoc: 0, rejected: { mark: 0, garbled: 0, script: 0 }, tags: 0, tagsEn: 0 };
   // 說明文字
   const AT = new Map(), ANY = new Map();
-  for (const line of readFileSync(join(ROOT, "tools", `route-text-${loc}.md`), "utf8").split(/\r?\n/)) {
+  for (const line of txLines(loc)) {
     const f = line.split("｜");
     if (f.length < 4 || !/\.md:\d+$/.test(f[0])) continue;
     const k = txKey(f.slice(2, -1).join("｜"));
