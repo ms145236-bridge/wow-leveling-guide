@@ -332,7 +332,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined, anyRace: tags.includes("部落可接") || undefined,
       desc: [...tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")),
         ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
-      spot: (tags.find((t) => /^所在[：:]/.test(t)) || "").replace(/^所在[：:]s*/, "") || undefined, // 副本內交的人在哪（副本中目標做完時顯示）
+      spot: (tags.find((t) => /^所在[：:]/.test(t)) || "").replace(/^所在[：:]\s*/, "") || undefined, // 副本內交的人在哪（副本中目標做完時顯示）
       star: starOf(tags), rate: (tags.map((t) => t.match(/^掉率\s*(\d+(?:\.\d+)?)\s*%/)).find(Boolean) || [])[1],
       pre: tags.map((t) => t.match(/^前置[：:].*?(\d{2,6})\s*$/)).filter(Boolean).map((m) => +m[1]) };
     if (step.t === "accept" || step.t === "turnin" || step.t === "do") {
@@ -356,6 +356,8 @@ for (const file of files.filter((f) => !sideFile(f))) {
     else if (step.t === "note") step.text = f[0];
     else if (step.t === "travel") { step.text = f.join("｜"); step.coord = parseCoord(step.text); }
     if (st.dungeon) Object.assign(step, { ph: st.phase }, dungeonTags(tags));
+    // 副本內的「做」：位置那段也當成副本中清單的補充行（spot）
+    if (st.dungeon && step.ph === "in" && step.t === "do" && !step.spot) step.spot = (tags.find((t) => /^位置[：:]/.test(t)) || "").replace(/^位置[：:]\s*/, "") || undefined;
     st.steps.push(step);
   });
 }

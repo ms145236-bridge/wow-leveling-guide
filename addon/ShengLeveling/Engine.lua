@@ -1180,18 +1180,19 @@ end
 
 -- 副本裡的步驟列：這個副本的任務（路線上的＋QuestieDB 屬於這個副本區域的），只列日誌中還沒完成的（在副本內交的完成了也留著），一次全列
 function E.InstanceState(d, all)
-  local steps, seen, inTurn = {}, {}, {}
+  local steps, seen, inTurn, inDo = {}, {}, {}, {}
   for _, x in ipairs(all or { d }) do
     for _, step in ipairs(x.list or {}) do
       -- 有地圖座標的是在本外交（路線放在副本內段落而已）
       if step.s.ph == "in" and step.s.t == "turnin" and step.s.q and not step.s.map then inTurn[step.s.q] = step.s end
+      if step.s.ph == "in" and step.s.t == "do" and step.s.q then inDo[step.s.q] = inDo[step.s.q] or step.s end -- 路線上的做法（位置補充行）
     end
   end
   local function add(q)
     if q and not seen[q] and C.IsOnQuest(q) and (inTurn[q] or not C.IsReady(q)) then
       seen[q] = true
       -- 目標做完、在副本內交的：改成「交」步驟，第二行寫找誰交
-      steps[#steps + 1] = { s = (inTurn[q] and C.IsReady(q)) and inTurn[q] or { t = "do", q = q }, key = "d:" .. q, st = d }
+      steps[#steps + 1] = { s = (inTurn[q] and C.IsReady(q)) and inTurn[q] or inDo[q] or { t = "do", q = q }, key = "d:" .. q, st = d }
     end
   end
   for _, x in ipairs(all or { d }) do

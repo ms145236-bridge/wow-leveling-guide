@@ -2203,6 +2203,7 @@ function UI.Render(S)
     elseif s.npc then
       line(s.npc, DIM); y = y - 18
     end
+    if state.instance and s.spot then line(s.spot, GOLD); y = y - 18 end -- 副本中：在副本哪裡（和主步驟第三行同色）
   end
   for k = used + 1, #bar.extra do bar.extra[k]:Hide(); bar.extraN[k]:Hide() end
   for k = #(state and state.group or {}) + 1, #bar.divs do bar.divs[k]:Hide() end
