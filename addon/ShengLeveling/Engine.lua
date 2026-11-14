@@ -435,7 +435,8 @@ function E.Detour(state)
       local s, q = step.s, step.s.q
       if s.ph == "post" and s.t == "turnin" and q and not here[q] and C.IsOnQuest(q) and ready(q) and now - (detourNo[step.key] or -999) >= 120 then
         local d = dist(s)
-        if d and d <= lim and d < cd * 0.25 and (not bd or d < bd) then best, bd = step, d end
+        -- 不在主線上，不比目前步驟近不近：人在附近就提示（交的人常就在下一步旁邊）
+        if d and d <= lim and (not bd or d < bd) then best, bd = step, d end
       end
     end
   end
