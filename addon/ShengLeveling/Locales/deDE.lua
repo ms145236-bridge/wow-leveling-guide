@@ -115,8 +115,6 @@ MG.Locales.deDE = {
   -- hint rows
   ["危險"] = "Gefahr",
   ["離開前"] = "Gehen Sie vorher",
-  ["待交"] = "Später abgeben",
-  ["%s 等 %d 個"] = "%s (%d)",
   ["還有 %d 個任務"] = "%d Quest(s) übrig",
   ["修裝"] = "Reparieren",
   ["耐久 "] = "Haltbarkeit ",

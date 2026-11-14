@@ -115,8 +115,6 @@ MG.Locales.frFR = {
   -- hint rows
   ["危險"] = "Danger",
   ["離開前"] = "Partir avant",
-  ["待交"] = "À rendre",
-  ["%s 等 %d 個"] = "%s (%d)",
   ["還有 %d 個任務"] = "%d quête(s) restante(s)",
   ["修裝"] = "Réparations",
   ["耐久 "] = "Durabilité ",

@@ -738,27 +738,6 @@ function E.Current()
   return st
 end
 
--- 待交：日誌裡已完成、但本站沒有交這個任務，路線排在後面某站才交（例如荊棘谷北邊做完、下一趟到藏寶海灣才交）
--- 回 { {q, st}... }，依交的站排序；玩家按 × 收掉的不再列
-function E.Hold(st)
-  if not st or st.dungeon then return {} end
-  local here, out = {}, {}
-  for _, step in ipairs(st.list) do if step.s.t == "turnin" and step.s.q then here[step.s.q] = true end end
-  for q, sts in pairs(questSt) do
-    if not here[q] and not MG.db.holdNo[q] and C.IsOnQuest(q) and ready(q) then
-      for _, o in ipairs(sts) do
-        if not o.dungeon and o.index > st.index then
-          local turnsHere = false
-          for _, step in ipairs(o.list) do if step.s.t == "turnin" and step.s.q == q then turnsHere = true; break end end
-          if turnsHere then out[#out + 1] = { q = q, st = o }; break end
-        end
-      end
-    end
-  end
-  table.sort(out, function(a, b) return a.st.index < b.st.index or (a.st.index == b.st.index and a.q < b.q) end)
-  return out
-end
-
 function E.Next(st)
   if st and st.dungeon then return nil end
   return st and E.stations[st.index + 1]

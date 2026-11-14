@@ -4,7 +4,7 @@ local E, C, N, UI = MG.E, MG.C, MG.N, MG.UI
 local L = MG.L
 local R = MG.Route or { stations = {}, quests = {} }
 
-local DEFAULTS = { notNow = {}, fpSeen = {}, fpSkip = {}, grindSkip = {}, dNo = {}, dDismiss = {}, holdNo = {}, mark = {}, pin = {}, skip = {}, latch = {}, drop = {}, carry = {}, shown = true } -- 其餘設定的預設在 UI.lua 的設定表
+local DEFAULTS = { notNow = {}, fpSeen = {}, fpSkip = {}, grindSkip = {}, dNo = {}, dDismiss = {}, mark = {}, pin = {}, skip = {}, latch = {}, drop = {}, carry = {}, shown = true } -- 其餘設定的預設在 UI.lua 的設定表
 local f = CreateFrame("Frame")
 local registered = {} -- 事件 → 是否註冊成功（probe 用）
 local trace = {} -- 事件參數紀錄（probe 用）

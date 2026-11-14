@@ -2218,18 +2218,6 @@ function UI.Render(S)
       H[#H + 1] = { tag = L["飛行點"], color = GOLD, text = fp.npc or L["飛行管理員"], actLabel = L["去"], act = function() goTo(fp, MG.Clean(fp.npc or L["飛行管理員"]), function() return MG.db.fpSeen[fp.npcG or fp.npc] end) end,
         close = function() MG.db.fpSkip[fp.npcG or fp.npc] = true end }
     end
-    local hold = E.Hold(st)
-    if #hold > 0 then
-      local first = hold[1]
-      H[#H + 1] = { tag = L["待交"], color = GOLD, text = #hold > 1 and L["%s 等 %d 個"]:format(E.QName(first.q), #hold) or E.QName(first.q),
-        sub = UI.StName(first.st),
-        tip = function(owner)
-          tipOpen(owner, L["待交"], "ANCHOR_BOTTOMLEFT")
-          for _, h in ipairs(hold) do tipLine(E.QName(h.q) .. L["："] .. UI.StName(h.st), TEXT, true) end
-          GameTooltip:Show()
-        end,
-        close = function() for _, h in ipairs(hold) do MG.db.holdNo[h.q] = true end end }
-    end
     if state.train then
       local ts = state.steps[state.train]
       H[#H + 1] = { tag = L["學技能"], color = GOLD, text = ts.s.npc, sub = L["%d 級"]:format(ts.s.lv), actLabel = L["去"], act = pin(state.train),

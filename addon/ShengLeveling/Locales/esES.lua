@@ -115,8 +115,6 @@ MG.Locales.esES = {
   -- hint rows
   ["危險"] = "Peligro",
   ["離開前"] = "salir antes",
-  ["待交"] = "Entregar luego",
-  ["%s 等 %d 個"] = "%s (%d)",
   ["還有 %d 個任務"] = "%d misiones restantes",
   ["修裝"] = "Reparación",
   ["耐久 "] = "Durabilidad ",
