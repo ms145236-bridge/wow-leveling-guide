@@ -94,13 +94,47 @@ local function macro()
   -- 選到屍體就清掉再選：/targetexact 挑最近的同名怪，可能是屍體；清掉後用部分比對再試一次，最後還是屍體就不留目標
   local DEAD = "/cleartarget [dead]"
   size = size + 1 + #DEAD
-  for _, name in ipairs(order) do if not add("/targetexact [noexists] " .. name) then break end end
-  lines[#lines + 1] = DEAD
-  -- 部分比對的備援：塞得下才加，加了才需要第二次清屍體
+  -- 部分比對的備援：同開頭的一群怪（黑鰭魚人、黑鰭戰士…）用共同開頭一行涵蓋，完整名稱塞不下的那幾種也選得到
   local partial = false
+  local fallbacks, groupOf = {}, {}
+  local function chars(str) local t = {}; for ch in str:gmatch("[%z\1-\127\194-\244][\128-\191]*") do t[#t + 1] = ch end; return t end
   for _, name in ipairs(order) do
-    if size + 1 + #DEAD + 1 + #("/target [noexists] " .. name) > LIMIT then break end
-    add("/target [noexists] " .. name); partial = true
+    local c = chars(name)
+    local cjk = #(c[1] or "") > 1
+    local k = cjk and table.concat(c, "", 1, math.min(2, #c)) or name:sub(1, 4)
+    local g = groupOf[k]
+    if not g then g = { names = {} }; groupOf[k] = g; fallbacks[#fallbacks + 1] = g end
+    g.names[#g.names + 1] = name
+  end
+  for _, g in ipairs(fallbacks) do
+    local line = g.names[1]
+    if #g.names > 1 then
+      local p = chars(g.names[1])
+      local n = #p
+      for i = 2, #g.names do
+        local c = chars(g.names[i])
+        local m = 0
+        while m < n and m < #c and c[m + 1] == p[m + 1] do m = m + 1 end
+        n = m
+      end
+      local prefix = strtrim(table.concat(p, "", 1, n))
+      if (#p[1] > 1 and n >= 2) or #prefix >= 4 then line = prefix end
+    end
+    g.line = "/tar [noexists] " .. line
+  end
+  -- 有共同開頭的那一行先留位子（它涵蓋最多種），剩下的空間放完整名稱
+  local reserve = 0
+  for _, g in ipairs(fallbacks) do if #g.names > 1 then reserve = 1 + #g.line + 1 + #DEAD; break end end
+  size = size + reserve
+  for _, name in ipairs(order) do if not add("/targetexact [noexists] " .. name) then break end end
+  size = size - reserve
+  lines[#lines + 1] = DEAD
+  local prio = {}
+  for _, g in ipairs(fallbacks) do if #g.names > 1 then prio[#prio + 1] = g end end
+  for _, g in ipairs(fallbacks) do if #g.names == 1 then prio[#prio + 1] = g end end
+  for _, g in ipairs(prio) do
+    if size + 1 + #DEAD + 1 + #g.line > LIMIT then break end
+    add(g.line); partial = true
   end
   if partial then add(DEAD) end
   if mark then lines[#lines + 1] = mark end
