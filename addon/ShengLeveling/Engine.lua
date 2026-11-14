@@ -399,7 +399,7 @@ end
 -- 條件：同地圖、距離 ≤ 設定值、且 < 目前步驟距離的 25%；不在「附近一起做」裡；同一步連續 3 秒都成立才提示；略過後 2 分鐘不再提。
 local detourKey, detourSince, detourNo = nil, 0, {}
 function E.Detour(state)
-  if not (state and state.cur and not state.instance and MG.UI.Get("detourOn")) then return end
+  if not (state and not state.instance and MG.UI.Get("detourOn")) then return end -- 本站做完（沒有目前步驟）時出本交的任務照樣提示
   local map, x, y = C.Position()
   if not (map and x) then return end
   local function dist(s)
@@ -415,7 +415,7 @@ function E.Detour(state)
     return best
   end
   local now, lim, lv = GetTime(), MG.UI.Get("detourDist"), UnitLevel("player") or 0
-  local cd = dist(state.steps[state.cur].s) or math.huge
+  local cd = state.cur and dist(state.steps[state.cur].s) or math.huge
   local best, bd
   for i, step in ipairs(state.steps) do
     local s, q = step.s, step.s.q
