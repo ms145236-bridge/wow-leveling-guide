@@ -596,6 +596,22 @@ for (const st of stations) {
   if (!st.map) hard(`${st.id} ${st.name}`, "沒有地圖 ID");
 }
 
+// 純對話／送信任務（沒有任何目標）：「做」和「交」是同一件事，同站有交、地點也一樣就不放「做」
+let talkOnly = 0;
+for (const st of stations) {
+  st.steps = st.steps.filter((s) => {
+    if (s.t !== "do" || !s.id || db.questMobs(s.id).length || db.quest(s.id)?.requiredSourceItems?.length) return true;
+    // QuestieDB 沒記目標的新任務也可能要打怪、撿東西：說明看起來是要做事的就留著
+    const h = s.hint || "";
+    const talk = /^(把|將)[^，。；]*(交給|帶給|交還給|送給|送回|帶回|帶到|拿給)/.test(h) || /^(與|和|向|問)[^，。；]*(談一談|談話|交談|對話|報到|回報|報告)/.test(h) || /^(到|去)[^，。；]*(找|報到|向)/.test(h);
+    if (!talk || /尋找|使用|餵|讀|點|搜尋|等|收集|殺|打|撿|拾|取得|×/.test(h)) return true;
+    const t = st.steps.find((x) => x.t === "turnin" && x.id === s.id);
+    const same = t && (!s.coord || (t.coord && t.coord.map === s.coord.map && Math.hypot(t.coord.x - s.coord.x, t.coord.y - s.coord.y) <= 2));
+    if (same) talkOnly++;
+    return !same;
+  });
+}
+
 // 順序檢查：「接」的前置在同一站較後面才交 → 把這個接（和夾在中間的同任務步驟）移到那個交後面
 const orderFixes = [];
 for (const st of stations) {
@@ -1266,7 +1282,7 @@ for (const [loc, c] of locCov) {
 }
 const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 順序錯誤（已自動調整 ${orderFixes.length}）\n\n${orderFixes.join("\n") || "無"}\n\n## 學技能站（候選站依序，遊戲取第一個本角色有的）\n\n${trainers.map((t) => `- ${t.c} ${t.lv} ${t.npc}（${t.place}）→ ${t.st.slice(0, 4).map((id) => id + " " + stations.find((x) => x.id === id).name).join("、")}`).join("\n") || "無"}\n`;
 writeFileSync(REPORT, report);
-console.log(`順序錯誤已調整 ${orderFixes.length}`);
+console.log(`順序錯誤已調整 ${orderFixes.length}、純對話任務的「做」拿掉 ${talkOnly}`);
 console.log(`路線外判定 ${offroute.size}、路線外前置 ${feeds.size}、訓練師 ${trainers.length}、保留物品 ${keep.size}、補給 ${stations.reduce((n, x) => n + (x.supply?.length || 0), 0)}、危險 ${stations.reduce((n, x) => n + (x.danger?.length || 0), 0)}`);
 console.log(`站 ${stations.length}、任務 ${quests.size}、需要處理 ${issues.hard.length}、提醒 ${issues.warn.length}、名稱不一致 ${nameIssues.length}`);
 console.log("裸任務 ID 換成任務名：" + ([...idStats.entries()].map(([k, v]) => k + " " + v).join("、") || "0"));
