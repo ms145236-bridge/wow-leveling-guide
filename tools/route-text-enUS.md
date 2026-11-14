@@ -12729,3 +12729,39 @@
 原文把「充能烈焰圖騰」標為獎勵，英文照該物品的官方名 Totem of Charged Flames。任務 1527、97257 的獎勵資料則指向 Fire Totem。 [Fire Totem](https://www.wowhead.com/forever/item=5176)
 01-第一段-1到12級.md:1205｜步驟說明｜目標巡邏，先沿路查看；找到後先跟他對話選激怒，他才會開打。｜He patrols, so check the road. When you find him, talk to him and pick the option that provokes him, or he won't fight.
 06-路線外任務.md:120｜路線外理由｜已打算學對應專業或紮營時順手做；11/10 起改在申德村交。｜Do it on the way if you plan to learn the profession or camp; since 11/10 it is turned in at Shen'dar Village.
+05-副本.md:39｜步驟所在｜首間穴居人廳右岔上坡，奧格弗林特後方遺體｜Up the right fork of the first cave hall, corpse behind Oggleflint
+05-副本.md:321｜步驟所在｜庭院右側，亡靈哨兵文森特｜Courtyard, right side: Deathstalker Vincent
+05-副本.md:694｜步驟所在｜副本入口處，護送終點｜At the dungeon entrance, where the escort ends
+05-副本.md:745｜步驟所在｜入門左轉下坡，清潔區牆邊的清潔器｜Left from the entrance, down the slope: cleaner on the wall of the Clean Room
+05-副本.md:846｜步驟所在｜火眼莫德雷斯附近的牢房，貝尼斯特拉茲｜Cell near Mordresh Fire Eye: Belnistrasz
+05-副本.md:849｜步驟所在｜神像旁，貝尼斯塔茲的火盆｜Brazier by the idol, where Belnistrasz performs the ritual
+05-副本.md:908｜步驟所在｜雷夫洛什身後房間的聖騎士遺體｜Paladin remains in the room behind Revelosh
+05-副本.md:919｜步驟所在｜阿札達斯後方寶庫的諾甘農圓盤｜Discs of Norgannon in the vault behind Archaedas
+05-副本.md:1094｜步驟所在｜塞雷布拉斯首領房內，贖罪者｜In the Celebras the Cursed boss room: Celebras the Redeemed
+05-副本.md:1097｜步驟所在｜塞雷布拉斯首領房內，贖罪者｜In the Celebras the Cursed boss room: Celebras the Redeemed
+05-副本.md:1200｜步驟所在｜上層走廊的牢房，指揮官 Folkar｜Cell off the upper corridor: Commander Folkar
+05-副本.md:1205｜步驟所在｜尾王後方密室的地板紙條｜Note on the floor of the hidden room behind Blazeroar
+05-副本.md:1208｜步驟所在｜上層走廊的牢房，指揮官 Folkar｜Cell off the upper corridor: Commander Folkar
+05-副本.md:1271｜步驟所在｜環廊下層的哈卡祭壇｜Altar of Hakkar on the lower level ring corridor
+05-副本.md:1273｜步驟所在｜下層中央的哈卡塑像｜Lower level center: the Hakkari statue
+05-副本.md:1279｜步驟所在｜伊蘭尼庫斯房，尾王旁的精華之泉｜Eranikus' chamber: the Essence Font beside the final boss
+05-副本.md:1327｜步驟所在｜索瑞森神殿裡的鑄鐵紀念碑｜Monument of Franclorn Forgewright in the Shrine of Thaurissan
+05-副本.md:1375｜步驟所在｜沃什加斯房外大斜坡下，側台的比修｜Down the big ramp outside Vosh'gajin's room: Bijou on the side platform
+05-副本.md:1378｜步驟所在｜比修所在的側台｜Bijou's side platform
+05-副本.md:1493｜步驟所在｜亡靈區入口旁的燃燒小教堂｜Burning chapel beside the Undead entrance
+05-副本.md:1496｜步驟所在｜瑞文戴爾房，奧里克斯會移到房內｜Baron Rivendare's room: Aurius moves there
+05-副本.md:1609｜步驟所在｜芬古斯後，陷阱旁的諾特｜Past Fengus, by the trap: Knot Thimblejack
+05-副本.md:1612｜步驟所在｜芬古斯庭院的破損陷阱旁，諾特｜Fengus' courtyard, by the broken trap: Knot Thimblejack
+05-副本.md:1615｜步驟所在｜戈多克平民區的踐踏者克雷格｜Gordok Commons: Stomper Kreeg
+05-副本.md:1618｜步驟所在｜圖書館裡的博學者基爾達斯｜Library: Lorekeeper Kildrath
+05-副本.md:1621｜步驟所在｜圖書館裡的博學者基爾達斯｜Library: Lorekeeper Kildrath
+05-副本.md:1624｜步驟所在｜圖書館裡的博學者基爾達斯｜Library: Lorekeeper Kildrath
+05-副本.md:1627｜步驟所在｜圖書館裡的博學者麥庫斯｜Library: Lorekeeper Mykos
+05-副本.md:1630｜步驟所在｜圖書館裡的博學者麥庫斯｜Library: Lorekeeper Mykos
+05-副本.md:1633｜步驟所在｜圖書館裡的博學者麥庫斯｜Library: Lorekeeper Mykos
+05-副本.md:1636｜步驟所在｜圖書館裡的博學者亞沃｜Library: Lorekeeper Javon
+05-副本.md:1639｜步驟所在｜圖書館裡的博學者亞沃｜Library: Lorekeeper Javon
+05-副本.md:1642｜步驟所在｜圖書館裡的博學者亞沃｜Library: Lorekeeper Javon
+05-副本.md:1574｜步驟所在｜圖書館裡的辛德拉古靈｜Library: Shen'dralar Ancient
+05-副本.md:1577｜步驟所在｜圖書館樓梯下的辛德拉寶箱｜Shen'dralar chest below the library stairs
+05-副本.md:1824｜步驟所在｜達基薩斯王座後方的烙印｜Brand of Drakkisath behind his throne

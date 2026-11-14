@@ -58,7 +58,7 @@ const tagEn = (tag) => { const out = (tag || "").split(/\s*・\s*/).map((t) => T
 const enText = (t) => String(t || "").replace(/\$[Bb]/g, " ").replace(/\$[Nn]/g, "you").replace(/\$[CcRr]/g, "adventurer").replace(/\s+/g, " ").trim();
 const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel" };
 // 行尾標籤：這些不顯示；其餘（可跳過、有隊伍再做…）顯示在步驟第 3 行
-const HIDDEN_TAG = /^(QuestieDB|補充|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接)/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接)/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -332,6 +332,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined, anyRace: tags.includes("部落可接") || undefined,
       desc: [...tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")),
         ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
+      spot: (tags.find((t) => /^所在[：:]/.test(t)) || "").replace(/^所在[：:]s*/, "") || undefined, // 副本內交的人在哪（副本中目標做完時顯示）
       star: starOf(tags), rate: (tags.map((t) => t.match(/^掉率\s*(\d+(?:\.\d+)?)\s*%/)).find(Boolean) || [])[1],
       pre: tags.map((t) => t.match(/^前置[：:].*?(\d{2,6})\s*$/)).filter(Boolean).map((m) => +m[1]) };
     if (step.t === "accept" || step.t === "turnin" || step.t === "do") {
@@ -706,7 +707,7 @@ const stepWhen = (w, sw) => {
   return Object.keys(out).length ? out : undefined;
 };
 const stepOut = (s, st) => ({
-  star: s.star, t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt, desc: s.desc, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
+  star: s.star, t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt, desc: s.desc, spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
   map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, when: stepWhen(s.when, st.when), video: s.video,
 });
 let out = `-- 由 tools/build.mjs 產生，勿手改。來源：route/*.md\nlocal _, MG = ...\nMG.Route = {\n  built = "@@BUILT@@",\n  stations = {\n`;
@@ -809,7 +810,7 @@ const wording = readFileSync(join(ROOT, "tools", "用詞.md"), "utf8").split(/\r
   .map((l) => l.match(/^-\s*([^｜]+)｜(.*)$/)).filter(Boolean).map((m) => [m[1].trim(), m[2].trim()]);
 const reword = (text) => wording.reduce((t, [from, to]) => t.split(from).join(to), text);
 out = out
-  .replace(/\b(d|desc|hint|pickup|text|why|use|note|entrance)="(?:[^"\\]|\\.)*"/g, reword)
+  .replace(/\b(d|desc|spot|hint|pickup|text|why|use|note|entrance)="(?:[^"\\]|\\.)*"/g, reword)
   .replace(/\b(s|pickupS)=\{(?:[^{}"]|"(?:[^"\\]|\\.)*")*\}/g, reword);
 // 資料版本＝內容雜湊（不放時間，內容沒變就不會產生差異）
 const version = createHash("sha1").update(out).digest("hex").slice(0, 8);
@@ -959,6 +960,11 @@ const emitRoute = (X) => {
         }
         if (parts.some((x) => !x)) { left.desc++; leftAt.push(step.where + "｜說明｜" + step.desc); }
         e.desc = parts.some(Boolean) ? parts.filter(Boolean).map(X.endDot).join(F.join) : undefined;
+      }
+      if (step.spot) {
+        cov.zhOnly.desc++;
+        e.spot = T(step.where, step.spot);
+        if (!e.spot) { left.desc++; leftAt.push(step.where + "｜所在｜" + step.spot); }
       }
       if (step.preText) { const ids = [...step.preText.matchAll(/\d{2,6}/g)].map((m) => +m[0]).filter((x) => db.quest(x)); e.preText = ids.length ? ids.map(X.qn).join(F.sep) : undefined; }
       if (step.star) {

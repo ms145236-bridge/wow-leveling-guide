@@ -46,7 +46,7 @@ function E.Localize()
       if en then
         s.npc, s.hint, s.text, s.node, s.preText, s.star = P(d.npc), P(d.hint), P(d.text), P(areas(d.nodeA) or d.node), P(d.preText), d.star
         s.npcObj = d.npcObj
-        s.desc, s.bind, s.to, s.from = P(d.desc), nil, nil, nil
+        s.desc, s.spot, s.bind, s.to, s.from = P(d.desc), P(d.spot), nil, nil, nil
         s.tagL = d.tag -- tag 本身是判斷用（怪多、副本前置鏈），顯示用 tagL
       end
     end
@@ -1167,13 +1167,20 @@ function E.DungeonByInstance(id)
   return all[1], all
 end
 
--- 副本裡的步驟列：這個副本的任務（路線上的＋QuestieDB 屬於這個副本區域的），只列日誌中還沒完成的，一次全列
+-- 副本裡的步驟列：這個副本的任務（路線上的＋QuestieDB 屬於這個副本區域的），只列日誌中還沒完成的（在副本內交的完成了也留著），一次全列
 function E.InstanceState(d, all)
-  local steps, seen = {}, {}
+  local steps, seen, inTurn = {}, {}, {}
+  for _, x in ipairs(all or { d }) do
+    for _, step in ipairs(x.list or {}) do
+      -- 有地圖座標的是在本外交（路線放在副本內段落而已）
+      if step.s.ph == "in" and step.s.t == "turnin" and step.s.q and not step.s.map then inTurn[step.s.q] = step.s end
+    end
+  end
   local function add(q)
-    if q and not seen[q] and C.IsOnQuest(q) and not C.IsReady(q) then
+    if q and not seen[q] and C.IsOnQuest(q) and (inTurn[q] or not C.IsReady(q)) then
       seen[q] = true
-      steps[#steps + 1] = { s = { t = "do", q = q }, key = "d:" .. q, st = d }
+      -- 目標做完、在副本內交的：改成「交」步驟，第二行寫找誰交
+      steps[#steps + 1] = { s = (inTurn[q] and C.IsReady(q)) and inTurn[q] or { t = "do", q = q }, key = "d:" .. q, st = d }
     end
   end
   for _, x in ipairs(all or { d }) do

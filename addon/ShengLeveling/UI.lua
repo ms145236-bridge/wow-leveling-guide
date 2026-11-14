@@ -1981,6 +1981,8 @@ function UI.Render(S)
       l3, l3warn = L["之後再接"], true
     elseif step.dungeon then
       l3 = L["副本 "] .. step.dungeon.name
+    elseif state.instance and s.spot then
+      l3 = s.spot -- 副本內交：交給誰在哪
     elseif s.q and state.fill[s.q] then
       l3 = L["補經驗"]
     elseif step.note then

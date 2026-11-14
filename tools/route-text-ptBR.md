@@ -13111,3 +13111,39 @@
 - 08-保留物品.md:212 保留物品用途｜奧達曼的能量源（1956），塵泥沼澤塔貝薩的小屋
 01-第一段-1到12級.md:1205｜步驟說明｜目標巡邏，先沿路查看；找到後先跟他對話選激怒，他才會開打。｜Ele patrulha: verifique a estrada. Ao encontrá-lo, fale e escolha provocá-lo, senão ele não luta.
 06-路線外任務.md:120｜路線外理由｜已打算學對應專業或紮營時順手做；11/10 起改在申德村交。｜Faça de passagem se for aprender a profissão ou acampar; desde 11/10 é entregue em Shen'dar.
+05-副本.md:39｜步驟所在｜首間穴居人廳右岔上坡，奧格弗林特後方遺體｜Rampa à direita do primeiro salão, corpo atrás de Oggleflint
+05-副本.md:321｜步驟所在｜庭院右側，亡靈哨兵文森特｜Pátio, à direita: Espreitador da Morte Vincent
+05-副本.md:694｜步驟所在｜副本入口處，護送終點｜Na entrada da masmorra, onde a escolta termina
+05-副本.md:745｜步驟所在｜入門左轉下坡，清潔區牆邊的清潔器｜À esquerda da entrada, descendo a rampa: limpador na parede da área de limpeza
+05-副本.md:846｜步驟所在｜火眼莫德雷斯附近的牢房，貝尼斯特拉茲｜Cela perto de Mordresh Olho de Fogo: Belnistrasz
+05-副本.md:849｜步驟所在｜神像旁，貝尼斯塔茲的火盆｜Braseiro junto ao ídolo, onde Belnistrasz faz o ritual
+05-副本.md:908｜步驟所在｜雷夫洛什身後房間的聖騎士遺體｜Restos do paladino na sala atrás de Revelosh
+05-副本.md:919｜步驟所在｜阿札達斯後方寶庫的諾甘農圓盤｜Discos de Norgannon no cofre atrás de Archaedas
+05-副本.md:1094｜步驟所在｜塞雷布拉斯首領房內，贖罪者｜Na sala de Celebras, o Amaldiçoado: Celebras, o Redimido
+05-副本.md:1097｜步驟所在｜塞雷布拉斯首領房內，贖罪者｜Na sala de Celebras, o Amaldiçoado: Celebras, o Redimido
+05-副本.md:1200｜步驟所在｜上層走廊的牢房，指揮官 Folkar｜Cela no corredor superior: Commander Folkar
+05-副本.md:1205｜步驟所在｜尾王後方密室的地板紙條｜Bilhete no chão da sala secreta atrás de Blazeroar
+05-副本.md:1208｜步驟所在｜上層走廊的牢房，指揮官 Folkar｜Cela no corredor superior: Commander Folkar
+05-副本.md:1271｜步驟所在｜環廊下層的哈卡祭壇｜Altar de Hakkar no corredor circular inferior
+05-副本.md:1273｜步驟所在｜下層中央的哈卡塑像｜Centro do nível inferior: a estátua Hakkari
+05-副本.md:1279｜步驟所在｜伊蘭尼庫斯房，尾王旁的精華之泉｜Câmara de Eranikus: a Fonte de Essência ao lado do chefe final
+05-副本.md:1327｜步驟所在｜索瑞森神殿裡的鑄鐵紀念碑｜Monumento de Franclorn Forjaverdade no Santuário de Thaurissan
+05-副本.md:1375｜步驟所在｜沃什加斯房外大斜坡下，側台的比修｜Pela rampa grande fora da sala de Vosh'gajin: Bijou na plataforma lateral
+05-副本.md:1378｜步驟所在｜比修所在的側台｜A plataforma lateral de Bijou
+05-副本.md:1493｜步驟所在｜亡靈區入口旁的燃燒小教堂｜Capela em chamas ao lado da entrada dos mortos-vivos
+05-副本.md:1496｜步驟所在｜瑞文戴爾房，奧里克斯會移到房內｜Sala do Barão Rivendare: Aurius se muda para lá
+05-副本.md:1609｜步驟所在｜芬古斯後，陷阱旁的諾特｜Depois de Fengus, junto à armadilha: Knot Dedalcampo
+05-副本.md:1612｜步驟所在｜芬古斯庭院的破損陷阱旁，諾特｜Pátio de Fengus, junto à armadilha quebrada: Knot Dedalcampo
+05-副本.md:1615｜步驟所在｜戈多克平民區的踐踏者克雷格｜Praça Gordok: Pisoteador Kreeg
+05-副本.md:1618｜步驟所在｜圖書館裡的博學者基爾達斯｜Biblioteca: Guardião do Saber Kildrath
+05-副本.md:1621｜步驟所在｜圖書館裡的博學者基爾達斯｜Biblioteca: Guardião do Saber Kildrath
+05-副本.md:1624｜步驟所在｜圖書館裡的博學者基爾達斯｜Biblioteca: Guardião do Saber Kildrath
+05-副本.md:1627｜步驟所在｜圖書館裡的博學者麥庫斯｜Biblioteca: Guardião do Saber Mykos
+05-副本.md:1630｜步驟所在｜圖書館裡的博學者麥庫斯｜Biblioteca: Guardião do Saber Mykos
+05-副本.md:1633｜步驟所在｜圖書館裡的博學者麥庫斯｜Biblioteca: Guardião do Saber Mykos
+05-副本.md:1636｜步驟所在｜圖書館裡的博學者亞沃｜Biblioteca: Guardião do Saber Javon
+05-副本.md:1639｜步驟所在｜圖書館裡的博學者亞沃｜Biblioteca: Guardião do Saber Javon
+05-副本.md:1642｜步驟所在｜圖書館裡的博學者亞沃｜Biblioteca: Guardião do Saber Javon
+05-副本.md:1574｜步驟所在｜圖書館裡的辛德拉古靈｜Biblioteca: Ancião Shen'dralar
+05-副本.md:1577｜步驟所在｜圖書館樓梯下的辛德拉寶箱｜Baú Shen'dralar sob a escada da biblioteca
+05-副本.md:1824｜步驟所在｜達基薩斯王座後方的烙印｜Marca de Drakkisath atrás do trono
