@@ -13119,3 +13119,24 @@
 新增.md:0｜步驟說明｜離主路較遠，趕路可略。｜Loin du trajet principal. Ignore si tu es pressé.
 新增.md:0｜步驟說明｜完成後從禮拜堂飛幽暗城。｜Une fois fini, vole de la Chapelle à Fossoyeuse.
 新增.md:0｜步驟說明｜到幽暗城外搭飛艇去奧格瑪。｜Devant Fossoyeuse, prends le zeppelin pour Orgrimmar.
+新增.md:0｜步驟說明｜這趟先接，科多獸骨留淒涼之地 葬影村第二次收。｜Prends-la maintenant. Récupère les os de kodo lors de ta deuxième visite à Proie-de-l'Ombre, en Désolace.
+新增.md:0｜步驟說明｜大道劫匪順手點營火再去比布里的小屋，兩段皆為任務等級 40、最低 30 級，亡命之徒留到荊棘谷 藏寶海灣交。集骨者在小屋先接，雕刻半人馬圖騰與科多獸骨留 37 級的淒涼之地 葬影村第二次。｜Pour Crime de grand chemin, clique sur le feu de camp en chemin, puis va à la cabane de Bibbly. Les deux parties sont de niveau 40 et demandent le niveau 30. Garde En cavale pour Baie-du-Butin. Prends Collectionneur d'os à la cabane ; garde Totems centaures sculptés et les os de kodo pour ta deuxième visite à Proie-de-l'Ombre, au niveau 37.
+新增.md:0｜步驟說明｜上古之書 6027 任務與目標約 38 級，比本站高 4–6 級；打不動就略過，不影響其他西岸任務。｜Le Livre des Anciens (6027) et ses cibles sont vers le niveau 38, soit 4–6 niveaux au-dessus de cette étape. Ignore-la si c'est trop dur ; les autres quêtes de la côte ouest n'en dépendent pas.
+新增.md:0｜步驟說明｜從葬影村出發，先走幽靈崗哨與科多墓地，到東北小屋交集骨者，再沿南路往瑪諾洛克集會所。｜Au départ de Proie-de-l'Ombre, passe par le poste de Rôdeur-fantôme et le Cimetière des kodos, rends Collectionneur d'os à la cabane au nord-est, puis suis la route sud jusqu'au Convent de Mannoroc.
+新增.md:0｜步驟說明｜任務等級 39–40 的雕刻半人馬圖騰 93225 與集骨者 5501 放這趟：圖騰在集會所東南的瑪格拉姆半人馬順打，集骨者在淒涼之地 葬影村第一次已接，這趟收科多獸骨再到比布里的小屋交。｜Fais Totems centaures sculptés (93225) et Collectionneur d'os (5501), tous deux de niveau 39–40, pendant ce passage. Tue les centaures Magram au sud-est du Convent pour les totems. Tu as pris Collectionneur d'os lors de ta première visite à Proie-de-l'Ombre ; récupère maintenant les os de kodo et rends-la à la cabane de Bibbly.
+新增.md:0｜步驟說明｜先在淚水之池西南打鹽齒鱷魚交 698／699，才開海中的威脅魚人鏈；螃蟹腿 1430 在去東南海岸途中收、回斯通納德交。1428 的魚人智者約 44–45 級，未到 44 級就略過。｜Tue les crocilisques Saltjaw au sud-ouest du Bassin des larmes et rends les deux quêtes Petit bonus du soir pour débloquer la chaîne des murlocs. Récupère les pattes de crabe pour 1430 en allant vers la côte sud-est et rends-les à Pierrêche. Les oracles murlocs de 1428 sont vers le niveau 44–45 ; ignore-la sous le niveau 44.
+新增.md:0｜步驟說明｜西側送完科泰羅卷軸再去避難營地，和水晶任務一起回收兩條迷失者支線。若要補少量經驗，可打淚水之池外圈的普通沼澤怪（約 60, 55），或在東風海岸北段打巨型淤泥蟹。｜Après avoir livré le parchemin de Cortello à l'ouest, va au Harborage et rends les deux quêtes des Perdus avec les quêtes de cristaux. Pour un peu d'XP en plus, tue les monstres normaux du marais autour du Bassin des larmes (vers 60, 55) ou les crabes géants au nord du Rivage d'Estevent.
+新增.md:0｜步驟說明｜先留，荊棘谷 藏寶海灣回訪再交。｜Garde-la pour l'instant. Rends-la lors du retour à Baie-du-Butin.
+新增.md:0｜步驟說明｜3520 留菲拉斯 莫沙徹營地做；97530 留砂槌營地；2874 留荊棘谷 藏寶海灣回訪交。｜Fais 3520 au Camp Mojache, à Féralas, et 97530 à la Base des Cognedunes. Garde 2874 pour le retour à Baie-du-Butin.
+新增.md:0｜步驟說明｜回奧格瑪開費拉斯後續｜Retour à Orgrimmar pour la suite de Feralas
+新增.md:0｜步驟說明｜從莫沙徹飛奧格瑪（通常經陶拉祖等已開飛點）。爐石維持莫沙徹，奧格瑪交完再用爐石回費拉斯。｜Vole de Mojache à Orgrimmar (en général via le Camp Taurajo ou d'autres points de vol déjà débloqués). Garde ta pierre de foyer liée à Mojache ; après les quêtes à Orgrimmar, utilise-la pour revenir à Féralas.
+新增.md:0｜步驟說明｜奧格瑪交完後用爐石回莫沙徹營地；爐石冷卻時從奧格瑪飛莫沙徹。｜Après les quêtes à Orgrimmar, utilise ta pierre de foyer pour revenir au Camp Mojache. Si elle est en recharge, vole d'Orgrimmar à Mojache.
+新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接。從村外往北沿沙灘找瓶子。｜Prends-la d'abord à Baie-du-Butin. Cherche la bouteille sur la plage au nord du village.
+新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接、辛特蘭 惡齒村與辛薩羅在辛特蘭撿酒。｜Prends-la d'abord à Baie-du-Butin. Récupère l'alcool dans les Hinterlands, au Village des Revantusk et à Jintha'Alor.
+新增.md:0｜步驟說明｜在交 6030 與接 5211 後開禮拜堂飛行點；末步飛幽暗城，交完書走去亡靈壁壘。｜Débloque le point de vol de la Chapelle après avoir rendu 6030 et pris 5211. À la dernière étape, vole jusqu'à Fossoyeuse, rends le livre, puis va à pied au Rempart.
+新增.md:0｜步驟說明｜出幽暗城沿大路往東到亡靈壁壘，再走費爾斯通農場、安多哈爾與北山伐木場。｜Sors de Fossoyeuse et suis la route principale vers l'est jusqu'au Rempart, puis passe par le Champ de Felstone, Andorhal et le camp de bûcherons de la Crête du nord.
+新增.md:0｜步驟說明｜回幽暗城飛艇塔，搭飛艇回奧格瑪。｜Retourne à la tour des zeppelins de Fossoyeuse et prends le zeppelin pour Orgrimmar.
+新增.md:0｜步驟說明｜等級落後可在安多哈爾東側外圍（約 46, 64）或瘟疫農場打普通亡靈，再回卡利姆多。｜Si tu es en retard de niveau, tue des morts-vivants normaux à la périphérie est d'Andorhal (vers 46, 64) ou dans les fermes pestiférées avant de retourner en Kalimdor.
+新增.md:0｜步驟說明｜從要塞飛回奧格瑪。｜Vole du Fort jusqu'à Orgrimmar.
+新增.md:0｜步驟說明｜第 1 步開塞納里奧要塞飛行點，最後一步飛回奧格瑪。｜Débloque le point de vol du Fort cénarien à l'étape 1. À la dernière étape, vole jusqu'à Orgrimmar.
+新增.md:0｜步驟說明｜未滿 59 級可留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜Sous le niveau 59, reste au nord-est du Fort (vers 55, 29) pour les scorpides et araignées normaux, ou tue les cultistes du Crépuscule au sud-ouest (vers 38, 44).

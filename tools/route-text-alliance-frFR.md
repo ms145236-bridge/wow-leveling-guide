@@ -390,3 +390,4 @@
 新增.md:0｜步驟說明｜在冬泉熊怪營地 32, 36 一帶打熊怪。｜Tue des furbolgs vers 32, 36 au camp Tombe-hiver.
 新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Reste au camp Tombe-hiver et continue à tuer des furbolgs.
 新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜Dans les maisons en ruine de Darrowshire, ramasse la tête, le côté gauche et le côté droit, puis fais un clic droit pour les assembler.
+新增.md:0｜步驟說明｜還沒到 60 級就打一趟黑石深淵；還不夠再刷斯坦索姆或通靈學院。｜Pas encore niveau 60 ? Fais une fois les profondeurs de Rochenoire. Si ça ne suffit pas, enchaîne Stratholme ou Scholomance.

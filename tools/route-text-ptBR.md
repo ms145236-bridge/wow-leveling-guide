@@ -13229,3 +13229,24 @@
 新增.md:0｜步驟說明｜離主路較遠，趕路可略。｜Longe da rota principal. Pule se estiver com pressa.
 新增.md:0｜步驟說明｜完成後從禮拜堂飛幽暗城。｜Ao terminar, voe da Capela para a Cidade Baixa.
 新增.md:0｜步驟說明｜到幽暗城外搭飛艇去奧格瑪。｜Fora da Cidade Baixa, pegue o zepelim para Orgrimmar.
+新增.md:0｜步驟說明｜這趟先接，科多獸骨留淒涼之地 葬影村第二次收。｜Pegue agora. Colete os ossos de kodo na segunda visita à Aldeia Pescassombra, em Desolação.
+新增.md:0｜步驟說明｜大道劫匪順手點營火再去比布里的小屋，兩段皆為任務等級 40、最低 30 級，亡命之徒留到荊棘谷 藏寶海灣交。集骨者在小屋先接，雕刻半人馬圖騰與科多獸骨留 37 級的淒涼之地 葬影村第二次。｜Em Roubo na estrada, clique na fogueira pelo caminho e depois vá à cabana de Bibbly. As duas partes são de nível 40 e exigem nível 30. Deixe a entrega de Em fuga para Angra do Butim. Pegue Ossos do ofício na cabana; deixe Totens de Centauro Entalhados e os ossos de kodo para a segunda visita à Aldeia Pescassombra, no nível 37.
+新增.md:0｜步驟說明｜上古之書 6027 任務與目標約 38 級，比本站高 4–6 級；打不動就略過，不影響其他西岸任務。｜O Livro dos Anciãos (6027) e seus alvos são de nível 38, cerca de 4–6 níveis acima desta parada. Pule se estiver difícil; as outras missões da costa oeste não dependem dela.
+新增.md:0｜步驟說明｜從葬影村出發，先走幽靈崗哨與科多墓地，到東北小屋交集骨者，再沿南路往瑪諾洛克集會所。｜Saindo da Aldeia Pescassombra, passe pelo Entreposto do Espírito que Anda e pelo Cemitério dos Kodos, entregue Ossos do ofício na cabana a nordeste e depois siga a estrada sul até Ruínas de Mannoroc.
+新增.md:0｜步驟說明｜任務等級 39–40 的雕刻半人馬圖騰 93225 與集骨者 5501 放這趟：圖騰在集會所東南的瑪格拉姆半人馬順打，集骨者在淒涼之地 葬影村第一次已接，這趟收科多獸骨再到比布里的小屋交。｜Faça nesta volta Totens de Centauro Entalhados (93225) e Ossos do ofício (5501), ambas de nível 39–40. Mate os centauros Magram a sudeste das Ruínas para os totens. Você pegou Ossos do ofício na primeira visita à Aldeia Pescassombra; colete agora os ossos de kodo e entregue na cabana de Bibbly.
+新增.md:0｜步驟說明｜先在淚水之池西南打鹽齒鱷魚交 698／699，才開海中的威脅魚人鏈；螃蟹腿 1430 在去東南海岸途中收、回斯通納德交。1428 的魚人智者約 44–45 級，未到 44 級就略過。｜Mate Crocoliscos Saltjaw a sudoeste do Poço de Lágrimas e entregue as duas missões Falta de suprimentos para liberar a cadeia dos murlocs. Colete as patas de caranguejo para 1430 a caminho da costa sudeste e entregue em Pedregal. Os Oráculos murlocs de 1428 são de nível 44–45; abaixo do nível 44, pule.
+新增.md:0｜步驟說明｜西側送完科泰羅卷軸再去避難營地，和水晶任務一起回收兩條迷失者支線。若要補少量經驗，可打淚水之池外圈的普通沼澤怪（約 60, 55），或在東風海岸北段打巨型淤泥蟹。｜Depois de levar o pergaminho de Cortello no oeste, vá ao Harborage e entregue as duas missões de Os Perdidos junto com as missões dos cristais. Para um pouco mais de EXP, mate monstros normais do pântano na borda do Poço de Lágrimas (cerca de 60, 55) ou caranguejos gigantes ao norte da Costa da Lestada.
+新增.md:0｜步驟說明｜先留，荊棘谷 藏寶海灣回訪再交。｜Guarde por enquanto. Entregue na volta a Angra do Butim.
+新增.md:0｜步驟說明｜3520 留菲拉斯 莫沙徹營地做；97530 留砂槌營地；2874 留荊棘谷 藏寶海灣回訪交。｜Faça 3520 na Aldeia Mojache, em Feralas, e 97530 no Complexo Dunamalho. Deixe 2874 para a volta a Angra do Butim.
+新增.md:0｜步驟說明｜回奧格瑪開費拉斯後續｜Volte a Orgrimmar para as sequências de Feralas
+新增.md:0｜步驟說明｜從莫沙徹飛奧格瑪（通常經陶拉祖等已開飛點）。爐石維持莫沙徹，奧格瑪交完再用爐石回費拉斯。｜Voe de Mojache para Orgrimmar (geralmente passando pelo Acampamento Taurajo ou outros pontos de voo já liberados). Mantenha a Pedra de Regresso em Mojache; depois das entregas em Orgrimmar, use-a para voltar a Feralas.
+新增.md:0｜步驟說明｜奧格瑪交完後用爐石回莫沙徹營地；爐石冷卻時從奧格瑪飛莫沙徹。｜Depois das entregas em Orgrimmar, use a Pedra de Regresso para voltar à Aldeia Mojache. Se estiver em recarga, voe de Orgrimmar para Mojache.
+新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接。從村外往北沿沙灘找瓶子。｜Pegue primeiro em Angra do Butim. Procure a garrafa na praia ao norte da vila.
+新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接、辛特蘭 惡齒村與辛薩羅在辛特蘭撿酒。｜Pegue primeiro em Angra do Butim. Colete a bebida nas Terras Agrestes, na Aldeia Revatusco e em Jintha'Alor.
+新增.md:0｜步驟說明｜在交 6030 與接 5211 後開禮拜堂飛行點；末步飛幽暗城，交完書走去亡靈壁壘。｜Libere o ponto de voo da Capela depois de entregar 6030 e pegar 5211. No último passo, voe para a Cidade Baixa, entregue o livro e depois vá a pé ao Baluarte.
+新增.md:0｜步驟說明｜出幽暗城沿大路往東到亡靈壁壘，再走費爾斯通農場、安多哈爾與北山伐木場。｜Saia da Cidade Baixa e siga a estrada principal para o leste até o Baluarte; depois passe por Campo Pedravil, Andorhal e Madeireira Beiranorte.
+新增.md:0｜步驟說明｜回幽暗城飛艇塔，搭飛艇回奧格瑪。｜Volte à torre do zepelim da Cidade Baixa e pegue o zepelim de volta a Orgrimmar.
+新增.md:0｜步驟說明｜等級落後可在安多哈爾東側外圍（約 46, 64）或瘟疫農場打普通亡靈，再回卡利姆多。｜Se estiver atrasado no nível, mate mortos-vivos normais na borda leste de Andorhal (cerca de 46, 64) ou nas fazendas pestilentas antes de voltar a Kalimdor.
+新增.md:0｜步驟說明｜從要塞飛回奧格瑪。｜Voe do Forte de volta a Orgrimmar.
+新增.md:0｜步驟說明｜第 1 步開塞納里奧要塞飛行點，最後一步飛回奧格瑪。｜Libere o ponto de voo do Forte Cenariano no passo 1. No último passo, voe de volta a Orgrimmar.
+新增.md:0｜步驟說明｜未滿 59 級可留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜Abaixo do nível 59, fique a nordeste do Forte (cerca de 55, 29) com escorpídeos e aranhas normais, ou mate cultistas do Crepúsculo a sudoeste (cerca de 38, 44).

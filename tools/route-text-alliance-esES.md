@@ -390,3 +390,4 @@
 新增.md:0｜步驟說明｜在冬泉熊怪營地 32, 36 一帶打熊怪。｜Mata fúrbolgs alrededor de 32, 36 en el campamento Nevada.
 新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Quédate en el campamento Nevada y sigue matando fúrbolgs.
 新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜En las casas en ruinas de Villa Darrow, recoge la cabeza, el lado izquierdo y el lado derecho, y combínalos con clic derecho.
+新增.md:0｜步驟說明｜還沒到 60 級就打一趟黑石深淵；還不夠再刷斯坦索姆或通靈學院。｜¿Aún no eres nivel 60? Haz una vez las Profundidades de Roca Negra. Si no basta, repite Stratholme o Scholomance.

@@ -13006,3 +13006,24 @@
 新增.md:0｜步驟說明｜離主路較遠，趕路可略。｜Weit abseits der Hauptroute. Überspring das, wenn du es eilig hast.
 新增.md:0｜步驟說明｜完成後從禮拜堂飛幽暗城。｜Flieg danach von der Kapelle nach Unterstadt.
 新增.md:0｜步驟說明｜到幽暗城外搭飛艇去奧格瑪。｜Nimm vor Unterstadt das Luftschiff nach Orgrimmar.
+新增.md:0｜步驟說明｜這趟先接，科多獸骨留淒涼之地 葬影村第二次收。｜Nimm sie jetzt an. Die Kodoknochen sammelst du beim zweiten Besuch in Shadowprey in Desolace.
+新增.md:0｜步驟說明｜大道劫匪順手點營火再去比布里的小屋，兩段皆為任務等級 40、最低 30 級，亡命之徒留到荊棘谷 藏寶海灣交。集骨者在小屋先接，雕刻半人馬圖騰與科多獸骨留 37 級的淒涼之地 葬影村第二次。｜Klick für Straßenraub unterwegs das Lagerfeuer an und geh dann zu Bibblys Hütte. Beide Teile sind Queststufe 40 und erfordern Stufe 30. Heb dir die Abgabe von Auf der Flucht für Beutebucht auf. Nimm Knochensammler an der Hütte an; Geschnitzte Zentaurentotem und die Kodoknochen bleiben für den zweiten Besuch in Shadowprey mit Stufe 37.
+新增.md:0｜步驟說明｜上古之書 6027 任務與目標約 38 級，比本站高 4–6 級；打不動就略過，不影響其他西岸任務。｜Buch der Uralten (6027) und seine Ziele sind etwa Stufe 38, also 4–6 Stufen über dieser Station. Überspring es, wenn es zu schwer ist; die anderen Westküstenquests hängen nicht davon ab.
+新增.md:0｜步驟說明｜從葬影村出發，先走幽靈崗哨與科多墓地，到東北小屋交集骨者，再沿南路往瑪諾洛克集會所。｜Geh von Shadowprey über Geistwandlerposten und den Kodofriedhof, gib Knochensammler an der Hütte im Nordosten ab und folg dann der Südstraße bis Mannorocs Koven.
+新增.md:0｜步驟說明｜任務等級 39–40 的雕刻半人馬圖騰 93225 與集骨者 5501 放這趟：圖騰在集會所東南的瑪格拉姆半人馬順打，集骨者在淒涼之地 葬影村第一次已接，這趟收科多獸骨再到比布里的小屋交。｜Mach Geschnitzte Zentaurentotem (93225) und Knochensammler (5501), beide Queststufe 39–40, auf dieser Runde. Die Totems bekommst du von den Magram-Zentauren südöstlich des Kovens. Knochensammler hast du beim ersten Besuch in Shadowprey angenommen; sammle jetzt die Kodoknochen und gib sie an Bibblys Hütte ab.
+新增.md:0｜步驟說明｜先在淚水之池西南打鹽齒鱷魚交 698／699，才開海中的威脅魚人鏈；螃蟹腿 1430 在去東南海岸途中收、回斯通納德交。1428 的魚人智者約 44–45 級，未到 44 級就略過。｜Töte südwestlich des Tränenteichs Salzkiefer-Krokilisken und gib beide Quests Mangelnde Reserven ab, um die Murloc-Kette freizuschalten. Sammle die Krabbenbeine für 1430 auf dem Weg zur Südostküste und gib sie in Stonard ab. Die Murlocorakel für 1428 sind etwa Stufe 44–45; unter Stufe 44 überspringen.
+新增.md:0｜步驟說明｜西側送完科泰羅卷軸再去避難營地，和水晶任務一起回收兩條迷失者支線。若要補少量經驗，可打淚水之池外圈的普通沼澤怪（約 60, 55），或在東風海岸北段打巨型淤泥蟹。｜Bring im Westen Cortellos Schriftrolle weg und geh dann zum Harborage, um beide Verirrten-Nebenquests zusammen mit den Kristallquests abzugeben. Für ein wenig EP töte normale Sumpfgegner am äußeren Tränenteich (etwa 60, 55) oder Riesenkrabben im Norden der Ostwindküste.
+新增.md:0｜步驟說明｜先留，荊棘谷 藏寶海灣回訪再交。｜Vorerst behalten. Gib sie beim Rückbesuch in Beutebucht ab.
+新增.md:0｜步驟說明｜3520 留菲拉斯 莫沙徹營地做；97530 留砂槌營地；2874 留荊棘谷 藏寶海灣回訪交。｜Mach 3520 in Camp Mojache in Feralas und 97530 im Truppenlager der Dünenbrecher. Heb 2874 für den Rückbesuch in Beutebucht auf.
+新增.md:0｜步驟說明｜回奧格瑪開費拉斯後續｜Zurück nach Orgrimmar für die Feralas-Folgequests
+新增.md:0｜步驟說明｜從莫沙徹飛奧格瑪（通常經陶拉祖等已開飛點）。爐石維持莫沙徹，奧格瑪交完再用爐石回費拉斯。｜Flieg von Mojache nach Orgrimmar (meist über Camp Taurajo oder andere freigeschaltete Flugpunkte). Lass deinen Ruhestein in Mojache und kehr nach den Abgaben in Orgrimmar per Ruhestein nach Feralas zurück.
+新增.md:0｜步驟說明｜奧格瑪交完後用爐石回莫沙徹營地；爐石冷卻時從奧格瑪飛莫沙徹。｜Kehr nach den Abgaben in Orgrimmar per Ruhestein nach Camp Mojache zurück. Ist er noch nicht bereit, flieg von Orgrimmar nach Mojache.
+新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接。從村外往北沿沙灘找瓶子。｜Nimm sie zuerst in Beutebucht an. Such die Flasche am Strand nördlich des Orts.
+新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接、辛特蘭 惡齒村與辛薩羅在辛特蘭撿酒。｜Nimm sie zuerst in Beutebucht an. Sammle den Schnaps im Hinterland in Revantusk und Jintha'Alor.
+新增.md:0｜步驟說明｜在交 6030 與接 5211 後開禮拜堂飛行點；末步飛幽暗城，交完書走去亡靈壁壘。｜Schalte den Flugpunkt an der Kapelle frei, nachdem du 6030 abgegeben und 5211 angenommen hast. Flieg im letzten Schritt nach Unterstadt, gib das Buch ab und geh dann zum Bollwerk.
+新增.md:0｜步驟說明｜出幽暗城沿大路往東到亡靈壁壘，再走費爾斯通農場、安多哈爾與北山伐木場。｜Verlass Unterstadt, folg der Hauptstraße nach Osten zum Bollwerk und geh dann über Teufelssteinfeld, Andorhal und Holzlager Northridge.
+新增.md:0｜步驟說明｜回幽暗城飛艇塔，搭飛艇回奧格瑪。｜Geh zurück zum Luftschiffturm von Unterstadt und nimm das Luftschiff zurück nach Orgrimmar.
+新增.md:0｜步驟說明｜等級落後可在安多哈爾東側外圍（約 46, 64）或瘟疫農場打普通亡靈，再回卡利姆多。｜Liegst du mit der Stufe zurück, töte normale Untote am östlichen Rand von Andorhal (etwa 46, 64) oder auf den verseuchten Höfen, bevor du nach Kalimdor zurückkehrst.
+新增.md:0｜步驟說明｜從要塞飛回奧格瑪。｜Flieg von der Burg zurück nach Orgrimmar.
+新增.md:0｜步驟說明｜第 1 步開塞納里奧要塞飛行點，最後一步飛回奧格瑪。｜Schalte in Schritt 1 den Flugpunkt Burg Cenarius frei. Flieg im letzten Schritt zurück nach Orgrimmar.
+新增.md:0｜步驟說明｜未滿 59 級可留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜Unter Stufe 59 bleib nordöstlich der Burg (etwa 55, 29) bei normalen Skorpiden und Spinnen oder töte Zwielichtkultisten im Südwesten (etwa 38, 44).

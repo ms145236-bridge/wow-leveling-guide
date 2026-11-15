@@ -390,3 +390,4 @@
 新增.md:0｜步驟說明｜在冬泉熊怪營地 32, 36 一帶打熊怪。｜Mate furbolgs perto de 32, 36 no acampamento Invernoso.
 新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Fique no acampamento Invernoso e continue matando furbolgs.
 新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜Nas casas em ruínas da Vila das Flechas, pegue a cabeça, o lado esquerdo e o lado direito e clique com o botão direito para juntar.
+新增.md:0｜步驟說明｜還沒到 60 級就打一趟黑石深淵；還不夠再刷斯坦索姆或通靈學院。｜Ainda não chegou ao 60? Faça o Abismo Rocha Negra uma vez. Se não bastar, repita Stratholme ou Scolomântia.

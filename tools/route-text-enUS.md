@@ -12851,3 +12851,24 @@
 新增.md:0｜步驟說明｜離主路較遠，趕路可略。｜Far off the main route. Skip if you're in a hurry.
 新增.md:0｜步驟說明｜完成後從禮拜堂飛幽暗城。｜When done, fly from the Chapel to Undercity.
 新增.md:0｜步驟說明｜到幽暗城外搭飛艇去奧格瑪。｜Take the zeppelin to Orgrimmar outside Undercity.
+新增.md:0｜步驟說明｜這趟先接，科多獸骨留淒涼之地 葬影村第二次收。｜Pick this up now. Collect the Kodo Bones on your second Shadowprey Village visit in Desolace.
+新增.md:0｜步驟說明｜大道劫匪順手點營火再去比布里的小屋，兩段皆為任務等級 40、最低 30 級，亡命之徒留到荊棘谷 藏寶海灣交。集骨者在小屋先接，雕刻半人馬圖騰與科多獸骨留 37 級的淒涼之地 葬影村第二次。｜For Highway Robbery, click the campfire on the way, then go to Bibbly's hut. Both parts are quest level 40 and require level 30. Save the On the Lam turn-in for Booty Bay. Pick up Bone Collector at the hut; save Carved Centaur Totems and the Kodo Bones for your second Shadowprey Village visit at level 37.
+新增.md:0｜步驟說明｜上古之書 6027 任務與目標約 38 級，比本站高 4–6 級；打不動就略過，不影響其他西岸任務。｜The Book of the Ancients (6027) and its targets are about level 38, 4–6 levels above this stop. Skip it if it's too hard; the other west coast quests don't depend on it.
+新增.md:0｜步驟說明｜從葬影村出發，先走幽靈崗哨與科多墓地，到東北小屋交集骨者，再沿南路往瑪諾洛克集會所。｜From Shadowprey Village, go through Ghost Walker Post and the Kodo Graveyard, turn in Bone Collector at the northeast hut, then follow the south road to Mannoroc Coven.
+新增.md:0｜步驟說明｜任務等級 39–40 的雕刻半人馬圖騰 93225 與集骨者 5501 放這趟：圖騰在集會所東南的瑪格拉姆半人馬順打，集骨者在淒涼之地 葬影村第一次已接，這趟收科多獸骨再到比布里的小屋交。｜Do Carved Centaur Totems (93225) and Bone Collector (5501), both quest level 39–40, on this trip. Kill Magram centaurs southeast of the Coven for the totems. You took Bone Collector on your first Shadowprey Village visit; collect the Kodo Bones now and turn in at Bibbly's hut.
+新增.md:0｜步驟說明｜先在淚水之池西南打鹽齒鱷魚交 698／699，才開海中的威脅魚人鏈；螃蟹腿 1430 在去東南海岸途中收、回斯通納德交。1428 的魚人智者約 44–45 級，未到 44 級就略過。｜Kill Saltjaw Crocolisks southwest of the Pool of Tears and turn in both Lack of Surplus quests to unlock the murloc chain. Collect crab legs for 1430 on the way to the southeast coast and turn them in at Stonard. The murloc oracles for 1428 are about level 44–45; skip it below level 44.
+新增.md:0｜步驟說明｜西側送完科泰羅卷軸再去避難營地，和水晶任務一起回收兩條迷失者支線。若要補少量經驗，可打淚水之池外圈的普通沼澤怪（約 60, 55），或在東風海岸北段打巨型淤泥蟹。｜After delivering Cortello's scroll in the west, go to the Harborage and turn in both Lost Ones side quests along with the crystal quests. For a little extra XP, kill normal swamp mobs around the outer Pool of Tears (about 60, 55) or giant crabs on the northern Eastwind Shore.
+新增.md:0｜步驟說明｜先留，荊棘谷 藏寶海灣回訪再交。｜Hold for now. Turn in on the Booty Bay return visit.
+新增.md:0｜步驟說明｜3520 留菲拉斯 莫沙徹營地做；97530 留砂槌營地；2874 留荊棘谷 藏寶海灣回訪交。｜Do 3520 at Camp Mojache in Feralas and 97530 at Dunemaul Compound. Save 2874 for the Booty Bay return visit.
+新增.md:0｜步驟說明｜回奧格瑪開費拉斯後續｜Return to Orgrimmar for the Feralas follow-ups
+新增.md:0｜步驟說明｜從莫沙徹飛奧格瑪（通常經陶拉祖等已開飛點）。爐石維持莫沙徹，奧格瑪交完再用爐石回費拉斯。｜Fly from Mojache to Orgrimmar (usually via Camp Taurajo or other unlocked flight points). Keep your hearth at Mojache; after the Orgrimmar turn-ins, hearth back to Feralas.
+新增.md:0｜步驟說明｜奧格瑪交完後用爐石回莫沙徹營地；爐石冷卻時從奧格瑪飛莫沙徹。｜After the Orgrimmar turn-ins, hearth to Camp Mojache. If your hearth is on cooldown, fly from Orgrimmar to Mojache.
+新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接。從村外往北沿沙灘找瓶子。｜Pick this up in Booty Bay first. Search the beach north of town for the bottle.
+新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接、辛特蘭 惡齒村與辛薩羅在辛特蘭撿酒。｜Pick this up in Booty Bay first. Collect the liquor in the Hinterlands at Revantusk Village and Jintha'Alor.
+新增.md:0｜步驟說明｜在交 6030 與接 5211 後開禮拜堂飛行點；末步飛幽暗城，交完書走去亡靈壁壘。｜Unlock the Chapel flight point after turning in 6030 and taking 5211. At the last step, fly to Undercity, turn in the book, then walk to the Bulwark.
+新增.md:0｜步驟說明｜出幽暗城沿大路往東到亡靈壁壘，再走費爾斯通農場、安多哈爾與北山伐木場。｜Leave Undercity and follow the main road east to the Bulwark, then go through Felstone Field, Andorhal and Northridge Lumber Camp.
+新增.md:0｜步驟說明｜回幽暗城飛艇塔，搭飛艇回奧格瑪。｜Return to the Undercity zeppelin tower and take the zeppelin back to Orgrimmar.
+新增.md:0｜步驟說明｜等級落後可在安多哈爾東側外圍（約 46, 64）或瘟疫農場打普通亡靈，再回卡利姆多。｜If you're behind on level, kill normal undead on the eastern outskirts of Andorhal (about 46, 64) or at the plagued farms before returning to Kalimdor.
+新增.md:0｜步驟說明｜從要塞飛回奧格瑪。｜Fly from the Hold back to Orgrimmar.
+新增.md:0｜步驟說明｜第 1 步開塞納里奧要塞飛行點，最後一步飛回奧格瑪。｜Unlock the Cenarion Hold flight point at step 1. At the last step, fly back to Orgrimmar.
+新增.md:0｜步驟說明｜未滿 59 級可留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜Under level 59, stay northeast of the Hold (about 55, 29) for normal scorpids and spiders, or kill Twilight cultists to the southwest (about 38, 44).

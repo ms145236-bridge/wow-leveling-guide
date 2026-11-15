@@ -390,3 +390,4 @@
 新增.md:0｜步驟說明｜在冬泉熊怪營地 32, 36 一帶打熊怪。｜Kill furbolgs around 32, 36 in the Winterfall camp.
 新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Stay at the Winterfall camp and keep killing furbolgs.
 新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜In the ruined houses of Darrowshire, collect the head, left side and right side, then right-click to combine them.
+新增.md:0｜步驟說明｜還沒到 60 級就打一趟黑石深淵；還不夠再刷斯坦索姆或通靈學院。｜Not 60 yet? Run Blackrock Depths once. If that's still not enough, farm Stratholme or Scholomance.

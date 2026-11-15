@@ -13393,3 +13393,24 @@
 新增.md:0｜步驟說明｜離主路較遠，趕路可略。｜Lejos de la ruta principal. Omítelo si tienes prisa.
 新增.md:0｜步驟說明｜完成後從禮拜堂飛幽暗城。｜Al terminar, vuela de la Capilla a Entrañas.
 新增.md:0｜步驟說明｜到幽暗城外搭飛艇去奧格瑪。｜Fuera de Entrañas, toma el zepelín a Orgrimmar.
+新增.md:0｜步驟說明｜這趟先接，科多獸骨留淒涼之地 葬影村第二次收。｜Acéptala ahora. Recoge los huesos de kodo en tu segunda visita a Aldea Cazasombras, en Desolace.
+新增.md:0｜步驟說明｜大道劫匪順手點營火再去比布里的小屋，兩段皆為任務等級 40、最低 30 級，亡命之徒留到荊棘谷 藏寶海灣交。集骨者在小屋先接，雕刻半人馬圖騰與科多獸骨留 37 級的淒涼之地 葬影村第二次。｜Para Saqueo sangriento, haz clic en la hoguera de camino y luego ve a la cabaña de Bibbly. Las dos partes son de nivel 40, con nivel mínimo 30. Guarda la entrega de Prófugos para Bahía del Botín. Acepta Recolección de kodos en la cabaña; deja Tótems tallados de los centauros y los huesos de kodo para tu segunda visita a Aldea Cazasombras, a nivel 37.
+新增.md:0｜步驟說明｜上古之書 6027 任務與目標約 38 級，比本站高 4–6 級；打不動就略過，不影響其他西岸任務。｜El Libro de los Ancestros (6027) y sus objetivos son de nivel 38 aprox., 4–6 niveles por encima de esta parada. Omítela si te cuesta; no afecta a las demás misiones de la costa oeste.
+新增.md:0｜步驟說明｜從葬影村出發，先走幽靈崗哨與科多墓地，到東北小屋交集骨者，再沿南路往瑪諾洛克集會所。｜Desde Aldea Cazasombras, pasa por Campamento del Espíritu Errante y el Cementerio de Kodos, entrega Recolección de kodos en la cabaña del noreste y luego sigue la carretera del sur hasta Aquelarre Mannoroc.
+新增.md:0｜步驟說明｜任務等級 39–40 的雕刻半人馬圖騰 93225 與集骨者 5501 放這趟：圖騰在集會所東南的瑪格拉姆半人馬順打，集骨者在淒涼之地 葬影村第一次已接，這趟收科多獸骨再到比布里的小屋交。｜Haz en este viaje Tótems tallados de los centauros (93225) y Recolección de kodos (5501), ambas de nivel 39–40. Mata centauros Magram al sureste del Aquelarre para los tótems. Aceptaste Recolección de kodos en tu primera visita a Aldea Cazasombras; recoge ahora los huesos de kodo y entrégala en la cabaña de Bibbly.
+新增.md:0｜步驟說明｜先在淚水之池西南打鹽齒鱷魚交 698／699，才開海中的威脅魚人鏈；螃蟹腿 1430 在去東南海岸途中收、回斯通納德交。1428 的魚人智者約 44–45 級，未到 44 級就略過。｜Mata crocoliscos Saltjaw al suroeste de la Charca de Lágrimas y entrega las dos misiones Falta de suministros para desbloquear la cadena de múrlocs. Recoge las patas de cangrejo para 1430 de camino a la costa sureste y entrégalas en Rocal. Los oráculos múrlocs de 1428 son de nivel 44–45 aprox.; por debajo del nivel 44, omítela.
+新增.md:0｜步驟說明｜西側送完科泰羅卷軸再去避難營地，和水晶任務一起回收兩條迷失者支線。若要補少量經驗，可打淚水之池外圈的普通沼澤怪（約 60, 55），或在東風海岸北段打巨型淤泥蟹。｜Tras entregar el pergamino de Cortello en el oeste, ve a Harborage y entrega las dos misiones secundarias de Los Perdidos junto con las de cristales. Para un poco más de EXP, mata enemigos normales del pantano en el borde de la Charca de Lágrimas (aprox. 60, 55) o cangrejos gigantes en el norte de Playa Viento Este.
+新增.md:0｜步驟說明｜先留，荊棘谷 藏寶海灣回訪再交。｜Guárdala por ahora. Entrégala al volver a Bahía del Botín.
+新增.md:0｜步驟說明｜3520 留菲拉斯 莫沙徹營地做；97530 留砂槌營地；2874 留荊棘谷 藏寶海灣回訪交。｜Haz 3520 en Campamento Mojache, en Feralas, y 97530 en Base Machacaduna. Guarda 2874 para la vuelta a Bahía del Botín.
+新增.md:0｜步驟說明｜回奧格瑪開費拉斯後續｜Vuelve a Orgrimmar para las continuaciones de Feralas
+新增.md:0｜步驟說明｜從莫沙徹飛奧格瑪（通常經陶拉祖等已開飛點）。爐石維持莫沙徹，奧格瑪交完再用爐石回費拉斯。｜Vuela de Mojache a Orgrimmar (normalmente pasando por Campamento Taurajo u otros puntos de vuelo ya abiertos). Deja la piedra de hogar en Mojache; tras las entregas en Orgrimmar, úsala para volver a Feralas.
+新增.md:0｜步驟說明｜奧格瑪交完後用爐石回莫沙徹營地；爐石冷卻時從奧格瑪飛莫沙徹。｜Tras las entregas en Orgrimmar, usa la piedra de hogar para volver a Campamento Mojache. Si está en reutilización, vuela de Orgrimmar a Mojache.
+新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接。從村外往北沿沙灘找瓶子。｜Acéptala primero en Bahía del Botín. Busca la botella en la playa al norte del pueblo.
+新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接、辛特蘭 惡齒村與辛薩羅在辛特蘭撿酒。｜Acéptala primero en Bahía del Botín. Recoge el licor en las Tierras del Interior, en Poblado Sañadiente y Jintha'Alor.
+新增.md:0｜步驟說明｜在交 6030 與接 5211 後開禮拜堂飛行點；末步飛幽暗城，交完書走去亡靈壁壘。｜Abre el punto de vuelo de la Capilla tras entregar 6030 y aceptar 5211. En el último paso, vuela a Entrañas, entrega el libro y luego ve a pie al Baluarte.
+新增.md:0｜步驟說明｜出幽暗城沿大路往東到亡靈壁壘，再走費爾斯通農場、安多哈爾與北山伐木場。｜Sal de Entrañas y sigue la carretera principal hacia el este hasta el Baluarte; luego pasa por Campo de Piedramácula, Andorhal y Aserradero Crestanorte.
+新增.md:0｜步驟說明｜回幽暗城飛艇塔，搭飛艇回奧格瑪。｜Vuelve a la torre del zepelín de Entrañas y toma el zepelín de vuelta a Orgrimmar.
+新增.md:0｜步驟說明｜等級落後可在安多哈爾東側外圍（約 46, 64）或瘟疫農場打普通亡靈，再回卡利姆多。｜Si vas atrasado de nivel, mata no-muertos normales en las afueras este de Andorhal (aprox. 46, 64) o en las granjas apestadas antes de volver a Kalimdor.
+新增.md:0｜步驟說明｜從要塞飛回奧格瑪。｜Vuela del Fuerte de vuelta a Orgrimmar.
+新增.md:0｜步驟說明｜第 1 步開塞納里奧要塞飛行點，最後一步飛回奧格瑪。｜Abre el punto de vuelo de Fuerte Cenarion en el paso 1. En el último paso, vuela de vuelta a Orgrimmar.
+新增.md:0｜步驟說明｜未滿 59 級可留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜Por debajo del nivel 59, quédate al noreste del Fuerte (aprox. 55, 29) con escórpidos y arañas normales, o mata cultistas crepusculares al suroeste (aprox. 38, 44).

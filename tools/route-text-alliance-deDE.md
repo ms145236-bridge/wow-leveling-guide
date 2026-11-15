@@ -390,3 +390,4 @@
 新增.md:0｜步驟說明｜在冬泉熊怪營地 32, 36 一帶打熊怪。｜Töte Furbolgs bei 32, 36 im Lager der Winterfelle.
 新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Bleib im Lager der Winterfelle und töte weiter Furbolgs.
 新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜Sammle in den zerstörten Häusern von Darrowshire Kopf, linke und rechte Seite und kombiniere sie per Rechtsklick.
+新增.md:0｜步驟說明｜還沒到 60 級就打一趟黑石深淵；還不夠再刷斯坦索姆或通靈學院。｜Noch nicht Stufe 60? Lauf einmal die Schwarzfelstiefen. Reicht das nicht, farm Stratholme oder Scholomance.
