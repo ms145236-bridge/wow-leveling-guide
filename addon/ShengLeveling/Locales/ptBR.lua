@@ -71,6 +71,8 @@ MG.Locales.ptBR = {
   ["之後"] = "Mais tarde",
   ["補做"] = "Alcance",
   ["補經驗"] = "Completar EXP",
+
+  ["順路，路上遇到就打"] = "No caminho: mate ao passar",
   ["副本"] = "Masmorra",
   ["不打"] = "Pular",
   ["要打"] = "Incluir",

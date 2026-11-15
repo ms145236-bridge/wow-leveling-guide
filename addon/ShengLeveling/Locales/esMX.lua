@@ -71,6 +71,8 @@ MG.Locales.esMX = {
   ["之後"] = "Más tarde",
   ["補做"] = "ponerse al día",
   ["補經驗"] = "Recuperar EXP",
+
+  ["順路，路上遇到就打"] = "De camino: mátalos al pasar",
   ["副本"] = "Calabozo",
   ["不打"] = "Omitir",
   ["要打"] = "incluir",

@@ -2079,6 +2079,8 @@ function UI.Render(S)
       l3 = s.spot -- 副本內交：交給誰在哪
     elseif s.q and state.fill[s.q] then
       l3 = L["補經驗"]
+    elseif s.roam and s.t == "do" then
+      l3 = L["順路，路上遇到就打"]
     elseif step.note then
       l3 = step.note
     elseif s.tag and (MG.uiZh or s.tagL) then

@@ -624,10 +624,13 @@ function E.Locate(st)
 
   -- 由前往後找未完成；後面 8 個（別的任務的）任務步驟過半已完成 → 算漏掉
   local auto, missedIdx, missedQ = nil, {}, {}
+  local roamQ = {} -- 順路任務還沒做完：它的交任務步驟也先不輪到
+  for i = 1, n do if steps[i].s.roam and not done[i] and not na[i] then roamQ[steps[i].s.q or 0] = true end end
   for i = 1, n do
     local q = steps[i].s.q
-    if tails[i] or steps[i].s.t == "train" then
+    if tails[i] or steps[i].s.t == "train" or steps[i].s.roam or (q and roamQ[q] and steps[i].s.t == "turnin") then
       -- 站尾交通先跳過，任務步驟都處理完才輪到；學技能只當提醒（步驟列下方），不擋路
+      -- 順路任務（怪散在整區）：不搶目前步驟，路上遇到就打；其他步驟都做完還沒完成才輪到
     elseif not done[i] and q and missedQ[q] then
       missedIdx[#missedIdx + 1] = i -- 同一任務前面的步驟已漏掉（例如沒接就輪到交）
     elseif not done[i] and q and steps[i].s.t ~= "accept" and not (steps[i].s.tag and steps[i].s.tag:find("怪多", 1, true)) and C.IsOnQuest(q) then
@@ -649,6 +652,9 @@ function E.Locate(st)
         auto = i; break
       end
     end
+  end
+  if not auto then
+    for i = 1, n do if steps[i].s.roam and not done[i] and not na[i] then auto = i; break end end
   end
   if not auto then
     for i = 1, n do if tails[i] and not done[i] and not na[i] then auto = i; break end end

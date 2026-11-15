@@ -496,6 +496,22 @@ for (const st of stations) {
       if (add.length > 40) add = Array.from({ length: 40 }, (_, i) => add[Math.floor((i * add.length) / 40)]);
       if (add.length) { step.more = [...(step.more || []), ...add]; objAdded++; }
     }
+    // 多個怪點：8 格內併成一群（取平均），地圖上一群一個點；散成 4 群以上且範圍超過 20 格、或範圍超過 35 格＝順路任務（不指路，路上遇到就打）
+    if (step.t === "do" && step.coord && step.more?.length) {
+      const pts = [step.coord, ...step.more].filter((p) => (p.map || st.map) === (step.coord.map || st.map));
+      const groups = [];
+      for (const p of pts) {
+        const g = groups.find((g) => Math.hypot(g.x - p.x, g.y - p.y) < 8);
+        if (g) { g.n++; g.sx += p.x; g.sy += p.y; g.x = g.sx / g.n; g.y = g.sy / g.n; } else groups.push({ n: 1, sx: p.x, sy: p.y, x: p.x, y: p.y });
+      }
+      const span = Math.max(...pts.flatMap((a) => pts.map((b) => Math.hypot(a.x - b.x, a.y - b.y))));
+      if ((groups.length >= 4 && span > 20) || span > 35) step.roam = true;
+      const map = step.coord.map || st.map;
+      const r2 = (n) => Math.round(n * 100) / 100;
+      const [first, ...rest] = groups.map((g) => ({ map, x: r2(g.x), y: r2(g.y) }));
+      step.coord = first;
+      step.more = [...rest, ...step.more.filter((p) => (p.map || st.map) !== map)];
+    }
     const at = `${step.where} ${step.verb}｜${step.zh}`;
     let id = step.id;
     if (id) {
@@ -739,7 +755,7 @@ const stepWhen = (w, sw) => {
 };
 const stepOut = (s, st) => ({
   star: s.star, t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt, desc: s.desc, spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
-  map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, when: stepWhen(s.when, st.when), video: s.video,
+  map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam,
 });
 let out = GUARD + `-- 由 tools/build.mjs 產生，勿手改。來源：${ALLY ? "route-alliance" : "route"}/*.md\nlocal _, MG = ...\nMG.Route = {\n  built = "@@BUILT@@",\n  stations = {\n`;
 for (const s of stations) {

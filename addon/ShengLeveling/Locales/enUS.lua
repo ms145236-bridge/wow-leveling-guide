@@ -71,6 +71,8 @@ MG.Locales.enUS = {
   ["之後"] = "Later",
   ["補做"] = "Catch up",
   ["補經驗"] = "XP top-up",
+
+  ["順路，路上遇到就打"] = "On the way: kill them as you pass",
   ["副本"] = "Dungeon",
   ["不打"] = "Skip",
   ["要打"] = "Include",

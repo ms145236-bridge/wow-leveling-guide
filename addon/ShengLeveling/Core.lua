@@ -114,7 +114,25 @@ local function refresh()
     end
   end
   if o then N.Set(o.map, o.x, o.y, o.name)
-  elseif s and s.x then N.Set(s.map, s.x, s.y, MG.Clean(E.Title(s))) else N.Clear() end
+  elseif s and s.x then
+    -- 有好幾群怪點：指向離玩家最近的那群；換群要近一半以上才換，走在兩群中間不會來回跳
+    local tx, ty = s.x, s.y
+    if s.more then
+      local map, x, y = C.Position()
+      if map == s.map and x and y then
+        local function d(px, py) return (px - x) ^ 2 + (py - y) ^ 2 end
+        local pick = MG.navPick and MG.navPick.s == s and MG.navPick or { s = s, x = s.x, y = s.y }
+        for _, p in ipairs(s.more) do
+          if p[1] == map and d(p[2], p[3]) < d(pick.x, pick.y) * 0.25 then pick = { s = s, x = p[2], y = p[3] } end
+        end
+        if not (MG.navPick and MG.navPick.s == s) then
+          for _, p in ipairs(s.more) do if p[1] == map and d(p[2], p[3]) < d(pick.x, pick.y) then pick = { s = s, x = p[2], y = p[3] } end end
+        end
+        MG.navPick = pick; tx, ty = pick.x, pick.y
+      end
+    end
+    N.Set(s.map, tx, ty, MG.Clean(E.Title(s)))
+  else N.Clear() end
 end
 
 function MG.Refresh(now)

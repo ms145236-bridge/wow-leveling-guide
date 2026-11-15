@@ -185,13 +185,26 @@ function P.Update(st, force)
   sig = key
 
   -- 收集各點：只畫有相對編號的步驟（目前步驟＝1，之後還沒做的），近的合併
+  -- 有好幾群怪點的步驟：目前步驟畫每一群；之後的步驟只畫離前一步最近的那群（地圖上連成一條路）；
+  -- 順路任務不是目前步驟時，每群都畫但小而淡（路上遇到就打）
   local groups, mini = {}, {}
+  local prev
   for i, step in ipairs(st.steps) do
     local n = st.num[i]
     if n then
       local cur = i == st.cur
-      local entry = { step = step, i = i, n = n, cur = cur, at = {} }
-      for _, p in ipairs(points(step.s)) do
+      local entry = { step = step, i = i, n = n, cur = cur, at = {}, faint = step.s.roam and not cur or nil }
+      local pts = points(step.s)
+      if #pts > 1 and not cur and not step.s.roam and prev then
+        local best, bd
+        for _, p in ipairs(pts) do
+          local d = p[1] == prev[1] and (p[2] - prev[2]) ^ 2 + (p[3] - prev[3]) ^ 2 or math.huge
+          if not bd or d < bd then best, bd = p, d end
+        end
+        pts = { best }
+      end
+      if pts[1] and not step.s.roam then prev = pts[1] end
+      for _, p in ipairs(pts) do
         local dup = false
         for _, q in ipairs(entry.at) do
           if q[1] == p[1] and (q[2] - p[2]) ^ 2 + (q[3] - p[3]) ^ 2 < far * far then dup = true; break end
@@ -217,10 +230,10 @@ function P.Update(st, force)
   for _, g in ipairs(groups) do
     local b = getPin()
     b.world = true
-    local cur = false
-    for _, e in ipairs(g) do if e.cur then cur = true end end
+    local cur, faint = false, true
+    for _, e in ipairs(g) do if e.cur then cur = true end; if not e.faint then faint = false end end
     local travel = not cur and not SHAPE[g[1].step.s.t]
-    style(b, g, size + (cur and 6 or travel and -4 or 0)); b:SetAlpha(UI.Get("pinAlpha") / 100)
+    style(b, g, size + (cur and 6 or (travel or faint) and -4 or 0)); b:SetAlpha(UI.Get("pinAlpha") / 100 * (faint and 0.5 or 1))
     pins:AddWorldMapIconMap(REF, b, g.map, g.x / 100, g.y / 100, showFlag, P.TopLevel())
     P.count.world = P.count.world + 1
   end

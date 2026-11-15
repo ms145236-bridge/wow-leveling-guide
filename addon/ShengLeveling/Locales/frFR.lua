@@ -71,6 +71,8 @@ MG.Locales.frFR = {
   ["之後"] = "Plus tard",
   ["補做"] = "Rattraper",
   ["補經驗"] = "Rattrapage d’EXP",
+
+  ["順路，路上遇到就打"] = "En chemin : à tuer au passage",
   ["副本"] = "Donjon",
   ["不打"] = "Passer",
   ["要打"] = "Inclure",
