@@ -18,6 +18,7 @@ MG.Locales.frFR = {
   ["學"] = "Apprendre",
   ["接"] = "Accepter",
   ["做"] = "Faire",
+  ["順"] = "Route",
   ["交"] = "Rendre",
   ["到"] = "Aller",
   ["鳥"] = "Trajet",

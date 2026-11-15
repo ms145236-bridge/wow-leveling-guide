@@ -2202,8 +2202,8 @@ function UI.Render(S)
       d:Show()
     end
     y = y - 6
-    local v = E.Verb(s)
-    line(v ~= "" and (hex(GOLD) .. v .. "|r " .. E.Title(s)) or E.Title(s), TEXT) -- 動詞金色（和清單、主標題一致）
+    local v = (s.roam and s.t == "do") and L["順路"] or E.Verb(s)
+    line(v ~= "" and (hex(GOLD) .. v .. "|r " .. E.Title(s)) or E.Title(s), TEXT) -- 動詞金色（和清單、主標題一致）；順路任務寫「順路」
     y = y - 18
     if s.t == "do" and s.q then
       local one, header, lines, num = objectiveLines(s.q)

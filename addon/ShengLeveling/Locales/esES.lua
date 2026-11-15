@@ -18,6 +18,7 @@ MG.Locales.esES = {
   ["學"] = "Aprender",
   ["接"] = "Aceptar",
   ["做"] = "Hacer",
+  ["順"] = "Ruta",
   ["交"] = "Entregar",
   ["到"] = "Ir",
   ["鳥"] = "Ruta de vuelo",

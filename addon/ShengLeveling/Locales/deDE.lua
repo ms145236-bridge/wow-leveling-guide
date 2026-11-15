@@ -18,6 +18,7 @@ MG.Locales.deDE = {
   ["學"] = "Erlernen",
   ["接"] = "Annehmen",
   ["做"] = "Erledigen",
+  ["順"] = "Unterw.",
   ["交"] = "Abgeben",
   ["到"] = "Gehe zu",
   ["鳥"] = "Flugpunkt",

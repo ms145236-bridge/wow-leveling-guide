@@ -1375,6 +1375,7 @@ E.VERB = VERB
 local IMPERATIVE = { Go = true, Leave = true, Take = true, Fly = true, Ride = true, Run = true, Head = true, Return = true, Enter = true, Use = true,
   Hearth = true, Travel = true, Follow = true, Swim = true, Walk = true, Cross = true, Board = true, Exit = true, Get = true, Continue = true, Back = true, From = true, At = true, After = true, If = true }
 function E.Verb(s)
+  if s.roam and s.t == "do" then return L["順"] end -- 順路任務：路上遇到就打
   if not MG.uiZh and (s.t == "travel" or s.t == "goto") and IMPERATIVE[(E.Title(s) or ""):match("^(%a+)") or ""] then return "" end
   return VERB[s.t] or ""
 end

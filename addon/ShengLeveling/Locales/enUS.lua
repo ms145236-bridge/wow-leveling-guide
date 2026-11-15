@@ -18,6 +18,7 @@ MG.Locales.enUS = {
   ["學"] = "Train",
   ["接"] = "Accept",
   ["做"] = "Do",
+  ["順"] = "Roam",
   ["交"] = "Turn in",
   ["到"] = "Go",
   ["鳥"] = "FP",

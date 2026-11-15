@@ -18,6 +18,7 @@ MG.Locales.ptBR = {
   ["學"] = "Aprender",
   ["接"] = "Aceitar",
   ["做"] = "Fazer",
+  ["順"] = "Rota",
   ["交"] = "Entregar",
   ["到"] = "Ir",
   ["鳥"] = "Rota de voo",
