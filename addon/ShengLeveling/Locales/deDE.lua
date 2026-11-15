@@ -74,6 +74,7 @@ MG.Locales.deDE = {
   ["補經驗"] = "EP nachholen",
 
   ["順路，路上遇到就打"] = "Unterwegs: einfach mitnehmen",
+  ["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"] = "In einer Gruppe: Diese Quest startet auch für deine Gruppe. Nimm sie selbst an, wenn alle bereit sind.",
   ["順路打完再交"] = "Abgeben, wenn unterwegs erledigt",
   ["副本"] = "Dungeon",
   ["不打"] = "Überspringen",

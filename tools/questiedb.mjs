@@ -142,6 +142,7 @@ export function openQuestieDB() {
       objEn: list(field("Quest", id, 8)).filter((x) => typeof x === "string"), // enUS 目標文字（英文介面用）
       zoneOrSort: field("Quest", id, 17) || 0,
       next: field("Quest", id, 22) || 0,
+      flags: field("Quest", id, 23) || 0, // 2＝隊伍一起接（護送類：一人接，隊友跳確認框）
     };
   };
   // spawns：{ [areaId] = {{x,y},...} } → [{ map(uiMapID), x, y }]

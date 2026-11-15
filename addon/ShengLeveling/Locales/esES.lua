@@ -74,6 +74,7 @@ MG.Locales.esES = {
   ["補經驗"] = "Recuperar EXP",
 
   ["順路，路上遇到就打"] = "De camino: mátalos al pasar",
+  ["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"] = "En grupo: esta misión también empieza para tu grupo. Acéptala tú cuando todos estén listos.",
   ["順路打完再交"] = "Entrégala al terminarla de camino",
   ["副本"] = "Mazmorra",
   ["不打"] = "Saltar",

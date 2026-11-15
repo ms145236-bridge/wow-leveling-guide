@@ -260,7 +260,13 @@ local AUTO = {}
 local function plain(v) return v ~= nil and not (issecretvalue and issecretvalue(v)) end
 function AUTO.QUEST_DETAIL()
   local id = GetQuestID and GetQuestID()
-  if plain(id) and inRoute(id) and wantAccept(id) then AcceptQuest() end
+  if not (plain(id) and inRoute(id) and wantAccept(id)) then return end
+  -- 護送、觸發事件的任務（一人接，隊友跳確認框一起開始）：組隊時讓玩家自己按，確認大家準備好
+  if R.quests[id].pa and IsInGroup and IsInGroup() then
+    MG.msg(L["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"])
+    return
+  end
+  AcceptQuest()
 end
 function AUTO.QUEST_PROGRESS()
   local id = GetQuestID and GetQuestID()

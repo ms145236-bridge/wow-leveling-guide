@@ -550,7 +550,7 @@ for (const st of stations) {
         ? { races: q.races && BigInt(q.races) !== HORDE ? q.races : undefined, xp: XP.get(id), mob: mobsOf(q), tgo: targetsOf(q), objs: (() => { const o = [...new Set(db.questMobs(q.id).filter((m) => m && m.kind === "object").flatMap((m) => m.objects))]; return o.length ? o : undefined; })(),
             items: [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))].length ? [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))] : undefined,
             d: q.obj.filter(Boolean).join("\n") || undefined,
-            n: QUEST_NAME[id] || step.zh || q.zhTW || step.en || q.en, zt: q.zhTW && q.zhTW !== (QUEST_NAME[id] || step.zh || q.zhTW) ? q.zhTW : undefined, lvl: q.level, min: q.reqLevel, pg: q.preGroup, ps: q.preSingle, ex: q.exclusiveTo, next: q.next, st: st.id }
+            n: QUEST_NAME[id] || step.zh || q.zhTW || step.en || q.en, zt: q.zhTW && q.zhTW !== (QUEST_NAME[id] || step.zh || q.zhTW) ? q.zhTW : undefined, lvl: q.level, min: q.reqLevel, pg: q.preGroup, ps: q.preSingle, ex: q.exclusiveTo, next: q.next, pa: q.flags & 2 ? true : undefined, st: st.id }
         : { n: QUEST_NAME[id] || step.zh || step.en, st: st.id });
     }
     if (q && !quests.get(id).en) {

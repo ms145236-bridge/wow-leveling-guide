@@ -74,6 +74,7 @@ MG.Locales.ptBR = {
   ["補經驗"] = "Completar EXP",
 
   ["順路，路上遇到就打"] = "No caminho: mate ao passar",
+  ["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"] = "Em grupo: esta missão começa para o grupo também. Aceite você mesmo quando todos estiverem prontos.",
   ["順路打完再交"] = "Entregue ao terminar no caminho",
   ["副本"] = "Masmorra",
   ["不打"] = "Pular",

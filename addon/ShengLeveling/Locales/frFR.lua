@@ -74,6 +74,7 @@ MG.Locales.frFR = {
   ["補經驗"] = "Rattrapage d’EXP",
 
   ["順路，路上遇到就打"] = "En chemin : à tuer au passage",
+  ["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"] = "En groupe : cette quête démarre aussi pour votre groupe. Acceptez-la vous-même quand tout le monde est prêt.",
   ["順路打完再交"] = "À rendre une fois fini en chemin",
   ["副本"] = "Donjon",
   ["不打"] = "Passer",
