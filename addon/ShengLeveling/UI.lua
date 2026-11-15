@@ -601,8 +601,8 @@ local function buildItems()
       end
     end
     for i, step in ipairs(state.steps) do
-      local hideDone = not UI.Get("showDone") and state.done[i] and i ~= state.cur
-      if (not state.na[i] or MG.db.skip[step.key] or step.defer or MG.db.notNow[step.key]) and not hideDone then items[#items + 1] = { kind = "step", i = i, step = step } end
+      local hideDone = not UI.Get("showDone") and state.done[i] and i ~= state.cur and not (state.low and state.low[i])
+      if (not state.na[i] or MG.db.skip[step.key] or step.defer or MG.db.notNow[step.key] or (state.low and state.low[i])) and not hideDone then items[#items + 1] = { kind = "step", i = i, step = step } end
     end
     local grind = state.st and state.st.grind
     if grind and #grind > 0 then
@@ -780,6 +780,7 @@ local function fillRow(row, it)
     -- 狀態一律放右欄（灰）；目前步驟的進度優先
     local status
     if skipped then status = L["略過"]
+    elseif state.low and state.low[i] then status = L["%d 級"]:format(state.lowLv[i] or 0); paint(row.name, FAINT); paint(row.verb, FAINT)
     elseif MG.db.notNow[it.step.key] then status = L["接不到"]
     elseif it.step.defer then status = L["之後"]
     elseif not state.done[i] then

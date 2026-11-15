@@ -532,13 +532,33 @@ function E.Locate(st)
   local steps = stepsOf(st)
   local n = #steps
   local map, x, y = C.Position()
-  local done, na, autoDone = {}, {}, {}
+  local done, na, autoDone, low = {}, {}, {}, {}
+  local lv = UnitLevel("player") or 0
   -- 本站有接取步驟的任務；沒有的（在之前的站接）不在日誌就不能做也不能交，不排進來
   local acc = {}
-  for _, step in ipairs(steps) do if step.s.t == "accept" and step.s.q then acc[step.s.q] = true end end
+  -- 接取等級還不夠的任務（不在日誌、沒交過）：接、做、交都先列出來但不輪到它
+  local lowQ = {}
+  for _, step in ipairs(steps) do
+    local s = step.s
+    if s.t == "accept" and s.q then
+      acc[s.q] = true
+      if s.pickLv and lv < s.pickLv and not C.IsOnQuest(s.q) and not turned(s.q) then lowQ[s.q] = s.pickLv end
+    end
+  end
+  local lowLv = {}
   for i, step in ipairs(steps) do
     local s = step.s
     na[i] = ((s.t == "do" or s.t == "turnin") and s.q and not acc[s.q] and not C.IsOnQuest(s.q) and not turned(s.q)) or step.defer or (s.q and db.notNow["a:" .. s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or (s.fq and (excluded(s.fq) or not raceOK(s.fq) or turned(s.fq))) or false
+    -- 只差等級（【N 級起】）的步驟：現在不能做，但清單照樣列出來（灰、寫幾級），免得以為這站快做完了
+    if na[i] and s.when and s.when.lvMin and lv < s.when.lvMin and not turned(s.q or 0) and not db.skip[step.key] then
+      local w = {}
+      for k, v in pairs(s.when) do w[k] = v end
+      w.lvMin = nil
+      low[i] = E.Applies(w) and not (s.q and (not raceOK(s.q) or excluded(s.q))) and not optOut(s) or nil
+      lowLv[i] = low[i] and s.when.lvMin
+    elseif not na[i] and s.q and lowQ[s.q] and QUEST[s.t] then
+      na[i], low[i], lowLv[i] = true, true, lowQ[s.q]
+    end
     local auto = stepDone(step, map, x, y)
     autoDone[i] = auto
     local mark = db.mark[step.key]
@@ -653,7 +673,7 @@ function E.Locate(st)
   local num, total = {}, 0
   if cur then
     total = 1; num[cur] = 1
-    for i = cur + 1, n do if not na[i] and not done[i] then total = total + 1; num[i] = total end end
+    for i = cur + 1, n do if (not na[i] and not done[i]) or low[i] then total = total + 1; num[i] = total end end
   end
   -- 附近可一起做的步驟：目前步驟之後 8 步內，還沒做、已在日誌的「做」（或同地點的接／交），
   -- 座標靠近目前步驟（或已併入的步驟）；遇到交通、爐石、飛行、船就停
@@ -706,7 +726,7 @@ function E.Locate(st)
   end
   local train
   for i = 1, n do if steps[i].s.t == "train" and not done[i] and not na[i] and i ~= cur then train = train or i end end
-  return { train = train, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
+  return { train = train, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, low = low, lowLv = lowLv, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
 end
 
 -- ── 站 ──────────────────────────────────────────────────────────────────────
