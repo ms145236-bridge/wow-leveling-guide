@@ -92,6 +92,8 @@ const db = openQuestieDB();
 // 任務經驗（QuestieDB 的 QuestXP 表：[id] = {等級, 經驗}）
 const XP = new Map();
 for (const m of readFileSync("C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns/QuestieDB/support/Forever/QuestXP/xpDB-classic.lua", "utf8").matchAll(/\[(\d+)\] = \{(\d+), (\d+)\}/g)) XP.set(+m[1], +m[3]);
+// QuestieDB 沒有的（多半是永恆新任務）：tools/quest-xp.md 補（Wowhead 永恆版任務頁的獎勵經驗；任務ID｜等級｜經驗）
+for (const m of readFileSync(join(ROOT, "tools", "quest-xp.md"), "utf8").matchAll(/^(\d+)｜(\d+)｜(\d+)\s*$/gm)) if (!XP.has(+m[1]) && +m[3] > 0) XP.set(+m[1], +m[3]);
 const classBlocks = [];
 // 名稱整理：去掉引號類符號、<副標>、「物件／物品」前綴、前後空白，全形空白換半形
 // 遊戲內實際名稱跟 QuestieDB 不同的 NPC（玩家在遊戲裡看到的為準，阿莫比玩家紀錄）：QuestieDB 名（cleanName 後）｜遊戲名

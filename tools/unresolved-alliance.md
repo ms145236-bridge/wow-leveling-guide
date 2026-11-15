@@ -1,13 +1,13 @@
-# 建置報告（資料版本 e4bb1205）
+# 建置報告（資料版本 ddb67710）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
-站數：67　任務數：1092
+站數：67　任務數：1096
 
 ## 需要處理（0）
 
 無
 
-## 提醒（52）
+## 提醒（56）
 
 - 01-2 艾爾文森林・閃金鎮：4 個「做」步驟沒有座標（不會出現箭頭）
 - 01-4 丹莫洛・卡拉諾斯：1 個「做」步驟沒有座標（不會出現箭頭）
@@ -61,6 +61,10 @@
 - 04-46 安戈洛環形山・第一次：1 個「做」步驟沒有座標（不會出現箭頭）
 - 04-51 冬泉谷：1 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d12 斯坦索姆：6 個「做」步驟沒有座標（不會出現箭頭）
+- 06-路線外任務.md:2192：任務 92597 在路線上，路線外判定不會用到
+- 06-路線外任務.md:2193：任務 92596 在路線上，路線外判定不會用到
+- 06-路線外任務.md:2194：任務 93461 在路線上，路線外判定不會用到
+- 06-路線外任務.md:2195：任務 94413 在路線上，路線外判定不會用到
 
 ## 副本前置鏈
 
@@ -126,8 +130,8 @@
 - 任務 179：目標怪 QuestieDB 沒有繁中名（森林狼、幼狼、蓬毛森林狼、蓬毛幼狼、TEST WOLF (ALPHA FIRST)、TEST WOLF (ALPHA SECOND)）
 - 任務 916：目標怪 QuestieDB 沒有繁中名（樹林蜘蛛、Webwood Creeper UNUSED）
 - 任務 98067：目標怪 QuestieDB 沒有繁中名（Credit）
-- 01-第一段-1到12級.md:588 交｜：QuestieDB 沒有繁中名（Akeri Duskblade），用「Akeri Duskblade」
-- 01-第一段-1到12級.md:592 交｜：QuestieDB 沒有繁中名（Blademaster Ren），用「Blademaster Ren」
+- 01-第一段-1到12級.md:589 交｜：QuestieDB 沒有繁中名（Akeri Duskblade），用「Akeri Duskblade」
+- 01-第一段-1到12級.md:593 交｜：QuestieDB 沒有繁中名（Blademaster Ren），用「Blademaster Ren」
 - 任務 92551：目標怪 QuestieDB 沒有繁中名（奧拉凱斯風暴召喚者、奧拉凱斯治療者、『颶語者』特戴歐爾、Galemender Delanea）
 - 任務 92909：目標怪 QuestieDB 沒有繁中名（麥田傀儡、看守傀儡、收割傀儡、生銹的麥田傀儡、Decrepit Harvester）
 - 任務 92909：目標怪 QuestieDB 沒有繁中名（麥田傀儡、看守傀儡、收割傀儡、Bulky Protective Ironweave、Electrostatic Discharge Shielding）
