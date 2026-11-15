@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "11e2625f",
+  built = "5596eaca",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -2102,6 +2102,8 @@ MG.Route = {
       } },
     { id="03-23", start=nil, name="濕地 第二次", short="濕地", visit=2, map=1437, lv={31, 32}, video=nil, test=nil, alt=nil, when=nil, tips={}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply=nil, danger=nil,
       steps = {
+        {t="accept", q=2923, npc="薩爾努修士", tgt="薩爾努修士", map=1453, x=51.05, y=48.39},
+        {t="accept", q=2928, npc="沉默的舒尼", tgt="沉默的舒尼", map=1453, x=62.63, y=34.11},
         {t="travel", text="到暴風城矮人區搭礦道地鐵到鐵爐堡。"},
         {t="turnin", q=637, npc="薩拉·巴魯", tgt="薩拉·巴魯", map=1455, x=63.5, y=67.3},
         {t="accept", q=683, npc="薩拉·巴魯", tgt="薩拉·巴魯", map=1455, x=63.5, y=67.3},
@@ -2110,12 +2112,17 @@ MG.Route = {
         {t="accept", q=1179, npc="飛行員比羅·長鬚", tgt="飛行員比羅·長鬚", map=1455, x=72.73, y=94.01},
         {t="turnin", q=686, npc="大石匠瑪布勒斯坦", tgt="大石匠瑪布勒斯坦", map=1455, x=39.04, y=88.05},
         {t="accept", q=689, npc="大石匠瑪布勒斯坦", tgt="大石匠瑪布勒斯坦", map=1455, x=39.04, y=88.05},
+        {t="turnin", q=2923, npc="工匠大師歐沃斯巴克", tgt="工匠大師歐沃斯巴克", map=1455, x=69.55, y=50.33},
+        {t="accept", q=2922, npc="工匠大師歐沃斯巴克", tgt="工匠大師歐沃斯巴克", map=1455, x=69.55, y=50.33},
+        {t="accept", q=2929, npc="大工匠梅卡托克", tgt="大工匠梅卡托克", map=1455, x=68.75, y=48.97},
+        {t="accept", q=2930, npc="大機械師卡斯派普", tgt="大機械師卡斯派普", map=1455, x=69.83, y=48.1},
         {t="fly", to="米奈希爾港"},
         {t="turnin", q=270, npc="戈羅林·鋼眉", tgt="戈羅林·鋼眉", map=1437, x=10.58, y=60.59},
         {t="accept", q=321, npc="戈羅林·鋼眉", tgt="戈羅林·鋼眉", map=1437, x=10.58, y=60.59},
         {t="turnin", q=321, npc="物件 浸水的箱子", map=1437, x=12.11, y=64.19},
         {t="accept", q=324, npc="物件 浸水的箱子", map=1437, x=12.11, y=64.19},
         {t="do", q=98208, hint="為米奈希爾港的希蕾莎‧暮語取回諾德爾。"},
+        {t="turnin", q=98208, npc="希蕾莎‧暮語", tgt="希蕾莎‧暮語", map=1437, x=7.9, y=55.8},
         {t="do", q=324, hint="收集5塊光鑄鐵錠，把它們交給濕地的戈羅林·鋼眉。", map=1437, x=10.8, y=67.2},
         {t="turnin", q=324, npc="戈羅林·鋼眉", tgt="戈羅林·鋼眉", map=1437, x=10.58, y=60.59},
         {t="accept", q=322, npc="戈羅林·鋼眉", tgt="戈羅林·鋼眉", map=1437, x=10.58, y=60.59},
@@ -2572,6 +2579,8 @@ MG.Route = {
       steps = {
         {t="turnin", q=697, opt=true, tag="可跳過", npc="大法師馬林", tgt="大法師馬林", map=1453, x=50.5, y=87.47},
         {t="turnin", q=543, opt=true, tag="可跳過", npc="雷明頓·瑞治維爾伯爵", tgt="雷明頓·瑞治維爾伯爵", map=1453, x=76.94, y=47.83},
+        {t="accept", q=1448, npc="布羅哈恩·鐵桶", tgt="布羅哈恩·鐵桶", map=1453, x=69.45, y=40.4},
+        {t="accept", q=1477, npc="高階巫師安多瑪斯", tgt="高階巫師安多瑪斯", map=1453, x=48.71, y=87.62},
         {t="fly", to="塞爾薩瑪"},
         {t="accept", q=2500, npc="加克", tgt="加克", map=1432, x=37.07, y=49.38},
         {t="turnin", q=707, npc="勘察員基恩薩·鐵環", tgt="勘察員基恩薩·鐵環", map=1432, x=65.93, y=65.62},

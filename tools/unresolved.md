@@ -1,4 +1,4 @@
-# 建置報告（資料版本 e863042b）
+# 建置報告（資料版本 f2716d60）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
 站數：94　任務數：1510
@@ -35,102 +35,102 @@
 - 05-d9 血色修道院・墓地：2 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d13 血色修道院・大教堂：1 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d11 血色修道院・圖書館：3 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:692 接｜進口商威利克斯：缺座標（QuestieDB 也沒有）
-- 05-副本.md:694 交｜進口商威利克斯：缺座標（QuestieDB 也沒有）
-- 05-副本.md:698 接｜邪惡的盟友：缺座標（QuestieDB 也沒有）
+- 05-副本.md:693 接｜進口商威利克斯：缺座標（QuestieDB 也沒有）
+- 05-副本.md:695 交｜進口商威利克斯：缺座標（QuestieDB 也沒有）
+- 05-副本.md:699 接｜邪惡的盟友：缺座標（QuestieDB 也沒有）
 - 05-d14 剃刀沼澤：6 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d16 沉沒之城：5 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:741 接｜壹團混亂：缺座標（QuestieDB 也沒有）
-- 05-副本.md:743 接｜臟兮兮的戒指：缺座標（QuestieDB 也沒有）
-- 05-副本.md:745 交｜臟兮兮的戒指：缺座標（QuestieDB 也沒有）
-- 05-副本.md:746 接｜戒指歸來：缺座標（QuestieDB 也沒有）
+- 05-副本.md:742 接｜壹團混亂：缺座標（QuestieDB 也沒有）
+- 05-副本.md:744 接｜臟兮兮的戒指：缺座標（QuestieDB 也沒有）
+- 05-副本.md:746 交｜臟兮兮的戒指：缺座標（QuestieDB 也沒有）
+- 05-副本.md:747 接｜戒指歸來：缺座標（QuestieDB 也沒有）
 - 05-d15 諾莫瑞根：3 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:832 接｜邪惡的盟友：缺座標（QuestieDB 也沒有）
-- 05-副本.md:844 接｜剃刀高地的亡靈天災：缺座標（QuestieDB 也沒有）
-- 05-副本.md:846 交｜剃刀高地的亡靈天災：缺座標（QuestieDB 也沒有）
-- 05-副本.md:847 接｜封印神像：缺座標（QuestieDB 也沒有）
-- 05-副本.md:849 交｜封印神像：缺座標（QuestieDB 也沒有）
+- 05-副本.md:833 接｜邪惡的盟友：缺座標（QuestieDB 也沒有）
+- 05-副本.md:845 接｜剃刀高地的亡靈天災：缺座標（QuestieDB 也沒有）
+- 05-副本.md:847 交｜剃刀高地的亡靈天災：缺座標（QuestieDB 也沒有）
+- 05-副本.md:848 接｜封印神像：缺座標（QuestieDB 也沒有）
+- 05-副本.md:850 交｜封印神像：缺座標（QuestieDB 也沒有）
 - 05-d17 剃刀高地：4 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:908 交｜搜尋項鏈，再來壹次：缺座標（QuestieDB 也沒有）
-- 05-副本.md:909 接｜翻譯日記：缺座標（QuestieDB 也沒有）
-- 05-副本.md:917 接｜白金圓盤：缺座標（QuestieDB 也沒有）
-- 05-副本.md:919 交｜白金圓盤：缺座標（QuestieDB 也沒有）
-- 05-副本.md:920 接｜白金圓盤：缺座標（QuestieDB 也沒有）
+- 05-副本.md:909 交｜搜尋項鏈，再來壹次：缺座標（QuestieDB 也沒有）
+- 05-副本.md:910 接｜翻譯日記：缺座標（QuestieDB 也沒有）
+- 05-副本.md:918 接｜白金圓盤：缺座標（QuestieDB 也沒有）
+- 05-副本.md:920 交｜白金圓盤：缺座標（QuestieDB 也沒有）
+- 05-副本.md:921 接｜白金圓盤：缺座標（QuestieDB 也沒有）
 - 05-d18 奧達曼：4 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1024 接｜克羅多克模具：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1025 接｜克羅多克模具：缺座標（QuestieDB 也沒有）
 - 05-d19 克羅多克要塞：7 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1094 交｜瑪拉頓的傳說：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1095 接｜塞雷布拉斯節杖：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1097 交｜塞雷布拉斯節杖：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1101 接｜生命之種：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1095 交｜瑪拉頓的傳說：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1096 接｜塞雷布拉斯節杖：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1098 交｜塞雷布拉斯節杖：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1102 接｜生命之種：缺座標（QuestieDB 也沒有）
 - 05-d20 瑪拉頓：5 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d21 祖爾法拉克：6 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1200 交｜不放棄任何一個獸人：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1201 接｜柯爾克隆的榮耀：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1205 交｜柯爾克隆的榮耀：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1206 接｜給弗卡爾的壞消息：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1208 交｜給弗卡爾的壞消息：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1209 接｜索爾必須知道：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1201 交｜不放棄任何一個獸人：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1202 接｜柯爾克隆的榮耀：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1206 交｜柯爾克隆的榮耀：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1207 接｜給弗卡爾的壞消息：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1209 交｜給弗卡爾的壞消息：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1210 接｜索爾必須知道：缺座標（QuestieDB 也沒有）
 - 05-d22 奧卡茲監獄：5 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1271 交｜深入神廟：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1273 交｜雕像群的秘密：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1277 接｜伊蘭尼庫斯精華：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1279 交｜伊蘭尼庫斯精華：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1272 交｜深入神廟：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1274 交｜雕像群的秘密：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1278 接｜伊蘭尼庫斯精華：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1280 交｜伊蘭尼庫斯精華：缺座標（QuestieDB 也沒有）
 - 05-d23 阿塔哈卡神廟：6 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1327 交｜黑鐵的遺產：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1328 交｜黑鐵的遺產：缺座標（QuestieDB 也沒有）
 - 05-d24 黑石深淵：7 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1373 接｜晉升印章：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1375 交｜狡猾的比修：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1376 接｜比修的裝置：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1378 交｜比修的裝置：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1379 接｜比修的偵察報告：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1386 交｜晉升印章：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1387 接｜晉升印章：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1400 交｜晉升印章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1374 接｜晉升印章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1376 交｜狡猾的比修：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1377 接｜比修的裝置：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1379 交｜比修的裝置：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1380 接｜比修的偵察報告：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1387 交｜晉升印章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1388 接｜晉升印章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1401 交｜晉升印章：缺座標（QuestieDB 也沒有）
 - 05-d25 黑石塔下層：8 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1491 接｜信仰獎章：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1493 交｜信仰獎章：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1494 接｜奧裏克斯的清算：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1496 交｜奧裏克斯的清算：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1492 接｜信仰獎章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1494 交｜信仰獎章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1495 接｜奧裏克斯的清算：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1497 交｜奧裏克斯的清算：缺座標（QuestieDB 也沒有）
 - 05-d27 斯坦索姆・亡靈區：6 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d26 斯坦索姆・血色區：3 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1607 接｜戈多克食人魔裝：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1609 交｜戈多克食人魔裝：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1610 接｜逃出生天！：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1612 交｜逃出生天！：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1613 接｜戈多克好酒：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1615 交｜戈多克好酒：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1616 接｜迦羅娜：潛行與詭計研究：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1618 交｜迦羅娜：潛行與詭計研究：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1619 接｜防禦寶典：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1621 交｜防禦寶典：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1622 接｜奧法師的食譜：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1624 交｜奧法師的食譜：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1625 接｜聖光之力：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1627 交｜聖光之力：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1628 接｜束縛之影：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1630 交｜束縛之影：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1631 接｜最偉大的獵手：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1633 交｜最偉大的獵手：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1634 接｜光明不會告訴妳的事情：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1636 交｜光明不會告訴妳的事情：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1637 接｜妳與冰霜震擊：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1639 交｜妳與冰霜震擊：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1640 接｜翡翠夢境……：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1642 交｜翡翠夢境……：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1608 接｜戈多克食人魔裝：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1610 交｜戈多克食人魔裝：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1611 接｜逃出生天！：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1613 交｜逃出生天！：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1614 接｜戈多克好酒：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1616 交｜戈多克好酒：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1617 接｜迦羅娜：潛行與詭計研究：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1619 交｜迦羅娜：潛行與詭計研究：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1620 接｜防禦寶典：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1622 交｜防禦寶典：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1623 接｜奧法師的食譜：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1625 交｜奧法師的食譜：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1626 接｜聖光之力：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1628 交｜聖光之力：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1629 接｜束縛之影：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1631 交｜束縛之影：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1632 接｜最偉大的獵手：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1634 交｜最偉大的獵手：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1635 接｜光明不會告訴妳的事情：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1637 交｜光明不會告訴妳的事情：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1638 接｜妳與冰霜震擊：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1640 交｜妳與冰霜震擊：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1641 接｜翡翠夢境……：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1643 交｜翡翠夢境……：缺座標（QuestieDB 也沒有）
 - 05-d30 厄運之槌・北區：12 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1572 接｜伊莫塔爾的瘋狂：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1574 交｜伊莫塔爾的瘋狂：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1575 接｜辛德拉的寶藏：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1577 交｜辛德拉的寶藏：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1573 接｜伊莫塔爾的瘋狂：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1575 交｜伊莫塔爾的瘋狂：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1576 接｜辛德拉的寶藏：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1578 交｜辛德拉的寶藏：缺座標（QuestieDB 也沒有）
 - 05-d29 厄運之槌・西區：3 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1539 接｜久違的法師：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1546 交｜久違的法師：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1540 接｜久違的法師：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1547 交｜久違的法師：缺座標（QuestieDB 也沒有）
 - 05-d28 厄運之槌・東區：4 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1682 交｜黑暗水晶：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1683 交｜黑暗水晶：缺座標（QuestieDB 也沒有）
 - 05-d31 塑造者殿堂：3 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d32 通靈學院：3 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1824 交｜黑手的命令：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1825 交｜黑手的命令：缺座標（QuestieDB 也沒有）
 - 05-d34 黑石塔上層：4 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d33 黑喉要塞：4 個「做」步驟沒有座標（不會出現箭頭）
 - 06-路線外任務.md:115：任務 96646 在路線上，路線外判定不會用到
@@ -226,29 +226,29 @@
 ## 名稱不一致（48）
 
 - 任務 92551：目標怪 QuestieDB 沒有繁中名（奧拉凱斯風暴召喚者、奧拉凱斯治療者、『颶語者』特戴歐爾、Galemender Delanea）
-- 01-第一段-1到12級.md:1137 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
-- 01-第一段-1到12級.md:1161 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
+- 01-第一段-1到12級.md:1139 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
+- 01-第一段-1到12級.md:1163 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
 - 任務 97257：目標怪 QuestieDB 沒有繁中名（Brazier of Offering）
 - 任務 880：目標怪 QuestieDB 沒有繁中名（綠洲鉗嘴龜、Oasis Snapjaw Hatchling）
 - 任務 1526：目標怪 QuestieDB 沒有繁中名（火之靈體、Manifestation of Flames）
 - 任務 671：目標怪 QuestieDB 沒有繁中名（辛迪加路霸、辛迪加巡路者、辛迪加雇傭兵、Syndicate Smuggler）
 - 任務 78830：目標怪 QuestieDB 沒有繁中名（Gharrik）
-- 03-30到45級.md:1087 交｜向赫格拉姆報到：路線寫「迅捷的赫格拉姆」，QuestieDB／遊戲名是「赫格拉姆」
-- 05-副本.md:1078 交｜：QuestieDB 沒有繁中名（Magister Kirandis），用「Magister Kirandis」
-- 05-副本.md:1042 接｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
-- 05-副本.md:1042 交｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
-- 05-副本.md:1079 接｜：QuestieDB 沒有繁中名（Mithera），用「Mithera」
-- 05-副本.md:1081 交｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
+- 03-30到45級.md:1089 交｜向赫格拉姆報到：路線寫「迅捷的赫格拉姆」，QuestieDB／遊戲名是「赫格拉姆」
+- 05-副本.md:1079 交｜：QuestieDB 沒有繁中名（Magister Kirandis），用「Magister Kirandis」
+- 05-副本.md:1043 接｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
+- 05-副本.md:1043 交｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
+- 05-副本.md:1080 接｜：QuestieDB 沒有繁中名（Mithera），用「Mithera」
+- 05-副本.md:1082 交｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
 - 任務 93404：目標怪 QuestieDB 沒有繁中名（Woodwyrd）
-- 05-副本.md:1082 接｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
-- 05-副本.md:1111 交｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
-- 05-副本.md:1189 交｜精英中的精英：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1190 接｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1192 交｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1193 接｜不放棄任何一個獸人：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1194 接｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1195 接｜血紅頭巾：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1213 交｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1083 接｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
+- 05-副本.md:1112 交｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
+- 05-副本.md:1190 交｜精英中的精英：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1191 接｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1193 交｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1194 接｜不放棄任何一個獸人：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1195 接｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1196 接｜血紅頭巾：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1214 交｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
 - 任務 8234：目標怪 QuestieDB 沒有繁中名（木喉薩滿、Blackmaw Shaman）
 - 任務 8425：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）
 - 任務 8425：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku、Mijan）
@@ -256,11 +256,11 @@
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Lieutenant Suncrest）
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Magister Hawkhelm）
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Ranger Lydrea）
-- 04-45到60級.md:634 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
-- 04-45到60級.md:636 交｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
-- 04-45到60級.md:637 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 04-45到60級.md:635 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 04-45到60級.md:637 交｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 04-45到60級.md:638 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
 - 任務 8251：目標怪 QuestieDB 沒有繁中名（血精靈勘測員、血精靈搜尋者、血精靈防衛者、Blood Elf Arcanist、伊文‧修密特、露蜜娜‧風詠）
-- 04-45到60級.md:920 接｜聖光研究：路線寫「物件 書籍」，QuestieDB／遊戲名是「詹妮亞·坎農」
+- 04-45到60級.md:921 接｜聖光研究：路線寫「物件 書籍」，QuestieDB／遊戲名是「詹妮亞·坎農」
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku、Mijan）
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro、Zolo）
@@ -268,11 +268,11 @@
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku、Mijan）
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro、Zolo）
-- 04-45到60級.md:1354 接｜奪回希利蘇斯：路線寫「塞納里奧使者黑蹄」，QuestieDB／遊戲名是「塞納里奧使者托爾·黑蹄」
+- 04-45到60級.md:1355 接｜奪回希利蘇斯：路線寫「塞納里奧使者黑蹄」，QuestieDB／遊戲名是「塞納里奧使者托爾·黑蹄」
 - 任務 4289：目標怪 QuestieDB 沒有繁中名（安戈洛猩猩、Un'Goro Gorilla）
 - 任務 97327：目標怪 QuestieDB 沒有繁中名（Blackmaw Berserker、Blackmaw Thrall、Blackmaw Headhunter、Swarming Imp、Legashi Slayer、Blackmaw Champion）
-- 05-副本.md:1770 接｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
-- 05-副本.md:1782 交｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
+- 05-副本.md:1771 接｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
+- 05-副本.md:1783 交｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
 
 ## 順序錯誤（已自動調整 3）
 
