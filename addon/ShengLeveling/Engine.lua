@@ -755,6 +755,14 @@ function E.Locate(st)
       end
     end
   end
+  -- 順路任務（已在日誌、還沒做完）常駐在上方框最下面，提醒路上遇到就打；不受「附近一起做」的距離與數量限制
+  for i = 1, n do
+    local s = steps[i].s
+    if s.roam and i ~= cur and not inGroup[i] and not done[i] and not na[i] and s.q and C.IsOnQuest(s.q) then
+      group[#group + 1] = i
+      inGroup[i] = true
+    end
+  end
   local train
   for i = 1, n do if steps[i].s.t == "train" and not done[i] and not na[i] and i ~= cur then train = train or i end end
   return { train = train, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, low = low, lowLv = lowLv, trainHid = trainHid, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
