@@ -1,6 +1,6 @@
 # 阿聖練等幫手 enUS 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **275** 列。
+- 只收聯盟路線獨有的說明列，共 **375** 列。
 
 檔名:行號｜類型｜中文原文｜enUS
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Right-click Nibbled-On Book in your bags to start the quest.
@@ -278,3 +278,103 @@
 06-路線外任務.md:2819｜說明｜是路線任務「艾魯拉的陰影」的前置，先補做才接得到。｜Prerequisite for the route quest "The Shade of Elura". Do it first to unlock that quest.
 06-路線外任務.md:2856｜說明｜是路線任務「身心之力」的前置，先補做才接得到。｜Prerequisite for the route quest "Body and Heart". Do it first to unlock that quest.
 06-路線外任務.md:3202｜說明｜冬泉谷（第51站）經過時，有空再接。｜Pick this up if you have time when you pass through Winterspring (stop 51).
+01-第一段-1到12級.md:994｜說明｜到閃金鎮交給女牧師潔塞塔，接聖光之衣。｜Turn in to Priestess Josetta in Goldshire and accept Garments of the Light.
+01-第一段-1到12級.md:999｜說明｜對受傷的衛兵施放次級治療術和真言術：韌，獎勵布甲。｜Cast Lesser Heal and Power Word: Fortitude on the wounded guards. Rewards cloth armor.
+01-第一段-1到12級.md:1005｜說明｜到卡拉諾斯交給馬克薩恩·安沃爾，接聖光之衣。｜Turn in to Maxan Anvol in Kharanos and accept Garments of the Light.
+01-第一段-1到12級.md:1030｜說明｜取得大地靈契，下一段在靈石處喝下才看得見大地之魂。｜Get the Earth Sapta. In the next step, drink it at the spirit stone to see the Minor Manifestation of Earth.
+01-第一段-1到12級.md:1032｜說明｜喝下大地靈契後與小型大地之靈體交談。｜Drink the Earth Sapta, then talk to the Minor Manifestation of Earth.
+01-第一段-1到12級.md:1010｜說明｜對受傷的登山者施放次級治療術和真言術：韌，獎勵布甲。｜Cast Lesser Heal and Power Word: Fortitude on the wounded mountaineers. Rewards cloth armor.
+01-第一段-1到12級.md:1016｜說明｜到多蘭納爾交給勞爾娜·晨光，接月光之衣。｜Turn in to Laurna Morninglight in Dolanaar and accept Garments of the Moon.
+01-第一段-1到12級.md:1021｜說明｜對受傷的哨兵施放次級治療術和真言術：韌，獎勵布甲。｜Cast Lesser Heal and Power Word: Fortitude on the wounded sentinels. Rewards cloth armor.
+01-第一段-1到12級.md:597｜說明｜站在地脈旁使用天裔精靈的解讀地脈種族技能。｜Stand next to the leyline and use the Skyborne racial Reading the Leylines.
+01-第一段-1到12級.md:843｜說明｜還不到 12 級，就在瓦拉納爾西邊打弗德飛狐首領（10 級，57.5, 71.7 一帶），練到 12 再搭船。｜If you're not level 12 yet, kill Vuldren Alphas west of Valanaar (level 10, around 57.5, 71.7) until 12, then take the boat.
+01-第一段-1到12級.md:1039｜說明｜微風島職業武器支線，搭船去達拉然前完成。｜Zephras Isle class weapon quest. Finish it before taking the boat to Dalaran.
+01-第一段-1到12級.md:1047｜說明｜導引可略過，已抵達瓦拉納爾就直接接 94978。｜The intro quest is optional: if you're already in Valanaar, accept 94978 directly.
+01-第一段-1到12級.md:1054｜說明｜到瓦拉納爾東北方的瀑布找厄先卓斯；搭船離開微風島前做。｜Find Urs'endris at the waterfall northeast of Valanaar. Do it before you sail away from Zephras Isle.
+01-第一段-1到12級.md:1054｜說明｜到瓦拉納爾東北方的瀑布找厄先卓斯｜Find Urs'endris at the waterfall northeast of Valanaar.
+01-第一段-1到12級.md:1054｜說明｜搭船離開微風島前做。｜Do it before you sail away from Zephras Isle.
+01-第一段-1到12級.md:1056｜說明｜厄芮德菈在申德高地巡邏，交任務學熊形態。｜Ur'endra patrols Shen'dar Highlands. Turn in to learn Bear Form.
+01-第一段-1到12級.md:1059｜說明｜抵達達拉然時接；沒接也可以直接到暴風城找沙德拉斯·月樹接 94914。｜Accept it when you arrive in Dalaran. If you missed it, go straight to Sheldras Moontree in Stormwind and accept 94914.
+01-第一段-1到12級.md:1059｜說明｜抵達達拉然時接｜Accept it when you arrive in Dalaran.
+01-第一段-1到12級.md:1059｜說明｜沒接也可以直接到暴風城找沙德拉斯·月樹接 94914。｜If you missed it, go straight to Sheldras Moontree in Stormwind and accept 94914.
+01-第一段-1到12級.md:1061｜說明｜在暴風城學傳送：月光林地，傳過去交任務。｜Learn Teleport: Moonglade in Stormwind, then teleport there to turn in.
+01-第一段-1到12級.md:1076｜說明｜導引可略過，直接到鐵爐堡找穆倫·雷矛接 1678。｜The intro quest is optional: go straight to Muren Stormpike in Ironforge and accept 1678.
+01-第一段-1到12級.md:1078｜說明｜維吉雷克在丹莫洛西南的冰爪洞穴附近。｜Vejrek is near the ice cave in southwestern Dun Morogh.
+01-第一段-1到12級.md:1093｜說明｜在卡拉諾斯接，到丹莫洛東邊往洛克莫丹的關口找布魯格斯‧燃裔。｜Accept it in Kharanos, then find Bruegs Kindleborn at the pass from eastern Dun Morogh to Loch Modan.
+01-第一段-1到12級.md:1110｜說明｜導引可略過，直接到鐵爐堡找霍夫丹·黑鬚接 2238。｜The intro quest is optional: go straight to Hulfdan Blackbeard in Ironforge and accept 2238.
+01-第一段-1到12級.md:1119｜說明｜導引可略過，直接到鐵爐堡找彬克接 1880。｜The intro quest is optional: go straight to Bink in Ironforge and accept 1880.
+01-第一段-1到12級.md:1134｜說明｜向瑪斯雷學傳送：月光林地，傳過去交任務。｜Learn Teleport: Moonglade from Mathrengyl Bearwalker, then teleport there to turn in.
+01-第一段-1到12級.md:1141｜說明｜到奧伯丁的月夜梟獸之石使用塞納里奧月塵，擊敗月爪並與其靈魂交談；黑海岸做完再回達納蘇斯交，學熊形態。｜Use the Cenarion Moondust at the Moonkin Stone in Auberdine, defeat Lunaclaw and talk to its spirit. After finishing Darkshore, return to Darnassus to turn in and learn Bear Form.
+01-第一段-1到12級.md:1141｜說明｜到奧伯丁的月夜梟獸之石使用塞納里奧月塵，擊敗月爪並與其靈魂交談｜Use the Cenarion Moondust at the Moonkin Stone in Auberdine, defeat Lunaclaw and talk to its spirit.
+01-第一段-1到12級.md:1141｜說明｜黑海岸做完再回達納蘇斯交，學熊形態。｜After finishing Darkshore, return to Darnassus to turn in and learn Bear Form.
+01-第一段-1到12級.md:1145｜說明｜在多蘭納爾接，到達納蘇斯交塞尤娜。｜Accept it in Dolanaar and turn it in to Syurna in Darnassus.
+01-第一段-1到12級.md:1153｜說明｜在多蘭納爾接，到達納蘇斯交女祭司阿蘭希雅。｜Accept it in Dolanaar and turn it in to Priestess Alathea in Darnassus.
+01-第一段-1到12級.md:1155｜說明｜完成後學星辰碎片。｜Afterwards, learn Starshards.
+02-12到30級.md:721｜說明｜導引可略過，直接到暴風城找哈里·伯加德接 1639。｜The intro quest is optional: go straight to Harry Burlguard in Stormwind and accept 1639.
+02-12到30級.md:725｜說明｜跟巴托比對話後他會開打，打到投降即可。｜Talk to Bartleby and he attacks you. Fight until he gives up.
+02-12到30級.md:732｜說明｜蛀牙傑克在艾爾文森林東谷伐木場北方的營地。｜Dead-tooth Jack is at the camp north of Eastvale Logging Camp in Elwynn Forest.
+02-12到30級.md:741｜說明｜人類在閃金鎮接的導引，可直接找加科因接 1688。｜Intro quest humans get in Goldshire. You can go straight to Gakin the Darkbinder and accept 1688.
+02-12到30級.md:743｜說明｜蘇倫娜·凱爾東在艾爾文森林布瑞克威爾南瓜田的農舍。｜Surena Caledon is in the farmhouse at the Brackwell Pumpkin Patch in Elwynn Forest.
+02-12到30級.md:746｜說明｜在加科因旁的召喚法陣使用符文，擊敗召喚出的虛無行者。｜Use the item at the summoning circle next to Gakin the Darkbinder and defeat the Summoned Voidwalker.
+02-12到30級.md:752｜說明｜導引可略過，直接到暴風城法師區找詹妮亞·坎農接 1861。｜The intro quest is optional: go straight to Jennea Cannon in the Mage Quarter of Stormwind and accept 1861.
+02-12到30級.md:760｜說明｜導引可略過，直接到暴風城軍情七處找馬迪亞斯·肖爾接 2206。｜The intro quest is optional: go straight to Master Mathias Shaw at SI:7 in Stormwind and accept 2206.
+02-12到30級.md:773｜說明｜學絕望禱言。｜Learn Desperate Prayer.
+02-12到30級.md:786｜說明｜交 10 塊亞麻布，不夠就去拍賣場買。｜Turn in 10 Linen Cloth. If you're short, buy some at the Auction House.
+02-12到30級.md:795｜說明｜用生命符記復活艾爾文森林的亨茲·法奧克。｜Use the Symbol of Life to resurrect Henze Faulk in Elwynn Forest.
+02-12到30級.md:798｜說明｜交任務學救贖。｜Turn in to learn Redemption.
+02-12到30級.md:819｜說明｜獎勵月神武器。｜Rewards an Elunite weapon.
+02-12到30級.md:826｜說明｜在奧伯丁的月夜梟獸之石完成身心之力後，回達納蘇斯交，學熊形態。｜After finishing Body and Heart at the Moonkin Stone in Auberdine, return to Darnassus to turn in and learn Bear Form.
+02-12到30級.md:832｜說明｜在黑海岸收集毒腺，回奧伯丁交。｜Collect the venom glands in Darkshore and turn them in at Auberdine.
+02-12到30級.md:835｜說明｜用解藥治療黑海岸生病的鹿。｜Use the cure on the sick deer in Darkshore.
+02-12到30級.md:838｜說明｜交任務學解毒術。｜Turn in to learn Cure Poison.
+02-12到30級.md:847｜說明｜在月光林地湖底找到月光之石。｜Find the Shrine Bauble at the bottom of the lake in Moonglade.
+02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得月光精華。｜Get the pendant half from the underwater ruins south of Auberdine in Darkshore.
+02-12到30級.md:853｜說明｜交任務學水棲形態。｜Turn in to learn Aquatic Form.
+02-12到30級.md:862｜說明｜在奧瑟爾伐木場附近的箱子使用開鎖。｜Use Pick Lock on the chest near Alther's Mill.
+02-12到30級.md:875｜說明｜在西部荒野克拉文之塔偷出密封信件，完成後學毒藥。｜Steal the sealed letter from Klaven's Tower in Westfall. Afterwards, learn Poisons.
+02-12到30級.md:888｜說明｜學回饋。｜Learn Feedback.
+02-12到30級.md:893｜說明｜暴風城接，到鐵爐堡交，學防護恐懼結界。｜Accept it in Stormwind, turn it in at Ironforge and learn Fear Ward.
+02-12到30級.md:898｜說明｜暴風城接，到丹莫洛交。｜Accept it in Stormwind and turn it in at Dun Morogh.
+02-12到30級.md:905｜說明｜藍色隱士酒吧在暴風城法師區。｜The Blue Recluse tavern is in the Mage Quarter of Stormwind.
+02-12到30級.md:908｜說明｜交 10 塊亞麻布和 6 顆充能裂隙寶石，寶石可在拍賣場買。｜Turn in 10 Linen Cloth and 6 Charged Rift Gems. You can buy the gems at the Auction House.
+02-12到30級.md:910｜說明｜獎勵法紋長袍。｜Rewards Manaweave Robe.
+02-12到30級.md:921｜說明｜在梣谷擊殺薩特取得同心樹。｜Kill satyrs in Ashenvale for the Heartswood.
+02-12到30級.md:925｜說明｜在加科因旁的召喚法陣使用，擊敗召喚出的魅魔。｜Use it at the summoning circle next to Gakin the Darkbinder and defeat the summoned succubus.
+02-12到30級.md:938｜說明｜右鍵背包裡的勇氣之書接任務。｜Right-click Tome of Valor in your bags to start the quest.
+02-12到30級.md:942｜說明｜護送達芙妮，途中會有迪菲亞伏擊。｜Escort Daphne Stilwell. Defias ambush you along the way.
+02-12到30級.md:948｜說明｜要科爾寶石、白洛爾的礦石等材料。｜Needs materials such as a Kor Gem and Bailor's Ore Shipment.
+02-12到30級.md:964｜說明｜瑞斯班洞穴在赤脊山西北，洞裡是巨魔。｜The Rethban Caverns are in northwestern Redridge Mountains, and they're full of ogres.
+02-12到30級.md:997｜說明｜學艾露恩的賜福。｜Learn Elune's Grace.
+02-12到30級.md:1053｜說明｜獎勵星結之衣。｜Rewards Astral Knot Garment.
+03-30到45級.md:812｜說明｜從人形怪身上偷竊取得。｜Get it by pickpocketing humanoids.
+03-30到45級.md:815｜說明｜交辛迪加徽章，可重複。｜Turn in Syndicate Emblems. Repeatable.
+03-30到45級.md:934｜說明｜到塵泥沼澤交給塔貝薩。｜Turn it in to Tabetha in Dustwallow Marsh.
+03-30到45級.md:870｜說明｜在斯坦哈德附近的法陣召喚並擊敗地獄獵犬。｜Summon and defeat the felhunter at the circle near Strahad Farsan.
+03-30到45級.md:989｜說明｜風之召喚，到阿拉希高地找維里克‧雷鎚。｜Call of Air: find Veyric Thunderhame in Arathi Highlands.
+03-30到45級.md:830｜說明｜從阿拉希高地的諾斯弗德農場偷辛迪加制服。｜Steal a Syndicate uniform from Northfold Manor in Arathi Highlands.
+03-30到45級.md:951｜說明｜獎勵法師魔杖。｜Rewards a mage wand.
+03-30到45級.md:924｜說明｜召喚地獄戰馬，到棘齒城交給斯坦哈德·法爾杉。｜Summon Felsteed: turn it in to Strahad Farsan in Ratchet.
+03-30到45級.md:982｜說明｜導引可略過，直接找暴風城的達索瑞恩·拉爾接 1661。｜The intro quest is optional: go straight to Duthorian Rall in Stormwind and accept 1661.
+03-30到45級.md:851｜說明｜在菲拉斯島的競技場連續擊敗四波對手。｜Defeat four waves of opponents in a row at the arena.
+03-30到45級.md:878｜說明｜要一件奧法之袍，可請裁縫做或在拍賣場買。｜You need Robes of Arcana. Ask a tailor to make them or buy them at the Auction House.
+03-30到45級.md:893｜說明｜獎勵魔化金線血袍。｜Rewards Enchanted Gold Bloodrobe.
+03-30到45級.md:904｜說明｜地獄犬碎片，和 4963 二選一。｜Felhound shard. Choose either this or 4963.
+03-30到45級.md:907｜說明｜地獄火碎片，和 4962 二選一。｜Infernal shard. Choose either this or 4962.
+03-30到45級.md:915｜說明｜選地獄犬碎片的做這條。｜Do this one if you chose the felhound shard.
+03-30到45級.md:918｜說明｜選地獄火碎片的做這條。｜Do this one if you chose the infernal shard.
+03-30到45級.md:929｜說明｜交任務學召喚地獄戰馬。｜Turn in to learn Summon Felsteed.
+03-30到45級.md:969｜說明｜奧達曼副本內。｜Inside the Uldaman dungeon.
+04-45到60級.md:779｜說明｜擊敗塞克隆尼亞取得精華。｜Defeat Cyclonian to get its essence.
+04-45到60級.md:785｜說明｜獎勵旋風武器。｜Rewards a Whirlwind weapon.
+04-45到60級.md:792｜說明｜暴風城的導引可略過，直接找艾薩拉的克希雷姆接 8251。｜The intro quest is optional: go straight to Archmage Xylem in Azshara and accept 8251.
+04-45到60級.md:800｜說明｜摩弗拉斯在阿塔哈卡神廟。｜Morphaz is in the Temple of Atal'Hakkar.
+04-45到60級.md:808｜說明｜在暴風城接，到艾薩拉交給奧汀克。｜Accept it in Stormwind and turn it in to Ogtinc in Azshara.
+04-45到60級.md:824｜說明｜在達納蘇斯（或鐵爐堡、暴風城）接，到艾薩拉交給奧汀克。｜Accept it in Darnassus (or Ironforge or Stormwind) and turn it in to Ogtinc in Azshara.
+04-45到60級.md:832｜說明｜綠龍在阿塔哈卡神廟。｜The green drake is in the Temple of Atal'Hakkar.
+04-45到60級.md:854｜說明｜克羅蘇斯在費伍德森林北方，要組隊。｜Kroshius is in northern Felwood. You need a group.
+04-45到60級.md:889｜說明｜到西瘟疫之地寒風營地交。｜Turn it in at Chillwind Camp in Western Plaguelands.
+04-45到60級.md:901｜說明｜交任務取得力量之石。｜Turn it in to get the Mightstone.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。｜Gather Earthroot and Lunar Fungus in Darkshore, then turn them in at Auberdine.
+02-12到30級.md:847｜說明｜在月神湖底找到神殿靈珠。｜Find the Shrine Bauble at the bottom of Lake Elune'ara.
+02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得半塊墜飾。｜Get one half of the Pendant of the Sea Lion from the underwater ruins south of Auberdine in Darkshore.
+03-30到45級.md:851｜說明｜在勇士島的競技場連續擊敗四波對手。｜Defeat four waves of opponents in a row at the arena on Fray Island.

@@ -1,6 +1,6 @@
 # 阿聖練等幫手 ptBR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **275** 列。
+- 只收聯盟路線獨有的說明列，共 **375** 列。
 
 檔名:行號｜類型｜中文原文｜ptBR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Clique com o botão direito em Livro Mordiscado na bolsa para iniciar a missão.
@@ -278,3 +278,103 @@
 06-路線外任務.md:2819｜說明｜是路線任務「艾魯拉的陰影」的前置，先補做才接得到。｜Pré-requisito da missão da rota "O vulto de Elura". Faça antes para poder pegá-la.
 06-路線外任務.md:2856｜說明｜是路線任務「身心之力」的前置，先補做才接得到。｜Pré-requisito da missão da rota "Corpo e coração". Faça antes para poder pegá-la.
 06-路線外任務.md:3202｜說明｜冬泉谷（第51站）經過時，有空再接。｜Pegue se tiver tempo, de passagem: Hibérnia (parada 51).
+01-第一段-1到12級.md:994｜說明｜到閃金鎮交給女牧師潔塞塔，接聖光之衣。｜Entregue à Sacerdotisa Joselita na Vila d'Ouro e aceite "Vestes da Luz".
+01-第一段-1到12級.md:999｜說明｜對受傷的衛兵施放次級治療術和真言術：韌，獎勵布甲。｜Lance Cura Menor e Palavra de Poder: Fortitude nos guardas feridos. Recompensa: armadura de tecido.
+01-第一段-1到12級.md:1005｜說明｜到卡拉諾斯交給馬克薩恩·安沃爾，接聖光之衣。｜Entregue a Maxan Begurno em Kharanos e aceite "Vestes da Luz".
+01-第一段-1到12級.md:1030｜說明｜取得大地靈契，下一段在靈石處喝下才看得見大地之魂。｜Pegue a Sapta da Terra. Na próxima etapa, beba na pedra espiritual para ver a Manifestação Menor de Terra.
+01-第一段-1到12級.md:1032｜說明｜喝下大地靈契後與小型大地之靈體交談。｜Beba a Sapta da Terra e fale com a Manifestação Menor de Terra.
+01-第一段-1到12級.md:1010｜說明｜對受傷的登山者施放次級治療術和真言術：韌，獎勵布甲。｜Lance Cura Menor e Palavra de Poder: Fortitude nos montanhistas feridos. Recompensa: armadura de tecido.
+01-第一段-1到12級.md:1016｜說明｜到多蘭納爾交給勞爾娜·晨光，接月光之衣。｜Entregue a Laurna Luzalbor em Dolanaar e aceite "Vestes da lua".
+01-第一段-1到12級.md:1021｜說明｜對受傷的哨兵施放次級治療術和真言術：韌，獎勵布甲。｜Lance Cura Menor e Palavra de Poder: Fortitude nos sentinelas feridos. Recompensa: armadura de tecido.
+01-第一段-1到12級.md:597｜說明｜站在地脈旁使用天裔精靈的解讀地脈種族技能。｜Fique ao lado do meridiano e use a habilidade racial Skyborne "Leitura dos meridianos".
+01-第一段-1到12級.md:843｜說明｜還不到 12 級，就在瓦拉納爾西邊打弗德飛狐首領（10 級，57.5, 71.7 一帶），練到 12 再搭船。｜Se ainda não for nível 12, mate Vuldrens Alfa a oeste de Valanaar (nível 10, perto de 57.5, 71.7) até o 12 e depois pegue o barco.
+01-第一段-1到12級.md:1039｜說明｜微風島職業武器支線，搭船去達拉然前完成。｜Missão de arma de classe da Ilha de Zefras. Termine antes de pegar o barco para Dalaran.
+01-第一段-1到12級.md:1047｜說明｜導引可略過，已抵達瓦拉納爾就直接接 94978。｜A missão introdutória é opcional: se já estiver em Valanaar, aceite a 94978 direto.
+01-第一段-1到12級.md:1054｜說明｜到瓦拉納爾東北方的瀑布找厄先卓斯；搭船離開微風島前做。｜Procure Urs'endris na cachoeira a nordeste de Valanaar. Faça antes de sair de barco da Ilha de Zefras.
+01-第一段-1到12級.md:1054｜說明｜到瓦拉納爾東北方的瀑布找厄先卓斯｜Procure Urs'endris na cachoeira a nordeste de Valanaar.
+01-第一段-1到12級.md:1054｜說明｜搭船離開微風島前做。｜Faça antes de sair de barco da Ilha de Zefras.
+01-第一段-1到12級.md:1056｜說明｜厄芮德菈在申德高地巡邏，交任務學熊形態。｜Ur'endra patrulha o Planalto de Shen'dar. Entregue a missão para aprender Forma de Urso.
+01-第一段-1到12級.md:1059｜說明｜抵達達拉然時接；沒接也可以直接到暴風城找沙德拉斯·月樹接 94914。｜Aceite ao chegar a Dalaran. Se não pegou, vá direto a Sheldras Lunárvore em Ventobravo e aceite a 94914.
+01-第一段-1到12級.md:1059｜說明｜抵達達拉然時接｜Aceite ao chegar a Dalaran.
+01-第一段-1到12級.md:1059｜說明｜沒接也可以直接到暴風城找沙德拉斯·月樹接 94914。｜Se não pegou, vá direto a Sheldras Lunárvore em Ventobravo e aceite a 94914.
+01-第一段-1到12級.md:1061｜說明｜在暴風城學傳送：月光林地，傳過去交任務。｜Aprenda Teleporte: Clareira da Lua em Ventobravo e teleporte-se para entregar a missão.
+01-第一段-1到12級.md:1076｜說明｜導引可略過，直接到鐵爐堡找穆倫·雷矛接 1678。｜A missão introdutória é opcional: vá direto a Muren Lançatroz em Altaforja e aceite 1678.
+01-第一段-1到12級.md:1078｜說明｜維吉雷克在丹莫洛西南的冰爪洞穴附近。｜Vejrek fica perto da caverna de gelo no sudoeste de Dun Morogh.
+01-第一段-1到12級.md:1093｜說明｜在卡拉諾斯接，到丹莫洛東邊往洛克莫丹的關口找布魯格斯‧燃裔。｜Aceite em Kharanos e procure Bruegs Igninato na passagem do leste de Dun Morogh para Loch Modan.
+01-第一段-1到12級.md:1110｜說明｜導引可略過，直接到鐵爐堡找霍夫丹·黑鬚接 2238。｜A missão introdutória é opcional: vá direto a Hulfdan Barbanegra em Altaforja e aceite 2238.
+01-第一段-1到12級.md:1119｜說明｜導引可略過，直接到鐵爐堡找彬克接 1880。｜A missão introdutória é opcional: vá direto a Bink em Altaforja e aceite 1880.
+01-第一段-1到12級.md:1134｜說明｜向瑪斯雷學傳送：月光林地，傳過去交任務。｜Aprenda Teleporte: Clareira da Lua com Mathrengyl Ursivagus e teleporte-se para entregar a missão.
+01-第一段-1到12級.md:1141｜說明｜到奧伯丁的月夜梟獸之石使用塞納里奧月塵，擊敗月爪並與其靈魂交談；黑海岸做完再回達納蘇斯交，學熊形態。｜Use a Poeira de Lua Cenariana na Pedra Luniscante de Auberdine, derrote Lunagarra e fale com o espírito dele. Depois da Costa Negra, volte a Darnassus para entregar e aprender Forma de Urso.
+01-第一段-1到12級.md:1141｜說明｜到奧伯丁的月夜梟獸之石使用塞納里奧月塵，擊敗月爪並與其靈魂交談｜Use a Poeira de Lua Cenariana na Pedra Luniscante de Auberdine, derrote Lunagarra e fale com o espírito dele.
+01-第一段-1到12級.md:1141｜說明｜黑海岸做完再回達納蘇斯交，學熊形態。｜Depois da Costa Negra, volte a Darnassus para entregar e aprender Forma de Urso.
+01-第一段-1到12級.md:1145｜說明｜在多蘭納爾接，到達納蘇斯交塞尤娜。｜Aceite em Dolanaar e entregue a Syurna em Darnassus.
+01-第一段-1到12級.md:1153｜說明｜在多蘭納爾接，到達納蘇斯交女祭司阿蘭希雅。｜Aceite em Dolanaar e entregue à Sacerdotisa Alathea em Darnassus.
+01-第一段-1到12級.md:1155｜說明｜完成後學星辰碎片。｜Depois, aprenda Estilhaços Estelares.
+02-12到30級.md:721｜說明｜導引可略過，直接到暴風城找哈里·伯加德接 1639。｜A missão introdutória é opcional: vá direto a Ari Barbotina em Ventobravo e aceite 1639.
+02-12到30級.md:725｜說明｜跟巴托比對話後他會開打，打到投降即可。｜Fale com Bartolino e ele vai atacar. Lute até ele se render.
+02-12到30級.md:732｜說明｜蛀牙傑克在艾爾文森林東谷伐木場北方的營地。｜Diogo Dente-podre fica no acampamento ao norte da Madeireira Vale do Leste, na Floresta de Elwynn.
+02-12到30級.md:741｜說明｜人類在閃金鎮接的導引，可直接找加科因接 1688。｜Missão introdutória dos humanos na Vila d'Ouro. Pode ir direto a Gakin, o Neromante, e aceitar a 1688.
+02-12到30級.md:743｜說明｜蘇倫娜·凱爾東在艾爾文森林布瑞克威爾南瓜田的農舍。｜Surena Caledon fica na casa da plantação de abóboras dos Brackwell, na Floresta de Elwynn.
+02-12到30級.md:746｜說明｜在加科因旁的召喚法陣使用符文，擊敗召喚出的虛無行者。｜Use o item no círculo de evocação ao lado de Gakin, o Neromante, e derrote o Emissário do Caos Evocado.
+02-12到30級.md:752｜說明｜導引可略過，直接到暴風城法師區找詹妮亞·坎農接 1861。｜A missão introdutória é opcional: vá direto a Jana Catão no Distrito dos Magos de Ventobravo e aceite 1861.
+02-12到30級.md:760｜說明｜導引可略過，直接到暴風城軍情七處找馬迪亞斯·肖爾接 2206。｜A missão introdutória é opcional: vá direto a Mestre Mathias Shaw na AVIN em Ventobravo e aceite 2206.
+02-12到30級.md:773｜說明｜學絕望禱言。｜Aprenda Prece Desesperada.
+02-12到30級.md:786｜說明｜交 10 塊亞麻布，不夠就去拍賣場買。｜Entregue 10 Linhos. Se faltar, compre na Casa de Leilões.
+02-12到30級.md:795｜說明｜用生命符記復活艾爾文森林的亨茲·法奧克。｜Use o Símbolo da Vida para ressuscitar Henze Faulk na Floresta de Elwynn.
+02-12到30級.md:798｜說明｜交任務學救贖。｜Entregue a missão para aprender Redenção.
+02-12到30級.md:819｜說明｜獎勵月神武器。｜Recompensa: uma arma de elunita.
+02-12到30級.md:826｜說明｜在奧伯丁的月夜梟獸之石完成身心之力後，回達納蘇斯交，學熊形態。｜Depois de concluir "Corpo e coração" na Pedra Luniscante de Auberdine, volte a Darnassus para entregar e aprender Forma de Urso.
+02-12到30級.md:832｜說明｜在黑海岸收集毒腺，回奧伯丁交。｜Colete as glândulas de veneno na Costa Negra e entregue em Auberdine.
+02-12到30級.md:835｜說明｜用解藥治療黑海岸生病的鹿。｜Use o remédio nos cervos doentes da Costa Negra.
+02-12到30級.md:838｜說明｜交任務學解毒術。｜Entregue a missão para aprender Curar Veneno.
+02-12到30級.md:847｜說明｜在月光林地湖底找到月光之石。｜Encontre o Adorno de Altar no fundo do lago da Clareira da Lua.
+02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得月光精華。｜Pegue o meio-pingente nas ruínas submersas ao sul de Auberdine, na Costa Negra.
+02-12到30級.md:853｜說明｜交任務學水棲形態。｜Entregue a missão para aprender Forma Aquática.
+02-12到30級.md:862｜說明｜在奧瑟爾伐木場附近的箱子使用開鎖。｜Use Arrombar no baú perto da Serraria Alther.
+02-12到30級.md:875｜說明｜在西部荒野克拉文之塔偷出密封信件，完成後學毒藥。｜Roube a carta lacrada da Torre Défias no Cerro Oeste. Depois, aprenda Venenos.
+02-12到30級.md:888｜說明｜學回饋。｜Aprenda Retroalimentação.
+02-12到30級.md:893｜說明｜暴風城接，到鐵爐堡交，學防護恐懼結界。｜Aceite em Ventobravo, entregue em Altaforja e aprenda Proteção contra Medo.
+02-12到30級.md:898｜說明｜暴風城接，到丹莫洛交。｜Aceite em Ventobravo e entregue em Dun Morogh.
+02-12到30級.md:905｜說明｜藍色隱士酒吧在暴風城法師區。｜A taverna Recôndito Azulego fica no Distrito dos Magos de Ventobravo.
+02-12到30級.md:908｜說明｜交 10 塊亞麻布和 6 顆充能裂隙寶石，寶石可在拍賣場買。｜Entregue 10 Linhos e 6 Gemas Energizadas da Fenda. As gemas podem ser compradas na Casa de Leilões.
+02-12到30級.md:910｜說明｜獎勵法紋長袍。｜Recompensa: Veste de fios de mana.
+02-12到30級.md:921｜說明｜在梣谷擊殺薩特取得同心樹。｜Mate sátiros no Vale Gris para pegar o Palocórdio.
+02-12到30級.md:925｜說明｜在加科因旁的召喚法陣使用，擊敗召喚出的魅魔。｜Use no círculo de evocação ao lado de Gakin, o Neromante, e derrote a súcubo evocada.
+02-12到30級.md:938｜說明｜右鍵背包裡的勇氣之書接任務。｜Clique com o botão direito em Tomo da Bravura na bolsa para iniciar a missão.
+02-12到30級.md:942｜說明｜護送達芙妮，途中會有迪菲亞伏擊。｜Escolte Dafne Calmafonte. No caminho, os Défias armam emboscadas.
+02-12到30級.md:948｜說明｜要科爾寶石、白洛爾的礦石等材料。｜Requer materiais como uma Gema Kor e o Carregamento de minério do Bailor.
+02-12到30級.md:964｜說明｜瑞斯班洞穴在赤脊山西北，洞裡是巨魔。｜As Cavernas Retibanas ficam no noroeste das Montanhas Cristarrubra e estão cheias de ogros.
+02-12到30級.md:997｜說明｜學艾露恩的賜福。｜Aprenda Graça de Eluna.
+02-12到30級.md:1053｜說明｜獎勵星結之衣。｜Recompensa: Traje do nó astral.
+03-30到45級.md:812｜說明｜從人形怪身上偷竊取得。｜Obtido furtando humanoides.
+03-30到45級.md:815｜說明｜交辛迪加徽章，可重複。｜Entregue Emblemas da Camarilha. Repetível.
+03-30到45級.md:934｜說明｜到塵泥沼澤交給塔貝薩。｜Entregue a Tabetha no Pântano Vadeoso.
+03-30到45級.md:870｜說明｜在斯坦哈德附近的法陣召喚並擊敗地獄獵犬。｜Evoque e derrote o caçador vil no círculo perto de Strahad Farsan.
+03-30到45級.md:989｜說明｜風之召喚，到阿拉希高地找維里克‧雷鎚。｜Chamado do Ar: procure Veyric Thunderhame no Planalto Arathi.
+03-30到45級.md:830｜說明｜從阿拉希高地的諾斯弗德農場偷辛迪加制服。｜Roube um uniforme da Camarilha em Northfold Manor, no Planalto Arathi.
+03-30到45級.md:951｜說明｜獎勵法師魔杖。｜Recompensa: uma varinha de mago.
+03-30到45級.md:924｜說明｜召喚地獄戰馬，到棘齒城交給斯坦哈德·法爾杉。｜Evocar Corcel Vil: entregue a Strahad Farsan na Vila Catraca.
+03-30到45級.md:982｜說明｜導引可略過，直接找暴風城的達索瑞恩·拉爾接 1661。｜A missão introdutória é opcional: vá direto a Benedito Brião em Ventobravo e aceite 1661.
+03-30到45級.md:851｜說明｜在菲拉斯島的競技場連續擊敗四波對手。｜Derrote quatro ondas de oponentes seguidas na arena.
+03-30到45級.md:878｜說明｜要一件奧法之袍，可請裁縫做或在拍賣場買。｜Você precisa das Vestes de Arcana. Peça a um alfaiate ou compre na Casa de Leilões.
+03-30到45級.md:893｜說明｜獎勵魔化金線血袍。｜Recompensa: Robessangre Dourado Encantado.
+03-30到45級.md:904｜說明｜地獄犬碎片，和 4963 二選一。｜Fragmento de cão vil. Escolha esta ou a 4963.
+03-30到45級.md:907｜說明｜地獄火碎片，和 4962 二選一。｜Fragmento de infernal. Escolha esta ou a 4962.
+03-30到45級.md:915｜說明｜選地獄犬碎片的做這條。｜Faça esta se escolheu o fragmento de cão vil.
+03-30到45級.md:918｜說明｜選地獄火碎片的做這條。｜Faça esta se escolheu o fragmento de infernal.
+03-30到45級.md:929｜說明｜交任務學召喚地獄戰馬。｜Entregue a missão para aprender Evocar Corcel Vil.
+03-30到45級.md:969｜說明｜奧達曼副本內。｜Dentro da masmorra de Uldaman.
+04-45到60級.md:779｜說明｜擊敗塞克隆尼亞取得精華。｜Derrote Ciclonium para obter a essência.
+04-45到60級.md:785｜說明｜獎勵旋風武器。｜Recompensa: uma arma do redemoinho.
+04-45到60級.md:792｜說明｜暴風城的導引可略過，直接找艾薩拉的克希雷姆接 8251。｜A missão introdutória é opcional: vá direto a Arquimago Tauriel em Azshara e aceite 8251.
+04-45到60級.md:800｜說明｜摩弗拉斯在阿塔哈卡神廟。｜Morphaz fica no Templo de Atal'Hakkar.
+04-45到60級.md:808｜說明｜在暴風城接，到艾薩拉交給奧汀克。｜Aceite em Ventobravo e entregue a Ogtinc em Azshara.
+04-45到60級.md:824｜說明｜在達納蘇斯（或鐵爐堡、暴風城）接，到艾薩拉交給奧汀克。｜Aceite em Darnassus (ou Altaforja, Ventobravo) e entregue a Ogtinc em Azshara.
+04-45到60級.md:832｜說明｜綠龍在阿塔哈卡神廟。｜O draco verde fica no Templo de Atal'Hakkar.
+04-45到60級.md:854｜說明｜克羅蘇斯在費伍德森林北方，要組隊。｜Kroshius fica no norte da Selva Maleva. É preciso grupo.
+04-45到60級.md:889｜說明｜到西瘟疫之地寒風營地交。｜Entregue no Acampamento Ventogelante, nas Terras Pestilentas Ocidentais.
+04-45到60級.md:901｜說明｜交任務取得力量之石。｜Entregue para obter a Pedra do Poder.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。｜Colete Raiz-telúrica e Fungo Lunar na Costa Negra e entregue em Auberdine.
+02-12到30級.md:847｜說明｜在月神湖底找到神殿靈珠。｜Encontre o Adorno de Altar no fundo do Lago Eluna'ara.
+02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得半塊墜飾。｜Pegue uma metade do Pingente do Leão Marinho nas ruínas submersas ao sul de Auberdine, na Costa Negra.
+03-30到45級.md:851｜說明｜在勇士島的競技場連續擊敗四波對手。｜Derrote quatro ondas de oponentes seguidas na arena da Ilha da Peleja.

@@ -1,6 +1,6 @@
 # 阿聖練等幫手 esMX 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **275** 列。
+- 只收聯盟路線獨有的說明列，共 **375** 列。
 
 檔名:行號｜類型｜中文原文｜esMX
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Haz clic derecho en Libro mordisqueado en tu bolsa para empezar la misión.
@@ -278,3 +278,103 @@
 06-路線外任務.md:2819｜說明｜是路線任務「艾魯拉的陰影」的前置，先補做才接得到。｜Requisito previo de la misión de la ruta «La sombra de Elura». Complétala primero para poder aceptarla.
 06-路線外任務.md:2856｜說明｜是路線任務「身心之力」的前置，先補做才接得到。｜Requisito previo de la misión de la ruta «Cuerpo y corazón». Complétala primero para poder aceptarla.
 06-路線外任務.md:3202｜說明｜冬泉谷（第51站）經過時，有空再接。｜Acéptala si tienes tiempo al pasar por Cuna del Invierno (parada 51).
+01-第一段-1到12級.md:994｜說明｜到閃金鎮交給女牧師潔塞塔，接聖光之衣。｜Entrégala a la Sacerdotisa Josetta en Villadorada y acepta «Las prendas de la Luz».
+01-第一段-1到12級.md:999｜說明｜對受傷的衛兵施放次級治療術和真言術：韌，獎勵布甲。｜Lanza Sanación inferior y Palabra de poder: entereza a los guardias heridos. Recompensa: armadura de tela.
+01-第一段-1到12級.md:1005｜說明｜到卡拉諾斯交給馬克薩恩·安沃爾，接聖光之衣。｜Entrégala a Maxan Anvol en Kharanos y acepta «Las prendas de la Luz».
+01-第一段-1到12級.md:1030｜說明｜取得大地靈契，下一段在靈石處喝下才看得見大地之魂。｜Consigue la Sapta de tierra. En el siguiente paso, bébela en la piedra espiritual para ver la Manifestación de tierra menor.
+01-第一段-1到12級.md:1032｜說明｜喝下大地靈契後與小型大地之靈體交談。｜Bebe la Sapta de tierra y habla con la Manifestación de tierra menor.
+01-第一段-1到12級.md:1010｜說明｜對受傷的登山者施放次級治療術和真言術：韌，獎勵布甲。｜Lanza Sanación inferior y Palabra de poder: entereza a los montaraces heridos. Recompensa: armadura de tela.
+01-第一段-1到12級.md:1016｜說明｜到多蘭納爾交給勞爾娜·晨光，接月光之衣。｜Entrégala a Laurna Luzdelalba en Dolanaar y acepta «Prendas de la luna».
+01-第一段-1到12級.md:1021｜說明｜對受傷的哨兵施放次級治療術和真言術：韌，獎勵布甲。｜Lanza Sanación inferior y Palabra de poder: entereza a los centinelas heridos. Recompensa: armadura de tela.
+01-第一段-1到12級.md:597｜說明｜站在地脈旁使用天裔精靈的解讀地脈種族技能。｜Colócate junto a la línea ley y usa la habilidad racial Skyborne «Lectura de líneas ley».
+01-第一段-1到12級.md:843｜說明｜還不到 12 級，就在瓦拉納爾西邊打弗德飛狐首領（10 級，57.5, 71.7 一帶），練到 12 再搭船。｜Si aún no eres nivel 12, mata Vuldren alfa al oeste de Valanaar (nivel 10, por 57.5, 71.7) hasta el 12 y luego toma el barco.
+01-第一段-1到12級.md:1039｜說明｜微風島職業武器支線，搭船去達拉然前完成。｜Misión de arma de clase de Isla Zephras. Complétala antes de tomar el barco a Dalaran.
+01-第一段-1到12級.md:1047｜說明｜導引可略過，已抵達瓦拉納爾就直接接 94978。｜La misión de introducción es opcional: si ya estás en Valanaar, acepta directamente la 94978.
+01-第一段-1到12級.md:1054｜說明｜到瓦拉納爾東北方的瀑布找厄先卓斯；搭船離開微風島前做。｜Busca a Urs'endris en la cascada al noreste de Valanaar. Hazla antes de salir en barco de Isla Zephras.
+01-第一段-1到12級.md:1054｜說明｜到瓦拉納爾東北方的瀑布找厄先卓斯｜Busca a Urs'endris en la cascada al noreste de Valanaar.
+01-第一段-1到12級.md:1054｜說明｜搭船離開微風島前做。｜Hazla antes de salir en barco de Isla Zephras.
+01-第一段-1到12級.md:1056｜說明｜厄芮德菈在申德高地巡邏，交任務學熊形態。｜Ur'endra patrulla las Tierras Altas de Shen'dar. Entrega la misión para aprender Forma de oso.
+01-第一段-1到12級.md:1059｜說明｜抵達達拉然時接；沒接也可以直接到暴風城找沙德拉斯·月樹接 94914。｜Acéptala al llegar a Dalaran. Si no la aceptaste, ve directamente a Sheldras Árbol Lunar en Ventormenta y acepta la 94914.
+01-第一段-1到12級.md:1059｜說明｜抵達達拉然時接｜Acéptala al llegar a Dalaran.
+01-第一段-1到12級.md:1059｜說明｜沒接也可以直接到暴風城找沙德拉斯·月樹接 94914。｜Si no la aceptaste, ve directamente a Sheldras Árbol Lunar en Ventormenta y acepta la 94914.
+01-第一段-1到12級.md:1061｜說明｜在暴風城學傳送：月光林地，傳過去交任務。｜Aprende Teletransporte: Claro de la Luna en Ventormenta y teletranspórtate allí para entregar la misión.
+01-第一段-1到12級.md:1076｜說明｜導引可略過，直接到鐵爐堡找穆倫·雷矛接 1678。｜La misión de introducción es opcional: ve directamente a Muren Pico Tormenta en Forjaz y acepta 1678.
+01-第一段-1到12級.md:1078｜說明｜維吉雷克在丹莫洛西南的冰爪洞穴附近。｜Vejrek está cerca de la cueva de hielo del suroeste de Dun Morogh.
+01-第一段-1到12級.md:1093｜說明｜在卡拉諾斯接，到丹莫洛東邊往洛克莫丹的關口找布魯格斯‧燃裔。｜Acéptala en Kharanos y busca a Bruegs Sangrellamas en el paso del este de Dun Morogh hacia Loch Modan.
+01-第一段-1到12級.md:1110｜說明｜導引可略過，直接到鐵爐堡找霍夫丹·黑鬚接 2238。｜La misión de introducción es opcional: ve directamente a Hulfdan Barbanegra en Forjaz y acepta 2238.
+01-第一段-1到12級.md:1119｜說明｜導引可略過，直接到鐵爐堡找彬克接 1880。｜La misión de introducción es opcional: ve directamente a Bink en Forjaz y acepta 1880.
+01-第一段-1到12級.md:1134｜說明｜向瑪斯雷學傳送：月光林地，傳過去交任務。｜Aprende Teletransporte: Claro de la Luna con Mathrengyl Garroso y teletranspórtate allí para entregar la misión.
+01-第一段-1到12級.md:1141｜說明｜到奧伯丁的月夜梟獸之石使用塞納里奧月塵，擊敗月爪並與其靈魂交談；黑海岸做完再回達納蘇斯交，學熊形態。｜Usa el Polvo de luna Cenarion en la piedra de lechúcico lunar de Auberdine, derrota a Garraluna y habla con su espíritu. Al terminar Costa Oscura, vuelve a Darnassus para entregarla y aprender Forma de oso.
+01-第一段-1到12級.md:1141｜說明｜到奧伯丁的月夜梟獸之石使用塞納里奧月塵，擊敗月爪並與其靈魂交談｜Usa el Polvo de luna Cenarion en la piedra de lechúcico lunar de Auberdine, derrota a Garraluna y habla con su espíritu.
+01-第一段-1到12級.md:1141｜說明｜黑海岸做完再回達納蘇斯交，學熊形態。｜Al terminar Costa Oscura, vuelve a Darnassus para entregarla y aprender Forma de oso.
+01-第一段-1到12級.md:1145｜說明｜在多蘭納爾接，到達納蘇斯交塞尤娜。｜Acéptala en Dolanaar y entrégala a Syurna en Darnassus.
+01-第一段-1到12級.md:1153｜說明｜在多蘭納爾接，到達納蘇斯交女祭司阿蘭希雅。｜Acéptala en Dolanaar y entrégala a la Sacerdotisa Alathea en Darnassus.
+01-第一段-1到12級.md:1155｜說明｜完成後學星辰碎片。｜Después, aprende Astillas de estrellas.
+02-12到30級.md:721｜說明｜導引可略過，直接到暴風城找哈里·伯加德接 1639。｜La misión de introducción es opcional: ve directamente a Harry Burlguard en Ventormenta y acepta 1639.
+02-12到30級.md:725｜說明｜跟巴托比對話後他會開打，打到投降即可。｜Habla con Bartleby y te atacará. Pelea hasta que se rinda.
+02-12到30級.md:732｜說明｜蛀牙傑克在艾爾文森林東谷伐木場北方的營地。｜Jack Dentomuerto está en el campamento al norte del Aserradero de la Vega del Este, en el Bosque de Elwynn.
+02-12到30級.md:741｜說明｜人類在閃金鎮接的導引，可直接找加科因接 1688。｜Misión de introducción de los humanos en Villadorada. Puedes ir directamente a Gakin el Presotenebra y aceptar la 1688.
+02-12到30級.md:743｜說明｜蘇倫娜·凱爾東在艾爾文森林布瑞克威爾南瓜田的農舍。｜Surena Caledon está en la granja del huerto de calabazas de los Brackwell, en el Bosque de Elwynn.
+02-12到30級.md:746｜說明｜在加科因旁的召喚法陣使用符文，擊敗召喚出的虛無行者。｜Usa el objeto en el círculo de invocación junto a Gakin el Presotenebra y derrota al Abisario invocado.
+02-12到30級.md:752｜說明｜導引可略過，直接到暴風城法師區找詹妮亞·坎農接 1861。｜La misión de introducción es opcional: ve directamente a Jennea Cañón en el Barrio de los Magos de Ventormenta y acepta 1861.
+02-12到30級.md:760｜說明｜導引可略過，直接到暴風城軍情七處找馬迪亞斯·肖爾接 2206。｜La misión de introducción es opcional: ve directamente a Maestro Mathias Shaw en el IS:7 de Ventormenta y acepta 2206.
+02-12到30級.md:773｜說明｜學絕望禱言。｜Aprende Rezo desesperado.
+02-12到30級.md:786｜說明｜交 10 塊亞麻布，不夠就去拍賣場買。｜Entrega 10 Paños de lino. Si te faltan, cómpralos en la casa de subastas.
+02-12到30級.md:795｜說明｜用生命符記復活艾爾文森林的亨茲·法奧克。｜Usa el Símbolo de la Vida para resucitar a Henze Faulk en el Bosque de Elwynn.
+02-12到30級.md:798｜說明｜交任務學救贖。｜Entrega la misión para aprender Redención.
+02-12到30級.md:819｜說明｜獎勵月神武器。｜Recompensa: un arma de Elunita.
+02-12到30級.md:826｜說明｜在奧伯丁的月夜梟獸之石完成身心之力後，回達納蘇斯交，學熊形態。｜Tras completar «Cuerpo y corazón» en la piedra de lechúcico lunar de Auberdine, vuelve a Darnassus para entregarla y aprender Forma de oso.
+02-12到30級.md:832｜說明｜在黑海岸收集毒腺，回奧伯丁交。｜Recoge las glándulas de veneno en Costa Oscura y entrégalas en Auberdine.
+02-12到30級.md:835｜說明｜用解藥治療黑海岸生病的鹿。｜Usa el remedio con los ciervos enfermos de Costa Oscura.
+02-12到30級.md:838｜說明｜交任務學解毒術。｜Entrega la misión para aprender Curar veneno.
+02-12到30級.md:847｜說明｜在月光林地湖底找到月光之石。｜Encuentra el adorno de altar en el fondo del lago de Claro de la Luna.
+02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得月光精華。｜Consigue la mitad del colgante en las ruinas submarinas al sur de Auberdine, en Costa Oscura.
+02-12到30級.md:853｜說明｜交任務學水棲形態。｜Entrega la misión para aprender Forma acuática.
+02-12到30級.md:862｜說明｜在奧瑟爾伐木場附近的箱子使用開鎖。｜Usa Forzar cerradura en el cofre cerca del Molino de Alther.
+02-12到30級.md:875｜說明｜在西部荒野克拉文之塔偷出密封信件，完成後學毒藥。｜Roba la carta sellada de la Torre Defias en los Páramos de Poniente. Después, aprende Venenos.
+02-12到30級.md:888｜說明｜學回饋。｜Aprende Retroalimentación.
+02-12到30級.md:893｜說明｜暴風城接，到鐵爐堡交，學防護恐懼結界。｜Acéptala en Ventormenta, entrégala en Forjaz y aprende Resguardo de miedo.
+02-12到30級.md:898｜說明｜暴風城接，到丹莫洛交。｜Acéptala en Ventormenta y entrégala en Dun Morogh.
+02-12到30級.md:905｜說明｜藍色隱士酒吧在暴風城法師區。｜La taberna El Ermitaño Azul está en el Barrio de los Magos de Ventormenta.
+02-12到30級.md:908｜說明｜交 10 塊亞麻布和 6 顆充能裂隙寶石，寶石可在拍賣場買。｜Entrega 10 Paños de lino y 6 Gemas cargadas de la falla. Las gemas se pueden comprar en la casa de subastas.
+02-12到30級.md:910｜說明｜獎勵法紋長袍。｜Recompensa: Toga Tejemaná.
+02-12到30級.md:921｜說明｜在梣谷擊殺薩特取得同心樹。｜Mata sátiros en Vallefresno para conseguir el duramen.
+02-12到30級.md:925｜說明｜在加科因旁的召喚法陣使用，擊敗召喚出的魅魔。｜Úsalo en el círculo de invocación junto a Gakin el Presotenebra y derrota al súcubo invocado.
+02-12到30級.md:938｜說明｜右鍵背包裡的勇氣之書接任務。｜Haz clic derecho en Escrito sobre valor en tu bolsa para empezar la misión.
+02-12到30級.md:942｜說明｜護送達芙妮，途中會有迪菲亞伏擊。｜Escolta a Daphne Fontana. Por el camino habrá emboscadas de los Defias.
+02-12到30級.md:948｜說明｜要科爾寶石、白洛爾的礦石等材料。｜Necesita materiales como una gema Kor y el envío de mena de Bailor.
+02-12到30級.md:964｜說明｜瑞斯班洞穴在赤脊山西北，洞裡是巨魔。｜Las Cuevas de Rethban están al noroeste de las Montañas Crestagrana y están llenas de ogros.
+02-12到30級.md:997｜說明｜學艾露恩的賜福。｜Aprende Gracia de Elune.
+02-12到30級.md:1053｜說明｜獎勵星結之衣。｜Recompensa: Prendas de nudo astral.
+03-30到45級.md:812｜說明｜從人形怪身上偷竊取得。｜Se consigue robando a humanoides.
+03-30到45級.md:815｜說明｜交辛迪加徽章，可重複。｜Entrega Emblemas de la Hermandad. Repetible.
+03-30到45級.md:934｜說明｜到塵泥沼澤交給塔貝薩。｜Entrégala a Tabetha en el Marjal Revolcafango.
+03-30到45級.md:870｜說明｜在斯坦哈德附近的法陣召喚並擊敗地獄獵犬。｜Invoca y derrota al manáfago en el círculo cerca de Strahad Farsan.
+03-30到45級.md:989｜說明｜風之召喚，到阿拉希高地找維里克‧雷鎚。｜Llamada del aire: busca a Veyric Horcatrueno en las Tierras Altas de Arathi.
+03-30到45級.md:830｜說明｜從阿拉希高地的諾斯弗德農場偷辛迪加制服。｜Roba un uniforme de la Hermandad en la Mansión Redilnorte, en las Tierras Altas de Arathi.
+03-30到45級.md:951｜說明｜獎勵法師魔杖。｜Recompensa: una varita de mago.
+03-30到45級.md:924｜說明｜召喚地獄戰馬，到棘齒城交給斯坦哈德·法爾杉。｜Invocar corcel vil: entrégala a Strahad Farsan en Trinquete.
+03-30到45級.md:982｜說明｜導引可略過，直接找暴風城的達索瑞恩·拉爾接 1661。｜La misión de introducción es opcional: ve directamente a Duthorian Rall en Ventormenta y acepta 1661.
+03-30到45級.md:851｜說明｜在菲拉斯島的競技場連續擊敗四波對手。｜Derrota cuatro oleadas de rivales seguidas en la arena.
+03-30到45級.md:878｜說明｜要一件奧法之袍，可請裁縫做或在拍賣場買。｜Necesitas unas Togas de Arcana. Pídeselas a un sastre o cómpralas en la casa de subastas.
+03-30到45級.md:893｜說明｜獎勵魔化金線血袍。｜Recompensa: Toga de sangre dorada encantada.
+03-30到45級.md:904｜說明｜地獄犬碎片，和 4963 二選一。｜Fragmento de manáfago. Elige esta o la 4963.
+03-30到45級.md:907｜說明｜地獄火碎片，和 4962 二選一。｜Fragmento de infernal. Elige esta o la 4962.
+03-30到45級.md:915｜說明｜選地獄犬碎片的做這條。｜Haz esta si elegiste el fragmento de manáfago.
+03-30到45級.md:918｜說明｜選地獄火碎片的做這條。｜Haz esta si elegiste el fragmento de infernal.
+03-30到45級.md:929｜說明｜交任務學召喚地獄戰馬。｜Entrega la misión para aprender Invocar corcel vil.
+03-30到45級.md:969｜說明｜奧達曼副本內。｜Dentro de la mazmorra de Uldaman.
+04-45到60級.md:779｜說明｜擊敗塞克隆尼亞取得精華。｜Derrota a Ciclonio para conseguir su esencia.
+04-45到60級.md:785｜說明｜獎勵旋風武器。｜Recompensa: un arma torbellino.
+04-45到60級.md:792｜說明｜暴風城的導引可略過，直接找艾薩拉的克希雷姆接 8251。｜La misión de introducción es opcional: ve directamente a el Archimago Xylem en Azshara y acepta 8251.
+04-45到60級.md:800｜說明｜摩弗拉斯在阿塔哈卡神廟。｜Morphaz está en el Templo de Atal'Hakkar.
+04-45到60級.md:808｜說明｜在暴風城接，到艾薩拉交給奧汀克。｜Acéptala en Ventormenta y entrégala a Ogtinc en Azshara.
+04-45到60級.md:824｜說明｜在達納蘇斯（或鐵爐堡、暴風城）接，到艾薩拉交給奧汀克。｜Acéptala en Darnassus (o Forjaz, Ventormenta) y entrégala a Ogtinc en Azshara.
+04-45到60級.md:832｜說明｜綠龍在阿塔哈卡神廟。｜El draco verde está en el Templo de Atal'Hakkar.
+04-45到60級.md:854｜說明｜克羅蘇斯在費伍德森林北方，要組隊。｜Kroshius está al norte de Frondavil. Necesitas grupo.
+04-45到60級.md:889｜說明｜到西瘟疫之地寒風營地交。｜Entrégala en el Campamento del Orvallo, en las Tierras de la Peste del Oeste.
+04-45到60級.md:901｜說明｜交任務取得力量之石。｜Entrégala para conseguir la Piedra de poderío.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。｜Recoge Raíz de tierra y Hongo lunar en Costa Oscura y entrégalos en Auberdine.
+02-12到30級.md:847｜說明｜在月神湖底找到神殿靈珠。｜Encuentra el Adorno de altar en el fondo del Lago Elune'ara.
+02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得半塊墜飾。｜Consigue una mitad del Colgante del León Marino en las ruinas submarinas al sur de Auberdine, en Costa Oscura.
+03-30到45級.md:851｜說明｜在勇士島的競技場連續擊敗四波對手。｜Derrota cuatro oleadas de rivales seguidas en la arena de Isla de Batalla.

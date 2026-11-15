@@ -1,6 +1,6 @@
 # 阿聖練等幫手 deDE 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **275** 列。
+- 只收聯盟路線獨有的說明列，共 **375** 列。
 
 檔名:行號｜類型｜中文原文｜deDE
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Rechtsklicke Angeknabbertes Buch im Rucksack, um die Quest anzunehmen.
@@ -278,3 +278,103 @@
 06-路線外任務.md:2819｜說明｜是路線任務「艾魯拉的陰影」的前置，先補做才接得到。｜Vorquest für die Routenquest „Eluras Schemen“. Hol sie zuerst nach, sonst bekommst du diese Quest nicht.
 06-路線外任務.md:2856｜說明｜是路線任務「身心之力」的前置，先補做才接得到。｜Vorquest für die Routenquest „Körper und Herz“. Hol sie zuerst nach, sonst bekommst du diese Quest nicht.
 06-路線外任務.md:3202｜說明｜冬泉谷（第51站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Winterquell (Station 51).
+01-第一段-1到12級.md:994｜說明｜到閃金鎮交給女牧師潔塞塔，接聖光之衣。｜Gib sie bei Priesterin Josetta in Goldhain ab und nimm „Gewänder des Lichts“ an.
+01-第一段-1到12級.md:999｜說明｜對受傷的衛兵施放次級治療術和真言術：韌，獎勵布甲。｜Wirk Geringes Heilen und Machtwort: Seelenstärke auf die verwundeten Wachen. Belohnung: Stoffrüstung.
+01-第一段-1到12級.md:1005｜說明｜到卡拉諾斯交給馬克薩恩·安沃爾，接聖光之衣。｜Gib sie bei Maxan Anvol in Kharanos ab und nimm „Gewänder des Lichts“ an.
+01-第一段-1到12級.md:1030｜說明｜取得大地靈契，下一段在靈石處喝下才看得見大地之魂。｜Hol dir das Erdsapta. Trink es im nächsten Schritt am Geiststein, um die Schwache Erdmanifestation zu sehen.
+01-第一段-1到12級.md:1032｜說明｜喝下大地靈契後與小型大地之靈體交談。｜Trink das Erdsapta und sprich dann mit der Schwachen Erdmanifestation.
+01-第一段-1到12級.md:1010｜說明｜對受傷的登山者施放次級治療術和真言術：韌，獎勵布甲。｜Wirk Geringes Heilen und Machtwort: Seelenstärke auf die verwundeten Gebirgsjäger. Belohnung: Stoffrüstung.
+01-第一段-1到12級.md:1016｜說明｜到多蘭納爾交給勞爾娜·晨光，接月光之衣。｜Gib sie bei Laurna Morninglight in Dolanaar ab und nimm „Gewänder des Mondes“ an.
+01-第一段-1到12級.md:1021｜說明｜對受傷的哨兵施放次級治療術和真言術：韌，獎勵布甲。｜Wirk Geringes Heilen und Machtwort: Seelenstärke auf die verwundeten Schildwachen. Belohnung: Stoffrüstung.
+01-第一段-1到12級.md:597｜說明｜站在地脈旁使用天裔精靈的解讀地脈種族技能。｜Stell dich neben die Leylinie und setz die Skyborne-Volksfähigkeit „Die Leylinien lesen“ ein.
+01-第一段-1到12級.md:843｜說明｜還不到 12 級，就在瓦拉納爾西邊打弗德飛狐首領（10 級，57.5, 71.7 一帶），練到 12 再搭船。｜Bist du noch nicht Stufe 12, töte westlich von Valanaar Vuldrenalphas (Stufe 10, um 57.5, 71.7), bis du 12 bist, dann nimm das Schiff.
+01-第一段-1到12級.md:1039｜說明｜微風島職業武器支線，搭船去達拉然前完成。｜Klassenwaffen-Nebenquest der Insel Zephras. Schließ sie ab, bevor du das Schiff nach Dalaran nimmst.
+01-第一段-1到12級.md:1047｜說明｜導引可略過，已抵達瓦拉納爾就直接接 94978。｜Die Einführungsquest kannst du auslassen: Bist du schon in Valanaar, nimm direkt 94978 an.
+01-第一段-1到12級.md:1054｜說明｜到瓦拉納爾東北方的瀑布找厄先卓斯；搭船離開微風島前做。｜Such Urs'endris am Wasserfall nordöstlich von Valanaar. Erledige das, bevor du die Insel Zephras mit dem Schiff verlässt.
+01-第一段-1到12級.md:1054｜說明｜到瓦拉納爾東北方的瀑布找厄先卓斯｜Such Urs'endris am Wasserfall nordöstlich von Valanaar.
+01-第一段-1到12級.md:1054｜說明｜搭船離開微風島前做。｜Erledige das, bevor du die Insel Zephras mit dem Schiff verlässt.
+01-第一段-1到12級.md:1056｜說明｜厄芮德菈在申德高地巡邏，交任務學熊形態。｜Ur'endra patrouilliert im Shen'darhochland. Gib die Quest ab, um Bärengestalt zu lernen.
+01-第一段-1到12級.md:1059｜說明｜抵達達拉然時接；沒接也可以直接到暴風城找沙德拉斯·月樹接 94914。｜Nimm sie bei der Ankunft in Dalaran an. Hast du sie verpasst, geh direkt zu Sheldras Moontree in Sturmwind und nimm 94914 an.
+01-第一段-1到12級.md:1059｜說明｜抵達達拉然時接｜Nimm sie bei der Ankunft in Dalaran an.
+01-第一段-1到12級.md:1059｜說明｜沒接也可以直接到暴風城找沙德拉斯·月樹接 94914。｜Hast du sie verpasst, geh direkt zu Sheldras Moontree in Sturmwind und nimm 94914 an.
+01-第一段-1到12級.md:1061｜說明｜在暴風城學傳送：月光林地，傳過去交任務。｜Lerne in Sturmwind „Teleportieren: Moonglade“ und teleportiere dich zum Abgeben dorthin.
+01-第一段-1到12級.md:1076｜說明｜導引可略過，直接到鐵爐堡找穆倫·雷矛接 1678。｜Die Einführungsquest kannst du auslassen: Geh direkt zu Muren Stormpike in Eisenschmiede und nimm 1678 an.
+01-第一段-1到12級.md:1078｜說明｜維吉雷克在丹莫洛西南的冰爪洞穴附近。｜Vejrek ist nahe der Eishöhle im Südwesten von Dun Morogh.
+01-第一段-1到12級.md:1093｜說明｜在卡拉諾斯接，到丹莫洛東邊往洛克莫丹的關口找布魯格斯‧燃裔。｜Nimm sie in Kharanos an und such dann Bruegs Kindleborn am Pass vom östlichen Dun Morogh nach Loch Modan.
+01-第一段-1到12級.md:1110｜說明｜導引可略過，直接到鐵爐堡找霍夫丹·黑鬚接 2238。｜Die Einführungsquest kannst du auslassen: Geh direkt zu Hulfdan Blackbeard in Eisenschmiede und nimm 2238 an.
+01-第一段-1到12級.md:1119｜說明｜導引可略過，直接到鐵爐堡找彬克接 1880。｜Die Einführungsquest kannst du auslassen: Geh direkt zu Bink in Eisenschmiede und nimm 1880 an.
+01-第一段-1到12級.md:1134｜說明｜向瑪斯雷學傳送：月光林地，傳過去交任務。｜Lerne „Teleportieren: Moonglade“ bei Mathrengyl Bearwalker und teleportiere dich zum Abgeben dorthin.
+01-第一段-1到12級.md:1141｜說明｜到奧伯丁的月夜梟獸之石使用塞納里奧月塵，擊敗月爪並與其靈魂交談；黑海岸做完再回達納蘇斯交，學熊形態。｜Benutze den Mondstaub des Cenarius am Moonkinstein bei Auberdine, besiege Mondklaue und sprich mit seinem Geist. Kehr nach der Dunkelküste nach Darnassus zurück, gib ab und lerne Bärengestalt.
+01-第一段-1到12級.md:1141｜說明｜到奧伯丁的月夜梟獸之石使用塞納里奧月塵，擊敗月爪並與其靈魂交談｜Benutze den Mondstaub des Cenarius am Moonkinstein bei Auberdine, besiege Mondklaue und sprich mit seinem Geist.
+01-第一段-1到12級.md:1141｜說明｜黑海岸做完再回達納蘇斯交，學熊形態。｜Kehr nach der Dunkelküste nach Darnassus zurück, gib ab und lerne Bärengestalt.
+01-第一段-1到12級.md:1145｜說明｜在多蘭納爾接，到達納蘇斯交塞尤娜。｜Nimm sie in Dolanaar an und gib sie bei Syurna in Darnassus ab.
+01-第一段-1到12級.md:1153｜說明｜在多蘭納爾接，到達納蘇斯交女祭司阿蘭希雅。｜Nimm sie in Dolanaar an und gib sie bei Priesterin Alathea in Darnassus ab.
+01-第一段-1到12級.md:1155｜說明｜完成後學星辰碎片。｜Lerne danach Sternensplitter.
+02-12到30級.md:721｜說明｜導引可略過，直接到暴風城找哈里·伯加德接 1639。｜Die Einführungsquest kannst du auslassen: Geh direkt zu Harry Burlguard in Sturmwind und nimm 1639 an.
+02-12到30級.md:725｜說明｜跟巴托比對話後他會開打，打到投降即可。｜Sprich mit Bartleby, dann greift er an. Kämpf, bis er aufgibt.
+02-12到30級.md:732｜說明｜蛀牙傑克在艾爾文森林東谷伐木場北方的營地。｜Stumpfzahn Jack ist im Lager nördlich vom Holzfällerlager des Osttals im Wald von Elwynn.
+02-12到30級.md:741｜說明｜人類在閃金鎮接的導引，可直接找加科因接 1688。｜Einführungsquest für Menschen aus Goldhain. Du kannst direkt zu Gakin dem Dunkelbinder gehen und 1688 annehmen.
+02-12到30級.md:743｜說明｜蘇倫娜·凱爾東在艾爾文森林布瑞克威爾南瓜田的農舍。｜Surena Caledon ist im Bauernhaus beim Kürbisfeld der Brackwells im Wald von Elwynn.
+02-12到30級.md:746｜說明｜在加科因旁的召喚法陣使用符文，擊敗召喚出的虛無行者。｜Benutze den Gegenstand am Beschwörungskreis neben Gakin dem Dunkelbinder und besiege den Beschworenen Leerwandler.
+02-12到30級.md:752｜說明｜導引可略過，直接到暴風城法師區找詹妮亞·坎農接 1861。｜Die Einführungsquest kannst du auslassen: Geh direkt zu Jennea Cannon im Magierviertel von Sturmwind und nimm 1861 an.
+02-12到30級.md:760｜說明｜導引可略過，直接到暴風城軍情七處找馬迪亞斯·肖爾接 2206。｜Die Einführungsquest kannst du auslassen: Geh direkt zu Meister Mathias Shaw bei SI:7 in Sturmwind und nimm 2206 an.
+02-12到30級.md:773｜說明｜學絕望禱言。｜Lerne Verzweifeltes Gebet.
+02-12到30級.md:786｜說明｜交 10 塊亞麻布，不夠就去拍賣場買。｜Gib 10 Leinenstoff ab. Fehlt dir welcher, kauf ihn im Auktionshaus.
+02-12到30級.md:795｜說明｜用生命符記復活艾爾文森林的亨茲·法奧克。｜Belebe Henze Faulk im Wald von Elwynn mit dem Symbol des Lebens wieder.
+02-12到30級.md:798｜說明｜交任務學救贖。｜Gib die Quest ab, um Erlösung zu lernen.
+02-12到30級.md:819｜說明｜獎勵月神武器。｜Belohnung: eine Waffe aus Elunit.
+02-12到30級.md:826｜說明｜在奧伯丁的月夜梟獸之石完成身心之力後，回達納蘇斯交，學熊形態。｜Schließ „Körper und Herz“ am Moonkinstein bei Auberdine ab, kehr dann nach Darnassus zurück, gib ab und lerne Bärengestalt.
+02-12到30級.md:832｜說明｜在黑海岸收集毒腺，回奧伯丁交。｜Sammle die Giftdrüsen an der Dunkelküste und gib sie in Auberdine ab.
+02-12到30級.md:835｜說明｜用解藥治療黑海岸生病的鹿。｜Heile die kranken Hirsche an der Dunkelküste mit dem Heilmittel.
+02-12到30級.md:838｜說明｜交任務學解毒術。｜Gib die Quest ab, um Vergiftung heilen zu lernen.
+02-12到30級.md:847｜說明｜在月光林地湖底找到月光之石。｜Finde das Schreinschmuckstück am Grund des Sees in Moonglade.
+02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得月光精華。｜Hol die Anhängerhälfte aus den Unterwasserruinen südlich von Auberdine an der Dunkelküste.
+02-12到30級.md:853｜說明｜交任務學水棲形態。｜Gib die Quest ab, um Wassergestalt zu lernen.
+02-12到30級.md:862｜說明｜在奧瑟爾伐木場附近的箱子使用開鎖。｜Wende Schlossknacken auf die Kiste bei Althers Mühle an.
+02-12到30級.md:875｜說明｜在西部荒野克拉文之塔偷出密封信件，完成後學毒藥。｜Stiehl den versiegelten Brief aus dem Turm der Defias in Westfall. Lerne danach Gifte.
+02-12到30級.md:888｜說明｜學回饋。｜Lerne Rückkopplung.
+02-12到30級.md:893｜說明｜暴風城接，到鐵爐堡交，學防護恐懼結界。｜Nimm sie in Sturmwind an, gib sie in Eisenschmiede ab und lerne Furchtzauberschutz.
+02-12到30級.md:898｜說明｜暴風城接，到丹莫洛交。｜Nimm sie in Sturmwind an und gib sie in Dun Morogh ab.
+02-12到30級.md:905｜說明｜藍色隱士酒吧在暴風城法師區。｜Die Taverne Zum Blauen Eremiten ist im Magierviertel von Sturmwind.
+02-12到30級.md:908｜說明｜交 10 塊亞麻布和 6 顆充能裂隙寶石，寶石可在拍賣場買。｜Gib 10 Leinenstoff und 6 Aufgeladene Rissedelsteine ab. Die Edelsteine gibt es im Auktionshaus.
+02-12到30級.md:910｜說明｜獎勵法紋長袍。｜Belohnung: Managewirkte Robe.
+02-12到30級.md:921｜說明｜在梣谷擊殺薩特取得同心樹。｜Töte Satyrn im Eschental für das Herzholz.
+02-12到30級.md:925｜說明｜在加科因旁的召喚法陣使用，擊敗召喚出的魅魔。｜Benutze ihn am Beschwörungskreis neben Gakin dem Dunkelbinder und besiege den beschworenen Sukkubus.
+02-12到30級.md:938｜說明｜右鍵背包裡的勇氣之書接任務。｜Rechtsklicke Foliant der Ehre im Rucksack, um die Quest anzunehmen.
+02-12到30級.md:942｜說明｜護送達芙妮，途中會有迪菲亞伏擊。｜Eskortiere Daphne Stilwell. Unterwegs greifen Defias aus dem Hinterhalt an.
+02-12到30級.md:948｜說明｜要科爾寶石、白洛爾的礦石等材料。｜Benötigt Materialien wie einen Kor-Edelstein und Bailors Erzlieferung.
+02-12到30級.md:964｜說明｜瑞斯班洞穴在赤脊山西北，洞裡是巨魔。｜Die Rethbanhöhlen liegen im Nordwesten des Rotkammgebirges und sind voller Oger.
+02-12到30級.md:997｜說明｜學艾露恩的賜福。｜Lerne Elunes Anmut.
+02-12到30級.md:1053｜說明｜獎勵星結之衣。｜Belohnung: Astralknotengewand.
+03-30到45級.md:812｜說明｜從人形怪身上偷竊取得。｜Erhältlich durch Taschendiebstahl bei Humanoiden.
+03-30到45級.md:815｜說明｜交辛迪加徽章，可重複。｜Gib Syndikatsembleme ab. Wiederholbar.
+03-30到45級.md:934｜說明｜到塵泥沼澤交給塔貝薩。｜Gib sie bei Tabetha in den Düstermarschen ab.
+03-30到45級.md:870｜說明｜在斯坦哈德附近的法陣召喚並擊敗地獄獵犬。｜Beschwöre und besiege den Teufelsjäger am Kreis bei Strahad Farsan.
+03-30到45級.md:989｜說明｜風之召喚，到阿拉希高地找維里克‧雷鎚。｜Ruf der Luft: Such Veyric Thunderhame im Arathihochland.
+03-30到45級.md:830｜說明｜從阿拉希高地的諾斯弗德農場偷辛迪加制服。｜Stiehl eine Uniform des Syndikats aus dem Northfold-Anwesen im Arathihochland.
+03-30到45級.md:951｜說明｜獎勵法師魔杖。｜Belohnung: ein Magierzauberstab.
+03-30到45級.md:924｜說明｜召喚地獄戰馬，到棘齒城交給斯坦哈德·法爾杉。｜Teufelsross beschwören: Gib sie bei Strahad Farsan in Ratschet ab.
+03-30到45級.md:982｜說明｜導引可略過，直接找暴風城的達索瑞恩·拉爾接 1661。｜Die Einführungsquest kannst du auslassen: Geh direkt zu Duthorian Rall in Sturmwind und nimm 1661 an.
+03-30到45級.md:851｜說明｜在菲拉斯島的競技場連續擊敗四波對手。｜Besiege in der Arena vier Gegnerwellen hintereinander.
+03-30到45級.md:878｜說明｜要一件奧法之袍，可請裁縫做或在拍賣場買。｜Du brauchst Roben von Arcana. Lass sie von einem Schneider anfertigen oder kauf sie im Auktionshaus.
+03-30到45級.md:893｜說明｜獎勵魔化金線血袍。｜Belohnung: Verzauberte Goldblutrobe.
+03-30到45級.md:904｜說明｜地獄犬碎片，和 4963 二選一。｜Teufelshund-Splitter. Wähle entweder diese oder 4963.
+03-30到45級.md:907｜說明｜地獄火碎片，和 4962 二選一。｜Höllenbestien-Splitter. Wähle entweder diese oder 4962.
+03-30到45級.md:915｜說明｜選地獄犬碎片的做這條。｜Mach diese, wenn du den Teufelshund-Splitter gewählt hast.
+03-30到45級.md:918｜說明｜選地獄火碎片的做這條。｜Mach diese, wenn du den Höllenbestien-Splitter gewählt hast.
+03-30到45級.md:929｜說明｜交任務學召喚地獄戰馬。｜Gib die Quest ab, um Teufelsross beschwören zu lernen.
+03-30到45級.md:969｜說明｜奧達曼副本內。｜Im Dungeon Uldaman.
+04-45到60級.md:779｜說明｜擊敗塞克隆尼亞取得精華。｜Besiege Cyclonian, um seine Essenz zu erhalten.
+04-45到60級.md:785｜說明｜獎勵旋風武器。｜Belohnung: eine Wirbelwaffe.
+04-45到60級.md:792｜說明｜暴風城的導引可略過，直接找艾薩拉的克希雷姆接 8251。｜Die Einführungsquest kannst du auslassen: Geh direkt zu Erzmagier Xylem in Azshara und nimm 8251 an.
+04-45到60級.md:800｜說明｜摩弗拉斯在阿塔哈卡神廟。｜Morphaz ist im Tempel von Atal'Hakkar.
+04-45到60級.md:808｜說明｜在暴風城接，到艾薩拉交給奧汀克。｜Nimm sie in Sturmwind an und gib sie bei Ogtinc in Azshara ab.
+04-45到60級.md:824｜說明｜在達納蘇斯（或鐵爐堡、暴風城）接，到艾薩拉交給奧汀克。｜Nimm sie in Darnassus (oder Eisenschmiede, Sturmwind) an und gib sie bei Ogtinc in Azshara ab.
+04-45到60級.md:832｜說明｜綠龍在阿塔哈卡神廟。｜Der grüne Drache ist im Tempel von Atal'Hakkar.
+04-45到60級.md:854｜說明｜克羅蘇斯在費伍德森林北方，要組隊。｜Kroshius ist im Norden des Teufelswalds. Du brauchst eine Gruppe.
+04-45到60級.md:889｜說明｜到西瘟疫之地寒風營地交。｜Gib sie auf der Chillwindspitze in den Westlichen Pestländern ab.
+04-45到60級.md:901｜說明｜交任務取得力量之石。｜Gib sie ab, um den Machtstein zu erhalten.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。｜Sammle Erdwurzel und Lunarfungus an der Dunkelküste und gib sie in Auberdine ab.
+02-12到30級.md:847｜說明｜在月神湖底找到神殿靈珠。｜Finde das Schrein-Schmuckstück am Grund des Elune'ara-Sees.
+02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得半塊墜飾。｜Hol eine Hälfte des Anhängers des Seelöwen aus den Unterwasserruinen südlich von Auberdine an der Dunkelküste.
+03-30到45級.md:851｜說明｜在勇士島的競技場連續擊敗四波對手。｜Besiege in der Arena auf dem Prügel-Eiland vier Gegnerwellen hintereinander.

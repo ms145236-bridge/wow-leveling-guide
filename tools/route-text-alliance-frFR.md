@@ -1,6 +1,6 @@
 # 阿聖練等幫手 frFR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **275** 列。
+- 只收聯盟路線獨有的說明列，共 **375** 列。
 
 檔名:行號｜類型｜中文原文｜frFR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Fais un clic droit sur Livre grignoté dans ton sac pour lancer la quête.
@@ -278,3 +278,103 @@
 06-路線外任務.md:2819｜說明｜是路線任務「艾魯拉的陰影」的前置，先補做才接得到。｜Prérequis de la quête de l'itinéraire « L'Ombre d'Elura ». Fais-la d'abord pour pouvoir la prendre.
 06-路線外任務.md:2856｜說明｜是路線任務「身心之力」的前置，先補做才接得到。｜Prérequis de la quête de l'itinéraire « Corps et cœur ». Fais-la d'abord pour pouvoir la prendre.
 06-路線外任務.md:3202｜說明｜冬泉谷（第51站）經過時，有空再接。｜À prendre si tu as le temps, en passant : Berceau-de-l'Hiver (étape 51).
+01-第一段-1到12級.md:994｜說明｜到閃金鎮交給女牧師潔塞塔，接聖光之衣。｜Rends-la à la prêtresse Josetta à Comté-de-l'Or et accepte « Vêtements de la Lumière ».
+01-第一段-1到12級.md:999｜說明｜對受傷的衛兵施放次級治療術和真言術：韌，獎勵布甲。｜Lance Soins inférieurs et Mot de pouvoir : Robustesse sur les gardes blessés. Récompense : armure en tissu.
+01-第一段-1到12級.md:1005｜說明｜到卡拉諾斯交給馬克薩恩·安沃爾，接聖光之衣。｜Rends-la à Maxan Anvol à Kharanos et accepte « Vêtements de la Lumière ».
+01-第一段-1到12級.md:1030｜說明｜取得大地靈契，下一段在靈石處喝下才看得見大地之魂。｜Obtiens la Sapta de terre. À l'étape suivante, bois-la à la pierre spirituelle pour voir la Manifestation de terre mineure.
+01-第一段-1到12級.md:1032｜說明｜喝下大地靈契後與小型大地之靈體交談。｜Bois la Sapta de terre, puis parle à la Manifestation de terre mineure.
+01-第一段-1到12級.md:1010｜說明｜對受傷的登山者施放次級治療術和真言術：韌，獎勵布甲。｜Lance Soins inférieurs et Mot de pouvoir : Robustesse sur les montagnards blessés. Récompense : armure en tissu.
+01-第一段-1到12級.md:1016｜說明｜到多蘭納爾交給勞爾娜·晨光，接月光之衣。｜Rends-la à Laurna Morninglight à Dolanaar et accepte « Vêtements de la lune ».
+01-第一段-1到12級.md:1021｜說明｜對受傷的哨兵施放次級治療術和真言術：韌，獎勵布甲。｜Lance Soins inférieurs et Mot de pouvoir : Robustesse sur les sentinelles blessés. Récompense : armure en tissu.
+01-第一段-1到12級.md:597｜說明｜站在地脈旁使用天裔精靈的解讀地脈種族技能。｜Place-toi près de la ligne tellurique et utilise la technique raciale Skyborne « Lecture des lignes telluriques ».
+01-第一段-1到12級.md:843｜說明｜還不到 12 級，就在瓦拉納爾西邊打弗德飛狐首領（10 級，57.5, 71.7 一帶），練到 12 再搭船。｜Si tu n'es pas encore niveau 12, tue des Alphas vuldrènes à l'ouest de Valanaar (niveau 10, vers 57.5, 71.7) jusqu'au 12, puis prends le bateau.
+01-第一段-1到12級.md:1039｜說明｜微風島職業武器支線，搭船去達拉然前完成。｜Quête d'arme de classe de l'île de Zéphras. Termine-la avant de prendre le bateau pour Dalaran.
+01-第一段-1到12級.md:1047｜說明｜導引可略過，已抵達瓦拉納爾就直接接 94978。｜La quête d'introduction est facultative : si tu es déjà à Valanaar, accepte directement 94978.
+01-第一段-1到12級.md:1054｜說明｜到瓦拉納爾東北方的瀑布找厄先卓斯；搭船離開微風島前做。｜Trouve Urs'endris à la cascade au nord-est de Valanaar. Fais-la avant de quitter l'île de Zéphras en bateau.
+01-第一段-1到12級.md:1054｜說明｜到瓦拉納爾東北方的瀑布找厄先卓斯｜Trouve Urs'endris à la cascade au nord-est de Valanaar.
+01-第一段-1到12級.md:1054｜說明｜搭船離開微風島前做。｜Fais-la avant de quitter l'île de Zéphras en bateau.
+01-第一段-1到12級.md:1056｜說明｜厄芮德菈在申德高地巡邏，交任務學熊形態。｜Ur'endra patrouille dans les hautes terres de Shen'dar. Rends la quête pour apprendre Forme d'ours.
+01-第一段-1到12級.md:1059｜說明｜抵達達拉然時接；沒接也可以直接到暴風城找沙德拉斯·月樹接 94914。｜Accepte-la en arrivant à Dalaran. Si tu l'as ratée, va directement voir Sheldras Moontree à Hurlevent et accepte 94914.
+01-第一段-1到12級.md:1059｜說明｜抵達達拉然時接｜Accepte-la en arrivant à Dalaran.
+01-第一段-1到12級.md:1059｜說明｜沒接也可以直接到暴風城找沙德拉斯·月樹接 94914。｜Si tu l'as ratée, va directement voir Sheldras Moontree à Hurlevent et accepte 94914.
+01-第一段-1到12級.md:1061｜說明｜在暴風城學傳送：月光林地，傳過去交任務。｜Apprends Téléportation : Reflet-de-Lune à Hurlevent, puis téléporte-toi pour rendre la quête.
+01-第一段-1到12級.md:1076｜說明｜導引可略過，直接到鐵爐堡找穆倫·雷矛接 1678。｜La quête d'introduction est facultative : va directement voir Muren Foudrepique à Forgefer et accepte 1678.
+01-第一段-1到12級.md:1078｜說明｜維吉雷克在丹莫洛西南的冰爪洞穴附近。｜Vejrek se trouve près de la grotte de glace au sud-ouest de Dun Morogh.
+01-第一段-1到12級.md:1093｜說明｜在卡拉諾斯接，到丹莫洛東邊往洛克莫丹的關口找布魯格斯‧燃裔。｜Accepte-la à Kharanos, puis trouve Bruegs Flammené au col entre l'est de Dun Morogh et le Loch Modan.
+01-第一段-1到12級.md:1110｜說明｜導引可略過，直接到鐵爐堡找霍夫丹·黑鬚接 2238。｜La quête d'introduction est facultative : va directement voir Hulfdan Blackbeard à Forgefer et accepte 2238.
+01-第一段-1到12級.md:1119｜說明｜導引可略過，直接到鐵爐堡找彬克接 1880。｜La quête d'introduction est facultative : va directement voir Bink à Forgefer et accepte 1880.
+01-第一段-1到12級.md:1134｜說明｜向瑪斯雷學傳送：月光林地，傳過去交任務。｜Apprends Téléportation : Reflet-de-Lune auprès de Mathrengyl Bearwalker, puis téléporte-toi pour rendre la quête.
+01-第一段-1到12級.md:1141｜說明｜到奧伯丁的月夜梟獸之石使用塞納里奧月塵，擊敗月爪並與其靈魂交談；黑海岸做完再回達納蘇斯交，學熊形態。｜Utilise la Poussière de lune cénarienne sur la Pierre des séléniens d'Auberdine, vaincs Lunegriffe et parle à son esprit. Après Sombrivage, retourne à Darnassus pour rendre la quête et apprendre Forme d'ours.
+01-第一段-1到12級.md:1141｜說明｜到奧伯丁的月夜梟獸之石使用塞納里奧月塵，擊敗月爪並與其靈魂交談｜Utilise la Poussière de lune cénarienne sur la Pierre des séléniens d'Auberdine, vaincs Lunegriffe et parle à son esprit.
+01-第一段-1到12級.md:1141｜說明｜黑海岸做完再回達納蘇斯交，學熊形態。｜Après Sombrivage, retourne à Darnassus pour rendre la quête et apprendre Forme d'ours.
+01-第一段-1到12級.md:1145｜說明｜在多蘭納爾接，到達納蘇斯交塞尤娜。｜Accepte-la à Dolanaar et rends-la à Syurna à Darnassus.
+01-第一段-1到12級.md:1153｜說明｜在多蘭納爾接，到達納蘇斯交女祭司阿蘭希雅。｜Accepte-la à Dolanaar et rends-la à la prêtresse Alathea à Darnassus.
+01-第一段-1到12級.md:1155｜說明｜完成後學星辰碎片。｜Ensuite, apprends Éclats stellaires.
+02-12到30級.md:721｜說明｜導引可略過，直接到暴風城找哈里·伯加德接 1639。｜La quête d'introduction est facultative : va directement voir Harry Burlguard à Hurlevent et accepte 1639.
+02-12到30級.md:725｜說明｜跟巴托比對話後他會開打，打到投降即可。｜Parle à Bartleby et il t'attaque. Combats-le jusqu'à ce qu'il se rende.
+02-12到30級.md:732｜說明｜蛀牙傑克在艾爾文森林東谷伐木場北方的營地。｜Jack Dent-Morte se trouve au camp au nord du Camp de bûcherons du Val d'est, dans la forêt d'Elwynn.
+02-12到30級.md:741｜說明｜人類在閃金鎮接的導引，可直接找加科因接 1688。｜Quête d'introduction des humains à Comté-de-l'Or. Tu peux aller directement voir Gakin le Tisse-noir et accepter 1688.
+02-12到30級.md:743｜說明｜蘇倫娜·凱爾東在艾爾文森林布瑞克威爾南瓜田的農舍。｜Surena Caledon se trouve dans la ferme du champ de citrouilles des Brackwell, dans la forêt d'Elwynn.
+02-12到30級.md:746｜說明｜在加科因旁的召喚法陣使用符文，擊敗召喚出的虛無行者。｜Utilise l'objet sur le cercle d'invocation près de Gakin le Tisse-noir et vaincs le Marcheur du Vide invoqué.
+02-12到30級.md:752｜說明｜導引可略過，直接到暴風城法師區找詹妮亞·坎農接 1861。｜La quête d'introduction est facultative : va directement voir Jennea Cannon dans le quartier des mages de Hurlevent et accepte 1861.
+02-12到30級.md:760｜說明｜導引可略過，直接到暴風城軍情七處找馬迪亞斯·肖爾接 2206。｜La quête d'introduction est facultative : va directement voir Maître Mathias Shaw au SI:7 à Hurlevent et accepte 2206.
+02-12到30級.md:773｜說明｜學絕望禱言。｜Apprends Prière du désespoir.
+02-12到30級.md:786｜說明｜交 10 塊亞麻布，不夠就去拍賣場買。｜Rends 10 Etoffes de lin. S'il t'en manque, achète-les à l'hôtel des ventes.
+02-12到30級.md:795｜說明｜用生命符記復活艾爾文森林的亨茲·法奧克。｜Utilise le Symbole de vie pour ressusciter Henze Faulk dans la forêt d'Elwynn.
+02-12到30級.md:798｜說明｜交任務學救贖。｜Rends la quête pour apprendre Rédemption.
+02-12到30級.md:819｜說明｜獎勵月神武器。｜Récompense : une arme en Elunite.
+02-12到30級.md:826｜說明｜在奧伯丁的月夜梟獸之石完成身心之力後，回達納蘇斯交，學熊形態。｜Après avoir terminé « Corps et cœur » à la Pierre des séléniens d'Auberdine, retourne à Darnassus pour rendre la quête et apprendre Forme d'ours.
+02-12到30級.md:832｜說明｜在黑海岸收集毒腺，回奧伯丁交。｜Récupère les glandes à venin à Sombrivage et rends-les à Auberdine.
+02-12到30級.md:835｜說明｜用解藥治療黑海岸生病的鹿。｜Utilise le remède sur les cerfs malades de Sombrivage.
+02-12到30級.md:838｜說明｜交任務學解毒術。｜Rends la quête pour apprendre Guérison du poison.
+02-12到30級.md:847｜說明｜在月光林地湖底找到月光之石。｜Trouve le Colifichet du sanctuaire au fond du lac de Reflet-de-Lune.
+02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得月光精華。｜Récupère le demi-pendentif dans les ruines sous-marines au sud d'Auberdine, à Sombrivage.
+02-12到30級.md:853｜說明｜交任務學水棲形態。｜Rends la quête pour apprendre Forme aquatique.
+02-12到30級.md:862｜說明｜在奧瑟爾伐木場附近的箱子使用開鎖。｜Utilise Crochetage sur le coffre près de la scierie d'Alther.
+02-12到30級.md:875｜說明｜在西部荒野克拉文之塔偷出密封信件，完成後學毒藥。｜Vole la lettre scellée dans la tour défias de la Marche de l'Ouest. Ensuite, apprends Poisons.
+02-12到30級.md:888｜說明｜學回饋。｜Apprends Réaction.
+02-12到30級.md:893｜說明｜暴風城接，到鐵爐堡交，學防護恐懼結界。｜Accepte-la à Hurlevent, rends-la à Forgefer et apprends Gardien de peur.
+02-12到30級.md:898｜說明｜暴風城接，到丹莫洛交。｜Accepte-la à Hurlevent et rends-la à Dun Morogh.
+02-12到30級.md:905｜說明｜藍色隱士酒吧在暴風城法師區。｜La taverne du Solitaire bleu se trouve dans le quartier des mages de Hurlevent.
+02-12到30級.md:908｜說明｜交 10 塊亞麻布和 6 顆充能裂隙寶石，寶石可在拍賣場買。｜Rends 10 Etoffes de lin et 6 Gemmes chargées de la faille. Les gemmes s'achètent à l'hôtel des ventes.
+02-12到30級.md:910｜說明｜獎勵法紋長袍。｜Récompense : robe de tisse-mana.
+02-12到30級.md:921｜說明｜在梣谷擊殺薩特取得同心樹。｜Tue des satyres à Orneval pour obtenir le cœur du bois.
+02-12到30級.md:925｜說明｜在加科因旁的召喚法陣使用，擊敗召喚出的魅魔。｜Utilise-le sur le cercle d'invocation près de Gakin le Tisse-noir et vaincs la succube invoquée.
+02-12到30級.md:938｜說明｜右鍵背包裡的勇氣之書接任務。｜Fais un clic droit sur Tome de la bravoure dans ton sac pour lancer la quête.
+02-12到30級.md:942｜說明｜護送達芙妮，途中會有迪菲亞伏擊。｜Escorte Daphne Stilwell. Des Défias vous tendent une embuscade en chemin.
+02-12到30級.md:948｜說明｜要科爾寶石、白洛爾的礦石等材料。｜Nécessite des matériaux comme une Gemme de Kor et la Cargaison de minerai de Bailor.
+02-12到30級.md:964｜說明｜瑞斯班洞穴在赤脊山西北，洞裡是巨魔。｜Les cavernes de Rethban se trouvent au nord-ouest des Carmines et sont pleines d'ogres.
+02-12到30級.md:997｜說明｜學艾露恩的賜福。｜Apprends Grâce d'Elune.
+02-12到30級.md:1053｜說明｜獎勵星結之衣。｜Récompense : habit du nœud astral.
+03-30到45級.md:812｜說明｜從人形怪身上偷竊取得。｜S'obtient en faisant les poches des humanoïdes.
+03-30到45級.md:815｜說明｜交辛迪加徽章，可重複。｜Rends des Emblèmes du Syndicat. Répétable.
+03-30到45級.md:934｜說明｜到塵泥沼澤交給塔貝薩。｜Rends-la à Tabetha au marécage d'Âprefange.
+03-30到45級.md:870｜說明｜在斯坦哈德附近的法陣召喚並擊敗地獄獵犬。｜Invoque et vaincs le chasseur corrompu sur le cercle près de Strahad Farsan.
+03-30到45級.md:989｜說明｜風之召喚，到阿拉希高地找維里克‧雷鎚。｜Appel de l'air : trouve Veyric Hametonne dans les Hautes-terres d'Arathi.
+03-30到45級.md:830｜說明｜從阿拉希高地的諾斯弗德農場偷辛迪加制服。｜Vole un uniforme du Syndicat au manoir de Nordclos, dans les Hautes-terres d'Arathi.
+03-30到45級.md:951｜說明｜獎勵法師魔杖。｜Récompense : une baguette de mage.
+03-30到45級.md:924｜說明｜召喚地獄戰馬，到棘齒城交給斯坦哈德·法爾杉。｜Invocation d'un palefroi corrompu : rends-la à Strahad Farsan à Cabestan.
+03-30到45級.md:982｜說明｜導引可略過，直接找暴風城的達索瑞恩·拉爾接 1661。｜La quête d'introduction est facultative : va directement voir Duthorian Rall à Hurlevent et accepte 1661.
+03-30到45級.md:851｜說明｜在菲拉斯島的競技場連續擊敗四波對手。｜Vaincs quatre vagues d'adversaires d'affilée dans l'arène.
+03-30到45級.md:878｜說明｜要一件奧法之袍，可請裁縫做或在拍賣場買。｜Il te faut une Robe d'Arcana. Demande à un tailleur ou achète-la à l'hôtel des ventes.
+03-30到45級.md:893｜說明｜獎勵魔化金線血袍。｜Récompense : Robe sanglante dorée enchantée.
+03-30到45級.md:904｜說明｜地獄犬碎片，和 4963 二選一。｜Fragment de gangrechien. Choisis entre celle-ci et 4963.
+03-30到45級.md:907｜說明｜地獄火碎片，和 4962 二選一。｜Fragment d'infernal. Choisis entre celle-ci et 4962.
+03-30到45級.md:915｜說明｜選地獄犬碎片的做這條。｜Fais celle-ci si tu as choisi le fragment de gangrechien.
+03-30到45級.md:918｜說明｜選地獄火碎片的做這條。｜Fais celle-ci si tu as choisi le fragment d'infernal.
+03-30到45級.md:929｜說明｜交任務學召喚地獄戰馬。｜Rends la quête pour apprendre Invocation d'un palefroi corrompu.
+03-30到45級.md:969｜說明｜奧達曼副本內。｜Dans le donjon d'Uldaman.
+04-45到60級.md:779｜說明｜擊敗塞克隆尼亞取得精華。｜Vaincs Cyclonien pour obtenir son essence.
+04-45到60級.md:785｜說明｜獎勵旋風武器。｜Récompense : une arme Tourbillon.
+04-45到60級.md:792｜說明｜暴風城的導引可略過，直接找艾薩拉的克希雷姆接 8251。｜La quête d'introduction est facultative : va directement voir l'archimage Xylem en Azshara et accepte 8251.
+04-45到60級.md:800｜說明｜摩弗拉斯在阿塔哈卡神廟。｜Morphaz se trouve dans le temple d'Atal'Hakkar.
+04-45到60級.md:808｜說明｜在暴風城接，到艾薩拉交給奧汀克。｜Accepte-la à Hurlevent et rends-la à Ogtinc en Azshara.
+04-45到60級.md:824｜說明｜在達納蘇斯（或鐵爐堡、暴風城）接，到艾薩拉交給奧汀克。｜Accepte-la à Darnassus (ou Forgefer, Hurlevent) et rends-la à Ogtinc en Azshara.
+04-45到60級.md:832｜說明｜綠龍在阿塔哈卡神廟。｜Le drake vert se trouve dans le temple d'Atal'Hakkar.
+04-45到60級.md:854｜說明｜克羅蘇斯在費伍德森林北方，要組隊。｜Kroshius se trouve au nord de Gangrebois. Il faut un groupe.
+04-45到60級.md:889｜說明｜到西瘟疫之地寒風營地交。｜Rends-la au camp du Noroît, dans les Maleterres de l'Ouest.
+04-45到60級.md:901｜說明｜交任務取得力量之石。｜Rends-la pour obtenir la Pierre de puissance.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。｜Récolte de la Terrestrine et des Champignons lunaires à Sombrivage, puis rends-les à Auberdine.
+02-12到30級.md:847｜說明｜在月神湖底找到神殿靈珠。｜Trouve le Colifichet du sanctuaire au fond du lac Elune'ara.
+02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得半塊墜飾。｜Récupère une moitié du Pendentif du lion de mer dans les ruines sous-marines au sud d'Auberdine, à Sombrivage.
+03-30到45級.md:851｜說明｜在勇士島的競技場連續擊敗四波對手。｜Vaincs quatre vagues d'adversaires d'affilée dans l'arène de l'île de la Dispute.
