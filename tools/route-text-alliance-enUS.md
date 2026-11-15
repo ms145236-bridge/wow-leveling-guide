@@ -465,3 +465,189 @@
 04-45到60級.md:765｜說明｜附近沒有飛行點：往南走回冰風崗再飛；或往東過索多里爾河，騎過東瘟疫之地到禮拜堂。｜There's no flight point nearby: walk back south to Chillwind Camp and fly from there, or head east across the Thondroril River and ride through the Eastern Plaguelands to the chapel.
 04-45到60級.md:765｜說明｜附近沒有飛行點：往南走回冰風崗再飛｜There's no flight point nearby: walk back south to Chillwind Camp and fly from there
 04-45到60級.md:765｜說明｜或往東過索多里爾河，騎過東瘟疫之地到禮拜堂。｜Or head east across the Thondroril River and ride through the Eastern Plaguelands to the chapel.
+01-第一段-1到12級.md:546｜說明｜找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再走村內傳送門進達納蘇斯。｜Find Silva Fil'naveth at Nighthaven (1450 44.15, 45.23) for the druid-only flight to Rut'theran Village, then take the portal in the village into Darnassus.
+01-第一段-1到12級.md:546｜說明｜沒有這個選項就用爐石回多蘭納爾，往西走進達納蘇斯。｜If you don't have that option, hearth back to Dolanaar and walk west into Darnassus.
+01-第一段-1到12級.md:1075｜說明｜在暴風城學傳送：月光林地，傳過去交任務。交完找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再到碼頭搭船去奧伯丁接回主線（需遊戲實測）；或用爐石回暴風城。｜Learn Teleport: Moonglade in Stormwind, then teleport there to turn in the quest. Afterward find Silva Fil'naveth at Nighthaven (1450 44.15, 45.23) for the druid-only flight to Rut'theran Village, then take the boat from the dock to Auberdine to rejoin the main route (needs in-game testing). Or hearth back to Stormwind.
+01-第一段-1到12級.md:1075｜說明｜在暴風城學傳送：月光林地，傳過去交任務。交完找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再到碼頭搭船去奧伯丁接回主線（需遊戲實測）｜Learn Teleport: Moonglade in Stormwind, then teleport there to turn in the quest. Afterward find Silva Fil'naveth at Nighthaven (1450 44.15, 45.23) for the druid-only flight to Rut'theran Village, then take the boat from the dock to Auberdine to rejoin the main route (needs in-game testing)
+01-第一段-1到12級.md:1075｜說明｜或用爐石回暴風城。｜Or hearth back to Stormwind.
+01-第一段-1到12級.md:940｜說明｜到聖騎士訓練師布蘭度爾·鐵錘補技能。｜Visit Brandur Ironhammer, the paladin trainer, to pick up new skills.
+01-第一段-1到12級.md:941｜說明｜人類術士在閃金鎮接加科因的召喚，不用這件。｜Human warlocks accept Gakin's Summons in Goldshire, so skip this one.
+05-副本.md:9｜說明｜走到丹莫洛與洛克莫丹時先接進本前的任務，進本前不必專程回頭。天裔精靈不走 01-第9站：第一次到鐵爐堡時往東到丹莫洛找大地先知法森，補做法森的遠視能力、防患於未然和地底地圖再回鐵爐堡；不想繞路就略過舊鐵爐堡入侵。｜On your way through Dun Morogh and Loch Modan, pick up the pre-dungeon quests first; there's no need to backtrack just before entering. Skyborne skip 01-Stop 9: on your first visit to Ironforge, head east to Dun Morogh to find Earthseer Farsen, finish Farsen's Watch, Nip 'Em in the Bud and Underground Map, then return to Ironforge. If you'd rather not detour, skip the Old Ironforge Incursion.
+02-12到30級.md:807｜說明｜從永夜港搭德魯伊專用的鳥到魯瑟蘭村，再飛奧伯丁。｜Take the druid-only flight from Nighthaven to Rut'theran Village, then fly to Auberdine.
+02-12到30級.md:814｜說明｜治好 10 頭鹿後用傳送：月光林地回去交。｜After curing 10 deer, use Teleport: Moonglade to go back and turn in.
+02-12到30級.md:816｜說明｜交任務學解毒術。從永夜港搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。｜Turn in the quest to learn Cure Poison. Take the druid-only flight from Nighthaven to Rut'theran Village, then use the portal in the village to enter Darnassus.
+02-12到30級.md:827｜說明｜兩個奇怪的帶鎖箱各裝半塊墜飾，一個在黑海岸奧伯丁北方的海底，一個在西部荒野西北海岸外的海底。｜The two strange locked chests each hold half of a pendant: one is on the sea floor north of Auberdine in Darkshore, the other is on the sea floor off the northwest coast of Westfall.
+02-12到30級.md:828｜說明｜從永夜港搭德魯伊專用的鳥到魯瑟蘭村，飛奧伯丁，往北游到海底的帶鎖箱；再從奧伯丁搭船到暴風城，飛哨兵嶺，往西北到海岸外游下去開另一個帶鎖箱。｜Take the druid-only flight from Nighthaven to Rut'theran Village, fly to Auberdine, and swim north to the locked chest on the sea floor. Then take the boat from Auberdine to Stormwind, fly to Sentinel Hill, and head northwest to the coast and dive in to open the other locked chest.
+02-12到30級.md:828｜說明｜從永夜港搭德魯伊專用的鳥到魯瑟蘭村，飛奧伯丁，往北游到海底的帶鎖箱｜Take the druid-only flight from Nighthaven to Rut'theran Village, fly to Auberdine, and swim north to the locked chest on the sea floor
+02-12到30級.md:828｜說明｜再從奧伯丁搭船到暴風城，飛哨兵嶺，往西北到海岸外游下去開另一個帶鎖箱。｜Then take the boat from Auberdine to Stormwind, fly to Sentinel Hill, and head northwest to the coast and dive in to open the other locked chest.
+02-12到30級.md:829｜說明｜集齊兩半後用傳送：月光林地回去，在雷姆洛斯神殿附近把墜飾合成一個。｜Once you have both halves, use Teleport: Moonglade to go back and combine the pendant halves near the Shrine of Remulos.
+02-12到30級.md:832｜說明｜交任務學水棲形態。從永夜港搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。｜Turn in the quest to learn Aquatic Form. Take the druid-only flight from Nighthaven to Rut'theran Village, then use the portal in the village to enter Darnassus.
+02-12到30級.md:896｜說明｜暴風城港口搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊莫爾杉壁壘進貧瘠之地往南找塔卡爾；十字路口和陶拉祖營地是部落據點，要繞開。｜Take the boat from Stormwind harbor to Auberdine, follow the Darkshore coast south into Ashenvale, then enter the Barrens from the east through Mor'shan Rampart and head south to find Takar. The Crossroads and Camp Taurajo are Horde strongholds; go around them.
+02-12到30級.md:896｜說明｜暴風城港口搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊莫爾杉壁壘進貧瘠之地往南找塔卡爾｜Take the boat from Stormwind harbor to Auberdine, follow the Darkshore coast south into Ashenvale, then enter the Barrens from the east through Mor'shan Rampart and head south to find Takar
+02-12到30級.md:896｜說明｜十字路口和陶拉祖營地是部落據點，要繞開。｜The Crossroads and Camp Taurajo are Horde strongholds; go around them.
+02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城；爐石在冷卻就往北回奧伯丁搭船到暴風城。｜After finishing Ashenvale, hearth back to Stormwind. If your Hearthstone is on cooldown, head north back to Auberdine and take the boat to Stormwind.
+02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城｜After finishing Ashenvale, hearth back to Stormwind
+02-12到30級.md:901｜說明｜爐石在冷卻就往北回奧伯丁搭船到暴風城。｜If your Hearthstone is on cooldown, head north back to Auberdine and take the boat to Stormwind.
+05-副本.md:40｜說明｜遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭往米奈希爾港的船在南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 02-第14站。｜Optional, far-off quest: the entrance is in the Ruins of Lordaeron above Undercity, which means crossing Horde territory. Take the Auberdine boat to Menethil Harbor, get off at Southshore and unlock its flight point, then go north through Hillsbrad Foothills and Silverpine Forest to Tirisfal Glades. After the dungeon, hearth back to Stormwind and rejoin 02-Stop 14.
+02-12到30級.md:992｜說明｜從永夜港找希爾瓦·菲納雯斯搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。｜Find Silva Fil'naveth at Nighthaven for the druid-only flight to Rut'theran Village, then use the portal in the village to enter Darnassus.
+02-12到30級.md:1009｜說明｜米奈希爾港北碼頭搭船到奧伯丁（中途停南海鎮不用下船），飛阿斯特蘭納取水；回程飛奧伯丁搭船回米奈希爾港，再走回赫妲娜的洞穴。｜Take the boat from the north dock at Menethil Harbor to Auberdine (it stops at Southshore on the way; no need to get off), then fly to Astranaar to fetch the water. On the way back, fly to Auberdine, take the boat to Menethil Harbor, then walk back to Hervdana's cave.
+02-12到30級.md:1009｜說明｜米奈希爾港北碼頭搭船到奧伯丁（中途停南海鎮不用下船），飛阿斯特蘭納取水｜Take the boat from the north dock at Menethil Harbor to Auberdine (it stops at Southshore on the way; no need to get off), then fly to Astranaar to fetch the water
+02-12到30級.md:1009｜說明｜回程飛奧伯丁搭船回米奈希爾港，再走回赫妲娜的洞穴。｜On the way back, fly to Auberdine, take the boat to Menethil Harbor, then walk back to Hervdana's cave.
+02-12到30級.md:1016｜說明｜從塞爾薩瑪飛哨兵嶺（經鐵爐堡、暴風城轉機），到遺忘的聖壇旁的池塘。｜Fly from Thelsamar to Sentinel Hill (changing flights at Ironforge and Stormwind), then go to the pond beside the Forgotten Altar.
+02-12到30級.md:1019｜說明｜小型水之靈體在西部荒野池塘的聖壇附近，確切位置待實測。｜The Minor Manifestation of Water is near the altar by the Westfall pond; the exact spot still needs in-game testing.
+02-12到30級.md:1021｜說明｜從哨兵嶺飛塞爾薩瑪。｜Fly from Sentinel Hill to Thelsamar.
+05-副本.md:154｜說明｜要 24 級；梣谷・第一次滿 24 再接。｜Requires level 24. Ashenvale, 1st visit: accept it once you reach level 24.
+05-副本.md:154｜說明｜要 24 級｜Requires level 24
+05-副本.md:154｜說明｜梣谷・第一次滿 24 再接。｜Ashenvale, 1st visit: accept it once you reach level 24.
+05-副本.md:155｜說明｜要 24 級；之前經過赤脊山時還不到就略過，不專程回頭。｜Requires level 24. You weren't high enough when passing through Redridge Mountains earlier, so skip it; don't backtrack.
+05-副本.md:155｜說明｜之前經過赤脊山時還不到就略過，不專程回頭。｜You weren't high enough when passing through Redridge Mountains earlier, so skip it; don't backtrack.
+05-副本.md:150｜說明｜走到梣谷・第一次時先接尋找凱特林（要 24 級）；赤脊山的尋找桑布雷德也要 24 級，之前經過赤脊山多半還不到。｜On reaching Ashenvale (1st visit), first pick up Seeking Caitlin (requires level 24). Songblade Search in Redridge Mountains also requires level 24, and you were most likely still too low when you passed through earlier.
+05-副本.md:114｜說明｜留到 02-第19站赤脊山・第三次經過湖畔鎮再交。｜Hold it until your third pass through Lakeshire at 02-Stop 19 to turn it in.
+05-副本.md:115｜說明｜留到 03-第22站暮色森林・第二次經過夜色鎮再交。｜Hold it until your second pass through Darkshire at 03-Stop 22 to turn it in.
+05-副本.md:126｜說明｜要 20 級；02-第13站進達納蘇斯時還不到就之後經過再接，或略過。｜Requires level 20. If you're not high enough when you enter Darnassus at 02-Stop 13, pick it up the next time you pass through, or skip it.
+05-副本.md:126｜說明｜要 20 級｜Requires level 20
+05-副本.md:126｜說明｜02-第13站進達納蘇斯時還不到就之後經過再接，或略過。｜If you're not high enough when you enter Darnassus at 02-Stop 13, pick it up the next time you pass through, or skip it.
+05-副本.md:127｜說明｜要 18 級，02-第13站進達納蘇斯時順接。｜Requires level 18; pick it up in passing when you enter Darnassus at 02-Stop 13.
+05-副本.md:128｜說明｜要 18 級；之後經過暴風城時搭礦道地鐵到鐵爐堡接，不想專程就略過。｜Requires level 18. The next time you pass through Stormwind, take the Deeprun Tram to Ironforge to accept it, or skip it if you don't want to make a special trip.
+05-副本.md:128｜說明｜要 18 級｜Requires level 18
+05-副本.md:128｜說明｜之後經過暴風城時搭礦道地鐵到鐵爐堡接，不想專程就略過。｜The next time you pass through Stormwind, take the Deeprun Tram to Ironforge to accept it, or skip it if you don't want to make a special trip.
+05-副本.md:121｜說明｜走到黑海岸・第二次時先接研究墮落；達納蘇斯和鐵爐堡的三件要 18–20 級，到等級經過時再接。｜On reaching Darkshore (2nd visit), first pick up Researching the Corruption. The three quests in Darnassus and Ironforge require levels 18-20; pick them up when you pass through at that level.
+05-副本.md:179｜說明｜達納蘇斯接，要 24 級：從奧伯丁飛魯瑟蘭村走傳送門進城；不繞路就連同出本後的回交一起略過。｜Accept it in Darnassus, requires level 24: fly from Auberdine to Rut'theran Village and take the portal into the city. If you don't want the detour, skip it together with the turn-in after the dungeon.
+05-副本.md:179｜說明｜達納蘇斯接，要 24 級：從奧伯丁飛魯瑟蘭村走傳送門進城｜Accept it in Darnassus, requires level 24: fly from Auberdine to Rut'theran Village and take the portal into the city
+05-副本.md:179｜說明｜不繞路就連同出本後的回交一起略過。｜If you don't want the detour, skip it together with the turn-in after the dungeon.
+05-副本.md:192｜說明｜交完回米奈希爾港，接 03-第24站的船。｜After turning in, return to Menethil Harbor and take the boat for 03-Stop 24.
+03-30到45級.md:1146｜說明｜鐵爐堡飛藏寶海灣（經暴風城轉機），搭船到棘齒城。｜Fly from Ironforge to Booty Bay (changing at Stormwind), then take the boat to Ratchet.
+03-30到45級.md:1148｜說明｜棘齒城搭船到藏寶海灣，飛鐵爐堡。｜Take the boat from Ratchet to Booty Bay, then fly to Ironforge.
+03-30到45級.md:1150｜說明｜鐵爐堡飛南海鎮，回程飛鐵爐堡。｜Fly from Ironforge to Southshore, and fly back to Ironforge on the return.
+03-30到45級.md:1153｜說明｜鐵爐堡飛米奈希爾港做濕地這段。｜Fly from Ironforge to Menethil Harbor for the Wetlands section.
+03-30到45級.md:1154｜說明｜米奈希爾港南碼頭搭船到塞拉摩，開飛行點後飛棘齒城；或從米奈希爾港飛藏寶海灣（經鐵爐堡、暴風城）再搭船。｜Take the boat from the south dock at Menethil Harbor to Theramore, unlock its flight point, then fly to Ratchet. Or fly from Menethil Harbor to Booty Bay (changing at Ironforge and Stormwind) and take the boat from there.
+03-30到45級.md:1154｜說明｜米奈希爾港南碼頭搭船到塞拉摩，開飛行點後飛棘齒城｜Take the boat from the south dock at Menethil Harbor to Theramore, unlock its flight point, then fly to Ratchet
+03-30到45級.md:1154｜說明｜或從米奈希爾港飛藏寶海灣（經鐵爐堡、暴風城）再搭船。｜Or fly from Menethil Harbor to Booty Bay (changing at Ironforge and Stormwind) and take the boat from there.
+03-30到45級.md:379｜說明｜做了達納蘇斯選做的從魯瑟蘭村飛棘齒城（經奧伯丁、塔倫迪斯營地），跳過的從阿斯特蘭納飛（經塔倫迪斯營地）；沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走莫爾杉壁壘。｜If you did the optional Darnassus quests, fly from Rut'theran Village to Ratchet (changing at Auberdine and Talrendis Point); if you skipped them, fly from Astranaar (changing at Talrendis Point). Follow the main road south, avoid Camp Taurajo, and take the Great Lift down into Thousand Needles. Only use Mor'shan Rampart if neither point is unlocked.
+03-30到45級.md:412｜說明｜交件在大河林地遠境堡的戴瑪‧布蘭特，下一站會去。｜Turn in to Demar Brant at Farholde Keep in the Riverglades; you'll go there at the next stop.
+03-30到45級.md:465｜說明｜遠境堡還沒開飛行點，第一次要從湖畔鎮沿大路往東走進大河林地西口。｜Farholde Keep has no flight point yet, so on your first visit walk east along the main road from Lakeshire into the western entrance of the Riverglades.
+03-30到45級.md:466｜說明｜過了赤脊山東邊的入口就是鬃丘，入口一帶的豺狼人 36–38 級，打起來痛。｜The entrance east of Redridge Mountains leads into Bristle Hills; the level 36-38 gnolls around the entrance hit hard.
+03-30到45級.md:471｜說明｜史納戈是 40 級精英，打不過就跳過。｜Snargl is a level 40 elite; skip him if you can't win.
+03-30到45級.md:475｜說明｜鋸刃散在豺狼人營地地上，確切點位待實測。｜The Saw Blades are scattered on the ground in the gnoll camps; the exact spots still need in-game testing.
+03-30到45級.md:481｜說明｜跟著荷利去救捲捲。｜Follow Hurley to rescue Curly.
+03-30到45級.md:488｜說明｜這趟先打特大螯蝦、撿新鮮肥料；泥鰭魚人頭顱留到威勒的農莊和淡水惡魔一起打。新鮮肥料點位待實測。｜On this trip, kill Jumbo Crawfish and pick up Fresh Fertilizer first. Save the Mudfin Murloc Heads for Wheeler's Grange and kill them together with the Freshwater Fiends. The Fresh Fertilizer spots still need in-game testing.
+03-30到45級.md:488｜說明｜這趟先打特大螯蝦、撿新鮮肥料｜On this trip, kill Jumbo Crawfish and pick up Fresh Fertilizer first
+03-30到45級.md:488｜說明｜泥鰭魚人頭顱留到威勒的農莊和淡水惡魔一起打。新鮮肥料點位待實測。｜Save the Mudfin Murloc Heads for Wheeler's Grange and kill them together with the Freshwater Fiends. The Fresh Fertilizer spots still need in-game testing.
+03-30到45級.md:489｜說明｜遠境堡｜Farholde Keep
+03-30到45級.md:502｜說明｜要 5 個聖潔蠟燭，材料商有賣；身上沒有就跳過這條和下一條。｜Requires 5 Holy Candles, which reagent vendors sell. If you don't have them, skip this quest and the next one.
+03-30到45級.md:502｜說明｜要 5 個聖潔蠟燭，材料商有賣｜Requires 5 Holy Candles, which reagent vendors sell
+03-30到45級.md:502｜說明｜身上沒有就跳過這條和下一條。｜If you don't have them, skip this quest and the next one.
+03-30到45級.md:505｜說明｜墳墓在遠境堡的禮拜堂旁，點位待實測。｜The grave is beside the chapel in Farholde Keep; the spot still needs in-game testing.
+03-30到45級.md:507｜說明｜乾草捆在遠境堡附近的田裡，點位待實測。｜The hay bales are in the fields near Farholde Keep; the spots still need in-game testing.
+03-30到45級.md:513｜說明｜泥鰭魚人頭顱和淡水惡魔一起打。｜Farm the Mudfin Murloc Heads together with the Freshwater Fiends.
+03-30到45級.md:514｜說明｜帽子在泥鰭魚人營地裡，點位待實測。｜The hat is in a Mudfin murloc camp; the spot still needs in-game testing.
+03-30到45級.md:515｜說明｜在農莊獸欄四周找證據。｜Look for evidence around the farm's animal pens.
+03-30到45級.md:521｜說明｜走失的馬在農莊附近，點位待實測。｜The runaway horse is near the farm; the spot still needs in-game testing.
+03-30到45級.md:533｜說明｜工頭的木箱在透納的伐木場，點位待實測。｜The foreman's crate is at Turner's Logging Camp; the spot still needs in-game testing.
+03-30到45級.md:536｜說明｜暮光書頁散在陽光林地，點位待實測。｜Twilight Pages are scattered across Sunnyglade; the spots still need in-game testing.
+03-30到45級.md:537｜說明｜暮光怪掉戰場元帥的日誌，右鍵背包裡的日誌接任務。｜Twilight mobs drop the Field Marshal's Log; right-click the log in your bags to start the quest.
+03-30到45級.md:539｜說明｜暮光指骨和拯救陽光林地打同一批暮光怪。｜Twilight Finger Bones come from the same Twilight mobs as Saving Sunnyglade.
+03-30到45級.md:542｜說明｜弗索的寶藏在陽光林地往西約 6 格。｜Fuzzle's Treasure is about 6 map squares west of Sunnyglade.
+03-30到45級.md:545｜說明｜在陽光林地下的洞穴對暮光之錘邪教徒和儀式法陣用水晶催化劑吸取樣本。｜In the cave beneath Sunnyglade, use the Crystal Catalyst on the Twilight's Hammer Cultists and the ritual circles to draw samples.
+03-30到45級.md:549｜說明｜喬札克是 41 級精英，在洞穴深處。｜Chogg'Zac is a level 41 elite deep in the cave.
+03-30到45級.md:552｜說明｜要先打完喬札克。｜You must kill Chogg'Zac first.
+03-30到45級.md:554｜說明｜打暮光劫掠者收紀念物，再放到艾布林農場西邊的墳墓。｜Kill Twilight Raiders for the mementos, then place them on the graves west of Elbrim's Farm.
+03-30到45級.md:559｜說明｜挑選的屍體在往泰洛堡的路邊。｜The Picked Carcass is on the roadside toward Terral's Watch.
+03-30到45級.md:567｜說明｜盜獵者在羅格瑪南邊，別靠近部落的羅格瑪。｜The poachers are south of Rog'mar; stay away from Rog'mar itself, which is a Horde town.
+03-30到45級.md:572｜說明｜歐巴沙是 41 級精英。｜Ombassa is a level 41 elite.
+03-30到45級.md:575｜說明｜往南回遠境堡。｜Head back south to Farholde Keep.
+03-30到45級.md:462｜說明｜這段沒有實跑紀錄，順序依 QuestieDB 座標排；地圖中央的羅格瑪是部落城鎮，別靠近。｜There are no run records for this stretch; the order follows QuestieDB coordinates. Rog'mar in the middle of the map is a Horde town; stay away.
+03-30到45級.md:596｜說明｜新鮮的蘋果在遠境堡附近的果樹下，點位待實測。｜The Fresh Apples are under the fruit trees near Farholde Keep; the spots still need in-game testing.
+03-30到45級.md:603｜說明｜從泰洛堡往西，經陽光林地南邊走到暮光之罩前的瑞夫坦中士；路過透納的伐木場順收木材。｜From Terral's Watch go west, passing south of Sunnyglade, to Sergeant Riftan in front of Twilight's Hood. Pick up the lumber as you pass Turner's Logging Camp.
+03-30到45級.md:604｜說明｜木材堆在透納的伐木場，點位待實測。｜The lumber piles are at Turner's Logging Camp; the spots still need in-game testing.
+03-30到45級.md:606｜說明｜任務 44 級，比這時的你高 3 級以上，怪打不動就跳過。｜This quest is level 44, 3 or more levels above you at this point; skip it if the mobs are too tough to kill.
+03-30到45級.md:608｜說明｜任務 43 級，比這時的你高 3 級以上，怪打不動就跳過。｜This quest is level 43, 3 or more levels above you at this point; skip it if the mobs are too tough to kill.
+03-30到45級.md:609｜說明｜任務 44 級，比這時的你高 3 級以上，怪打不動就跳過。；在暮光之罩的導引裝置召喚暮光奴隸，用靈魂石捕獲。｜This quest is level 44, 3 or more levels above you at this point; skip it if the mobs are too tough to kill. At the conduit in Twilight's Hood, summon a Twilight Thrall and capture it with a Soulstone.
+03-30到45級.md:609｜說明｜在暮光之罩的導引裝置召喚暮光奴隸，用靈魂石捕獲。｜At the conduit in Twilight's Hood, summon a Twilight Thrall and capture it with a Soulstone.
+03-30到45級.md:612｜說明｜任務 44 級，比這時的你高 3 級以上，怪打不動就跳過。；斥候關在暮光之罩各處，點位待實測。｜This quest is level 44, 3 or more levels above you at this point; skip it if the mobs are too tough to kill. Scouts are held prisoner all around Twilight's Hood; the spots still need in-game testing.
+03-30到45級.md:612｜說明｜斥候關在暮光之罩各處，點位待實測。｜Scouts are held prisoner all around Twilight's Hood; the spots still need in-game testing.
+03-30到45級.md:618｜說明｜霸主基爾加是 46 級精英。｜Overlord Kilgar is a level 46 elite.
+03-30到45級.md:621｜說明｜要先打完霸主基爾加。｜You must kill Overlord Kilgar first.
+03-30到45級.md:622｜說明｜往東經陽光林地、泰洛堡南邊走到火線港，繞開部落的羅格瑪；火線港沒有聯盟飛行點。｜Head east through Sunnyglade and south of Terral's Watch to Powderfuse Port, avoiding the Horde town of Rog'mar. Powderfuse Port has no Alliance flight point.
+03-30到45級.md:623｜說明｜史利博在往火線港的路北邊一點。｜Sleebo is a little north of the road to Powderfuse Port.
+03-30到45級.md:624｜說明｜沼澤氣體在史利博附近的噴口收，點位待實測。｜Collect the swamp gas at the vents near Sleebo; the spots still need in-game testing.
+03-30到45級.md:636｜說明｜陷爪在火線港東邊的海岸。｜Trapclaw is on the coast east of Powderfuse Port.
+03-30到45級.md:641｜說明｜和不友好競爭一起打東海海盜和火槍手。｜Kill the Eastsea Buccaneers and Musketeers together with Unfriendly Competition.
+03-30到45級.md:650｜說明｜任務 44 級，比這時的你高 3 級以上，怪打不動就跳過。；火藥桶在風息堡廢墟的建物內。｜This quest is level 44, 3 or more levels above you at this point; skip it if the mobs are too tough to kill. The Powder Kegs are inside the buildings of the Windbreak ruins.
+03-30到45級.md:650｜說明｜火藥桶在風息堡廢墟的建物內。｜The Powder Kegs are inside the buildings of the Windbreak ruins.
+03-30到45級.md:655｜說明｜任務 45 級，比這時的你高 3 級以上，怪打不動就跳過。｜This quest is level 45, 3 or more levels above you at this point; skip it if the mobs are too tough to kill.
+03-30到45級.md:656｜說明｜任務 44 級，比這時的你高 3 級以上，怪打不動就跳過。；在東海海盜的三艘船上各放一枚炸藥。｜This quest is level 44, 3 or more levels above you at this point; skip it if the mobs are too tough to kill. Place one explosive on each of the three Eastsea Buccaneer ships.
+03-30到45級.md:656｜說明｜在東海海盜的三艘船上各放一枚炸藥。｜Place one explosive on each of the three Eastsea Buccaneer ships.
+03-30到45級.md:657｜說明｜炸完船沿岸往東北送。｜After blowing up the ships, take it along the coast to the northeast to turn in.
+03-30到45級.md:660｜說明｜任務 45 級，比這時的你高 3 級以上，怪打不動就跳過。；戰利品位置待實測。｜This quest is level 45, 3 or more levels above you at this point; skip it if the mobs are too tough to kill. Loot location still needs in-game testing.
+03-30到45級.md:660｜說明｜戰利品位置待實測。｜Loot location still needs in-game testing.
+03-30到45級.md:664｜說明｜從火線港往西南走回遠境堡。｜From Powderfuse Port, head southwest back to Farholde Keep.
+03-30到45級.md:672｜說明｜會經湖畔鎮轉機。｜You'll change flights at Lakeshire.
+05-副本.md:232｜說明｜右鍵背包裡的破碎的項鏈接任務。項鏈任務線要回鐵爐堡兩次，後段在出本後第二趟進本做。｜Right-click the Shattered Necklace in your bags to start the quest. The necklace questline needs two trips back to Ironforge; the later part is done on a second dungeon run after you exit.
+05-副本.md:249｜說明｜要 5 塊銀錠。｜Requires 5 Silver Bars.
+05-副本.md:266｜說明｜第二趟進奧達曼：從鐵爐堡飛塞爾薩瑪，往東南走進荒蕪之地，從北邊入口進本。｜Second Uldaman run: fly from Ironforge to Thelsamar, head southeast into the Badlands, and enter the dungeon from the north entrance.
+05-副本.md:266｜說明｜項鏈任務線後段；隊伍不想再進本就略過到最後。｜Later part of the necklace questline. If your group doesn't want another run, skip it to the end.
+05-副本.md:266｜說明｜項鏈任務線後段｜Later part of the necklace questline
+05-副本.md:266｜說明｜隊伍不想再進本就略過到最後。｜If your group doesn't want another run, skip it to the end.
+05-副本.md:271｜說明｜能量源在尾王阿札達斯身上。｜The power source is on the final boss, Archaedas.
+05-副本.md:272｜說明｜出本走回塞爾薩瑪飛鐵爐堡。｜After the dungeon, walk back to Thelsamar and fly to Ironforge.
+03-30到45級.md:1167｜說明｜棘齒城搭船到藏寶海灣。｜Take the boat from Ratchet to Booty Bay.
+03-30到45級.md:1169｜說明｜藏寶海灣搭船回棘齒城。｜Take the boat from Booty Bay back to Ratchet.
+03-30到45級.md:1176｜說明｜阿拉希這段：棘齒城搭船到藏寶海灣，飛避難谷地（經暴風城、鐵爐堡轉機）；回程反向。｜Arathi leg: take the boat from Ratchet to Booty Bay, then fly to Refuge Pointe (changing at Stormwind and Ironforge). Reverse the trip on the way back.
+03-30到45級.md:1176｜說明｜阿拉希這段：棘齒城搭船到藏寶海灣，飛避難谷地（經暴風城、鐵爐堡轉機）｜Arathi leg: take the boat from Ratchet to Booty Bay, then fly to Refuge Pointe (changing at Stormwind and Ironforge)
+03-30到45級.md:1176｜說明｜回程反向。｜Reverse the trip on the way back.
+04-45到60級.md:798｜說明｜避難谷地飛米奈希爾港，南碼頭搭船到塞拉摩，飛薩蘭納爾，往東走進千針石林。｜Fly from Refuge Pointe to Menethil Harbor, take the boat from the south dock to Theramore, fly to Thalanaar, then walk east into Thousand Needles.
+04-45到60級.md:799｜說明｜薩蘭納爾飛塞拉摩，搭船到米奈希爾港，飛避難谷地。｜Fly from Thalanaar to Theramore, take the boat to Menethil Harbor, then fly to Refuge Pointe.
+04-45到60級.md:134｜說明｜瑪爾戈的角開灼熱峽谷鑰匙任務線；不打就跳過第 12、31–32、34、36、39–41 步，第 42 步從鐵爐堡飛回瑟銀哨塔。｜Margol's Horn starts the Searing Gorge key questline. If you skip it, skip steps 12, 31-32, 34, 36 and 39-41, and for step 42 fly back to Thorium Point from Ironforge.
+04-45到60級.md:134｜說明｜瑪爾戈的角開灼熱峽谷鑰匙任務線｜Margol's Horn starts the Searing Gorge key questline
+04-45到60級.md:134｜說明｜不打就跳過第 12、31–32、34、36、39–41 步，第 42 步從鐵爐堡飛回瑟銀哨塔。｜If you skip it, skip steps 12, 31-32, 34, 36 and 39-41, and for step 42 fly back to Thorium Point from Ironforge.
+04-45到60級.md:162｜說明｜有館長的證明（3201）才回貝波蒂拿鑰匙；沒有就跳到第 42 步。｜Only go back to Mountaineer Pebblebitty for the key if you have At Last! (3201). If you don't, skip to step 42.
+04-45到60級.md:162｜說明｜有館長的證明（3201）才回貝波蒂拿鑰匙｜Only go back to Mountaineer Pebblebitty for the key if you have At Last! (3201)
+04-45到60級.md:162｜說明｜沒有就跳到第 42 步。｜If you don't, skip to step 42.
+04-45到60級.md:165｜說明｜沒有灼熱峽谷鑰匙的人從鐵爐堡直飛回灼熱峽谷；已經穿隧道進來的跳過。｜If you don't have the Searing Gorge key, fly straight back to Searing Gorge from Ironforge. If you already came in through the tunnel, skip this.
+04-45到60級.md:165｜說明｜沒有灼熱峽谷鑰匙的人從鐵爐堡直飛回灼熱峽谷｜If you don't have the Searing Gorge key, fly straight back to Searing Gorge from Ironforge
+04-45到60級.md:165｜說明｜已經穿隧道進來的跳過。｜If you already came in through the tunnel, skip this.
+04-45到60級.md:263｜說明｜卷軸在塵泥沼澤西南的迅猛龍洞穴，先往東走回塞拉摩（1445 67.48, 51.30）再飛。｜The scroll is in the raptor cave southwest of Dustwallow Marsh. Walk back east to Theramore (1445 67.48, 51.30) first, then fly.
+04-45到60級.md:821｜說明｜暴風城的導引可略過；到艾薩拉仍要先找薩納斯傳送上懸崖。｜You can skip the Stormwind introduction. You still need to find Sanath Lim-yo first to be teleported up the cliff when you reach Azshara.
+04-45到60級.md:821｜說明｜暴風城的導引可略過｜You can skip the Stormwind introduction
+04-45到60級.md:821｜說明｜到艾薩拉仍要先找薩納斯傳送上懸崖。｜You still need to find Sanath Lim-yo first to be teleported up the cliff when you reach Azshara.
+04-45到60級.md:822｜說明｜有接導引才在這裡交。｜Turn it in here only if you picked up the introduction.
+04-45到60級.md:823｜說明｜找薩納斯對話，請他把你傳送上懸崖找大法師克希雷姆。｜Talk to Sanath Lim-yo and ask him to teleport you up the cliff to find Archmage Xylem.
+04-45到60級.md:826｜說明｜塵埃在山下，回去同樣找薩納斯傳送上來。｜The dust is at the foot of the mountain; go back to Sanath Lim-yo the same way to be teleported up.
+04-45到60級.md:832｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項（需遊戲實測）。｜Morphaz is in the Temple of Atal'Hakkar. To get down the cliff, use your Hearthstone or look for the teleport option next to Xylem (needs in-game testing).
+04-45到60級.md:492｜說明｜托爾瓦旁沒有飛行點：從他身後的坡道出安戈洛環形山進塔納利斯，往東北跑到加基森。｜There's no flight point near Torwa: leave Un'Goro Crater by the ramp behind him into Tanaris and run northeast to Gadgetzan.
+04-45到60級.md:499｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（37.04, 44.13）。｜Set your Hearthstone with Innkeeper Shaussiy at the Auberdine inn (37.04, 44.13).
+04-45到60級.md:683｜說明｜從死木蒸鍋往南走到刺枝林地飛行點（1448 62.49, 24.24）起飛，會經奧伯丁轉機。｜From the Deadwood Cauldron, head south to the Talonbranch Glade flight point (1448 62.49, 24.24) and take off from there; you'll change flights at Auberdine.
+04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜Only go to Lakeshire if you have The True Masters (4186). If you don't, skip steps 60-62 and fly straight from Stormwind to Morgan's Vigil.
+04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮｜Only go to Lakeshire if you have The True Masters (4186)
+04-45到60級.md:777｜說明｜沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜If you don't, skip steps 60-62 and fly straight from Stormwind to Morgan's Vigil.
+05-副本.md:351｜說明｜骨架待補：只列入口和進本前的愛與家庭（5848），找畫、出本回交和回主線交通還沒寫。｜Skeleton only for now: it lists just the entrance and Of Love and Family (5848) before the dungeon; finding the painting, the post-dungeon turn-in and the travel back to the main route aren't written yet.
+05-副本.md:323｜說明｜前置是索瑞森廢墟（3701），04-第57站在鐵爐堡交完再接。｜The prerequisite is The Smoldering Ruins of Thaurissan (3701); accept it after you turn that in at Ironforge at 04-Stop 57.
+05-副本.md:324｜說明｜在詛咒之地接到才交。｜Turn it in only once you've picked it up in the Blasted Lands.
+05-副本.md:325｜說明｜卡拉諾斯不順路，不繞就略過。｜Kharanos is out of the way; skip it unless you want to make the detour.
+05-副本.md:319｜說明｜在鐵爐堡交完索瑞森廢墟就接卡蘭·巨錘；燃燒平原的幾件在摩根的崗哨一帶接。｜Pick up Kharan Mighthammer once you've turned in The Smoldering Ruins of Thaurissan at Ironforge. The Burning Steppes quests are accepted around Morgan's Vigil.
+06-路線外任務.md:17｜說明｜塔納利斯・第一次（第40站）經過時，有空再接。｜Pick this up if you have time when you pass through Tanaris (1st visit, stop 40).
+06-路線外任務.md:20｜說明｜塔納利斯・第三次（第47站）經過時，有空再接。｜Pick this up if you have time when you pass through Tanaris (3rd visit, stop 47).
+06-路線外任務.md:25｜說明｜大河林地兩站沒排（精英、副本、要特殊材料或太偏），跳過不影響練級。｜The two Riverglades stops weren't scheduled (elites, dungeons, special materials or too far out); skipping them doesn't affect leveling.
+06-路線外任務.md:162｜說明｜費伍德森林・第一次（第49站）經過時，有空再接。｜Pick this up if you have time when you pass through Felwood (1st visit, stop 49).
+06-路線外任務.md:586｜說明｜安戈洛環形山・第二次（第52站）經過時，有空再接。｜Pick this up if you have time when you pass through Un'Goro Crater (2nd visit, stop 52).
+06-路線外任務.md:808｜說明｜西瘟疫之地・第一次（第55站）經過時，有空再接。｜Pick this up if you have time when you pass through Western Plaguelands (1st visit, stop 55).
+06-路線外任務.md:826｜說明｜西瘟疫之地・第二次（第57站）經過時，有空再接。｜Pick this up if you have time when you pass through Western Plaguelands (2nd visit, stop 57).
+06-路線外任務.md:972｜說明｜灼熱峽谷（第45站）經過時，有空再接。｜Pick this up if you have time when you pass through Searing Gorge (stop 45).
+06-路線外任務.md:973｜說明｜荊棘谷・第四次（第46站）經過時，有空再接。｜Pick this up if you have time when you pass through Stranglethorn Vale (4th visit, stop 46).
+06-路線外任務.md:993｜說明｜辛特蘭（第44站）經過時，有空再接。｜Pick this up if you have time when you pass through The Hinterlands (stop 44).
+06-路線外任務.md:1020｜說明｜東瘟疫之地（第56站）經過時，有空再接。｜Pick this up if you have time when you pass through Eastern Plaguelands (stop 56).
+06-路線外任務.md:1448｜說明｜塵泥沼澤（第34站）經過時，有空再接。｜Pick this up if you have time when you pass through Dustwallow Marsh (stop 34).
+06-路線外任務.md:1463｜說明｜悲傷沼澤（第37站）經過時，有空再接。｜Pick this up if you have time when you pass through Swamp of Sorrows (stop 37).
+06-路線外任務.md:1479｜說明｜荊棘谷・第三次（第39站）經過時，有空再接。｜Pick this up if you have time when you pass through Stranglethorn Vale (3rd visit, stop 39).
+06-路線外任務.md:1504｜說明｜荒蕪之地（第36站）經過時，有空再接。｜Pick this up if you have time when you pass through Badlands (stop 36).
+06-路線外任務.md:1652｜說明｜淒涼之地（第38站）經過時，有空再接。｜Pick this up if you have time when you pass through Desolace (stop 38).
+06-路線外任務.md:1777｜說明｜菲拉斯・第一次（第41站）經過時，有空再接。｜Pick this up if you have time when you pass through Feralas (1st visit, stop 41).
+06-路線外任務.md:1789｜說明｜菲拉斯・第二次（第50站）經過時，有空再接。｜Pick this up if you have time when you pass through Feralas (2nd visit, stop 50).
+06-路線外任務.md:1968｜說明｜千針石林・第二次（第33站）經過時，有空再接。｜Pick this up if you have time when you pass through Thousand Needles (2nd visit, stop 33).
+06-路線外任務.md:1974｜說明｜泰達希爾（第42站）經過時，有空再接。｜Pick this up if you have time when you pass through Teldrassil (stop 42).
+06-路線外任務.md:1983｜說明｜費伍德森林・第二次（第51站）經過時，有空再接。｜Pick this up if you have time when you pass through Felwood (2nd visit, stop 51).
+06-路線外任務.md:2479｜說明｜安戈洛環形山・第一次（第48站）經過時，有空再接。｜Pick this up if you have time when you pass through Un'Goro Crater (1st visit, stop 48).
+06-路線外任務.md:2509｜說明｜塔納利斯・第二次（第43站）經過時，有空再接。｜Pick this up if you have time when you pass through Tanaris (2nd visit, stop 43).
+06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第35站）經過時，有空再接。｜Pick this up if you have time when you pass through Stranglethorn Vale (2nd visit, stop 35).
+06-路線外任務.md:2602｜說明｜燃燒平原（第54站）經過時，有空再接。｜Pick this up if you have time when you pass through Burning Steppes (stop 54).

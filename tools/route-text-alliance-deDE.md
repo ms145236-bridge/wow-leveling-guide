@@ -465,3 +465,189 @@
 04-45到60級.md:765｜說明｜附近沒有飛行點：往南走回冰風崗再飛；或往東過索多里爾河，騎過東瘟疫之地到禮拜堂。｜In der Nähe gibt es keinen Flugpunkt: Geh nach Süden zurück zur Chillwindspitze und flieg von dort, oder geh nach Osten über den Thondroril und reite durch die Östlichen Pestländer zur Kapelle.
 04-45到60級.md:765｜說明｜附近沒有飛行點：往南走回冰風崗再飛｜In der Nähe gibt es keinen Flugpunkt: Geh nach Süden zurück zur Chillwindspitze und flieg von dort
 04-45到60級.md:765｜說明｜或往東過索多里爾河，騎過東瘟疫之地到禮拜堂。｜Oder geh nach Osten über den Thondroril und reite durch die Östlichen Pestländer zur Kapelle.
+01-第一段-1到12級.md:546｜說明｜找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再走村內傳送門進達納蘇斯。｜Such in Nachthafen Silva Fil'naveth (1450 44.15, 45.23) auf, nimm den Flug nur für Druiden nach Rut'theran und geh dort durch das Portal im Dorf nach Darnassus.
+01-第一段-1到12級.md:546｜說明｜沒有這個選項就用爐石回多蘭納爾，往西走進達納蘇斯。｜Hast du diese Option nicht, benutze deinen Ruhestein nach Dolanaar und geh nach Westen nach Darnassus.
+01-第一段-1到12級.md:1075｜說明｜在暴風城學傳送：月光林地，傳過去交任務。交完找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再到碼頭搭船去奧伯丁接回主線（需遊戲實測）；或用爐石回暴風城。｜Lerne in Sturmwind „Teleportieren: Moonglade“ und teleportiere dich zum Abgeben dorthin. Such danach in Nachthafen Silva Fil'naveth (1450 44.15, 45.23) auf, nimm den Flug nur für Druiden nach Rut'theran und fahr dann vom Hafen mit dem Schiff nach Auberdine, um zur Hauptroute zurückzukehren (im Spiel prüfen). Oder benutze deinen Ruhestein nach Sturmwind.
+01-第一段-1到12級.md:1075｜說明｜在暴風城學傳送：月光林地，傳過去交任務。交完找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再到碼頭搭船去奧伯丁接回主線（需遊戲實測）｜Lerne in Sturmwind „Teleportieren: Moonglade“ und teleportiere dich zum Abgeben dorthin. Such danach in Nachthafen Silva Fil'naveth (1450 44.15, 45.23) auf, nimm den Flug nur für Druiden nach Rut'theran und fahr dann vom Hafen mit dem Schiff nach Auberdine, um zur Hauptroute zurückzukehren (im Spiel prüfen)
+01-第一段-1到12級.md:1075｜說明｜或用爐石回暴風城。｜Oder benutze deinen Ruhestein nach Sturmwind.
+01-第一段-1到12級.md:940｜說明｜到聖騎士訓練師布蘭度爾·鐵錘補技能。｜Besuche den Paladinlehrer Brandur Ironhammer, um neue Fähigkeiten zu lernen.
+01-第一段-1到12級.md:941｜說明｜人類術士在閃金鎮接加科因的召喚，不用這件。｜Menschliche Hexenmeister nehmen Gakins Beschwörung in Goldhain an, daher entfällt diese Quest.
+05-副本.md:9｜說明｜走到丹莫洛與洛克莫丹時先接進本前的任務，進本前不必專程回頭。天裔精靈不走 01-第9站：第一次到鐵爐堡時往東到丹莫洛找大地先知法森，補做法森的遠視能力、防患於未然和地底地圖再回鐵爐堡；不想繞路就略過舊鐵爐堡入侵。｜Nimm auf dem Weg durch Dun Morogh und Loch Modan zuerst die Quests vor dem Dungeon an; kurz vor dem Eingang musst du nicht extra zurück. Skyborne überspringen 01-Station 9: Geh beim ersten Besuch in Eisenschmiede nach Osten nach Dun Morogh zu Erdseher Farsen, erledige Farsens Wacht, Erstickt sie im Keim und Karte des Untergrunds und kehr dann nach Eisenschmiede zurück. Willst du den Umweg nicht machen, überspring Eindringlinge in der Altstadt von Ironforge.
+02-12到30級.md:807｜說明｜從永夜港搭德魯伊專用的鳥到魯瑟蘭村，再飛奧伯丁。｜Nimm in Nachthafen den Flug nur für Druiden nach Rut'theran und flieg dann nach Auberdine.
+02-12到30級.md:814｜說明｜治好 10 頭鹿後用傳送：月光林地回去交。｜Benutze nach der Heilung von 10 Hirschen „Teleportieren: Moonglade“, um zum Abgeben zurückzukehren.
+02-12到30級.md:816｜說明｜交任務學解毒術。從永夜港搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。｜Gib die Quest ab, um Gift heilen zu lernen. Nimm in Nachthafen den Flug nur für Druiden nach Rut'theran und geh dort durch das Portal im Dorf nach Darnassus.
+02-12到30級.md:827｜說明｜兩個奇怪的帶鎖箱各裝半塊墜飾，一個在黑海岸奧伯丁北方的海底，一個在西部荒野西北海岸外的海底。｜Die zwei seltsamen verschlossenen Truhen enthalten je eine Amulett-Hälfte: Eine liegt auf dem Meeresgrund nördlich von Auberdine in der Dunkelküste, die andere auf dem Meeresgrund vor der Nordwestküste von Westfall.
+02-12到30級.md:828｜說明｜從永夜港搭德魯伊專用的鳥到魯瑟蘭村，飛奧伯丁，往北游到海底的帶鎖箱；再從奧伯丁搭船到暴風城，飛哨兵嶺，往西北到海岸外游下去開另一個帶鎖箱。｜Nimm in Nachthafen den Flug nur für Druiden nach Rut'theran, flieg nach Auberdine und schwimm nach Norden zur verschlossenen Truhe auf dem Meeresgrund. Fahr dann mit dem Schiff von Auberdine nach Sturmwind, flieg zur Späherkuppe und tauch im Nordwesten vor der Küste hinab, um die andere verschlossene Truhe zu öffnen.
+02-12到30級.md:828｜說明｜從永夜港搭德魯伊專用的鳥到魯瑟蘭村，飛奧伯丁，往北游到海底的帶鎖箱｜Nimm in Nachthafen den Flug nur für Druiden nach Rut'theran, flieg nach Auberdine und schwimm nach Norden zur verschlossenen Truhe auf dem Meeresgrund
+02-12到30級.md:828｜說明｜再從奧伯丁搭船到暴風城，飛哨兵嶺，往西北到海岸外游下去開另一個帶鎖箱。｜Fahr dann mit dem Schiff von Auberdine nach Sturmwind, flieg zur Späherkuppe und tauch im Nordwesten vor der Küste hinab, um die andere verschlossene Truhe zu öffnen.
+02-12到30級.md:829｜說明｜集齊兩半後用傳送：月光林地回去，在雷姆洛斯神殿附近把墜飾合成一個。｜Benutze mit beiden Hälften „Teleportieren: Moonglade“, um zurückzukehren, und setze die Amulett-Hälften in der Nähe des Schreins von Remulos zusammen.
+02-12到30級.md:832｜說明｜交任務學水棲形態。從永夜港搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。｜Gib die Quest ab, um Wassergestalt zu lernen. Nimm in Nachthafen den Flug nur für Druiden nach Rut'theran und geh dort durch das Portal im Dorf nach Darnassus.
+02-12到30級.md:896｜說明｜暴風城港口搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊莫爾杉壁壘進貧瘠之地往南找塔卡爾；十字路口和陶拉祖營地是部落據點，要繞開。｜Fahr vom Hafen von Sturmwind mit dem Schiff nach Auberdine, folge der Küste der Dunkelküste nach Süden bis ins Eschental, geh dann von Osten über den Mor'shan-Wall ins Brachland und weiter nach Süden zu Takar. Das Wegkreuz und Camp Taurajo sind Horde-Stützpunkte; umgeh sie.
+02-12到30級.md:896｜說明｜暴風城港口搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊莫爾杉壁壘進貧瘠之地往南找塔卡爾｜Fahr vom Hafen von Sturmwind mit dem Schiff nach Auberdine, folge der Küste der Dunkelküste nach Süden bis ins Eschental, geh dann von Osten über den Mor'shan-Wall ins Brachland und weiter nach Süden zu Takar
+02-12到30級.md:896｜說明｜十字路口和陶拉祖營地是部落據點，要繞開。｜Das Wegkreuz und Camp Taurajo sind Horde-Stützpunkte; umgeh sie.
+02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城；爐石在冷卻就往北回奧伯丁搭船到暴風城。｜Benutze nach dem Eschental deinen Ruhestein nach Sturmwind. Hat der Ruhestein Abklingzeit, geh nach Norden zurück nach Auberdine und nimm das Schiff nach Sturmwind.
+02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城｜Benutze nach dem Eschental deinen Ruhestein nach Sturmwind
+02-12到30級.md:901｜說明｜爐石在冷卻就往北回奧伯丁搭船到暴風城。｜Hat der Ruhestein Abklingzeit, geh nach Norden zurück nach Auberdine und nimm das Schiff nach Sturmwind.
+05-副本.md:40｜說明｜遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭往米奈希爾港的船在南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 02-第14站。｜Optional und weit entfernt: Der Eingang liegt in den Ruinen von Lordaeron über Unterstadt, du musst also durch Horde-Gebiet. Nimm das Schiff von Auberdine nach Menethil, steig in Süderstade aus und entdecke den Flugpunkt, dann geh nach Norden durch das Vorgebirge von Hillsbrad und den Silberwald nach Tirisfal. Benutze nach dem Dungeon deinen Ruhestein nach Sturmwind und steig bei 02-Station 14 wieder ein.
+02-12到30級.md:992｜說明｜從永夜港找希爾瓦·菲納雯斯搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。｜Such in Nachthafen Silva Fil'naveth auf, nimm den Flug nur für Druiden nach Rut'theran und geh dort durch das Portal im Dorf nach Darnassus.
+02-12到30級.md:1009｜說明｜米奈希爾港北碼頭搭船到奧伯丁（中途停南海鎮不用下船），飛阿斯特蘭納取水；回程飛奧伯丁搭船回米奈希爾港，再走回赫妲娜的洞穴。｜Nimm am Nordanleger von Menethil das Schiff nach Auberdine (es hält unterwegs in Süderstade; du musst nicht aussteigen) und flieg dann nach Astranaar, um das Wasser zu holen. Flieg auf dem Rückweg nach Auberdine, nimm das Schiff nach Menethil und geh dann zu Fuß zurück zu Hervdanas Höhle.
+02-12到30級.md:1009｜說明｜米奈希爾港北碼頭搭船到奧伯丁（中途停南海鎮不用下船），飛阿斯特蘭納取水｜Nimm am Nordanleger von Menethil das Schiff nach Auberdine (es hält unterwegs in Süderstade; du musst nicht aussteigen) und flieg dann nach Astranaar, um das Wasser zu holen
+02-12到30級.md:1009｜說明｜回程飛奧伯丁搭船回米奈希爾港，再走回赫妲娜的洞穴。｜Flieg auf dem Rückweg nach Auberdine, nimm das Schiff nach Menethil und geh dann zu Fuß zurück zu Hervdanas Höhle.
+02-12到30級.md:1016｜說明｜從塞爾薩瑪飛哨兵嶺（經鐵爐堡、暴風城轉機），到遺忘的聖壇旁的池塘。｜Flieg von Thelsamar zur Späherkuppe (Umstieg in Eisenschmiede und Sturmwind) und geh zum Teich neben dem Vergessenen Altar.
+02-12到30級.md:1019｜說明｜小型水之靈體在西部荒野池塘的聖壇附近，確切位置待實測。｜Die Schwache Wassermanifestation befindet sich in der Nähe des Altars am Teich in Westfall; die genaue Position muss noch im Spiel getestet werden.
+02-12到30級.md:1021｜說明｜從哨兵嶺飛塞爾薩瑪。｜Flieg von der Späherkuppe nach Thelsamar.
+05-副本.md:154｜說明｜要 24 級；梣谷・第一次滿 24 再接。｜Benötigt Stufe 24. Eschental, 1. Besuch: Erst annehmen, wenn du Stufe 24 hast.
+05-副本.md:154｜說明｜要 24 級｜Benötigt Stufe 24
+05-副本.md:154｜說明｜梣谷・第一次滿 24 再接。｜Eschental, 1. Besuch: Erst annehmen, wenn du Stufe 24 hast.
+05-副本.md:155｜說明｜要 24 級；之前經過赤脊山時還不到就略過，不專程回頭。｜Benötigt Stufe 24. Als du vorher durch das Rotkammgebirge kamst, warst du noch nicht hoch genug; überspring sie und geh nicht extra zurück.
+05-副本.md:155｜說明｜之前經過赤脊山時還不到就略過，不專程回頭。｜Als du vorher durch das Rotkammgebirge kamst, warst du noch nicht hoch genug; überspring sie und geh nicht extra zurück.
+05-副本.md:150｜說明｜走到梣谷・第一次時先接尋找凱特林（要 24 級）；赤脊山的尋找桑布雷德也要 24 級，之前經過赤脊山多半還不到。｜Nimm beim Eintreffen im Eschental (1. Besuch) zuerst Suche nach Caitlin an (benötigt Stufe 24). Auch Suche nach Songblade im Rotkammgebirge benötigt Stufe 24; als du vorher dort durchkamst, warst du meist noch nicht hoch genug.
+05-副本.md:114｜說明｜留到 02-第19站赤脊山・第三次經過湖畔鎮再交。｜Heb sie dir bis zum dritten Mal in Seenhain bei 02-Station 19 zum Abgeben auf.
+05-副本.md:115｜說明｜留到 03-第22站暮色森林・第二次經過夜色鎮再交。｜Heb sie dir bis zum zweiten Mal in Dunkelhain bei 03-Station 22 zum Abgeben auf.
+05-副本.md:126｜說明｜要 20 級；02-第13站進達納蘇斯時還不到就之後經過再接，或略過。｜Benötigt Stufe 20. Bist du bei 02-Station 13 beim Betreten von Darnassus noch nicht hoch genug, nimm sie beim nächsten Durchgang an oder überspring sie.
+05-副本.md:126｜說明｜要 20 級｜Benötigt Stufe 20
+05-副本.md:126｜說明｜02-第13站進達納蘇斯時還不到就之後經過再接，或略過。｜Bist du bei 02-Station 13 beim Betreten von Darnassus noch nicht hoch genug, nimm sie beim nächsten Durchgang an oder überspring sie.
+05-副本.md:127｜說明｜要 18 級，02-第13站進達納蘇斯時順接。｜Benötigt Stufe 18; nimm sie bei 02-Station 13 beim Betreten von Darnassus gleich mit.
+05-副本.md:128｜說明｜要 18 級；之後經過暴風城時搭礦道地鐵到鐵爐堡接，不想專程就略過。｜Benötigt Stufe 18. Nimm sie beim nächsten Durchgang durch Sturmwind an, indem du die Tiefenbahn nach Eisenschmiede nimmst, oder überspring sie, wenn du keinen extra Weg machen willst.
+05-副本.md:128｜說明｜要 18 級｜Benötigt Stufe 18
+05-副本.md:128｜說明｜之後經過暴風城時搭礦道地鐵到鐵爐堡接，不想專程就略過。｜Nimm sie beim nächsten Durchgang durch Sturmwind an, indem du die Tiefenbahn nach Eisenschmiede nimmst, oder überspring sie, wenn du keinen extra Weg machen willst.
+05-副本.md:121｜說明｜走到黑海岸・第二次時先接研究墮落；達納蘇斯和鐵爐堡的三件要 18–20 級，到等級經過時再接。｜Nimm beim Eintreffen an der Dunkelküste (2. Besuch) zuerst Erforschung der Verderbnis an. Die drei Quests in Darnassus und Eisenschmiede benötigen Stufe 18-20; nimm sie an, wenn du auf der passenden Stufe vorbeikommst.
+05-副本.md:179｜說明｜達納蘇斯接，要 24 級：從奧伯丁飛魯瑟蘭村走傳送門進城；不繞路就連同出本後的回交一起略過。｜Nimm sie in Darnassus an (benötigt Stufe 24): Flieg von Auberdine nach Rut'theran und geh durch das Portal in die Stadt. Willst du den Umweg nicht machen, überspring sie samt der Abgabe nach dem Dungeon.
+05-副本.md:179｜說明｜達納蘇斯接，要 24 級：從奧伯丁飛魯瑟蘭村走傳送門進城｜Nimm sie in Darnassus an (benötigt Stufe 24): Flieg von Auberdine nach Rut'theran und geh durch das Portal in die Stadt
+05-副本.md:179｜說明｜不繞路就連同出本後的回交一起略過。｜Willst du den Umweg nicht machen, überspring sie samt der Abgabe nach dem Dungeon.
+05-副本.md:192｜說明｜交完回米奈希爾港，接 03-第24站的船。｜Kehre nach der Abgabe nach Menethil zurück und nimm das Schiff für 03-Station 24.
+03-30到45級.md:1146｜說明｜鐵爐堡飛藏寶海灣（經暴風城轉機），搭船到棘齒城。｜Flieg von Eisenschmiede nach Beutebucht (Umstieg in Sturmwind) und fahr dann mit dem Schiff nach Ratschet.
+03-30到45級.md:1148｜說明｜棘齒城搭船到藏寶海灣，飛鐵爐堡。｜Fahr in Ratschet mit dem Schiff nach Beutebucht und flieg dann nach Eisenschmiede.
+03-30到45級.md:1150｜說明｜鐵爐堡飛南海鎮，回程飛鐵爐堡。｜Flieg von Eisenschmiede nach Süderstade und auf dem Rückweg wieder nach Eisenschmiede.
+03-30到45級.md:1153｜說明｜鐵爐堡飛米奈希爾港做濕地這段。｜Flieg von Eisenschmiede nach Menethil für den Abschnitt im Sumpfland.
+03-30到45級.md:1154｜說明｜米奈希爾港南碼頭搭船到塞拉摩，開飛行點後飛棘齒城；或從米奈希爾港飛藏寶海灣（經鐵爐堡、暴風城）再搭船。｜Nimm am Südanleger von Menethil das Schiff nach Theramore, entdecke dort den Flugpunkt und flieg dann nach Ratschet. Oder flieg von Menethil nach Beutebucht (Umstieg in Eisenschmiede und Sturmwind) und nimm von dort das Schiff.
+03-30到45級.md:1154｜說明｜米奈希爾港南碼頭搭船到塞拉摩，開飛行點後飛棘齒城｜Nimm am Südanleger von Menethil das Schiff nach Theramore, entdecke dort den Flugpunkt und flieg dann nach Ratschet
+03-30到45級.md:1154｜說明｜或從米奈希爾港飛藏寶海灣（經鐵爐堡、暴風城）再搭船。｜Oder flieg von Menethil nach Beutebucht (Umstieg in Eisenschmiede und Sturmwind) und nimm von dort das Schiff.
+03-30到45級.md:379｜說明｜做了達納蘇斯選做的從魯瑟蘭村飛棘齒城（經奧伯丁、塔倫迪斯營地），跳過的從阿斯特蘭納飛（經塔倫迪斯營地）；沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走莫爾杉壁壘。｜Hast du die optionalen Quests in Darnassus gemacht, flieg von Rut'theran nach Ratschet (Umstieg in Auberdine und an der Talrendisspitze); wenn nicht, flieg von Astranaar (Umstieg an der Talrendisspitze). Folge der Hauptstraße nach Süden, umgeh Camp Taurajo und nimm den Großen Aufzug hinab in die Tausend Nadeln. Nur wenn beide Punkte nicht entdeckt sind, geh über den Mor'shan-Wall.
+03-30到45級.md:412｜說明｜交件在大河林地遠境堡的戴瑪‧布蘭特，下一站會去。｜Gib bei Demar Brant in Burg Farholde in den Flusslanden ab; du kommst bei der nächsten Station dorthin.
+03-30到45級.md:465｜說明｜遠境堡還沒開飛行點，第一次要從湖畔鎮沿大路往東走進大河林地西口。｜Burg Farholde hat noch keinen Flugpunkt; geh beim ersten Besuch von Seenhain auf der Straße nach Osten in den westlichen Eingang der Flusslande.
+03-30到45級.md:466｜說明｜過了赤脊山東邊的入口就是鬃丘，入口一帶的豺狼人 36–38 級，打起來痛。｜Hinter dem Eingang östlich des Rotkammgebirges liegen die Borstenhügel; die Gnolle der Stufen 36-38 am Eingang schlagen kräftig zu.
+03-30到45級.md:471｜說明｜史納戈是 40 級精英，打不過就跳過。｜Snargl ist ein Elite der Stufe 40; schaffst du ihn nicht, überspring ihn.
+03-30到45級.md:475｜說明｜鋸刃散在豺狼人營地地上，確切點位待實測。｜Die Sägeblätter liegen verstreut in den Gnoll-Lagern am Boden; die genauen Stellen müssen noch im Spiel getestet werden.
+03-30到45級.md:481｜說明｜跟著荷利去救捲捲。｜Folge Hurley, um Curly zu retten.
+03-30到45級.md:488｜說明｜這趟先打特大螯蝦、撿新鮮肥料；泥鰭魚人頭顱留到威勒的農莊和淡水惡魔一起打。新鮮肥料點位待實測。｜Erledige diesmal zuerst die Riesigen Flusskrebse und sammle frischen Dünger. Heb dir die Murlockköpfe der Schlickflossen für Wheelers Gehöft auf und erledige sie zusammen mit den Süßwasserscheusalen. Die Stellen für frischen Dünger müssen noch im Spiel getestet werden.
+03-30到45級.md:488｜說明｜這趟先打特大螯蝦、撿新鮮肥料｜Erledige diesmal zuerst die Riesigen Flusskrebse und sammle frischen Dünger
+03-30到45級.md:488｜說明｜泥鰭魚人頭顱留到威勒的農莊和淡水惡魔一起打。新鮮肥料點位待實測。｜Heb dir die Murlockköpfe der Schlickflossen für Wheelers Gehöft auf und erledige sie zusammen mit den Süßwasserscheusalen. Die Stellen für frischen Dünger müssen noch im Spiel getestet werden.
+03-30到45級.md:489｜說明｜遠境堡｜Burg Farholde
+03-30到45級.md:502｜說明｜要 5 個聖潔蠟燭，材料商有賣；身上沒有就跳過這條和下一條。｜Benötigt 5 Heilige Kerzen, die Reagenzienhändler verkaufen. Hast du keine, überspring diese Quest und die nächste.
+03-30到45級.md:502｜說明｜要 5 個聖潔蠟燭，材料商有賣｜Benötigt 5 Heilige Kerzen, die Reagenzienhändler verkaufen
+03-30到45級.md:502｜說明｜身上沒有就跳過這條和下一條。｜Hast du keine, überspring diese Quest und die nächste.
+03-30到45級.md:505｜說明｜墳墓在遠境堡的禮拜堂旁，點位待實測。｜Das Grab liegt neben der Kapelle von Burg Farholde; die Stelle muss noch im Spiel getestet werden.
+03-30到45級.md:507｜說明｜乾草捆在遠境堡附近的田裡，點位待實測。｜Die Heuballen liegen auf den Feldern bei Burg Farholde; die Stellen müssen noch im Spiel getestet werden.
+03-30到45級.md:513｜說明｜泥鰭魚人頭顱和淡水惡魔一起打。｜Erledige die Murlockköpfe der Schlickflossen zusammen mit den Süßwasserscheusalen.
+03-30到45級.md:514｜說明｜帽子在泥鰭魚人營地裡，點位待實測。｜Der Hut liegt in einem Murloc-Lager der Schlickflossen; die Stelle muss noch im Spiel getestet werden.
+03-30到45級.md:515｜說明｜在農莊獸欄四周找證據。｜Such rund um die Tiergehege des Hofs nach Beweisen.
+03-30到45級.md:521｜說明｜走失的馬在農莊附近，點位待實測。｜Das entlaufene Pferd ist in der Nähe des Hofs; die Stelle muss noch im Spiel getestet werden.
+03-30到45級.md:533｜說明｜工頭的木箱在透納的伐木場，點位待實測。｜Die Kiste des Vorarbeiters steht in Turners Holzfällerlager; die Stelle muss noch im Spiel getestet werden.
+03-30到45級.md:536｜說明｜暮光書頁散在陽光林地，點位待實測。｜Die Twilight-Seiten liegen verstreut im Sonnengrund; die Stellen müssen noch im Spiel getestet werden.
+03-30到45級.md:537｜說明｜暮光怪掉戰場元帥的日誌，右鍵背包裡的日誌接任務。｜Die Twilight-Gegner lassen das Logbuch des Feldmarschalls fallen; klick es im Rucksack mit der rechten Maustaste an, um die Quest anzunehmen.
+03-30到45級.md:539｜說明｜暮光指骨和拯救陽光林地打同一批暮光怪。｜Die Twilight-Fingerknochen bekommst du von denselben Twilight-Gegnern wie für Die Rettung von Sonnengrund.
+03-30到45級.md:542｜說明｜弗索的寶藏在陽光林地往西約 6 格。｜Fuzzles Schatz liegt etwa 6 Kartenfelder westlich von Sunnyglade.
+03-30到45級.md:545｜說明｜在陽光林地下的洞穴對暮光之錘邪教徒和儀式法陣用水晶催化劑吸取樣本。｜Benutze in der Höhle unter dem Sonnengrund den Kristallkatalysator an den Twilight-Kultisten des Hammers und an den Ritualkreisen, um Proben zu entnehmen.
+03-30到45級.md:549｜說明｜喬札克是 41 級精英，在洞穴深處。｜Chogg'Zac ist ein Elite der Stufe 41 tief in der Höhle.
+03-30到45級.md:552｜說明｜要先打完喬札克。｜Du musst zuerst Chogg'Zac besiegen.
+03-30到45級.md:554｜說明｜打暮光劫掠者收紀念物，再放到艾布林農場西邊的墳墓。｜Besiege Twilight-Räuber für die Andenken und leg sie dann auf die Gräber westlich von Elbrims Hof.
+03-30到45級.md:559｜說明｜挑選的屍體在往泰洛堡的路邊。｜Der Abgenagte Kadaver liegt am Straßenrand auf dem Weg nach Terrals Wacht.
+03-30到45級.md:567｜說明｜盜獵者在羅格瑪南邊，別靠近部落的羅格瑪。｜Die Wilderer sind südlich von Rog'mar; komm Rog'mar selbst, einer Horde-Stadt, nicht zu nahe.
+03-30到45級.md:572｜說明｜歐巴沙是 41 級精英。｜Ombassa ist ein Elite der Stufe 41.
+03-30到45級.md:575｜說明｜往南回遠境堡。｜Geh nach Süden zurück nach Burg Farholde.
+03-30到45級.md:462｜說明｜這段沒有實跑紀錄，順序依 QuestieDB 座標排；地圖中央的羅格瑪是部落城鎮，別靠近。｜Für diesen Abschnitt gibt es keine Laufprotokolle; die Reihenfolge richtet sich nach den QuestieDB-Koordinaten. Rog'mar in der Kartenmitte ist eine Horde-Stadt; komm ihr nicht zu nahe.
+03-30到45級.md:596｜說明｜新鮮的蘋果在遠境堡附近的果樹下，點位待實測。｜Die frischen Äpfel liegen unter den Obstbäumen bei Burg Farholde; die Stellen müssen noch im Spiel getestet werden.
+03-30到45級.md:603｜說明｜從泰洛堡往西，經陽光林地南邊走到暮光之罩前的瑞夫坦中士；路過透納的伐木場順收木材。｜Geh von Terrals Wacht nach Westen, südlich am Sonnengrund vorbei, zu Sergeant Riftan vor Twilight's Hood. Nimm im Vorbeigehen das Holz in Turners Holzfällerlager mit.
+03-30到45級.md:604｜說明｜木材堆在透納的伐木場，點位待實測。｜Die Holzstapel liegen in Turners Holzfällerlager; die Stellen müssen noch im Spiel getestet werden.
+03-30到45級.md:606｜說明｜任務 44 級，比這時的你高 3 級以上，怪打不動就跳過。｜Die Quest hat Stufe 44, mindestens 3 Stufen über dir; kannst du die Gegner nicht besiegen, überspring sie.
+03-30到45級.md:608｜說明｜任務 43 級，比這時的你高 3 級以上，怪打不動就跳過。｜Die Quest hat Stufe 43, mindestens 3 Stufen über dir; kannst du die Gegner nicht besiegen, überspring sie.
+03-30到45級.md:609｜說明｜任務 44 級，比這時的你高 3 級以上，怪打不動就跳過。；在暮光之罩的導引裝置召喚暮光奴隸，用靈魂石捕獲。｜Die Quest hat Stufe 44, mindestens 3 Stufen über dir; kannst du die Gegner nicht besiegen, überspring sie. Beschwöre am Leitgerät in Twilight's Hood einen Twilight-Knecht und fange ihn mit einem Seelenstein ein.
+03-30到45級.md:609｜說明｜在暮光之罩的導引裝置召喚暮光奴隸，用靈魂石捕獲。｜Beschwöre am Leitgerät in Twilight's Hood einen Twilight-Knecht und fange ihn mit einem Seelenstein ein.
+03-30到45級.md:612｜說明｜任務 44 級，比這時的你高 3 級以上，怪打不動就跳過。；斥候關在暮光之罩各處，點位待實測。｜Die Quest hat Stufe 44, mindestens 3 Stufen über dir; kannst du die Gegner nicht besiegen, überspring sie. Die Späher sind überall in Twilight's Hood eingesperrt; die Stellen müssen noch im Spiel getestet werden.
+03-30到45級.md:612｜說明｜斥候關在暮光之罩各處，點位待實測。｜Die Späher sind überall in Twilight's Hood eingesperrt; die Stellen müssen noch im Spiel getestet werden.
+03-30到45級.md:618｜說明｜霸主基爾加是 46 級精英。｜Oberanführer Kilgar ist ein Elite der Stufe 46.
+03-30到45級.md:621｜說明｜要先打完霸主基爾加。｜Du musst zuerst Oberanführer Kilgar besiegen.
+03-30到45級.md:622｜說明｜往東經陽光林地、泰洛堡南邊走到火線港，繞開部落的羅格瑪；火線港沒有聯盟飛行點。｜Geh nach Osten durch den Sonnengrund und südlich an Terrals Wacht vorbei zum Hafen von Powderfuse und umgeh dabei Rog'mar, die Horde-Stadt. Der Hafen von Powderfuse hat keinen Flugpunkt der Allianz.
+03-30到45級.md:623｜說明｜史利博在往火線港的路北邊一點。｜Sleebo steht etwas nördlich der Straße zum Hafen von Powderfuse.
+03-30到45級.md:624｜說明｜沼澤氣體在史利博附近的噴口收，點位待實測。｜Sammle das Sumpfgas an den Schlöten bei Sleebo ein; die Stellen müssen noch im Spiel getestet werden.
+03-30到45級.md:636｜說明｜陷爪在火線港東邊的海岸。｜Fallenklaue ist an der Küste östlich des Hafens von Powderfuse.
+03-30到45級.md:641｜說明｜和不友好競爭一起打東海海盜和火槍手。｜Erledige die Bukaniere und Musketiere der östlichen See zusammen mit Feindschaftlicher Wettbewerb.
+03-30到45級.md:650｜說明｜任務 44 級，比這時的你高 3 級以上，怪打不動就跳過。；火藥桶在風息堡廢墟的建物內。｜Die Quest hat Stufe 44, mindestens 3 Stufen über dir; kannst du die Gegner nicht besiegen, überspring sie. Die Pulverfässchen stehen in den Gebäuden der Windbreak-Ruinen.
+03-30到45級.md:650｜說明｜火藥桶在風息堡廢墟的建物內。｜Die Pulverfässchen stehen in den Gebäuden der Windbreak-Ruinen.
+03-30到45級.md:655｜說明｜任務 45 級，比這時的你高 3 級以上，怪打不動就跳過。｜Die Quest hat Stufe 45, mindestens 3 Stufen über dir; kannst du die Gegner nicht besiegen, überspring sie.
+03-30到45級.md:656｜說明｜任務 44 級，比這時的你高 3 級以上，怪打不動就跳過。；在東海海盜的三艘船上各放一枚炸藥。｜Die Quest hat Stufe 44, mindestens 3 Stufen über dir; kannst du die Gegner nicht besiegen, überspring sie. Platziere auf jedem der drei Schiffe der Bukaniere der östlichen See eine Sprengladung.
+03-30到45級.md:656｜說明｜在東海海盜的三艘船上各放一枚炸藥。｜Platziere auf jedem der drei Schiffe der Bukaniere der östlichen See eine Sprengladung.
+03-30到45級.md:657｜說明｜炸完船沿岸往東北送。｜Bring sie nach dem Sprengen der Schiffe entlang der Küste nach Nordosten zum Abgeben.
+03-30到45級.md:660｜說明｜任務 45 級，比這時的你高 3 級以上，怪打不動就跳過。；戰利品位置待實測。｜Die Quest hat Stufe 45, mindestens 3 Stufen über dir; kannst du die Gegner nicht besiegen, überspring sie. Die Position der Beute muss noch im Spiel getestet werden.
+03-30到45級.md:660｜說明｜戰利品位置待實測。｜Die Position der Beute muss noch im Spiel getestet werden.
+03-30到45級.md:664｜說明｜從火線港往西南走回遠境堡。｜Geh vom Hafen von Powderfuse nach Südwesten zurück nach Burg Farholde.
+03-30到45級.md:672｜說明｜會經湖畔鎮轉機。｜Du steigst in Seenhain um.
+05-副本.md:232｜說明｜右鍵背包裡的破碎的項鏈接任務。項鏈任務線要回鐵爐堡兩次，後段在出本後第二趟進本做。｜Klick die Zerrissene Halskette im Rucksack mit der rechten Maustaste an, um die Quest anzunehmen. Die Halsketten-Questreihe führt dich zweimal nach Eisenschmiede zurück; der spätere Teil wird beim zweiten Durchgang nach dem Dungeon erledigt.
+05-副本.md:249｜說明｜要 5 塊銀錠。｜Benötigt 5 Silberbarren.
+05-副本.md:266｜說明｜第二趟進奧達曼：從鐵爐堡飛塞爾薩瑪，往東南走進荒蕪之地，從北邊入口進本。｜Zweiter Durchgang Uldaman: Flieg von Eisenschmiede nach Thelsamar, geh nach Südosten ins Ödland und betritt den Dungeon über den Nordeingang.
+05-副本.md:266｜說明｜項鏈任務線後段；隊伍不想再進本就略過到最後。｜Späterer Teil der Halsketten-Questreihe. Will deine Gruppe nicht noch einmal rein, überspring sie bis zum Schluss.
+05-副本.md:266｜說明｜項鏈任務線後段｜Späterer Teil der Halsketten-Questreihe
+05-副本.md:266｜說明｜隊伍不想再進本就略過到最後。｜Will deine Gruppe nicht noch einmal rein, überspring sie bis zum Schluss.
+05-副本.md:271｜說明｜能量源在尾王阿札達斯身上。｜Die Energiequelle trägt der letzte Boss Archaedas.
+05-副本.md:272｜說明｜出本走回塞爾薩瑪飛鐵爐堡。｜Geh nach dem Dungeon zu Fuß zurück nach Thelsamar und flieg nach Eisenschmiede.
+03-30到45級.md:1167｜說明｜棘齒城搭船到藏寶海灣。｜Fahr in Ratschet mit dem Schiff nach Beutebucht.
+03-30到45級.md:1169｜說明｜藏寶海灣搭船回棘齒城。｜Fahr in Beutebucht mit dem Schiff zurück nach Ratschet.
+03-30到45級.md:1176｜說明｜阿拉希這段：棘齒城搭船到藏寶海灣，飛避難谷地（經暴風城、鐵爐堡轉機）；回程反向。｜Abschnitt Arathi: Fahr in Ratschet mit dem Schiff nach Beutebucht und flieg dann zur Zuflucht (Umstieg in Sturmwind und Eisenschmiede). Auf dem Rückweg geht es in umgekehrter Richtung.
+03-30到45級.md:1176｜說明｜阿拉希這段：棘齒城搭船到藏寶海灣，飛避難谷地（經暴風城、鐵爐堡轉機）｜Abschnitt Arathi: Fahr in Ratschet mit dem Schiff nach Beutebucht und flieg dann zur Zuflucht (Umstieg in Sturmwind und Eisenschmiede)
+03-30到45級.md:1176｜說明｜回程反向。｜Auf dem Rückweg geht es in umgekehrter Richtung.
+04-45到60級.md:798｜說明｜避難谷地飛米奈希爾港，南碼頭搭船到塞拉摩，飛薩蘭納爾，往東走進千針石林。｜Flieg von der Zuflucht nach Menethil, nimm am Südanleger das Schiff nach Theramore, flieg nach Thalanaar und geh dann zu Fuß nach Osten in die Tausend Nadeln.
+04-45到60級.md:799｜說明｜薩蘭納爾飛塞拉摩，搭船到米奈希爾港，飛避難谷地。｜Flieg von Thalanaar nach Theramore, fahr mit dem Schiff nach Menethil und flieg dann zur Zuflucht.
+04-45到60級.md:134｜說明｜瑪爾戈的角開灼熱峽谷鑰匙任務線；不打就跳過第 12、31–32、34、36、39–41 步，第 42 步從鐵爐堡飛回瑟銀哨塔。｜Margols Horn startet die Questreihe um den Schlüssel zur Sengenden Schlucht. Lässt du sie aus, überspring die Schritte 12, 31-32, 34, 36 und 39-41; bei Schritt 42 fliegst du von Eisenschmiede zurück zur Thoriumspitze.
+04-45到60級.md:134｜說明｜瑪爾戈的角開灼熱峽谷鑰匙任務線｜Margols Horn startet die Questreihe um den Schlüssel zur Sengenden Schlucht
+04-45到60級.md:134｜說明｜不打就跳過第 12、31–32、34、36、39–41 步，第 42 步從鐵爐堡飛回瑟銀哨塔。｜Lässt du sie aus, überspring die Schritte 12, 31-32, 34, 36 und 39-41; bei Schritt 42 fliegst du von Eisenschmiede zurück zur Thoriumspitze.
+04-45到60級.md:162｜說明｜有館長的證明（3201）才回貝波蒂拿鑰匙；沒有就跳到第 42 步。｜Geh nur mit Endlich! (3201) zu Gebirgsjägerin Pebblebitty zurück, um den Schlüssel zu holen. Hast du sie nicht, spring zu Schritt 42.
+04-45到60級.md:162｜說明｜有館長的證明（3201）才回貝波蒂拿鑰匙｜Geh nur mit Endlich! (3201) zu Gebirgsjägerin Pebblebitty zurück, um den Schlüssel zu holen
+04-45到60級.md:162｜說明｜沒有就跳到第 42 步。｜Hast du sie nicht, spring zu Schritt 42.
+04-45到60級.md:165｜說明｜沒有灼熱峽谷鑰匙的人從鐵爐堡直飛回灼熱峽谷；已經穿隧道進來的跳過。｜Hast du den Schlüssel zur Sengenden Schlucht nicht, flieg von Eisenschmiede direkt zurück zur Sengenden Schlucht. Bist du bereits durch den Tunnel hereingekommen, überspring das.
+04-45到60級.md:165｜說明｜沒有灼熱峽谷鑰匙的人從鐵爐堡直飛回灼熱峽谷｜Hast du den Schlüssel zur Sengenden Schlucht nicht, flieg von Eisenschmiede direkt zurück zur Sengenden Schlucht
+04-45到60級.md:165｜說明｜已經穿隧道進來的跳過。｜Bist du bereits durch den Tunnel hereingekommen, überspring das.
+04-45到60級.md:263｜說明｜卷軸在塵泥沼澤西南的迅猛龍洞穴，先往東走回塞拉摩（1445 67.48, 51.30）再飛。｜Die Schriftrolle liegt in der Raptorhöhle im Südwesten der Düstermarschen. Geh zuerst nach Osten zurück nach Theramore (1445 67.48, 51.30) und flieg dann.
+04-45到60級.md:821｜說明｜暴風城的導引可略過；到艾薩拉仍要先找薩納斯傳送上懸崖。｜Die Einführung in Sturmwind kannst du überspringen. In Azshara musst du dich trotzdem zuerst von Sanath Lim-yo auf die Klippe teleportieren lassen.
+04-45到60級.md:821｜說明｜暴風城的導引可略過｜Die Einführung in Sturmwind kannst du überspringen
+04-45到60級.md:821｜說明｜到艾薩拉仍要先找薩納斯傳送上懸崖。｜In Azshara musst du dich trotzdem zuerst von Sanath Lim-yo auf die Klippe teleportieren lassen.
+04-45到60級.md:822｜說明｜有接導引才在這裡交。｜Gib sie hier nur ab, wenn du die Einführung angenommen hast.
+04-45到60級.md:823｜說明｜找薩納斯對話，請他把你傳送上懸崖找大法師克希雷姆。｜Sprich mit Sanath Lim-yo und bitte ihn, dich auf die Klippe zu Erzmagier Xylem zu teleportieren.
+04-45到60級.md:826｜說明｜塵埃在山下，回去同樣找薩納斯傳送上來。｜Der Staub liegt unten am Berg; lass dich genauso von Sanath Lim-yo wieder hinaufteleportieren.
+04-45到60級.md:832｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項（需遊戲實測）。｜Morphaz ist im Tempel von Atal'Hakkar. Zum Abstieg von der Klippe benutze deinen Ruhestein oder such die Teleportoption neben Xylem (im Spiel prüfen).
+04-45到60級.md:492｜說明｜托爾瓦旁沒有飛行點：從他身後的坡道出安戈洛環形山進塔納利斯，往東北跑到加基森。｜Bei Torwa gibt es keinen Flugpunkt: Verlass den Krater von Un'Goro über die Rampe hinter ihm nach Tanaris und lauf nach Nordosten nach Gadgetzan.
+04-45到60級.md:499｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（37.04, 44.13）。｜Binde deinen Ruhestein bei Gastwirtin Shaussiy im Gasthaus von Auberdine (37.04, 44.13).
+04-45到60級.md:683｜說明｜從死木蒸鍋往南走到刺枝林地飛行點（1448 62.49, 24.24）起飛，會經奧伯丁轉機。｜Geh vom Kessel der Totenwaldfelle nach Süden zum Flugpunkt Krallenzweiglichtung (1448 62.49, 24.24) und flieg von dort ab; du steigst in Auberdine um.
+04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜Geh nur mit Die wahren Meister (4186) nach Seenhain. Hast du sie nicht, überspring die Schritte 60-62 und flieg direkt von Sturmwind nach Morgans Wacht.
+04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮｜Geh nur mit Die wahren Meister (4186) nach Seenhain
+04-45到60級.md:777｜說明｜沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜Hast du sie nicht, überspring die Schritte 60-62 und flieg direkt von Sturmwind nach Morgans Wacht.
+05-副本.md:351｜說明｜骨架待補：只列入口和進本前的愛與家庭（5848），找畫、出本回交和回主線交通還沒寫。｜Nur ein Gerüst: Bisher stehen nur der Eingang und Von Liebe und Familie (5848) vor dem Dungeon drin; das Bild finden, die Abgabe nach dem Dungeon und die Reise zurück zur Hauptroute sind noch nicht geschrieben.
+05-副本.md:323｜說明｜前置是索瑞森廢墟（3701），04-第57站在鐵爐堡交完再接。｜Die Vorquest ist Die glimmenden Ruinen von Thaurissan (3701); nimm sie an, nachdem du bei 04-Station 57 in Eisenschmiede abgegeben hast.
+05-副本.md:324｜說明｜在詛咒之地接到才交。｜Gib sie erst ab, wenn du sie in den Verwüsteten Landen angenommen hast.
+05-副本.md:325｜說明｜卡拉諾斯不順路，不繞就略過。｜Kharanos liegt nicht auf dem Weg; überspring es, wenn du den Umweg nicht machen willst.
+05-副本.md:319｜說明｜在鐵爐堡交完索瑞森廢墟就接卡蘭·巨錘；燃燒平原的幾件在摩根的崗哨一帶接。｜Nimm Kharan Mighthammer an, sobald du Die glimmenden Ruinen von Thaurissan in Eisenschmiede abgegeben hast. Die Quests der Brennenden Steppe nimmst du in der Gegend von Morgans Wacht an.
+06-路線外任務.md:17｜說明｜塔納利斯・第一次（第40站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Tanaris (1. Besuch, Station 40).
+06-路線外任務.md:20｜說明｜塔納利斯・第三次（第47站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Tanaris (3. Besuch, Station 47).
+06-路線外任務.md:25｜說明｜大河林地兩站沒排（精英、副本、要特殊材料或太偏），跳過不影響練級。｜Die zwei Stationen in den Flusslanden sind nicht eingeplant (Elite, Dungeon, besondere Materialien oder zu abgelegen); sie zu überspringen schadet dem Leveln nicht.
+06-路線外任務.md:162｜說明｜費伍德森林・第一次（第49站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Teufelswald (1. Besuch, Station 49).
+06-路線外任務.md:586｜說明｜安戈洛環形山・第二次（第52站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Krater von Un'Goro (2. Besuch, Station 52).
+06-路線外任務.md:808｜說明｜西瘟疫之地・第一次（第55站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Westliche Pestländer (1. Besuch, Station 55).
+06-路線外任務.md:826｜說明｜西瘟疫之地・第二次（第57站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Westliche Pestländer (2. Besuch, Station 57).
+06-路線外任務.md:972｜說明｜灼熱峽谷（第45站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Sengende Schlucht (Station 45).
+06-路線外任務.md:973｜說明｜荊棘谷・第四次（第46站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Schlingendorntal (4. Besuch, Station 46).
+06-路線外任務.md:993｜說明｜辛特蘭（第44站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Hinterland (Station 44).
+06-路線外任務.md:1020｜說明｜東瘟疫之地（第56站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Östliche Pestländer (Station 56).
+06-路線外任務.md:1448｜說明｜塵泥沼澤（第34站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Düstermarschen (Station 34).
+06-路線外任務.md:1463｜說明｜悲傷沼澤（第37站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Sümpfe des Elends (Station 37).
+06-路線外任務.md:1479｜說明｜荊棘谷・第三次（第39站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Schlingendorntal (3. Besuch, Station 39).
+06-路線外任務.md:1504｜說明｜荒蕪之地（第36站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Ödland (Station 36).
+06-路線外任務.md:1652｜說明｜淒涼之地（第38站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Desolace (Station 38).
+06-路線外任務.md:1777｜說明｜菲拉斯・第一次（第41站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Feralas (1. Besuch, Station 41).
+06-路線外任務.md:1789｜說明｜菲拉斯・第二次（第50站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Feralas (2. Besuch, Station 50).
+06-路線外任務.md:1968｜說明｜千針石林・第二次（第33站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Tausend Nadeln (2. Besuch, Station 33).
+06-路線外任務.md:1974｜說明｜泰達希爾（第42站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Teldrassil (Station 42).
+06-路線外任務.md:1983｜說明｜費伍德森林・第二次（第51站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Teufelswald (2. Besuch, Station 51).
+06-路線外任務.md:2479｜說明｜安戈洛環形山・第一次（第48站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Krater von Un'Goro (1. Besuch, Station 48).
+06-路線外任務.md:2509｜說明｜塔納利斯・第二次（第43站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Tanaris (2. Besuch, Station 43).
+06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第35站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Schlingendorntal (2. Besuch, Station 35).
+06-路線外任務.md:2602｜說明｜燃燒平原（第54站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Brennende Steppe (Station 54).
