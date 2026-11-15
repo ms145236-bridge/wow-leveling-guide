@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "cd34b5c4",
+  built = "11e2625f",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -866,8 +866,8 @@ MG.Route = {
         {t="accept", q=94638, desc="厄芮德菈在申德高地巡邏，交任務學熊形態。", npc="厄先卓斯", tgt="厄先卓斯", map=2521, x=69.81, y=61.71, when={lvMin=10, class={"DRUID"}}},
         {t="do", q=94638, desc="厄芮德菈在申德高地巡邏，交任務學熊形態。", hint="在申德高地尋找並殺死厄芮德菈。", map=2521, x=54.54, y=65.03, when={lvMin=10, class={"DRUID"}}},
         {t="turnin", q=94638, desc="厄芮德菈在申德高地巡邏，交任務學熊形態。", npc="厄先卓斯", tgt="厄先卓斯", map=2521, x=69.81, y=61.71, when={lvMin=10, class={"DRUID"}}},
-        {t="accept", q=94912, opt=true, desc="抵達達拉然時接；沒接也可以直接到暴風城找沙德拉斯·月樹接 月光林地。", tag="可跳過", npc="大法師安斯雷姆‧織符者", tgt="大法師安斯雷姆‧織符者", map=1416, x=18.84, y=78.49, when={lvMin=10, class={"DRUID"}}},
-        {t="turnin", q=94912, opt=true, desc="抵達達拉然時接；沒接也可以直接到暴風城找沙德拉斯·月樹接 月光林地。", tag="可跳過", npc="沙德拉斯·月樹", tgt="沙德拉斯·月樹", map=1453, x=35.84, y=67.38, when={lvMin=10, class={"DRUID"}}},
+        {t="accept", q=94912, desc="抵達達拉然時接；沒接也可以直接到暴風城找沙德拉斯·月樹接 月光林地。", npc="大法師安斯雷姆‧織符者", tgt="大法師安斯雷姆‧織符者", map=1416, x=18.84, y=78.49, when={lvMin=10, class={"DRUID"}}},
+        {t="turnin", q=94912, desc="抵達達拉然時接；沒接也可以直接到暴風城找沙德拉斯·月樹接 月光林地。", npc="沙德拉斯·月樹", tgt="沙德拉斯·月樹", map=1453, x=35.84, y=67.38, when={lvMin=10, class={"DRUID"}}},
         {t="accept", q=94914, desc="在暴風城學傳送：月光林地，傳過去交任務。", npc="沙德拉斯·月樹", tgt="沙德拉斯·月樹", map=1453, x=35.84, y=67.38, when={lvMin=10, class={"DRUID"}}},
         {t="turnin", q=94914, desc="在暴風城學傳送：月光林地，傳過去交任務。", npc="德迪利特·星焰", tgt="德迪利特·星焰", map=1450, x=56.21, y=30.64, when={lvMin=10, class={"DRUID"}}},
         {t="accept", q=93791, desc="搭船離開微風島前做。", npc="阿納薩瑪斯‧靈風", tgt="阿納薩瑪斯‧靈風", map=2521, x=65.91, y=80.57, when={lvMin=10, class={"MAGE"}}},
