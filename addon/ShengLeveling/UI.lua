@@ -1319,6 +1319,7 @@ function UI.Create()
   bar.l3 = text(bar, 13, GOLD)
   bar.l3:SetPoint("TOPLEFT", 40, -52)
   bar.l3:SetPoint("RIGHT", -10, 0)
+  wrapLines(bar.l3, 2) -- 段落標題（例如西南環線：甲 → 乙 → 丙）太長就換第二行
   bar.flash = bar:CreateTexture(nil, "ARTWORK")
   bar.flash:SetAllPoints(); bar.flash:SetColorTexture(GREEN[1], GREEN[2], GREEN[3], 0.28); bar.flash:SetAlpha(0)
 
@@ -2183,7 +2184,7 @@ function UI.Render(S)
     end
   end
   if #shown > 0 then y = y - math.ceil(#shown / cols) * 18 end
-  if l3 then bar.l3:SetPoint("TOPLEFT", x0, y); y = y - 18 end
+  if l3 then bar.l3:SetPoint("TOPLEFT", x0, y); y = y - math.max(18, math.ceil(bar.l3:GetStringHeight() or 0) + 5) end
   -- 附近可一起做的步驟：每步一個小區塊（分隔線＋動詞任務名＋目標）；完整內容在步驟列的滑鼠提示
   local used = 0
   local function line(t, color, x, w, num)
