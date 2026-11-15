@@ -74,6 +74,7 @@ MG.Locales.enUS = {
   ["補經驗"] = "XP top-up",
 
   ["順路，路上遇到就打"] = "On the way: kill them as you pass",
+  ["順路打完再交"] = "Turn in after you finish it on the way",
   ["副本"] = "Dungeon",
   ["不打"] = "Skip",
   ["要打"] = "Include",

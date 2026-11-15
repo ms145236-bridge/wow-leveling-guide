@@ -74,6 +74,7 @@ MG.Locales.ptBR = {
   ["補經驗"] = "Completar EXP",
 
   ["順路，路上遇到就打"] = "No caminho: mate ao passar",
+  ["順路打完再交"] = "Entregue ao terminar no caminho",
   ["副本"] = "Masmorra",
   ["不打"] = "Pular",
   ["要打"] = "Incluir",

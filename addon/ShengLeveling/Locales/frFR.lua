@@ -74,6 +74,7 @@ MG.Locales.frFR = {
   ["補經驗"] = "Rattrapage d’EXP",
 
   ["順路，路上遇到就打"] = "En chemin : à tuer au passage",
+  ["順路打完再交"] = "À rendre une fois fini en chemin",
   ["副本"] = "Donjon",
   ["不打"] = "Passer",
   ["要打"] = "Inclure",

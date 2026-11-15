@@ -74,6 +74,7 @@ MG.Locales.esMX = {
   ["補經驗"] = "Recuperar EXP",
 
   ["順路，路上遇到就打"] = "De camino: mátalos al pasar",
+  ["順路打完再交"] = "Entrégala al terminarla de camino",
   ["副本"] = "Calabozo",
   ["不打"] = "Omitir",
   ["要打"] = "incluir",

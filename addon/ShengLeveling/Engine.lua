@@ -704,7 +704,11 @@ function E.Locate(st)
   local num, total = {}, 0
   if cur then
     total = 1; num[cur] = 1
-    for i = cur + 1, n do if (not na[i] and not done[i]) or low[i] then total = total + 1; num[i] = total end end
+    -- 順路任務還沒打完：它的「交」先不編號、不上地圖（打完才排進去）
+    for i = cur + 1, n do
+      local s = steps[i].s
+      if ((not na[i] and not done[i]) or low[i]) and not (s.t == "turnin" and s.q and roamQ[s.q]) then total = total + 1; num[i] = total end
+    end
   end
   -- 附近可一起做的步驟：目前步驟之後 8 步內，還沒做、已在日誌的「做」（或同地點的接／交），
   -- 座標靠近目前步驟（或已併入的步驟）；遇到交通、爐石、飛行、船就停
@@ -765,7 +769,7 @@ function E.Locate(st)
   end
   local train
   for i = 1, n do if steps[i].s.t == "train" and not done[i] and not na[i] and i ~= cur then train = train or i end end
-  return { train = train, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, low = low, lowLv = lowLv, trainHid = trainHid, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
+  return { roamQ = roamQ, train = train, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, low = low, lowLv = lowLv, trainHid = trainHid, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
 end
 
 -- ── 站 ──────────────────────────────────────────────────────────────────────
