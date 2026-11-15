@@ -32,7 +32,7 @@ local SPEC = {
   { key = "groupOn", label = "同時顯示附近任務", def = true, hint = "接下來幾步裡地點相近的任務一起列出，順手一起做。" },
   { key = "groupMax", label = "最多同時顯示", min = 1, max = 5, step = 1, def = 3, hint = "一起列出的任務最多幾個（含目前這步）。" },
   { key = "locked", label = "鎖定位置", def = false, menu = true },
-  { button = "重設位置", run = function() MG.db.pos = nil end },
+  { button = "重設位置", run = function() MetroGuideDB.set.pos = nil end },
   { section = "展開清單" },
   { key = "listWidth", label = "寬度", min = 280, max = 600, step = 10, def = 320 },
   { key = "showDone", label = "顯示已完成步驟", def = true },
@@ -101,7 +101,12 @@ local SPEC = {
 }
 local SPEC_BY = {}
 for _, sp in ipairs(SPEC) do if sp.key then SPEC_BY[sp.key] = sp end end
-local function store(sp) return sp.acct and MetroGuideDB or MG.db end
+-- 設定全帳號共用（MetroGuideDB.set）；acct 那幾項本來就放在 MetroGuideDB
+local function store(sp)
+  if sp.acct then return MetroGuideDB end
+  MetroGuideDB.set = MetroGuideDB.set or {}
+  return MetroGuideDB.set
+end
 -- 字較長的介面語言：步驟列、清單的預設寬加大，平常任務名、站名不用截斷（只改預設；玩家調過的值照用）
 local LOCALE_DEF = {
   deDE = { barWidth = 330, listWidth = 420 },
@@ -131,6 +136,18 @@ function UI.InitDefaults()
       end
       if db == MG.db then db.showCount, db.showLevel, db.scale = nil, nil, nil end
       db.settingsV = SETTINGS_VERSION
+    end
+  end
+  -- 改成共用前設定是各角色分開存的：第一個「改過設定」的角色登入時，把它的設定和視窗位置帶進共用（只做一次）
+  MetroGuideDB.set = MetroGuideDB.set or {}
+  if not MetroGuideDB.setFrom then
+    local any
+    for _, sp in ipairs(SPEC) do
+      if sp.key and not sp.acct and MG.db[sp.key] ~= nil then MetroGuideDB.set[sp.key] = MG.db[sp.key]; any = true end
+    end
+    if any then
+      MetroGuideDB.set.pos = MG.db.pos or MetroGuideDB.set.pos
+      MetroGuideDB.setFrom = UnitName("player") or "?"
     end
   end
 end
@@ -267,7 +284,7 @@ local function goldButton(parent, label, w)
 end
 
 local function savePos()
-  MG.db.pos = { x = root:GetLeft(), y = root:GetTop() }
+  MetroGuideDB.set.pos = { x = root:GetLeft(), y = root:GetTop() }
 end
 -- 安全按鈕（目標、任務物品）不能錨在會變大小的步驟列上，否則戰鬥中步驟列一變高就會被遊戲擋。
 -- 改錨在這個固定底座：掛在 UIParent，戰鬥外才跟著步驟列的位置、縮放、寬度對齊。
@@ -317,7 +334,7 @@ function UI.ApplySettings()
   panel:SetWidth(lw)
   for _, row in ipairs(rows) do row:SetWidth(lw - 2); row.para:SetWidth(lw - 2 - 28 - 12) end
   root:ClearAllPoints()
-  local p = MG.db.pos
+  local p = MetroGuideDB.set.pos
   if p and p.x and p.y then root:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", p.x, p.y)
   else root:SetPoint("TOPRIGHT", UIParent, "TOPRIGHT", -40, -240) end
   root:SetShown(MG.db.shown ~= false)
@@ -1791,7 +1808,7 @@ function UI.CreateOptions()
         btn:SetScript("OnClick", function()
           if sp.all then
             for _, other in ipairs(SPEC) do if other.key then UI.Reset(other.key) end end
-            MG.db.pos = nil
+            MetroGuideDB.set.pos = nil
           else
             sp.run()
           end
