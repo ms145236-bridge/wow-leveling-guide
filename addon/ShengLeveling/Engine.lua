@@ -149,11 +149,21 @@ end
 local function raceOK(q)
   local info = R.quests[q]
   if not (info and info.races and me.raceID) then return true end
-  return math.floor(info.races / 2 ^ (me.raceID - 1)) % 2 == 1
+  return math.floor(info.races / 2 ^ (me.bit - 1)) % 2 == 1
 end
 
 function E.Build()
   me.raceL, me.race, me.raceID = UnitRace("player")
+  -- 舊版只要打開訓練師視窗就勾掉「去學技能」：清一次，之後照「都學完了才勾」重新判斷
+  if not MG.db.trainFix then
+    for k in pairs(MG.db.latch) do if k:sub(1, 3) == "tr:" then MG.db.latch[k] = nil end end
+    MG.db.trainFix = true
+  end
+  -- QuestieDB 把天裔精靈記成第 33（聯盟）、34（部落）位；遊戲給的種族編號不一定是這兩個，照陣營對過去
+  me.bit = me.raceID
+  if (me.race and me.race:find("Sky")) or (me.raceL and me.raceL:find("天裔", 1, true)) then
+    me.bit = UnitFactionGroup("player") == "Alliance" and 33 or 34
+  end
   me.class = select(2, UnitClass("player"))
   wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt)
   local startKey = E.StartKey()
@@ -944,8 +954,21 @@ function E.MakeUp(st, p)
 end
 
 -- 開了本職業訓練師（不是專業技能訓練師）：等級已到的「學」步驟都算做完，不管是哪一位訓練師
+-- 訓練師視窗：開著時記下還有沒有能學沒學的技能，關掉時都學完了才勾「去學技能」（只是找訓練師交任務不算）
+function E.TrainerSeen()
+  if IsTradeskillTrainer and IsTradeskillTrainer() then E.trainLeft = nil; return end
+  local left = 0
+  local ok, n = pcall(GetNumTrainerServices)
+  if not ok or type(n) ~= "number" or not GetTrainerServiceInfo then E.trainLeft = 0; return end -- 讀不到就照舊：開過就算
+  for i = 1, n do
+    local okI, _, kind = pcall(GetTrainerServiceInfo, i)
+    if okI and kind == "available" then left = left + 1 end
+  end
+  E.trainLeft = left
+end
 function E.Trained()
-  if IsTradeskillTrainer and IsTradeskillTrainer() then return end
+  if E.trainLeft == nil or E.trainLeft > 0 then E.trainLeft = nil; return end
+  E.trainLeft = nil
   local lv = UnitLevel("player") or 0
   for _, step in ipairs(E.trainSteps) do
     if step.s.lv <= lv then MG.db.latch[step.key] = true end

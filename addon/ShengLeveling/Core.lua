@@ -283,7 +283,7 @@ local EVENTS = {
   "ADDON_LOADED", "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_REMOVED", "QUEST_TURNED_IN", "QUEST_LOG_UPDATE",
   "UNIT_QUEST_LOG_CHANGED", "PLAYER_LEVEL_UP", "ZONE_CHANGED_NEW_AREA", "PLAYER_CONTROL_GAINED", "PLAYER_CONTROL_LOST", "HEARTHSTONE_BOUND",
   "TAXIMAP_OPENED", "QUEST_DETAIL", "QUEST_PROGRESS", "QUEST_COMPLETE", "GOSSIP_SHOW", "QUEST_GREETING",
-  "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "TRAINER_SHOW", "UPDATE_INVENTORY_DURABILITY",
+  "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "TRAINER_SHOW", "TRAINER_UPDATE", "TRAINER_CLOSED", "UPDATE_INVENTORY_DURABILITY",
 }
 for _, e in ipairs(EVENTS) do
   if e == "UNIT_QUEST_LOG_CHANGED" and f.RegisterUnitEvent then registered[e] = pcall(f.RegisterUnitEvent, f, e, "player")
@@ -327,7 +327,9 @@ local function onEvent(_, event, ...)
       wipe(MG.db.notNow) -- 交了任務：暫時接不到的重新看
       trace.QUEST_TURNED_IN = id .. L["，事件當下已標記完成："] .. tostring(C.IsTurnedIn(id))
     end
-  elseif event == "TRAINER_SHOW" then
+  elseif event == "TRAINER_SHOW" or event == "TRAINER_UPDATE" then
+    E.TrainerSeen()
+  elseif event == "TRAINER_CLOSED" then
     E.Trained()
   elseif event == "PLAYER_LEVEL_UP" then
     MG.db.sugHide = nil
