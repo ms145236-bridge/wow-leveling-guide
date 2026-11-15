@@ -552,7 +552,8 @@ function E.Locate(st)
     local s = step.s
     if s.t == "accept" and s.q then
       acc[s.q] = true
-      if s.pickLv and lv < s.pickLv and not C.IsOnQuest(s.q) and not turned(s.q) then lowQ[s.q] = s.pickLv end
+      local need = s.pickLv or (R.quests[s.q] or {}).min -- 步驟沒寫接取等級就用任務資料的最低等級
+      if need and lv < need and not C.IsOnQuest(s.q) and not turned(s.q) then lowQ[s.q] = need end
     end
   end
   local lowLv = {}
@@ -575,6 +576,20 @@ function E.Locate(st)
     if mark ~= nil and mark == auto then db.mark[step.key] = nil; mark = nil end
     done[i] = na[i] or (mark ~= nil and mark) or (mark == nil and auto)
   end
+  -- 「去學技能」同時只留一個（離自己最近的訓練師），其餘先藏起來；跟訓練師說話時一起勾掉（trainHid）
+  local trainHid, best, bestD = {}, nil, nil
+  for i, step in ipairs(steps) do
+    local s = step.s
+    if s.t == "train" and not done[i] and not na[i] then
+      local d = (map and s.map == map and x and s.x) and math.sqrt((x - s.x) ^ 2 + (y - s.y) ^ 2) or 1e9
+      if best then trainHid[i] = true end
+      if not bestD or d < bestD then
+        if best then trainHid[best] = true end
+        trainHid[i], best, bestD = nil, i, d
+      end
+    end
+  end
+  for i in pairs(trainHid) do na[i], done[i] = true, true end
   -- 軟步驟（交通、到達、鳥點、飛行、船）：後面任一任務步驟已完成就算過了；
   -- 後面已沒有任務步驟的（往下一站的交通）不擋路，文字留給「前往下一站」顯示
   -- passed：被後面任務帶過的軟步驟（當作過了，但清單不打勾）；tails：站尾往下一站的交通（任務都做完才輪到它）
@@ -736,7 +751,7 @@ function E.Locate(st)
   end
   local train
   for i = 1, n do if steps[i].s.t == "train" and not done[i] and not na[i] and i ~= cur then train = train or i end end
-  return { train = train, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, low = low, lowLv = lowLv, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
+  return { train = train, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, low = low, lowLv = lowLv, trainHid = trainHid, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
 end
 
 -- ── 站 ──────────────────────────────────────────────────────────────────────
@@ -954,24 +969,11 @@ function E.MakeUp(st, p)
 end
 
 -- 開了本職業訓練師（不是專業技能訓練師）：等級已到的「學」步驟都算做完，不管是哪一位訓練師
--- 訓練師視窗：開著時記下還有沒有能學沒學的技能，關掉時都學完了才勾「去學技能」（只是找訓練師交任務不算）
-function E.TrainerSeen()
-  if IsTradeskillTrainer and IsTradeskillTrainer() then E.trainLeft = nil; return end
-  local left = 0
-  local ok, n = pcall(GetNumTrainerServices)
-  if not ok or type(n) ~= "number" or not GetTrainerServiceInfo then E.trainLeft = 0; return end -- 讀不到就照舊：開過就算
-  for i = 1, n do
-    local okI, _, kind = pcall(GetTrainerServiceInfo, i)
-    if okI and kind == "available" then left = left + 1 end
-  end
-  E.trainLeft = left
-end
-function E.Trained()
-  if E.trainLeft == nil or E.trainLeft > 0 then E.trainLeft = nil; return end
-  E.trainLeft = nil
-  local lv = UnitLevel("player") or 0
-  for _, step in ipairs(E.trainSteps) do
-    if step.s.lv <= lv then MG.db.latch[step.key] = true end
+-- 跟職業訓練師說話：只勾已經走到的「去學技能」（目前提醒的那一個，或排在目前步驟前面的）；提前找訓練師不算，有沒有學不管
+function E.Trained(state)
+  if (IsTradeskillTrainer and IsTradeskillTrainer()) or not state or not state.steps then return end
+  for i, step in ipairs(state.steps) do
+    if step.s.t == "train" and ((not state.na[i] and (state.train == i or (state.cur and i < state.cur))) or (state.trainHid and state.trainHid[i])) then MG.db.latch[step.key] = true end
   end
 end
 -- 任務日誌滑鼠提示：在路線上 → 哪一站第幾步；不在 → 06 的判定，否則規則（灰 → 可放掉；路線任務的前置 → 值得做；其餘 → 之後順路）

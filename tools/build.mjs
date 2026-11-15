@@ -466,7 +466,7 @@ for (const blk of classBlocks) {
   if (!target) { hard(blk.where, "職業任務指定的站不存在：" + blk.target); continue; }
   for (const step of blk.steps) step.when = { ...blk.when, ...(step.when || {}) };
   let at = target.steps.length;
-  while (at > 0 && ["travel", "note"].includes(target.steps[at - 1].t)) at--;
+  while (at > 0 && ["travel", "note", "boat", "fly", "hearth"].includes(target.steps[at - 1].t)) at--;
   target.steps.splice(at, 0, ...blk.steps);
 }
 
