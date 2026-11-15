@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "5596eaca",
+  built = "d6f0778b",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -1573,6 +1573,7 @@ MG.Route = {
         {t="accept", q=125, npc="工頭奧斯洛", tgt="工頭奧斯洛", map=1433, x=27.05, y=48.64},
         {t="turnin", q=119, npc="弗納·奧斯古", tgt="弗納·奧斯古", map=1433, x=25.88, y=47.27},
         {t="accept", q=124, npc="弗納·奧斯古", tgt="弗納·奧斯古", map=1433, x=25.88, y=47.27},
+        {t="accept", q=386, npc="衛兵伯爾頓", tgt="衛兵伯爾頓", map=1433, x=21.17, y=46.58},
         {t="accept", q=3741, npc="肖恩", tgt="肖恩", map=1433, x=24.23, y=53.64},
         {t="do", q=3741, hint="找到希拉蕊的項鏈，將其還給湖畔鎮的希拉蕊。", map=1433, x=21.6, y=53.9},
         {t="do", q=98407, desc="在 10.8, 63.7 一帶多打混血赤脊山豺狼人。", hint="到湖畔鎮附近幫菲爾頓副隊長從赤脊山痛擊者身上收集5個尖刺項圈。", map=1433, x=10.4, y=64.6},
