@@ -79,7 +79,9 @@ local function style(b, group, S)
   b.base:SetVertexColor(c[1], c[2], c[3])
   b.rim:SetTexture(MEDIA .. "pin_" .. shape .. "_rim")
   if cur then b.rim:SetVertexColor(1, 1, 1) else b.rim:SetVertexColor(0.90, 0.86, 0.80) end
-  local label = group[1].n .. (#group > 1 and "+" or "")
+  local faint = true
+  for _, g in ipairs(group) do if not g.faint then faint = false end end
+  local label = faint and "" or group[1].n .. (#group > 1 and "+" or "") -- 淡點（其他怪群、順路任務）不寫號碼
   local short = S >= 30 and 15 or S >= 24 and 12 or S >= 20 and 11 or S >= 18 and 10 or 9
   local long = S >= 30 and 12 or S >= 24 and 10 or S >= 18 and 9 or 8
   local font = NumberFontNormal and NumberFontNormal:GetFont() or STANDARD_TEXT_FONT
@@ -179,6 +181,7 @@ function P.Update(st, force)
   P.diag.thresholdPx, P.diag.pxPerPct, P.diag.pinScale = UI.Get("pinMergeX") * shown * pe, pxPerPct, pe
   local parts = { st.st.id, tostring(st.cur), size, UI.Get("miniPinSize"), UI.Get("miniSteps"), UI.Get("pinAlpha"), math.floor(near * 100) }
   for i in ipairs(st.steps) do if not st.done[i] and not st.na[i] then parts[#parts + 1] = i end end
+  if MG.navPick then parts[#parts + 1] = MG.navPick.x .. ":" .. MG.navPick.y end -- 箭頭換了一群怪：重畫
   local key = table.concat(parts, ",")
   if key == sig and not force then return end
   P.Clear()
@@ -204,6 +207,25 @@ function P.Update(st, force)
         pts = { best }
       end
       if pts[1] and not step.s.roam then prev = pts[1] end
+      -- 目前步驟：箭頭指的那群照常畫，其他群另成一組小而淡的點
+      local other
+      if cur and #pts > 1 then
+        local nav = MG.navPick and MG.navPick.s == step.s and MG.navPick or { x = step.s.x, y = step.s.y }
+        local keep = {}
+        other = { step = step, i = i, n = n, at = {}, faint = true }
+        for _, p in ipairs(pts) do
+          if p[2] == nav.x and p[3] == nav.y then keep[#keep + 1] = p else other.at[#other.at + 1] = p end
+        end
+        if #keep > 0 then pts = keep else other = nil end
+      end
+      for _, p in ipairs(other and other.at or {}) do
+        local hit
+        for _, g in ipairs(groups) do
+          if g.map == p[1] and (g.x - p[2]) ^ 2 + (g.y - p[3]) ^ 2 < near * near then hit = g; break end
+        end
+        if not hit then hit = { map = p[1], x = p[2], y = p[3], has = {} }; groups[#groups + 1] = hit end
+        if not hit.has[other] then hit.has[other] = true; hit[#hit + 1] = other end
+      end
       for _, p in ipairs(pts) do
         local dup = false
         for _, q in ipairs(entry.at) do

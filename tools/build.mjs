@@ -496,7 +496,7 @@ for (const st of stations) {
       if (add.length > 40) add = Array.from({ length: 40 }, (_, i) => add[Math.floor((i * add.length) / 40)]);
       if (add.length) { step.more = [...(step.more || []), ...add]; objAdded++; }
     }
-    // 多個怪點：8 格內併成一群（取平均），地圖上一群一個點；散成 4 群以上且範圍超過 20 格、或範圍超過 35 格＝順路任務（不指路，路上遇到就打）
+    // 多個怪點：8 格內併成一群（取平均），地圖上一群一個點；散成 4 群以上、或範圍超過 35 格＝順路任務（不指路，路上遇到就打）
     if (step.t === "do" && step.coord && step.more?.length) {
       const pts = [step.coord, ...step.more].filter((p) => (p.map || st.map) === (step.coord.map || st.map));
       const groups = [];
@@ -505,7 +505,7 @@ for (const st of stations) {
         if (g) { g.n++; g.sx += p.x; g.sy += p.y; g.x = g.sx / g.n; g.y = g.sy / g.n; } else groups.push({ n: 1, sx: p.x, sy: p.y, x: p.x, y: p.y });
       }
       const span = Math.max(...pts.flatMap((a) => pts.map((b) => Math.hypot(a.x - b.x, a.y - b.y))));
-      if ((groups.length >= 4 && span > 20) || span > 35) step.roam = true;
+      if (groups.length >= 4 || span > 35) step.roam = true;
       const map = step.coord.map || st.map;
       const r2 = (n) => Math.round(n * 100) / 100;
       const [first, ...rest] = groups.map((g) => ({ map, x: r2(g.x), y: r2(g.y) }));
