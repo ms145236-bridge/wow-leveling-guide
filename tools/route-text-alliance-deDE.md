@@ -391,3 +391,77 @@
 新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Bleib im Lager der Winterfelle und töte weiter Furbolgs.
 新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜Sammle in den zerstörten Häusern von Darrowshire Kopf, linke und rechte Seite und kombiniere sie per Rechtsklick.
 新增.md:0｜步驟說明｜還沒到 60 級就打一趟黑石深淵；還不夠再刷斯坦索姆或通靈學院。｜Noch nicht Stufe 60? Lauf einmal die Schwarzfelstiefen. Reicht das nicht, farm Stratholme oder Scholomance.
+01-第一段-1到12級.md:561｜說明｜飛行地圖沒有奧伯丁就到魯瑟蘭村碼頭搭船去奧伯丁。｜Ist Auberdine nicht auf deiner Flugkarte, nimm am Hafen von Rut'theran das Schiff nach Auberdine.
+01-第一段-1到12級.md:902｜說明｜飛行地圖沒有鐵爐堡就往西穿過山口回丹莫洛，直接走到卡拉諾斯。｜Ist Eisenschmiede nicht auf deiner Flugkarte, geh nach Westen durch den Pass zurück nach Dun Morogh und lauf direkt nach Kharanos.
+01-第一段-1到12級.md:933｜說明｜爐石還在冷卻就從塞爾薩瑪飛鐵爐堡，再搭礦道地鐵到暴風城。｜Hat dein Ruhestein noch Abklingzeit, flieg von Thelsamar nach Eisenschmiede und nimm dann die Tiefenbahn nach Sturmwind.
+01-第一段-1到12級.md:936｜說明｜飛行地圖沒有鐵爐堡就往西穿過山口回丹莫洛，沿大路走進鐵爐堡。｜Ist Eisenschmiede nicht auf deiner Flugkarte, geh nach Westen durch den Pass zurück nach Dun Morogh und folge der Straße nach Eisenschmiede hinein.
+01-第一段-1到12級.md:872｜說明｜人類從暴風城搭礦道地鐵到鐵爐堡；夜精靈搭船到暴風城再轉地鐵。天裔精靈不走這站：第8站從達拉然走傳送門到暴風城，再搭船到黑海岸。｜Menschen nehmen in Sturmwind die Tiefenbahn nach Eisenschmiede. Nachtelfen fahren mit dem Schiff nach Sturmwind und dann mit der Bahn. Skyborne lassen diese Station aus: In Station 8 gehen sie von Dalaran durch das Portal nach Sturmwind und fahren dann mit dem Schiff zur Dunkelküste.
+02-12到30級.md:70｜說明｜爐石沒綁暴風城或還在冷卻，就在奧伯丁碼頭搭船到暴風城。｜Ist dein Ruhestein nicht an Sturmwind gebunden oder hat er Abklingzeit, nimm am Hafen von Auberdine das Schiff nach Sturmwind.
+02-12到30級.md:79｜說明｜出暴風城沿艾爾文森林大路往西，經閃金鎮過橋進西部荒野，再沿大道往南到哨兵嶺。｜Verlass Sturmwind und folge der Straße durch den Wald von Elwynn nach Westen, geh durch Goldhain und über die Brücke nach Westfall und folge dann der Hauptstraße nach Süden bis zur Späherkuppe.
+02-12到30級.md:146｜說明｜出鐵爐堡沿大路往東，穿過東邊山口的隧道進洛克莫丹，再沿路往東北到塞爾薩瑪。｜Verlass Eisenschmiede und folge der Straße nach Osten, geh durch den Tunnel im östlichen Pass nach Loch Modan und folge dann dem Weg nach Nordosten bis Thelsamar.
+02-12到30級.md:279｜說明｜飛行地圖沒有魯瑟蘭村就和其他種族一樣搭船。｜Ist Rut'theran nicht auf deiner Flugkarte, nimm wie die anderen Völker das Schiff.
+02-12到30級.md:281｜說明｜走進魯瑟蘭村的傳送門到達納蘇斯。｜Geh in Rut'theran durch das Portal nach Darnassus.
+02-12到30級.md:284｜說明｜走進達納蘇斯的傳送門回魯瑟蘭村。｜Geh in Darnassus durch das Portal zurück nach Rut'theran.
+02-12到30級.md:300｜說明｜從暴風城沿艾爾文森林大路往東進赤脊山，順大路到湖畔鎮。｜Folge von Sturmwind aus der Straße durch den Wald von Elwynn nach Osten ins Rotkammgebirge und bleib auf der Straße bis Seenhain.
+02-12到30級.md:303｜說明｜第2站沒開湖畔鎮飛行點，就從暴風城沿艾爾文森林大路往東走到湖畔鎮。｜Hast du in Station 2 den Flugpunkt Seenhain nicht freigeschaltet, geh von Sturmwind auf der Straße durch den Wald von Elwynn nach Osten bis Seenhain.
+02-12到30級.md:400｜說明｜從黑海岸南邊沿大路往南進梣谷，先到邁斯特拉崗哨。｜Folge von der Südseite der Dunkelküste der Straße nach Süden ins Eschental und geh zuerst zu Maestras Posten.
+02-12到30級.md:431｜說明｜這班船中途停南海鎮，到米奈希爾港再下船。｜Dieses Schiff hält unterwegs in Süderstade. Steig erst in Menethil aus.
+02-12到30級.md:502｜說明｜已開夜色鎮飛行點就直接飛夜色鎮。沒開就飛湖畔鎮，落地後沿大路往西到赤脊山西邊的路口，再往南進暮色森林到夜色鎮。｜Hast du den Flugpunkt Dunkelhain freigeschaltet, flieg direkt nach Dunkelhain. Sonst flieg nach Seenhain, folge dort der Straße nach Westen bis zur Kreuzung am Westrand des Rotkammgebirges und geh dann nach Süden durch den Dämmerwald nach Dunkelhain.
+03-30到45級.md:190｜說明｜在米奈希爾港北邊碼頭搭往奧伯丁的船，中途在南海鎮下船。｜Nimm am nördlichen Pier von Menethil das Schiff nach Auberdine und steig unterwegs in Süderstade aus.
+03-30到45級.md:270｜說明｜從暮色森林西邊沿大路往南進荊棘谷，先到反抗軍營地。｜Folge vom Westrand des Dämmerwalds der Straße nach Süden ins Schlingendorntal und geh zuerst zum Rebellenlager.
+03-30到45級.md:298｜說明｜沿荊棘谷大路一路往南到藏寶海灣，經過格羅姆高附近時離部落營地遠一點。｜Folge der Straße durch das Schlingendorntal bis nach Beutebucht im Süden und halte bei Grom'gol ordentlich Abstand zum Lager der Horde.
+03-30到45級.md:331｜說明｜這班船中途停南海鎮，到奧伯丁再下船。｜Dieses Schiff hält unterwegs in Süderstade. Steig erst in Auberdine aus.
+03-30到45級.md:377｜說明｜從魯瑟蘭村或阿斯特蘭納飛棘齒城（經塔倫迪斯營地），沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走莫爾杉壁壘。｜Flieg von Rut'theran oder Astranaar nach Ratschet (mit Zwischenstopp an der Talrendisspitze), folge der Hauptstraße nach Süden, umgehe Camp Taurajo und nimm den Großen Aufzug hinab nach Tausend Nadeln. Nimm den Weg über den Mor'shan-Wall nur, wenn beide Flugpunkte fehlen.
+03-30到45級.md:398｜說明｜從閃光平原沿大路往南進塔納利斯，到加基森開飛行點再爐石。｜Folge von der Schimmernden Ebene der Straße nach Süden nach Tanaris, schalte in Gadgetzan den Flugpunkt frei und nutze dann den Ruhestein.
+03-30到45級.md:399｜說明｜加基森｜Gadgetzan
+03-30到45級.md:408｜說明｜避難谷地沒開就飛米奈希爾港，沿濕地大路往東北，過薩多爾大橋進阿拉希高地，再沿大路到避難谷地。｜Ist Die Zuflucht nicht freigeschaltet, flieg nach Menethil, folge der Straße durch das Sumpfland nach Nordosten, überquere den Thandol-Übergang ins Arathihochland und folge dann der Straße bis zur Zuflucht.
+03-30到45級.md:453｜說明｜爐石還在冷卻就從南海鎮飛鐵爐堡，搭礦道地鐵回暴風城。｜Hat dein Ruhestein Abklingzeit, flieg von Süderstade nach Eisenschmiede und nimm die Tiefenbahn zurück nach Sturmwind.
+03-30到45級.md:469｜說明｜在米奈希爾港南邊碼頭上船。｜Geh am südlichen Pier von Menethil an Bord.
+03-30到45級.md:475｜說明｜會經塞拉摩轉機。第29站沒開加基森，就從棘齒城往西南穿過貧瘠之地，搭大升降梯下千針石林，再往東到閃光平原。｜Du steigst in Theramore um. Hast du in Station 29 Gadgetzan nicht freigeschaltet, lauf von Ratschet nach Südwesten durch das Brachland, nimm den Großen Aufzug hinab nach Tausend Nadeln und geh dann nach Osten zur Schimmernden Ebene.
+03-30到45級.md:653｜說明｜從夜色鎮往東過逆風小徑進悲傷沼澤。｜Geh von Dunkelhain nach Osten durch den Gebirgspass der Totenwinde in die Sümpfe des Elends.
+03-30到45級.md:674｜說明｜從悲傷沼澤南邊進詛咒之地，沿路往南到守望堡。｜Geh vom Süden der Sümpfe des Elends in die Verwüsteten Lande und folge dem Weg nach Süden zur Burg Nethergarde.
+03-30到45級.md:676｜說明｜守望堡｜Burg Nethergarde
+03-30到45級.md:689｜說明｜已開尼耶爾前哨站就直接飛過去（經塞拉摩），跳過下一步。石爪峰沒開就飛阿斯特蘭納，從梣谷南邊的山洞進石爪山脈。｜Hast du die Nijelspitze freigeschaltet, flieg direkt dorthin (über Theramore) und überspring den nächsten Schritt. Ist der Steinkrallengipfel nicht freigeschaltet, flieg nach Astranaar und betritt das Steinkrallengebirge durch die Höhle südlich des Eschentals.
+03-30到45級.md:690｜說明｜從石爪峰沿大路往南下山，經過烈日石居時繞開部落營地，從石爪山脈西南邊進淒涼之地，尼耶爾前哨站在淒涼之地北邊。｜Folge vom Steinkrallengipfel der Straße nach Süden den Berg hinab, umgehe beim Vorbeikommen an Sonnenfels das Lager der Horde und betritt Desolace am Südwestrand des Steinkrallengebirges. Die Nijelspitze liegt im Norden von Desolace.
+03-30到45級.md:691｜說明｜尼耶爾前哨站｜Nijelspitze
+03-30到45級.md:713｜說明｜爐石還在冷卻就從尼耶爾前哨站飛棘齒城（經塞拉摩），再搭船到藏寶海灣。｜Hat dein Ruhestein Abklingzeit, flieg von der Nijelspitze nach Ratschet (über Theramore) und nimm dann das Schiff nach Beutebucht.
+04-45到60級.md:72｜說明｜塞拉摩碼頭的船直達米奈希爾港。｜Das Schiff am Pier von Theramore fährt direkt nach Menethil.
+04-45到60級.md:73｜說明｜沒接調查神廟（1448）就不必去暴風城，直接從米奈希爾港飛南海鎮。｜Hast du Auf der Suche nach dem Tempel (1448) nicht angenommen, musst du nicht nach Sturmwind; flieg direkt von Menethil nach Süderstade.
+04-45到60級.md:83｜說明｜南海鎮沒開就飛米奈希爾港，搭北邊碼頭往奧伯丁的船，在南海鎮下船。｜Ist Süderstade nicht freigeschaltet, flieg nach Menethil, nimm am nördlichen Pier das Schiff nach Auberdine und steig in Süderstade aus.
+04-45到60級.md:86｜說明｜鷹巢山｜Nistgipfel
+04-45到60級.md:130｜說明｜從荒蕪之地往西走，經部落營地卡加斯旁的山路進灼熱峽谷，卡加斯要繞開。｜Geh aus dem Ödland nach Westen und nimm den Bergpfad neben Kargath, dem Lager der Horde, in die Sengende Schlucht. Umgehe Kargath.
+04-45到60級.md:163｜說明｜用剛拿到的灼熱峽谷鑰匙打開巡山人貝波蒂旁的大門，穿過隧道進灼熱峽谷。｜Öffne mit dem frisch erhaltenen Schlüssel zur Sengenden Schlucht das Tor neben Gebirgsjägerin Pebblebitty und geh durch den Tunnel in die Sengende Schlucht.
+04-45到60級.md:211｜說明｜爐石好了就爐回塞爾薩瑪再飛；不然回瑟銀哨塔（37.90, 30.40）找飛行管理員。｜Ist dein Ruhestein bereit, nutze ihn zurück nach Thelsamar und flieg von dort; sonst geh zurück zur Thoriumspitze (37.90, 30.40) und such den Flugmeister.
+04-45到60級.md:211｜說明｜爐石好了就爐回塞爾薩瑪再飛｜Ist dein Ruhestein bereit, nutze ihn zurück nach Thelsamar und flieg von dort
+04-45到60級.md:211｜說明｜不然回瑟銀哨塔（37.90, 30.40）找飛行管理員。｜Sonst geh zurück zur Thoriumspitze (37.90, 30.40) und such den Flugmeister.
+04-45到60級.md:217｜說明｜守望堡沒開就飛夜色鎮，往東過逆風小徑進悲傷沼澤，再往南進詛咒之地到守望堡。｜Ist die Burg Nethergarde nicht freigeschaltet, flieg nach Dunkelhain, geh nach Osten durch den Gebirgspass der Totenwinde in die Sümpfe des Elends und dann nach Süden in die Verwüsteten Lande zur Burg Nethergarde.
+04-45到60級.md:229｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。｜In den Sümpfen des Elends gibt es keinen Flugpunkt der Allianz: Geh nach Westen durch den Gebirgspass der Totenwinde zurück nach Dunkelhain und flieg von dort.
+04-45到60級.md:285｜說明｜從塔納利斯西邊的山路走坡道下安戈洛環形山，托爾瓦·尋路者就在坡道底的入口旁。｜Folge dem Bergpfad westlich von Tanaris die Rampe hinab in den Krater von Un'Goro. Torwa Pathfinder steht direkt am Eingang am Fuß der Rampe.
+04-45到60級.md:344｜說明｜爐石還在冷卻就從馬紹爾營地飛奧伯丁（經加基森、塞拉摩），跳過下兩步。｜Hat dein Ruhestein Abklingzeit, flieg von Marshals Zuflucht nach Auberdine (über Gadgetzan und Theramore) und überspring die nächsten zwei Schritte.
+04-45到60級.md:365｜說明｜從阿斯特蘭納沿大路往北進費伍德森林。｜Folge von Astranaar der Straße nach Norden in den Teufelswald.
+04-45到60級.md:392｜說明｜從這裡進木喉要塞的山洞，穿過去就是冬泉谷。｜Betritt hier die Höhle der Holzschlundfeste und geh hindurch, dahinter liegt Winterquell.
+04-45到60級.md:429｜說明｜爐石還在冷卻就從羽月要塞飛阿斯特蘭納（經奧伯丁），再往北走進費伍德。｜Hat dein Ruhestein Abklingzeit, flieg von der Mondfederfeste nach Astranaar (über Auberdine) und geh dann nach Norden in den Teufelswald.
+04-45到60級.md:437｜說明｜回阿斯特蘭納飛刺枝林地，再往北穿過木喉要塞進冬泉谷。｜Flieg zurück nach Astranaar und dann zur Krallenzweiglichtung, geh dann nach Norden durch die Holzschlundfeste nach Winterquell.
+04-45到60級.md:444｜說明｜會經塔倫迪斯營地轉機。｜Du steigst an der Talrendisspitze um.
+04-45到60級.md:493｜說明｜會經塞拉摩轉機。｜Du steigst in Theramore um.
+04-45到60級.md:512｜說明｜冷卻就走回阿斯特蘭納飛奧伯丁。｜Hat er Abklingzeit, lauf zurück nach Astranaar und flieg nach Auberdine.
+04-45到60級.md:528｜說明｜已開摩根的崗哨就從鐵爐堡直接飛過去。沒開就飛湖畔鎮，沿大路往北進燃燒平原，摩根的崗哨就在入口旁。｜Hast du Morgans Wacht freigeschaltet, flieg direkt von Eisenschmiede dorthin. Sonst flieg nach Seenhain und folge der Straße nach Norden in die Brennende Steppe; Morgans Wacht liegt gleich am Eingang.
+04-45到60級.md:529｜說明｜摩根的崗哨｜Morgans Wacht
+04-45到60級.md:552｜說明｜不做真正的主人（4183）就直接飛暴風城，跳過下兩步。｜Überspringst du Die wahren Meister (4183), flieg direkt nach Sturmwind und überspring die nächsten zwei Schritte.
+04-45到60級.md:916｜說明｜到西瘟疫之地冰風崗交。｜Gib sie auf der Chillwindspitze in den Westlichen Pestländern ab.
+04-45到60級.md:573｜說明｜已開冰風崗就直接飛冰風崗，跳過下一步。飛行地圖沒有鷹巢山就飛南海鎮，照辛特蘭那次的路往東跑到鷹巢山。｜Hast du die Chillwindspitze freigeschaltet, flieg direkt dorthin und überspring den nächsten Schritt. Ist der Nistgipfel nicht auf deiner Flugkarte, flieg nach Süderstade und lauf auf demselben Weg wie bei der Hinterland-Etappe nach Osten zum Nistgipfel.
+04-45到60級.md:574｜說明｜從鷹巢山往北走山路進西瘟疫之地東南角（65.30, 86.80），再沿路往西到冰風崗。｜Geh vom Nistgipfel auf dem Bergpfad nach Norden in die Südostecke der Westlichen Pestländer (65.30, 86.80) und folge dann der Straße nach Westen zur Chillwindspitze.
+04-45到60級.md:575｜說明｜冰風崗｜Chillwindspitze
+04-45到60級.md:625｜說明｜從鷹巢山往北走山路進西瘟疫之地，再往東過索多里爾河進東瘟疫之地，提里奧·弗丁就在入口旁的小屋。｜Geh vom Nistgipfel auf dem Bergpfad nach Norden in die Westlichen Pestländer, dann nach Osten über den Thondroril in die Östlichen Pestländer. Tirion Fordring ist in der Hütte direkt am Eingang.
+04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機；飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Du steigst an der Chillwindspitze oder am Nistgipfel um; ist Süderstade nicht auf deiner Flugkarte, flieg wie gewohnt nach Sturmwind und nimm im Hafen das Schiff nach Auberdine.
+04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機｜Du steigst an der Chillwindspitze oder am Nistgipfel um
+04-45到60級.md:665｜說明｜飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Ist Süderstade nicht auf deiner Flugkarte, flieg wie gewohnt nach Sturmwind und nimm im Hafen das Schiff nach Auberdine.
+04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快；改飛暴風城的話在暴風城港口上船。｜Am Pier von Süderstade legt direkt ein Schiff nach Auberdine ab; das geht schneller, als nach Sturmwind zu fliegen und umzusteigen. Fliegst du stattdessen nach Sturmwind, geh im Hafen von Sturmwind an Bord.
+04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快｜Am Pier von Süderstade legt direkt ein Schiff nach Auberdine ab; das geht schneller, als nach Sturmwind zu fliegen und umzusteigen
+04-45到60級.md:666｜說明｜改飛暴風城的話在暴風城港口上船。｜Fliegst du stattdessen nach Sturmwind, geh im Hafen von Sturmwind an Bord.
+04-45到60級.md:716｜說明｜爐石還在冷卻就走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Hat dein Ruhestein Abklingzeit, geh durch das Portal zurück nach Rut'theran, flieg nach Auberdine, nimm das Schiff nach Menethil, steig in Süderstade aus und flieg dann zur Chillwindspitze.
+04-45到60級.md:717｜說明｜飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜Ist die Chillwindspitze nicht auf deiner Flugkarte, geh vom Nistgipfel auf dem Bergpfad nach Norden in die Westlichen Pestländer und lauf dann nach Westen zur Chillwindspitze.
+04-45到60級.md:732｜說明｜安多哈爾沒有飛行點，先往南走回冰風崗再飛。｜Andorhal hat keinen Flugpunkt. Geh zuerst nach Süden zurück zur Chillwindspitze und flieg von dort.
+04-45到60級.md:765｜說明｜附近沒有飛行點：往南走回冰風崗再飛；或往東過索多里爾河，騎過東瘟疫之地到禮拜堂。｜In der Nähe gibt es keinen Flugpunkt: Geh nach Süden zurück zur Chillwindspitze und flieg von dort, oder geh nach Osten über den Thondroril und reite durch die Östlichen Pestländer zur Kapelle.
+04-45到60級.md:765｜說明｜附近沒有飛行點：往南走回冰風崗再飛｜In der Nähe gibt es keinen Flugpunkt: Geh nach Süden zurück zur Chillwindspitze und flieg von dort
+04-45到60級.md:765｜說明｜或往東過索多里爾河，騎過東瘟疫之地到禮拜堂。｜Oder geh nach Osten über den Thondroril und reite durch die Östlichen Pestländer zur Kapelle.

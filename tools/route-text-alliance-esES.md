@@ -391,3 +391,77 @@
 新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Quédate en el campamento Nevada y sigue matando fúrbolgs.
 新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜En las casas en ruinas de Villa Darrow, recoge la cabeza, el lado izquierdo y el lado derecho, y combínalos con clic derecho.
 新增.md:0｜步驟說明｜還沒到 60 級就打一趟黑石深淵；還不夠再刷斯坦索姆或通靈學院。｜¿Aún no eres nivel 60? Haz una vez las Profundidades de Roca Negra. Si no basta, repite Stratholme o Scholomance.
+01-第一段-1到12級.md:561｜說明｜飛行地圖沒有奧伯丁就到魯瑟蘭村碼頭搭船去奧伯丁。｜Si Auberdine no está en tu mapa de vuelos, toma el barco en el muelle de Aldea Rut'theran hasta Auberdine.
+01-第一段-1到12級.md:902｜說明｜飛行地圖沒有鐵爐堡就往西穿過山口回丹莫洛，直接走到卡拉諾斯。｜Si Forjaz no está en tu mapa de vuelos, ve al oeste por el paso de vuelta a Dun Morogh y camina directo a Kharanos.
+01-第一段-1到12級.md:933｜說明｜爐石還在冷卻就從塞爾薩瑪飛鐵爐堡，再搭礦道地鐵到暴風城。｜Si la piedra de hogar sigue en reutilización, vuela de Thelsamar a Forjaz y luego toma el Tranvía Subterráneo a Ventormenta.
+01-第一段-1到12級.md:936｜說明｜飛行地圖沒有鐵爐堡就往西穿過山口回丹莫洛，沿大路走進鐵爐堡。｜Si Forjaz no está en tu mapa de vuelos, ve al oeste por el paso de vuelta a Dun Morogh y sigue la carretera hasta entrar en Forjaz.
+01-第一段-1到12級.md:872｜說明｜人類從暴風城搭礦道地鐵到鐵爐堡；夜精靈搭船到暴風城再轉地鐵。天裔精靈不走這站：第8站從達拉然走傳送門到暴風城，再搭船到黑海岸。｜Humanos: tomad el Tranvía Subterráneo de Ventormenta a Forjaz. Elfos de la noche: tomad el barco a Ventormenta y luego el tranvía. Los Skyborne se saltan esta parada: en la parada 8 cruzan el portal de Dalaran a Ventormenta y luego van en barco a Costa Oscura.
+02-12到30級.md:70｜說明｜爐石沒綁暴風城或還在冷卻，就在奧伯丁碼頭搭船到暴風城。｜Si tu piedra de hogar no está vinculada a Ventormenta o está en reutilización, toma el barco en el muelle de Auberdine hasta Ventormenta.
+02-12到30級.md:79｜說明｜出暴風城沿艾爾文森林大路往西，經閃金鎮過橋進西部荒野，再沿大道往南到哨兵嶺。｜Sal de Ventormenta y sigue el camino del Bosque de Elwynn hacia el oeste, pasa por Villadorada y cruza el puente hacia los Páramos de Poniente; luego sigue la carretera principal al sur hasta la Colina del Centinela.
+02-12到30級.md:146｜說明｜出鐵爐堡沿大路往東，穿過東邊山口的隧道進洛克莫丹，再沿路往東北到塞爾薩瑪。｜Sal de Forjaz y sigue el camino hacia el este, atraviesa el túnel del paso oriental hasta Loch Modan y luego sigue el camino al noreste hasta Thelsamar.
+02-12到30級.md:279｜說明｜飛行地圖沒有魯瑟蘭村就和其他種族一樣搭船。｜Si Aldea Rut'theran no está en tu mapa de vuelos, toma el barco como las demás razas.
+02-12到30級.md:281｜說明｜走進魯瑟蘭村的傳送門到達納蘇斯。｜Cruza el portal de Aldea Rut'theran hasta Darnassus.
+02-12到30級.md:284｜說明｜走進達納蘇斯的傳送門回魯瑟蘭村。｜Cruza el portal de Darnassus de vuelta a Aldea Rut'theran.
+02-12到30級.md:300｜說明｜從暴風城沿艾爾文森林大路往東進赤脊山，順大路到湖畔鎮。｜Desde Ventormenta, sigue el camino del Bosque de Elwynn hacia el este hasta Montañas Crestagrana y continúa por la carretera hasta Villa del Lago.
+02-12到30級.md:303｜說明｜第2站沒開湖畔鎮飛行點，就從暴風城沿艾爾文森林大路往東走到湖畔鎮。｜Si no abriste el punto de vuelo de Villa del Lago en la parada 2, camina desde Ventormenta por el camino del Bosque de Elwynn hacia el este hasta Villa del Lago.
+02-12到30級.md:400｜說明｜從黑海岸南邊沿大路往南進梣谷，先到邁斯特拉崗哨。｜Desde el sur de Costa Oscura, sigue el camino hacia el sur hasta Vallefresno y ve primero a Puesto de Maestra.
+02-12到30級.md:431｜說明｜這班船中途停南海鎮，到米奈希爾港再下船。｜Este barco hace escala en Costasur. Baja en Puerto de Menethil.
+02-12到30級.md:502｜說明｜已開夜色鎮飛行點就直接飛夜色鎮。沒開就飛湖畔鎮，落地後沿大路往西到赤脊山西邊的路口，再往南進暮色森林到夜色鎮。｜Si ya tienes el punto de vuelo de Villa Oscura, vuela directo a Villa Oscura. Si no, vuela a Villa del Lago, sigue el camino al oeste hasta el cruce del extremo oeste de Montañas Crestagrana y ve al sur por el Bosque del Ocaso hasta Villa Oscura.
+03-30到45級.md:190｜說明｜在米奈希爾港北邊碼頭搭往奧伯丁的船，中途在南海鎮下船。｜Toma el barco a Auberdine en el muelle norte de Puerto de Menethil y baja en Costasur durante el trayecto.
+03-30到45級.md:270｜說明｜從暮色森林西邊沿大路往南進荊棘谷，先到反抗軍營地。｜Desde el oeste del Bosque del Ocaso, sigue el camino al sur hasta Vega de Tuercespina y ve primero al Campamento Rebelde.
+03-30到45級.md:298｜說明｜沿荊棘谷大路一路往南到藏寶海灣，經過格羅姆高附近時離部落營地遠一點。｜Sigue el camino de Vega de Tuercespina todo el rato al sur hasta Bahía del Botín y mantente lejos del campamento de la Horda al pasar cerca de Grom'gol.
+03-30到45級.md:331｜說明｜這班船中途停南海鎮，到奧伯丁再下船。｜Este barco hace escala en Costasur. Baja en Auberdine.
+03-30到45級.md:377｜說明｜從魯瑟蘭村或阿斯特蘭納飛棘齒城（經塔倫迪斯營地），沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走莫爾杉壁壘。｜Vuela desde Aldea Rut'theran o Astranaar a Trinquete (con escala en Punta Talrendis), sigue el camino principal al sur, rodea el Campamento Taurajo y baja en el Gran Elevador a Las Mil Agujas. Usa la ruta por la Muralla de Mor'shan solo si no tienes ninguno de los dos puntos.
+03-30到45級.md:398｜說明｜從閃光平原沿大路往南進塔納利斯，到加基森開飛行點再爐石。｜Desde El Desierto de Sal, sigue el camino al sur hasta Tanaris, abre el punto de vuelo de Gadgetzan y luego usa la piedra de hogar.
+03-30到45級.md:399｜說明｜加基森｜Gadgetzan
+03-30到45級.md:408｜說明｜避難谷地沒開就飛米奈希爾港，沿濕地大路往東北，過薩多爾大橋進阿拉希高地，再沿大路到避難谷地。｜Si no tienes Refugio de la Zaga, vuela a Puerto de Menethil, sigue el camino al noreste por Los Humedales, cruza el Puente Thandol hasta las Tierras Altas de Arathi y sigue la carretera hasta Refugio de la Zaga.
+03-30到45級.md:453｜說明｜爐石還在冷卻就從南海鎮飛鐵爐堡，搭礦道地鐵回暴風城。｜Si tu piedra de hogar está en reutilización, vuela de Costasur a Forjaz y toma el Tranvía Subterráneo de vuelta a Ventormenta.
+03-30到45級.md:469｜說明｜在米奈希爾港南邊碼頭上船。｜Embarca en el muelle sur de Puerto de Menethil.
+03-30到45級.md:475｜說明｜會經塞拉摩轉機。第29站沒開加基森，就從棘齒城往西南穿過貧瘠之地，搭大升降梯下千針石林，再往東到閃光平原。｜Harás escala en Theramore. Si no abriste Gadgetzan en la parada 29, ve desde Trinquete al suroeste por Los Baldíos, baja en el Gran Elevador a Las Mil Agujas y sigue al este hasta El Desierto de Sal.
+03-30到45級.md:653｜說明｜從夜色鎮往東過逆風小徑進悲傷沼澤。｜Desde Villa Oscura, ve al este por el Paso de la Muerte hasta el Pantano de las Penas.
+03-30到45級.md:674｜說明｜從悲傷沼澤南邊進詛咒之地，沿路往南到守望堡。｜Desde el sur del Pantano de las Penas, entra en Las Tierras Devastadas y sigue el camino al sur hasta el Castillo de Nethergarde.
+03-30到45級.md:676｜說明｜守望堡｜Castillo de Nethergarde
+03-30到45級.md:689｜說明｜已開尼耶爾前哨站就直接飛過去（經塞拉摩），跳過下一步。石爪峰沒開就飛阿斯特蘭納，從梣谷南邊的山洞進石爪山脈。｜Si ya abriste Punta de Nijel, vuela directo (con escala en Theramore) y sáltate el siguiente paso. Si no tienes Cima del Espolón, vuela a Astranaar y entra en Sierra Espolón por la cueva al sur de Vallefresno.
+03-30到45級.md:690｜說明｜從石爪峰沿大路往南下山，經過烈日石居時繞開部落營地，從石爪山脈西南邊進淒涼之地，尼耶爾前哨站在淒涼之地北邊。｜Desde Cima del Espolón, sigue el camino al sur montaña abajo, rodea el campamento de la Horda al pasar por Refugio Roca del Sol y entra en Desolace por el suroeste de Sierra Espolón. Punta de Nijel está en el norte de Desolace.
+03-30到45級.md:691｜說明｜尼耶爾前哨站｜Punta de Nijel
+03-30到45級.md:713｜說明｜爐石還在冷卻就從尼耶爾前哨站飛棘齒城（經塞拉摩），再搭船到藏寶海灣。｜Si tu piedra de hogar está en reutilización, vuela de Punta de Nijel a Trinquete (con escala en Theramore) y luego toma el barco a Bahía del Botín.
+04-45到60級.md:72｜說明｜塞拉摩碼頭的船直達米奈希爾港。｜El barco del muelle de Theramore va directo a Puerto de Menethil.
+04-45到60級.md:73｜說明｜沒接調查神廟（1448）就不必去暴風城，直接從米奈希爾港飛南海鎮。｜Si no aceptaste En búsqueda del templo (1448), no hace falta ir a Ventormenta; vuela directo de Puerto de Menethil a Costasur.
+04-45到60級.md:83｜說明｜南海鎮沒開就飛米奈希爾港，搭北邊碼頭往奧伯丁的船，在南海鎮下船。｜Si no tienes Costasur, vuela a Puerto de Menethil, toma el barco a Auberdine en el muelle norte y baja en Costasur.
+04-45到60級.md:86｜說明｜鷹巢山｜Pico Nidal
+04-45到60級.md:130｜說明｜從荒蕪之地往西走，經部落營地卡加斯旁的山路進灼熱峽谷，卡加斯要繞開。｜Desde Tierras Inhóspitas, ve al oeste y entra en La Garganta de Fuego por el sendero de montaña junto al campamento de la Horda de Kargath. Rodea Kargath.
+04-45到60級.md:163｜說明｜用剛拿到的灼熱峽谷鑰匙打開巡山人貝波蒂旁的大門，穿過隧道進灼熱峽谷。｜Usa la llave de La Garganta de Fuego que acabas de conseguir para abrir la puerta junto a la montañera Pebblebitty y atraviesa el túnel hasta La Garganta de Fuego.
+04-45到60級.md:211｜說明｜爐石好了就爐回塞爾薩瑪再飛；不然回瑟銀哨塔（37.90, 30.40）找飛行管理員。｜Si tu piedra de hogar está lista, úsala para volver a Thelsamar y vuela desde allí; si no, regresa a Puesto del Torio (37.90, 30.40) y busca al maestro de vuelo.
+04-45到60級.md:211｜說明｜爐石好了就爐回塞爾薩瑪再飛｜Si tu piedra de hogar está lista, úsala para volver a Thelsamar y vuela desde allí
+04-45到60級.md:211｜說明｜不然回瑟銀哨塔（37.90, 30.40）找飛行管理員。｜Si no, regresa a Puesto del Torio (37.90, 30.40) y busca al maestro de vuelo.
+04-45到60級.md:217｜說明｜守望堡沒開就飛夜色鎮，往東過逆風小徑進悲傷沼澤，再往南進詛咒之地到守望堡。｜Si no tienes el Castillo de Nethergarde, vuela a Villa Oscura, ve al este por el Paso de la Muerte hasta el Pantano de las Penas y luego al sur, a Las Tierras Devastadas, hasta el Castillo de Nethergarde.
+04-45到60級.md:229｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。｜El Pantano de las Penas no tiene punto de vuelo de la Alianza: ve al oeste por el Paso de la Muerte de vuelta a Villa Oscura y vuela desde allí.
+04-45到60級.md:285｜說明｜從塔納利斯西邊的山路走坡道下安戈洛環形山，托爾瓦·尋路者就在坡道底的入口旁。｜Desde el camino de montaña al oeste de Tanaris, baja por la rampa hasta el Cráter de Un'Goro. Abrecaminos Torwa está justo junto a la entrada, al pie de la rampa.
+04-45到60級.md:344｜說明｜爐石還在冷卻就從馬紹爾營地飛奧伯丁（經加基森、塞拉摩），跳過下兩步。｜Si tu piedra de hogar está en reutilización, vuela de Refugio de Marshal a Auberdine (con escala en Gadgetzan y Theramore) y sáltate los dos pasos siguientes.
+04-45到60級.md:365｜說明｜從阿斯特蘭納沿大路往北進費伍德森林。｜Desde Astranaar, sigue el camino al norte hasta Frondavil.
+04-45到60級.md:392｜說明｜從這裡進木喉要塞的山洞，穿過去就是冬泉谷。｜Entra aquí en la cueva del Bastión de los Fauces de Madera y atraviésala para llegar a Cuna del Invierno.
+04-45到60級.md:429｜說明｜爐石還在冷卻就從羽月要塞飛阿斯特蘭納（經奧伯丁），再往北走進費伍德。｜Si tu piedra de hogar está en reutilización, vuela de Bastión Plumaluna a Astranaar (con escala en Auberdine) y luego camina al norte hasta Frondavil.
+04-45到60級.md:437｜說明｜回阿斯特蘭納飛刺枝林地，再往北穿過木喉要塞進冬泉谷。｜Vuelve a Astranaar, vuela al Claro Ramaespolón y sigue al norte por el Bastión de los Fauces de Madera hasta Cuna del Invierno.
+04-45到60級.md:444｜說明｜會經塔倫迪斯營地轉機。｜Harás escala en Punta Talrendis.
+04-45到60級.md:493｜說明｜會經塞拉摩轉機。｜Harás escala en Theramore.
+04-45到60級.md:512｜說明｜冷卻就走回阿斯特蘭納飛奧伯丁。｜Si está en reutilización, camina de vuelta a Astranaar y vuela a Auberdine.
+04-45到60級.md:528｜說明｜已開摩根的崗哨就從鐵爐堡直接飛過去。沒開就飛湖畔鎮，沿大路往北進燃燒平原，摩根的崗哨就在入口旁。｜Si ya abriste Vigilia de Morgan, vuela directo desde Forjaz. Si no, vuela a Villa del Lago y sigue el camino al norte hasta Las Estepas Ardientes; Vigilia de Morgan está justo en la entrada.
+04-45到60級.md:529｜說明｜摩根的崗哨｜Vigilia de Morgan
+04-45到60級.md:552｜說明｜不做真正的主人（4183）就直接飛暴風城，跳過下兩步。｜Si no vas a hacer Los verdaderos maestros (4183), vuela directo a Ventormenta y sáltate los dos pasos siguientes.
+04-45到60級.md:916｜說明｜到西瘟疫之地冰風崗交。｜Entrégala en el Campamento del Orvallo, en las Tierras de la Peste del Oeste.
+04-45到60級.md:573｜說明｜已開冰風崗就直接飛冰風崗，跳過下一步。飛行地圖沒有鷹巢山就飛南海鎮，照辛特蘭那次的路往東跑到鷹巢山。｜Si ya abriste el Campamento del Orvallo, vuela directo y sáltate el siguiente paso. Si el Pico Nidal no está en tu mapa de vuelos, vuela a Costasur y corre al este hasta el Pico Nidal por el mismo camino que en la visita a las Tierras del Interior.
+04-45到60級.md:574｜說明｜從鷹巢山往北走山路進西瘟疫之地東南角（65.30, 86.80），再沿路往西到冰風崗。｜Desde el Pico Nidal, toma el camino de montaña al norte hasta el extremo sureste de las Tierras de la Peste del Oeste (65.30, 86.80) y sigue la carretera al oeste hasta el Campamento del Orvallo.
+04-45到60級.md:575｜說明｜冰風崗｜Campamento del Orvallo
+04-45到60級.md:625｜說明｜從鷹巢山往北走山路進西瘟疫之地，再往東過索多里爾河進東瘟疫之地，提里奧·弗丁就在入口旁的小屋。｜Desde el Pico Nidal, toma el camino de montaña al norte hasta las Tierras de la Peste del Oeste y luego ve al este cruzando el río Thondroril hasta las Tierras de la Peste del Este. Tirión Vadín está en la cabaña junto a la entrada.
+04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機；飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Harás escala en el Campamento del Orvallo o en el Pico Nidal; si Costasur no está en tu mapa de vuelos, vuela a Ventormenta como siempre y toma el barco a Auberdine en el puerto.
+04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機｜Harás escala en el Campamento del Orvallo o en el Pico Nidal
+04-45到60級.md:665｜說明｜飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Si Costasur no está en tu mapa de vuelos, vuela a Ventormenta como siempre y toma el barco a Auberdine en el puerto.
+04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快；改飛暴風城的話在暴風城港口上船。｜En el muelle de Costasur sale directamente un barco a Auberdine, más rápido que volar a Ventormenta y cambiar de barco. Si vuelas a Ventormenta, embarca en el puerto de Ventormenta.
+04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快｜En el muelle de Costasur sale directamente un barco a Auberdine, más rápido que volar a Ventormenta y cambiar de barco
+04-45到60級.md:666｜說明｜改飛暴風城的話在暴風城港口上船。｜Si vuelas a Ventormenta, embarca en el puerto de Ventormenta.
+04-45到60級.md:716｜說明｜爐石還在冷卻就走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Si tu piedra de hogar está en reutilización, cruza el portal de vuelta a Aldea Rut'theran, vuela a Auberdine, toma el barco a Puerto de Menethil, baja en Costasur y luego vuela al Campamento del Orvallo.
+04-45到60級.md:717｜說明｜飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜Si el Campamento del Orvallo no está en tu mapa de vuelos, toma el camino de montaña al norte desde el Pico Nidal hasta las Tierras de la Peste del Oeste y corre al oeste hasta el Campamento del Orvallo.
+04-45到60級.md:732｜說明｜安多哈爾沒有飛行點，先往南走回冰風崗再飛。｜Andorhal no tiene punto de vuelo. Primero camina de vuelta al sur hasta el Campamento del Orvallo y vuela desde allí.
+04-45到60級.md:765｜說明｜附近沒有飛行點：往南走回冰風崗再飛；或往東過索多里爾河，騎過東瘟疫之地到禮拜堂。｜No hay punto de vuelo cerca: camina de vuelta al sur hasta el Campamento del Orvallo y vuela desde allí, o ve al este cruzando el río Thondroril y cabalga por las Tierras de la Peste del Este hasta la capilla.
+04-45到60級.md:765｜說明｜附近沒有飛行點：往南走回冰風崗再飛｜No hay punto de vuelo cerca: camina de vuelta al sur hasta el Campamento del Orvallo y vuela desde allí
+04-45到60級.md:765｜說明｜或往東過索多里爾河，騎過東瘟疫之地到禮拜堂。｜O ve al este cruzando el río Thondroril y cabalga por las Tierras de la Peste del Este hasta la capilla.

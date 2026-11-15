@@ -75,6 +75,7 @@ MG.Locales.ptBR = {
 
   ["順路，路上遇到就打"] = "No caminho: mate ao passar",
   ["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"] = "Em grupo: esta missão começa para o grupo também. Aceite você mesmo quando todos estiverem prontos.",
+  ["飛行地圖上沒有%s：還沒開過這個鳥點，或中間的鳥點沒開，要先跑過去開"] = "%s não aparece no mapa de voo: você ainda não descobriu esse ponto de voo (ou um intermediário). Vá primeiro por terra.",
   ["順路打完再交"] = "Entregue ao terminar no caminho",
   ["副本"] = "Masmorra",
   ["不打"] = "Pular",

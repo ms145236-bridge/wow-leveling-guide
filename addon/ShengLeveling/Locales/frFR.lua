@@ -75,6 +75,7 @@ MG.Locales.frFR = {
 
   ["順路，路上遇到就打"] = "En chemin : à tuer au passage",
   ["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"] = "En groupe : cette quête démarre aussi pour votre groupe. Acceptez-la vous-même quand tout le monde est prêt.",
+  ["飛行地圖上沒有%s：還沒開過這個鳥點，或中間的鳥點沒開，要先跑過去開"] = "%s n’apparaît pas sur la carte de vol : vous n’avez pas encore découvert ce point de vol (ou un point intermédiaire). Allez-y d’abord à pied.",
   ["順路打完再交"] = "À rendre une fois fini en chemin",
   ["副本"] = "Donjon",
   ["不打"] = "Passer",

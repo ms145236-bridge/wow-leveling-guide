@@ -412,6 +412,18 @@ local function onEvent(_, event, ...)
         end
       end
     end
+    -- 目前這步要飛的鳥點不在飛行地圖上（沒開過，或中間的鳥點沒開所以接不過去）：提醒先跑過去開
+    local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
+    if #known > 0 and cur and cur.s.t == "fly" and cur.s.to then
+      local dest
+      for _, st in ipairs(E.stations) do
+        for _, step in ipairs(st.list) do
+          local s = step.s
+          if not dest and s.t == "fp" and s.node == cur.s.to and s.x then dest = s end
+        end
+      end
+      if dest and not isKnown(dest.map, dest.x, dest.y, dest.node) then MG.msg(string.format(L["飛行地圖上沒有%s：還沒開過這個鳥點，或中間的鳥點沒開，要先跑過去開"], L[cur.s.to] or cur.s.to)) end
+    end
     -- 名字可能和路線寫的不同（譯名、稱號）：人旁邊的飛行管理員也一律記成開過
     local map, x, y = C.Position()
     if map and x then

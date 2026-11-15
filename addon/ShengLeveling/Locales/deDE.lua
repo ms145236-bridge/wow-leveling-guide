@@ -75,6 +75,7 @@ MG.Locales.deDE = {
 
   ["順路，路上遇到就打"] = "Unterwegs: einfach mitnehmen",
   ["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"] = "In einer Gruppe: Diese Quest startet auch für deine Gruppe. Nimm sie selbst an, wenn alle bereit sind.",
+  ["飛行地圖上沒有%s：還沒開過這個鳥點，或中間的鳥點沒開，要先跑過去開"] = "%s fehlt auf der Flugkarte: Du hast diesen Flugpunkt (oder einen Zwischenpunkt) noch nicht entdeckt. Lauf zuerst hin.",
   ["順路打完再交"] = "Abgeben, wenn unterwegs erledigt",
   ["副本"] = "Dungeon",
   ["不打"] = "Überspringen",

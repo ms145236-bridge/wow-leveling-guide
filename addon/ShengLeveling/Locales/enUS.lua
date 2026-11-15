@@ -75,6 +75,7 @@ MG.Locales.enUS = {
 
   ["順路，路上遇到就打"] = "On the way: kill them as you pass",
   ["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"] = "In a group: this quest starts for your party too. Accept it yourself when everyone is ready.",
+  ["飛行地圖上沒有%s：還沒開過這個鳥點，或中間的鳥點沒開，要先跑過去開"] = "%s is not on the flight map: you have not discovered it (or a flight point in between) yet. Travel there on foot first.",
   ["順路打完再交"] = "Turn in after you finish it on the way",
   ["副本"] = "Dungeon",
   ["不打"] = "Skip",

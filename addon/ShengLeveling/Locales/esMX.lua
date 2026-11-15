@@ -75,6 +75,7 @@ MG.Locales.esMX = {
 
   ["順路，路上遇到就打"] = "De camino: mátalos al pasar",
   ["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"] = "En grupo: esta misión también empieza para tu grupo. Acéptala tú cuando todos estén listos.",
+  ["飛行地圖上沒有%s：還沒開過這個鳥點，或中間的鳥點沒開，要先跑過去開"] = "%s no aparece en el mapa de vuelo: aún no has descubierto ese punto de vuelo (o uno intermedio). Ve primero por tierra.",
   ["順路打完再交"] = "Entrégala al terminarla de camino",
   ["副本"] = "Calabozo",
   ["不打"] = "Omitir",

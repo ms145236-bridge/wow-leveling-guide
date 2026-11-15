@@ -391,3 +391,77 @@
 新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Reste au camp Tombe-hiver et continue à tuer des furbolgs.
 新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜Dans les maisons en ruine de Darrowshire, ramasse la tête, le côté gauche et le côté droit, puis fais un clic droit pour les assembler.
 新增.md:0｜步驟說明｜還沒到 60 級就打一趟黑石深淵；還不夠再刷斯坦索姆或通靈學院。｜Pas encore niveau 60 ? Fais une fois les profondeurs de Rochenoire. Si ça ne suffit pas, enchaîne Stratholme ou Scholomance.
+01-第一段-1到12級.md:561｜說明｜飛行地圖沒有奧伯丁就到魯瑟蘭村碼頭搭船去奧伯丁。｜Si Auberdine n'est pas sur ta carte des vols, prends le bateau au quai de Rut'theran jusqu'à Auberdine.
+01-第一段-1到12級.md:902｜說明｜飛行地圖沒有鐵爐堡就往西穿過山口回丹莫洛，直接走到卡拉諾斯。｜Si Forgefer n'est pas sur ta carte des vols, va vers l'ouest par le col pour retourner à Dun Morogh et marche directement jusqu'à Kharanos.
+01-第一段-1到12級.md:933｜說明｜爐石還在冷卻就從塞爾薩瑪飛鐵爐堡，再搭礦道地鐵到暴風城。｜Si ta pierre de foyer est encore en recharge, vole de Thelsamar à Forgefer, puis prends le tram des profondeurs jusqu'à Hurlevent.
+01-第一段-1到12級.md:936｜說明｜飛行地圖沒有鐵爐堡就往西穿過山口回丹莫洛，沿大路走進鐵爐堡。｜Si Forgefer n'est pas sur ta carte des vols, va vers l'ouest par le col pour retourner à Dun Morogh et suis la route jusqu'à Forgefer.
+01-第一段-1到12級.md:872｜說明｜人類從暴風城搭礦道地鐵到鐵爐堡；夜精靈搭船到暴風城再轉地鐵。天裔精靈不走這站：第8站從達拉然走傳送門到暴風城，再搭船到黑海岸。｜Humains : prenez le tram des profondeurs de Hurlevent à Forgefer. Elfes de la nuit : prenez le bateau pour Hurlevent, puis le tram. Les Skyborne sautent cette étape : à l'étape 8, ils passent par le portail de Dalaran vers Hurlevent, puis prennent le bateau pour Sombrivage.
+02-12到30級.md:70｜說明｜爐石沒綁暴風城或還在冷卻，就在奧伯丁碼頭搭船到暴風城。｜Si ta pierre de foyer n'est pas liée à Hurlevent ou est en recharge, prends le bateau au quai d'Auberdine jusqu'à Hurlevent.
+02-12到30級.md:79｜說明｜出暴風城沿艾爾文森林大路往西，經閃金鎮過橋進西部荒野，再沿大道往南到哨兵嶺。｜Quitte Hurlevent et suis la route de la forêt d'Elwynn vers l'ouest, traverse Comté-de-l'Or et franchis le pont vers la Marche de l'Ouest, puis suis la grand-route vers le sud jusqu'à la Colline des Sentinelles.
+02-12到30級.md:146｜說明｜出鐵爐堡沿大路往東，穿過東邊山口的隧道進洛克莫丹，再沿路往東北到塞爾薩瑪。｜Quitte Forgefer et suis la route vers l'est, traverse le tunnel du col oriental pour entrer à Loch Modan, puis suis le chemin vers le nord-est jusqu'à Thelsamar.
+02-12到30級.md:279｜說明｜飛行地圖沒有魯瑟蘭村就和其他種族一樣搭船。｜Si Rut'theran n'est pas sur ta carte des vols, prends le bateau comme les autres races.
+02-12到30級.md:281｜說明｜走進魯瑟蘭村的傳送門到達納蘇斯。｜Prends le portail de Rut'theran pour Darnassus.
+02-12到30級.md:284｜說明｜走進達納蘇斯的傳送門回魯瑟蘭村。｜Prends le portail de Darnassus pour retourner à Rut'theran.
+02-12到30級.md:300｜說明｜從暴風城沿艾爾文森林大路往東進赤脊山，順大路到湖畔鎮。｜Depuis Hurlevent, suis la route de la forêt d'Elwynn vers l'est jusqu'aux Carmines, puis reste sur la route jusqu'à Comté-du-Lac.
+02-12到30級.md:303｜說明｜第2站沒開湖畔鎮飛行點，就從暴風城沿艾爾文森林大路往東走到湖畔鎮。｜Si tu n'as pas débloqué le point de vol de Comté-du-Lac à l'étape 2, va à pied de Hurlevent vers l'est par la route de la forêt d'Elwynn jusqu'à Comté-du-Lac.
+02-12到30級.md:400｜說明｜從黑海岸南邊沿大路往南進梣谷，先到邁斯特拉崗哨。｜Depuis le sud de Sombrivage, suis la route vers le sud jusqu'à Orneval et rends-toi d'abord au Poste de Maestra.
+02-12到30級.md:431｜說明｜這班船中途停南海鎮，到米奈希爾港再下船。｜Ce bateau fait escale à Austrivage. Descends au Port de Menethil.
+02-12到30級.md:502｜說明｜已開夜色鎮飛行點就直接飛夜色鎮。沒開就飛湖畔鎮，落地後沿大路往西到赤脊山西邊的路口，再往南進暮色森林到夜色鎮。｜Si tu as débloqué le point de vol de Sombre-comté, vole directement jusqu'à Sombre-comté. Sinon, vole jusqu'à Comté-du-Lac, suis la route vers l'ouest jusqu'au carrefour à l'ouest des Carmines, puis va vers le sud à travers le bois de la Pénombre jusqu'à Sombre-comté.
+03-30到45級.md:190｜說明｜在米奈希爾港北邊碼頭搭往奧伯丁的船，中途在南海鎮下船。｜Prends le bateau pour Auberdine au quai nord du Port de Menethil et descends à Austrivage en route.
+03-30到45級.md:270｜說明｜從暮色森林西邊沿大路往南進荊棘谷，先到反抗軍營地。｜Depuis l'ouest du bois de la Pénombre, suis la route vers le sud jusqu'à la Vallée de Strangleronce et rends-toi d'abord au Camp des rebelles.
+03-30到45級.md:298｜說明｜沿荊棘谷大路一路往南到藏寶海灣，經過格羅姆高附近時離部落營地遠一點。｜Suis la route de la Vallée de Strangleronce vers le sud jusqu'à Baie-du-Butin et reste loin du camp de la Horde en passant près de Grom'gol.
+03-30到45級.md:331｜說明｜這班船中途停南海鎮，到奧伯丁再下船。｜Ce bateau fait escale à Austrivage. Descends à Auberdine.
+03-30到45級.md:377｜說明｜從魯瑟蘭村或阿斯特蘭納飛棘齒城（經塔倫迪斯營地），沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走莫爾杉壁壘。｜Vole depuis Rut'theran ou Astranaar jusqu'à Cabestan (avec escale à la Halte de Talrendis), suis la route principale vers le sud, contourne le Camp Taurajo et prends le Grand ascenseur pour descendre à Mille pointes. N'emprunte la route par le Rempart de Mor'shan que si aucun des deux points n'est débloqué.
+03-30到45級.md:398｜說明｜從閃光平原沿大路往南進塔納利斯，到加基森開飛行點再爐石。｜Depuis les Shimmering Flats, suis la route vers le sud jusqu'à Tanaris, débloque le point de vol de Gadgetzan, puis utilise ta pierre de foyer.
+03-30到45級.md:399｜說明｜加基森｜Gadgetzan
+03-30到45級.md:408｜說明｜避難谷地沒開就飛米奈希爾港，沿濕地大路往東北，過薩多爾大橋進阿拉希高地，再沿大路到避難谷地。｜Si le Refuge de l'Ornière n'est pas débloqué, vole jusqu'au Port de Menethil, suis la route vers le nord-est à travers Les Paluns, franchis le Viaduc de Thandol pour entrer dans les Hautes-terres d'Arathi, puis suis la route jusqu'au Refuge de l'Ornière.
+03-30到45級.md:453｜說明｜爐石還在冷卻就從南海鎮飛鐵爐堡，搭礦道地鐵回暴風城。｜Si ta pierre de foyer est en recharge, vole d'Austrivage à Forgefer et reprends le tram des profondeurs pour Hurlevent.
+03-30到45級.md:469｜說明｜在米奈希爾港南邊碼頭上船。｜Embarque au quai sud du Port de Menethil.
+03-30到45級.md:475｜說明｜會經塞拉摩轉機。第29站沒開加基森，就從棘齒城往西南穿過貧瘠之地，搭大升降梯下千針石林，再往東到閃光平原。｜Tu feras escale à Theramore. Si tu n'as pas débloqué Gadgetzan à l'étape 29, va de Cabestan vers le sud-ouest à travers Les Tarides, prends le Grand ascenseur pour descendre à Mille pointes, puis va vers l'est jusqu'aux Shimmering Flats.
+03-30到45級.md:653｜說明｜從夜色鎮往東過逆風小徑進悲傷沼澤。｜Depuis Sombre-comté, va vers l'est par le Défilé de Deuillevent jusqu'au Marais des Chagrins.
+03-30到45級.md:674｜說明｜從悲傷沼澤南邊進詛咒之地，沿路往南到守望堡。｜Depuis le sud du Marais des Chagrins, entre dans les Terres foudroyées et suis la route vers le sud jusqu'au Rempart-du-Néant.
+03-30到45級.md:676｜說明｜守望堡｜Rempart-du-Néant
+03-30到45級.md:689｜說明｜已開尼耶爾前哨站就直接飛過去（經塞拉摩），跳過下一步。石爪峰沒開就飛阿斯特蘭納，從梣谷南邊的山洞進石爪山脈。｜Si tu as débloqué la Combe de Nijel, vole directement (avec escale à Theramore) et saute l'étape suivante. Si le Pic des Serres-Rocheuses n'est pas débloqué, vole jusqu'à Astranaar et entre dans les Serres-Rocheuses par la grotte au sud d'Orneval.
+03-30到45級.md:690｜說明｜從石爪峰沿大路往南下山，經過烈日石居時繞開部落營地，從石爪山脈西南邊進淒涼之地，尼耶爾前哨站在淒涼之地北邊。｜Depuis le Pic des Serres-Rocheuses, suis la route vers le sud en descendant la montagne, contourne le camp de la Horde en passant par la Retraite de Roche-Soleil, puis entre en Désolace par le sud-ouest des Serres-Rocheuses. La Combe de Nijel se trouve au nord de Désolace.
+03-30到45級.md:691｜說明｜尼耶爾前哨站｜Combe de Nijel
+03-30到45級.md:713｜說明｜爐石還在冷卻就從尼耶爾前哨站飛棘齒城（經塞拉摩），再搭船到藏寶海灣。｜Si ta pierre de foyer est en recharge, vole de la Combe de Nijel à Cabestan (avec escale à Theramore), puis prends le bateau pour Baie-du-Butin.
+04-45到60級.md:72｜說明｜塞拉摩碼頭的船直達米奈希爾港。｜Le bateau du quai de Theramore va directement au Port de Menethil.
+04-45到60級.md:73｜說明｜沒接調查神廟（1448）就不必去暴風城，直接從米奈希爾港飛南海鎮。｜Si tu n'as pas pris À la recherche du temple (1448), inutile d'aller à Hurlevent : vole directement du Port de Menethil à Austrivage.
+04-45到60級.md:83｜說明｜南海鎮沒開就飛米奈希爾港，搭北邊碼頭往奧伯丁的船，在南海鎮下船。｜Si Austrivage n'est pas débloqué, vole jusqu'au Port de Menethil, prends le bateau pour Auberdine au quai nord et descends à Austrivage.
+04-45到60級.md:86｜說明｜鷹巢山｜Nid-de-l'Aigle
+04-45到60級.md:130｜說明｜從荒蕪之地往西走，經部落營地卡加斯旁的山路進灼熱峽谷，卡加斯要繞開。｜Depuis les Terres ingrates, va vers l'ouest et prends le sentier de montagne à côté de Kargath, le camp de la Horde, pour entrer dans la Gorge des Vents brûlants. Contourne Kargath.
+04-45到60級.md:163｜說明｜用剛拿到的灼熱峽谷鑰匙打開巡山人貝波蒂旁的大門，穿過隧道進灼熱峽谷。｜Utilise la clé de la Gorge des Vents brûlants que tu viens d'obtenir pour ouvrir la porte à côté de la Montagnarde Pebblebitty et traverse le tunnel jusqu'à la Gorge des Vents brûlants.
+04-45到60級.md:211｜說明｜爐石好了就爐回塞爾薩瑪再飛；不然回瑟銀哨塔（37.90, 30.40）找飛行管理員。｜Si ta pierre de foyer est prête, utilise-la pour retourner à Thelsamar et vole de là ; sinon, retourne à la Halte du Thorium (37.90, 30.40) et trouve le maître de vol.
+04-45到60級.md:211｜說明｜爐石好了就爐回塞爾薩瑪再飛｜Si ta pierre de foyer est prête, utilise-la pour retourner à Thelsamar et vole de là
+04-45到60級.md:211｜說明｜不然回瑟銀哨塔（37.90, 30.40）找飛行管理員。｜Sinon, retourne à la Halte du Thorium (37.90, 30.40) et trouve le maître de vol.
+04-45到60級.md:217｜說明｜守望堡沒開就飛夜色鎮，往東過逆風小徑進悲傷沼澤，再往南進詛咒之地到守望堡。｜Si le Rempart-du-Néant n'est pas débloqué, vole jusqu'à Sombre-comté, va vers l'est par le Défilé de Deuillevent jusqu'au Marais des Chagrins, puis vers le sud dans les Terres foudroyées jusqu'au Rempart-du-Néant.
+04-45到60級.md:229｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。｜Le Marais des Chagrins n'a pas de point de vol de l'Alliance : retourne à pied vers l'ouest par le Défilé de Deuillevent jusqu'à Sombre-comté et vole de là.
+04-45到60級.md:285｜說明｜從塔納利斯西邊的山路走坡道下安戈洛環形山，托爾瓦·尋路者就在坡道底的入口旁。｜Depuis le chemin de montagne à l'ouest de Tanaris, descends la rampe jusqu'au Cratère d'Un'Goro. Torwa Pathfinder se trouve juste à l'entrée, au pied de la rampe.
+04-45到60級.md:344｜說明｜爐石還在冷卻就從馬紹爾營地飛奧伯丁（經加基森、塞拉摩），跳過下兩步。｜Si ta pierre de foyer est en recharge, vole du Refuge des Marshal à Auberdine (avec escales à Gadgetzan et à Theramore) et saute les deux étapes suivantes.
+04-45到60級.md:365｜說明｜從阿斯特蘭納沿大路往北進費伍德森林。｜Depuis Astranaar, suis la route vers le nord jusqu'à Gangrebois.
+04-45到60級.md:392｜說明｜從這裡進木喉要塞的山洞，穿過去就是冬泉谷。｜Entre ici dans la grotte du Repaire des Grumegueules et traverse-la pour arriver à Berceau-de-l'Hiver.
+04-45到60級.md:429｜說明｜爐石還在冷卻就從羽月要塞飛阿斯特蘭納（經奧伯丁），再往北走進費伍德。｜Si ta pierre de foyer est en recharge, vole du Bastion de Plumelune à Astranaar (avec escale à Auberdine), puis va à pied vers le nord jusqu'à Gangrebois.
+04-45到60級.md:437｜說明｜回阿斯特蘭納飛刺枝林地，再往北穿過木喉要塞進冬泉谷。｜Retourne à Astranaar, vole jusqu'à la Clairière de Griffebranche, puis va vers le nord en traversant le Repaire des Grumegueules jusqu'à Berceau-de-l'Hiver.
+04-45到60級.md:444｜說明｜會經塔倫迪斯營地轉機。｜Tu feras escale à la Halte de Talrendis.
+04-45到60級.md:493｜說明｜會經塞拉摩轉機。｜Tu feras escale à Theramore.
+04-45到60級.md:512｜說明｜冷卻就走回阿斯特蘭納飛奧伯丁。｜S'il est en recharge, retourne à pied à Astranaar et vole jusqu'à Auberdine.
+04-45到60級.md:528｜說明｜已開摩根的崗哨就從鐵爐堡直接飛過去。沒開就飛湖畔鎮，沿大路往北進燃燒平原，摩根的崗哨就在入口旁。｜Si tu as débloqué la Veille de Morgan, vole-y directement depuis Forgefer. Sinon, vole jusqu'à Comté-du-Lac et suis la route vers le nord jusqu'aux Steppes ardentes ; la Veille de Morgan se trouve juste à l'entrée.
+04-45到60級.md:529｜說明｜摩根的崗哨｜Veille de Morgan
+04-45到60級.md:552｜說明｜不做真正的主人（4183）就直接飛暴風城，跳過下兩步。｜Si tu ne fais pas Les véritables maîtres (4183), vole directement jusqu'à Hurlevent et saute les deux étapes suivantes.
+04-45到60級.md:916｜說明｜到西瘟疫之地冰風崗交。｜Rends-la au camp du Noroît, dans les Maleterres de l'Ouest.
+04-45到60級.md:573｜說明｜已開冰風崗就直接飛冰風崗，跳過下一步。飛行地圖沒有鷹巢山就飛南海鎮，照辛特蘭那次的路往東跑到鷹巢山。｜Si tu as débloqué le camp du Noroît, vole-y directement et saute l'étape suivante. Si le Nid-de-l'Aigle n'est pas sur ta carte des vols, vole jusqu'à Austrivage et cours vers l'est jusqu'au Nid-de-l'Aigle par le même chemin que lors du passage aux Hinterlands.
+04-45到60級.md:574｜說明｜從鷹巢山往北走山路進西瘟疫之地東南角（65.30, 86.80），再沿路往西到冰風崗。｜Depuis le Nid-de-l'Aigle, prends le sentier de montagne vers le nord jusqu'au coin sud-est des Maleterres de l'Ouest (65.30, 86.80), puis suis la route vers l'ouest jusqu'au camp du Noroît.
+04-45到60級.md:575｜說明｜冰風崗｜Camp du Noroît
+04-45到60級.md:625｜說明｜從鷹巢山往北走山路進西瘟疫之地，再往東過索多里爾河進東瘟疫之地，提里奧·弗丁就在入口旁的小屋。｜Depuis le Nid-de-l'Aigle, prends le sentier de montagne vers le nord jusqu'aux Maleterres de l'Ouest, puis va vers l'est en traversant la rivière Thondroril jusqu'aux Maleterres de l'Est. Tirion Fordring se trouve dans la cabane juste à l'entrée.
+04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機；飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Tu feras escale au camp du Noroît ou au Nid-de-l'Aigle ; si Austrivage n'est pas sur ta carte des vols, vole jusqu'à Hurlevent comme d'habitude et prends le bateau pour Auberdine au port.
+04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機｜Tu feras escale au camp du Noroît ou au Nid-de-l'Aigle
+04-45到60級.md:665｜說明｜飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Si Austrivage n'est pas sur ta carte des vols, vole jusqu'à Hurlevent comme d'habitude et prends le bateau pour Auberdine au port.
+04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快；改飛暴風城的話在暴風城港口上船。｜Il y a un bateau pour Auberdine directement au quai d'Austrivage, plus rapide que de voler jusqu'à Hurlevent puis de changer de bateau. Si tu voles jusqu'à Hurlevent, embarque au port de Hurlevent.
+04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快｜Il y a un bateau pour Auberdine directement au quai d'Austrivage, plus rapide que de voler jusqu'à Hurlevent puis de changer de bateau
+04-45到60級.md:666｜說明｜改飛暴風城的話在暴風城港口上船。｜Si tu voles jusqu'à Hurlevent, embarque au port de Hurlevent.
+04-45到60級.md:716｜說明｜爐石還在冷卻就走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Si ta pierre de foyer est en recharge, prends le portail pour retourner à Rut'theran, vole jusqu'à Auberdine, prends le bateau pour le Port de Menethil, descends à Austrivage, puis vole jusqu'au camp du Noroît.
+04-45到60級.md:717｜說明｜飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜Si le camp du Noroît n'est pas sur ta carte des vols, prends le sentier de montagne vers le nord depuis le Nid-de-l'Aigle jusqu'aux Maleterres de l'Ouest, puis cours vers l'ouest jusqu'au camp du Noroît.
+04-45到60級.md:732｜說明｜安多哈爾沒有飛行點，先往南走回冰風崗再飛。｜Andorhal n'a pas de point de vol. Retourne d'abord à pied vers le sud jusqu'au camp du Noroît et vole de là.
+04-45到60級.md:765｜說明｜附近沒有飛行點：往南走回冰風崗再飛；或往東過索多里爾河，騎過東瘟疫之地到禮拜堂。｜Il n'y a pas de point de vol à proximité : retourne à pied vers le sud jusqu'au camp du Noroît et vole de là, ou va vers l'est en traversant la rivière Thondroril et chevauche à travers les Maleterres de l'Est jusqu'à la chapelle.
+04-45到60級.md:765｜說明｜附近沒有飛行點：往南走回冰風崗再飛｜Il n'y a pas de point de vol à proximité : retourne à pied vers le sud jusqu'au camp du Noroît et vole de là
+04-45到60級.md:765｜說明｜或往東過索多里爾河，騎過東瘟疫之地到禮拜堂。｜Ou va vers l'est en traversant la rivière Thondroril et chevauche à travers les Maleterres de l'Est jusqu'à la chapelle.
