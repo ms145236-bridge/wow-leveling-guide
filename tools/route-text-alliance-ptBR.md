@@ -651,3 +651,20 @@
 06-路線外任務.md:2509｜說明｜塔納利斯・第二次（第43站）經過時，有空再接。｜Pegue se tiver tempo, de passagem: Tanaris (2ª visita, parada 43).
 06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第35站）經過時，有空再接。｜Pegue se tiver tempo, de passagem: Selva do Espinhaço (2ª visita, parada 35).
 06-路線外任務.md:2602｜說明｜燃燒平原（第54站）經過時，有空再接。｜Pegue se tiver tempo, de passagem: Estepes Ardentes (parada 54).
+03-30到45級.md:490｜說明｜泥鰭魚人頭顱和淡水惡魔一起打，再往北打特大螯蝦、撿新鮮肥料。新鮮肥料點位待實測。｜Mate as Cabeças de Murloc Nadalama junto com os Inimigos de água doce, depois siga para o norte para matar Lagostins Gigantes e pegar Fertilizante Fresco. Os pontos do Fertilizante Fresco ainda precisam ser testados no jogo.
+03-30到45級.md:588｜說明｜會經塞爾薩瑪轉機。｜Você faz escala em Thelsamar.
+03-30到45級.md:812｜說明｜會經夜色鎮、湖畔鎮轉機。｜Você faz escala em Vila Sombria e Vila Plácida.
+03-30到45級.md:815｜說明｜任務 47 級，比這時的你高 3 級以上，怪打不動就跳過。；要先交掉落觸發的 94885 才接得到。｜A missão é de nível 47, 3 ou mais níveis acima do seu neste momento; pule se não conseguir matar os monstros. Você precisa entregar antes o 94885 ativado por drop para poder pegá-la.
+03-30到45級.md:815｜說明｜任務 47 級，比這時的你高 3 級以上，怪打不動就跳過。｜A missão é de nível 47, 3 ou mais níveis acima do seu neste momento; pule se não conseguir matar os monstros.
+03-30到45級.md:815｜說明｜要先交掉落觸發的 94885 才接得到。｜Você precisa entregar antes o 94885 ativado por drop para poder pegá-la.
+03-30到45級.md:895｜說明｜會經湖畔鎮轉機；沒接致哀和暮光威脅就不用去，直接爐回藏寶海灣。｜Você faz escala em Vila Plácida; se você não pegou Condolências e Ameaça do Crepúsculo, não precisa ir; volte direto para a Angra do Butim com a pedra de regresso.
+03-30到45級.md:895｜說明｜會經湖畔鎮轉機｜Você faz escala em Vila Plácida.
+03-30到45級.md:895｜說明｜沒接致哀和暮光威脅就不用去，直接爐回藏寶海灣。｜Se você não pegou Condolências e Ameaça do Crepúsculo, não precisa ir; volte direto para a Angra do Butim com a pedra de regresso.
+03-30到45級.md:898｜說明｜爐石沒綁藏寶海灣或還在冷卻，就從暴風城飛藏寶海灣。｜Se a pedra de regresso não estiver vinculada à Angra do Butim ou estiver em recarga, voe de Ventobravo até a Angra do Butim.
+06-路線外任務.md:1448｜說明｜塵泥沼澤（第33站）經過時，有空再接。｜Pegue se tiver tempo, de passagem: Pântano Vadeoso (parada 33).
+06-路線外任務.md:1463｜說明｜悲傷沼澤（第36站）經過時，有空再接。｜Pegue se tiver tempo, de passagem: Pântano das Mágoas (parada 36).
+06-路線外任務.md:1504｜說明｜荒蕪之地（第35站）經過時，有空再接。｜Pegue se tiver tempo, de passagem: Ermos (parada 35).
+06-路線外任務.md:1750｜說明｜悲傷沼澤（第36站）經過時，有空再接；下一站回遠境堡就能交。｜Pegue se tiver tempo, de passagem: Pântano das Mágoas (parada 36); na próxima parada você pode entregá-la de volta na Bastilha de Ermoforte.
+06-路線外任務.md:1968｜說明｜千針石林・第二次（第32站）到加基森時，有空再接；第37站到火線港交。｜Pegue se tiver tempo ao chegar a Geringontzan: Mil Agulhas (2ª visita, parada 32); entregue no Porto Detonapavio na parada 37.
+06-路線外任務.md:1969｜說明｜千針石林・第二次（第32站）經過時，有空再接。｜Pegue se tiver tempo, de passagem: Mil Agulhas (2ª visita, parada 32).
+06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第34站）經過時，有空再接。｜Pegue se tiver tempo, de passagem: Selva do Espinhaço (2ª visita, parada 34).

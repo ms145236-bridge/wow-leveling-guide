@@ -651,3 +651,20 @@
 06-路線外任務.md:2509｜說明｜塔納利斯・第二次（第43站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Tanaris (2. Besuch, Station 43).
 06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第35站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Schlingendorntal (2. Besuch, Station 35).
 06-路線外任務.md:2602｜說明｜燃燒平原（第54站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Brennende Steppe (Station 54).
+03-30到45級.md:490｜說明｜泥鰭魚人頭顱和淡水惡魔一起打，再往北打特大螯蝦、撿新鮮肥料。新鮮肥料點位待實測。｜Erledige die Murlockköpfe der Schlickflossen zusammen mit den Süßwasserscheusalen, geh dann nach Norden, erledige die Riesigen Flusskrebse und sammle frischen Dünger. Die Stellen für frischen Dünger müssen noch im Spiel getestet werden.
+03-30到45級.md:588｜說明｜會經塞爾薩瑪轉機。｜Du steigst in Thelsamar um.
+03-30到45級.md:812｜說明｜會經夜色鎮、湖畔鎮轉機。｜Du steigst in Dunkelhain und Seenhain um.
+03-30到45級.md:815｜說明｜任務 47 級，比這時的你高 3 級以上，怪打不動就跳過。；要先交掉落觸發的 94885 才接得到。｜Die Quest hat Stufe 47, mindestens 3 Stufen über dir; kannst du die Gegner nicht besiegen, überspring sie. Du musst zuerst das durch Drop ausgelöste 94885 abgeben, sonst kannst du sie nicht annehmen.
+03-30到45級.md:815｜說明｜任務 47 級，比這時的你高 3 級以上，怪打不動就跳過。｜Die Quest hat Stufe 47, mindestens 3 Stufen über dir; kannst du die Gegner nicht besiegen, überspring sie.
+03-30到45級.md:815｜說明｜要先交掉落觸發的 94885 才接得到。｜Du musst zuerst das durch Drop ausgelöste 94885 abgeben, sonst kannst du sie nicht annehmen.
+03-30到45級.md:895｜說明｜會經湖畔鎮轉機；沒接致哀和暮光威脅就不用去，直接爐回藏寶海灣。｜Du steigst in Seenhain um; Hast du „Beileid“ und „Die Zwielichtbedrohung“ nicht angenommen, musst du nicht hin; nimm direkt den Ruhestein zurück nach Beutebucht.
+03-30到45級.md:895｜說明｜會經湖畔鎮轉機｜Du steigst in Seenhain um.
+03-30到45級.md:895｜說明｜沒接致哀和暮光威脅就不用去，直接爐回藏寶海灣。｜Hast du „Beileid“ und „Die Zwielichtbedrohung“ nicht angenommen, musst du nicht hin; nimm direkt den Ruhestein zurück nach Beutebucht.
+03-30到45級.md:898｜說明｜爐石沒綁藏寶海灣或還在冷卻，就從暴風城飛藏寶海灣。｜Ist dein Ruhestein nicht an Beutebucht gebunden oder hat Abklingzeit, flieg von Sturmwind nach Beutebucht.
+06-路線外任務.md:1448｜說明｜塵泥沼澤（第33站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Düstermarschen (Station 33).
+06-路線外任務.md:1463｜說明｜悲傷沼澤（第36站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Sümpfe des Elends (Station 36).
+06-路線外任務.md:1504｜說明｜荒蕪之地（第35站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Ödland (Station 35).
+06-路線外任務.md:1750｜說明｜悲傷沼澤（第36站）經過時，有空再接；下一站回遠境堡就能交。｜Bei Zeit unterwegs annehmen: Sümpfe des Elends (Station 36); bei der nächsten Station kannst du sie wieder in Burg Farholde abgeben.
+06-路線外任務.md:1968｜說明｜千針石林・第二次（第32站）到加基森時，有空再接；第37站到火線港交。｜Bei Zeit in Gadgetzan annehmen: Tausend Nadeln (2. Besuch, Station 32); abgeben im Hafen von Powderfuse bei Station 37.
+06-路線外任務.md:1969｜說明｜千針石林・第二次（第32站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Tausend Nadeln (2. Besuch, Station 32).
+06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第34站）經過時，有空再接。｜Bei Zeit unterwegs annehmen: Schlingendorntal (2. Besuch, Station 34).

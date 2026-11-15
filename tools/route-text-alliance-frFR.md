@@ -651,3 +651,20 @@
 06-路線外任務.md:2509｜說明｜塔納利斯・第二次（第43站）經過時，有空再接。｜À prendre si tu as le temps, en passant : Tanaris (2e visite, étape 43).
 06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第35站）經過時，有空再接。｜À prendre si tu as le temps, en passant : Vallée de Strangleronce (2e visite, étape 35).
 06-路線外任務.md:2602｜說明｜燃燒平原（第54站）經過時，有空再接。｜À prendre si tu as le temps, en passant : Steppes ardentes (étape 54).
+03-30到45級.md:490｜說明｜泥鰭魚人頭顱和淡水惡魔一起打，再往北打特大螯蝦、撿新鮮肥料。新鮮肥料點位待實測。｜Tue les têtes de Murloc aileron-fangeux en même temps que les Démons d'eau douce, puis monte vers le nord tuer les écrevisses géantes et ramasser de l'engrais frais. Les emplacements de l'engrais frais restent à tester en jeu.
+03-30到45級.md:588｜說明｜會經塞爾薩瑪轉機。｜Tu feras escale à Thelsamar.
+03-30到45級.md:812｜說明｜會經夜色鎮、湖畔鎮轉機。｜Tu feras escale à Sombre-comté et à Comté-du-Lac.
+03-30到45級.md:815｜說明｜任務 47 級，比這時的你高 3 級以上，怪打不動就跳過。；要先交掉落觸發的 94885 才接得到。｜La quête est de niveau 47, soit 3 niveaux ou plus au-dessus du tien à ce stade ; passe-la si tu ne peux pas vaincre les monstres. Tu dois d'abord rendre le 94885 déclenché par un butin, sinon tu ne pourras pas la prendre.
+03-30到45級.md:815｜說明｜任務 47 級，比這時的你高 3 級以上，怪打不動就跳過。｜La quête est de niveau 47, soit 3 niveaux ou plus au-dessus du tien à ce stade ; passe-la si tu ne peux pas vaincre les monstres.
+03-30到45級.md:815｜說明｜要先交掉落觸發的 94885 才接得到。｜Tu dois d'abord rendre le 94885 déclenché par un butin, sinon tu ne pourras pas la prendre.
+03-30到45級.md:895｜說明｜會經湖畔鎮轉機；沒接致哀和暮光威脅就不用去，直接爐回藏寶海灣。｜Tu feras escale à Comté-du-Lac ; si tu n'as pas pris « Condoléances » et « Menace du Crépuscule », inutile d'y aller ; reviens directement à Baie-du-Butin avec ta pierre de foyer.
+03-30到45級.md:895｜說明｜會經湖畔鎮轉機｜Tu feras escale à Comté-du-Lac.
+03-30到45級.md:895｜說明｜沒接致哀和暮光威脅就不用去，直接爐回藏寶海灣。｜Si tu n'as pas pris « Condoléances » et « Menace du Crépuscule », inutile d'y aller ; reviens directement à Baie-du-Butin avec ta pierre de foyer.
+03-30到45級.md:898｜說明｜爐石沒綁藏寶海灣或還在冷卻，就從暴風城飛藏寶海灣。｜Si ta pierre de foyer n'est pas liée à Baie-du-Butin ou est en recharge, vole de Hurlevent à Baie-du-Butin.
+06-路線外任務.md:1448｜說明｜塵泥沼澤（第33站）經過時，有空再接。｜À prendre si tu as le temps, en passant : Marécage d'Âprefange (étape 33).
+06-路線外任務.md:1463｜說明｜悲傷沼澤（第36站）經過時，有空再接。｜À prendre si tu as le temps, en passant : Marais des Chagrins (étape 36).
+06-路線外任務.md:1504｜說明｜荒蕪之地（第35站）經過時，有空再接。｜À prendre si tu as le temps, en passant : Terres ingrates (étape 35).
+06-路線外任務.md:1750｜說明｜悲傷沼澤（第36站）經過時，有空再接；下一站回遠境堡就能交。｜À prendre si tu as le temps, en passant : Marais des Chagrins (étape 36) ; à l'étape suivante, tu pourras la rendre à Fort-Lointain.
+06-路線外任務.md:1968｜說明｜千針石林・第二次（第32站）到加基森時，有空再接；第37站到火線港交。｜À prendre si tu as le temps en arrivant à Gadgetzan : Mille pointes (2e visite, étape 32) ; à rendre à Port de Poudremèche à l'étape 37.
+06-路線外任務.md:1969｜說明｜千針石林・第二次（第32站）經過時，有空再接。｜À prendre si tu as le temps, en passant : Mille pointes (2e visite, étape 32).
+06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第34站）經過時，有空再接。｜À prendre si tu as le temps, en passant : Vallée de Strangleronce (2e visite, étape 34).

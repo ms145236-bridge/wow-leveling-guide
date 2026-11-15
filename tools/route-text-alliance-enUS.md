@@ -651,3 +651,20 @@
 06-路線外任務.md:2509｜說明｜塔納利斯・第二次（第43站）經過時，有空再接。｜Pick this up if you have time when you pass through Tanaris (2nd visit, stop 43).
 06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第35站）經過時，有空再接。｜Pick this up if you have time when you pass through Stranglethorn Vale (2nd visit, stop 35).
 06-路線外任務.md:2602｜說明｜燃燒平原（第54站）經過時，有空再接。｜Pick this up if you have time when you pass through Burning Steppes (stop 54).
+03-30到45級.md:490｜說明｜泥鰭魚人頭顱和淡水惡魔一起打，再往北打特大螯蝦、撿新鮮肥料。新鮮肥料點位待實測。｜Kill the Mudfin Murloc Heads together with the Freshwater Fiends, then head north to kill Jumbo Crawfish and pick up Fresh Fertilizer. The Fresh Fertilizer spots still need in-game testing.
+03-30到45級.md:588｜說明｜會經塞爾薩瑪轉機。｜You'll change flights at Thelsamar.
+03-30到45級.md:812｜說明｜會經夜色鎮、湖畔鎮轉機。｜You'll change flights at Darkshire and Lakeshire.
+03-30到45級.md:815｜說明｜任務 47 級，比這時的你高 3 級以上，怪打不動就跳過。；要先交掉落觸發的 94885 才接得到。｜This quest is level 47, 3 or more levels above you at this point; skip it if the mobs are too tough to kill. You must first turn in the drop-triggered 94885 before you can pick this up.
+03-30到45級.md:815｜說明｜任務 47 級，比這時的你高 3 級以上，怪打不動就跳過。｜This quest is level 47, 3 or more levels above you at this point; skip it if the mobs are too tough to kill.
+03-30到45級.md:815｜說明｜要先交掉落觸發的 94885 才接得到。｜You must first turn in the drop-triggered 94885 before you can pick this up.
+03-30到45級.md:895｜說明｜會經湖畔鎮轉機；沒接致哀和暮光威脅就不用去，直接爐回藏寶海灣。｜You'll change flights at Lakeshire; if you didn't pick up Condolences and Twilight Menace, there's no need to go - hearth straight back to Booty Bay.
+03-30到45級.md:895｜說明｜會經湖畔鎮轉機｜You'll change flights at Lakeshire.
+03-30到45級.md:895｜說明｜沒接致哀和暮光威脅就不用去，直接爐回藏寶海灣。｜If you didn't pick up Condolences and Twilight Menace, there's no need to go; hearth straight back to Booty Bay.
+03-30到45級.md:898｜說明｜爐石沒綁藏寶海灣或還在冷卻，就從暴風城飛藏寶海灣。｜If your hearthstone isn't bound to Booty Bay or is on cooldown, fly from Stormwind to Booty Bay.
+06-路線外任務.md:1448｜說明｜塵泥沼澤（第33站）經過時，有空再接。｜Pick this up if you have time when you pass through Dustwallow Marsh (stop 33).
+06-路線外任務.md:1463｜說明｜悲傷沼澤（第36站）經過時，有空再接。｜Pick this up if you have time when you pass through Swamp of Sorrows (stop 36).
+06-路線外任務.md:1504｜說明｜荒蕪之地（第35站）經過時，有空再接。｜Pick this up if you have time when you pass through Badlands (stop 35).
+06-路線外任務.md:1750｜說明｜悲傷沼澤（第36站）經過時，有空再接；下一站回遠境堡就能交。｜Pick this up if you have time when you pass through Swamp of Sorrows (stop 36); you can turn it in back at Farholde Keep at the next stop.
+06-路線外任務.md:1968｜說明｜千針石林・第二次（第32站）到加基森時，有空再接；第37站到火線港交。｜Pick this up if you have time when you reach Gadgetzan on your 2nd visit to Thousand Needles (stop 32); turn it in at Powderfuse Port at stop 37.
+06-路線外任務.md:1969｜說明｜千針石林・第二次（第32站）經過時，有空再接。｜Pick this up if you have time when you pass through Thousand Needles (2nd visit, stop 32).
+06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第34站）經過時，有空再接。｜Pick this up if you have time when you pass through Stranglethorn Vale (2nd visit, stop 34).

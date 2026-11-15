@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "c3447c65",
+  built = "c50c06ac",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -2898,7 +2898,7 @@ MG.Route = {
       } },
     { id="03-37", start=nil, name="大河林地 暮光之罩與火線港", short="大河林地 暮光之罩等", visit=nil, map=2548, lv={42, 43}, video=nil, test=nil, alt=nil, when=nil, tips={{k="提醒", text="這段沒有實跑紀錄，順序依 QuestieDB 座標排；地圖中央的羅格瑪是部落城鎮，別靠近。", s={{"這段沒有實跑紀錄，順序依 QuestieDB 座標排"}, {"地圖中央的羅格瑪是部落城鎮，別靠近"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply=nil, danger=nil,
       steps = {
-        {t="fly", desc="會經暮色鎮、湖畔鎮轉機。", to="遠境堡"},
+        {t="fly", desc="會經夜色鎮、湖畔鎮轉機。", to="遠境堡"},
         {t="accept", q=95329, npc="戴瑪‧布蘭特", tgt="戴瑪‧布蘭特", map=2548, x=66.67, y=81.01},
         {t="accept", q=94886, npc="戴瑪‧布蘭特", tgt="戴瑪‧布蘭特", map=2548, x=66.67, y=81.01},
         {t="accept", q=94887, opt=true, desc="任務 47 級，比這時的你高 3 級以上，怪打不動就跳過。；要先交掉落觸發的 戰場元帥的日誌 才接得到。", tag="可跳過", npc="戴瑪‧布蘭特", tgt="戴瑪‧布蘭特", map=2548, x=66.67, y=81.01},
