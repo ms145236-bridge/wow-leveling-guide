@@ -12872,3 +12872,6 @@
 新增.md:0｜步驟說明｜從要塞飛回奧格瑪。｜Fly from the Hold back to Orgrimmar.
 新增.md:0｜步驟說明｜第 1 步開塞納里奧要塞飛行點，最後一步飛回奧格瑪。｜Unlock the Cenarion Hold flight point at step 1. At the last step, fly back to Orgrimmar.
 新增.md:0｜步驟說明｜未滿 59 級可留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜Under level 59, stay northeast of the Hold (about 55, 29) for normal scorpids and spiders, or kill Twilight cultists to the southwest (about 38, 44).
+新增.md:0｜步驟說明｜從葬影村往東走，經幽靈崗哨與科多墓地，再往北到雷斧堡壘拿惡魔之盒。｜From Shadowprey Village, head east past Ghost Walker Post and the Kodo Graveyard, then north to Thunder Axe Fortress for the Demon Box.
+新增.md:0｜步驟說明｜從比布里的小屋回葬影村交埃盧梭斯之手、接燃燒軍團的傳送門，再往南到瑪諾洛克集會所。｜From Bibbly's hut, return to Shadowprey Village to turn in Hand of Iruxos and pick up Portals of the Legion, then head south to Mannoroc Coven.
+新增.md:0｜步驟說明｜埃盧梭斯之手 5381 第一趟只接，第二趟 37 級再去雷斧堡壘拿惡魔之盒（任務 38 級），交了才接得到燃燒軍團的傳送門 5581。｜Only pick up Hand of Iruxos on the first visit. Get the Demon Box at Thunder Axe Fortress on the second visit at level 37 (quest level 38). Turning it in unlocks Portals of the Legion.

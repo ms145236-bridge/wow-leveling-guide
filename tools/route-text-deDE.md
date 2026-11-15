@@ -13027,3 +13027,6 @@
 新增.md:0｜步驟說明｜從要塞飛回奧格瑪。｜Flieg von der Burg zurück nach Orgrimmar.
 新增.md:0｜步驟說明｜第 1 步開塞納里奧要塞飛行點，最後一步飛回奧格瑪。｜Schalte in Schritt 1 den Flugpunkt Burg Cenarius frei. Flieg im letzten Schritt zurück nach Orgrimmar.
 新增.md:0｜步驟說明｜未滿 59 級可留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜Unter Stufe 59 bleib nordöstlich der Burg (etwa 55, 29) bei normalen Skorpiden und Spinnen oder töte Zwielichtkultisten im Südwesten (etwa 38, 44).
+新增.md:0｜步驟說明｜從葬影村往東走，經幽靈崗哨與科多墓地，再往北到雷斧堡壘拿惡魔之盒。｜Geh von Shadowprey nach Osten über Geistwandlerposten und den Kodofriedhof, dann nach Norden zur Festung Thunder Axe für die Dämonenkiste.
+新增.md:0｜步驟說明｜從比布里的小屋回葬影村交埃盧梭斯之手、接燃燒軍團的傳送門，再往南到瑪諾洛克集會所。｜Kehr von Bibblys Hütte nach Shadowprey zurück, gib Hand von Iruxos ab, nimm Portale der Legion an und geh dann nach Süden zu Mannorocs Koven.
+新增.md:0｜步驟說明｜埃盧梭斯之手 5381 第一趟只接，第二趟 37 級再去雷斧堡壘拿惡魔之盒（任務 38 級），交了才接得到燃燒軍團的傳送門 5581。｜Nimm Hand von Iruxos beim ersten Besuch nur an. Hol die Dämonenkiste beim zweiten Besuch mit Stufe 37 in der Festung Thunder Axe (Queststufe 38). Erst nach der Abgabe bekommst du Portale der Legion.

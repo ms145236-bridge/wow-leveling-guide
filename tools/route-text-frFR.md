@@ -13140,3 +13140,6 @@
 新增.md:0｜步驟說明｜從要塞飛回奧格瑪。｜Vole du Fort jusqu'à Orgrimmar.
 新增.md:0｜步驟說明｜第 1 步開塞納里奧要塞飛行點，最後一步飛回奧格瑪。｜Débloque le point de vol du Fort cénarien à l'étape 1. À la dernière étape, vole jusqu'à Orgrimmar.
 新增.md:0｜步驟說明｜未滿 59 級可留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜Sous le niveau 59, reste au nord-est du Fort (vers 55, 29) pour les scorpides et araignées normaux, ou tue les cultistes du Crépuscule au sud-ouest (vers 38, 44).
+新增.md:0｜步驟說明｜從葬影村往東走，經幽靈崗哨與科多墓地，再往北到雷斧堡壘拿惡魔之盒。｜Depuis Proie-de-l'Ombre, va vers l'est en passant par le poste de Rôdeur-fantôme et le Cimetière des kodos, puis au nord jusqu'à la Forteresse de Hache-Tonnerre pour la boîte de démon.
+新增.md:0｜步驟說明｜從比布里的小屋回葬影村交埃盧梭斯之手、接燃燒軍團的傳送門，再往南到瑪諾洛克集會所。｜Depuis la cabane de Bibbly, retourne à Proie-de-l'Ombre pour rendre La Main d'Iruxos et prendre Les portails de la Légion, puis va au sud jusqu'au Convent de Mannoroc.
+新增.md:0｜步驟說明｜埃盧梭斯之手 5381 第一趟只接，第二趟 37 級再去雷斧堡壘拿惡魔之盒（任務 38 級），交了才接得到燃燒軍團的傳送門 5581。｜Lors du premier passage, prends seulement La Main d'Iruxos. Au second passage, au niveau 37, va chercher la boîte de démon à la Forteresse de Hache-Tonnerre (quête de niveau 38). La rendre débloque Les portails de la Légion.

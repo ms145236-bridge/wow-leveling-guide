@@ -1,4 +1,4 @@
-# 建置報告（資料版本 ac57c93d）
+# 建置報告（資料版本 366c13cf）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
 站數：92　任務數：1510
@@ -233,7 +233,7 @@
 - 任務 1526：目標怪 QuestieDB 沒有繁中名（火之靈體、Manifestation of Flames）
 - 任務 671：目標怪 QuestieDB 沒有繁中名（辛迪加路霸、辛迪加巡路者、辛迪加雇傭兵、Syndicate Smuggler）
 - 任務 78830：目標怪 QuestieDB 沒有繁中名（Gharrik）
-- 03-30到45級.md:1088 交｜向赫格拉姆報到：路線寫「迅捷的赫格拉姆」，QuestieDB／遊戲名是「赫格拉姆」
+- 03-30到45級.md:1090 交｜向赫格拉姆報到：路線寫「迅捷的赫格拉姆」，QuestieDB／遊戲名是「赫格拉姆」
 - 05-副本.md:1080 交｜：QuestieDB 沒有繁中名（Magister Kirandis），用「Magister Kirandis」
 - 05-副本.md:1044 接｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
 - 05-副本.md:1044 交｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」

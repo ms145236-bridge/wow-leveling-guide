@@ -13414,3 +13414,6 @@
 新增.md:0｜步驟說明｜從要塞飛回奧格瑪。｜Vuela del Fuerte de vuelta a Orgrimmar.
 新增.md:0｜步驟說明｜第 1 步開塞納里奧要塞飛行點，最後一步飛回奧格瑪。｜Abre el punto de vuelo de Fuerte Cenarion en el paso 1. En el último paso, vuela de vuelta a Orgrimmar.
 新增.md:0｜步驟說明｜未滿 59 級可留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜Por debajo del nivel 59, quédate al noreste del Fuerte (aprox. 55, 29) con escórpidos y arañas normales, o mata cultistas crepusculares al suroeste (aprox. 38, 44).
+新增.md:0｜步驟說明｜從葬影村往東走，經幽靈崗哨與科多墓地，再往北到雷斧堡壘拿惡魔之盒。｜Desde Aldea Cazasombras ve al este pasando por Campamento del Espíritu Errante y el Cementerio de Kodos, y luego al norte hasta la Fortaleza del Hacha de Trueno por la Caja demoníaca.
+新增.md:0｜步驟說明｜從比布里的小屋回葬影村交埃盧梭斯之手、接燃燒軍團的傳送門，再往南到瑪諾洛克集會所。｜Desde la cabaña de Bibbly regresa a Aldea Cazasombras para entregar La Mano de Iruxos y aceptar Los portales de la Legión. Luego ve al sur hasta Aquelarre Mannoroc.
+新增.md:0｜步驟說明｜埃盧梭斯之手 5381 第一趟只接，第二趟 37 級再去雷斧堡壘拿惡魔之盒（任務 38 級），交了才接得到燃燒軍團的傳送門 5581。｜En la primera visita solo acepta La Mano de Iruxos. En la segunda, a nivel 37, consigue la Caja demoníaca en la Fortaleza del Hacha de Trueno (misión de nivel 38). Al entregarla se desbloquea Los portales de la Legión.
