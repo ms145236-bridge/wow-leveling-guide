@@ -378,3 +378,15 @@
 02-12到30級.md:847｜說明｜在月神湖底找到神殿靈珠。｜Find the Shrine Bauble at the bottom of Lake Elune'ara.
 02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得半塊墜飾。｜Get one half of the Pendant of the Sea Lion from the underwater ruins south of Auberdine in Darkshore.
 03-30到45級.md:851｜說明｜在勇士島的競技場連續擊敗四波對手。｜Defeat four waves of opponents in a row at the arena on Fray Island.
+新增.md:0｜步驟說明｜達納蘇斯這段經驗少，趕路可跳過。｜Little XP in the Darnassus section. Skip if you're in a hurry.
+新增.md:0｜步驟說明｜從阿斯特蘭納往南穿過貧瘠之地，搭大升降梯下千針石林。｜Head south from Astranaar through the Barrens and take the Great Lift down to Thousand Needles.
+新增.md:0｜步驟說明｜薩蘭納爾｜Thalanaar
+新增.md:0｜步驟說明｜從薩蘭納爾往西穿過菲拉斯，到海邊碼頭搭船上羽月要塞。｜From Thalanaar, head west through Feralas to the dock on the coast and take the boat to Feathermoon Stronghold.
+新增.md:0｜步驟說明｜有黑石深淵隊伍才在這練到 52；單人跳過。｜Level here to 52 only with a Blackrock Depths group. Skip if solo.
+新增.md:0｜步驟說明｜有黑石深淵隊伍才在這練到 52｜Level here to 52 only with a Blackrock Depths group
+新增.md:0｜步驟說明｜單人跳過。｜Skip if solo.
+新增.md:0｜步驟說明｜打怪拾到被撕破的日記才右鍵接。｜Right-click to start only if you loot A Mangled Journal from mobs.
+新增.md:0｜步驟說明｜在加德納爾 35, 59 一帶打怪。｜Kill mobs around 35, 59 in Jaedenar.
+新增.md:0｜步驟說明｜在冬泉熊怪營地 32, 36 一帶打熊怪。｜Kill furbolgs around 32, 36 in the Winterfall camp.
+新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Stay at the Winterfall camp and keep killing furbolgs.
+新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜In the ruined houses of Darrowshire, collect the head, left side and right side, then right-click to combine them.

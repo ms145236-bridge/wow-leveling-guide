@@ -13099,3 +13099,23 @@
 03-30到45級.md:480｜交通步驟｜從陶拉祖營地往東進塵泥沼澤，先停在路邊燒毀的旅店（29.70, 48.20）。｜Va vers l'est depuis le Camp Taurajo, en direction du Marécage d'Âprefange. Arrête-toi d'abord à l'auberge incendiée au bord de la route (29.70, 48.20).
 01-第一段-1到12級.md:1520｜步驟說明｜圖拉克旁邊長者高地的拉哈羅，順路接怒焰裂谷任務；13 級以上再去打。｜Rahauro, à côté de Turak à Cime des Anciens : prends au passage les quêtes du Gouffre de Ragefeu ; à faire à partir du niveau 13.
 01-第一段-1到12級.md:1520｜步驟說明｜圖拉克旁邊長者高地的拉哈羅，順路接怒焰裂谷任務｜Rahauro, à côté de Turak à Cime des Anciens : prends au passage les quêtes du Gouffre de Ragefeu
+新增.md:0｜步驟說明｜掉率低，做其他任務時剛好收齊才值得做。｜Faible taux de butin. Ça vaut le coup seulement si tu complètes en faisant d'autres quêtes.
+新增.md:0｜步驟說明｜值得做｜Ça vaut le coup
+新增.md:0｜步驟說明｜先到東北方的多恩交耐力試煉，再回亂風崗一次交完。｜Rends d'abord L'épreuve d'Endurance à Dorn, au nord-est, puis retourne au poste de Librevent pour tout rendre d'un coup.
+新增.md:0｜步驟說明｜初到葬影村就找吉納澤林拿兩條魚。｜Dès ton arrivée à Proie-de-l'Ombre, prends deux poissons auprès de Jinar'Zillen.
+新增.md:0｜步驟說明｜498／549 已在希爾斯布萊德丘陵第12站做完。進山後交 533 才接 503，高迪爾和瓦杜斯的辛迪加營地目標一起找。｜498/549 sont déjà faites à l'étape 12, dans les Contreforts de Hautebrande. Dans les montagnes, rends 533 avant de prendre 503. Cherche ensemble les objectifs de Gol'dir et Vardus dans les camps du Syndicat.
+新增.md:0｜步驟說明｜沿路有伏擊。護送後交件在藏寶海灣。｜Embuscades en chemin. Après l'escorte, rends la quête à Baie-du-Butin.
+新增.md:0｜步驟說明｜打完深痕谷或海岸，爐石回莫沙徹營地集中交。｜Après Val des Griffes farouches ou la côte, utilise ta pierre de foyer pour revenir au Camp Mojache et tout rendre.
+新增.md:0｜步驟說明｜有撿到 OOX-22/FE 定位器就在深痕谷接護送，護送到海岸後順做海岸巨人與水元素。｜Si tu as ramassé la Balise de détresse OOX-22/FE, prends l'escorte à Val des Griffes farouches. Après l'avoir escorté jusqu'à la côte, fais les géants de la côte et les élémentaires d'eau.
+新增.md:0｜步驟說明｜可跳過｜Facultatif
+新增.md:0｜步驟說明｜手上有 625 就先從加基森飛蕨牆村，往南到木橋下交件，再從蕨牆村飛奧格瑪。｜Si tu as 625, vole de Gadgetzan à Mur-de-Fougères, va au sud pour la rendre sous le pont en bois, puis vole de Mur-de-Fougères à Orgrimmar.
+新增.md:0｜步驟說明｜從加基森飛棘齒城，上船前先找莉芙交件。｜Vole de Gadgetzan à Cabestan et rends la quête à Liv avant de prendre le bateau.
+新增.md:0｜步驟說明｜在棘齒城搭船到藏寶海灣，再飛荒蕪之地卡加斯。暴掠龍爪留在幽暗城轉回奧格瑪時順路交。｜À Cabestan, prends le bateau pour Baie-du-Butin, puis vole jusqu'à Kargath, dans les Terres ingrates. Garde les griffes de ravasaure pour le trajet de Fossoyeuse à Orgrimmar.
+新增.md:0｜步驟說明｜先別交｜Ne rends pas encore
+新增.md:0｜步驟說明｜從卡加斯飛幽暗城，準備往西瘟疫之地。｜Vole de Kargath à Fossoyeuse et prépare-toi pour les Maleterres de l'Ouest.
+新增.md:0｜步驟說明｜回莫沙徹營地飛棘齒城。｜Retourne au Camp Mojache et vole jusqu'à Cabestan.
+新增.md:0｜步驟說明｜主要轉場為永望鎮飛莫沙徹、莫沙徹飛棘齒城。｜Trajets principaux : Long-guet vers Mojache, puis Mojache vers Cabestan.
+新增.md:0｜步驟說明｜到棘齒城後沿岸往南找水之先知伊斯倫。｜À Cabestan, longe la côte vers le sud jusqu'à Islen Waterseer.
+新增.md:0｜步驟說明｜離主路較遠，趕路可略。｜Loin du trajet principal. Ignore si tu es pressé.
+新增.md:0｜步驟說明｜完成後從禮拜堂飛幽暗城。｜Une fois fini, vole de la Chapelle à Fossoyeuse.
+新增.md:0｜步驟說明｜到幽暗城外搭飛艇去奧格瑪。｜Devant Fossoyeuse, prends le zeppelin pour Orgrimmar.

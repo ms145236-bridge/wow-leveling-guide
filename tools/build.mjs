@@ -676,6 +676,9 @@ for (const [id, q] of quests) {
   q.fol = fol.length ? fol : undefined;
   q.chain = [...quests.entries()].some(([oid, o]) => oid !== id && order.get(o.st) > order.get(q.st) && ([...(o.pg || []), ...(o.ps || [])].includes(id) || q.next === oid)) || undefined;
 }
+// 會開後續任務的不當順路任務：照順序先做完，免得後面接不到
+let roamKept = 0;
+for (const st of stations) for (const step of st.steps) if (step.roam && quests.get(step.id)?.fol) { step.roam = undefined; roamKept++; }
 
 // 遊戲 zhTW 字型缺的字：・（U+30FB）→ 空白，彎引號 → ASCII
 const idStats = new Map(); // 檔案 → 換掉的裸 ID 數

@@ -13209,3 +13209,23 @@
 03-30到45級.md:480｜交通步驟｜從陶拉祖營地往東進塵泥沼澤，先停在路邊燒毀的旅店（29.70, 48.20）。｜Siga de Acampamento Taurajo para o leste, rumo ao Pântano Vadeoso. Pare primeiro na pousada incendiada à beira da estrada (29.70, 48.20).
 01-第一段-1到12級.md:1520｜步驟說明｜圖拉克旁邊長者高地的拉哈羅，順路接怒焰裂谷任務；13 級以上再去打。｜Rahauro, ao lado de Turak no Platô dos Anciãos: pegue no caminho as missões de Cavernas Ígneas; vá a partir do nível 13.
 01-第一段-1到12級.md:1520｜步驟說明｜圖拉克旁邊長者高地的拉哈羅，順路接怒焰裂谷任務｜Rahauro, ao lado de Turak no Platô dos Anciãos: pegue no caminho as missões de Cavernas Ígneas
+新增.md:0｜步驟說明｜掉率低，做其他任務時剛好收齊才值得做。｜Taxa de drop baixa. Só vale a pena se completar enquanto faz outras missões.
+新增.md:0｜步驟說明｜值得做｜Vale a pena fazer
+新增.md:0｜步驟說明｜先到東北方的多恩交耐力試煉，再回亂風崗一次交完。｜Primeiro entregue Teste de resistência a Dorn, a nordeste, e depois volte a Aldeia Vento Livre para entregar tudo de uma vez.
+新增.md:0｜步驟說明｜初到葬影村就找吉納澤林拿兩條魚。｜Assim que chegar à Aldeia Pescassombra, pegue dois peixes com Jinar'Zillen.
+新增.md:0｜步驟說明｜498／549 已在希爾斯布萊德丘陵第12站做完。進山後交 533 才接 503，高迪爾和瓦杜斯的辛迪加營地目標一起找。｜498/549 já foram feitas na parada 12, no Contraforte de Eira dos Montes. Nas montanhas, entregue 533 antes de pegar 503. Procure juntos os objetivos de Gol'dir e Vardus nos acampamentos da Camarilha.
+新增.md:0｜步驟說明｜沿路有伏擊。護送後交件在藏寶海灣。｜Há emboscadas no caminho. Depois da escolta, entregue em Angra do Butim.
+新增.md:0｜步驟說明｜打完深痕谷或海岸，爐石回莫沙徹營地集中交。｜Depois do Vale dos Abomináveis ou da costa, use a Pedra de Regresso para voltar à Aldeia Mojache e entregar tudo.
+新增.md:0｜步驟說明｜有撿到 OOX-22/FE 定位器就在深痕谷接護送，護送到海岸後順做海岸巨人與水元素。｜Se pegou o Transmissor de Emergência OOX-22/FE, aceite a escolta no Vale dos Abomináveis. Depois de escoltar até a costa, faça os gigantes da costa e os elementais da água.
+新增.md:0｜步驟說明｜可跳過｜Opcional
+新增.md:0｜步驟說明｜手上有 625 就先從加基森飛蕨牆村，往南到木橋下交件，再從蕨牆村飛奧格瑪。｜Se tiver 625, voe de Geringontzan para Brackenwall Village, vá para o sul entregar sob a ponte de madeira e depois voe de Brackenwall Village para Orgrimmar.
+新增.md:0｜步驟說明｜從加基森飛棘齒城，上船前先找莉芙交件。｜Voe de Geringontzan para Vila Catraca e entregue a Liv antes de pegar o barco.
+新增.md:0｜步驟說明｜在棘齒城搭船到藏寶海灣，再飛荒蕪之地卡加斯。暴掠龍爪留在幽暗城轉回奧格瑪時順路交。｜Em Vila Catraca, pegue o barco para Angra do Butim e depois voe para Karrath, nos Ermos. Guarde as garras de Ravasaur para o caminho da Cidade Baixa de volta a Orgrimmar.
+新增.md:0｜步驟說明｜先別交｜Não entregue ainda
+新增.md:0｜步驟說明｜從卡加斯飛幽暗城，準備往西瘟疫之地。｜Voe de Karrath para a Cidade Baixa e prepare-se para as Terras Pestilentas Ocidentais.
+新增.md:0｜步驟說明｜回莫沙徹營地飛棘齒城。｜Volte à Aldeia Mojache e voe para Vila Catraca.
+新增.md:0｜步驟說明｜主要轉場為永望鎮飛莫沙徹、莫沙徹飛棘齒城。｜Principais deslocamentos: de Visteterna para Mojache e de Mojache para Vila Catraca.
+新增.md:0｜步驟說明｜到棘齒城後沿岸往南找水之先知伊斯倫。｜Em Vila Catraca, siga a costa para o sul até Islen Vidente da Água.
+新增.md:0｜步驟說明｜離主路較遠，趕路可略。｜Longe da rota principal. Pule se estiver com pressa.
+新增.md:0｜步驟說明｜完成後從禮拜堂飛幽暗城。｜Ao terminar, voe da Capela para a Cidade Baixa.
+新增.md:0｜步驟說明｜到幽暗城外搭飛艇去奧格瑪。｜Fora da Cidade Baixa, pegue o zepelim para Orgrimmar.

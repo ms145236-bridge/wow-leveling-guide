@@ -12986,3 +12986,23 @@
 03-30到45級.md:480｜交通步驟｜從陶拉祖營地往東進塵泥沼澤，先停在路邊燒毀的旅店（29.70, 48.20）。｜Reise von Camp Taurajo nach Osten in die Düstermarschen. Halte zuerst am ausgebrannten Gasthaus an der Straße an (29.70, 48.20).
 01-第一段-1到12級.md:1520｜步驟說明｜圖拉克旁邊長者高地的拉哈羅，順路接怒焰裂谷任務；13 級以上再去打。｜Rahauro neben Turak auf der Anhöhe der Ältesten: Nimm unterwegs die Quests für Ragefire Chasm an; ab Stufe 13 hingehen.
 01-第一段-1到12級.md:1520｜步驟說明｜圖拉克旁邊長者高地的拉哈羅，順路接怒焰裂谷任務｜Rahauro neben Turak auf der Anhöhe der Ältesten: Nimm unterwegs die Quests für Ragefire Chasm an
+新增.md:0｜步驟說明｜掉率低，做其他任務時剛好收齊才值得做。｜Niedrige Droprate. Lohnt sich nur, wenn du sie nebenbei bei anderen Quests voll bekommst.
+新增.md:0｜步驟說明｜值得做｜Lohnt sich
+新增.md:0｜步驟說明｜先到東北方的多恩交耐力試煉，再回亂風崗一次交完。｜Gib zuerst Test der Belastbarkeit bei Dorn im Nordosten ab und kehr dann zum Freiwindposten zurück, um alles auf einmal abzugeben.
+新增.md:0｜步驟說明｜初到葬影村就找吉納澤林拿兩條魚。｜Hol dir gleich bei der Ankunft in Shadowprey zwei Fische von Jinar'Zillen.
+新增.md:0｜步驟說明｜498／549 已在希爾斯布萊德丘陵第12站做完。進山後交 533 才接 503，高迪爾和瓦杜斯的辛迪加營地目標一起找。｜498/549 hast du schon an Station 12 im Vorgebirge des Hügellands erledigt. Gib in den Bergen 533 ab, bevor du 503 annimmst. Such die Ziele für Gol'dir und Vardus in den Syndikatlagern zusammen.
+新增.md:0｜步驟說明｜沿路有伏擊。護送後交件在藏寶海灣。｜Unterwegs gibt es Hinterhalte. Nach der Eskorte gibst du in Beutebucht ab.
+新增.md:0｜步驟說明｜打完深痕谷或海岸，爐石回莫沙徹營地集中交。｜Bist du mit Wildschrammtal oder der Küste fertig, kehr per Ruhestein nach Camp Mojache zurück und gib alles gesammelt ab.
+新增.md:0｜步驟說明｜有撿到 OOX-22/FE 定位器就在深痕谷接護送，護送到海岸後順做海岸巨人與水元素。｜Wenn du den OOX-22/FE-Notsignalgeber gefunden hast, nimm die Eskorte im Wildschrammtal an. Hast du ihn zur Küste begleitet, erledige dort gleich die Küstenriesen und Wasserelementare.
+新增.md:0｜步驟說明｜可跳過｜Optional
+新增.md:0｜步驟說明｜手上有 625 就先從加基森飛蕨牆村，往南到木橋下交件，再從蕨牆村飛奧格瑪。｜Hast du 625 dabei, flieg von Gadgetzan nach Brackenwall, geh nach Süden zur Abgabe unter der Holzbrücke und flieg dann von Brackenwall nach Orgrimmar.
+新增.md:0｜步驟說明｜從加基森飛棘齒城，上船前先找莉芙交件。｜Flieg von Gadgetzan nach Ratschet und gib vor dem Schiff bei Liv ab.
+新增.md:0｜步驟說明｜在棘齒城搭船到藏寶海灣，再飛荒蕪之地卡加斯。暴掠龍爪留在幽暗城轉回奧格瑪時順路交。｜Nimm in Ratschet das Schiff nach Beutebucht und flieg dann nach Kargath im Ödland. Gib die Ravasaurierklauen erst auf dem Weg von Unterstadt zurück nach Orgrimmar ab.
+新增.md:0｜步驟說明｜先別交｜Noch nicht abgeben
+新增.md:0｜步驟說明｜從卡加斯飛幽暗城，準備往西瘟疫之地。｜Flieg von Kargath nach Unterstadt und mach dich bereit für die Westlichen Pestländer.
+新增.md:0｜步驟說明｜回莫沙徹營地飛棘齒城。｜Kehr nach Camp Mojache zurück und flieg nach Ratschet.
+新增.md:0｜步驟說明｜主要轉場為永望鎮飛莫沙徹、莫沙徹飛棘齒城。｜Hauptwege: von Everlook nach Mojache, dann von Mojache nach Ratschet.
+新增.md:0｜步驟說明｜到棘齒城後沿岸往南找水之先知伊斯倫。｜Folge in Ratschet der Küste nach Süden zu Islen Waterseer.
+新增.md:0｜步驟說明｜離主路較遠，趕路可略。｜Weit abseits der Hauptroute. Überspring das, wenn du es eilig hast.
+新增.md:0｜步驟說明｜完成後從禮拜堂飛幽暗城。｜Flieg danach von der Kapelle nach Unterstadt.
+新增.md:0｜步驟說明｜到幽暗城外搭飛艇去奧格瑪。｜Nimm vor Unterstadt das Luftschiff nach Orgrimmar.

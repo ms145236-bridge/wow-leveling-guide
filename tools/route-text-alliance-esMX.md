@@ -378,3 +378,15 @@
 02-12到30級.md:847｜說明｜在月神湖底找到神殿靈珠。｜Encuentra el Adorno de altar en el fondo del Lago Elune'ara.
 02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得半塊墜飾。｜Consigue una mitad del Colgante del León Marino en las ruinas submarinas al sur de Auberdine, en Costa Oscura.
 03-30到45級.md:851｜說明｜在勇士島的競技場連續擊敗四波對手。｜Derrota cuatro oleadas de rivales seguidas en la arena de Isla de Batalla.
+新增.md:0｜步驟說明｜達納蘇斯這段經驗少，趕路可跳過。｜Poca experiencia en el tramo de Darnassus. Omítelo si tienes prisa.
+新增.md:0｜步驟說明｜從阿斯特蘭納往南穿過貧瘠之地，搭大升降梯下千針石林。｜Desde Astranaar ve al sur por Los Baldíos y baja en el Gran Elevador a Las Mil Agujas.
+新增.md:0｜步驟說明｜薩蘭納爾｜Thalanaar
+新增.md:0｜步驟說明｜從薩蘭納爾往西穿過菲拉斯，到海邊碼頭搭船上羽月要塞。｜Desde Thalanaar ve al oeste por Feralas hasta el muelle de la costa y toma el barco al Bastión Plumaluna.
+新增.md:0｜步驟說明｜有黑石深淵隊伍才在這練到 52；單人跳過。｜Sube aquí hasta el 52 solo con grupo para las Profundidades de Roca Negra. En solitario, omítelo.
+新增.md:0｜步驟說明｜有黑石深淵隊伍才在這練到 52｜Sube aquí hasta el 52 solo con grupo para las Profundidades de Roca Negra
+新增.md:0｜步驟說明｜單人跳過。｜En solitario, omítelo.
+新增.md:0｜步驟說明｜打怪拾到被撕破的日記才右鍵接。｜Haz clic derecho para aceptarla solo si consigues Un diario destrozado de los enemigos.
+新增.md:0｜步驟說明｜在加德納爾 35, 59 一帶打怪。｜Mata enemigos alrededor de 35, 59 en Jaedenar.
+新增.md:0｜步驟說明｜在冬泉熊怪營地 32, 36 一帶打熊怪。｜Mata furbolgs alrededor de 32, 36 en el campamento Nevada.
+新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Quédate en el campamento Nevada y sigue matando furbolgs.
+新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜En las casas en ruinas de Villa Darrow, recoge la cabeza, el lado izquierdo y el lado derecho, y combínalos con clic derecho.

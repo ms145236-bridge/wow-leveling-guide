@@ -378,3 +378,15 @@
 02-12到30級.md:847｜說明｜在月神湖底找到神殿靈珠。｜Encontre o Adorno de Altar no fundo do Lago Eluna'ara.
 02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得半塊墜飾。｜Pegue uma metade do Pingente do Leão Marinho nas ruínas submersas ao sul de Auberdine, na Costa Negra.
 03-30到45級.md:851｜說明｜在勇士島的競技場連續擊敗四波對手。｜Derrote quatro ondas de oponentes seguidas na arena da Ilha da Peleja.
+新增.md:0｜步驟說明｜達納蘇斯這段經驗少，趕路可跳過。｜Pouca experiência no trecho de Darnassus. Pule se estiver com pressa.
+新增.md:0｜步驟說明｜從阿斯特蘭納往南穿過貧瘠之地，搭大升降梯下千針石林。｜De Astranaar, vá para o sul pelos Sertões e desça pelo Grande Elevador até Mil Agulhas.
+新增.md:0｜步驟說明｜薩蘭納爾｜Thalanaar
+新增.md:0｜步驟說明｜從薩蘭納爾往西穿過菲拉斯，到海邊碼頭搭船上羽月要塞。｜De Thalanaar, vá para o oeste por Feralas até o cais na costa e pegue o barco para o Domínio de Plumaluna.
+新增.md:0｜步驟說明｜有黑石深淵隊伍才在這練到 52；單人跳過。｜Upe aqui até o 52 só com grupo para o Abismo Rocha Negra. Sozinho, pule.
+新增.md:0｜步驟說明｜有黑石深淵隊伍才在這練到 52｜Upe aqui até o 52 só com grupo para o Abismo Rocha Negra
+新增.md:0｜步驟說明｜單人跳過。｜Sozinho, pule.
+新增.md:0｜步驟說明｜打怪拾到被撕破的日記才右鍵接。｜Clique com o botão direito para aceitar só se conseguir Um Diário Destroçado dos monstros.
+新增.md:0｜步驟說明｜在加德納爾 35, 59 一帶打怪。｜Mate monstros perto de 35, 59 em Jaedenar.
+新增.md:0｜步驟說明｜在冬泉熊怪營地 32, 36 一帶打熊怪。｜Mate furbolgs perto de 32, 36 no acampamento Invernoso.
+新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Fique no acampamento Invernoso e continue matando furbolgs.
+新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜Nas casas em ruínas da Vila das Flechas, pegue a cabeça, o lado esquerdo e o lado direito e clique com o botão direito para juntar.

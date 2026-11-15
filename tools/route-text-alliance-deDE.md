@@ -378,3 +378,15 @@
 02-12到30級.md:847｜說明｜在月神湖底找到神殿靈珠。｜Finde das Schrein-Schmuckstück am Grund des Elune'ara-Sees.
 02-12到30級.md:850｜說明｜在黑海岸奧伯丁南方的海底遺跡取得半塊墜飾。｜Hol eine Hälfte des Anhängers des Seelöwen aus den Unterwasserruinen südlich von Auberdine an der Dunkelküste.
 03-30到45級.md:851｜說明｜在勇士島的競技場連續擊敗四波對手。｜Besiege in der Arena auf dem Prügel-Eiland vier Gegnerwellen hintereinander.
+新增.md:0｜步驟說明｜達納蘇斯這段經驗少，趕路可跳過。｜Der Abschnitt in Darnassus bringt wenig EP. Überspring ihn, wenn du es eilig hast.
+新增.md:0｜步驟說明｜從阿斯特蘭納往南穿過貧瘠之地，搭大升降梯下千針石林。｜Geh von Astranaar nach Süden durch das Brachland und fahr mit dem Großen Aufzug hinunter nach Tausend Nadeln.
+新增.md:0｜步驟說明｜薩蘭納爾｜Thalanaar
+新增.md:0｜步驟說明｜從薩蘭納爾往西穿過菲拉斯，到海邊碼頭搭船上羽月要塞。｜Geh von Thalanaar nach Westen durch Feralas zum Steg an der Küste und nimm das Boot zur Mondfederfeste.
+新增.md:0｜步驟說明｜有黑石深淵隊伍才在這練到 52；單人跳過。｜Level hier nur mit einer Gruppe für die Schwarzfelstiefen bis 52. Solo überspringen.
+新增.md:0｜步驟說明｜有黑石深淵隊伍才在這練到 52｜Level hier nur mit einer Gruppe für die Schwarzfelstiefen bis 52
+新增.md:0｜步驟說明｜單人跳過。｜Solo überspringen.
+新增.md:0｜步驟說明｜打怪拾到被撕破的日記才右鍵接。｜Rechtsklicke Ein zerfleddertes Tagebuch nur, wenn du es von Gegnern erbeutet hast.
+新增.md:0｜步驟說明｜在加德納爾 35, 59 一帶打怪。｜Töte Gegner bei 35, 59 in Jaedenar.
+新增.md:0｜步驟說明｜在冬泉熊怪營地 32, 36 一帶打熊怪。｜Töte Furbolgs bei 32, 36 im Lager der Winterfelle.
+新增.md:0｜步驟說明｜留在冬泉熊怪營地繼續打熊怪。｜Bleib im Lager der Winterfelle und töte weiter Furbolgs.
+新增.md:0｜步驟說明｜在達隆郡廢屋撿頭、左身、右身三個部件，右鍵組合。｜Sammle in den zerstörten Häusern von Darrowshire Kopf, linke und rechte Seite und kombiniere sie per Rechtsklick.

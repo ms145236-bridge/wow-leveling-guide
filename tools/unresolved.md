@@ -1,7 +1,7 @@
-# 建置報告（資料版本 d20260a7）
+# 建置報告（資料版本 0632c116）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
-站數：94　任務數：1510
+站數：93　任務數：1510
 
 ## 需要處理（0）
 
@@ -233,7 +233,7 @@
 - 任務 1526：目標怪 QuestieDB 沒有繁中名（火之靈體、Manifestation of Flames）
 - 任務 671：目標怪 QuestieDB 沒有繁中名（辛迪加路霸、辛迪加巡路者、辛迪加雇傭兵、Syndicate Smuggler）
 - 任務 78830：目標怪 QuestieDB 沒有繁中名（Gharrik）
-- 03-30到45級.md:1090 交｜向赫格拉姆報到：路線寫「迅捷的赫格拉姆」，QuestieDB／遊戲名是「赫格拉姆」
+- 03-30到45級.md:1085 交｜向赫格拉姆報到：路線寫「迅捷的赫格拉姆」，QuestieDB／遊戲名是「赫格拉姆」
 - 05-副本.md:1080 交｜：QuestieDB 沒有繁中名（Magister Kirandis），用「Magister Kirandis」
 - 05-副本.md:1044 接｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
 - 05-副本.md:1044 交｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
@@ -256,11 +256,11 @@
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Lieutenant Suncrest）
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Magister Hawkhelm）
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Ranger Lydrea）
-- 04-45到60級.md:635 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
-- 04-45到60級.md:637 交｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
-- 04-45到60級.md:638 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 04-45到60級.md:654 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 04-45到60級.md:656 交｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 04-45到60級.md:657 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
 - 任務 8251：目標怪 QuestieDB 沒有繁中名（血精靈勘測員、血精靈搜尋者、血精靈防衛者、Blood Elf Arcanist、伊文‧修密特、露蜜娜‧風詠）
-- 04-45到60級.md:921 接｜聖光研究：路線寫「物件 書籍」，QuestieDB／遊戲名是「詹妮亞·坎農」
+- 任務 4289：目標怪 QuestieDB 沒有繁中名（安戈洛猩猩、Un'Goro Gorilla）
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku、Mijan）
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro、Zolo）
@@ -268,17 +268,15 @@
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku、Mijan）
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro、Zolo）
-- 04-45到60級.md:1355 接｜奪回希利蘇斯：路線寫「塞納里奧使者黑蹄」，QuestieDB／遊戲名是「塞納里奧使者托爾·黑蹄」
-- 任務 4289：目標怪 QuestieDB 沒有繁中名（安戈洛猩猩、Un'Goro Gorilla）
+- 04-45到60級.md:1288 接｜聖光研究：路線寫「物件 書籍」，QuestieDB／遊戲名是「詹妮亞·坎農」
+- 04-45到60級.md:1335 接｜奪回希利蘇斯：路線寫「塞納里奧使者黑蹄」，QuestieDB／遊戲名是「塞納里奧使者托爾·黑蹄」
 - 任務 97327：目標怪 QuestieDB 沒有繁中名（Blackmaw Berserker、Blackmaw Thrall、Blackmaw Headhunter、Swarming Imp、Legashi Slayer、Blackmaw Champion）
 - 05-副本.md:1772 接｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
 - 05-副本.md:1784 交｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
 
-## 順序錯誤（已自動調整 3）
+## 順序錯誤（已自動調整 0）
 
-- 03-24 大河林地・羅格瑪第一次：接「豺狼人出沒」（94532）原本排在前置「獵人的箭袋」（96109）交之前，已移到交之後
-- 03-24 大河林地・羅格瑪第一次：接「鬃丘強盜」（94535）原本排在前置「獵人的箭袋」（96109）交之前，已移到交之後
-- 03-24 大河林地・羅格瑪第一次：接「史納戈的鼻子」（94533）原本排在前置「獵人的箭袋」（96109）交之前，已移到交之後
+無
 
 ## 學技能站（候選站依序，遊戲取第一個本角色有的）
 
