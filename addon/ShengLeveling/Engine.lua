@@ -516,7 +516,7 @@ local function stepDone(step, map, x, y)
   elseif t == "goto" or (t == "travel" and s.x) then
     -- 好幾個座標（via）：依序走，走到最後一個才算到；路過第 k 點就記「@k」（箭頭改指下一點，見 E.ViaTarget）。
     -- 搭船、飛艇到別張地圖：那個點本來就是最後一點
-    -- 到了沒：換成世界座標比碼數（到某處 40 碼、交通 80 碼）；步驟寫了 r（地圖 %）或換算不了就用地圖 %
+    -- 到了沒：換成世界座標比碼數（到某處 25 碼、交通 50 碼）；步驟寫了 r（地圖 %）或換算不了就用地圖 %
     local function near(p)
       if not s.r and C_Map and C_Map.GetWorldPosFromMapPos and CreateVector2D then
         local _, a = C_Map.GetWorldPosFromMapPos(map, CreateVector2D(x / 100, y / 100))
@@ -524,7 +524,7 @@ local function stepDone(step, map, x, y)
         if a and b then
           local ax, ay = a:GetXY()
           local bx, by = b:GetXY()
-          return math.sqrt((ax - bx) ^ 2 + (ay - by) ^ 2) <= (t == "travel" and 80 or 40)
+          return math.sqrt((ax - bx) ^ 2 + (ay - by) ^ 2) <= (t == "travel" and 50 or 25)
         end
       end
       return math.sqrt((x - p[2]) ^ 2 + (y - p[3]) ^ 2) <= (s.r or 3)
