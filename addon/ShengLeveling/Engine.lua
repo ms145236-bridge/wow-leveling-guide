@@ -1244,7 +1244,7 @@ function E.DungeonPrompt()
         end
         if left > 0 then return d, L["先做前置鏈（%d 步）"]:format(left) end
         local total, got = E.DungeonPre(d)
-        return d, total > got and L["前置 %d/%d 未接"]:format(total - got, total) or nil
+        return d, total > got and L["前置未接 %d／共 %d"]:format(total - got, total) or nil
       end
     end
   end

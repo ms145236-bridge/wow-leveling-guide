@@ -248,7 +248,7 @@ export function openQuestieDB() {
     if (!enIds[type]) { enIds[type] = new Map(); for (const id of loadType(type).idList) { const n = field(type, id, 1); if (typeof n === "string" && !enIds[type].has(n)) enIds[type].set(n, id); } }
     return enIds[type].get(en);
   };
-  return { quest, npc, object, questsByName, questMobs, allQuestIds: () => loadType("Quest").idList, norm, enByZh, itemEn, l10nName, l10nObj, idByEn };
+  return { field, quest, npc, object, questsByName, questMobs, allQuestIds: () => loadType("Quest").idList, norm, enByZh, itemEn, l10nName, l10nObj, idByEn };
 }
 
 // 一群點取最密集一群的中心（同地圖、距離 5 以內算一群）

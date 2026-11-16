@@ -349,7 +349,11 @@ for (const file of files.filter((f) => !sideFile(f))) {
       else if (key === "二選一" && v !== "無") st.alt = v;
       else if (key.startsWith("地圖")) st.map = +v || undefined;
       else if (key === "未完") warn(`${st.id} ${st.name}`, `未完：${v}`);
-      else if (key !== "限定" && key !== "二選一") st.tips.push({ k: key, raw: v, text: v.replace(/【[^】]*】/g, "").trim(), where });
+      else if (key !== "限定" && key !== "二選一") {
+        // 取捨的「值得做｜」「之後順路｜」是分類，不顯示（留在 verdict）；「可跳過」照樣顯示
+        const vd = key === "取捨" && v.match(/^(值得做|之後順路)｜\s*/), body = vd ? v.slice(vd[0].length) : v;
+        st.tips.push({ k: key, verdict: vd ? vd[1] : undefined, raw: body, text: body.replace(/【[^】]*】/g, "").trim(), where });
+      }
       return;
     }
     const sm = line.match(/^\s*(?:(\d+)\s*[.、)]\s*|[-*]\s*)?(交通|接|做|交|到|鳥|爐|飛|船|練|註|買)｜(.*)$/);
@@ -888,7 +892,8 @@ const zhTitle = (s) => {
   if (ZH_VERB[s.t]) return ZH_VERB[s.t] + (s.node || s.bind || s.to || s.text || "");
   return (s.text || "").replace(/【[^】]*】/g, "").split(/[，。；（(]/)[0].trim().slice(0, 16) || undefined; // 交通、到、註：第一句
 };
-const replaceIds = (text) => replaceStations(stepRefs(text, zhTitle, "zh")).replace(/(?<![\d.\w])(\d{3,6})(?![\d.,]|\s*[個隻只根張份塊件頭名條把顆片枚級%]|\s+\d+[.,]\d)/g, (all, num, at, whole) => {
+// 裸數字只在「不是數量」時才當任務 ID：後面接單位（金、經驗、號、型…）、前面是「約／捐／共…」、網址裡的數字都保持原樣
+const replaceIds = (text) => replaceStations(stepRefs(text, zhTitle, "zh")).replace(/(?<![\d.\w/=])(?<!(?:約|捐|共|花|付|需|值)\s?)(\d{3,6})(?![\d.,]|\s*(?:[個隻只根張份塊件頭名條把顆片枚級%金銀銅格秒次碼號型倍]|經驗|XP|xp|分鐘|小時)|\s+\d+[.,]\d)/g, (all, num, at, whole) => {
   const id = +num;
   if (MAP_IDS.has(id)) return all;
   // 沒換掉的「第 N 步」「第 N–M、K 步」裡的數字是步驟編號，不是任務 ID
@@ -925,7 +930,9 @@ const stepWhen = (w, sw) => {
   return Object.keys(out).length ? out : undefined;
 };
 const stepOut = (s, st) => ({
-  star: s.star, t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt, desc: s.desc, spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
+  star: s.star, t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
+  // 說明段用「；」接起來：句號結尾的段後面不再補「；」，完全相同的段只留一次（翻譯照原本的「；」切段，不受影響）
+  desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
   map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, via: s.via?.length ? s.via.map((p) => [p.map, p.x, p.y]) : undefined, back: s.back, hm: s.hm, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam,
 });
 let out = GUARD + `-- 由 tools/build.mjs 產生，勿手改。來源：${ALLY ? "route-alliance" : "route"}/*.md\nlocal _, MG = ...\nMG.Route = {\n  built = "@@BUILT@@",\n  stations = {\n`;
