@@ -410,5 +410,11 @@ MG.Locales.deDE = {
   ["重新載入"] = "Neu laden",
   ["稍後"] = "Später",
   ["介面語言改成 %s，重新載入介面後生效。"] = "Sprache auf %s gestellt. Oberfläche neu laden, um sie zu übernehmen.",
+  ["略過「%s」：之後的「%s」（%s）會接不到"] = "„%s“ übersprungen: Die spätere Quest „%s“ (%s) ist dann nicht annehmbar",
+  ["略過了「%s」（%s）"] = "„%s“ übersprungen (%s)",
+  ["%s 副本前置"] = "Vorquest für %s",
+  ["獎勵：%s"] = "Belohnung: %s",
+  ["本站有 %d 條重要任務沒排（%s）；設定開「帶上可跳過的任務」就會顯示"] = "%d wichtige Questreihen fehlen hier (%s). Aktiviere „Optionale Quests einbeziehen“ in den Optionen, um sie anzuzeigen.",
+  ["%s等"] = "%s u. a.",
   ["已完成"] = "Abgeschlossen",
 }

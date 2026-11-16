@@ -263,6 +263,13 @@ local function available(q)
   return true
 end
 
+-- 後續任務已經接了或交了（例如沒做導引就直接接到主任務）：這個任務不用做了
+local function superseded(q)
+  if turned(q) or C.IsOnQuest(q) then return false end
+  for _, f in ipairs((R.quests[q] or {}).fol or {}) do if turned(f) or C.IsOnQuest(f) then return true end end
+  return false
+end
+
 -- 可跳過的步驟：設定沒開就不算路線，除非該任務已在任務日誌，或經驗不夠時被補回來（fill）
 local fill = {}
 local function optOut(s)
@@ -344,11 +351,22 @@ function E.FillPlan(st)
     if s.q and (s.t == "do" or s.t == "turnin") then work[s.q] = true end
     if s.q and s.tag and (s.tag:find("隊伍", 1, true) or s.tag:find("組隊", 1, true) or s.tag:find("精英", 1, true)) then group[s.q] = true end
   end
+  -- 前置已完成、是本站會做也會交的任務，或前置也已被補回（任務鏈依序補）才算得到（必做的也一樣：前置被略過、不在本站的不算）
+  local function eligible(q)
+    if available(q) then return true end
+    local qi = R.quests[q] or {}
+    for _, p in ipairs(qi.pg or {}) do if not (turned(p) or (hand[p] and seen[p]) or fill[p]) then return false end end
+    if qi.ps and #qi.ps > 0 then
+      for _, p in ipairs(qi.ps) do if turned(p) or (hand[p] and seen[p]) or fill[p] then return true end end
+      return false
+    end
+    return true
+  end
   for _, step in ipairs(st.list) do
     local s, q = step.s, step.s.q
-    if q and E.Applies(s.when) and raceOK(q) and not turned(q) and not MG.db.skip[step.key] and not excluded(q) then
+    if q and E.Applies(s.when) and raceOK(q) and not turned(q) and not MG.db.skip[step.key] and not MG.db.skip["a:" .. q] and not excluded(q) and not superseded(q) then
       -- 必做的，和已經接了的可跳過任務
-      if (not s.opt or C.IsOnQuest(q)) and not seen[q] then
+      if (not s.opt or C.IsOnQuest(q)) and not seen[q] and eligible(q) then
         seen[q] = true
         info.questXP = info.questXP + (hand[q] and questXP(q, lv) or 0)
         info.killXP = info.killXP + (work[q] and killXP(q, lv) or 0)
@@ -380,17 +398,6 @@ function E.FillPlan(st)
     if c.xp > 0 then list[#list + 1] = c end
   end
   table.sort(list, function(a, b) return a.score > b.score end)
-  -- 前置已完成，或前置也已被補回（任務鏈依序補）才能選
-  local function eligible(q)
-    if available(q) then return true end
-    local qi = R.quests[q] or {}
-    for _, p in ipairs(qi.pg or {}) do if not (turned(p) or fill[p]) then return false end end
-    if qi.ps and #qi.ps > 0 then
-      for _, p in ipairs(qi.ps) do if turned(p) or fill[p] then return true end end
-      return false
-    end
-    return true
-  end
   local picked = true
   while projected < need and picked do
     picked = false
@@ -441,7 +448,7 @@ function E.Detour(state)
   local best, bd
   for i, step in ipairs(state.steps) do
     local s, q = step.s, step.s.q
-    if i ~= state.cur and q and not state.done[i] and not state.na[i] and not state.inGroup[i] and now - (detourNo[step.key] or -999) >= 120 then
+    if i ~= state.cur and q and not state.done[i] and not state.na[i] and not state.wait[i] and not state.inGroup[i] and now - (detourNo[step.key] or -999) >= 120 then
       local onQ = C.IsOnQuest(q)
       local ok = (s.t == "accept" and not onQ and lv >= ((R.quests[q] or {}).min or 0))
         or (s.t == "do" and onQ and not ready(q)) or (s.t == "turnin" and onQ and ready(q))
@@ -614,9 +621,29 @@ function E.Locate(st)
     end
   end
   local lowLv = {}
+  -- 「接不到」記在接取步驟的鍵上（同站同任務第二個接取點是 a:任務~2）：換成任務 ID，接、做、交一起收起來
+  local notNowQ = {}
+  for k in pairs(db.notNow) do
+    local q = tonumber(k:match("^a:(%d+)"))
+    if q then notNowQ[q] = true end
+  end
+  -- 前置還沒交，但本站前面排了它的「交」（會做到）：後續任務先列出來（wait），不輪到它，等前置交了才變成一般步驟
+  -- turnAt[q]＝本站還沒做、適用的「交 q」在第幾步；off(j)＝那一步不算數（漏掉了、不在這一輪）
+  local turnAt, wait = {}, {}
+  local function planned(q, off)
+    local info = R.quests[q]
+    local function ok(p) return turned(p) or (turnAt[p] and not (off and off(turnAt[p]))) end
+    for _, p in ipairs(info.pg or {}) do if not ok(p) then return false end end
+    if info.ps and #info.ps > 0 then
+      for _, p in ipairs(info.ps) do if ok(p) then return true end end
+      return false
+    end
+    return true
+  end
   for i, step in ipairs(steps) do
     local s = step.s
-    na[i] = ((s.t == "do" or s.t == "turnin") and s.q and not acc[s.q] and not C.IsOnQuest(s.q) and not turned(s.q)) or step.defer or (s.q and db.notNow["a:" .. s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or not available(s.q))) or (s.fq and (excluded(s.fq) or not raceOK(s.fq) or turned(s.fq))) or false
+    local open = not s.q or available(s.q)
+    na[i] =((s.t == "do" or s.t == "turnin") and s.q and not acc[s.q] and not C.IsOnQuest(s.q) and not turned(s.q)) or step.defer or (s.q and notNowQ[s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or (s.t == "train" and (not MG.UI.Get("trainOn") or (UnitLevel("player") or 0) < s.lv)) or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or superseded(s.q) or not (open or planned(s.q)))) or (s.fq and (excluded(s.fq) or not raceOK(s.fq) or turned(s.fq))) or false
     -- 只差等級（【N 級起】）的步驟：現在不能做，但清單照樣列出來（灰、寫幾級），免得以為這站快做完了
     if na[i] and s.when and s.when.lvMin and lv < s.when.lvMin and not turned(s.q or 0) and not db.skip[step.key] then
       local w = {}
@@ -632,6 +659,8 @@ function E.Locate(st)
     local mark = db.mark[step.key]
     if mark ~= nil and mark == auto then db.mark[step.key] = nil; mark = nil end
     done[i] = na[i] or (mark ~= nil and mark) or (mark == nil and auto)
+    wait[i] = not na[i] and not open or nil
+    if s.t == "turnin" and s.q and not done[i] then turnAt[s.q] = i end
   end
   -- 「去學技能」同時只留一個（離自己最近的訓練師），其餘先藏起來；跟訓練師說話時一起勾掉（trainHid）
   local trainHid, best, bestD = {}, nil, nil
@@ -685,7 +714,8 @@ function E.Locate(st)
   for i = 1, n do if steps[i].s.roam and not done[i] and not na[i] then roamQ[steps[i].s.q or 0] = true end end
   for i = 1, n do
     local q = steps[i].s.q
-    if tails[i] or steps[i].s.t == "train" or steps[i].s.roam or (q and roamQ[q] and steps[i].s.t == "turnin") then
+    if tails[i] or wait[i] or steps[i].s.t == "train" or steps[i].s.roam or (q and roamQ[q] and steps[i].s.t == "turnin") then
+      -- 等前置的後續任務：不輪到它、也不算漏掉（前置的「交」排在它前面）
       -- 站尾交通先跳過，任務步驟都處理完才輪到；學技能只當提醒（步驟列下方），不擋路
       -- 順路任務（怪散在整區）：不搶目前步驟，路上遇到就打；其他步驟都做完還沒完成才輪到
     elseif not done[i] and q and missedQ[q] then
@@ -696,7 +726,7 @@ function E.Locate(st)
       local seen, d, j = 0, 0, i + 1
       while j <= n and seen < 8 do
         local s2 = steps[j].s
-        if s2.q and s2.q ~= steps[i].s.q and not na[j] then
+        if s2.q and s2.q ~= steps[i].s.q and not na[j] and not wait[j] then
           seen = seen + 1
           if done[j] then d = d + 1 end
         end
@@ -708,6 +738,16 @@ function E.Locate(st)
       else
         auto = i; break
       end
+    end
+  end
+  -- 前置的「交」被判成漏掉：等它的後續任務照舊不適用（依序往後，整條鏈一起收）
+  local missedAt = {}
+  for _, i in ipairs(missedIdx) do missedAt[i] = true end
+  for i = 1, n do
+    local q = steps[i].s.q
+    if wait[i] and not planned(q, function(j) return missedAt[j] end) then
+      na[i], done[i], wait[i] = true, true, nil
+      if turnAt[q] == i then turnAt[q] = nil end
     end
   end
   if not auto then
@@ -806,7 +846,8 @@ function E.Locate(st)
       local s = steps[i].s
       if not done[i] and not na[i] then
         if s.t == "travel" or s.t == "hearth" or s.t == "bind" or s.t == "fly" or s.t == "boat" or s.t == "fp" then break end
-        local ok = (s.t == "do" and s.q and C.IsOnQuest(s.q)) or s.t == "accept" or (s.t == "turnin" and s.q and C.IsOnQuest(s.q) and ready(s.q))
+        -- 等前置的「接」：前置的「交」就是目前步驟或已併進來（同一個人交了接著接）才併
+        local ok = (s.t == "do" and s.q and C.IsOnQuest(s.q)) or (s.t == "accept" and (not wait[i] or planned(s.q, function(j) return j ~= cur and not inGroup[j] end))) or (s.t == "turnin" and s.q and C.IsOnQuest(s.q) and ready(s.q))
         local p = ok and near(s)
         if p then
           group[#group + 1] = i
@@ -826,7 +867,7 @@ function E.Locate(st)
   end
   local train
   for i = 1, n do if steps[i].s.t == "train" and not done[i] and not na[i] and i ~= cur then train = train or i end end
-  return { roamQ = roamQ, train = train, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, low = low, lowLv = lowLv, trainHid = trainHid, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
+  return { roamQ = roamQ, train = train, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, wait = wait, low = low, lowLv = lowLv, trainHid = trainHid, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
 end
 
 -- ── 站 ──────────────────────────────────────────────────────────────────────
@@ -835,7 +876,7 @@ function E.Progress(st)
   local total, got, seen = 0, 0, {}
   for _, step in ipairs(st.list) do
     local q = step.s.q
-    if q and not seen[q] and E.Applies(step.s.when) and not optOut(step.s) and raceOK(q) then
+    if q and not seen[q] and E.Applies(step.s.when) and not optOut(step.s) and raceOK(q) and not superseded(q) then
       seen[q] = true
       total = total + 1
       local m = MG.db.mark["t:" .. q]
@@ -998,7 +1039,7 @@ function E.Leaving(state)
   for i, step in ipairs(state.steps) do
     local q = step.s.q
     local skipped = MG.db.skip[step.key]
-    if q and not seen[q] and not step.carry and not turned(q) and (skipped or not (state.done[i] or state.na[i])) then
+    if q and not seen[q] and not step.carry and not turned(q) and (skipped or not (state.done[i] or state.na[i] or state.wait[i])) then
       seen[q] = true
       local imp = E.Impact(q, state.st)
       if #imp > 0 then out[#out + 1] = { i = i, q = q, imp = imp } end
@@ -1137,6 +1178,60 @@ function E.ToggleSkip(key)
       end
     end
   end
+end
+
+-- 任務本身或後續是副本任務（沒選不打的）、有本職業的好獎勵 → { hit, why, chain }；整條鏈都不重要 → false（這次登入記著）
+local weight = {}
+local function weigh(q)
+  if weight[q] ~= nil then return weight[q] end
+  local seen, queue, k, hit, why = { [q] = true }, { q }, 1, nil, nil
+  while queue[k] do
+    local cur = queue[k]
+    k = k + 1
+    for _, o in ipairs(not why and not turned(cur) and raceOK(cur) and questSt[cur] or {}) do
+      for _, step in ipairs(o.list) do
+        local s = step.s
+        if not why and s.q == cur and E.Applies(s.when) then
+          local star = E.StarFor(cur, s)
+          why = (o.dungeon and not MG.db.dNo[o.id] and (s.ph == "pre" and L["%s 副本前置"] or L["%s 副本"]):format(o.name)) or (star and L["獎勵：%s"]:format(star)) or nil
+          hit = why and cur
+        end
+      end
+    end
+    for _, f in ipairs((R.quests[cur] or {}).fol or {}) do
+      if not seen[f] then seen[f] = true; queue[#queue + 1] = f end
+    end
+  end
+  weight[q] = why and { hit = hit, why = why, chain = queue } or false
+  return weight[q]
+end
+-- 手動略過了重要任務：回一句提示；同一條鏈只提一次（存檔 skipNote）
+function E.SkipNotice(q)
+  local note = MG.db.skipNote
+  local w = not note[q] and not turned(q) and raceOK(q) and weigh(q)
+  if not w then return end
+  for _, c in ipairs(w.chain) do note[c] = true end
+  if w.hit == q then return L["略過了「%s」（%s）"]:format(questName(q), w.why) end
+  return L["略過「%s」：之後的「%s」（%s）會接不到"]:format(questName(q), questName(w.hit), w.why)
+end
+-- 到站：可跳過沒開而沒排進來的重要任務，整站合成一句（最多列 3 個）；每站只提一次（存檔 optNote）
+function E.OptNotice(state)
+  local st = state.st
+  if state.instance or st.dungeon or MG.db.optNote[st.id] then return end
+  MG.db.optNote[st.id] = true
+  local n, names, seen, said = 0, {}, {}, {}
+  for _, step in ipairs(state.steps) do
+    local s = step.s
+    local w = s.q and not seen[s.q] and optOut(s) and not MG.db.skip[step.key] and E.Applies(s.when) and not turned(s.q) and raceOK(s.q) and weigh(s.q)
+    if w then
+      n = n + 1
+      for _, c in ipairs(w.chain) do seen[c] = true end
+      if not said[w.why] then said[w.why] = true; names[#names + 1] = w.why end
+    end
+  end
+  if n == 0 then return end
+  local list = table.concat(names, L["、"], 1, math.min(#names, 3))
+  return L["本站有 %d 條重要任務沒排（%s）；設定開「帶上可跳過的任務」就會顯示"]:format(n, #names > 3 and L["%s等"]:format(list) or list)
 end
 
 -- 手動勾選：val = true／false；nil＝回到自動
@@ -1480,8 +1575,8 @@ function E.Title(s, full)
   elseif s.t == "fp" then return (full and L["開鳥點："] or "") .. (s.node or (s.map and C.MapName(s.map)) or "")
   elseif s.t == "hearth" then return (full and L["爐石回 "] or "") .. (s.bind or (s.hm and C.MapName(s.hm)) or "")
   elseif s.t == "bind" then return (full and L["綁爐石："] or "") .. (s.bind or (s.map and C.MapName(s.map)) or (s.hm and C.MapName(s.hm)) or "")
-  elseif s.t == "fly" then return (full and L["飛往 "] or "") .. ((MG.uiZh and s.to or s.toL) or "")
-  elseif s.t == "boat" then return (full and L["搭船／飛艇往 "] or "") .. ((MG.uiZh and s.to or s.toL) or "")
+  elseif s.t == "fly" then return (full and L["飛往 "] or "") .. ((MG.uiZh and s.to or s.toL) or s.to or "")
+  elseif s.t == "boat" then return (full and L["搭船／飛艇往 "] or "") .. ((MG.uiZh and s.to or s.toL) or s.to or "")
   elseif s.t == "level" then return L[full and "練到 %s 級" or "到 %s 級"]:format(s.lv or "?")
   elseif s.t == "train" then return (full and L["去學技能："] or "") .. (s.npc or "") .. (s.place and L["（%s）"]:format(s.place) or "") end
   return s.text or ""

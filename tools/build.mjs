@@ -86,7 +86,7 @@ const tagEn = (tag) => { const out = (tag || "").split(/\s*・\s*/).map((t) => T
 const enText = (t) => String(t || "").replace(/\$[Bb]/g, " ").replace(/\$[Nn]/g, "you").replace(/\$[CcRr]/g, "adventurer").replace(/\s+/g, " ").trim();
 const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel", 買: "buy" };
 // 行尾標籤：這些不顯示；其餘（可跳過、有隊伍再做…）顯示在步驟第 3 行
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接)/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測)/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -837,9 +837,15 @@ for (const [id, e] of quests) {
   exFixed.push(`- ${id} ${e.n}：前置 ${alt.join("、")} 或它的替代 ${union.filter((p) => !alt.includes(p)).join("、") || "（互斥的前置之間）"} 任一個`);
 }
 // 互斥清單裡的導引（自己的前置，或 next 指向自己的）不算互斥：交完導引不會把主任務藏掉
+// 同名、交給主任務發任務 NPC 的也是導引（例：虛弱妖術 5654 泰金→烏爾庫，主任務 5652 向烏爾庫接）
 const exLead = [];
 for (const [id, e] of quests) {
-  const lead = (e.ex || []).filter((o) => [...(e.pg || []), ...(e.ps || [])].includes(o) || db.quest(o)?.next === id);
+  const main = db.quest(id);
+  const lead = (e.ex || []).filter((o) => {
+    const q = db.quest(o);
+    return [...(e.pg || []), ...(e.ps || [])].includes(o) || q?.next === id
+      || (q && main && q.en === main.en && q.endNpcs.some((n) => main.startNpcs.includes(n)) && !q.startNpcs.some((n) => main.startNpcs.includes(n)));
+  });
   if (!lead.length) continue;
   e.ex = e.ex.filter((o) => !lead.includes(o));
   exLead.push(`- ${id} ${e.n}：${lead.join("、")}`);
@@ -1199,7 +1205,21 @@ out += `  },\n}\n`;
 // 台服用詞（tools/用詞.md）：只改說明文字欄位與句子陣列，任務名／NPC／怪名保持和遊戲一致
 const wording = readFileSync(join(ROOT, "tools", "用詞.md"), "utf8").split(/\r?\n/)
   .map((l) => l.match(/^-\s*([^｜]+)｜(.*)$/)).filter(Boolean).map((m) => [m[1].trim(), m[2].trim()]);
-const reword = (text) => wording.reduce((t, [from, to]) => t.split(from).join(to), text);
+// QuestieDB 的 zhTW 任務文字有一批是簡體硬轉的（一→壹、里→裏、钻→鉆…）：顯示用的說明欄位改回台灣寫法。
+// 譯名裡的「里」（提里奧、塞納里奧…）先改回來，剩下的「裏」才是「裡」。任務名／NPC／怪名不經過這裡
+const ZH_FIX = [
+  ["裏→里（譯名）", /(加莫|提|塞納|卡|雷布|哈|瑪科|薩瓦|尤克|瑪艾|雷姆托|杜|加|格|索|貝|梅|史克|拉索)裏(?=塔|奧|爾|·|石板|克|希望|談|的營地|的頭顱|和取|楊|什|姆|薩拉|加爾)/g, "$1里"],
+  ["裏→裡", /裏/g, "裡"], ["壹→一", /壹/g, "一"], ["只→隻（量詞）", /([0-9０-９一兩幾])只/g, "$1隻"],
+  ["信息→訊息", /信息(?!素)/g, "訊息"], ["惟一→唯一", /惟一/g, "唯一"], ["激活→啟動", /激活/g, "啟動"], ["麽→麼", /麽/g, "麼"], ["凈→淨", /凈/g, "淨"], ["鉆→鑽", /鉆/g, "鑽"],
+  ["余燼→餘燼", /余燼/g, "餘燼"], ["恒→恆", /恒/g, "恆"], ["采→採", /采/g, "採"], ["巖→岩", /巖/g, "岩"], ["沈沒→沉沒", /沈沒/g, "沉沒"], ["沖擊→衝擊", /沖擊/g, "衝擊"],
+  ["咨詢→諮詢", /咨詢/g, "諮詢"], ["象征→象徵", /象征/g, "象徵"], ["聯系→聯繫", /聯系/g, "聯繫"], ["關系→關係", /關系/g, "關係"], ["頭發→頭髮", /頭發/g, "頭髮"],
+  ["幹→乾", /曬幹|幹肉/g, (m) => m.replace("幹", "乾")], ["蔔→卜", /占蔔|地蔔師/g, (m) => m.replace("蔔", "卜")], ["制→製", /(?<![控限抑克壓強編機體])制(?=作|造|成)|粗制/g, (m) => m.replace("制", "製")],
+];
+const zhFixed = new Map();
+const reword = (text) => ZH_FIX.reduce((t, [label, from, to]) => t.replace(from, (...m) => {
+  zhFixed.set(label, (zhFixed.get(label) || 0) + 1);
+  return typeof to === "function" ? to(m[0]) : to.replace("$1", m[1]);
+}), wording.reduce((t, [from, to]) => t.split(from).join(to), text));
 out = out
   .replace(/\b(d|desc|spot|hint|pickup|text|why|use|note|entrance)="(?:[^"\\]|\\.)*"/g, reword)
   .replace(/\b(s|pickupS)=\{(?:[^{}"]|"(?:[^"\\]|\\.)*")*\}/g, reword);
@@ -1207,6 +1227,7 @@ out = out
 const version = createHash("sha1").update(out).digest("hex").slice(0, 8);
 out = out.replace("@@BUILT@@", version);
 writeFileSync(OUT, out);
+console.log(`簡體硬轉字改回台灣寫法 ${[...zhFixed.values()].reduce((a, b) => a + b, 0)} 處：${[...zhFixed].map(([k, n]) => `${k} ${n}`).join("、") || "無"}`);
 
 // ── Data/Route_enUS.lua：英文介面／英文客戶端用的名稱與說明（站 ID＋步驟序號、任務 ID 對到 Route.lua）──
 // 之後加語言：再產生一個 Route_<locale>.lua，結構相同
@@ -1621,6 +1642,7 @@ for (const loc of Object.keys(NAME_LOC)) {
     c.text++;
     const v = TL(where, zhText);
     if (v) { c.textLoc++; return v; }
+    (c.need ||= new Map()).set(k, where); // 這個語系沒翻到的（TX_NEED=檔案 時另存 檔案.<語系>）
     const e = tx(where, zhText);
     if (e) c.textEn++;
     return e;
@@ -1667,6 +1689,7 @@ for (const loc of Object.keys(NAME_LOC)) {
   locCov.push([loc, c]);
 }
 for (const [loc, c] of locCov) {
+  if (process.env.TX_NEED) writeFileSync(`${process.env.TX_NEED}.${loc}`, [...(c.need || [])].map(([k, w]) => `${w}｜說明｜${k}｜`).join("\n"));
   console.log(`${loc}：名稱 ${c.namesLoc}/${c.names}（英文 ${c.namesEn.size} 種）、說明文字 ${c.textLoc}/${c.text}（用英文 ${c.textEn}）、任務名 ${c.qnLoc}/${c.qn}、任務目標文字 ${c.qdLoc}/${c.qd}、標籤用英文 ${c.tagsEn}/${c.tags}、站名缺 ${(c.stMiss || []).join("、") || 0}／地點缺 ${c.stPartMiss || 0}；翻譯列不用：亂碼 ${c.rejected.garbled}、字型顯示不了 ${c.rejected.script}（另有審稿標記拿掉 ${c.rejected.mark}）`);
   if (process.env.LOC_REPORT) writeFileSync(join(process.env.LOC_REPORT, `names-en-${loc}.txt`), [...c.namesEn].sort().join("\n"));
 }

@@ -410,5 +410,11 @@ MG.Locales.frFR = {
   ["重新載入"] = "Recharger",
   ["稍後"] = "Plus tard",
   ["介面語言改成 %s，重新載入介面後生效。"] = "Langue réglée sur %s. Recharge l'interface pour l'appliquer.",
+  ["略過「%s」：之後的「%s」（%s）會接不到"] = "« %s » passée : la suite « %s » (%s) ne sera pas disponible",
+  ["略過了「%s」（%s）"] = "« %s » passée (%s)",
+  ["%s 副本前置"] = "prérequis du donjon %s",
+  ["獎勵：%s"] = "Récompense : %s",
+  ["本站有 %d 條重要任務沒排（%s）；設定開「帶上可跳過的任務」就會顯示"] = "%d suites de quêtes importantes sont laissées de côté ici (%s). Activez « Inclure les quêtes facultatives » dans les options pour les afficher.",
+  ["%s等"] = "%s, etc.",
   ["已完成"] = "Terminé",
 }

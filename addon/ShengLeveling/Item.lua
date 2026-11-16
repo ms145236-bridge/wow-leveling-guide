@@ -159,8 +159,18 @@ function I.Create(bar)
   local f = CreateFrame("Frame")
   pcall(f.RegisterEvent, f, "PLAYER_REGEN_ENABLED")
   pcall(f.RegisterEvent, f, "BAG_UPDATE_DELAYED")
+  pcall(f.RegisterEvent, f, "BAG_UPDATE_COOLDOWN")
+  pcall(f.RegisterEvent, f, "SPELL_UPDATE_COOLDOWN")
   f:SetScript("OnEvent", function(_, event)
-    if event == "BAG_UPDATE_DELAYED" then key = ""; MG.Refresh() elseif pending then MG.try("任務物品", I.Apply) end
+    if event == "BAG_UPDATE_COOLDOWN" or event == "SPELL_UPDATE_COOLDOWN" then -- 用了物品後冷卻立刻畫上（原本要等下次重算才畫）
+      for i, b in ipairs(buttons) do
+        local id = items[i]
+        if id and b.cd and C_Container and C_Container.GetItemCooldown then
+          local start, dur = C_Container.GetItemCooldown(id)
+          b.cd:SetCooldown(start or 0, dur or 0)
+        end
+      end
+    elseif event == "BAG_UPDATE_DELAYED" then key = ""; MG.Refresh() elseif pending then MG.try("任務物品", I.Apply) end
   end)
   C.impl.Item = GetQuestLogSpecialItemInfo and "GetQuestLogSpecialItemInfo" or "只有 QuestieDB 任務物品"
 end

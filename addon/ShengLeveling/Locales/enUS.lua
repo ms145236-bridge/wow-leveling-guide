@@ -410,5 +410,11 @@ MG.Locales.enUS = {
   ["重新載入"] = "Reload",
   ["稍後"] = "Later",
   ["介面語言改成 %s，重新載入介面後生效。"] = "Interface language set to %s. Reload the interface to apply.",
+  ["略過「%s」：之後的「%s」（%s）會接不到"] = "Skipped \"%s\": the later \"%s\" (%s) won't be available",
+  ["略過了「%s」（%s）"] = "Skipped \"%s\" (%s)",
+  ["%s 副本前置"] = "%s dungeon prereq",
+  ["獎勵：%s"] = "Reward: %s",
+  ["本站有 %d 條重要任務沒排（%s）；設定開「帶上可跳過的任務」就會顯示"] = "%d important quest chains here are left out (%s). Turn on \"Include optional quests\" in the options to show them.",
+  ["%s等"] = "%s and more",
   ["已完成"] = "Completed",
 }

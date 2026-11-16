@@ -843,7 +843,7 @@ local function fillRow(row, it)
     local status
     if skipped then status = L["略過"]
     elseif state.low and state.low[i] then status = L["%d 級"]:format(state.lowLv[i] or 0); paint(row.name, FAINT); paint(row.verb, FAINT)
-    elseif MG.db.notNow[it.step.key] then status = L["接不到"]
+    elseif MG.db.notNow[it.step.key] and not (s.q and (C.IsOnQuest(s.q) or E.Turned(s.q))) then status = L["接不到"]
     elseif it.step.defer then status = L["之後"]
     elseif not state.done[i] then
       if it.step.carry then status = L["補做"]
@@ -1246,7 +1246,7 @@ function UI.Leaving(S)
     end
     for j = i + 1, #S.steps do
       local q = S.steps[j].s.q
-      if q and not S.done[j] and not S.na[j] and not behind[q] then return {} end
+      if q and not S.done[j] and not S.na[j] and not S.wait[j] and not behind[q] then return {} end
     end
   end
   return E.Leaving(S)

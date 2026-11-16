@@ -4,7 +4,7 @@ local E, C, N, UI = MG.E, MG.C, MG.N, MG.UI
 local L = MG.L
 local R = MG.Route or { stations = {}, quests = {} }
 
-local DEFAULTS = { notNow = {}, fpSeen = {}, fpSkip = {}, grindSkip = {}, dNo = {}, dDismiss = {}, mark = {}, pin = {}, skip = {}, latch = {}, drop = {}, carry = {}, shown = true } -- 其餘設定的預設在 UI.lua 的設定表
+local DEFAULTS = { notNow = {}, fpSeen = {}, fpSkip = {}, grindSkip = {}, dNo = {}, dDismiss = {}, mark = {}, pin = {}, skip = {}, skipNote = {}, optNote = {}, latch = {}, drop = {}, carry = {}, shown = true } -- 其餘設定的預設在 UI.lua 的設定表
 local f = CreateFrame("Frame")
 local registered = {} -- 事件 → 是否註冊成功（probe 用）
 local trace = {} -- 事件參數紀錄（probe 用）
@@ -107,6 +107,14 @@ local function refresh()
     end
   end
   lastState = state
+  -- 手動略過的任務本身或後面有副本任務、好獎勵：聊天框提一次；可跳過沒開的整站合成一句
+  for _, step in ipairs(state and state.steps or {}) do
+    local s = step.s
+    local text = s.q and MG.db.skip[step.key] and E.Applies(s.when) and E.SkipNotice(s.q)
+    if text then MG.msg(text) end
+  end
+  local optText = state and state.st and E.OptNotice(state)
+  if optText then MG.msg(optText) end
   local nextSt = st and E.Next(st)
   if UI.Visible() then UI.Render({ state = state, sug = E.Suggest(st), nextSt = nextSt }) end -- 步驟列關著就不畫（打開時會重算）
   MG.try("目標按鈕", MG.T.Update, state)
@@ -256,9 +264,10 @@ end
 
 -- 安全網：打開目前「接」步驟的 NPC，卻沒有這個任務可接 → 先跳過（升級或交任務後再看）。
 -- 只直接跳出任務內容（沒有先開對話選單）才看 QUEST_DETAIL，避免自動接交選了別的任務時誤判。
-local lastMenu = 0
+local lastMenu, lastAccept = 0, 0
 local function notOffered(event)
   if event ~= "QUEST_DETAIL" then lastMenu = GetTime() elseif GetTime() - lastMenu < 3 then return end
+  if GetTime() - lastAccept < 3 then return end -- 剛接任務時 NPC 選單會重刷，日誌還沒更新，不判斷
   local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
   local s = cur and cur.s
   if not (s and s.t == "accept" and s.q) or C.IsOnQuest(s.q) or E.Turned(s.q) then return end
@@ -399,6 +408,8 @@ local function onEvent(_, event, ...)
       args[i] = issecretvalue and issecretvalue(v) and "secret" or tostring(v)
     end
     trace.QUEST_ACCEPTED = table.concat(args, ", ")
+    lastAccept = GetTime()
+    wipe(MG.db.notNow) -- 接了任務：暫時接不到的重新看
   elseif event == "QUEST_TURNED_IN" then
     local id = ...
     if type(id) == "number" and not (issecretvalue and issecretvalue(id)) then

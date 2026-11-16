@@ -410,5 +410,11 @@ MG.Locales.ptBR = {
   ["重新載入"] = "Recarregar",
   ["稍後"] = "Depois",
   ["介面語言改成 %s，重新載入介面後生效。"] = "Idioma definido como %s. Recarregue a interface para aplicar.",
+  ["略過「%s」：之後的「%s」（%s）會接不到"] = "Pulou \"%s\": a missão seguinte \"%s\" (%s) não ficará disponível",
+  ["略過了「%s」（%s）"] = "Pulou \"%s\" (%s)",
+  ["%s 副本前置"] = "pré-requisito da masmorra %s",
+  ["獎勵：%s"] = "Recompensa: %s",
+  ["本站有 %d 條重要任務沒排（%s）；設定開「帶上可跳過的任務」就會顯示"] = "%d cadeias de missões importantes ficaram de fora aqui (%s). Ative \"Incluir missões opcionais\" nas opções para mostrá-las.",
+  ["%s等"] = "%s e mais",
   ["已完成"] = "Concluída",
 }

@@ -410,5 +410,11 @@ MG.Locales.esMX = {
   ["重新載入"] = "Recargar",
   ["稍後"] = "Más tarde",
   ["介面語言改成 %s，重新載入介面後生效。"] = "Idioma cambiado a %s. Recarga la interfaz para aplicarlo.",
+  ["略過「%s」：之後的「%s」（%s）會接不到"] = "Omitida «%s»: la posterior «%s» (%s) no estará disponible",
+  ["略過了「%s」（%s）"] = "Omitida «%s» (%s)",
+  ["%s 副本前置"] = "requisito del calabozo %s",
+  ["獎勵：%s"] = "Recompensa: %s",
+  ["本站有 %d 條重要任務沒排（%s）；設定開「帶上可跳過的任務」就會顯示"] = "Aquí se omiten %d cadenas de misiones importantes (%s). Activa «Incluir misiones opcionales» en las opciones para mostrarlas.",
+  ["%s等"] = "%s y más",
   ["已完成"] = "Completada",
 }

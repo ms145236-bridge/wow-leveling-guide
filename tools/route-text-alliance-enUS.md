@@ -1015,3 +1015,223 @@
 06-路線外任務.md:2480｜說明｜經過03-第25站時，有空再接。｜Pick this up if you have time when you pass stop 25 of part 3.
 06-路線外任務.md:2481｜說明｜經過03-第34站時，有空再接。｜Pick this up if you have time when you pass stop 34 of part 3.
 06-路線外任務.md:2488｜說明｜經過04-第54站時，有空再接。｜Pick this up if you have time when you pass stop 54 of part 4.
+01-第一段-1到12級.md:284｜說明｜學了剝皮，到鐵爐堡找巴爾薩斯·裂石交。｜Once you've learned Skinning, turn in to Balthus Stoneflayer in Ironforge.
+01-第一段-1到12級.md:593｜說明｜還不到 3 級，就在塔下的坦德爾林地打捲雲兵蜂、瘦弱的熊獸補到 3。｜If you're not level 3 yet, grind Cirrusfly Soldiers and Scrawny Ursera in Thendal Grove below the tower until you're 3.
+01-第一段-1到12級.md:651｜說明｜學了剝皮，到申德村找曼達拉斯‧破癒交。｜Once you've learned Skinning, turn in to Mendalass Tattermend in Shen'dar Village.
+01-第一段-1到12級.md:655｜說明｜坦德爾林地東側的蜂群，數量多，順路去殺蜂后。｜The swarm on the east side of Thendal Grove; there are lots of them, and it's on your way to kill the queen.
+01-第一段-1到12級.md:656｜說明｜瞭望塔西邊林地，普通怪，可逐隻拉。｜The woods west of the watchtower; normal mobs that can be pulled one at a time.
+01-第一段-1到12級.md:678｜說明｜學了剝皮才交。｜Turn in only after you've learned Skinning.
+01-第一段-1到12級.md:765｜說明｜暴躁的逐風者在瓦拉納爾西邊的風莓低地，就是剛才收逐風者腰肉的地方。｜Ornery Galestriders are in the Gustberry Lowlands west of Valanaar, right where you just collected the galestrider loins.
+01-第一段-1到12級.md:1066｜說明｜回瓦拉納爾旅店（62.20, 72.60），還不到 12 級就在附近練到 12 再搭船去達拉然。｜Return to the Valanaar inn (62.20, 72.60); if you're not level 12 yet, grind nearby to 12 before taking the boat to Dalaran.
+01-第一段-1到12級.md:1094｜說明｜回暴風城港口搭船去奧伯丁。爐石在冷卻就找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再到碼頭搭船去奧伯丁。｜Return to Stormwind Harbor and take the boat to Auberdine. If your Hearthstone is on cooldown, see Silva Fil'naveth in Nighthaven (1450 44.15, 45.23) for the druid-only flight to Rut'theran Village, then take the boat to Auberdine from the dock.
+01-第一段-1到12級.md:877｜說明｜瓦拉納爾西邊草地，數量多，搭船前補到 12 級。｜Grassland west of Valanaar; lots of mobs. Grind to level 12 before taking the boat.
+01-第一段-1到12級.md:1143｜說明｜交了這個導引才接得到國王的財寶。｜You can only accept Simple Subterfugin' after turning in this breadcrumb.
+02-12到30級.md:734｜說明｜從東谷伐木場沿艾爾文森林大路往西，經閃金鎮過橋進西部荒野。｜From Eastvale Logging Camp, follow the Elwynn Forest road west, pass Goldshire and cross the bridge into Westfall.
+02-12到30級.md:760｜說明｜交了這個導引才接得到連偷帶搶。｜You can only accept Snatch and Grab after turning in this breadcrumb.
+02-12到30級.md:905｜說明｜在鐵爐堡搭礦道地鐵回暴風城。｜Take the Deeprun Tram from Ironforge back to Stormwind.
+02-12到30級.md:911｜說明｜回鐵爐堡搭礦道地鐵到暴風城。｜Return to Ironforge and take the Deeprun Tram to Stormwind.
+02-12到30級.md:304｜說明｜從暴風城沿艾爾文森林大路往東，先到阿祖拉之塔找塞歐克瑞圖斯接法師的眼線；接完再往東到赤脊山入口找衛兵派克，然後沿大路進湖畔鎮。｜From Stormwind, follow the Elwynn Forest road east; first go to the Tower of Azora and get A Watchful Eye from Theocritus; then continue east to the Redridge Mountains entrance to find Guard Parker, and follow the road into Lakeshire.
+02-12到30級.md:320｜說明｜離開赤脊山前還不到 21 級，就到湖畔鎮北邊的豺狼人營地打赤脊山猛擊者補到 21；這一段是從阿拉希高地的練級拆過來的。｜If you're not level 21 before leaving the Redridge Mountains, go to the gnoll camp north of Lakeshire and grind Redridge Bashers to 21; this stretch was split off from the Arathi Highlands grind.
+02-12到30級.md:320｜說明｜離開赤脊山前還不到 21 級，就到湖畔鎮北邊的豺狼人營地打赤脊山猛擊者補到 21｜If you're not level 21 before leaving the Redridge Mountains, go to the gnoll camp north of Lakeshire and grind Redridge Bashers to 21
+02-12到30級.md:320｜說明｜這一段是從阿拉希高地的練級拆過來的。｜This stretch was split off from the Arathi Highlands grind.
+02-12到30級.md:347｜說明｜湖畔鎮北邊的豺狼人營地，普通怪，離飛行點近。｜Gnoll camp north of Lakeshire; normal mobs, close to the flight path.
+02-12到30級.md:348｜說明｜止水湖東北岸的黑石獸人，等級較合適，混有步兵，從外圍拉。｜Blackrock orcs on the northeast shore of Lake Everstill; a better level match, with grunts mixed in, so pull from the edge.
+02-12到30級.md:1000｜說明｜在奧伯丁飛魯瑟蘭村（飛行地圖沒有就搭船），走村內傳送門進達納蘇斯。｜Fly from Auberdine to Rut'theran Village (take the boat if it's not on your flight map), then take the portal in the village into Darnassus.
+02-12到30級.md:1007｜說明｜走傳送門回魯瑟蘭村，飛奧伯丁接回路線。｜Take the portal back to Rut'theran Village and fly to Auberdine to rejoin the route.
+02-12到30級.md:1024｜說明｜賽利南的化身在月光林地南部。｜The Avatar of Saeyleenan is in southern Moonglade.
+02-12到30級.md:1026｜說明｜到怒風獸穴入口使用可提供潛行的雕像，三個聖物各拿一個。｜At the entrance of the Stormrage Barrow Dens, use the statue that grants stealth, then take one of each of the three relics.
+02-12到30級.md:1029｜說明｜回永夜港找德迪利特·星焰交。｜Return to Nighthaven and turn in to Dendrite Starblaze.
+05-副本.md:154｜說明｜已爐回暴風城的先飛米奈希爾港，從米奈希爾港沿濕地大路往東走到挖掘場。｜If you hearthed back to Stormwind, fly to Menethil Harbor first, then follow the Wetlands road east from Menethil Harbor to the excavation site.
+05-副本.md:157｜說明｜要在挖掘場裡找亞丁‧格拉斯曼，交件對象還沒查到。｜You have to find Ardin Grassman in the excavation site; the turn-in NPC hasn't been identified yet.
+02-12到30級.md:549｜說明｜有梅力克的弓才做。｜Do this only if you have Merrick's Bow.
+02-12到30級.md:550｜說明｜有伊菈的匕首才做。｜Do this only if you have Ira's Dagger.
+02-12到30級.md:591｜說明｜打完暴風城監獄（監獄暴動）才接得到。｜Only available after you've run the Stormwind Stockade (The Stockade Riots).
+02-12到30級.md:627｜說明｜空瓶子在哨塔頂；後續 249 不排。｜The empty jar is at the top of the watchtower; the follow-up 249 isn't on the route.
+02-12到30級.md:627｜說明｜空瓶子在哨塔頂｜The empty jar is at the top of the watchtower
+02-12到30級.md:627｜說明｜後續 249 不排。｜The follow-up 249 isn't on the route.
+03-30到45級.md:99｜說明｜諾莫瑞根副本任務，要打諾莫瑞根才接。｜A Gnomeregan dungeon quest; accept it only if you're going to run Gnomeregan.
+03-30到45級.md:118｜說明｜哈林多爾船長在擱淺的無畏號上，先殺他拿鑰匙，再開船上的保險箱。｜Captain Halyndor is on the beached Intrepid; kill him for the key, then open the strongbox on the ship.
+03-30到45級.md:135｜說明｜送貨任務，回米奈希爾港時交給詹姆士·哈洛倫。｜A delivery quest; hand it to James Halloran when you return to Menethil Harbor.
+03-30到45級.md:137｜說明｜怒牙營地裡的書，撿起來帶回米奈希爾港。｜A book in the Angerfang Encampment; pick it up and bring it back to Menethil Harbor.
+03-30到45級.md:183｜說明｜去投石車的路上交給霍文‧輕羽。｜Hand it to Howin Kindfeather on the way to the catapults.
+05-副本.md:181｜說明｜從米奈希爾港飛鐵爐堡，出城門沿丹莫洛大路往西到諾莫瑞根。｜Fly from Menethil Harbor to Ironforge, leave through the city gates and follow the Dun Morogh road west to Gnomeregan.
+05-副本.md:185｜說明｜機械怪身上掉，回暴風城時交。｜Drops from the mechanical mobs; turn in when you return to Stormwind.
+03-30到45級.md:248｜說明｜打過諾莫瑞根、拿齊機械內膽的才交。｜Turn in only if you've run Gnomeregan and collected all the Robo-mechanical Guts.
+03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務；沒遇到就跳過。｜He patrols the road and only gives the quest if you save him when he's ambushed; skip it if you don't run into him.
+03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務｜He patrols the road and only gives the quest if you save him when he's ambushed
+03-30到45級.md:281｜說明｜沒遇到就跳過。｜Skip it if you don't run into him.
+03-30到45級.md:296｜說明｜庫爾森營地裡的檔案；後續還在同一個營地，有時間再接。｜The files in Kurzen's Compound; the follow-up is in the same camp, so take it if you have time.
+03-30到45級.md:296｜說明｜庫爾森營地裡的檔案｜The files in Kurzen's Compound
+03-30到45級.md:296｜說明｜後續還在同一個營地，有時間再接。｜The follow-up is in the same camp; take it if you have time.
+03-30到45級.md:1220｜說明｜從棘齒城沿貧瘠之地大路往北，過十字路口後繼續往北進梣谷，再沿梣谷大路往西到阿斯特蘭納（1440 34.41, 47.99）。｜From Ratchet, follow the Barrens road north, continue north past the Crossroads into Ashenvale, then follow the Ashenvale road west to Astranaar (1440 34.41, 47.99).
+03-30到45級.md:1220｜說明｜十字路口和碎木崗哨是部落據點，要繞開。飛行地圖有塞拉摩的，可以直接飛阿斯特蘭納（經塞拉摩、奧伯丁轉機）。｜The Crossroads and Splintertree Post are Horde bases; go around them. If Theramore is on your flight map, you can fly straight to Astranaar (connecting through Theramore and Auberdine).
+03-30到45級.md:348｜說明｜黑海岸撿到《深淵之神》的才交。｜Turn in only if you picked up Book: The Powers Below in Darkshore.
+03-30到45級.md:377｜說明｜從森林之歌沿大路往東進艾薩拉，營地就在入口旁。｜From Forest Song, follow the road east into Azshara; the camp is right by the entrance.
+03-30到45級.md:420｜說明｜離開閃光平原前還不到 35 級，就在賽道南邊打鹽石凝視者、鹽石水晶蜥蜴補到 35；這一段是從阿拉希高地的練級拆過來的。｜If you're not level 35 before leaving the Shimmering Flats, grind Saltstone Gazers and Saltstone Crystalhides south of the racetrack to 35; this stretch was split off from the Arathi Highlands grind.
+03-30到45級.md:420｜說明｜離開閃光平原前還不到 35 級，就在賽道南邊打鹽石凝視者、鹽石水晶蜥蜴補到 35｜If you're not level 35 before leaving the Shimmering Flats, grind Saltstone Gazers and Saltstone Crystalhides south of the racetrack to 35
+03-30到45級.md:426｜說明｜閃光平原南端，普通怪，和安全隱患的蜥蜴同一區。｜South end of the Shimmering Flats; normal mobs, in the same area as the basilisks for A Bump in the Road.
+03-30到45級.md:427｜說明｜和凝視者混在一起，數量較多，等級略低。｜Mixed in with the Gazers; more of them, slightly lower level.
+03-30到45級.md:438｜說明｜奧圖和法庫雷斯特是 38、40 級精英。｜Otto and Falconcrest are level 38 and 40 elites.
+03-30到45級.md:444｜說明｜練到 36 級約四分之三；就在枯鬚峽谷打枯鬚狗頭人和掘地工。前面赤脊山、閃光平原照著練過，這裡只差一點。｜Grind to about three quarters of the way through level 36; kill Drywhisker Kobolds and Diggers in Drywhisker Gorge. If you did the earlier Redridge Mountains and Shimmering Flats grinds, you're only a little short here.
+03-30到45級.md:444｜說明｜練到 36 級約四分之三｜Grind to about three quarters of the way through level 36
+03-30到45級.md:444｜說明｜就在枯鬚峽谷打枯鬚狗頭人和掘地工。前面赤脊山、閃光平原照著練過，這裡只差一點。｜Kill Drywhisker Kobolds and Diggers in Drywhisker Gorge. If you did the earlier Redridge Mountains and Shimmering Flats grinds, you're only a little short here.
+03-30到45級.md:449｜說明｜被遺忘者信差沿格沙克農場一帶的大路巡邏，看到就打，拿密封的信件。｜The Forsaken Courier patrols the road around Go'Shek Farm; kill her when you see her and take the Sealed Folder.
+03-30到45級.md:455｜說明｜回去交魔杖前還不到 37 級，就在石拳大廳外打石拳蠻兵，或到東邊枯木村打枯木食人妖補到 37。｜If you're not level 37 before going back to turn in the wand, kill Boulderfist Brutes outside Boulderfist Hall, or go to Witherbark Village in the east and kill Witherbark trolls until 37.
+03-30到45級.md:477｜說明｜護送任務，跟著基恩洛走，途中會有伏擊。｜Escort quest; follow Kinelory. There will be ambushes along the way.
+03-30到45級.md:1347｜說明｜要打剃刀沼澤（貧瘠之地南邊的副本），組到隊再做；後續的風暴、大地和火焰也一起略過。｜Requires Razorfen Kraul (the dungeon in the southern Barrens); do it once you have a group; skip the follow-up Storm, Earth, and Fire along with it.
+03-30到45級.md:1347｜說明｜要打剃刀沼澤（貧瘠之地南邊的副本），組到隊再做｜Requires Razorfen Kraul (the dungeon in the southern Barrens); do it once you have a group
+03-30到45級.md:1347｜說明｜後續的風暴、大地和火焰也一起略過。｜Skip the follow-up Storm, Earth, and Fire along with it.
+03-30到45級.md:1349｜說明｜維里克‧雷鎚在鐵爐堡（1455 47.10, 13.79）也找得到。｜Veyric Thunderhame can also be found in Ironforge (1455 47.10, 13.79).
+03-30到45級.md:1350｜說明｜四種扭曲圖騰在塵泥沼澤、荒蕪之地、悲傷沼澤、淒涼之地的怪身上掉，後面幾站沿路收；最後到鐵爐堡找維里克‧雷鎚交。｜The four Twisted Totems drop from mobs in Dustwallow Marsh, the Badlands, the Swamp of Sorrows and Desolace; collect them along the way over the next few stops; finally turn in to Veyric Thunderhame in Ironforge.
+03-30到45級.md:1350｜說明｜四種扭曲圖騰在塵泥沼澤、荒蕪之地、悲傷沼澤、淒涼之地的怪身上掉，後面幾站沿路收｜The four Twisted Totems drop from mobs in Dustwallow Marsh, the Badlands, the Swamp of Sorrows and Desolace; collect them along the way over the next few stops
+03-30到45級.md:1350｜說明｜最後到鐵爐堡找維里克‧雷鎚交。｜Finally turn in to Veyric Thunderhame in Ironforge.
+03-30到45級.md:489｜說明｜枯鬚峽谷入口一帶，普通怪，受困的公主做完就在旁邊。｜Around the entrance of Drywhisker Gorge; normal mobs, right next to where you finish The Princess Trapped.
+03-30到45級.md:490｜說明｜峽谷深處水晶旁，等級較合適。｜By the crystal deep in the gorge; a better level match.
+03-30到45級.md:491｜說明｜石拳大廳外圍的巨魔，拿魔杖時順路。｜Ogres around the outside of Boulderfist Hall; on your way when you get the wand.
+03-30到45級.md:492｜說明｜東南的枯木村，和證明實力同一批食人妖。｜Witherbark Village in the southeast; the same trolls as for Worth Its Weight in Gold.
+03-30到45級.md:559｜說明｜把走失的馬帶回農莊。｜Bring the runaway horse back to the grange.
+03-30到45級.md:632｜說明｜同一間旅店裡；送信到塞拉摩。｜In the same inn; deliver the letter to Theramore.
+03-30到45級.md:632｜說明｜同一間旅店裡｜In the same inn
+03-30到45級.md:632｜說明｜送信到塞拉摩。｜Deliver the letter to Theramore.
+03-30到45級.md:1296｜說明｜書在血色修道院圖書館，組到隊再做；法師的魔杖要先交這個。｜The book is in the Scarlet Monastery Library; do it once you have a group; Mage's Wand requires turning this in first.
+03-30到45級.md:1296｜說明｜書在血色修道院圖書館，組到隊再做｜The book is in the Scarlet Monastery Library; do it once you have a group
+03-30到45級.md:1296｜說明｜法師的魔杖要先交這個。｜Mage's Wand requires turning this in first.
+03-30到45級.md:674｜說明｜和亨德爾下士對話後他會翻臉，打到投降，等任務完成再去交。｜After you talk to Private Hendel he turns hostile; fight him until he surrenders, and turn in once the quest completes.
+03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，位置待實測；找不齊就略過。｜You have to recover 8 stolen goods in the Ruins of Zul'Kunda; the locations still need in-game testing; skip it if you can't find them all.
+03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，位置待實測｜You have to recover 8 stolen goods in the Ruins of Zul'Kunda; the locations still need in-game testing
+03-30到45級.md:731｜說明｜找不齊就略過。｜Skip it if you can't find them all.
+03-30到45級.md:732｜說明｜被關在祖昆達廢墟的哥布林。｜The goblin held captive in the Ruins of Zul'Kunda.
+03-30到45級.md:735｜說明｜護送他離開廢墟，之後回藏寶海灣找碼頭管理員回報。｜Escort him out of the ruins, then return to Booty Bay and report to the dockmaster.
+03-30到45級.md:799｜說明｜還不到 40 級，就在營地南邊打野生峭壁山狗，或往南到石窟打石窟斷骨者補到 40。｜If you're not level 40 yet, kill Feral Crag Coyotes south of the camp, or go south to the Stonevault area and kill Stonevault Bonesnappers until 40.
+03-30到45級.md:1273｜說明｜到棘齒城交給梅納拉·沃倫德，接寶珠碎片。｜Take it to Ratchet and turn in to Menara Voidrender, then accept Fragments of the Orb of Orahil.
+03-30到45級.md:820｜說明｜營地南邊的荒地，分散的普通怪，可逐隻打。｜The wasteland south of the camp; scattered normal mobs you can kill one at a time.
+03-30到45級.md:821｜說明｜阿戈莫德的屍骨南邊，等級較合適，成群時從外圍拉。｜South of Agmond's End; a better level match. When they're in packs, pull from the edge.
+03-30到45級.md:843｜說明｜跟著加林走出農田避難所（失落者的營地），路上的怪會打他要保護；護送完再去他的營地開保險箱。｜Follow Galen out of the Fallow Sanctuary (the Lost Ones' camp); mobs on the way attack him and you have to protect him; after the escort, go to his camp and open the strongbox.
+03-30到45級.md:843｜說明｜跟著加林走出農田避難所（失落者的營地），路上的怪會打他要保護｜Follow Galen out of the Fallow Sanctuary (the Lost Ones' camp); mobs on the way attack him and you have to protect him
+03-30到45級.md:1260｜說明｜寶珠之魔是 40 級精英，找隊伍再做。｜The Demon of the Orb is a level 40 elite; find a group for it.
+03-30到45級.md:964｜說明｜任何氏族的半人馬都掉，但這站不順路打半人馬，科卡爾村的怪等級也偏低；想多補經驗再做。｜Centaurs of any clan drop them, but this stop has no centaurs on the way and the mobs at Kolkar Village are on the low side; do it if you want extra XP.
+03-30到45級.md:964｜說明｜任何氏族的半人馬都掉，但這站不順路打半人馬，科卡爾村的怪等級也偏低｜Centaurs of any clan drop them, but this stop has no centaurs on the way and the mobs at Kolkar Village are on the low side
+03-30到45級.md:964｜說明｜想多補經驗再做。｜Do it if you want extra XP.
+03-30到45級.md:1354｜說明｜風之圖騰在這裡的瑪洛迪半人馬身上；水之圖騰在塵泥沼澤北邊的黑鰭魚人、火焰圖騰在荒蕪之地的石窟食人魔、大地圖騰在悲傷沼澤的失落者身上，經過時順手收。｜The Wind Totem comes from the Maraudine centaurs here; the Water Totem from the Mirefin murlocs in northern Dustwallow Marsh, the Fire Totem from the Stonevault troggs in the Badlands, and the Earth Totem from the Lost Ones in the Swamp of Sorrows. Collect them as you pass through.
+03-30到45級.md:1354｜說明｜風之圖騰在這裡的瑪洛迪半人馬身上｜The Wind Totem comes from the Maraudine centaurs here
+03-30到45級.md:1354｜說明｜水之圖騰在塵泥沼澤北邊的黑鰭魚人、火焰圖騰在荒蕪之地的石窟食人魔、大地圖騰在悲傷沼澤的失落者身上，經過時順手收。｜The Water Totem comes from the Mirefin murlocs in northern Dustwallow Marsh, the Fire Totem from the Stonevault troggs in the Badlands, and the Earth Totem from the Lost Ones in the Swamp of Sorrows. Collect them as you pass through.
+03-30到45級.md:1000｜說明｜還不到 43 級，就到藏寶海灣北邊海岸打納迦探險者，或南邊海灘打血帆海盜補到 43。｜If you're not level 43 yet, kill Naga Explorers on the coast north of Booty Bay, or Bloodsail pirates on the beach to the south, until 43.
+03-30到45級.md:1029｜說明｜藏寶海灣北邊海岸，普通怪，數量集中。｜Coast north of Booty Bay; normal mobs, tightly grouped.
+03-30到45級.md:1030｜說明｜南邊海灘的血帆營地，和血帆任務同一批。｜The Bloodsail camp on the southern beach; the same mobs as for the Bloodsail quests.
+03-30到45級.md:1053｜說明｜沒有確切座標，往廢土營地的路上找空地使用。｜No exact coordinates; find an open spot on the way to the Wastewander camp and use it there.
+03-30到45級.md:1055｜說明｜還不到 44 級，就留在廢土營地打廢土遊蕩者、廢土暗影法師補到 44。｜If you're not level 44 yet, stay at the Wastewander camp and kill Wastewander Rogues and Wastewander Shadow Mages until 44.
+03-30到45級.md:1060｜說明｜留到塔納利斯第二次打砂槌巨魔時做。｜Save it for your second visit to Tanaris, when you fight the Dunemaul ogres.
+03-30到45級.md:1082｜說明｜加基森東南的廢土營地，和廢土的公正同一批。｜The Wastewander camp southeast of Gadgetzan; the same mobs as for Wastewander Justice.
+03-30到45級.md:1083｜說明｜同一個營地，施法怪，逐隻拉。｜Same camp; casters, so pull them one at a time.
+03-30到45級.md:1141｜說明｜護送機器雞到西北邊被遺忘的海岸碼頭，沿路有伏擊；交件在藏寶海灣。｜Escort the robot chicken to the dock on the Forgotten Coast to the northwest; there are ambushes along the way; the turn-in is in Booty Bay.
+03-30到45級.md:1141｜說明｜護送機器雞到西北邊被遺忘的海岸碼頭，沿路有伏擊｜Escort the robot chicken to the dock on the Forgotten Coast to the northwest; there are ambushes along the way
+03-30到45級.md:1141｜說明｜交件在藏寶海灣。｜The turn-in is in Booty Bay.
+04-45到60級.md:21｜說明｜沈沒的神廟 46 級才能接，還差一點就在羽月要塞附近打怪補到 46；後面的石環接在它後面。｜The Sunken Temple can't be accepted until level 46; if you're just short, grind mobs near Feathermoon Stronghold to 46; The Stone Circle follows on from it.
+04-45到60級.md:21｜說明｜沈沒的神廟 46 級才能接，還差一點就在羽月要塞附近打怪補到 46｜The Sunken Temple can't be accepted until level 46; if you're just short, grind mobs near Feathermoon Stronghold to 46
+04-45到60級.md:21｜說明｜後面的石環接在它後面。｜The Stone Circle follows on from it.
+04-45到60級.md:33｜說明｜羽月要塞對岸的海灘，下船就到。｜The beach across from Feathermoon Stronghold; you're there as soon as you get off the boat.
+04-45到60級.md:34｜說明｜薩達爾島南端的納迦，離要塞近，等級略低。｜Naga at the south end of Sardor Isle; close to the stronghold, slightly lower level.
+04-45到60級.md:102｜說明｜去打梟獸的路上；後續要帶酒，不接。｜On the way to the owlbeasts; the follow-up needs you to bring liquor, so don't take it.
+04-45到60級.md:102｜說明｜去打梟獸的路上｜On the way to the owlbeasts
+04-45到60級.md:102｜說明｜後續要帶酒，不接。｜The follow-up needs you to bring liquor; don't take it.
+04-45到60級.md:105｜說明｜還不到 47 級，就往東打野蠻的梟獸、銀鬃捕獵者補到 47，順便收梟獸羽毛。｜If you're not level 47 yet, head east and kill Savage Owlbeasts and Silvermane Stalkers until 47, collecting Wildkin Feathers as you go.
+04-45到60級.md:1235｜說明｜要先做完元素援助（剃刀沼澤）和風暴、大地和火焰才接得到。｜You have to finish Elemental Aid (Razorfen Kraul) and Storm, Earth, and Fire before you can accept this.
+04-45到60級.md:128｜說明｜辛特蘭中部林地，數量多，和梟獸羽毛同一批。｜Woods in the central Hinterlands; plenty of mobs, the same ones as for the Wildkin Feathers.
+04-45到60級.md:129｜說明｜再往東的狼群，分散，可逐隻打。｜The wolf packs farther east; spread out, so you can kill them one at a time.
+04-45到60級.md:148｜說明｜瑪爾戈的角開灼熱峽谷鑰匙任務線；不想打就跳過，後面相關步驟會自動略過，最後從鐵爐堡飛回瑟銀哨塔。｜Margol's Horn starts the Key to Searing Gorge quest line; skip it if you don't want to fight him. The related later steps are then skipped automatically, and you end by flying from Ironforge back to Thorium Point.
+04-45到60級.md:148｜說明｜不想打就跳過，後面相關步驟會自動略過，最後從鐵爐堡飛回瑟銀哨塔。｜Skip it if you don't want to fight him. The related later steps are then skipped automatically, and you end by flying from Ironforge back to Thorium Point.
+04-45到60級.md:176｜說明｜有館長的證明（3201）才回貝波蒂拿鑰匙；沒有就跳過，直接從鐵爐堡飛回瑟銀哨塔。｜Go back to Pebblebitty for the key only if you have At Last! (3201); if not, skip it and fly straight from Ironforge back to Thorium Point.
+04-45到60級.md:176｜說明｜沒有就跳過，直接從鐵爐堡飛回瑟銀哨塔。｜If not, skip it and fly straight from Ironforge back to Thorium Point.
+04-45到60級.md:188｜說明｜還不到 48 級，就在大熔爐外圍打黑鐵監工、黑鐵奴隸販子補到 48。｜If you're not level 48 yet, kill Dark Iron Taskmasters and Dark Iron Slavers around the outside of the Cauldron until 48.
+04-45到60級.md:218｜說明｜黑衣拉索里克和奧比斯頓都是 52 級精英，找隊伍再做。｜Lathoric the Black and Obsidion are both level 52 elites; find a group for it.
+04-45到60級.md:229｜說明｜打完奧達曼的白金圓盤才接得到。｜Only available after you've done The Platinum Discs in Uldaman.
+04-45到60級.md:241｜說明｜大熔爐外圍的黑鐵矮人，等級合適。｜Dark Iron dwarves around the outside of the Cauldron; a good level match.
+04-45到60級.md:242｜說明｜大熔爐南側，等級略低，數量分散。｜South side of the Cauldron; slightly lower level, spread out.
+04-45到60級.md:266｜說明｜還不到 49 級，就留在島上打藍鬃猩猩、叢林獵豹補到 49。｜If you're not level 49 yet, stay on the island and kill Skymane Gorillas and Jaguero Stalkers until 49.
+04-45到60級.md:276｜說明｜穆克拉所在的小島，普通怪，打完王順手清。｜The small island where Mukla is; normal mobs. Clear them on your way after killing the king.
+04-45到60級.md:277｜說明｜同一座島的西側。｜West side of the same island.
+04-45到60級.md:330｜說明｜四色能量水晶散在安戈洛各處地上，沿路看到就撿，各 7 塊；第二次來安戈洛再交。｜Power crystals in four colors are scattered on the ground all over Un'Goro; pick them up whenever you see them on the way, 7 of each; turn in on your second visit to Un'Goro.
+04-45到60級.md:330｜說明｜四色能量水晶散在安戈洛各處地上，沿路看到就撿，各 7 塊｜Power crystals in four colors are scattered on the ground all over Un'Goro; pick them up whenever you see them on the way, 7 of each
+04-45到60級.md:330｜說明｜第二次來安戈洛再交。｜Turn in on your second visit to Un'Goro.
+04-45到60級.md:339｜說明｜還不到 50 級，就留在猩猩洞外打安戈洛猩猩補到 50。｜If you're not level 50 yet, stay outside the gorilla cave and kill Un'Goro Gorillas until 50.
+04-45到60級.md:366｜說明｜還不到 51 級，就在營地東邊打翼手龍，或南邊焦油坑打焦油潛伏者補到 51。｜If you're not level 51 yet, kill pterrordax east of the camp, or Tar Lurkers at the tar pits to the south, until 51.
+04-45到60級.md:1261｜說明｜要接暴風城的導引才去：在鐵爐堡搭礦道地鐵到暴風城。｜Go only if you want the Stormwind breadcrumb: take the Deeprun Tram from Ironforge to Stormwind.
+04-45到60級.md:1263｜說明｜從暴風城飛米奈希爾港，接回路線。｜Fly from Stormwind to Menethil Harbor and rejoin the route.
+04-45到60級.md:1279｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項。｜Morphaz is in the Temple of Atal'Hakkar. To get down the cliff, use your Hearthstone or the teleport option from the NPC next to Xylem.
+04-45到60級.md:1280｜說明｜回塔倫迪斯營地飛阿斯特蘭納，再沿大路往北進費伍德森林。｜Return to Talrendis Point and fly to Astranaar, then follow the road north into Felwood.
+04-45到60級.md:383｜說明｜東側的植物群，剛進環形山時打。｜The plant mobs on the east side; kill them when you first enter the crater.
+04-45到60級.md:384｜說明｜東北猩猩洞外，和猩猩皮同一批。｜Outside the gorilla cave in the northeast; the same mobs as for the gorilla pelts.
+04-45到60級.md:385｜說明｜馬紹爾營地東邊的山壁。｜The cliffs east of Marshal's Refuge.
+04-45到60級.md:386｜說明｜營地南邊的焦油坑，等級偏高，逐隻拉。｜The tar pits south of the camp; on the high side for level, so pull one at a time.
+04-45到60級.md:431｜說明｜加德納爾入口一帶，普通怪。｜Around the entrance to Jaedenar; normal mobs.
+04-45到60級.md:432｜說明｜和守護者混在一起，施法怪。｜Mixed in with the Guardians; casters.
+04-45到60級.md:475｜說明｜背包要留著塞納里奧信標才會掉；鐵喙貓頭鷹在聖地西邊，軟泥怪在西北的水池。｜They only drop while the Cenarion Beacon is in your bags; the Ironbeak Owls are west of the sanctuary, and the oozes are at the pools to the northwest.
+04-45到60級.md:475｜說明｜背包要留著塞納里奧信標才會掉｜They only drop while the Cenarion Beacon is in your bags
+04-45到60級.md:475｜說明｜鐵喙貓頭鷹在聖地西邊，軟泥怪在西北的水池。｜The Ironbeak Owls are west of the sanctuary, and the oozes are at the pools to the northwest.
+04-45到60級.md:500｜說明｜多諾瓦北邊的冬泉熊怪營地，和熊怪任務同一批。｜The Winterfall furbolg camp north of Donova; the same mobs as for the furbolg quest.
+04-45到60級.md:501｜說明｜同一個營地，施法怪。｜Same camp; casters.
+04-45到60級.md:536｜說明｜四色水晶散在環形山各處地上，前面沒撿夠的再補。｜Crystals in four colors are scattered on the ground all over the crater; top up any you were short on earlier.
+04-45到60級.md:589｜說明｜黑色龍人和幼龍是 51–53 級精英。｜The black dragonspawn and drakes are level 51–53 elites.
+04-45到60級.md:653｜說明｜大鍋旁穀倉裡的日記。｜The diary in the barn next to the cauldron.
+04-45到60級.md:677｜說明｜寶藏在辛特蘭東岸，要橫跨整張圖；交完用爐石回去。｜The treasure is on the east coast of the Hinterlands, all the way across the map; use your Hearthstone to get back after turning in.
+04-45到60級.md:677｜說明｜寶藏在辛特蘭東岸，要橫跨整張圖｜The treasure is on the east coast of the Hinterlands, all the way across the map
+04-45到60級.md:677｜說明｜交完用爐石回去。｜Use your Hearthstone to get back after turning in.
+04-45到60級.md:747｜說明｜鎮內對話任務；後續要打精英巨人，不接。｜A talk-only quest inside town; the follow-up has you fight elite giants, so don't take it.
+04-45到60級.md:747｜說明｜鎮內對話任務｜A talk-only quest inside town
+04-45到60級.md:747｜說明｜後續要打精英巨人，不接。｜The follow-up has you fight elite giants; don't take it.
+04-45到60級.md:749｜說明｜從多諾瓦那邊回來、往南出發前再打雪人。｜Fight the yetis after you come back from Donova, before setting off south.
+04-45到60級.md:760｜說明｜角只有洞裡的女王和雪人王會掉，掉率低；想多補經驗再做。｜The horns only drop from the matriarchs and patriarchs in the cave, and the drop rate is low; do it if you want extra XP.
+04-45到60級.md:760｜說明｜角只有洞裡的女王和雪人王會掉，掉率低｜The horns only drop from the matriarchs and patriarchs in the cave, and the drop rate is low
+04-45到60級.md:762｜說明｜後續要跑安戈洛和加基森，不接。｜The follow-up sends you to Un'Goro and Gadgetzan; don't take it.
+04-45到60級.md:778｜說明｜從蘭莎爾拉往南進暗語峽谷（1452 59.82, 74.25），沿峽谷往西走到底就進海加爾山。峽谷口有冰霜巨人精英，峽谷裡有惡魔精英，貼著路走別停。｜From Ranshalla, head south into Darkwhisper Gorge (1452 59.82, 74.25) and follow the gorge west all the way to the end to enter Mount Hyjal. There are elite frost giants at the gorge mouth and elite demons inside; stick to the road and don't stop.
+04-45到60級.md:822｜說明｜目標裂皮是 56 級精英古樹，有隊伍再做；沒組隊就跳過，後面的交件會自動略過。｜The target, Sunderbark, is a level 56 elite ancient; do it when you have a group; without a group, skip it and the later turn-in is skipped automatically.
+04-45到60級.md:822｜說明｜沒組隊就跳過，後面的交件會自動略過。｜Without a group, skip it and the later turn-in is skipped automatically.
+04-45到60級.md:843｜說明｜會喚出 58 級精英軟泥；沒組隊就跳過混合黏液和後續任務。｜It summons a level 58 elite slime; without a group, skip Amalgamated Marrow and its follow-up quests.
+04-45到60級.md:843｜說明｜沒組隊就跳過混合黏液和後續任務。｜Without a group, skip Amalgamated Marrow and its follow-up quests.
+04-45到60級.md:1062｜說明｜兩個目標都是 60 級精英惡魔；沒組隊就跳過，後續會自動略過。｜Both targets are level 60 elite demons; without a group, skip it and the follow-ups are skipped automatically.
+04-45到60級.md:1062｜說明｜沒組隊就跳過，後續會自動略過。｜Without a group, skip it and the follow-ups are skipped automatically.
+04-45到60級.md:1155｜說明｜接了才開始掉骷髏碎片，在悔恨嶺和安多哈爾打骷髏時順便收。｜Skeletal Fragments only start dropping once you've accepted this; collect them while killing skeletons at Sorrow Hill and Andorhal.
+04-45到60級.md:1189｜說明｜後續要進通靈學院，不接。｜The follow-up goes into Scholomance; don't take it.
+04-45到60級.md:1207｜說明｜人就在冰風崗，直接找飛行管理員。｜You're already at Chillwind Camp; just see the flight master.
+04-45到60級.md:1216｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就從暴風城直飛摩根的崗哨。｜Go to Lakeshire only if you have The True Masters (4186); if not, fly straight from Stormwind to Morgan's Vigil.
+04-45到60級.md:1216｜說明｜沒有就從暴風城直飛摩根的崗哨。｜If not, fly straight from Stormwind to Morgan's Vigil.
+05-副本.md:379｜說明｜在血色區的血色十字軍堡壘裡，找描繪兩個月亮的那幅畫，愛與家庭就藏在後面。｜In the Scarlet Bastion on the Scarlet side, find the painting of the two moons; Of Love and Family is hidden behind it.
+05-副本.md:383｜說明｜提里奧·弗丁在東瘟疫之地西邊河岸旁的小屋。｜Tirion Fordring is at the cabin on the riverbank on the west side of Eastern Plaguelands.
+06-路線外任務.md:13｜說明｜路線任務不需要它當前置；經過03-第29站時，有空再接。｜Route quests don't need it as a prerequisite; pick it up if you have time when you pass 03-Stop 29.
+06-路線外任務.md:14｜說明｜路線任務不需要它當前置；路線也不經過任務起點，跳過不影響練級。｜Route quests don't need it as a prerequisite; the route doesn't pass the quest's starting point either, so skipping it won't hurt your leveling.
+06-路線外任務.md:15｜說明｜路線任務不需要它當前置；經過03-第34站時，有空再接。｜Route quests don't need it as a prerequisite; pick it up if you have time when you pass 03-Stop 34.
+06-路線外任務.md:20｜說明｜經過03-第27站時，有空再接。｜Pick it up if you have time when you pass 03-Stop 27.
+06-路線外任務.md:158｜說明｜碎片只掉自 59–60 級精英霜槌巨人，跳過不影響練級。｜The shards only drop from level 59–60 elite Frostmaul giants; skipping it won't hurt your leveling.
+06-路線外任務.md:372｜說明｜經過02-第18站時，有空再接。｜Pick it up if you have time when you pass 02-Stop 18.
+06-路線外任務.md:421｜說明｜要戰場獎章才能交，跳過不影響練級。｜It needs battleground marks to turn in; skipping it won't hurt your leveling.
+06-路線外任務.md:700｜說明｜路線不經過任務起點那一區，跳過不影響練級。｜The route doesn't pass through the zone where the quest starts; skipping it won't hurt your leveling.
+06-路線外任務.md:708｜說明｜經過04-第53站時，有空再接。｜Pick it up if you have time when you pass 04-Stop 53.
+06-路線外任務.md:1090｜說明｜經過02-第21站時，有空再接。｜Pick it up if you have time when you pass 02-Stop 21.
+06-路線外任務.md:1113｜說明｜路線任務的前置是任一即可，另一個（7383）已在路線。｜The route quest accepts either one as its prerequisite; the other one (7383) is already on the route.
+06-路線外任務.md:1504｜說明｜路線任務不需要它當前置；經過03-第38站時，有空再接。｜Route quests don't need it as a prerequisite; pick it up if you have time when you pass 03-Stop 38.
+06-路線外任務.md:1747｜說明｜和路線已排的「墜星村」（5250）互斥，做了 5250 就接不到。｜Mutually exclusive with Starfall (5250), which is already on the route; once you do 5250 you can't accept this.
+06-路線外任務.md:1808｜說明｜經過02-第10站時，有空再接。｜Pick it up if you have time when you pass 02-Stop 10.
+06-路線外任務.md:1973｜說明｜路線任務的前置是任一即可，另一個（94484）已在路線。｜The route quest accepts either one as its prerequisite; the other one (94484) is already on the route.
+02-12到30級.md:320｜說明｜離開赤脊山前還不到 21 級，就到湖畔鎮北邊的豺狼人營地打赤脊山猛擊者補到 21。｜If you're not level 21 before leaving the Redridge Mountains, go to the gnoll camp north of Lakeshire and grind Redridge Bashers to 21.
+03-30到45級.md:420｜說明｜離開閃光平原前還不到 35 級，就在賽道南邊打鹽石凝視者、鹽石水晶蜥蜴補到 35。｜If you're not level 35 before leaving the Shimmering Flats, grind Saltstone Gazers and Saltstone Crystalhides south of the racetrack to 35.
+03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，在廢墟裡沿路找；找不齊就略過。｜You have to recover 8 stolen goods in the Ruins of Zul'Kunda; look for them along the way through the ruins; skip it if you can't find them all.
+03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，在廢墟裡沿路找｜You have to recover 8 stolen goods in the Ruins of Zul'Kunda; look for them along the way through the ruins
+04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火酒瓶，撿到後右鍵接任務；還沒掉就繼續打熊怪。｜Winterfall furbolgs drop the Empty Firewater Flask; once you loot it, right-click it to accept the quest; if it hasn't dropped yet, keep killing furbolgs.
+04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火酒瓶，撿到後右鍵接任務｜Winterfall furbolgs drop the Empty Firewater Flask; once you loot it, right-click it to accept the quest
+04-45到60級.md:731｜說明｜還沒掉就繼續打熊怪。｜If it hasn't dropped yet, keep killing furbolgs.
+04-45到60級.md:1089｜說明｜郵件散在永望鎮外的山丘上，照任務日誌的提示找；找不到可先略過。｜The mail is scattered over the hills outside Everlook; follow the hints in the quest log to find it; if you can't find it, skip it for now.
+04-45到60級.md:1089｜說明｜郵件散在永望鎮外的山丘上，照任務日誌的提示找｜The mail is scattered over the hills outside Everlook; follow the hints in the quest log to find it
+06-路線外任務.md:397｜說明｜夏拉卡在04-第58站嘉文關‧葉源附近（31.3, 50.3）接；小貓就在附近，照任務日誌的提示找。｜Pick up Shalla'kal at 04-Stop 58 near Galvinquam Leafsyre (31.3, 50.3); the kittens are nearby, so follow the hints in the quest log to find them.
+06-路線外任務.md:398｜說明｜洞穴甲蟲在樹皮地穴一帶，在那裡做其他任務時順便找。｜The cave beetles are around the Barkskin cave; look for them while you're doing other quests there.
+06-路線外任務.md:406｜說明｜路線沒有排；在海加爾山遇到這個任務再接。｜Not on the route; pick it up if you come across this quest in Mount Hyjal.
+06-路線外任務.md:408｜說明｜先完成前置才接；法師塔照任務日誌的提示找。｜Accept it only after finishing the prerequisite; follow the hints in the quest log to find the mage tower.
+06-路線外任務.md:409｜說明｜要進永恆之井，入口照任務日誌的提示找。｜You have to enter the Well of Eternity; follow the hints in the quest log to find the entrance.
+03-30到45級.md:911｜說明｜老爛餌是 42 級精英魚人，在火線港南邊的魚人群島一帶游走。｜Old Rot-Chum is a level 42 elite murloc that roams around the murloc isles south of Powderfuse Port.
+03-30到45級.md:912｜說明｜彩繪獸皮在往南邊魚人海岸的路上，去打魚人時順路撿。｜The painted hide is on the way to the murloc coast in the south; pick it up on your way to fight the murlocs.
+03-30到45級.md:932｜說明｜內臟從沿路的野獸身上收；腐肉蘑菇在風息堡旁的洞穴裡，洞內有巨魔。｜Collect the entrails from beasts along the way; the Rotflesh Mushrooms are in the cave next to Windbreak, and there are ogres inside.
+03-30到45級.md:932｜說明｜內臟從沿路的野獸身上收｜Collect the entrails from beasts along the way
+03-30到45級.md:932｜說明｜腐肉蘑菇在風息堡旁的洞穴裡，洞內有巨魔。｜The Rotflesh Mushrooms are in the cave next to Windbreak, and there are ogres inside.
+03-30到45級.md:946｜說明｜到藏寶海灣交給旅行者拉茲戈特，下次去荊棘谷時順路。｜Turn in to Caravaneer Ruzzgot in Booty Bay; it's on the way the next time you go to Stranglethorn Vale.
+03-30到45級.md:947｜說明｜到塔納利斯的熱砂港交給碼頭管理員汽嘶，之後去塔納利斯時順路。｜Turn in to Wharfmaster Steamfizzle at Steamwheedle Port in Tanaris; it's on the way when you go to Tanaris later.
+03-30到45級.md:949｜說明｜在魚人島的水下沉船旁使用誘餌召出海怪，打倒後撿頭顱。｜Use the bait next to the sunken ship underwater at the murloc island to summon the sea monster; defeat it, then loot the head.
+06-路線外任務.md:27｜說明｜要交 10 份鹽水海鮮燉湯，得自己用烹飪做或跟別人買；手上剛好有再交。｜It wants 10 servings of saltwater seafood stew, which you have to cook yourself or buy from other players; turn it in only if you happen to have them.

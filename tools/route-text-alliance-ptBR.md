@@ -1015,3 +1015,223 @@
 06-路線外任務.md:2480｜說明｜經過03-第25站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 25 da parte 3.
 06-路線外任務.md:2481｜說明｜經過03-第34站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 34 da parte 3.
 06-路線外任務.md:2488｜說明｜經過04-第54站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 54 da parte 4.
+01-第一段-1到12級.md:284｜說明｜學了剝皮，到鐵爐堡找巴爾薩斯·裂石交。｜Depois de aprender Esfolamento, entregue a Balthus Esfolapedra em Altaforja.
+01-第一段-1到12級.md:593｜說明｜還不到 3 級，就在塔下的坦德爾林地打捲雲兵蜂、瘦弱的熊獸補到 3。｜Se ainda não estiver no nível 3, mate Soldados Cirromosca e Urseras Delgadas no Bosque Thendal, abaixo da torre, até o 3.
+01-第一段-1到12級.md:651｜說明｜學了剝皮，到申德村找曼達拉斯‧破癒交。｜Depois de aprender Esfolamento, entregue a Mendalass Emendarrapo na Aldeia de Shen'dar.
+01-第一段-1到12級.md:655｜說明｜坦德爾林地東側的蜂群，數量多，順路去殺蜂后。｜O enxame no lado leste do Bosque Thendal; são muitos, e fica no caminho para matar a rainha.
+01-第一段-1到12級.md:656｜說明｜瞭望塔西邊林地，普通怪，可逐隻拉。｜Bosque a oeste da torre de vigia; monstros comuns, dá para puxar um de cada vez.
+01-第一段-1到12級.md:678｜說明｜學了剝皮才交。｜Só entregue depois de aprender Esfolamento.
+01-第一段-1到12級.md:765｜說明｜暴躁的逐風者在瓦拉納爾西邊的風莓低地，就是剛才收逐風者腰肉的地方。｜Os Vagaventos Turrões ficam nos Baixios dos Lufopomos, a oeste de Valanaar, bem onde você acabou de coletar os lombos de vagaventos.
+01-第一段-1到12級.md:1066｜說明｜回瓦拉納爾旅店（62.20, 72.60），還不到 12 級就在附近練到 12 再搭船去達拉然。｜Volte à estalagem de Valanaar (62.20, 72.60); se ainda não estiver no nível 12, upe por perto até o 12 antes de pegar o barco para Dalaran.
+01-第一段-1到12級.md:1094｜說明｜回暴風城港口搭船去奧伯丁。爐石在冷卻就找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再到碼頭搭船去奧伯丁。｜Volte ao Porto de Ventobravo e pegue o barco para Auberdine. Se a pedra de regresso estiver em recarga, procure Silva Fil'naveth em Refúgio Noturno (1450 44.15, 45.23) para pegar o voo exclusivo de druidas até a Vila de Rut'theran e depois pegue o barco no cais para Auberdine.
+01-第一段-1到12級.md:877｜說明｜瓦拉納爾西邊草地，數量多，搭船前補到 12 級。｜Campina a oeste de Valanaar; muitos monstros. Chegue ao nível 12 antes de pegar o barco.
+01-第一段-1到12級.md:1143｜說明｜交了這個導引才接得到國王的財寶。｜Você só consegue aceitar Simples subterfúgio depois de entregar esta missão de introdução.
+02-12到30級.md:734｜說明｜從東谷伐木場沿艾爾文森林大路往西，經閃金鎮過橋進西部荒野。｜Da Madeireira Vale do Leste, siga a estrada da Floresta de Elwynn para o oeste, passe pela Vila d'Ouro e atravesse a ponte para entrar em Cerro Oeste.
+02-12到30級.md:760｜說明｜交了這個導引才接得到連偷帶搶。｜Você só consegue aceitar O punguista depois de entregar esta missão de introdução.
+02-12到30級.md:905｜說明｜在鐵爐堡搭礦道地鐵回暴風城。｜Pegue o Metrô Correfundo em Altaforja de volta para Ventobravo.
+02-12到30級.md:911｜說明｜回鐵爐堡搭礦道地鐵到暴風城。｜Volte a Altaforja e pegue o Metrô Correfundo para Ventobravo.
+02-12到30級.md:304｜說明｜從暴風城沿艾爾文森林大路往東，先到阿祖拉之塔找塞歐克瑞圖斯接法師的眼線；接完再往東到赤脊山入口找衛兵派克，然後沿大路進湖畔鎮。｜De Ventobravo, siga a estrada da Floresta de Elwynn para o leste; primeiro vá à Torre de Azora e aceite Olho vigilante com Teócrito; depois continue para o leste até a entrada das Montanhas Cristarrubra, procure o Guarda Florestan e siga a estrada até Vila Plácida.
+02-12到30級.md:320｜說明｜離開赤脊山前還不到 21 級，就到湖畔鎮北邊的豺狼人營地打赤脊山猛擊者補到 21；這一段是從阿拉希高地的練級拆過來的。｜Se ainda não estiver no nível 21 antes de sair das Montanhas Cristarrubra, vá ao acampamento dos gnolls ao norte de Vila Plácida e mate Esmagadores de Cristarrubra até o 21; este trecho foi separado do grind do Planalto Arathi.
+02-12到30級.md:320｜說明｜離開赤脊山前還不到 21 級，就到湖畔鎮北邊的豺狼人營地打赤脊山猛擊者補到 21｜Se ainda não estiver no nível 21 antes de sair das Montanhas Cristarrubra, vá ao acampamento dos gnolls ao norte de Vila Plácida e mate Esmagadores de Cristarrubra até o 21
+02-12到30級.md:320｜說明｜這一段是從阿拉希高地的練級拆過來的。｜Este trecho foi separado do grind do Planalto Arathi.
+02-12到30級.md:347｜說明｜湖畔鎮北邊的豺狼人營地，普通怪，離飛行點近。｜Acampamento dos gnolls ao norte de Vila Plácida; monstros comuns, perto do ponto de voo.
+02-12到30級.md:348｜說明｜止水湖東北岸的黑石獸人，等級較合適，混有步兵，從外圍拉。｜Orcs Rocha Negra na margem nordeste do Lago Plácido; nível mais adequado, com Brutos misturados, então puxe pela borda.
+02-12到30級.md:1000｜說明｜在奧伯丁飛魯瑟蘭村（飛行地圖沒有就搭船），走村內傳送門進達納蘇斯。｜Em Auberdine, voe para a Vila de Rut'theran (se não estiver no seu mapa de voo, pegue o barco) e use o portal da vila para entrar em Darnassus.
+02-12到30級.md:1007｜說明｜走傳送門回魯瑟蘭村，飛奧伯丁接回路線。｜Use o portal para voltar à Vila de Rut'theran e voe para Auberdine para retomar a rota.
+02-12到30級.md:1024｜說明｜賽利南的化身在月光林地南部。｜O Avatar de Saeyleenan fica no sul da Clareira da Lua.
+02-12到30級.md:1026｜說明｜到怒風獸穴入口使用可提供潛行的雕像，三個聖物各拿一個。｜Na entrada dos Templos de Tempesfúria, use a estátua que concede furtividade e pegue uma de cada uma das três relíquias.
+02-12到30級.md:1029｜說明｜回永夜港找德迪利特·星焰交。｜Volte a Refúgio Noturno e entregue a Dendrite Stellardor.
+05-副本.md:154｜說明｜已爐回暴風城的先飛米奈希爾港，從米奈希爾港沿濕地大路往東走到挖掘場。｜Se você já voltou a Ventobravo com a pedra de regresso, voe primeiro para o Porto de Menethil; do Porto de Menethil, siga a estrada do Pantanal para o leste até o sítio de escavação.
+05-副本.md:157｜說明｜要在挖掘場裡找亞丁‧格拉斯曼，交件對象還沒查到。｜É preciso encontrar Ardin Grassman no sítio de escavação; ainda não se sabe a quem entregar.
+02-12到30級.md:549｜說明｜有梅力克的弓才做。｜Só faça se tiver Merrick's Bow.
+02-12到30級.md:550｜說明｜有伊菈的匕首才做。｜Só faça se tiver Adaga de Íria.
+02-12到30級.md:591｜說明｜打完暴風城監獄（監獄暴動）才接得到。｜Só dá para aceitar depois de fazer o Cárcere de Ventobravo (Rebelião no Cárcere).
+02-12到30級.md:627｜說明｜空瓶子在哨塔頂；後續 249 不排。｜A Jarra Vazia fica no topo da torre de vigia; a continuação 249 não está na rota.
+02-12到30級.md:627｜說明｜空瓶子在哨塔頂｜A Jarra Vazia fica no topo da torre de vigia
+02-12到30級.md:627｜說明｜後續 249 不排。｜A continuação 249 não está na rota.
+03-30到45級.md:99｜說明｜諾莫瑞根副本任務，要打諾莫瑞根才接。｜Missão da masmorra de Gnomeregan; só aceite se for fazer Gnomeregan.
+03-30到45級.md:118｜說明｜哈林多爾船長在擱淺的無畏號上，先殺他拿鑰匙，再開船上的保險箱。｜O Capitão Halyndor está no Intrépido encalhado; mate-o primeiro para pegar a chave e depois abra o cofre no navio.
+03-30到45級.md:135｜說明｜送貨任務，回米奈希爾港時交給詹姆士·哈洛倫。｜Missão de entrega; entregue a Iago Halberque quando voltar ao Porto de Menethil.
+03-30到45級.md:137｜說明｜怒牙營地裡的書，撿起來帶回米奈希爾港。｜Um livro no Acampamento Presirada; pegue-o e leve de volta ao Porto de Menethil.
+03-30到45級.md:183｜說明｜去投石車的路上交給霍文‧輕羽。｜Entregue a Alvinho Penagentil a caminho das catapultas.
+05-副本.md:181｜說明｜從米奈希爾港飛鐵爐堡，出城門沿丹莫洛大路往西到諾莫瑞根。｜Voe do Porto de Menethil para Altaforja, saia pelo portão da cidade e siga a estrada de Dun Morogh para o oeste até Gnomeregan.
+05-副本.md:185｜說明｜機械怪身上掉，回暴風城時交。｜Cai dos monstros mecânicos; entregue quando voltar a Ventobravo.
+03-30到45級.md:248｜說明｜打過諾莫瑞根、拿齊機械內膽的才交。｜Só entregue se tiver feito Gnomeregan e juntado todas as Tripas Mecanobóticas.
+03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務；沒遇到就跳過。｜Ele patrulha a estrada e só dá a missão se você o salvar quando for emboscado; se não o encontrar, pule.
+03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務｜Ele patrulha a estrada e só dá a missão se você o salvar quando for emboscado
+03-30到45級.md:281｜說明｜沒遇到就跳過。｜Se não o encontrar, pule.
+03-30到45級.md:296｜說明｜庫爾森營地裡的檔案；後續還在同一個營地，有時間再接。｜Os arquivos no Complexo do Kurzen; a continuação fica no mesmo acampamento, aceite se tiver tempo.
+03-30到45級.md:296｜說明｜庫爾森營地裡的檔案｜Os arquivos no Complexo do Kurzen
+03-30到45級.md:296｜說明｜後續還在同一個營地，有時間再接。｜A continuação fica no mesmo acampamento, aceite se tiver tempo.
+03-30到45級.md:1220｜說明｜從棘齒城沿貧瘠之地大路往北，過十字路口後繼續往北進梣谷，再沿梣谷大路往西到阿斯特蘭納（1440 34.41, 47.99）。｜De Vila Catraca, siga a estrada dos Sertões para o norte, passe pela Encruzilhada e continue para o norte até entrar no Vale Gris; depois siga a estrada do Vale Gris para o oeste até Astranaar (1440 34.41, 47.99).
+03-30到45級.md:1220｜說明｜十字路口和碎木崗哨是部落據點，要繞開。飛行地圖有塞拉摩的，可以直接飛阿斯特蘭納（經塞拉摩、奧伯丁轉機）。｜A Encruzilhada e o Posto Machadada são bases da Horda; contorne-os. Se Theramore estiver no seu mapa de voo, você pode voar direto para Astranaar (com conexão em Theramore e Auberdine).
+03-30到45級.md:348｜說明｜黑海岸撿到《深淵之神》的才交。｜Só entregue se tiver pegado Livro: Os Poderes de Baixo na Costa Negra.
+03-30到45級.md:377｜說明｜從森林之歌沿大路往東進艾薩拉，營地就在入口旁。｜De Cantilenda, siga a estrada para o leste até entrar em Azshara; o acampamento fica logo ao lado da entrada.
+03-30到45級.md:420｜說明｜離開閃光平原前還不到 35 級，就在賽道南邊打鹽石凝視者、鹽石水晶蜥蜴補到 35；這一段是從阿拉希高地的練級拆過來的。｜Se ainda não estiver no nível 35 antes de sair da Chapada Cintilante, mate Observadores Sal-gema e Cristaldermes Sal-gema ao sul da pista de corrida até o 35; este trecho foi separado do grind do Planalto Arathi.
+03-30到45級.md:420｜說明｜離開閃光平原前還不到 35 級，就在賽道南邊打鹽石凝視者、鹽石水晶蜥蜴補到 35｜Se ainda não estiver no nível 35 antes de sair da Chapada Cintilante, mate Observadores Sal-gema e Cristaldermes Sal-gema ao sul da pista de corrida até o 35
+03-30到45級.md:426｜說明｜閃光平原南端，普通怪，和安全隱患的蜥蜴同一區。｜Extremo sul da Chapada Cintilante; monstros comuns, na mesma área dos basiliscos de Tinha um calombo no meio do caminho.
+03-30到45級.md:427｜說明｜和凝視者混在一起，數量較多，等級略低。｜Misturados com os Observadores; mais numerosos, de nível um pouco mais baixo.
+03-30到45級.md:438｜說明｜奧圖和法庫雷斯特是 38、40 級精英。｜Otto e Falcocrista são elites de nível 38 e 40.
+03-30到45級.md:444｜說明｜練到 36 級約四分之三；就在枯鬚峽谷打枯鬚狗頭人和掘地工。前面赤脊山、閃光平原照著練過，這裡只差一點。｜Upe até uns três quartos do nível 36; mate Kobolds Bigodesseco e Escavadores na Garganta Seca mesmo. Se você fez os grinds anteriores das Montanhas Cristarrubra e da Chapada Cintilante, aqui falta só um pouco.
+03-30到45級.md:444｜說明｜練到 36 級約四分之三｜Upe até uns três quartos do nível 36
+03-30到45級.md:444｜說明｜就在枯鬚峽谷打枯鬚狗頭人和掘地工。前面赤脊山、閃光平原照著練過，這裡只差一點。｜Mate Kobolds Bigodesseco e Escavadores na Garganta Seca mesmo. Se você fez os grinds anteriores das Montanhas Cristarrubra e da Chapada Cintilante, aqui falta só um pouco.
+03-30到45級.md:449｜說明｜被遺忘者信差沿格沙克農場一帶的大路巡邏，看到就打，拿密封的信件。｜A Mensageira Renegada patrulha a estrada na região da Fazenda Go'Shek; mate-a quando a vir e pegue a Pasta Lacrada.
+03-30到45級.md:455｜說明｜回去交魔杖前還不到 37 級，就在石拳大廳外打石拳蠻兵，或到東邊枯木村打枯木食人妖補到 37。｜Se ainda não estiver no nível 37 antes de voltar para entregar a varinha, mate Brutamontes Punho de Pedra do lado de fora do Forte Punho de Pedra ou vá à Aldeia Cascasseca, a leste, e mate trolls Cascasseca até o 37.
+03-30到45級.md:477｜說明｜護送任務，跟著基恩洛走，途中會有伏擊。｜Missão de escolta; siga Kinelory, haverá emboscadas pelo caminho.
+03-30到45級.md:1347｜說明｜要打剃刀沼澤（貧瘠之地南邊的副本），組到隊再做；後續的風暴、大地和火焰也一起略過。｜É preciso fazer Urzal dos Tuscos (a masmorra no sul dos Sertões); faça quando tiver grupo; pule também a continuação, Tempestade, terra e fogo.
+03-30到45級.md:1347｜說明｜要打剃刀沼澤（貧瘠之地南邊的副本），組到隊再做｜É preciso fazer Urzal dos Tuscos (a masmorra no sul dos Sertões); faça quando tiver grupo
+03-30到45級.md:1347｜說明｜後續的風暴、大地和火焰也一起略過。｜Pule também a continuação, Tempestade, terra e fogo.
+03-30到45級.md:1349｜說明｜維里克‧雷鎚在鐵爐堡（1455 47.10, 13.79）也找得到。｜Veyric Thunderhame também pode ser encontrado em Altaforja (1455 47.10, 13.79).
+03-30到45級.md:1350｜說明｜四種扭曲圖騰在塵泥沼澤、荒蕪之地、悲傷沼澤、淒涼之地的怪身上掉，後面幾站沿路收；最後到鐵爐堡找維里克‧雷鎚交。｜Os quatro tipos de totem retorcido caem dos monstros do Pântano Vadeoso, de Ermos, do Pântano das Mágoas e de Desolação; colete-os pelo caminho nas próximas paradas; por fim, entregue a Veyric Thunderhame em Altaforja.
+03-30到45級.md:1350｜說明｜四種扭曲圖騰在塵泥沼澤、荒蕪之地、悲傷沼澤、淒涼之地的怪身上掉，後面幾站沿路收｜Os quatro tipos de totem retorcido caem dos monstros do Pântano Vadeoso, de Ermos, do Pântano das Mágoas e de Desolação; colete-os pelo caminho nas próximas paradas
+03-30到45級.md:1350｜說明｜最後到鐵爐堡找維里克‧雷鎚交。｜Por fim, entregue a Veyric Thunderhame em Altaforja.
+03-30到45級.md:489｜說明｜枯鬚峽谷入口一帶，普通怪，受困的公主做完就在旁邊。｜Região da entrada da Garganta Seca; monstros comuns, bem ao lado de onde você conclui A princesa aprisionada.
+03-30到45級.md:490｜說明｜峽谷深處水晶旁，等級較合適。｜Junto ao cristal no fundo da garganta; nível mais adequado.
+03-30到45級.md:491｜說明｜石拳大廳外圍的巨魔，拿魔杖時順路。｜Ogros ao redor do Forte Punho de Pedra; ficam no caminho quando você for pegar a varinha.
+03-30到45級.md:492｜說明｜東南的枯木村，和證明實力同一批食人妖。｜Aldeia Cascasseca, a sudeste; os mesmos trolls de Isto vale ouro.
+03-30到45級.md:559｜說明｜把走失的馬帶回農莊。｜Leve o cavalo perdido de volta à fazenda.
+03-30到45級.md:632｜說明｜同一間旅店裡；送信到塞拉摩。｜Na mesma estalagem; leve a carta a Theramore.
+03-30到45級.md:632｜說明｜同一間旅店裡｜Na mesma estalagem
+03-30到45級.md:632｜說明｜送信到塞拉摩。｜Leve a carta a Theramore.
+03-30到45級.md:1296｜說明｜書在血色修道院圖書館，組到隊再做；法師的魔杖要先交這個。｜O livro está na Biblioteca do Monastério Escarlate; faça quando tiver grupo; Varinha do Mago exige entregar esta antes.
+03-30到45級.md:1296｜說明｜書在血色修道院圖書館，組到隊再做｜O livro está na Biblioteca do Monastério Escarlate; faça quando tiver grupo
+03-30到45級.md:1296｜說明｜法師的魔杖要先交這個。｜Varinha do Mago exige entregar esta antes.
+03-30到45級.md:674｜說明｜和亨德爾下士對話後他會翻臉，打到投降，等任務完成再去交。｜Depois que você falar com o Recruta Remos, ele fica hostil; lute até ele se render e só vá entregar quando a missão for concluída.
+03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，位置待實測；找不齊就略過。｜É preciso recuperar 8 mercadorias roubadas nas Ruínas de Zul'Kanda; a localização ainda precisa ser testada no jogo; se não encontrar todas, pule.
+03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，位置待實測｜É preciso recuperar 8 mercadorias roubadas nas Ruínas de Zul'Kanda; a localização ainda precisa ser testada no jogo
+03-30到45級.md:731｜說明｜找不齊就略過。｜Se não encontrar todas, pule.
+03-30到45級.md:732｜說明｜被關在祖昆達廢墟的哥布林。｜O goblin preso nas Ruínas de Zul'Kanda.
+03-30到45級.md:735｜說明｜護送他離開廢墟，之後回藏寶海灣找碼頭管理員回報。｜Escolte-o para fora das ruínas e depois volte a Angra do Butim para avisar o mestre do cais.
+03-30到45級.md:799｜說明｜還不到 40 級，就在營地南邊打野生峭壁山狗，或往南到石窟打石窟斷骨者補到 40。｜Se ainda não estiver no nível 40, mate Coiotes Ferozes do Rochedo ao sul do acampamento ou vá para o sul, até a área da Abóbada de Pedra, e mate Quebraossos da Abóbada de Pedra até o 40.
+03-30到45級.md:1273｜說明｜到棘齒城交給梅納拉·沃倫德，接寶珠碎片。｜Entregue a Menara Nihila em Vila Catraca e aceite Fragmentos do Orbe de Orahil.
+03-30到45級.md:820｜說明｜營地南邊的荒地，分散的普通怪，可逐隻打。｜O descampado ao sul do acampamento; monstros comuns espalhados, dá para matar um de cada vez.
+03-30到45級.md:821｜說明｜阿戈莫德的屍骨南邊，等級較合適，成群時從外圍拉。｜Ao sul da Ruína de Agmundo; nível mais adequado. Quando estiverem em bando, puxe pela borda.
+03-30到45級.md:843｜說明｜跟著加林走出農田避難所（失落者的營地），路上的怪會打他要保護；護送完再去他的營地開保險箱。｜Siga Galen para fora do Retiro Alqueivado (o acampamento dos Perdidos); os monstros no caminho o atacam, então proteja-o; depois da escolta, vá ao acampamento dele e abra o cofre.
+03-30到45級.md:843｜說明｜跟著加林走出農田避難所（失落者的營地），路上的怪會打他要保護｜Siga Galen para fora do Retiro Alqueivado (o acampamento dos Perdidos); os monstros no caminho o atacam, então proteja-o
+03-30到45級.md:1260｜說明｜寶珠之魔是 40 級精英，找隊伍再做。｜O Demônio do Orbe é elite de nível 40; procure um grupo para fazer.
+03-30到45級.md:964｜說明｜任何氏族的半人馬都掉，但這站不順路打半人馬，科卡爾村的怪等級也偏低；想多補經驗再做。｜Centauros de qualquer clã deixam cair, mas nesta parada não há centauros no caminho, e os monstros da Aldeia Kolkar também têm nível baixo; faça se quiser experiência extra.
+03-30到45級.md:964｜說明｜任何氏族的半人馬都掉，但這站不順路打半人馬，科卡爾村的怪等級也偏低｜Centauros de qualquer clã deixam cair, mas nesta parada não há centauros no caminho, e os monstros da Aldeia Kolkar também têm nível baixo
+03-30到45級.md:964｜說明｜想多補經驗再做。｜Faça se quiser experiência extra.
+03-30到45級.md:1354｜說明｜風之圖騰在這裡的瑪洛迪半人馬身上；水之圖騰在塵泥沼澤北邊的黑鰭魚人、火焰圖騰在荒蕪之地的石窟食人魔、大地圖騰在悲傷沼澤的失落者身上，經過時順手收。｜O totem do vento vem dos centauros Maraudinos daqui; o totem da água vem dos murlocs Lamapina no norte do Pântano Vadeoso, o totem do fogo, dos troggs da Abóbada de Pedra em Ermos, e o totem da terra, dos Perdidos no Pântano das Mágoas; colete-os ao passar por lá.
+03-30到45級.md:1354｜說明｜風之圖騰在這裡的瑪洛迪半人馬身上｜O totem do vento vem dos centauros Maraudinos daqui
+03-30到45級.md:1354｜說明｜水之圖騰在塵泥沼澤北邊的黑鰭魚人、火焰圖騰在荒蕪之地的石窟食人魔、大地圖騰在悲傷沼澤的失落者身上，經過時順手收。｜O totem da água vem dos murlocs Lamapina no norte do Pântano Vadeoso, o totem do fogo, dos troggs da Abóbada de Pedra em Ermos, e o totem da terra, dos Perdidos no Pântano das Mágoas; colete-os ao passar por lá.
+03-30到45級.md:1000｜說明｜還不到 43 級，就到藏寶海灣北邊海岸打納迦探險者，或南邊海灘打血帆海盜補到 43。｜Se ainda não estiver no nível 43, mate Exploradores Naga na costa ao norte de Angra do Butim ou piratas da Vela Sangrenta na praia ao sul até o 43.
+03-30到45級.md:1029｜說明｜藏寶海灣北邊海岸，普通怪，數量集中。｜Costa ao norte de Angra do Butim; monstros comuns, bem concentrados.
+03-30到45級.md:1030｜說明｜南邊海灘的血帆營地，和血帆任務同一批。｜O Complexo da Vela Sangrenta, na praia ao sul; os mesmos monstros das missões da Vela Sangrenta.
+03-30到45級.md:1053｜說明｜沒有確切座標，往廢土營地的路上找空地使用。｜Sem coordenadas exatas; procure um espaço aberto no caminho para o acampamento dos Errantes e use ali.
+03-30到45級.md:1055｜說明｜還不到 44 級，就留在廢土營地打廢土遊蕩者、廢土暗影法師補到 44。｜Se ainda não estiver no nível 44, fique no acampamento dos Errantes e mate Ladinos Errantes e Magos das Sombras Errantes até o 44.
+03-30到45級.md:1060｜說明｜留到塔納利斯第二次打砂槌巨魔時做。｜Guarde para a segunda visita a Tanaris, quando for enfrentar os ogros Dunamalho.
+03-30到45級.md:1082｜說明｜加基森東南的廢土營地，和廢土的公正同一批。｜O acampamento dos Errantes a sudeste de Geringontzan; os mesmos monstros de O erro dos Errantes.
+03-30到45級.md:1083｜說明｜同一個營地，施法怪，逐隻拉。｜Mesmo acampamento; conjuradores, puxe um de cada vez.
+03-30到45級.md:1141｜說明｜護送機器雞到西北邊被遺忘的海岸碼頭，沿路有伏擊；交件在藏寶海灣。｜Escolte a galinha-robô até o cais da Costa Esquecida, a noroeste; há emboscadas pelo caminho; a entrega é em Angra do Butim.
+03-30到45級.md:1141｜說明｜護送機器雞到西北邊被遺忘的海岸碼頭，沿路有伏擊｜Escolte a galinha-robô até o cais da Costa Esquecida, a noroeste; há emboscadas pelo caminho
+03-30到45級.md:1141｜說明｜交件在藏寶海灣。｜A entrega é em Angra do Butim.
+04-45到60級.md:21｜說明｜沈沒的神廟 46 級才能接，還差一點就在羽月要塞附近打怪補到 46；後面的石環接在它後面。｜O Templo Submerso só pode ser aceita no nível 46; se faltar pouco, mate monstros perto do Domínio de Plumaluna até o 46; O círculo de pedra vem logo depois dela.
+04-45到60級.md:21｜說明｜沈沒的神廟 46 級才能接，還差一點就在羽月要塞附近打怪補到 46｜O Templo Submerso só pode ser aceita no nível 46; se faltar pouco, mate monstros perto do Domínio de Plumaluna até o 46
+04-45到60級.md:21｜說明｜後面的石環接在它後面。｜O círculo de pedra vem logo depois dela.
+04-45到60級.md:33｜說明｜羽月要塞對岸的海灘，下船就到。｜A praia em frente ao Domínio de Plumaluna, na outra margem; você chega assim que desce do barco.
+04-45到60級.md:34｜說明｜薩達爾島南端的納迦，離要塞近，等級略低。｜Nagas no extremo sul da Ilha de Sardor; perto do Domínio, de nível um pouco mais baixo.
+04-45到60級.md:102｜說明｜去打梟獸的路上；後續要帶酒，不接。｜No caminho para as ferujas; a continuação exige levar bebida, não aceite.
+04-45到60級.md:102｜說明｜去打梟獸的路上｜No caminho para as ferujas
+04-45到60級.md:102｜說明｜後續要帶酒，不接。｜A continuação exige levar bebida, não aceite.
+04-45到60級.md:105｜說明｜還不到 47 級，就往東打野蠻的梟獸、銀鬃捕獵者補到 47，順便收梟獸羽毛。｜Se ainda não estiver no nível 47, siga para o leste e mate Ferujas Selvagens e Espreitadores Jubaprata até o 47, coletando Penas de Coruscante de passagem.
+04-45到60級.md:1235｜說明｜要先做完元素援助（剃刀沼澤）和風暴、大地和火焰才接得到。｜Você precisa concluir Auxílio elemental (Urzal dos Tuscos) e Tempestade, terra e fogo antes de poder aceitar esta.
+04-45到60級.md:128｜說明｜辛特蘭中部林地，數量多，和梟獸羽毛同一批。｜Bosque no centro das Terras Agrestes; muitos monstros, os mesmos das Penas de Coruscante.
+04-45到60級.md:129｜說明｜再往東的狼群，分散，可逐隻打。｜As alcateias mais a leste; espalhadas, dá para matar um de cada vez.
+04-45到60級.md:148｜說明｜瑪爾戈的角開灼熱峽谷鑰匙任務線；不想打就跳過，後面相關步驟會自動略過，最後從鐵爐堡飛回瑟銀哨塔。｜O Chifre de Margol inicia a cadeia de missões da Chave da Garganta Abrasadora; se não quiser enfrentá-lo, pule: as etapas relacionadas mais adiante serão puladas automaticamente e, no fim, você voa de Altaforja de volta ao Posto de Tório.
+04-45到60級.md:148｜說明｜不想打就跳過，後面相關步驟會自動略過，最後從鐵爐堡飛回瑟銀哨塔。｜Se não quiser enfrentá-lo, pule: as etapas relacionadas mais adiante serão puladas automaticamente e, no fim, você voa de Altaforja de volta ao Posto de Tório.
+04-45到60級.md:176｜說明｜有館長的證明（3201）才回貝波蒂拿鑰匙；沒有就跳過，直接從鐵爐堡飛回瑟銀哨塔。｜Só volte à Montanhista Pedrabrita para pegar a chave se tiver Finalmente! (3201); se não tiver, pule e voe direto de Altaforja de volta ao Posto de Tório.
+04-45到60級.md:176｜說明｜沒有就跳過，直接從鐵爐堡飛回瑟銀哨塔。｜Se não tiver, pule e voe direto de Altaforja de volta ao Posto de Tório.
+04-45到60級.md:188｜說明｜還不到 48 級，就在大熔爐外圍打黑鐵監工、黑鐵奴隸販子補到 48。｜Se ainda não estiver no nível 48, mate Capatazes Ferro Negro e Feitores Ferro Negro nos arredores do Caldeirão até o 48.
+04-45到60級.md:218｜說明｜黑衣拉索里克和奧比斯頓都是 52 級精英，找隊伍再做。｜Latórico, o Negro, e Obsidião são ambos elites de nível 52; procure um grupo para fazer.
+04-45到60級.md:229｜說明｜打完奧達曼的白金圓盤才接得到。｜Só dá para aceitar depois de fazer Os discos de platina em Uldaman.
+04-45到60級.md:241｜說明｜大熔爐外圍的黑鐵矮人，等級合適。｜Anões Ferro Negro nos arredores do Caldeirão; nível adequado.
+04-45到60級.md:242｜說明｜大熔爐南側，等級略低，數量分散。｜Lado sul do Caldeirão; nível um pouco mais baixo, monstros espalhados.
+04-45到60級.md:266｜說明｜還不到 49 級，就留在島上打藍鬃猩猩、叢林獵豹補到 49。｜Se ainda não estiver no nível 49, fique na ilha e mate Gorilas Grenhacéu e Jaguero Stalkers até o 49.
+04-45到60級.md:276｜說明｜穆克拉所在的小島，普通怪，打完王順手清。｜A ilhota onde fica o Rei Mukla; monstros comuns. Limpe-os de passagem depois de matar o rei.
+04-45到60級.md:277｜說明｜同一座島的西側。｜Lado oeste da mesma ilha.
+04-45到60級.md:330｜說明｜四色能量水晶散在安戈洛各處地上，沿路看到就撿，各 7 塊；第二次來安戈洛再交。｜Cristais de poder de quatro cores estão espalhados pelo chão por toda Un'Goro; pegue os que vir pelo caminho, 7 de cada; entregue na segunda visita a Un'Goro.
+04-45到60級.md:330｜說明｜四色能量水晶散在安戈洛各處地上，沿路看到就撿，各 7 塊｜Cristais de poder de quatro cores estão espalhados pelo chão por toda Un'Goro; pegue os que vir pelo caminho, 7 de cada
+04-45到60級.md:330｜說明｜第二次來安戈洛再交。｜Entregue na segunda visita a Un'Goro.
+04-45到60級.md:339｜說明｜還不到 50 級，就留在猩猩洞外打安戈洛猩猩補到 50。｜Se ainda não estiver no nível 50, fique do lado de fora da caverna dos gorilas e mate Gorilas de Un'Goro até o 50.
+04-45到60級.md:366｜說明｜還不到 51 級，就在營地東邊打翼手龍，或南邊焦油坑打焦油潛伏者補到 51。｜Se ainda não estiver no nível 51, mate pterrordaxes a leste do acampamento ou Tocaieiros de Piche nos poços de piche ao sul até o 51.
+04-45到60級.md:1261｜說明｜要接暴風城的導引才去：在鐵爐堡搭礦道地鐵到暴風城。｜Só vá se quiser aceitar a missão de introdução de Ventobravo: pegue o Metrô Correfundo de Altaforja para Ventobravo.
+04-45到60級.md:1263｜說明｜從暴風城飛米奈希爾港，接回路線。｜Voe de Ventobravo para o Porto de Menethil e retome a rota.
+04-45到60級.md:1279｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項。｜Morphaz fica no Templo de Atal'Hakkar. Para descer o penhasco, use a pedra de regresso ou procure a opção de teleporte ao lado do Arquimago Tauriel.
+04-45到60級.md:1280｜說明｜回塔倫迪斯營地飛阿斯特蘭納，再沿大路往北進費伍德森林。｜Volte ao Campo Talrendis e voe para Astranaar; depois siga a estrada para o norte até entrar na Selva Maleva.
+04-45到60級.md:383｜說明｜東側的植物群，剛進環形山時打。｜As plantas do lado leste; mate-as assim que entrar na cratera.
+04-45到60級.md:384｜說明｜東北猩猩洞外，和猩猩皮同一批。｜Do lado de fora da caverna dos gorilas, a nordeste; os mesmos monstros das peles de gorila.
+04-45到60級.md:385｜說明｜馬紹爾營地東邊的山壁。｜O paredão a leste do Refúgio do Marshal.
+04-45到60級.md:386｜說明｜營地南邊的焦油坑，等級偏高，逐隻拉。｜Os poços de piche ao sul do acampamento; nível um pouco alto, puxe um de cada vez.
+04-45到60級.md:431｜說明｜加德納爾入口一帶，普通怪。｜Região da entrada de Jaedenar; monstros comuns.
+04-45到60級.md:432｜說明｜和守護者混在一起，施法怪。｜Misturados com os Guardiões; conjuradores.
+04-45到60級.md:475｜說明｜背包要留著塞納里奧信標才會掉；鐵喙貓頭鷹在聖地西邊，軟泥怪在西北的水池。｜Só caem se o Lampião Cenariano estiver na mochila; as Corujas Bico-de-ferro ficam a oeste do santuário, e as gosmas, nas poças a noroeste.
+04-45到60級.md:475｜說明｜背包要留著塞納里奧信標才會掉｜Só caem se o Lampião Cenariano estiver na mochila
+04-45到60級.md:475｜說明｜鐵喙貓頭鷹在聖地西邊，軟泥怪在西北的水池。｜As Corujas Bico-de-ferro ficam a oeste do santuário, e as gosmas, nas poças a noroeste.
+04-45到60級.md:500｜說明｜多諾瓦北邊的冬泉熊怪營地，和熊怪任務同一批。｜O acampamento dos furbolgs Invernosos ao norte de Bruna Covaneve; os mesmos monstros da missão dos furbolgs.
+04-45到60級.md:501｜說明｜同一個營地，施法怪。｜Mesmo acampamento; conjuradores.
+04-45到60級.md:536｜說明｜四色水晶散在環形山各處地上，前面沒撿夠的再補。｜Cristais de quatro cores estão espalhados pelo chão por toda a cratera; complete os que ficaram faltando antes.
+04-45到60級.md:589｜說明｜黑色龍人和幼龍是 51–53 級精英。｜Os draconoides negros e os dracos são elites de nível 51–53.
+04-45到60級.md:653｜說明｜大鍋旁穀倉裡的日記。｜O diário no celeiro ao lado do caldeirão.
+04-45到60級.md:677｜說明｜寶藏在辛特蘭東岸，要橫跨整張圖；交完用爐石回去。｜O tesouro fica na costa leste das Terras Agrestes, é preciso atravessar o mapa inteiro; depois de entregar, use a pedra de regresso para voltar.
+04-45到60級.md:677｜說明｜寶藏在辛特蘭東岸，要橫跨整張圖｜O tesouro fica na costa leste das Terras Agrestes, é preciso atravessar o mapa inteiro
+04-45到60級.md:677｜說明｜交完用爐石回去。｜Depois de entregar, use a pedra de regresso para voltar.
+04-45到60級.md:747｜說明｜鎮內對話任務；後續要打精英巨人，不接。｜Missão de diálogo dentro da vila; a continuação exige enfrentar gigantes de elite, não aceite.
+04-45到60級.md:747｜說明｜鎮內對話任務｜Missão de diálogo dentro da vila
+04-45到60級.md:747｜說明｜後續要打精英巨人，不接。｜A continuação exige enfrentar gigantes de elite, não aceite.
+04-45到60級.md:749｜說明｜從多諾瓦那邊回來、往南出發前再打雪人。｜Enfrente os yetis depois de voltar de Bruna Covaneve, antes de partir para o sul.
+04-45到60級.md:760｜說明｜角只有洞裡的女王和雪人王會掉，掉率低；想多補經驗再做。｜Os chifres só caem das matriarcas e dos patriarcas na caverna, e a taxa de saque é baixa; faça se quiser experiência extra.
+04-45到60級.md:760｜說明｜角只有洞裡的女王和雪人王會掉，掉率低｜Os chifres só caem das matriarcas e dos patriarcas na caverna, e a taxa de saque é baixa
+04-45到60級.md:762｜說明｜後續要跑安戈洛和加基森，不接。｜A continuação exige ir a Un'Goro e a Geringontzan, não aceite.
+04-45到60級.md:778｜說明｜從蘭莎爾拉往南進暗語峽谷（1452 59.82, 74.25），沿峽谷往西走到底就進海加爾山。峽谷口有冰霜巨人精英，峽谷裡有惡魔精英，貼著路走別停。｜De Ranshalla, vá para o sul e entre na Garganta do Sussurro Sombrio (1452 59.82, 74.25); siga o desfiladeiro para o oeste até o fim para entrar no Monte Hyjal. Há gigantes de gelo elite na entrada do desfiladeiro e demônios elite lá dentro; fique na estrada e não pare.
+04-45到60級.md:822｜說明｜目標裂皮是 56 級精英古樹，有隊伍再做；沒組隊就跳過，後面的交件會自動略過。｜O alvo, Sunderbark, é um ancião elite de nível 56; faça quando tiver grupo; sem grupo, pule, e a entrega mais adiante será pulada automaticamente.
+04-45到60級.md:822｜說明｜沒組隊就跳過，後面的交件會自動略過。｜Sem grupo, pule, e a entrega mais adiante será pulada automaticamente.
+04-45到60級.md:843｜說明｜會喚出 58 級精英軟泥；沒組隊就跳過混合黏液和後續任務。｜Invoca uma gosma elite de nível 58; sem grupo, pule Amalgamated Marrow e as missões seguintes.
+04-45到60級.md:843｜說明｜沒組隊就跳過混合黏液和後續任務。｜Sem grupo, pule Amalgamated Marrow e as missões seguintes.
+04-45到60級.md:1062｜說明｜兩個目標都是 60 級精英惡魔；沒組隊就跳過，後續會自動略過。｜Os dois alvos são demônios elite de nível 60; sem grupo, pule, e as continuações serão puladas automaticamente.
+04-45到60級.md:1062｜說明｜沒組隊就跳過，後續會自動略過。｜Sem grupo, pule, e as continuações serão puladas automaticamente.
+04-45到60級.md:1155｜說明｜接了才開始掉骷髏碎片，在悔恨嶺和安多哈爾打骷髏時順便收。｜Os Fragmentos de Ossos só começam a cair depois que você aceita a missão; colete-os de passagem ao matar esqueletos na Colina do Pesar e em Andorhal.
+04-45到60級.md:1189｜說明｜後續要進通靈學院，不接。｜A continuação exige entrar em Scolomântia, não aceite.
+04-45到60級.md:1207｜說明｜人就在冰風崗，直接找飛行管理員。｜Você já está no Acampamento Ventogelante; procure direto o mestre de voo.
+04-45到60級.md:1216｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就從暴風城直飛摩根的崗哨。｜Só vá a Vila Plácida se tiver Os verdadeiros mestres (4186); se não tiver, voe direto de Ventobravo para a Vigia de Morgan.
+04-45到60級.md:1216｜說明｜沒有就從暴風城直飛摩根的崗哨。｜Se não tiver, voe direto de Ventobravo para a Vigia de Morgan.
+05-副本.md:379｜說明｜在血色區的血色十字軍堡壘裡，找描繪兩個月亮的那幅畫，愛與家庭就藏在後面。｜No Bastião Escarlate, no lado Escarlate, procure a pintura que retrata as duas luas; Do amor e da família está escondida atrás dela.
+05-副本.md:383｜說明｜提里奧·弗丁在東瘟疫之地西邊河岸旁的小屋。｜Tirion Fordring fica na cabana à beira do rio, no oeste das Terras Pestilentas Orientais.
+06-路線外任務.md:13｜說明｜路線任務不需要它當前置；經過03-第29站時，有空再接。｜As missões da rota não precisam dela como pré-requisito; aceite se tiver tempo ao passar por 03-parada 29.
+06-路線外任務.md:14｜說明｜路線任務不需要它當前置；路線也不經過任務起點，跳過不影響練級。｜As missões da rota não precisam dela como pré-requisito; a rota também não passa pelo ponto de início da missão, pular não atrapalha a evolução.
+06-路線外任務.md:15｜說明｜路線任務不需要它當前置；經過03-第34站時，有空再接。｜As missões da rota não precisam dela como pré-requisito; aceite se tiver tempo ao passar por 03-parada 34.
+06-路線外任務.md:20｜說明｜經過03-第27站時，有空再接。｜Aceite se tiver tempo ao passar por 03-parada 27.
+06-路線外任務.md:158｜說明｜碎片只掉自 59–60 級精英霜槌巨人，跳過不影響練級。｜Os estilhaços só caem dos gigantes Friomalho elite de nível 59–60, pular não atrapalha a evolução.
+06-路線外任務.md:372｜說明｜經過02-第18站時，有空再接。｜Aceite se tiver tempo ao passar por 02-parada 18.
+06-路線外任務.md:421｜說明｜要戰場獎章才能交，跳過不影響練級。｜É preciso ter medalhas de campo de batalha para entregar, pular não atrapalha a evolução.
+06-路線外任務.md:700｜說明｜路線不經過任務起點那一區，跳過不影響練級。｜A rota não passa pela zona onde a missão começa, pular não atrapalha a evolução.
+06-路線外任務.md:708｜說明｜經過04-第53站時，有空再接。｜Aceite se tiver tempo ao passar por 04-parada 53.
+06-路線外任務.md:1090｜說明｜經過02-第21站時，有空再接。｜Aceite se tiver tempo ao passar por 02-parada 21.
+06-路線外任務.md:1113｜說明｜路線任務的前置是任一即可，另一個（7383）已在路線。｜A missão da rota aceita qualquer uma das duas como pré-requisito; a outra (7383) já está na rota.
+06-路線外任務.md:1504｜說明｜路線任務不需要它當前置；經過03-第38站時，有空再接。｜As missões da rota não precisam dela como pré-requisito; aceite se tiver tempo ao passar por 03-parada 38.
+06-路線外任務.md:1747｜說明｜和路線已排的「墜星村」（5250）互斥，做了 5250 就接不到。｜É mutuamente exclusiva com "Chuva Estelar" (5250), que já está na rota; se fizer 5250, não dá para aceitar esta.
+06-路線外任務.md:1808｜說明｜經過02-第10站時，有空再接。｜Aceite se tiver tempo ao passar por 02-parada 10.
+06-路線外任務.md:1973｜說明｜路線任務的前置是任一即可，另一個（94484）已在路線。｜A missão da rota aceita qualquer uma das duas como pré-requisito; a outra (94484) já está na rota.
+02-12到30級.md:320｜說明｜離開赤脊山前還不到 21 級，就到湖畔鎮北邊的豺狼人營地打赤脊山猛擊者補到 21。｜Se ainda não estiver no nível 21 antes de sair das Montanhas Cristarrubra, vá ao acampamento dos gnolls ao norte de Vila Plácida e mate Esmagadores de Cristarrubra até o 21.
+03-30到45級.md:420｜說明｜離開閃光平原前還不到 35 級，就在賽道南邊打鹽石凝視者、鹽石水晶蜥蜴補到 35。｜Se ainda não estiver no nível 35 antes de sair da Chapada Cintilante, mate Observadores Sal-gema e Cristaldermes Sal-gema ao sul da pista de corrida até o 35.
+03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，在廢墟裡沿路找；找不齊就略過。｜É preciso recuperar 8 mercadorias roubadas nas Ruínas de Zul'Kanda; procure-as pelo caminho dentro das ruínas; se não encontrar todas, pule.
+03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，在廢墟裡沿路找｜É preciso recuperar 8 mercadorias roubadas nas Ruínas de Zul'Kanda; procure-as pelo caminho dentro das ruínas
+04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火酒瓶，撿到後右鍵接任務；還沒掉就繼續打熊怪。｜Os furbolgs Invernosos deixam cair o Frasco Vazio de Aguardente; depois de pegá-lo, clique com o botão direito para aceitar a missão; se ainda não caiu, continue matando furbolgs.
+04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火酒瓶，撿到後右鍵接任務｜Os furbolgs Invernosos deixam cair o Frasco Vazio de Aguardente; depois de pegá-lo, clique com o botão direito para aceitar a missão
+04-45到60級.md:731｜說明｜還沒掉就繼續打熊怪。｜Se ainda não caiu, continue matando furbolgs.
+04-45到60級.md:1089｜說明｜郵件散在永望鎮外的山丘上，照任務日誌的提示找；找不到可先略過。｜A correspondência está espalhada pelas colinas fora de Visteterna; procure seguindo as dicas do registro de missões; se não encontrar, pode pular por enquanto.
+04-45到60級.md:1089｜說明｜郵件散在永望鎮外的山丘上，照任務日誌的提示找｜A correspondência está espalhada pelas colinas fora de Visteterna; procure seguindo as dicas do registro de missões
+06-路線外任務.md:397｜說明｜夏拉卡在04-第58站嘉文關‧葉源附近（31.3, 50.3）接；小貓就在附近，照任務日誌的提示找。｜Shalla'kal pode ser aceita em 04-parada 58, perto de Galvinquam Leafsyre (31.3, 50.3); os gatinhos estão por perto, procure seguindo as dicas do registro de missões.
+06-路線外任務.md:398｜說明｜洞穴甲蟲在樹皮地穴一帶，在那裡做其他任務時順便找。｜Os besouros da caverna ficam na área da caverna Casca; procure-os de passagem enquanto faz outras missões por lá.
+06-路線外任務.md:406｜說明｜路線沒有排；在海加爾山遇到這個任務再接。｜Não está na rota; aceite se encontrar esta missão no Monte Hyjal.
+06-路線外任務.md:408｜說明｜先完成前置才接；法師塔照任務日誌的提示找。｜Aceite só depois de concluir o pré-requisito; procure a torre de magos seguindo as dicas do registro de missões.
+06-路線外任務.md:409｜說明｜要進永恆之井，入口照任務日誌的提示找。｜É preciso entrar no Poço da Eternidade; procure a entrada seguindo as dicas do registro de missões.
+03-30到45級.md:911｜說明｜老爛餌是 42 級精英魚人，在火線港南邊的魚人群島一帶游走。｜Podreira Velha é um murloc de elite de nível 42 que ronda as ilhas dos murlocs ao sul do Porto Detonapavio.
+03-30到45級.md:912｜說明｜彩繪獸皮在往南邊魚人海岸的路上，去打魚人時順路撿。｜O couro pintado fica no caminho para a costa dos murlocs, ao sul; pegue de passagem quando for matar os murlocs.
+03-30到45級.md:932｜說明｜內臟從沿路的野獸身上收；腐肉蘑菇在風息堡旁的洞穴裡，洞內有巨魔。｜Colete as entranhas das feras pelo caminho; os Cogumelos Carne-podre ficam na caverna ao lado de Windbreak, e há ogros lá dentro.
+03-30到45級.md:932｜說明｜內臟從沿路的野獸身上收｜Colete as entranhas das feras pelo caminho
+03-30到45級.md:932｜說明｜腐肉蘑菇在風息堡旁的洞穴裡，洞內有巨魔。｜Os Cogumelos Carne-podre ficam na caverna ao lado de Windbreak, e há ogros lá dentro.
+03-30到45級.md:946｜說明｜到藏寶海灣交給旅行者拉茲戈特，下次去荊棘谷時順路。｜Entregue ao Caravaneiro Russote na Angra do Butim; fica no caminho na próxima vez que você for à Selva do Espinhaço.
+03-30到45級.md:947｜說明｜到塔納利斯的熱砂港交給碼頭管理員汽嘶，之後去塔納利斯時順路。｜Entregue ao Mestre Portuário Vaporeto no Porto de Bondebico, em Tanaris; fica no caminho quando você for a Tanaris mais tarde.
+03-30到45級.md:949｜說明｜在魚人島的水下沉船旁使用誘餌召出海怪，打倒後撿頭顱。｜Use a isca ao lado do navio naufragado debaixo d'água na ilha dos murlocs para invocar o monstro marinho; derrote-o e depois pegue a cabeça.
+06-路線外任務.md:27｜說明｜要交 10 份鹽水海鮮燉湯，得自己用烹飪做或跟別人買；手上剛好有再交。｜Pede 10 porções de ensopado de frutos do mar de água salgada, que você precisa cozinhar ou comprar de outros jogadores; entregue só se por acaso já as tiver.
