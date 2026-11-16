@@ -1,20 +1,20 @@
-# 建置報告（資料版本 72db87ba）
+# 建置報告（資料版本 102c01fa）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
-站數：92　任務數：1521
+站數：94　任務數：1601
 
 ## 需要處理（0）
 
 無
 
-## 提醒（133）
+## 提醒（132）
 
 - 01-第一段-1到12級.md:33 接｜歡迎！：缺座標（QuestieDB 也沒有）
 - 01-第一段-1到12級.md:269 接｜歡迎！：缺座標（QuestieDB 也沒有）
 - 05-副本.md:39 交｜尋找背包：缺座標（QuestieDB 也沒有）
 - 05-副本.md:40 接｜歸還背包：缺座標（QuestieDB 也沒有）
 - 05-d1 怒焰裂谷：5 個「做」步驟沒有座標（不會出現箭頭）
-- 02-12到30級.md:307 交｜影牙城堡裏的亡靈哨兵：缺座標（QuestieDB 也沒有）
+- 02-12到30級.md:308 交｜影牙城堡裏的亡靈哨兵：缺座標（QuestieDB 也沒有）
 - 05-副本.md:139 接｜無盡的折磨：缺座標（QuestieDB 也沒有）
 - 05-副本.md:140 接｜羅德隆紋章：缺座標（QuestieDB 也沒有）
 - 05-d3 羅德隆廢墟：4 個「做」步驟沒有座標（不會出現箭頭）
@@ -59,78 +59,78 @@
 - 05-d18 奧達曼：4 個「做」步驟沒有座標（不會出現箭頭）
 - 05-副本.md:1026 接｜克羅多克模具：缺座標（QuestieDB 也沒有）
 - 05-d19 克羅多克要塞：7 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1096 交｜瑪拉頓的傳說：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1097 接｜塞雷布拉斯節杖：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1099 交｜塞雷布拉斯節杖：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1103 接｜生命之種：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1099 交｜瑪拉頓的傳說：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1100 接｜塞雷布拉斯節杖：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1102 交｜塞雷布拉斯節杖：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1106 接｜生命之種：缺座標（QuestieDB 也沒有）
 - 05-d20 瑪拉頓：5 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1202 交｜不放棄任何一個獸人：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1203 接｜柯爾克隆的榮耀：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1207 交｜柯爾克隆的榮耀：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1208 接｜給弗卡爾的壞消息：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1210 交｜給弗卡爾的壞消息：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1211 接｜索爾必須知道：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1205 交｜不放棄任何一個獸人：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1206 接｜柯爾克隆的榮耀：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1210 交｜柯爾克隆的榮耀：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1211 接｜給弗卡爾的壞消息：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1213 交｜給弗卡爾的壞消息：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1214 接｜索爾必須知道：缺座標（QuestieDB 也沒有）
 - 05-d22 奧卡茲監獄：5 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d21 祖爾法拉克：6 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1273 交｜深入神廟：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1275 交｜雕像群的秘密：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1279 接｜伊蘭尼庫斯精華：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1281 交｜伊蘭尼庫斯精華：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1276 交｜深入神廟：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1278 交｜雕像群的秘密：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1282 接｜伊蘭尼庫斯精華：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1284 交｜伊蘭尼庫斯精華：缺座標（QuestieDB 也沒有）
 - 05-d23 阿塔哈卡神廟：6 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1329 交｜黑鐵的遺產：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1332 交｜黑鐵的遺產：缺座標（QuestieDB 也沒有）
 - 05-d24 黑石深淵：7 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1376 接｜晉升印章：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1378 交｜狡猾的比修：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1379 接｜比修的裝置：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1381 交｜比修的裝置：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1382 接｜比修的偵察報告：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1389 交｜晉升印章：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1390 接｜晉升印章：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1403 交｜晉升印章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1379 接｜晉升印章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1381 交｜狡猾的比修：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1382 接｜比修的裝置：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1384 交｜比修的裝置：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1385 接｜比修的偵察報告：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1392 交｜晉升印章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1393 接｜晉升印章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1406 交｜晉升印章：缺座標（QuestieDB 也沒有）
 - 05-d25 黑石塔下層：8 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1495 接｜信仰獎章：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1497 交｜信仰獎章：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1498 接｜奧裏克斯的清算：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1500 交｜奧裏克斯的清算：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1498 接｜信仰獎章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1500 交｜信仰獎章：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1501 接｜奧裏克斯的清算：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1503 交｜奧裏克斯的清算：缺座標（QuestieDB 也沒有）
 - 05-d27 斯坦索姆・亡靈區：6 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d26 斯坦索姆・血色區：3 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d32 通靈學院：3 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1611 接｜戈多克食人魔裝：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1613 交｜戈多克食人魔裝：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1614 接｜逃出生天！：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1616 交｜逃出生天！：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1617 接｜戈多克好酒：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1619 交｜戈多克好酒：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1620 接｜迦羅娜：潛行與詭計研究：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1622 交｜迦羅娜：潛行與詭計研究：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1623 接｜防禦寶典：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1625 交｜防禦寶典：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1626 接｜奧法師的食譜：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1628 交｜奧法師的食譜：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1629 接｜聖光之力：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1631 交｜聖光之力：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1632 接｜束縛之影：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1634 交｜束縛之影：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1635 接｜最偉大的獵手：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1637 交｜最偉大的獵手：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1638 接｜光明不會告訴妳的事情：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1640 交｜光明不會告訴妳的事情：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1641 接｜妳與冰霜震擊：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1643 交｜妳與冰霜震擊：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1644 接｜翡翠夢境……：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1646 交｜翡翠夢境……：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1614 接｜戈多克食人魔裝：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1616 交｜戈多克食人魔裝：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1617 接｜逃出生天！：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1619 交｜逃出生天！：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1620 接｜戈多克好酒：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1622 交｜戈多克好酒：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1623 接｜迦羅娜：潛行與詭計研究：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1625 交｜迦羅娜：潛行與詭計研究：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1626 接｜防禦寶典：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1628 交｜防禦寶典：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1629 接｜奧法師的食譜：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1631 交｜奧法師的食譜：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1632 接｜聖光之力：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1634 交｜聖光之力：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1635 接｜束縛之影：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1637 交｜束縛之影：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1638 接｜最偉大的獵手：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1640 交｜最偉大的獵手：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1641 接｜光明不會告訴妳的事情：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1643 交｜光明不會告訴妳的事情：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1644 接｜妳與冰霜震擊：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1646 交｜妳與冰霜震擊：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1647 接｜翡翠夢境……：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1649 交｜翡翠夢境……：缺座標（QuestieDB 也沒有）
 - 05-d30 厄運之槌・北區：12 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1576 接｜伊莫塔爾的瘋狂：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1578 交｜伊莫塔爾的瘋狂：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1579 接｜辛德拉的寶藏：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1581 交｜辛德拉的寶藏：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1579 接｜伊莫塔爾的瘋狂：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1581 交｜伊莫塔爾的瘋狂：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1582 接｜辛德拉的寶藏：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1584 交｜辛德拉的寶藏：缺座標（QuestieDB 也沒有）
 - 05-d29 厄運之槌・西區：3 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1543 接｜久違的法師：缺座標（QuestieDB 也沒有）
-- 05-副本.md:1547 交｜久違的法師：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1546 接｜久違的法師：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1550 交｜久違的法師：缺座標（QuestieDB 也沒有）
 - 05-d28 厄運之槌・東區：4 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1686 交｜黑暗水晶：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1689 交｜黑暗水晶：缺座標（QuestieDB 也沒有）
 - 05-d31 塑造者殿堂：3 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:1828 交｜黑手的命令：缺座標（QuestieDB 也沒有）
+- 05-副本.md:1831 交｜黑手的命令：缺座標（QuestieDB 也沒有）
 - 05-d34 黑石塔上層：4 個「做」步驟沒有座標（不會出現箭頭）
 - 05-d33 黑喉要塞：4 個「做」步驟沒有座標（不會出現箭頭）
 - 06-路線外任務.md:115：任務 96646 在路線上，路線外判定不會用到
@@ -141,7 +141,6 @@
 - 06-路線外任務.md:132：任務 98512 在路線上，路線外判定不會用到
 - 06-路線外任務.md:133：任務 92708 在路線上，路線外判定不會用到
 - 06-路線外任務.md:134：任務 93165 在路線上，路線外判定不會用到
-- 06-路線外任務.md:1071：任務 93341 在路線上，路線外判定不會用到
 
 ## 副本前置鏈
 
@@ -164,7 +163,7 @@
 - 剃刀高地：補了 0 步（0 個任務）
 - 奧達曼：補了 0 步（0 個任務）
 - 克羅多克要塞：補了 9 步（3 個任務）
-- 瑪拉頓：補了 2 步（1 個任務）
+- 瑪拉頓：補了 0 步（0 個任務）
 - 祖爾法拉克：補了 0 步（0 個任務）
 - 奧卡茲監獄：補了 0 步（0 個任務）
 - 阿塔哈卡神廟：補了 0 步（0 個任務）
@@ -223,32 +222,32 @@
 - 01-第一段-1到12級.md：…84, 66.20）接 364… → 無腦的殭屍
 - 01-第一段-1到12級.md：… 3 級才接瑪拉的遺願 6395。到 6… → 瑪拉的遺願
 
-## 名稱不一致（48）
+## 名稱不一致（229）
 
 - 任務 92551：目標怪 QuestieDB 沒有繁中名（奧拉凱斯風暴召喚者、奧拉凱斯治療者、『颶語者』特戴歐爾、Galemender Delanea）
-- 01-第一段-1到12級.md:1139 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
-- 01-第一段-1到12級.md:1163 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
+- 01-第一段-1到12級.md:1146 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
+- 01-第一段-1到12級.md:1170 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
 - 任務 97257：目標怪 QuestieDB 沒有繁中名（Brazier of Offering）
 - 任務 880：目標怪 QuestieDB 沒有繁中名（綠洲鉗嘴龜、Oasis Snapjaw Hatchling）
 - 任務 1526：目標怪 QuestieDB 沒有繁中名（火之靈體、Manifestation of Flames）
 - 任務 671：目標怪 QuestieDB 沒有繁中名（辛迪加路霸、辛迪加巡路者、辛迪加雇傭兵、Syndicate Smuggler）
 - 任務 78830：目標怪 QuestieDB 沒有繁中名（Gharrik）
-- 03-30到45級.md:1129 交｜向赫格拉姆報到：路線寫「迅捷的赫格拉姆」，QuestieDB／遊戲名是「赫格拉姆」
+- 03-30到45級.md:1123 交｜向赫格拉姆報到：路線寫「迅捷的赫格拉姆」，QuestieDB／遊戲名是「赫格拉姆」
 - 05-副本.md:1080 交｜：QuestieDB 沒有繁中名（Magister Kirandis），用「Magister Kirandis」
-- 05-副本.md:1044 接｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
-- 05-副本.md:1044 交｜Forlorn Gardens：QuestieDB 沒有繁中名（Mithera），用「Mithera」
 - 05-副本.md:1081 接｜：QuestieDB 沒有繁中名（Mithera），用「Mithera」
-- 05-副本.md:1083 交｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
+- 05-副本.md:1083 交｜：QuestieDB 沒有繁中名（Mithera），用「Mithera」
+- 05-副本.md:1084 接｜：QuestieDB 沒有繁中名（Mithera），用「Mithera」
+- 05-副本.md:1086 交｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
 - 任務 93404：目標怪 QuestieDB 沒有繁中名（Woodwyrd）
-- 05-副本.md:1084 接｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
-- 05-副本.md:1113 交｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
-- 05-副本.md:1191 交｜精英中的精英：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1192 接｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1194 交｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1195 接｜不放棄任何一個獸人：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1196 接｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1197 接｜血紅頭巾：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
-- 05-副本.md:1215 交｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1087 接｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
+- 05-副本.md:1116 交｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
+- 05-副本.md:1194 交｜精英中的精英：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1195 接｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1197 交｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1198 接｜不放棄任何一個獸人：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1199 接｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1200 接｜血紅頭巾：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
+- 05-副本.md:1218 交｜還以顏色：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
 - 任務 8234：目標怪 QuestieDB 沒有繁中名（木喉薩滿、Blackmaw Shaman）
 - 任務 8425：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）
 - 任務 8425：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku、Mijan）
@@ -256,9 +255,9 @@
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Lieutenant Suncrest）
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Magister Hawkhelm）
 - 任務 91497：目標怪 QuestieDB 沒有繁中名（Ranger Lydrea）
-- 04-45到60級.md:605 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
-- 04-45到60級.md:607 交｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
 - 04-45到60級.md:608 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 04-45到60級.md:610 交｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
+- 04-45到60級.md:611 接｜：QuestieDB 沒有繁中名（Sin'dorei Tome of Summoning），用「Sin'dorei Tome of Summoning」
 - 任務 8251：目標怪 QuestieDB 沒有繁中名（血精靈勘測員、血精靈搜尋者、血精靈防衛者、Blood Elf Arcanist、伊文‧修密特、露蜜娜‧風詠）
 - 任務 4289：目標怪 QuestieDB 沒有繁中名（安戈洛猩猩、Un'Goro Gorilla）
 - 任務 8413：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）
@@ -268,13 +267,223 @@
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku、Mijan）
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro、Zolo）
-- 04-45到60級.md:1239 接｜聖光研究：路線寫「物件 書籍」，QuestieDB／遊戲名是「詹妮亞·坎農」
-- 04-45到60級.md:1344 接｜奪回希利蘇斯：路線寫「塞納里奧使者黑蹄」，QuestieDB／遊戲名是「塞納里奧使者托爾·黑蹄」
+- 04-45到60級.md:1245 接｜聖光研究：路線寫「物件 書籍」，QuestieDB／遊戲名是「詹妮亞·坎農」
+- 04-45到60級.md:1350 接｜奪回希利蘇斯：路線寫「塞納里奧使者黑蹄」，QuestieDB／遊戲名是「塞納里奧使者托爾·黑蹄」
+- 04-45到60級.md:1426 交｜旅外表兄：QuestieDB 沒有繁中名（Thark Gorax），用「薩克‧葛洛克斯」
+- 04-45到60級.md:1427 接｜指引視界：QuestieDB 沒有繁中名（Thark Gorax），用「薩克‧葛洛克斯」
+- 04-45到60級.md:1429 交｜腐化根源：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1430 交｜彼之垃圾：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1431 接｜林地工坊：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1432 接｜新季節的種子：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1433 接｜為幼雛帶來希望：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1436 交｜新季節的種子：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1437 交｜為幼雛帶來希望：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 任務 93759：目標怪 QuestieDB 沒有繁中名（Hyjal Stag、Predatory Hyjal Stag）
+- 04-45到60級.md:1438 接｜自然的恩惠：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1439 接｜暴力化為青翠：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1442 交｜自然的恩惠：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1443 交｜暴力化為青翠：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1444 接｜致敬儀式：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1446 交｜致敬儀式：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1447 接｜古樹盟友：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1449 交｜古樹盟友：QuestieDB 沒有繁中名（Fraxinus），用「法拉希納斯」
+- 04-45到60級.md:1450 接｜抹一些泥土：QuestieDB 沒有繁中名（Hyacinth），用「風信子」
+- 任務 91755：目標怪 QuestieDB 沒有繁中名（Tainted Shrubbery）
+- 04-45到60級.md:1451 接｜樹葉止血：QuestieDB 沒有繁中名（Hyacinth），用「風信子」
+- 任務 91923：目標怪 QuestieDB 沒有繁中名（Celastrus the Bitter）
+- 04-45到60級.md:1452 接｜『苦痛者』瑟拉史卓斯：QuestieDB 沒有繁中名（Thylaen），用「席萊安」
+- 04-45到60級.md:1454 交｜林地工坊：QuestieDB 沒有繁中名（Kaylaena Springwhisper），用「凱蕾娜‧春語者」
+- 任務 92594：目標怪 QuestieDB 沒有繁中名（Tainted Shrubbery）
+- 04-45到60級.md:1455 接｜引火差事：QuestieDB 沒有繁中名（Kaylaena Springwhisper），用「凱蕾娜‧春語者」
+- 04-45到60級.md:1456 接｜首批零件：QuestieDB 沒有繁中名（Kaylaena Springwhisper），用「凱蕾娜‧春語者」
+- 04-45到60級.md:1461 交｜抹一些泥土：QuestieDB 沒有繁中名（Hyacinth），用「風信子」
+- 04-45到60級.md:1462 交｜樹葉止血：QuestieDB 沒有繁中名（Hyacinth），用「風信子」
+- 04-45到60級.md:1463 交｜『苦痛者』瑟拉史卓斯：QuestieDB 沒有繁中名（Thylaen），用「席萊安」
+- 任務 91770：目標怪 QuestieDB 沒有繁中名（Fraxinus）
+- 04-45到60級.md:1464 接｜樹皮痛：QuestieDB 沒有繁中名（Hyacinth），用「風信子」
+- 04-45到60級.md:1466 交｜樹皮痛：QuestieDB 沒有繁中名（Fraxinus），用「法拉希納斯」
+- 04-45到60級.md:1467 接｜垂死古樹：QuestieDB 沒有繁中名（Fraxinus），用「法拉希納斯」
+- 04-45到60級.md:1469 交｜垂死古樹：QuestieDB 沒有繁中名（Fraxinus），用「法拉希納斯」
+- 04-45到60級.md:1470 接｜美麗羽毛之友：QuestieDB 沒有繁中名（Fraxinus），用「法拉希納斯」
+- 04-45到60級.md:1471 交｜美麗羽毛之友：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 任務 95317：目標怪 QuestieDB 沒有繁中名（Ashen Acolyte）
+- 04-45到60級.md:1472 接｜筆記、筆記、筆記：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1473 接｜奇怪的問題：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1474 交｜奇怪的問題：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 任務 95318：目標怪 QuestieDB 沒有繁中名（Ashen Acolyte）
+- 04-45到60級.md:1475 接｜灰燼的滋味：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 04-45到60級.md:1478 交｜灰燼的滋味：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 04-45到60級.md:1479 接｜收集水晶：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 04-45到60級.md:1481 交｜收集水晶：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 任務 95378：目標怪 QuestieDB 沒有繁中名（Tyaeha Darkoath）
+- 任務 95378：目標怪 QuestieDB 沒有繁中名（Dazka Shadowsleep）
+- 任務 95378：目標怪 QuestieDB 沒有繁中名（Frezzlie Popwhiz）
+- 04-45到60級.md:1482 接｜多頭蛇之首：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 任務 95379：目標怪 QuestieDB 沒有繁中名（Brashann Grimdark）
+- 04-45到60級.md:1483 接｜甜美的復仇：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 04-45到60級.md:1486 交｜多頭蛇之首：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 04-45到60級.md:1487 交｜甜美的復仇：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 04-45到60級.md:1488 接｜最適合的結局：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 04-45到60級.md:1489 交｜筆記、筆記、筆記：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 任務 95380：目標怪 QuestieDB 沒有繁中名（Noxious Slime）
+- 04-45到60級.md:1490 接｜產量十足：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1491 接｜多刺松果：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 任務 96255：目標怪 QuestieDB 沒有繁中名（Awakened Fel Ash Slime）
+- 04-45到60級.md:1498 接｜垂死之神：QuestieDB 沒有繁中名（Velician），用「維利希亞」
+- 04-45到60級.md:1499 交｜產量十足：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1500 交｜多刺松果：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1501 接｜實驗性方法：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1503 交｜混合黏液：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 04-45到60級.md:1504 接｜復仇的苦澀：QuestieDB 沒有繁中名（Felflick），用「魔拂」
+- 04-45到60級.md:1505 交｜實驗性方法：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1506 交｜復仇的苦澀：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1507 交｜垂死之神：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1508 接｜西邊哨站：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1509 接｜老頑固，老朋友：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1510 交｜老頑固，老朋友：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1511 接｜月光林地的幫助：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1513 交｜首批零件：QuestieDB 沒有繁中名（Nami），用「娜米」
+- 04-45到60級.md:1523 接｜木箱之旅：QuestieDB 沒有繁中名（Nami），用「娜米」
+- 04-45到60級.md:1525 交｜木箱之旅：QuestieDB 沒有繁中名（Kaylaena Springwhisper），用「凱蕾娜‧春語者」
+- 04-45到60級.md:1526 交｜引火差事：QuestieDB 沒有繁中名（Kaylaena Springwhisper），用「凱蕾娜‧春語者」
+- 04-45到60級.md:1527 交｜教團：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1528 接｜任性的鴉神：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1529 接｜飛向全新高度：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1530 交｜任性的鴉神：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 04-45到60級.md:1531 接｜前往山頂：QuestieDB 沒有繁中名（Curious Crow），用「好奇的烏鴉」
+- 任務 93952：目標怪 QuestieDB 沒有繁中名（Deadwood Den Guardian）
+- 04-45到60級.md:1563 接｜力求平衡：QuestieDB 沒有繁中名（Brerufa），用「布瑞魯法」
+- 任務 90865：目標怪 QuestieDB 沒有繁中名（Eternal Sentry）
+- 04-45到60級.md:1564 接｜觀察者之眼：QuestieDB 沒有繁中名（Eluneth），用「伊露涅絲」
+- 04-45到60級.md:1565 接｜遠離此地：QuestieDB 沒有繁中名（Veteran of the Third War），用「第三次大戰的老兵」
+- 04-45到60級.md:1566 交｜西邊哨站：QuestieDB 沒有繁中名（Zet'gan），用「澤特甘」
+- 04-45到60級.md:1567 交｜指引視界：QuestieDB 沒有繁中名（Ortak Lomgok），用「歐塔克‧洛勾克」
+- 任務 92609：目標怪 QuestieDB 沒有繁中名（Hyjal Owl）
+- 04-45到60級.md:1568 接｜飛行羽毛：QuestieDB 沒有繁中名（Zet'gan），用「澤特甘」
+- 任務 95026：目標怪 QuestieDB 沒有繁中名（Forgotten Soldier）
+- 任務 95026：目標怪 QuestieDB 沒有繁中名（Fleshflay Ravener）
+- 04-45到60級.md:1569 接｜疫病不再：QuestieDB 沒有繁中名（Zet'gan），用「澤特甘」
+- 任務 92592：目標怪 QuestieDB 沒有繁中名（Scourge Reanimator）
+- 04-45到60級.md:1570 接｜最終之死：QuestieDB 沒有繁中名（Zet'gan），用「澤特甘」
+- 04-45到60級.md:1571 接｜傷患與疲累之人的草藥：QuestieDB 沒有繁中名（Ortak Lomgok），用「歐塔克‧洛勾克」
+- 04-45到60級.md:1575 交｜回想戰鬥：QuestieDB 沒有繁中名（Veteran of the Third War），用「第三次大戰的老兵」
+- 04-45到60級.md:1577 接｜神聖飲水：QuestieDB 沒有繁中名（Galvinquam Leafsyre），用「嘉文關‧葉源」
+- 04-45到60級.md:1580 交｜前往山頂：QuestieDB 沒有繁中名（Jereman），用「傑瑞曼」
+- 04-45到60級.md:1581 接｜暴力的鹿：QuestieDB 沒有繁中名（Jereman），用「傑瑞曼」
+- 04-45到60級.md:1582 接｜生與死的平衡：QuestieDB 沒有繁中名（Jereman），用「傑瑞曼」
+- 04-45到60級.md:1583 接｜聰明的生物：QuestieDB 沒有繁中名（Jereman），用「傑瑞曼」
+- 04-45到60級.md:1584 交｜暴力的鹿：QuestieDB 沒有繁中名（Kala'th），用「卡拉斯」
+- 任務 93617：目標怪 QuestieDB 沒有繁中名（Predatory Hyjal Stag）
+- 04-45到60級.md:1585 接｜獵物與掠食者：QuestieDB 沒有繁中名（Kala'th），用「卡拉斯」
+- 04-45到60級.md:1587 交｜獵物與掠食者：QuestieDB 沒有繁中名（Kala'th），用「卡拉斯」
+- 04-45到60級.md:1588 交｜生與死的平衡：QuestieDB 沒有繁中名（Marrosis），用「馬羅希斯」
+- 任務 92317：目標怪 QuestieDB 沒有繁中名（Death Wailer、Fleshflay Ravener、Forgotten Soldier）
+- 04-45到60級.md:1589 接｜被竊取的生命：QuestieDB 沒有繁中名（Marrosis），用「馬羅希斯」
+- 04-45到60級.md:1590 接｜吃得骨中骨：QuestieDB 沒有繁中名（Marrosis），用「馬羅希斯」
+- 04-45到60級.md:1597 交｜吃得骨中骨：QuestieDB 沒有繁中名（Marrosis），用「馬羅希斯」
+- 04-45到60級.md:1598 交｜觀察者之眼：QuestieDB 沒有繁中名（Eluneth），用「伊露涅絲」
+- 04-45到60級.md:1601 交｜力求平衡：QuestieDB 沒有繁中名（Brerufa），用「布瑞魯法」
+- 04-45到60級.md:1602 交｜飛行羽毛：QuestieDB 沒有繁中名（Zet'gan），用「澤特甘」
+- 04-45到60級.md:1603 交｜疫病不再：QuestieDB 沒有繁中名（Zet'gan），用「澤特甘」
+- 04-45到60級.md:1604 交｜最終之死：QuestieDB 沒有繁中名（Zet'gan），用「澤特甘」
+- 04-45到60級.md:1605 交｜傷患與疲累之人的草藥：QuestieDB 沒有繁中名（Ortak Lomgok），用「歐塔克‧洛勾克」
+- 04-45到60級.md:1606 接｜無痛歇息：QuestieDB 沒有繁中名（Ortak Lomgok），用「歐塔克‧洛勾克」
+- 04-45到60級.md:1608 交｜無痛歇息：QuestieDB 沒有繁中名（Ortak Lomgok），用「歐塔克‧洛勾克」
+- 04-45到60級.md:1609 接｜前往永恆山峰：QuestieDB 沒有繁中名（Zet'gan），用「澤特甘」
+- 04-45到60級.md:1611 交｜神聖飲水：QuestieDB 沒有繁中名（Galvinquam Leafsyre），用「嘉文關‧葉源」
+- 04-45到60級.md:1612 接｜山路相助：QuestieDB 沒有繁中名（Galvinquam Leafsyre），用「嘉文關‧葉源」
+- 04-45到60級.md:1613 接｜勇闖飛翼與利爪：QuestieDB 沒有繁中名（Lisbael Highfeather），用「莉絲貝爾‧高羽」
+- 04-45到60級.md:1616 交｜勇闖飛翼與利爪：QuestieDB 沒有繁中名（Phoebe Highfeather），用「菲比‧高羽」
+- 04-45到60級.md:1617 交｜惡臭腐化：QuestieDB 沒有繁中名（Phoebe Highfeather），用「菲比‧高羽」
+- 任務 92147：目標怪 QuestieDB 沒有繁中名（Wormwing Harpy、Wormwing Windwitch、Wormwing Ambusher、Wormwing Fledgling、Zarrat Wormwing）
+- 04-45到60級.md:1618 接｜高羽幫手：QuestieDB 沒有繁中名（Phoebe Highfeather），用「菲比‧高羽」
+- 04-45到60級.md:1619 接｜污損的寶藏：QuestieDB 沒有繁中名（Phoebe Highfeather），用「菲比‧高羽」
+- 04-45到60級.md:1620 交｜飛向全新高度：QuestieDB 沒有繁中名（Skylord Omnuron），用「傲天者歐姆奴隆」
+- 04-45到60級.md:1621 接｜天空碎片：QuestieDB 沒有繁中名（Skylord Omnuron），用「傲天者歐姆奴隆」
+- 任務 91883：目標怪 QuestieDB 沒有繁中名（Zarrat Wormwing）
+- 04-45到60級.md:1622 接｜傲天者之矛：QuestieDB 沒有繁中名（Skylord Omnuron），用「傲天者歐姆奴隆」
+- 04-45到60級.md:1627 交｜高羽幫手：QuestieDB 沒有繁中名（Phoebe Highfeather），用「菲比‧高羽」
+- 04-45到60級.md:1628 交｜污損的寶藏：QuestieDB 沒有繁中名（Phoebe Highfeather），用「菲比‧高羽」
+- 04-45到60級.md:1629 交｜傲天者之矛：QuestieDB 沒有繁中名（Skylord Omnuron），用「傲天者歐姆奴隆」
+- 04-45到60級.md:1630 交｜聰明的生物：QuestieDB 沒有繁中名（Renalard），用「瑞納拉德」
+- 04-45到60級.md:1631 接｜軍團進軍處的灰燼：QuestieDB 沒有繁中名（Renalard），用「瑞納拉德」
+- 04-45到60級.md:1632 接｜智取惡魔：QuestieDB 沒有繁中名（Renalard），用「瑞納拉德」
+- 04-45到60級.md:1635 交｜智取惡魔：QuestieDB 沒有繁中名（Renalard），用「瑞納拉德」
+- 04-45到60級.md:1637 交｜前往永恆山峰：QuestieDB 沒有繁中名（Thisalee Crow），用「黎沙莉‧烏鴉」
+- 04-45到60級.md:1638 交｜霍萊伊的大蜥蜴全書：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1639 接｜恢復通訊：QuestieDB 沒有繁中名（Sebelia），用「塞貝莉雅」
+- 04-45到60級.md:1641 交｜被竊取的生命：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1642 交｜軍團進軍處的灰燼：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1643 交｜天空碎片：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1644 接｜山脈法杖：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
+- 04-45到60級.md:1651 交｜巔峰郵遞：QuestieDB 沒有繁中名（Sebelia），用「塞貝莉雅」
+- 04-45到60級.md:1652 交｜山脈法杖：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1653 接｜償還教約：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1654 接｜山巔哨兵：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1655 接｜爪中荊棘：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 任務 93584：目標怪 QuestieDB 沒有繁中名（Blackthorne Cultist）
+- 任務 93584：目標怪 QuestieDB 沒有繁中名（Blackthorne Adept）
+- 04-45到60級.md:1656 接｜終結狂熱：QuestieDB 沒有繁中名（Thisalee Crow），用「黎沙莉‧烏鴉」
+- 04-45到60級.md:1657 交｜山路相助：QuestieDB 沒有繁中名（Marn Euhorn），用「瑪恩‧尤霍恩」
+- 任務 92017：目標怪 QuestieDB 沒有繁中名（Mountain Squallclimber）
+- 任務 92017：目標怪 QuestieDB 沒有繁中名（Wildbreath Chimaerok）
+- 04-45到60級.md:1658 接｜淨化之風：QuestieDB 沒有繁中名（Marn Euhorn），用「瑪恩‧尤霍恩」
+- 任務 92533：目標怪 QuestieDB 沒有繁中名（Blackthorne Cultist、Blackthorne Outrunner）
+- 任務 92533：目標怪 QuestieDB 沒有繁中名（Blackthorne Adept、Blackthorne Priest）
+- 04-45到60級.md:1659 接｜扭曲的工具：QuestieDB 沒有繁中名（Toron Rockhoof），用「托倫‧岩蹄」
+- 04-45到60級.md:1666 交｜償還教約：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1667 交｜山巔哨兵：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1668 交｜爪中荊棘：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1669 接｜棘手之策：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1671 交｜棘手之策：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1672 交｜終結狂熱：QuestieDB 沒有繁中名（Thisalee Crow），用「黎沙莉‧烏鴉」
+- 04-45到60級.md:1673 接｜回憶迷霧：QuestieDB 沒有繁中名（Thisalee Crow），用「黎沙莉‧烏鴉」
+- 04-45到60級.md:1674 交｜淨化之風：QuestieDB 沒有繁中名（Marn Euhorn），用「瑪恩‧尤霍恩」
+- 04-45到60級.md:1675 接｜阿克蒙德之赦：QuestieDB 沒有繁中名（Marn Euhorn），用「瑪恩‧尤霍恩」
+- 04-45到60級.md:1676 接｜樹根保養：QuestieDB 沒有繁中名（Marn Euhorn），用「瑪恩‧尤霍恩」
+- 04-45到60級.md:1677 交｜扭曲的工具：QuestieDB 沒有繁中名（Toron Rockhoof），用「托倫‧岩蹄」
+- 04-45到60級.md:1681 交｜樹根保養：QuestieDB 沒有繁中名（Marn Euhorn），用「瑪恩‧尤霍恩」
+- 04-45到60級.md:1682 交｜阿克蒙德之赦：QuestieDB 沒有繁中名（Marn Euhorn），用「瑪恩‧尤霍恩」
+- 04-45到60級.md:1683 交｜回憶迷霧：QuestieDB 沒有繁中名（Thisalee Crow），用「黎沙莉‧烏鴉」
+- 任務 92833：目標怪 QuestieDB 沒有繁中名（Ve'han Talongrasp）
+- 04-45到60級.md:1684 接｜維漢的殞落：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1686 交｜維漢的殞落：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1687 接｜任務完成：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
+- 04-45到60級.md:1689 交｜任務完成：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
 - 任務 97327：目標怪 QuestieDB 沒有繁中名（Blackmaw Berserker、Blackmaw Thrall、Blackmaw Headhunter、Swarming Imp、Legashi Slayer、Blackmaw Champion）
-- 05-副本.md:1774 接｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
-- 05-副本.md:1786 交｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
+- 05-副本.md:1777 接｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
+- 05-副本.md:1789 交｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
 
 ## 順序錯誤（已自動調整 0）
+
+無
+
+## 綁爐石步驟（18）
+
+- 01-第一段-1到12級.md:122：剃刀嶺｜到剃刀嶺先找旅店老闆格羅斯克綁爐石（1411 51.51, 41.64）。
+- 01-第一段-1到12級.md:337：血蹄村｜到血蹄村先找旅店老闆考烏斯綁爐石（1412 45.93, 64.16）。
+- 01-第一段-1到12級.md:475：十字路口｜在十字路口旅店向旅店老闆伯蘭德·草風（1413 51.99, 29.89）綁爐石
+- 01-第一段-1到12級.md:566：布瑞爾｜到布瑞爾找旅店老闆瑞尼綁爐石（1420 61.72, 52.05）。
+- 01-第一段-1到12級.md:684：十字路口｜在十字路口旅店向旅店老闆伯蘭德·草風（1413 51.99, 29.89）綁爐石
+- 01-第一段-1到12級.md:770：申德村｜到申德村後找旅店老闆珂瑞菈‧靜風綁爐石（2521 43.01, 43.23）。
+- 01-第一段-1到12級.md:1003：十字路口｜在十字路口旅店向旅店老闆伯蘭德·草風（1413 51.99, 29.89）綁爐石
+- 02-12到30級.md:35：十字路口｜在十字路口旅店向旅店老闆伯蘭德·草風（1413 51.99, 29.89）綁爐石
+- 02-12到30級.md:597：烈日石居｜在烈日石居旅店向旅店老闆傑卡（1442 47.47, 62.13）綁爐石，留到南
+- 02-12到30級.md:682：塔倫米爾｜在塔倫米爾旅店向旅店老闆沙恩（1424 62.78, 19.03）綁爐石。
+- 03-30到45級.md:29：塔倫米爾｜在塔倫米爾旅店向旅店老闆沙恩（1424 62.78, 19.03）綁爐石。
+- 03-30到45級.md:219：葬影村｜在葬影村旅店向旅店老闆希科瓦（1443 24.09, 68.21）綁爐石。
+- 03-30到45級.md:606：塔倫米爾｜在奧格瑪城外飛艇塔搭提里斯法林地線。從布瑞爾南塔下船後到幽暗城，飛塔倫米爾並綁爐
+- 03-30到45級.md:759：羅格瑪｜在羅格瑪旅店向旅店老闆托卡（2548 57.58, 45.47）綁爐石。
+- 04-45到60級.md:31：加基森｜在加基森旅店向旅店老闆菲茲格瑞博（1446 52.51, 27.91）暫綁爐石。
+- 04-45到60級.md:89：莫沙徹營地｜在莫沙徹營地旅店向旅店老闆格盧爾（1444 74.80, 45.18）綁爐石。
+- 04-45到60級.md:238：加基森｜從莫沙徹飛加基森，在加基森暫綁爐石。
+- 04-45到60級.md:1070：永望鎮｜在永望鎮旅店向旅店老闆維茲奇（1452 61.36, 38.83）綁爐石。
+
+## 互斥前置改成任一個（0）
+
+無
+
+## 職業任務回到路線（0）
 
 無
 

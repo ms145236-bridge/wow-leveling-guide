@@ -114,6 +114,9 @@ local function refresh()
     end
   end
   if o then N.Set(o.map, o.x, o.y, o.name)
+  elseif s and s.via and state.cur and state.steps[state.cur].s == s then
+    local p = E.ViaTarget(state.steps[state.cur]) -- 好幾個座標的交通：指向下一個還沒走到的點
+    N.Set(p[1], p[2], p[3], MG.Clean(E.Title(s)))
   elseif s and s.x then
     -- 有好幾群怪點：指向離玩家最近的那群；換群要近一半以上才換，走在兩群中間不會來回跳
     local tx, ty = s.x, s.y
@@ -179,7 +182,9 @@ f:SetScript("OnUpdate", function(_, dt)
   end
 end)
 
--- 目前步驟是某類型時記一筆（到達、開鳥點、下飛行、換區搭船）
+local HEARTH_SPELL = { [8690] = true, [556] = true } -- 爐石、星界傳送（薩滿）
+local hearthAt -- 爐石施法成功的時間（等換區）
+-- 目前步驟是某類型時記一筆（到達、開鳥點、下飛行、換區搭船、爐石到了）
 local function latchCurrent(t)
   local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
   if cur and cur.s.t == t then MG.db.latch[cur.key] = true end
@@ -306,11 +311,12 @@ end
 local EVENTS = {
   "ADDON_LOADED", "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_REMOVED", "QUEST_TURNED_IN", "QUEST_LOG_UPDATE",
   "UNIT_QUEST_LOG_CHANGED", "PLAYER_LEVEL_UP", "ZONE_CHANGED_NEW_AREA", "PLAYER_CONTROL_GAINED", "PLAYER_CONTROL_LOST", "HEARTHSTONE_BOUND",
+  "UNIT_SPELLCAST_SUCCEEDED", "ZONE_CHANGED", "ZONE_CHANGED_INDOORS",
   "TAXIMAP_OPENED", "QUEST_DETAIL", "QUEST_PROGRESS", "QUEST_COMPLETE", "GOSSIP_SHOW", "QUEST_GREETING",
   "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "TRAINER_SHOW", "UPDATE_INVENTORY_DURABILITY",
 }
 for _, e in ipairs(EVENTS) do
-  if e == "UNIT_QUEST_LOG_CHANGED" and f.RegisterUnitEvent then registered[e] = pcall(f.RegisterUnitEvent, f, e, "player")
+  if (e == "UNIT_QUEST_LOG_CHANGED" or e == "UNIT_SPELLCAST_SUCCEEDED") and f.RegisterUnitEvent then registered[e] = pcall(f.RegisterUnitEvent, f, e, "player")
   else registered[e] = pcall(f.RegisterEvent, f, e) end
 end
 
@@ -331,6 +337,11 @@ local function onEvent(_, event, ...)
     return
   end
   if not MG.db then return end
+  -- 爐石回 X：施法成功後 60 秒內換了區域（傳送到了）才勾目前的「爐」步驟
+  if hearthAt and (event == "PLAYER_ENTERING_WORLD" or event == "ZONE_CHANGED_NEW_AREA" or event == "ZONE_CHANGED" or event == "ZONE_CHANGED_INDOORS") then
+    if GetTime() - hearthAt <= 60 then latchCurrent("hearth") end
+    hearthAt = nil
+  end
   if event == "PLAYER_ENTERING_WORLD" then
     if not E.built then E.Build(); E.built = true end -- 每次登入建一次（換起點時 UI 會自己重建）
     N.Forget()
@@ -351,6 +362,14 @@ local function onEvent(_, event, ...)
       wipe(MG.db.notNow) -- 交了任務：暫時接不到的重新看
       trace.QUEST_TURNED_IN = id .. L["，事件當下已標記完成："] .. tostring(C.IsTurnedIn(id))
     end
+  elseif event == "UNIT_SPELLCAST_SUCCEEDED" then
+    local unit, _, spell = ...
+    if unit == "player" and not (issecretvalue and issecretvalue(spell)) and HEARTH_SPELL[spell] then hearthAt = GetTime() end
+    return
+  elseif event == "HEARTHSTONE_BOUND" then
+    -- 綁爐石：認得地點又是 zhTW 客戶端時看 GetBindLocation（E.Locate）；否則目前這步就是綁爐石就勾掉
+    local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
+    if cur and cur.s.t == "bind" and not (MG.gameZh and (cur.s.bindK or cur.s.bind)) then MG.db.latch[cur.key] = true end
   elseif event == "TRAINER_SHOW" then
     E.Trained(lastState)
   elseif event == "PLAYER_LEVEL_UP" then

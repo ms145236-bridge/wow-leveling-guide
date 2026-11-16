@@ -295,6 +295,8 @@ pick("Position",
   end)
 
 pick("Bind", "GetBindLocation", GetBindLocation and function() return GetBindLocation() end)
+-- 回 子區域, 區域, 小地圖區域名（爐石回 X：人已經在 X 了沒）
+pick("ZoneTexts", "GetSubZoneText", GetSubZoneText and function() return GetSubZoneText(), GetZoneText and GetZoneText(), GetMinimapZoneText and GetMinimapZoneText() end)
 
 -- 任務綠色範圍（超過即灰）：GetQuestGreenRange → 估算
 pick("GreenRange",

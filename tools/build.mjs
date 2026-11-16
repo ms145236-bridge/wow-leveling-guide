@@ -1,6 +1,19 @@
 // 離線建置：route/*.md → addon/ShengLeveling/Data/Route.lua + tools/unresolved.md
 // 用法：node tools/build.mjs
 // 缺任務 ID／座標時查 QuestieDB（zhTW、zhCN、enUS 名稱）。有「找不到／多個候選」時以結束碼 1 結束（輸出仍會寫出）。
+//
+// 路線寫法補充：
+// - 職業任務段落：### 職業（可加種族）｜N 級｜第M站
+//   預設排在第M站站尾的交通前面。要指定位置就在標題後面加一段：
+//     ｜插在 #K 之後／｜插在 #K 之前（K＝該站步驟行開頭的編號，例如「91. 船｜棘齒城｜藏寶海灣」的 91）
+//     ｜插在「船｜棘齒城」之後（引號裡寫該站某一步的開頭文字：動詞｜第一欄…，比對時不看【】標籤）
+//   指定位置時，段落最後一個座標和插入點後面第一個有座標的主線步驟不在同一張地圖（或相距超過 10 格），
+//   會自動補一步「回到路線：地圖 座標」（只給這個職業）；段落最後一步自己寫了交通／飛／船／爐就不補。
+// - 爐｜X：用爐石回 X（軟步驟）。用了爐石並換區時勾掉；人已經在 X（zhTW 客戶端比區域名）、走到下一步附近、或後面的任務做了也算過了。
+// - 交通文字有「綁爐石」（例如「在X旅店綁爐石」「到X找旅店老闆…綁爐石」「綁X爐石」）：改成綁爐石步驟，
+//   爐石綁到 X（GetBindLocation）才勾；地點認不出來時，在這步收到 HEARTHSTONE_BOUND 就勾。
+//   「已綁／仍綁／不改／保留…」這類說明、「可改找／可在…綁爐石」這類選擇性的不算。
+// - 交通文字有好幾個座標：依序指路，走到最後一個才算到（船、飛照舊）。
 import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { join, dirname } from "node:path";
@@ -53,7 +66,10 @@ const STATION_EN = {
   "斯坦索姆 血色區": "Stratholme: Live", "斯坦索姆 亡靈區": "Stratholme: Undead", "厄運之槌 東區": "Dire Maul: East", "厄運之槌 西區": "Dire Maul: West", "厄運之槌 北區": "Dire Maul: North",
 };
 const NODE_EN = { 蕨牆村: "Brackenwall Village", 斯通納德: "Stonard", 卡加斯: "Kargath", 莫沙徹營地: "Camp Mojache", 瑟銀哨塔: "Thorium Point", 惡齒村: "Revantusk Village", 瓦羅莫克: "Valormok",
-  馬紹爾營地: "Marshal's Refuge", 烈焰峰: "Flame Crest", 聖光之願禮拜堂: "Light's Hope Chapel", 血毒崗哨: "Bloodvenom Post", 永望鎮: "Everlook", 月光林地: "Moonglade", 塞納里奧城堡: "Cenarion Hold" };
+  馬紹爾營地: "Marshal's Refuge", 烈焰峰: "Flame Crest", 聖光之願禮拜堂: "Light's Hope Chapel", 血毒崗哨: "Bloodvenom Post", 永望鎮: "Everlook", 月光林地: "Moonglade", 塞納里奧城堡: "Cenarion Hold",
+  十字路口: "The Crossroads", 奧格瑪: "Orgrimmar", 雷霆崖: "Thunder Bluff", 塔倫米爾: "Tarren Mill", 烈日石居: "Sun Rock Retreat", 葬影村: "Shadowprey Village",
+  加基森: "Gadgetzan", 羅格瑪: "Rog'mar", 遠境堡: "Farholde Keep", 污化丘陵: "Tainted Foothills", 永恆山峰: "Summit of Eternity",
+  冰風崗: "Chillwind Camp", 刺枝林地: "Talonbranch Glade", 南海鎮: "Southshore", 哨兵嶺: "Sentinel Hill", 塔倫迪斯營地: "Talrendis Point", 塞拉摩: "Theramore", 塞爾薩瑪: "Thelsamar", 奧伯丁: "Auberdine", 守望堡: "Nethergarde Keep", 尼耶爾前哨站: "Nijel's Point", 摩根的崗哨: "Morgan's Vigil", 暴風城: "Stormwind", 棘齒城: "Ratchet", 湖畔鎮: "Lakeshire", 石爪峰: "Stonetalon Peak", 米奈希爾港: "Menethil Harbor", 薩蘭納爾: "Thalanaar", 藏寶海灣: "Booty Bay", 避難谷地: "Refuge Pointe", 鐵爐堡: "Ironforge", 阿斯特蘭納: "Astranaar", 魯瑟蘭村: "Rut'theran Village", 鷹巢山: "Aerie Peak", 夜色鎮: "Darkshire", 羽月要塞: "Feathermoon Stronghold", 落錘鎮: "Hammerfall", 格羅姆高: "Grom'gol", 碎木崗哨: "Splintertree Post", 亂風崗: "Freewind Post", 陶拉祖營地: "Camp Taurajo", 幽暗城: "Undercity", 瑟伯切爾: "The Sepulcher" };
 // 步驟標籤（第 3 行）：整段對得上才翻，對不上的英文介面不顯示
 const TAG_EN = { 可跳過: "Optional", 需遊戲實測: "Unverified", 有隊伍再做: "Group", 怪多: "Crowded", 副本前置鏈: "Dungeon prereq", 精英: "Elite", 護送: "Escort", 組隊: "Group",
   副本: "Dungeon", 組隊護送: "Group escort", 有隊伍才下: "Group only", 有隊伍或能單刷: "Group or solo", 有掉落才做: "If it drops", 掉落時才做: "If it drops", 掉落觸發: "Drop starts it",
@@ -174,7 +190,11 @@ const mobsOf = (q) => {
   const mobs = db.questMobs(q.id);
   if (!mobs.length) return undefined;
   const nums = [...q.obj.join(" ").matchAll(/(\d+)\s*[個只隻根張份塊件頭名條把顆片枚]/g)].map((m) => +m[1]);
-  return mobs.map((m, k) => m && m.kind !== "object"
+  // 怪物目標其實是跟 NPC 互動（聽提里奧說話、餵受訓者、救人…）：目標文字是對話／餵食，或任務說明只有互動、沒有打的字眼 → 不算打怪經驗
+  const objText = q.obj.join(" ");
+  const talkQ = /聽聽|聆聽|談話|交談|談一談|談壹談|對話|餵|飽餐|救出|解救/.test(objText) && !/殺|擊敗|打敗|消滅|擊殺|幹掉|摧毀|征服|打死/.test(objText);
+  const talk = (m) => m.kind === "kill" && (talkQ || /\b(talk|speak|listen|feed|fed)\b/i.test(m.text || ""));
+  return mobs.map((m, k) => m && m.kind !== "object" && !talk(m)
     ? [Math.round(m.lvl * 10) / 10, nums.length ? (nums[k] ?? 1) : 6, m.kind === "drop" ? 2 : 1, m.elite ? 1 : 0]
     : [0, 0, 1, 0]);
 };
@@ -187,10 +207,10 @@ const splitName = (s) => {
   const m = s.trim().match(/^(.*?)\s*[（(]([^（）()]*)[）)]\s*$/);
   return m ? { zh: m[1].trim(), en: m[2].trim() } : { zh: s.trim(), en: "" };
 };
-const parseCoord = (s) => {
-  const m = String(s || "").replace(/約/g, "").match(/(?:(\d{3,5})\s*[｜:：\s]\s*)?(\d{1,2}(?:\.\d+)?)\s*[,，]\s*(\d{1,2}(?:\.\d+)?)/);
-  return m ? { map: m[1] ? +m[1] : undefined, x: +m[2], y: +m[3] } : null;
-};
+// 文字裡所有座標（依序）；at＝在去掉「約」之後的文字中的位置
+const parseCoords = (s) => [...String(s || "").replace(/約/g, "").matchAll(/(?:(\d{3,5})\s*[｜:：\s]\s*)?(\d{1,2}(?:\.\d+)?)\s*[,，]\s*(\d{1,2}(?:\.\d+)?)/g)]
+  .map((m) => ({ map: m[1] ? +m[1] : undefined, x: +m[2], y: +m[3], at: m.index }));
+const parseCoord = (s) => { const c = parseCoords(s)[0]; return c ? { map: c.map, x: c.x, y: c.y } : null; };
 // 【僅獸人／食人妖】【非術士】→ when
 const parseWhen = (tags) => {
   const when = {};
@@ -244,7 +264,9 @@ for (const file of files.filter((f) => !sideFile(f))) {
       if (/天裔/.test(ch[1])) (when.race ||= []).push("天裔");
       if (when.race && !when.race.length) delete when.race;
       if (!when.class?.length) warn(where, "職業任務標題找不到職業：" + ch[1]);
-      st = { classBlock: true, target: `${prefix}-${ch[3]}`, when, steps: [], tips: [], where };
+      // ｜插在 #K 之後／之前、｜插在「動詞｜文字」之後／之前
+      const ins = line.match(/｜\s*插在\s*(?:#\s*(\d+)|「(.+?)」)\s*之(前|後)/);
+      st = { classBlock: true, target: `${prefix}-${ch[3]}`, when, steps: [], tips: [], where, at: ins ? { no: ins[1] ? +ins[1] : undefined, text: ins[2], after: ins[3] === "後" } : undefined };
       classBlocks.push(st);
       return;
     }
@@ -329,13 +351,15 @@ for (const file of files.filter((f) => !sideFile(f))) {
       else if (key !== "限定" && key !== "二選一") st.tips.push({ k: key, raw: v, text: v.replace(/【[^】]*】/g, "").trim(), where });
       return;
     }
-    const sm = line.match(/^\s*(?:\d+\s*[.、)]\s*|[-*]\s*)?(交通|接|做|交|到|鳥|爐|飛|船|練|註|買)｜(.*)$/);
+    const sm = line.match(/^\s*(?:(\d+)\s*[.、)]\s*|[-*]\s*)?(交通|接|做|交|到|鳥|爐|飛|船|練|註|買)｜(.*)$/);
     if (!sm) return;
-    const tags = [...sm[2].matchAll(/【([^】]*)】/g)].map((m) => m[1]);
-    const body = sm[2].replace(/【[^】]*】/g, "").trim();
+    const [, no, verb, rest0] = sm;
+    const tags = [...rest0.matchAll(/【([^】]*)】/g)].map((m) => m[1]);
+    const body = rest0.replace(/【[^】]*】/g, "").trim();
     const keep = /★/.test(body);
     const f = body.replace(/★/g, "").split("｜").map((s) => s.trim());
-    const step = { verb: sm[1], t: VERB[sm[1]], where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
+    // no、raw：職業任務段落的插入點用（#K、「動詞｜文字」）
+    const step = { verb, t: VERB[verb], no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined, anyRace: tags.includes("部落可接") || undefined,
       desc: [...tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")),
         ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
@@ -367,7 +391,22 @@ for (const file of files.filter((f) => !sideFile(f))) {
     else if (step.t === "boat") { step.to = f[0]; step.from = f[1]; }
     else if (step.t === "level") step.lv = +f[0];
     else if (step.t === "note") step.text = f[0];
-    else if (step.t === "travel") { step.text = f.join("｜"); step.coord = parseCoord(step.text); }
+    else if (step.t === "travel") {
+      step.text = f.join("｜");
+      // 綁爐石：交通改成「綁」（地點在全部檔讀完後才認，見下方）；座標取離「綁爐石」最近的那個（旅店老闆）
+      const bindAt = step.text.replace(/約/g, "").indexOf("綁爐石");
+      const pts = parseCoords(step.text);
+      if (bindAt >= 0 && !/(已|仍|不改|保留|繼續)[^，。；]{0,8}綁|可(?:改|在|以)?[^，。；]*綁爐石/.test(step.text)) {
+        step.t = "bind";
+        step.bindAt = bindAt;
+        const c = [...pts].sort((a, b) => Math.abs(a.at - bindAt) - Math.abs(b.at - bindAt))[0];
+        step.coord = c ? { map: c.map, x: c.x, y: c.y } : null;
+      } else {
+        step.coord = pts[0] ? { map: pts[0].map, x: pts[0].x, y: pts[0].y } : null;
+        step.via = pts.slice(1).map((p) => ({ map: p.map, x: p.x, y: p.y })); // 其餘座標：依序指路，走到最後一個才算到
+      }
+      step.pts = pts; // 地圖 ID 檢查（E4）用
+    }
     if (st.dungeon) Object.assign(step, { ph: st.phase }, dungeonTags(tags));
     // 副本內的「做」：位置那段也當成副本中清單的補充行（spot）
     if (st.dungeon && step.ph === "in" && step.t === "do" && !step.spot) step.spot = (tags.find((t) => /^位置[：:]/.test(t)) || "").replace(/^位置[：:]\s*/, "") || undefined;
@@ -410,7 +449,7 @@ for (const d of dungeons) {
   }
   if (!d.inst) warn(d.where, "副本「" + d.name + "」缺副本 ID（可加「- 副本ID｜N」）");
   // 沒寫地圖的座標：前置／交任務通常在插入點那站的區域，用那站的地圖（不是副本入口的地圖）
-  for (const x of d.steps) if (x.coord && !x.coord.map) x.coord.map = stations[at].map;
+  for (const x of d.steps) for (const p of [x.coord, ...(x.via || [])]) if (p && !p.map) p.map = stations[at].map;
   if (!d.pickAt) d.pickAt = d.after;
   const pick = (ph) => d.steps.filter((x) => (x.ph || "pre") === ph);
   const go = d.entrance ? [{ t: "travel", text: "前往 " + d.name + " 入口", coord: d.entrance.x ? { map: d.entrance.map, x: d.entrance.x, y: d.entrance.y } : undefined, where: d.where }] : [];
@@ -460,15 +499,68 @@ for (const d of dungeons) {
   stations.splice(at + 1, 0, d);
 }
 
-// 職業任務併進指定的站：排在站尾的交通步驟前面
+// 職業任務併進指定的站：排在站尾的交通步驟前面，或標題指定的位置（｜插在 #K 之後…）
+const MOVE_T = ["travel", "boat", "fly", "hearth"];
 for (const blk of classBlocks) {
   const target = stations.find((s) => s.id === blk.target);
   if (!target) { hard(blk.where, "職業任務指定的站不存在：" + blk.target); continue; }
-  for (const step of blk.steps) step.when = { ...blk.when, ...(step.when || {}) };
+  for (const step of blk.steps) Object.assign(step, { when: { ...blk.when, ...(step.when || {}) }, cls: blk });
   let at = target.steps.length;
-  while (at > 0 && ["travel", "note", "boat", "fly", "hearth"].includes(target.steps[at - 1].t)) at--;
+  if (blk.at) {
+    const norm = (t) => t.replace(/\s+/g, "");
+    const k = target.steps.findIndex((s) => !s.cls && (blk.at.no ? s.no === blk.at.no : s.raw && norm(s.raw).startsWith(norm(blk.at.text))));
+    if (k < 0) { hard(blk.where, "職業任務的插入點在第" + blk.target.split("-")[1] + "站找不到：" + (blk.at.no ? "#" + blk.at.no : "「" + blk.at.text + "」")); continue; }
+    at = blk.at.after ? k + 1 : k;
+    while (target.steps[at]?.cls && target.steps[at].cls.anchor === target.steps[k]) at++; // 同一個插入點的段落照寫的順序排
+    blk.anchor = target.steps[k];
+    // 回到路線：座標在解析完任務座標後才補（見下方），用不到就拿掉
+    const last = blk.steps[blk.steps.length - 1];
+    if (last && !MOVE_T.includes(last.t)) blk.steps.push({ t: "travel", verb: "交通", back: true, cls: blk, when: { ...blk.when }, where: blk.where });
+  } else while (at > 0 && ["travel", "note", "boat", "fly", "hearth"].includes(target.steps[at - 1].t)) at--;
   target.steps.splice(at, 0, ...blk.steps);
 }
+
+// 綁爐石的地點：「在X旅店」「綁X爐石」，否則找「綁爐石」前面最後出現的已知地名（爐石回的地點、鳥點、站名、區域名）
+// 地名 → 地圖（E4：交通座標沒寫地圖、文字卻是別張地圖的地名時警告）
+const PLACE = new Map();
+const putPlace = (n, map) => { if (n && n.length >= 2 && map && !PLACE.has(n)) PLACE.set(n, map); };
+for (const st of stations) for (const s of st.steps) if (s.t === "fp") putPlace(s.node, s.coord?.map || st.map || ZONE_MAP[st.name.split(/[・·\s]/)[0]]);
+for (const st of stations) for (const t of st.name.split(/[・·\s／與、]/)) putPlace(t, st.map || ZONE_MAP[st.name.split(/[・·\s]/)[0]]);
+for (const [n, map] of Object.entries(ZONE_MAP)) putPlace(n, map);
+const BIND_NAMES = new Set();
+for (const st of stations) for (const s of st.steps) if (s.t === "hearth" && s.bind) BIND_NAMES.add(s.bind);
+const placeBefore = (text, at, names) => {
+  let best;
+  for (const n of names) {
+    const i = text.lastIndexOf(n, at - n.length);
+    if (i >= 0 && i + n.length <= at && (!best || i + n.length > best.end || (i + n.length === best.end && n.length > best.n.length))) best = { n, end: i + n.length };
+  }
+  return best?.n;
+};
+const bindReport = [], mapWarn = [];
+for (const st of stations) {
+  const stMap = st.map || ZONE_MAP[st.name.split(/[・·\s]/)[0]];
+  for (const s of st.steps) {
+    if (s.t === "bind") {
+      const text = s.text.replace(/約/g, "");
+      // 「到／抵達／上／飛／回 X（後、先、並、開、找、向、，）」和已知地名：取離「綁爐石」最近（結束位置最後）的
+      const known = placeBefore(text, s.bindAt, [...BIND_NAMES, ...PLACE.keys()]);
+      const went = [...text.slice(0, s.bindAt).matchAll(/(?:到|抵達|上|飛(?!行)|回)\s*([^\s，。；、（(]{2,6}?)(?=後|先|並|開|找|向|，)/g)].pop();
+      const wentEnd = went ? went.index + went[0].length : -1;
+      s.bind = (text.match(/在([^\s，。；、（(]{2,8}?)的?旅店/) || text.match(/綁([^\s，。；、（(]{2,8}?)爐石/) || [])[1]
+        || (went && (!known || wentEnd > text.lastIndexOf(known, s.bindAt - known.length) + known.length) ? went[1] : known);
+      bindReport.push(`- ${s.where}：${s.bind || "（認不出地點：收到綁定事件就勾）"}｜${s.text.slice(0, 40)}`);
+    }
+    // E4：座標沒寫地圖，但座標前面最近的地名在別張地圖
+    if (s.pts && stMap) for (const p of s.pts.filter((p) => !p.map)) {
+      const text = s.text.replace(/約/g, "");
+      const n = placeBefore(text, p.at + 1, PLACE.keys());
+      // 地名和座標要在同一句（中間沒有，。；），才是在講這個座標
+      if (n && PLACE.get(n) !== stMap && !/[，。；]/.test(text.slice(text.lastIndexOf(n, p.at + 1 - n.length) + n.length, p.at))) mapWarn.push(`- ${s.where}：座標 ${p.x}, ${p.y} 沒寫地圖 ID，文字的「${n}」在地圖 ${PLACE.get(n)}（本站 ${stMap}），會被當成本站地圖`);
+    }
+  }
+}
+for (const w of mapWarn) issues.warn.push(w);
 
 // 測試站：和正式站等級重疊就略過
 const real = stations.filter((s) => !s.test);
@@ -485,7 +577,7 @@ for (const st of stations) {
   for (const p of [...(st.grind || []), ...(st.supply || []), ...(st.danger || [])]) p.map ||= st.map; // 解析當下站的地圖可能還沒定
   for (const step of st.steps) {
     if (!["accept", "do", "turnin"].includes(step.t)) {
-      if (step.coord) step.coord.map ||= st.map;
+      for (const p of [step.coord, ...(step.via || [])]) if (p) p.map ||= st.map;
       continue;
     }
     for (const p of step.more || []) p.map ||= st.map;
@@ -617,6 +709,35 @@ for (const st of stations) {
   const noCoord = st.steps.filter((s) => s.t === "do" && !s.coord).length;
   if (noCoord) warn(`${st.id} ${st.name}`, `${noCoord} 個「做」步驟沒有座標（不會出現箭頭）`);
   if (!st.map) hard(`${st.id} ${st.name}`, "沒有地圖 ID");
+}
+
+// 職業任務段落的「回到路線」：指向插入點後面第一個有座標的主線步驟；段落最後的座標就在那附近（同地圖、10 格內）就不用
+const backAdded = [];
+for (const st of stations) {
+  st.steps = st.steps.filter((s, i) => {
+    if (!s.back) return true;
+    const next = st.steps.slice(i + 1).find((x) => !x.cls && x.coord);
+    const prev = st.steps.slice(0, i).reverse().find((x) => x.cls === s.cls && x.coord);
+    if (!next || !prev || (prev.coord.map === next.coord.map && Math.hypot(prev.coord.x - next.coord.x, prev.coord.y - next.coord.y) <= 10)) return false;
+    s.coord = { map: next.coord.map, x: next.coord.x, y: next.coord.y };
+    backAdded.push(`- ${s.where}：回到 ${s.coord.map} ${s.coord.x}, ${s.coord.y}（${next.where}）`);
+    return true;
+  });
+  // 爐石回 X：非中文介面沒有地名，用下一個有座標步驟的地圖名
+  st.steps.forEach((s, i) => { if (s.t === "hearth") s.hm = st.steps.slice(i + 1).find((x) => x.coord)?.coord.map; });
+}
+
+// 前置（全部要做）裡互斥的任務（A 的 ex 有 B）：只能做其中一個 → 改成「任一個」（ps）
+const exFixed = [];
+for (const [id, e] of quests) {
+  if (!e.pg || e.pg.length < 2) continue;
+  const exOf = (p) => db.quest(p)?.exclusiveTo || [];
+  const mutual = e.pg.filter((p) => e.pg.some((o) => o !== p && (exOf(p).includes(o) || exOf(o).includes(p))));
+  if (!mutual.length) continue;
+  if (e.ps && e.ps.length) { exFixed.push(`- ${id} ${e.n}：前置 ${mutual.join("、")} 互斥，但已有任一前置 ${e.ps.join("、")}，沒改`); continue; }
+  e.pg = e.pg.filter((p) => !mutual.includes(p));
+  e.ps = mutual;
+  exFixed.push(`- ${id} ${e.n}：前置 ${mutual.join("、")} 互斥，改成任一個`);
 }
 
 // 純對話／送信任務（沒有任何目標）：「做」和「交」是同一件事，同站有交、地點也一樣就不放「做」
@@ -758,13 +879,15 @@ const stepWhen = (w, sw) => {
 };
 const stepOut = (s, st) => ({
   star: s.star, t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt, desc: s.desc, spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
-  map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam,
+  map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, via: s.via?.length ? s.via.map((p) => [p.map, p.x, p.y]) : undefined, back: s.back, hm: s.hm, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam,
 });
 let out = GUARD + `-- 由 tools/build.mjs 產生，勿手改。來源：${ALLY ? "route-alliance" : "route"}/*.md\nlocal _, MG = ...\nMG.Route = {\n  built = "@@BUILT@@",\n  stations = {\n`;
 for (const s of stations) {
   idFile = s.file;
   refPrefix = s.dungeon ? s.after.split("-")[0] : s.id.split("-")[0];
-  const start = s.when?.race && s.lv[0] <= 12 ? s.when.race.join("/") : undefined;
+  // 起點路線：從 1 級開始的種族限定站，和接在後面、種族相同的站（01-9 這種多族共用的 9 級站不是起點，照 when 過濾）
+  const raceKey = s.when?.race?.join("/");
+  const start = raceKey && s.lv[0] <= 12 && stations.some((x) => x.lv[0] === 1 && x.when?.race?.join("/") === raceKey) ? raceKey : undefined;
   // 顯示用短名：去掉「第一次」，第二次起改成 visit＝2、3…（介面以淡色 (2) 顯示）；子區域有「與／、」只留第一個＋「等」
   let visit;
   const full = safeText(s.name);
@@ -798,22 +921,23 @@ for (const file of files.filter((f) => /^06-/.test(f))) {
 const feeds = new Map();
 for (const [id, q] of quests) for (const p of [...(q.pg || []), ...(q.ps || [])]) if (!quests.has(p) && !feeds.has(p)) feeds.set(p, id);
 // ── 07 訓練師：職業｜等級｜地點｜NPC｜座標｜順路時機 ──
-// 只讀「建議回訪等級」那一節（其他節是主城訓練師一覽、專項、武器技能，當參考）；等級欄取第一個數字（「4、6」「10–12」→ 4、10）
+// 只讀「建議回訪等級」那一節（其他節是主城訓練師一覽、專項、武器技能，當參考）；等級欄「4、6」＝每個等級各一筆提醒，範圍「10–12」取第一個數字
 const trainers = [];
 for (const file of files.filter((f) => /^07-/.test(f))) {
   let inStops = false;
   readFileSync(join(ROUTE, file), "utf8").split(/\r?\n/).forEach((line, li) => {
     if (/^##\s/.test(line)) inStops = /建議回訪等級/.test(line);
     if (!inStops) return;
-    const m = line.match(/^\s*-\s*(.+?)｜\s*(\d+)[^｜]*｜(.*)$/);
+    const m = line.match(/^\s*-\s*(.+?)｜\s*(\d+[^｜]*)｜(.*)$/);
     if (!m || !CLASS[m[1].trim()]) return;
     const where = `${file}:${li + 1}`;
     const [place, rawNpc, coordText, rawWhen] = m[3].split("｜").map((x) => x.trim());
     const npc = (rawNpc || "").replace(/\s*[（(][^（）()]*[）)]\s*$/, "").trim(); // 去掉英文名，才對得上遊戲裡的 NPC 名
     const when = (rawWhen || "").replace(/【[^】]*】/g, "");
-    const lv = +m[2];
     const c = parseCoord(coordText);
     const map = c?.map || ZONE_MAP[(place || "").split(/[ ・·]/)[0]];
+    if (npc && !c) warn(where, `訓練師 ${npc} 沒有座標`);
+    for (const lv of m[2].split(/[、,，／/]/).map((p) => +(p.match(/\d+/) || [])[0]).filter(Boolean)) {
     // 候選站（依序，遊戲裡取第一個本角色有的站；起點站只有該種族有）：
     // 寫了「0X-第N站」就用它；站名任一段出現在順路時機或地點文字裡的（等級接近的優先）；同地圖且等級涵蓋；等級涵蓋
     const ref = (when || "").match(/(\d+)\s*-\s*第(\d+)站/);
@@ -830,9 +954,9 @@ for (const file of files.filter((f) => /^07-/.test(f))) {
       ...main.filter((x) => x.lv[0] <= lv && lv <= x.lv[1]),
     ];
     const ids = [...new Set(cands.map((x) => x.id))].slice(0, 12);
-    if (!npc || !ids.length) return warn(where, "訓練師格式看不懂或對不到站：" + line.slice(0, 50));
-    if (!c) warn(where, `訓練師 ${npc} 沒有座標`);
+    if (!npc || !ids.length) { warn(where, "訓練師格式看不懂或對不到站：" + line.slice(0, 50)); continue; }
     trainers.push({ c: CLASS[m[1].trim()], lv, place, npc, map: map || main.find((x) => x.id === ids[0])?.map, x: c?.x, y: c?.y, st: ids });
+    }
   });
 }
 // ── 08 保留物品：物品名｜物品ID｜何時拿到｜何時用到（用到的任務 ID 寫在文字裡就會在任務交掉後不再提示） ──
@@ -980,7 +1104,7 @@ const emitRoute = (X) => {
         if (!e.hint) { cov.hint--; e.hint = F.complete; }
       } else if (step.t === "need") e.text = F.prereq + (X.qn(step.id) || F.quest + step.id);
       else if (step.t === "travel" && /^前往 .+ 入口$/.test(step.text || "")) e.text = F.entrance.replace("%s", () => name || F.dungeon);
-      else if (step.t === "travel" || step.t === "goto" || step.t === "note") {
+      else if ((step.t === "travel" || step.t === "bind" || step.t === "goto" || step.t === "note") && step.text) {
         const kind = step.t === "note" ? "note" : "travelText";
         cov.zhOnly[kind]++;
         e.text = step.text && T(step.where, step.text);
@@ -1313,7 +1437,7 @@ for (const [loc, c] of locCov) {
   console.log(`${loc}：名稱 ${c.namesLoc}/${c.names}（英文 ${c.namesEn.size} 種）、說明文字 ${c.textLoc}/${c.text}（用英文 ${c.textEn}）、任務名 ${c.qnLoc}/${c.qn}、任務目標文字 ${c.qdLoc}/${c.qd}、標籤用英文 ${c.tagsEn}/${c.tags}、站名缺 ${(c.stMiss || []).join("、") || 0}／地點缺 ${c.stPartMiss || 0}；翻譯列不用：亂碼 ${c.rejected.garbled}、字型顯示不了 ${c.rejected.script}（另有審稿標記拿掉 ${c.rejected.mark}）`);
   if (process.env.LOC_REPORT) writeFileSync(join(process.env.LOC_REPORT, `names-en-${loc}.txt`), [...c.namesEn].sort().join("\n"));
 }
-const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 順序錯誤（已自動調整 ${orderFixes.length}）\n\n${orderFixes.join("\n") || "無"}\n\n## 學技能站（候選站依序，遊戲取第一個本角色有的）\n\n${trainers.map((t) => `- ${t.c} ${t.lv} ${t.npc}（${t.place}）→ ${t.st.slice(0, 4).map((id) => id + " " + stations.find((x) => x.id === id).name).join("、")}`).join("\n") || "無"}\n`;
+const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 順序錯誤（已自動調整 ${orderFixes.length}）\n\n${orderFixes.join("\n") || "無"}\n\n## 綁爐石步驟（${bindReport.length}）\n\n${bindReport.join("\n") || "無"}\n\n## 互斥前置改成任一個（${exFixed.length}）\n\n${exFixed.join("\n") || "無"}\n\n## 職業任務回到路線（${backAdded.length}）\n\n${backAdded.join("\n") || "無"}\n\n## 學技能站（候選站依序，遊戲取第一個本角色有的）\n\n${trainers.map((t) => `- ${t.c} ${t.lv} ${t.npc}（${t.place}）→ ${t.st.slice(0, 4).map((id) => id + " " + stations.find((x) => x.id === id).name).join("、")}`).join("\n") || "無"}\n`;
 writeFileSync(REPORT, report);
 console.log(`順序錯誤已調整 ${orderFixes.length}、純對話任務的「做」拿掉 ${talkOnly}`);
 console.log(`路線外判定 ${offroute.size}、路線外前置 ${feeds.size}、訓練師 ${trainers.length}、保留物品 ${keep.size}、補給 ${stations.reduce((n, x) => n + (x.supply?.length || 0), 0)}、危險 ${stations.reduce((n, x) => n + (x.danger?.length || 0), 0)}`);

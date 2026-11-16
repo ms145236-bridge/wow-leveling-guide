@@ -186,7 +186,7 @@ function UI.VerbWidth()
   if MG.uiZh then return 18 end
   if not verbW then
     verbW = 18
-    for _, t in ipairs({ "accept", "do", "turnin", "goto", "fp", "hearth", "fly", "boat", "level", "travel", "need", "train", "buy" }) do verbW = math.max(verbW, textWidth(E.VERB[t] or "", 13) + 2) end
+    for _, t in ipairs({ "accept", "do", "turnin", "goto", "fp", "hearth", "bind", "fly", "boat", "level", "travel", "need", "train", "buy" }) do verbW = math.max(verbW, textWidth(E.VERB[t] or "", 13) + 2) end
     for _, v in ipairs({ L["打"], L["去"] }) do verbW = math.max(verbW, textWidth(v, 13) + 2) end -- 練怪列、副本入口列也用這欄
   end
   return verbW
@@ -502,7 +502,7 @@ function UI.StepTooltip(owner, s, prefix, side)
   tipScale()
   addLine((prefix or "") .. E.VerbTitle(s), GOLD[1], GOLD[2], GOLD[3])
   if s.npc then addLine(s.npc, TEXT[1], TEXT[2], TEXT[3]) end
-  if s.t == "travel" and s.text then addLine(s.text, TEXT[1], TEXT[2], TEXT[3], true) end
+  if (s.t == "travel" or s.t == "bind") and s.text then addLine(s.text, TEXT[1], TEXT[2], TEXT[3], true) end
   if s.q then
     local same = MG.sameLang -- 任務日誌的文字是客戶端語言：和介面同語言才用
     local objText
@@ -2066,7 +2066,7 @@ function UI.Render(S)
       local one, header, lines, num = objectiveLines(s.q)
       if lines then l2, objList = header, lines else l2, l2num = one or s.hint, one and num end
     elseif s.t == "level" then l2 = L["目前 %d 級"]:format(lv)
-    elseif s.t == "hearth" then l2 = L["找旅店老闆"]
+    elseif s.t == "bind" then l2 = s.text or L["找旅店老闆"]
     elseif s.t == "fp" then l2 = L["找飛行管理員"]
     elseif s.t == "travel" then l2 = s.text and select(2, E.Clause(s.text)) end
     if s.t == "turnin" and C.IsOnQuest(s.q) and E.Ready(s.q) then titleColor = GREEN end

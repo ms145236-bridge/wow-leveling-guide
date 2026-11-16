@@ -40,6 +40,7 @@ function E.Localize()
     local ds, gs = D and D.stations[st.id] or none, G and G.stations[st.id] or none
     for i, s in ipairs(st.steps) do
       s.key0 = tostring(s.node or s.bind or s.to or s.text or s.lv or "") -- 存檔用的步驟鍵不跟語言變
+      s.bindK = s.bind -- 爐石地點（中文）：zhTW 客戶端比對 GetBindLocation／區域名用，顯示用的 bind 會拿掉
       local d, g = ds.steps and ds.steps[i] or none, gs.steps and gs.steps[i] or none
       s.npcG = s.npc
       if G then s.npcG, s.tgt = g.npc or s.npc, g.tgt; s.npcObj = g.npcObj end
@@ -99,7 +100,7 @@ E.byId = {}
 E.trainSteps = {} -- 本職業的「學技能」步驟（Build 時插進建議站）
 
 local QUEST = { accept = true, ["do"] = true, turnin = true }
-local SOFT = { ["goto"] = true, fp = true, fly = true, boat = true, travel = true }
+local SOFT = { ["goto"] = true, fp = true, fly = true, boat = true, travel = true, hearth = true }
 local questSt = {} -- 任務 → 有它步驟的站（主線站與副本，Build 時建）
 E.QUEST, E.SOFT = QUEST, SOFT
 
@@ -333,16 +334,23 @@ function E.FillPlan(st)
   info.need = need
   -- 必做任務（不是可跳過、還沒交）的預估經驗，與它們的座標（算繞路用）
   local projected, seen, spots, cands = 0, {}, {}, {}
+  -- 本站有交的任務才算任務經驗、本站有做或交的才算打怪經驗（在別站交的，到下一站前拿不到）
+  local hand, work = {}, {}
+  for _, step in ipairs(st.list) do
+    local s = step.s
+    if s.q and s.t == "turnin" then hand[s.q] = true end
+    if s.q and (s.t == "do" or s.t == "turnin") then work[s.q] = true end
+  end
   for _, step in ipairs(st.list) do
     local s, q = step.s, step.s.q
     if q and E.Applies(s.when) and raceOK(q) and not turned(q) then
       if not s.opt and not seen[q] then
         seen[q] = true
-        info.questXP = info.questXP + questXP(q, lv)
-        info.killXP = info.killXP + killXP(q, lv)
+        info.questXP = info.questXP + (hand[q] and questXP(q, lv) or 0)
+        info.killXP = info.killXP + (work[q] and killXP(q, lv) or 0)
       end
       if s.opt and s.t == "accept" and not C.IsOnQuest(q) and lv >= ((R.quests[q] or {}).min or 0) and not cands[q] then
-        cands[q] = { q = q, xp = questXP(q, lv) + killXP(q, lv), pts = {} }
+        cands[q] = { q = q, xp = (hand[q] and questXP(q, lv) or 0) + (work[q] and killXP(q, lv) or 0), pts = {} }
       end
     end
     if s.x and not s.opt then spots[#spots + 1] = s end
@@ -487,16 +495,41 @@ local function stepDone(step, map, x, y)
   elseif t == "turnin" then return turned(q)
   elseif t == "buy" then return E.ItemCount(s.item) >= (s.n or 1) or (s.fq ~= nil and (turned(s.fq) or (C.IsOnQuest(s.fq) and ready(s.fq))))
   elseif t == "level" then return (UnitLevel("player") or 0) >= (s.lv or 0)
-  elseif t == "hearth" then
-    local b = C.Bind()
-    return b ~= nil and s.bind ~= nil and (b == s.bind or b:find(s.bind, 1, true) ~= nil)
+  elseif t == "hearth" or t == "bind" then
+    -- 地點只有 zhTW 客戶端比得出來（其他語言靠 Core 的事件記 latch）
+    local bk = MG.gameZh and (s.bindK or s.bind)
+    if not bk then return false end
+    local function same(z) return z ~= nil and z ~= "" and (z == bk or z:find(bk, 1, true) ~= nil or bk:find(z, 1, true) ~= nil) end
+    -- 綁爐石：爐石綁在這裡了
+    if t == "bind" then return same(C.Bind()) end
+    -- 爐石回 X：人已經在 X（用爐石換區時 Core 記 latch；走到下一步附近、後面任務做了也算過了，見 E.Locate）
+    local sub, zone, mini = C.ZoneTexts()
+    return same(sub) or same(zone) or same(mini)
   elseif t == "fp" then return s.node ~= nil and MG.db.fpNodes ~= nil and MG.db.fpNodes[s.node] == true -- 飛行地圖上已經有這個鳥點
   elseif t == "goto" or (t == "travel" and s.x) then
-    local here = map ~= nil and map == s.map and x ~= nil and s.x ~= nil and math.sqrt((x - s.x) ^ 2 + (y - s.y) ^ 2) <= (s.r or 3)
-    if here then MG.db.latch[step.key] = true end
-    return here
+    -- 好幾個座標（via）：依序走，走到最後一個才算到；路過第 k 點就記「@k」（箭頭改指下一點，見 E.ViaTarget）。
+    -- 走到別張地圖上的點（搭船、飛艇、穿過山口到了）也算到：後面的座標常是另一條路或附帶說明
+    local n = 1 + (s.via and #s.via or 0)
+    for k = n, 1, -1 do
+      local p = k == 1 and { s.map, s.x, s.y } or s.via[k - 1]
+      if map ~= nil and map == p[1] and x ~= nil and math.sqrt((x - p[2]) ^ 2 + (y - p[3]) ^ 2) <= (s.r or 3) then
+        local fin = k == n or p[1] ~= s.map
+        MG.db.latch[fin and step.key or (step.key .. "@" .. k)] = true
+        return fin
+      end
+    end
+    return false
   end
   return false
+end
+
+-- 好幾個座標的交通：下一個還沒走到的點 { map, x, y }
+function E.ViaTarget(step)
+  local s = step.s
+  for k = #s.via, 1, -1 do
+    if MG.db.latch[step.key .. "@" .. k] then return s.via[k] end
+  end
+  return { s.map, s.x, s.y }
 end
 
 -- 本站要顯示的步驟（跳站時帶來的「順路補」排在最前面）
@@ -551,7 +584,7 @@ function E.Locate(st)
   for _, step in ipairs(steps) do
     local s = step.s
     if s.t == "accept" and s.q then
-      acc[s.q] = true
+      if E.Applies(s.when) and not optOut(s) then acc[s.q] = true end -- 接取步驟本身不適用（種族、職業、可跳過沒開）就不算本站有接
       local need = s.pickLv or (R.quests[s.q] or {}).min -- 步驟沒寫接取等級就用任務資料的最低等級
       if need and lv < need and not C.IsOnQuest(s.q) and not turned(s.q) then lowQ[s.q] = need end
     end
@@ -609,7 +642,7 @@ function E.Locate(st)
         for j = i + 1, n do
           local sj = steps[j].s
           if sj.x then
-            if sj.map == map and math.sqrt((sj.x - x) ^ 2 + (sj.y - y) ^ 2) <= 3 then done[i] = true; db.latch[step.key] = true end
+            if sj.map == map and math.sqrt((sj.x - x) ^ 2 + (sj.y - y) ^ 2) <= (step.s.t == "hearth" and 10 or 3) then done[i] = true; db.latch[step.key] = true end -- 爐石落點和下一步常隔一段路
             break
           end
         end
@@ -1371,7 +1404,7 @@ end
 
 -- 步驟的顯示文字
 local VERB = setmetatable({}, { __index = function(_, t)
-  local zh = ({ train = "學", accept = "接", ["do"] = "做", turnin = "交", ["goto"] = "到", fp = "鳥", hearth = "爐", fly = "飛", boat = "船", level = "練", travel = "行", need = "需", buy = "買" })[t]
+  local zh = ({ train = "學", accept = "接", ["do"] = "做", turnin = "交", ["goto"] = "到", fp = "鳥", hearth = "爐", bind = "爐", fly = "飛", boat = "船", level = "練", travel = "行", need = "需", buy = "買" })[t]
   return zh and L[zh]
 end })
 E.VERB = VERB
@@ -1415,11 +1448,13 @@ function E.Title(s)
   if s.t == "need" then return s.text or "" end
   if s.q then return E.QName(s.q) end
   -- 交通／到達沒有文字：只寫地點（動詞框已經是「去」）
+  if s.t == "travel" and s.back then return L["回到路線："] .. where(s) end -- 職業任務段落做完：回主線
   if s.t == "travel" then return s.text and (E.Clause(s.text)) or (s.map and where(s)) or L["交通"]
   elseif s.t == "goto" then return s.text or (s.map and where(s)) or L["前往"]
   elseif s.t == "buy" then return (s.text or "") .. ((s.n or 1) > 1 and (" ×" .. s.n) or "")
   elseif s.t == "fp" then return L["開鳥點："] .. (s.node or (s.map and C.MapName(s.map)) or "")
-  elseif s.t == "hearth" then return L["綁爐石："] .. (s.bind or (s.map and C.MapName(s.map)) or "")
+  elseif s.t == "hearth" then return L["爐石回 "] .. (s.bind or (s.hm and C.MapName(s.hm)) or "")
+  elseif s.t == "bind" then return L["綁爐石："] .. (s.bind or (s.map and C.MapName(s.map)) or "")
   elseif s.t == "fly" then return L["飛往 "] .. (s.to or "")
   elseif s.t == "boat" then return L["搭船／飛艇往 "] .. (s.to or "")
   elseif s.t == "level" then return L["練到 %s 級"]:format(s.lv or "?")

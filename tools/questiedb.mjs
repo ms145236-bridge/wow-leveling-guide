@@ -196,7 +196,7 @@ export function openQuestieDB() {
     const out = [];
     for (const c of list(get(obj, 1))) {
       const m = mobLevel(get(c, 1));
-      out.push(m ? { ...m, kind: "kill", names: [m.name], namesEn: [m.en], zhMissing: m.zhMissing } : null);
+      out.push(m ? { ...m, kind: "kill", names: [m.name], namesEn: [m.en], zhMissing: m.zhMissing, text: get(c, 2) } : null);
     }
     // 物件目標（第 2 群）：遊戲內目標順序是 怪、物件、物品，留位置才對得上
     for (const o of list(get(obj, 2))) {
