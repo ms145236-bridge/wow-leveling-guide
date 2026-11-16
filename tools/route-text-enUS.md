@@ -14091,3 +14091,58 @@
 03-30到45級.md:1259｜說明｜老爛餌｜Old Rot-Chum
 06-路線外任務.md:891｜說明｜要交 10 份鹽水海鮮燉湯，得自己用烹飪做或跟別人買；手上剛好有再交。｜It wants 10 servings of saltwater seafood stew, which you have to cook yourself or buy from other players; turn it in only if you happen to have them.
 03-30到45級.md:1015｜步驟說明｜到辛特蘭時在海岸拾酒，之後回藏寶海灣再交。｜Pick up the grog on the Hinterlands coast, then turn it in when you're back in Booty Bay.
+03-30到45級.md:754｜說明｜去大河林地前，可以先在拍賣場買 10 塊大塊野豬肉（收集白牙豬肉用）和 10 個重平衡石（第二步：更多石頭用）。｜Before heading to the Riverglades, you can buy 10 Chunk of Boar Meat (for Paletusk Harvesting) and 10 Heavy Weightstone (for Step Two: More Rock) at the Auction House.
+03-30到45級.md:871｜說明｜大塊野豬肉可以在拍賣場買，買齊 10 塊就不用打。｜Chunk of Boar Meat can be bought at the Auction House. With 10 you can skip the farming.
+03-30到45級.md:888｜說明｜重平衡石可以在拍賣場買，買齊 10 個就能直接交。｜Heavy Weightstone can be bought at the Auction House. With 10 you can turn in right away.
+04-45到60級.md:330｜說明｜去灼熱峽谷前，可以先在拍賣場買 15 塊絲綢（被鎖起來的矮人用）。｜Before heading to the Searing Gorge, you can buy 15 Silk Cloth (for Caught!) at the Auction House.
+04-45到60級.md:2130｜說明｜若已有訓練師版 8419，直接交 8419 再接 8421。；惡魔布可以在拍賣場買。｜If you took 8419 from a trainer, turn it in first, then accept 8421. Felcloth can be bought at the Auction House.
+04-45到60級.md:2130｜說明｜惡魔布可以在拍賣場買。｜Felcloth can be bought at the Auction House.
+02-12到30級.md:1259｜說明｜可以先在拍賣場買（或請分身寄來）5 株地根草（之後的收集解藥用）。｜You can buy 5 Earthroot at the Auction House now, or have an alt mail it (for Gathering the Cure later).
+03-30到45級.md:26｜說明｜強力食人妖之血藥水 ×1 可以在拍賣場買。｜Strong Troll's Blood Potion ×1 can be bought at the Auction House.
+03-30到45級.md:348｜說明｜散頁是荊棘谷的怪隨機掉的，缺的頁可以在拍賣場買，四章湊齊再交。｜Pages drop randomly from Stranglethorn mobs. Buy missing pages at the Auction House, and turn in once all four chapters are complete.
+03-30到45級.md:1574｜說明｜可以先在拍賣場買（或請分身寄來）1 顆翡翠（之後塵泥沼澤的強大的物品用）。｜You can buy 1 Jade at the Auction House now, or have an alt mail it (for Items of Power in Dustwallow Marsh later).
+03-30到45級.md:764｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）10 塊大塊野豬肉（收集白牙豬肉用）和 10 個重平衡石（第二步：更多石頭用）。｜Before heading to the Riverglades, you can buy 10 Chunk of Boar Meat (for Paletusk Harvesting) and 10 Heavy Weightstone (for Step Two: More Rock) at the Auction House, or have an alt mail them.
+03-30到45級.md:870｜說明｜把頭送到北邊的博德羅克，走北線時順路交。｜Take the head north to Bolder'ok. Turn it in on the northern loop.
+03-30到45級.md:910｜說明｜第一次先清農場、豺狼人、河岸及羅格瑪周邊野獸，最後走北線到博德羅克。喬札克是精英，有隊伍再打，打完才有送頭和鈍拳的後續。暮光之罩和海岸留到第二次來。｜On the first visit, clear the farm, the gnolls, the riverbank, and the beasts around Rog'mar, then finish with the northern loop to Bolder'ok. Chogg'Zac is elite, so kill him with a group. The head delivery and Clugfist's follow-ups only open after that. Leave Twilight's Shroud and the coast for the second visit.
+03-30到45級.md:937｜說明｜去荒蕪之地前，可以先在拍賣場買（或請分身寄來）冰霜之油、發條式同步協調陀螺儀、治療藥水、次級隱形藥水各 1 個（荒蕪之地三個交材料的任務用）。｜Before heading to the Badlands, you can buy 1 each of Frost Oil, Gyrochronatom, Healing Potion, and Lesser Invisibility Potion at the Auction House, or have an alt mail them (for the three Badlands hand-in quests).
+03-30到45級.md:1312｜說明｜先往西做暮光之罩（要先交鈍拳的命令才接得到），再往東到火線港。霸主基爾加是精英，有隊伍再打。海怪線和風息堡同一趟做。｜Go west to Twilight's Shroud first (it only opens after you turn in Clugfist's Decree), then east to Powderfuse Port. Overlord Kilgar is elite, so kill him with a group. Do the sea monster chain on the same trip as Windrest Keep.
+04-45到60級.md:330｜說明｜去灼熱峽谷前，可以先在拍賣場買（或請分身寄來）15 塊絲綢（被鎖起來的矮人用）。｜Before heading to the Searing Gorge, you can buy 15 Silk Cloth (for Caught!) at the Auction House, or have an alt mail them.
+04-45到60級.md:2130｜說明｜若已有訓練師版 8419，直接交 8419 再接 8421。；惡魔布 ×1 可以在拍賣場買。｜If you took 8419 from a trainer, turn it in first, then accept 8421. Felcloth ×1 can be bought at the Auction House.
+04-45到60級.md:2130｜說明｜惡魔布 ×1 可以在拍賣場買。｜Felcloth ×1 can be bought at the Auction House.
+05-副本.md:1614｜說明｜要用的材料是符文布卷 ×4、硬甲皮 ×8、符文線 ×2，加本內巨魔鞣酸 ×1。；符文布卷、硬甲皮、符文線先在拍賣場買好，巨魔鞣酸在副本裡拿。｜Bring 4 Bolts of Runecloth, 8 Rugged Leather and 2 Rune Thread. Loot 1 Ogre Tannin. Buy Bolt of Runecloth, Rugged Leather, and Rune Thread at the Auction House beforehand. Ogre Tannin comes from inside the dungeon.
+05-副本.md:1614｜說明｜符文布卷、硬甲皮、符文線先在拍賣場買好，巨魔鞣酸在副本裡拿。｜Buy Bolt of Runecloth, Rugged Leather, and Rune Thread at the Auction House beforehand. Ogre Tannin comes from inside the dungeon.
+02-12到30級.md:87｜說明｜魔像等能彈簧 ×14 可以在拍賣場買，迴轉穩定器 ×5 還是要打。｜Golem Isospring ×14 can be bought at the Auction House. Harvester Gyrostabilizer ×5 still has to be farmed.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。；地根草 ×5 可以在拍賣場買。｜Gather Earthroot and Lunar Fungus in Darkshore, then turn them in at Auberdine. Earthroot ×5 can be bought at the Auction House.
+02-12到30級.md:832｜說明｜地根草 ×5 可以在拍賣場買。｜Earthroot ×5 can be bought at the Auction House.
+02-12到30級.md:304｜說明｜去赤脊山前，可以先在拍賣場買（或請分身寄來）8 片魚人的鰭（魚人偷獵者用）。｜Before heading to Redridge, you can buy 8 Murloc Fin (for Murloc Poachers) at the Auction House, or have an alt mail them.
+02-12到30級.md:892｜說明｜普通野花和鉛瓶商人有賣，青銅管可以在拍賣場買。；淡綠色絲線在暴風城運河區的裁縫店裡撿。｜Vendors sell Simple Wildflowers and Leaded Vial. Bronze Tube can be bought at the Auction House. Pick up the Spool of Light Chartreuse Silk Thread inside the tailoring shop in Stormwind's Canals.
+02-12到30級.md:892｜說明｜普通野花和鉛瓶商人有賣，青銅管可以在拍賣場買。｜Vendors sell Simple Wildflowers and Leaded Vial. Bronze Tube can be bought at the Auction House.
+02-12到30級.md:892｜說明｜淡綠色絲線在暴風城運河區的裁縫店裡撿。｜Pick up the Spool of Light Chartreuse Silk Thread inside the tailoring shop in Stormwind's Canals.
+02-12到30級.md:599｜說明｜絲綢 ×3 可以在拍賣場買。｜Silk Cloth ×3 can be bought at the Auction House.
+03-30到45級.md:506｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）8 個堅固的磨刀石（最鋒利的刀劍用）。｜Before heading to the Riverglades, you can buy 8 Solid Sharpening Stone (for The Sharpest of Blades) at the Auction House, or have an alt mail them.
+03-30到45級.md:553｜說明｜要 8 個堅固的磨刀石，可以在拍賣場買或請鍛造做。；身上沒有就跳過。｜Needs 8 Solid Sharpening Stone. Buy them at the Auction House or ask a blacksmith. Skip it if you don't have them.
+03-30到45級.md:553｜說明｜要 8 個堅固的磨刀石，可以在拍賣場買或請鍛造做。｜Needs 8 Solid Sharpening Stone. Buy them at the Auction House or ask a blacksmith.
+03-30到45級.md:553｜說明｜身上沒有就跳過。｜Skip it if you don't have them.
+03-30到45級.md:1335｜說明｜翡翠 ×1 可以在拍賣場買。｜Jade ×1 can be bought at the Auction House.
+03-30到45級.md:870｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）20 塊魔紋布（創傷服裝用）。｜Before heading to the Riverglades, you can buy 20 Mageweave Cloth (for Wound Dressings) at the Auction House, or have an alt mail them.
+03-30到45級.md:876｜說明｜要 20 塊魔紋布，可以在拍賣場買。；身上沒有就跳過。｜Needs 20 Mageweave Cloth. Buy it at the Auction House. Skip it if you don't have them.
+03-30到45級.md:876｜說明｜要 20 塊魔紋布，可以在拍賣場買。｜Needs 20 Mageweave Cloth. Buy it at the Auction House.
+03-30到45級.md:879｜說明｜受傷的士兵就在洛雷修士旁邊。｜The Wounded Soldiers are right next to Brother Lowley.
+03-30到45級.md:962｜說明｜到菲拉斯的羽月要塞交，之後去菲拉斯時順路。｜Turn in at Feathermoon Stronghold in Feralas. It is on the way when you go to Feralas later.
+03-30到45級.md:1264｜說明｜金錠 ×1 可以在拍賣場買。｜Gold Bar ×1 can be bought at the Auction House.
+04-45到60級.md:17｜說明｜可以先在拍賣場買（或請分身寄來）15 塊絲綢（之後灼熱峽谷的被鎖起來的矮人用）。｜You can buy 15 Silk Cloth at the Auction House now, or have an alt mail it (for Caught! in the Searing Gorge later).
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。；流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。；活根草和三種符咒可以在拍賣場買。｜Needs Bloodscalp Tusk ×30, Liferoot ×8, and Essence of the Exile ×1. For Essence of the Exile, bring 8 each of Burning Charm, Thundering Charm, and Cresting Charm to the cauldron next to him. Liferoot and the three charms can be bought at the Auction House.
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。；流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。｜Needs Bloodscalp Tusk ×30, Liferoot ×8, and Essence of the Exile ×1. For Essence of the Exile, bring 8 each of Burning Charm, Thundering Charm, and Cresting Charm to the cauldron next to him.
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。｜Needs Bloodscalp Tusk ×30, Liferoot ×8, and Essence of the Exile ×1.
+04-45到60級.md:1250｜說明｜流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。；活根草和三種符咒可以在拍賣場買。｜For Essence of the Exile, bring 8 each of Burning Charm, Thundering Charm, and Cresting Charm to the cauldron next to him. Liferoot and the three charms can be bought at the Auction House.
+04-45到60級.md:1250｜說明｜流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。｜For Essence of the Exile, bring 8 each of Burning Charm, Thundering Charm, and Cresting Charm to the cauldron next to him.
+04-45到60級.md:1250｜說明｜活根草和三種符咒可以在拍賣場買。｜Liferoot and the three charms can be bought at the Auction House.
+04-45到60級.md:1285｜說明｜可以先在拍賣場買（或請分身寄來）1 份亡靈腐液（之後艾薩拉的亡靈的腐液用）。｜You can buy 1 Ichor of Undeath at the Auction House now, or have an alt mail it (for The Ichor of Undeath in Azshara later).
+04-45到60級.md:363｜說明｜可以先在拍賣場買（或請分身寄來）1 個祕銀外殼（之後安戈洛的找回A-Me 01用）。｜You can buy 1 Mithril Casing at the Auction House now, or have an alt mail it (for Chasing A-Me 01 in Un'Goro later).
+04-45到60級.md:1296｜說明｜亡靈腐液 ×1 可以在拍賣場買。｜Ichor of Undeath ×1 can be bought at the Auction House.
+03-30到45級.md:900｜說明｜交完以力服人、不夠格的勇士後，哈穆爾才會給。｜Hamur offers this only after you turn in the two quests above.
+03-30到45級.md:1427｜說明｜若巴斯拉已提供此任務可先接起來；火在荒蕪之地、土在悲傷沼澤可順路收，淒涼之地與塵泥沼澤的圖騰需要回訪。｜Accept it from Bath'rah if he already offers it. Fire can be picked up on the way in Badlands and earth in Swamp of Sorrows; the totems in Desolace and Dustwallow Marsh need a return trip.
+03-30到45級.md:1427｜說明｜若巴斯拉已提供此任務可先接起來｜Accept it from Bath'rah if he already offers it
+03-30到45級.md:1427｜說明｜火在荒蕪之地、土在悲傷沼澤可順路收，淒涼之地與塵泥沼澤的圖騰需要回訪。｜Fire can be picked up on the way in Badlands and earth in Swamp of Sorrows; the totems in Desolace and Dustwallow Marsh need a return trip.
+03-30到45級.md:645｜說明｜498／549 上次在希爾斯布萊德丘陵已做完。進山後交 533 才接 503，高迪爾和瓦杜斯的辛迪加營地目標一起找。｜498/549 were already done on your last visit to Hillsbrad Foothills. In the mountains, turn in 533 before taking 503. Search the Syndicate camps for the Gol'dir and Vardus objectives together.
+03-30到45級.md:1222｜說明｜交件在菲拉斯莫沙徹營地的巫醫尤克里，到莫沙徹營地時再交。｜Turn in to Witch Doctor Uzer'i at Camp Mojache in Feralas; hand it in when you get to Camp Mojache.

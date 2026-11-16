@@ -14470,3 +14470,58 @@
 06-路線外任務.md:891｜說明｜要交 10 份鹽水海鮮燉湯，得自己用烹飪做或跟別人買；手上剛好有再交。｜Pede 10 porções de ensopado de frutos do mar de água salgada, que você precisa cozinhar ou comprar de outros jogadores; entregue só se por acaso já as tiver.
 03-30到45級.md:1015｜步驟說明｜到辛特蘭時在海岸拾酒，之後回藏寶海灣再交。｜Pegue o grogue na costa das Terras Agrestes e entregue quando voltar a Angra do Butim.
 03-30到45級.md:669｜步驟說明｜進洞走左邊的路，繞到最裡面的平台，粉紅色水晶就是交件點。｜Na caverna, siga pelo caminho da esquerda e contorne até a plataforma no fundo; o cristal rosa é o ponto de entrega.
+03-30到45級.md:754｜說明｜去大河林地前，可以先在拍賣場買 10 塊大塊野豬肉（收集白牙豬肉用）和 10 個重平衡石（第二步：更多石頭用）。｜Antes de ir para Sendas do Rio, você pode comprar na casa de leilões 10 × Naco de Carne de Javali (para Paletusk Harvesting) e 10 × Contrapeso Pesado (para Step Two: More Rock).
+03-30到45級.md:871｜說明｜大塊野豬肉可以在拍賣場買，買齊 10 塊就不用打。｜Naco de Carne de Javali pode ser comprado na casa de leilões. Com 10, não precisa farmar.
+03-30到45級.md:888｜說明｜重平衡石可以在拍賣場買，買齊 10 個就能直接交。｜Contrapeso Pesado pode ser comprado na casa de leilões. Com 10, você entrega na hora.
+04-45到60級.md:330｜說明｜去灼熱峽谷前，可以先在拍賣場買 15 塊絲綢（被鎖起來的矮人用）。｜Antes de ir para a Garganta Abrasadora, você pode comprar na casa de leilões 15 × Seda (para Calça arriada!).
+04-45到60級.md:2130｜說明｜若已有訓練師版 8419，直接交 8419 再接 8421。；惡魔布可以在拍賣場買。｜Se já aceitou 8419 com o instrutor, entregue 8419 direto e aceite 8421. Tecido Vil pode ser comprado na casa de leilões.
+04-45到60級.md:2130｜說明｜惡魔布可以在拍賣場買。｜Tecido Vil pode ser comprado na casa de leilões.
+02-12到30級.md:1259｜說明｜可以先在拍賣場買（或請分身寄來）5 株地根草（之後的收集解藥用）。｜Você já pode comprar na casa de leilões (ou pedir para um alt enviar) 5 × Raiz-telúrica (para Colhendo a cura, mais tarde).
+03-30到45級.md:26｜說明｜強力食人妖之血藥水 ×1 可以在拍賣場買。｜Poção Forte de Sangue de Troll ×1: dá para comprar na casa de leilões.
+03-30到45級.md:348｜說明｜散頁是荊棘谷的怪隨機掉的，缺的頁可以在拍賣場買，四章湊齊再交。｜As páginas caem aleatoriamente dos monstros da Selva do Espinhaço. Compre as que faltarem na casa de leilões e entregue quando tiver os quatro capítulos.
+03-30到45級.md:1574｜說明｜可以先在拍賣場買（或請分身寄來）1 顆翡翠（之後塵泥沼澤的強大的物品用）。｜Você já pode comprar na casa de leilões (ou pedir para um alt enviar) 1 × Jade (para Itens do poder, mais tarde no Pântano Vadeoso).
+03-30到45級.md:764｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）10 塊大塊野豬肉（收集白牙豬肉用）和 10 個重平衡石（第二步：更多石頭用）。｜Antes de ir para Sendas do Rio, você pode comprar na casa de leilões (ou pedir para um alt enviar) 10 × Naco de Carne de Javali (para Paletusk Harvesting) e 10 × Contrapeso Pesado (para Step Two: More Rock).
+03-30到45級.md:870｜說明｜把頭送到北邊的博德羅克，走北線時順路交。｜Leve a cabeça para Bolder'ok, ao norte. Entregue durante a rota norte.
+03-30到45級.md:910｜說明｜第一次先清農場、豺狼人、河岸及羅格瑪周邊野獸，最後走北線到博德羅克。喬札克是精英，有隊伍再打，打完才有送頭和鈍拳的後續。暮光之罩和海岸留到第二次來。｜Na primeira visita, limpe a fazenda, os gnolls, a margem do rio e as feras ao redor de Rog'mar e termine com a rota norte até Bolder'ok. Chogg'Zac é de elite: mate-o com grupo. A entrega da cabeça e as missões seguintes de Clugfist só abrem depois disso. Deixe Mortalha do Crepúsculo e a costa para a segunda visita.
+03-30到45級.md:937｜說明｜去荒蕪之地前，可以先在拍賣場買（或請分身寄來）冰霜之油、發條式同步協調陀螺儀、治療藥水、次級隱形藥水各 1 個（荒蕪之地三個交材料的任務用）。｜Antes de ir para as Terras Áridas, você pode comprar na casa de leilões (ou pedir para um alt enviar) 1 × de cada: Óleo Gélido, Giroscronatom, Poção de Cura e Poção Inferior de Invisibilidade (para as três missões de entrega das Terras Áridas).
+03-30到45級.md:1312｜說明｜先往西做暮光之罩（要先交鈍拳的命令才接得到），再往東到火線港。霸主基爾加是精英，有隊伍再打。海怪線和風息堡同一趟做。｜Vá primeiro para o oeste, a Mortalha do Crepúsculo (só abre depois de entregar Clugfist's Decree), e depois para o leste, até Porto Detonapavio. O Suserano Kilgar é de elite: mate-o com grupo. Faça a linha do monstro marinho na mesma viagem de Windrest Keep.
+04-45到60級.md:330｜說明｜去灼熱峽谷前，可以先在拍賣場買（或請分身寄來）15 塊絲綢（被鎖起來的矮人用）。｜Antes de ir para a Garganta Abrasadora, você pode comprar na casa de leilões (ou pedir para um alt enviar) 15 × Seda (para Calça arriada!).
+04-45到60級.md:2130｜說明｜若已有訓練師版 8419，直接交 8419 再接 8421。；惡魔布 ×1 可以在拍賣場買。｜Se já aceitou 8419 com o instrutor, entregue 8419 direto e aceite 8421. Tecido Vil ×1: dá para comprar na casa de leilões.
+04-45到60級.md:2130｜說明｜惡魔布 ×1 可以在拍賣場買。｜Tecido Vil ×1: dá para comprar na casa de leilões.
+05-副本.md:1614｜說明｜要用的材料是符文布卷 ×4、硬甲皮 ×8、符文線 ×2，加本內巨魔鞣酸 ×1。；符文布卷、硬甲皮、符文線先在拍賣場買好，巨魔鞣酸在副本裡拿。｜Leve 4 peças de Runatrama, 8 Couro Rústico e 2 Fio Rúnico. Pegue 1 Tanino Ôgrico dentro da masmorra. Compre antes Peça de Runatrama, Couro Rústico e Fio Rúnico na casa de leilões. Tanino Ôgrico é obtido dentro da masmorra.
+05-副本.md:1614｜說明｜符文布卷、硬甲皮、符文線先在拍賣場買好，巨魔鞣酸在副本裡拿。｜Compre antes Peça de Runatrama, Couro Rústico e Fio Rúnico na casa de leilões. Tanino Ôgrico é obtido dentro da masmorra.
+02-12到30級.md:87｜說明｜魔像等能彈簧 ×14 可以在拍賣場買，迴轉穩定器 ×5 還是要打。｜Isomola de Golem ×14: dá para comprar na casa de leilões. Giroestabilizador de Ceifador ×5 ainda precisa ser obtido matando.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。；地根草 ×5 可以在拍賣場買。｜Colete Raiz-telúrica e Fungo Lunar na Costa Negra e entregue em Auberdine. Raiz-telúrica ×5: dá para comprar na casa de leilões.
+02-12到30級.md:832｜說明｜地根草 ×5 可以在拍賣場買。｜Raiz-telúrica ×5: dá para comprar na casa de leilões.
+02-12到30級.md:307｜說明｜去赤脊山前，可以先在拍賣場買（或請分身寄來）8 片魚人的鰭（魚人偷獵者用）。｜Antes de ir para as Montanhas Cristarrubra, você pode comprar na casa de leilões (ou pedir para um alt enviar) 8 × Barbatana de Murloc (para Caçadores de murlocs).
+02-12到30級.md:892｜說明｜普通野花和鉛瓶商人有賣，青銅管可以在拍賣場買。；淡綠色絲線在暴風城運河區的裁縫店裡撿。｜Flores Silvestres Simples e Ampola Chumbada são vendidos por comerciantes. Tubo de Bronze: dá para comprar na casa de leilões. Bobina de Seda Chartreuse Leve fica na alfaiataria dos Canais de Ventobravo.
+02-12到30級.md:892｜說明｜普通野花和鉛瓶商人有賣，青銅管可以在拍賣場買。｜Flores Silvestres Simples e Ampola Chumbada são vendidos por comerciantes. Tubo de Bronze: dá para comprar na casa de leilões.
+02-12到30級.md:892｜說明｜淡綠色絲線在暴風城運河區的裁縫店裡撿。｜Bobina de Seda Chartreuse Leve fica na alfaiataria dos Canais de Ventobravo.
+02-12到30級.md:599｜說明｜絲綢 ×3 可以在拍賣場買。｜Seda ×3: dá para comprar na casa de leilões.
+03-30到45級.md:506｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）8 個堅固的磨刀石（最鋒利的刀劍用）。｜Antes de ir para Sendas do Rio, você pode comprar na casa de leilões (ou pedir para um alt enviar) 8 × Pedra de Afiar Maciça (para A lâmina mais afiada).
+03-30到45級.md:553｜說明｜要 8 個堅固的磨刀石，可以在拍賣場買或請鍛造做。；身上沒有就跳過。｜Precisa de 8 × Pedra de Afiar Maciça. Compre na casa de leilões ou peça a um ferreiro. Pule se não tiver com você.
+03-30到45級.md:553｜說明｜要 8 個堅固的磨刀石，可以在拍賣場買或請鍛造做。｜Precisa de 8 × Pedra de Afiar Maciça. Compre na casa de leilões ou peça a um ferreiro.
+03-30到45級.md:876｜說明｜身上沒有就跳過。｜Pule se não tiver com você.
+03-30到45級.md:1335｜說明｜翡翠 ×1 可以在拍賣場買。｜Jade ×1: dá para comprar na casa de leilões.
+03-30到45級.md:870｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）20 塊魔紋布（創傷服裝用）。｜Antes de ir para Sendas do Rio, você pode comprar na casa de leilões (ou pedir para um alt enviar) 20 × Magitrama (para Curativos para os feridos).
+03-30到45級.md:876｜說明｜要 20 塊魔紋布，可以在拍賣場買。；身上沒有就跳過。｜Precisa de 20 × Magitrama. Dá para comprar na casa de leilões. Pule se não tiver com você.
+03-30到45級.md:876｜說明｜要 20 塊魔紋布，可以在拍賣場買。｜Precisa de 20 × Magitrama. Dá para comprar na casa de leilões.
+03-30到45級.md:879｜說明｜受傷的士兵就在洛雷修士旁邊。｜Os soldados feridos estão bem ao lado do Irmão Lowley.
+03-30到45級.md:962｜說明｜到菲拉斯的羽月要塞交，之後去菲拉斯時順路。｜Entregue na Fortaleza Plumaluna, em Feralas. Fica no caminho quando você for a Feralas.
+03-30到45級.md:1264｜說明｜金錠 ×1 可以在拍賣場買。｜Barra de Ouro ×1: dá para comprar na casa de leilões.
+04-45到60級.md:17｜說明｜可以先在拍賣場買（或請分身寄來）15 塊絲綢（之後灼熱峽谷的被鎖起來的矮人用）。｜Você já pode comprar na casa de leilões (ou pedir para um alt enviar) 15 × Seda (para Calça arriada!, mais tarde na Garganta Abrasadora).
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。；流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。；活根草和三種符咒可以在拍賣場買。｜Precisa de Presa de Sanguescalpo ×30, Raiz-da-vida ×8 e Essência dos Exilados ×1. Para Essência dos Exilados, leve 8 × de cada um de Patuá Ardente, Patuá Trovejante e Patuá Pontudo ao caldeirão ao lado. Raiz-da-vida e os três patuás podem ser comprados na casa de leilões.
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。；流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。｜Precisa de Presa de Sanguescalpo ×30, Raiz-da-vida ×8 e Essência dos Exilados ×1. Para Essência dos Exilados, leve 8 × de cada um de Patuá Ardente, Patuá Trovejante e Patuá Pontudo ao caldeirão ao lado.
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。｜Precisa de Presa de Sanguescalpo ×30, Raiz-da-vida ×8 e Essência dos Exilados ×1.
+04-45到60級.md:1250｜說明｜流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。；活根草和三種符咒可以在拍賣場買。｜Para Essência dos Exilados, leve 8 × de cada um de Patuá Ardente, Patuá Trovejante e Patuá Pontudo ao caldeirão ao lado. Raiz-da-vida e os três patuás podem ser comprados na casa de leilões.
+04-45到60級.md:1250｜說明｜流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。｜Para Essência dos Exilados, leve 8 × de cada um de Patuá Ardente, Patuá Trovejante e Patuá Pontudo ao caldeirão ao lado.
+04-45到60級.md:1250｜說明｜活根草和三種符咒可以在拍賣場買。｜Raiz-da-vida e os três patuás podem ser comprados na casa de leilões.
+04-45到60級.md:1285｜說明｜可以先在拍賣場買（或請分身寄來）1 份亡靈腐液（之後艾薩拉的亡靈的腐液用）。｜Você já pode comprar na casa de leilões (ou pedir para um alt enviar) 1 × Linfa de Morte-viva (para A linfa de morte-viva, mais tarde em Azshara).
+04-45到60級.md:363｜說明｜可以先在拍賣場買（或請分身寄來）1 個祕銀外殼（之後安戈洛的找回A-Me 01用）。｜Você já pode comprar na casa de leilões (ou pedir para um alt enviar) 1 × Carcaça de Mithril (para Procura-se A-Me 01, mais tarde na Cratera Un'Goro).
+04-45到60級.md:1296｜說明｜亡靈腐液 ×1 可以在拍賣場買。｜Linfa de Morte-viva ×1: dá para comprar na casa de leilões.
+03-30到45級.md:900｜說明｜交完以力服人、不夠格的勇士後，哈穆爾才會給。｜Hamur só oferece esta missão depois que você entregar as duas missões acima.
+03-30到45級.md:1427｜說明｜若巴斯拉已提供此任務可先接起來；火在荒蕪之地、土在悲傷沼澤可順路收，淒涼之地與塵泥沼澤的圖騰需要回訪。｜Se Bath'rah já oferecer esta missão, aceite. O fogo dá para pegar de passagem em Ermos e a terra no Pântano das Mágoas; os totens de Desolação e do Pântano Vadeoso exigem voltar depois.
+03-30到45級.md:1427｜說明｜若巴斯拉已提供此任務可先接起來｜Se Bath'rah já oferecer esta missão, aceite
+03-30到45級.md:1427｜說明｜火在荒蕪之地、土在悲傷沼澤可順路收，淒涼之地與塵泥沼澤的圖騰需要回訪。｜O fogo dá para pegar de passagem em Ermos e a terra no Pântano das Mágoas; os totens de Desolação e do Pântano Vadeoso exigem voltar depois.
+03-30到45級.md:645｜說明｜498／549 上次在希爾斯布萊德丘陵已做完。進山後交 533 才接 503，高迪爾和瓦杜斯的辛迪加營地目標一起找。｜498/549 já foram feitas na sua última passagem pelo Contraforte de Eira dos Montes. Nas montanhas, entregue 533 antes de pegar 503. Procure juntos os objetivos de Gol'dir e Vardus nos acampamentos da Camarilha.
+03-30到45級.md:1222｜說明｜交件在菲拉斯莫沙徹營地的巫醫尤克里，到莫沙徹營地時再交。｜Entregue ao Mandingueiro Uzer'i em Aldeia Mojache, em Feralas; entregue quando chegar à Aldeia Mojache.

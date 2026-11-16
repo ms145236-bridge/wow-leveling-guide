@@ -1235,3 +1235,19 @@
 03-30到45級.md:947｜說明｜到塔納利斯的熱砂港交給碼頭管理員汽嘶，之後去塔納利斯時順路。｜Entregue ao Mestre Portuário Vaporeto no Porto de Bondebico, em Tanaris; fica no caminho quando você for a Tanaris mais tarde.
 03-30到45級.md:949｜說明｜在魚人島的水下沉船旁使用誘餌召出海怪，打倒後撿頭顱。｜Use a isca ao lado do navio naufragado debaixo d'água na ilha dos murlocs para invocar o monstro marinho; derrote-o e depois pegue a cabeça.
 06-路線外任務.md:27｜說明｜要交 10 份鹽水海鮮燉湯，得自己用烹飪做或跟別人買；手上剛好有再交。｜Pede 10 porções de ensopado de frutos do mar de água salgada, que você precisa cozinhar ou comprar de outros jogadores; entregue só se por acaso já as tiver.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。；沒學草藥學的話，地根草可以在拍賣場買。｜Colete Raiz-telúrica e Fungo Lunar na Costa Negra e entregue em Auberdine. Sem Herborismo, compre a Raiz-telúrica na casa de leilões.
+02-12到30級.md:832｜說明｜沒學草藥學的話，地根草可以在拍賣場買。｜Sem Herborismo, compre a Raiz-telúrica na casa de leilões.
+02-12到30級.md:307｜說明｜去赤脊山前，可以先在拍賣場買 8 片魚人的鰭（魚人偷獵者用）。｜Antes de ir para as Montanhas Cristarrubra, você pode comprar na casa de leilões 8 × Barbatana de Murloc (para Caçadores de murlocs).
+02-12到30級.md:313｜說明｜魚人的鰭可以在拍賣場買，買齊 8 片就不用打。｜Barbatana de Murloc pode ser comprada na casa de leilões. Com 8, não precisa farmar.
+03-30到45級.md:11｜說明｜毛料可以在拍賣場買，要 60 塊。｜Lã pode ser comprada na casa de leilões. Você precisa de 60.
+03-30到45級.md:1314｜說明｜翡翠可以在拍賣場買。｜Jade pode ser comprado na casa de leilões.
+03-30到45級.md:1243｜說明｜金錠可以在拍賣場買。｜Barra de Ouro pode ser comprada na casa de leilões.
+04-45到60級.md:17｜說明｜可以先在拍賣場買 15 塊絲綢（之後灼熱峽谷的被鎖起來的矮人用）。｜Você já pode comprar na casa de leilões 15 × Seda (para Calça arriada!, mais tarde na Garganta Abrasadora).
+04-45到60級.md:1250｜說明｜擊敗塞克隆尼亞取得精華。；活根草可以在拍賣場買，要 8 株。｜Derrote Ciclonium para obter a essência. Raiz-da-vida pode ser comprada na casa de leilões. Você precisa de 8.
+04-45到60級.md:1250｜說明｜活根草可以在拍賣場買，要 8 株。｜Raiz-da-vida pode ser comprada na casa de leilões. Você precisa de 8.
+04-45到60級.md:146｜說明｜絲綢可以在拍賣場買，要 15 塊。｜Seda pode ser comprada na casa de leilões. Você precisa de 15.
+04-45到60級.md:363｜說明｜可以先在拍賣場買 1 個祕銀外殼（之後安戈洛的找回A-Me 01用）。｜Você já pode comprar na casa de leilões 1 × Carcaça de Mithril (para Procura-se A-Me 01, mais tarde na Cratera Un'Goro).
+04-45到60級.md:1296｜說明｜亡靈腐液可以在拍賣場買。｜Linfa de Morte-viva pode ser comprada na casa de leilões.
+04-45到60級.md:1330｜說明｜惡魔布可以在拍賣場買。｜Tecido Vil pode ser comprado na casa de leilões.
+05-副本.md:150｜說明｜走到梣谷・第一次時先接尋找凱特林（要 24 級）。｜Ao chegar em Vale Gris (1ª visita), pegue primeiro Procurando Tina (requer nível 24).
+03-30到45級.md:1087｜說明｜往廢土營地途中找空地使用任務道具。｜Procure um espaço aberto no caminho para o acampamento dos Errantes e use ali o item da missão.

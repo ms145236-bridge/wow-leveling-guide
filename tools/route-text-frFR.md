@@ -14360,3 +14360,58 @@
 06-路線外任務.md:891｜說明｜要交 10 份鹽水海鮮燉湯，得自己用烹飪做或跟別人買；手上剛好有再交。｜Il faut rendre 10 portions de ragoût de fruits de mer à l'eau salée, à cuisiner toi-même ou à acheter à d'autres joueurs ; ne la rends que si tu les as justement sur toi.
 03-30到45級.md:1015｜步驟說明｜到辛特蘭時在海岸拾酒，之後回藏寶海灣再交。｜Ramasse le grog sur la côte des Hinterlands, puis rends la quête à ton retour à Baie-du-Butin.
 03-30到45級.md:669｜步驟說明｜進洞走左邊的路，繞到最裡面的平台，粉紅色水晶就是交件點。｜Dans la grotte, prends le chemin de gauche et suis-le jusqu'à la plateforme tout au fond ; le cristal rose est le point de remise.
+03-30到45級.md:754｜說明｜去大河林地前，可以先在拍賣場買 10 塊大塊野豬肉（收集白牙豬肉用）和 10 個重平衡石（第二步：更多石頭用）。｜Avant de partir pour Rives Claires, tu peux acheter à l'hôtel des ventes 10 × Morceau de viande de sanglier (pour Capture de brochepâle) et 10 × Caillou lourd (pour Deuxième étape : plus de pierres).
+03-30到45級.md:871｜說明｜大塊野豬肉可以在拍賣場買，買齊 10 塊就不用打。｜Le Morceau de viande de sanglier s'achète à l'hôtel des ventes. Avec 10, pas besoin de farmer.
+03-30到45級.md:888｜說明｜重平衡石可以在拍賣場買，買齊 10 個就能直接交。｜Le Caillou lourd s'achète à l'hôtel des ventes. Avec 10, tu peux rendre la quête tout de suite.
+04-45到60級.md:330｜說明｜去灼熱峽谷前，可以先在拍賣場買 15 塊絲綢（被鎖起來的矮人用）。｜Avant de partir pour la Gorge des Vents brûlants, tu peux acheter à l'hôtel des ventes 15 × Etoffe de soie (pour Piégé !).
+04-45到60級.md:2130｜說明｜若已有訓練師版 8419，直接交 8419 再接 8421。；惡魔布可以在拍賣場買。｜Si tu as déjà pris 8419 auprès du maître, rends directement 8419, puis prends 8421. La Gangrétoffe s'achète à l'hôtel des ventes.
+04-45到60級.md:2130｜說明｜惡魔布可以在拍賣場買。｜La Gangrétoffe s'achète à l'hôtel des ventes.
+02-12到30級.md:1259｜說明｜可以先在拍賣場買（或請分身寄來）5 株地根草（之後的收集解藥用）。｜Tu peux déjà acheter à l'hôtel des ventes (ou te faire envoyer par un reroll) 5 × Terrestrine (pour Rassembler les ingrédients du remède, plus tard).
+03-30到45級.md:26｜說明｜強力食人妖之血藥水 ×1 可以在拍賣場買。｜Potion de sang de troll forte ×1 s'achète à l'hôtel des ventes.
+03-30到45級.md:348｜說明｜散頁是荊棘谷的怪隨機掉的，缺的頁可以在拍賣場買，四章湊齊再交。｜Les pages tombent au hasard sur les monstres de Strangleronce. Achète celles qui manquent à l'hôtel des ventes et rends la quête une fois les quatre chapitres complets.
+03-30到45級.md:1574｜說明｜可以先在拍賣場買（或請分身寄來）1 顆翡翠（之後塵泥沼澤的強大的物品用）。｜Tu peux déjà acheter à l'hôtel des ventes (ou te faire envoyer par un reroll) 1 × Jade (pour Les Objets de Puissance, plus tard dans le Marécage d'Âprefange).
+03-30到45級.md:764｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）10 塊大塊野豬肉（收集白牙豬肉用）和 10 個重平衡石（第二步：更多石頭用）。｜Avant de partir pour Rives Claires, tu peux acheter à l'hôtel des ventes (ou te faire envoyer par un reroll) 10 × Morceau de viande de sanglier (pour Capture de brochepâle) et 10 × Caillou lourd (pour Deuxième étape : plus de pierres).
+03-30到45級.md:870｜說明｜把頭送到北邊的博德羅克，走北線時順路交。｜Apporte la tête à Bolder’ok, au nord. Rends-la pendant la boucle nord.
+03-30到45級.md:910｜說明｜第一次先清農場、豺狼人、河岸及羅格瑪周邊野獸，最後走北線到博德羅克。喬札克是精英，有隊伍再打，打完才有送頭和鈍拳的後續。暮光之罩和海岸留到第二次來。｜À ta première visite, nettoie la ferme, les gnolls, la berge et les bêtes des environs de Rog’mar, puis termine par la boucle nord jusqu'à Bolder’ok. Chogg’Zac est un élite : tue-le en groupe. La livraison de la tête et les suites de Poing-Serré ne s'ouvrent qu'après. Garde le Suaire du Crépuscule et la côte pour ton deuxième passage.
+03-30到45級.md:937｜說明｜去荒蕪之地前，可以先在拍賣場買（或請分身寄來）冰霜之油、發條式同步協調陀螺儀、治療藥水、次級隱形藥水各 1 個（荒蕪之地三個交材料的任務用）。｜Avant de partir pour les Terres ingrates, tu peux acheter à l'hôtel des ventes (ou te faire envoyer par un reroll) 1 × chacun : Huile glaciale, Gyrochronatome, Potion de soins et Potion d'Invisibilité inférieure (pour les trois quêtes de livraison des Terres ingrates).
+03-30到45級.md:1312｜說明｜先往西做暮光之罩（要先交鈍拳的命令才接得到），再往東到火線港。霸主基爾加是精英，有隊伍再打。海怪線和風息堡同一趟做。｜Va d'abord à l'ouest au Suaire du Crépuscule (disponible seulement après avoir rendu Le décret de Poing-Serré), puis à l'est jusqu'à Port de Poudremèche. Le Suzerain Kilgar est un élite : tue-le en groupe. Fais la chaîne du monstre marin dans le même trajet que Windrest Keep.
+04-45到60級.md:330｜說明｜去灼熱峽谷前，可以先在拍賣場買（或請分身寄來）15 塊絲綢（被鎖起來的矮人用）。｜Avant de partir pour la Gorge des Vents brûlants, tu peux acheter à l'hôtel des ventes (ou te faire envoyer par un reroll) 15 × Etoffe de soie (pour Piégé !).
+04-45到60級.md:2130｜說明｜若已有訓練師版 8419，直接交 8419 再接 8421。；惡魔布 ×1 可以在拍賣場買。｜Si tu as déjà pris 8419 auprès du maître, rends directement 8419, puis prends 8421. Gangrétoffe ×1 s'achète à l'hôtel des ventes.
+04-45到60級.md:2130｜說明｜惡魔布 ×1 可以在拍賣場買。｜Gangrétoffe ×1 s'achète à l'hôtel des ventes.
+05-副本.md:1614｜說明｜要用的材料是符文布卷 ×4、硬甲皮 ×8、符文線 ×2，加本內巨魔鞣酸 ×1。；符文布卷、硬甲皮、符文線先在拍賣場買好，巨魔鞣酸在副本裡拿。｜Apporte 4 rouleaux d'étoffe runique, 8 cuirs robustes et 2 fils runiques. Récupère 1 tanin d'ogre dans le donjon. Achète Rouleau d'étoffe runique, Cuir robuste et Fil runique à l'hôtel des ventes à l'avance. Tanin ogre s'obtient dans le donjon.
+05-副本.md:1614｜說明｜符文布卷、硬甲皮、符文線先在拍賣場買好，巨魔鞣酸在副本裡拿。｜Achète Rouleau d'étoffe runique, Cuir robuste et Fil runique à l'hôtel des ventes à l'avance. Tanin ogre s'obtient dans le donjon.
+02-12到30級.md:87｜說明｜魔像等能彈簧 ×14 可以在拍賣場買，迴轉穩定器 ×5 還是要打。｜Isoressort de golem ×14 s'achète à l'hôtel des ventes. Gyrostabiliseur de moissonneur ×5 reste à récupérer sur les monstres.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。；地根草 ×5 可以在拍賣場買。｜Récolte de la Terrestrine et des Champignons lunaires à Sombrivage, puis rends-les à Auberdine. Terrestrine ×5 s'achète à l'hôtel des ventes.
+02-12到30級.md:832｜說明｜地根草 ×5 可以在拍賣場買。｜Terrestrine ×5 s'achète à l'hôtel des ventes.
+02-12到30級.md:307｜說明｜去赤脊山前，可以先在拍賣場買（或請分身寄來）8 片魚人的鰭（魚人偷獵者用）。｜Avant de partir pour les Carmines, tu peux acheter à l'hôtel des ventes (ou te faire envoyer par un reroll) 8 × Aileron de murloc (pour Les braconniers murlocs).
+02-12到30級.md:892｜說明｜普通野花和鉛瓶商人有賣，青銅管可以在拍賣場買。；淡綠色絲線在暴風城運河區的裁縫店裡撿。｜Fleurs sauvages simples et Fiole plombée se vendent chez les marchands. Tube en bronze s'achète à l'hôtel des ventes. Bobine de fil de soie chartreuse se ramasse dans la boutique de couture des Canaux de Hurlevent.
+02-12到30級.md:892｜說明｜普通野花和鉛瓶商人有賣，青銅管可以在拍賣場買。｜Fleurs sauvages simples et Fiole plombée se vendent chez les marchands. Tube en bronze s'achète à l'hôtel des ventes.
+02-12到30級.md:892｜說明｜淡綠色絲線在暴風城運河區的裁縫店裡撿。｜Bobine de fil de soie chartreuse se ramasse dans la boutique de couture des Canaux de Hurlevent.
+02-12到30級.md:599｜說明｜絲綢 ×3 可以在拍賣場買。｜Etoffe de soie ×3 s'achète à l'hôtel des ventes.
+03-30到45級.md:506｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）8 個堅固的磨刀石（最鋒利的刀劍用）。｜Avant de partir pour Rives Claires, tu peux acheter à l'hôtel des ventes (ou te faire envoyer par un reroll) 8 × Pierre à aiguiser solide (pour Des lames des plus affûtées).
+03-30到45級.md:553｜說明｜要 8 個堅固的磨刀石，可以在拍賣場買或請鍛造做。；身上沒有就跳過。｜Il faut 8 × Pierre à aiguiser solide. Achète-les à l'hôtel des ventes ou demande à un forgeron. Passe si tu ne les as pas sur toi.
+03-30到45級.md:553｜說明｜要 8 個堅固的磨刀石，可以在拍賣場買或請鍛造做。｜Il faut 8 × Pierre à aiguiser solide. Achète-les à l'hôtel des ventes ou demande à un forgeron.
+03-30到45級.md:876｜說明｜身上沒有就跳過。｜Passe si tu ne les as pas sur toi.
+03-30到45級.md:1335｜說明｜翡翠 ×1 可以在拍賣場買。｜Jade ×1 s'achète à l'hôtel des ventes.
+03-30到45級.md:870｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）20 塊魔紋布（創傷服裝用）。｜Avant de partir pour Rives Claires, tu peux acheter à l'hôtel des ventes (ou te faire envoyer par un reroll) 20 × Etoffe de tisse-mage (pour Panser les plaies).
+03-30到45級.md:876｜說明｜要 20 塊魔紋布，可以在拍賣場買。；身上沒有就跳過。｜Il faut 20 × Etoffe de tisse-mage. S'achète à l'hôtel des ventes. Passe si tu ne les as pas sur toi.
+03-30到45級.md:876｜說明｜要 20 塊魔紋布，可以在拍賣場買。｜Il faut 20 × Etoffe de tisse-mage. S'achète à l'hôtel des ventes.
+03-30到45級.md:879｜說明｜受傷的士兵就在洛雷修士旁邊。｜Les soldats blessés sont juste à côté de Frère Lowley.
+03-30到45級.md:962｜說明｜到菲拉斯的羽月要塞交，之後去菲拉斯時順路。｜À rendre au Bastion de Pennelune, en Féralas. C'est sur le chemin quand tu iras en Féralas.
+03-30到45級.md:1264｜說明｜金錠 ×1 可以在拍賣場買。｜Barre d'or ×1 s'achète à l'hôtel des ventes.
+04-45到60級.md:17｜說明｜可以先在拍賣場買（或請分身寄來）15 塊絲綢（之後灼熱峽谷的被鎖起來的矮人用）。｜Tu peux déjà acheter à l'hôtel des ventes (ou te faire envoyer par un reroll) 15 × Etoffe de soie (pour Piégé !, plus tard dans la Gorge des Vents brûlants).
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。；流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。；活根草和三種符咒可以在拍賣場買。｜Il faut Défense de Bloodscalp ×30, Vietérule ×8 et Essence d'exil ×1. Pour Essence d'exil, apporte 8 × chacun de Charme ardent, Charme de tonnerre et Charme armorié au chaudron juste à côté. Vietérule et les trois charmes s'achètent à l'hôtel des ventes.
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。；流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。｜Il faut Défense de Bloodscalp ×30, Vietérule ×8 et Essence d'exil ×1. Pour Essence d'exil, apporte 8 × chacun de Charme ardent, Charme de tonnerre et Charme armorié au chaudron juste à côté.
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。｜Il faut Défense de Bloodscalp ×30, Vietérule ×8 et Essence d'exil ×1.
+04-45到60級.md:1250｜說明｜流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。；活根草和三種符咒可以在拍賣場買。｜Pour Essence d'exil, apporte 8 × chacun de Charme ardent, Charme de tonnerre et Charme armorié au chaudron juste à côté. Vietérule et les trois charmes s'achètent à l'hôtel des ventes.
+04-45到60級.md:1250｜說明｜流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。｜Pour Essence d'exil, apporte 8 × chacun de Charme ardent, Charme de tonnerre et Charme armorié au chaudron juste à côté.
+04-45到60級.md:1250｜說明｜活根草和三種符咒可以在拍賣場買。｜Vietérule et les trois charmes s'achètent à l'hôtel des ventes.
+04-45到60級.md:1285｜說明｜可以先在拍賣場買（或請分身寄來）1 份亡靈腐液（之後艾薩拉的亡靈的腐液用）。｜Tu peux déjà acheter à l'hôtel des ventes (ou te faire envoyer par un reroll) 1 × Ichor de non-mort (pour L'ichor de non-mort, plus tard en Azshara).
+04-45到60級.md:363｜說明｜可以先在拍賣場買（或請分身寄來）1 個祕銀外殼（之後安戈洛的找回A-Me 01用）。｜Tu peux déjà acheter à l'hôtel des ventes (ou te faire envoyer par un reroll) 1 × Caisse en mithril (pour À la poursuite d'A-mi 01, plus tard dans le Cratère d'Un'Goro).
+04-45到60級.md:1296｜說明｜亡靈腐液 ×1 可以在拍賣場買。｜Ichor de non-mort ×1 s'achète à l'hôtel des ventes.
+03-30到45級.md:900｜說明｜交完以力服人、不夠格的勇士後，哈穆爾才會給。｜Hamur ne la propose qu’après avoir rendu les deux quêtes ci-dessus.
+03-30到45級.md:1427｜說明｜若巴斯拉已提供此任務可先接起來；火在荒蕪之地、土在悲傷沼澤可順路收，淒涼之地與塵泥沼澤的圖騰需要回訪。｜Accepte-la auprès de Bath'rah si elle la propose déjà. Tu peux récupérer le feu en passant dans les Terres ingrates et la terre dans le Marais des Chagrins ; il faudra revenir pour les totems de Désolace et du Marécage d'Âprefange.
+03-30到45級.md:1427｜說明｜若巴斯拉已提供此任務可先接起來｜Accepte-la auprès de Bath'rah si elle la propose déjà
+03-30到45級.md:1427｜說明｜火在荒蕪之地、土在悲傷沼澤可順路收，淒涼之地與塵泥沼澤的圖騰需要回訪。｜Tu peux récupérer le feu en passant dans les Terres ingrates et la terre dans le Marais des Chagrins ; il faudra revenir pour les totems de Désolace et du Marécage d'Âprefange.
+03-30到45級.md:645｜說明｜498／549 上次在希爾斯布萊德丘陵已做完。進山後交 533 才接 503，高迪爾和瓦杜斯的辛迪加營地目標一起找。｜498/549 sont déjà faites depuis ton dernier passage dans les Contreforts de Hautebrande. Dans les montagnes, rends 533 avant de prendre 503. Cherche ensemble les objectifs de Gol'dir et Vardus dans les camps du Syndicat.
+03-30到45級.md:1222｜說明｜交件在菲拉斯莫沙徹營地的巫醫尤克里，到莫沙徹營地時再交。｜Rends-la au Sorcier-docteur Uzer'i au Camp Mojache, en Feralas ; attends d'être au Camp Mojache pour la rendre.

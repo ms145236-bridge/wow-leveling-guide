@@ -41,14 +41,16 @@ local function instanceView()
 end
 
 -- 箭頭要指的點（主座標＋more 各群）：玩家所在地圖上最近的一群；這張地圖上沒有就指主座標（沒有主座標就是第一群）。
--- 換群要比目前那群近 2.5 格以上（或不到 6 成距離）並維持 2 秒，走在兩群中間不會來回跳；換步驟、換地圖、任務進度變了就直接挑最近的
+-- 換群要比目前那群近 2.5 格以上（或不到 6 成距離）並維持 2 秒，走在兩群中間不會來回跳；換步驟、換地圖就直接挑最近的；任務進度變了不用等 2 秒（距離門檻照舊）
 local arrowStep -- 箭頭目前指的步驟（位置檢查時重挑點用）
 local function navPoint(s)
   local map, x, y = C.Position()
   local prog = ""
   for _, o in ipairs(s.q and C.Objectives(s.q) or {}) do prog = prog .. tostring(o.have) .. tostring(o.done) .. "," end
   local pick = MG.navPick
-  if not (pick and pick.s == s and pick.map == map and pick.prog == prog) then pick = { s = s, map = map, prog = prog } end
+  if not (pick and pick.s == s and pick.map == map) then pick = { s = s, map = map, prog = prog } end
+  local progressed = pick.prog ~= prog -- 任務進度變了：夠近的那群不用等 2 秒就換（差一點點的不換，邊打邊移動時箭頭不會在兩群之間跳）
+  pick.prog = prog
   MG.navPick = pick
   local pts = { s.x and { s.map, s.x, s.y } or nil }
   for _, p in ipairs(s.more or {}) do pts[#pts + 1] = p end
@@ -63,9 +65,8 @@ local function navPoint(s)
   if not best then nextP, pick.cand = pts[1], nil
   elseif not cur then nextP, pick.cand = best, nil
   elseif same(best, cur) or not (far(cur) - bd >= 2.5 or bd < far(cur) * 0.6) then pick.cand = nil
-  elseif same(best, pick.cand) then
-    if GetTime() - pick.since >= 2 then nextP, pick.cand = best, nil end
-  else pick.cand, pick.since = best, GetTime() end
+  elseif progressed or (same(best, pick.cand) and GetTime() - pick.since >= 2) then nextP, pick.cand = best, nil
+  elseif not same(best, pick.cand) then pick.cand, pick.since = best, GetTime() end
   if not same(nextP, pick.p) then pick.p = nextP end -- 同一點留原本的表（位置檢查用 ~= 判斷有沒有換）
   return pick.p
 end
@@ -187,10 +188,13 @@ f:SetScript("OnUpdate", function(_, dt)
   -- 到達型步驟：每 0.5 秒檢查一次
   if tick >= 0.5 then
     tick = 0
-    -- 沒移動（< 0.2%）而且沒有等待中的順路提醒就不用重看
+    -- 沒移動而且沒有等待中的順路提醒就不用重看。和上次檢查時的位置比（不是上一次取樣）：慢慢走的小位移會累積到門檻。
+    -- 門檻 0.2%；目前是到達型步驟或有臨時航點時 0.02%（大地圖上走路 0.5 秒不到 0.05%，停在到達範圍邊上也要看得到）
     local map, x, y = C.Position()
-    local moved = not (lastPos and map == lastPos[1] and x and lastPos[2] and math.abs(x - lastPos[2]) + math.abs(y - lastPos[3]) < 0.2)
-    lastPos = { map, x, y }
+    local at = lastState and lastState.cur and lastState.steps[lastState.cur].s
+    local arrive = MG.wpOverride or (at and (at.t == "goto" or (at.t == "travel" and at.x) or at.t == "hearth"))
+    local moved = not (lastPos and map == lastPos[1] and x and lastPos[2] and math.abs(x - lastPos[2]) + math.abs(y - lastPos[3]) < (arrive and 0.02 or 0.2))
+    if moved then lastPos = { map, x, y } end
     -- 箭頭指的是好幾群點的步驟：走動時（或等著換群時）重挑點，換了就重畫箭頭與標點
     local pick = MG.navPick
     if arrowStep and arrowStep.more and (moved or (pick and pick.cand)) then
@@ -222,6 +226,19 @@ local function latchCurrent(t)
   local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
   if cur and cur.s.t == t then MG.db.latch[cur.key] = true end
 end
+-- 飛／船的目的地、出發地（鳥點中文名）在哪張地圖：路線上有這個鳥點才查得到
+local nodeMap
+local function mapOf(node)
+  if not nodeMap then
+    nodeMap = {}
+    for _, st in ipairs(R.stations) do
+      for _, s in ipairs(st.steps) do
+        if s.t == "fp" and s.map and (s.nodeK or s.node) then nodeMap[s.nodeK or s.node] = s.map end
+      end
+    end
+  end
+  return node and nodeMap[node]
+end
 
 -- ── 自動接交任務（設定預設開；按住 Shift 暫停） ─────────────────────────────
 -- 同名任務很多（例如「馴服野獸」有 10 個 ID），所以標題對到的是 ID 清單
@@ -243,23 +260,33 @@ local function routeQuestsByTitle(title)
   return title and nameToQuest[title] or {}
 end
 local function autoOn() return UI.Get("auto") and not IsShiftKeyDown() end
-local optQ = {} -- 接任務那步標了「可跳過」的任務
-local dungQ = {} -- 只在副本前置接的任務 → 那些副本的 ID（全部選了不打就不自動接）
+local accQ = {} -- 任務 → 路線上每個「接」步驟 { when, opt, d＝副本站 ID }（同一個任務可以主線必做、副本段可跳過）
 for _, st in ipairs(R.stations) do
   for _, s in ipairs(st.steps) do
-    if s.t == "accept" and s.opt then optQ[s.q] = true end
-    if s.t == "accept" and s.q and dungQ[s.q] ~= false then
-      if st.dungeon then local l = dungQ[s.q] or {}; l[#l + 1] = st.id; dungQ[s.q] = l else dungQ[s.q] = false end
+    if s.t == "accept" and s.q then
+      local l = accQ[s.q] or {}
+      accQ[s.q] = l
+      l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or nil }
     end
   end
 end
--- 路線上的任務，和引擎的判斷一致：在日誌裡的都算（交任務）；手動略過的、可跳過沒開（補經驗補回的除外）、副本選了不打的不自動接
+-- 路線上的任務，和引擎的判斷一致：在日誌裡的都算（交任務）；手動略過的不自動接。
+-- 其餘要有一個本角色適用的「接」步驟算數：可跳過的要設定有開或被補經驗補回，副本段的要那個副本沒選不打；路線上只有做／交的照舊算
 local function inRoute(id)
   if not (id and not (issecretvalue and issecretvalue(id)) and id > 0 and R.quests[id] ~= nil) then return false end
   if C.IsOnQuest(id) then return true end
-  if MG.db.skip["a:" .. id] or (optQ[id] and not UI.Get("optional") and not E.Fill[id]) then return false end
-  for _, d in ipairs(dungQ[id] or {}) do if not MG.db.dNo[d] then return true end end
-  return not dungQ[id]
+  if MG.db.skip["a:" .. id] then return false end
+  local optional = UI.Get("optional") or E.Fill[id]
+  for _, a in ipairs(accQ[id] or {}) do
+    local when = a.when
+    if when and when.lvMin then -- 等級條件不看：NPC 已經給了就接
+      when = {}
+      for k, v in pairs(a.when) do when[k] = v end
+      when.lvMin = nil
+    end
+    if E.Applies(when) and (not a.opt or optional) and not (a.d and MG.db.dNo[a.d]) then return true end
+  end
+  return not accQ[id]
 end
 
 -- 安全網：打開目前「接」步驟的 NPC，卻沒有這個任務可接 → 先跳過（升級或交任務後再看）。
@@ -389,6 +416,17 @@ local function onEvent(_, event, ...)
     if GetTime() - hearthAt <= 60 and not other then latchCurrent("hearth") end
     hearthAt = nil
   end
+  -- 船／飛艇：目的地對得到鳥點（而且和出發地不同張地圖）→ 人到了那張地圖才勾，走路換到別區不算；對不到 → 照舊，換到別的地圖（離開碼頭那張）就勾
+  if event == "PLAYER_ENTERING_WORLD" or event == "ZONE_CHANGED_NEW_AREA" or event == "ZONE_CHANGED" or event == "ZONE_CHANGED_INDOORS" then
+    local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
+    if cur and cur.s.t == "boat" then
+      local map = C.Position()
+      local dest, dock = mapOf(cur.s.to), cur.s.map or mapOf(cur.s.from)
+      if dest and map and dest ~= dock then
+        if map == dest then MG.db.latch[cur.key] = true end
+      elseif event == "ZONE_CHANGED_NEW_AREA" and (not cur.s.map or (map and map ~= cur.s.map)) then MG.db.latch[cur.key] = true end
+    end
+  end
   if event == "PLAYER_ENTERING_WORLD" then
     if not E.built then E.Build(); E.built = true end -- 每次登入建一次（換起點時 UI 會自己重建）
     N.Forget()
@@ -422,29 +460,35 @@ local function onEvent(_, event, ...)
     if unit == "player" and not (issecretvalue and issecretvalue(spell)) and HEARTH_SPELL[spell] then hearthAt = GetTime() end
     return
   elseif event == "HEARTHSTONE_BOUND" then
-    -- 綁爐石：本站哪一步的旅店（人在那步座標旁邊，或 zhTW 的 GetBindLocation 對得上；目前這步是沒座標的綁爐石也算）就勾那步，不必是目前步驟。
-    -- 記下綁的是哪間（boundK）：之後同一間的綁爐石步驟直接算過。對不到路線的旅店時，只有 zhTW 看得出綁在別處才清掉
+    -- 綁爐石：本站哪一步的旅店（人在那步座標旁邊，或 GetBindLocation 對得上遊戲語言的地點名；目前這步是沒座標也沒地點名的綁爐石也算）就勾那步，不必是目前步驟。
+    -- 記下綁的是哪間（boundK）：之後同一間的綁爐石步驟直接算過。本站對不到就找整條路線上人旁邊的旅店，都沒有＝綁在路線外，清掉；
+    -- 讀不到位置時不動（綁點文字變了 E.Locate 會清，見 Engine 的 bindCheck）
     local map, x, y = C.Position()
-    local b = MG.gameZh and C.Bind()
+    local b = C.Bind()
     local hit
     for i, step in ipairs(lastState and not lastState.instance and lastState.steps or {}) do
-      local s, k = step.s, step.s.bindK or step.s.bind
+      local s, name = step.s, step.s.bindG or (MG.gameZh and (step.s.bindK or step.s.bind))
       if not hit and s.t == "bind" and ((s.x and map == s.map and x and (x - s.x) ^ 2 + (y - s.y) ^ 2 <= 25)
-        or (b and b ~= "" and k and (b:find(k, 1, true) or k:find(b, 1, true))) or (i == lastState.cur and not s.x and not b)) then hit = step end
+        or (b and b ~= "" and name and (b:find(name, 1, true) or name:find(b, 1, true))) or (i == lastState.cur and not s.x and not name)) then hit = step end
     end
-    if hit then
-      MG.db.latch[hit.key] = true
-      MG.db.boundK = hit.s.bindK or hit.s.bind
-    elseif b and b ~= "" then
-      MG.db.boundK = nil
+    if hit then MG.db.latch[hit.key] = true end
+    local inn = hit and hit.s
+    for _, st in ipairs(not inn and x and R.stations or {}) do
+      for _, s in ipairs(st.steps) do
+        if not inn and s.t == "bind" and s.x and s.map == map and (x - s.x) ^ 2 + (y - s.y) ^ 2 <= 25 then inn = s end
+      end
     end
+    if inn then MG.db.boundK, MG.db.boundRaw = inn.bindK or inn.bind, false -- boundRaw＝false：下次重算記下這次的綁點文字
+    elseif x then MG.db.boundK, MG.db.boundRaw = nil, nil end
   elseif event == "TRAINER_SHOW" then
     E.Trained(lastState)
   elseif event == "PLAYER_LEVEL_UP" then
     MG.db.sugHide = nil
     wipe(MG.db.notNow)
   elseif event == "TAXIMAP_OPENED" then
-    latchCurrent("fp")
+    -- 目前是「開鳥點」：人就在那個鳥點旁邊才勾（在別的城開飛行地圖不算；讀不到位置照舊勾）。那個鳥點已經在飛行地圖上的，下面會另外勾
+    local fp, pm, px, py = lastState and lastState.cur and lastState.steps[lastState.cur].s, C.Position()
+    if not (fp and fp.t == "fp" and fp.x and px) or (pm == fp.map and (px - fp.x) ^ 2 + (py - fp.y) ^ 2 <= 100) then latchCurrent("fp") end
     local name = UnitName("npc")
     if name and not (issecretvalue and issecretvalue(name)) then MG.db.fpSeen[name] = true end
     -- 飛行地圖列出所有開過的鳥點：對到路線的「開鳥點」步驟和飛行管理員，都記成開過。
@@ -526,17 +570,16 @@ local function onEvent(_, event, ...)
     return
   elseif event == "PLAYER_CONTROL_GAINED" then
     if onTaxi then
-      latchCurrent("fly")
+      -- 目的地對得到鳥點時，降落在那張地圖才勾（飛去別的地方不算）；對不到或讀不到位置照舊勾
+      local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
+      local dest, map = mapOf(cur and cur.s.to), C.Position()
+      if not (dest and map) or dest == map then latchCurrent("fly") end
       -- 下飛行：臨時航點收回，箭頭回到目前步驟
       MG.wpOverride = nil
       N.Forget()
     end
     onTaxi = false
   elseif event == "ZONE_CHANGED_NEW_AREA" then
-    -- 船：換到別的地圖（離開碼頭那張）才算到了
-    local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
-    local map = C.Position()
-    if cur and cur.s.t == "boat" and (not cur.s.map or (map and map ~= cur.s.map)) then MG.db.latch[cur.key] = true end
     N.Forget()
   elseif AUTO[event] then
     if event ~= "QUEST_PROGRESS" and event ~= "QUEST_COMPLETE" then MG.try("接不到檢查", notOffered, event); dirty = true end

@@ -80,7 +80,8 @@ local function set(map, x, y, name)
 end
 
 local function clear()
-  if not last then return end
+  -- last 只記這次登入放的點；/reload 後沒有 last，但地圖上那個點還是我們上次放的（存檔的 wp 或 WaypointUI 的標記認得）也要收
+  if not last and not ours() then return end
   last = nil
   if not free() then MG.db.wp = nil; return end
   local api = wpui()

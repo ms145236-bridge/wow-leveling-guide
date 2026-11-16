@@ -200,8 +200,8 @@ const mobsOf = (q) => {
   const objText = q.obj.join(" ").replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0));
   const nums = [...objText.matchAll(/(\d+)\s*[個只隻根張份塊件頭名條把顆片枚]|\b(?:Kill|Slay|Defeat|Destroy|Collect|Gather|Obtain|Retrieve|Recover|Bring)\s+(\d+)\b/gi)].map((m) => +(m[1] ?? m[2]));
   // 怪物目標其實是跟 NPC 互動（聽提里奧說話、餵受訓者、救人、把動物趕回／送回…）：目標文字是對話／餵食，或任務說明只有互動、沒有打的字眼 → 不算打怪經驗
-  const talkQ = /聽聽|聆聽|談話|交談|談一談|談壹談|對話|餵|飽餐|救出|解救|送回|趕回|趕到/.test(objText) && !/殺|擊敗|打敗|消滅|擊殺|幹掉|摧毀|征服|打死/.test(objText);
-  const talk = (m) => m.kind === "kill" && (talkQ || /\b(talk|speak|listen|feed|fed)\b/i.test(m.text || ""));
+  const talkQ = /聽聽|聆聽|談話|交談|談一談|談壹談|對話|餵|飽餐|救出|解救|送回|趕回|趕到|馴服/.test(objText) && !/殺|擊敗|打敗|消滅|擊殺|幹掉|摧毀|征服|打死/.test(objText);
+  const talk = (m) => m.kind === "kill" && (talkQ || /\b(talk|speak|listen|feed|fed|tame)\b/i.test(m.text || ""));
   return mobs.map((m, k) => m && m.kind !== "object" && !talk(m)
     ? [Math.round(m.lvl * 10) / 10, m.elite ? 0 : (nums.length ? (nums[k] ?? 1) : 1), m.kind === "drop" ? 2 : 1, m.elite ? 1 : 0] // 目標文字沒數字當 1；全是精英的目標數量記 0（單人補經驗不算，在日誌裡時遊戲給的剩餘數量照算）
     : [0, 0, 1, 0]);
@@ -684,7 +684,7 @@ for (const st of stations) {
       quests.set(id, q
         ? { races: q.races && BigInt(q.races) !== HORDE ? q.races : undefined, xp: XP.get(id), mob: mobsOf(q), tgo: targetsOf(q), objs: (() => { const o = [...new Set(db.questMobs(q.id).filter((m) => m && m.kind === "object").flatMap((m) => m.objects))]; return o.length ? o : undefined; })(),
             items: [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))].length ? [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))] : undefined,
-            d: q.obj.filter(Boolean).join("\n") || undefined,
+            d: q.obj.filter(Boolean).join("\n").replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0)).replace(/\$(?![A-Za-z])/g, "") || undefined, // 全形數字轉半形；落單的「$」（任務文字控制符殘片）拿掉
             n: QUEST_NAME[id] || step.zh || q.zhTW || step.en || q.en, zt: q.zhTW && q.zhTW !== (QUEST_NAME[id] || step.zh || q.zhTW) ? q.zhTW : undefined, lvl: q.level, min: q.reqLevel, pg: q.preGroup, ps: q.preSingle, ex: q.exclusiveTo, next: q.next, pa: q.flags & 2 ? true : undefined, st: st.id }
         : { n: QUEST_NAME[id] || step.zh || step.en, st: st.id });
     }
@@ -850,7 +850,7 @@ for (const [id, e] of quests) {
   e.ex = e.ex.filter((o) => !lead.includes(o));
   exLead.push(`- ${id} ${e.n}：${lead.join("、")}`);
 }
-// 必做任務的前置在主線只有「可跳過」的步驟：那些前置改成必做（預設不帶可跳過時前置不成立，主任務整條會被藏）。前置的前置照樣往上找
+// 必做任務的前置在主線只有「可跳過」的步驟：那些前置改成必做（預設不帶可跳過時前置不成立，主任務整條會被藏）。前置的前置照樣往上找；前置標了「有隊伍再做」（精英）的不改：沒打就照舊把後續藏起來
 const leadReq = [];
 {
   const main = stations.filter((s) => !s.dungeon).flatMap((s) => s.steps);
@@ -861,6 +861,7 @@ const leadReq = [];
     if (!e) continue;
     const ps = e.ps?.length && !e.ps.some((p) => turnin(p, true)) ? e.ps.filter((p) => turnin(p)) : [];
     for (const p of [...(e.pg || []).filter((p) => !turnin(p, true) && turnin(p)), ...ps]) {
+      if (main.some((x) => x.id === p && x.opt && (x.tag || "").includes("有隊伍再做"))) continue;
       for (const x of main.filter((x) => x.id === p && x.opt)) {
         delete x.opt;
         x.tag = (x.tag || "").split("・").filter((t) => t !== "可跳過").join("・") || undefined;
@@ -1647,7 +1648,7 @@ for (const loc of Object.keys(NAME_LOC)) {
     if (e) c.textEn++;
     return e;
   };
-  const clean = (t) => t.replace(/\$[Gg]\s*([^:;]*):[^;]*;/g, "$1").replace(/\$[Bb]/g, " ").replace(/\$[NnCcRr]/g, "").replace(/\s+/g, " ").trim();
+  const clean = (t) => t.replace(/\$[Gg]\s*([^:;]*):[^;]*;/g, "$1").replace(/\$[Bb]/g, " ").replace(/\$[NnCcRr]/g, "").replace(/\$(?![A-Za-z])/g, "").replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0)).replace(/\s+/g, " ").trim();
   const genL = (q) => {
     const mk = q?.en?.mk;
     if (!mk) return undefined;
@@ -1671,7 +1672,7 @@ for (const loc of Object.keys(NAME_LOC)) {
       const z = zoneL(en);
       if (z) return { node: z };
       const a = AREA_ID.get(en);
-      return a ? { nodeA: `{a:${a[0].id}}` } : { node: en };
+      return a ? { nodeA: `{a:${a[0].id}}`, node: en } : { node: en }; // nodeA 在遊戲裡查不到地區名時，退回英文名（不會變成空白）
     },
     tag: (t, where) => { c.tags++; const v = TL(where, t) || F.tags?.[t]; if (v) return v; if (TAG_EN[t]) c.tagsEn++; return TAG_EN[t]; },
     hint: (q, id) => q && (q.en ? qd(id)?.split("\n")[0] : undefined),

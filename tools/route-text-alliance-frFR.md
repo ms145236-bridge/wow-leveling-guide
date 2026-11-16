@@ -1235,3 +1235,19 @@
 03-30到45級.md:947｜說明｜到塔納利斯的熱砂港交給碼頭管理員汽嘶，之後去塔納利斯時順路。｜Rends-la au maître des quais Pétivape à Port Gentepression, en Tanaris ; c'est sur ton chemin quand tu iras en Tanaris plus tard.
 03-30到45級.md:949｜說明｜在魚人島的水下沉船旁使用誘餌召出海怪，打倒後撿頭顱。｜Utilise l'appât près de l'épave engloutie, sous l'eau, à l'île des murlocs pour faire venir le monstre marin ; bats-le, puis ramasse sa tête.
 06-路線外任務.md:27｜說明｜要交 10 份鹽水海鮮燉湯，得自己用烹飪做或跟別人買；手上剛好有再交。｜Il faut rendre 10 portions de ragoût de fruits de mer à l'eau salée, à cuisiner toi-même ou à acheter à d'autres joueurs ; ne la rends que si tu les as justement sur toi.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。；沒學草藥學的話，地根草可以在拍賣場買。｜Récolte de la Terrestrine et des Champignons lunaires à Sombrivage, puis rends-les à Auberdine. Sans Herboristerie, achète la Terrestrine à l'hôtel des ventes.
+02-12到30級.md:832｜說明｜沒學草藥學的話，地根草可以在拍賣場買。｜Sans Herboristerie, achète la Terrestrine à l'hôtel des ventes.
+02-12到30級.md:307｜說明｜去赤脊山前，可以先在拍賣場買 8 片魚人的鰭（魚人偷獵者用）。｜Avant de partir pour les Carmines, tu peux acheter à l'hôtel des ventes 8 × Aileron de murloc (pour Les braconniers murlocs).
+02-12到30級.md:313｜說明｜魚人的鰭可以在拍賣場買，買齊 8 片就不用打。｜L'Aileron de murloc s'achète à l'hôtel des ventes. Avec 8, pas besoin de farmer.
+03-30到45級.md:11｜說明｜毛料可以在拍賣場買，要 60 塊。｜L'Etoffe de laine s'achète à l'hôtel des ventes. Il en faut 60.
+03-30到45級.md:1314｜說明｜翡翠可以在拍賣場買。｜Le Jade s'achète à l'hôtel des ventes.
+03-30到45級.md:1243｜說明｜金錠可以在拍賣場買。｜La Barre d'or s'achète à l'hôtel des ventes.
+04-45到60級.md:17｜說明｜可以先在拍賣場買 15 塊絲綢（之後灼熱峽谷的被鎖起來的矮人用）。｜Tu peux déjà acheter à l'hôtel des ventes 15 × Etoffe de soie (pour Piégé !, plus tard dans la Gorge des Vents brûlants).
+04-45到60級.md:1250｜說明｜擊敗塞克隆尼亞取得精華。；活根草可以在拍賣場買，要 8 株。｜Vaincs Cyclonien pour obtenir son essence. La Vietérule s'achète à l'hôtel des ventes. Il en faut 8.
+04-45到60級.md:1250｜說明｜活根草可以在拍賣場買，要 8 株。｜La Vietérule s'achète à l'hôtel des ventes. Il en faut 8.
+04-45到60級.md:146｜說明｜絲綢可以在拍賣場買，要 15 塊。｜L'Etoffe de soie s'achète à l'hôtel des ventes. Il en faut 15.
+04-45到60級.md:363｜說明｜可以先在拍賣場買 1 個祕銀外殼（之後安戈洛的找回A-Me 01用）。｜Tu peux déjà acheter à l'hôtel des ventes 1 × Caisse en mithril (pour À la poursuite d'A-mi 01, plus tard dans le Cratère d'Un'Goro).
+04-45到60級.md:1296｜說明｜亡靈腐液可以在拍賣場買。｜L'Ichor de non-mort s'achète à l'hôtel des ventes.
+04-45到60級.md:1330｜說明｜惡魔布可以在拍賣場買。｜La Gangrétoffe s'achète à l'hôtel des ventes.
+05-副本.md:150｜說明｜走到梣谷・第一次時先接尋找凱特林（要 24 級）。｜En arrivant à Orneval (1re visite), prends d'abord À la recherche de Caitlin (niveau 24 requis).
+03-30到45級.md:1087｜說明｜往廢土營地途中找空地使用任務道具。｜Trouve un espace dégagé sur le chemin du camp Bat-le-désert et utilise l'objet de quête là.

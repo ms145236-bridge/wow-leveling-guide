@@ -14635,3 +14635,58 @@
 06-路線外任務.md:891｜說明｜要交 10 份鹽水海鮮燉湯，得自己用烹飪做或跟別人買；手上剛好有再交。｜Pide 10 raciones de guiso de marisco de agua salada, que tienes que cocinar tú o comprar a otros jugadores; entrégala solo si da la casualidad de que las tienes.
 03-30到45級.md:1015｜步驟說明｜到辛特蘭時在海岸拾酒，之後回藏寶海灣再交。｜Recoge el grog en la costa de las Tierras del Interior y entrégala cuando vuelvas a Bahía del Botín.
 03-30到45級.md:669｜步驟說明｜進洞走左邊的路，繞到最裡面的平台，粉紅色水晶就是交件點。｜En la cueva, toma el camino de la izquierda y síguelo hasta la plataforma del fondo; el cristal rosa es el punto de entrega.
+03-30到45級.md:754｜說明｜去大河林地前，可以先在拍賣場買 10 塊大塊野豬肉（收集白牙豬肉用）和 10 個重平衡石（第二步：更多石頭用）。｜Antes de ir a Clarofluvial, puedes comprar en la casa de subastas 10 × Trozo de carne de jabalí (para Cosecha de colmipálidos) y 10 × Piedrafuerte pesada (para Segundo paso: más piedras).
+03-30到45級.md:871｜說明｜大塊野豬肉可以在拍賣場買，買齊 10 塊就不用打。｜El Trozo de carne de jabalí se puede comprar en la casa de subastas. Con 10 no hace falta farmear.
+03-30到45級.md:888｜說明｜重平衡石可以在拍賣場買，買齊 10 個就能直接交。｜La Piedrafuerte pesada se puede comprar en la casa de subastas. Con 10 puedes entregar directamente.
+04-45到60級.md:330｜說明｜去灼熱峽谷前，可以先在拍賣場買 15 塊絲綢（被鎖起來的矮人用）。｜Antes de ir a La Garganta de Fuego, puedes comprar en la casa de subastas 15 × Paño de seda (para Atrapado).
+04-45到60級.md:2130｜說明｜若已有訓練師版 8419，直接交 8419 再接 8421。；惡魔布可以在拍賣場買。｜Si ya aceptaste 8419 del instructor, entrega 8419 directamente y acepta 8421. La Tela de inferi se puede comprar en la casa de subastas.
+04-45到60級.md:2130｜說明｜惡魔布可以在拍賣場買。｜La Tela de inferi se puede comprar en la casa de subastas.
+02-12到30級.md:1259｜說明｜可以先在拍賣場買（或請分身寄來）5 株地根草（之後的收集解藥用）。｜Puedes comprar ya en la casa de subastas (o pedir a un alter que te lo envíe) 5 × Raíz de tierra (para Reunir los ingredientes del remedio, más adelante).
+03-30到45級.md:26｜說明｜強力食人妖之血藥水 ×1 可以在拍賣場買。｜Poción de sangre trol fuerte ×1 se puede comprar en la casa de subastas.
+03-30到45級.md:348｜說明｜散頁是荊棘谷的怪隨機掉的，缺的頁可以在拍賣場買，四章湊齊再交。｜Las páginas caen al azar de los enemigos de Tuercespina. Compra las que falten en la casa de subastas y entrega cuando tengas los cuatro capítulos.
+03-30到45級.md:1574｜說明｜可以先在拍賣場買（或請分身寄來）1 顆翡翠（之後塵泥沼澤的強大的物品用）。｜Puedes comprar ya en la casa de subastas (o pedir a un alter que te lo envíe) 1 × Jade (para Objetos de poder, más adelante en el Marjal Revolcafango).
+03-30到45級.md:764｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）10 塊大塊野豬肉（收集白牙豬肉用）和 10 個重平衡石（第二步：更多石頭用）。｜Antes de ir a Clarofluvial, puedes comprar en la casa de subastas (o pedir a un alter que te lo envíe) 10 × Trozo de carne de jabalí (para Cosecha de colmipálidos) y 10 × Piedrafuerte pesada (para Segundo paso: más piedras).
+03-30到45級.md:870｜說明｜把頭送到北邊的博德羅克，走北線時順路交。｜Lleva la cabeza a Bolder'ok, al norte. Entrégala durante la ruta norte.
+03-30到45級.md:910｜說明｜第一次先清農場、豺狼人、河岸及羅格瑪周邊野獸，最後走北線到博德羅克。喬札克是精英，有隊伍再打，打完才有送頭和鈍拳的後續。暮光之罩和海岸留到第二次來。｜En la primera visita, limpia la granja, los gnolls, la orilla del río y las bestias de los alrededores de Rog'mar, y termina con la ruta norte hasta Bolder'ok. Chogg'Zac es élite: mátalo con grupo. La entrega de la cabeza y las misiones siguientes de Puñotorta solo se abren después. Deja Sudario Crepuscular y la costa para la segunda visita.
+03-30到45級.md:937｜說明｜去荒蕪之地前，可以先在拍賣場買（或請分身寄來）冰霜之油、發條式同步協調陀螺儀、治療藥水、次級隱形藥水各 1 個（荒蕪之地三個交材料的任務用）。｜Antes de ir a las Tierras Inhóspitas, puedes comprar en la casa de subastas (o pedir a un alter que te lo envíe) 1 × de cada: Aceite escarchado, Girocronátomo, Poción de curación y Poción de invisibilidad inferior (para las tres misiones de entrega de las Tierras Inhóspitas).
+03-30到45級.md:1312｜說明｜先往西做暮光之罩（要先交鈍拳的命令才接得到），再往東到火線港。霸主基爾加是精英，有隊伍再打。海怪線和風息堡同一趟做。｜Ve primero al oeste, a Sudario Crepuscular (solo se abre tras entregar Por decreto de Puñotorta), y luego al este, a Puerto Polvofusil. El Señor supremo Kilgar es élite: mátalo con grupo. Haz la línea del monstruo marino en el mismo viaje que Windrest Keep.
+04-45到60級.md:330｜說明｜去灼熱峽谷前，可以先在拍賣場買（或請分身寄來）15 塊絲綢（被鎖起來的矮人用）。｜Antes de ir a La Garganta de Fuego, puedes comprar en la casa de subastas (o pedir a un alter que te lo envíe) 15 × Paño de seda (para Atrapado).
+04-45到60級.md:2130｜說明｜若已有訓練師版 8419，直接交 8419 再接 8421。；惡魔布 ×1 可以在拍賣場買。｜Si ya aceptaste 8419 del instructor, entrega 8419 directamente y acepta 8421. Tela de inferi ×1 se puede comprar en la casa de subastas.
+04-45到60級.md:2130｜說明｜惡魔布 ×1 可以在拍賣場買。｜Tela de inferi ×1 se puede comprar en la casa de subastas.
+05-副本.md:1614｜說明｜要用的材料是符文布卷 ×4、硬甲皮 ×8、符文線 ×2，加本內巨魔鞣酸 ×1。；符文布卷、硬甲皮、符文線先在拍賣場買好，巨魔鞣酸在副本裡拿。｜Lleva 4 piezas de Paño rúnico, 8 Cuero basto y 2 Hilo rúnico. Recoge 1 Tanino ogro dentro de la mazmorra. Compra antes Descarga de paño rúnico, Cuero basto y Hilo rúnico en la casa de subastas. Tanino ogro se consigue dentro de la mazmorra.
+05-副本.md:1614｜說明｜符文布卷、硬甲皮、符文線先在拍賣場買好，巨魔鞣酸在副本裡拿。｜Compra antes Descarga de paño rúnico, Cuero basto y Hilo rúnico en la casa de subastas. Tanino ogro se consigue dentro de la mazmorra.
+02-12到30級.md:87｜說明｜魔像等能彈簧 ×14 可以在拍賣場買，迴轉穩定器 ×5 還是要打。｜Isomuelle de gólem ×14 se puede comprar en la casa de subastas. Giroestabilizador de cosechador ×5 hay que conseguirlo matando.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。；地根草 ×5 可以在拍賣場買。｜Recoge Raíz de tierra y Seta lunar en Costa Oscura y entrégalas en Auberdine. Raíz de tierra ×5 se puede comprar en la casa de subastas.
+02-12到30級.md:832｜說明｜地根草 ×5 可以在拍賣場買。｜Raíz de tierra ×5 se puede comprar en la casa de subastas.
+02-12到30級.md:307｜說明｜去赤脊山前，可以先在拍賣場買（或請分身寄來）8 片魚人的鰭（魚人偷獵者用）。｜Antes de ir a las Montañas Crestagrana, puedes comprar en la casa de subastas (o pedir a un alter que te lo envíe) 8 × Aleta de múrloc (para Cazadores furtivos).
+02-12到30級.md:892｜說明｜普通野花和鉛瓶商人有賣，青銅管可以在拍賣場買。；淡綠色絲線在暴風城運河區的裁縫店裡撿。｜Flores silvestres simples y Vial con plomo los venden los vendedores. Tubo de bronce se puede comprar en la casa de subastas. Bobina de hilo de seda chartreuse se recoge en la sastrería de los Canales de Ventormenta.
+02-12到30級.md:892｜說明｜普通野花和鉛瓶商人有賣，青銅管可以在拍賣場買。｜Flores silvestres simples y Vial con plomo los venden los vendedores. Tubo de bronce se puede comprar en la casa de subastas.
+02-12到30級.md:892｜說明｜淡綠色絲線在暴風城運河區的裁縫店裡撿。｜Bobina de hilo de seda chartreuse se recoge en la sastrería de los Canales de Ventormenta.
+02-12到30級.md:599｜說明｜絲綢 ×3 可以在拍賣場買。｜Paño de seda ×3 se puede comprar en la casa de subastas.
+03-30到45級.md:506｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）8 個堅固的磨刀石（最鋒利的刀劍用）。｜Antes de ir a Clarofluvial, puedes comprar en la casa de subastas (o pedir a un alter que te lo envíe) 8 × Piedra de afilar sólida (para La hoja más afilada).
+03-30到45級.md:553｜說明｜要 8 個堅固的磨刀石，可以在拍賣場買或請鍛造做。；身上沒有就跳過。｜Necesita 8 × Piedra de afilar sólida. Cómpralas en la casa de subastas o pídeselas a un herrero. Sáltala si no los llevas encima.
+03-30到45級.md:553｜說明｜要 8 個堅固的磨刀石，可以在拍賣場買或請鍛造做。｜Necesita 8 × Piedra de afilar sólida. Cómpralas en la casa de subastas o pídeselas a un herrero.
+03-30到45級.md:876｜說明｜身上沒有就跳過。｜Sáltala si no los llevas encima.
+03-30到45級.md:1335｜說明｜翡翠 ×1 可以在拍賣場買。｜Jade ×1 se puede comprar en la casa de subastas.
+03-30到45級.md:870｜說明｜去大河林地前，可以先在拍賣場買（或請分身寄來）20 塊魔紋布（創傷服裝用）。｜Antes de ir a Clarofluvial, puedes comprar en la casa de subastas (o pedir a un alter que te lo envíe) 20 × Tela de paño mágico (para Vendas para heridas).
+03-30到45級.md:876｜說明｜要 20 塊魔紋布，可以在拍賣場買。；身上沒有就跳過。｜Necesita 20 × Tela de paño mágico. Se puede comprar en la casa de subastas. Sáltala si no los llevas encima.
+03-30到45級.md:876｜說明｜要 20 塊魔紋布，可以在拍賣場買。｜Necesita 20 × Tela de paño mágico. Se puede comprar en la casa de subastas.
+03-30到45級.md:879｜說明｜受傷的士兵就在洛雷修士旁邊。｜Los soldados heridos están justo al lado del Hermano Lowley.
+03-30到45級.md:962｜說明｜到菲拉斯的羽月要塞交，之後去菲拉斯時順路。｜Se entrega en el Bastión Plumaluna, en Feralas. Queda de camino cuando vayas a Feralas.
+03-30到45級.md:1264｜說明｜金錠 ×1 可以在拍賣場買。｜Lingote de oro ×1 se puede comprar en la casa de subastas.
+04-45到60級.md:17｜說明｜可以先在拍賣場買（或請分身寄來）15 塊絲綢（之後灼熱峽谷的被鎖起來的矮人用）。｜Puedes comprar ya en la casa de subastas (o pedir a un alter que te lo envíe) 15 × Paño de seda (para Atrapado, más adelante en La Garganta de Fuego).
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。；流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。；活根草和三種符咒可以在拍賣場買。｜Necesita Colmillo Sangrapellejo ×30, Vidarraíz ×8 y Esencia del exilio ×1. Para Esencia del exilio, lleva 8 × de cada uno de Talismán ardiente, Talismán del trueno y Talismán blasonado al caldero que está al lado. Vidarraíz y los tres talismanes se pueden comprar en la casa de subastas.
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。；流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。｜Necesita Colmillo Sangrapellejo ×30, Vidarraíz ×8 y Esencia del exilio ×1. Para Esencia del exilio, lleva 8 × de cada uno de Talismán ardiente, Talismán del trueno y Talismán blasonado al caldero que está al lado.
+04-45到60級.md:1250｜說明｜要血頂食人妖的獠牙 ×30、活根草 ×8、流放精華 ×1。｜Necesita Colmillo Sangrapellejo ×30, Vidarraíz ×8 y Esencia del exilio ×1.
+04-45到60級.md:1250｜說明｜流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。；活根草和三種符咒可以在拍賣場買。｜Para Esencia del exilio, lleva 8 × de cada uno de Talismán ardiente, Talismán del trueno y Talismán blasonado al caldero que está al lado. Vidarraíz y los tres talismanes se pueden comprar en la casa de subastas.
+04-45到60級.md:1250｜說明｜流放精華要拿燃燒、雷霆、海浪符咒各 8 個到旁邊的大鍋換。｜Para Esencia del exilio, lleva 8 × de cada uno de Talismán ardiente, Talismán del trueno y Talismán blasonado al caldero que está al lado.
+04-45到60級.md:1250｜說明｜活根草和三種符咒可以在拍賣場買。｜Vidarraíz y los tres talismanes se pueden comprar en la casa de subastas.
+04-45到60級.md:1285｜說明｜可以先在拍賣場買（或請分身寄來）1 份亡靈腐液（之後艾薩拉的亡靈的腐液用）。｜Puedes comprar ya en la casa de subastas (o pedir a un alter que te lo envíe) 1 × Icor de no-muerto (para El icor de los no-muertos, más adelante en Azshara).
+04-45到60級.md:363｜說明｜可以先在拍賣場買（或請分身寄來）1 個祕銀外殼（之後安戈洛的找回A-Me 01用）。｜Puedes comprar ya en la casa de subastas (o pedir a un alter que te lo envíe) 1 × Envoltura de mitril (para Buscando a Memo 01, más adelante en el Cráter de Un'Goro).
+04-45到60級.md:1296｜說明｜亡靈腐液 ×1 可以在拍賣場買。｜Icor de no-muerto ×1 se puede comprar en la casa de subastas.
+03-30到45級.md:900｜說明｜交完以力服人、不夠格的勇士後，哈穆爾才會給。｜Hamur solo la ofrece después de entregar las dos misiones anteriores.
+03-30到45級.md:1427｜說明｜若巴斯拉已提供此任務可先接起來；火在荒蕪之地、土在悲傷沼澤可順路收，淒涼之地與塵泥沼澤的圖騰需要回訪。｜Acéptala de Bath'rah si ya te la ofrece. El fuego se recoge de paso en Tierras Inhóspitas y la tierra en Pantano de las Penas; los tótems de Desolace y Marjal Revolcafango exigen volver.
+03-30到45級.md:1427｜說明｜若巴斯拉已提供此任務可先接起來｜Acéptala de Bath'rah si ya te la ofrece
+03-30到45級.md:1427｜說明｜火在荒蕪之地、土在悲傷沼澤可順路收，淒涼之地與塵泥沼澤的圖騰需要回訪。｜El fuego se recoge de paso en Tierras Inhóspitas y la tierra en Pantano de las Penas; los tótems de Desolace y Marjal Revolcafango exigen volver.
+03-30到45級.md:645｜說明｜498／549 上次在希爾斯布萊德丘陵已做完。進山後交 533 才接 503，高迪爾和瓦杜斯的辛迪加營地目標一起找。｜498/549 ya las hiciste en tu última visita a Laderas de Trabalomas. En las montañas, entrega 533 antes de aceptar 503. Busca juntos los objetivos de Gol'dir y Vardus en los campamentos de la Hermandad.
+03-30到45級.md:1222｜說明｜交件在菲拉斯莫沙徹營地的巫醫尤克里，到莫沙徹營地時再交。｜Entrégala al Médico brujo Uzer'i en Campamento Mojache, en Feralas; entrégala cuando llegues a Campamento Mojache.

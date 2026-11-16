@@ -1235,3 +1235,19 @@
 03-30到45級.md:947｜說明｜到塔納利斯的熱砂港交給碼頭管理員汽嘶，之後去塔納利斯時順路。｜Gib sie in Steamwheedle in Tanaris bei Werftmeister Steamfizzle ab; das liegt auf dem Weg, wenn du später nach Tanaris gehst.
 03-30到45級.md:949｜說明｜在魚人島的水下沉船旁使用誘餌召出海怪，打倒後撿頭顱。｜Benutze den Köder neben dem versunkenen Schiffswrack unter Wasser bei der Murlocinsel, um das Meeresungeheuer hervorzulocken; besiege es und plündere dann den Kopf.
 06-路線外任務.md:27｜說明｜要交 10 份鹽水海鮮燉湯，得自己用烹飪做或跟別人買；手上剛好有再交。｜Verlangt 10 Portionen Salzwasser-Meeresfrüchteeintopf, die du selbst kochen oder anderen Spielern abkaufen musst; gib sie nur ab, wenn du sie zufällig dabeihast.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。；沒學草藥學的話，地根草可以在拍賣場買。｜Sammle Erdwurzel und Lunarfungus an der Dunkelküste und gib sie in Auberdine ab. Ohne Kräuterkunde kaufst du Erdwurzel im Auktionshaus.
+02-12到30級.md:832｜說明｜沒學草藥學的話，地根草可以在拍賣場買。｜Ohne Kräuterkunde kaufst du Erdwurzel im Auktionshaus.
+02-12到30級.md:307｜說明｜去赤脊山前，可以先在拍賣場買 8 片魚人的鰭（魚人偷獵者用）。｜Vor der Reise ins Rotkammgebirge kannst du im Auktionshaus 8 × Murlocflosse (für Murlocwilderer) kaufen.
+02-12到30級.md:313｜說明｜魚人的鰭可以在拍賣場買，買齊 8 片就不用打。｜Murlocflosse gibt es im Auktionshaus. Mit 8 Stück musst du nicht farmen.
+03-30到45級.md:11｜說明｜毛料可以在拍賣場買，要 60 塊。｜Wollstoff gibt es im Auktionshaus. Du brauchst 60 Stück.
+03-30到45級.md:1314｜說明｜翡翠可以在拍賣場買。｜Jade gibt es im Auktionshaus.
+03-30到45級.md:1243｜說明｜金錠可以在拍賣場買。｜Goldbarren gibt es im Auktionshaus.
+04-45到60級.md:17｜說明｜可以先在拍賣場買 15 塊絲綢（之後灼熱峽谷的被鎖起來的矮人用）。｜Du kannst jetzt im Auktionshaus 15 × Seidenstoff kaufen (später für Eingesperrt! in der Sengenden Schlucht).
+04-45到60級.md:1250｜說明｜擊敗塞克隆尼亞取得精華。；活根草可以在拍賣場買，要 8 株。｜Besiege Cyclonian, um seine Essenz zu erhalten. Lebenswurz gibt es im Auktionshaus. Du brauchst 8 Stück.
+04-45到60級.md:1250｜說明｜活根草可以在拍賣場買，要 8 株。｜Lebenswurz gibt es im Auktionshaus. Du brauchst 8 Stück.
+04-45到60級.md:146｜說明｜絲綢可以在拍賣場買，要 15 塊。｜Seidenstoff gibt es im Auktionshaus. Du brauchst 15 Stück.
+04-45到60級.md:363｜說明｜可以先在拍賣場買 1 個祕銀外殼（之後安戈洛的找回A-Me 01用）。｜Du kannst jetzt im Auktionshaus 1 × Mithrilgehäuse kaufen (später für Chasing A-Me 01 im Krater von Un'Goro).
+04-45到60級.md:1296｜說明｜亡靈腐液可以在拍賣場買。｜Sekret des Untodes gibt es im Auktionshaus.
+04-45到60級.md:1330｜說明｜惡魔布可以在拍賣場買。｜Teufelsstoff gibt es im Auktionshaus.
+05-副本.md:150｜說明｜走到梣谷・第一次時先接尋找凱特林（要 24 級）。｜Nimm beim Eintreffen in Ashenvale (1. Besuch) zuerst Suche nach Caitlin an (benötigt Stufe 24).
+03-30到45級.md:1087｜說明｜往廢土營地途中找空地使用任務道具。｜Such dir auf dem Weg zum Lager der Wüstenläufer eine freie Stelle und benutze dort den Questgegenstand.

@@ -43,7 +43,10 @@ function E.Localize()
       s.bindK = s.bind -- 爐石地點（中文）：zhTW 客戶端比對 GetBindLocation／區域名用，非中文介面的 bind 換成翻譯地名
       local d, g = ds.steps and ds.steps[i] or none, gs.steps and gs.steps[i] or none
       s.npcG = s.npc
-      if G then s.npcG, s.tgt = g.npc or s.npc, g.tgt; s.npcObj = g.npcObj end
+      if G then
+        s.npcG, s.tgt = g.npc or s.npc, g.tgt; s.npcObj = g.npcObj
+        s.bindG = areas(g.bindA) or g.bind -- 爐石地點的客戶端語言名（比對 GetBindLocation、區域名用）；沒有就 nil，只靠綁定事件
+      end
       if en then
         s.nodeK = s.node -- 鳥點中文名：飛行步驟的 to 用它對到鳥點（Core 的未開點提醒）
         s.npc, s.hint, s.text, s.node, s.preText, s.star = P(d.npc), P(d.hint), P(d.text), P(areas(d.nodeA) or d.node), P(d.preText), d.star
@@ -347,9 +350,15 @@ function E.FillPlan(st)
   local solo = not (IsInGroup and IsInGroup())
   for _, step in ipairs(st.list) do
     local s = step.s
-    if s.q and s.t == "turnin" then hand[s.q] = true end
-    if s.q and (s.t == "do" or s.t == "turnin") then work[s.q] = true end
+    local on = s.q and not MG.db.skip[step.key] -- 手動略過的步驟不算（只略過「交」＝這站拿不到任務經驗）
+    if on and s.t == "turnin" then hand[s.q] = true end
+    if on and (s.t == "do" or s.t == "turnin") then work[s.q] = true end
     if s.q and s.tag and (s.tag:find("隊伍", 1, true) or s.tag:find("組隊", 1, true) or s.tag:find("精英", 1, true)) then group[s.q] = true end
+  end
+  -- 互斥的任務（二選一）只算一個：已經算進來（必做／在日誌）或已補回的任務，它的互斥對象不再算、不再補
+  local function clash(q)
+    for _, other in ipairs((R.quests[q] or {}).ex or {}) do if seen[other] or fill[other] then return true end end
+    return false
   end
   -- 前置已完成、是本站會做也會交的任務，或前置也已被補回（任務鏈依序補）才算得到（必做的也一樣：前置被略過、不在本站的不算）
   local function eligible(q)
@@ -366,7 +375,7 @@ function E.FillPlan(st)
     local s, q = step.s, step.s.q
     if q and E.Applies(s.when) and raceOK(q) and not turned(q) and not MG.db.skip[step.key] and not MG.db.skip["a:" .. q] and not excluded(q) and not superseded(q) then
       -- 必做的，和已經接了的可跳過任務
-      if (not s.opt or C.IsOnQuest(q)) and not seen[q] and eligible(q) then
+      if (not s.opt or C.IsOnQuest(q)) and not seen[q] and not clash(q) and eligible(q) then
         seen[q] = true
         info.questXP = info.questXP + (hand[q] and questXP(q, lv) or 0)
         info.killXP = info.killXP + (work[q] and killXP(q, lv) or 0)
@@ -402,7 +411,7 @@ function E.FillPlan(st)
   while projected < need and picked do
     picked = false
     for _, c in ipairs(list) do
-      if not fill[c.q] and eligible(c.q) then
+      if not fill[c.q] and not clash(c.q) and eligible(c.q) then
         fill[c.q] = true
         info.added[#info.added + 1] = c.q
         projected = projected + c.xp
@@ -508,17 +517,18 @@ local function stepDone(step, map, x, y)
   elseif t == "level" then return (UnitLevel("player") or 0) >= (s.lv or 0)
   elseif t == "hearth" or t == "bind" then
     local k = s.bindK or s.bind -- 中文地點
-    -- 綁爐石：之前已經在這間旅店綁過（Core 收到綁定事件時記的 boundK），任何語言都算
-    if t == "bind" and k and MG.db.boundK == k then return true end
-    -- 地點只有 zhTW 客戶端比得出來（其他語言靠 Core 的事件記 latch）
-    local bk = MG.gameZh and k
-    if not bk then return false end
-    local function same(z) return z ~= nil and z ~= "" and (z == bk or z:find(bk, 1, true) ~= nil or bk:find(z, 1, true) ~= nil) end
-    -- 綁爐石：爐石綁在這裡了（只是「已經綁好」的捷徑；綁定事件在任何語言都會勾）
+    -- 客戶端語言的地點名（GetBindLocation、區域名是這個語言）：zhTW 就是中文地點，其他語言是 Localize 給的 bindG；沒有就比不出來
+    local name = s.bindG or (MG.gameZh and k) or nil
+    local function same(z) return name ~= nil and z ~= nil and z ~= "" and (z == name or z:find(name, 1, true) ~= nil or name:find(z, 1, true) ~= nil) end
     if t == "bind" then
-      if not same(C.Bind()) then return false end
-      MG.db.boundK = bk
-      return true
+      -- 爐石現在就綁在這裡（名稱對得上：沒收到綁定事件、剛裝插件也認得）
+      local b = C.Bind()
+      if k and same(b) then
+        MG.db.boundK, MG.db.boundRaw = k, b
+        return true
+      end
+      -- 或綁定事件記下的就是這間（boundK；之後在別處改綁過的，bindCheck 已經清掉）
+      return k ~= nil and MG.db.boundK == k
     end
     -- 爐石回 X：人已經在 X（用爐石換區時 Core 記 latch；走到下一步附近、後面任務做了也算過了，見 E.Locate）
     local sub, zone, mini = C.ZoneTexts()
@@ -598,10 +608,34 @@ local function gray(q)
 end
 E.Gray = gray
 
+-- 記下的綁點（boundK）還算不算數：boundRaw 是記的時候 GetBindLocation 的文字，文字變了＝之後在別處改綁過（插件沒開、沒收到事件）→ 清掉。
+-- boundRaw＝false（剛收到綁定事件）：記下現在的文字。舊存檔沒有 boundRaw：現在的綁點對得上路線另一間旅店的名字才清，否則也記下現在的文字
+local function bindCheck()
+  local db = MG.db
+  local b = db.boundK and C.Bind()
+  if not b or b == "" then return end
+  if db.boundRaw then
+    if db.boundRaw ~= b then db.boundK, db.boundRaw = nil, nil end
+    return
+  end
+  local function has(n) return n and (b == n or b:find(n, 1, true) or n:find(b, 1, true)) end
+  local mine, other
+  for _, x in ipairs(db.boundRaw == nil and R.stations or {}) do
+    for _, s in ipairs(x.steps) do
+      local k = s.t == "bind" and (s.bindK or s.bind)
+      if k and has(s.bindG or (MG.gameZh and k)) then
+        if k == db.boundK then mine = true else other = true end
+      end
+    end
+  end
+  if other and not mine then db.boundK = nil else db.boundRaw = b end
+end
+
 -- ── locate ──────────────────────────────────────────────────────────────────
 -- 回 { st, steps, done[], na[], cur, auto, missed = { {q, i}... }, complete }
 function E.Locate(st)
   local db = MG.db
+  bindCheck()
   local fillInfo = E.FillPlan(st)
   local steps = stepsOf(st)
   local n = #steps
@@ -1160,21 +1194,43 @@ function E.ToggleSkip(key)
     return
   end
   local t, q = key:match("^(%a):(%d+)$")
+  if not q then t, q = key:match("^(%a):(%d+)~%d+$") end -- 同站重複的步驟（a:任務~2）
   q = tonumber(q)
   skip[key] = key
   if not q then return end
-  if t ~= "t" then
-    for _, p in ipairs({ "a", "d", "t" }) do if not skip[p .. ":" .. q] then skip[p .. ":" .. q] = key end end
+  -- 一個任務的接／做／交全部略過：基本鍵之外，各站實際的步驟鍵（含 ~2、~3）也記
+  local function mark(x)
+    for _, p in ipairs({ "a", "d", "t" }) do if not skip[p .. ":" .. x] then skip[p .. ":" .. x] = key end end
+    for _, st in ipairs(questSt[x] or {}) do
+      for _, step in ipairs(st.list) do
+        if step.s.q == x and QUEST[step.s.t] and not skip[step.key] then skip[step.key] = key end
+      end
+    end
   end
-  -- 後續任務（遞迴）
-  local seen, queue = { [q] = true }, { q }
+  if t ~= "t" then mark(q) end
+  -- 後續任務（遞迴）：前置斷了才連帶。已經接了或交了的不動；「任一個前置」（ps）還有別條沒被略過的也不動；只靠 next 接過來的照舊連帶
+  local cut = { [q] = true }
+  local function gone(p) return not turned(p) and (cut[p] or skip["a:" .. p] or skip["t:" .. p]) and true or false end
+  local queue = { q }
   while #queue > 0 do
     local cur = table.remove(queue, 1)
     for _, f in ipairs((R.quests[cur] or {}).fol or {}) do
-      if not seen[f] then
-        seen[f] = true
-        queue[#queue + 1] = f
-        for _, p in ipairs({ "a", "d", "t" }) do if not skip[p .. ":" .. f] then skip[p .. ":" .. f] = key end end
+      if not cut[f] and not turned(f) and not C.IsOnQuest(f) then
+        local info = R.quests[f] or {}
+        local listed, dead, alive = false, false, not (info.ps and #info.ps > 0)
+        for _, p in ipairs(info.pg or {}) do
+          if p == cur then listed = true end
+          if gone(p) then dead = true end
+        end
+        for _, p in ipairs(info.ps or {}) do
+          if p == cur then listed = true end
+          if not gone(p) then alive = true end
+        end
+        if dead or not alive or not listed then
+          cut[f] = true
+          queue[#queue + 1] = f
+          mark(f)
+        end
       end
     end
   end

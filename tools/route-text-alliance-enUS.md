@@ -1235,3 +1235,19 @@
 03-30到45級.md:947｜說明｜到塔納利斯的熱砂港交給碼頭管理員汽嘶，之後去塔納利斯時順路。｜Turn in to Wharfmaster Steamfizzle at Steamwheedle Port in Tanaris; it's on the way when you go to Tanaris later.
 03-30到45級.md:949｜說明｜在魚人島的水下沉船旁使用誘餌召出海怪，打倒後撿頭顱。｜Use the bait next to the sunken ship underwater at the murloc island to summon the sea monster; defeat it, then loot the head.
 06-路線外任務.md:27｜說明｜要交 10 份鹽水海鮮燉湯，得自己用烹飪做或跟別人買；手上剛好有再交。｜It wants 10 servings of saltwater seafood stew, which you have to cook yourself or buy from other players; turn it in only if you happen to have them.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。；沒學草藥學的話，地根草可以在拍賣場買。｜Gather Earthroot and Lunar Fungus in Darkshore, then turn them in at Auberdine. Without Herbalism, buy the Earthroot at the Auction House.
+02-12到30級.md:832｜說明｜沒學草藥學的話，地根草可以在拍賣場買。｜Without Herbalism, buy the Earthroot at the Auction House.
+02-12到30級.md:304｜說明｜去赤脊山前，可以先在拍賣場買 8 片魚人的鰭（魚人偷獵者用）。｜Before heading to Redridge, you can buy 8 Murloc Fin (for Murloc Poachers) at the Auction House.
+02-12到30級.md:313｜說明｜魚人的鰭可以在拍賣場買，買齊 8 片就不用打。｜Murloc Fin can be bought at the Auction House. With 8 you can skip the farming.
+03-30到45級.md:11｜說明｜毛料可以在拍賣場買，要 60 塊。｜Wool Cloth can be bought at the Auction House. You need 60.
+03-30到45級.md:1314｜說明｜翡翠可以在拍賣場買。｜Jade can be bought at the Auction House.
+03-30到45級.md:1243｜說明｜金錠可以在拍賣場買。｜Gold Bar can be bought at the Auction House.
+04-45到60級.md:17｜說明｜可以先在拍賣場買 15 塊絲綢（之後灼熱峽谷的被鎖起來的矮人用）。｜You can buy 15 Silk Cloth at the Auction House now (for Caught! in the Searing Gorge later).
+04-45到60級.md:1250｜說明｜擊敗塞克隆尼亞取得精華。；活根草可以在拍賣場買，要 8 株。｜Defeat Cyclonian to get its essence. Liferoot can be bought at the Auction House. You need 8.
+04-45到60級.md:1250｜說明｜活根草可以在拍賣場買，要 8 株。｜Liferoot can be bought at the Auction House. You need 8.
+04-45到60級.md:146｜說明｜絲綢可以在拍賣場買，要 15 塊。｜Silk Cloth can be bought at the Auction House. You need 15.
+04-45到60級.md:363｜說明｜可以先在拍賣場買 1 個祕銀外殼（之後安戈洛的找回A-Me 01用）。｜You can buy 1 Mithril Casing at the Auction House now (for Chasing A-Me 01 in Un'Goro later).
+04-45到60級.md:1296｜說明｜亡靈腐液可以在拍賣場買。｜Ichor of Undeath can be bought at the Auction House.
+04-45到60級.md:1330｜說明｜惡魔布可以在拍賣場買。｜Felcloth can be bought at the Auction House.
+05-副本.md:150｜說明｜走到梣谷・第一次時先接尋找凱特林（要 24 級）。｜On reaching Ashenvale (1st visit), first pick up Seeking Caitlin (requires level 24).
+03-30到45級.md:1087｜說明｜往廢土營地途中找空地使用任務道具。｜Find an open spot on the way to the Wastewander camp and use the quest item there.

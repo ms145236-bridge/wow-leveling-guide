@@ -1235,3 +1235,19 @@
 03-30到45級.md:947｜說明｜到塔納利斯的熱砂港交給碼頭管理員汽嘶，之後去塔納利斯時順路。｜Entrégala al maestro de los muelles Vaporchispa en Puerto Bonvapor, en Tanaris; te pilla de paso cuando vayas a Tanaris más adelante.
 03-30到45級.md:949｜說明｜在魚人島的水下沉船旁使用誘餌召出海怪，打倒後撿頭顱。｜Usa el cebo junto al barco hundido bajo el agua en la isla de los múrlocs para invocar a la bestia marina; derrótala y luego recoge la cabeza.
 06-路線外任務.md:27｜說明｜要交 10 份鹽水海鮮燉湯，得自己用烹飪做或跟別人買；手上剛好有再交。｜Pide 10 raciones de guiso de marisco de agua salada, que tienes que cocinar tú o comprar a otros jugadores; entrégala solo si da la casualidad de que las tienes.
+02-12到30級.md:832｜說明｜在黑海岸採地根草和月亮菇，回奧伯丁交。；沒學草藥學的話，地根草可以在拍賣場買。｜Recoge Raíz de tierra y Seta lunar en Costa Oscura y entrégalas en Auberdine. Sin Herboristería, compra la Raíz de tierra en la casa de subastas.
+02-12到30級.md:832｜說明｜沒學草藥學的話，地根草可以在拍賣場買。｜Sin Herboristería, compra la Raíz de tierra en la casa de subastas.
+02-12到30級.md:307｜說明｜去赤脊山前，可以先在拍賣場買 8 片魚人的鰭（魚人偷獵者用）。｜Antes de ir a las Montañas Crestagrana, puedes comprar en la casa de subastas 8 × Aleta de múrloc (para Cazadores furtivos).
+02-12到30級.md:313｜說明｜魚人的鰭可以在拍賣場買，買齊 8 片就不用打。｜La Aleta de múrloc se puede comprar en la casa de subastas. Con 8 no hace falta farmear.
+03-30到45級.md:11｜說明｜毛料可以在拍賣場買，要 60 塊。｜El Paño de lana se puede comprar en la casa de subastas. Necesitas 60.
+03-30到45級.md:1314｜說明｜翡翠可以在拍賣場買。｜El Jade se puede comprar en la casa de subastas.
+03-30到45級.md:1243｜說明｜金錠可以在拍賣場買。｜El Lingote de oro se puede comprar en la casa de subastas.
+04-45到60級.md:17｜說明｜可以先在拍賣場買 15 塊絲綢（之後灼熱峽谷的被鎖起來的矮人用）。｜Puedes comprar ya en la casa de subastas 15 × Paño de seda (para Atrapado, más adelante en La Garganta de Fuego).
+04-45到60級.md:1250｜說明｜擊敗塞克隆尼亞取得精華。；活根草可以在拍賣場買，要 8 株。｜Derrota a Cicloniano para conseguir su esencia. La Vidarraíz se puede comprar en la casa de subastas. Necesitas 8.
+04-45到60級.md:1250｜說明｜活根草可以在拍賣場買，要 8 株。｜La Vidarraíz se puede comprar en la casa de subastas. Necesitas 8.
+04-45到60級.md:146｜說明｜絲綢可以在拍賣場買，要 15 塊。｜El Paño de seda se puede comprar en la casa de subastas. Necesitas 15.
+04-45到60級.md:363｜說明｜可以先在拍賣場買 1 個祕銀外殼（之後安戈洛的找回A-Me 01用）。｜Puedes comprar ya en la casa de subastas 1 × Envoltura de mitril (para Buscando a Memo 01, más adelante en el Cráter de Un'Goro).
+04-45到60級.md:1296｜說明｜亡靈腐液可以在拍賣場買。｜El Icor de no-muerto se puede comprar en la casa de subastas.
+04-45到60級.md:1330｜說明｜惡魔布可以在拍賣場買。｜La Tela de inferi se puede comprar en la casa de subastas.
+05-副本.md:150｜說明｜走到梣谷・第一次時先接尋找凱特林（要 24 級）。｜Al llegar a Vallefresno (1.ª visita), acepta primero En busca de Caitlin (requiere nivel 24).
+03-30到45級.md:1087｜說明｜往廢土營地途中找空地使用任務道具。｜Busca un claro de camino al campamento de los Deambuladores y usa allí el objeto de misión.
