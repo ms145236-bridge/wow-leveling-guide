@@ -19,6 +19,7 @@ P.diag = {}
 local function hbd()
   return LibStub and LibStub("HereBeDragons-Pins-2.0", true)
 end
+function P.Available() return hbd() ~= nil end
 
 local function layer(b, draw, sub)
   local t = b:CreateTexture(nil, draw, nil, sub)
@@ -56,7 +57,7 @@ local function getPin()
     end)
     b:SetScript("OnLeave", function() GameTooltip:Hide() end)
     b:SetScript("OnClick", function(self)
-      if state then E.PinIndex(state, self.group[1].i); MG.Refresh(true) end
+      if state and self.world then E.PinIndex(state, self.group[1].i); MG.Refresh(true) end
     end)
     pool[used] = b
   end
@@ -120,23 +121,30 @@ local function scales()
   return cw * ce / 100, ce * pinScale, ce, cs
 end
 
--- ── 最上層：比地圖上其他標點的最高層級再高；另外用比地圖高一階的 strata 保底 ──
+-- ── 層級：比地圖上其他標點高，但在玩家箭頭／隊友（GroupMembersPinTemplate）之下，走到目的地時不蓋住自己 ──
+-- 地圖上找不到玩家箭頭那一層（舊版地圖）才用比地圖高一階的 strata 保底
 local STRATA = { "BACKGROUND", "LOW", "MEDIUM", "HIGH", "DIALOG", "FULLSCREEN", "FULLSCREEN_DIALOG" }
 local function maxOtherLevel()
-  local top, mine = 0, {}
+  local top, mine, arrow = 0, {}, nil
   for k = 1, used do if pool[k].world and pool[k]:GetParent() then mine[pool[k]:GetParent()] = true end end
   if WorldMapFrame and WorldMapFrame.EnumerateAllPins then
     for pin in WorldMapFrame:EnumerateAllPins() do
-      if not mine[pin] and pin:IsShown() then top = math.max(top, pin:GetFrameLevel()) end
+      if pin.pinTemplate == "GroupMembersPinTemplate" then arrow = pin
+      elseif not mine[pin] and pin:IsShown() then top = math.max(top, pin:GetFrameLevel()) end
     end
   end
-  return top
+  return top, arrow
 end
 function P.Raise()
   if not WorldMapFrame then return end
+  local top, arrow = maxOtherLevel()
   local strata = WorldMapFrame:GetFrameStrata()
-  for k, name in ipairs(STRATA) do if name == strata then strata = STRATA[math.min(k + 1, #STRATA)]; break end end
-  local level = math.min(maxOtherLevel() + 10, 9000)
+  local level = math.min(top + 10, 9000)
+  if arrow then
+    strata, level = arrow:GetFrameStrata(), math.max(1, math.min(level, arrow:GetFrameLevel() - 1))
+  else
+    for k, name in ipairs(STRATA) do if name == strata then strata = STRATA[math.min(k + 1, #STRATA)]; break end end
+  end
   for k = 1, used do
     local b = pool[k]
     if b.world then
@@ -182,10 +190,26 @@ function P.Update(st, force)
   local steps = UI.Get("mapSteps")
   local pmap, px, py = MG.C.Position()
   local nav = MG.navPick and MG.navPick.p
+  local function d2(a, b) return (a[2] - b[2]) ^ 2 + (a[3] - b[3]) ^ 2 end
+  -- 順路任務只畫玩家所在地圖、10 格內最近的一群
+  local function roamPt(s)
+    local best, bd
+    for _, p in ipairs(px and py and points(s) or {}) do
+      if p[1] == pmap and d2(p, { pmap, px, py }) <= 100 and (not bd or d2(p, { pmap, px, py }) < bd) then best, bd = p, d2(p, { pmap, px, py }) end
+    end
+    return best
+  end
   local parts = { st.st.id, tostring(st.cur), size, UI.Get("miniPinSize"), UI.Get("miniSteps"), UI.Get("pinAlpha"), math.floor(near * 100), steps, tostring(pmap) }
-  for i in ipairs(st.steps) do if not st.done[i] and not st.na[i] then parts[#parts + 1] = i end end
+  for i, step in ipairs(st.steps) do
+    if not st.done[i] and not st.na[i] then
+      parts[#parts + 1] = i
+      if step.s.roam and i ~= st.cur then local p = roamPt(step.s); parts[#parts + 1] = p and (p[2] .. ":" .. p[3]) or "-" end -- 走進／走出順路點範圍：重畫
+    end
+  end
   if nav then parts[#parts + 1] = nav[1] .. ":" .. nav[2] .. ":" .. nav[3] end -- 箭頭換了一群怪：重畫
-  if px and py then parts[#parts + 1] = math.floor(px / 5) .. ":" .. math.floor(py / 5) end -- 順路任務只畫玩家附近的：走遠了重畫
+  local cs = st.cur and st.steps[st.cur]
+  local via = cs and cs.s.via and E.ViaTarget(cs) -- 好幾個座標的交通：和箭頭一樣指下一個還沒走到的點
+  if via then parts[#parts + 1] = via[1] .. ":" .. via[2] .. ":" .. via[3] end
   local key = table.concat(parts, ",")
   if key == sig and not force then return end
   P.Clear()
@@ -196,14 +220,19 @@ function P.Update(st, force)
   -- 之後的步驟每步只畫 1 點：離前一步最近的那群（地圖上連成一條路）；順路任務只畫玩家所在地圖、10 格內最近的一群（淡點）
   local groups, mini = {}, {}
   local prev
-  local function d2(a, b) return (a[2] - b[2]) ^ 2 + (a[3] - b[3]) ^ 2 end
+  -- 同一步在一個圖釘群只列一次（以步驟序號去重）；目前群（亮）取代先放進去的淡色次群
+  local function add(g, e)
+    local k = g.has[e.i]
+    if not k then g.has[e.i] = #g + 1; g[#g + 1] = e
+    elseif e.cur and not g[k].cur then g[k] = e end
+  end
   for i, step in ipairs(st.steps) do
     local n = st.num[i]
     if n and n > steps + 1 and #mini >= UI.Get("miniSteps") then break end
     if n then
       local cur = i == st.cur
       local entry = { step = step, i = i, n = n, cur = cur, at = {}, faint = step.s.roam and not cur or nil }
-      local pts = points(step.s)
+      local pts = cur and via and { via } or points(step.s)
       local multi = #pts > 1
       local other
       if cur and multi then
@@ -217,11 +246,7 @@ function P.Update(st, force)
         other = { step = step, i = i, n = n, at = { rest[1], rest[2] }, faint = true }
         pts = { p0 }
       elseif not cur and step.s.roam then
-        local best, bd
-        for _, p in ipairs(px and py and pts or {}) do
-          if p[1] == pmap and d2(p, { pmap, px, py }) <= 100 and (not bd or d2(p, { pmap, px, py }) < bd) then best, bd = p, d2(p, { pmap, px, py }) end
-        end
-        pts = { best }
+        pts = { roamPt(step.s) }
       elseif not cur and multi then
         local best, bd
         for _, p in ipairs(pts) do
@@ -242,7 +267,7 @@ function P.Update(st, force)
           if g.map == p[1] and (g.x - p[2]) ^ 2 + (g.y - p[3]) ^ 2 < near * near then hit = g; break end
         end
         if not hit then hit = { map = p[1], x = p[2], y = p[3], has = {} }; groups[#groups + 1] = hit end
-        if not hit.has[other] then hit.has[other] = true; hit[#hit + 1] = other end
+        add(hit, other)
       end
       for _, p in ipairs(pts) do
         local dup = false
@@ -259,7 +284,7 @@ function P.Update(st, force)
             hit = { map = p[1], x = p[2], y = p[3], has = {} }
             groups[#groups + 1] = hit
           end
-          if not hit.has[entry] then hit.has[entry] = true; hit[#hit + 1] = entry end
+          add(hit, entry)
         end
       end
     end
@@ -269,6 +294,7 @@ function P.Update(st, force)
   for _, g in ipairs(groups) do
     local b = getPin()
     b.world = true
+    if b.SetMouseClickEnabled then b:SetMouseClickEnabled(true) end
     local cur, faint = false, true
     for _, e in ipairs(g) do if e.cur then cur = true end; if not e.faint then faint = false end end
     local travel = not cur and not SHAPE[g[1].step.s.t]
@@ -281,6 +307,7 @@ function P.Update(st, force)
   for _, e in ipairs(mini) do
     local b = getPin()
     b.world = false
+    if b.SetMouseClickEnabled then b:SetMouseClickEnabled(false) end -- 小地圖標點只給滑鼠提示：點擊留給小地圖（不會誤觸換步驟）
     style(b, { e }, UI.Get("miniPinSize") + (e.cur and 3 or 0)); b:SetAlpha(UI.Get("pinAlpha") / 100)
     pins:AddMinimapIconMap(REF, b, e.pt[1], e.pt[2] / 100, e.pt[3] / 100, false, e.cur)
     raiseMini(b)

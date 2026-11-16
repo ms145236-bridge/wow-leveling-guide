@@ -74,14 +74,16 @@ function T.Targets(state)
   return out
 end
 
+-- 按鈕實際的顯示狀態：戰鬥中不能改，要等脫離戰鬥才跟上「該不該顯示」
 function T.Shown(state)
+  if InCombatLockdown() then return btn ~= nil and btn:IsShown() end
   return MG.UI.Get("showTarget") and #T.Targets(state) > 0
 end
 
--- 標記：一律加 /tm（對已有同一標記的目標再按會取消，主人接受）
+-- 標記：單人時加 /tm（對已有同一標記的目標再按會取消，主人接受）；組隊時不標，不蓋掉隊長的記號
 local function markLine()
   if not MG.UI.Get("markOn") then return nil end
-  return "/tm [@target,exists,nodead] " .. MG.UI.Get("markIcon")
+  return "/tm [@target,exists,nodead,nogroup] " .. MG.UI.Get("markIcon")
 end
 
 -- 巨集文字（255 字元內）：先全部完整名稱，再部分比對當備援；超過時先丟備援、再丟後面的名字。標記與記錄那兩行一定保留。
@@ -283,7 +285,7 @@ function T.Diag()
 end
 
 function T.Create(bar)
-  btn = CreateFrame("Button", "MetroGuideTargetButton", UIParent, "SecureActionButtonTemplate")
+  btn = CreateFrame("Button", "MetroGuideTargetButton", bar, "SecureActionButtonTemplate") -- 掛在底座下：跟著步驟列縮放、透明度
   btn:SetSize(20, 20)
   btn:SetPoint("TOPRIGHT", bar, "TOPRIGHT", -28, -9) -- 和齒輪同一行
   btn:SetFrameStrata(bar:GetFrameStrata())

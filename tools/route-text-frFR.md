@@ -7,7 +7,7 @@
 
 檔名:行號｜類型｜中文原文｜frFR
 
-01-第一段-1到12級.md:27｜站內交通｜跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克。完整轉乘見文首。｜Suis la grande route de Durotar vers le sud, entre dans la Vallée des Épreuves par l'est et retrouve Kaltunk. Le trajet complet est indiqué en haut.
+01-第一段-1到12級.md:27｜站內交通｜跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克。完整轉乘見文首。｜Suis la grande route de Durotar vers le sud, entre dans la Vallée des Épreuves par l'est et retrouve Kaltunk.
 01-第一段-1到12級.md:33｜標籤｜僅獸人／食人妖｜Orcs/Trolls uniquement
 01-第一段-1到12級.md:33｜步驟說明｜持有試煉谷禮品券才接。｜N'accepte la quête que si tu as le bon-cadeau de la Vallée des Épreuves.
 01-第一段-1到12級.md:33｜標籤｜可跳過｜Facultatif
@@ -44,7 +44,7 @@
 01-第一段-1到12級.md:74｜站內取捨｜先完成 1485／1499 的小鬼任務，再找同一位祖雷薩接火刃獎章（Burning Blade Medallion）794【僅術士】。｜Termine d'abord la quête du diablotin 1485 ou 1499, puis accepte Le médaillon de la Lame ardente (794) auprès de Zureetha Fargaze (démoniste uniquement).
 01-第一段-1到12級.md:74｜標籤｜僅術士｜Démonistes uniquement
 01-第一段-1到12級.md:75｜站內提醒｜不足 6 級就沿路打雜斑野豬、工蠍或邪靈劣魔，再前往森金村。｜En dessous du niveau 6 ? Tue des sangliers tachetés, des scorpides ouvriers ou des vils quasits sur le chemin de Sen'jin.
-01-第一段-1到12級.md:77｜練怪說明｜密集／一般怪／多為中立，可逐隻開怪／試煉谷北側空地，1–2 級接續小試身手｜Des foules normales denses, pour la plupart neutres. Tire-les une par une au nord de la Vallée des Épreuves pour La dent tranchante aux niveaux 1 et 2.
+01-第一段-1到12級.md:77｜練怪說明｜密集／一般怪／多為中立，可逐隻開怪／試煉谷北側空地，1–2 級接續小試身手｜Monstres normaux, densité élevée, pour la plupart neutres. Tire-les une par une au nord de la Vallée des Épreuves pour La dent tranchante aux niveaux 1 et 2.
 01-第一段-1到12級.md:78｜練怪說明｜密集／一般怪／多為中立，可逐隻開怪／大獸穴西北方，做工蠍的尾巴時順打｜Beaucoup de créatures ordinaires, surtout neutres, au nord-ouest de L'Antre. Attire-les une par une pendant L'aiguillon du scorpide.
 01-第一段-1到12級.md:79｜練怪說明｜密集／一般怪／洞口易多拉，先打外圍／火刃洞穴一帶，離谷前補到 6 級｜Beaucoup de créatures normales près du Convent de la Lame ardente. Attire-les une par une depuis l'extérieur. Atteins le niveau 6 avant de quitter la vallée.
 01-第一段-1到12級.md:83｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
@@ -147,13 +147,13 @@
 01-第一段-1到12級.md:244｜站內取捨｜先交背信棄義的人類（Vanquish the Betrayers）784，才接得到海底沈船（From The Wreckage....）825。把沉船和沃納爾大師（A Solvent Spirit）818 排成同一趟。｜Rends Vaincre les traîtres (784) pour débloquer Des épaves (825). Fais-les en même temps que Un esprit parfaitement éduqué (818).
 01-第一段-1到12級.md:245｜站內取捨｜暗巷區副本接續可先留。打算下怒焰裂谷（Ragefire Chasm）再跟索爾接隱藏的敵人（Hidden Enemies）5726→5727→5728。5726 所需的軍官徽章可在北邊火刃區取得。｜Garde la chaîne de donjon de la Faille de l'Ombre pour plus tard. Prends Ennemis cachés (5726→5727→5728) auprès de Thrall si tu comptes faire le Gouffre de Ragefeu. Récupère l'insigne pour 5726 au camp de la Lame ardente au nord.
 01-第一段-1到12級.md:246｜站內提醒｜不足 12 級可補保衛商路（Securing the Lines）、骷髏石（Skull Rock）或地底威脅（Threat from Below）前幾段。｜En dessous du niveau 12 ? Fais Des lignes sécurisées, Rocher du crâne ou les premières étapes d'Une menace venue d'en bas.
-01-第一段-1到12級.md:248｜練怪說明｜密集／一般怪／城堡通道易多拉，先打外側／提拉加德城堡，順收新背包所需的帆布腳料｜Des foules normales denses au donjon de Tiragarde. Attire-les à l'extérieur pour éviter d'en tirer d'autres dans les couloirs. Récupère les Morceaux de canevas pour Assumer ses responsabilités.
-01-第一段-1到12級.md:249｜練怪說明｜集中／一般怪／巡邏可能加怪，先拉營地邊緣／剃刀嶺西面，可和野豬人的進犯一起做｜Les foules normales se regroupent à l'ouest de Tranchecolline. Longe le bord du camp et surveille les patrouilles. Fais-le en même temps qu'Empiètement.
-01-第一段-1到12級.md:250｜練怪說明｜集中／一般怪／有施法怪，貼掩體拉到近處／北杜洛塔，做保衛商路或進奧格瑪前補到 12 級｜Les foules normales se regroupent dans le nord de Durotar, avec des lanceurs de sorts. Tire-les depuis un abri. Fais Des lignes sécurisées ou farme jusqu'au niveau 12 avant Orgrimmar.
+01-第一段-1到12級.md:248｜練怪說明｜密集／一般怪／城堡通道易多拉，先打外側／提拉加德城堡，順收新背包所需的帆布腳料｜Monstres normaux, densité élevée au donjon de Tiragarde. Attire-les à l'extérieur pour éviter d'en tirer d'autres dans les couloirs. Récupère les Morceaux de canevas pour Assumer ses responsabilités.
+01-第一段-1到12級.md:249｜練怪說明｜集中／一般怪／巡邏可能加怪，先拉營地邊緣／剃刀嶺西面，可和野豬人的進犯一起做｜Les monstres normaux se regroupent à l'ouest de Tranchecolline. Longe le bord du camp et surveille les patrouilles. Fais-le en même temps qu'Empiètement.
+01-第一段-1到12級.md:250｜練怪說明｜集中／一般怪／有施法怪，貼掩體拉到近處／北杜洛塔，做保衛商路或進奧格瑪前補到 12 級｜Les monstres normaux se regroupent dans le nord de Durotar, avec des lanceurs de sorts. Tire-les depuis un abri. Fais Des lignes sécurisées ou farme jusqu'au niveau 12 avant Orgrimmar.
 01-第一段-1到12級.md:256｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 01-第一段-1到12級.md:259｜危險說明｜提拉加德城堡的樓梯和門框容易把樓上水兵一起引下來。先清外牆與門口。｜Les escaliers et les portes du Donjon de Tiragarde peuvent attirer les marins de l'étage. Dégage d’abord le mur extérieur et l’entrée.
 01-第一段-1到12級.md:260｜危險說明｜北岸的海巨人在納迦區活動。清掉周圍小怪再打，跑不動時從岸上撤。｜Les géants des mers de la côte nord rôdent près de la zone des nagas. Élimine d'abord les monstres autour avant d'en attirer un. Si ça tourne mal, replie-toi le long du rivage.
-01-第一段-1到12級.md:266｜站內交通｜跨族起點先到血蹄村，再沿路往南上紅雲台地到納拉其營地。完整轉乘見文首。｜Si tu viens d'une autre zone de départ, va d'abord à Sabot-de-Sang, puis suis la route vers le sud jusqu'à la Mesa de Nuage rouge et au Camp Narache. Trajet complet en haut de page.
+01-第一段-1到12級.md:266｜站內交通｜跨族起點先到血蹄村，再沿路往南上紅雲台地到納拉其營地。完整轉乘見文首。｜Si tu viens d'une autre zone de départ, va d'abord à Sabot-de-Sang, puis suis la route vers le sud jusqu'à la Mesa de Nuage rouge et au Camp Narache.
 01-第一段-1到12級.md:269｜標籤｜僅牛頭人｜Taurens uniquement
 01-第一段-1到12級.md:269｜步驟說明｜持有納拉其營地禮品券才接。｜Accepte la quête uniquement si tu possèdes le bon-cadeau du Camp Narache.
 01-第一段-1到12級.md:269｜標籤｜可跳過｜Facultatif
@@ -194,9 +194,9 @@
 01-第一段-1到12級.md:305｜交通步驟｜走出紅雲臺地，沿大路向北到血蹄村。｜Quitte la Mesa de Nuage rouge et suis la route vers le nord jusqu'à Sabot-de-Sang.
 01-第一段-1到12級.md:307｜站內取捨｜刺刃峽谷同一趟做力量儀祭（Rite of Strength）、刺鬃酋長（Break Sharptusk!）、鬥豬（The Battleboars），有地圖再接 781。｜Fais Le Rite de force, La fin de Brochaigu ! et Les sangliers de guerre apprivoisés d'une traite dans le Ravin de Roncelame. Accepte 781 si tu ramasses la carte.
 01-第一段-1到12級.md:308｜站內提醒｜不足 6 級就沿刺刃峽谷外側補鬥豬或刺背野豬人，再往血蹄村。｜En dessous du niveau 6 ? Tue des sangliers de guerre ou des Huran Dos-hirsute au bord du Ravin de Roncelame, puis va à Sabot-de-Sang.
-01-第一段-1到12級.md:310｜練怪說明｜密集／一般怪／多為中立，可逐隻開怪／納拉其營地東南井旁，開始狩獵時順打｜Des foules normales denses et pour la plupart neutres près du puits sud-est de Camp Narache. Tire un ennemi à la fois pendant La chasse commence.
-01-第一段-1到12級.md:311｜練怪說明｜密集／一般怪／多為中立，可逐隻開怪／紅雲台地南坡，補繼續狩獵所需的皮｜Des foules normales denses et pour la plupart neutres sur le versant sud de Mesa de Nuage rouge. Tire un ennemi à la fois pour obtenir les peaux nécessaires dans La chasse continue.
-01-第一段-1到12級.md:312｜練怪說明｜集中／一般怪／與刺背野豬人混居，先清外側／刺刃峽谷，與鬥豬及力量儀祭同行｜Les foules normales se regroupent parmi Huran Dos-hirsute dans Ravin de Roncelame. Dégage d'abord les bords. Associe-le avec Sanglier de guerre et Le Rite de force.
+01-第一段-1到12級.md:310｜練怪說明｜密集／一般怪／多為中立，可逐隻開怪／納拉其營地東南井旁，開始狩獵時順打｜Monstres normaux, densité élevée et pour la plupart neutres près du puits sud-est de Camp Narache. Tire un ennemi à la fois pendant La chasse commence.
+01-第一段-1到12級.md:311｜練怪說明｜密集／一般怪／多為中立，可逐隻開怪／紅雲台地南坡，補繼續狩獵所需的皮｜Monstres normaux, densité élevée et pour la plupart neutres sur le versant sud de Mesa de Nuage rouge. Tire un ennemi à la fois pour obtenir les peaux nécessaires dans La chasse continue.
+01-第一段-1到12級.md:312｜練怪說明｜集中／一般怪／與刺背野豬人混居，先清外側／刺刃峽谷，與鬥豬及力量儀祭同行｜Les monstres normaux se regroupent parmi Huran Dos-hirsute dans Ravin de Roncelame. Dégage d'abord les bords. Associe-le avec Sanglier de guerre et Le Rite de force.
 01-第一段-1到12級.md:316｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 01-第一段-1到12級.md:318｜危險說明｜刺刃峽谷的野豬人集中在狹窄坡口。打刺鬃酋長前先清坡口，撤退時回紅雲臺地。｜Les quilboars du Ravin de Roncelame se concentrent sur une rampe étroite. Dégage-la avant d'attirer Chef Brochaigu Mantépine. Replie-toi vers la Mesa de Nuage rouge.
 01-第一段-1到12級.md:326｜標籤｜可跳過｜Facultatif
@@ -238,7 +238,7 @@
 01-第一段-1到12級.md:389｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:391｜粗體註記｜西側白鬃／挖掘場，沿幻象路線到先知｜Ouest : Palemane et le chantier de fouilles. Suis la vision jusqu'au voyant
 01-第一段-1到12級.md:395｜步驟說明｜在部族營火前喝先知之水，跟幻象向西北走；途中可順路清已接任務。｜Bois l'Eau des Prophètes devant le feu de camp de la tribu, puis suis la vision vers le nord-ouest. Fais en chemin les quêtes déjà prises.
-01-第一段-1到12級.md:396｜步驟說明｜若要避免提早進雷霆崖，先接並護送，首次到雷霆崖再交。｜Pour éviter d'aller trop tôt aux Pitons-du-Tonnerre, prends la quête et fais l'escorte maintenant. Rends-la à ta première visite des Pitons-du-Tonnerre.
+01-第一段-1到12級.md:396｜步驟說明｜若要避免提早進雷霆崖，先接並護送，首次到雷霆崖再交。｜Pour éviter d'aller trop tôt à Thunder Bluff, prends la quête et fais l'escorte maintenant. Rends-la à ta première visite de Thunder Bluff.
 01-第一段-1到12級.md:396｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:397｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:400｜標籤｜僅牛頭人｜Taurens uniquement
@@ -286,8 +286,8 @@
 01-第一段-1到12級.md:444｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:445｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:445｜標籤｜掉率 41%｜Taux de butin : 41 %
-01-第一段-1到12級.md:447｜粗體註記｜雷霆崖開點，接十字路口｜Point de vol des Pitons-du-Tonnerre, puis direction La Croisée
-01-第一段-1到12級.md:449｜交通步驟｜沿莫高雷中路到雷霆崖，乘電梯上城。開塔爾飛行點（1456 47.00, 49.83）。｜Suis la route principale de Mulgore jusqu'aux Pitons-du-Tonnerre. Prends l'ascenseur et apprends le point de vol de Tal (1456 47.00, 49.83).
+01-第一段-1到12級.md:447｜粗體註記｜雷霆崖開點，接十字路口｜Point de vol de Thunder Bluff, puis direction La Croisée
+01-第一段-1到12級.md:449｜交通步驟｜沿莫高雷中路到雷霆崖，乘電梯上城。開塔爾飛行點（1456 47.00, 49.83）。｜Suis la route principale de Mulgore jusqu'à Thunder Bluff. Prends l'ascenseur et apprends le point de vol de Tal (1456 47.00, 49.83).
 01-第一段-1到12級.md:454｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:455｜標籤｜僅牛頭人｜Taurens uniquement
 01-第一段-1到12級.md:455｜標籤｜可跳過｜Facultatif
@@ -304,14 +304,14 @@
 01-第一段-1到12級.md:461｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:462｜步驟說明｜需已學剝皮，交 12 塊輕皮。｜Tu dois avoir appris le Dépeçage. Rends 12 cuirs légers.
 01-第一段-1到12級.md:462｜標籤｜可跳過｜Facultatif
-01-第一段-1到12級.md:462｜步驟說明｜座標是雷霆崖交材料的位置；輕皮可剝低等野獸，也可交易取得。｜Les coordonnées indiquent où remettre les matériaux aux Pitons-du-Tonnerre. Dépèce des bêtes de bas niveau pour obtenir du cuir léger, ou achètes-en.
+01-第一段-1到12級.md:462｜步驟說明｜座標是雷霆崖交材料的位置；輕皮可剝低等野獸，也可交易取得。｜Les coordonnées indiquent où remettre les matériaux à Thunder Bluff. Dépèce des bêtes de bas niveau pour obtenir du cuir léger, ou achètes-en.
 01-第一段-1到12級.md:463｜步驟說明｜需已學剝皮，交 12 塊輕皮。｜Tu dois avoir appris le Dépeçage. Rends 12 cuirs légers.
 01-第一段-1到12級.md:463｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:464｜步驟說明｜需已學製皮且達任務門檻，另備 4 塊輕皮與 4 份粗線。｜Il faut connaître le Travail du cuir et avoir le niveau requis. Apporte 4 Cuirs légers et 4 Bobines de fil grossier.
 01-第一段-1到12級.md:464｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:465｜步驟說明｜需已學製皮且達任務門檻，另備 4 塊輕皮與 4 份粗線。｜Il faut connaître le Travail du cuir et avoir le niveau requis. Apporte 4 Cuirs légers et 4 Bobines de fil grossier.
 01-第一段-1到12級.md:465｜標籤｜可跳過｜Facultatif
-01-第一段-1到12級.md:465｜步驟說明｜座標是雷霆崖交材料的位置；輕皮可剝皮或交易，粗線向商人購買。｜Les coordonnées indiquent où remettre les matériaux aux Pitons-du-Tonnerre. Dépèce des bêtes ou échange pour du cuir léger ; achète le fil grossier auprès d'un marchand.
+01-第一段-1到12級.md:465｜步驟說明｜座標是雷霆崖交材料的位置；輕皮可剝皮或交易，粗線向商人購買。｜Les coordonnées indiquent où remettre les matériaux à Thunder Bluff. Dépèce des bêtes ou échange pour du cuir léger ; achète le fil grossier auprès d'un marchand.
 01-第一段-1到12級.md:466｜步驟說明｜需已學製皮且達任務門檻，另備 4 塊輕皮與 4 份粗線。同任務也可找波拉姆（1456 44.08, 44.89）。｜Il faut connaître le Travail du cuir et avoir le niveau requis. Apporte 4 Cuirs légers et 4 Bobines de fil grossier. Tu peux aussi prendre la quête auprès de Boramu (1456 44.08, 44.89).
 01-第一段-1到12級.md:466｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:467｜交通步驟｜達 12 級後從莫高雷東門走到貧瘠之地。經陶拉祖營地時開歐姆薩·雷角飛行點（1413 44.45, 59.15）。｜Au niveau 12, quitte Mulgore par la porte est et entre dans les Tarides. En passant par le Camp Taurajo, apprends le point de vol d'Omusa Thunderhorn (1413 44.45, 59.15).
@@ -329,14 +329,14 @@
 01-第一段-1到12級.md:473｜站內取捨｜值得做幻象儀祭（Rite of Vision）767→771→772、智慧儀祭（Rite of Wisdom）773 和雷霆崖之旅（Journey into Thunder Bluff）775，末段正好開飛行點。｜Fais Le Rite de vision (767→771→772), Le Rite de sagesse (773) et Voyage à Thunder Bluff (775). Le dernier tronçon débloque justement un point de vol.
 01-第一段-1到12級.md:474｜站內取捨｜水井任務先完成前一口才接下一口【僅牛頭人】。已到 12 級時可跳過蠻鬃之井支線【僅牛頭人】。｜Termine chaque quête de puits avant de prendre la suivante (Taurens uniquement). Au niveau 12, tu peux ignorer la chaîne des puits de Wildmane (Taurens uniquement).
 01-第一段-1到12級.md:474｜標籤｜僅牛頭人｜Taurens uniquement
-01-第一段-1到12級.md:475｜站內取捨｜到了雷霆崖可接怒焰裂谷（Ragefire Chasm）前置，打算進本才跟拉哈羅接試探敵人（Testing an Enemy’s Strength）5723、尋找背包（Searching for the Lost Satchel）5722。｜En arrivant aux Pitons-du-Tonnerre, tu peux prendre les prérequis du Gouffre de Ragefeu. Prends Tester la force de l'ennemi (5723) et À la recherche de la sacoche perdue (5722) auprès de Rahauro seulement si tu comptes y entrer.
+01-第一段-1到12級.md:475｜站內取捨｜到了雷霆崖可接怒焰裂谷（Ragefire Chasm）前置，打算進本才跟拉哈羅接試探敵人（Testing an Enemy’s Strength）5723、尋找背包（Searching for the Lost Satchel）5722。｜En arrivant à Thunder Bluff, tu peux prendre les prérequis du Gouffre de Ragefeu. Prends Tester la force de l'ennemi (5723) et À la recherche de la sacoche perdue (5722) auprès de Rahauro seulement si tu comptes y entrer.
 01-第一段-1到12級.md:476｜站內提醒｜接近 12 級還差經驗，優先補莫高雷北邊鷹身人、赤色石或菲茲普羅克礦坑；10 級職業解鎖見文末。｜Il te manque de l'XP pour le niveau 12 ? Farme les harpies du nord de Mulgore, les Rochers rouges ou la mine de la KapitalRisk. Les quêtes de classe de niveau 10 sont en bas de page.
-01-第一段-1到12級.md:478｜練怪說明｜分散／一般怪／草地可逐隻拉，留意游走怪／血蹄村北側，順收馬茲拉納其材料｜Des foules normales dispersées au nord de Sabot-de-Sang. Tire un ennemi à la fois dans l'herbe et surveillez les vagabonds. Récupère les matériaux Mazzranache.
-01-第一段-1到12級.md:479｜練怪說明｜集中／一般怪／混有工人與巡邏，先沿礦坑外側拉／菲茲普羅克礦坑周邊，可順做礦坑任務｜Les foules normales se regroupent autour de la mine de la KapitalRisk, mêlées à des ouvriers et des patrouilles. Tire-les depuis l'extérieur de la mine. Fais-le en même temps que les quêtes de la mine.
-01-第一段-1到12級.md:480｜練怪說明｜密集／一般怪／混有施法型鷹身人，先拉營地外側／莫高雷西北鷹身人營地，接近 12 級時補經驗｜Des foules normales denses au camp de harpies au nord-ouest de Mulgore, avec des harpies lanceuses de sorts. Tire-les depuis le bord du camp. Farme ici si tu es proche du niveau 12.
+01-第一段-1到12級.md:478｜練怪說明｜分散／一般怪／草地可逐隻拉，留意游走怪／血蹄村北側，順收馬茲拉納其材料｜Des monstres normaux dispersés au nord de Sabot-de-Sang. Tire un ennemi à la fois dans l'herbe et surveille les vagabonds. Récupère les matériaux Mazzranache.
+01-第一段-1到12級.md:479｜練怪說明｜集中／一般怪／混有工人與巡邏，先沿礦坑外側拉／菲茲普羅克礦坑周邊，可順做礦坑任務｜Les monstres normaux se regroupent autour de la mine de la KapitalRisk, mêlés à des ouvriers et des patrouilles. Tire-les depuis l'extérieur de la mine. Fais-le en même temps que les quêtes de la mine.
+01-第一段-1到12級.md:480｜練怪說明｜密集／一般怪／混有施法型鷹身人，先拉營地外側／莫高雷西北鷹身人營地，接近 12 級時補經驗｜Monstres normaux, densité élevée au camp de harpies au nord-ouest de Mulgore, avec des harpies lanceuses de sorts. Tire-les depuis le bord du camp. Farme ici si tu es proche du niveau 12.
 01-第一段-1到12級.md:485｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 01-第一段-1到12級.md:488｜危險說明｜菲茲普羅克礦坑會把巡邏與礦工一起拉入戰。先清外側，拿到筆記板就退出洞道。｜À la mine de la KapitalRisk, patrouilles et mineurs peuvent se joindre au combat. Nettoie d'abord l'extérieur, prends la planchette à notes et ressors du tunnel.
-01-第一段-1到12級.md:494｜站內交通｜跨族起點從布瑞爾南側飛艇塔下船，沿大道向西進喪鐘鎮。完整轉乘見文首。｜Si tu viens d'une autre zone de départ, descends à la tour des zeppelins au sud de Brill et suis la route vers l'ouest jusqu'au Glas. Trajet complet en haut de page.
+01-第一段-1到12級.md:494｜站內交通｜跨族起點從布瑞爾南側飛艇塔下船，沿大道向西進喪鐘鎮。完整轉乘見文首。｜Si tu viens d'une autre zone de départ, descends à la tour des zeppelins au sud de Brill et suis la route vers l'ouest jusqu'au Glas.
 01-第一段-1到12級.md:498｜站內提醒｜從墓穴內的 363 開始【僅不死族】。抵達喪鐘鎮後，可在暗影牧師薩維斯（1420 30.84, 66.20）接 364。若薩維斯未顯示任務，沿道路前往布瑞爾。｜Commence par 363 dans la crypte (morts-vivants uniquement). À ton arrivée au Glas, prends 364 auprès du prêtre des ombres Sarvis (1420 30.84, 66.20). Si Sarvis ne propose pas la quête, suis la route jusqu'à Brill.
 01-第一段-1到12級.md:498｜標籤｜僅不死族｜Morts-vivants uniquement
 01-第一段-1到12級.md:499｜標籤｜僅不死族｜Morts-vivants uniquement
@@ -352,9 +352,9 @@
 01-第一段-1到12級.md:532｜站內值得做｜在夜行蜘蛛洞穴完成 380 時，可順路救出闇境明燈（A Light in the Darkness）98389 的受害者【僅不死族】。｜En faisant 380 aux Grottes des Tisse-nuit, sauve aussi les victimes pour Une lumière dans les ténèbres (98389). Morts-vivants uniquement.
 01-第一段-1到12級.md:532｜標籤｜僅不死族｜Morts-vivants uniquement
 01-第一段-1到12級.md:533｜站內提醒｜尚未到 3 級再打幾隻斷骨骷髏，升到 3 級才接瑪拉的遺願 6395。到 6 級或做完這段就往布瑞爾。｜Si tu n'es pas encore niveau 3, tue encore quelques squelettes. Attends le niveau 3 pour prendre La dernière volonté de Marla (6395). Va à Brill au niveau 6 ou une fois cette étape terminée.
-01-第一段-1到12級.md:535｜練怪說明｜密集／一般怪／多為中立，可逐隻開怪／喪鐘鎮北側，1–2 級順做無腦的僵屍｜Des foules normales denses, pour la plupart neutres, au nord du Glas. Tire-les une par une pendant Les Déchus aux niveaux 1 et 2.
-01-第一段-1到12級.md:536｜練怪說明｜密集／一般怪／洞內易多拉，沿入口到內側逐段清／夜行蜘蛛洞穴，順做洞穴任務｜Des foules normales denses dans les grottes des Tisse-nuit. Dégage par étapes depuis l'entrée pour éviter d'en tirer d'autres.
-01-第一段-1到12級.md:537｜練怪說明｜密集／一般怪／與信徒混居，先打營地外圍／東側血色營地，與臂章任務一起清｜Des foules normales denses dans le camp écarlate oriental. Dégage le long du bord pour éviter de tirer les fanatiques. Associe-le à la quête du brassard.
+01-第一段-1到12級.md:535｜練怪說明｜密集／一般怪／多為中立，可逐隻開怪／喪鐘鎮北側，1–2 級順做無腦的僵屍｜Monstres normaux, densité élevée, pour la plupart neutres, au nord du Glas. Tire-les une par une pendant Les Déchus aux niveaux 1 et 2.
+01-第一段-1到12級.md:536｜練怪說明｜密集／一般怪／洞內易多拉，沿入口到內側逐段清／夜行蜘蛛洞穴，順做洞穴任務｜Monstres normaux, densité élevée dans les grottes des Tisse-nuit. Dégage par étapes depuis l'entrée pour éviter d'en tirer d'autres.
+01-第一段-1到12級.md:537｜練怪說明｜密集／一般怪／與信徒混居，先打營地外圍／東側血色營地，與臂章任務一起清｜Monstres normaux, densité élevée dans le camp écarlate oriental. Dégage le long du bord pour éviter de tirer les fanatiques. Associe-le à la quête du brassard.
 01-第一段-1到12級.md:541｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 01-第一段-1到12級.md:543｜危險說明｜夜行蜘蛛洞穴的窄道容易同時拉到前後兩群蜘蛛。入口先清一輪再進。｜Dans l'étroit tunnel des grottes des Tisse-nuit, tu risques d'attirer des araignées devant et derrière toi. Dégage l'entrée avant d'entrer.
 01-第一段-1到12級.md:552｜粗體註記｜喪鐘鎮往布瑞爾，先清西側農場｜Du Glas à Brill, en nettoyant d'abord les fermes de l'ouest
@@ -439,9 +439,9 @@
 01-第一段-1到12級.md:681｜標籤｜僅獸人／食人妖／不死族｜Orcs/Trolls/Morts-vivants uniquement
 01-第一段-1到12級.md:681｜標籤｜僅不死族｜Morts-vivants uniquement
 01-第一段-1到12級.md:682｜站內提醒｜若未到 12 級，優先補 372、408 或銀色黎明 96895／96897／96898，依可接與所在位置選擇。｜En dessous du niveau 12 ? Fais en priorité 372, 408 ou les quêtes de l'Aube d'argent 96895, 96897 et 96898, selon ce qui est disponible et là où tu te trouves.
-01-第一段-1到12級.md:684｜練怪說明｜分散／一般怪／會施法，可從營地外側逐隻拉／布瑞爾西南，與第一輪血色十字軍任務同行｜Des foules normales éparses au sud-ouest de Brill, avec des lanceurs de sorts. Tire-les une par une depuis le bord du camp pendant les premières quêtes de la Croisade écarlate.
-01-第一段-1到12級.md:685｜練怪說明｜集中／一般怪／與血殭屍混居，留意巡邏／東南墓地，巡查後方和墓穴草可一起做｜Des foules normales se regroupent avec les zombies de sang dans le cimetière sud-est. Surveille les patrouilles. Fais Patrouille d'arrière-garde en même temps que la quête des Herbes sépulcrales.
-01-第一段-1到12級.md:686｜練怪說明｜密集／一般怪／與黑暗執法者混居，營地邊緣較好單拉／東南銀色黎明支線附近，11 級後可補到 12｜Des foules normales denses près des quêtes de l'Aube d'argent au sud-est. Tire-les une par une depuis le bord du camp pour éviter les Dark Enforcers. Farme du niveau 11 au niveau 12.
+01-第一段-1到12級.md:684｜練怪說明｜分散／一般怪／會施法，可從營地外側逐隻拉／布瑞爾西南，與第一輪血色十字軍任務同行｜Des monstres normaux épars au sud-ouest de Brill, avec des lanceurs de sorts. Tire-les une par une depuis le bord du camp pendant les premières quêtes de la Croisade écarlate.
+01-第一段-1到12級.md:685｜練怪說明｜集中／一般怪／與血殭屍混居，留意巡邏／東南墓地，巡查後方和墓穴草可一起做｜Des monstres normaux se regroupent avec les zombies de sang dans le cimetière sud-est. Surveille les patrouilles. Fais Patrouille d'arrière-garde en même temps que la quête des Herbes sépulcrales.
+01-第一段-1到12級.md:686｜練怪說明｜密集／一般怪／與黑暗執法者混居，營地邊緣較好單拉／東南銀色黎明支線附近，11 級後可補到 12｜Monstres normaux, densité élevée près des quêtes de l'Aube d'argent au sud-est. Tire-les une par une depuis le bord du camp pour éviter les Dark Enforcers. Farme du niveau 11 au niveau 12.
 01-第一段-1到12級.md:691｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 01-第一段-1到12級.md:694｜危險說明｜東南墓地混有血殭屍與遊蕩的幽靈，容易被前後夾擊。沿墓地邊緣清，留住退路。｜Dans le cimetière sud-est, des zombies de sang et des fantômes errants peuvent t'attaquer des deux côtés. Dégage le long du bord et garde une issue de repli.
 01-第一段-1到12級.md:700｜站內交通｜跨族起點從莫高雷 天空守望者高原 南側碼頭（1412 34.30, 25.80）搭割天者號，在瓦拉納爾西碼頭（2521 57.90, 80.90）下船，再沿路北上坦德爾林地。｜Si tu viens d'une autre zone de départ, prends le Skycutter au quai sud du Plateau de Guette-ciel, à Mulgore (1412 34.30, 25.80). Descends au quai ouest de Valanaar (2521 57.90, 80.90), puis suis la route vers le nord jusqu'au Bosquet de Thendal.
@@ -597,22 +597,22 @@
 01-第一段-1到12級.md:939｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:940｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:942｜粗體註記｜奧基爾聖殿與離島｜Sanctuaire d’Akir et les îles périphériques
-01-第一段-1到12級.md:954｜步驟說明｜用傳送門抵達羅哈希尖塔後再進行劇情，完成後回瓦拉納爾交件。｜Prends le portail vers les Rohashi Spires pour assister à l'événement, puis reviens à Valanaar pour rendre la quête.
+01-第一段-1到12級.md:954｜步驟說明｜用傳送門抵達羅哈希尖塔後再進行劇情，完成後回瓦拉納爾交件。｜Prends le portail vers les Flèches Rohashi pour assister à l'événement, puis reviens à Valanaar pour rendre la quête.
 01-第一段-1到12級.md:963｜交通步驟｜到瓦拉納爾小屋外的西碼頭（2521 57.90, 80.90），在塑風者碼頭管理員所在的碼頭搭割天者號。到莫高雷 天空守望者高原 南側碼頭（1412 34.30, 25.80）下船。瓦拉納爾的東碼頭（2521 65.90, 83.50）開往達拉然。｜Prends le Skycutter près du maître des quais sculpte-vent, sur le quai ouest à l'extérieur de la cabane de Valanaar (2521 57.90, 80.90). Descends au quai sud du Plateau de Guette-ciel, à Mulgore (1412 34.30, 25.80). Le quai est de Valanaar (2521 65.90, 83.50) dessert Dalaran.
 01-第一段-1到12級.md:965｜步驟說明｜同任務也可找穆倫‧地怒（1412 33.42, 22.59）。｜Tu peux aussi prendre la quête auprès de Muln Rageterre (1412 33.42, 22.59).
 01-第一段-1到12級.md:966｜標籤｜僅塑風者天裔精靈｜Skyborne sculpte-vents uniquement
 01-第一段-1到12級.md:966｜步驟說明｜之後到奧格瑪才交｜À rendre plus tard, à Orgrimmar
 01-第一段-1到12級.md:966｜標籤｜可跳過｜Facultatif
-01-第一段-1到12級.md:967｜交通步驟｜從 天空守望者高原 沿地面道路南下，搭雷霆崖電梯上城，先開塔爾飛行點（1456 47.00, 49.83）。若十字路口飛點已開，可直接飛過去。初訪則沿莫高雷大道走東側山口，經陶拉祖營地開歐姆薩·雷角飛行點（1413 44.45, 59.15），再沿大路往北。到十字路口開迪弗拉克飛行點（1413 51.50, 30.34），向旅店老闆伯蘭德·草風綁爐石（1413 51.99, 29.89），接貧瘠之地 十字路口。｜Descends vers le sud à pied depuis le Plateau de Guette-ciel, prends l'ascenseur jusqu'aux Pitons-du-Tonnerre et apprends le point de vol de Tal (1456 47.00, 49.83). Si le point de vol de La Croisée est débloqué, envole-toi directement. Sinon, quitte Mulgore par le col est, passe par le Camp Taurajo pour apprendre le point de vol d'Omusa Thunderhorn (1413 44.45, 59.15), puis suis la route vers le nord. À La Croisée, apprends le point de vol de Devrak (1413 51.50, 30.34), lie ta pierre de foyer auprès de Boorand Plainswind l'aubergiste (1413 51.99, 29.89) et prends les quêtes de La Croisée.
+01-第一段-1到12級.md:967｜交通步驟｜從 天空守望者高原 沿地面道路南下，搭雷霆崖電梯上城，先開塔爾飛行點（1456 47.00, 49.83）。若十字路口飛點已開，可直接飛過去。初訪則沿莫高雷大道走東側山口，經陶拉祖營地開歐姆薩·雷角飛行點（1413 44.45, 59.15），再沿大路往北。到十字路口開迪弗拉克飛行點（1413 51.50, 30.34），向旅店老闆伯蘭德·草風綁爐石（1413 51.99, 29.89），接貧瘠之地 十字路口。｜Descends vers le sud à pied depuis le Plateau de Guette-ciel, prends l'ascenseur jusqu'à Thunder Bluff et apprends le point de vol de Tal (1456 47.00, 49.83). Si le point de vol de La Croisée est débloqué, envole-toi directement. Sinon, quitte Mulgore par le col est, passe par le Camp Taurajo pour apprendre le point de vol d'Omusa Thunderhorn (1413 44.45, 59.15), puis suis la route vers le nord. À La Croisée, apprends le point de vol de Devrak (1413 51.50, 30.34), lie ta pierre de foyer auprès de Boorand Plainswind l'aubergiste (1413 51.99, 29.89) et prends les quêtes de La Croisée.
 01-第一段-1到12級.md:969｜站內取捨｜本島主線依序走坦德爾、申德村、瓦拉納爾、奧基爾聖殿。還沒到12級可先做果園或影風森林支線，再搭飛艇。｜Suis la route principale de l'île : Bosquet de Thendal, Shen'dar, Valanaar, puis le sanctuaire d'Akir. En dessous du niveau 12 ? Fais d'abord les quêtes secondaires du verger ou de la forêt de Trombenoire, puis monte à bord du zeppelin.
 01-第一段-1到12級.md:970｜站內取捨｜村旁學徒和強盜任務可一起接。也可同時接角鷹獸騷擾（Hippogryph Harassment）92516【僅天裔精靈】。群爪問題（The Problem With Prideclaws）給簡易皮革背袋。愛管閒事的法師（Meddlesome Mages）可選潮汐流轉塑像【僅德魯伊】。完成火之召喚可取得充能烈焰圖騰【僅薩滿】。｜Prends ensemble les quêtes de l'apprenti et du bandit près du village. Tu peux aussi ajouter Harceleurs hippogriffes (92516) si tu es Skyborne. Le problème avec les fièregriffes donne une Sacoche simple en cuir. Des mages perturbateurs propose l'Idole des flots changeants aux druides. L'appel du feu donne le Totem des flammes chargées aux chamans.
 01-第一段-1到12級.md:970｜標籤｜僅天裔精靈｜Skyborne uniquement
 01-第一段-1到12級.md:970｜標籤｜僅德魯伊｜Druides uniquement
 01-第一段-1到12級.md:970｜標籤｜僅薩滿｜Chamans uniquement
 01-第一段-1到12級.md:971｜站內提醒｜離島兩個銜接任務 93090、95349 顯示為 13 級任務，QuestieDB 最低可接等級是 7，主線跑完就能接。｜Les quêtes 93090 et 95349 de l'île voisine s'affichent au niveau 13 dans le journal, mais tu peux les prendre dès le niveau 7 une fois la chaîne principale terminée, selon QuestieDB.
-01-第一段-1到12級.md:974｜練怪說明｜密集／一般怪／可逐隻開怪，留意鄰近蜂群／坦德爾林地，1–2 級可先在起點附近升級｜Des foules normales denses dans le Bosquet de Thendal. Tire-les une par une et surveille les essaims proches. Farme près du point de départ aux niveaux 1 et 2.
-01-第一段-1到12級.md:975｜練怪說明｜密集／一般怪／強盜會成群，先清營地邊緣／申德高地，與犯罪元素及被偷走的風石同行｜Des foules normales denses dans les hautes terres de Shen'dar. Tire les bandits depuis le bord du camp pour éviter les groupes. Fais-le en même temps que L'élément du crime et Les pierres de vent chapardées.
-01-第一段-1到12級.md:976｜練怪說明｜密集／一般怪／混有步行兵，先從營地外側拉／影風森林，順做不屑為伍也不夠格之人，接近 12 級時補經驗｜Des foules normales denses dans la forêt de Trombenoire. Tire-les depuis le bord pour éviter les fantassins. Fais-le en même temps qu'Indignes même dans la mort, ou farme jusqu'au niveau 12.
+01-第一段-1到12級.md:974｜練怪說明｜密集／一般怪／可逐隻開怪，留意鄰近蜂群／坦德爾林地，1–2 級可先在起點附近升級｜Monstres normaux, densité élevée dans le Bosquet de Thendal. Tire-les une par une et surveille les essaims proches. Farme près du point de départ aux niveaux 1 et 2.
+01-第一段-1到12級.md:975｜練怪說明｜密集／一般怪／強盜會成群，先清營地邊緣／申德高地，與犯罪元素及被偷走的風石同行｜Monstres normaux, densité élevée dans les hautes terres de Shen'dar. Tire les bandits depuis le bord du camp pour éviter les groupes. Fais-le en même temps que L'élément du crime et Les pierres de vent chapardées.
+01-第一段-1到12級.md:976｜練怪說明｜密集／一般怪／混有步行兵，先從營地外側拉／影風森林，順做不屑為伍也不夠格之人，接近 12 級時補經驗｜Monstres normaux, densité élevée dans la forêt de Trombenoire. Tire-les depuis le bord pour éviter les fantassins. Fais-le en même temps qu'Indignes même dans la mort, ou farme jusqu'au niveau 12.
 01-第一段-1到12級.md:980｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 01-第一段-1到12級.md:984｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 01-第一段-1到12級.md:988｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
@@ -882,13 +882,13 @@
 01-第一段-1到12級.md:1164｜步驟說明｜與貧瘠之地 1505→1498 擇一。｜Choisis cette chaîne ou 1505 → 1498 dans les Tarides.
 01-第一段-1到12級.md:1164｜標籤｜僅不死族／Undead｜Morts-vivants uniquement
 01-第一段-1到12級.md:1164｜標籤｜僅戰士｜Guerriers uniquement
-01-第一段-1到12級.md:1165｜步驟說明｜先清墓地附近的怪，再開事件。｜Élimine les foules près du cimetière avant de commencer l'événement.
+01-第一段-1到12級.md:1165｜步驟說明｜先清墓地附近的怪，再開事件。｜Élimine les monstres près du cimetière avant de commencer l'événement.
 01-第一段-1到12級.md:1165｜標籤｜僅不死族／Undead｜Morts-vivants uniquement
 01-第一段-1到12級.md:1165｜標籤｜僅戰士｜Guerriers uniquement
-01-第一段-1到12級.md:1166｜步驟說明｜先清墓地附近的怪，再開事件。｜Élimine les foules près du cimetière avant de commencer l'événement.
+01-第一段-1到12級.md:1166｜步驟說明｜先清墓地附近的怪，再開事件。｜Élimine les monstres près du cimetière avant de commencer l'événement.
 01-第一段-1到12級.md:1166｜標籤｜僅不死族／Undead｜Morts-vivants uniquement
 01-第一段-1到12級.md:1166｜標籤｜僅戰士｜Guerriers uniquement
-01-第一段-1到12級.md:1167｜步驟說明｜先清墓地附近的怪，再開事件。｜Élimine les foules près du cimetière avant de commencer l'événement.
+01-第一段-1到12級.md:1167｜步驟說明｜先清墓地附近的怪，再開事件。｜Élimine les monstres près du cimetière avant de commencer l'événement.
 01-第一段-1到12級.md:1167｜標籤｜僅不死族／Undead｜Morts-vivants uniquement
 01-第一段-1到12級.md:1167｜標籤｜僅戰士｜Guerriers uniquement
 01-第一段-1到12級.md:1168｜步驟說明｜武器獎勵支線。｜Quête de récompense d'arme facultative.
@@ -1227,13 +1227,13 @@
 01-第一段-1到12級.md:1354｜標籤｜僅獵人｜Chasseurs uniquement
 01-第一段-1到12級.md:1355｜標籤｜僅牛頭人｜Taurens uniquement
 01-第一段-1到12級.md:1355｜標籤｜僅獵人｜Chasseurs uniquement
-01-第一段-1到12級.md:1355｜步驟說明｜完成三次馴服後，到雷霆崖獵人高地學寵物訓練技能。｜Après les trois dressages, apprends les compétences de familier à la Cime des Chasseurs, aux Pitons-du-Tonnerre.
+01-第一段-1到12級.md:1355｜步驟說明｜完成三次馴服後，到雷霆崖獵人高地學寵物訓練技能。｜Après les trois dressages, apprends les compétences de familier à la Cime des Chasseurs, à Thunder Bluff.
 01-第一段-1到12級.md:1356｜標籤｜僅牛頭人｜Taurens uniquement
 01-第一段-1到12級.md:1356｜標籤｜僅獵人｜Chasseurs uniquement
-01-第一段-1到12級.md:1356｜步驟說明｜完成三次馴服後，到雷霆崖獵人高地學寵物訓練技能。｜Après les trois dressages, apprends les compétences de familier à la Cime des Chasseurs, aux Pitons-du-Tonnerre.
+01-第一段-1到12級.md:1356｜步驟說明｜完成三次馴服後，到雷霆崖獵人高地學寵物訓練技能。｜Après les trois dressages, apprends les compétences de familier à la Cime des Chasseurs, à Thunder Bluff.
 01-第一段-1到12級.md:1357｜標籤｜僅牛頭人｜Taurens uniquement
 01-第一段-1到12級.md:1357｜標籤｜僅獵人｜Chasseurs uniquement
-01-第一段-1到12級.md:1357｜步驟說明｜完成三次馴服後，到雷霆崖獵人高地學寵物訓練技能。｜Après les trois dressages, apprends les compétences de familier à la Cime des Chasseurs, aux Pitons-du-Tonnerre.
+01-第一段-1到12級.md:1357｜步驟說明｜完成三次馴服後，到雷霆崖獵人高地學寵物訓練技能。｜Après les trois dressages, apprends les compétences de familier à la Cime des Chasseurs, à Thunder Bluff.
 01-第一段-1到12級.md:1362｜標籤｜僅塑風者天裔精靈｜Skyborne sculpte-vents uniquement
 01-第一段-1到12級.md:1362｜標籤｜僅獵人｜Chasseurs uniquement
 01-第一段-1到12級.md:1362｜步驟說明｜若你已抵達瓦拉納爾，可直接查看奎爾安娜是否提供 94978。｜Déjà dans Valanaar ? Vérifie si Quel'ana Vent-Vif propose 94978.
@@ -1415,13 +1415,13 @@
 01-第一段-1到12級.md:1466｜步驟說明｜導引三選一，可直接找圖拉克接月光林地。｜Fais l'une des trois introductions ou prends Reflet-de-Lune directement auprès de Turak Runetotem.
 01-第一段-1到12級.md:1467｜標籤｜僅牛頭人｜Taurens uniquement
 01-第一段-1到12級.md:1467｜標籤｜僅德魯伊｜Druides uniquement
-01-第一段-1到12級.md:1467｜步驟說明｜向圖拉克取得傳送法術後直接傳送月光林地。｜Apprends la téléportation auprès de Turak Runetotem, puis utilisez-la pour atteindre Reflet-de-Lune.
+01-第一段-1到12級.md:1467｜步驟說明｜向圖拉克取得傳送法術後直接傳送月光林地。｜Apprends la téléportation auprès de Turak Runetotem, puis utilise-la pour atteindre Reflet-de-Lune.
 01-第一段-1到12級.md:1468｜標籤｜僅牛頭人｜Taurens uniquement
 01-第一段-1到12級.md:1468｜標籤｜僅德魯伊｜Druides uniquement
-01-第一段-1到12級.md:1468｜步驟說明｜向圖拉克取得傳送法術後直接傳送月光林地。｜Apprends la téléportation auprès de Turak Runetotem, puis utilisez-la pour atteindre Reflet-de-Lune.
+01-第一段-1到12級.md:1468｜步驟說明｜向圖拉克取得傳送法術後直接傳送月光林地。｜Apprends la téléportation auprès de Turak Runetotem, puis utilise-la pour atteindre Reflet-de-Lune.
 01-第一段-1到12級.md:1469｜標籤｜僅牛頭人｜Taurens uniquement
 01-第一段-1到12級.md:1469｜標籤｜僅德魯伊｜Druides uniquement
-01-第一段-1到12級.md:1469｜步驟說明｜向圖拉克取得傳送法術後直接傳送月光林地。｜Apprends la téléportation auprès de Turak Runetotem, puis utilisez-la pour atteindre Reflet-de-Lune.
+01-第一段-1到12級.md:1469｜步驟說明｜向圖拉克取得傳送法術後直接傳送月光林地。｜Apprends la téléportation auprès de Turak Runetotem, puis utilise-la pour atteindre Reflet-de-Lune.
 01-第一段-1到12級.md:1470｜標籤｜僅牛頭人｜Taurens uniquement
 01-第一段-1到12級.md:1470｜標籤｜僅德魯伊｜Druides uniquement
 01-第一段-1到12級.md:1470｜步驟說明｜與西北邊的巨熊之靈交談，再回永夜港。｜Parle à l'Esprit du Grand ours au nord-ouest, puis retourne à Havrenuit.
@@ -1472,13 +1472,13 @@
 01-第一段-1到12級.md:1491｜步驟說明｜割天者號抵達莫高雷時可接導引。｜Accepte le fil d'Ariane lorsque le Skycutter atteint Mulgore.
 01-第一段-1到12級.md:1492｜標籤｜僅塑風者天裔精靈｜Skyborne sculpte-vents uniquement
 01-第一段-1到12級.md:1492｜標籤｜僅德魯伊｜Druides uniquement
-01-第一段-1到12級.md:1492｜步驟說明｜在雷霆崖取得傳送法術，再傳到月光林地交任務。｜Apprends la téléportation aux Pitons-du-Tonnerre, puis utilise-la pour aller à Reflet-de-Lune.
+01-第一段-1到12級.md:1492｜步驟說明｜在雷霆崖取得傳送法術，再傳到月光林地交任務。｜Apprends la téléportation à Thunder Bluff, puis utilise-la pour aller à Reflet-de-Lune.
 01-第一段-1到12級.md:1493｜標籤｜僅塑風者天裔精靈｜Skyborne sculpte-vents uniquement
 01-第一段-1到12級.md:1493｜標籤｜僅德魯伊｜Druides uniquement
-01-第一段-1到12級.md:1493｜步驟說明｜在雷霆崖取得傳送法術，再傳到月光林地交任務。｜Apprends la téléportation aux Pitons-du-Tonnerre, puis utilise-la pour aller à Reflet-de-Lune.
+01-第一段-1到12級.md:1493｜步驟說明｜在雷霆崖取得傳送法術，再傳到月光林地交任務。｜Apprends la téléportation à Thunder Bluff, puis utilise-la pour aller à Reflet-de-Lune.
 01-第一段-1到12級.md:1494｜標籤｜僅塑風者天裔精靈｜Skyborne sculpte-vents uniquement
 01-第一段-1到12級.md:1494｜標籤｜僅德魯伊｜Druides uniquement
-01-第一段-1到12級.md:1494｜步驟說明｜在雷霆崖取得傳送法術，再傳到月光林地交任務。｜Apprends la téléportation aux Pitons-du-Tonnerre, puis utilise-la pour aller à Reflet-de-Lune.
+01-第一段-1到12級.md:1494｜步驟說明｜在雷霆崖取得傳送法術，再傳到月光林地交任務。｜Apprends la téléportation à Thunder Bluff, puis utilise-la pour aller à Reflet-de-Lune.
 01-第一段-1到12級.md:1498｜步驟說明｜先交 788 小試身手才會給石板。｜Remets La dent tranchante (788) pour obtenir la tablette.
 01-第一段-1到12級.md:1498｜標籤｜僅牧師｜Prêtres uniquement
 01-第一段-1到12級.md:1498｜標籤｜僅食人妖｜Trolls uniquement
@@ -1542,7 +1542,7 @@
 01-第一段-1到12級.md:1563｜步驟說明｜先交 364 無腦的僵屍。｜Remets d'abord Les Déchus (364).
 01-第一段-1到12級.md:1563｜標籤｜僅法師｜Mages uniquement
 01-第一段-1到12級.md:1563｜標籤｜僅不死族｜Morts-vivants uniquement
-01-第一段-1到12級.md:1567｜步驟說明｜奧格瑪由尤塞爾奈接；在雷霆崖可找瑟斯頓·科薩恩（1456 25.18, 20.96）。人在森金村可直接找安蘇瓦接 1884。｜Prends la quête à Orgrimmar auprès d'Uthel'nay ou aux Pitons-du-Tonnerre auprès de Thurston Xane (1456 25.18, 20.96). À Sen'jin, prends directement 1884 auprès d'Un'Thuwa.
+01-第一段-1到12級.md:1567｜步驟說明｜奧格瑪由尤塞爾奈接；在雷霆崖可找瑟斯頓·科薩恩（1456 25.18, 20.96）。人在森金村可直接找安蘇瓦接 1884。｜Prends la quête à Orgrimmar auprès d'Uthel'nay ou à Thunder Bluff auprès de Thurston Xane (1456 25.18, 20.96). À Sen'jin, prends directement 1884 auprès d'Un'Thuwa.
 01-第一段-1到12級.md:1567｜標籤｜可跳過｜Facultatif
 01-第一段-1到12級.md:1567｜標籤｜僅食人妖／獸人｜Trolls/Orcs uniquement
 01-第一段-1到12級.md:1567｜標籤｜僅法師｜Mages uniquement
@@ -1588,13 +1588,13 @@
 02-12到30級.md:42｜標籤｜可跳過｜Facultatif
 02-12到30級.md:51｜標籤｜掉率 80%｜Taux de butin : 80 %
 02-12到30級.md:52｜標籤｜掉率 85%｜Taux de butin : 85 %
-02-12到30級.md:54｜步驟說明｜東北野豬人營外的酒桶，旁邊有怪就先清。｜Élimine d'abord les foules au tonneau à l'extérieur du camp des quilboars au nord-est.
+02-12到30級.md:54｜步驟說明｜東北野豬人營外的酒桶，旁邊有怪就先清。｜Élimine d'abord les monstres au tonneau à l'extérieur du camp des quilboars au nord-est.
 02-12到30級.md:54｜標籤｜可跳過｜Facultatif
 02-12到30級.md:60｜粗體註記｜東側野豬人，回程集中交補給和第一批狩獵｜Quilboar oriental. Remise des provisions et premières chasses au retour
 02-12到30級.md:62｜標籤｜掉率 31%｜Taux de butin : 31 %
 02-12到30級.md:63｜標籤｜掉率 100%｜Taux de butin : 100 %
 02-12到30級.md:70｜步驟說明｜先留，第二次回貧瘠之地才去迅猛龍巢。｜Garde-la pour les nids de raptors lors de ta deuxième visite dans les Tarides.
-02-12到30級.md:72｜粗體註記｜西北遺忘之池，接半人馬線後繞鷹身人營地｜Bassins Oubliés : démarrez la chaîne des centaures, puis faites une boucle autour du camp des harpies
+02-12到30級.md:72｜粗體註記｜西北遺忘之池，接半人馬線後繞鷹身人營地｜Bassins Oubliés : démarre la chaîne des centaures, puis faites une boucle autour du camp des harpies
 02-12到30級.md:78｜步驟說明｜以科卡爾牧民的掉率估算。往綠洲打牧民，路過同區其他科卡爾怪也可補護腕。｜Tue les Kolkar Wranglers à l'oasis. D'autres Kolkar à proximité peuvent aussi lâcher des brassards.
 02-12到30級.md:78｜標籤｜掉率 42%｜Taux de butin : 42 %
 02-12到30級.md:79｜步驟說明｜和旁邊馴獸師分開拉；等級不足可組隊。｜Éloigne-le du Wrangler voisin. Fais équipe si tu n'as pas le niveau.
@@ -1621,12 +1621,12 @@
 02-12到30級.md:125｜步驟目標｜綠洲鉗嘴龜／綠洲鉗嘴龜 Hatchling｜Gueule d'acier des oasis / Gueule d'acier des oasis Nouveau-né
 02-12到30級.md:125｜標籤｜掉率 80%｜Taux de butin : 80 %
 02-12到30級.md:127｜步驟說明｜先留，銀松森林 瑟伯切爾在銀松森林瑟伯切爾交。｜Garde-la pour la remise au Sépulcre, dans la forêt des Pins argentés.
-02-12到30級.md:128｜步驟說明｜有意下哀嚎洞穴可先接；雷霆崖開線。｜Prends-la si tu vises les cavernes des Lamentations. La chaîne commence aux Pitons-du-Tonnerre.
+02-12到30級.md:128｜步驟說明｜有意下哀嚎洞穴可先接；雷霆崖開線。｜Prends-la si tu vises les cavernes des Lamentations. La chaîne commence à Thunder Bluff.
 02-12到30級.md:128｜標籤｜可跳過｜Facultatif
 02-12到30級.md:130｜粗體註記｜未到 16 級時補狩獵，準備跨海｜Pas encore niveau 16 ? Fais les chasses supplémentaires avant de traverser la mer
-02-12到30級.md:132｜步驟說明｜只有此刻要去雷霆崖才接，計時 45 分鐘。｜Prends-la uniquement si tu pars maintenant pour les Pitons-du-Tonnerre. Tu as 45 minutes.
+02-12到30級.md:132｜步驟說明｜只有此刻要去雷霆崖才接，計時 45 分鐘。｜Prends-la uniquement si tu pars maintenant pour Thunder Bluff. Tu as 45 minutes.
 02-12到30級.md:132｜標籤｜可跳過｜Facultatif
-02-12到30級.md:133｜交通步驟｜選做雷霆崖支線時，已開塔爾的飛行點就從十字路口搭鳥。沒開時由陶拉祖營地沿路入莫高雷，搭雷霆崖電梯上城，找塔爾開點（1456 47.00, 49.83）。853 計時從接取開始，只有能及時到達才接。｜Pour le détour facultatif des Pitons-du-Tonnerre, si le point de vol de Tal est débloqué, vole depuis La Croisée. Sinon, passe par le Camp Taurajo pour entrer à Mulgore, prends l'ascenseur et apprends le point de vol de Tal (1456 47.00, 49.83). La quête 853 lance un chronomètre dès qu'on la prend : ne la prends que si tu peux arriver à temps.
+02-12到30級.md:133｜交通步驟｜選做雷霆崖支線時，已開塔爾的飛行點就從十字路口搭鳥。沒開時由陶拉祖營地沿路入莫高雷，搭雷霆崖電梯上城，找塔爾開點（1456 47.00, 49.83）。853 計時從接取開始，只有能及時到達才接。｜Pour le détour facultatif de Thunder Bluff, si le point de vol de Tal est débloqué, vole depuis La Croisée. Sinon, passe par le Camp Taurajo pour entrer à Mulgore, prends l'ascenseur et apprends le point de vol de Tal (1456 47.00, 49.83). La quête 853 lance un chronomètre dès qu'on la prend : ne la prends que si tu peux arriver à temps.
 02-12到30級.md:134｜標籤｜可跳過｜Facultatif
 02-12到30級.md:135｜標籤｜可跳過｜Facultatif
 02-12到30級.md:136｜標籤｜可跳過｜Facultatif
@@ -1650,7 +1650,7 @@
 02-12到30級.md:142｜標籤｜14級起｜Niveau 14+
 02-12到30級.md:143｜步驟說明｜雷霆崖靈魂高地的克拉莉斯，留銀松森林 瑟伯切爾在銀松交。｜Clarice se trouve à la Cime des Esprits. Rends la quête au Sépulcre plus tard.
 02-12到30級.md:143｜標籤｜可跳過｜Facultatif
-02-12到30級.md:144｜交通步驟｜從目前所在的十字路口或雷霆崖飛奧格瑪，前提是已開奧格瑪飛點。從十字路口首次去奧格瑪，走東北大道過怒水河再沿杜洛塔大道北上；從雷霆崖首次去，先飛十字路口。進城找朵拉斯開點（1454 45.12, 63.89）。｜Vole vers Orgrimmar si le point de vol est débloqué. Pour une première visite depuis La Croisée, prends la route vers le nord-est, traverse la rivière Furie-du-Sud, puis remonte la grande route de Durotar vers le nord. Depuis les Pitons-du-Tonnerre, vole d'abord vers La Croisée. Une fois en ville, apprends le point de vol auprès de Doras (1454 45.12, 63.89).
+02-12到30級.md:144｜交通步驟｜從目前所在的十字路口或雷霆崖飛奧格瑪，前提是已開奧格瑪飛點。從十字路口首次去奧格瑪，走東北大道過怒水河再沿杜洛塔大道北上；從雷霆崖首次去，先飛十字路口。進城找朵拉斯開點（1454 45.12, 63.89）。｜Vole vers Orgrimmar si le point de vol est débloqué. Pour une première visite depuis La Croisée, prends la route vers le nord-est, traverse la rivière Furie-du-Sud, puis remonte la grande route de Durotar vers le nord. Depuis Thunder Bluff, vole d'abord vers La Croisée. Une fois en ville, apprends le point de vol auprès de Doras (1454 45.12, 63.89).
 02-12到30級.md:145｜步驟說明｜順路進奧格瑪智慧谷才接，留石爪山脈 烈日石居找希雷斯。｜Prends-la en passant dans la Vallée de la Sagesse, à Orgrimmar. À rendre à Seereth, à la Retraite de Roche-Soleil.
 02-12到30級.md:145｜標籤｜可跳過｜Facultatif
 02-12到30級.md:145｜標籤｜13級起｜Niveau 13+
@@ -1658,10 +1658,10 @@
 02-12到30級.md:148｜站內交通｜第 4 步開十字路口並綁爐石；第一趟棘齒城開布萊格；離站到弗雷薩一側等提里斯法林地線。｜À l'étape 4, débloque le point de vol de La Croisée et lie ta pierre de foyer. Apprends le point de vol de Bragok lors de ta première visite à Cabestan. En partant, attends du côté de Frezza le zeppelin des Clairières de Tirisfal.
 02-12到30級.md:149｜站內取捨｜值得做 870 → 877 → 880，只有交完才開往銀松的 3301。TUGs 把 880 排到另一次貧瘠之地，本路線提早清完，方便下一站直接交 3301。｜Fais 870 → 877 → 880 : 3301, qui mène aux Pins argentés, ne s'ouvre qu'une fois la chaîne rendue. Les TUG repoussent 880 à un autre passage dans les Tarides ; cette route la termine plus tôt pour rendre 3301 à l'étape suivante.
 02-12到30級.md:150｜站內取捨｜北側沼澤護送、礦洞與 888 留貧瘠之地 棘齒城與陶拉祖營地一起做，第一次到棘齒城只清近岸海盜。｜Fais l'escorte des marais du nord, la mine et 888 pendant la boucle de Cabestan et du Camp Taurajo. À ta première visite à Cabestan, élimine seulement les pirates proches du rivage.
-02-12到30級.md:151｜站內取捨｜雷霆崖 853、1489、264 看是否順路；若已 16 級又無哀嚎隊伍，可直接轉銀松。｜Fais 853, 1489 et 264 si tu passes par les Pitons-du-Tonnerre. Si tu es déjà niveau 16 et sans groupe pour les cavernes des Lamentations, va directement aux Pins argentés.
+02-12到30級.md:151｜站內取捨｜雷霆崖 853、1489、264 看是否順路；若已 16 級又無哀嚎隊伍，可直接轉銀松。｜Fais 853, 1489 et 264 si tu passes par Thunder Bluff. Si tu es déjà niveau 16 et sans groupe pour les cavernes des Lamentations, va directement aux Pins argentés.
 02-12到30級.md:152｜站內提醒｜14–16 可選怒焰裂谷；主線無須排到副本。未滿 16 可提前做貧瘠之地 棘齒城與陶拉祖營地的 881、875，或在死水綠洲（約 55, 42）打變異龜，走下一站前先交現成的任務。｜Le Gouffre de Ragefeu est facultatif entre les niveaux 14 et 16 ; la route principale n'en dépend pas. En dessous du niveau 16, fais 881 et 875 en début d'étape Cabestan et Camp Taurajo, ou tue des gueules d'acier mutantes à l'Oasis stagnante (vers 55, 42). Rends toutes les quêtes terminées avant de partir.
 02-12到30級.md:155｜練怪說明｜十字路口東南的開闊平原，密度中等、普通怪。附近有半人馬巡邏，沿路挑落單的陸行鳥，適合 12–13 級補開局經驗。｜Densité modérée, monstres normaux, sur la plaine ouverte au sud-est de La Croisée. Élimine les trotteurs solitaires aux niveaux 12 et 13. Surveille les patrouilles de centaures.
-02-12到30級.md:156｜練怪說明｜死水綠洲岸邊密度高，普通怪；往外拉，留意附近的科卡爾。可同步補變異的鉗嘴龜殼。｜Des foules normales denses sur la rive de l'Oasis stagnante. Tire-les loin du bord et surveille les Kolkar. Récupère les carapaces de gueules d'acier mutantes au passage.
+02-12到30級.md:156｜練怪說明｜死水綠洲岸邊密度高，普通怪；往外拉，留意附近的科卡爾。可同步補變異的鉗嘴龜殼。｜Monstres normaux, densité élevée sur la rive de l'Oasis stagnante. Tire-les loin du bord et surveille les Kolkar. Récupère les carapaces de gueules d'acier mutantes au passage.
 02-12到30級.md:162｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 02-12到30級.md:163｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊,盜賊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides/Voleurs uniquement
 02-12到30級.md:167｜危險說明｜棘齒城南的南海炮兵與海盜會從高低兩層一起加入。先清山腳再上坡取零件。｜Les canonniers et les pirates des mers du Sud peuvent tirer depuis les deux niveaux au sud de Cabestan. Dégage le pied de la colline avant de remonter pour les pièces.
@@ -1782,9 +1782,9 @@
 02-12到30級.md:345｜站內取捨｜可跳過｜走到 20 級便可以回貧瘠之地。優先跳過還沒進場的護送 435、伏擊 452 與影牙城堡支線。若已接 447、444 等幽暗城交付，從瑟伯切爾飛回時順便交。｜Retourne dans les Tarides au niveau 20. Passe en priorité l'escorte 435, l'embuscade 452 et les quêtes du Donjon d'Ombrecroc si tu ne les as pas commencées. Rends 447, 444 et les autres quêtes déjà prises à Fossoyeuse en revenant du Sépulcre en vol.
 02-12到30級.md:346｜站內取捨｜先別交｜493 在 19 級接到後留給希爾斯布萊德丘陵 塔倫米爾。路線先回貧瘠之地，不另跑一趟塔倫米爾。｜Prends 493 au niveau 19 et garde-la pour Moulin-de-Tarren dans les Contreforts de Hautebrande. Retourne d'abord dans les Tarides sans faire un détour par Moulin-de-Tarren.
 02-12到30級.md:347｜站內提醒｜若低於 20 級，先清葛雷邁恩之牆（約 43, 81）或安伯米爾（約 63, 65）剩餘的單人任務和普通怪。有隊伍時可打影牙城堡；1013 最低 16 級，1014、1098 最低 18 級。｜En dessous du niveau 20 ? Termine d'abord les quêtes solo restantes et tue des monstres normaux au Mur Grisetête (vers 43, 81) ou à Moulin-de-l'Ambre (vers 63, 65). Si tu as un groupe, fais le donjon d'Ombrecroc. 1013 demande le niveau 16, 1014 et 1098 le niveau 18.
-02-12到30級.md:350｜練怪說明｜安伯米爾外圍密度中等，普通遠程怪；先清路邊，用地形拉離房屋門口，減少連帶引怪。｜Densité modérée de foules à distance normales à l'extérieur de Moulin-de-l'Ambre. Dégage d’abord le bord de la route. Utilise le terrain pour éloigner les foules des portes.
-02-12到30級.md:351｜練怪說明｜安伯米爾外圈密度中等，普通遠程怪；附近有衛士，逐隻打。離原本達拉然任務近。｜Densité modérée de monstres à distance normaux à l'extérieur de Moulin-de-l'Ambre, près de la zone de quête Dalaran. Tire un ennemi à la fois et surveillez les gardes.
-02-12到30級.md:352｜練怪說明｜葛雷邁恩之牆前密度高，普通怪；近牆區域較擠，從路邊逐隻拉，適合離站前補到 20 級。｜Des foules normales denses près du Mur Grisetête. Tire un ennemi à la fois du bord de la route. Tue les ennemis jusqu'à atteindre le niveau 20 avant de partir.
+02-12到30級.md:350｜練怪說明｜安伯米爾外圍密度中等，普通遠程怪；先清路邊，用地形拉離房屋門口，減少連帶引怪。｜Densité modérée de monstres à distance normales à l'extérieur de Moulin-de-l'Ambre. Dégage d’abord le bord de la route. Utilise le terrain pour éloigner les monstres des portes.
+02-12到30級.md:351｜練怪說明｜安伯米爾外圈密度中等，普通遠程怪；附近有衛士，逐隻打。離原本達拉然任務近。｜Densité modérée de monstres à distance normaux à l'extérieur de Moulin-de-l'Ambre, près de la zone de quête Dalaran. Tire un ennemi à la fois et surveille les gardes.
+02-12到30級.md:352｜練怪說明｜葛雷邁恩之牆前密度高，普通怪；近牆區域較擠，從路邊逐隻拉，適合離站前補到 20 級。｜Monstres normaux, densité élevée près du Mur Grisetête. Tire un ennemi à la fois du bord de la route. Tue les ennemis jusqu'à atteindre le niveau 20 avant de partir.
 02-12到30級.md:359｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 02-12到30級.md:360｜標籤｜僅盜賊｜Voleurs uniquement
 02-12到30級.md:364｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides uniquement
@@ -1841,7 +1841,7 @@
 02-12到30級.md:449｜步驟說明｜隨基爾薩瑞斯由北方城堡走回棘齒城，確定跳完成後再離隊。｜Escorte Gilthares du Fort de Guet-du-Nord jusqu'à Cabestan. Reste jusqu'à ce que la quête soit validée.
 02-12到30級.md:449｜標籤｜可跳過｜Facultatif
 02-12到30級.md:452｜標籤｜可跳過｜Facultatif
-02-12到30級.md:453｜交通步驟｜從棘齒城向西南走至死水綠洲與迅猛龍巢，之後順路往陶拉祖。｜Dirigez-vous vers le sud-ouest depuis Cabestan en passant par l'oasis stagnante et les nids de rapaces, puis continuez jusqu'à Camp Taurajo.
+02-12到30級.md:453｜交通步驟｜從棘齒城向西南走至死水綠洲與迅猛龍巢，之後順路往陶拉祖。｜Dirige-toi vers le sud-ouest depuis Cabestan en passant par l'oasis stagnante et les nids de rapaces, puis continue jusqu'à Camp Taurajo.
 02-12到30級.md:454｜步驟說明｜多人一起清怪比較快；看到喊話就往 53.06, 41.74 的帳篷。｜Fais équipe pour nettoyer plus vite. Quand tu vois le cri, dirige-toi vers la tente en 53.06, 41.74.
 02-12到30級.md:454｜標籤｜掉率 100%｜Taux de butin : 100 %
 02-12到30級.md:456｜標籤｜掉率 26%｜Taux de butin : 26 %
@@ -1909,7 +1909,7 @@
 02-12到30級.md:517｜步驟說明｜最後回十字路口順路交。｜Rends-la en passant, à ton retour à La Croisée.
 02-12到30級.md:517｜標籤｜可跳過｜Facultatif
 02-12到30級.md:518｜標籤｜可跳過｜Facultatif
-02-12到30級.md:520｜粗體註記｜完成喬恩線和兩條跨站導引｜Terminez la chaîne de Jorn et les deux introductions pour les arrêts ultérieurs
+02-12到30級.md:520｜粗體註記｜完成喬恩線和兩條跨站導引｜Termine la chaîne de Jorn et les deux introductions pour les arrêts ultérieurs
 02-12到30級.md:522｜交通步驟｜陶拉祖往北回棘齒城西邊途中找快步斑馬與伊沙姆哈爾；拿到新鮮斑馬屍體先完成誘捕。｜En remontant du Camp Taurajo vers l'ouest de Cabestan, trouve les Zhévras rapides et Ishamuhale. Dès que tu as une Carcasse de zhévra fraîche, utilise-la d'abord pour invoquer Ishamuhale.
 02-12到30級.md:523｜步驟說明｜斑馬屍體 30 分鐘後腐壞。｜Les carcasses de zhévra pourrissent au bout de 30 minutes.
 02-12到30級.md:523｜標籤｜掉率 100%｜Taux de butin : 100 %
@@ -1925,7 +1925,7 @@
 02-12到30級.md:532｜標籤｜掉率 80%｜Taux de butin : 80 %
 02-12到30級.md:533｜步驟說明｜和營地外的雷霆蜥蜴同路，先備足三瓶。｜Fais-la avec les lézards-tonnerre à l'extérieur du camp. Prépare trois bouteilles.
 02-12到30級.md:535｜標籤｜掉率 100%｜Taux de butin : 100 %
-02-12到30級.md:537｜交通步驟｜飛回十字路口交剩下的任務；之後向西走榮耀崗哨 35.26, 27.88 前往石爪山。｜Vole vers La Croisée pour rendre les quêtes restantes. Pars ensuite vers l'ouest par Honor's Stand (35.26, 27.88) en direction des Serres-Rocheuses.
+02-12到30級.md:537｜交通步驟｜飛回十字路口交剩下的任務；之後向西走榮耀崗哨 35.26, 27.88 前往石爪山。｜Vole vers La Croisée pour rendre les quêtes restantes. Pars ensuite vers l'ouest par le lieu de l'Honneur (35.26, 27.88) en direction des Serres-Rocheuses.
 02-12到30級.md:541｜標籤｜可跳過｜Facultatif
 02-12到30級.md:542｜標籤｜可跳過｜Facultatif
 02-12到30級.md:544｜站內交通｜北側清完用爐石回十字路口，先交營地任務再飛棘齒城。初到陶拉祖營地補開飛點。｜Après la boucle nord, utilise ta pierre de foyer pour revenir à La Croisée. Rends d'abord les quêtes du camp, puis vole vers Cabestan. À ta première visite au Camp Taurajo, débloque le point de vol.
@@ -1934,10 +1934,10 @@
 02-12到30級.md:547｜站內取捨｜20 級精英 92706、半人馬事件 4021、邊境 97250 組隊再做；北方城堡護送容易引到沿路怪，也可略過。｜En groupe pour l'élite de niveau 20 de 92706, l'événement des centaures de 4021 et la quête de la frontière 97250. L'escorte du Fort de Guet-du-Nord attire facilement des monstres sur la route : tu peux aussi la passer.
 02-12到30級.md:548｜站內取捨｜礦工的寶貝掉率偏低，已打不出便去做路線後段；四個稀有只在遇到並拾到物品時觸發。｜La bonne fortune d'un mineur pauvre a un faible taux de drop. Si rien ne tombe, passe à la suite du parcours. Les quatre quêtes rares ne se déclenchent que si tu croises le rare et ramasses son objet.
 02-12到30級.md:549｜站內提醒｜未到 23 級可在肅清原野 98093 的怪點（47.11, 77.38）續打蜥蜴、潛獵者，或南下接 843。哀嚎洞穴入口約 47.70, 35.00，建議 18–23 級跑。可帶貧瘠之地 十字路口已解鎖的尖牙德魯伊 914、毒蛇花 962，棘齒城港口的麻煩 959、智慧飲料 1491，以及洞外岩台的變異皮革 1486、清除變異者 1487。｜En dessous du niveau 23 ? Continue de tuer lézards et rôdeurs au point d'Un champ à nettoyer (98093) (47.11, 77.38), ou descends vers le sud pour prendre 843. L'entrée des cavernes des Lamentations est vers 47.70, 35.00 ; niveaux 18 à 23 conseillés. Apporte 914 et 962 de La Croisée, 959 et 1491 de Cabestan, et 1486 et 1487 de la corniche devant la grotte.
-02-12到30級.md:552｜練怪說明｜肅清原野密度高，普通怪；在草地輪巡，留意憤恨的掠取者精英，避開戰團中央。｜Des foules normales denses dans Un champ à nettoyer. Parcours l'herbe en boucle, évite le centre des combats et surveille le Pilleur indigné, une élite.
+02-12到30級.md:552｜練怪說明｜肅清原野密度高，普通怪；在草地輪巡，留意憤恨的掠取者精英，避開戰團中央。｜Monstres normaux, densité élevée dans Un champ à nettoyer. Parcours l'herbe en boucle, évite le centre des combats et surveille le Pilleur indigné, une élite.
 02-12到30級.md:553｜練怪說明｜與雷鱗蜥蜴同一片草地，密度高、普通怪；有其他玩家清同區時，沿外圈補另一種怪，不必轉營地。｜Beaucoup de créatures ordinaires dans le même pré que les Stormhides. Si d'autres joueurs nettoient la zone, tue l'autre type de créature en bordure sans changer de camp.
 02-12到30級.md:560｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
-02-12到30級.md:565｜危險說明｜肅清原野的精英掠取者在普通怪之間巡邏。只打外圈蜥蜴，避免穿過戰團。｜Dans Un champ à nettoyer, un pilleur d'élite patrouille parmi les foules normales. Ne tue que les lézards en périphérie et évite de traverser le centre du combat.
+02-12到30級.md:565｜危險說明｜肅清原野的精英掠取者在普通怪之間巡邏。只打外圈蜥蜴，避免穿過戰團。｜Dans Un champ à nettoyer, un pilleur d'élite patrouille parmi les monstres normaux. Ne tue que les lézards en périphérie et évite de traverser le centre du combat.
 02-12到30級.md:566｜危險說明｜通往塵泥沼澤的邊境有成群聯盟士兵。沒有隊伍可略過遭錯怪，得平反。｜Les soldats de l'Alliance se regroupent à la frontière du Marécage d'Âprefange. Passe Accusé à tort, corrigé à raison (97250) si tu n'as pas de groupe.
 02-12到30級.md:574｜交通步驟｜從十字路口沿西北大道往石爪山入口，先找貧瘠之地希雷斯·碎石（1413 35.26, 27.88）。｜Prends la route du nord-ouest depuis La Croisée vers l'entrée des Serres-Rocheuses. Arrête-toi d'abord chez Seereth Stonebreak dans les Tarides (1413 35.26, 27.88).
 02-12到30級.md:575｜標籤｜若貧瘠之地 十字路口已接｜Si tu l'as prise à La Croisée
@@ -1965,10 +1965,10 @@
 02-12到30級.md:606｜標籤｜可跳過｜Facultatif
 02-12到30級.md:606｜標籤｜掉率 80%｜Taux de butin : 80 %
 02-12到30級.md:610｜標籤｜可跳過｜Facultatif
-02-12到30級.md:611｜交通步驟｜從烈日石居往西進焦炭谷，將鷹身人、日長石、火元素和土堆排在同一圈。｜Va vers l'ouest depuis la Retraite de Roche-Soleil jusqu'à Charred Vale. Fais en une seule boucle les harpies, les pierres solaires, les élémentaires de feu et les monticules de terre.
+02-12到30級.md:611｜交通步驟｜從烈日石居往西進焦炭谷，將鷹身人、日長石、火元素和土堆排在同一圈。｜Va vers l'ouest depuis la Retraite de Roche-Soleil jusqu'au Val calciné. Fais en une seule boucle les harpies, les pierres solaires, les élémentaires de feu et les monticules de terre.
 02-12到30級.md:614｜標籤｜掉率 80%｜Taux de butin : 80 %
 02-12到30級.md:615｜步驟說明｜對有凸起的蓋亞土堆使用任務種子。｜Utilise la graine de quête sur un Monticule de poussière de Gaea surélevé.
-02-12到30級.md:616｜交通步驟｜完成焦炭谷一圈後，循東側路回烈日石居集中交件，爐石留給瑪拉卡金與山口回程。｜Une fois la boucle de Charred Vale terminée, reviens à pied par l'est à la Retraite de Roche-Soleil pour tout rendre d'un coup. Garde ta pierre de foyer pour Malaka'jin et le retour du col.
+02-12到30級.md:616｜交通步驟｜完成焦炭谷一圈後，循東側路回烈日石居集中交件，爐石留給瑪拉卡金與山口回程。｜Une fois la boucle du Val calciné terminée, reviens à pied par l'est à la Retraite de Roche-Soleil pour tout rendre d'un coup. Garde ta pierre de foyer pour Malaka'jin et le retour du col.
 02-12到30級.md:621｜標籤｜精英｜Élite
 02-12到30級.md:621｜標籤｜可跳過｜Facultatif
 02-12到30級.md:622｜標籤｜精英｜Élite
@@ -1977,7 +1977,7 @@
 02-12到30級.md:622｜標籤｜掉率 100%｜Taux de butin : 100 %
 02-12到30級.md:623｜標籤｜精英｜Élite
 02-12到30級.md:623｜標籤｜可跳過｜Facultatif
-02-12到30級.md:624｜交通步驟｜在烈日石居交完焦炭谷任務後，從東南路下山，做滾岩峽谷選做支線，或直往瑪拉卡金與貧瘠之地山口。保留烈日石居爐石，等山口任務交完再用。｜Après avoir rendu les quêtes de Charred Vale à la Retraite de Roche-Soleil, descends par la route sud-est. Fais les quêtes facultatives du ravin des Eboulis, ou va directement à Malaka'jin et au col des Tarides. Garde ta pierre de foyer pour la remise des quêtes du col.
+02-12到30級.md:624｜交通步驟｜在烈日石居交完焦炭谷任務後，從東南路下山，做滾岩峽谷選做支線，或直往瑪拉卡金與貧瘠之地山口。保留烈日石居爐石，等山口任務交完再用。｜Après avoir rendu les quêtes du Val calciné à la Retraite de Roche-Soleil, descends par la route sud-est. Fais les quêtes facultatives du ravin des Eboulis, ou va directement à Malaka'jin et au col des Tarides. Garde ta pierre de foyer pour la remise des quêtes du col.
 02-12到30級.md:625｜標籤｜可跳過｜Facultatif
 02-12到30級.md:626｜標籤｜可跳過｜Facultatif
 02-12到30級.md:627｜標籤｜可跳過｜Facultatif
@@ -1985,39 +1985,39 @@
 02-12到30級.md:628｜標籤｜可跳過｜Facultatif
 02-12到30級.md:629｜標籤｜可跳過｜Facultatif
 02-12到30級.md:631｜標籤｜可跳過｜Facultatif
-02-12到30級.md:633｜標籤｜已有足夠經驗可不折返｜Évitez le voyage de retour si vous avez suffisamment de XP
+02-12到30級.md:633｜標籤｜已有足夠經驗可不折返｜Évite le voyage de retour si tu as suffisamment de XP
 02-12到30級.md:633｜標籤｜可跳過｜Facultatif
-02-12到30級.md:634｜標籤｜已有足夠經驗可不折返｜Évitez le voyage de retour si vous avez suffisamment de XP
+02-12到30級.md:634｜標籤｜已有足夠經驗可不折返｜Évite le voyage de retour si tu as suffisamment de XP
 02-12到30級.md:634｜標籤｜可跳過｜Facultatif
-02-12到30級.md:635｜標籤｜已有足夠經驗可不折返｜Évitez le voyage de retour si vous avez suffisamment de XP
+02-12到30級.md:635｜標籤｜已有足夠經驗可不折返｜Évite le voyage de retour si tu as suffisamment de XP
 02-12到30級.md:635｜標籤｜可跳過｜Facultatif
-02-12到30級.md:636｜標籤｜雷霆崖前置｜Prérequis des Pitons-du-Tonnerre
+02-12到30級.md:636｜標籤｜雷霆崖前置｜Prérequis de Thunder Bluff
 02-12到30級.md:636｜標籤｜可跳過｜Facultatif
 02-12到30級.md:637｜交通步驟｜在山口交完希雷斯的任務後，爐石回烈日石居，從薩爾姆搭鳥到棘齒城交卵與密信。若爐石還在冷卻，從山口沿路進貧瘠之地，到十字路口飛棘齒城。｜Après avoir rendu les quêtes de Seereth au col, utilise ta pierre de foyer pour rejoindre la Retraite de Roche-Soleil, puis vole de Tharm à Cabestan pour remettre l'œuf et la lettre. Si ta pierre de foyer est en recharge, va à pied du col jusqu'aux Tarides, puis vole de La Croisée à Cabestan.
 02-12到30級.md:638｜標籤｜若貧瘠之地 棘齒城與陶拉祖營地已接｜Si tu l'as prise à l'étape Cabestan / Camp Taurajo
 02-12到30級.md:641｜標籤｜之後順路｜À faire plus tard en passant
 02-12到30級.md:641｜標籤｜可跳過｜Facultatif
-02-12到30級.md:642｜交通步驟｜選做無辜者之血前置且有 1063 時，從棘齒城飛雷霆崖接續。未開雷霆崖飛點又不打算順路開者，可略過這條支線，從棘齒城直接飛奧格瑪。｜Si tu fais l'introduction facultative du Sang des innocents et que tu as 1063, vole de Cabestan aux Pitons-du-Tonnerre pour la suite. Si tu n'as pas débloqué les Pitons-du-Tonnerre et ne veux pas le faire en passant, passe cette branche et vole directement de Cabestan à Orgrimmar.
-02-12到30級.md:643｜標籤｜雷霆崖前置｜Prérequis des Pitons-du-Tonnerre
+02-12到30級.md:642｜交通步驟｜選做無辜者之血前置且有 1063 時，從棘齒城飛雷霆崖接續。未開雷霆崖飛點又不打算順路開者，可略過這條支線，從棘齒城直接飛奧格瑪。｜Si tu fais l'introduction facultative du Sang des innocents et que tu as 1063, vole de Cabestan à Thunder Bluff pour la suite. Si tu n'as pas débloqué Thunder Bluff et ne veux pas le faire en passant, passe cette branche et vole directement de Cabestan à Orgrimmar.
+02-12到30級.md:643｜標籤｜雷霆崖前置｜Prérequis de Thunder Bluff
 02-12到30級.md:643｜標籤｜可跳過｜Facultatif
-02-12到30級.md:644｜標籤｜雷霆崖前置｜Prérequis des Pitons-du-Tonnerre
+02-12到30級.md:644｜標籤｜雷霆崖前置｜Prérequis de Thunder Bluff
 02-12到30級.md:644｜標籤｜可跳過｜Facultatif
-02-12到30級.md:645｜標籤｜雷霆崖前置｜Prérequis des Pitons-du-Tonnerre
+02-12到30級.md:645｜標籤｜雷霆崖前置｜Prérequis de Thunder Bluff
 02-12到30級.md:645｜標籤｜可跳過｜Facultatif
-02-12到30級.md:646｜標籤｜雷霆崖前置｜Prérequis des Pitons-du-Tonnerre
+02-12到30級.md:646｜標籤｜雷霆崖前置｜Prérequis de Thunder Bluff
 02-12到30級.md:646｜標籤｜可跳過｜Facultatif
-02-12到30級.md:647｜標籤｜雷霆崖前置｜Prérequis des Pitons-du-Tonnerre
+02-12到30級.md:647｜標籤｜雷霆崖前置｜Prérequis de Thunder Bluff
 02-12到30級.md:647｜標籤｜可跳過｜Facultatif
-02-12到30級.md:648｜標籤｜雷霆崖前置｜Prérequis des Pitons-du-Tonnerre
+02-12到30級.md:648｜標籤｜雷霆崖前置｜Prérequis de Thunder Bluff
 02-12到30級.md:648｜標籤｜可跳過｜Facultatif
-02-12到30級.md:649｜交通步驟｜做完雷霆崖選做支線先從雷霆崖飛奧格瑪。從奧格瑪出城，到杜洛塔飛艇塔弗雷薩（1411 50.82, 13.54）處確認提里斯法林地線；搭到布瑞爾南塔，再走到幽暗城。接續往希爾斯布萊德丘陵 塔倫米爾。｜Après les quêtes facultatives des Pitons-du-Tonnerre, vole d'abord vers Orgrimmar. Sors de la ville et confirme la ligne de Tirisfal auprès de Frezza à la tour des zeppelins de Durotar (1411 50.82, 13.54). Descends à la tour sud de Brill, va à pied jusqu'à Fossoyeuse, puis continue jusqu'à Moulin-de-Tarren.
+02-12到30級.md:649｜交通步驟｜做完雷霆崖選做支線先從雷霆崖飛奧格瑪。從奧格瑪出城，到杜洛塔飛艇塔弗雷薩（1411 50.82, 13.54）處確認提里斯法林地線；搭到布瑞爾南塔，再走到幽暗城。接續往希爾斯布萊德丘陵 塔倫米爾。｜Après les quêtes facultatives de Thunder Bluff, vole d'abord vers Orgrimmar. Sors de la ville et confirme la ligne de Tirisfal auprès de Frezza à la tour des zeppelins de Durotar (1411 50.82, 13.54). Descends à la tour sud de Brill, va à pied jusqu'à Fossoyeuse, puis continue jusqu'à Moulin-de-Tarren.
 02-12到30級.md:651｜站內交通｜烈日石居首次開點和綁爐石；留爐石給南側山口交件後回烈日石居，續飛棘齒城。｜Lors de ta première visite à la Retraite de Roche-Soleil, débloque le point de vol et lie ta pierre de foyer. Garde-la pour revenir à la Retraite de Roche-Soleil après les quêtes du col sud, puis vole vers Cabestan.
-02-12到30級.md:652｜站內取捨｜值得做。暗色湖撿蓋亞之種，石爪峰清塞納留斯的遺產。交回種子後，焦炭谷四項同趟做。千針石林 亂風崗路過大升降梯再交 5881。｜À faire. Récupère les graines de Gaea au lac Mirkfallon et fais L'héritage de Cénarius au Pic des Serres-Rocheuses. Après avoir remis les graines, fais les quatre objectifs de Charred Vale en une seule boucle. Rends 5881 au Grand Ascenseur, en route vers le poste de Librevent, à Mille pointes.
+02-12到30級.md:652｜站內取捨｜值得做。暗色湖撿蓋亞之種，石爪峰清塞納留斯的遺產。交回種子後，焦炭谷四項同趟做。千針石林 亂風崗路過大升降梯再交 5881。｜À faire. Récupère les graines de Gaea au lac Mirkfallon et fais L'héritage de Cénarius au Pic des Serres-Rocheuses. Après avoir remis les graines, fais les quatre objectifs du Val calciné en une seule boucle. Rends 5881 à la Grande élévation, en route vers le poste de Librevent, à Mille pointes.
 02-12到30級.md:653｜站內取捨｜之後順路。1088 在梣谷 碎木崗哨打奧達努斯；1095～1096 只有日後會回狂風峭壁才續做，少一趟棘齒城往返。｜À faire plus tard en passant. Tue Ordanus pour 1088 au poste de Bois-brisé. Ne continue 1095 – 1096 que si tu comptes revenir à Combe des Cisailles : cela évite un aller-retour vers Cabestan.
 02-12到30級.md:654｜站內取捨｜可跳過。貝瑟萊斯、土靈的覺醒要打精英；1058 要刷多種野獸且交件在南端，已有足夠材料才交。｜Facultatif. Besseleth et Un Terrestre se lève demandent de tuer des élites. 1058 t'envoie chasser plusieurs types de bêtes et se rend à l'extrémité sud : ne la rends que si tu as déjà le matériel.
-02-12到30級.md:655｜站內提醒｜沒到25級時在焦炭谷外圍（約32, 64）補血怒鷹身人或火元素，先打單隻落單怪。｜En dessous du niveau 25 ? Tue les harpies Rougefurie ou les élémentaires de feu aux abords de Charred Vale (vers 32, 64). Tire d'abord les ennemis isolés.
-02-12到30級.md:658｜練怪說明｜焦炭谷東側入口密度中等，普通怪；外圍先挑落單，留意巡邏，23 級即可補經驗。｜Densité modérée de foules normales à l'entrée est de Charred Vale. Prends d'abord les ennemis isolés à l'extérieur et surveille les patrouilles. Idéal pour gagner de l'XP dès le niveau 23.
-02-12到30級.md:659｜練怪說明｜焦炭谷東側密度高，普通施法怪；利用山壁拉出營地，避免把巢群一起引來。可同時做焦炭谷任務。｜Des foules normales denses, lanceuses de sorts, dans l'est de Charred Vale. Utilise la falaise pour les attirer hors du camp et éviter de réveiller des nids entiers. Fais-les en même temps que les quêtes de Charred Vale.
+02-12到30級.md:655｜站內提醒｜沒到25級時在焦炭谷外圍（約32, 64）補血怒鷹身人或火元素，先打單隻落單怪。｜En dessous du niveau 25 ? Tue les harpies Rougefurie ou les élémentaires de feu aux abords du Val calciné (vers 32, 64). Tire d'abord les ennemis isolés.
+02-12到30級.md:658｜練怪說明｜焦炭谷東側入口密度中等，普通怪；外圍先挑落單，留意巡邏，23 級即可補經驗。｜Densité modérée de monstres normaux à l'entrée est du Val calciné. Prends d'abord les ennemis isolés à l'extérieur et surveille les patrouilles. Idéal pour gagner de l'XP dès le niveau 23.
+02-12到30級.md:659｜練怪說明｜焦炭谷東側密度高，普通施法怪；利用山壁拉出營地，避免把巢群一起引來。可同時做焦炭谷任務。｜Monstres normaux, densité élevée, lanceuses de sorts, dans l'est du Val calciné. Utilise la falaise pour les attirer hors du camp et éviter de réveiller des nids entiers. Fais-les en même temps que les quêtes du Val calciné.
 02-12到30級.md:665｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 02-12到30級.md:666｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides uniquement
 02-12到30級.md:668｜危險說明｜蛛網山地有精英蜘蛛貝瑟萊斯。先清周圍小蜘蛛，沒有隊伍可跳過。｜Besseleth est une araignée d'élite près du Sentier des Tisseuses. Élimine d'abord les petites araignées. Passe-la si tu n'as pas de groupe.
@@ -2046,7 +2046,7 @@
 02-12到30級.md:722｜標籤｜可跳過｜Facultatif
 02-12到30級.md:723｜標籤｜需先完成 1066；千針石林 亂風崗交｜Termine d'abord 1066. À rendre au poste de Librevent, à Mille pointes.
 02-12到30級.md:723｜標籤｜可跳過｜Facultatif
-02-12到30級.md:727｜粗體註記｜市政廳 → 礦坑 → 塔倫米爾回交｜Mairie → mine → rendez-vous à Moulin-de-Tarren
+02-12到30級.md:727｜粗體註記｜市政廳 → 礦坑 → 塔倫米爾回交｜Mairie → mine → retour à Moulin-de-Tarren pour rendre
 02-12到30級.md:733｜標籤｜可跳過｜Facultatif
 02-12到30級.md:737｜標籤｜可跳過｜Facultatif
 02-12到30級.md:738｜標籤｜組隊｜Groupe
@@ -2070,27 +2070,27 @@
 02-12到30級.md:752｜站內取捨｜值得做｜496、501 在西面同一趟收集，搭配希爾斯布萊德之戰 527。交 527 後才出現 546，之後殺人類時一路收頭骨。｜Fais la collecte de 496 et 501 à l'ouest avec La bataille d'Hillsbrad (527). Rends 527 pour débloquer 546, puis ramasse les crânes en tuant les humains sur le trajet.
 02-12到30級.md:753｜站內取捨｜值得做｜98094、509 順路完成馬索吉周圍的兩個任務；若接了 1066，再到敦霍爾德外圍。Forever XP 走完才補滿顱骨，此處從 528 起就順手收。｜Fais 98094 et 509 près de Nécrotraqueur Masoj. Si tu as 1066, poursuis vers les abords du Donjon de Fort-de-Durn. Contrairement à Forever XP, ramasse les crânes dès 528, pendant le trajet.
 02-12到30級.md:754｜站內取捨｜可跳過｜若 567 缺目標且需為此折返，直接前往下一站。丹加洛克 541 怪多，獨行可留到等級更高；98095 西側山脊有高等山獅，趕路時略過整條支線。｜Si la cible de 567 manque et t'oblige à revenir sur tes pas, passe à l'étape suivante. Il y a beaucoup d'ennemis pour 541 à Dun Garok. En solo, attends d'avoir un niveau plus élevé. La crête ouest de 98095 abrite des pumas de haut niveau. Passe la chaîne si tu es pressé.
-02-12到30級.md:755｜站內取捨｜之後順路｜若石爪山脈 烈日石居已接 1065，趁敦霍爾德行程完成 1066，帶 1067 給千針石林 亂風崗途經雷霆崖時交。｜Si tu as pris 1065 à la Retraite de Roche-Soleil, fais 1066 en passant au Donjon de Fort-de-Durn. Rends 1067 aux Pitons-du-Tonnerre en route vers le Poste de Librevent aux Mille pointes.
+02-12到30級.md:755｜站內取捨｜之後順路｜若石爪山脈 烈日石居已接 1065，趁敦霍爾德行程完成 1066，帶 1067 給千針石林 亂風崗途經雷霆崖時交。｜Si tu as pris 1065 à la Retraite de Roche-Soleil, fais 1066 en passant au Donjon de Fort-de-Durn. Rends 1067 à Thunder Bluff en route vers le Poste de Librevent aux Mille pointes.
 02-12到30級.md:756｜站內取捨｜之後順路｜509 → 513 完成後，希爾斯布萊德丘陵 塔倫米爾可在幽暗城接 515，再回希爾斯布萊德海岸做。｜Après 509 → 513, prends 515 à Fossoyeuse pendant l'étape Moulin-de-Tarren, puis fais-la sur la côte de Hautebrande.
 02-12到30級.md:757｜站內取捨｜之後順路｜想現在救敦霍爾德城堡的兩名囚犯，可順做克魯斯克的拯救行動（The Rescue，498）；同地的通緝：辛迪加成員（WANTED: Syndicate Personnel，549）可一起做。奧特蘭克山脈收錄兩個任務的完整步驟。完成 498 後 29 級才接續秘密潛入（Infiltration，533）。｜Si tu veux sauver les deux prisonniers au Donjon de Fort-de-Durn, fais Sauvetage (498) avec ON RECHERCHE : Personnel du Syndicat (549), au même endroit. Les deux quêtes sont détaillées dans Montagnes d'Alterac. Après 498, tu dois atteindre le niveau 29 pour prendre Infiltration (533).
 02-12到30級.md:758｜站內提醒｜到 27 級即可轉千針石林 亂風崗短訪，再進梣谷。仍低於 27 級時先在西側希爾斯布萊德農場（約 33, 42）打農夫，或清敦霍爾德城堡外圍（約 77, 43）的普通辛迪加成員；有隊伍可再挑戰丹加洛克。｜Au niveau 27, tu peux faire une courte visite au poste de Librevent avant Orneval. En dessous de 27, farme les fermiers des Champs de Hautebrande (vers 33, 42) ou les membres normaux du Syndicat devant Fort-de-Durn (vers 77, 43). En groupe, tu peux ensuite tenter Dun Garok.
-02-12到30級.md:761｜練怪說明｜希爾斯布萊德農場東側密度中等，普通怪；避開農舍門口的群怪，可同步收人類顱骨。｜Densité modérée de foules normales à l'est des Champs de Hautebrande. Évite les groupes près de la ferme. Récupère les crânes d'humains de Hautebrande au passage.
-02-12到30級.md:762｜練怪說明｜農場中段密度中等，普通怪；沿田邊找巡邏步卒，避開同時站著議員與農夫的屋內。｜Densité modérée de foules normales au milieu de la ferme. Cherche les fantassins en patrouille le long des champs. Évite les maisons où se trouvent à la fois un conseiller municipal et un fermier.
-02-12到30級.md:763｜練怪說明｜敦霍爾德城堡北側的野外林地密度較低，普通怪；避開城堡人群，適合沿東側主線回程時補幾隻。｜Des foules normales clairsemées dans les bois au nord de Donjon de Fort-de-Durn. Évite les groupes du fort. Tues-en quelques-uns au retour, le long de la route de l'est.
+02-12到30級.md:761｜練怪說明｜希爾斯布萊德農場東側密度中等，普通怪；避開農舍門口的群怪，可同步收人類顱骨。｜Densité modérée de monstres normaux à l'est des Champs de Hautebrande. Évite les groupes près de la ferme. Récupère les crânes d'humains de Hautebrande au passage.
+02-12到30級.md:762｜練怪說明｜農場中段密度中等，普通怪；沿田邊找巡邏步卒，避開同時站著議員與農夫的屋內。｜Densité modérée de monstres normaux au milieu de la ferme. Cherche les fantassins en patrouille le long des champs. Évite les maisons où se trouvent à la fois un conseiller municipal et un fermier.
+02-12到30級.md:763｜練怪說明｜敦霍爾德城堡北側的野外林地密度較低，普通怪；避開城堡人群，適合沿東側主線回程時補幾隻。｜Des monstres normaux clairsemés dans les bois au nord de Donjon de Fort-de-Durn. Évite les groupes du fort. Tues-en quelques-uns au retour, le long de la route de l'est.
 02-12到30級.md:769｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 02-12到30級.md:771｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides uniquement
 02-12到30級.md:772｜標籤｜僅盜賊｜Voleurs uniquement
 02-12到30級.md:774｜危險說明｜丹加洛克的火槍手、牧師與巡山人會在階梯口互相支援。隊伍先清外圈，再進室內找上尉。｜À Dun Garok, les fusiliers, les prêtres et les gardes-montagne se soutiennent dans les escaliers. Dégage l'extérieur en groupe avant d'aller chercher le capitaine.
 02-12到30級.md:775｜危險說明｜放西峰藥劑瓶要經雪怪洞上方。遇到高等山獅就沿坡繞開，避免直接上陡坡。｜Passe par le chemin au-dessus de la grotte du yéti pour poser la fiole au sommet ouest. Si tu vois des pumas de niveau supérieur, contourne la pente au lieu de monter tout droit.
-02-12到30級.md:783｜交通步驟｜在布瑞爾南方飛艇塔找薩匹塔（1420 60.74, 58.87，西平台）確認奧格瑪線。抵杜洛塔後進奧格瑪；有 1067 要交就先飛雷霆崖再飛陶拉祖，否則從奧格瑪飛陶拉祖。若仍在塔倫米爾才先飛幽暗城轉飛艇。｜Va à la tour des zeppelins au sud de Brill et confirme la ligne d'Orgrimmar auprès de Zapetta, plate-forme ouest (1420 60.74, 58.87). À Durotar, entre à Orgrimmar. Si tu as 1067 à rendre, vole d'abord aux Pitons-du-Tonnerre, puis au Camp Taurajo. Sinon, vole d'Orgrimmar directement au Camp Taurajo. Si tu es encore à Moulin-de-Tarren, vole d'abord à Fossoyeuse pour le zeppelin.
+02-12到30級.md:783｜交通步驟｜在布瑞爾南方飛艇塔找薩匹塔（1420 60.74, 58.87，西平台）確認奧格瑪線。抵杜洛塔後進奧格瑪；有 1067 要交就先飛雷霆崖再飛陶拉祖，否則從奧格瑪飛陶拉祖。若仍在塔倫米爾才先飛幽暗城轉飛艇。｜Va à la tour des zeppelins au sud de Brill et confirme la ligne d'Orgrimmar auprès de Zapetta, plate-forme ouest (1420 60.74, 58.87). À Durotar, entre à Orgrimmar. Si tu as 1067 à rendre, vole d'abord à Thunder Bluff, puis au Camp Taurajo. Sinon, vole d'Orgrimmar directement au Camp Taurajo. Si tu es encore à Moulin-de-Tarren, vole d'abord à Fossoyeuse pour le zeppelin.
 02-12到30級.md:784｜標籤｜若希爾斯布萊德丘陵 塔倫米爾已接｜Si tu l'as prise à Moulin-de-Tarren
 02-12到30級.md:784｜標籤｜可跳過｜Facultatif
 02-12到30級.md:785｜標籤｜若希爾斯布萊德丘陵 塔倫米爾已接｜Si tu l'as prise à Moulin-de-Tarren
 02-12到30級.md:785｜標籤｜可跳過｜Facultatif
-02-12到30級.md:786｜交通步驟｜沿貧瘠之地南路到大升降梯，與北側守衛交接。｜Prends la route sud des Tarides jusqu'au Grand Ascenseur et rends la quête au garde du côté nord.
+02-12到30級.md:786｜交通步驟｜沿貧瘠之地南路到大升降梯，與北側守衛交接。｜Prends la route sud des Tarides jusqu'à la Grande élévation et rends la quête au garde du côté nord.
 02-12到30級.md:787｜標籤｜若石爪山脈 烈日石居已接｜Si tu l'as prise à la Retraite de Roche-Soleil
 02-12到30級.md:788｜標籤｜若石爪山脈 烈日石居已接｜Si tu l'as prise à la Retraite de Roche-Soleil
-02-12到30級.md:792｜交通步驟｜搭大升降梯下到谷底，沿路東行至亂風崗，再搭亂風崗升降梯上台地，找奈瑟開飛行點（1441 45.14, 49.11）。本段不改爐石綁定。｜Descends par le Grand Ascenseur. Suis la vallée vers l'est et monte par l'ascenseur du poste de Librevent. Apprends le point de vol de Nyse (1441 45.14, 49.11). Ne change pas ton lien de foyer.
+02-12到30級.md:792｜交通步驟｜搭大升降梯下到谷底，沿路東行至亂風崗，再搭亂風崗升降梯上台地，找奈瑟開飛行點（1441 45.14, 49.11）。本段不改爐石綁定。｜Descends par la Grande élévation. Suis la vallée vers l'est et monte par l'ascenseur du poste de Librevent. Apprends le point de vol de Nyse (1441 45.14, 49.11). Ne change pas ton lien de foyer.
 02-12到30級.md:796｜步驟說明｜同任務也可找勞恩·峭壁行者（46.14, 51.71）。｜Tu peux aussi prendre la quête auprès de Rau Cliffrunner (46.14, 51.71).
 02-12到30級.md:799｜交通步驟｜先繞亂風崗北側半人馬營地，再去多恩和風蛇巢。｜Élimine d'abord les camps de centaures au nord du poste de Librevent, puis va vers Dorn et les nids de serpents du vent.
 02-12到30級.md:802｜步驟說明｜只從多恩傳送點正前方突出的木板跳，成功會傳回多恩。｜Saute uniquement depuis la planche qui dépasse juste devant le point de téléportation de Dorn. Si tu réussis, tu es téléporté de retour à Dorn.
@@ -2106,7 +2106,7 @@
 02-12到30級.md:816｜標籤｜可跳過｜Facultatif
 02-12到30級.md:817｜標籤｜護送｜Escorte
 02-12到30級.md:817｜標籤｜可跳過｜Facultatif
-02-12到30級.md:820｜標籤｜要飛雷霆崖才接｜À prendre si tu voles vers les Pitons-du-Tonnerre
+02-12到30級.md:820｜標籤｜要飛雷霆崖才接｜À prendre si tu voles vers Thunder Bluff
 02-12到30級.md:820｜標籤｜可跳過｜Facultatif
 02-12到30級.md:821｜標籤｜精英｜Élite
 02-12到30級.md:821｜標籤｜可跳過｜Facultatif
@@ -2151,17 +2151,17 @@
 02-12到30級.md:845｜標籤｜掉率 100%｜Taux de butin : 100 %
 02-12到30級.md:846｜標籤｜已遇到才做｜Seulement si tu l'as croisé
 02-12到30級.md:846｜標籤｜可跳過｜Facultatif
-02-12到30級.md:847｜交通步驟｜有神聖之火 5062 要交且雷霆崖飛點已開，先從亂風崗飛雷霆崖。若不去雷霆崖，略過下一個交件，直接走離站步驟。｜Si tu as Feu sacré (5062) à rendre et que les Pitons-du-Tonnerre sont débloqués, vole d'abord du poste de Librevent aux Pitons-du-Tonnerre. Sinon, passe la prochaine remise et continue.
-02-12到30級.md:848｜標籤｜雷霆崖交件｜À rendre aux Pitons-du-Tonnerre
+02-12到30級.md:847｜交通步驟｜有神聖之火 5062 要交且雷霆崖飛點已開，先從亂風崗飛雷霆崖。若不去雷霆崖，略過下一個交件，直接走離站步驟。｜Si tu as Feu sacré (5062) à rendre et que Thunder Bluff est débloqué, vole d'abord du poste de Librevent à Thunder Bluff. Sinon, passe la prochaine remise et continue.
+02-12到30級.md:848｜標籤｜雷霆崖交件｜À rendre à Thunder Bluff
 02-12到30級.md:848｜標籤｜可跳過｜Facultatif
-02-12到30級.md:849｜交通步驟｜從目前的亂風崗或雷霆崖搭鳥。碎木崗哨飛點已開可直飛；初訪先飛十字路口，沿貧瘠之地北路越過莫爾杉壁壘，沿梣谷東側大道抵碎木崗哨。｜Vole depuis le poste de Librevent ou les Pitons-du-Tonnerre. Si le point de vol du poste de Bois-brisé est débloqué, vole directement. Sinon, vole d'abord à La Croisée, prends la route nord des Tarides au-delà du rempart de Mor'shan, puis la grande route est d'Orneval jusqu'au poste de Bois-brisé.
-02-12到30級.md:851｜站內交通｜奧格瑪進城飛陶拉祖；從貧瘠之地南端搭大升降梯下谷，亂風崗首次開點。雷霆崖有 5062 才繞。｜Vole d'Orgrimmar au Camp Taurajo, puis prends le Grand Ascenseur à l'extrémité sud des Tarides. Débloque le point de vol du poste de Librevent à ta première visite. Ne passe par les Pitons-du-Tonnerre que si tu as 5062.
-02-12到30級.md:852｜站內取捨｜值得做。石爪山脈 烈日石居的信直接交大升降梯守衛。亂風崗西邊的補給箱、三種鷹身人和耐力試煉共用區域。｜Remets la lettre de la Retraite de Roche-Soleil au garde du Grand Ascenseur. La caisse à l'ouest du poste de Librevent, les trois types de harpies et L'épreuve d'Endurance se font dans la même zone.
-02-12到30級.md:853｜站內取捨｜之後順路。影片先講梣谷，再提中途跑一趟千針石林。這裡把亂風崗短訪排在梣谷主線前；閃光平原整圈留千針石林 閃光平原。｜La vidéo présente d'abord Orneval, puis évoque un détour par Mille pointes. Ici, la courte visite du poste de Librevent passe avant la chaîne d'Orneval ; la boucle complète de Shimmering Flats est gardée pour la visite à Mille pointes.
+02-12到30級.md:849｜交通步驟｜從目前的亂風崗或雷霆崖搭鳥。碎木崗哨飛點已開可直飛；初訪先飛十字路口，沿貧瘠之地北路越過莫爾杉壁壘，沿梣谷東側大道抵碎木崗哨。｜Vole depuis le poste de Librevent ou Thunder Bluff. Si le point de vol du poste de Bois-brisé est débloqué, vole directement. Sinon, vole d'abord à La Croisée, prends la route nord des Tarides au-delà du rempart de Mor'shan, puis la grande route est d'Orneval jusqu'au poste de Bois-brisé.
+02-12到30級.md:851｜站內交通｜奧格瑪進城飛陶拉祖；從貧瘠之地南端搭大升降梯下谷，亂風崗首次開點。雷霆崖有 5062 才繞。｜Vole d'Orgrimmar au Camp Taurajo, puis prends la Grande élévation à l'extrémité sud des Tarides. Débloque le point de vol du poste de Librevent à ta première visite. Ne passe par Thunder Bluff que si tu as 5062.
+02-12到30級.md:852｜站內取捨｜值得做。石爪山脈 烈日石居的信直接交大升降梯守衛。亂風崗西邊的補給箱、三種鷹身人和耐力試煉共用區域。｜Remets la lettre de la Retraite de Roche-Soleil au garde de la Grande élévation. La caisse à l'ouest du poste de Librevent, les trois types de harpies et L'épreuve d'Endurance se font dans la même zone.
+02-12到30級.md:853｜站內取捨｜之後順路。影片先講梣谷，再提中途跑一趟千針石林。這裡把亂風崗短訪排在梣谷主線前；閃光平原整圈留千針石林 閃光平原。｜La vidéo présente d'abord Orneval, puis évoque un détour par Mille pointes. Ici, la courte visite du poste de Librevent passe avant la chaîne d'Orneval ; la boucle complète des Salines est gardée pour la visite à Mille pointes.
 02-12到30級.md:854｜站內取捨｜可跳過。拉克塔護送、豹籠和西側巡邏後續較費時；有隊友或正在經過目標再做。｜Passe l'escorte de Lakota Windsong, la cage de la panthère et la suite de la patrouille ouest, sauf si tu as de l'aide ou si tu passes déjà près des cibles.
-02-12到30級.md:855｜站內提醒｜若要打剃刀沼澤，入口在大升降梯前的貧瘠之地南端。未達本段預期進度，可以在亂風崗西側的尖嘯鷹身人坡地（約27, 51）補經驗。｜Si tu veux faire le Kraal de Tranchebauge, l'entrée est à l'extrémité sud des Tarides, avant le Grand Ascenseur. Si tu as du retard en XP, tue des harpies hurlantes à l'ouest du poste de Librevent (vers 27, 51).
-02-12到30級.md:858｜練怪說明｜亂風崗西側谷地密度中等，普通怪；在谷底逐隻打，不必繞到鷹身人營地。｜Densité modérée de foules normales dans la vallée à l'ouest du poste de Librevent. Tire-les une par une au fond de la vallée, sans détour par le camp des harpies.
-02-12到30級.md:859｜練怪說明｜西側鷹身人坡地密度中等，普通怪；營地同時有其他鷹身人，沿坡緣挑落單，可順做尖嘯鷹身人任務。｜Densité modérée de foules normales sur les pentes ouest des harpies. Élimine les harpies solitaires le long du bord tout en accomplissant la quête des harpies.
+02-12到30級.md:855｜站內提醒｜若要打剃刀沼澤，入口在大升降梯前的貧瘠之地南端。未達本段預期進度，可以在亂風崗西側的尖嘯鷹身人坡地（約27, 51）補經驗。｜Si tu veux faire le Kraal de Tranchebauge, l'entrée est à l'extrémité sud des Tarides, avant la Grande élévation. Si tu as du retard en XP, tue des harpies hurlantes à l'ouest du poste de Librevent (vers 27, 51).
+02-12到30級.md:858｜練怪說明｜亂風崗西側谷地密度中等，普通怪；在谷底逐隻打，不必繞到鷹身人營地。｜Densité modérée de monstres normaux dans la vallée à l'ouest du poste de Librevent. Tire-les une par une au fond de la vallée, sans détour par le camp des harpies.
+02-12到30級.md:859｜練怪說明｜西側鷹身人坡地密度中等，普通怪；營地同時有其他鷹身人，沿坡緣挑落單，可順做尖嘯鷹身人任務。｜Densité modérée de monstres normaux sur les pentes ouest des harpies. Élimine les harpies solitaires le long du bord tout en accomplissant la quête des harpies.
 02-12到30級.md:865｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 02-12到30級.md:866｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides uniquement
 02-12到30級.md:869｜危險說明｜升降梯落差會致死。過亂風崗橋面或北端升降梯時先等平台到位。｜La chute de l'ascenseur est fatale. Attends que la plate-forme soit là avant de traverser le pont du poste de Librevent ou d'utiliser l'ascenseur nord.
@@ -2262,11 +2262,11 @@
 02-12到30級.md:933｜標籤｜掉率 100%｜Taux de butin : 100 %
 02-12到30級.md:934｜標籤｜低等怪補缺口｜Des monstres de bas niveau pour des XP supplémentaires
 02-12到30級.md:934｜標籤｜可跳過｜Facultatif
-02-12到30級.md:935｜交通步驟｜由前哨站沿道路往東，到薊皮村打熊怪，再到村北洞穴撿符咒。｜Suis la route est jusqu'à Village des Crins-de-Chardon. Tue les furbolgs et récupérez les charmes dans la grotte au nord du village.
+02-12到30級.md:935｜交通步驟｜由前哨站沿道路往東，到薊皮村打熊怪，再到村北洞穴撿符咒。｜Suis la route est jusqu'à Village des Crins-de-Chardon. Tue les furbolgs et récupère les charmes dans la grotte au nord du village.
 02-12到30級.md:938｜標籤｜護送｜Escorte
 02-12到30級.md:938｜標籤｜可跳過｜Facultatif
 02-12到30級.md:939｜標籤｜護送｜Escorte
-02-12到30級.md:939｜步驟說明｜入口與洞內可能同時刷怪，先清通道再接。｜Des foules peuvent apparaître à l’entrée et à l’intérieur. Libère le passage avant d’accepter.
+02-12到30級.md:939｜步驟說明｜入口與洞內可能同時刷怪，先清通道再接。｜Des monstres peuvent apparaître à l’entrée et à l’intérieur. Libère le passage avant d’accepter.
 02-12到30級.md:939｜標籤｜可跳過｜Facultatif
 02-12到30級.md:942｜標籤｜需再去東側營地｜Retour au camp oriental
 02-12到30級.md:942｜標籤｜可跳過｜Facultatif
@@ -2319,11 +2319,11 @@
 02-12到30級.md:965｜站內交通｜先開碎木崗哨，再開佐拉姆加；依待交任務選碎木崗哨、烈日石居、十字路口，或從佐拉姆加直接飛奧格瑪。保留塔倫米爾爐石。｜Débloque d'abord le poste de Bois-brisé, puis Zoram'gar. Selon les quêtes à rendre, vole vers le poste de Bois-brisé, la Retraite de Roche-Soleil ou La Croisée, ou va directement à Orgrimmar depuis Zoram'gar. Garde ta pierre de foyer liée à Moulin-de-Tarren.
 02-12到30級.md:966｜站內取捨｜值得做。碎木崗哨南側先驅者、西南湖元素、北側薩特各做一圈；佐拉姆加的熊怪與洞穴符咒一起解。｜Fais trois boucles depuis le poste de Bois-brisé : les précurseurs au sud, les élémentaires du lac au sud-ouest et les satyres au nord. Fais les furbolgs et les charmes des cavernes ensemble à Zoram'gar.
 02-12到30級.md:967｜站內取捨｜可跳過。三隻獵物會巡邏，只在順路遇到時打。散頁沒集滿可留到日後交易，不必反覆刷。｜Les trois bêtes patrouillent. Ne les tue que si tu les croises en route. Si tu n'as pas toutes les pages, échange-les plus tard au lieu de farmer.
-02-12到30級.md:968｜站內取捨｜之後順路。29級後若本來就要跑十字路口和奧格瑪，可先接 1145，交奧格瑪後接 1146。到千針石林 閃光平原交 1146 才能接 1147；與本段交通不順路就略過。｜Au niveau 29, prends 1145 si tu vas déjà vers La Croisée et Orgrimmar. Rends-la à Orgrimmar pour obtenir 1146, puis rends 1146 à Shimmering Flats pour débloquer 1147. Passe la chaîne si elle est hors de ta route.
+02-12到30級.md:968｜站內取捨｜之後順路。29級後若本來就要跑十字路口和奧格瑪，可先接 1145，交奧格瑪後接 1146。到千針石林 閃光平原交 1146 才能接 1147；與本段交通不順路就略過。｜Au niveau 29, prends 1145 si tu vas déjà vers La Croisée et Orgrimmar. Rends-la à Orgrimmar pour obtenir 1146, puis rends 1146 aux Salines pour débloquer 1147. Passe la chaîne si elle est hors de ta route.
 02-12到30級.md:969｜站內提醒｜未到30級優先補薩特（約67, 57）或薊皮熊怪（約32, 38）。有隊伍可在佐拉姆海岸下黑暗深淵；若隊友未到齊，先繼續本段。｜En dessous du niveau 30 ? Fais en priorité les satyres (vers 67, 57) ou les furbolgs Crins-de-Chardon (vers 32, 38). Si ton groupe est prêt, fais les Profondeurs de Brassenoire depuis la côte de Zoram. Sinon, continue tes quêtes.
-02-12到30級.md:972｜練怪說明｜魔草薩特營地外側密度中等，普通怪；同類巡邏與其他薩特會靠近，沿營地邊緣清，能順便收薩特之角。｜Densité modérée de foules normales en dehors du camp des satyres. Dégage le long du bord, surveillez les patrouilles et les satyres à proximité et récupérez Cornes de satyre.
-02-12到30級.md:973｜練怪說明｜碎木崗哨北側林地密度中等，普通怪；用開闊地逐隻打，離飛行點近，適合不想進薩特營地時補經驗。｜Densité modérée de foules normales dans les bois au nord du poste de Bois-brisé. Tire-les une par une à découvert, près du point de vol, si tu préfères éviter le camp des satyres.
-02-12到30級.md:974｜練怪說明｜薩維亞營地密度中等，普通怪；留意隱匿與巡邏怪，先清外圍再走內側。適合 29 級最後一段，亦可順手補薩特之角。｜Densité modérée de foules normales à Xavian. Surveille les monstres furtifs et les patrouilles. Nettoie d'abord l'extérieur, puis l'intérieur. Idéal pour finir le niveau 29, et tu peux en profiter pour récolter des Cornes de satyre.
+02-12到30級.md:972｜練怪說明｜魔草薩特營地外側密度中等，普通怪；同類巡邏與其他薩特會靠近，沿營地邊緣清，能順便收薩特之角。｜Densité modérée de monstres normaux en dehors du camp des satyres. Dégage le long du bord, surveille les patrouilles et les satyres à proximité et récupère Cornes de satyre.
+02-12到30級.md:973｜練怪說明｜碎木崗哨北側林地密度中等，普通怪；用開闊地逐隻打，離飛行點近，適合不想進薩特營地時補經驗。｜Densité modérée de monstres normaux dans les bois au nord du poste de Bois-brisé. Tire-les une par une à découvert, près du point de vol, si tu préfères éviter le camp des satyres.
+02-12到30級.md:974｜練怪說明｜薩維亞營地密度中等，普通怪；留意隱匿與巡邏怪，先清外圍再走內側。適合 29 級最後一段，亦可順手補薩特之角。｜Densité modérée de monstres normaux à Xavian. Surveille les monstres furtifs et les patrouilles. Nettoie d'abord l'extérieur, puis l'intérieur. Idéal pour finir le niveau 29, et tu peux en profiter pour récolter des Cornes de satyre.
 02-12到30級.md:980｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 02-12到30級.md:984｜危險說明｜阿斯特蘭納是聯盟城鎮，路邊有 40 級哨兵。去佐拉姆加時從鎮外繞過。｜Astranaar est une ville de l'Alliance, avec des sentinelles de niveau 40 au bord de la route. Contourne-la en allant à Zoram'gar.
 02-12到30級.md:985｜危險說明｜薊皮洞內的熊怪會堵窄道。先清到出口再開箱或接盧爾護送。｜Dans le fort des Crins-de-Chardon, les furbolgs peuvent bloquer les passages étroits. Dégage jusqu'à la sortie avant d'ouvrir le coffre ou de lancer l'escorte de Ruul.
@@ -2458,7 +2458,7 @@
 02-12到30級.md:1045｜標籤｜可跳過｜Facultatif
 02-12到30級.md:1045｜★獎勵物品名｜禍狼｜Tue-loup
 02-12到30級.md:1045｜★獎勵職業｜聖騎士｜Paladin
-02-12到30級.md:1051｜步驟說明｜剃刀嶺接取後往前沿哨所；也可向奧格瑪的索瑞克（1454 80.39, 32.38）、雷霆崖的托姆·狂暴圖騰（1456 57.24, 87.37）或血蹄村的克朗·石蹄接。若已走布瑞爾 1819，可跳過這個防禦姿態分支。｜Prends la quête à Tranchecolline, puis va au Far Watch Post. Sorek à Orgrimmar (1454 80.39, 32.38), Torm Ragetotem aux Pitons-du-Tonnerre (1456 57.24, 87.37) et Krang Stonehoof au Village de Sabot-de-Sang la proposent aussi. Si tu as fait 1819 à Brill, passe cette branche de la Posture défensive.
+02-12到30級.md:1051｜步驟說明｜剃刀嶺接取後往前沿哨所；也可向奧格瑪的索瑞克（1454 80.39, 32.38）、雷霆崖的托姆·狂暴圖騰（1456 57.24, 87.37）或血蹄村的克朗·石蹄接。若已走布瑞爾 1819，可跳過這個防禦姿態分支。｜Prends la quête à Tranchecolline, puis va au Poste de garde extérieur. Sorek à Orgrimmar (1454 80.39, 32.38), Torm Ragetotem à Thunder Bluff (1456 57.24, 87.37) et Krang Stonehoof au Village de Sabot-de-Sang la proposent aussi. Si tu as fait 1819 à Brill, passe cette branche de la Posture défensive.
 02-12到30級.md:1051｜標籤｜僅戰士｜Guerriers uniquement
 02-12到30級.md:1052｜步驟說明｜由奧格瑪、雷霆崖、血蹄村或剃刀嶺的訓練師起始；若已走布瑞爾 1819，可跳過這個防禦姿態分支。｜Commence auprès de n'importe quel maître guerrier de la liste. Ignore cette branche si tu as fait 1819 à Brill.
 02-12到30級.md:1052｜標籤｜僅戰士｜Guerriers uniquement
@@ -2520,13 +2520,13 @@
 02-12到30級.md:1077｜★獎勵物品名｜充能烈焰圖騰｜Totem des flammes chargées
 02-12到30級.md:1077｜★獎勵職業｜薩滿｜Chaman
 02-12到30級.md:1077｜標籤｜僅薩滿｜Chamans uniquement
-02-12到30級.md:1081｜步驟說明｜可從奧格瑪、雷霆崖或幽暗城訓練師接。同任務也可找托姆·狂暴圖騰（1456 57.24, 87.37）、巴爾圖斯·弗勒（1458 47.40, 17.29）。｜Prends la quête auprès d'un maître à Orgrimmar, aux Pitons-du-Tonnerre ou à Fossoyeuse. Torm Ragetotem (1456 57.24, 87.37) et Baltus Fowler (1458 47.40, 17.29) la proposent aussi.
+02-12到30級.md:1081｜步驟說明｜可從奧格瑪、雷霆崖或幽暗城訓練師接。同任務也可找托姆·狂暴圖騰（1456 57.24, 87.37）、巴爾圖斯·弗勒（1458 47.40, 17.29）。｜Prends la quête auprès d'un maître à Orgrimmar, à Thunder Bluff ou à Fossoyeuse. Torm Ragetotem (1456 57.24, 87.37) et Baltus Fowler (1458 47.40, 17.29) la proposent aussi.
 02-12到30級.md:1081｜標籤｜可跳過｜Facultatif
 02-12到30級.md:1081｜標籤｜僅戰士｜Guerriers uniquement
-02-12到30級.md:1082｜步驟說明｜可從奧格瑪、雷霆崖或幽暗城訓練師接。｜Prends-la auprès d'un maître à Orgrimmar, aux Pitons-du-Tonnerre ou à Fossoyeuse.
+02-12到30級.md:1082｜步驟說明｜可從奧格瑪、雷霆崖或幽暗城訓練師接。｜Prends-la auprès d'un maître à Orgrimmar, à Thunder Bluff ou à Fossoyeuse.
 02-12到30級.md:1082｜標籤｜可跳過｜Facultatif
 02-12到30級.md:1082｜標籤｜僅戰士｜Guerriers uniquement
-02-12到30級.md:1083｜步驟說明｜可從奧格瑪、雷霆崖或幽暗城訓練師接。｜Prends-la auprès d'un maître à Orgrimmar, aux Pitons-du-Tonnerre ou à Fossoyeuse.
+02-12到30級.md:1083｜步驟說明｜可從奧格瑪、雷霆崖或幽暗城訓練師接。｜Prends-la auprès d'un maître à Orgrimmar, à Thunder Bluff ou à Fossoyeuse.
 02-12到30級.md:1083｜標籤｜可跳過｜Facultatif
 02-12到30級.md:1083｜標籤｜僅戰士｜Guerriers uniquement
 02-12到30級.md:1084｜步驟說明｜與陶拉祖營地周邊任務同趟。｜Fais-la en même temps que les quêtes autour du Camp Taurajo.
@@ -2669,7 +2669,7 @@
 02-12到30級.md:1160｜標籤｜掉率 100%｜Taux de butin : 100 %
 02-12到30級.md:1161｜步驟說明｜先偷鑰匙。改良藥劑鎖箱需要開鎖；中毒後接希諾特的幫助。｜Vole d'abord la clé. Le coffre verrouillé de la potion améliorée demande Crochetage. Après l'empoisonnement, prends L'aide d'Hinott.
 02-12到30級.md:1161｜標籤｜僅盜賊｜Voleurs uniquement
-02-12到30級.md:1162｜步驟說明｜在塔倫米爾交。｜Rendez-vous à Moulin-de-Tarren.
+02-12到30級.md:1162｜步驟說明｜在塔倫米爾交。｜Rends-la à Moulin-de-Tarren.
 02-12到30級.md:1162｜標籤｜僅盜賊｜Voleurs uniquement
 02-12到30級.md:1168｜步驟說明｜接續清除贊吉爾之觸。｜Continue la chaîne pour guérir Toucher de Zanzil.
 02-12到30級.md:1168｜標籤｜僅盜賊｜Voleurs uniquement
@@ -2743,11 +2743,11 @@
 02-12到30級.md:1204｜步驟說明｜只有收到後續信件才回去。｜Reviens seulement après avoir reçu la lettre de suivi.
 02-12到30級.md:1204｜標籤｜可跳過｜Facultatif
 02-12到30級.md:1204｜標籤｜僅盜賊｜Voleurs uniquement
-02-12到30級.md:1208｜步驟說明｜雷霆崖 1529、剃刀嶺 2985、血蹄村 2986 為同一條線的可選導引，也可直接找伊斯倫。｜1529 aux Pitons-du-Tonnerre, 2985 à Tranchecolline et 2986 au Village de Sabot-de-Sang sont des introductions facultatives à la même chaîne. Tu peux aussi aller voir directement Islen Waterseer.
+02-12到30級.md:1208｜步驟說明｜雷霆崖 1529、剃刀嶺 2985、血蹄村 2986 為同一條線的可選導引，也可直接找伊斯倫。｜1529 à Thunder Bluff, 2985 à Tranchecolline et 2986 au Village de Sabot-de-Sang sont des introductions facultatives à la même chaîne. Tu peux aussi aller voir directement Islen Waterseer.
 02-12到30級.md:1208｜標籤｜僅薩滿｜Chamans uniquement
-02-12到30級.md:1209｜步驟說明｜雷霆崖 1529、剃刀嶺 2985、血蹄村 2986 為同一條線的可選導引，也可直接找伊斯倫。｜1529 aux Pitons-du-Tonnerre, 2985 à Tranchecolline et 2986 au Village de Sabot-de-Sang sont des introductions facultatives à la même chaîne. Tu peux aussi aller voir directement Islen Waterseer.
+02-12到30級.md:1209｜步驟說明｜雷霆崖 1529、剃刀嶺 2985、血蹄村 2986 為同一條線的可選導引，也可直接找伊斯倫。｜1529 à Thunder Bluff, 2985 à Tranchecolline et 2986 au Village de Sabot-de-Sang sont des introductions facultatives à la même chaîne. Tu peux aussi aller voir directement Islen Waterseer.
 02-12到30級.md:1209｜標籤｜僅薩滿｜Chamans uniquement
-02-12到30級.md:1210｜步驟說明｜雷霆崖 1529、剃刀嶺 2985、血蹄村 2986 為同一條線的可選導引，也可直接找伊斯倫。｜1529 aux Pitons-du-Tonnerre, 2985 à Tranchecolline et 2986 au Village de Sabot-de-Sang sont des introductions facultatives à la même chaîne. Tu peux aussi aller voir directement Islen Waterseer.
+02-12到30級.md:1210｜步驟說明｜雷霆崖 1529、剃刀嶺 2985、血蹄村 2986 為同一條線的可選導引，也可直接找伊斯倫。｜1529 à Thunder Bluff, 2985 à Tranchecolline et 2986 au Village de Sabot-de-Sang sont des introductions facultatives à la même chaîne. Tu peux aussi aller voir directement Islen Waterseer.
 02-12到30級.md:1210｜標籤｜僅薩滿｜Chamans uniquement
 02-12到30級.md:1217｜步驟說明｜塔倫米爾取水，千針石林 亂風崗回貧瘠之地再交。｜Récupère de l'eau à Moulin-de-Tarren. Rends-la dans les Tarides après le poste de Librevent.
 02-12到30級.md:1217｜標籤｜僅薩滿｜Chamans uniquement
@@ -2842,7 +2842,7 @@
 02-12到30級.md:1307｜標籤｜僅塑風者天裔精靈｜Skyborne sculpte-vents uniquement
 02-12到30級.md:1308｜標籤｜僅德魯伊｜Druides uniquement
 02-12到30級.md:1308｜標籤｜僅塑風者天裔精靈｜Skyborne sculpte-vents uniquement
-02-12到30級.md:1310｜粗體註記｜兩種族共同收尾｜Terminez les deux routes raciales ici
+02-12到30級.md:1310｜粗體註記｜兩種族共同收尾｜Termine les deux routes raciales ici
 02-12到30級.md:1312｜標籤｜僅德魯伊｜Druides uniquement
 02-12到30級.md:1312｜步驟說明｜交圖拉克學獵豹形態及該形態的起始技能。｜Va voir Turak Runetotem pour apprendre Forme de félin et ses premières capacités.
 02-12到30級.md:1313｜標籤｜僅德魯伊｜Druides uniquement
@@ -2958,17 +2958,17 @@
 02-12到30級.md:1386｜粗體註記｜選做職業裝備｜Équipement de classe en option
 02-12到30級.md:1388｜標籤｜僅術士｜Démonistes uniquement
 02-12到30級.md:1388｜標籤｜可跳過｜Facultatif
-02-12到30級.md:1388｜步驟說明｜小碎片 ×3 取自黑暗深淵暮光侍僧，大碎片 ×1 取自影牙城堡影牙黑暗之魂狼人。｜Récupère 3 petits fragments sur les acolytes du Crépuscule aux Profondeurs de Brassenoire et 1 gros fragment sur un Shadowfang Darksoul (worgen) au donjon d'Ombrecroc.
+02-12到30級.md:1388｜步驟說明｜小碎片 ×3 取自黑暗深淵暮光侍僧，大碎片 ×1 取自影牙城堡影牙黑暗之魂狼人。｜Récupère 3 petits fragments sur les acolytes du Crépuscule aux Profondeurs de Brassenoire et 1 gros fragment sur un Ténébreux d'Ombrecroc (worgen) au donjon d'Ombrecroc.
 02-12到30級.md:1388｜★獎勵物品名｜索蘭魯克寶珠｜Orbe de Soran'ruk
 02-12到30級.md:1388｜★獎勵職業｜術士｜Démoniste
 02-12到30級.md:1388｜★獎勵物品名｜索拉魯克法杖｜Bâton de Soran'ruk
 02-12到30級.md:1389｜標籤｜僅術士｜Démonistes uniquement
 02-12到30級.md:1389｜標籤｜可跳過｜Facultatif
-02-12到30級.md:1389｜步驟說明｜小碎片 ×3 取自黑暗深淵暮光侍僧，大碎片 ×1 取自影牙城堡影牙黑暗之魂狼人。｜Récupère 3 petits fragments sur les acolytes du Crépuscule aux Profondeurs de Brassenoire et 1 gros fragment sur un Shadowfang Darksoul (worgen) au donjon d'Ombrecroc.
-02-12到30級.md:1389｜步驟說明｜依序為黑暗深淵與影牙城堡入口。黑暗深淵打暮光侍僧，影牙城堡打影牙黑暗之魂；室內怪點 ?。｜Les repères indiquent, dans l'ordre, les entrées des Profondeurs de Brassenoire et du donjon d'Ombrecroc. Brassenoire : acolytes du Crépuscule ; Ombrecroc : Shadowfang Darksoul. Les positions des monstres à l'intérieur sont inconnues.
+02-12到30級.md:1389｜步驟說明｜小碎片 ×3 取自黑暗深淵暮光侍僧，大碎片 ×1 取自影牙城堡影牙黑暗之魂狼人。｜Récupère 3 petits fragments sur les acolytes du Crépuscule aux Profondeurs de Brassenoire et 1 gros fragment sur un Ténébreux d'Ombrecroc (worgen) au donjon d'Ombrecroc.
+02-12到30級.md:1389｜步驟說明｜依序為黑暗深淵與影牙城堡入口。黑暗深淵打暮光侍僧，影牙城堡打影牙黑暗之魂；室內怪點 ?。｜Les repères indiquent, dans l'ordre, les entrées des Profondeurs de Brassenoire et du donjon d'Ombrecroc. Brassenoire : acolytes du Crépuscule ; Ombrecroc : Ténébreux d'Ombrecroc. Les positions des monstres à l'intérieur sont inconnues.
 02-12到30級.md:1390｜標籤｜僅術士｜Démonistes uniquement
 02-12到30級.md:1390｜標籤｜可跳過｜Facultatif
-02-12到30級.md:1390｜步驟說明｜小碎片 ×3 取自黑暗深淵暮光侍僧，大碎片 ×1 取自影牙城堡影牙黑暗之魂狼人。｜Récupère 3 petits fragments sur les acolytes du Crépuscule aux Profondeurs de Brassenoire et 1 gros fragment sur un Shadowfang Darksoul (worgen) au donjon d'Ombrecroc.
+02-12到30級.md:1390｜步驟說明｜小碎片 ×3 取自黑暗深淵暮光侍僧，大碎片 ×1 取自影牙城堡影牙黑暗之魂狼人。｜Récupère 3 petits fragments sur les acolytes du Crépuscule aux Profondeurs de Brassenoire et 1 gros fragment sur un Ténébreux d'Ombrecroc (worgen) au donjon d'Ombrecroc.
 02-12到30級.md:1390｜★獎勵物品名｜索蘭魯克寶珠｜Orbe de Soran'ruk
 02-12到30級.md:1390｜★獎勵職業｜術士｜Démoniste
 02-12到30級.md:1390｜★獎勵物品名｜索拉魯克法杖｜Bâton de Soran'ruk
@@ -3048,14 +3048,14 @@
 03-30到45級.md:63｜標籤｜可跳過｜Facultatif
 03-30到45級.md:64｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:64｜標籤｜可跳過｜Facultatif
-03-30到45級.md:65｜交通步驟｜出塔倫米爾往東，過索拉丁之牆進阿拉希高地。｜Va vers l'est depuis Moulin-de-Tarren, passe le Mur de Thoradin et entre dans les Hautes-terres d'Arathi.
+03-30到45級.md:65｜交通步驟｜出塔倫米爾往東，過索拉丁之牆進阿拉希高地。｜Va vers l'est depuis Moulin-de-Tarren, passe le Mur de Thoradin et entre dans les Hautes-terres Arathies.
 03-30到45級.md:67｜站內取捨｜未到 31 級可在丘陵洞穴打雪怪補差額。｜En dessous du niveau 31 ? Tue les yétis dans la grotte Hautebrande.
 03-30到45級.md:68｜站內取捨｜達拉然巡邏隊與地縛護腕要交前一輪才開，集中跑西側。城市鑰匙可順手接，達拉然城副本可跳過。｜Rends d'abord les quêtes du tour précédent pour débloquer Les patrouilles de Dalaran et Les Bracelets de liaison, puis fais-les sur la boucle ouest. Prends Clé de la ville au passage ; tu peux passer La cité de Dalaran si tu préfères.
 03-30到45級.md:69｜站內取捨｜秘密潛入 533 要先完成拯救行動 498，留奧特蘭克山脈再接。未做過苦楚藥劑前段就跳過沿海分支。｜Rends Sauvetage (498) pour débloquer Infiltration (533), que tu gardes pour les Montagnes d'Alterac. Passe la branche côtière de L'élixir d'agonie si tu n'as pas fait les quêtes précédentes.
 03-30到45級.md:70｜站內提醒｜赫爾庫拉的墓地靠近聯盟南海鎮，從城外接近。｜La tombe d'Helcular se trouve près d'Austrivage, ville de l'Alliance. Approche depuis l'extérieur de la ville.
-03-30到45級.md:71｜站內提醒｜30–32 級帶可與阿拉希高地 落錘鎮合併累積。缺經驗先打希爾斯布萊德西側山腳的普通雪怪（約 45, 29），也可到落錘鎮再補。｜Cette étape (niveaux 30 à 32) se combine avec Trépas-d'Orgrim, dans les Hautes-terres d'Arathi. Besoin d'XP ? Tue les yétis normaux dans les contreforts ouest de Hautebrande (vers 45, 29), ou rattrape-toi à Trépas-d'Orgrim.
-03-30到45級.md:73｜練怪說明｜西側雪人洞外坡地，密度高、普通怪。先在洞外逐隻打，避開洞口重疊怪點，30 級即可開始。｜Des foules normales et denses sur la pente à l'extérieur de la grotte du yéti ouest. Éloigne un ennemi à la fois de l’entrée. Commence au niveau 30.
-03-30到45級.md:74｜練怪說明｜雪人洞口附近，密度高、普通怪。與洞穴雪人混在一起，先清外圈再補 31–32 級經驗。｜Des foules normales denses, mêlées à des yétis des cavernes, à l'entrée de la grotte. Dégage d'abord le bord extérieur pour gagner l'XP des niveaux 31 à 32.
+03-30到45級.md:71｜站內提醒｜30–32 級帶可與阿拉希高地 落錘鎮合併累積。缺經驗先打希爾斯布萊德西側山腳的普通雪怪（約 45, 29），也可到落錘鎮再補。｜Cette étape (niveaux 30 à 32) se combine avec Trépas-d'Orgrim, dans les Hautes-terres Arathies. Besoin d'XP ? Tue les yétis normaux dans les contreforts ouest de Hautebrande (vers 45, 29), ou rattrape-toi à Trépas-d'Orgrim.
+03-30到45級.md:73｜練怪說明｜西側雪人洞外坡地，密度高、普通怪。先在洞外逐隻打，避開洞口重疊怪點，30 級即可開始。｜Des monstres normaux et denses sur la pente à l'extérieur de la grotte du yéti ouest. Éloigne un ennemi à la fois de l’entrée. Commence au niveau 30.
+03-30到45級.md:74｜練怪說明｜雪人洞口附近，密度高、普通怪。與洞穴雪人混在一起，先清外圈再補 31–32 級經驗。｜Monstres normaux, densité élevée, mêlées à des yétis des cavernes, à l'entrée de la grotte. Dégage d'abord le bord extérieur pour gagner l'XP des niveaux 31 à 32.
 03-30到45級.md:79｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 03-30到45級.md:81｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides uniquement
 03-30到45級.md:82｜標籤｜僅盜賊｜Voleurs uniquement
@@ -3070,15 +3070,15 @@
 03-30到45級.md:119｜步驟說明｜先在同一位醫生交 97539，才會出現補給任務。｜Remets 97539 au même médecin pour débloquer la quête de ravitaillement.
 03-30到45級.md:120｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:121｜標籤｜有前置｜Avec prérequis
-03-30到45級.md:122｜交通步驟｜飛幽暗城整理技能與背包，到布瑞爾南側飛艇塔搭奧格瑪線。到奧格瑪後，已開亂風崗就直接選該飛點；未開則飛陶拉祖營地，沿南路搭大升降梯下谷底，再往東搭亂風崗升降梯。｜Vole jusqu'à Fossoyeuse pour t'entraîner et vider ton sac, puis prends le zeppelin d'Orgrimmar depuis la tour au sud de Brill. Une fois à Orgrimmar, si le point de vol du poste de Librevent est débloqué, choisis-le directement. Sinon, vole jusqu'au Camp Taurajo, descends par le Grand Ascenseur au sud, puis va vers l'est et monte par l'ascenseur du poste de Librevent.
-03-30到45級.md:124｜站內取捨｜先清落錘鎮近郊迅猛龍、辛迪加與東南邊枯木。已到 32 級時，進階的 678、701 留阿拉希高地 落錘鎮。｜Élimine d'abord les raptors et les monstres du Syndicat près de Trépas-d'Orgrim, ainsi que les Witherbark au sud-est. Si tu es déjà niveau 32, garde les quêtes avancées 678 et 701 pour ta prochaine visite à Trépas-d'Orgrim, dans les Hautes-terres d'Arathi.
+03-30到45級.md:122｜交通步驟｜飛幽暗城整理技能與背包，到布瑞爾南側飛艇塔搭奧格瑪線。到奧格瑪後，已開亂風崗就直接選該飛點；未開則飛陶拉祖營地，沿南路搭大升降梯下谷底，再往東搭亂風崗升降梯。｜Vole jusqu'à Fossoyeuse pour t'entraîner et vider ton sac, puis prends le zeppelin d'Orgrimmar depuis la tour au sud de Brill. Une fois à Orgrimmar, si le point de vol du poste de Librevent est débloqué, choisis-le directement. Sinon, vole jusqu'au Camp Taurajo, descends par la Grande élévation au sud, puis va vers l'est et monte par l'ascenseur du poste de Librevent.
+03-30到45級.md:124｜站內取捨｜先清落錘鎮近郊迅猛龍、辛迪加與東南邊枯木。已到 32 級時，進階的 678、701 留阿拉希高地 落錘鎮。｜Élimine d'abord les raptors et les monstres du Syndicat près de Trépas-d'Orgrim, ainsi que les Witherbark au sud-est. Si tu es déjà niveau 32, garde les quêtes avancées 678 et 701 pour ta prochaine visite à Trépas-d'Orgrim, dans les Hautes-terres Arathies.
 03-30到45級.md:125｜站內取捨｜病房重新補給與蛛絲縫線是永恆新增。先交 97539 才接 92519。已到 32 級可留第二趟。｜Réapprovisionnement de l'infirmerie et Sutures soyeuses sont des ajouts de Forever. Rends d'abord 97539 pour prendre 92519. Si tu es déjà niveau 32, garde-les pour ta deuxième visite.
 03-30到45級.md:126｜站內提醒｜前往千針石林前若未到 32，從落錘鎮到枯木村外圍（約 68, 69）打普通枯木食人妖，避免深入多怪的營地。｜En dessous du niveau 32 ? Tue les trolls Witherbark normaux à l'extérieur du village (vers 68, 69) avant de partir pour Mille pointes. Reste en dehors du camp bondé.
-03-30到45級.md:128｜練怪說明｜枯木村外圍，密度高、普通遠程怪。從坡緣拉出單隻，靠近原任務區，適合補到 32 級。｜Des foules normales denses, à distance, à l'extérieur de Fanécorce. Tire-les une par une depuis la pente, près de la zone de quête. Idéal pour finir le niveau 32.
-03-30到45級.md:129｜練怪說明｜枯木村東側，密度高、普通施法怪。可打斷治療並沿屋外清，留意附近更高等的枯木獵頭者。｜Des foules normales denses, lanceuses de sorts, à l'est de Fanécorce. Interromps leurs soins et nettoie autour des bâtiments. Surveille les chasseurs de têtes Witherbark de niveau supérieur.
+03-30到45級.md:128｜練怪說明｜枯木村外圍，密度高、普通遠程怪。從坡緣拉出單隻，靠近原任務區，適合補到 32 級。｜Monstres normaux, densité élevée, à distance, à l'extérieur de Fanécorce. Tire-les une par une depuis la pente, près de la zone de quête. Idéal pour finir le niveau 32.
+03-30到45級.md:129｜練怪說明｜枯木村東側，密度高、普通施法怪。可打斷治療並沿屋外清，留意附近更高等的枯木獵頭者。｜Monstres normaux, densité élevée, lanceuses de sorts, à l'est de Fanécorce. Interromps leurs soins et nettoie autour des bâtiments. Surveille les chasseurs de têtes Witherbark de niveau supérieur.
 03-30到45級.md:135｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 03-30到45級.md:137｜危險說明｜枯木村屋內的巫醫會補血，屋前有較高等的獵頭者。優先沿田地邊緣清，留打斷。｜Dans les huttes de Fanécorce, les sorciers soignent, et devant se tiennent des chasseurs de têtes de niveau supérieur. Nettoie de préférence depuis le bord des champs et garde une interruption en réserve.
-03-30到45級.md:147｜交通步驟｜先開亂風崗奈瑟飛行點 45.14, 49.11，再沿路向東南進閃光平原。｜Apprends d'abord le point de vol du poste de Librevent auprès de Nyse (45.14, 49.11), puis suis la route vers le sud-est jusqu'à Shimmering Flats.
+03-30到45級.md:147｜交通步驟｜先開亂風崗奈瑟飛行點 45.14, 49.11，再沿路向東南進閃光平原。｜Apprends d'abord le point de vol du poste de Librevent auprès de Nyse (45.14, 49.11), puis suis la route vers le sud-est jusqu'aux Salines.
 03-30到45級.md:149｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:149｜標籤｜可跳過｜Facultatif
 03-30到45級.md:156｜標籤｜掉率 27%｜Taux de butin : 27 %
@@ -3108,18 +3108,18 @@
 03-30到45級.md:177｜標籤｜可跳過｜Facultatif
 03-30到45級.md:178｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:178｜標籤｜可跳過｜Facultatif
-03-30到45級.md:179｜交通步驟｜在閃光平原收完任務，沿谷底原路回亂風崗，搭升降梯上飛點，再飛石爪山脈烈日石居。從烈日石居往西南穿過焦炭谷進淒涼之地。｜Une fois les quêtes de Shimmering Flats terminées, reviens par le même chemin au fond de la vallée jusqu'au poste de Librevent, monte par l'ascenseur jusqu'au point de vol, puis vole vers la Retraite de Roche-Soleil. De là, va vers le sud-ouest à travers Charred Vale jusqu'à Désolace.
-03-30到45級.md:181｜站內取捨｜閃光平原六個接任務點相近，先接齊再繞一圈。車手送件 1111 只在下一趟經棘齒城時做。交完可向碼頭管理員迪茲維格接給克拉維爾的零件（1112），留給下次經千針石林 閃光平原賽道時交。｜Les six quêtes de Shimmering Flats sont proches : prends-les toutes avant de faire une boucle. Livraison 1111 : seulement lors de ton prochain passage à Cabestan. Ensuite, prends Les pièces détachées de Kravel (1112) auprès du Maître des quais Dizzywig et remets-la au circuit lors de ta prochaine visite à Shimmering Flats.
+03-30到45級.md:179｜交通步驟｜在閃光平原收完任務，沿谷底原路回亂風崗，搭升降梯上飛點，再飛石爪山脈烈日石居。從烈日石居往西南穿過焦炭谷進淒涼之地。｜Une fois les quêtes des Salines terminées, reviens par le même chemin au fond de la vallée jusqu'au poste de Librevent, monte par l'ascenseur jusqu'au point de vol, puis vole vers la Retraite de Roche-Soleil. De là, va vers le sud-ouest à travers Val calciné jusqu'à Désolace.
+03-30到45級.md:181｜站內取捨｜閃光平原六個接任務點相近，先接齊再繞一圈。車手送件 1111 只在下一趟經棘齒城時做。交完可向碼頭管理員迪茲維格接給克拉維爾的零件（1112），留給下次經千針石林 閃光平原賽道時交。｜Les six quêtes des Salines sont proches : prends-les toutes avant de faire une boucle. Livraison 1111 : seulement lors de ton prochain passage à Cabestan. Ensuite, prends Les pièces détachées de Kravel (1112) auprès du Maître des quais Dizzywig et remets-la au circuit lors de ta prochaine visite aux Salines.
 03-30到45級.md:182｜站內取捨｜保留流放者馬特克 1106 到荒蕪之地 卡加斯，兄弟 5361 到淒涼之地 葬影村，奈辛瓦里 5762 到荊棘谷 格羅姆高與藏寶海灣。｜Garde Martek l'Exilé (1106) pour Kargath, dans les Terres ingrates, Frère (5361) pour Proie-de-l'Ombre, en Désolace, et Nesingwary (5762) pour Grom'gol et la Baie-du-Butin.
 03-30到45級.md:183｜站內提醒｜若 1146 尚未交，略過 1147。影片提醒蟲洞內怪物等級高，打到洞口一帶就回頭。1148 若完成，留塵泥沼澤 蕨牆村途經十字路口時交。｜Passe 1147 si tu n'as pas encore rendu 1146. La vidéo prévient que les monstres du fond de la ruche sont de niveau supérieur : tue-les jusqu'à l'entrée, puis repars. Si tu as terminé 1148, rends-la en passant par La Croisée, en allant à Mur-de-Fougères.
 03-30到45級.md:184｜站內提醒｜32–34 級帶可與淒涼之地 葬影村合併累積。閃光平原未到 33 可在賽道南側（約 76, 85）打烏龜、禿鷲與蠍子，再去淒涼之地。｜Cette étape (niveaux 32 à 34) se combine avec Proie-de-l'Ombre. En dessous du niveau 33 ? Tue des tortues, des vautours et des scorpides au sud du circuit (vers 76, 85), puis va à Désolace.
-03-30到45級.md:186｜練怪說明｜閃光平原賽道南側，密度高、普通怪。地勢開闊，可沿鹽地逐隻挑選，適合 32 級補經驗。｜Des foules normales denses au sud du circuit de Shimmering Flats. Prends les ennemis isolés dans les marais salants ouverts, idéal au niveau 32.
-03-30到45級.md:187｜練怪說明｜同一片鹽地往東，密度中等、普通怪。與蜥蜴輪打，可順便收鹽殼龜殼。｜Densité modérée de foules normales plus à l'est sur les marais salants. Alterne avec les lézards et récupère des carapaces de tortue durcies.
-03-30到45級.md:188｜練怪說明｜賽道東南，密度中等、普通怪。沿地表輪打即可，留意近處其他鹽地野獸；有蠍毒任務可一起收。｜Densité modérée de foules normales au sud-est du circuit. Tourne en boucle à la surface et surveille les autres bêtes proches. Récupère le Venin de scorpide acide si besoin.
+03-30到45級.md:186｜練怪說明｜閃光平原賽道南側，密度高、普通怪。地勢開闊，可沿鹽地逐隻挑選，適合 32 級補經驗。｜Monstres normaux, densité élevée au sud du circuit des Salines. Prends les ennemis isolés dans les marais salants ouverts, idéal au niveau 32.
+03-30到45級.md:187｜練怪說明｜同一片鹽地往東，密度中等、普通怪。與蜥蜴輪打，可順便收鹽殼龜殼。｜Densité modérée de monstres normaux plus à l'est sur les marais salants. Alterne avec les lézards et récupère des carapaces de tortue durcies.
+03-30到45級.md:188｜練怪說明｜賽道東南，密度中等、普通怪。沿地表輪打即可，留意近處其他鹽地野獸；有蠍毒任務可一起收。｜Densité modérée de monstres normaux au sud-est du circuit. Tourne en boucle à la surface et surveille les autres bêtes proches. Récupère le Venin de scorpide acide si besoin.
 03-30到45級.md:194｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 03-30到45級.md:195｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides uniquement
 03-30到45級.md:198｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
-03-30到45級.md:200｜危險說明｜閃光平原蟲洞深處的異種蠍密集且等級較高。完成瘋狂的蟲群後從洞口原路退出。｜Des silithides de niveau supérieur se concentrent au fond de la ruche de Shimmering Flats. Après L'essaim s'agrandit, ressors par le même chemin jusqu'à l'entrée.
+03-30到45級.md:200｜危險說明｜閃光平原蟲洞深處的異種蠍密集且等級較高。完成瘋狂的蟲群後從洞口原路退出。｜Des silithides de niveau supérieur se concentrent au fond de la ruche des Salines. Après L'essaim s'agrandit, ressors par le même chemin jusqu'à l'entrée.
 03-30到45級.md:214｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:215｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:219｜交通步驟｜沿南路過吉爾吉斯村，到葬影村開薩隆飛行點 21.60, 74.13，綁爐石。｜Suis la route sud en passant devant le village de Gelkis. Apprends le point de vol de Thalon (21.60, 74.13) à Proie-de-l'Ombre et lie ta pierre de foyer.
@@ -3171,27 +3171,27 @@
 03-30到45級.md:286｜站內取捨｜葬影村去西岸時一起做兩個水域任務與上古之書。雷斧堡壘先打聖光節杖與埃魯索斯之手，若進度不足再到第二趟補交。｜Pendant la boucle côtière depuis Proie-de-l'Ombre, fais ensemble les deux quêtes aquatiques et Le Livre des Anciens. À la Forteresse de Hache-Tonnerre, fais d'abord Sceptre de lumière et La Main d'Iruxos. Si tu manques d'XP, rends-les à ta deuxième visite.
 03-30到45級.md:287｜站內取捨｜沒遇到車隊就直接走，不原地等護送。保留荊棘谷狩獵 5763 到下一站。｜Passe ton chemin si la caravane n'est pas là ; n'attends pas l'escorte sur place. Garde la chasse de Strangleronce 5763 pour l'étape suivante.
 03-30到45級.md:288｜站內提醒｜前往荊棘谷前若未到 34，在科多墓地周圍打普通半人馬（約 56, 60–68），或在西岸打滑刃納迦（35.91, 28.84）。｜En dessous du niveau 34 ? Tue les centaures normaux autour du Cimetière des kodos (environ 56, 60-68) ou des nagas Slitherblade sur la côte ouest (35.91, 28.84) avant de partir pour Vallée de Strangleronce.
-03-30到45級.md:290｜練怪說明｜科多墓地東側外圍，密度較低、普通怪。留意其他腐化鳥，離墓地任務近，適合順手補少量經驗。｜Des foules normales clairsemées à l’est du Cimetière des kodos. Surveille les autres oiseaux charognards. Récupère un petit XP dans la boucle de quête du cimetière.
-03-30到45級.md:291｜練怪說明｜西岸水邊，密度高、普通怪。沿岸挑落單，留意同區巫女，西岸任務可以一起清。｜Des foules normales denses sur la côte ouest. Prends les ennemis isolés le long du rivage et surveille les sorcières voisines. Fais-les en même temps que les autres quêtes de la côte.
+03-30到45級.md:290｜練怪說明｜科多墓地東側外圍，密度較低、普通怪。留意其他腐化鳥，離墓地任務近，適合順手補少量經驗。｜Des monstres normaux clairsemés à l’est du Cimetière des kodos. Surveille les autres oiseaux charognards. Récupère un petit XP dans la boucle de quête du cimetière.
+03-30到45級.md:291｜練怪說明｜西岸水邊，密度高、普通怪。沿岸挑落單，留意同區巫女，西岸任務可以一起清。｜Monstres normaux, densité élevée sur la côte ouest. Prends les ennemis isolés le long du rivage et surveille les sorcières voisines. Fais-les en même temps que les autres quêtes de la côte.
 03-30到45級.md:292｜練怪說明｜西岸納迦區南端，密度中等、普通施法怪。把怪拉向岸邊再打，避免水下龍蝦人連帶入戰。｜Densité modérée de lanceurs de sorts normaux à l'extrémité sud de la zone naga de la côte ouest. Attire-les vers la rive pour éviter que des makrura ne se joignent au combat.
 03-30到45級.md:298｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 03-30到45級.md:300｜危險說明｜西岸納迦點近水下甲殼蝦人。先把施法怪拉到沙灘，避免水下同時進兩群。｜Les nagas de la côte ouest sont près des makrura sous-marins. Attire d'abord les lanceurs de sorts sur la plage pour ne pas affronter deux groupes sous l'eau en même temps.
 03-30到45級.md:308｜交通步驟｜在奧格瑪城外飛艇塔搭格羅姆高線，抵達後開塞斯塔飛行點 32.54, 29.35。已在荊棘谷者直接到營地。｜Prends le zeppelin de Grom'gol à la tour devant Orgrimmar. À l'arrivée, apprends le point de vol de Thysta (32.54, 29.35). Si tu es déjà en Strangleronce, va directement au camp.
-03-30到45級.md:310｜標籤｜怪多｜Des foules denses
+03-30到45級.md:310｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:310｜標籤｜可跳過｜Facultatif
-03-30到45級.md:311｜標籤｜怪多｜Des foules denses
+03-30到45級.md:311｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:311｜標籤｜可跳過｜Facultatif
 03-30到45級.md:315｜步驟說明｜同任務也可找克蘭克·菲茲巴布（27.12, 77.21）。｜Tu peux aussi prendre la quête auprès de Crank Fizzlebub (27.12, 77.21).
 03-30到45級.md:316｜步驟說明｜石板在水下遺跡外牆，可從外側游過去，避開巡邏的精英魚人。｜La tablette est sur le mur extérieur des ruines englouties : nage-y depuis l'extérieur pour éviter les murlocs d'élite en patrouille.
 03-30到45級.md:318｜標籤｜前置：暗礁海 629｜Prérequis : Le Récif infâme (629)
 03-30到45級.md:318｜步驟說明｜水中的敵人（95773）要先交這個才接得到。｜Rends-la pour pouvoir prendre Des adversaires sous les flots (95773).
 03-30到45級.md:319｜交通步驟｜已開藏寶海灣飛點就從格羅姆高飛過去。初訪沿荊棘谷南向大路到藏寶海灣，開格林戈飛行點 26.87, 77.10。接完第一輪任務再飛回格羅姆高。｜Si le point de vol de la Baie-du-Butin est débloqué, vole-y depuis Grom'gol. Sinon, suis la grande route sud de Strangleronce jusqu'à la Baie-du-Butin et apprends le point de vol de Gringer (26.87, 77.10). Prends le premier lot de quêtes, puis retourne en vol à Grom'gol.
-03-30到45級.md:320｜標籤｜怪多｜Des foules denses
+03-30到45級.md:320｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:320｜標籤｜可跳過｜Facultatif
 03-30到45級.md:326｜標籤｜前置：大道劫匪 79229｜Prérequis : Crime de grand chemin (79229)
 03-30到45級.md:328｜標籤｜前置：亡命之徒 79235｜Prérequis : En cavale (79235)
 03-30到45級.md:329｜步驟說明｜買來直接拿去交，別喝掉。｜Achète-le et remets-le directement ; ne le bois pas.
-03-30到45級.md:330｜步驟說明｜交完可接盜卻無道（79242），去阿拉希高地東南海岸才順路。｜Prends 79242 après avoir rendu la quête. Ne la fais que si tu passes par la côte sud-est des Hautes-terres d'Arathi.
+03-30到45級.md:330｜步驟說明｜交完可接盜卻無道（79242），去阿拉希高地東南海岸才順路。｜Prends 79242 après avoir rendu la quête. Ne la fais que si tu passes par la côte sud-est des Hautes-terres Arathies.
 03-30到45級.md:332｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:332｜標籤｜可跳過｜Facultatif
 03-30到45級.md:333｜標籤｜有前置｜Avec prérequis
@@ -3210,23 +3210,23 @@
 03-30到45級.md:343｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:344｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:351｜標籤｜掉率 34%｜Taux de butin : 34 %
-03-30到45級.md:368｜標籤｜怪多｜Des foules denses
+03-30到45級.md:368｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:368｜標籤｜可跳過｜Facultatif
 03-30到45級.md:370｜粗體註記｜先處理祖昆達與血頂食人妖，再回格羅姆高｜Nettoie Zuul'Kunda et élimine les trolls Bloodscalp avant de retourner à Grom'gol
 03-30到45級.md:372｜標籤｜掉率 27%｜Taux de butin : 27 %
-03-30到45級.md:372｜標籤｜怪多｜Des foules denses
+03-30到45級.md:372｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:372｜標籤｜可跳過｜Facultatif
 03-30到45級.md:373｜標籤｜掉率 37%｜Taux de butin : 37 %
-03-30到45級.md:373｜標籤｜怪多｜Des foules denses
+03-30到45級.md:373｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:373｜標籤｜可跳過｜Facultatif
 03-30到45級.md:374｜標籤｜掉率 17%｜Taux de butin : 17 %
-03-30到45級.md:374｜標籤｜怪多｜Des foules denses
+03-30到45級.md:374｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:374｜標籤｜可跳過｜Facultatif
-03-30到45級.md:375｜標籤｜怪多｜Des foules denses
+03-30到45級.md:375｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:375｜標籤｜可跳過｜Facultatif
-03-30到45級.md:376｜標籤｜怪多｜Des foules denses
+03-30到45級.md:376｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:376｜標籤｜可跳過｜Facultatif
-03-30到45級.md:377｜標籤｜怪多｜Des foules denses
+03-30到45級.md:377｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:377｜標籤｜可跳過｜Facultatif
 03-30到45級.md:378｜標籤｜掉率 36%｜Taux de butin : 36 %
 03-30到45級.md:379｜標籤｜掉率 52%｜Taux de butin : 52 %
@@ -3235,7 +3235,7 @@
 03-30到45級.md:381｜標籤｜可跳過｜Facultatif
 03-30到45級.md:381｜標籤｜部落可接｜Ouverte à la Horde
 03-30到45級.md:381｜步驟說明｜人在祖昆達西側籠內才接；插件若未顯示，直接看 NPC 是否有任務。｜Accepte à la cage à l'ouest de Zul'Kunda. Vérifie le PNJ si l'étape est cachée.
-03-30到45級.md:382｜標籤｜怪多｜Des foules denses
+03-30到45級.md:382｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:382｜標籤｜可跳過｜Facultatif
 03-30到45級.md:384｜標籤｜可跳過｜Facultatif
 03-30到45級.md:385｜標籤｜可跳過｜Facultatif
@@ -3246,11 +3246,11 @@
 03-30到45級.md:387｜標籤｜有遇到才做｜Fais si tu le vois
 03-30到45級.md:387｜標籤｜可跳過｜Facultatif
 03-30到45級.md:388｜標籤｜掉率 80%｜Taux de butin : 80 %
-03-30到45級.md:388｜標籤｜怪多｜Des foules denses
+03-30到45級.md:388｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:388｜標籤｜可跳過｜Facultatif
-03-30到45級.md:389｜標籤｜怪多｜Des foules denses
+03-30到45級.md:389｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:389｜標籤｜可跳過｜Facultatif
-03-30到45級.md:394｜標籤｜怪多｜Des foules denses
+03-30到45級.md:394｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:394｜標籤｜可跳過｜Facultatif
 03-30到45級.md:396｜標籤｜前置：古拉巴什古代傳說 95748｜Prérequis : Les anciennes légendes des Gurubashi (95748)
 03-30到45級.md:398｜步驟目標｜海鱗爭鬥者｜Tirailleur écaille-de-mer
@@ -3258,20 +3258,20 @@
 03-30到45級.md:403｜標籤｜前置：水中的敵人 95773｜Prérequis : Des adversaires sous les flots (95773)
 03-30到45級.md:403｜標籤｜前置：定位失落之城 95770｜Prérequis : À la recherche de la cité perdue (95770)
 03-30到45級.md:406｜交通步驟｜約 35 級且備好可交的低階任務時，飛藏寶海灣交第一批。｜Vers le niveau 35, vole vers la Baie-du-Butin quand tu as un premier lot de quêtes de bas niveau à rendre.
-03-30到45級.md:407｜標籤｜怪多｜Des foules denses
+03-30到45級.md:407｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:407｜標籤｜可跳過｜Facultatif
-03-30到45級.md:412｜標籤｜怪多｜Des foules denses
+03-30到45級.md:412｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:412｜標籤｜可跳過｜Facultatif
 03-30到45級.md:413｜標籤｜可跳過｜Facultatif
 03-30到45級.md:414｜標籤｜可跳過｜Facultatif
-03-30到45級.md:415｜標籤｜下趟閃光平原再交｜À rendre à ta prochaine visite à Shimmering Flats
+03-30到45級.md:415｜標籤｜下趟閃光平原再交｜À rendre à ta prochaine visite aux Salines
 03-30到45級.md:415｜標籤｜可跳過｜Facultatif
-03-30到45級.md:418｜交通步驟｜交完第一批後飛回格羅姆高。｜Après la première série de quêtes, retournez à Grom'gol.
+03-30到45級.md:418｜交通步驟｜交完第一批後飛回格羅姆高。｜Après la première série de quêtes, retourne à Grom'gol.
 03-30到45級.md:420｜粗體註記｜中部海岸 → 食人妖、巨魔與同路狩獵｜Côte centrale → trolls, ogres et chasses sur le trajet
 03-30到45級.md:422｜標籤｜掉率 100%｜Taux de butin : 100 %
-03-30到45級.md:422｜標籤｜怪多｜Des foules denses
+03-30到45級.md:422｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:422｜標籤｜可跳過｜Facultatif
-03-30到45級.md:424｜標籤｜怪多｜Des foules denses
+03-30到45級.md:424｜標籤｜怪多｜Monstres, densité élevée
 03-30到45級.md:424｜標籤｜可跳過｜Facultatif
 03-30到45級.md:429｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:435｜標籤｜可跳過｜Facultatif
@@ -3283,7 +3283,7 @@
 03-30到45級.md:441｜交通步驟｜577 若已完成，可等回荊棘谷 藏寶海灣時交。｜Si 577 est prête, garde-la pour ton prochain passage à la Baie-du-Butin.
 03-30到45級.md:442｜標籤｜36級起｜Niveau 36+
 03-30到45級.md:443｜交通步驟｜格羅姆高搭飛艇回奧格瑪，再飛十字路口或陶拉祖營地。｜Prends le zeppelin de Grom'gol jusqu'à Orgrimmar, puis vole vers La Croisée ou le Camp Taurajo.
-03-30到45級.md:445｜站內取捨｜藏寶海灣初訪就交亡命之徒並買酒完成「你在想櫻桃酒嗎？」。之後會去阿拉希高地東南離岸島，再接後續盜卻無道。｜Rends En cavale dès ta première visite à la Baie-du-Butin et achète le vin pour « Une cerise, et tu me dis tout ? ». Fais la suite quand tu iras à l'île au sud-est des Hautes-terres d'Arathi.
+03-30到45級.md:445｜站內取捨｜藏寶海灣初訪就交亡命之徒並買酒完成「你在想櫻桃酒嗎？」。之後會去阿拉希高地東南離岸島，再接後續盜卻無道。｜Rends En cavale dès ta première visite à la Baie-du-Butin et achète le vin pour « Une cerise, et tu me dis tout ? ». Fais la suite quand tu iras à l'île au sud-est des Hautes-terres Arathies.
 03-30到45級.md:446｜站內取捨｜祖昆達找得到吉米克斯才跑鑰匙與護送，鑰匙與遭竊貨物同區。已有人護送可直接繼續主線。[台服任務紀錄](https://wowamobi.com/quests/97329)｜Ne fais les clés et l'escorte que si tu trouves Gimix à Zul'Kunda. Les clés et la Cargaison volée sont dans la même zone. Si quelqu'un d'autre l'escorte déjà, continue la quête principale. [registre de quêtes zhTW](https://wowamobi.com/quests/97329)
 03-30到45級.md:447｜站內取捨｜藏寶海灣第 1 次到訪主要開飛點並接任務；約 35 級只交第一批：189、201、575、605、213，及已做完的 97328／97331。交 575 和 605 才開 577 和 600。｜À la visite 1 de Baie-du-Butin, débloque le vol et prends les quêtes. Vers le niveau 35, rends seulement 189, 201, 575, 605, 213 et, si elles sont terminées, 97328 et 97331. Rends 575 et 605 pour débloquer 577 et 600.
 03-30到45級.md:448｜站內取捨｜先別交 600 風險投資公司（Venture Company Mining）、628 刨花皮靴（Excelsior），留荊棘谷 藏寶海灣併南谷回收。577 完成後留荊棘谷 藏寶海灣先交，再接 628。｜Ne rends pas encore La KapitalRisk (600) ni L'Excelsior de chez Drizzlik (628) : garde-les pour la Baie-du-Butin, avec le retour de la boucle de la vallée sud. À cette visite, rends d'abord 577 pour pouvoir prendre 628.
@@ -3292,10 +3292,10 @@
 03-30到45級.md:451｜站內取捨｜若 34 級空白起步，先做三條獵線頭兩輪，並做格羅姆高與血頂食人妖群。深喉獵豹同時解 192／570，普通辛達爾 188 同圈處理。585 的三件戰利品留荊棘谷 藏寶海灣和裂骨項鏈一起做。荊棘谷的青山 338–342 有散頁再交。｜Si tu repars de zéro au niveau 34, fais les deux premiers tours des trois chaînes de chasse, ainsi que les quêtes de Grom'gol et des Bloodscalp. Les panthères Shadowmaw comptent pour 192 et 570 ; tue Sin'Dall pour 188 sur la même boucle. Garde les trois trophées de 585 et le Collier d'os brisés pour la Baie-du-Butin. Rends Les vertes collines de Strangleronce (338 – 342) quand tu as les pages.
 03-30到45級.md:452｜站內提醒｜35 級可組沉沒之城（The Drowned City，35–40）。先確認隊伍與相關任務，從格羅姆高西邊海底入場。｜Fais La cité Submergée au niveau 35 en groupe (35 à 40 conseillés). Vérifie d'abord ton groupe et tes quêtes. Entre sous l'eau à l'ouest de Grom'gol.
 03-30到45級.md:453｜站內提醒｜約 34–35 級先在北谷打血頂食人妖（29.76, 21.62）；36 級後轉格羅姆高東南的巨魔營地（35.55, 30.92），缺多少就在這裡補到 37 再搭飛艇。先交營地裡已完成的任務。｜Vers les niveaux 34–35, tue les trolls Bloodscalp au nord de Strangleronce (29.76, 21.62). À partir du niveau 36, passe au camp des ogres au sud-est de Grom'gol (35.55, 30.92) pour compléter jusqu'au niveau 37 si nécessaire. Rends les quêtes terminées au camp avant de prendre le zeppelin.
-03-30到45級.md:455｜練怪說明｜北谷血頂遺跡，密度中等、普通怪。沿外牆挑落單，留意附近的血頂薩滿，適合 34 級補經驗。可同趟收旋風武器任務用的血頂獠牙【僅戰士】。｜Densité modérée de foules normales dans les ruines Bloodscalp du nord. Tire-les une par une le long des murs extérieurs et surveille les chamans. Idéal pour gagner de l'XP au niveau 34. Tu peux aussi récolter les défenses Bloodscalp pour l'arme Tourbillon (guerriers uniquement).
+03-30到45級.md:455｜練怪說明｜北谷血頂遺跡，密度中等、普通怪。沿外牆挑落單，留意附近的血頂薩滿，適合 34 級補經驗。可同趟收旋風武器任務用的血頂獠牙【僅戰士】。｜Densité modérée de monstres normaux dans les ruines Bloodscalp du nord. Tire-les une par une le long des murs extérieurs et surveille les chamans. Idéal pour gagner de l'XP au niveau 34. Tu peux aussi récolter les défenses Bloodscalp pour l'arme Tourbillon (guerriers uniquement).
 03-30到45級.md:455｜標籤｜僅戰士｜Guerriers uniquement
-03-30到45級.md:456｜練怪說明｜格羅姆高以北的林地，密度高、普通怪。沿路找單隻，避開下水後的鹽鱗精英，可順做迅猛龍獵殺。｜Des foules normales denses dans les bois au nord de Grom'gol. Prends les ennemis isolés le long de la route et évite les élites Saltscale dans l'eau. Va bien avec la chasse aux raptors.
-03-30到45級.md:457｜練怪說明｜格羅姆高東南巨魔營地外圍，密度中等、普通怪。避開巫醫與稀有怪羅洛克，36 級後可就近補到 37。｜Densité modérée de foules normales à l'extérieur du camp des ogres au sud-est de Grom'gol. Évite les sorciers et le rare Roloch. À partir du niveau 36, tu peux gagner jusqu'au niveau 37 ici.
+03-30到45級.md:456｜練怪說明｜格羅姆高以北的林地，密度高、普通怪。沿路找單隻，避開下水後的鹽鱗精英，可順做迅猛龍獵殺。｜Monstres normaux, densité élevée dans les bois au nord de Grom'gol. Prends les ennemis isolés le long de la route et évite les élites Saltscale dans l'eau. Va bien avec la chasse aux raptors.
+03-30到45級.md:457｜練怪說明｜格羅姆高東南巨魔營地外圍，密度中等、普通怪。避開巫醫與稀有怪羅洛克，36 級後可就近補到 37。｜Densité modérée de monstres normaux à l'extérieur du camp des ogres au sud-est de Grom'gol. Évite les sorciers et le rare Roloch. À partir du niveau 36, tu peux gagner jusqu'au niveau 37 ici.
 03-30到45級.md:463｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 03-30到45級.md:468｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 03-30到45級.md:470｜危險說明｜暗礁海遺跡有鹽鱗精英。從海面下潛貼外牆找石板，留足呼吸時間折返。｜Des élites Saltscale gardent les ruines du Récif infâme. Plonge depuis la surface, longe le mur extérieur jusqu'à la tablette et garde assez de souffle pour le retour.
@@ -3330,14 +3330,14 @@
 03-30到45級.md:540｜站內取捨｜黑色盾牌 1251、可疑的蹄印 1268、雷瑟上尉 1269 三件在同一座燒毀旅店。先接齊再進村。｜Récupère Le bouclier noir (1251), Des empreintes de sabots suspectes (1268) et Lieutenant Paval Reethe (1269) dans la même auberge incendiée avant d'entrer dans le village.
 03-30到45級.md:541｜站內取捨｜舒心草帶 3 份再出城。月鋼寬劍已有就交，特地買或鍛造會增加折返。1270 在棘齒城交，當趟不路過就保留或略過。｜Apporte 3 Epices apaisantes avant de quitter la ville. Remets l'Epée d'acier lunaire si tu en as déjà une ; l'acheter ou la forger ajoute un détour. Rends 1270 à Cabestan si tu passes par là, sinon garde-la ou passe-la.
 03-30到45級.md:542｜站內可跳過｜挑戰莫格穆洛克（Challenge Overlord Mok’Morokk）1173。影片建議略過。這條線前幾個任務最低 38 級，37 級到站先走北沼澤群。｜Passe Défier le Seigneur Mok'Morokk (1173), comme le suggère la vidéo. Les premières quêtes de cette chaîne demandent le niveau 38. Si tu arrives au niveau 37, commence par le marais du nord.
-03-30到45級.md:543｜站內之後順路｜若接了 1240，可在荊棘谷 藏寶海灣交給格羅姆高的肯維雷。後續 1261 要回蕨牆村，只有再回塵泥時才續做。黑色盾牌 1276 留雷霆崖順路。｜Si tu as pris 1240, rends-la à Kin'weelay à Grom'gol (branche de la Baie-du-Butin). Ne continue 1261 que si tu retournes à Mur-de-Fougères. Garde Le bouclier noir (1276) pour les Pitons-du-Tonnerre.
+03-30到45級.md:543｜站內之後順路｜若接了 1240，可在荊棘谷 藏寶海灣交給格羅姆高的肯維雷。後續 1261 要回蕨牆村，只有再回塵泥時才續做。黑色盾牌 1276 留雷霆崖順路。｜Si tu as pris 1240, rends-la à Kin'weelay à Grom'gol (branche de la Baie-du-Butin). Ne continue 1261 que si tu retournes à Mur-de-Fougères. Garde Le bouclier noir (1276) pour Thunder Bluff.
 03-30到45級.md:544｜站內提醒｜蕨牆村和淒涼之地 葬影村共用 37→38 的經驗帶。若淒涼回訪的任務已交過，可在塵泥北邊打普通蛛怪和迅猛龍，靠塵泥沼澤 蕨牆村的北沼澤任務怪點補到 38。｜Mur-de-Fougères et le retour à Proie-de-l'Ombre en Désolace partagent le palier 37→38. Si tu as déjà rendu les quêtes de Désolace, tue des araignées et des raptors ordinaires près des objectifs au nord du marécage d'Âprefange jusqu'au niveau 38.
-03-30到45級.md:546｜練怪說明｜北沼澤枯藤地，密度高、普通怪。與其他枯藤怪混雜，沿陸地逐隻清，等級貼近離站門檻。｜Des foules normales denses dans le marais du nord, mêlées aux autres monstres Withervine. Prends-les une par une depuis la terre ferme, jusqu'au niveau requis pour partir.
-03-30到45級.md:547｜練怪說明｜北沼澤東側，密度中等、普通怪。留意毒傷和迅猛龍巡邏，枯藤區有人清怪時可換點。｜Densité modérée de foules normales à l'est du marais nord. Surveille les dégâts de poison et les patrouilles de raptors. Change de point si d'autres joueurs nettoient déjà la zone Withervine.
-03-30到45級.md:548｜練怪說明｜北沼澤林緣，密度高、普通怪。旁邊有鱷魚與其他迅猛龍，沿岸挑單隻，打到 38 即可離站。｜Des foules normales denses en lisière du marais nord. À côté, des crocilisques et d'autres raptors : tire-les un par un le long de la rive et pars dès le niveau 38.
+03-30到45級.md:546｜練怪說明｜北沼澤枯藤地，密度高、普通怪。與其他枯藤怪混雜，沿陸地逐隻清，等級貼近離站門檻。｜Monstres normaux, densité élevée dans le marais du nord, mêlées aux autres monstres Withervine. Prends-les une par une depuis la terre ferme, jusqu'au niveau requis pour partir.
+03-30到45級.md:547｜練怪說明｜北沼澤東側，密度中等、普通怪。留意毒傷和迅猛龍巡邏，枯藤區有人清怪時可換點。｜Densité modérée de monstres normaux à l'est du marais nord. Surveille les dégâts de poison et les patrouilles de raptors. Change de point si d'autres joueurs nettoient déjà la zone Withervine.
+03-30到45級.md:548｜練怪說明｜北沼澤林緣，密度高、普通怪。旁邊有鱷魚與其他迅猛龍，沿岸挑單隻，打到 38 即可離站。｜Monstres normaux, densité élevée en lisière du marais nord. À côté, des crocilisques et d'autres raptors : tire-les un par un le long de la rive et pars dès le niveau 38.
 03-30到45級.md:553｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 03-30到45級.md:554｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides uniquement
-03-30到45級.md:556｜危險說明｜北沼澤的毒蜘蛛與迅猛龍巡邏路重疊。沿外側挑單隻，避開草叢內的交會點。｜Les patrouilles d'araignées venimeuses et de rapaces se chevauchent dans le marais du nord. Tire un ennemi à la fois du bord et évitez les endroits où les patrouilles se rencontrent dans les broussailles.
+03-30到45級.md:556｜危險說明｜北沼澤的毒蜘蛛與迅猛龍巡邏路重疊。沿外側挑單隻，避開草叢內的交會點。｜Les patrouilles d'araignées venimeuses et de rapaces se chevauchent dans le marais du nord. Tire un ennemi à la fois du bord et évite les endroits où les patrouilles se rencontrent dans les broussailles.
 03-30到45級.md:564｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:565｜交通步驟｜從葬影村出發，先走幽靈崗哨，再沿南路往瑪諾洛克集會所。｜Au départ de Proie-de-l'Ombre, passe d'abord par le poste de Rôdeur-fantôme, puis suis la route sud jusqu'au Convent de Mannoroc.
 03-30到45級.md:567｜標籤｜吉爾吉斯線、有前置｜Chaîne Gelkis avec un prérequis
@@ -3351,10 +3351,10 @@
 03-30到45級.md:574｜站內取捨｜影片有這趟回訪。37 級缺經驗時，補做東南側半人馬和附近的燃燒軍團傳送門；淒涼之地 葬影村交過埃盧梭斯之手才接得到 5581。幽靈電漿可用箱子引出怪物後逐隻處理。｜La vidéo inclut ce retour. Si tu manques d'XP au niveau 37, fais les quêtes des centaures au sud-est et le portail de la Légion ardente proche ; 5581 n'est disponible qu'après avoir rendu La Main d'Iruxos à Proie-de-l'Ombre. Pour Chasse à l'ectoplasme, utilise la caisse pour attirer les monstres, puis tue-les un par un.
 03-30到45級.md:575｜站內取捨｜盎格庫爾 1373 的目標在悲傷沼澤。先接，留悲傷沼澤 斯通納德順路做。1374 在回村交 1373 後才接得到，留往後補。｜Les objectifs d'Ongeku (1373) sont au Marais des Chagrins. Prends la quête et fais-la en passant à Pierrêche. Rends 1373 au village pour prendre 1374 plus tard.
 03-30到45級.md:576｜站內提醒｜還未到 38，就在瑪諾洛克集會所外圈（約 50.40, 70.40）打普通惡魔；若殺得慢，可回科多墓地東南的半人馬區。｜En dessous du niveau 38 ? Tue des démons normaux autour du Convent de Mannoroc (vers 50.40, 70.40). Si ça avance lentement, va vers les centaures au sud-est du Cimetière des kodos.
-03-30到45級.md:578｜練怪說明｜瑪諾洛克集會所北外圈，密度高、普通怪。留意周邊其他惡魔。可順便拿魔化金線血袍任務需要的次級地獄火石【僅術士】。｜Des foules normales denses au nord du Convent de Mannoroc. Surveille les autres démons autour. Les démonistes peuvent en profiter pour récupérer la Pierre d'infernal inférieure nécessaire à Les composants de la robe sanglante dorée enchantée.
+03-30到45級.md:578｜練怪說明｜瑪諾洛克集會所北外圈，密度高、普通怪。留意周邊其他惡魔。可順便拿魔化金線血袍任務需要的次級地獄火石【僅術士】。｜Monstres normaux, densité élevée au nord du Convent de Mannoroc. Surveille les autres démons autour. Les démonistes peuvent en profiter pour récupérer la Pierre d'infernal inférieure nécessaire à Les composants de la robe sanglante dorée enchantée.
 03-30到45級.md:578｜標籤｜僅術士｜Démonistes uniquement
 03-30到45級.md:579｜練怪說明｜集會所同一片外圈，密度中等、普通施法怪。用地形拉出群怪，可與次級地獄火輪打。｜Densité modérée de lanceurs de sorts normaux sur la même périphérie du Convent de Mannoroc. Utilise le terrain pour les écarter des groupes. Alterne avec les infernaux inférieurs.
-03-30到45級.md:580｜練怪說明｜集會所東側，密度中等、普通怪。沿外緣找單隻，避開南面的精英領主；若外圈人多，可換到這裡補經驗。｜Densité modérée de foules normales à l'est du Convent de Mannoroc. Prends les ennemis isolés en bordure et évite le seigneur d'élite au sud. Si la périphérie est bondée, viens ici pour gagner de l'XP.
+03-30到45級.md:580｜練怪說明｜集會所東側，密度中等、普通怪。沿外緣找單隻，避開南面的精英領主；若外圈人多，可換到這裡補經驗。｜Densité modérée de monstres normaux à l'est du Convent de Mannoroc. Prends les ennemis isolés en bordure et évite le seigneur d'élite au sud. Si la périphérie est bondée, viens ici pour gagner de l'XP.
 03-30到45級.md:586｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 03-30到45級.md:588｜危險說明｜瑪諾洛克集會所南側有精英領主。若只要補經驗或材料，在東側打法師獵手即可。｜Des seigneurs d'élite rôdent au sud du Convent de Mannoroc. Pour l'XP ou les matériaux, contente-toi des chasseurs de mages du côté est.
 03-30到45級.md:598｜交通步驟｜在奧格瑪城外飛艇塔搭提里斯法林地線。從布瑞爾南塔下船後到幽暗城，飛塔倫米爾並綁爐石。｜Prends le zeppelin de Tirisfal devant Orgrimmar. Depuis la tour sud de Brill, va à Fossoyeuse, vole vers Moulin-de-Tarren et lie ta pierre de foyer.
@@ -3404,12 +3404,12 @@
 03-30到45級.md:627｜標籤｜可跳過｜Facultatif
 03-30到45級.md:628｜標籤｜有隊伍再做｜Groupe recommandé
 03-30到45級.md:628｜標籤｜可跳過｜Facultatif
-03-30到45級.md:629｜交通步驟｜去完辛迪加營地後向東過索拉丁之牆，重返阿拉希高地。｜Après le camp du Syndicat, va vers l'est par le Mur de Thoradin et reviens aux Hautes-terres d'Arathi.
+03-30到45級.md:629｜交通步驟｜去完辛迪加營地後向東過索拉丁之牆，重返阿拉希高地。｜Après le camp du Syndicat, va vers l'est par le Mur de Thoradin et reviens aux Hautes-terres Arathies.
 03-30到45級.md:631｜站內取捨｜塔倫米爾先確認 498／549，兩個前置可在敦霍爾德城堡同一趟做。進山後交 533 才接 503，高迪爾和瓦杜斯的辛迪加營地目標一起找。｜À Moulin-de-Tarren, vérifie 498 et 549 ; ces deux prérequis peuvent se faire en une seule fois à Fort-de-Durn. Une fois dans les montagnes, rends 533 pour prendre 503, puis cherche les objectifs de Gol'dir et Vardus dans les camps du Syndicat.
 03-30到45級.md:632｜站內可跳過｜意志之冠 518–521 要進精英食人魔區，並在末段回幽暗城交件，有隊伍再開整條。｜Fais équipe pour La Couronne de Volonté (518 – 521) : la chaîne passe par des ogres d'élite et se termine à Fossoyeuse. À faire en entier seulement si tu as un groupe.
 03-30到45級.md:633｜站內提醒｜與阿拉希高地 落錘鎮合計練到 40；到阿拉希高地 落錘鎮再看等級差額。若缺少量經驗，可先打辛迪加營地的普通成員（58.44, 70.00），再往落錘鎮。｜Avec Trépas-d'Orgrim, cette étape te mène au niveau 40 ; vérifie ton XP en arrivant à Trépas-d'Orgrim. S'il ne manque qu'un peu d'XP, tue d'abord des membres normaux du Syndicat dans leur camp (58.44, 70.00), puis va à Trépas-d'Orgrim.
-03-30到45級.md:635｜練怪說明｜辛迪加營地外圍，密度高、普通怪。留意隱匿及巫師，沿營地邊緣找單隻，只補少量就往落錘鎮。｜Des foules normales denses à l'extérieur du camp du Syndicat. Surveille les monstres furtifs et les sorciers. Prends les ennemis isolés pour un peu d'XP avant Trépas-d'Orgrim.
-03-30到45級.md:636｜練怪說明｜破碎嶺外側山路，密度高、普通怪。城內另有精英，留在外圍可少繞路，適合單人補怪。｜Des foules normales denses sur la route de montagne à l'extérieur des ruines d'Alterac. Reste à l'extérieur pour éviter les élites de la ville : convient bien en solo.
+03-30到45級.md:635｜練怪說明｜辛迪加營地外圍，密度高、普通怪。留意隱匿及巫師，沿營地邊緣找單隻，只補少量就往落錘鎮。｜Monstres normaux, densité élevée à l'extérieur du camp du Syndicat. Surveille les monstres furtifs et les sorciers. Prends les ennemis isolés pour un peu d'XP avant Trépas-d'Orgrim.
+03-30到45級.md:636｜練怪說明｜破碎嶺外側山路，密度高、普通怪。城內另有精英，留在外圍可少繞路，適合單人補怪。｜Monstres normaux, densité élevée sur la route de montagne à l'extérieur des ruines d'Alterac. Reste à l'extérieur pour éviter les élites de la ville : convient bien en solo.
 03-30到45級.md:641｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 03-30到45級.md:643｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides uniquement
 03-30到45級.md:644｜標籤｜僅盜賊｜Voleurs uniquement
@@ -3493,8 +3493,8 @@
 03-30到45級.md:728｜站內取捨｜影片建議激流堡有餘力再做。要省跑圖，先做水晶和落錘近郊，激流堡後段 643–646 可跳。｜La vidéo traite Stromgarde comme facultatif. Faites d'abord les cristaux et les objectifs proches de Trépas-d'Orgrim. Ignore les quêtes de Stromgarde 643 – 646 pour gagner du temps de trajet.
 03-30到45級.md:729｜站內提醒｜途經斯通納德先開飛點。悲傷沼澤任務留悲傷沼澤 斯通納德。｜Débloque le point de vol en passant par Pierrêche. Garde les quêtes du Marais des Chagrins pour l'étape de Pierrêche.
 03-30到45級.md:730｜站內提醒｜前往大河林地前若未到 40，先清落錘鎮東側乾鬚峽谷的普通狗頭人（約 84, 31）。怪物開始轉灰時，改打枯木村外圍的普通枯木食人妖（約 68, 69）。｜En dessous du niveau 40 ? Tue les kobolds normaux de la gorge des Sèches-moustaches, à l'est de Trépas-d'Orgrim (vers 84, 31). Quand ils deviennent gris, passe aux trolls Witherbark normaux à l'extérieur du village (vers 68, 69).
-03-30到45級.md:732｜練怪說明｜落錘鎮東側枯鬚峽谷深處，密度中等、普通怪。洞道狹窄且可能碰到稀有地卜師弗林塔格，從入口逐段推進。｜Densité modérée de foules normales au plus profond de la gorge des Sèches-moustaches, à l'est de Trépas-d'Orgrim. Dégage la grotte étroite par étapes. Surveille le rare Géomancien Dague-de-silex.
-03-30到45級.md:733｜練怪說明｜枯鬚峽谷洞道，密度高、普通怪。與勘探員混合，可和水晶任務同趟，留意洞內回頭時的重生。｜Des foules normales denses, mêlées à des prospecteurs, dans les tunnels de la gorge des Sèches-moustaches. Fais-les en même temps que la quête des cristaux. Surveille les réapparitions quand tu fais demi-tour dans la grotte.
+03-30到45級.md:732｜練怪說明｜落錘鎮東側枯鬚峽谷深處，密度中等、普通怪。洞道狹窄且可能碰到稀有地卜師弗林塔格，從入口逐段推進。｜Densité modérée de monstres normaux au plus profond de la gorge des Sèches-moustaches, à l'est de Trépas-d'Orgrim. Dégage la grotte étroite par étapes. Surveille le rare Géomancien Dague-de-silex.
+03-30到45級.md:733｜練怪說明｜枯鬚峽谷洞道，密度高、普通怪。與勘探員混合，可和水晶任務同趟，留意洞內回頭時的重生。｜Monstres normaux, densité élevée, mêlées à des prospecteurs, dans les tunnels de la gorge des Sèches-moustaches. Fais-les en même temps que la quête des cristaux. Surveille les réapparitions quand tu fais demi-tour dans la grotte.
 03-30到45級.md:734｜練怪說明｜落錘鎮西北水元素區，密度高、普通怪。比狗頭人稍高等，可打到 40。可同趟收集旋風武器任務的元素符咒【僅戰士】。｜Élémentaires d'eau normaux denses au nord-ouest de Trépas-d'Orgrim. Ils sont d'un niveau légèrement supérieur à celui des kobolds et peuvent atteindre le niveau 40. Les guerriers peuvent collecter des charmes pour leur arme Tourbillon.
 03-30到45級.md:734｜標籤｜僅戰士｜Guerriers uniquement
 03-30到45級.md:740｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
@@ -3525,7 +3525,7 @@
 03-30到45級.md:789｜標籤｜可跳過｜Facultatif
 03-30到45級.md:789｜★獎勵物品名｜血鼻打擊者｜Frappeuse de flaire-sang
 03-30到45級.md:789｜★獎勵職業｜戰士／聖騎士｜Guerrier/Paladin
-03-30到45級.md:791｜粗體註記｜沿河伐木營地與 Sunnyglade｜Camps forestiers Riverside et Sunnyglade
+03-30到45級.md:791｜粗體註記｜沿河伐木營地與 Sunnyglade｜Camps forestiers Riverside et Clairsoleil
 03-30到45級.md:796｜步驟說明｜交借來的刀刃後接；劍先留到大河林地 火線港再交佛利茲。｜Après Lames réclamées, accepte la quête ici. Garde l'épée pour la rendre à Friz à Port de Poudremèche, dans Rives Claires.
 03-30到45級.md:817｜標籤｜有隊伍再做｜Groupe recommandé
 03-30到45級.md:817｜標籤｜可跳過｜Facultatif
@@ -3578,7 +3578,7 @@
 03-30到45級.md:877｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 03-30到45級.md:879｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides uniquement
 03-30到45級.md:881｜危險說明｜羅格瑪以南有遠境堡斥候和牧師。先拉落單的斥候，避免牧師一起入戰。｜Des éclaireurs et des prêtres de Fort-Lointain rôdent au sud de Rog’mar. Attaque d'abord les éclaireurs isolés pour éviter que les prêtres ne rejoignent le combat.
-03-30到45級.md:882｜危險說明｜陽光林地的暮光儀式洞道狹窄。先清洞口後再拆儀式圈，別讓暗影法師在背後重生。｜Le tunnel du rituel du Crépuscule à Sunnyglade est étroit. Nettoie l'entrée avant de détruire les cercles rituels. Évite que les Shadowmancers réapparaissent derrière toi.
+03-30到45級.md:882｜危險說明｜陽光林地的暮光儀式洞道狹窄。先清洞口後再拆儀式圈，別讓暗影法師在背後重生。｜Le tunnel du rituel du Crépuscule à Clairsoleil est étroit. Nettoie l'entrée avant de détruire les cercles rituels. Évite que les Shadowmancers réapparaissent derrière toi.
 03-30到45級.md:890｜交通步驟｜卡加斯｜Kargath
 03-30到45級.md:890｜步驟說明｜向格里克開飛行點。｜Débloque le point de vol auprès de Gorrik.
 03-30到45級.md:891｜交通步驟｜需要補技能與騎術時再離開，回來可飛卡加斯。｜Pars apprendre tes compétences ou la monte si nécessaire. Tu peux revenir à Kargath en volant.
@@ -3654,7 +3654,7 @@
 03-30到45級.md:976｜標籤｜可跳過｜Facultatif
 03-30到45級.md:977｜標籤｜悲傷沼澤 斯通納德再做｜À faire à Pierrêche (Marais des Chagrins)
 03-30到45級.md:977｜標籤｜可跳過｜Facultatif
-03-30到45級.md:977｜步驟說明｜前置從棘齒城的給克拉維爾的零件（1112）開始，經閃光平原的侏儒的貨物（1114），再到藏寶海灣交車手的傳聞（1115）。｜Chaîne préalable : 1112 à Cabestan, puis 1114 aux Shimmering Flats, puis 1115 à rendre à Baie-du-Butin.
+03-30到45級.md:977｜步驟說明｜前置從棘齒城的給克拉維爾的零件（1112）開始，經閃光平原的侏儒的貨物（1114），再到藏寶海灣交車手的傳聞（1115）。｜Chaîne préalable : 1112 à Cabestan, puis 1114 aux Salines, puis 1115 à rendre à Baie-du-Butin.
 03-30到45級.md:979｜粗體註記｜北海灘踩點，再回港解鎖血帆任務群｜Explore la plage nord, puis retourne au port pour débloquer les quêtes de la Voile sanglante.
 03-30到45級.md:992｜交通步驟｜若要做營地補收，從藏寶海灣飛格羅姆高，一路向南清怪回港。｜Pour récupérer les quêtes supplémentaires du camp, vole de Baie-du-Butin à Grom'gol, puis nettoie vers le sud en revenant au port.
 03-30到45級.md:993｜標籤｜有前置｜Avec prérequis
@@ -3732,7 +3732,7 @@
 03-30到45級.md:1085｜交通步驟｜在斯通納德確認布雷依克飛行點 46.07, 54.83。｜À Pierrêche, vérifie que le point de vol de Breyk est débloqué (46.07, 54.83).
 03-30到45級.md:1086｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:1087｜標籤｜有前置｜Avec prérequis
-03-30到45級.md:1090｜粗體註記｜西邊橋下與避難營地｜Sous le pont ouest et au Harborage
+03-30到45級.md:1090｜粗體註記｜西邊橋下與避難營地｜Sous le pont ouest et au Havre boueux
 03-30到45級.md:1092｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:1093｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:1094｜標籤｜之後順路｜À faire plus tard en passant
@@ -3860,24 +3860,24 @@
 03-30到45級.md:1223｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1224｜標籤｜有前置｜Avec prérequis
 03-30到45級.md:1224｜標籤｜可跳過｜Facultatif
-03-30到45級.md:1226｜粗體註記｜可選地城｜克羅多克要塞｜Donjon facultatif : Krol'dok Stronghold
+03-30到45級.md:1226｜粗體註記｜可選地城｜克羅多克要塞｜Donjon facultatif : Bastion Krol’dok
 03-30到45級.md:1228｜標籤｜有隊伍才下｜Groupe uniquement
 03-30到45級.md:1228｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1229｜標籤｜有隊伍才下｜Groupe uniquement
 03-30到45級.md:1229｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1230｜標籤｜有隊伍才下｜Groupe uniquement
 03-30到45級.md:1230｜標籤｜可跳過｜Facultatif
-03-30到45級.md:1230｜步驟說明｜座標為插件收錄的克羅多克要塞入口；首領霸主馬戈的副本內座標 ?。｜Les coordonnées indiquent seulement l'entrée de Krol'dok Stronghold enregistrée par l'addon. Celles d'Overlord Mago à l'intérieur du donjon sont inconnues (?).
+03-30到45級.md:1230｜步驟說明｜座標為插件收錄的克羅多克要塞入口；首領霸主馬戈的副本內座標 ?。｜Les coordonnées indiquent seulement l'entrée du Bastion Krol’dok enregistrée par l'addon. Celles d'Overlord Mago à l'intérieur du donjon sont inconnues (?).
 03-30到45級.md:1231｜標籤｜有隊伍才下｜Groupe uniquement
 03-30到45級.md:1231｜標籤｜可跳過｜Facultatif
-03-30到45級.md:1231｜步驟說明｜座標為插件收錄的克羅多克要塞入口；書由副本首領納古克掉落，副本內座標 ?。｜Les coordonnées indiquent seulement l'entrée de Krol'dok Stronghold enregistrée par l'addon. Le livre est lâché par le boss Nar’gurk ; ses coordonnées à l'intérieur du donjon sont inconnues (?).
+03-30到45級.md:1231｜步驟說明｜座標為插件收錄的克羅多克要塞入口；書由副本首領納古克掉落，副本內座標 ?。｜Les coordonnées indiquent seulement l'entrée du Bastion Krol’dok enregistrée par l'addon. Le livre est lâché par le boss Nar’gurk ; ses coordonnées à l'intérieur du donjon sont inconnues (?).
 03-30到45級.md:1232｜標籤｜有隊伍才下｜Groupe uniquement
 03-30到45級.md:1232｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1233｜標籤｜有隊伍才下｜Groupe uniquement
 03-30到45級.md:1233｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1237｜站內取捨｜北線與暮光之罩整條選做。已做暮光不再的角色可先回博德羅克，交鈍拳的命令後在羅格瑪接迷途的戰士。火線港第一次清海盜順手拿走私貨物，第二次收火藥桶與殺投彈手並送走私快遞，交完再出海炸船。海怪線要繞洞穴，經驗不足且 NPC 有提供任務時再做。｜Les boucles nord et Suaire du Crépuscule sont entièrement facultatives. Si tu as déjà fait Crépuscule No More !, retourne à Bolder’ok, rends Le décret de Poing-Serré, puis prends Le guerrier téméraire à Rog’mar. À Port de Poudremèche, nettoie les pirates la première fois et prends au passage les marchandises de contrebande ; la deuxième fois, récupère les barils de poudre, tue les bombardiers et livre le colis du contrebandier, puis prends la mer pour saboter les navires. La quête du monstre marin impose un détour par une grotte : ne la fais que s'il te manque de l'XP et que le PNJ la propose.
-03-30到45級.md:1239｜站內可跳過｜Bloodmaster’s Ring 競技場、94768、95882 和克羅多克要塞留有隊伍再做。｜Garde l'arène Bloodmaster’s Ring, 94768, 95882 et Krol'dok Stronghold pour un groupe.
-03-30到45級.md:1240｜站內提醒｜不足 45 就在東風海岸（約 84, 35–43）沿岸打東海海盜與火槍手，港口附近可以補給。40–45 級有隊伍可下克羅多克要塞（Krol’dok Stronghold），先接羅格瑪的 94968／94972。｜En dessous du niveau 45, tue les boucaniers et mousquetaires des mers de l'Est le long du Rivage d’Estevent (vers 84, 35-43) ; tu peux te réapprovisionner au port. Aux niveaux 40-45, tu peux faire Krol'dok Stronghold en groupe, après avoir pris 94968 et 94972 à Rog’mar.
+03-30到45級.md:1239｜站內可跳過｜Bloodmaster’s Ring 競技場、94768、95882 和克羅多克要塞留有隊伍再做。｜Garde l'arène Bloodmaster’s Ring, 94768, 95882 et le Bastion Krol’dok pour un groupe.
+03-30到45級.md:1240｜站內提醒｜不足 45 就在東風海岸（約 84, 35–43）沿岸打東海海盜與火槍手，港口附近可以補給。40–45 級有隊伍可下克羅多克要塞（Krol’dok Stronghold），先接羅格瑪的 94968／94972。｜En dessous du niveau 45, tue les boucaniers et mousquetaires des mers de l'Est le long du Rivage d’Estevent (vers 84, 35-43) ; tu peux te réapprovisionner au port. Aux niveaux 40-45, tu peux faire Bastion Krol’dok en groupe, après avoir pris 94968 et 94972 à Rog’mar.
 03-30到45級.md:1241｜站內交通｜到 45 級後在火線港碼頭（2548 80.60, 54.60）搭中立船到塔納利斯 熱砂港（1446 68.60, 23.00），再往加基森。若要留在東部王國，可沿路回羅格瑪飛行點。從塔納利斯抵港的部落角色同樣要由陸路去羅格瑪開飛點。｜Au niveau 45, prends le bateau neutre du quai de Port de Poudremèche (2548 80.60, 54.60) vers Port Gentepression, à Tanaris (1446 68.60, 23.00), puis va à Gadgetzan. Pour rester dans les Royaumes de l'est, retourne au point de vol de Rog’mar par la route. Si tu arrives de Tanaris, rejoins Rog’mar par la route pour débloquer le point de vol.
 03-30到45級.md:1243｜練怪說明｜火線港北側東風海岸，資料庫點位密集、普通怪。與火槍手混合，沿沙灘逐隻拉；可同步完成 95119。｜Monstres normaux denses sur le Rivage d’Estevent, au nord de Port de Poudremèche, parmi les mousquetaires. Attaque-les un par un le long de la plage ; tu peux faire 95119 en même temps.
 03-30到45級.md:1244｜練怪說明｜東風海岸中段，資料庫點位密集、普通遠程怪。與海盜交錯，近戰可利用地形拉到岸側；適合補到 45 級。｜Tireurs et lanceurs à distance normaux et denses au centre du Rivage d’Estevent, mêlés aux pirates. Les combattants de mêlée peuvent utiliser le terrain pour les attirer vers la côte ; idéal pour atteindre le niveau 45.
@@ -3887,7 +3887,7 @@
 03-30到45級.md:1254｜危險說明｜東風水濱的火槍手容易在遠處加入戰鬥。清海盜時沿沙灘拉開，炸船前清上船路。｜Les mousquetaires des mers de l'Est peuvent rejoindre le combat de loin. Attire les pirates le long de la plage et dégage le chemin d'embarquement avant de saboter les navires.
 03-30到45級.md:1260｜標籤｜僅不死族｜Morts-vivants uniquement
 03-30到45級.md:1260｜標籤｜僅聖騎士｜Paladins uniquement
-03-30到45級.md:1260｜步驟說明｜40 級回幽暗城時可接，然後到班達利昂要塞。同任務也可找『希望者』阿洛丹（1456 25.42, 14.71）。｜Prends la quête au niveau 40, à ton retour à Fossoyeuse, puis va à la Forteresse de Bandarion. Alodan the Hopeful (1456 25.42, 14.71) la propose aussi.
+03-30到45級.md:1260｜步驟說明｜40 級回幽暗城時可接，然後到班達利昂要塞。同任務也可找『希望者』阿洛丹（1456 25.42, 14.71）。｜Prends la quête au niveau 40, à ton retour à Fossoyeuse, puis va à la Forteresse de Bandarion. Alodan l'Optimiste (1456 25.42, 14.71) la propose aussi.
 03-30到45級.md:1261｜標籤｜僅不死族｜Morts-vivants uniquement
 03-30到45級.md:1261｜標籤｜僅聖騎士｜Paladins uniquement
 03-30到45級.md:1261｜步驟說明｜40 級回幽暗城時可接，然後到班達利昂要塞。｜Accepte à Fossoyeuse au niveau 40, puis va à la forteresse de Bandarion.
@@ -3924,10 +3924,10 @@
 03-30到45級.md:1279｜步驟說明｜開旋風武器線；與狂暴姿態分開。｜Lance la chaîne des armes Tourbillon, séparément de la Posture berserker.
 03-30到45級.md:1279｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1279｜標籤｜僅戰士｜Guerriers uniquement
-03-30到45級.md:1280｜步驟說明｜荊棘谷 格羅姆高與藏寶海灣收血頂獠牙，阿拉希高地 落錘鎮收元素符咒；齊料後回巴斯拉。｜Récupère des défenses de scalp-sang à Strangleronce (Grom'gol et Baie-du-Butin) et des charmes élémentaires près de Trépas-d'Orgrim, dans les Hautes-terres d'Arathi. Une fois tout réuni, retourne voir Bath'rah.
+03-30到45級.md:1280｜步驟說明｜荊棘谷 格羅姆高與藏寶海灣收血頂獠牙，阿拉希高地 落錘鎮收元素符咒；齊料後回巴斯拉。｜Récupère des défenses de scalp-sang à Strangleronce (Grom'gol et Baie-du-Butin) et des charmes élémentaires près de Trépas-d'Orgrim, dans les Hautes-terres Arathies. Une fois tout réuni, retourne voir Bath'rah.
 03-30到45級.md:1280｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1280｜標籤｜僅戰士｜Guerriers uniquement
-03-30到45級.md:1284｜步驟說明｜和普通荊棘谷任務共用怪點；剩下流放精華阿拉希高地 落錘鎮拿。｜Fais-la avec les quêtes ordinaires de Strangleronce. Récupère l'Essence d'exil près de Trépas-d'Orgrim, dans les Hautes-terres d'Arathi.
+03-30到45級.md:1284｜步驟說明｜和普通荊棘谷任務共用怪點；剩下流放精華阿拉希高地 落錘鎮拿。｜Fais-la avec les quêtes ordinaires de Strangleronce. Récupère l'Essence d'exil près de Trépas-d'Orgrim, dans les Hautes-terres Arathies.
 03-30到45級.md:1284｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1284｜標籤｜僅戰士｜Guerriers uniquement
 03-30到45級.md:1284｜標籤｜掉率 37%｜Taux de butin : 37 %
@@ -4037,17 +4037,17 @@
 03-30到45級.md:1332｜標籤｜僅薩滿｜Chamans uniquement
 03-30到45級.md:1332｜標籤｜需遊戲實測｜À vérifier en jeu
 03-30到45級.md:1333｜標籤｜需遊戲實測｜À vérifier en jeu
-03-30到45級.md:1336｜步驟說明｜千針石林 閃光平原返回卡林多再交。｜Rends la quête aux Shimmering Flats, dans Mille pointes, à ton retour à Kalimdor.
+03-30到45級.md:1336｜步驟說明｜千針石林 閃光平原返回卡林多再交。｜Rends la quête aux Salines, dans Mille pointes, à ton retour à Kalimdor.
 03-30到45級.md:1336｜標籤｜僅薩滿｜Chamans uniquement
 03-30到45級.md:1340｜步驟說明｜完成後取得水之圖騰。｜Termine la quête pour obtenir ton Totem d'eau.
 03-30到45級.md:1340｜標籤｜僅薩滿｜Chamans uniquement
 03-30到45級.md:1341｜步驟說明｜完成後取得水之圖騰。｜Termine la quête pour obtenir ton Totem d'eau.
 03-30到45級.md:1341｜標籤｜僅薩滿｜Chamans uniquement
-03-30到45級.md:1345｜步驟說明｜奧格瑪訓練師可接 1531，雷霆崖可用同線替代導引 1532。｜Un maître d'Orgrimmar peut te donner 1531 ; aux Pitons-du-Tonnerre, la chaîne équivalente 1532 sert d'alternative.
+03-30到45級.md:1345｜步驟說明｜奧格瑪訓練師可接 1531，雷霆崖可用同線替代導引 1532。｜Un maître d'Orgrimmar peut te donner 1531 ; à Thunder Bluff, la chaîne équivalente 1532 sert d'alternative.
 03-30到45級.md:1345｜標籤｜僅薩滿｜Chamans uniquement
-03-30到45級.md:1346｜步驟說明｜奧格瑪訓練師可接 1531，雷霆崖可用同線替代導引 1532。｜Un maître d'Orgrimmar peut te donner 1531 ; aux Pitons-du-Tonnerre, la chaîne équivalente 1532 sert d'alternative.
+03-30到45級.md:1346｜步驟說明｜奧格瑪訓練師可接 1531，雷霆崖可用同線替代導引 1532。｜Un maître d'Orgrimmar peut te donner 1531 ; à Thunder Bluff, la chaîne équivalente 1532 sert d'alternative.
 03-30到45級.md:1346｜標籤｜僅薩滿｜Chamans uniquement
-03-30到45級.md:1347｜步驟說明｜奧格瑪訓練師可接 1531，雷霆崖可用同線替代導引 1532。｜Un maître d'Orgrimmar peut te donner 1531 ; aux Pitons-du-Tonnerre, la chaîne équivalente 1532 sert d'alternative.
+03-30到45級.md:1347｜步驟說明｜奧格瑪訓練師可接 1531，雷霆崖可用同線替代導引 1532。｜Un maître d'Orgrimmar peut te donner 1531 ; à Thunder Bluff, la chaîne équivalente 1532 sert d'alternative.
 03-30到45級.md:1347｜標籤｜僅薩滿｜Chamans uniquement
 03-30到45級.md:1348｜步驟說明｜剃刀沼澤尾王掉便箋，保留到奧特蘭克山脈交。同任務也可找勞恩·峭壁行者（46.14, 51.71）。｜Garde la note lâchée par le dernier boss de Kraal de Tranchebauge pour la rendre dans les Montagnes d'Alterac. Rau Cliffrunner la propose aussi (46.14, 51.71).
 03-30到45級.md:1348｜標籤｜可跳過｜Facultatif
@@ -4334,7 +4334,7 @@
 03-30到45級.md:1479｜標籤｜僅術士｜Démonistes uniquement
 03-30到45級.md:1479｜步驟說明｜先交所在地的導引，再向斯坦哈德接取。｜Rends la quête d'introduction locale, puis prends la suite auprès de Strahad.
 03-30到45級.md:1483｜標籤｜可跳過｜Facultatif
-03-30到45級.md:1483｜步驟說明｜本路線經奧格瑪。已在雷霆崖可找奧松·格盧爾（1456 25.70, 14.19），在幽暗城可找安娜斯塔西婭·哈特威爾（1458 85.14, 10.03）。｜Cet itinéraire passe par Orgrimmar. Aux Pitons-du-Tonnerre, tu peux voir Ursyn Ghull (1456 25.70, 14.19) ; à Fossoyeuse, Anastasia Hartwell (1458 85.14, 10.03).
+03-30到45級.md:1483｜步驟說明｜本路線經奧格瑪。已在雷霆崖可找奧松·格盧爾（1456 25.70, 14.19），在幽暗城可找安娜斯塔西婭·哈特威爾（1458 85.14, 10.03）。｜Cet itinéraire passe par Orgrimmar. À Thunder Bluff, tu peux voir Ursyn Ghull (1456 25.70, 14.19) ; à Fossoyeuse, Anastasia Hartwell (1458 85.14, 10.03).
 03-30到45級.md:1483｜標籤｜僅法師｜Mages uniquement
 03-30到45級.md:1484｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1485｜標籤｜可跳過｜Facultatif
@@ -4383,7 +4383,7 @@
 03-30到45級.md:1500｜★獎勵職業｜法師擇一｜Mage : choisir une récompense
 03-30到45級.md:1500｜標籤｜僅法師｜Mages uniquement
 03-30到45級.md:1504｜標籤｜可跳過｜Facultatif
-03-30到45級.md:1504｜步驟說明｜本路線經奧格瑪。已在雷霆崖可找奧松·格盧爾（1456 25.70, 14.19），在幽暗城可找安娜斯塔西婭·哈特威爾（1458 85.14, 10.03）。｜Cet itinéraire passe par Orgrimmar. Aux Pitons-du-Tonnerre, tu peux voir Ursyn Ghull (1456 25.70, 14.19) ; à Fossoyeuse, Anastasia Hartwell (1458 85.14, 10.03).
+03-30到45級.md:1504｜步驟說明｜本路線經奧格瑪。已在雷霆崖可找奧松·格盧爾（1456 25.70, 14.19），在幽暗城可找安娜斯塔西婭·哈特威爾（1458 85.14, 10.03）。｜Cet itinéraire passe par Orgrimmar. À Thunder Bluff, tu peux voir Ursyn Ghull (1456 25.70, 14.19) ; à Fossoyeuse, Anastasia Hartwell (1458 85.14, 10.03).
 03-30到45級.md:1504｜標籤｜僅法師｜Mages uniquement
 03-30到45級.md:1505｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1506｜標籤｜可跳過｜Facultatif
@@ -4400,15 +4400,15 @@
 03-30到45級.md:1512｜步驟說明｜先補滿血量及法力，再請塔貝薩開始驅除。｜Récupère toute ta santé et ton mana, puis demande à Tabetha de commencer l'exorcisme.
 03-30到45級.md:1512｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1512｜標籤｜僅法師｜Mages uniquement
-03-30到45級.md:1513｜步驟說明｜先跟隊伍確認會走有黑曜石哨兵的入口。｜Confirme avec ton groupe que vous prenez l'entrée qui mène à la Sentinelle d'obsidienne.
+03-30到45級.md:1513｜步驟說明｜先跟隊伍確認會走有黑曜石哨兵的入口。｜Confirme avec ton groupe que tu prends l'entrée qui mène à la Sentinelle d'obsidienne.
 03-30到45級.md:1513｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1513｜標籤｜僅法師｜Mages uniquement
-03-30到45級.md:1514｜步驟說明｜先跟隊伍確認會走有黑曜石哨兵的入口。｜Confirme avec ton groupe que vous prenez l'entrée qui mène à la Sentinelle d'obsidienne.
+03-30到45級.md:1514｜步驟說明｜先跟隊伍確認會走有黑曜石哨兵的入口。｜Confirme avec ton groupe que tu prends l'entrée qui mène à la Sentinelle d'obsidienne.
 03-30到45級.md:1514｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1514｜步驟說明｜奧達曼後門；由後門找黑曜石哨兵。入口座標僅用於導航，副本內目標座標 ?。｜Entre par la porte arrière d'Uldaman pour trouver la Sentinelle d'obsidienne. Les coordonnées marquent uniquement l'entrée ; celles de la cible à l'intérieur sont inconnues (?).
 03-30到45級.md:1514｜標籤｜僅法師｜Mages uniquement
 03-30到45級.md:1514｜標籤｜掉率 100%｜Taux de butin : 100 %
-03-30到45級.md:1515｜步驟說明｜先跟隊伍確認會走有黑曜石哨兵的入口。｜Confirme avec ton groupe que vous prenez l'entrée qui mène à la Sentinelle d'obsidienne.
+03-30到45級.md:1515｜步驟說明｜先跟隊伍確認會走有黑曜石哨兵的入口。｜Confirme avec ton groupe que tu prends l'entrée qui mène à la Sentinelle d'obsidienne.
 03-30到45級.md:1515｜標籤｜可跳過｜Facultatif
 03-30到45級.md:1515｜標籤｜僅法師｜Mages uniquement
 03-30到45級.md:1516｜步驟說明｜接下後有時限，滿法力再開始。｜Recharge ton mana avant d'accepter. Le chronomètre démarre quand tu acceptes.
@@ -4457,7 +4457,7 @@
 03-30到45級.md:1566｜標籤｜僅部落天裔｜Skyborne de la Horde uniquement
 03-30到45級.md:1567｜標籤｜僅部落天裔｜Skyborne de la Horde uniquement
 03-30到45級.md:1568｜標籤｜僅部落天裔｜Skyborne de la Horde uniquement
-04-45到60級.md:16｜交通步驟｜在大河林地 火線港 2548 80.60, 54.60 搭熱砂港線，在塔納利斯 1446 68.60, 23.00 下船。從奧格瑪出發且已開加基森飛行點可搭鳥；初訪可由亂風崗經閃光平原南坡步行到加基森。｜Prends le bateau de Port de Poudremèche, dans Rives Claires (2548 80.60, 54.60), vers Port Gentepression et descends à Tanaris (1446 68.60, 23.00). Si tu pars d'Orgrimmar et que Gadgetzan est débloqué, tu peux voler. Lors d'une première visite, tu peux aussi courir depuis Poste de Librevent à travers les Shimmering Flats et descendre par la pente sud jusqu'à Gadgetzan.
+04-45到60級.md:16｜交通步驟｜在大河林地 火線港 2548 80.60, 54.60 搭熱砂港線，在塔納利斯 1446 68.60, 23.00 下船。從奧格瑪出發且已開加基森飛行點可搭鳥；初訪可由亂風崗經閃光平原南坡步行到加基森。｜Prends le bateau de Port de Poudremèche, dans Rives Claires (2548 80.60, 54.60), vers Port Gentepression et descends à Tanaris (1446 68.60, 23.00). Si tu pars d'Orgrimmar et que Gadgetzan est débloqué, tu peux voler. Lors d'une première visite, tu peux aussi courir depuis Poste de Librevent à travers les Salines et descendre par la pente sud jusqu'à Gadgetzan.
 04-45到60級.md:18｜粗體註記｜港口先接，再入城整備｜Récupération au port, puis réapprovisionnement en ville
 04-45到60級.md:25｜步驟說明｜菲拉斯 莫沙徹營地在費拉斯做，塔納利斯 加基森與砂槌營地回熱砂港交。｜Fais cette quête à Feralas, au Camp Mojache. Rends-la à Port Gentepression pendant la visite de Tanaris (Gadgetzan et Base des Cognedunes).
 04-45到60級.md:26｜步驟說明｜砂槌營地順路做，屆時回熱砂港交。｜Fais-la à la Base des Cognedunes ; rends-la ensuite à Port Gentepression.
@@ -4493,7 +4493,7 @@
 04-45到60級.md:66｜練怪說明｜碼頭外沿的普通怪，海賊入口被搶怪時換點。從外緣拉，避免同時引到碼頭守怪。｜Monstres normaux à l'extérieur des quais. Change d'endroit si l'entrée des pirates est occupée. Attaque depuis le bord pour éviter d'attirer les gardes du quai.
 04-45到60級.md:72｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 04-45到60級.md:75｜危險說明｜卡利夫會巡邏，身邊可能帶護衛。先清沿途廢土強盜，等他走到開闊處再打。｜Le calife patrouille et peut être accompagné de gardes. Élimine d'abord les bandits Wastewander sur le chemin, puis attaque-le quand il arrive en terrain dégagé.
-04-45到60級.md:83｜交通步驟｜已有莫沙徹飛點可從加基森直接飛。初訪照影片從加基森北行上閃光平原，經千針石林沿西路入菲拉斯。｜Si tu as débloqué Camp Mojache, vole directement depuis Gadgetzan. Lors d'une première visite, comme dans la vidéo, monte vers le nord depuis Gadgetzan jusqu'aux Shimmering Flats, puis prends la route de l'ouest via Mille pointes jusqu'à Feralas.
+04-45到60級.md:83｜交通步驟｜已有莫沙徹飛點可從加基森直接飛。初訪照影片從加基森北行上閃光平原，經千針石林沿西路入菲拉斯。｜Si tu as débloqué Camp Mojache, vole directement depuis Gadgetzan. Lors d'une première visite, comme dans la vidéo, monte vers le nord depuis Gadgetzan jusqu'aux Salines, puis prends la route de l'ouest via Mille pointes jusqu'à Feralas.
 04-45到60級.md:83｜步驟提醒｜還沒開這個飛行點，第一次要用跑的｜Point de vol pas encore débloqué : la première fois, va-y à pied.
 04-45到60級.md:84｜交通步驟｜莫沙徹營地｜Camp Mojache
 04-45到60級.md:84｜步驟說明｜向夏恩開飛行點。｜Débloque le point de vol auprès de Shyn.
@@ -4626,7 +4626,7 @@
 04-45到60級.md:351｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 04-45到60級.md:353｜危險說明｜森提帕爾蟲巢入口容易連拉。只在巢口外沿空地打，不要為了一隻追進窄道。｜L'entrée de la ruche Centipaar attire facilement plusieurs groupes. Combats sur le terrain dégagé à l'extérieur de la ruche et ne poursuis pas un monstre dans le tunnel étroit.
 04-45到60級.md:361｜交通步驟｜從奧格瑪飛棘齒城，跨海前到棘齒城碼頭接安戈洛導引；再坐船到藏寶海灣並飛荒蕪之地卡加斯。｜Vole d'Orgrimmar à Cabestan. Avant la traversée, prends la quête d'introduction d'Un'Goro sur les quais de Cabestan, puis prends le bateau jusqu'à Baie-du-Butin et vole vers Kargath, dans les Terres ingrates.
-04-45到60級.md:362｜步驟說明｜最低 49 級；安戈洛環形山 馬紹爾營地安戈洛火羽山打，貧瘠之地 棘齒城回棘齒城交。｜Niveau 49 minimum. À faire à Fire Plume Ridge, dans le cratère d'Un'Goro (Refuge des Marshal). Rends la quête à Cabestan, dans Les Tarides.
+04-45到60級.md:362｜步驟說明｜最低 49 級；安戈洛環形山 馬紹爾營地安戈洛火羽山打，貧瘠之地 棘齒城回棘齒城交。｜Niveau 49 minimum. À faire à la Crête de la Fournaise, dans le cratère d'Un'Goro (Refuge des Marshal). Rends la quête à Cabestan, dans Les Tarides.
 04-45到60級.md:363｜交通步驟｜由卡加斯向西南沿道路進灼熱峽谷，走北側大道到瑟銀哨塔。｜Depuis Kargath, prends la route vers le sud-ouest jusqu'à la Gorge des Vents brûlants, puis suis la grande route du nord jusqu'à la Halte du Thorium.
 04-45到60級.md:364｜交通步驟｜瑟銀哨塔｜Halte du Thorium
 04-45到60級.md:364｜步驟說明｜向部落飛行管理員格瑞沙開點。｜Débloque le point de vol de la Horde auprès de Grisha.
@@ -4652,7 +4652,7 @@
 04-45到60級.md:389｜標籤｜可跳過｜Facultatif
 04-45到60級.md:389｜標籤｜掉率 50%｜Taux de butin : 50 %
 04-45到60級.md:390｜標籤｜可跳過｜Facultatif
-04-45到60級.md:391｜交通步驟｜返回瑟銀哨塔，把大熔爐任務一次交完。｜Retourne à Halte du Thorium et validez toutes les quêtes Chaudron ensemble.
+04-45到60級.md:391｜交通步驟｜返回瑟銀哨塔，把大熔爐任務一次交完。｜Retourne à Halte du Thorium et valide toutes les quêtes Chaudron ensemble.
 04-45到60級.md:396｜標籤｜可跳過｜Facultatif
 04-45到60級.md:397｜標籤｜可跳過｜Facultatif
 04-45到60級.md:398｜標籤｜可跳過｜Facultatif
@@ -4696,7 +4696,7 @@
 04-45到60級.md:431｜練怪說明｜瑟銀哨塔南側的普通黑鐵怪，回飛點前可連打並補任務掉落。營地內可能連拉。｜Monstres Sombrefer normaux au sud de la Halte du Thorium. Enchaîne-les et récupère le butin de quête avant de revenir au point de vol. Attention aux renforts à l'intérieur du camp.
 04-45到60級.md:436｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 04-45到60級.md:438｜危險說明｜工頭瑪托留斯在熔渣之池一帶的黑鐵礦洞深處。用隊伍逐段清通道，獨行可跳過懸賞。｜Le surveillant Maltorius se trouve tout au fond de la mine Sombrefer, près de la fosse à scories. Nettoie les tunnels par étapes avec ton groupe ; si tu es seul, saute la prime.
-04-45到60級.md:446｜交通步驟｜從灼熱峽谷飛惡齒村。未開點先飛塔倫米爾，從敦霍爾德城堡北側山口進辛特蘭，沿大道往東，下海岸往南到惡齒村。｜Vole de la Gorge des Vents brûlants au Village des Revantusk. Si le point de vol n'est pas débloqué, vole à Moulin-de-Tarren, puis entre dans Les Hinterlands par le col au nord de Durnholde Keep, suis la grande route vers l'est, puis descends vers le sud le long de la côte jusqu'au Village des Revantusk.
+04-45到60級.md:446｜交通步驟｜從灼熱峽谷飛惡齒村。未開點先飛塔倫米爾，從敦霍爾德城堡北側山口進辛特蘭，沿大道往東，下海岸往南到惡齒村。｜Vole de la Gorge des Vents brûlants au Village des Revantusk. Si le point de vol n'est pas débloqué, vole à Moulin-de-Tarren, puis entre dans Les Hinterlands par le col au nord du Donjon de Fort-de-Durn, suis la grande route vers l'est, puis descends vers le sud le long de la côte jusqu'au Village des Revantusk.
 04-45到60級.md:446｜步驟提醒｜還沒開這個飛行點，第一次要用跑的｜Point de vol pas encore débloqué : la première fois, va-y à pied.
 04-45到60級.md:447｜交通步驟｜惡齒村｜Village des Revantusk
 04-45到60級.md:447｜步驟說明｜向格卡斯開飛行點。｜Débloque le point de vol auprès de Gorkas.
@@ -4824,18 +4824,18 @@
 04-45到60級.md:639｜標籤｜掉率 8.0%｜Taux de butin : 8.0 %
 04-45到60級.md:643｜標籤｜需遊戲實測｜À vérifier en jeu
 04-45到60級.md:644｜標籤｜需遊戲實測｜À vérifier en jeu
-04-45到60級.md:645｜步驟說明｜下一站前若經雷霆崖可交。｜Si tu passes par les Pitons-du-Tonnerre avant la prochaine étape, rends-la là-bas.
+04-45到60級.md:645｜步驟說明｜下一站前若經雷霆崖可交。｜Si tu passes par Thunder Bluff avant la prochaine étape, rends-la là-bas.
 04-45到60級.md:645｜標籤｜可跳過｜Facultatif
 04-45到60級.md:646｜步驟說明｜本次回奧格瑪時交。｜Rends-la lors de ce retour à Orgrimmar.
 04-45到60級.md:646｜標籤｜可跳過｜Facultatif
 04-45到60級.md:647｜步驟說明｜留到之後途經幽暗城再交。｜Attends ton prochain passage à Fossoyeuse pour rendre la quête.
 04-45到60級.md:647｜標籤｜可跳過｜Facultatif
-04-45到60級.md:648｜交通步驟｜瓦羅莫克飛回奧格瑪，交首級和順路的石板。可再轉雷霆崖交石板，但要多一段航程。｜Vole de Valormok à Orgrimmar pour rendre la tête et, au passage, la tablette. Tu peux aussi rendre la tablette aux Pitons-du-Tonnerre, mais cela demande un vol de plus.
+04-45到60級.md:648｜交通步驟｜瓦羅莫克飛回奧格瑪，交首級和順路的石板。可再轉雷霆崖交石板，但要多一段航程。｜Vole de Valormok à Orgrimmar pour rendre la tête et, au passage, la tablette. Tu peux aussi rendre la tablette à Thunder Bluff, mais cela demande un vol de plus.
 04-45到60級.md:649｜標籤｜需遊戲實測｜À vérifier en jeu
 04-45到60級.md:650｜標籤｜需遊戲實測｜À vérifier en jeu
 04-45到60級.md:651｜標籤｜可跳過｜Facultatif
 04-45到60級.md:652｜標籤｜可跳過｜Facultatif
-04-45到60級.md:653｜步驟說明｜在奧格瑪基爾茲賓處接，再飛菲拉斯。塔納利斯 加基森與砂槌營地已交 32 或 7732 才接，留塔納利斯 加基森與破碎石柱。若要繞雷霆崖交 3518，先接本任務再離開奧格瑪。｜Prends-la auprès de Zilzibin à Orgrimmar, puis vole vers Feralas. Ne la prends que si tu as rendu 32 ou 7732 à Gadgetzan / Base des Cognedunes ; garde-la pour Gadgetzan et le Pilier brisé, à Tanaris. Si tu passes par les Pitons-du-Tonnerre pour rendre 3518, prends cette quête avant de quitter Orgrimmar.
+04-45到60級.md:653｜步驟說明｜在奧格瑪基爾茲賓處接，再飛菲拉斯。塔納利斯 加基森與砂槌營地已交 32 或 7732 才接，留塔納利斯 加基森與破碎石柱。若要繞雷霆崖交 3518，先接本任務再離開奧格瑪。｜Prends-la auprès de Zilzibin à Orgrimmar, puis vole vers Feralas. Ne la prends que si tu as rendu 32 ou 7732 à Gadgetzan / Base des Cognedunes ; garde-la pour Gadgetzan et le Pilier brisé, à Tanaris. Si tu passes par Thunder Bluff pour rendre 3518, prends cette quête avant de quitter Orgrimmar.
 04-45到60級.md:653｜標籤｜可跳過｜Facultatif
 04-45到60級.md:654｜標籤｜可跳過｜Facultatif
 04-45到60級.md:655｜標籤｜可跳過｜Facultatif
@@ -4943,7 +4943,7 @@
 04-45到60級.md:826｜標籤｜可跳過｜Facultatif
 04-45到60級.md:827｜交通步驟｜從加基森飛棘齒城，搭船到藏寶海灣，再飛荒蕪之地卡加斯。暴掠龍爪留在幽暗城轉回奧格瑪時順路交。｜Vole de Gadgetzan à Cabestan, prends le bateau jusqu'à Baie-du-Butin, puis vole vers Kargath, dans les Terres ingrates. Garde les griffes de Ravasaure blanc pour les rendre en repassant par Fossoyeuse, puis Orgrimmar.
 04-45到60級.md:829｜站內取捨｜值得做｜能量水晶、恐龍材料、焦油和血瓣花一路並行。走近中部前留意巡邏魔暴龍。｜Ramasse des cristaux de puissance, des matériaux de dinosaures, du goudron et des fleurs Pétale-de-sang en chemin. En approchant du centre, surveille les diablosaures en patrouille.
-04-45到60級.md:830｜站內取捨｜先別交｜3908 留冬泉谷；4502、4147 留棘齒城。4292、三座水晶塔、猩猩、火羽山救援與究根問底留安戈洛環形山 馬紹爾營地。｜Ne rends pas encore : garde 3908 pour Berceau-de-l'Hiver, 4502 et 4147 pour Cabestan. Garde 4292, les trois pylônes, les gorilles, le sauvetage de Fire Plume Ridge et À la recherche de la source pour Refuge des Marshal, à Un'Goro.
+04-45到60級.md:830｜站內取捨｜先別交｜3908 留冬泉谷；4502、4147 留棘齒城。4292、三座水晶塔、猩猩、火羽山救援與究根問底留安戈洛環形山 馬紹爾營地。｜Ne rends pas encore : garde 3908 pour Berceau-de-l'Hiver, 4502 et 4147 pour Cabestan. Garde 4292, les trois pylônes, les gorilles, le sauvetage de la Crête de la Fournaise et À la recherche de la source pour Refuge des Marshal, à Un'Goro.
 04-45到60級.md:831｜站內取捨｜之後順路｜4300 若已打齊爪子，下次經奧格瑪找傑斯雷蒙（1454 55.52, 34.08）交。4507 需在南邊孵化並打王，可跳過。｜Si tu as toutes les griffes de 4300, rends la quête à Jes'rimon (1454 55.52, 34.08) à ton prochain passage à Orgrimmar. Pour 4507, il faut faire éclore l'œuf et tuer le boss au sud. Tu peux passer la quête.
 04-45到60級.md:832｜站內提醒｜若差一點到 54 級，可在北部焦油怪（51.77, 25.14）或馬紹爾營地東邊雙帆龍（50.78, 19.90）補經驗。｜Presque niveau 54 ? Farme les monstres de goudron au nord (51.77, 25.14) ou les diemetradons à l'est de Refuge des Marshal (50.78, 19.90).
 04-45到60級.md:836｜練怪說明｜營地南側的普通焦油怪，可順收黏稠焦油。刷新靠水邊，沿岸單拉並留意魔暴龍巡邏。｜Monstres de goudron normaux au sud du camp ; ramasse le Goudron ultra collant au passage. Ils réapparaissent près de l'eau : attaque un par un depuis le bord et surveille les patrouilles de diablosaures.
@@ -4990,7 +4990,7 @@
 04-45到60級.md:905｜危險說明｜索瑞森廢墟施法怪和巡邏會一起進戰。從斷牆外拉，別站在兩條巡邏路交叉處。｜Les lanceurs de sorts et les patrouilles des Ruines de Thaurissan peuvent rejoindre le combat ensemble. Attaque depuis l'extérieur des murs brisés et ne reste pas à l'intersection de deux patrouilles.
 04-45到60級.md:913｜標籤｜可跳過｜Facultatif
 04-45到60級.md:914｜標籤｜可跳過｜Facultatif
-04-45到60級.md:915｜交通步驟｜從幽暗城城外往東走到亡靈壁壘，再穿過西瘟疫之地進東瘟疫之地。沿南側主路往東，不進斯坦索姆。｜Depuis l'extérieur de Fossoyeuse, va vers l'est jusqu'au Rempart, puis traverse les Maleterres de l'ouest vers les Maleterres de l'est. Suis la route principale du sud vers l'est, sans entrer à Stratholme.
+04-45到60級.md:915｜交通步驟｜從幽暗城城外往東走到亡靈壁壘，再穿過西瘟疫之地進東瘟疫之地。沿南側主路往東，不進斯坦索姆。｜Depuis l'extérieur de Fossoyeuse, va vers l'est jusqu'à la Barricade, puis traverse les Maleterres de l'ouest vers les Maleterres de l'est. Suis la route principale du sud vers l'est, sans entrer à Stratholme.
 04-45到60級.md:916｜步驟說明｜離主路較遠。若只想開聖光之願飛行點可略。｜C'est loin de la route principale. Saute-la si tu veux seulement débloquer le point de vol de l'Espoir de Lumière.
 04-45到60級.md:916｜標籤｜可跳過｜Facultatif
 04-45到60級.md:917｜步驟說明｜離主路較遠。若只想開聖光之願飛行點可略。｜C'est loin de la route principale. Saute-la si tu veux seulement débloquer le point de vol de l'Espoir de Lumière.
@@ -5003,7 +5003,7 @@
 04-45到60級.md:921｜步驟說明｜採 QuestieDB 永恆版地圖座標。｜Coordonnées de QuestieDB Forever.
 04-45到60級.md:922｜交通步驟｜由禮拜堂飛幽暗城，若手上有圖書館任務可順路交。｜Vole de la Chapelle de l'Espoir de Lumière à Fossoyeuse, et rends au passage les quêtes de la bibliothèque si tu en as.
 04-45到60級.md:923｜步驟說明｜QuestieDB 與 Wowhead 單一任務頁列奧蘭；Wowhead 永恆版圖書館指南另列歐文·薩得（1458 73.40, 33.00），兩人都在幽暗城法師區。先依遊戲可交提示。｜QuestieDB et la fiche Wowhead de la quête indiquent Oran ; le guide Forever de la Bibliothèque sur Wowhead indique aussi Owen Thadd (1458 73.40, 33.00). Tous deux se trouvent dans le Quartier des mages de Fossoyeuse. Fie-toi d'abord à l'indicateur de remise dans le jeu.
-04-45到60級.md:924｜交通步驟｜留在東部王國。下一站從幽暗城往東到亡靈壁壘。｜Reste dans les Royaumes de l'est. La prochaine étape va vers l'est depuis Fossoyeuse jusqu'au Rempart.
+04-45到60級.md:924｜交通步驟｜留在東部王國。下一站從幽暗城往東到亡靈壁壘。｜Reste dans les Royaumes de l'est. La prochaine étape va vers l'est depuis Fossoyeuse jusqu'à la Barricade.
 04-45到60級.md:926｜站內取捨｜值得做｜首次到東瘟疫先開聖光之願飛行點，禮拜堂書在同一處。提里奧、納薩諾斯和達隆郡主要任務留到後段。｜À ta première visite des Maleterres de l'est, débloque le point de vol de la Chapelle de l'Espoir de Lumière ; le livre est dans la chapelle. Garde les quêtes principales de Tirion, Nathanos et Comté-de-Darrow pour plus tard.
 04-45到60級.md:927｜站內取捨｜可跳過｜6164 要繞到恐懼谷，純轉場可略過。若影片拾的是禮拜堂裡的書，對應永恆版 84398。｜6164 impose un détour par Val-Terreur. Passe-la si tu ne fais que traverser la zone. Si le livre de la vidéo est celui de la chapelle, c'est la quête Forever 84398.
 04-45到60級.md:928｜站內提醒｜未滿 54 級可在聖光之願外沿道路打普通瘟疫怪，或到下一站清費爾斯通農場（約 38, 56）的普通亡靈。｜En dessous du niveau 54 ? Tue les monstres normaux du Fléau le long de la route à l'extérieur de l'Espoir de Lumière, ou les morts-vivants normaux du Champ de Felstone (environ 38, 56) à l'étape suivante.
@@ -5011,7 +5011,7 @@
 04-45到60級.md:933｜練怪說明｜禮拜堂西側空地的普通蝙蝠，補經驗後可快速回補給。與瘟疫蝙蝠任務重疊，遇到玩家時往南轉。｜Chauves-souris normales dans la clairière à l'ouest de la Chapelle de l'Espoir de Lumière ; tu peux vite te réapprovisionner après avoir gagné de l'XP. Elles recoupent la quête des chauves-souris de la peste : va vers le sud si la zone est occupée.
 04-45到60級.md:939｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 04-45到60級.md:941｜危險說明｜走恐懼谷找收據冊時，屋內和樓梯上的亡靈可能同時拉到。先清樓下再上樓。｜Quand tu cherches le livre de reçus à Val-Terreur, les morts-vivants de la maison et des escaliers peuvent arriver en même temps. Nettoie d'abord le rez-de-chaussée, puis monte.
-04-45到60級.md:949｜交通步驟｜從幽暗城出城，沿提里斯法林地東路到亡靈壁壘（1420 83.13, 68.94）。保留幽暗城的飛行點，方便本段末尾交城內支線。｜Quitte Fossoyeuse et suis la route de l'est à travers les Clairières de Tirisfal jusqu'au Rempart (1420 83.13, 68.94). Garde le point de vol de Fossoyeuse à portée pour les quêtes de la ville à la fin de cette étape.
+04-45到60級.md:949｜交通步驟｜從幽暗城出城，沿提里斯法林地東路到亡靈壁壘（1420 83.13, 68.94）。保留幽暗城的飛行點，方便本段末尾交城內支線。｜Quitte Fossoyeuse et suis la route de l'est à travers les Clairières de Tirisfal jusqu'à la Barricade (1420 83.13, 68.94). Garde le point de vol de Fossoyeuse à portée pour les quêtes de la ville à la fin de cette étape.
 04-45到60級.md:950｜步驟說明｜接完就在德靈頓旁的箱子領瓶中火，與任務提供的天譴軍旗都要帶上。｜Après avoir accepté la quête, prends la Flamme en bouteille dans le coffre près de Derington ; emporte aussi la Bannière du Fléau fournie par la quête.
 04-45到60級.md:951｜步驟說明｜先用瓶中火燒帳篷，再使用軍旗。｜Brûle d'abord la tente avec la Flamme en bouteille, puis utilise la bannière.
 04-45到60級.md:952｜步驟說明｜先用瓶中火燒帳篷，再使用軍旗。｜Brûle d'abord la tente avec la Flamme en bouteille, puis utilise la bannière.
@@ -5019,13 +5019,13 @@
 04-45到60級.md:959｜步驟說明｜先確認身上有范蒂絲給的空瓶。｜Vérifie que tu as la fiole vide donnée par le donneur de quête.
 04-45到60級.md:959｜標籤｜掉率 100%｜Taux de butin : 100 %
 04-45到60級.md:961｜步驟說明｜拿到樣本後，在同一口大鍋接回程。｜Récupère l'échantillon, puis accepte la quête de retour au même chaudron.
-04-45到60級.md:963｜步驟說明｜包裹位於馬廄內，靠近後與物件互動。｜Interagissez avec le colis à l’intérieur de l’écurie.
+04-45到60級.md:963｜步驟說明｜包裹位於馬廄內，靠近後與物件互動。｜Interagis avec le colis à l’intérieur de l’écurie.
 04-45到60級.md:965｜步驟說明｜選部落版 5023，返回幽暗城交；本地只取包裹。｜Choisis la version de la Horde, 5023, et rends-la à Fossoyeuse ; ici, ramasse seulement le colis.
 04-45到60級.md:966｜交通步驟｜由費爾斯通農場往東到達爾松之淚。這裡先解房屋日記與鑰匙，天譴大鍋留下一趟。｜Va vers l'est depuis le Champ de Felstone jusqu'aux Larmes de Dalson. Fais ici le journal de la maison et la clé ; garde le Chaudron du Fléau pour un prochain passage.
-04-45到60級.md:970｜步驟說明｜日記讀完再找遊蕩的骷髏。開廁所後農夫會出現。｜Lis le journal, puis trouvez un Squelette errant. Ouvre la dépendance pour faire apparaître le fermier.
-04-45到60級.md:971｜步驟說明｜日記讀完再找遊蕩的骷髏。開廁所後農夫會出現。｜Lis le journal, puis trouvez un Squelette errant. Ouvre la dépendance pour faire apparaître le fermier.
+04-45到60級.md:970｜步驟說明｜日記讀完再找遊蕩的骷髏。開廁所後農夫會出現。｜Lis le journal, puis trouve un Squelette errant. Ouvre la dépendance pour faire apparaître le fermier.
+04-45到60級.md:971｜步驟說明｜日記讀完再找遊蕩的骷髏。開廁所後農夫會出現。｜Lis le journal, puis trouve un Squelette errant. Ouvre la dépendance pour faire apparaître le fermier.
 04-45到60級.md:971｜標籤｜掉率 66%｜Taux de butin : 66 %
-04-45到60級.md:972｜步驟說明｜日記讀完再找遊蕩的骷髏。開廁所後農夫會出現。｜Lis le journal, puis trouvez un Squelette errant. Ouvre la dépendance pour faire apparaître le fermier.
+04-45到60級.md:972｜步驟說明｜日記讀完再找遊蕩的骷髏。開廁所後農夫會出現。｜Lis le journal, puis trouve un Squelette errant. Ouvre la dépendance pour faire apparaître le fermier.
 04-45到60級.md:973｜步驟說明｜先清廁所周圍，開櫃後可立即交件。｜Nettoie autour des latrines, ouvre la cache, puis rends la quête immédiatement.
 04-45到60級.md:974｜步驟說明｜先清廁所周圍，開櫃後可立即交件。｜Nettoie autour des latrines, ouvre la cache, puis rends la quête immédiatement.
 04-45到60級.md:974｜標籤｜掉率 97%｜Taux de butin : 97 %
@@ -5033,9 +5033,9 @@
 04-45到60級.md:976｜交通步驟｜沿安多哈爾外緣逐塔走，再回壁壘。塔門有高等守衛時先等巡邏離開。｜Fais le tour d'Andorhal en visitant chaque tour, puis reviens au Rempart. Si des gardes de haut niveau sont aux portes, attends que la patrouille s'éloigne avant d'approcher.
 04-45到60級.md:977｜步驟說明｜在門口即可使用火炬，毋須進塔打守衛。｜Utilise la torche à la porte ; inutile d'entrer dans la tour pour tuer les gardes.
 04-45到60級.md:981｜交通步驟｜回幽暗城，先在公會登記處附近交城內包裹。｜Retourne à Fossoyeuse et rends d'abord le colis en ville, près du registraire de guilde.
-04-45到60級.md:987｜步驟說明｜先保留半個護符，西瘟疫之地 亡靈壁壘到費爾斯通農場交。｜Garde la demi-amulette ; rends-la au Champ de Felstone lors de la visite du Rempart, dans les Maleterres de l'ouest.
+04-45到60級.md:987｜步驟說明｜先保留半個護符，西瘟疫之地 亡靈壁壘到費爾斯通農場交。｜Garde la demi-amulette ; rends-la au Champ de Felstone lors de la visite de la Barricade, dans les Maleterres de l'ouest.
 04-45到60級.md:988｜交通步驟｜幽暗城外的飛艇塔搭往奧格瑪的飛艇。｜Prends le zeppelin Orgrimmar depuis la tour à l'extérieur de Fossoyeuse.
-04-45到60級.md:990｜站內交通｜要去亡靈壁壘須步行。西側往提里斯法林地或幽暗城，走城外飛艇回奧格瑪。｜Pour aller au Rempart, il faut marcher. Vers l'ouest, pour les Clairières de Tirisfal ou Fossoyeuse, prends le zeppelin hors de la ville pour revenir à Orgrimmar.
+04-45到60級.md:990｜站內交通｜要去亡靈壁壘須步行。西側往提里斯法林地或幽暗城，走城外飛艇回奧格瑪。｜Pour aller à la Barricade, il faut marcher. Vers l'ouest, pour les Clairières de Tirisfal ou Fossoyeuse, prends le zeppelin hors de la ville pour revenir à Orgrimmar.
 04-45到60級.md:991｜站內取捨｜值得做｜費爾斯通農場的瘟疫鍋和包裹在同一處，回城可把 5023、5049 一起交。｜Le chaudron et le colis sont au même endroit, au Champ de Felstone. Rends 5023 et 5049 ensemble de retour en ville.
 04-45到60級.md:992｜站內取捨｜之後順路｜本趟完成第一口鍋，達爾松之淚的 5231 與安多哈爾的通靈學院任務留下一輪。傑雷米亞的好運護符 5050／5051 後段回西瘟疫才做。｜Fais le premier chaudron maintenant. Garde 5231 aux Larmes de Dalson et la quête de Scholomance à Andorhal pour le prochain passage. Fais le Charme porte-bonheur de Jeremiah (5050/5051) à ton retour dans les Maleterres de l'ouest.
 04-45到60級.md:993｜站內提醒｜未到55級，可補費爾斯通農場外圍的普通骷髏和食屍鬼（約38, 56）；避開安多哈爾內的高等精英。｜En dessous du niveau 55 ? Tue les squelettes normaux et les goules autour de Champ de Felstone (environ 38, 56). Évite les élites de niveau supérieur à Andorhal.
@@ -5051,8 +5051,8 @@
 04-45到60級.md:1018｜步驟說明｜血琥珀在費伍德北段；下一站順路打鐵木樹人，晚一點回南端交。｜Récupère l'ambre de sang dans le nord de Gangrebois. Tue ensuite les tréants de fer, puis retourne vers le sud plus tard pour rendre la quête.
 04-45到60級.md:1021｜步驟說明｜完成後木喉熊怪聲望上升。若還是敵對，後續到北營地再補。｜Cela fait monter ta réputation auprès des Grumegueule. S'ils sont encore hostiles, retourne au camp du nord plus tard.
 04-45到60級.md:1023｜步驟說明｜先接，下一站到費伍德最北邊交。｜Prends-la maintenant et rends-la à l'extrémité nord de Gangrebois à l'étape suivante.
-04-45到60級.md:1024｜交通步驟｜沿主路往北先經加德納爾，再到血毒崗哨。｜Suis la route principale vers le nord en passant par Jaedenar jusqu'à Bloodvenom Post.
-04-45到60級.md:1025｜交通步驟｜血毒崗哨｜Bloodvenom Post
+04-45到60級.md:1024｜交通步驟｜沿主路往北先經加德納爾，再到血毒崗哨。｜Suis la route principale vers le nord en passant par Jaedenar jusqu'au Poste de la Vénéneuse.
+04-45到60級.md:1025｜交通步驟｜血毒崗哨｜Poste de la Vénéneuse
 04-45到60級.md:1025｜步驟說明｜向布拉卡爾開飛行點。｜Débloque le point de vol auprès de Brakkar.
 04-45到60級.md:1029｜交通步驟｜沿主路北行一小段到碎痕谷，完成腐蝕調查，再走西側薩特月井和南端獸人營地回翡翠聖地。｜Remonte un peu la route principale vers le nord jusqu'au Val Grêlé pour l'enquête sur la corruption, puis reviens au Sanctuaire d'émeraude en passant par le puits de lune des satyres de l'ouest et le camp des orcs du sud.
 04-45到60級.md:1030｜步驟說明｜務必走到任務勘查區，單殺元素不會完成全部目標。｜Visite également la zone d'enquête. Tuer des élémentaires à lui seul ne suffira pas.
@@ -5060,20 +5060,20 @@
 04-45到60級.md:1032｜步驟說明｜目標在南端營地深處；沿坡道清掉周邊怪再拉。｜La cible est au fond du camp du sud. Nettoie les monstres autour en suivant la rampe avant de l'attaquer.
 04-45到60級.md:1032｜標籤｜掉率 100%｜Taux de butin : 100 %
 04-45到60級.md:1035｜步驟說明｜下趟用空水壺到加德納爾中央月井裝水。｜À ta prochaine visite, remplis la gourde vide au puits de lune central de Jaedenar.
-04-45到60級.md:1036｜交通步驟｜回血毒崗哨，交水樣與洛爾的爪子；視需要在這裡補給。｜Retourne à Bloodvenom Post pour rendre l'échantillon d'eau et la griffe de Rell ; réapprovisionne-toi ici si nécessaire.
-04-45到60級.md:1040｜站內交通｜血毒崗哨開飛行點，下站仍由此出發。若途經梣谷碎木崗哨，沿大道繞過聯盟城鎮的守衛。｜Débloque le point de vol de Bloodvenom Post maintenant ; la prochaine étape part d'ici. Si tu passes par le Poste de Bois-brisé, suis la grande route en contournant la ville de l'Alliance et ses gardes.
+04-45到60級.md:1036｜交通步驟｜回血毒崗哨，交水樣與洛爾的爪子；視需要在這裡補給。｜Retourne au Poste de la Vénéneuse pour rendre l'échantillon d'eau et la griffe de Rell ; réapprovisionne-toi ici si nécessaire.
+04-45到60級.md:1040｜站內交通｜血毒崗哨開飛行點，下站仍由此出發。若途經梣谷碎木崗哨，沿大道繞過聯盟城鎮的守衛。｜Débloque le point de vol du Poste de la Vénéneuse maintenant ; la prochaine étape part d'ici. Si tu passes par le Poste de Bois-brisé, suis la grande route en contournant la ville de l'Alliance et ses gardes.
 04-45到60級.md:1041｜站內取捨｜值得做｜南部死木熊怪直接開木喉聲望；加德納爾、南段洛爾和碧火薩特月井可連著跑。｜Les furbolgs Deadwood du sud débloquent directement la réputation Grumegueule. Enchaîne Jaedenar, les quêtes de Rell au sud et le puits de lune des satyres Jadefeu.
 04-45到60級.md:1042｜站內取捨｜之後順路｜4102 先接，北邊拿齊血琥珀。採完後晚點再回南部交，省下立刻折返一趟。｜Prends 4102 et ramasse tout l'ambre de sang au nord. Rends la quête plus tard au sud pour éviter un aller-retour immédiat.
 04-45到60級.md:1043｜站內提醒｜未到55級時，優先在碎痕谷外圈（約41, 42）打普通元素，或補木喉聲望的死木熊怪。｜En dessous du niveau 55 ? Tue les élémentaires normaux à la limite de Val Grêlé (environ 41, 42) ou les furbolgs Deadwood pour la réputation Timbermaw.
-04-45到60級.md:1046｜練怪說明｜碎痕谷外圈的普通元素，和熱能擊殺任務重疊。入口有任務玩家時從外側向內輪打。｜Les élémentaires normaux autour de Val Grêlé comptent pour la quête de mise à mort. Si l’entrée est occupée, travaillez du bord vers l’intérieur.
+04-45到60級.md:1046｜練怪說明｜碎痕谷外圈的普通元素，和熱能擊殺任務重疊。入口有任務玩家時從外側向內輪打。｜Les élémentaires normaux autour de Val Grêlé comptent pour la quête de mise à mort. Si l’entrée est occupée, travaille du bord vers l’intérieur.
 04-45到60級.md:1047｜練怪說明｜同一片普通元素點，有較高等的變種，與熱能野獸混打。地形窄，留意成對刷新。｜Mélange les élémentaires normaux de niveau supérieur avec les autres élémentaires au même endroit. Le terrain est étroit : attention aux apparitions par paires.
 04-45到60級.md:1052｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 04-45到60級.md:1056｜危險說明｜碎痕谷熱能元素會在坑邊成對刷新。從坡口單拉，別往坑底跨到下一群。｜Les élémentaires thermiques du Val Grêlé apparaissent par paires au bord de la fosse. Attaque depuis le haut de la rampe et ne descends pas dans la fosse, pour ne pas attirer le groupe suivant.
-04-45到60級.md:1065｜步驟說明｜下站冬泉谷打梟獸，後續回血毒崗哨交。｜Tue les bêtes-hiboux au Berceau-de-l'Hiver à la prochaine étape, puis rends la quête à Bloodvenom Post.
+04-45到60級.md:1065｜步驟說明｜下站冬泉谷打梟獸，後續回血毒崗哨交。｜Tue les bêtes-hiboux au Berceau-de-l'Hiver à la prochaine étape, puis rends la quête au Poste de la Vénéneuse.
 04-45到60級.md:1066｜交通步驟｜先往南去加德納爾中央月井，取水後走回翡翠聖地交件。之後才回碧火薩特月井放出小貓。｜Va d'abord vers le sud jusqu'au puits de lune central de Jaedenar, puise de l'eau et rends-la au Sanctuaire d'émeraude. Ensuite seulement, relâche le chaton au puits de lune Jadefeu.
 04-45到60級.md:1069｜步驟說明｜留到棘齒城南面的水之先知伊斯倫交。｜Enregistre la remise pour Islen Waterseer au sud de Cabestan.
 04-45到60級.md:1070｜步驟說明｜放貓後別走太快或飛走；到溫娜身邊須先點小貓交還，才能交任務。｜Marche avec le chaton, sans courir ni voler. Une fois près de Winna, clique d'abord sur le chaton pour le lui rendre, puis rends la quête.
-04-45到60級.md:1072｜交通步驟｜離開血毒崗哨，沿主路北上鐵木森林與死木村，最北端在木喉洞口找納菲恩。｜Quitte Bloodvenom Post et suis la route principale vers le nord, en passant par Bois d'Arbrefer et Village des Mort-bois. Trouve Nafien à l'entrée de Grumegueule, tout au nord.
+04-45到60級.md:1072｜交通步驟｜離開血毒崗哨，沿主路北上鐵木森林與死木村，最北端在木喉洞口找納菲恩。｜Quitte le Poste de la Vénéneuse et suis la route principale vers le nord, en passant par Bois d'Arbrefer et Village des Mort-bois. Trouve Nafien à l'entrée de Grumegueule, tout au nord.
 04-45到60級.md:1073｜步驟說明｜收齊先保留，下次回南費伍德再向梅貝絲交。｜Garde les objets une fois rassemblés et rends-les à Maybess lors de ta prochaine visite dans le sud de Gangrebois.
 04-45到60級.md:1073｜標籤｜掉率 100%｜Taux de butin : 100 %
 04-45到60級.md:1074｜標籤｜若先前已接｜Si déjà accepté
@@ -5081,16 +5081,16 @@
 04-45到60級.md:1078｜步驟說明｜北營地清完再確認聲望，仍敵對就加刷死木怪直到冷淡。｜Après le camp du nord, vérifie ta réputation auprès des Grumegueule. Si tu es encore hostile, tue des furbolgs Deadwood jusqu'à atteindre Inamical.
 04-45到60級.md:1080｜步驟說明｜從洞內往冬泉谷出口走，出洞找薩爾法。｜Prends la sortie vers Berceau-de-l'Hiver depuis l'intérieur de la grotte, puis trouve Salfa à l'extérieur.
 04-45到60級.md:1081｜交通步驟｜木喉熊怪聲望到「冷淡」後進洞，沿冬泉谷出口走。洞內不打木喉熊怪。｜Une fois ta réputation Grumegueule à Inamical, entre dans le tunnel et prends la sortie vers Berceau-de-l'Hiver. Ne combats pas les furbolgs Grumegueule dans le tunnel.
-04-45到60級.md:1083｜站內交通｜血毒崗哨補給後沿大道向北。洞內看分岔，走往冬泉谷的出口。｜Réapprovisionne-toi à Bloodvenom Post, puis suis la grande route vers le nord. À la bifurcation dans le tunnel, prends la sortie vers Berceau-de-l'Hiver.
-04-45到60級.md:1084｜站內取捨｜值得做｜北部鐵木森林一起解血琥珀與墮落的力量，最後才刷死木熊怪聲望。｜Fais Ambre de sang et The Strength of Corruption ensemble dans le nord du Bois d'Arbrefer. Farme ensuite la réputation sur les furbolgs Mort-bois.
+04-45到60級.md:1083｜站內交通｜血毒崗哨補給後沿大道向北。洞內看分岔，走往冬泉谷的出口。｜Réapprovisionne-toi au Poste de la Vénéneuse, puis suis la grande route vers le nord. À la bifurcation dans le tunnel, prends la sortie vers Berceau-de-l'Hiver.
+04-45到60級.md:1084｜站內取捨｜值得做｜北部鐵木森林一起解血琥珀與墮落的力量，最後才刷死木熊怪聲望。｜Fais Ambre de sang et La force de la corruption ensemble dans le nord du Bois d'Arbrefer. Farme ensuite la réputation sur les furbolgs Mort-bois.
 04-45到60級.md:1085｜站內取捨｜之後順路｜已打完 4102 先留物品，往後回翡翠聖地再交。5158 留棘齒城。｜Garde les objets de 4102 si tu as fini la quête. Rends-la au prochain passage au Sanctuaire d'émeraude. Garde 5158 pour Cabestan.
 04-45到60級.md:1086｜站內提醒｜木喉聲望達「冷淡」即可安全走洞。若聲望仍是敵對，或未到56級，可在北死木村（約62, 8）補熊怪。｜Atteins Inamical avec les Grumegueule pour traverser le tunnel en sécurité. Si tu es encore hostile ou en dessous du niveau 56, farme des furbolgs au nord du Village des Mort-bois (autour de 62, 8).
 04-45到60級.md:1089｜練怪說明｜北死木村普通熊怪，去木喉要塞前順打，可補聲望及羽毛。營帳間容易連拉，先清外圈。｜Furbolgs normaux au nord du Village des Mort-bois ; tue-les avant d'aller au Repaire des Grumegueules pour la réputation et les plumes. Les tentes provoquent facilement des renforts : nettoie d'abord le pourtour.
 04-45到60級.md:1090｜練怪說明｜同村靠大道的普通熊怪，遇到聲望團可沿路側挑落單怪。不要打木喉守衛。｜Furbolgs normaux près de la route principale du même village ; si un groupe fait la réputation, prends les isolés au bord de la route. N'attaque pas les gardes Grumegueule.
 04-45到60級.md:1095｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 04-45到60級.md:1097｜危險說明｜木喉要塞仍對你敵對時，洞內的守衛可能成群加入戰鬥。先打外面的死木熊怪升到冷淡再穿洞。｜Si tu es encore hostile avec les Grumegueule, les gardes du tunnel peuvent se regrouper. Tue d'abord les furbolgs Deadwood à l'extérieur jusqu'à atteindre Inamical, puis traverse.
-04-45到60級.md:1105｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已接｜Si prise à Bloodvenom Post / Repaire des Grumegueules
-04-45到60級.md:1106｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已接｜Si prise à Bloodvenom Post / Repaire des Grumegueules
+04-45到60級.md:1105｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已接｜Si prise au Poste de la Vénéneuse / Repaire des Grumegueules
+04-45到60級.md:1106｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已接｜Si prise au Poste de la Vénéneuse / Repaire des Grumegueules
 04-45到60級.md:1107｜步驟說明｜可在永望鎮東側的冬泉村解。後續還要西返，可等下次回洞口再交。｜À faire au Village Tombe-hiver, à l'est de Long-guet. Tu peux la rendre à ton prochain retour vers l'ouest, au tunnel.
 04-45到60級.md:1107｜標籤｜可跳過｜Facultatif
 04-45到60級.md:1108｜交通步驟｜從洞口向南去冰火溫泉，先接多諾瓦的熊怪任務，再去西部冬泉熊怪營地。｜Depuis le tunnel, va vers le sud jusqu'aux Sources de Givrefeu et prends d'abord les quêtes furbolg de Donova, avant d'aller au camp furbolg de Winterfall, à l'ouest.
@@ -5106,12 +5106,12 @@
 04-45到60級.md:1120｜交通步驟｜永望鎮｜Long-guet
 04-45到60級.md:1120｜步驟說明｜向尤格雷克開飛行點。｜Débloque le point de vol auprès de Yugrek.
 04-45到60級.md:1121｜交通步驟｜向旅店老闆維茲奇（1452 61.36, 38.83）綁爐石。｜Lie ta pierre de foyer auprès de l'aubergiste Vizzie (1452 61.36, 38.83).
-04-45到60級.md:1122｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已接｜Si prise à Bloodvenom Post / Repaire des Grumegueules
-04-45到60級.md:1122｜步驟說明｜打完留到回費伍德血毒崗哨再交。｜Une fois terminée, garde-la pour la rendre à ta prochaine visite à Bloodvenom Post, à Gangrebois.
+04-45到60級.md:1122｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已接｜Si prise au Poste de la Vénéneuse / Repaire des Grumegueules
+04-45到60級.md:1122｜步驟說明｜打完留到回費伍德血毒崗哨再交。｜Une fois terminée, garde-la pour la rendre à ta prochaine visite au Poste de la Vénéneuse, à Gangrebois.
 04-45到60級.md:1123｜標籤｜若燃燒平原 烈焰峰與黑石山已接｜Si prise à Corniche des flammes / Mont Rochenoire
 04-45到60級.md:1124｜標籤｜若燃燒平原 烈焰峰與黑石山已接｜Si prise à Corniche des flammes / Mont Rochenoire
 04-45到60級.md:1125｜標籤｜需先完成4808｜Termine d'abord la quête 4808
-04-45到60級.md:1127｜步驟說明｜下一趟到亡靈壁壘交銀色黎明軍官加魯什。｜Rends-la la prochaine fois à l'Officier de l'Aube d'argent Garush, au Rempart.
+04-45到60級.md:1127｜步驟說明｜下一趟到亡靈壁壘交銀色黎明軍官加魯什。｜Rends-la la prochaine fois à l'Officier de l'Aube d'argent Garush, à la Barricade.
 04-45到60級.md:1128｜步驟說明｜留往東瘟疫之地聖光之願禮拜堂交。｜Garde-la pour la rendre à la Chapelle de l'Espoir de Lumière, dans les Maleterres de l'est.
 04-45到60級.md:1129｜步驟說明｜與永望鎮的報告一起帶到東瘟疫，東瘟疫之地 聖光之願禮拜堂在達隆郡交。｜Emporte-la avec Le rapport de Long-guet dans les Maleterres de l'est ; rends-la à Comté-de-Darrow, depuis la Chapelle de l'Espoir de Lumière.
 04-45到60級.md:1130｜標籤｜精英｜Élite
@@ -5144,8 +5144,8 @@
 04-45到60級.md:1158｜危險說明｜永望鎮北邊有精英碎齒熊尤西烏斯巡邏。單打普通熊時繞開，已組隊再做牠的任務。｜Ursius, un ours Shardtooth d'élite, patrouille au nord de Long-guet. Donne-lui une large place en farmant des ours normaux. Fais sa quête en groupe.
 04-45到60級.md:1159｜危險說明｜冬泉村內的薩滿祭司和巡邏熊怪容易成群。缺經驗就沿村外找落單守衛。｜Les chamans et les furbolgs en patrouille peuvent se rassembler dans le Village Tombe-hiver. Si tu as besoin d'XP, élimine les gardes isolés à l'extérieur du village.
 04-45到60級.md:1167｜交通步驟｜從永望鎮飛莫沙徹營地；這一趟先回營地交菲拉斯 莫沙徹營地與怒痕堡的費伍德支線，已接視靈藥劑再去北邊。｜Vole de Long-guet à Camp Mojache. Rends d'abord à Camp Mojache les quêtes secondaires de Gangrebois prises aux étapes Camp Mojache / Repaire des Griffes féroces, puis, si tu as pris L'élixir de Videre, va vers le nord.
-04-45到60級.md:1168｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已完成｜Si terminée à Bloodvenom Post / Repaire des Grumegueules
-04-45到60級.md:1169｜交通步驟｜若身上有 3909，沿菲拉斯大道向西至岔路，再朝雙塔山與北邊的烏鴉風廢墟。｜Si tu as 3909, suis la route de Feralas vers l'ouest jusqu'à la fourche, puis dirige-toi vers les Twin Colossals et, au nord, les ruines de Ravenwind.
+04-45到60級.md:1168｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已完成｜Si terminée au Poste de la Vénéneuse / Repaire des Grumegueules
+04-45到60級.md:1169｜交通步驟｜若身上有 3909，沿菲拉斯大道向西至岔路，再朝雙塔山與北邊的烏鴉風廢墟。｜Si tu as 3909, suis la route de Feralas vers l'ouest jusqu'à la fourche, puis dirige-toi vers les Colosses jumeaux et, au nord, les ruines de Ravenwind.
 04-45到60級.md:1170｜標籤｜若冬泉谷 永望鎮已接｜Si prise à Long-guet
 04-45到60級.md:1170｜步驟說明｜格雷甘交換藥劑是 4041 的對話流程；本趟只取藥，別喝，留給冬泉谷多諾瓦交。｜L'échange de l'élixir avec Gregan fait partie du dialogue de 4041 ; cette fois, prends seulement l'élixir et ne le bois pas : garde-le pour Donova, à Berceau-de-l'Hiver.
 04-45到60級.md:1171｜交通步驟｜打算補海岸支線才去被遺忘的海岸。若手上有菲拉斯定位器，可先去深痕谷洞穴接護送，再順路走到海岸。｜Ne va à la Côte Oubliée que pour les quêtes facultatives du littoral. Si tu as la balise de Feralas, prends l'escorte dans la grotte du Val des Griffes farouches, puis rejoins la côte en passant.
@@ -5172,7 +5172,7 @@
 04-45到60級.md:1183｜交通步驟｜回莫沙徹營地飛棘齒城。已完成 2767 且想交件時，可由棘齒城搭船往返藏寶海灣；其餘直接在棘齒城辦交接。｜Retourne à Camp Mojache et vole vers Cabestan. Si tu as terminé 2767 et veux la rendre, prends le bateau jusqu'à Baie-du-Butin et reviens. Sinon, fais tes remises à Cabestan.
 04-45到60級.md:1185｜站內交通｜主要轉場為永望鎮飛莫沙徹、莫沙徹飛棘齒城。若已安排藏寶海灣交件，可用棘齒城對開的船補交。｜Prends le vol de Long-Guet au Camp Mojache, puis celui pour Cabestan. Si tu as des quêtes à rendre à Baie-du-Butin, prends le bateau depuis Cabestan.
 04-45到60級.md:1186｜站內取捨｜值得做｜菲拉斯 莫沙徹營地與怒痕堡接、費伍德做的 4120 是回村就能交的任務。｜4120, prise à l'étape Camp Mojache / Repaire des Griffes féroces, se fait à Gangrebois et se rend dès le retour au village.
-04-45到60級.md:1187｜站內取捨｜可跳過｜海岸支線在西側，定位器沒掉就不找；只有想補經驗或要去雙塔山時才把海岸並入。｜Les quêtes de la côte sont à l'ouest. Si la balise ne tombe pas, ne la cherche pas exprès. Fais la côte si tu as besoin d'XP ou si tu vas aux Twin Colossals.
+04-45到60級.md:1187｜站內取捨｜可跳過｜海岸支線在西側，定位器沒掉就不找；只有想補經驗或要去雙塔山時才把海岸並入。｜Les quêtes de la côte sont à l'ouest. Si la balise ne tombe pas, ne la cherche pas exprès. Fais la côte si tu as besoin d'XP ou si tu vas aux Colosses jumeaux.
 04-45到60級.md:1188｜站內提醒｜此站沒有必須單獨練等的門檻。若差56，先到下一站交件，再把經驗差留給後段同等怪區。｜Cette étape n'a pas de seuil de niveau à farmer séparément. Si tu es encore sous le niveau 56, fais d'abord la quête de l'étape suivante, puis rattrape l'écart d'XP plus tard sur des monstres de même niveau.
 04-45到60級.md:1191｜練怪說明｜若已在北泉交件，可清營地外圍的普通鷹身人，順收北泉任務掉落。怪等偏低，若還差一大截就去冬泉谷。｜Si tu as déjà rendu la quête à Northspring, tue les harpies normales autour du camp et ramasse le butin des quêtes de Northspring. Ces monstres sont de niveau plutôt bas : s'il te manque beaucoup d'XP, va plutôt à Berceau-de-l'Hiver.
 04-45到60級.md:1192｜練怪說明｜若差 56 級，上一站離開永望鎮前優先在這片補。普通雪人集中，外坡比洞口好拉。｜Si tu es sous le niveau 56, farme ici avant de quitter Long-guet à l'étape précédente. Les yétis normaux sont regroupés ; les pentes extérieures sont plus faciles à attaquer que l'entrée de la grotte.
@@ -5185,19 +5185,19 @@
 04-45到60級.md:1211｜標籤｜若安戈洛環形山 馬紹爾營地已採滿灰燼｜Si toutes les cendres sont ramassées à Refuge des Marshal
 04-45到60級.md:1212｜標籤｜若安戈洛環形山 馬紹爾營地已接｜Si prise à Refuge des Marshal
 04-45到60級.md:1213｜標籤｜若安戈洛環形山 馬紹爾營地已接｜Si prise à Refuge des Marshal
-04-45到60級.md:1214｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已接｜Si prise à Bloodvenom Post / Repaire des Grumegueules
-04-45到60級.md:1215｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已接｜Si prise à Bloodvenom Post / Repaire des Grumegueules
+04-45到60級.md:1214｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已接｜Si prise au Poste de la Vénéneuse / Repaire des Grumegueules
+04-45到60級.md:1215｜標籤｜若費伍德森林 血毒崗哨與木喉要塞已接｜Si prise au Poste de la Vénéneuse / Repaire des Grumegueules
 04-45到60級.md:1216｜標籤｜需先完成5158｜Termine d'abord la quête 5158
 04-45到60級.md:1216｜步驟說明｜保留淨化水。後段回費伍德翡翠聖地再交格雷塔。｜Garde l'eau purifiée pour la rendre à Greta au Sanctuaire d'émeraude plus tard, à Gangrebois.
-04-45到60級.md:1217｜交通步驟｜回棘齒城飛奧格瑪，搭城外前往提里斯法林地的飛艇。抵達後沿提里斯法林地東路前往亡靈壁壘。｜Vole de Cabestan à Orgrimmar et prends le zeppelin pour les Clairières de Tirisfal, à l'extérieur de la ville. À l'arrivée, suis la route de l'est jusqu'au Rempart.
-04-45到60級.md:1219｜站內交通｜棘齒城飛奧格瑪後，換城外幽暗城方向飛艇。抵達提里斯法林地，沿東路到亡靈壁壘。｜Après le vol de Cabestan à Orgrimmar, prends le zeppelin de Fossoyeuse à l'extérieur de la ville. Aux Clairières de Tirisfal, suis la route de l'est jusqu'au Rempart.
+04-45到60級.md:1217｜交通步驟｜回棘齒城飛奧格瑪，搭城外前往提里斯法林地的飛艇。抵達後沿提里斯法林地東路前往亡靈壁壘。｜Vole de Cabestan à Orgrimmar et prends le zeppelin pour les Clairières de Tirisfal, à l'extérieur de la ville. À l'arrivée, suis la route de l'est jusqu'à la Barricade.
+04-45到60級.md:1219｜站內交通｜棘齒城飛奧格瑪後，換城外幽暗城方向飛艇。抵達提里斯法林地，沿東路到亡靈壁壘。｜Après le vol de Cabestan à Orgrimmar, prends le zeppelin de Fossoyeuse à l'extérieur de la ville. Aux Clairières de Tirisfal, suis la route de l'est jusqu'à la Barricade.
 04-45到60級.md:1220｜站內取捨｜值得做｜已完成安戈洛灰燼和車間支線就一起交給莉芙，海岸再接伊斯倫回費伍德的信。｜Si tu les as terminées, rends ensemble les quêtes des cendres d'Un'Goro et de l'atelier à Liv. Prends ensuite sur la côte la lettre d'Islen pour retourner à Gangrebois.
 04-45到60級.md:1221｜站內取捨｜可跳過｜若身上沒有棘齒城可交任務，可由菲拉斯直接飛奧格瑪轉飛艇。｜Si tu n'as rien à rendre à Cabestan, prends un vol direct de Feralas à Orgrimmar et change pour le zeppelin.
-04-45到60級.md:1222｜站內提醒｜棘齒城的怪等級偏低。未到 56 級可在轉飛艇前飛回永望鎮打東側普通雪人（約 64, 40），或到西瘟疫之地 亡靈壁壘在費爾斯通農場（約 38, 56）打普通亡靈。｜Les monstres de Cabestan sont de bas niveau. En dessous du niveau 56 ? Avant de prendre le zeppelin, retourne à Long-guet et tue les yétis normaux à l'est (environ 64, 40), ou tue les morts-vivants normaux du Champ de Felstone (environ 38, 56) sur l'étape du Rempart, dans les Maleterres de l'ouest.
+04-45到60級.md:1222｜站內提醒｜棘齒城的怪等級偏低。未到 56 級可在轉飛艇前飛回永望鎮打東側普通雪人（約 64, 40），或到西瘟疫之地 亡靈壁壘在費爾斯通農場（約 38, 56）打普通亡靈。｜Les monstres de Cabestan sont de bas niveau. En dessous du niveau 56 ? Avant de prendre le zeppelin, retourne à Long-guet et tue les yétis normaux à l'est (environ 64, 40), ou tue les morts-vivants normaux du Champ de Felstone (environ 38, 56) sur l'étape de la Barricade, dans les Maleterres de l'ouest.
 04-45到60級.md:1225｜練怪說明｜棘齒城只辦交接。缺 56 級時沿原路搭飛艇，到下一站費爾斯通農場再打。普通骷髏多，從田埂拉，避開血色巡邏。｜Cabestan ne sert qu'aux remises de quêtes. S'il te manque du niveau 56, reprends le zeppelin par le même chemin et farme à l'étape suivante, au Champ de Felstone. Squelettes normaux nombreux : attaque depuis le bord des champs et évite les patrouilles écarlates.
 04-45到60級.md:1231｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 04-45到60級.md:1232｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides uniquement
-04-45到60級.md:1240｜交通步驟｜從棘齒城飛奧格瑪並轉乘飛艇，抵達提里斯法林地後，沿幽暗城外的大路往東走到亡靈壁壘。｜Vole de Cabestan à Orgrimmar et prends le zeppelin ; en arrivant aux Clairières de Tirisfal, suis la grande route à l'est, depuis l'extérieur de Fossoyeuse, jusqu'au Rempart.
+04-45到60級.md:1240｜交通步驟｜從棘齒城飛奧格瑪並轉乘飛艇，抵達提里斯法林地後，沿幽暗城外的大路往東走到亡靈壁壘。｜Vole de Cabestan à Orgrimmar et prends le zeppelin ; en arrivant aux Clairières de Tirisfal, suis la grande route à l'est, depuis l'extérieur de Fossoyeuse, jusqu'à la Barricade.
 04-45到60級.md:1249｜步驟說明｜先清鍋邊的普通亡靈，靠近鍋會引出護鍋者。｜Élimine d'abord les morts-vivants normaux autour du chaudron ; en t'approchant, tu fais apparaître le gardien.
 04-45到60級.md:1249｜標籤｜掉率 100%｜Taux de butin : 100 %
 04-45到60級.md:1255｜步驟說明｜先清鍋邊的普通亡靈，靠近鍋會引出護鍋者。｜Élimine d'abord les morts-vivants normaux autour du chaudron ; en t'approchant, tu fais apparaître le gardien.
@@ -5205,12 +5205,12 @@
 04-45到60級.md:1264｜步驟說明｜與兩口瘟疫之鍋同趟收，回壁壘交樣本時一起交。｜À faire avec les deux chaudrons du Fléau, puis à rendre avec les échantillons au Rempart.
 04-45到60級.md:1269｜步驟說明｜先清鍋邊的普通亡靈，靠近鍋會引出護鍋者。｜Élimine d'abord les morts-vivants normaux autour du chaudron ; en t'approchant, tu fais apparaître le gardien.
 04-45到60級.md:1269｜標籤｜掉率 100%｜Taux de butin : 100 %
-04-45到60級.md:1273｜站內交通｜第 1 步由飛艇塔往亡靈壁壘。打完蓋羅恩農場後沿主路向東去東瘟疫。｜À l'étape 1, va de la tour du zeppelin au Rempart. Après La Flétrissure de Gahrron, suis la route principale vers l'est jusqu'aux Maleterres de l'est.
-04-45到60級.md:1274｜站內取捨｜值得做｜瘟疫之鍋按接續順序做，嚎哭鬼屋順路完成兩段野生動物。｜Fais Les chaudrons du Fléau dans l'ordre. À Writhing Haunt, fais au passage les deux étapes de la faune sauvage.
-04-45到60級.md:1275｜站內取捨｜先別交｜5236 留西瘟疫之地 亡靈壁壘，5901 在東瘟疫之地 聖光之願禮拜堂完成、回西瘟疫之地 亡靈壁壘交。｜Garde 5236 pour le Rempart, dans les Maleterres de l'ouest. Fais 5901 à la Chapelle de l'Espoir de Lumière, dans les Maleterres de l'est, puis rends-la au Rempart.
+04-45到60級.md:1273｜站內交通｜第 1 步由飛艇塔往亡靈壁壘。打完蓋羅恩農場後沿主路向東去東瘟疫。｜À l'étape 1, va de la tour du zeppelin à la Barricade. Après La Flétrissure de Gahrron, suis la route principale vers l'est jusqu'aux Maleterres de l'est.
+04-45到60級.md:1274｜站內取捨｜值得做｜瘟疫之鍋按接續順序做，嚎哭鬼屋順路完成兩段野生動物。｜Fais Les chaudrons du Fléau dans l'ordre. Au Repaire putride, fais au passage les deux étapes de la faune sauvage.
+04-45到60級.md:1275｜站內取捨｜先別交｜5236 留西瘟疫之地 亡靈壁壘，5901 在東瘟疫之地 聖光之願禮拜堂完成、回西瘟疫之地 亡靈壁壘交。｜Garde 5236 pour la Barricade, dans les Maleterres de l'ouest. Fais 5901 à la Chapelle de l'Espoir de Lumière, dans les Maleterres de l'est, puis rends-la à la Barricade.
 04-45到60級.md:1276｜站內提醒｜同為 56–57 級帶，接著去東瘟疫之地 聖光之願禮拜堂。壁壘旁接了 964 才開始累積骸骨碎片。打算自備通靈學院鑰匙的角色，交完就接 5514，並帶兩塊瑟銀錠帶去塔納利斯 加基森，再進安戈洛環形山。｜Même tranche de niveaux 56-57 ; va ensuite à la Chapelle de l'Espoir de Lumière. Les Fragments de squelette ne s'accumulent qu'après avoir pris 964 près du Rempart. Si tu veux ta propre clé de Scholomance, rends la quête puis prends 5514 et apporte 2 barres de thorium à Gadgetzan, à Tanaris, avant d'entrer à Un'Goro.
 04-45到60級.md:1279｜練怪說明｜達爾松之淚的普通骷髏，跑瘟疫鍋可順收骸骨碎片。北側會遇到血色巡邏，打外側。｜Squelettes normaux aux Larmes de Dalson : ils donnent des Fragments de squelette pendant la boucle des chaudrons. Reste à l'extérieur et surveille les patrouilles écarlates au nord.
-04-45到60級.md:1280｜練怪說明｜嚎哭鬼屋附近的普通食屍鬼，等級較合適，和下一口鍋同路。屋門口密集，從田邊開始。｜Goules normales près de Writhing Haunt, d'un bon niveau et sur la route du prochain chaudron. Commence au bord du champ pour éviter la porte de la maison, bondée.
+04-45到60級.md:1280｜練怪說明｜嚎哭鬼屋附近的普通食屍鬼，等級較合適，和下一口鍋同路。屋門口密集，從田邊開始。｜Goules normales près du Repaire putride, d'un bon niveau et sur la route du prochain chaudron. Commence au bord du champ pour éviter la porte de la maison, bondée.
 04-45到60級.md:1284｜危險說明｜達爾松之淚北側有血色巡邏。收瘟疫鍋材料時從田埂拉骷髏，別往北穿營地。｜Des patrouilles écarlates parcourent le nord des Larmes de Dalson. Pendant que tu rassembles les matériaux du chaudron, attaque les squelettes depuis le bord du champ et ne traverse pas le camp vers le nord.
 04-45到60級.md:1292｜交通步驟｜過西界後沿索多里爾河岸找提里奧，接齊再向南上主路。｜Franchis la frontière ouest et trouve Tirion le long de la Thondroril. Reprends ses quêtes, puis va vers le sud jusqu'à la route principale.
 04-45到60級.md:1301｜步驟說明｜拾取零件時可能出現鬼魂，先清門口。｜Des fantômes peuvent apparaître quand tu ramasses les pièces : dégage d'abord l'entrée.
@@ -5224,7 +5224,7 @@
 04-45到60級.md:1326｜步驟說明｜要做完提里奧的三個狩獵任務才會出現。｜Termine les trois quêtes de chasse de Tirion pour débloquer celle-ci.
 04-45到60級.md:1327｜交通步驟｜完成後從禮拜堂飛幽暗城，再搭飛艇去奧格瑪。｜Une fois la boucle terminée, vole de la Chapelle de l'Espoir de Lumière à Fossoyeuse, puis prends le zeppelin pour Orgrimmar.
 04-45到60級.md:1329｜站內交通｜在交 6030 與接 5211 後開禮拜堂飛行點；末步飛幽暗城後轉飛艇。｜Débloque le point de vol de la chapelle après avoir rendu 6030 et pris 5211. À la dernière étape, vole vers Fossoyeuse puis prends le zeppelin.
-04-45到60級.md:1330｜站內取捨｜先別交｜5901 與 5152 回西瘟疫之地 亡靈壁壘交。｜Rends 5901 et 5152 au Rempart, dans les Maleterres de l'ouest.
+04-45到60級.md:1330｜站內取捨｜先別交｜5901 與 5152 回西瘟疫之地 亡靈壁壘交。｜Rends 5901 et 5152 à la Barricade, dans les Maleterres de l'ouest.
 04-45到60級.md:1331｜站內取捨｜可跳過｜暗翼蝠（Duskwing, Oh How I Hate Thee...，6135）在東瘟疫，是精英巡邏目標；按影片的取捨略過。｜Crépuscaile, oh comme je te hais ! (6135) vise une élite qui patrouille dans les Maleterres de l'est. Passe la quête comme dans la vidéo.
 04-45到60級.md:1332｜站內取捨｜可跳過｜6024 要在墓穴與祖爾瑪夏間來回，5781 點墓土後會引來一群傭兵，趕路可以略過。｜6024 demande un aller-retour entre la crypte et Zul'Mashar. Dans 5781, cliquer sur la terre de la tombe attire des mercenaires. Passe les deux si tu es pressé.
 04-45到60級.md:1333｜站內提醒｜進度落後可在瘟疫木林外圍（約 29, 28）打普通蝙蝠、犬與食屍鬼。要到 57 級可等菲拉斯 亂羽高地前補。｜En retard sur l'XP ? Tue les chauves-souris, les chiens et les goules normaux autour de Pestebois (environ 29, 28). Pour atteindre le niveau 57, tu peux aussi compléter avant l'étape des Hautes-terres des Aigreplumes.
@@ -5236,14 +5236,14 @@
 04-45到60級.md:1355｜步驟說明｜此為部落前往永夜港的引導；做過 1004 或 1018 的角色可直接找哈繆爾。｜Quête d'introduction de la Horde vers Havrenuit. Va directement voir Hamuul si tu as fait 1004 ou 1018.
 04-45到60級.md:1356｜步驟說明｜此為部落前往永夜港的引導；做過 1004 或 1018 的角色可直接找哈繆爾。｜Quête d'introduction de la Horde vers Havrenuit. Va directement voir Hamuul si tu as fait 1004 ou 1018.
 04-45到60級.md:1357｜步驟說明｜此為部落前往永夜港的引導；做過 1004 或 1018 的角色可直接找哈繆爾。｜Quête d'introduction de la Horde vers Havrenuit. Va directement voir Hamuul si tu as fait 1004 ou 1018.
-04-45到60級.md:1359｜交通步驟｜從雷霆崖飛血毒崗哨，往北繞死木村到 1448 60.20, 5.84 的死木蒸鍋，接著走木喉要塞往月光林地岔路。｜Vole vers Bloodvenom Post. Va vers le nord en contournant le Village des Mort-bois jusqu'au chaudron Deadwood (1448 60.20, 5.84), puis passe par le Repaire des Grumegueules et prends la fourche vers Reflet-de-Lune.
+04-45到60級.md:1359｜交通步驟｜從雷霆崖飛血毒崗哨，往北繞死木村到 1448 60.20, 5.84 的死木蒸鍋，接著走木喉要塞往月光林地岔路。｜Vole vers le Poste de la Vénéneuse. Va vers le nord en contournant le Village des Mort-bois jusqu'au chaudron Deadwood (1448 60.20, 5.84), puis passe par le Repaire des Grumegueules et prends la fourche vers Reflet-de-Lune.
 04-45到60級.md:1367｜交通步驟｜月光林地｜Reflet-de-Lune
 04-45到60級.md:1367｜步驟說明｜往月光林地西南側，向法斯托恩開部落飛行點。｜Va au sud-ouest de Reflet-de-Lune et débloque le point de vol de la Horde auprès de Faustron.
 04-45到60級.md:1368｜交通步驟｜再穿木喉要塞去冬泉谷。｜Traverse à nouveau Repaire des Grumegueules pour atteindre Berceau-de-l’Hiver.
 04-45到60級.md:1370｜站內交通｜第 2 步飛雷霆崖，第 7 步飛費伍德並走木喉要塞，在月光林地西南開飛行點，再步行進冬泉谷。｜À l'étape 2, vole vers Thunder Bluff. À l'étape 7, vole vers Gangrebois et passe par le Repaire des Grumegueules. Débloque le point de vol au sud-ouest de Reflet-de-Lune, puis entre à pied dans Berceau-de-l'Hiver.
 04-45到60級.md:1371｜站內取捨｜值得做｜先接 1124 和 5527，希利蘇斯南風村能接著做同一區的任務。｜Prends d'abord 1124 et 5527. Enchaîne sur les quêtes à proximité du Village de Sudevent, à Silithus.
 04-45到60級.md:1372｜站內取捨｜先別交｜5085 到冬泉谷 永望鎮交；5527 在希利蘇斯 塞納里奧要塞拾取，留月光林地 永夜港交。｜Rends 5085 à Long-Guet, au Berceau-de-l'Hiver. Ramasse 5527 au Fort cénarien, à Silithus, et rends-la plus tard à Havrenuit, à Reflet-de-Lune.
-04-45到60級.md:1373｜站內提醒｜木喉熊怪若還會主動攻擊，先在要塞外打死木熊怪或完成費伍德森林 翡翠聖地與血毒崗哨至冬泉谷 永望鎮的聲望任務；通過要塞後可立刻接冬泉谷 永望鎮。｜Si les furbolgs Grumegueule t'attaquent encore, tue d'abord les furbolgs Deadwood à l'extérieur du tunnel, ou termine les quêtes de réputation des étapes Sanctuaire d'émeraude et Bloodvenom Post, ainsi que celles de Long-guet. Une fois le tunnel traversé, tu peux prendre immédiatement les quêtes de Long-guet.
+04-45到60級.md:1373｜站內提醒｜木喉熊怪若還會主動攻擊，先在要塞外打死木熊怪或完成費伍德森林 翡翠聖地與血毒崗哨至冬泉谷 永望鎮的聲望任務；通過要塞後可立刻接冬泉谷 永望鎮。｜Si les furbolgs Grumegueule t'attaquent encore, tue d'abord les furbolgs Deadwood à l'extérieur du tunnel, ou termine les quêtes de réputation des étapes Sanctuaire d'émeraude et le Poste de la Vénéneuse, ainsi que celles de Long-guet. Une fois le tunnel traversé, tu peux prendre immédiatement les quêtes de Long-guet.
 04-45到60級.md:1376｜練怪說明｜永夜港交完可由木喉要塞回費伍德側入口補。普通死木熊怪密集，還能補木喉聲望；避開木喉守衛與帳篷內的連拉。｜Après avoir rendu la quête à Havrenuit, repasse par le Repaire des Grumegueules jusqu'à l'entrée de Gangrebois. Farme les furbolgs Deadwood normaux, nombreux, pour la réputation. Évite les gardes Grumegueule et fais attention aux renforts dans les tentes.
 04-45到60級.md:1377｜練怪說明｜若已穿過要塞，冬泉谷一側先打沿路普通熊怪。可在多諾瓦附近補少量，主要怪群仍在永望鎮以東。｜Si tu as déjà traversé le tunnel, tue d'abord les furbolgs normaux le long de la route de Berceau-de-l'Hiver. Tu peux en farmer un peu près de Donova, mais les groupes principaux sont à l'est de Long-guet.
 04-45到60級.md:1382｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
@@ -5290,11 +5290,11 @@
 04-45到60級.md:1497｜站內交通｜第 1、11 步經加基森，沿途用機械雪人，末步走西北坡去希利蘇斯。｜Passe par Gadgetzan aux étapes 1 et 11 et utilise le Yéti mécanique en chemin. À la dernière étape, prends la pente nord-ouest vers Silithus.
 04-45到60級.md:1498｜站內取捨｜先別交｜980 到冬泉谷 冰火溫泉交，5163 到永望鎮交；3942 留費伍德森林 鐵木森林。｜Rends 980 aux Sources de Givrefeu, au Berceau-de-l'Hiver, et 5163 à Long-Guet. Garde 3942 pour le Bois d'Arbrefer, à Gangrebois.
 04-45到60級.md:1499｜站內取捨｜可跳過｜2741 只在撿到蛋且還能交時出發；沒撿的不用折返。｜Ne pars pour 2741 que si tu as ramassé un œuf et peux encore le rendre. Sans œuf, ne reviens pas sur tes pas.
-04-45到60級.md:1500｜站內提醒｜同為 57–59 級帶。要補進度可打火羽山普通元素或北側猩猩，留意平原巡邏的魔暴龍。｜Toujours dans la tranche de niveaux 57-59. Si tu es en retard d'XP, tue les élémentaires normaux de Fire Plume Ridge ou les gorilles au nord ; attention aux diablosaures qui patrouillent dans la plaine.
-04-45到60級.md:1503｜練怪說明｜火羽山的普通元素，等級較高且可順做火山任務。沿山腰拉，別進入魔暴龍巡邏的平原。｜Élémentaires normaux de niveau supérieur à Fire Plume Ridge ; ils recoupent la quête du volcan. Longe la pente et évite la plaine où patrouillent les diablosaures.
+04-45到60級.md:1500｜站內提醒｜同為 57–59 級帶。要補進度可打火羽山普通元素或北側猩猩，留意平原巡邏的魔暴龍。｜Toujours dans la tranche de niveaux 57-59. Si tu es en retard d'XP, tue les élémentaires normaux de la Crête de la Fournaise ou les gorilles au nord ; attention aux diablosaures qui patrouillent dans la plaine.
+04-45到60級.md:1503｜練怪說明｜火羽山的普通元素，等級較高且可順做火山任務。沿山腰拉，別進入魔暴龍巡邏的平原。｜Élémentaires normaux de niveau supérieur à la Crête de la Fournaise ; ils recoupent la quête du volcan. Longe la pente et évite la plaine où patrouillent les diablosaures.
 04-45到60級.md:1504｜練怪說明｜馬紹爾營地附近的普通焦油怪，差一點就升級時可從營地出發打幾輪。沿池邊單拉。｜Monstres de goudron normaux près de Refuge des Marshal ; s'il te manque un petit bout d'XP, fais quelques tours depuis le camp. Attaque un par un depuis le bord de la mare.
 04-45到60級.md:1509｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
-04-45到60級.md:1512｜危險說明｜火羽山南側平原有 54–56 級精英魔暴龍。護送林格前先觀察路線，走山腰避開平原。｜Des diablosaures d'élite de niveau 54-56 patrouillent dans la plaine au sud de Fire Plume Ridge. Repère l'itinéraire avant d'escorter Ringo et reste sur la pente.
+04-45到60級.md:1512｜危險說明｜火羽山南側平原有 54–56 級精英魔暴龍。護送林格前先觀察路線，走山腰避開平原。｜Des diablosaures d'élite de niveau 54-56 patrouillent dans la plaine au sud de la Crête de la Fournaise. Repère l'itinéraire avant d'escorter Ringo et reste sur la pente.
 04-45到60級.md:1520｜交通步驟｜塞納里奧城堡｜Fort cénarien
 04-45到60級.md:1520｜步驟說明｜抵達塞納里奧要塞後，向魯克·馴風者開部落飛行點。｜Une fois au Fort cénarien, débloque le point de vol de la Horde auprès de Runk Windtamer.
 04-45到60級.md:1521｜交通步驟｜可在旅店（1451 51.89, 39.16）綁爐石，跑完勇士之墓後用。｜Tu peux lier ta pierre de foyer à l'auberge (1451 51.89, 39.16) pour l'utiliser après Le repos des vaillants.
@@ -5309,13 +5309,13 @@
 04-45到60級.md:1559｜站內取捨｜先別交｜5527、6844 留到月光林地交。｜Garde 5527 et 6844 pour les rendre à Reflet-de-Lune.
 04-45到60級.md:1560｜站內取捨｜可跳過｜8282 要從要塞再跑一次地圖最南端；8283 要殺精英，練等路線可略過。｜8282 te ramène du fort à l'extrême sud de la carte. Pour 8283, tu dois tuer une élite. Tu peux passer les deux en montant de niveau.
 04-45到60級.md:1561｜站內取捨｜可跳過｜影片提及的暗翼蝠 6135 在東瘟疫；希利蘇斯這站也略過組隊精英。｜Crépuscaile (6135), mentionnée dans la vidéo, est dans les Maleterres de l'est. Passe aussi les élites de groupe à cette étape de Silithus.
-04-45到60級.md:1562｜站內提醒｜未滿 59 級仍可先到西瘟疫之地 亡靈壁壘；要補則留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜En dessous du niveau 59, tu peux quand même aller d'abord au Rempart ; sinon, tue les scorpides et les araignées normaux au nord-est du fort (environ 55, 29) ou les cultistes du Crépuscule au sud-ouest (environ 38, 44).
+04-45到60級.md:1562｜站內提醒｜未滿 59 級仍可先到西瘟疫之地 亡靈壁壘；要補則留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜En dessous du niveau 59, tu peux quand même aller d'abord à la Barricade ; sinon, tue les scorpides et les araignées normaux au nord-est du fort (environ 55, 29) ou les cultistes du Crépuscule au sud-ouest (environ 38, 44).
 04-45到60級.md:1565｜練怪說明｜暮光營地外側普通教徒，等級正合適、掉暮光裝，可順做教徒任務。會遇到收裝玩家，從營邊清。｜Cultistes normaux à l'extérieur du camp du Crépuscule, du bon niveau ; ils lâchent de l'équipement du Crépuscule et comptent pour les quêtes des cultistes. D'autres joueurs viennent chercher l'équipement : commence par le bord du camp.
 04-45到60級.md:1566｜練怪說明｜要塞東北空地的普通怪，等級稍低但密度好，與採任務材料同路。若暮光營地人多可替換。｜Monstres normaux dans la clairière au nord-est du fort, de niveau légèrement inférieur mais denses, sur le chemin de la collecte de matériaux. Change d'endroit si le camp du Crépuscule est bondé.
 04-45到60級.md:1572｜標籤｜僅獵人,戰士,盜賊｜Chasseurs/Guerriers/Voleurs uniquement
 04-45到60級.md:1573｜標籤｜僅法師,薩滿,牧師,聖騎士,術士,德魯伊,盜賊｜Mages/Chamans/Prêtres/Paladins/Démonistes/Druides/Voleurs uniquement
 04-45到60級.md:1575｜危險說明｜南風村塔頂會觸發異種蠍群。先清塔內和樓梯，把退路留到觸發後。｜Monter au sommet de la tour du Village de Sudevent déclenche un essaim de silithides. Dégage d'abord la tour et les escaliers, et garde ta voie de sortie jusqu'après le déclenchement.
-04-45到60級.md:1583｜交通步驟｜由提里斯法飛艇塔往亡靈壁壘，再走費爾斯通農場、安多哈爾與北山伐木場。｜De la tour du zeppelin de Tirisfal au Rempart, puis traverse le Champ de Felstone, Andorhal et le camp de bûcherons de la Crête du nord.
+04-45到60級.md:1583｜交通步驟｜由提里斯法飛艇塔往亡靈壁壘，再走費爾斯通農場、安多哈爾與北山伐木場。｜De la tour du zeppelin de Tirisfal à la Barricade, puis traverse le Champ de Felstone, Andorhal et le camp de bûcherons de la Crête du nord.
 04-45到60級.md:1587｜★獎勵物品名｜英勇短劍｜Epée courte vaillante
 04-45到60級.md:1587｜★獎勵職業｜聖騎士／法師／術士｜Paladin/Mage/Démoniste
 04-45到60級.md:1589｜★獎勵物品名｜英勇短劍｜Epée courte vaillante
@@ -5325,7 +5325,7 @@
 04-45到60級.md:1603｜步驟說明｜假書可能引出敵人；看封面並避開市中心精英。｜Vérifie la couverture : les faux livres peuvent faire apparaître des ennemis. Évite les élites du centre-ville.
 04-45到60級.md:1613｜步驟說明｜桶會引來敵人，開完就撤離。｜Ouvrir le tonneau attire des ennemis. Éloigne-toi dès qu’il est ouvert.
 04-45到60級.md:1615｜交通步驟｜回幽暗城飛艇塔，搭飛艇回奧格瑪，再往費伍德。｜Retourne à la tour du zeppelin de Fossoyeuse. Prends le zeppelin pour Orgrimmar, puis continue vers Gangrebois.
-04-45到60級.md:1617｜站內交通｜第 1 步進亡靈壁壘，最後一步從幽暗城外搭飛艇。｜Entre au Rempart à l'étape 1. À la dernière étape, prends le zeppelin à l'extérieur de Fossoyeuse.
+04-45到60級.md:1617｜站內交通｜第 1 步進亡靈壁壘，最後一步從幽暗城外搭飛艇。｜Entre à la Barricade à l'étape 1. À la dernière étape, prends le zeppelin à l'extérieur de Fossoyeuse.
 04-45到60級.md:1618｜站內取捨｜值得做｜費爾斯通和安多哈爾連著做，末段白蟻回程剛好一起交。｜Enchaîne le Champ de Felstone et Andorhal. Rends aussi la quête des termites au retour.
 04-45到60級.md:1619｜站內取捨｜之後順路｜克羅米其餘鏈要再跑東瘟疫；有專程回去再接。｜Les quêtes restantes de Chromie te renvoient dans les Maleterres de l'est. Prends-les si tu prévois d'y retourner.
 04-45到60級.md:1620｜站內提醒｜未到 59 級可在安多哈爾東側外圍（約 46, 64）或瘟疫農場打普通亡靈，再轉費伍德。｜En dessous du niveau 59 ? Tue les morts-vivants normaux autour de l'est d'Andorhal (environ 46, 64) ou dans les fermes de la peste, puis dirige-toi vers Gangrebois.
@@ -5402,7 +5402,7 @@
 04-45到60級.md:1764｜標籤｜僅聖騎士｜Paladins uniquement
 04-45到60級.md:1764｜標籤｜僅不死族｜Morts-vivants uniquement
 04-45到60級.md:1764｜標籤｜需遊戲實測｜À vérifier en jeu
-04-45到60級.md:1765｜步驟說明｜先聽完 93030；飛艇回奧格瑪時可組艾薩拉 黑喉要塞。取得聖匣後，等回到提里斯法林地再交。｜Termine d'abord 93030. Pendant le retour en zeppelin vers Orgrimmar, tu peux monter un groupe pour Blackmaw Hold, à Azshara. Une fois la relique obtenue, rends-la à ton retour aux Clairières de Tirisfal.
+04-45到60級.md:1765｜步驟說明｜先聽完 93030；飛艇回奧格瑪時可組艾薩拉 黑喉要塞。取得聖匣後，等回到提里斯法林地再交。｜Termine d'abord 93030. Pendant le retour en zeppelin vers Orgrimmar, tu peux monter un groupe pour le Repaire des Noiregueules, à Azshara. Une fois la relique obtenue, rends-la à ton retour aux Clairières de Tirisfal.
 04-45到60級.md:1765｜標籤｜可跳過｜Facultatif
 04-45到60級.md:1765｜★獎勵職業｜聖騎士｜Paladin
 04-45到60級.md:1765｜標籤｜僅聖騎士｜Paladins uniquement
@@ -5558,7 +5558,7 @@
 04-45到60級.md:1858｜標籤｜可跳過｜Facultatif
 04-45到60級.md:1859｜標籤｜可跳過｜Facultatif
 04-45到60級.md:1860｜標籤｜可跳過｜Facultatif
-04-45到60級.md:1861｜步驟說明｜加德納爾精華可先拿；月光林地 永夜港從奧格瑪可先飛艾薩拉，西瘟疫之地 亡靈壁壘在東部王國時可飛斯通納德往詛咒之地。｜Tu peux prendre d'abord l'essence de Jaedenar. Pour Havrenuit à Reflet-de-Lune, vole d'Orgrimmar vers Azshara ; depuis le Rempart, dans les Royaumes de l'est, vole vers Pierrêche, puis vers les Terres foudroyées.
+04-45到60級.md:1861｜步驟說明｜加德納爾精華可先拿；月光林地 永夜港從奧格瑪可先飛艾薩拉，西瘟疫之地 亡靈壁壘在東部王國時可飛斯通納德往詛咒之地。｜Tu peux prendre d'abord l'essence de Jaedenar. Pour Havrenuit à Reflet-de-Lune, vole d'Orgrimmar vers Azshara ; depuis la Barricade, dans les Royaumes de l'est, vole vers Pierrêche, puis vers les Terres foudroyées.
 04-45到60級.md:1861｜標籤｜可跳過｜Facultatif
 04-45到60級.md:1861｜標籤｜僅術士｜Démonistes uniquement
 04-45到60級.md:1862｜步驟說明｜若已有訓練師版 8419，直接交 8419 再接 8421。｜Si tu as déjà pris 8419 auprès du maître, rends directement 8419, puis prends 8421.
@@ -5574,12 +5574,12 @@
 04-45到60級.md:1866｜標籤｜可跳過｜Facultatif
 04-45到60級.md:1866｜標籤｜掉率 20%｜Taux de butin : 20 %
 04-45到60級.md:1867｜標籤｜可跳過｜Facultatif
-04-45到60級.md:1868｜步驟說明｜打算組神廟再接；西瘟疫之地 亡靈壁壘到東部王國後可下。｜Prends-la si tu comptes faire Le Temple englouti pendant l'étape des Royaumes de l'est ; tu pourras l'entreprendre après le Rempart.
+04-45到60級.md:1868｜步驟說明｜打算組神廟再接；西瘟疫之地 亡靈壁壘到東部王國後可下。｜Prends-la si tu comptes faire Le Temple englouti pendant l'étape des Royaumes de l'est ; tu pourras l'entreprendre après la Barricade.
 04-45到60級.md:1868｜標籤｜可跳過｜Facultatif
 04-45到60級.md:1868｜★獎勵物品名｜靈魂收割者｜Moissonneuse d'âmes
 04-45到60級.md:1868｜★獎勵職業｜術士｜Démoniste
 04-45到60級.md:1868｜標籤｜僅術士｜Démonistes uniquement
-04-45到60級.md:1872｜步驟說明｜可從幽暗城飛斯通納德。留費伍德森林 鐵木森林交伊普斯。｜Envolez-vous vers Pierrêche à partir de Fossoyeuse. Enregistrez la remise de Démonet pour Bois d'Arbrefer.
+04-45到60級.md:1872｜步驟說明｜可從幽暗城飛斯通納德。留費伍德森林 鐵木森林交伊普斯。｜Envole-toi vers Pierrêche à partir de Fossoyeuse. Enregistre la remise de Démonet pour Bois d'Arbrefer.
 04-45到60級.md:1872｜標籤｜可跳過｜Facultatif
 04-45到60級.md:1872｜步驟目標｜加什爾／祖羅爾／加什爾／胡庫／米杉／胡庫／祖羅／洛若爾／洛若爾｜Balafreur / Zul'Lor / Balafreur / Hukku / Mijan / Hukku / Zolo / Loro / Loro
 04-45到60級.md:1872｜標籤｜僅術士｜Démonistes uniquement
@@ -5617,7 +5617,7 @@
 04-45到60級.md:1888｜標籤｜僅盜賊｜Voleurs uniquement
 04-45到60級.md:1892｜步驟說明｜QuestieDB 同時列木喉薩滿與黑喉薩滿為掉落來源；優先打黑喉，避免降低木喉聲望。｜QuestieDB liste aussi bien les chamans Grumegueule que Blackmaw comme sources de butin ; farme de préférence les Blackmaw pour ne pas perdre de réputation Grumegueule.
 04-45到60級.md:1892｜標籤｜可跳過｜Facultatif
-04-45到60級.md:1892｜步驟目標｜木喉薩滿／Blackmaw Shaman｜Chaman Grumegueule / Blackmaw Shaman
+04-45到60級.md:1892｜步驟目標｜木喉薩滿／Blackmaw Shaman｜Chaman Grumegueule / Chaman noiregueule
 04-45到60級.md:1892｜標籤｜僅盜賊｜Voleurs uniquement
 04-45到60級.md:1893｜步驟說明｜從山腳薩納斯（28.11, 50.09）前往克希雷姆的塔。｜Voir Sanath Lim-yo au pied de la montagne (28.11, 50.09) pour atteindre la tour de Xylem.
 04-45到60級.md:1893｜標籤｜可跳過｜Facultatif
@@ -5671,13 +5671,13 @@
 04-45到60級.md:1923｜★獎勵物品名｜灰色毛皮｜Fourrure grisonnante
 04-45到60級.md:1923｜★獎勵職業｜德魯伊｜Druide
 04-45到60級.md:1923｜標籤｜僅德魯伊｜Druides uniquement
-04-45到60級.md:1927｜步驟說明｜過奧格瑪找牧師訓練師，順手買亡靈腐液 ×1。｜Passe par Orgrimmar voir un maître prêtre et achète 1 Ichor of Undeath au passage.
+04-45到60級.md:1927｜步驟說明｜過奧格瑪找牧師訓練師，順手買亡靈腐液 ×1。｜Passe par Orgrimmar voir un maître prêtre et achète 1 Ichor de non-mort au passage.
 04-45到60級.md:1927｜標籤｜可跳過｜Facultatif
 04-45到60級.md:1927｜標籤｜僅牧師｜Prêtres uniquement
-04-45到60級.md:1928｜步驟說明｜過奧格瑪找牧師訓練師，順手買亡靈腐液 ×1。｜Passe par Orgrimmar voir un maître prêtre et achète 1 Ichor of Undeath au passage.
+04-45到60級.md:1928｜步驟說明｜過奧格瑪找牧師訓練師，順手買亡靈腐液 ×1。｜Passe par Orgrimmar voir un maître prêtre et achète 1 Ichor de non-mort au passage.
 04-45到60級.md:1928｜標籤｜可跳過｜Facultatif
 04-45到60級.md:1928｜標籤｜僅牧師｜Prêtres uniquement
-04-45到60級.md:1929｜步驟說明｜過奧格瑪找牧師訓練師，順手買亡靈腐液 ×1。｜Passe par Orgrimmar voir un maître prêtre et achète 1 Ichor of Undeath au passage.
+04-45到60級.md:1929｜步驟說明｜過奧格瑪找牧師訓練師，順手買亡靈腐液 ×1。｜Passe par Orgrimmar voir un maître prêtre et achète 1 Ichor de non-mort au passage.
 04-45到60級.md:1929｜標籤｜可跳過｜Facultatif
 04-45到60級.md:1929｜標籤｜僅牧師｜Prêtres uniquement
 04-45到60級.md:1930｜標籤｜可跳過｜Facultatif
@@ -5707,12 +5707,12 @@
 04-45到60級.md:1944｜★獎勵物品名｜祝福珠串｜Chapelet béni
 04-45到60級.md:1944｜★獎勵職業｜牧師｜Prêtre
 04-45到60級.md:1944｜標籤｜僅牧師｜Prêtres uniquement
-04-45到60級.md:2046｜站內永恆交通複查｜核對火線港與熱砂港的雙向船線，補上塔納利斯端碼頭及加基森首訪地面路線。加基森、莫沙徹、瑟銀哨塔、永望鎮、月光林地與希利蘇斯飛行管理員或旅店依 QuestieDB 的 NPC 名稱、座標更新。[永恆版大河林地航線](https://www.wowhead.com/forever/guide/riverglades-zone-overview)｜Vérifie la liaison par bateau dans les deux sens entre Port de Poudremèche et Port Gentepression ; ajoute le quai de Tanaris et l'itinéraire terrestre de première visite vers Gadgetzan. Les maîtres de vol et aubergistes de Gadgetzan, Camp Mojache, Halte du Thorium, Long-guet, Reflet-de-Lune et Silithus suivent les noms et coordonnées des PNJ de QuestieDB. [Forever Riverglades travel](https://www.wowhead.com/forever/guide/riverglades-zone-overview)
+04-45到60級.md:2046｜站內永恆交通複查｜核對火線港與熱砂港的雙向船線，補上塔納利斯端碼頭及加基森首訪地面路線。加基森、莫沙徹、瑟銀哨塔、永望鎮、月光林地與希利蘇斯飛行管理員或旅店依 QuestieDB 的 NPC 名稱、座標更新。[永恆版大河林地航線](https://www.wowhead.com/forever/guide/riverglades-zone-overview)｜Vérifie la liaison par bateau dans les deux sens entre Port de Poudremèche et Port Gentepression ; ajoute le quai de Tanaris et l'itinéraire terrestre de première visite vers Gadgetzan. Les maîtres de vol et aubergistes de Gadgetzan, Camp Mojache, Halte du Thorium, Long-guet, Reflet-de-Lune et Silithus suivent les noms et coordonnées des PNJ de QuestieDB. [Forever Rives Claires travel](https://www.wowhead.com/forever/guide/Rives Claires-zone-overview)
 04-45到60級.md:2047｜站內永恆交通複查｜斯通納德、莫沙徹和聖光之願的回訪先確認飛行點，補首訪地面替代路線。從莫沙徹飛棘齒城後再決定是否搭船交護送，預設少一次跨洲來回。｜Avant de revenir à Pierrêche, Camp Mojache ou la Chapelle de l'Espoir de Lumière, vérifie ton point de vol et prépare l'itinéraire terrestre de première visite. Depuis Camp Mojache, vole vers Cabestan, puis décide si tu prends le bateau pour rendre l'escorte ; par défaut, cela évite un aller-retour entre continents.
 04-45到60級.md:2048｜站內永恆交通複查｜莫沙徹爐石冷卻時走大路回營地。暴掠龍爪留奧格瑪順路交，加基森先完成墓園和機械雪人再南下，省各一趟同城折返。｜Si ta pierre de foyer de Camp Mojache est en recharge, retourne au camp par la route principale. Garde les griffes de ravasaure pour les rendre à Orgrimmar. À Gadgetzan, termine le cimetière et le Yéti mécanique avant d'aller vers le sud, pour économiser un aller-retour dans la ville.
 05-副本.md:8｜副本動線｜入口清穴居人→首廳岔路右上坡，打奧格弗林特並找瑪爾→回主路過十字熔岩橋打塔拉加曼→沿路清火刃教徒→右坡打巴札蘭，盡頭打耶戈什。｜Élimine les troggs à l'entrée → prends la rampe de droite du premier hall pour Lorgnesilex, puis trouve Maur Grimtotem → reviens sur la route principale et traverse le pont de lave pour Taragaman l'Affameur → élimine en chemin les cultistes de la Lame ardente → monte la rampe de droite pour Bazzalan, puis Jergosh l'Invocateur au fond.
 05-副本.md:11｜副本入口｜奧格瑪 1454 52.60, 49.00｜Orgrimmar 1454 52.60, 49.00
-05-副本.md:18｜站內前置接取路線｜在貧瘠之地 十字路口開飛行點後，飛雷霆崖找拉哈羅接 5722／5723，飛奧格瑪找索爾先做 5726／5727，再去暗巷區接 5761；若此輪已開幽暗城飛點，可在飛艇跨海時先向瓦里瑪薩斯領 5725。｜Après avoir débloqué le point de vol de La Croisée, vole jusqu'aux Pitons-du-Tonnerre pour prendre 5722 et 5723 auprès de Rahauro, puis fais 5726 et 5727 avec Thrall à Orgrimmar. Prends ensuite 5761 dans la Faille des ombres. Si tu as déjà débloqué Fossoyeuse, prends 5725 auprès de Varimathras pendant la traversée en zeppelin.
+05-副本.md:18｜站內前置接取路線｜在貧瘠之地 十字路口開飛行點後，飛雷霆崖找拉哈羅接 5722／5723，飛奧格瑪找索爾先做 5726／5727，再去暗巷區接 5761；若此輪已開幽暗城飛點，可在飛艇跨海時先向瓦里瑪薩斯領 5725。｜Après avoir débloqué le point de vol de La Croisée, vole jusqu'à Thunder Bluff pour prendre 5722 et 5723 auprès de Rahauro, puis fais 5726 et 5727 avec Thrall à Orgrimmar. Prends ensuite 5761 dans la Faille des ombres. Si tu as déjà débloqué Fossoyeuse, prends 5725 auprès de Varimathras pendant la traversée en zeppelin.
 05-副本.md:18｜標籤｜接取錨點 02-第8站｜Départ : 02-étape 8
 05-副本.md:23｜標籤｜接取等級 9｜Niveau requis : 9
 05-副本.md:23｜標籤｜建議等級 15｜Niveau conseillé : 15
@@ -5765,11 +5765,11 @@
 05-副本.md:52｜標籤｜前置：隱藏的敵人 5729｜Prérequis : Ennemis cachés (5729)
 05-副本.md:52｜標籤｜可共享｜Partageable
 05-副本.md:58｜標籤｜可跳過｜Facultatif
-05-副本.md:60｜站內取捨｜進本前確認 5728 已解鎖。只打怒焰一次，暗巷區就近交 5761；雷霆崖、幽暗城的交件可分配到跨城主線。｜Vérifie que 5728 est débloquée avant d'entrer. Ne fais Gouffre de Ragefeu qu'une fois et rends 5761 sur place, dans la Faille des ombres. Les remises des Pitons-du-Tonnerre et de Fossoyeuse peuvent se faire lors des passages en ville sur l'itinéraire.
+05-副本.md:60｜站內取捨｜進本前確認 5728 已解鎖。只打怒焰一次，暗巷區就近交 5761；雷霆崖、幽暗城的交件可分配到跨城主線。｜Vérifie que 5728 est débloquée avant d'entrer. Ne fais Gouffre de Ragefeu qu'une fois et rends 5761 sur place, dans la Faille des ombres. Les remises de Thunder Bluff et de Fossoyeuse peuvent se faire lors des passages en ville sur l'itinéraire.
 05-副本.md:61｜站內說明｜正式門在奧格瑪暗影裂口底部；先進城內暗影裂口，再沿通道到藍色門。｜L'entrée officielle se trouve au fond de la Faille des ombres d'Orgrimmar. Entre d'abord dans la Faille des ombres de la ville, puis suis le passage jusqu'à la porte bleue.
 05-副本.md:66｜副本動線｜入口→安威瑪休憩地打法德林→黑鐵召喚師旁打瑪格瑪圖斯→走廊清巡邏的掠奪者→諸王聖物庫打杜爾根。｜Entrée → Faldrim à Repos de Courbenclume → Magmatus près de l'invocateur Sombrefer → le Pilleur en patrouille dans le couloir → Durgen dans la chambre forte des rois.
 05-副本.md:69｜副本入口｜鐵爐堡 1455 27.63, 47.83｜Forgefer 1455 27.63, 47.83
-05-副本.md:78｜站內前置接取路線｜從貧瘠之地轉往東部王國後，只有專程成就隊才從幽暗城經銀松、希爾斯布萊德、阿拉希南下濕地，經丹奧加茲到丹莫羅再進鐵爐堡。部落前置接取點未查到。｜Après avoir quitté Les Tarides pour les Royaumes de l'Est, ne va à Forgefer que si tu fais un groupe dédié aux hauts faits. Depuis Fossoyeuse, passe par la Forêt des Pins argentés, les Contreforts d'Hillsbrad et les Hautes-terres d'Arathi, puis descends vers Les Paluns, traverse Dun Algaz jusqu'à Dun Morogh et entre à Forgefer. Aucun point de prise de quête préalable Horde n'a été trouvé.
+05-副本.md:78｜站內前置接取路線｜從貧瘠之地轉往東部王國後，只有專程成就隊才從幽暗城經銀松、希爾斯布萊德、阿拉希南下濕地，經丹奧加茲到丹莫羅再進鐵爐堡。部落前置接取點未查到。｜Après avoir quitté Les Tarides pour les Royaumes de l'Est, ne va à Forgefer que si tu fais un groupe dédié aux hauts faits. Depuis Fossoyeuse, passe par la Forêt des Pins argentés, les Contreforts de Hautebrande et les Hautes-terres Arathies, puis descends vers Les Paluns, traverse Dun Algaz jusqu'à Dun Morogh et entre à Forgefer. Aucun point de prise de quête préalable Horde n'a été trouvé.
 05-副本.md:78｜標籤｜接取錨點 02-第8站｜Départ : 02-étape 8
 05-副本.md:83｜站內說明｜本機永恆版的 96391、96393、96394、96395、96403、98423 都標聯盟；部落沒有可核實的接取路線。｜Dans la version Forever locale, 96391, 96393, 96394, 96395, 96403 et 98423 sont toutes marquées Alliance. Aucun itinéraire de prise de quête Horde n'a pu être vérifié.
 05-副本.md:87｜站內說明｜可進本打法德林·安威瑪、瑪格瑪圖斯、掠奪者、杜爾根·喪鐘錘等首領。這趟以掉落或成就為主。｜Tu peux y affronter les boss Faldrim Courbenclume, Magmatus, le Pilleur et Durgen Mornemartel. Cette course vise surtout le butin ou les hauts faits.
@@ -5873,7 +5873,7 @@
 05-副本.md:168｜站內說明｜入口在幽暗城上方、提里斯法地表的王城廢墟。用幽暗城地圖座標，在進王城後上左側石階；不要走到地下電梯。｜L'entrée est dans les Ruines de Lordaeron, à la surface de Tirisfal, au-dessus de Fossoyeuse. Utilise les coordonnées de la carte de Fossoyeuse. Dans les ruines, monte l'escalier de pierre à gauche sans descendre à l'ascenseur.
 05-副本.md:173｜副本動線｜入口淺水找安娜科德拉→河西打考布萊恩→回水道往東打皮薩斯、斯卡姆、瑟芬迪斯、永生的沃爾丹→四牙王都倒後回入口護送信徒，打穆坦努斯。兩翼沿路採毒蛇花、收變異皮革和哀嚎香精，並清變異怪。｜Anacondra dans les eaux peu profondes de l'entrée → Cobrahn à l'ouest de la rivière → en revenant par le cours d'eau vers l'est : Pythas, Skum, Serpentis et Verdan l'Éternel → après la chute des quatre seigneurs, retourne à l'entrée pour escorter le disciple, puis tue Mutanus. Cueille des fleurs de serpent le long des deux ailes, récupère les peaux de déviant et l'essence de lamentation, et élimine les déviants en chemin.
 05-副本.md:176｜副本入口｜貧瘠之地 1413 46.00, 36.30｜Les Tarides 1413 46.00, 36.30
-05-副本.md:184｜站內前置接取路線｜在貧瘠之地 十字路口找圖加完成 870→877→880，然後去雷霆崖找哈繆爾、納拉與札瑪；棘齒城先交 865 再接 1491 和 959。最後去洞口上方石台找納爾派克與厄布魯。｜Termine 870 → 877 → 880 avec Tonga à La Croisée, puis va aux Pitons-du-Tonnerre voir Hamuul, Nara et Zama. À Cabestan, rends d'abord 865 avant de prendre 1491 et 959. Enfin, trouve Nalpak et Ebru sur le rebord de pierre au-dessus de l'entrée de la grotte.
+05-副本.md:184｜站內前置接取路線｜在貧瘠之地 十字路口找圖加完成 870→877→880，然後去雷霆崖找哈繆爾、納拉與札瑪；棘齒城先交 865 再接 1491 和 959。最後去洞口上方石台找納爾派克與厄布魯。｜Termine 870 → 877 → 880 avec Tonga à La Croisée, puis va à Thunder Bluff voir Hamuul, Nara et Zama. À Cabestan, rends d'abord 865 avant de prendre 1491 et 959. Enfin, trouve Nalpak et Ebru sur le rebord de pierre au-dessus de l'entrée de la grotte.
 05-副本.md:184｜標籤｜接取錨點 02-第8站｜Départ : 02-étape 8
 05-副本.md:189｜標籤｜接取等級 10｜Niveau requis : 10
 05-副本.md:189｜標籤｜建議等級 13｜Niveau conseillé : 13
@@ -6044,7 +6044,7 @@
 05-副本.md:292｜站內說明｜月溪鎮的礦井入口約 1436 42.40, 70.40，先進建築下樓，再循坑道到 38.20, 77.50 的正式門。聯盟接的迪菲亞任務不列入部落。｜L'entrée de la mine de Ruisselune se trouve vers 1436 42.40, 70.40 : entre dans le bâtiment et descends, puis suis le tunnel jusqu'au vrai portail à 38.20, 77.50. Les quêtes des Défias de l'Alliance ne sont pas listées pour la Horde.
 05-副本.md:297｜副本動線｜入口打雷希戈爾並放出阿達曼特→庭院右側找文森特→穿過宴會廳與城牆→芬魯斯房取書→沿塔路清怪，打狼王南杜斯→上樓打阿魯高並查桌面。｜Tue Rethilgore et libère Adamant → trouve Vincent sur le côté droit de la cour → traverse la salle de banquet et les remparts → va dans la salle de Fenrus pour le livre → dégage le chemin de la tour et tue Maître-loup Nandos → monte à l'étage pour tuer Arugal et fouille sa table.
 05-副本.md:300｜副本入口｜銀松森林 1421 44.70, 67.80｜Forêt des Pins argentés 1421 44.70, 67.80
-05-副本.md:308｜站內前置接取路線｜前往銀松森林前，路過幽暗城時在鍊金區先接 1013，到瑟伯切爾找哈德瑞克和達拉爾接 1098、1014。可在貧瘠之地 陶拉祖營地東側接 1740【僅術士】。先做死亡礦坑章節的 91858 至 95036，保留 95036【僅不死族】【僅聖騎士】。往希爾斯布萊德途中，回東部王國後可先飛銀松森林 瑟伯切爾，再向南走。｜Avant d'aller en Forêt des Pins argentés, prends 1013 à l'Apothicarium en passant par Fossoyeuse, puis va au Sépulcre prendre 1098 et 1014 auprès de Hadrec et Dalar. Tu peux prendre 1740 à l'est de Camp Taurajo, dans Les Tarides [Démonistes uniquement]. Fais d'abord les quêtes des Mortemines, de 91858 à 95036, et garde 95036 [Morts-vivants uniquement] [Paladins uniquement]. Sur le chemin des Contreforts d'Hillsbrad, une fois revenu aux Royaumes de l'Est, tu peux d'abord voler jusqu'au Sépulcre, puis partir vers le sud.
+05-副本.md:308｜站內前置接取路線｜前往銀松森林前，路過幽暗城時在鍊金區先接 1013，到瑟伯切爾找哈德瑞克和達拉爾接 1098、1014。可在貧瘠之地 陶拉祖營地東側接 1740【僅術士】。先做死亡礦坑章節的 91858 至 95036，保留 95036【僅不死族】【僅聖騎士】。往希爾斯布萊德途中，回東部王國後可先飛銀松森林 瑟伯切爾，再向南走。｜Avant d'aller en Forêt des Pins argentés, prends 1013 à l'Apothicarium en passant par Fossoyeuse, puis va au Sépulcre prendre 1098 et 1014 auprès de Hadrec et Dalar. Tu peux prendre 1740 à l'est de Camp Taurajo, dans Les Tarides [Démonistes uniquement]. Fais d'abord les quêtes des Mortemines, de 91858 à 95036, et garde 95036 [Morts-vivants uniquement] [Paladins uniquement]. Sur le chemin des Contreforts de Hautebrande, une fois revenu aux Royaumes de l'Est, tu peux d'abord voler jusqu'au Sépulcre, puis partir vers le sud.
 05-副本.md:308｜標籤｜接取錨點 02-第9站｜Départ : 02-étape 9
 05-副本.md:308｜標籤｜僅術士｜Démonistes uniquement
 05-副本.md:308｜標籤｜僅不死族｜Morts-vivants uniquement
@@ -6085,7 +6085,7 @@
 05-副本.md:334｜站內說明｜瑟伯切爾南下，沿焚木村北側坡道進堡，過外門走到庭院旁真正的副本門。想打達拉然城隱藏首領，另從阿魯高桌上取 Black Tome，再去安伯米爾大廳的地脈裝置製成 Tome of Dalaran。｜Depuis le Sépulcre, va vers le sud et prends la rampe au nord de Bois-du-Bûcher pour entrer dans le château. Passe la porte extérieure jusqu'au vrai portail du donjon, près de la cour. Pour le boss caché de Dalaran, prends le Black Tome sur la table d'Arugal, puis utilise le dispositif tellurique de la grande salle de Moulin-de-l'Ambre pour fabriquer le Tome of Dalaran.
 05-副本.md:339｜副本動線｜從東側入口往西穿沼澤打鹽脊→沿草叢小徑打灌木迅猛龍與暗齒→走西南側營區清龍喉→南行至挖掘場啟動守護者旁面板，打倒守護者後拾聖物。｜Depuis l'entrée est, va vers l'ouest à travers le marais jusqu'à Seléchine → prends le sentier broussailleux pour tuer les raptors des fourrés et Dent-Sombre → nettoie les Gueules-de-Dragon dans le camp sud-ouest → descends vers le sud jusqu'au site de fouilles, active le panneau près du gardien, tue le Gardien des reliques et ramasse la relique.
 05-副本.md:342｜副本入口｜溼地 1437 47.79, 56.16｜Les Paluns (1437), 47.79, 56.16.
-05-副本.md:350｜站內前置接取路線｜石爪山脈 烈日石居已滿24可從石爪山飛奧格瑪，暗巷區找博斯坦接 95697。塔倫米爾離站後，先往阿拉希落錘鎮找薩魯克接 95663，再過薩多爾大橋與丹莫德，走瑟根石一帶山路找亡靈衛兵密探；接 95682 後才進本。｜À Retraite de Roche-Soleil, dans les Serres-Rocheuses, au niveau 24, vole des Serres-Rocheuses jusqu'à Orgrimmar et prends 95697 auprès de Borstan dans la Faille des ombres. Après avoir quitté Moulin-de-Tarren, va d'abord à Trépas-d'Orgrim, dans les Hautes-terres d'Arathi, prendre 95663 auprès de Zaruk, puis passe le Viaduc de Thandol et Dun Modr et suis la route de montagne vers le Rocher de Thelgen pour trouver l'Agent Traqueur noir. N'entre dans le donjon qu'après avoir pris 95682.
+05-副本.md:350｜站內前置接取路線｜石爪山脈 烈日石居已滿24可從石爪山飛奧格瑪，暗巷區找博斯坦接 95697。塔倫米爾離站後，先往阿拉希落錘鎮找薩魯克接 95663，再過薩多爾大橋與丹莫德，走瑟根石一帶山路找亡靈衛兵密探；接 95682 後才進本。｜À Retraite de Roche-Soleil, dans les Serres-Rocheuses, au niveau 24, vole des Serres-Rocheuses jusqu'à Orgrimmar et prends 95697 auprès de Borstan dans la Faille des ombres. Après avoir quitté Moulin-de-Tarren, va d'abord à Trépas-d'Orgrim, dans les Hautes-terres Arathies, prendre 95663 auprès de Zaruk, puis passe le Viaduc de Thandol et Dun Modr et suis la route de montagne vers le Rocher de Thelgen pour trouver l'Agent Traqueur noir. N'entre dans le donjon qu'après avoir pris 95682.
 05-副本.md:350｜標籤｜接取錨點 02-第11站｜Départ : 02-étape 11
 05-副本.md:355｜標籤｜接取等級 24｜Niveau requis : 24
 05-副本.md:355｜標籤｜建議等級 27｜Niveau conseillé : 27
@@ -6114,12 +6114,12 @@
 05-副本.md:373｜標籤｜共享?｜Partage non confirmé
 05-副本.md:374｜步驟說明｜交長者知識後向巴珊娜接；先檢查任務是否重新提供聖物。若材料未給，以遊戲當前狀態為準。｜Après avoir rendu Le savoir des anciens, prends la suite auprès de Bashana et vérifie d'abord si la quête te redonne la relique. Si le matériel n'est pas fourni, fie-toi à l'état actuel du jeu.
 05-副本.md:375｜步驟說明｜交長者知識後向巴珊娜接；先檢查任務是否重新提供聖物。若材料未給，以遊戲當前狀態為準。｜Après avoir rendu Le savoir des anciens, prends la suite auprès de Bashana et vérifie d'abord si la quête te redonne la relique. Si le matériel n'est pas fourni, fie-toi à l'état actuel du jeu.
-05-副本.md:377｜站內取捨｜打滿一次可同時收肉、龍喉急件和尾王聖物。最後一段要回卡林多，跟下一趟奧格瑪／雷霆崖行程一起交。｜Une seule course complète permet de récupérer la viande, la dépêche Gueule-de-Dragon et la relique du boss final. La dernière remise est à Kalimdor : rends-la lors du prochain passage à Orgrimmar ou aux Pitons-du-Tonnerre.
+05-副本.md:377｜站內取捨｜打滿一次可同時收肉、龍喉急件和尾王聖物。最後一段要回卡林多，跟下一趟奧格瑪／雷霆崖行程一起交。｜Une seule course complète permet de récupérer la viande, la dépêche Gueule-de-Dragon et la relique du boss final. La dernière remise est à Kalimdor : rends-la lors du prochain passage à Orgrimmar ou à Thunder Bluff.
 05-副本.md:378｜站內說明｜正式藍色門在維爾加挖掘場東南方的高坡。集合石、亡靈衛兵密探與副本門是不同點。｜Le portail bleu se trouve en haut du versant au sud-est des Excavations de Whelgar. La pierre de rencontre, l’Agent Traqueur noir et le portail sont à des endroits distincts.
 05-副本.md:383｜副本動線｜沿水洞到加摩拉的海龜池，從水下側洞找塞爾瑞德→經薩利維絲女士和格里哈斯特的岔洞到暮光營區找洛古斯。暮光營區順路收碎片。【僅術士】從月神祭壇廢墟橋下點石、打阿奎尼斯並取水球→回聖所打克爾里斯→全隊準備好再逐一點火，進阿庫麥爾巢穴。｜Suis la grotte inondée jusqu'au bassin des tortues de Ghamoo-ra et trouve Thaelrid dans la grotte latérale sous l'eau → passe par les embranchements de Dame Sarevess et de Gelihast jusqu'au camp du Crépuscule pour trouver Lorgus Jett. Ramasse les fragments au passage dans le camp du Crépuscule. [Démonistes uniquement] Sous le pont des ruines de l'autel d'Élune, utilise la pierre, tue Aquanis et prends le globe → retourne au sanctuaire pour tuer Kelris → quand tout le groupe est prêt, allume les braseros un par un, puis entre dans l'antre d'Aku'mai.
 05-副本.md:383｜標籤｜僅術士｜Démonistes uniquement
 05-副本.md:386｜副本入口｜梣谷 1440 16.50, 11.00｜Orneval 1440 16.50, 11.00
-05-副本.md:393｜站內前置接取路線｜在石爪山脈 烈日石居找蘇納曼接 6562，留到梣谷 佐拉姆加前哨站找耶努薩克雷。貧瘠之地 棘齒城與陶拉祖營地可先接 1740【僅術士】。在銀松森林 瑟伯切爾接好 95036 並留在日誌【僅不死族】【僅聖騎士】。到梣谷 佐拉姆海岸先接 6563／6921，外洞取得便箋時先回前哨交再進本。再接 95042【僅不死族】【僅聖騎士】。｜Prends 6562 auprès de Tsunaman à Retraite de Roche-Soleil, dans les Serres-Rocheuses, et garde-la pour Je'neu Sancrea à l'avant-poste de Zoram'gar, à Orneval. À Cabestan et au Camp Taurajo, dans Les Tarides, tu peux déjà prendre 1740 [Démonistes uniquement]. Prends 95036 au Sépulcre, en Forêt des Pins argentés, et garde-la dans ton journal [Morts-vivants uniquement] [Paladins uniquement]. À Zoram Strand, à Orneval, prends d'abord 6563 et 6921 ; si tu obtiens la note dans la grotte extérieure, rends-la à l'avant-poste avant d'entrer. Prends ensuite 95042 [Morts-vivants uniquement] [Paladins uniquement].
+05-副本.md:393｜站內前置接取路線｜在石爪山脈 烈日石居找蘇納曼接 6562，留到梣谷 佐拉姆加前哨站找耶努薩克雷。貧瘠之地 棘齒城與陶拉祖營地可先接 1740【僅術士】。在銀松森林 瑟伯切爾接好 95036 並留在日誌【僅不死族】【僅聖騎士】。到梣谷 佐拉姆海岸先接 6563／6921，外洞取得便箋時先回前哨交再進本。再接 95042【僅不死族】【僅聖騎士】。｜Prends 6562 auprès de Tsunaman à Retraite de Roche-Soleil, dans les Serres-Rocheuses, et garde-la pour Je'neu Sancrea à l'avant-poste de Zoram'gar, à Orneval. À Cabestan et au Camp Taurajo, dans Les Tarides, tu peux déjà prendre 1740 [Démonistes uniquement]. Prends 95036 au Sépulcre, en Forêt des Pins argentés, et garde-la dans ton journal [Morts-vivants uniquement] [Paladins uniquement]. À la grève de Zoram, à Orneval, prends d'abord 6563 et 6921 ; si tu obtiens la note dans la grotte extérieure, rends-la à l'avant-poste avant d'entrer. Prends ensuite 95042 [Morts-vivants uniquement] [Paladins uniquement].
 05-副本.md:393｜標籤｜接取錨點 02-第11站｜Départ : 02-étape 11
 05-副本.md:393｜標籤｜僅術士｜Démonistes uniquement
 05-副本.md:393｜標籤｜僅不死族｜Morts-vivants uniquement
@@ -6176,7 +6176,7 @@
 05-副本.md:415｜步驟位置｜過格里哈斯特水洞，到暮光營區找洛古斯｜Après la grotte inondée de Gelihast, trouve Lorgus Jett dans le camp du Crépuscule.
 05-副本.md:416｜標籤｜僅術士｜Démonistes uniquement
 05-副本.md:416｜標籤｜可跳過｜Facultatif
-05-副本.md:416｜步驟位置｜從暮光營區到聖所沿途清侍僧，拾三份碎片｜Tue les acolytes du camp Crépuscule jusqu'au sanctuaire et récupérez trois fragments.
+05-副本.md:416｜步驟位置｜從暮光營區到聖所沿途清侍僧，拾三份碎片｜Tue les acolytes du camp Crépuscule jusqu'au sanctuaire et récupère trois fragments.
 05-副本.md:417｜步驟說明｜DungeonsForever 地城圖可查 Twilight Lord Kelris（第 2 圖 51.90, 81.60）。｜Carte DungeonsForever 2 : Seigneur du crépuscule Kelris (51.90, 81.60).
 05-副本.md:417｜標籤｜掉率 100%｜Taux de butin : 100 %
 05-副本.md:417｜步驟位置｜上岸進月神聖所，到暮光祭壇前打克爾里斯｜Sors de l'eau et entre dans le sanctuaire d'Élune, puis tue Kelris devant l'autel du Crépuscule.
@@ -6194,10 +6194,10 @@
 05-副本.md:430｜站內取捨｜外洞的 6563 與便箋可以同一趟處理。便箋為掉落導引，沒拿到仍可清其他任務。已接 95042 可同一趟完成【僅不死族】【僅聖騎士】。｜Tu peux faire 6563 et chercher la note dans la grotte extérieure en une seule course. La note est un objet qui lance la quête : si tu ne l'obtiens pas, tu peux quand même terminer les autres quêtes. Si tu as pris 95042, tu peux la finir dans la même course [Morts-vivants uniquement] [Paladins uniquement].
 05-副本.md:430｜標籤｜僅不死族｜Morts-vivants uniquement
 05-副本.md:430｜標籤｜僅聖騎士｜Paladins uniquement
-05-副本.md:431｜站內說明｜由佐拉姆海岸西北的廢墟外洞進水，沿水道穿進洞窟，走到深處才是副本門。克爾里斯周圍的火盆會各自觸發一波怪，分次點。｜Entre dans l'eau par la grotte extérieure des ruines au nord-ouest de Zoram Strand, suis le passage sous l'eau à travers la grotte jusqu'au fond où se trouve le portail du donjon. Les braseros autour de Kelris déclenchent chacun une vague de monstres : allume-les un par un.
+05-副本.md:431｜站內說明｜由佐拉姆海岸西北的廢墟外洞進水，沿水道穿進洞窟，走到深處才是副本門。克爾里斯周圍的火盆會各自觸發一波怪，分次點。｜Entre dans l'eau par la grotte extérieure des ruines au nord-ouest de la grève de Zoram, suis le passage sous l'eau à travers la grotte jusqu'au fond où se trouve le portail du donjon. Les braseros autour de Kelris déclenchent chacun une vague de monstres : allume-les un par un.
 05-副本.md:436｜副本動線｜入口走廊清十字軍並收心臟→審訊室打韋沙斯，找拷問架上的沃瑞爾→穿過露天墓園，下墓穴階梯打血法師薩爾諾斯。｜Élimine les croisés dans le couloir d'entrée et ramasse les cœurs → tue Vishas dans la salle d'interrogatoire et trouve Vorrel sur le chevalet de torture → traverse le cimetière à ciel ouvert, puis descends l'escalier des catacombes pour tuer le Mage de sang Thalnos.
 05-副本.md:439｜副本入口｜提里斯法林地 1420 85.20, 32.10｜Clairières de Tirisfal 1420 85.20, 32.10
-05-副本.md:447｜站內前置接取路線｜經希爾斯布萊德丘陵 塔倫米爾時可先開飛行點；從幽暗城沿提里斯法林地北路到修道院。先完成剃刀沼澤 1109（若先跑千針石林才去剃刀沼澤，把 1113 留到轉往奧特蘭克山脈途中接；墓地可先打沃瑞爾），在幽暗城煉金區找法拉尼爾；離開墓地之後要到奧特蘭克湖岸與塔倫米爾。｜En passant par Moulin-de-Tarren, dans les Contreforts d'Hillsbrad, débloque d'abord le point de vol ; depuis Fossoyeuse, suis la route nord de Tirisfal jusqu'au monastère. Termine d'abord 1109 au Kraal de Tranchebauge (si tu fais Mille pointes avant le Kraal de Tranchebauge, garde 1113 pour la prendre en route vers les Montagnes d'Alterac ; tu peux d'abord tuer Vorrel au Cimetière), puis trouve Faranell à l'Apothicarium de Fossoyeuse. Après le Cimetière, va aux rives du lac d'Alterac et à Moulin-de-Tarren.
+05-副本.md:447｜站內前置接取路線｜經希爾斯布萊德丘陵 塔倫米爾時可先開飛行點；從幽暗城沿提里斯法林地北路到修道院。先完成剃刀沼澤 1109（若先跑千針石林才去剃刀沼澤，把 1113 留到轉往奧特蘭克山脈途中接；墓地可先打沃瑞爾），在幽暗城煉金區找法拉尼爾；離開墓地之後要到奧特蘭克湖岸與塔倫米爾。｜En passant par Moulin-de-Tarren, dans les Contreforts de Hautebrande, débloque d'abord le point de vol ; depuis Fossoyeuse, suis la route nord de Tirisfal jusqu'au monastère. Termine d'abord 1109 au Kraal de Tranchebauge (si tu fais Mille pointes avant le Kraal de Tranchebauge, garde 1113 pour la prendre en route vers les Montagnes d'Alterac ; tu peux d'abord tuer Vorrel au Cimetière), puis trouve Faranell à l'Apothicarium de Fossoyeuse. Après le Cimetière, va aux rives du lac d'Alterac et à Moulin-de-Tarren.
 05-副本.md:447｜標籤｜接取錨點 03-第15站｜Départ : 03-étape 15
 05-副本.md:449｜副本入口｜由大堂朝四門看，最左側；座標是室外修道院入口，進大堂後依門序找實際傳送門。｜Depuis le hall, face aux quatre portes, prends la plus à gauche. Les coordonnées indiquent l'entrée extérieure du monastère ; dans le hall, trouve le vrai portail selon l'ordre des portes.
 05-副本.md:453｜標籤｜接取等級 30｜Niveau requis : 30
@@ -6231,7 +6231,7 @@
 05-副本.md:470｜站內說明｜看清最左入口；墓地不需要血色十字軍鑰匙。｜Repère bien l'entrée tout à gauche. Le Cimetière ne nécessite pas la clé écarlate.
 05-副本.md:473｜副本動線｜進本在下水道入口接哥布林任務→打阿崔希斯，想打林恩再進符文密室→從右路上街，沿途收構裝體核心並到城堡左側樓上書架找書→紫羅蘭城堡會客室開傳送門，擊敗大法師之影。離本前回下水道入口找瑞克希交書。｜Prends les quêtes gobelines à l'entrée des égouts → bats Atrexis, puis Lynn dans la salle des runes si tu veux → prends à droite vers la rue, ramasse les noyaux de golems et cherche le livre à l'étage à gauche de la citadelle → ouvre le portail du salon de la Citadelle pourpre et bats l'Ombre de l'archimage. Rends le livre à Rexxie à l'entrée des égouts avant de sortir.
 05-副本.md:476｜副本入口｜奧特蘭克山脈 1416 8.46, 59.21｜Montagnes d'Alterac 1416 8.46, 59.21
-05-副本.md:484｜站內前置接取路線｜塔倫米爾可先接梅里薩拉的 96986，經幽暗城時向馬丁醫生接 96988。希爾斯布萊德丘陵 塔倫米爾到30級向沃迪恩接 544／93680，沿洛丹米爾湖東南到收容所，同一趟取血石和污穢鑰匙；回塔倫米爾交後接 545，完成再接 92434。繞湖岸向莫德菈的影像報到，接 96984 後把下水道鑰匙留在身上。｜À Moulin-de-Tarren, prends d'abord 96986 auprès de Melisara, puis 96988 auprès du Docteur Martin Felben en passant par Fossoyeuse. Au niveau 30, à Moulin-de-Tarren, dans les Contreforts d'Hillsbrad, prends 544 et 93680 auprès de Wordeen. Va au sud-est du lac Lordamere jusqu'au camp d'internement pour récupérer en une fois la pierre de sang et la clé souillée. Retourne à Moulin-de-Tarren pour les rendre, prends 545, puis 92434 une fois celle-ci terminée. Longe la rive du lac jusqu'à l'image de Modera, prends 96984 et garde la clé des égouts sur toi.
+05-副本.md:484｜站內前置接取路線｜塔倫米爾可先接梅里薩拉的 96986，經幽暗城時向馬丁醫生接 96988。希爾斯布萊德丘陵 塔倫米爾到30級向沃迪恩接 544／93680，沿洛丹米爾湖東南到收容所，同一趟取血石和污穢鑰匙；回塔倫米爾交後接 545，完成再接 92434。繞湖岸向莫德菈的影像報到，接 96984 後把下水道鑰匙留在身上。｜À Moulin-de-Tarren, prends d'abord 96986 auprès de Melisara, puis 96988 auprès du Docteur Martin Felben en passant par Fossoyeuse. Au niveau 30, à Moulin-de-Tarren, dans les Contreforts de Hautebrande, prends 544 et 93680 auprès de Wordeen. Va au sud-est du lac Lordamere jusqu'au camp d'internement pour récupérer en une fois la pierre de sang et la clé souillée. Retourne à Moulin-de-Tarren pour les rendre, prends 545, puis 92434 une fois celle-ci terminée. Longe la rive du lac jusqu'à l'image de Modera, prends 96984 et garde la clé des égouts sur toi.
 05-副本.md:484｜標籤｜接取錨點 02-第12站｜Départ : 02-étape 12
 05-副本.md:489｜標籤｜接取等級 24｜Niveau requis : 24
 05-副本.md:489｜標籤｜建議等級 31｜Niveau conseillé : 31
@@ -6290,7 +6290,7 @@
 05-副本.md:524｜站內說明｜莫德菈影像與正式門在不同點；走洛丹米爾湖的下水道側。戶外達拉然城門與城內 NPC 通行受陣營規則限制。｜L'image de Modera et le portail du donjon se trouvent à des endroits différents. Approche du côté de l'égout Lac Lordamere. Des restrictions de faction s'appliquent aux portes extérieures de la ville et à l'accès des PNJ.
 05-副本.md:529｜副本動線｜過入口畫廊到左手小室取書→經前庭打馴犬者洛克希→在長廊末段與杜安前的書架分別取書→擊敗奧法師杜安，開身後箱取血色十字軍鑰匙。｜Passe la galerie d'entrée et prends le livre dans la petite pièce de gauche → traverse l'avant-cour et tue Maître-chien Loksey → prends les livres au bout du long couloir et sur l'étagère avant Doan → tue Arcaniste Doan, puis ouvre le coffre derrière lui pour prendre la clé écarlate.
 05-副本.md:532｜副本入口｜提里斯法林地 1420 85.20, 32.10｜Clairières de Tirisfal 1420 85.20, 32.10
-05-副本.md:540｜站內前置接取路線｜阿拉希高地 落錘鎮回幽暗城再去圖書館；千針石林 亂風崗先做多恩 1149→1150→1151。已走過石爪山脈 烈日石居時，可在梣谷南線由隧道去布勞格，再到幽暗城找帕科瓦。路過雷霆崖時可順接 1049【僅獸人,牛頭人,食人妖】。可在 千針石林 閃光平原、塵泥沼澤 蕨牆村跑塔貝薩和提爾斯的前置，書可之後回東部王國時補拿【僅法師】。｜Depuis Trépas-d'Orgrim, dans les Hautes-terres d'Arathi, retourne à Fossoyeuse puis va à la Bibliothèque. À Poste de Librevent, dans Mille pointes, fais d'abord Dorn 1149 → 1150 → 1151. Si tu es déjà passé par Retraite de Roche-Soleil, prends le tunnel de la route sud d'Orneval vers Braug, puis va à Fossoyeuse trouver Parqual. En passant par les Pitons-du-Tonnerre, tu peux aussi prendre 1049 [Orcs, Taurens, Trolls uniquement]. Tu peux faire les prérequis de Tabetha et de Tirth aux Salines de Mille pointes ou à Mur-de-Fougères ; le livre pourra être récupéré plus tard, de retour aux Royaumes de l'Est [Mages uniquement].
+05-副本.md:540｜站內前置接取路線｜阿拉希高地 落錘鎮回幽暗城再去圖書館；千針石林 亂風崗先做多恩 1149→1150→1151。已走過石爪山脈 烈日石居時，可在梣谷南線由隧道去布勞格，再到幽暗城找帕科瓦。路過雷霆崖時可順接 1049【僅獸人,牛頭人,食人妖】。可在 千針石林 閃光平原、塵泥沼澤 蕨牆村跑塔貝薩和提爾斯的前置，書可之後回東部王國時補拿【僅法師】。｜Depuis Trépas-d'Orgrim, dans les Hautes-terres Arathies, retourne à Fossoyeuse puis va à la Bibliothèque. À Poste de Librevent, dans Mille pointes, fais d'abord Dorn 1149 → 1150 → 1151. Si tu es déjà passé par Retraite de Roche-Soleil, prends le tunnel de la route sud d'Orneval vers Braug, puis va à Fossoyeuse trouver Parqual. En passant par Thunder Bluff, tu peux aussi prendre 1049 [Orcs, Taurens, Trolls uniquement]. Tu peux faire les prérequis de Tabetha et de Tirth aux Salines de Mille pointes ou à Mur-de-Fougères ; le livre pourra être récupéré plus tard, de retour aux Royaumes de l'Est [Mages uniquement].
 05-副本.md:540｜標籤｜接取錨點 03-第16站｜Départ : 03-étape 16
 05-副本.md:540｜標籤｜僅獸人,牛頭人,食人妖｜Orcs/Taurens/Trolls uniquement
 05-副本.md:540｜標籤｜僅法師｜Mages uniquement
@@ -6411,7 +6411,7 @@
 05-副本.md:585｜標籤｜可跳過｜Facultatif
 05-副本.md:585｜步驟位置｜最後一條走廊起點，找左手書架露出的書｜Vérifie le livre qui dépasse de l’étagère de gauche au début du dernier hall.
 05-副本.md:586｜交通步驟｜擊殺馴犬者洛克希，記入深入血色修道院 1048。｜Tue Maître-chien Loksey pour Au monastère écarlate (1048).
-05-副本.md:587｜交通步驟｜擊殺奧法師杜安後，開他身後的保險箱，拾血色十字軍鑰匙。｜Tue Arcaniste Doan et récupérez la clé écarlate dans le coffre-fort derrière lui.
+05-副本.md:587｜交通步驟｜擊殺奧法師杜安後，開他身後的保險箱，拾血色十字軍鑰匙。｜Tue Arcaniste Doan et récupère la clé écarlate dans le coffre-fort derrière lui.
 05-副本.md:591｜標籤｜可跳過｜Facultatif
 05-副本.md:592｜標籤｜僅獸人／牛頭人／食人妖｜Orcs/Taurens/Trolls uniquement
 05-副本.md:593｜標籤｜僅法師｜Mages uniquement
@@ -6420,7 +6420,7 @@
 05-副本.md:596｜站內說明｜1048 橫跨三翼，完整做／交列在大教堂。｜La quête 1048 s'étend sur trois ailes ; le parcours complet et la remise sont décrits dans la Cathédrale.
 05-副本.md:599｜副本動線｜開門進軍械庫→沿營房和長廊到底→在大廳打赫洛德→清後續進場的血色學員。｜Ouvre la porte de l'armurerie → traverse la caserne et le long couloir jusqu'au bout → bats Hérode dans la salle → élimine les recrues écarlates qui entrent ensuite.
 05-副本.md:602｜副本入口｜提里斯法林地 1420 85.20, 32.10｜Clairières de Tirisfal 1420 85.20, 32.10
-05-副本.md:609｜站內前置接取路線｜由阿拉希高地 落錘鎮飛幽暗城，可與圖書館同趟；在幽暗城皇家區瓦里瑪薩斯處接 1048，需 33 級；若在圖書館已接，保留任務並帶上血色十字軍鑰匙。從幽暗城走提里斯法林地北路到修道院。｜Vole de Trépas-d'Orgrim, dans les Hautes-terres d'Arathi, à Fossoyeuse ; tu peux le faire en même temps que la Bibliothèque. Prends 1048 auprès de Varimathras dans le Quartier royal de Fossoyeuse (niveau 33 requis) ; si tu l'as déjà prise à la Bibliothèque, garde la quête et apporte la clé écarlate. Depuis Fossoyeuse, suis la route nord de Tirisfal jusqu'au monastère.
+05-副本.md:609｜站內前置接取路線｜由阿拉希高地 落錘鎮飛幽暗城，可與圖書館同趟；在幽暗城皇家區瓦里瑪薩斯處接 1048，需 33 級；若在圖書館已接，保留任務並帶上血色十字軍鑰匙。從幽暗城走提里斯法林地北路到修道院。｜Vole de Trépas-d'Orgrim, dans les Hautes-terres Arathies, à Fossoyeuse ; tu peux le faire en même temps que la Bibliothèque. Prends 1048 auprès de Varimathras dans le Quartier royal de Fossoyeuse (niveau 33 requis) ; si tu l'as déjà prise à la Bibliothèque, garde la quête et apporte la clé écarlate. Depuis Fossoyeuse, suis la route nord de Tirisfal jusqu'au monastère.
 05-副本.md:609｜標籤｜接取錨點 03-第16站｜Départ : 03-étape 16
 05-副本.md:611｜副本入口｜由大堂朝四門看，右數第二道鎖門；座標是室外修道院入口，進大堂後依門序找實際傳送門。｜Depuis le hall, face aux quatre portes, prends la deuxième porte en partant de la droite (verrouillée). Les coordonnées indiquent l'entrée extérieure du monastère ; dans le hall, trouve le vrai portail selon l'ordre des portes.
 05-副本.md:615｜交通步驟｜在幽暗城確認 1048 已接，若未接依圖書館段補接。｜Vérifie à Fossoyeuse que 1048 est prise ; sinon, prends-la en suivant la section Bibliothèque.
@@ -6431,20 +6431,20 @@
 05-副本.md:626｜站內說明｜帶血色十字軍鑰匙，或請隊友中開鎖技能達 １７５ 點的盜賊開門。｜Apporte la clé écarlate ou demande à un Voleur du groupe avec 175 en Crochetage d'ouvrir la porte.
 05-副本.md:629｜副本動線｜穿過噴泉庭院上階梯→正殿打莫格萊尼→懷特邁恩復活莫格萊尼→擊敗兩人。｜Traverse la cour de la fontaine et monte les marches → tue Mograine dans la Cathédrale → attends que Blanchetête le ressuscite → tue les deux.
 05-副本.md:632｜副本入口｜提里斯法林地 1420 85.20, 32.10｜Clairières de Tirisfal 1420 85.20, 32.10
-05-副本.md:640｜站內前置接取路線｜由阿拉希高地 落錘鎮飛幽暗城，滿 35 可和圖書館、軍械庫一起打。前往希爾斯布萊德丘陵途中，經過幽暗城時可先看皇家區瓦里瑪薩斯，33 級才接 1048；若尚未滿 35 級，可在回東部王國去奧特蘭克山脈時一起打。帶血色十字軍鑰匙與圖書館、軍械庫的擊殺進度。｜Vole de Trépas-d'Orgrim, dans les Hautes-terres d'Arathi, à Fossoyeuse. Au niveau 35, tu peux faire la Cathédrale en même temps que la Bibliothèque et l'Armurerie. En allant vers les Contreforts d'Hillsbrad, passe voir Varimathras dans le Quartier royal de Fossoyeuse : 1048 n'est disponible qu'à partir du niveau 33. Si tu n'as pas encore le niveau 35, tu peux la faire en retournant aux Royaumes de l'Est, en direction des Montagnes d'Alterac. Apporte la clé écarlate et ta progression de la Bibliothèque et de l'Armurerie.
+05-副本.md:640｜站內前置接取路線｜由阿拉希高地 落錘鎮飛幽暗城，滿 35 可和圖書館、軍械庫一起打。前往希爾斯布萊德丘陵途中，經過幽暗城時可先看皇家區瓦里瑪薩斯，33 級才接 1048；若尚未滿 35 級，可在回東部王國去奧特蘭克山脈時一起打。帶血色十字軍鑰匙與圖書館、軍械庫的擊殺進度。｜Vole de Trépas-d'Orgrim, dans les Hautes-terres Arathies, à Fossoyeuse. Au niveau 35, tu peux faire la Cathédrale en même temps que la Bibliothèque et l'Armurerie. En allant vers les Contreforts de Hautebrande, passe voir Varimathras dans le Quartier royal de Fossoyeuse : 1048 n'est disponible qu'à partir du niveau 33. Si tu n'as pas encore le niveau 35, tu peux la faire en retournant aux Royaumes de l'Est, en direction des Montagnes d'Alterac. Apporte la clé écarlate et ta progression de la Bibliothèque et de l'Armurerie.
 05-副本.md:640｜標籤｜接取錨點 03-第16站｜Départ : 03-étape 16
 05-副本.md:642｜副本入口｜由大堂朝四門看，左數第二道鎖門；座標是室外修道院入口，進大堂後依門序找實際傳送門。｜Depuis le hall, face aux quatre portes, prends la deuxième porte en partant de la gauche (verrouillée). Les coordonnées indiquent l'entrée extérieure du monastère ; dans le hall, trouve le vrai portail selon l'ordre des portes.
 05-副本.md:646｜交通步驟｜確認任務日誌有深入血色修道院 1048；接取詳見圖書館。｜Vérifie que la quête Au monastère écarlate (1048) est dans ton journal ; pour savoir où la prendre, voir l'aile Bibliothèque.
 05-副本.md:650｜步驟說明｜大教堂先清房間周圍；懷特邁恩會復活莫格萊尼。｜Commence par dégager les abords de la salle. Blanchetête ressuscite Mograine.
 05-副本.md:650｜步驟說明｜DungeonsForever 地城圖可查大檢察官懷特邁恩；莫格萊尼 49.0,27.5（第 1 圖 49.10, 16.00）。｜Carte 1 de DungeonsForever : Grand inquisiteur Blanchetête (49.10, 16.00). Mograine : 49.0, 27.5.
-05-副本.md:650｜步驟位置｜穿過噴泉庭院上階梯，進正殿打雙王。｜Traverse la cour de la fontaine et montez les marches. Tue les deux boss de la Cathédrale.
+05-副本.md:650｜步驟位置｜穿過噴泉庭院上階梯，進正殿打雙王。｜Traverse la cour de la fontaine et monte les marches. Tue les deux boss de la Cathédrale.
 05-副本.md:650｜步驟順序｜莫格萊尼→懷特邁恩復活→雙王｜Tue Mograine → Blanchetête le ressuscite → combats les deux.
 05-副本.md:654｜步驟說明｜四個首領都計入後回幽暗城皇家區。｜Une fois les quatre boss validés, retourne au Quartier royal de Fossoyeuse.
 05-副本.md:656｜站內取捨｜若尚缺洛克希或赫洛德，先回相應分區，再一起回城。｜S'il te manque Loksey ou Hérode, retourne d'abord dans l'aile correspondante, puis rentre en ville.
 05-副本.md:657｜站內說明｜帶血色十字軍鑰匙，或請隊友中開鎖技能達 １７５ 點的盜賊開門。｜Apporte la clé écarlate ou demande à un Voleur du groupe avec 175 en Crochetage d'ouvrir la porte.
 05-副本.md:660｜副本動線｜入口荊棘道沿路用地鼠找藍葉薯→走支路打魯古格→賈格巴→拉姆塔斯→蝙蝠洞收糞便→卡爾加小屋打王、拾心臟與任務物品→路清完再回尾王旁營帳，護送威利克斯到入口。｜Utilise le gopher le long du chemin de ronces à l'entrée pour trouver les racines de Feuillebleue → prends le chemin secondaire jusqu'à Roogug → Jargba → Ramtusk → ramasse le guano dans la grotte aux chauves-souris → tue Charlga dans sa cabane et ramasse le cœur et les objets de quête → une fois le chemin dégagé, retourne à la tente près du dernier boss et escorte Willix jusqu'à l'entrée.
 05-副本.md:663｜副本入口｜貧瘠之地 1413 約 42.30, 89.90（荊棘通道的副本門附近）｜Les Tarides (1413), près du portail du donjon dans le tunnel d’épines, vers 42.30, 89.90.
-05-副本.md:671｜站內前置接取路線｜前往千針石林時可順路進本。在貧瘠之地 棘齒城可先接 1221 並拿地鼠工具；前往希爾斯布萊德丘陵途中，經過幽暗城時找法拉尼爾接 1109；進本前若經雷霆崖找奧爾德接 1102。可從千針石林 亂風崗出發，經大升降梯回貧瘠之地，走西側荊棘路進本。｜Tu peux faire le donjon en allant vers Mille pointes. À Cabestan, dans Les Tarides, prends d'abord 1221 et récupère les outils pour le gopher. En allant vers les Contreforts d'Hillsbrad, prends 1109 auprès de Faranell en passant par Fossoyeuse. Si tu passes par les Pitons-du-Tonnerre avant le donjon, prends 1102 auprès d'Auld. Depuis Poste de Librevent, dans Mille pointes, tu peux repartir par le Grand ascenseur vers Les Tarides, puis prendre la route des ronces à l'ouest pour entrer dans le donjon.
+05-副本.md:671｜站內前置接取路線｜前往千針石林時可順路進本。在貧瘠之地 棘齒城可先接 1221 並拿地鼠工具；前往希爾斯布萊德丘陵途中，經過幽暗城時找法拉尼爾接 1109；進本前若經雷霆崖找奧爾德接 1102。可從千針石林 亂風崗出發，經大升降梯回貧瘠之地，走西側荊棘路進本。｜Tu peux faire le donjon en allant vers Mille pointes. À Cabestan, dans Les Tarides, prends d'abord 1221 et récupère les outils pour le gopher. En allant vers les Contreforts de Hautebrande, prends 1109 auprès de Faranell en passant par Fossoyeuse. Si tu passes par Thunder Bluff avant le donjon, prends 1102 auprès d'Auld. Depuis Poste de Librevent, dans Mille pointes, tu peux repartir par la Grande élévation vers Les Tarides, puis prendre la route des ronces à l'ouest pour entrer dans le donjon.
 05-副本.md:671｜標籤｜接取錨點 03-第17站｜Départ : 03-étape 17
 05-副本.md:676｜標籤｜接取等級 20｜Niveau requis : 20
 05-副本.md:676｜標籤｜建議等級 26｜Niveau conseillé : 26
@@ -6532,7 +6532,7 @@
 05-副本.md:708｜標籤｜可跳過｜Facultatif
 05-副本.md:708｜步驟說明｜奧特蘭克山脈到奧特蘭克時交件。若日誌顯示亂風崗，按提示交勞恩·峭壁行者（1441 46.14, 51.71）。｜Rends la quête à Alterac, dans les Montagnes d'Alterac. Si ton journal indique Poste de Librevent, rends-la à Rau Cliffrunner (1441 46.14, 51.71) comme indiqué.
 05-副本.md:710｜站內取捨｜想接狂熱之心與剃刀高地後續，尾王及前廳蝙蝠都要打；只有短時間可先做沿路地鼠或護送。｜Si tu veux prendre Des cœurs zélés et la suite des Souilles de Tranchebauge, tue le boss final et les chauves-souris du hall d'entrée. Si tu manques de temps, fais seulement les gophers sur le chemin ou l'escorte.
-05-副本.md:711｜站內說明｜大升降梯西側是剃刀沼澤；東側是剃刀高地。42.30, 89.90 為永恆版客戶端的門口標記。從大路沿西側荊棘隧道找傳送門。｜Kraal de Tranchebauge est à l'ouest du Grand Ascenseur. Souilles de Tranchebauge est à l’est. Le client Forever marque l'entrée à 42.30, 89.90. Suis le tunnel d’épines ouest depuis la route principale jusqu’au portail du donjon.
+05-副本.md:711｜站內說明｜大升降梯西側是剃刀沼澤；東側是剃刀高地。42.30, 89.90 為永恆版客戶端的門口標記。從大路沿西側荊棘隧道找傳送門。｜Kraal de Tranchebauge est à l'ouest de la Grande élévation. Souilles de Tranchebauge est à l’est. Le client Forever marque l'entrée à 42.30, 89.90. Suis le tunnel d’épines ouest depuis la route principale jusqu’au portail du donjon.
 05-副本.md:714｜副本動線｜入本左轉下坡到清潔區→右側宿舍護送克努比→電刑器→群體打擊者→瑟瑪普拉格，拾密碼開保險箱。打到髒戒指後回清潔區用超級清潔器。｜Va à gauche et descends jusqu'à la zone propre → escorte Kernobee depuis les quartiers de droite → Électrocuteur 6000 → Faucheur de foule 9-60 → Thermaplugg, puis utilise son code sur le coffre-fort. Après avoir obtenu l'Anneau sale, retourne à la zone propre pour utiliser le Sparklematic.
 05-副本.md:717｜副本入口｜荊棘谷 1434 27.60, 77.48｜Vallée de Strangleronce 1434 27.60, 77.48
 05-副本.md:717｜步驟說明｜部落入場用藏寶海灣傳送器，座標為斯庫提工作區。｜Horde entre via le téléporteur Baie-du-Butin. L'épingle marque l'atelier de Scooty.
@@ -6586,7 +6586,7 @@
 05-副本.md:756｜站內說明｜傳送到丹莫洛的設施後，循地下走道到實例門；不走鐵爐堡。若未解斯庫提，先完成傳送鏈。｜Après la téléportation vers l'installation de Dun Morogh, suis le couloir souterrain jusqu'au portail du donjon ; ne passe pas par Forgefer. Si tu n'as pas encore terminé la chaîne de Scooty, termine d'abord la chaîne de téléportation.
 05-副本.md:759｜副本動線｜祖爾阿萊→伐塔卡→懼湧船長→不滅之髓→聖蛇米洛斯。沿途在入口水池左側、伐塔卡左側、船區頭骨嘴裡和米洛斯身後拓印石板；船區同時清海盜並收神器。原初元素與基爾可選。｜Zul'Alai → Var'Taka → Capitaine Lèveffroi → Moelle immortelle → Min'loth le Serpent. En chemin, fais des frottements de tablettes à gauche du bassin d'entrée, à gauche de Var'Taka, dans la bouche du crâne de la zone des navires et derrière Min'loth. Dans la zone des navires, élimine aussi les pirates et ramasse les artefacts. L'Élémentaire primordial et Gill sont facultatifs.
 05-副本.md:762｜副本入口｜荊棘谷 1434 21.50, 27.70｜Vallée de Strangleronce 1434 21.50, 27.70
-05-副本.md:769｜站內前置接取路線｜荊棘谷第一次已排進主線：格羅姆高接 629 先做暗礁海、交後接 95748；藏寶海灣找克拉茲克接 95789、95791；祖昆達拓印 95748；回格羅姆高接 95770、95773 在西岸一起做完，交後接 95775、95776。若已開雷霆崖飛行點，進本前可飛雷霆崖，沿莫高雷道路去天空觀測高臺找瑪庫可。接齊後回格羅姆高，自西岸下水游到水下傳送門。｜La première visite en Strangleronce est déjà intégrée à l'itinéraire principal : prends 629 à Grom'gol et fais d'abord Le Récif infâme, puis rends-la pour prendre 95748. Prends 95789 et 95791 auprès de Krazek à Baie-du-Butin. Fais les frottements pour 95748 à Zul'Kunda. Retourne à Grom'gol prendre 95770 et 95773, termine-les ensemble sur la côte ouest, puis rends-les pour prendre 95775 et 95776. Si tu as déjà débloqué le point de vol des Pitons-du-Tonnerre, vole-y avant le donjon et suis la route de Mulgore jusqu'au Plateau de Guette-ciel pour trouver Mazu'kon. Une fois tout pris, retourne à Grom'gol et nage depuis la côte ouest jusqu'au portail sous-marin.
+05-副本.md:769｜站內前置接取路線｜荊棘谷第一次已排進主線：格羅姆高接 629 先做暗礁海、交後接 95748；藏寶海灣找克拉茲克接 95789、95791；祖昆達拓印 95748；回格羅姆高接 95770、95773 在西岸一起做完，交後接 95775、95776。若已開雷霆崖飛行點，進本前可飛雷霆崖，沿莫高雷道路去天空觀測高臺找瑪庫可。接齊後回格羅姆高，自西岸下水游到水下傳送門。｜La première visite en Strangleronce est déjà intégrée à l'itinéraire principal : prends 629 à Grom'gol et fais d'abord Le Récif infâme, puis rends-la pour prendre 95748. Prends 95789 et 95791 auprès de Krazek à Baie-du-Butin. Fais les frottements pour 95748 à Zul'Kunda. Retourne à Grom'gol prendre 95770 et 95773, termine-les ensemble sur la côte ouest, puis rends-les pour prendre 95775 et 95776. Si tu as déjà débloqué le point de vol de Thunder Bluff, vole-y avant le donjon et suis la route de Mulgore jusqu'au Plateau de Guette-ciel pour trouver Mazu'kon. Une fois tout pris, retourne à Grom'gol et nage depuis la côte ouest jusqu'au portail sous-marin.
 05-副本.md:769｜標籤｜接取錨點 03-第19站｜Départ : 03-étape 19
 05-副本.md:776｜標籤｜接取等級 30｜Niveau requis : 30
 05-副本.md:776｜標籤｜建議等級 37｜Niveau conseillé : 37
@@ -6600,7 +6600,7 @@
 05-副本.md:779｜標籤｜共享?｜Partage non confirmé
 05-副本.md:782｜標籤｜接取等級 30｜Niveau requis : 30
 05-副本.md:782｜標籤｜建議等級 40｜Niveau conseillé : 40
-05-副本.md:782｜標籤｜前置：The Gurubashi Legends of Old 95748｜Prérequis : The Gurubashi Legends of Old (95748)
+05-副本.md:782｜標籤｜前置：The Gurubashi Legends of Old 95748｜Prérequis : Les anciennes légendes des Gurubashi (95748)
 05-副本.md:782｜標籤｜共享?｜Partage non confirmé
 05-副本.md:785｜標籤｜接取等級 30｜Niveau requis : 30
 05-副本.md:785｜標籤｜建議等級 37｜Niveau conseillé : 37
@@ -6613,11 +6613,11 @@
 05-副本.md:787｜步驟說明｜荊棘谷 格羅姆高與藏寶海灣已有此步。先交 629 後向指揮官確認；若任務已出現，可在肯維雷往返時順手做。｜Cette étape est déjà dans l'étape de Grom'gol et de Baie-du-Butin. Après avoir rendu 629, vérifie auprès du commandant ; si la quête est déjà apparue, tu peux la faire en passant lors de l'aller-retour à Kin'weelay.
 05-副本.md:788｜標籤｜接取等級 30｜Niveau requis : 30
 05-副本.md:788｜標籤｜建議等級 40｜Niveau conseillé : 40
-05-副本.md:788｜標籤｜前置：Locating the Lost City 95770｜Prérequis : Locating the Lost City (95770)
+05-副本.md:788｜標籤｜前置：Locating the Lost City 95770｜Prérequis : À la recherche de la cité perdue (95770)
 05-副本.md:788｜標籤｜共享?｜Partage non confirmé
 05-副本.md:789｜標籤｜接取等級 30｜Niveau requis : 30
 05-副本.md:789｜標籤｜建議等級 38｜Niveau conseillé : 38
-05-副本.md:789｜標籤｜前置：Enemies in the Water 95773｜Prérequis : Enemies in the Water (95773)
+05-副本.md:789｜標籤｜前置：Enemies in the Water 95773｜Prérequis : Des adversaires sous les flots (95773)
 05-副本.md:789｜標籤｜前置：定位失落之城 95770｜Prérequis : À la recherche de la cité perdue (95770)
 05-副本.md:789｜標籤｜共享?｜Partage non confirmé
 05-副本.md:790｜標籤｜接取等級 34｜Niveau requis : 34
@@ -6649,7 +6649,7 @@
 05-副本.md:808｜標籤｜可跳過｜Facultatif
 05-副本.md:809｜標籤｜接取等級 30｜Niveau requis : 30
 05-副本.md:809｜標籤｜建議等級 40｜Niveau conseillé : 40
-05-副本.md:809｜標籤｜前置：The Drowned City 95775｜Prérequis : The Drowned City (95775)
+05-副本.md:809｜標籤｜前置：The Drowned City 95775｜Prérequis : cité Submergée (95775)
 05-副本.md:809｜步驟說明｜如果還要飛回奧格瑪，順手回報；不影響這次下本。｜Si tu retournes à Orgrimmar en vol, rends la quête au passage. Tu peux faire ce donjon avant de la rendre.
 05-副本.md:809｜標籤｜可跳過｜Facultatif
 05-副本.md:809｜標籤｜共享?｜Partage non confirmé
@@ -6661,7 +6661,7 @@
 05-副本.md:814｜站內說明｜實例門在格羅姆高以西的水下洞窟。DungeonsForever 點 21.50, 27.70 與實地攻略的約 21.4, 27.9 相符；22.40, 27.18 是 95770 探查點。帶水下呼吸藥劑，或請有技能的隊友施放。｜Le portail se trouve dans une grotte sous-marine à l'ouest de Grom'gol. Le point de DungeonsForever (21.50, 27.70) correspond au guide de terrain (environ 21.4, 27.9) ; 22.40, 27.18 est un point d'exploration de 95770. Apporte une potion de respiration aquatique ou demande à un coéquipier qui a le sort de te le lancer.
 05-副本.md:817｜副本動線｜入口清到火眼莫德雷斯附近牢房→和貝尼斯特拉茲交換誓言石，再護送他封印神像，途中可能遇見腐爛的普雷莫→沿螺旋坡打亞門納爾，同區找寒冰使者之眼。｜Nettoie depuis l'entrée jusqu'à la cellule de Belnistrasz près de Mordresh Oeil-de-feu → échange la pierre de serment avec lui et escorte-le jusqu'à l'idole, avec Pestegueule le Pourrissant si tu le rencontres → prends la rampe en spirale jusqu'à Amnennar et cherche l'Œil du Porte-froid à proximité.
 05-副本.md:820｜副本入口｜貧瘠之地 1413 約 49.10, 93.40（荊棘通道深處的副本門）｜Les Tarides (1413), portail au fond du tunnel épineux, vers 49.10, 93.40.
-05-副本.md:828｜站內前置接取路線｜離開阿拉希高地 落錘鎮時先飛幽暗城。千針石林 閃光平原可先打剃刀沼澤並拾 6522。奧特蘭克山脈至阿拉希高地 落錘鎮經幽暗城時先交瓦里瑪薩斯，再同城找安德魯接 3341。由提里斯法坐飛艇回奧格瑪、飛雷霆崖，往莫高雷西北找蘇塔菈接 97196；飛陶拉祖往南，門外找麥雷姆。若從東部王國的火線港轉場，可搭船到熱砂港後北上千針石林。｜En quittant Trépas-d'Orgrim, dans les Hautes-terres d'Arathi, vole d'abord à Fossoyeuse. Aux Salines de Mille pointes, tu peux d'abord faire le Kraal de Tranchebauge et ramasser 6522. Entre les Montagnes d'Alterac et Trépas-d'Orgrim, en passant par Fossoyeuse, rends d'abord la quête à Varimathras, puis trouve Andrew dans la même ville pour prendre 3341. Depuis Tirisfal, prends le zeppelin pour Orgrimmar, vole jusqu'aux Pitons-du-Tonnerre et va au nord-ouest de Mulgore trouver Sutara Marche-plaines pour 97196 ; vole jusqu'à Camp Taurajo, va vers le sud et trouve Myriam Moonsinger devant l'entrée. Si tu changes de zone depuis Poudremèche, aux Royaumes de l'Est, prends le bateau jusqu'à Port Gentepression, puis va vers le nord jusqu'à Mille pointes.
+05-副本.md:828｜站內前置接取路線｜離開阿拉希高地 落錘鎮時先飛幽暗城。千針石林 閃光平原可先打剃刀沼澤並拾 6522。奧特蘭克山脈至阿拉希高地 落錘鎮經幽暗城時先交瓦里瑪薩斯，再同城找安德魯接 3341。由提里斯法坐飛艇回奧格瑪、飛雷霆崖，往莫高雷西北找蘇塔菈接 97196；飛陶拉祖往南，門外找麥雷姆。若從東部王國的火線港轉場，可搭船到熱砂港後北上千針石林。｜En quittant Trépas-d'Orgrim, dans les Hautes-terres Arathies, vole d'abord à Fossoyeuse. Aux Salines de Mille pointes, tu peux d'abord faire le Kraal de Tranchebauge et ramasser 6522. Entre les Montagnes d'Alterac et Trépas-d'Orgrim, en passant par Fossoyeuse, rends d'abord la quête à Varimathras, puis trouve Andrew dans la même ville pour prendre 3341. Depuis Tirisfal, prends le zeppelin pour Orgrimmar, vole jusqu'à Thunder Bluff et va au nord-ouest de Mulgore trouver Sutara Marche-plaines pour 97196 ; vole jusqu'à Camp Taurajo, va vers le sud et trouve Myriam Moonsinger devant l'entrée. Si tu changes de zone depuis Poudremèche, aux Royaumes de l'Est, prends le bateau jusqu'à Port Gentepression, puis va vers le nord jusqu'à Mille pointes.
 05-副本.md:828｜標籤｜接取錨點 03-第23站｜Départ : 03-étape 23
 05-副本.md:832｜標籤｜接取等級 28｜Niveau requis : 28
 05-副本.md:832｜標籤｜建議等級 30｜Niveau conseillé : 30
@@ -6700,7 +6700,7 @@
 05-副本.md:847｜標籤｜接取等級 32｜Niveau requis : 32
 05-副本.md:847｜標籤｜建議等級 40｜Niveau conseillé : 40
 05-副本.md:847｜標籤｜前置：剃刀高地的亡靈天災 3523｜Prérequis : Le Fléau des Souilles (3523)
-05-副本.md:847｜步驟說明｜開始後跟緊 NPC，全隊準備完才啟動。｜Attends tout le groupe avant de commencer, puis restez à proximité du PNJ.
+05-副本.md:847｜步驟說明｜開始後跟緊 NPC，全隊準備完才啟動。｜Attends tout le groupe avant de commencer, puis reste à proximité du PNJ.
 05-副本.md:847｜標籤｜不可共享｜Non partageable
 05-副本.md:847｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:848｜步驟位置｜從牢房跟到神像旁，護住貝尼斯特拉茲。｜Escorte Belnistrasz depuis sa cellule jusqu'à l'idole et protège-le.
@@ -6708,12 +6708,12 @@
 05-副本.md:849｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:850｜步驟說明｜DungeonsForever 地城圖可查 Amnennar the Coldbringer（第 1 圖 45.00, 59.10）。｜Carte 1 de DungeonsForever : Amnennar le Porte-froid (45.00, 59.10).
 05-副本.md:850｜標籤｜掉率 100%｜Taux de butin : 100 %
-05-副本.md:850｜步驟位置｜離開牢房區，沿螺旋高坡上到亞門納爾。｜Quitte les cellules et empruntez la rampe en spirale jusqu'à Amnennar.
+05-副本.md:850｜步驟位置｜離開牢房區，沿螺旋高坡上到亞門納爾。｜Quitte les cellules et emprunte la rampe en spirale jusqu'à Amnennar.
 05-副本.md:851｜步驟位置｜進亞門納爾巢穴，找寒冰使者之眼。｜Trouve l'Œil du Porte-Froid dans l'antre d'Amnennar.
 05-副本.md:851｜步驟順序｜與第 17 步同一區｜Même zone qu'à l'étape 17.
 05-副本.md:858｜站內取捨｜40 級後有隊伍才跑完整本，97196 與 3341 同打尾王；34 級現在只適合先接眼球，有順路可做門外 6626。｜Fais le donjon complet à partir du niveau 40, avec un groupe. Tue le boss final pour 97196 et 3341. À 34, prends seulement la quête de l'œil pour l'instant, et fais 6626 à l'extérieur si c'est sur ton chemin.
-05-副本.md:859｜站內說明｜五人隊，無鑰匙。門口在大升降梯北側的東路，與西側剃刀沼澤不同。若已轉入大河林地，可在火線港搭船到熱砂港後再北上。｜Donjon pour cinq joueurs, aucune clé nécessaire. L'entrée se trouve par la route est, au nord du Grand ascenseur, et non du côté ouest du Kraal de Tranchebauge. Si tu es déjà passé par Rives Claires, prends le bateau de Poudremèche à Port Gentepression, puis remonte vers le nord.
-05-副本.md:860｜站內提醒｜五人隊，無鑰匙。門口在大升降梯北側的東路，與西側剃刀沼澤不同。若已轉入大河林地，可在火線港搭船到熱砂港後再北上。｜Donjon pour cinq joueurs, aucune clé nécessaire. L'entrée se trouve par la route est, au nord du Grand ascenseur, et non du côté ouest du Kraal de Tranchebauge. Si tu es déjà passé par Rives Claires, prends le bateau de Poudremèche à Port Gentepression, puis remonte vers le nord.
+05-副本.md:859｜站內說明｜五人隊，無鑰匙。門口在大升降梯北側的東路，與西側剃刀沼澤不同。若已轉入大河林地，可在火線港搭船到熱砂港後再北上。｜Donjon pour cinq joueurs, aucune clé nécessaire. L'entrée se trouve par la route est, au nord de la Grande élévation, et non du côté ouest du Kraal de Tranchebauge. Si tu es déjà passé par Rives Claires, prends le bateau de Poudremèche à Port Gentepression, puis remonte vers le nord.
+05-副本.md:860｜站內提醒｜五人隊，無鑰匙。門口在大升降梯北側的東路，與西側剃刀沼澤不同。若已轉入大河林地，可在火線港搭船到熱砂港後再北上。｜Donjon pour cinq joueurs, aucune clé nécessaire. L'entrée se trouve par la route est, au nord de la Grande élévation, et non du côté ouest du Kraal de Tranchebauge. Si tu es déjà passé par Rives Claires, prends le bateau de Poudremèche à Port Gentepression, puis remonte vers le nord.
 05-副本.md:864｜副本動線｜正門→雷夫洛什→找遺體取日記，先回卡加斯翻譯再回本。可從後門直接去黑曜石哨兵。【僅法師】第二挖掘場→加加恩→格瑞姆洛克→阿札達斯→查諾甘農圓盤。｜Entrée principale → Revelosh → trouve le corps pour prendre le journal, retourne d'abord à Kargath pour le faire traduire, puis reviens dans le donjon. Tu peux aller directement à la Sentinelle d'obsidienne par l'entrée arrière. [Mages uniquement] Deuxième site de fouilles → Galgann → Grimlok → Archaedas → Disques de Norgannon.
 05-副本.md:864｜標籤｜僅法師｜Mages uniquement
 05-副本.md:867｜副本入口｜荒蕪之地 1418 約 42.60, 10.80（正門定位，沿挖掘場入地下）；後門實際門點 ?｜Terres ingrates 1418, vers 42.60, 10.80 (position de l'entrée principale ; suis le site de fouilles sous terre). Coordonnées du portail arrière inconnues.
@@ -6822,7 +6822,7 @@
 05-副本.md:920｜標籤｜接取等級 40｜Niveau requis : 40
 05-副本.md:920｜標籤｜建議等級 42｜Niveau conseillé : 42
 05-副本.md:920｜標籤｜前置：白金圓盤 2278｜Prérequis : Les Disques de platine (2278)
-05-副本.md:920｜步驟說明｜在同一圓盤接部落送件，回雷霆崖。｜Prends la livraison Horde sur les mêmes disques, puis retourne aux Pitons-du-Tonnerre.
+05-副本.md:920｜步驟說明｜在同一圓盤接部落送件，回雷霆崖。｜Prends la livraison Horde sur les mêmes disques, puis retourne à Thunder Bluff.
 05-副本.md:920｜標籤｜共享?｜Partage non confirmé
 05-副本.md:920｜步驟說明｜DungeonsForever 地城圖可查 The Discs of Norgannon，與 2278 同一物件（第 1 圖 38.60, 5.50）。｜Carte 1 de DungeonsForever : Disques de Norgannon, même objet que pour 2278 (38.60, 5.50).
 05-副本.md:920｜標籤｜需遊戲實測｜À vérifier en jeu
@@ -6852,26 +6852,26 @@
 05-副本.md:961｜標籤｜共享?｜Partage non confirmé
 05-副本.md:966｜標籤｜接取等級 36｜Niveau requis : 36
 05-副本.md:966｜標籤｜建議等級 40｜Niveau conseillé : 40
-05-副本.md:966｜標籤｜前置：Encroaching Twilight 94672｜Prérequis : Encroaching Twilight (94672)
-05-副本.md:966｜標籤｜前置：Twilight Missives 94680｜Prérequis : Twilight Missives (94680)
+05-副本.md:966｜標籤｜前置：Encroaching Twilight 94672｜Prérequis : L’approche du Crépuscule (94672)
+05-副本.md:966｜標籤｜前置：Twilight Missives 94680｜Prérequis : Missives du Crépuscule (94680)
 05-副本.md:966｜標籤｜共享?｜Partage non confirmé
 05-副本.md:969｜標籤｜接取等級 36｜Niveau requis : 36
 05-副本.md:969｜標籤｜建議等級 40｜Niveau conseillé : 40
-05-副本.md:969｜標籤｜前置：Digging for Answers 94727｜Prérequis : Digging for Answers (94727)
+05-副本.md:969｜標籤｜前置：Digging for Answers 94727｜Prérequis : Une mine de réponses (94727)
 05-副本.md:969｜標籤｜共享?｜Partage non confirmé
 05-副本.md:972｜標籤｜接取等級 36｜Niveau requis : 36
 05-副本.md:972｜標籤｜建議等級 40｜Niveau conseillé : 40
-05-副本.md:972｜標籤｜前置：The Purple Ones 95417｜Prérequis : The Purple Ones (95417)
+05-副本.md:972｜標籤｜前置：The Purple Ones 95417｜Prérequis : Les qui sont violets (95417)
 05-副本.md:972｜標籤｜共享?｜Partage non confirmé
 05-副本.md:973｜標籤｜接取等級 36｜Niveau requis : 36
 05-副本.md:973｜標籤｜建議等級 40｜Niveau conseillé : 40
-05-副本.md:973｜標籤｜前置：The Purple Ones 95417｜Prérequis : The Purple Ones (95417)
+05-副本.md:973｜標籤｜前置：The Purple Ones 95417｜Prérequis : Les qui sont violets (95417)
 05-副本.md:973｜標籤｜共享?｜Partage non confirmé
 05-副本.md:975｜步驟說明｜QuestieDB 無儀式圈獨立點，沿洞穴找。｜QuestieDB n'a pas de point séparé pour le cercle rituel. Cherche le long de la grotte.
 05-副本.md:978｜標籤｜接取等級 36｜Niveau requis : 36
 05-副本.md:978｜標籤｜建議等級 41｜Niveau conseillé : 41
-05-副本.md:978｜標籤｜前置：The Purple Ones 95601｜Prérequis : The Purple Ones (95601)
-05-副本.md:978｜標籤｜前置：Sickening Lights 95602｜Prérequis : Sickening Lights (95602)
+05-副本.md:978｜標籤｜前置：The Purple Ones 95601｜Prérequis : Les qui sont violets (95601)
+05-副本.md:978｜標籤｜前置：Sickening Lights 95602｜Prérequis : La lumière qui fait malade (95602)
 05-副本.md:978｜步驟說明｜精英，先請隊友一同完成。｜Élite : demande d'abord de l'aide à ton groupe.
 05-副本.md:978｜標籤｜共享?｜Partage non confirmé
 05-副本.md:979｜步驟說明｜精英，先請隊友一同完成。｜Élite : demande d'abord de l'aide à ton groupe.
@@ -6879,15 +6879,15 @@
 05-副本.md:980｜步驟說明｜精英，先請隊友一同完成。｜Élite : demande d'abord de l'aide à ton groupe.
 05-副本.md:981｜標籤｜接取等級 36｜Niveau requis : 36
 05-副本.md:981｜標籤｜建議等級 40｜Niveau conseillé : 40
-05-副本.md:981｜標籤｜前置：Twilight No More! 95427｜Prérequis : Twilight No More! (95427)
+05-副本.md:981｜標籤｜前置：Twilight No More! 95427｜Prérequis : Crépuscule être nul (95427)
 05-副本.md:981｜標籤｜共享?｜Partage non confirmé
 05-副本.md:984｜標籤｜接取等級 36｜Niveau requis : 36
 05-副本.md:984｜標籤｜建議等級 40｜Niveau conseillé : 40
-05-副本.md:984｜標籤｜前置：Spread the Word 95418｜Prérequis : Spread the Word (95418)
+05-副本.md:984｜標籤｜前置：Spread the Word 95418｜Prérequis : Répandre la nouvelle (95418)
 05-副本.md:984｜標籤｜共享?｜Partage non confirmé
 05-副本.md:987｜標籤｜接取等級 36｜Niveau requis : 36
 05-副本.md:987｜標籤｜建議等級 41｜Niveau conseillé : 41
-05-副本.md:987｜標籤｜前置：Land of Giants 95420｜Prérequis : Land of Giants (95420)
+05-副本.md:987｜標籤｜前置：Land of Giants 95420｜Prérequis : La terre des géants (95420)
 05-副本.md:987｜標籤｜共享?｜Partage non confirmé
 05-副本.md:990｜標籤｜接取等級 36｜Niveau requis : 36
 05-副本.md:990｜標籤｜建議等級 42｜Niveau conseillé : 42
@@ -6895,19 +6895,19 @@
 05-副本.md:990｜標籤｜共享?｜Partage non confirmé
 05-副本.md:993｜標籤｜接取等級 36｜Niveau requis : 36
 05-副本.md:993｜標籤｜建議等級 41｜Niveau conseillé : 41
-05-副本.md:993｜標籤｜前置：Unworthy Champion 95425｜Prérequis : Unworthy Champion (95425)
+05-副本.md:993｜標籤｜前置：Unworthy Champion 95425｜Prérequis : Pas champion de personne (95425)
 05-副本.md:993｜標籤｜共享?｜Partage non confirmé
 05-副本.md:996｜標籤｜接取等級 38｜Niveau requis : 38
 05-副本.md:996｜標籤｜建議等級 43｜Niveau conseillé : 43
-05-副本.md:996｜標籤｜前置：Clugfist's Decree 95428｜Prérequis : Clugfist's Decree (95428)
+05-副本.md:996｜標籤｜前置：Clugfist's Decree 95428｜Prérequis : Le décret de Poing-Serré (95428)
 05-副本.md:996｜標籤｜共享?｜Partage non confirmé
 05-副本.md:999｜標籤｜接取等級 38｜Niveau requis : 38
 05-副本.md:999｜標籤｜建議等級 44｜Niveau conseillé : 44
-05-副本.md:999｜標籤｜前置：The Wayward Warrior 94744｜Prérequis : The Wayward Warrior (94744)
+05-副本.md:999｜標籤｜前置：The Wayward Warrior 94744｜Prérequis : Le guerrier téméraire (94744)
 05-副本.md:999｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1000｜標籤｜接取等級 38｜Niveau requis : 38
 05-副本.md:1000｜標籤｜建議等級 44｜Niveau conseillé : 44
-05-副本.md:1000｜標籤｜前置：The Wayward Warrior 94744｜Prérequis : The Wayward Warrior (94744)
+05-副本.md:1000｜標籤｜前置：The Wayward Warrior 94744｜Prérequis : Le guerrier téméraire (94744)
 05-副本.md:1000｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1001｜標籤｜接取等級 38｜Niveau requis : 38
 05-副本.md:1001｜標籤｜建議等級 41｜Niveau conseillé : 41
@@ -6927,27 +6927,27 @@
 05-副本.md:1008｜標籤｜可跳過｜Facultatif
 05-副本.md:1011｜標籤｜接取等級 38｜Niveau requis : 38
 05-副本.md:1011｜標籤｜建議等級 46｜Niveau conseillé : 46
-05-副本.md:1011｜標籤｜前置：Carving a Path 94745｜Prérequis : Carving a Path (94745)
-05-副本.md:1011｜標籤｜前置：Break Their Chains 94748｜Prérequis : Break Their Chains (94748)
+05-副本.md:1011｜標籤｜前置：Carving a Path 94745｜Prérequis : Tracer un chemin (94745)
+05-副本.md:1011｜標籤｜前置：Break Their Chains 94748｜Prérequis : Briser leurs chaînes (94748)
 05-副本.md:1011｜步驟說明｜若完成開闢道路與斷開鎖鏈仍未出現，可順路完成克拉洛的招募支線後再查。｜Si elle n'apparaît toujours pas après Tracer un chemin et Briser leurs chaînes, termine au passage la quête annexe de recrutement de Klarg, puis vérifie à nouveau.
 05-副本.md:1011｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1012｜步驟目標｜霸主基爾加｜Suzerain Kilgar
 05-副本.md:1014｜標籤｜接取等級 38｜Niveau requis : 38
 05-副本.md:1014｜標籤｜建議等級 42｜Niveau conseillé : 42
-05-副本.md:1014｜標籤｜前置：Bring Me His Head 94768｜Prérequis : Bring Me His Head (94768)
+05-副本.md:1014｜標籤｜前置：Bring Me His Head 94768｜Prérequis : Ramenez-moi sa tête (94768)
 05-副本.md:1014｜步驟說明｜達羅許在交 Overlord Kilgar 頭顱後給。｜Da'grosh la propose après la remise de la tête de l'Overlord Kilgar.
 05-副本.md:1014｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1015｜標籤｜接取等級 38｜Niveau requis : 38
 05-副本.md:1015｜標籤｜建議等級 45｜Niveau conseillé : 45
-05-副本.md:1015｜標籤｜前置：Bring Me His Head 94768｜Prérequis : Bring Me His Head (94768)
+05-副本.md:1015｜標籤｜前置：Bring Me His Head 94768｜Prérequis : Ramenez-moi sa tête (94768)
 05-副本.md:1015｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1018｜標籤｜接取等級 40｜Niveau requis : 40
 05-副本.md:1018｜標籤｜建議等級 45｜Niveau conseillé : 45
-05-副本.md:1018｜標籤｜前置：It Is Time, Brother... 95278｜Prérequis : It Is Time, Brother... (95278)
+05-副本.md:1018｜標籤｜前置：It Is Time, Brother... 95278｜Prérequis : L’heure est venue, mon frère (95278)
 05-副本.md:1018｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1019｜標籤｜接取等級 39｜Niveau requis : 39
 05-副本.md:1019｜標籤｜建議等級 44｜Niveau conseillé : 44
-05-副本.md:1019｜標籤｜前置：It Is Time, Brother... 95278｜Prérequis : It Is Time, Brother... (95278)
+05-副本.md:1019｜標籤｜前置：It Is Time, Brother... 95278｜Prérequis : L’heure est venue, mon frère (95278)
 05-副本.md:1019｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1023｜步驟說明｜優先清 Zarmok 周圍的教徒，再檢查是否缺數。｜Élimine d'abord les cultistes autour de Zarmok, puis vérifie s'il t'en manque.
 05-副本.md:1023｜步驟說明｜地城自訂圖 Zarmok 39.10, 69.40（掉教徒耳朵的首領之一），｜Carte personnalisée du donjon : Zarmok (39.10, 69.40), l'un des boss qui lâchent des oreilles de cultistes.
@@ -7017,7 +7017,7 @@
 05-副本.md:1069｜標籤｜可跳過｜Facultatif
 05-副本.md:1070｜標籤｜接取等級 35｜Niveau requis : 35
 05-副本.md:1070｜標籤｜建議等級 43｜Niveau conseillé : 43
-05-副本.md:1070｜標籤｜前置：Fragments of the Pylons 96010｜Prérequis : Fragments of the Pylons (96010)
+05-副本.md:1070｜標籤｜前置：Fragments of the Pylons 96010｜Prérequis : Des fragments de pylône (96010)
 05-副本.md:1070｜步驟說明｜法力數量依任務日誌。｜Consulte le journal de quêtes pour connaître la quantité de mana nécessaire.
 05-副本.md:1070｜標籤｜可跳過｜Facultatif
 05-副本.md:1070｜標籤｜共享?｜Partage non confirmé
@@ -7039,7 +7039,7 @@
 05-副本.md:1075｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:1076｜標籤｜接取等級 35｜Niveau requis : 35
 05-副本.md:1076｜標籤｜建議等級 43｜Niveau conseillé : 43
-05-副本.md:1076｜標籤｜前置：A Brief History Lesson 93016｜Prérequis : A Brief History Lesson (93016)
+05-副本.md:1076｜標籤｜前置：A Brief History Lesson 93016｜Prérequis : Une courte leçon d’histoire (93016)
 05-副本.md:1076｜標籤｜可跳過｜Facultatif
 05-副本.md:1076｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1076｜標籤｜需遊戲實測｜À vérifier en jeu
@@ -7049,7 +7049,7 @@
 05-副本.md:1078｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:1079｜標籤｜接取等級 35｜Niveau requis : 35
 05-副本.md:1079｜標籤｜建議等級 43｜Niveau conseillé : 43
-05-副本.md:1079｜標籤｜前置：Meeting the Magister 93394｜Prérequis : Meeting the Magister (93394)
+05-副本.md:1079｜標籤｜前置：Meeting the Magister 93394｜Prérequis : Rencontre avec le magistère (93394)
 05-副本.md:1079｜標籤｜可跳過｜Facultatif
 05-副本.md:1079｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1079｜標籤｜需遊戲實測｜À vérifier en jeu
@@ -7059,7 +7059,7 @@
 05-副本.md:1081｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:1082｜標籤｜接取等級 35｜Niveau requis : 35
 05-副本.md:1082｜標籤｜建議等級 49｜Niveau conseillé : 49
-05-副本.md:1082｜標籤｜前置：Word of the Woods 93594｜Prérequis : Word of the Woods (93594)
+05-副本.md:1082｜標籤｜前置：Word of the Woods 93594｜Prérequis : Des nouvelles du jardin (93594)
 05-副本.md:1082｜步驟說明｜先交 93594；帶進瑪拉頓內區。｜Rends d'abord 93594. Apporte-la dans la zone intérieure de Maraudon.
 05-副本.md:1082｜標籤｜可跳過｜Facultatif
 05-副本.md:1082｜標籤｜共享?｜Partage non confirmé
@@ -7187,7 +7187,7 @@
 05-副本.md:1160｜標籤｜可跳過｜Facultatif
 05-副本.md:1161｜標籤｜可跳過｜Facultatif
 05-副本.md:1163｜站內取捨｜優先加基森三任與摩沙魯石板；已有木槌再打加茲瑞拉；塔貝薩留給會經塵泥沼澤的角色。｜Donne la priorité aux trois quêtes de Gadgetzan et aux tablettes de Mosh'aru. Ne tue Gahz'rilla que si tu as déjà le maillet. Garde la quête de Tabetha pour un personnage qui passera par le Marécage d'Âprefange.
-05-副本.md:1164｜站內說明｜可在塔納利斯 熱砂港與加基森先刷一次；走完整葉基亞前置才建議塔納利斯 加基森與砂槌營地刷。摩沙魯石板亦為哈卡鏈前置。｜Tu peux le faire une première fois pendant les étapes de Port Gentepression et de Gadgetzan, à Tanaris. Ne le fais à l'étape de Gadgetzan et de Dunemaul que si tu fais toute la chaîne de Yeh'kinya. Les tablettes de Mosh'aru sont aussi un prérequis de la chaîne d'Hakkar.
+05-副本.md:1164｜站內說明｜可在塔納利斯 熱砂港與加基森先刷一次；走完整葉基亞前置才建議塔納利斯 加基森與砂槌營地刷。摩沙魯石板亦為哈卡鏈前置。｜Tu peux le faire une première fois pendant les étapes de Port Gentepression et de Gadgetzan, à Tanaris. Ne le fais à l'étape de Gadgetzan et de la Base des Cognedunes que si tu fais toute la chaîne de Yeh'kinya. Les tablettes de Mosh'aru sont aussi un prérequis de la chaîne d'Hakkar.
 05-副本.md:1168｜副本動線｜入口上層牢房找弗卡爾→打典獄長監督者瑞克斯取鑰匙→清審問者和海潮主母並收頭巾→開下層牢門打『清潔者』卡特莉娜與燃吼→在尾王身後密室查看紙條，再回上層牢房找弗卡爾。｜Trouve le commandant Folkar dans les cellules du haut → tue le surveillant Wrex pour la clé → élimine l'Interrogateur et la Maîtresse des marées Ca'zass et ramasse les bandanas → ouvre les cellules du bas pour Katerina la Nettoyeuse et Rugiflamme → lis la note dans la pièce cachée derrière le dernier boss, puis retourne voir Folkar dans les cellules du haut.
 05-副本.md:1171｜副本入口｜塵泥沼澤 1445 75.30, 14.10｜Marécage d'Âprefange 1445 75.30, 14.10
 05-副本.md:1180｜站內前置接取路線｜前往悲傷沼澤時，未到 48 級可先開塵泥沼澤 蕨牆村飛行點。前往灼熱峽谷前，在奧格瑞瑪智慧谷索爾的大廳向伊崔格接 95283（1454 34.28, 39.35），再飛蕨牆村找納澤爾·血矛。沿東北海岸游往奧卡茲島，在島側軍士處依序交 95284、95285，拿 95309 再進島塔地下。留下 95483 至下次奧格瑞瑪。｜Sur le chemin du Marais des Chagrins, si tu n'as pas encore le niveau 48, débloque d'abord le point de vol de Mur-de-Fougères, dans le Marécage d'Âprefange. Avant la Gorge des Vents brûlants, prends 95283 auprès d'Eitrigg dans la salle de Thrall, à la Vallée de la Sagesse d'Orgrimmar (1454 34.28, 39.35), puis vole jusqu'à Mur-de-Fougères et va voir Nazeer Bloodpike. Nage le long de la côte nord-est jusqu'à l'île d'Alcaz. Rends 95284 puis 95285 au sergent sur le côté de l'île, prends 95309, puis entre sous la tour de l'île. Garde 95483 jusqu'au prochain passage à Orgrimmar.
@@ -7255,7 +7255,7 @@
 05-副本.md:1219｜站內說明｜部落可避開塞拉摩；由蕨牆村到東北海岸後游泳。軍士在島側，副本門位於島塔地下走廊。｜La Horde peut éviter Theramore. Va de Mur-de-Fougères jusqu'à la côte nord-est, puis nage. Le sergent est sur le côté de l'île et le portail du donjon se trouve dans le couloir sous la tour de l'île.
 05-副本.md:1223｜副本動線｜入口右側平路→下層環廊查祭壇並點雕像→阿塔拉利恩→上層六座陽台清守衛→獻祭之穴東廊打迦瑪蘭→西廊可選召哈卡→四龍獸→伊蘭尼庫斯與精華之泉。沿途打阿塔萊食人妖收神像。｜Chemin plat à droite de l'entrée → étudie l'autel de la galerie inférieure et active les statues → Atal'alarion → élimine les gardes des six balcons supérieurs → Jammal'an dans le couloir est de la fosse des sacrifices → invocation facultative d'Hakkar par le couloir ouest → les quatre draconides → Eranikus et la fontaine d'essence. Tue les trolls Atal'ai en chemin pour récupérer les idoles.
 05-副本.md:1226｜副本入口｜悲傷沼澤 1435 69.50, 52.50（神廟建築外部路標）｜Marais des Chagrins (1435), 69.50, 52.50. Marque l'extérieur du temple.
-05-副本.md:1234｜站內前置接取路線｜到悲傷沼澤 斯通納德完成 1424 並保留 1429；從辛特蘭 惡齒村飛行點走到辛特蘭南側流放者交 1429、接 1444 與 1446，若完成祖爾法拉克石板鏈再去辛薩羅拿卵。菲拉斯先接 3380；塔納利斯 加基森與砂槌營地先到瑪爾馮開石環任務，飛棘齒城取物，再回瑪爾馮接兩個神廟任務。在塔納利斯 熱砂港交卵後，可從加基森飛棘齒城，再搭船到藏寶海灣，飛斯通納德交 1444、接 1445 並赴神廟。｜Termine 1424 à Pierrêche, au Marais des Chagrins, et garde 1429. Depuis le point de vol du Village des Revantusk, va voir l'exilé au sud des Hinterlands, rends 1429 et prends 1444 et 1446. Si tu as fini la chaîne des tablettes de Zul'Farrak, récupère l'œuf à Jintha'Alor. Prends 3380 à Feralas. Pendant l'étape de Gadgetzan et de Dunemaul, à Tanaris, commence la quête du cercle auprès de Marvon, prends le vol pour Cabestan chercher l'objet et reviens auprès de Marvon prendre les deux quêtes du temple. Rends l'œuf à Port Gentepression. Ensuite, prends le vol de Gadgetzan à Cabestan, le bateau pour Baie-du-Butin et le vol pour Pierrêche. Rends 1444, prends 1445 et va au temple.
+05-副本.md:1234｜站內前置接取路線｜到悲傷沼澤 斯通納德完成 1424 並保留 1429；從辛特蘭 惡齒村飛行點走到辛特蘭南側流放者交 1429、接 1444 與 1446，若完成祖爾法拉克石板鏈再去辛薩羅拿卵。菲拉斯先接 3380；塔納利斯 加基森與砂槌營地先到瑪爾馮開石環任務，飛棘齒城取物，再回瑪爾馮接兩個神廟任務。在塔納利斯 熱砂港交卵後，可從加基森飛棘齒城，再搭船到藏寶海灣，飛斯通納德交 1444、接 1445 並赴神廟。｜Termine 1424 à Pierrêche, au Marais des Chagrins, et garde 1429. Depuis le point de vol du Village des Revantusk, va voir l'exilé au sud des Hinterlands, rends 1429 et prends 1444 et 1446. Si tu as fini la chaîne des tablettes de Zul'Farrak, récupère l'œuf à Jintha'Alor. Prends 3380 à Feralas. Pendant l'étape de Gadgetzan et de la Base des Cognedunes, à Tanaris, commence la quête du cercle auprès de Marvon, prends le vol pour Cabestan chercher l'objet et reviens auprès de Marvon prendre les deux quêtes du temple. Rends l'œuf à Port Gentepression. Ensuite, prends le vol de Gadgetzan à Cabestan, le bateau pour Baie-du-Butin et le vol pour Pierrêche. Rends 1444, prends 1445 et va au temple.
 05-副本.md:1234｜標籤｜接取錨點 03-第27站｜Départ : 03-étape 27
 05-副本.md:1238｜標籤｜接取等級 38｜Niveau requis : 38
 05-副本.md:1238｜標籤｜建議等級 43｜Niveau conseillé : 43
@@ -7346,7 +7346,7 @@
 05-副本.md:1278｜步驟順序｜尾王掉精華，接後在同房交｜Le boss final laisse tomber l'essence : ramasse-la, prends la quête et rends-la dans la même salle.
 05-副本.md:1279｜步驟說明｜DungeonsForever 地城上方首領樓層的精華之泉 70.70, 81.50。｜DungeonsForever, étage supérieur des boss : fontaine d'essence (70.70, 81.50).
 05-副本.md:1279｜標籤｜需遊戲實測｜À vérifier en jeu
-05-副本.md:1287｜站內取捨｜斯通納德與辛特蘭本地鏈優先；摩沙魯鏈適合已刷祖爾法拉克並到辛薩羅的人；石環在塔納利斯 加基森與砂槌營地安排棘齒城一趟。｜Fais en priorité les chaînes locales de Pierrêche et des Hinterlands. La chaîne de Mosh'aru convient à ceux qui ont déjà fait Zul'Farrak et sont allés à Jintha'Alor. Pour le Cercle de pierres, prévois un aller-retour à Cabestan pendant l'étape de Gadgetzan et de Dunemaul, à Tanaris.
+05-副本.md:1287｜站內取捨｜斯通納德與辛特蘭本地鏈優先；摩沙魯鏈適合已刷祖爾法拉克並到辛薩羅的人；石環在塔納利斯 加基森與砂槌營地安排棘齒城一趟。｜Fais en priorité les chaînes locales de Pierrêche et des Hinterlands. La chaîne de Mosh'aru convient à ceux qui ont déjà fait Zul'Farrak et sont allés à Jintha'Alor. Pour le Cercle de pierres, prévois un aller-retour à Cabestan pendant l'étape de Gadgetzan et de la Base des Cognedunes, à Tanaris.
 05-副本.md:1288｜站內說明｜座標指向淚水之池建築外。沿南側階梯進神廟，經面具之廳及儀式之廳到骸骨之廳中層的副本門。｜Les coordonnées indiquent l'extérieur du bâtiment du Bassin des larmes. Descends l'escalier sud du temple, passe par la Salle des Masques et la Salle du Rituel, jusqu'au portail au niveau intermédiaire de la Salle des Ossements.
 05-副本.md:1292｜副本動線｜入口外可先打征服者派隆→監獄與競技場外廊清鐵怒矮人→黑鐵砧打伊森迪奧斯→工藝大廳打弗諾斯、到紀念碑換影爐鑰匙→寶庫取山脈之心、黑鐵酒吧打雷布裏和取秘方，順路可互換→過七賢與熔岩橋，到熔火之心門旁拾核心碎片。沿途打元素怪與魔像。｜Éventuellement le Grand seigneur Pyron à l'extérieur, avant l'entrée → nains Ironfury dans le Mitard et autour du Cercle de la loi → Seigneur Incendius à l'Enclume noire → Fineous dans la Chambre de l'artisanat et monument pour la Clé d'Ombreforge → Cœur de la montagne dans le coffre-fort, et Ribbly avec la recette au Grim Guzzler, dans l'ordre que tu veux → passe les Sept et le pont de lave jusqu'au fragment du Cœur près du portail du Cœur du Magma. Pille les élémentaires et les golems tout au long du chemin.
 05-副本.md:1295｜副本入口｜灼熱峽谷 1427 34.80, 85.30（黑石山外部路標）｜Gorge des Vents brûlants (1427), 34.80, 85.30. Marque l'approche du Mont Rochenoire.
@@ -7417,7 +7417,7 @@
 05-副本.md:1330｜步驟說明｜與隊友一起清掉酒吧附近敵人再動手。｜Élimine d'abord avec ton groupe les ennemis autour du bar avant de lancer le combat.
 05-副本.md:1330｜步驟說明｜DungeonsForever 地城圖參考點 47.60, 57.50。同一事件的聯盟任務 4126 標記是觸發三個酒桶的實際位置，兩陣營由同一敵人掉落秘方。｜Point de référence DungeonsForever : 47.60, 57.50. Le repère de la quête Alliance 4126, du même événement, indique l'endroit où briser les trois tonneaux. Le même ennemi laisse tomber la recette pour les deux factions.
 05-副本.md:1330｜標籤｜掉率 100%｜Taux de butin : 100 %
-05-副本.md:1330｜步驟位置｜到酒吧後房敲碎三桶酒，等霍爾雷出現｜Casse trois fûts dans l'arrière-salle du Grim Guzzler et attendez Hurley.
+05-副本.md:1330｜步驟位置｜到酒吧後房敲碎三桶酒，等霍爾雷出現｜Casse trois fûts dans l'arrière-salle du Grim Guzzler et attends Hurley.
 05-副本.md:1331｜標籤｜可跳過｜Facultatif
 05-副本.md:1331｜步驟說明｜DungeonsForever 地城圖參考點 61.30, 68.50。地城任務 4123 的黑鐵寶庫標記。｜Point de référence DungeonsForever : 61.30, 68.50, repère du coffre-fort Sombrefer pour la quête de donjon 4123.
 05-副本.md:1331｜步驟位置｜進黑鐵寶庫開十二遺物箱，進暗室取山脈之心｜Entre dans le coffre-fort Sombrefer et ouvre les 12 coffres de reliques, puis va dans la pièce cachée prendre le Cœur de la montagne.
@@ -7828,11 +7828,11 @@
 05-副本.md:1654｜副本動線｜入口→泰坦遺跡沿途收四色水晶→在無色水晶旁一起處理水池目標。泰坦龍、Bolt、Vitrix、納納雅的完整擊殺順序待核。｜Entrée → récupère les cristaux de quatre couleurs dans les ruines des Titans → près du cristal incolore, règle en même temps les objectifs du bassin. L'ordre complet de mise à mort du dragon titan, de Bolt, de Vitrix et de Nanaya reste à confirmer.
 05-副本.md:1654｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:1657｜副本入口｜安戈洛環形山 1449 48.10, 6.10（泰坦建築室外路標；副本傳送門精確點 ?）｜Cratère d'Un'Goro (1449), 48.10, 6.10. Marque la structure Titan. Coordonnées exactes du portail inconnues.
-05-副本.md:1666｜站內前置接取路線｜前往月光林地途中，經雷霆崖時可先到莫高雷西北找 Mayena Earthseeker。回安戈洛環形山 馬紹爾營地後，沿北邊石階往上找泰坦建築；95928 以外兩件的接取者仍待確認。｜Si tu passes aux Pitons-du-Tonnerre en allant à Reflet-de-Lune, tu peux d'abord voir Mayena Earthseeker au nord-ouest de Mulgore. De retour au Refuge des Marshal, dans le cratère d'Un'Goro, monte les marches en pierre au nord pour trouver le bâtiment des titans. Les départs des deux autres quêtes, hors 95928, restent à confirmer.
+05-副本.md:1666｜站內前置接取路線｜前往月光林地途中，經雷霆崖時可先到莫高雷西北找 Mayena Earthseeker。回安戈洛環形山 馬紹爾營地後，沿北邊石階往上找泰坦建築；95928 以外兩件的接取者仍待確認。｜Si tu passes à Thunder Bluff en allant à Reflet-de-Lune, tu peux d'abord voir Mayena Earthseeker au nord-ouest de Mulgore. De retour au Refuge des Marshal, dans le cratère d'Un'Goro, monte les marches en pierre au nord pour trouver le bâtiment des titans. Les départs des deux autres quêtes, hors 95928, restent à confirmer.
 05-副本.md:1666｜標籤｜接取錨點 04-第52站｜Départ : 04-étape 52
 05-副本.md:1670｜標籤｜接取等級 55｜Niveau requis : 55
 05-副本.md:1670｜標籤｜建議等級 58｜Niveau conseillé : 58
-05-副本.md:1670｜步驟說明｜在雷霆崖西側高原接；接交 NPC 對照永恆版遊戲紀錄。｜Prends-la sur le plateau ouest des Pitons-du-Tonnerre. Les PNJ de prise et de remise sont tirés des enregistrements de jeu de la version Forever.
+05-副本.md:1670｜步驟說明｜在雷霆崖西側高原接；接交 NPC 對照永恆版遊戲紀錄。｜Prends-la sur le plateau ouest de Thunder Bluff. Les PNJ de prise et de remise sont tirés des enregistrements de jeu de la version Forever.
 05-副本.md:1670｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1671｜標籤｜接取等級 55｜Niveau requis : 55
 05-副本.md:1671｜標籤｜建議等級 58｜Niveau conseillé : 58
@@ -7856,11 +7856,11 @@
 05-副本.md:1686｜站內提醒｜永恆版新增五人副本。由馬紹爾營地北側上坡，泰坦門前可用安戈洛採集的能量水晶。安戈洛約 48.10, 6.10 為泰坦建築的外側入口路標，副本傳送門精確點 ?。｜Nouveau donjon pour cinq joueurs de la version Forever. Monte la pente au nord du Refuge des Marshal. Devant la porte des Titans, tu peux utiliser les cristaux de puissance récoltés à Un'Goro. Le repère extérieur du bâtiment des Titans est vers 48.10, 6.10 ; l'emplacement exact du portail n'est pas confirmé.
 05-副本.md:1690｜副本動線｜入口橋→第一大廳取地契→召喚廳後取另一份→骨庫打血骨傀儡與瘟疫幼龍→萊斯·霜語房取地契→下層六室拿末份並清卡斯迪諾夫房→黑暗院長加丁。｜Pont d'entrée → acte de propriété dans la première salle → un autre derrière la salle d'invocation → ossuaire pour Cliquettripes et les dragonnets de la peste → acte dans la salle de Ras Murmegivre → dernier acte dans les six salles du bas, puis la salle de Krastinov → Sombre Maître Gandling.
 05-副本.md:1693｜副本入口｜西瘟疫之地 1422 約 68.90, 72.80（凱爾達隆地下入口）｜Maleterres de l'ouest (1422), vers 68.90, 72.80. Entrée souterraine à Caer Darrow.
-05-副本.md:1701｜站內前置接取路線｜在西瘟疫之地 亡靈壁壘可先接阿萊克斯 5341 與鑰匙前段；聖光之願禮拜堂接 5529。從亡靈壁壘沿南路上凱爾達隆島，先找艾瓦再進門。若要親自做鑰匙，在亡靈壁壘交骸骨碎片後接模具，去塔納利斯 加基森與安戈洛環形山 火羽山，最後回亡靈壁壘完成。｜Au Rempart, dans les Maleterres de l'ouest, prends 5341 auprès d'Alexi et la première partie de la quête de la clé. Prends 5529 à la Chapelle de l'Espoir de Lumière. Depuis le Rempart, prends la route du sud jusqu'à l'île de Caer Darrow et va d'abord voir Eva avant d'entrer. Si tu veux fabriquer toi-même la clé, rends les Fragments de squelette au Rempart, prends la quête du moule, puis va à Gadgetzan, à Tanaris, et à la Crête de la Fournaise, à Un'Goro, avant de terminer au Rempart.
+05-副本.md:1701｜站內前置接取路線｜在西瘟疫之地 亡靈壁壘可先接阿萊克斯 5341 與鑰匙前段；聖光之願禮拜堂接 5529。從亡靈壁壘沿南路上凱爾達隆島，先找艾瓦再進門。若要親自做鑰匙，在亡靈壁壘交骸骨碎片後接模具，去塔納利斯 加基森與安戈洛環形山 火羽山，最後回亡靈壁壘完成。｜À la Barricade, dans les Maleterres de l'ouest, prends 5341 auprès d'Alexi et la première partie de la quête de la clé. Prends 5529 à la Chapelle de l'Espoir de Lumière. Depuis la Barricade, prends la route du sud jusqu'à l'île de Caer Darrow et va d'abord voir Eva avant d'entrer. Si tu veux fabriquer toi-même la clé, rends les Fragments de squelette à la Barricade, prends la quête du moule, puis va à Gadgetzan, à Tanaris, et à la Crête de la Fournaise, à Un'Goro, avant de terminer à la Barricade.
 05-副本.md:1701｜標籤｜接取錨點 04-第50站｜Départ : 04-étape 50
 05-副本.md:1705｜標籤｜接取等級 52｜Niveau requis : 52
 05-副本.md:1705｜標籤｜建議等級 58｜Niveau conseillé : 58
-05-副本.md:1705｜步驟說明｜亡靈壁壘，滿 52 級可提前接。｜Au Rempart, tu peux la prendre dès que tu as atteint le niveau 52.
+05-副本.md:1705｜步驟說明｜亡靈壁壘，滿 52 級可提前接。｜À la Barricade, tu peux la prendre dès que tu as atteint le niveau 52.
 05-副本.md:1705｜標籤｜可共享｜Partageable
 05-副本.md:1706｜標籤｜接取等級 55｜Niveau requis : 55
 05-副本.md:1706｜標籤｜建議等級 58｜Niveau conseillé : 58
@@ -7872,22 +7872,22 @@
 05-副本.md:1707｜標籤｜可共享｜Partageable
 05-副本.md:1708｜標籤｜接取等級 50｜Niveau requis : 50
 05-副本.md:1708｜標籤｜建議等級 58｜Niveau conseillé : 58
-05-副本.md:1708｜步驟說明｜只在需自己製作通靈學院鑰匙時跑；西瘟疫之地 亡靈壁壘已做可略。｜Ne la fais que si tu dois fabriquer ta propre clé de Scholomance. Ignore-la si tu l'as déjà terminée au Rempart, dans les Maleterres de l'ouest.
+05-副本.md:1708｜步驟說明｜只在需自己製作通靈學院鑰匙時跑；西瘟疫之地 亡靈壁壘已做可略。｜Ne la fais que si tu dois fabriquer ta propre clé de Scholomance. Ignore-la si tu l'as déjà terminée à la Barricade, dans les Maleterres de l'ouest.
 05-副本.md:1708｜標籤｜不可共享｜Non partageable
 05-副本.md:1711｜標籤｜接取等級 50｜Niveau requis : 50
 05-副本.md:1711｜標籤｜建議等級 58｜Niveau conseillé : 58
 05-副本.md:1711｜標籤｜前置：誤導血色十字軍 5096｜Prérequis : Diversions écarlates (5096)
-05-副本.md:1711｜步驟說明｜主線西瘟疫之地 亡靈壁壘已排。｜Déjà sur la route principale au Rempart à Maleterres de l’ouest.
+05-副本.md:1711｜步驟說明｜主線西瘟疫之地 亡靈壁壘已排。｜Déjà sur la route principale à la Barricade à Maleterres de l’ouest.
 05-副本.md:1711｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1714｜標籤｜接取等級 55｜Niveau requis : 55
 05-副本.md:1714｜標籤｜建議等級 58｜Niveau conseillé : 58
 05-副本.md:1714｜標籤｜前置：標記哨塔 5098｜Prérequis : Tout au long des tours de guet (5098)
-05-副本.md:1714｜步驟說明｜西瘟疫之地 亡靈壁壘可先交。｜Tu peux la rendre plus tôt, au Rempart.
+05-副本.md:1714｜步驟說明｜西瘟疫之地 亡靈壁壘可先交。｜Tu peux la rendre plus tôt, à la Barricade.
 05-副本.md:1714｜標籤｜可共享｜Partageable
 05-副本.md:1717｜標籤｜接取等級 55｜Niveau requis : 55
 05-副本.md:1717｜標籤｜建議等級 58｜Niveau conseillé : 58
 05-副本.md:1717｜標籤｜前置：通靈學院 838｜Prérequis : Scholomance (838)
-05-副本.md:1717｜步驟說明｜西瘟疫之地 亡靈壁壘已接或交過時略過這三步；打算自備鑰匙就接模具。｜Ignore ces trois étapes si tu les as déjà prises ou rendues au Rempart. Prends la quête du moule si tu comptes fabriquer ta propre clé.
+05-副本.md:1717｜步驟說明｜西瘟疫之地 亡靈壁壘已接或交過時略過這三步；打算自備鑰匙就接模具。｜Ignore ces trois étapes si tu les as déjà prises ou rendues à la Barricade. Prends la quête du moule si tu comptes fabriquer ta propre clé.
 05-副本.md:1717｜標籤｜可共享｜Partageable
 05-副本.md:1718｜標籤｜掉率 80%｜Taux de butin : 80 %
 05-副本.md:1720｜標籤｜接取等級 55｜Niveau requis : 55
@@ -7903,13 +7903,13 @@
 05-副本.md:1726｜標籤｜接取等級 55｜Niveau requis : 55
 05-副本.md:1726｜標籤｜建議等級 58｜Niveau conseillé : 58
 05-副本.md:1726｜標籤｜前置：火羽山 5802｜Prérequis : Forgée dans la Fournaise (5802)
-05-副本.md:1726｜步驟說明｜西瘟疫之地 亡靈壁壘做安多哈爾時有隊伍才打。｜Ne la fais pendant l'étape d'Andorhal, depuis le Rempart, que si tu as un groupe.
+05-副本.md:1726｜步驟說明｜西瘟疫之地 亡靈壁壘做安多哈爾時有隊伍才打。｜Ne la fais pendant l'étape d'Andorhal, depuis la Barricade, que si tu as un groupe.
 05-副本.md:1726｜標籤｜可共享｜Partageable
 05-副本.md:1729｜標籤｜接取等級 55｜Niveau requis : 55
 05-副本.md:1729｜標籤｜建議等級 58｜Niveau conseillé : 58
 05-副本.md:1729｜標籤｜前置：阿拉基的聖甲蟲 5804｜Prérequis : Le Scarabée d'Araj (5804)
 05-副本.md:1729｜標籤｜可共享｜Partageable
-05-副本.md:1734｜步驟位置｜依序搜首廳、召喚廳後、霜語房、巴羅夫房｜Fouille la première salle, passez devant la salle d'invocation, puis les chambres de Ras et de Barov.
+05-副本.md:1734｜步驟位置｜依序搜首廳、召喚廳後、霜語房、巴羅夫房｜Fouille la première salle, passe devant la salle d'invocation, puis les chambres de Ras et de Barov.
 05-副本.md:1734｜步驟順序｜南海鎮→塔倫米爾→布瑞爾→凱爾達隆｜Austrivage → Moulin-de-Tarren → Brill → Caer Darrow.
 05-副本.md:1735｜步驟位置｜過召喚廳後進骨庫，在血骨傀儡房殺幼龍｜Passe la salle d'invocation, entre dans l'ossuaire et tue les dragonnets dans la salle de Cliquettripes.
 05-副本.md:1736｜步驟說明｜DungeonsForever 地城圖參考點 88.80, 45.50。卡斯迪諾夫教授。艾瓦與盧森遺骸在其房內，沒有獨立位置。｜Carte : Krastinov (88.80, 45.50). Les restes d'Eva et de Lucien sont dans la pièce.
@@ -7922,7 +7922,7 @@
 05-副本.md:1749｜副本動線｜入口熊怪通道沿路收黑喉袋子→地下根系區收諾達希爾根帽→枯萎之喉與骨鼻的岔路→血鬃長老取儀祭圖騰。分岔與打王順序待核。｜Ramasse les Blackmaw Pouches dans les tunnels des furbolgs à l'entrée → récupère les Rootcaps de Nordrassil dans la zone des racines souterraines → embranchement de Flétrigueule et de Muflos l'Indompté → l'Ancien chaman Crin-de-sang pour le totem rituel. Les embranchements et l'ordre des boss restent à confirmer.
 05-副本.md:1749｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:1752｜副本入口｜冬泉谷 1452 66.60, 84.40｜Berceau-de-l’Hiver 1452 66.60, 84.40
-05-副本.md:1760｜站內前置接取路線｜瓦羅莫克找傑迪加接 92346；同站可到奧汀克接 92069，滿 55 級再回艾薩拉找 Ekkal。經貧瘠之地 棘齒城回卡林多時先飛雷霆崖到長者高地交傑迪加的信、接 92343，並往莫高雷找穆倫·地怒。最後飛瓦羅莫克，由艾薩拉地道前往副本；留 92343、97198 到下次雷霆崖和莫高雷回程。｜Prends 92346 auprès de Jediga à Valormok ; au même endroit, prends 92069 auprès d'Ogtinc, puis reviens à Azshara voir Ekkal au niveau 55. En retournant à Kalimdor par Cabestan, dans Les Tarides, vole d'abord jusqu'aux Pitons-du-Tonnerre, rends la lettre de Jediga à la Cime des Anciens et prends 92343, puis va voir Muln Rageterre à Mulgore. Vole enfin jusqu'à Valormok et prends le tunnel d'Azshara jusqu'au donjon ; garde 92343 et 97198 pour ton prochain passage aux Pitons-du-Tonnerre et à Mulgore.
+05-副本.md:1760｜站內前置接取路線｜瓦羅莫克找傑迪加接 92346；同站可到奧汀克接 92069，滿 55 級再回艾薩拉找 Ekkal。經貧瘠之地 棘齒城回卡林多時先飛雷霆崖到長者高地交傑迪加的信、接 92343，並往莫高雷找穆倫·地怒。最後飛瓦羅莫克，由艾薩拉地道前往副本；留 92343、97198 到下次雷霆崖和莫高雷回程。｜Prends 92346 auprès de Jediga à Valormok ; au même endroit, prends 92069 auprès d'Ogtinc, puis reviens à Azshara voir Ekkal au niveau 55. En retournant à Kalimdor par Cabestan, dans Les Tarides, vole d'abord jusqu'à Thunder Bluff, rends la lettre de Jediga à la Cime des Anciens et prends 92343, puis va voir Muln Rageterre à Mulgore. Vole enfin jusqu'à Valormok et prends le tunnel d'Azshara jusqu'au donjon ; garde 92343 et 97198 pour ton prochain passage à Thunder Bluff et à Mulgore.
 05-副本.md:1760｜標籤｜接取錨點 第38站｜Départ : étape 38
 05-副本.md:1764｜標籤｜接取等級 45｜Niveau requis : 45
 05-副本.md:1764｜標籤｜建議等級 55｜Niveau conseillé : 55
@@ -7933,7 +7933,7 @@
 05-副本.md:1766｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:1767｜標籤｜接取等級 45｜Niveau requis : 45
 05-副本.md:1767｜標籤｜建議等級 55｜Niveau conseillé : 55
-05-副本.md:1767｜標籤｜前置：?（Beneath Nordrassil） 92346｜Prérequis : ? (Beneath Nordrassil) (92346)
+05-副本.md:1767｜標籤｜前置：?（Beneath Nordrassil） 92346｜Prérequis : ? (Sous Nordrassil) (92346)
 05-副本.md:1767｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1767｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:1768｜標籤｜接取等級 45｜Niveau requis : 45
@@ -7943,23 +7943,23 @@
 05-副本.md:1769｜標籤｜接取等級 52｜Niveau requis : 52
 05-副本.md:1769｜標籤｜建議等級 59｜Niveau conseillé : 59
 05-副本.md:1769｜標籤｜前置：無｜Prérequis : aucun
-05-副本.md:1769｜步驟說明｜莫高雷通往雷霆崖的區域，依莫高雷地圖座標找。｜Utilise les coordonnées de la carte de Mulgore, dans la zone qui mène aux Pitons-du-Tonnerre.
+05-副本.md:1769｜步驟說明｜莫高雷通往雷霆崖的區域，依莫高雷地圖座標找。｜Utilise les coordonnées de la carte de Mulgore, dans la zone qui mène à Thunder Bluff.
 05-副本.md:1769｜標籤｜共享?｜Partage non confirmé
 05-副本.md:1770｜標籤｜接取等級 55｜Niveau requis : 55
 05-副本.md:1770｜標籤｜建議等級 60｜Niveau conseillé : 60
 05-副本.md:1770｜標籤｜前置：無｜Prérequis : aucun
 05-副本.md:1770｜步驟說明｜艾薩拉埃達拉斯廢墟。最低接取等級由本機 DungeonsForever 補足。｜Ruines d'Eldarath, à Azshara. Le niveau minimum pour la prendre est fourni par le DungeonsForever local.
 05-副本.md:1770｜標籤｜共享?｜Partage non confirmé
-05-副本.md:1774｜步驟位置｜沿城內通道找地下根系區，在根部採根帽｜Suis les passages jusqu'aux racines souterraines et récupérez-y les coiffes.
+05-副本.md:1774｜步驟位置｜沿城內通道找地下根系區，在根部採根帽｜Suis les passages jusqu'aux racines souterraines et récupères-y les coiffes.
 05-副本.md:1774｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:1775｜步驟目標｜巨熊枯萎之喉／『不屈者』骨鼻｜Flétrigueule l'Ours géant / Muflos l'Indompté
 05-副本.md:1775｜步驟位置｜沿熊怪通道找枯萎之喉與骨鼻，分岔待核｜Trouve Flétrigueule et Muflos l'Indompté dans les tunnels des furbolgs ; l'embranchement reste à confirmer.
 05-副本.md:1775｜標籤｜需遊戲實測｜À vérifier en jeu
-05-副本.md:1776｜步驟位置｜進城後沿首領路線找血鬃長老，取儀祭圖騰｜Suis la route du boss jusqu'à Ancien chaman crin-de-sang et récupérez son totem rituel.
+05-副本.md:1776｜步驟位置｜進城後沿首領路線找血鬃長老，取儀祭圖騰｜Suis la route du boss jusqu'à Ancien chaman crin-de-sang et récupère son totem rituel.
 05-副本.md:1776｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:1777｜步驟位置｜進門沿熊怪居住區清腐化黑喉族，留意袋子｜Élimine les furbolgs Blackmaw corrompus dans les quartiers d'habitation et les pochettes de butin.
 05-副本.md:1784｜步驟說明｜QuestieDB 記錄莫高雷穆倫·地怒是接任 NPC；交任 NPC／座標尚待核對。｜QuestieDB indique Muln Rageterre à Mulgore comme PNJ de prise de quête ; le PNJ de remise et les coordonnées restent à vérifier.
-05-副本.md:1786｜站內取捨｜順路先準備奧汀克、埃達拉斯廢墟任務；部落根帽鏈在雷霆崖一次辦完。｜Prépare au passage les quêtes d'Ogtinc et des ruines d'Eldarath. Termine la chaîne des Rootcaps de la Horde en une seule visite aux Pitons-du-Tonnerre.
+05-副本.md:1786｜站內取捨｜順路先準備奧汀克、埃達拉斯廢墟任務；部落根帽鏈在雷霆崖一次辦完。｜Prépare au passage les quêtes d'Ogtinc et des ruines d'Eldarath. Termine la chaîne des Rootcaps de la Horde en une seule visite à Thunder Bluff.
 05-副本.md:1787｜站內說明｜傳送門的座標落在冬泉谷地圖。從艾薩拉 1447 38.70, 33.40 進熊怪地道一路走到門，勿由冬泉谷地表尋找。｜Les coordonnées du portail tombent sur la carte de Berceau-de-l'Hiver. Entre dans le tunnel des furbolgs depuis Azshara (1447 38.70, 33.40) et suis-le jusqu'au portail ; ne le cherche pas à la surface de Berceau-de-l'Hiver.
 05-副本.md:1791｜副本動線｜龍塔大廳七符文→烈焰衛士艾博希爾→孵化間取石板→黑手大廳→競技場打雷德與蓋斯→熔爐（比斯巨獸可選）→塔頂王座打達基薩斯並查看身後寶珠。｜Nettoie les sept runes de la salle de la Tour du Dragon → Pyrogarde Prophète ardent → tablette dans la salle d'incubation → salle de Blackhand → Rend et Gyth dans l'arène → forge (La Bête facultative) → Général Drakkisath sur le trône au sommet de la tour, puis examine l'orbe derrière lui.
 05-副本.md:1794｜副本入口｜灼熱峽谷 1427 34.80, 85.30（黑石山外部路標）｜Gorge des Vents brûlants (1427), 34.80, 85.30. Marque l'approche du Mont Rochenoire.
@@ -7999,7 +7999,7 @@
 05-副本.md:1817｜步驟說明｜在黑石塔門外從裂盾軍需官拿到信後右鍵接；有意開黑翼之巢才做。｜Prends la lettre du quartier-maître devant Pic Rochenoire, puis fais un clic droit dessus pour l'accepter. À faire seulement si tu veux faire Repaire de l'Aile noire.
 05-副本.md:1817｜標籤｜可跳過｜Facultatif
 05-副本.md:1817｜標籤｜不可共享｜Non partageable
-05-副本.md:1821｜步驟說明｜黑石塔上層特製地圖第 3 圖層：雷德·黑手 48.60, 25.60。｜Carte d'Upper Blackrock Spire, niveau 3 : Chef de guerre Rend Blackhand (48.60, 25.60).
+05-副本.md:1821｜步驟說明｜黑石塔上層特製地圖第 3 圖層：雷德·黑手 48.60, 25.60。｜Carte du Pic Rochenoire supérieur, niveau 3 : Chef de guerre Rend Blackhand (48.60, 25.60).
 05-副本.md:1821｜標籤｜掉率 100%｜Taux de butin : 100 %
 05-副本.md:1821｜步驟位置｜過孵化間上黑手大廳，進競技場北門觸發雷德｜Traverse le Couvoir jusqu'au Hall de Blackhand, puis entre par la porte nord de l'arène pour déclencher Rend.
 05-副本.md:1821｜步驟順序｜先取孵化間石板再打競技場｜Prends la tablette au Couvoir avant l'arène.
@@ -8007,13 +8007,13 @@
 05-副本.md:1822｜步驟位置｜殺烈焰衛士後進孵化間，沿牆看地上的石板｜Après avoir tué Pyrogarde Prophète ardent, entre dans le Couvoir. Longe le mur et cherche les tablettes au sol.
 05-副本.md:1822｜步驟順序｜在第13步競技場前完成｜Fais-le avant l'arène, à l'étape 13.
 05-副本.md:1823｜標籤｜可跳過｜Facultatif
-05-副本.md:1823｜步驟說明｜黑石塔上層特製地圖第 3 圖層：達基薩斯 34.80, 50.10，烙印在其後方。｜Carte d'Upper Blackrock Spire, niveau 3 : Général Drakkisath (34.80, 50.10). La Marque est derrière lui.
+05-副本.md:1823｜步驟說明｜黑石塔上層特製地圖第 3 圖層：達基薩斯 34.80, 50.10，烙印在其後方。｜Carte du Pic Rochenoire supérieur, niveau 3 : Général Drakkisath (34.80, 50.10). La Marque est derrière lui.
 05-副本.md:1823｜步驟位置｜競技場南門出，經熔爐往王座，烙印在王後｜Sors par la porte sud de l'arène, traverse la forge jusqu'au trône. La marque est derrière le boss.
 05-副本.md:1823｜步驟順序｜擊殺達基薩斯後點擊身後烙印｜Tue Drakkisath, puis clique sur la marque derrière lui.
 05-副本.md:1824｜標籤｜可跳過｜Facultatif
 05-副本.md:1824｜標籤｜需遊戲實測｜À vérifier en jeu
 05-副本.md:1831｜站內取捨｜卡加斯和奧格瑞瑪先接滿；黑手的命令是團隊副本傳送前置，有需求再做。｜Commence par prendre les quêtes de Kargath et d'Orgrimmar. Fais Les ordres de Blackhand seulement si tu as besoin de l'harmonisation pour le raid.
-05-副本.md:1832｜站內說明｜與下層共用外門，進門後向左上去找上層鎖門；組隊先找可用晉升印章的隊友。開服後攻略已有上層實際門序；若遇到跳台地形擋路，走上層外側步道。｜Partage l'entrée extérieure avec Lower Blackrock Spire. Après l'entrée, monte vers la gauche pour trouver la porte verrouillée de la partie haute. En groupe, trouve d'abord un coéquipier qui peut utiliser Le sceau de l'ascension. Après le lancement du serveur, les guides donnent l'ordre réel des portes de la partie haute. Si un passage à sauter te bloque, prends la passerelle extérieure de la partie haute.
+05-副本.md:1832｜站內說明｜與下層共用外門，進門後向左上去找上層鎖門；組隊先找可用晉升印章的隊友。開服後攻略已有上層實際門序；若遇到跳台地形擋路，走上層外側步道。｜Partage l'entrée extérieure avec Pic Rochenoire inférieur. Après l'entrée, monte vers la gauche pour trouver la porte verrouillée de la partie haute. En groupe, trouve d'abord un coéquipier qui peut utiliser Le sceau de l'ascension. Après le lancement du serveur, les guides donnent l'ordre réel des portes de la partie haute. Si un passage à sauter te bloque, prends la passerelle extérieure de la partie haute.
 06-路線外任務.md:13｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:13｜路線外理由｜想解鎖對應寵物才做，經幽暗城順路處理。｜Fais-le en passant par Fossoyeuse si tu veux débloquer la mascotte.
 06-路線外任務.md:14｜路線外判定｜之後順路｜À faire plus tard en passant
@@ -8045,7 +8045,7 @@
 06-路線外任務.md:27｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:27｜路線外理由｜此步可接「研究資格」，等主線走到接取或交件區再一併做。｜Débloque une quête de suite. Fais-la quand tu passes au point de départ ou de retour.
 06-路線外任務.md:28｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:28｜路線外理由｜此步可接「Greater Friend of the Library」，等主線走到接取或交件區再一併做。｜Débloque « Greater Friend of the Library ». Fais la quête quand le trajet principal passe près du départ ou du retour.
+06-路線外任務.md:28｜路線外理由｜此步可接「Greater Friend of the Library」，等主線走到接取或交件區再一併做。｜Débloque « Mécène de la bibliothèque ». Fais la quête quand le trajet principal passe près du départ ou du retour.
 06-路線外任務.md:29｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:29｜路線外理由｜此步可接「研究資格」，等主線走到接取或交件區再一併做。｜Débloque une quête de suite. Fais-la quand tu passes au point de départ ou de retour.
 06-路線外任務.md:30｜路線外判定｜之後順路｜À faire plus tard en passant
@@ -8239,15 +8239,15 @@
 06-路線外任務.md:127｜路線外判定｜值得做｜Ça vaut le coup
 06-路線外任務.md:127｜路線外理由｜接交點在同一區且靠近主線，回營地時可順手交。｜Prends la quête en chemin et rends-la à ton retour au camp dans la même zone.
 06-路線外任務.md:128｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:128｜路線外理由｜限天裔，在微風島清主線時若剛好到目標區就做，無須專程折返。｜Skyborne uniquement. Fais la quête si ton trajet principal te fait passer près de l'objectif à Zephras Isle. Évite le détour.
+06-路線外任務.md:128｜路線外理由｜限天裔，在微風島清主線時若剛好到目標區就做，無須專程折返。｜Skyborne uniquement. Fais la quête si ton trajet principal te fait passer près de l'objectif à l'Île de Zéphras. Évite le détour.
 06-路線外任務.md:129｜路線外判定｜值得做｜Ça vaut le coup
 06-路線外任務.md:129｜路線外理由｜可接主線已收錄的「女士之淚」。｜Débloque « Les larmes de la Dame », déjà sur le trajet principal.
 06-路線外任務.md:130｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:130｜路線外理由｜在微風島清主線時若剛好到目標區就做，無須專程折返。｜Fais la quête si ton trajet principal te fait passer près de l'objectif à Zephras Isle. Évite le détour.
+06-路線外任務.md:130｜路線外理由｜在微風島清主線時若剛好到目標區就做，無須專程折返。｜Fais la quête si ton trajet principal te fait passer près de l'objectif à l'Île de Zéphras. Évite le détour.
 06-路線外任務.md:131｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:131｜路線外理由｜限天裔，在微風島清主線時若剛好到目標區就做，無須專程折返。｜Skyborne uniquement. Fais la quête si ton trajet principal te fait passer près de l'objectif à Zephras Isle. Évite le détour.
+06-路線外任務.md:131｜路線外理由｜限天裔，在微風島清主線時若剛好到目標區就做，無須專程折返。｜Skyborne uniquement. Fais la quête si ton trajet principal te fait passer près de l'objectif à l'Île de Zéphras. Évite le détour.
 06-路線外任務.md:132｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:132｜路線外理由｜在微風島清主線時若剛好到目標區就做，無須專程折返。｜Fais la quête si ton trajet principal te fait passer près de l'objectif à Zephras Isle. Évite le détour.
+06-路線外任務.md:132｜路線外理由｜在微風島清主線時若剛好到目標區就做，無須專程折返。｜Fais la quête si ton trajet principal te fait passer près de l'objectif à l'Île de Zéphras. Évite le détour.
 06-路線外任務.md:133｜路線外判定｜值得做｜Ça vaut le coup
 06-路線外任務.md:133｜路線外理由｜可與主線「非常時期」一起打怪或收集，省一次清場。｜Tue les monstres ou ramasse les objets en même temps que « Une situation désespérée » pour ne nettoyer la zone qu'une fois.
 06-路線外任務.md:134｜路線外判定｜值得做｜Ça vaut le coup
@@ -8487,7 +8487,7 @@
 06-路線外任務.md:263｜路線外判定｜值得做｜Ça vaut le coup
 06-路線外任務.md:263｜路線外理由｜限食人妖，到 40 級學騎術時同趟處理，已有對應坐騎與騎術則可省下這趟。｜Trolls uniquement. Fais-la quand tu apprends la monte au niveau 40. Évite le trajet si tu as déjà la monture et la compétence correspondantes.
 06-路線外任務.md:264｜路線外判定｜值得做｜Ça vaut le coup
-06-路線外任務.md:264｜路線外理由｜可接主線已收錄的「菲拉斯的食人魔」。｜Débloque Les ogres de Féralas, qui se trouve sur la route principale.
+06-路線外任務.md:264｜路線外理由｜可接主線已收錄的「菲拉斯的食人魔」。｜Débloque Les ogres de Feralas, qui se trouve sur la route principale.
 06-路線外任務.md:265｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:265｜路線外理由｜有練對應專業才留，回區域找專業訓練師時一起辦。｜Garde la quête pour le métier concerné. Fais-la lors de ta prochaine visite au maître de métier.
 06-路線外任務.md:266｜路線外判定｜之後順路｜À faire plus tard en passant
@@ -9379,7 +9379,7 @@
 06-路線外任務.md:757｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:757｜路線外理由｜有隊伍時順手處理精英「阿茲雷索克領主」，單練可以先跳。｜Si tu es en groupe, fais la quête d'élite Seigneur Azrethoc. En solo, passe ton tour pour l'instant.
 06-路線外任務.md:758｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:758｜路線外理由｜交完你在想櫻桃酒嗎？（79236）可向藏寶海灣托卡（1434 26.98, 77.29）接，留給阿拉希高地東南海岸的伊拉里‧暮羽與戰利品箱（1417 94.15, 69.28）行程。｜Après avoir rendu « Une cerise, et tu me dis tout ? » (79236), prends la suite chez Tokal à la Baie-du-Butin (1434 26.98, 77.29). À garder pour le trajet vers Illari Duskfeather et le coffre à butin, sur la côte sud-est des Hautes-terres d'Arathi (1417 94.15, 69.28).
+06-路線外任務.md:758｜路線外理由｜交完你在想櫻桃酒嗎？（79236）可向藏寶海灣托卡（1434 26.98, 77.29）接，留給阿拉希高地東南海岸的伊拉里‧暮羽與戰利品箱（1417 94.15, 69.28）行程。｜Après avoir rendu « Une cerise, et tu me dis tout ? » (79236), prends la suite chez Tokal à la Baie-du-Butin (1434 26.98, 77.29). À garder pour le trajet vers Illari Plumenuit et le coffre à butin, sur la côte sud-est des Hautes-terres Arathies (1417 94.15, 69.28).
 06-路線外任務.md:759｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:759｜路線外理由｜經過瓦魯格附近時再接，回城或交件時順手完成。｜Prends la quête en passant voir Warug. Termine-la à ton prochain passage en ville ou à ta prochaine remise de quêtes.
 06-路線外任務.md:760｜路線外判定｜之後順路｜À faire plus tard en passant
@@ -9413,7 +9413,7 @@
 06-路線外任務.md:777｜路線外判定｜可放掉｜À abandonner
 06-路線外任務.md:777｜路線外理由｜屬重複兌換或補領，練級只需做有經驗的首次任務。｜Échange ou remplacement répétable. Rends la quête une première fois pour l’XP.
 06-路線外任務.md:778｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:778｜路線外理由｜在菲拉斯清主線時若剛好到目標區就做，無須專程折返。｜Fais la quête si l’itinéraire principal passe près de l’objectif à Féralas. Évite le détour.
+06-路線外任務.md:778｜路線外理由｜在菲拉斯清主線時若剛好到目標區就做，無須專程折返。｜Fais la quête si l’itinéraire principal passe près de l’objectif à Feralas. Évite le détour.
 06-路線外任務.md:779｜路線外判定｜可放掉｜À abandonner
 06-路線外任務.md:779｜路線外理由｜要交專業材料或成品，沒有專業需求時省下材料。｜Remets les matériaux ou objets fabriqués. Garde-les si tu n’as pas besoin de la récompense de métier.
 06-路線外任務.md:780｜路線外判定｜之後順路｜À faire plus tard en passant
@@ -9487,11 +9487,11 @@
 06-路線外任務.md:820｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:820｜路線外理由｜交件要換地圖，去目的地飛行點時再順手辦。｜La quête se rend dans une autre zone. Profite de ton passage au maître de vol de destination.
 06-路線外任務.md:821｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:821｜路線外理由｜30 級起，交完碼頭管理員迪茲維格（1111）向棘齒城同一位碼頭管理員（1413 63.35, 38.45）接；下次經千針石林 閃光平原賽道交克拉維爾·濃鬚（1441 77.79, 77.27），原地續接侏儒的貨物（1114）。｜Au niveau 30 ou plus, après avoir rendu la quête à Maître des quais Dizzywig (1111), prends la suite auprès du même maître des quais à Cabestan (1413 63.35, 38.45). La prochaine fois que tu passes par Mille pointes, rends-la à Kravel Koalbeard sur le circuit des Shimmering Flats (1441 77.79, 77.27) et enchaîne sur Une livraison pour les gnomes (1114).
+06-路線外任務.md:821｜路線外理由｜30 級起，交完碼頭管理員迪茲維格（1111）向棘齒城同一位碼頭管理員（1413 63.35, 38.45）接；下次經千針石林 閃光平原賽道交克拉維爾·濃鬚（1441 77.79, 77.27），原地續接侏儒的貨物（1114）。｜Au niveau 30 ou plus, après avoir rendu la quête à Maître des quais Dizzywig (1111), prends la suite auprès du même maître des quais à Cabestan (1413 63.35, 38.45). La prochaine fois que tu passes par Mille pointes, rends-la à Kravel Koalbeard sur le circuit des Salines (1441 77.79, 77.27) et enchaîne sur Une livraison pour les gnomes (1114).
 06-路線外任務.md:822｜路線外判定｜值得做｜Ça vaut le coup
 06-路線外任務.md:822｜路線外理由｜接取點靠近主線，交件後可接「車手的傳聞」。｜Prends la quête près du trajet principal. Rends la quête pour débloquer Le marchand de rumeurs.
 06-路線外任務.md:823｜路線外判定｜值得做｜Ça vaut le coup
-06-路線外任務.md:823｜路線外理由｜交完侏儒的貨物（1114）後向閃光平原的克拉維爾·濃鬚接，下趟到藏寶海灣找克拉茲克交並解鎖夢境之塵（1116）。｜Après Une livraison pour les gnomes (1114), va voir Kravel Koalbeard aux Shimmering Flats. La fois suivante, rends la quête à Krazek à la Baie-du-Butin pour débloquer De la Poussière de rêve dans les marécages (1116).
+06-路線外任務.md:823｜路線外理由｜交完侏儒的貨物（1114）後向閃光平原的克拉維爾·濃鬚接，下趟到藏寶海灣找克拉茲克交並解鎖夢境之塵（1116）。｜Après Une livraison pour les gnomes (1114), va voir Kravel Koalbeard aux Salines. La fois suivante, rends la quête à Krazek à la Baie-du-Butin pour débloquer De la Poussière de rêve dans les marécages (1116).
 06-路線外任務.md:824｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:824｜路線外理由｜此步可接「返回藏寶海灣」，等主線走到接取或交件區再一併做。｜Débloque « Retour à Baie-du-Butin ». Fais la quête quand tu passes au point de départ ou de retour.
 06-路線外任務.md:825｜路線外判定｜之後順路｜À faire plus tard en passant
@@ -9535,7 +9535,7 @@
 06-路線外任務.md:847｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:847｜路線外理由｜節慶開放且剛好路過時再做，練級途中可先放著。｜Fais la quête quand l’événement est actif et que tu passes par là.
 06-路線外任務.md:851｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:851｜路線外理由｜在阿拉希高地清主線時若剛好到目標區就做，無須專程折返。｜Fais la quête si l’itinéraire principal passe près de l’objectif dans les Hautes-terres d'Arathi. Évite le détour.
+06-路線外任務.md:851｜路線外理由｜在阿拉希高地清主線時若剛好到目標區就做，無須專程折返。｜Fais la quête si l’itinéraire principal passe près de l’objectif dans les Hautes-terres Arathies. Évite le détour.
 06-路線外任務.md:852｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:852｜路線外理由｜已有觸發物再交，專程等掉落容易拖慢進度。｜Rends la quête si tu as déjà l'objet de départ. Attendre exprès qu'il tombe te ralentit.
 06-路線外任務.md:853｜路線外判定｜值得做｜Ça vaut le coup
@@ -9545,7 +9545,7 @@
 06-路線外任務.md:855｜路線外判定｜值得做｜Ça vaut le coup
 06-路線外任務.md:855｜路線外理由｜順路打到觸發物就用，同區可交件。｜Utilise l'objet de départ s'il tombe en chemin. Rends la quête dans la même zone.
 06-路線外任務.md:856｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:856｜路線外理由｜在阿拉希高地清主線時若剛好到目標區就做，無須專程折返。｜Fais la quête si l’itinéraire principal passe près de l’objectif dans les Hautes-terres d'Arathi. Évite le détour.
+06-路線外任務.md:856｜路線外理由｜在阿拉希高地清主線時若剛好到目標區就做，無須專程折返。｜Fais la quête si l’itinéraire principal passe près de l’objectif dans les Hautes-terres Arathies. Évite le détour.
 06-路線外任務.md:857｜路線外判定｜值得做｜Ça vaut le coup
 06-路線外任務.md:857｜路線外理由｜接交點在同一區且靠近主線，回營地時可順手交。｜Prends la quête en chemin et rends-la à ton retour au camp dans la même zone.
 06-路線外任務.md:858｜路線外判定｜值得做｜Ça vaut le coup
@@ -10248,7 +10248,7 @@
 06-路線外任務.md:1248｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:1248｜路線外理由｜此步可接「洛拉姆斯」，等主線走到接取或交件區再一併做。｜Débloque « Loramus ». Fais la quête quand tu passes au point de départ ou de retour.
 06-路線外任務.md:1249｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:1249｜路線外理由｜此步可接「惡魔拉瑟萊克」，等主線走到接取或交件區再一併做。｜Débloque « Vous êtes Rakh'likh, démon ». Fais la quête quand tu passes au point de départ ou de retour.
+06-路線外任務.md:1249｜路線外理由｜此步可接「惡魔拉瑟萊克」，等主線走到接取或交件區再一併做。｜Débloque « Tu es Rakh'likh, démon ». Fais la quête quand tu passes au point de départ ou de retour.
 06-路線外任務.md:1250｜路線外判定｜可放掉｜À abandonner
 06-路線外任務.md:1250｜路線外理由｜這段練級不會順路經過目標，單為此任務折返耗時。｜Évite le détour. L’objectif est hors de l’itinéraire de montée en niveau.
 06-路線外任務.md:1251｜路線外判定｜值得做｜Ça vaut le coup
@@ -10308,7 +10308,7 @@
 06-路線外任務.md:1284｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:1284｜路線外理由｜打算養毒皮暴掠龍再順手收兩種肉，交給莫維克換聲望。｜Si tu élèves un Ravasaure peau-de-venin, récupère les deux types de viande. Remets-les à Mor'vek pour gagner de la réputation.
 06-路線外任務.md:1288｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:1288｜路線外理由｜進奧卡茲監獄時向囚犯接支線，打審問者拿鐐銬鑰匙可接藏寶後續。｜En entrant dans Alcaz Prison, prends la quête annexe du prisonnier. Tue l'interrogateur pour obtenir la clé des fers et débloquer la suite du trésor.
+06-路線外任務.md:1288｜路線外理由｜進奧卡茲監獄時向囚犯接支線，打審問者拿鐐銬鑰匙可接藏寶後續。｜En entrant dans la Prison d’Alcaz, prends la quête annexe du prisonnier. Tue l'interrogateur pour obtenir la clé des fers et débloquer la suite du trésor.
 06-路線外任務.md:1289｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:1289｜路線外理由｜已幫石匠康納利解開鐐銬才接，拿到筆記再找他的藏寶。｜Libère d'abord le maçon Connery de ses chaînes, puis utilise la note pour trouver son trésor.
 06-路線外任務.md:1290｜路線外判定｜之後順路｜À faire plus tard en passant
@@ -11272,7 +11272,7 @@
 06-路線外任務.md:1799｜路線外判定｜可放掉｜À abandonner
 06-路線外任務.md:1799｜路線外理由｜須排戰場或完成 PvP 目標，有打戰場再留。｜Garde la quête si tu comptes déjà faire des champs de bataille ou remplir les objectifs JcJ.
 06-路線外任務.md:1800｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:1800｜路線外理由｜本來要走黑石塔下層時，在荒蕪之地先找卡加斯的督軍高圖斯。｜Si tu comptes faire Lower Blackrock Spire, va d'abord voir Chef de guerre Goretooth à Kargath, dans les Terres ingrates.
+06-路線外任務.md:1800｜路線外理由｜本來要走黑石塔下層時，在荒蕪之地先找卡加斯的督軍高圖斯。｜Si tu comptes faire Pic Rochenoire inférieur, va d'abord voir Chef de guerre Goretooth à Kargath, dans les Terres ingrates.
 06-路線外任務.md:1804｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:1804｜路線外理由｜已組隊要打這座副本再接，可和同本任務一起交。｜Prends la quête une fois ton groupe de donjon formé. Rends-la avec les autres quêtes du donjon.
 06-路線外任務.md:1805｜路線外判定｜之後順路｜À faire plus tard en passant
@@ -12007,9 +12007,9 @@
 07-訓練師.md:43｜標籤｜僅不死族｜Morts-vivants uniquement
 07-訓練師.md:44｜訓練時機｜提里斯法林地 布瑞爾收尾交件後，搭奧格瑪線飛艇前補技能。並查看救贖職業線。｜Entraîne-toi après avoir rendu les dernières quêtes de Brill, avant de prendre le zeppelin pour Orgrimmar. Vérifie aussi la chaîne de classe « Rédemption ».
 07-訓練師.md:44｜標籤｜僅不死族｜Morts-vivants uniquement
-07-訓練師.md:45｜訓練時機｜銀松森林 瑟伯切爾／葛雷邁恩之牆或希爾斯布萊德丘陵 塔倫米爾行程經幽暗城時。20 級禍狼線要用雙手劍，先向軍事區武器大師確認。可順路補的等級為 16、18、20、26、30 級。｜Entraîne-toi à Fossoyeuse en passant par Sépulcre, le Greymane Wall ou Moulin-de-Tarren. Au niveau 20, la chaîne Wolfsbane demande des épées à deux mains : vérifie d'abord auprès du maître d'armes du Quartier de la guerre. Niveaux à passer en chemin : 16, 18, 20, 26 et 30.
+07-訓練師.md:45｜訓練時機｜銀松森林 瑟伯切爾／葛雷邁恩之牆或希爾斯布萊德丘陵 塔倫米爾行程經幽暗城時。20 級禍狼線要用雙手劍，先向軍事區武器大師確認。可順路補的等級為 16、18、20、26、30 級。｜Entraîne-toi à Fossoyeuse en passant par Sépulcre, le mur de Grisetête ou Moulin-de-Tarren. Au niveau 20, la chaîne Wolfsbane demande des épées à deux mains : vérifie d'abord auprès du maître d'armes du Quartier de la guerre. Niveaux à passer en chemin : 16, 18, 20, 26 et 30.
 07-訓練師.md:46｜訓練時機｜奧特蘭克山脈前經幽暗城，或荒蕪之地 卡加斯換騎術時回城。40 級可接職業戰馬引導。可順路補的等級為 38、40、44 級。｜Entraîne-toi à Fossoyeuse avant les Montagnes d'Alterac, ou à ton retour en ville après avoir appris la monte à Kargath. Niveaux à passer en chemin : 38, 40 et 44. Au niveau 40, prends la quête d'introduction au destrier de classe.
-07-訓練師.md:47｜訓練時機｜菲拉斯 莫沙徹營地回訪或升到 60 後，從卡林多順路飛雷霆崖。若正在東部王國，經幽暗城可改找嘉瑞‧拉苟。可順路補的等級為 50、56、60 級。｜Après le retour au Camp Mojache (Féralas) ou au niveau 60, vole vers Thunder Bluff depuis Kalimdor. Si tu es dans les Royaumes de l'est, passe par Fossoyeuse et va voir Garen Largo. Niveaux à passer en chemin : 50, 56 et 60.
+07-訓練師.md:47｜訓練時機｜菲拉斯 莫沙徹營地回訪或升到 60 後，從卡林多順路飛雷霆崖。若正在東部王國，經幽暗城可改找嘉瑞‧拉苟。可順路補的等級為 50、56、60 級。｜Après le retour au Camp Mojache (Feralas) ou au niveau 60, vole vers Thunder Bluff depuis Kalimdor. Si tu es dans les Royaumes de l'est, passe par Fossoyeuse et va voir Garen Largo. Niveaux à passer en chemin : 50, 56 et 60.
 07-訓練師.md:51｜訓練時機｜試煉谷回交第一輪任務時補技能。｜Apprends tes nouvelles techniques quand tu rends tes premières quêtes dans la Vallée des Épreuves.
 07-訓練師.md:51｜標籤｜僅獸人,食人妖｜Orcs/Trolls uniquement
 07-訓練師.md:52｜訓練時機｜試煉谷回交收尾任務時補技能。若先離開起點，可等到下一個營地一起學。｜Apprends tes nouvelles techniques quand tu rends les dernières quêtes dans la Vallée des Épreuves. Si tu pars plus tôt, attends le prochain camp.
@@ -12098,7 +12098,7 @@
 07-訓練師.md:103｜訓練時機｜提里斯法林地 布瑞爾收尾交件後，搭奧格瑪線飛艇前補技能。｜Entraîne-toi après avoir rendu les dernières quêtes de Brill, avant de prendre le zeppelin pour Orgrimmar.
 07-訓練師.md:103｜標籤｜僅不死族｜Morts-vivants uniquement
 07-訓練師.md:104｜訓練時機｜銀松森林 瑟伯切爾、希爾斯布萊德丘陵 塔倫米爾或奧特蘭克山脈，經幽暗城時補常用傷害與治療。可順路補的等級為 16、20、26、30、38 級。｜Entraîne-toi aux sorts de dégâts et de soins courants à Fossoyeuse, en passant par Sépulcre, Moulin-de-Tarren ou les Montagnes d'Alterac. Niveaux à passer en chemin : 16, 20, 26, 30 et 38.
-07-訓練師.md:105｜訓練時機｜荒蕪之地 卡加斯學騎術回奧格瑪，或菲拉斯／塔納利斯行程經奧格瑪時。可順路補的等級為 40、44、48 級。｜Entraîne-toi à Orgrimmar en rentrant de Kargath après avoir appris la monte, ou en allant vers Féralas ou Tanaris. Niveaux à passer en chemin : 40, 44 et 48.
+07-訓練師.md:105｜訓練時機｜荒蕪之地 卡加斯學騎術回奧格瑪，或菲拉斯／塔納利斯行程經奧格瑪時。可順路補的等級為 40、44、48 級。｜Entraîne-toi à Orgrimmar en rentrant de Kargath après avoir appris la monte, ou en allant vers Feralas ou Tanaris. Niveaux à passer en chemin : 40, 44 et 48.
 07-訓練師.md:106｜訓練時機｜荊棘谷 藏寶海灣轉艾薩拉 瓦羅莫克途中，可同趟接塞納里奧議會的求助。可順路補的等級為 50–52、56、60 級。｜Entre la Baie-du-Butin et Valormok, prends aussi la demande d'aide du Cercle cénarien. Niveaux à passer en chemin : 50-52, 56 et 60.
 07-訓練師.md:110｜訓練時機｜試煉谷回交第一輪任務時補技能。尚未取得大地圖騰時，按種族職業支線取得。｜Entraîne-toi dans la Vallée des Épreuves dès le premier retour de quêtes. Si tu n'as pas encore le Totem de terre, fais la quête de classe raciale.
 07-訓練師.md:110｜標籤｜僅獸人,食人妖｜Orcs/Trolls uniquement
@@ -12523,11 +12523,11 @@
 08-保留物品.md:152｜保留物品用途｜完美的雪人毛皮（7738），莫沙徹營地｜Une peau de yéti parfaite (7738) — Camp Mojache.
 08-保留物品.md:153｜保留物品用途｜威利德的日記（3884），安戈洛環形山馬紹爾營地｜Le journal de Williden (3884) — Refuge des Marshal, cratère d'Un'Goro.
 08-保留物品.md:154｜保留物品用途｜冬泉火酒（5083），冰火溫泉多諾瓦｜L'eau de feu de Tombe-hiver (5083) — Donova à Sources de Givrefeu.
-08-保留物品.md:155｜保留物品用途｜尋找OOX-22/FE！（2766），菲拉斯怒痕谷｜Trouvez OOX-22/FE ! (2766) — Repaire des Griffes féroces, Féralas.
+08-保留物品.md:155｜保留物品用途｜尋找OOX-22/FE！（2766），菲拉斯怒痕谷｜Trouve OOX-22/FE ! (2766) — Repaire des Griffes féroces, Feralas.
 08-保留物品.md:156｜保留物品用途｜最後壹片（5123），冰火溫泉多諾瓦｜Le dernier morceau (5123) — Donova à Sources de Givrefeu.
-08-保留物品.md:157｜保留物品用途｜尖嘯者的靈魂（3520），菲拉斯捕捉尖嘯者靈魂｜Capture les esprits hurleurs à Féralas pour « Esprits de Hurleurs » (3520).
+08-保留物品.md:157｜保留物品用途｜尖嘯者的靈魂（3520），菲拉斯捕捉尖嘯者靈魂｜Capture les esprits hurleurs à Feralas pour « Esprits de Hurleurs » (3520).
 08-保留物品.md:158｜保留物品用途｜測試容器（3123），辛特蘭收集精華｜Récupère des essences dans les Hinterlands pour « Test du récipient » (3123).
-08-保留物品.md:159｜保留物品用途｜測試容器（3123），菲拉斯莫沙徹營地｜Test du récipient (3123) — Camp Mojache, Féralas.
+08-保留物品.md:159｜保留物品用途｜測試容器（3123），菲拉斯莫沙徹營地｜Test du récipient (3123) — Camp Mojache, Feralas.
 08-保留物品.md:160｜保留物品用途｜斯普琳科的秘密佐料（2641），塔納利斯加基森｜L'ingrédient secret de Sprinkle (2641) — Gadgetzan, Tanaris.
 08-保留物品.md:161｜保留物品用途｜遠古之卵（4787），塔納利斯熱砂港｜L'oeuf antique (4787) — Port Gentepression, Tanaris.
 08-保留物品.md:162｜保留物品用途｜神靈哈卡（3528），悲傷沼澤沉沒的神廟｜Le dieu Hakkar (3528) — Temple englouti, Marais des Chagrins.
@@ -12539,8 +12539,8 @@
 08-保留物品.md:168｜保留物品用途｜無人知曉的秘密（3845），馬紹爾營地｜C'est un Secret pour tout le monde (3845) — Refuge des Marshal.
 08-保留物品.md:169｜保留物品用途｜無人知曉的秘密（3845），馬紹爾營地｜C'est un Secret pour tout le monde (3845) — Refuge des Marshal.
 08-保留物品.md:170｜保留物品用途｜無人知曉的秘密（3908），冬泉谷冰火溫泉｜C'est un Secret pour tout le monde (3908) — Sources de Givrefeu, Berceau-de-l’Hiver.
-08-保留物品.md:171｜保留物品用途｜視靈藥劑（3909），菲拉斯在米布隆·亂齒腳邊放下｜Pose-le aux pieds de Miblon Grondequenotte à Féralas pour « L'élixir de Videre » (3909).
-08-保留物品.md:172｜保留物品用途｜視靈藥劑（3909），菲拉斯找格雷甘·山酒｜Va voir Gregan Brewspewer à Féralas pour « L'élixir de Videre » (3909).
+08-保留物品.md:171｜保留物品用途｜視靈藥劑（3909），菲拉斯在米布隆·亂齒腳邊放下｜Pose-le aux pieds de Miblon Grondequenotte à Feralas pour « L'élixir de Videre » (3909).
+08-保留物品.md:172｜保留物品用途｜視靈藥劑（3909），菲拉斯找格雷甘·山酒｜Va voir Gregan Brewspewer à Feralas pour « L'élixir de Videre » (3909).
 08-保留物品.md:173｜保留物品用途｜墓地相見（3912），塔納利斯墓地，完成冬泉谷交接後才飲用｜Bois-le au cimetière de Tanaris pour « Rendez-vous à la tombe » (3912), une fois les remises de Berceau-de-l’Hiver faites.
 08-保留物品.md:174｜保留物品用途｜菲諾克（4808），冬泉谷永望鎮｜Felnok Steelspring (4808) — Long-guet, Berceau-de-l'Hiver.
 08-保留物品.md:175｜保留物品用途｜好運護符（5050），費爾斯通農場｜Charme porte-bonheur (5050) — Champ de Felstone.
@@ -12567,14 +12567,14 @@
 08-保留物品.md:193｜保留物品用途｜灼熱的疼痛（8420），費伍德森林｜Chaud et piquant (8420) — Gangrebois.
 08-保留物品.md:193｜標籤｜僅術士｜Démonistes uniquement
 08-保留物品.md:197｜保留物品用途｜達拉然城下水道入口，永久開門工具；交完副本任務後仍保留｜Garde-le après les quêtes du donjon. Il ouvre en permanence l'entrée des égouts de la Cité de Dalaran.
-08-保留物品.md:198｜保留物品用途｜克羅多克要塞內通往尾王區的捷徑門；不作首次進本門檻，交件後仍保留｜Utilise-le pour ouvrir le raccourci vers le boss final dans Krol'dok Stronghold. Il n'est pas exigé pour la première entrée. Garde-le après la remise.
+08-保留物品.md:198｜保留物品用途｜克羅多克要塞內通往尾王區的捷徑門；不作首次進本門檻，交件後仍保留｜Utilise-le pour ouvrir le raccourci vers le boss final dans le Bastion Krol’dok. Il n'est pas exigé pour la première entrée. Garde-le après la remise.
 08-保留物品.md:200｜保留物品用途｜The Gurubashi Legends of Old（95748），荊棘谷格羅姆高營地｜Les légendes anciennes Gurubashi (95748) — Campement Grom'gol, Vallée de Strangleronce.
 08-保留物品.md:200｜標籤｜需遊戲實測｜À vérifier en jeu
 08-保留物品.md:201｜保留物品用途｜沉沒之城（95775），荊棘谷格羅姆高營地，和其他三份拓片一併交｜Remets-le avec les trois autres estampages pour « La cité Submergée » (95775) au Campement Grom'gol.
 08-保留物品.md:202｜保留物品用途｜沉沒之城（95775），荊棘谷格羅姆高營地，和其他三份拓片一併交｜Remets-le avec les trois autres estampages pour « La cité Submergée » (95775) au Campement Grom'gol.
 08-保留物品.md:203｜保留物品用途｜沉沒之城（95775），荊棘谷格羅姆高營地，和其他三份拓片一併交｜Remets-le avec les trois autres estampages pour « La cité Submergée » (95775) au Campement Grom'gol.
 08-保留物品.md:204｜保留物品用途｜沉沒之城（95775），荊棘谷格羅姆高營地，和其他三份拓片一併交｜Remets-le avec les trois autres estampages pour « La cité Submergée » (95775) au Campement Grom'gol.
-08-保留物品.md:205｜保留物品用途｜加茲瑞拉（2770），千針石林閃光平原｜Gahz'rilla (2770) — Shimmering Flats, Mille pointes.
+08-保留物品.md:205｜保留物品用途｜加茲瑞拉（2770），千針石林閃光平原｜Gahz'rilla (2770) — Salines, Mille pointes.
 08-保留物品.md:206｜保留物品用途｜摩沙魯的預言（3527），塔納利斯熱砂港｜La prophétie de Mosh'aru (3527) — Port Gentepression, Tanaris.
 08-保留物品.md:207｜保留物品用途｜摩沙魯的預言（3527），塔納利斯熱砂港｜La prophétie de Mosh'aru (3527) — Port Gentepression, Tanaris.
 08-保留物品.md:208｜保留物品用途｜黑暗石板（4768），荒蕪之地卡加斯｜La tablette de Darkstone (4768) — Kargath, Terres ingrates.
@@ -12596,14 +12596,14 @@
 08-保留物品.md:220｜保留物品用途｜臟兮兮的戒指（2945），諾莫瑞根清潔器｜Anneau sali (2945) — le Sparklematic 5200 dans Gnomeregan.
 08-保留物品.md:221｜保留物品用途｜克羅多克模具（94973），大河林地羅格瑪｜Moulage krol’dok (94973) — Rog’mar, Rives Claires.
 08-保留物品.md:222｜保留物品用途｜伊蘭尼庫斯精華（3373），沉沒的神廟同區精華之泉｜L'Essence d'Eranikus (3373) — la source d'essence voisine dans le Temple englouti.
-08-保留物品.md:223｜保留物品用途｜黑手的命令（7761），黑石塔上層，需點擊達基薩斯身後的寶珠｜Clique sur l'orbe derrière Général Drakkisath, dans Upper Blackrock Spire, pour « Les ordres de Blackhand » (7761).
+08-保留物品.md:223｜保留物品用途｜黑手的命令（7761），黑石塔上層，需點擊達基薩斯身後的寶珠｜Clique sur l'orbe derrière Général Drakkisath, dans Pic Rochenoire supérieur, pour « Les ordres de Blackhand » (7761).
 08-保留物品.md:224｜保留物品用途｜諾莫瑞根，使用藏寶海灣的傳送器進本｜Utilise le téléporteur de la Baie-du-Butin pour entrer dans Gnomeregan.
 08-保留物品.md:225｜保留物品用途｜瑪拉頓的傳說（7044），瑪拉頓塞雷布拉斯｜Légendes de Maraudon (7044) — Celebras, dans Maraudon.
 08-保留物品.md:226｜保留物品用途｜瑪拉頓的傳說（7044），瑪拉頓塞雷布拉斯｜Légendes de Maraudon (7044) — Celebras, dans Maraudon.
 08-保留物品.md:227｜保留物品用途｜瑪拉頓，之後可由入口附近啟用傳送點｜Utilise-le plus tard pour activer le point de téléportation près de l'entrée de Maraudon.
 08-保留物品.md:228｜保留物品用途｜辛特蘭辛薩羅祭壇，轉化成祖爾法拉克之槌｜Utilise-le sur l'autel de Jintha'Alor, dans les Hinterlands, pour fabriquer le Marteau de Zul'Farrak.
 08-保留物品.md:229｜保留物品用途｜祖爾法拉克，在加茲瑞拉的鑼召喚首領｜Frappe le gong de Zul'Farrak pour invoquer le boss Gahz'rilla.
-08-保留物品.md:230｜保留物品用途｜黑石深淵，之後開鎖並操作機關｜Utilise-le pour crocheter les serrures et actionner les mécanismes dans Blackrock Depths.
+08-保留物品.md:230｜保留物品用途｜黑石深淵，之後開鎖並操作機關｜Utilise-le pour crocheter les serrures et actionner les mécanismes dans les Profondeurs de Rochenoire.
 08-保留物品.md:231｜保留物品用途｜厄運之槌北區及西區，開門｜Utilise-le pour ouvrir les portes de Hache-tripes Nord et Ouest.
 08-保留物品.md:232｜保留物品用途｜昂貴的模具（5514），塔納利斯加基森｜Moisissure rime avec… (5514) — Gadgetzan, Tanaris.
 08-保留物品.md:233｜保留物品用途｜火羽山（5802），安戈洛環形山火羽山｜Forgée dans la Fournaise (5802) — Crête de la Fournaise, Cratère d'Un'Goro.
@@ -12611,17 +12611,17 @@
 08-保留物品.md:235｜保留物品用途｜火羽山（5802），安戈洛環形山火羽山｜Forgée dans la Fournaise (5802) — Crête de la Fournaise, Cratère d'Un'Goro.
 08-保留物品.md:236｜保留物品用途｜阿拉基的聖甲蟲（5804），提里斯法林地亡靈壁壘｜Le Scarabée d'Araj (5804) — la Barricade, Clairières de Tirisfal.
 08-保留物品.md:237｜保留物品用途｜通靈學院，開門｜Utilise-le pour ouvrir la porte de Scholomance.
-08-保留物品.md:238｜保留物品用途｜晉升印章（4742），黑石塔下層維埃蘭｜Le sceau de l'ascension (4742) — Vaelan, dans Lower Blackrock Spire.
-08-保留物品.md:239｜保留物品用途｜晉升印章（4742），黑石塔下層維埃蘭｜Le sceau de l'ascension (4742) — Vaelan, dans Lower Blackrock Spire.
-08-保留物品.md:240｜保留物品用途｜晉升印章（4742），黑石塔下層維埃蘭｜Le sceau de l'ascension (4742) — Vaelan, dans Lower Blackrock Spire.
-08-保留物品.md:241｜保留物品用途｜晉升印章（4742），黑石塔下層維埃蘭｜Le sceau de l'ascension (4742) — Vaelan, dans Lower Blackrock Spire.
+08-保留物品.md:238｜保留物品用途｜晉升印章（4742），黑石塔下層維埃蘭｜Le sceau de l'ascension (4742) — Vaelan, dans Pic Rochenoire inférieur.
+08-保留物品.md:239｜保留物品用途｜晉升印章（4742），黑石塔下層維埃蘭｜Le sceau de l'ascension (4742) — Vaelan, dans Pic Rochenoire inférieur.
+08-保留物品.md:240｜保留物品用途｜晉升印章（4742），黑石塔下層維埃蘭｜Le sceau de l'ascension (4742) — Vaelan, dans Pic Rochenoire inférieur.
+08-保留物品.md:241｜保留物品用途｜晉升印章（4742），黑石塔下層維埃蘭｜Le sceau de l'ascension (4742) — Vaelan, dans Pic Rochenoire inférieur.
 08-保留物品.md:242｜保留物品用途｜晉升印章（4743），塵泥沼澤埃博斯塔夫洞穴｜Le sceau de l'ascension (4743) — Tanière de Brandeguerre, Marécage d'Âprefange.
 08-保留物品.md:243｜保留物品用途｜晉升印章（4743），塵泥沼澤埃博斯塔夫洞穴｜Le sceau de l'ascension (4743) — Tanière de Brandeguerre, Marécage d'Âprefange.
 08-保留物品.md:244｜保留物品用途｜晉升印章（4743），塵泥沼澤埃博斯塔夫洞穴｜Le sceau de l'ascension (4743) — Tanière de Brandeguerre, Marécage d'Âprefange.
-08-保留物品.md:245｜保留物品用途｜晉升印章（4743），黑石塔下層維埃蘭｜Le sceau de l'ascension (4743) — Vaelan, dans Lower Blackrock Spire.
-08-保留物品.md:246｜保留物品用途｜黑石塔上層，開門｜Utilise-le pour ouvrir la porte de Upper Blackrock Spire.
+08-保留物品.md:245｜保留物品用途｜晉升印章（4743），黑石塔下層維埃蘭｜Le sceau de l'ascension (4743) — Vaelan, dans Pic Rochenoire inférieur.
+08-保留物品.md:246｜保留物品用途｜黑石塔上層，開門｜Utilise-le pour ouvrir la porte de Pic Rochenoire supérieur.
 08-保留物品.md:247｜保留物品用途｜信仰獎章（5122），斯坦索姆亡靈區小教堂｜Le médaillon de foi (5122) — la chapelle de l'aile des morts-vivants de Stratholme.
-08-保留物品.md:248｜保留物品用途｜逃出生天！（5525），厄運之槌北區，開諾特的鎖鏈｜Libérez Knot ! (5525) — Hache-tripes Nord, ouvre les chaînes de Knot.
+08-保留物品.md:248｜保留物品用途｜逃出生天！（5525），厄運之槌北區，開諾特的鎖鏈｜Libère Knot ! (5525) — Hache-tripes Nord, ouvre les chaînes de Knot.
 08-保留物品.md:249｜保留物品用途｜破碎的陷阱（1193），厄運之槌北區修陷阱｜Répare le piège dans Hache-tripes Nord pour « Un piège cassé » (1193).
 08-保留物品.md:250｜保留物品用途｜戈多克食人魔裝（5518），厄運之槌北區｜La tenue d'ogre gordok (5518) — Hache-tripes Nord.
 08-保留物品.md:251｜保留物品用途｜戈多克食人魔裝（5518），厄運之槌北區｜La tenue d'ogre gordok (5518) — Hache-tripes Nord.
@@ -12648,7 +12648,7 @@
 08-保留物品.md:265｜標籤｜僅術士｜Démonistes uniquement
 08-保留物品.md:266｜保留物品用途｜最偉大的獵手（7503），厄運之槌圖書館｜La plus grande race de chasseurs (7503) — Bibliothèque Hache-tripes.
 08-保留物品.md:266｜標籤｜僅獵人｜Chasseurs uniquement
-08-保留物品.md:267｜保留物品用途｜光明不會告訴妳的事情（7504），厄運之槌圖書館｜Sainte Bolognaise : Ce que la lumière ne vous dit pas (7504) — Bibliothèque Hache-tripes.
+08-保留物品.md:267｜保留物品用途｜光明不會告訴妳的事情（7504），厄運之槌圖書館｜Sainte Bolognaise : Ce que la lumière ne te dit pas (7504) — Bibliothèque Hache-tripes.
 08-保留物品.md:267｜標籤｜僅牧師｜Prêtres uniquement
 08-保留物品.md:268｜保留物品用途｜妳與冰霜震擊（7505），厄運之槌圖書館｜Le Horion de givre et vous (7505) — Bibliothèque Hache-tripes.
 08-保留物品.md:268｜標籤｜僅薩滿｜Chamans uniquement
@@ -13050,7 +13050,7 @@
 03-30到45級.md:1230｜步驟說明｜書由副本首領納古克掉落。｜Le livre est lâché par le boss du donjon, Nar'gurk.
 03-30到45級.md:1315｜步驟說明｜貨物由兩名守衛看管。｜Deux gardes surveillent la cargaison.
 03-30到45級.md:1495｜步驟說明｜進入血色修道院後走圖書館區。｜Après être entré dans le Monastère écarlate, prends l'aile de la Bibliothèque.
-03-30到45級.md:1513｜步驟說明｜從奧達曼後門進入，找黑曜石哨兵。｜Entre dans Uldaman par la porte arrière et trouvez la Sentinelle d'obsidienne.
+03-30到45級.md:1513｜步驟說明｜從奧達曼後門進入，找黑曜石哨兵。｜Entre dans Uldaman par la porte arrière et trouve la Sentinelle d'obsidienne.
 04-45到60級.md:632｜步驟說明｜數量以任務日誌為準。｜Les quantités exactes sont indiquées dans ton journal de quêtes.
 04-45到60級.md:923｜步驟說明｜奧蘭與歐文·薩得（1458 73.40, 33.00）都在幽暗城法師區；先依遊戲可交提示。｜Oran et Owen Thadd (1458 73.40, 33.00) sont tous deux dans le Quartier de la magie de Fossoyeuse ; fie-toi d'abord à l'indication de remise du jeu.
 04-45到60級.md:1892｜步驟說明｜木喉與黑喉薩滿都會掉落；優先打黑喉，避免降低木喉聲望。｜Les chamans Timbermaw et Blackmaw le lâchent ; attaque en priorité les Blackmaw pour ne pas perdre de réputation auprès des Timbermaw.
@@ -13125,16 +13125,16 @@
 新增.md:0｜步驟說明｜從葬影村出發，先走幽靈崗哨與科多墓地，到東北小屋交集骨者，再沿南路往瑪諾洛克集會所。｜Au départ de Proie-de-l'Ombre, passe par le poste de Rôdeur-fantôme et le Cimetière des kodos, rends Collectionneur d'os à la cabane au nord-est, puis suis la route sud jusqu'au Convent de Mannoroc.
 新增.md:0｜步驟說明｜任務等級 39–40 的雕刻半人馬圖騰 93225 與集骨者 5501 放這趟：圖騰在集會所東南的瑪格拉姆半人馬順打，集骨者在淒涼之地 葬影村第一次已接，這趟收科多獸骨再到比布里的小屋交。｜Fais Totems centaures sculptés (93225) et Collectionneur d'os (5501), tous deux de niveau 39–40, pendant ce passage. Tue les centaures Magram au sud-est du Convent pour les totems. Tu as pris Collectionneur d'os lors de ta première visite à Proie-de-l'Ombre ; récupère maintenant les os de kodo et rends-la à la cabane de Bibbly.
 新增.md:0｜步驟說明｜先在淚水之池西南打鹽齒鱷魚交 698／699，才開海中的威脅魚人鏈；螃蟹腿 1430 在去東南海岸途中收、回斯通納德交。1428 的魚人智者約 44–45 級，未到 44 級就略過。｜Tue les crocilisques Saltjaw au sud-ouest du Bassin des larmes et rends les deux quêtes Petit bonus du soir pour débloquer la chaîne des murlocs. Récupère les pattes de crabe pour 1430 en allant vers la côte sud-est et rends-les à Pierrêche. Les oracles murlocs de 1428 sont vers le niveau 44–45 ; ignore-la sous le niveau 44.
-新增.md:0｜步驟說明｜西側送完科泰羅卷軸再去避難營地，和水晶任務一起回收兩條迷失者支線。若要補少量經驗，可打淚水之池外圈的普通沼澤怪（約 60, 55），或在東風海岸北段打巨型淤泥蟹。｜Après avoir livré le parchemin de Cortello à l'ouest, va au Harborage et rends les deux quêtes des Perdus avec les quêtes de cristaux. Pour un peu d'XP en plus, tue les monstres normaux du marais autour du Bassin des larmes (vers 60, 55) ou les crabes géants au nord du Rivage d'Estevent.
+新增.md:0｜步驟說明｜西側送完科泰羅卷軸再去避難營地，和水晶任務一起回收兩條迷失者支線。若要補少量經驗，可打淚水之池外圈的普通沼澤怪（約 60, 55），或在東風海岸北段打巨型淤泥蟹。｜Après avoir livré le parchemin de Cortello à l'ouest, va au Havre boueux et rends les deux quêtes des Perdus avec les quêtes de cristaux. Pour un peu d'XP en plus, tue les monstres normaux du marais autour du Bassin des larmes (vers 60, 55) ou les crabes géants au nord du Rivage d'Estevent.
 新增.md:0｜步驟說明｜先留，荊棘谷 藏寶海灣回訪再交。｜Garde-la pour l'instant. Rends-la lors du retour à Baie-du-Butin.
-新增.md:0｜步驟說明｜3520 留菲拉斯 莫沙徹營地做；97530 留砂槌營地；2874 留荊棘谷 藏寶海灣回訪交。｜Fais 3520 au Camp Mojache, à Féralas, et 97530 à la Base des Cognedunes. Garde 2874 pour le retour à Baie-du-Butin.
+新增.md:0｜步驟說明｜3520 留菲拉斯 莫沙徹營地做；97530 留砂槌營地；2874 留荊棘谷 藏寶海灣回訪交。｜Fais 3520 au Camp Mojache, à Feralas, et 97530 à la Base des Cognedunes. Garde 2874 pour le retour à Baie-du-Butin.
 新增.md:0｜步驟說明｜回奧格瑪開費拉斯後續｜Retour à Orgrimmar pour la suite de Feralas
-新增.md:0｜步驟說明｜從莫沙徹飛奧格瑪（通常經陶拉祖等已開飛點）。爐石維持莫沙徹，奧格瑪交完再用爐石回費拉斯。｜Vole de Mojache à Orgrimmar (en général via le Camp Taurajo ou d'autres points de vol déjà débloqués). Garde ta pierre de foyer liée à Mojache ; après les quêtes à Orgrimmar, utilise-la pour revenir à Féralas.
+新增.md:0｜步驟說明｜從莫沙徹飛奧格瑪（通常經陶拉祖等已開飛點）。爐石維持莫沙徹，奧格瑪交完再用爐石回費拉斯。｜Vole de Mojache à Orgrimmar (en général via le Camp Taurajo ou d'autres points de vol déjà débloqués). Garde ta pierre de foyer liée à Mojache ; après les quêtes à Orgrimmar, utilise-la pour revenir à Feralas.
 新增.md:0｜步驟說明｜奧格瑪交完後用爐石回莫沙徹營地；爐石冷卻時從奧格瑪飛莫沙徹。｜Après les quêtes à Orgrimmar, utilise ta pierre de foyer pour revenir au Camp Mojache. Si elle est en recharge, vole d'Orgrimmar à Mojache.
 新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接。從村外往北沿沙灘找瓶子。｜Prends-la d'abord à Baie-du-Butin. Cherche la bouteille sur la plage au nord du village.
 新增.md:0｜步驟說明｜荊棘谷 藏寶海灣先接、辛特蘭 惡齒村與辛薩羅在辛特蘭撿酒。｜Prends-la d'abord à Baie-du-Butin. Récupère l'alcool dans les Hinterlands, au Village des Revantusk et à Jintha'Alor.
-新增.md:0｜步驟說明｜在交 6030 與接 5211 後開禮拜堂飛行點；末步飛幽暗城，交完書走去亡靈壁壘。｜Débloque le point de vol de la Chapelle après avoir rendu 6030 et pris 5211. À la dernière étape, vole jusqu'à Fossoyeuse, rends le livre, puis va à pied au Rempart.
-新增.md:0｜步驟說明｜出幽暗城沿大路往東到亡靈壁壘，再走費爾斯通農場、安多哈爾與北山伐木場。｜Sors de Fossoyeuse et suis la route principale vers l'est jusqu'au Rempart, puis passe par le Champ de Felstone, Andorhal et le camp de bûcherons de la Crête du nord.
+新增.md:0｜步驟說明｜在交 6030 與接 5211 後開禮拜堂飛行點；末步飛幽暗城，交完書走去亡靈壁壘。｜Débloque le point de vol de la Chapelle après avoir rendu 6030 et pris 5211. À la dernière étape, vole jusqu'à Fossoyeuse, rends le livre, puis va à pied à la Barricade.
+新增.md:0｜步驟說明｜出幽暗城沿大路往東到亡靈壁壘，再走費爾斯通農場、安多哈爾與北山伐木場。｜Sors de Fossoyeuse et suis la route principale vers l'est jusqu'à la Barricade, puis passe par le Champ de Felstone, Andorhal et le camp de bûcherons de la Crête du nord.
 新增.md:0｜步驟說明｜回幽暗城飛艇塔，搭飛艇回奧格瑪。｜Retourne à la tour des zeppelins de Fossoyeuse et prends le zeppelin pour Orgrimmar.
 新增.md:0｜步驟說明｜等級落後可在安多哈爾東側外圍（約 46, 64）或瘟疫農場打普通亡靈，再回卡利姆多。｜Si tu es en retard de niveau, tue des morts-vivants normaux à la périphérie est d'Andorhal (vers 46, 64) ou dans les fermes pestiférées avant de retourner en Kalimdor.
 新增.md:0｜步驟說明｜從要塞飛回奧格瑪。｜Vole du Fort jusqu'à Orgrimmar.
@@ -13145,15 +13145,15 @@
 新增.md:0｜步驟說明｜埃盧梭斯之手 5381 第一趟只接，第二趟 37 級再去雷斧堡壘拿惡魔之盒（任務 38 級），交了才接得到燃燒軍團的傳送門 5581。｜Lors du premier passage, prends seulement La Main d'Iruxos. Au second passage, au niveau 37, va chercher la boîte de démon à la Forteresse de Hache-Tonnerre (quête de niveau 38). La rendre débloque Les portails de la Légion.
 01-第一段-1到12級.md:33｜說明｜持有試煉谷禮品券才接。；禮品券是原種族角色出生時背包內的起始物品，直接右鍵，沒有地圖上的接取點。｜Ne l'accepte que si tu possèdes un bon cadeau de la Vallée des Épreuves. Le bon cadeau est un objet de départ présent dans le sac des personnages de la race d'origine. Fais un clic droit dessus directement ; il n'y a pas de point d'obtention sur la carte.
 01-第一段-1到12級.md:269｜說明｜持有納拉其營地禮品券才接。；禮品券是原種族角色出生時背包內的起始物品，直接右鍵，沒有地圖上的接取點。｜Ne l'accepte que si tu possèdes un bon cadeau du Camp Narache. Le bon cadeau est un objet de départ présent dans le sac des personnages de la race d'origine. Fais un clic droit dessus directement ; il n'y a pas de point d'obtention sur la carte.
-01-第一段-1到12級.md:464｜說明｜需已學剝皮，交 12 塊輕皮。；到雷霆崖交材料；輕皮可剝低等野獸，也可交易取得。｜Il faut avoir appris le dépeçage. Remets 12 Cuir léger. Remets le matériel aux Pitons-du-Tonnerre. Le Cuir léger s'obtient en dépeçant des bêtes de bas niveau ou par échange.
-01-第一段-1到12級.md:464｜說明｜需已學剝皮，交 12 塊輕皮。；到雷霆崖交材料｜Il faut avoir appris le dépeçage. Remets 12 Cuir léger. Remets le matériel aux Pitons-du-Tonnerre.
-01-第一段-1到12級.md:468｜說明｜需已學製皮且達任務門檻，另備 4 塊輕皮與 4 份粗線。；到雷霆崖交材料；輕皮可剝皮或交易取得，粗線向商人購買。｜Il faut avoir appris le travail du cuir et atteint le niveau de compétence de la quête. Prends aussi 4 Cuir léger et 4 Fil grossier. Remets le matériel aux Pitons-du-Tonnerre. Le Cuir léger s'obtient en dépeçant ou par échange. Achète le Fil grossier chez un marchand.
-01-第一段-1到12級.md:468｜說明｜需已學製皮且達任務門檻，另備 4 塊輕皮與 4 份粗線。；到雷霆崖交材料｜Il faut avoir appris le travail du cuir et atteint le niveau de compétence de la quête. Prends aussi 4 Cuir léger et 4 Fil grossier. Remets le matériel aux Pitons-du-Tonnerre.
+01-第一段-1到12級.md:464｜說明｜需已學剝皮，交 12 塊輕皮。；到雷霆崖交材料；輕皮可剝低等野獸，也可交易取得。｜Il faut avoir appris le dépeçage. Remets 12 Cuir léger. Remets le matériel à Thunder Bluff. Le Cuir léger s'obtient en dépeçant des bêtes de bas niveau ou par échange.
+01-第一段-1到12級.md:464｜說明｜需已學剝皮，交 12 塊輕皮。；到雷霆崖交材料｜Il faut avoir appris le dépeçage. Remets 12 Cuir léger. Remets le matériel à Thunder Bluff.
+01-第一段-1到12級.md:468｜說明｜需已學製皮且達任務門檻，另備 4 塊輕皮與 4 份粗線。；到雷霆崖交材料；輕皮可剝皮或交易取得，粗線向商人購買。｜Il faut avoir appris le travail du cuir et atteint le niveau de compétence de la quête. Prends aussi 4 Cuir léger et 4 Fil grossier. Remets le matériel à Thunder Bluff. Le Cuir léger s'obtient en dépeçant ou par échange. Achète le Fil grossier chez un marchand.
+01-第一段-1到12級.md:468｜說明｜需已學製皮且達任務門檻，另備 4 塊輕皮與 4 份粗線。；到雷霆崖交材料｜Il faut avoir appris le travail du cuir et atteint le niveau de compétence de la quête. Prends aussi 4 Cuir léger et 4 Fil grossier. Remets le matériel à Thunder Bluff.
 01-第一段-1到12級.md:800｜說明｜想學烹飪時做。｜Fais-la quand tu veux apprendre la cuisine.
 01-第一段-1到12級.md:851｜說明｜往荒原果園路上，在瓦拉納爾西邊打風歌蟹。｜En allant au Verger Champ-des-Vents, tue des Clampants chantevent à l'ouest de Valanaar.
 01-第一段-1到12級.md:991｜說明｜還不到 12 級，就在瓦拉納爾西邊打弗德飛狐首領（10 級，57.5, 71.7 一帶），練到 12 再搭船。｜Si tu n'es pas encore niveau 12, tue l'Alpha vuldrène (niveau 10, vers 57.5, 71.7) à l'ouest de Valanaar jusqu'au niveau 12, puis prends le bateau.
-02-12到30級.md:133｜說明｜選做雷霆崖支線時，已開塔爾的飛行點就從十字路口搭鳥。沒開時由陶拉祖營地沿路入莫高雷，搭雷霆崖電梯上城，找塔爾開點（1456 47.00, 49.83）。路過陶拉祖營地順手開飛行點。853 計時從接取開始，只有能及時到達才接。｜Si tu fais la quête facultative des Pitons-du-Tonnerre et que le point de vol de Tal est déjà débloqué, vole depuis La Croisée. Sinon, pars du Camp Taurajo, suis la route jusqu'à Mulgore, monte par l'ascenseur des Pitons-du-Tonnerre et débloque le point de vol auprès de Tal (1456 47.00, 49.83). Débloque aussi le point de vol du Camp Taurajo en passant. Le minuteur de 853 démarre dès l'acceptation : ne l'accepte que si tu peux arriver à temps.
-05-副本.md:18｜說明｜在貧瘠之地 十字路口開飛行點後，雷霆崖飛點已開就飛雷霆崖找拉哈羅接 5722／5723（沒開就從十字路口沿南路經陶拉祖營地往西進莫高雷，搭電梯上城開點），飛奧格瑪找索爾先做 5726／5727，再去暗巷區接 5761；若此輪已開幽暗城飛點，可在飛艇跨海時先向瓦里瑪薩斯領 5725。｜Après avoir débloqué le point de vol de La Croisée, dans Les Tarides, si celui des Pitons-du-Tonnerre est déjà ouvert, vole aux Pitons-du-Tonnerre et va voir Rahauro pour 5722/5723 (sinon, pars de La Croisée par la route du sud, passe le Camp Taurajo et entre à l'ouest dans Mulgore, monte par l'ascenseur et débloque-le). Vole à Orgrimmar et va voir Thrall pour faire d'abord 5726/5727, puis rends-toi au Drag pour 5761. Si le point de vol de Fossoyeuse est déjà débloqué ce tour-ci, récupère d'abord 5725 auprès de Varimathras pendant la traversée de la mer en zeppelin.
+02-12到30級.md:133｜說明｜選做雷霆崖支線時，已開塔爾的飛行點就從十字路口搭鳥。沒開時由陶拉祖營地沿路入莫高雷，搭雷霆崖電梯上城，找塔爾開點（1456 47.00, 49.83）。路過陶拉祖營地順手開飛行點。853 計時從接取開始，只有能及時到達才接。｜Si tu fais la quête facultative de Thunder Bluff et que le point de vol de Tal est déjà débloqué, vole depuis La Croisée. Sinon, pars du Camp Taurajo, suis la route jusqu'à Mulgore, monte par l'ascenseur de Thunder Bluff et débloque le point de vol auprès de Tal (1456 47.00, 49.83). Débloque aussi le point de vol du Camp Taurajo en passant. Le minuteur de 853 démarre dès l'acceptation : ne l'accepte que si tu peux arriver à temps.
+05-副本.md:18｜說明｜在貧瘠之地 十字路口開飛行點後，雷霆崖飛點已開就飛雷霆崖找拉哈羅接 5722／5723（沒開就從十字路口沿南路經陶拉祖營地往西進莫高雷，搭電梯上城開點），飛奧格瑪找索爾先做 5726／5727，再去暗巷區接 5761；若此輪已開幽暗城飛點，可在飛艇跨海時先向瓦里瑪薩斯領 5725。｜Après avoir débloqué le point de vol de La Croisée, dans Les Tarides, si celui de Thunder Bluff est déjà ouvert, vole à Thunder Bluff et va voir Rahauro pour 5722/5723 (sinon, pars de La Croisée par la route du sud, passe le Camp Taurajo et entre à l'ouest dans Mulgore, monte par l'ascenseur et débloque-le). Vole à Orgrimmar et va voir Thrall pour faire d'abord 5726/5727, puis rends-toi au Drag pour 5761. Si le point de vol de Fossoyeuse est déjà débloqué ce tour-ci, récupère d'abord 5725 auprès de Varimathras pendant la traversée de la mer en zeppelin.
 02-12到30級.md:273｜說明｜往北出銀松森林，沿大路走到布瑞爾。｜Quitte la Forêt des Pins argentés vers le nord et suis la grand-route jusqu'à Brill.
 02-12到30級.md:341｜說明｜用先前綁好的爐石回貧瘠之地 十字路口。爐石不可用時到布瑞爾南塔找薩匹塔（1420 60.74, 58.87，西平台）搭奧格瑪線；還在瑟伯切爾就先飛幽暗城再出城，幽暗城飛點未開就沿東北道路直接走到布瑞爾。｜Retourne à La Croisée, dans Les Tarides, avec la pierre de foyer liée plus tôt. Si ta pierre de foyer n'est pas disponible, va à la tour au sud de Brill, trouve Zapetta (1420 60.74, 58.87, plateforme ouest) et prends la ligne d'Orgrimmar. Si tu es encore au Sépulcre, vole d'abord à Fossoyeuse puis sors de la ville. Si le point de vol de Fossoyeuse n'est pas débloqué, prends la route du nord-est directement jusqu'à Brill.
 05-副本.md:141｜說明｜到拉斯梅爾墓園西側，靠近食屍鬼旁的愛德華；順序：建議先打第25步再靠近遺體｜Va du côté ouest du cimetière de Rath'mael et trouve Edward près des goules. Ordre : Fais d'abord l'étape 25, puis approche-toi du corps.
@@ -13168,12 +13168,12 @@
 05-副本.md:220｜說明｜坐標指向門外的吞噬軟漿怪，進本後仍可繼續收集。；可在副本門外打吞噬軟漿怪。；位置：在副本內沿水道找軟泥怪，缺精華再補｜Les coordonnées pointent vers des ectoplasmes dévorants à l'extérieur de l'entrée. Tu peux continuer à en récolter après être entré dans le donjon. Tu peux tuer des ectoplasmes dévorants à l'extérieur de l'entrée du donjon. Lieu : Dans le donjon, cherche des vases le long du canal d'eau et complète l'essence s'il t'en manque.
 05-副本.md:220｜說明｜坐標指向門外的吞噬軟漿怪，進本後仍可繼續收集。；可在副本門外打吞噬軟漿怪。｜Les coordonnées pointent vers des ectoplasmes dévorants à l'extérieur de l'entrée. Tu peux continuer à en récolter après être entré dans le donjon. Tu peux tuer des ectoplasmes dévorants à l'extérieur de l'entrée du donjon.
 05-副本.md:220｜說明｜可在副本門外打吞噬軟漿怪。；位置：在副本內沿水道找軟泥怪，缺精華再補｜Tu peux tuer des ectoplasmes dévorants à l'extérieur de l'entrée du donjon. Lieu : Dans le donjon, cherche des vases le long du canal d'eau et complète l'essence s'il t'en manque.
-02-12到30級.md:643｜說明｜選做無辜者之血前置且有 1063 時，從棘齒城飛雷霆崖接續；未開雷霆崖就飛陶拉祖營地，往西沿莫高雷大道走到雷霆崖找塔爾開點（1456 47.00, 49.83）。不打算順路開者，可略過這條支線，從棘齒城直接飛奧格瑪。｜Si tu fais l'introduction facultative du Sang des innocents et que tu as 1063, vole de Cabestan aux Pitons-du-Tonnerre pour la suite. Si les Pitons-du-Tonnerre ne sont pas débloqués, vole au Camp Taurajo, va vers l'ouest par la route de Mulgore jusqu'aux Pitons-du-Tonnerre et débloque-les auprès de Tal (1456 47.00, 49.83). Si tu ne comptes pas le débloquer en chemin, tu peux sauter cette quête annexe et voler directement de Cabestan à Orgrimmar.
+02-12到30級.md:643｜說明｜選做無辜者之血前置且有 1063 時，從棘齒城飛雷霆崖接續；未開雷霆崖就飛陶拉祖營地，往西沿莫高雷大道走到雷霆崖找塔爾開點（1456 47.00, 49.83）。不打算順路開者，可略過這條支線，從棘齒城直接飛奧格瑪。｜Si tu fais l'introduction facultative du Sang des innocents et que tu as 1063, vole de Cabestan à Thunder Bluff pour la suite. Si Thunder Bluff ne sont pas débloqués, vole au Camp Taurajo, va vers l'ouest par la route de Mulgore jusqu'à Thunder Bluff et débloque-les auprès de Tal (1456 47.00, 49.83). Si tu ne comptes pas le débloquer en chemin, tu peux sauter cette quête annexe et voler directement de Cabestan à Orgrimmar.
 02-12到30級.md:759｜說明｜值得做｜496 在西面同一趟收集，搭配希爾斯布萊德之戰 527；501 掉率低，順手收齊才交。交 527 後才出現 546，之後殺人類時一路收頭骨。｜À faire : récupère 496 dans la même boucle à l'ouest, avec La bataille d'Hillsbrad (527) 501 a un faible taux de butin ; ramasse tout en chemin avant de rendre. 546 n'apparaît qu'après avoir rendu 527 ; ensuite, ramasse les crânes en tuant des humains.
-02-12到30級.md:789｜說明｜在布瑞爾南方飛艇塔找薩匹塔（1420 60.74, 58.87，西平台）確認奧格瑪線。抵杜洛塔後進奧格瑪飛陶拉祖；若仍在塔倫米爾才先飛幽暗城轉飛艇。有 1067 要交：已開雷霆崖就先飛雷霆崖交件再飛陶拉祖；未開就從陶拉祖往西沿莫高雷大道走到雷霆崖，搭電梯上城向塔爾開點（1456 47.00, 49.83），交完再飛回陶拉祖。｜À la tour des zeppelins au sud de Brill, trouve Zapetta (1420 60.74, 58.87, plateforme ouest) pour confirmer la ligne d'Orgrimmar. Une fois à Durotar, entre à Orgrimmar et vole au Camp Taurajo. Si tu es encore à Moulin-de-Tarren, vole d'abord à Fossoyeuse et prends la correspondance du zeppelin. Si tu as 1067 à rendre : si les Pitons-du-Tonnerre sont déjà débloqués, vole d'abord là-bas, rends-la, puis vole au Camp Taurajo. S'ils ne sont pas débloqués, va du Camp Taurajo vers l'ouest par la route de Mulgore jusqu'aux Pitons-du-Tonnerre, monte par l'ascenseur et débloque le point de vol auprès de Tal (1456 47.00, 49.83) ; après avoir rendu la quête, retourne en volant au Camp Taurajo.
+02-12到30級.md:789｜說明｜在布瑞爾南方飛艇塔找薩匹塔（1420 60.74, 58.87，西平台）確認奧格瑪線。抵杜洛塔後進奧格瑪飛陶拉祖；若仍在塔倫米爾才先飛幽暗城轉飛艇。有 1067 要交：已開雷霆崖就先飛雷霆崖交件再飛陶拉祖；未開就從陶拉祖往西沿莫高雷大道走到雷霆崖，搭電梯上城向塔爾開點（1456 47.00, 49.83），交完再飛回陶拉祖。｜À la tour des zeppelins au sud de Brill, trouve Zapetta (1420 60.74, 58.87, plateforme ouest) pour confirmer la ligne d'Orgrimmar. Une fois à Durotar, entre à Orgrimmar et vole au Camp Taurajo. Si tu es encore à Moulin-de-Tarren, vole d'abord à Fossoyeuse et prends la correspondance du zeppelin. Si tu as 1067 à rendre : si Thunder Bluff sont déjà débloqués, vole d'abord là-bas, rends-la, puis vole au Camp Taurajo. S'ils ne sont pas débloqués, va du Camp Taurajo vers l'ouest par la route de Mulgore jusqu'à Thunder Bluff, monte par l'ascenseur et débloque le point de vol auprès de Tal (1456 47.00, 49.83) ; après avoir rendu la quête, retourne en volant au Camp Taurajo.
 02-12到30級.md:817｜說明｜與 98070 同一區，從亂風崗往西，沿鷹身人坡地到洞內找可互動的補給箱。；遊戲實測物件 670338 的三個採集點。｜Même zone que 98070 : depuis le poste de Librevent, va vers l'ouest, suis les pentes des harpies jusqu'à la grotte et cherche la caisse de ravitaillement interactive. Les trois points de récolte de l'objet 670338, vérifiés en jeu.
-02-12到30級.md:855｜說明｜從亂風崗或雷霆崖前往梣谷碎木崗哨。｜Va du poste de Librevent ou des Pitons-du-Tonnerre jusqu'au poste de Bois-brisé, à Orneval.
-02-12到30級.md:884｜說明｜碎木崗哨飛點已開就從亂風崗或雷霆崖直飛。未開就先飛十字路口，沿貧瘠之地北路越過莫爾杉壁壘，沿梣谷東側大道到碎木崗哨。｜Si le point de vol du poste de Bois-brisé est débloqué, vole directement depuis le poste de Librevent ou les Pitons-du-Tonnerre. Sinon, vole d'abord à La Croisée, va vers le nord dans Les Tarides en passant le Rempart de Mor'shan et suis la route du côté est d'Orneval jusqu'au poste de Bois-brisé.
+02-12到30級.md:855｜說明｜從亂風崗或雷霆崖前往梣谷碎木崗哨。｜Va du poste de Librevent ou de Thunder Bluff jusqu'au poste de Bois-brisé, à Orneval.
+02-12到30級.md:884｜說明｜碎木崗哨飛點已開就從亂風崗或雷霆崖直飛。未開就先飛十字路口，沿貧瘠之地北路越過莫爾杉壁壘，沿梣谷東側大道到碎木崗哨。｜Si le point de vol du poste de Bois-brisé est débloqué, vole directement depuis le poste de Librevent ou Thunder Bluff. Sinon, vole d'abord à La Croisée, va vers le nord dans Les Tarides en passant le Rempart de Mor'shan et suis la route du côté est d'Orneval jusqu'au poste de Bois-brisé.
 02-12到30級.md:962｜說明｜從狂風峭壁北側沿坡上木架，不要在湖底找他。；格雷蘇在高架上。｜Grimpe sur la pente au nord de Combe des Cisailles jusqu'à l'échafaudage en bois. Ne le cherche pas au fond du lac. Gerenzo est sur l'échafaudage surélevé.
 02-12到30級.md:965｜說明｜守門人及洞穴目標集中，已組隊且順路才深入。；前三點為三個儲藏處，末點為石爪峰洞穴儲藏室。｜Les gardiens de la porte et les objectifs de la grotte sont regroupés ; n'avance en profondeur que si tu es en groupe et que c'est sur ton chemin. Les trois premiers points sont trois caches ; le dernier est la réserve de la grotte du Pic des Serres-Rocheuses.
 02-12到30級.md:1039｜說明｜這一列在三份材料齊全後完成。死亡礦坑位於西部荒野，部落可經荊棘谷、暮色森林前往。；掉率只計哥布林木匠掉落的白石橡木。｜Termine cette ligne une fois les trois matériaux réunis. Les Mortemines se trouvent dans la Marche de l'Ouest ; la Horde peut y aller par la Vallée de Strangleronce et le Bois de la Pénombre. Le taux de butin ne compte que le chêne de pierre blanche laissé par les sculpteurs gobelins.
@@ -13185,14 +13185,14 @@
 05-副本.md:651｜說明｜大教堂先清房間周圍；懷特邁恩會復活莫格萊尼。；位置：穿過噴泉庭院上階梯，進正殿打雙王。；順序：莫格萊尼→懷特邁恩復活→雙王｜Nettoie d'abord les alentours de la salle dans la cathédrale. Whitemane ressuscitera Mograine. Lieu : Traverse la cour à la fontaine, monte les escaliers et affronte les deux boss dans la salle principale. Ordre : Mograine → Whitemane le ressuscite → les deux boss.
 05-副本.md:651｜說明｜大教堂先清房間周圍；懷特邁恩會復活莫格萊尼。；位置：穿過噴泉庭院上階梯，進正殿打雙王。｜Nettoie d'abord les alentours de la salle dans la cathédrale. Whitemane ressuscitera Mograine. Lieu : Traverse la cour à la fontaine, monte les escaliers et affronte les deux boss dans la salle principale.
 05-副本.md:651｜說明｜穿過噴泉庭院上階梯，進正殿打雙王。；順序：莫格萊尼→懷特邁恩復活→雙王｜Traverse la cour à la fontaine, monte les escaliers et affronte les deux boss dans la salle principale. Ordre : Mograine → Whitemane le ressuscite → les deux boss.
-03-30到45級.md:147｜說明｜在布瑞爾南側飛艇塔找薩匹塔（1420 60.74, 58.87，西平台）搭奧格瑪線。到奧格瑪後，已開亂風崗就直接飛；未開就飛陶拉祖營地，沿南路搭大升降梯下谷底，往東搭亂風崗升降梯，向奈瑟開飛行點 45.14, 49.11。再沿路向東南進閃光平原。｜À la tour des zeppelins au sud de Brill, trouve Zapetta (1420 60.74, 58.87, plateforme ouest) et prends la ligne d'Orgrimmar. Une fois à Orgrimmar, si le poste de Librevent est déjà débloqué, vole directement. Sinon, vole au Camp Taurajo, prends le grand ascenseur jusqu'au fond de la vallée par la route du sud, va vers l'est, monte à l'ascenseur du poste de Librevent et débloque le point de vol auprès de Nyse (45.14, 49.11). Suis ensuite la route vers le sud-est jusqu'aux Shimmering Flats.
+03-30到45級.md:147｜說明｜在布瑞爾南側飛艇塔找薩匹塔（1420 60.74, 58.87，西平台）搭奧格瑪線。到奧格瑪後，已開亂風崗就直接飛；未開就飛陶拉祖營地，沿南路搭大升降梯下谷底，往東搭亂風崗升降梯，向奈瑟開飛行點 45.14, 49.11。再沿路向東南進閃光平原。｜À la tour des zeppelins au sud de Brill, trouve Zapetta (1420 60.74, 58.87, plateforme ouest) et prends la ligne d'Orgrimmar. Une fois à Orgrimmar, si le poste de Librevent est déjà débloqué, vole directement. Sinon, vole au Camp Taurajo, prends la Grande élévation jusqu'au fond de la vallée par la route du sud, va vers l'est, monte à l'ascenseur du poste de Librevent et débloque le point de vol auprès de Nyse (45.14, 49.11). Suis ensuite la route vers le sud-est jusqu'aux Salines.
 03-30到45級.md:169｜說明｜回亂風崗飛棘齒城，交完飛回。｜Retourne au poste de Librevent, vole à Cabestan, rends la quête et reviens en volant.
-03-30到45級.md:179｜說明｜在閃光平原收完任務，沿谷底原路回亂風崗，搭升降梯上飛點。｜Après avoir fini les quêtes aux Shimmering Flats, reviens par le fond de la vallée jusqu'au poste de Librevent et prends l'ascenseur jusqu'au point de vol.
+03-30到45級.md:179｜說明｜在閃光平原收完任務，沿谷底原路回亂風崗，搭升降梯上飛點。｜Après avoir fini les quêtes aux Salines, reviens par le fond de la vallée jusqu'au poste de Librevent et prends l'ascenseur jusqu'au point de vol.
 05-副本.md:694｜說明｜護送從副本內 NPC 開始。；位置：尾王旁營帳出發，跟威利克斯走回入口。；順序：清完第 17–20 步再接護送｜L'escorte commence avec un PNJ à l'intérieur du donjon. Lieu : Pars de la tente à côté du dernier boss et suis Willix jusqu'à l'entrée. Ordre : Termine les étapes 17–20 avant de prendre l'escorte.
 05-副本.md:694｜說明｜護送從副本內 NPC 開始。；位置：尾王旁營帳出發，跟威利克斯走回入口。｜L'escorte commence avec un PNJ à l'intérieur du donjon. Lieu : Pars de la tente à côté du dernier boss et suis Willix jusqu'à l'entrée.
 05-副本.md:694｜說明｜尾王旁營帳出發，跟威利克斯走回入口。；順序：清完第 17–20 步再接護送｜Pars de la tente à côté du dernier boss et suis Willix jusqu'à l'entrée. Ordre : Termine les étapes 17–20 avant de prendre l'escorte.
 05-副本.md:698｜說明｜跟第 18 步同打尾端小屋的卡爾加。；順序：與第 18 步一起拾取｜Tue Charlga dans la cabane tout au bout, en même temps que l'étape 18. Ordre : Ramasse-le en même temps que l'étape 18.
-03-30到45級.md:210｜說明｜從亂風崗飛石爪山脈烈日石居（經十字路口等已開點轉乘），往西南穿過焦炭谷進淒涼之地。烈日石居未開就先飛十字路口，往西經石爪山入口（1413 35.26, 27.88）沿山路到烈日石居開點。｜Depuis le poste de Librevent, vole à la Retraite de Roche-Soleil, dans Les Serres-Rocheuses (correspondance par La Croisée ou d'autres points débloqués), puis va vers le sud-ouest par Charred Vale jusqu'à Désolace. Si la Retraite de Roche-Soleil n'est pas débloquée, vole d'abord à La Croisée, va vers l'ouest en passant l'entrée des Serres-Rocheuses (1413 35.26, 27.88) et suis la route de montagne jusqu'à la Retraite de Roche-Soleil pour la débloquer.
+03-30到45級.md:210｜說明｜從亂風崗飛石爪山脈烈日石居（經十字路口等已開點轉乘），往西南穿過焦炭谷進淒涼之地。烈日石居未開就先飛十字路口，往西經石爪山入口（1413 35.26, 27.88）沿山路到烈日石居開點。｜Depuis le poste de Librevent, vole à la Retraite de Roche-Soleil, dans Les Serres-Rocheuses (correspondance par La Croisée ou d'autres points débloqués), puis va vers le sud-ouest par le Val calciné jusqu'à Désolace. Si la Retraite de Roche-Soleil n'est pas débloquée, vole d'abord à La Croisée, va vers l'ouest en passant l'entrée des Serres-Rocheuses (1413 35.26, 27.88) et suis la route de montagne jusqu'à la Retraite de Roche-Soleil pour la débloquer.
 03-30到45級.md:279｜說明｜出城到杜洛塔飛艇塔。｜Sors de la ville vers la tour des zeppelins de Durotar.
 03-30到45級.md:306｜說明｜在奧格瑪城外飛艇塔找斯納爾克（1411 50.69, 12.89）搭格羅姆高線，抵達後開塞斯塔飛行點 32.54, 29.35。已在荊棘谷者直接到營地。｜À la tour des zeppelins à l'extérieur d'Orgrimmar, trouve Snurk (1411 50.69, 12.89) et prends la ligne de Grom'gol. À l'arrivée, débloque le point de vol de Thysta (32.54, 29.35). Si tu es déjà dans la Vallée de Strangleronce, va directement au camp.
 03-30到45級.md:440｜說明｜格羅姆高搭飛艇回奧格瑪。｜Prends le zeppelin de Grom'gol pour retourner à Orgrimmar.
@@ -13202,7 +13202,7 @@
 05-副本.md:800｜說明｜收不齊就繼續清船區的海盜。；位置：進鹽占海盜船區，沿路清海盜收神器。｜Si tu n'en trouves pas assez, continue à nettoyer les pirates de la zone des navires. Lieu : Entre dans la zone du navire pirate de Saltseer et ramasse les artefacts sur les pirates en chemin.
 05-副本.md:800｜說明｜進鹽占海盜船區，沿路清海盜收神器。；順序：和第 21 步同區清理｜Entre dans la zone du navire pirate de Saltseer et ramasse les artefacts sur les pirates en chemin. Ordre : Nettoie-le dans la même zone que l'étape 21.
 05-副本.md:801｜說明｜到船區，沿船長附近通道清驗屍官。；順序：殺船長後互動發光珍珠｜Va dans la zone des navires et nettoie les médecins légistes dans les passages près du capitaine. Ordre : Interagis avec la perle lumineuse après avoir tué le capitaine.
-05-副本.md:770｜說明｜荊棘谷第一次已排進主線：格羅姆高接 629 先做暗礁海、交後接 95748；藏寶海灣找克拉茲克接 95789、95791；祖昆達拓印 95748；回格羅姆高接 95770、95773 在西岸一起做完，交後接 95775、95776。若已開雷霆崖飛行點，進本前從格羅姆高搭飛艇回奧格瑪，再飛雷霆崖，沿莫高雷道路去天空觀測高臺找瑪庫可。接齊後回格羅姆高，自西岸下水游到水下傳送門。｜La première visite à la Vallée de Strangleronce est déjà dans la route principale : prends 629 à Grom'gol, fais d'abord Le Récif infâme et prends 95748 après l'avoir rendue. Prends 95789 et 95791 auprès de Krazek à Baie-du-Butin. Fais le frottage de Zul'Kunda pour 95748. Retourne à Grom'gol pour 95770 et 95773 et termine-les ensemble sur la côte ouest ; après les avoir rendues, prends 95775 et 95776. Si le point de vol des Pitons-du-Tonnerre est déjà débloqué, avant d'entrer dans le donjon, prends le zeppelin de Grom'gol pour retourner à Orgrimmar, vole aux Pitons-du-Tonnerre et suis la route de Mulgore jusqu'au Plateau de Guette-ciel pour trouver Mazu'kon. Une fois tout réuni, retourne à Grom'gol et nage depuis la côte ouest jusqu'au portail sous-marin.
+05-副本.md:770｜說明｜荊棘谷第一次已排進主線：格羅姆高接 629 先做暗礁海、交後接 95748；藏寶海灣找克拉茲克接 95789、95791；祖昆達拓印 95748；回格羅姆高接 95770、95773 在西岸一起做完，交後接 95775、95776。若已開雷霆崖飛行點，進本前從格羅姆高搭飛艇回奧格瑪，再飛雷霆崖，沿莫高雷道路去天空觀測高臺找瑪庫可。接齊後回格羅姆高，自西岸下水游到水下傳送門。｜La première visite à la Vallée de Strangleronce est déjà dans la route principale : prends 629 à Grom'gol, fais d'abord Le Récif infâme et prends 95748 après l'avoir rendue. Prends 95789 et 95791 auprès de Krazek à Baie-du-Butin. Fais le frottage de Zul'Kunda pour 95748. Retourne à Grom'gol pour 95770 et 95773 et termine-les ensemble sur la côte ouest ; après les avoir rendues, prends 95775 et 95776. Si le point de vol de Thunder Bluff est déjà débloqué, avant d'entrer dans le donjon, prends le zeppelin de Grom'gol pour retourner à Orgrimmar, vole à Thunder Bluff et suis la route de Mulgore jusqu'au Plateau de Guette-ciel pour trouver Mazu'kon. Une fois tout réuni, retourne à Grom'gol et nage depuis la côte ouest jusqu'au portail sous-marin.
 05-副本.md:741｜說明｜戰鬥時有人去按掩體旁按鈕控制炸彈。；位置：沿工坊深處通道進尾王圓廳，殺王後開箱。｜Pendant le combat, quelqu'un appuie sur le bouton à côté de l'abri pour contrôler les bombes. Lieu : Suis le passage au fond de l'atelier jusqu'à la rotonde du dernier boss et ouvre le coffre après l'avoir tué.
 05-副本.md:743｜說明｜清潔區旁宿舍接人，沿發條小徑回正門。；順序：可先做第 9–10 步再深入尾王｜Récupère le PNJ au dortoir à côté de la zone de nettoyage et suis le sentier mécanique jusqu'à la porte principale. Ordre : Tu peux faire d'abord les étapes 9–10 avant de t'enfoncer jusqu'au dernier boss.
 05-副本.md:745｜說明｜帶 3 銀，依機器對話操作。；位置：入門左轉下坡，到清潔區牆邊找清潔器。；順序：先從黑鐵特工取得戒指｜Prends 3 pièces d'argent et suis les dialogues de la machine. Lieu : Tourne à gauche après l'entrée et descends la pente ; trouve le Décapeur 5200 contre le mur de la zone de nettoyage. Ordre : Récupère d'abord l'anneau auprès de l'agent Dark Iron.
@@ -13212,31 +13212,31 @@
 03-30到45級.md:1530｜說明｜組隊進圖書館，在書架上找書。；進入血色修道院後走圖書館區。｜Entre en groupe dans la bibliothèque et cherche le livre sur les étagères. Après être entré dans le Monastère écarlate, va dans la zone de la bibliothèque.
 03-30到45級.md:537｜說明｜回蕨牆村。保留爐石給淒涼之地 葬影村集會所回程。｜Retourne à Mur-de-Fougères. Garde ta pierre de foyer pour le retour depuis le convent près de Proie-de-l'Ombre, à Désolace.
 03-30到45級.md:563｜說明｜在蕨牆村飛行地圖選葬影村，經十字路口、烈日石居等已開點轉乘。地圖上沒有葬影村時，爐石綁葬影村且已冷卻就爐回去，集會所回程再沿路走回葬影村。｜À Mur-de-Fougères, choisis Proie-de-l'Ombre sur la carte des vols et prends les correspondances par des points débloqués comme La Croisée et la Retraite de Roche-Soleil. Si Proie-de-l'Ombre n'est pas sur la carte et que ta pierre de foyer y est liée et disponible, retourne-y avec ; pour le retour depuis le convent, reviens à pied à Proie-de-l'Ombre par la route.
-03-30到45級.md:1548｜說明｜先跟隊伍確認會走有黑曜石哨兵的入口。；從奧達曼後門進入，找黑曜石哨兵。｜Confirme d'abord avec le groupe que vous prendrez l'entrée avec la sentinelle d'obsidienne. Entre dans Uldaman par la porte arrière et trouve la sentinelle d'obsidienne.
-03-30到45級.md:634｜說明｜去完辛迪加營地後前往阿拉希高地。｜Après le camp du Syndicat, va aux Hautes-terres d'Arathi.
+03-30到45級.md:1548｜說明｜先跟隊伍確認會走有黑曜石哨兵的入口。；從奧達曼後門進入，找黑曜石哨兵。｜Confirme d'abord avec le groupe que tu prendras l'entrée avec la sentinelle d'obsidienne. Entre dans Uldaman par la porte arrière et trouve la sentinelle d'obsidienne.
+03-30到45級.md:634｜說明｜去完辛迪加營地後前往阿拉希高地。｜Après le camp du Syndicat, va aux Hautes-terres Arathies.
 03-30到45級.md:661｜說明｜從辛迪加營地出發就向東過索拉丁之牆，沿主路往東，先到 62.50, 33.73 接受困的公主再進落錘鎮。已回塔倫米爾或幽暗城且開過落錘鎮，可直接飛落錘鎮，再回頭接受困的公主。｜Si tu pars du camp du Syndicat, va vers l'est par le Mur de Thoradin et suis la grand-route vers l'est. Va d'abord en 62.50, 33.73 pour prendre La princesse piégée, puis entre à Trépas-d'Orgrim. Si tu es déjà revenu à Moulin-de-Tarren ou à Fossoyeuse et que tu as débloqué Trépas-d'Orgrim, vole directement à Trépas-d'Orgrim, puis reviens pour La princesse piégée.
 03-30到45級.md:669｜說明｜洞外山坡和洞裡的枯鬚狗頭人都會掉，掉率低、會逃跑，約要殺 30 隻；冰霜法師打很痛。最後幾隻在洞底打，集滿直接交。；位置：上山小路藏在落錘鎮東邊 80, 40 附近的大石頭和樹後面，往東再轉北，洞口在 82.3, 36.7。｜Les kobolds Sèche-moustache sur la pente devant la grotte et à l'intérieur en lâchent tous. Le taux est faible et ils fuient ; compte environ 30 morts. Les mages de givre frappent fort. Combats les derniers au fond de la grotte et rends dès que tu as tout. Lieu : Le sentier de montagne est caché derrière les gros rochers et les arbres vers 80, 40, à l'est de Trépas-d'Orgrim. Va vers l'est puis tourne au nord ; l'entrée de la grotte est en 82.3, 36.7.
 05-副本.md:847｜說明｜走到火眼莫德雷斯附近牢房，找貝尼斯特拉茲。；順序：全隊先交誓言石再接護送｜Va à la cellule près de Mordresh Œil-de-feu et trouve Belnistrasz. Ordre : Tout le groupe rend d'abord à la pierre du serment, puis prend l'escorte.
 05-副本.md:853｜說明｜進亞門納爾巢穴，找寒冰使者之眼。；順序：與第 17 步同一區｜Entre dans le repaire d'Amnennar et trouve l'Œil du Porte-froid. Ordre : Même zone que l'étape 17.
-05-副本.md:830｜說明｜離開阿拉希高地 落錘鎮時先飛幽暗城。千針石林 閃光平原可先打剃刀沼澤並拾 6522。奧特蘭克山脈至阿拉希高地 落錘鎮經幽暗城時先交瓦里瑪薩斯，再同城找安德魯接 3341。由提里斯法坐飛艇回奧格瑪、飛雷霆崖（沒開就飛陶拉祖走莫高雷大道），往莫高雷西北找蘇塔菈接 97196；飛陶拉祖往南，門外找麥雷姆。已在大河林地的隊員從火線港搭船到熱砂港再北上。出本後在卡林多就飛加基森到熱砂港搭船進大河林地（第 24 站），加基森沒開就照第 24 站首步，飛亂風崗走閃光平原南坡；要先回幽暗城交 3341、6521，就從幽暗城照第 24 站首步走。｜En quittant Trépas-d'Orgrim, aux Hautes-terres d'Arathi, vole d'abord à Fossoyeuse. Depuis les Shimmering Flats, dans Mille pointes, tu peux d'abord faire le Kraal de Tranchebauge et ramasser 6522. Si tu viens des Montagnes d'Alterac ou de Trépas-d'Orgrim en passant par Fossoyeuse, rends d'abord à Varimathras, puis trouve Andrew Brownell dans la même ville pour prendre 3341. Prends le zeppelin de Tirisfal pour retourner à Orgrimmar et vole aux Pitons-du-Tonnerre (s'ils ne sont pas débloqués, vole au Camp Taurajo et suis la route de Mulgore) ; va ensuite au nord-ouest de Mulgore, trouve Sutara Marche-plaines et prends 97196. Vole au Camp Taurajo et va vers le sud ; trouve Myriam Moonsinger devant la porte. Les membres du groupe déjà dans Rives Claires prennent le bateau de Port de Poudremèche à Port Gentepression et remontent vers le nord. Après le donjon, si tu es à Kalimdor, vole à Gadgetzan et prends le bateau de Port Gentepression vers Rives Claires (étape 24) ; si Gadgetzan n'est pas débloqué, suis la première étape de l'étape 24 : vole au poste de Librevent et prends la pente sud des Shimmering Flats. Si tu dois d'abord retourner à Fossoyeuse pour rendre 3341 et 6521, suis depuis Fossoyeuse la première étape de l'étape 24.
-03-30到45級.md:755｜說明｜已開羅格瑪就從落錘鎮直飛。沒開就照多數玩家的走法搭船：落錘鎮飛幽暗城，到布瑞爾南方飛艇塔搭往奧格瑪的飛艇；在奧格瑪飛加基森（沒開加基森就飛亂風崗，經閃光平原南坡進塔納利斯，到了先開加基森）。人在卡林多就直接去塔納利斯。｜Si Rog'mar est débloqué, vole directement depuis Trépas-d'Orgrim. Sinon, prends la route de la plupart des joueurs, en bateau : vole de Trépas-d'Orgrim à Fossoyeuse et prends le zeppelin pour Orgrimmar à la tour au sud de Brill. À Orgrimmar, vole à Gadgetzan (si Gadgetzan n'est pas débloqué, vole au poste de Librevent, traverse la pente sud des Shimmering Flats vers Tanaris et débloque Gadgetzan en arrivant). Si tu es à Kalimdor, va directement à Tanaris.
+05-副本.md:830｜說明｜離開阿拉希高地 落錘鎮時先飛幽暗城。千針石林 閃光平原可先打剃刀沼澤並拾 6522。奧特蘭克山脈至阿拉希高地 落錘鎮經幽暗城時先交瓦里瑪薩斯，再同城找安德魯接 3341。由提里斯法坐飛艇回奧格瑪、飛雷霆崖（沒開就飛陶拉祖走莫高雷大道），往莫高雷西北找蘇塔菈接 97196；飛陶拉祖往南，門外找麥雷姆。已在大河林地的隊員從火線港搭船到熱砂港再北上。出本後在卡林多就飛加基森到熱砂港搭船進大河林地（第 24 站），加基森沒開就照第 24 站首步，飛亂風崗走閃光平原南坡；要先回幽暗城交 3341、6521，就從幽暗城照第 24 站首步走。｜En quittant Trépas-d'Orgrim, aux Hautes-terres Arathies, vole d'abord à Fossoyeuse. Depuis les Salines, dans Mille pointes, tu peux d'abord faire le Kraal de Tranchebauge et ramasser 6522. Si tu viens des Montagnes d'Alterac ou de Trépas-d'Orgrim en passant par Fossoyeuse, rends d'abord à Varimathras, puis trouve Andrew Brownell dans la même ville pour prendre 3341. Prends le zeppelin de Tirisfal pour retourner à Orgrimmar et vole à Thunder Bluff (s'ils ne sont pas débloqués, vole au Camp Taurajo et suis la route de Mulgore) ; va ensuite au nord-ouest de Mulgore, trouve Sutara Marche-plaines et prends 97196. Vole au Camp Taurajo et va vers le sud ; trouve Myriam Moonsinger devant la porte. Les membres du groupe déjà dans Rives Claires prennent le bateau de Port de Poudremèche à Port Gentepression et remontent vers le nord. Après le donjon, si tu es à Kalimdor, vole à Gadgetzan et prends le bateau de Port Gentepression vers Rives Claires (étape 24) ; si Gadgetzan n'est pas débloqué, suis la première étape de l'étape 24 : vole au poste de Librevent et prends la pente sud des Salines. Si tu dois d'abord retourner à Fossoyeuse pour rendre 3341 et 6521, suis depuis Fossoyeuse la première étape de l'étape 24.
+03-30到45級.md:755｜說明｜已開羅格瑪就從落錘鎮直飛。沒開就照多數玩家的走法搭船：落錘鎮飛幽暗城，到布瑞爾南方飛艇塔搭往奧格瑪的飛艇；在奧格瑪飛加基森（沒開加基森就飛亂風崗，經閃光平原南坡進塔納利斯，到了先開加基森）。人在卡林多就直接去塔納利斯。｜Si Rog'mar est débloqué, vole directement depuis Trépas-d'Orgrim. Sinon, prends la route de la plupart des joueurs, en bateau : vole de Trépas-d'Orgrim à Fossoyeuse et prends le zeppelin pour Orgrimmar à la tour au sud de Brill. À Orgrimmar, vole à Gadgetzan (si Gadgetzan n'est pas débloqué, vole au poste de Librevent, traverse la pente sud des Salines vers Tanaris et débloque Gadgetzan en arrivant). Si tu es à Kalimdor, va directement à Tanaris.
 03-30到45級.md:756｜說明｜到加基森東邊的熱砂港（1446 68.60, 23.00）搭船，在大河林地火線港碼頭（2548 80.60, 54.60）下船，往西走到羅格瑪。火線港飛行管理員沒有航線。｜Va à Port Gentepression, à l'est de Gadgetzan (1446 68.60, 23.00), et prends le bateau. Descends au quai de Port de Poudremèche, dans Rives Claires (2548 80.60, 54.60), et marche vers l'ouest jusqu'à Rog'mar. Le maître de vol de Port de Poudremèche n'a aucune route.
 03-30到45級.md:757｜說明｜向葛菈娜開飛行點。｜Débloque le point de vol auprès de Grakna.
 03-30到45級.md:758｜說明｜向旅店老闆托卡（2548 57.58, 45.47）綁爐石。｜Lie ta pierre de foyer auprès de l'aubergiste Toka (2548 57.58, 45.47).
 03-30到45級.md:870｜說明｜在這站先開羅格瑪飛點，往返卡加斯或斯通納德可少跑地面。補給可找旅店老闆托卡。｜Débloque à cette étape le point de vol de Rog'mar ; cela évite des trajets à pied aller-retour vers Kargath ou Pierrêche. Tu peux te ravitailler auprès de l'aubergiste Toka.
 03-30到45級.md:906｜說明｜先取得冰霜之油，再交給魯特維爾。；到此交材料；冰霜之油可由煉金師製作。｜Procure-toi d'abord de l'huile de givre, puis remets-la à Lotwil. Remets le matériel ici. Les alchimistes peuvent fabriquer l'huile de givre.
 03-30到45級.md:906｜說明｜先取得冰霜之油，再交給魯特維爾。；到此交材料｜Procure-toi d'abord de l'huile de givre, puis remets-la à Lotwil. Remets le matériel ici.
-03-30到45級.md:942｜說明｜已學騎術就從卡加斯出發往荊棘谷。尚未學時依種族前往騎術訓練師：不死族從卡加斯飛幽暗城，走到布瑞爾；獸人／食人妖飛格羅姆高，搭飛艇回奧格瑪（食人妖再到森金村）；牛頭人和部落天裔也照這樣到奧格瑪再飛雷霆崖，牛頭人下到血蹄村，部落天裔走到天空守望者高原碼頭搭割天者號。｜Si tu as appris l'équitation, pars de Kargath vers la Vallée de Strangleronce. Sinon, va voir le maître d'équitation de ta race : les morts-vivants volent de Kargath à Fossoyeuse et marchent jusqu'à Brill. Orcs et trolls volent à Grom'gol et prennent le zeppelin pour retourner à Orgrimmar (les trolls continuent ensuite jusqu'au village de Sen'jin) Les taurens et les Hauts-nés de la Horde passent aussi par Orgrimmar, puis volent aux Pitons-du-Tonnerre. Les taurens descendent à Sabot-de-Sang ; les Hauts-nés de la Horde marchent jusqu'au quai du Plateau de Guette-ciel et prennent le Skycutter.
+03-30到45級.md:942｜說明｜已學騎術就從卡加斯出發往荊棘谷。尚未學時依種族前往騎術訓練師：不死族從卡加斯飛幽暗城，走到布瑞爾；獸人／食人妖飛格羅姆高，搭飛艇回奧格瑪（食人妖再到森金村）；牛頭人和部落天裔也照這樣到奧格瑪再飛雷霆崖，牛頭人下到血蹄村，部落天裔走到天空守望者高原碼頭搭割天者號。｜Si tu as appris l'équitation, pars de Kargath vers la Vallée de Strangleronce. Sinon, va voir le maître d'équitation de ta race : les morts-vivants volent de Kargath à Fossoyeuse et marchent jusqu'à Brill. Orcs et trolls volent à Grom'gol et prennent le zeppelin pour retourner à Orgrimmar (les trolls continuent ensuite jusqu'au village de Sen'jin) Les taurens et les Hauts-nés de la Horde passent aussi par Orgrimmar, puis volent à Thunder Bluff. Les taurens descendent à Sabot-de-Sang ; les Hauts-nés de la Horde marchent jusqu'au quai du Plateau de Guette-ciel et prennent le Skycutter.
 05-副本.md:907｜說明｜紫色蘑菇生長在副本門外。；位置：正門外洞先採紫菇，進本再沿挖掘通道補齊。｜Les champignons violets poussent devant l'entrée du donjon. Lieu : Cueille d'abord les champignons violets dans la grotte devant l'entrée principale, puis complète à l'intérieur le long des passages d'excavation.
 05-副本.md:909｜說明｜從正門打過雷夫洛什，到他身後房間查遺體。；順序：完成後出本做第 30、33 步｜Depuis l'entrée principale, combats jusqu'à Revelosh et examine les restes dans la salle derrière lui. Ordre : Une fois fini, sors du donjon et fais les étapes 30 et 33.
 05-副本.md:918｜說明｜二號挖掘場甕→加加恩房→格瑞姆洛克→尾王。；順序：先取黃寶石，再紅、藍寶石，最後取能量源｜Urne du deuxième chantier de fouilles → salle de Galgann → Grimlok → dernier boss. Ordre : Prends d'abord la gemme jaune, puis la rouge et la bleue, et en dernier la source d'énergie.
 05-副本.md:920｜說明｜擊敗阿札達斯，進後方寶庫點諾甘農圓盤。；順序：先聽石頭看守者，再點圓盤｜Bats Archaedas et entre dans la chambre derrière lui pour cliquer sur les Disques de Norgannon. Ordre : Écoute d'abord le gardien de pierre, puis clique sur les disques.
 03-30到45級.md:970｜說明｜在卡加斯就直飛藏寶海灣開下一批任務。從騎術訓練師回來時，人在卡林多先飛奧格瑪，到城外飛艇塔找斯納爾克（1411 50.69, 12.89）；人在幽暗城就到布瑞爾南方飛艇塔找興登堡（1420 61.78, 59.18）。搭格羅姆高線，到格羅姆高再飛藏寶海灣。｜Depuis Kargath, vole directement à Baie-du-Butin pour lancer la série de quêtes suivante. Si tu reviens du maître d'équitation et que tu es à Kalimdor, vole d'abord à Orgrimmar et trouve Snurk à la tour des zeppelins à l'extérieur de la ville (1411 50.69, 12.89) Si tu es à Fossoyeuse, trouve Hin Denburg à la tour des zeppelins au sud de Brill (1420 61.78, 59.18). Prends la ligne de Grom'gol, puis vole de Grom'gol à Baie-du-Butin.
 03-30到45級.md:1059｜說明｜交完血帆與討債後前往悲傷沼澤斯通納德。｜Après avoir rendu Voile-sanglante et Recouvrement de dettes, va à Pierrêche, dans le Marais des Chagrins.
-03-30到45級.md:1091｜說明｜已開斯通納德就從藏寶海灣或格羅姆高直飛。沒開時，爐石綁羅格瑪且可用就先爐回羅格瑪，不然從藏寶海灣飛羅格瑪（經卡加斯轉乘），再沿南側道路經 Terral’s Watch（2548 約 60, 64）南下進悲傷沼澤；或飛格羅姆高，沿荊棘谷大道北上暮色森林，繞開夜色鎮守衛，從東口經逆風小徑進悲傷沼澤。｜Si Pierrêche est débloqué, vole directement depuis Baie-du-Butin ou Grom'gol. Sinon, si ta pierre de foyer est liée à Rog'mar et utilisable, utilise-la d'abord pour Rog'mar ; sinon, vole de Baie-du-Butin à Rog'mar (correspondance par Kargath), puis suis la route du sud en passant par Terral's Watch (2548 vers 60, 64) vers le sud jusque dans le Marais des Chagrins. Ou vole à Grom'gol, remonte la route de la Vallée de Strangleronce vers le nord jusqu'au Bois de la Pénombre, évite les gardes de Sombrebois et entre dans le Marais des Chagrins par la sortie est, via le Défilé de Deuillevent.
+03-30到45級.md:1091｜說明｜已開斯通納德就從藏寶海灣或格羅姆高直飛。沒開時，爐石綁羅格瑪且可用就先爐回羅格瑪，不然從藏寶海灣飛羅格瑪（經卡加斯轉乘），再沿南側道路經 Terral’s Watch（2548 約 60, 64）南下進悲傷沼澤；或飛格羅姆高，沿荊棘谷大道北上暮色森林，繞開夜色鎮守衛，從東口經逆風小徑進悲傷沼澤。｜Si Pierrêche est débloqué, vole directement depuis Baie-du-Butin ou Grom'gol. Sinon, si ta pierre de foyer est liée à Rog'mar et utilisable, utilise-la d'abord pour Rog'mar ; sinon, vole de Baie-du-Butin à Rog'mar (correspondance par Kargath), puis suis la route du sud en passant par le Guet de Terral (2548 vers 60, 64) vers le sud jusque dans le Marais des Chagrins. Ou vole à Grom'gol, remonte la route de la Vallée de Strangleronce vers le nord jusqu'au Bois de la Pénombre, évite les gardes de Sombrebois et entre dans le Marais des Chagrins par la sortie est, via le Défilé de Deuillevent.
 03-30到45級.md:1092｜說明｜向布雷依克開飛行點。｜Débloque le point de vol auprès de Breyk.
 03-30到45級.md:1150｜說明｜前往大河林地羅格瑪。｜Va à Rog'mar, dans Rives Claires.
-03-30到45級.md:1176｜說明｜爐石綁羅格瑪且已冷卻就爐回羅格瑪；冷卻中就從斯通納德直飛。羅格瑪飛點未開就從斯通納德往北進大河林地，經 Terral’s Watch（2548 約 60, 64）北上羅格瑪開點。｜Si ta pierre de foyer est liée à Rog'mar et disponible, utilise-la pour retourner à Rog'mar. Si elle est en récupération, vole directement depuis Pierrêche. Si le point de vol de Rog'mar n'est pas débloqué, va vers le nord depuis Pierrêche jusqu'à Rives Claires et suis la route vers le nord en passant par Terral's Watch (2548 vers 60, 64) jusqu'à Rog'mar pour le débloquer.
+03-30到45級.md:1176｜說明｜爐石綁羅格瑪且已冷卻就爐回羅格瑪；冷卻中就從斯通納德直飛。羅格瑪飛點未開就從斯通納德往北進大河林地，經 Terral’s Watch（2548 約 60, 64）北上羅格瑪開點。｜Si ta pierre de foyer est liée à Rog'mar et disponible, utilise-la pour retourner à Rog'mar. Si elle est en récupération, vole directement depuis Pierrêche. Si le point de vol de Rog'mar n'est pas débloqué, va vers le nord depuis Pierrêche jusqu'à Rives Claires et suis la route vers le nord en passant par le Guet de Terral (2548 vers 60, 64) jusqu'à Rog'mar pour le débloquer.
 03-30到45級.md:1254｜說明｜帶任務給的炸藥到三艘海盜船，逐船各放一枚。；東海海盜在岸邊；上船後找第二層火炮旁的砲彈堆。｜Apporte les explosifs donnés par la quête aux trois navires pirates et place-en un sur chaque navire. Les pirates de la mer de l'Est sont sur la rive. Une fois à bord, cherche le tas de boulets à côté du canon du deuxième pont.
 03-30到45級.md:1254｜說明｜帶任務給的炸藥到三艘海盜船，逐船各放一枚。；東海海盜在岸邊｜Apporte les explosifs donnés par la quête aux trois navires pirates et place-en un sur chaque navire. Les pirates de la mer de l'Est sont sur la rive.
 05-副本.md:1025｜說明｜優先清 Zarmok 周圍的教徒，再檢查是否缺數。；地城自訂圖 Zarmok 39.10, 69.40（掉教徒耳朵的首領之一），；位置：礦道後清扎爾莫克周圍，沿要塞通道補耳朵。｜Nettoie d'abord les cultistes autour de Zarmok, puis vérifie s'il t'en manque. Carte personnalisée du donjon : Zarmok 39.10, 69.40 (un des boss qui lâchent des oreilles de cultiste) ; Lieu : Nettoie les alentours de Zarmok après la galerie de la mine et complète les oreilles dans les passages de la forteresse.
@@ -13245,8 +13245,8 @@
 05-副本.md:1026｜說明｜Tunk 掉落鑄模；右鍵啟動任務。；Tunk 在戰事管理者 Ashka 旁的鐵匠鋪，拾鑄模後右鍵。｜Tunk lâche le moule. Fais un clic droit pour lancer la quête. Tunk est dans la forge à côté du gestionnaire de guerre Ashka. Fais un clic droit sur le moule après l'avoir ramassé.
 05-副本.md:1027｜說明｜地城自訂圖納古克 34.70, 50.30，；位置：過阿什卡，清暮光術士區找納古克。｜Carte personnalisée du donjon : Nar'gurk 34.70, 50.30 ; Lieu : Passe Ashka et cherche Nar'gurk dans la zone des sorciers du crépuscule.
 05-副本.md:1028｜說明｜地城自訂圖 Mugg 71.00, 14.30，；位置：過圖夫守的橋，進最深處房間打霸主馬戈。｜Carte personnalisée du donjon : Mugg 71.00, 14.30 ; Lieu : Traverse le pont gardé par Bossman Toof et tue Seigneur Mugg dans la salle la plus profonde.
-04-45到60級.md:83｜說明｜已有莫沙徹飛點可從加基森直接飛。初訪從加基森飛千針石林亂風崗，搭升降梯下谷底，沿谷底大路向西進菲拉斯。亂風崗也沒開就從加基森北行上閃光平原，沿千針石林谷底向西。｜Si tu as le point de vol du Camp Mojache, vole directement depuis Gadgetzan. À la première visite, vole de Gadgetzan au poste de Librevent, dans Mille pointes, descends par l'ascenseur au fond de la vallée et suis la route de la vallée vers l'ouest jusqu'à Féralas. Si le poste de Librevent n'est pas non plus débloqué, va vers le nord depuis Gadgetzan jusqu'aux Shimmering Flats et suis le fond de la vallée de Mille pointes vers l'ouest.
-04-45到60級.md:146｜說明｜從莫沙徹飛奧格瑪（通常經十字路口或雷霆崖）。爐石維持莫沙徹，奧格瑪交完再用爐石回費拉斯。｜Vole du Camp Mojache à Orgrimmar (en général via La Croisée ou les Pitons-du-Tonnerre). Garde ta pierre de foyer au Camp Mojache, puis retourne-y avec après avoir rendu à Orgrimmar, pour revenir à Féralas.
+04-45到60級.md:83｜說明｜已有莫沙徹飛點可從加基森直接飛。初訪從加基森飛千針石林亂風崗，搭升降梯下谷底，沿谷底大路向西進菲拉斯。亂風崗也沒開就從加基森北行上閃光平原，沿千針石林谷底向西。｜Si tu as le point de vol du Camp Mojache, vole directement depuis Gadgetzan. À la première visite, vole de Gadgetzan au poste de Librevent, dans Mille pointes, descends par l'ascenseur au fond de la vallée et suis la route de la vallée vers l'ouest jusqu'à Feralas. Si le poste de Librevent n'est pas non plus débloqué, va vers le nord depuis Gadgetzan jusqu'aux Salines et suis le fond de la vallée de Mille pointes vers l'ouest.
+04-45到60級.md:146｜說明｜從莫沙徹飛奧格瑪（通常經十字路口或雷霆崖）。爐石維持莫沙徹，奧格瑪交完再用爐石回費拉斯。｜Vole du Camp Mojache à Orgrimmar (en général via La Croisée ou Thunder Bluff). Garde ta pierre de foyer au Camp Mojache, puis retourne-y avec après avoir rendu à Orgrimmar, pour revenir à Feralas.
 04-45到60級.md:157｜說明｜可跳過｜海岸支線在西側，定位器沒掉就不找；有時間再走海岸。｜Facultatif : La quête annexe de la côte est à l'ouest. Si le localisateur ne tombe pas, ne le cherche pas. Longe la côte si tu as le temps.
 05-副本.md:1073｜說明｜法力數量依任務日誌。；上神殿最高一層取篩，共收 8 份法力，每塔 4 份。西塔與東塔可在潛行下互動。｜La quantité de mana dépend de ton journal de quêtes. Prends le tamis à l'étage le plus haut du temple et récolte 8 de mana au total, 4 par tour. La tour ouest et la tour est peuvent être utilisées en restant furtif.
 05-副本.md:1093｜說明｜數量以任務日誌為準。；位置：橙紫外洞先打半人馬，進門後一路拾雕像。｜Fie-toi à la quantité de ton journal de quêtes. Lieu : Tue d'abord les centaures dans les grottes extérieures orange et violette, puis ramasse les statues tout au long du chemin après être entré.
@@ -13272,9 +13272,9 @@
 05-副本.md:1206｜說明｜開下層門打尾王，進後方密室找地板紙條。；順序：先從典獄長拿鑰匙｜Ouvre la porte inférieure et tue le dernier boss ; entre ensuite dans la chambre secrète derrière et trouve le mot par terre. Ordre : Prends d'abord la clé auprès du gardien.
 05-副本.md:1209｜說明｜從尾王密室折返上層，回原牢房交指揮官。；順序：先讀第 18 步紙條｜Reviens de la chambre du dernier boss au niveau supérieur et retourne à la cellule d'origine pour rendre au commandant. Ordre : Lis d'abord le mot de l'étape 18.
 04-45到60級.md:409｜說明｜惡齒村已開就從瑟銀哨塔在飛行地圖選惡齒村，經卡加斯、幽暗城等已開點轉乘。未開點先飛塔倫米爾，從敦霍爾德城堡北側山口進辛特蘭，沿大道往東，下海岸往南到惡齒村。｜Si le Village des Revantusk est débloqué, choisis le Village des Revantusk sur la carte des vols depuis la Halte du Thorium et prends les correspondances par des points débloqués comme Kargath et Fossoyeuse. Sinon, vole d'abord à Moulin-de-Tarren, entre dans Les Hinterlands par le col au nord du château de Durnholde, suis la grand-route vers l'est, puis descends la côte vers le sud jusqu'au Village des Revantusk.
-04-45到60級.md:493｜說明｜斯通納德已開就從惡齒村選斯通納德（經卡加斯等已開點轉乘）；未開就飛羅格瑪，沿南側道路經 Terral’s Watch 南下悲傷沼澤，到斯通納德開點。沿南方道路進詛咒之地，到北部兩名血法師（50.55, 14.20／50.64, 14.30）。｜Si Pierrêche est débloqué, choisis Pierrêche depuis le Village des Revantusk (correspondance par des points débloqués comme Kargath) Sinon, vole à Rog'mar, suis la route du sud en passant par Terral's Watch vers le sud jusque dans le Marais des Chagrins et débloque Pierrêche. Suis la route du sud jusqu'aux Terres foudroyées et va voir les deux mages de sang au nord (50.55, 14.20 / 50.64, 14.30).
+04-45到60級.md:493｜說明｜斯通納德已開就從惡齒村選斯通納德（經卡加斯等已開點轉乘）；未開就飛羅格瑪，沿南側道路經 Terral’s Watch 南下悲傷沼澤，到斯通納德開點。沿南方道路進詛咒之地，到北部兩名血法師（50.55, 14.20／50.64, 14.30）。｜Si Pierrêche est débloqué, choisis Pierrêche depuis le Village des Revantusk (correspondance par des points débloqués comme Kargath) Sinon, vole à Rog'mar, suis la route du sud en passant par le Guet de Terral vers le sud jusque dans le Marais des Chagrins et débloque Pierrêche. Suis la route du sud jusqu'aux Terres foudroyées et va voir les deux mages de sang au nord (50.55, 14.20 / 50.64, 14.30).
 04-45到60級.md:577｜說明｜已有艾薩拉飛行點，從奧格瑪飛瓦羅莫克。初訪從奧格瑪飛碎木崗哨，往東先到羅哈圖，再走瓦羅莫克；碎木崗哨未開就先飛十字路口，由北路經莫爾杉壁壘進梣谷東側大道。｜Si tu as le point de vol d'Azshara, vole d'Orgrimmar à Valormok. À la première visite, vole d'Orgrimmar au poste de Bois-brisé, va vers l'est d'abord à Loh'atu, puis continue jusqu'à Valormok. Si le poste de Bois-brisé n'est pas débloqué, vole d'abord à La Croisée et prends la route du nord en passant le Rempart de Mor'shan jusqu'à la route du côté est d'Orneval.
-04-45到60級.md:649｜說明｜從奧格瑪，或交完 3518 的雷霆崖，在飛行地圖選莫沙徹營地，經十字路口等已開點轉乘。若由這一站開始且未開點，可先飛千針石林亂風崗，沿谷底大路向西進菲拉斯，再找夏恩開點。｜Depuis Orgrimmar, ou depuis les Pitons-du-Tonnerre après avoir rendu 3518, choisis le Camp Mojache sur la carte des vols et prends les correspondances par des points débloqués comme La Croisée. Si tu commences à cette étape sans l'avoir débloqué, vole d'abord au poste de Librevent, dans Mille pointes, suis la route de la vallée vers l'ouest jusqu'à Féralas, puis trouve Shyn pour le débloquer.
+04-45到60級.md:649｜說明｜從奧格瑪，或交完 3518 的雷霆崖，在飛行地圖選莫沙徹營地，經十字路口等已開點轉乘。若由這一站開始且未開點，可先飛千針石林亂風崗，沿谷底大路向西進菲拉斯，再找夏恩開點。｜Depuis Orgrimmar, ou depuis Thunder Bluff après avoir rendu 3518, choisis le Camp Mojache sur la carte des vols et prends les correspondances par des points débloqués comme La Croisée. Si tu commences à cette étape sans l'avoir débloqué, vole d'abord au poste de Librevent, dans Mille pointes, suis la route de la vallée vers l'ouest jusqu'à Feralas, puis trouve Shyn pour le débloquer.
 04-45到60級.md:676｜說明｜值得做｜3123 在莫沙徹營地交，接續 3124–3126；每個階段都要先交，下一種容器才拿得到。｜À faire : rends 3123 au Camp Mojache et poursuis avec 3124–3126. Chaque étape doit d'abord être rendue pour obtenir le type de récipient suivant.
 05-副本.md:1272｜說明｜進門走右側平路下層，在環廊找哈卡祭壇。；順序：先交祭壇再接第 32 步｜Entre par la porte, prends le chemin plat à droite vers le niveau inférieur et trouve l'Autel d'Hakkar dans le couloir circulaire. Ordre : Rends d'abord l'autel, puis prends l'étape 32.
 05-副本.md:1274｜說明｜順序有誤會觸發陷阱。；位置：在下層環廊依序點六像，再到中央打王。；順序：南→北→西南→東南→西北→東北｜Un mauvais ordre déclenche un piège. Lieu : Clique sur les six statues dans l'ordre le long du couloir circulaire inférieur, puis va au centre tuer le boss. Ordre : Sud → nord → sud-ouest → sud-est → nord-ouest → nord-est.
@@ -13315,12 +13315,12 @@
 05-副本.md:1497｜說明｜清通靈塔後過屠宰場，到瑞文戴爾房找奧里克斯；順序：擊殺後同房找奧里克斯｜Après avoir nettoyé les tours de nécromanciens, passe l'abattoir et va à la salle de Rivendare pour trouver Aurius. Ordre : Après l'avoir tué, trouve Aurius dans la même salle.
 05-副本.md:1451｜說明｜血色檔案位於檔案管理員所在的檔案室。；位置：進血色堡壘檔案室，打加爾福特後燒檔案｜Les archives écarlates se trouvent dans la salle d'archives où est l'archiviste. Lieu : Entre dans la salle d'archives du Bastion écarlate et brûle les archives après avoir tué Galford.
 05-副本.md:1452｜說明｜雙月畫就在檔案室首領所在的房間。；位置：同一間血色檔案室，查牆上的雙月畫｜Le tableau des Deux Lunes est dans la même salle que le boss des archives. Lieu : Dans la même salle des archives écarlates, examine le tableau des Deux Lunes sur le mur.
-05-副本.md:1736｜說明｜依序搜首廳、召喚廳後、霜語房、巴羅夫房；順序：南海鎮→塔倫米爾→布瑞爾→凱爾達隆｜Fouille dans l'ordre le hall d'entrée, l'arrière de la salle d'invocation, la salle de Frostwhisper et la salle de Barov. Ordre : Southshore → Moulin-de-Tarren → Brill → Caer Darrow.
+05-副本.md:1736｜說明｜依序搜首廳、召喚廳後、霜語房、巴羅夫房；順序：南海鎮→塔倫米爾→布瑞爾→凱爾達隆｜Fouille dans l'ordre le hall d'entrée, l'arrière de la salle d'invocation, la salle de Frostwhisper et la salle de Barov. Ordre : Austrivage → Moulin-de-Tarren → Brill → Caer Darrow.
 05-副本.md:1738｜說明｜艾瓦與盧森的遺骸在教授房內。；位置：進末段六室找卡斯迪諾夫，同房焚兩份遺骸；順序：遺骸在同房｜Les restes d'Eva et de Lucien sont dans la salle du professeur. Lieu : Va dans les six salles de la section finale pour trouver Krastinov et brûle les deux restes dans la même salle. Ordre : Les restes sont dans la même salle.
 05-副本.md:1738｜說明｜艾瓦與盧森的遺骸在教授房內。；位置：進末段六室找卡斯迪諾夫，同房焚兩份遺骸｜Les restes d'Eva et de Lucien sont dans la salle du professeur. Lieu : Va dans les six salles de la section finale pour trouver Krastinov et brûle les deux restes dans la même salle.
 05-副本.md:1738｜說明｜進末段六室找卡斯迪諾夫，同房焚兩份遺骸；順序：遺骸在同房｜Va dans les six salles de la section finale pour trouver Krastinov et brûle les deux restes dans la même salle. Ordre : Les restes sont dans la même salle.
-04-45到60級.md:1341｜說明｜雷霆崖已開就從奧格瑪飛雷霆崖；未開就飛陶拉祖營地，往西沿莫高雷大道到雷霆崖，搭電梯上城向塔爾開點。在城下接信差的引導，再往長者高地找大德魯伊。｜Si les Pitons-du-Tonnerre sont débloqués, vole d'Orgrimmar aux Pitons-du-Tonnerre. Sinon, vole au Camp Taurajo, va vers l'ouest par la route de Mulgore jusqu'aux Pitons-du-Tonnerre, monte par l'ascenseur et débloque-les auprès de Tal. Suis le messager sous la ville, puis va à la Cime des Anciens pour trouver l'archidruide.
-04-45到60級.md:1389｜說明｜選做取蛋或已組好厄運之槌隊伍時才飛菲拉斯莫沙徹營地；兩項都跳過就飛加基森。｜Ne vole au Camp Mojache, à Féralas, que si tu fais la quête facultative des œufs ou si tu as déjà un groupe pour Hache-Tripes. Si tu sautes les deux, vole à Gadgetzan.
+04-45到60級.md:1341｜說明｜雷霆崖已開就從奧格瑪飛雷霆崖；未開就飛陶拉祖營地，往西沿莫高雷大道到雷霆崖，搭電梯上城向塔爾開點。在城下接信差的引導，再往長者高地找大德魯伊。｜Si Thunder Bluff sont débloqués, vole d'Orgrimmar à Thunder Bluff. Sinon, vole au Camp Taurajo, va vers l'ouest par la route de Mulgore jusqu'à Thunder Bluff, monte par l'ascenseur et débloque-les auprès de Tal. Suis le messager sous la ville, puis va à la Cime des Anciens pour trouver l'archidruide.
+04-45到60級.md:1389｜說明｜選做取蛋或已組好厄運之槌隊伍時才飛菲拉斯莫沙徹營地；兩項都跳過就飛加基森。｜Ne vole au Camp Mojache, à Feralas, que si tu fais la quête facultative des œufs ou si tu as déjà un groupe pour Hache-Tripes. Si tu sautes les deux, vole à Gadgetzan.
 05-副本.md:1615｜說明｜完成貢品路線取得國王狀態後找克雷格。；踐踏者克雷格在戈多克平民區；取得國王狀態後才與他對話。｜Après avoir terminé la route du tribut et obtenu le statut de roi, trouve Kreeg. Kreeg le Marteleur est dans les Communs de Gordok. Ne lui parle qu'une fois le statut de roi obtenu.
 05-副本.md:1615｜說明｜完成貢品路線取得國王狀態後找克雷格。；踐踏者克雷格在戈多克平民區｜Après avoir terminé la route du tribut et obtenu le statut de roi, trouve Kreeg. Kreeg le Marteleur est dans les Communs de Gordok.
 05-副本.md:1616｜說明｜踐踏者克雷格在戈多克平民區；取得國王狀態後才與他對話。；位置：打完大王取得國王身分，原路回前段找克雷格；順序：貢品跑後回頭交談｜Kreeg le Marteleur est dans les Communs de Gordok. Ne lui parle qu'une fois le statut de roi obtenu. Lieu : Après avoir vaincu le grand boss et être devenu roi, reviens sur tes pas vers la première section pour trouver Kreeg. Ordre : Reviens lui parler après la route du tribut.
@@ -13347,10 +13347,10 @@
 05-副本.md:1825｜說明｜競技場南門出，經熔爐往王座，烙印在王後；順序：擊殺達基薩斯後點擊身後烙印｜Sors par la porte sud de l'arène, traverse la fonderie jusqu'au trône ; la marque est derrière le roi. Ordre : Clique sur la marque derrière lui après avoir tué Drakkisath.
 05-副本.md:1754｜說明｜艾薩拉 1447 38.70, 33.40（地道外口，由瓦羅莫克進山；副本門在冬泉谷 1452 66.60, 84.40）｜Azshara 1447 38.70, 33.40 (sortie extérieure du tunnel ; entre dans la montagne depuis Valormok ; l'entrée du donjon est à Berceau-de-l'Hiver 1452 66.60, 84.40)
 03-30到45級.md:169｜說明｜已接車手送件才去：回亂風崗飛棘齒城，交完飛回。｜Uniquement si tu as pris la livraison du coursier (1111) : retourne au poste de Librevent, vole à Cabestan, rends la quête et reviens en volant.
-01-第一段-1到12級.md:1503｜說明｜在永夜港找德魯伊專用的布瑟恩·草風（1450 44.28, 45.87）飛雷霆崖；爐石綁在可用的地方且已冷卻也可直接爐回。別用月光林地南邊的一般鳥點法斯托恩，那條線還沒開。｜À Havrenuit, trouve Bunthen Plainswind (druides uniquement ; 1450 44.28, 45.87) et vole vers les Pitons-du-Tonnerre. Si ta pierre de foyer est liée à un endroit utile et prête, tu peux aussi l'utiliser pour rentrer. Ignore le point de vol classique de Faustron, au sud de Reflet-de-Lune : cette ligne n'est pas encore ouverte.
-02-12到30級.md:1252｜說明｜在永夜港找德魯伊專用的布瑟恩·草風（1450 44.28, 45.87）飛雷霆崖，再照已開的飛點轉十字路口；爐石綁十字路口且已冷卻就直接爐回。｜À Havrenuit, trouve Bunthen Plainswind (druides uniquement ; 1450 44.28, 45.87) et vole vers les Pitons-du-Tonnerre, puis continue jusqu'à La Croisée avec les points de vol déjà ouverts. Si ta pierre de foyer est liée à La Croisée et prête, rentre directement avec.
-03-30到45級.md:147｜說明｜在布瑞爾南側飛艇塔找薩匹塔（1420 60.74, 58.87，西平台）搭奧格瑪線。到奧格瑪後，已開亂風崗就直接飛；未開就飛陶拉祖營地，沿南路搭大升降梯下谷底，往東搭亂風崗升降梯，向奈瑟開飛行點 45.14, 49.11。｜Trouve Zapetta à la tour des zeppelins au sud de Brill (1420 60.74, 58.87, plate-forme ouest) et prends la ligne d'Orgrimmar. À Orgrimmar, vole directement vers le Poste de Librevent si tu l'as déjà ouvert. Sinon, vole vers le Camp Taurajo, suis la route du sud jusqu'au Grand ascenseur pour descendre au fond de la vallée, va vers l'est et monte par l'ascenseur du Poste de Librevent, puis apprends le point de vol de Nyse (45.14, 49.11).
-03-30到45級.md:149｜說明｜接完族譜後從亂風崗下台地，沿谷底大路向東南進閃光平原。｜Après avoir pris Arbre familial, quitte le Poste de Librevent par le plateau et suis la route du fond de la vallée vers le sud-est jusqu'aux Shimmering Flats.
+01-第一段-1到12級.md:1503｜說明｜在永夜港找德魯伊專用的布瑟恩·草風（1450 44.28, 45.87）飛雷霆崖；爐石綁在可用的地方且已冷卻也可直接爐回。別用月光林地南邊的一般鳥點法斯托恩，那條線還沒開。｜À Havrenuit, trouve Bunthen Plainswind (druides uniquement ; 1450 44.28, 45.87) et vole vers Thunder Bluff. Si ta pierre de foyer est liée à un endroit utile et prête, tu peux aussi l'utiliser pour rentrer. Ignore le point de vol classique de Faustron, au sud de Reflet-de-Lune : cette ligne n'est pas encore ouverte.
+02-12到30級.md:1252｜說明｜在永夜港找德魯伊專用的布瑟恩·草風（1450 44.28, 45.87）飛雷霆崖，再照已開的飛點轉十字路口；爐石綁十字路口且已冷卻就直接爐回。｜À Havrenuit, trouve Bunthen Plainswind (druides uniquement ; 1450 44.28, 45.87) et vole vers Thunder Bluff, puis continue jusqu'à La Croisée avec les points de vol déjà ouverts. Si ta pierre de foyer est liée à La Croisée et prête, rentre directement avec.
+03-30到45級.md:147｜說明｜在布瑞爾南側飛艇塔找薩匹塔（1420 60.74, 58.87，西平台）搭奧格瑪線。到奧格瑪後，已開亂風崗就直接飛；未開就飛陶拉祖營地，沿南路搭大升降梯下谷底，往東搭亂風崗升降梯，向奈瑟開飛行點 45.14, 49.11。｜Trouve Zapetta à la tour des zeppelins au sud de Brill (1420 60.74, 58.87, plate-forme ouest) et prends la ligne d'Orgrimmar. À Orgrimmar, vole directement vers le Poste de Librevent si tu l'as déjà ouvert. Sinon, vole vers le Camp Taurajo, suis la route du sud jusqu'à la Grande élévation pour descendre au fond de la vallée, va vers l'est et monte par l'ascenseur du Poste de Librevent, puis apprends le point de vol de Nyse (45.14, 49.11).
+03-30到45級.md:149｜說明｜接完族譜後從亂風崗下台地，沿谷底大路向東南進閃光平原。｜Après avoir pris Arbre familial, quitte le Poste de Librevent par le plateau et suis la route du fond de la vallée vers le sud-est jusqu'aux Salines.
 05-副本.md:794｜說明｜剃刀高地的任務，剃刀高地段也會排；只有真的去莫高雷接遠古古拉巴什塑像時才順接。｜Ce sont des quêtes des Souilles de Tranchebauge, et l'étape des Souilles de Tranchebauge les programme aussi. Ne la prends en passant que si tu vas vraiment à Mulgore pour l'Idole antique des Gurubashi.
 05-副本.md:794｜說明｜剃刀高地的任務，剃刀高地段也會排｜Ce sont des quêtes des Souilles de Tranchebauge, et l'étape des Souilles de Tranchebauge les programme aussi
 05-副本.md:794｜說明｜只有真的去莫高雷接遠古古拉巴什塑像時才順接。｜Ne la prends en passant que si tu vas vraiment à Mulgore pour l'Idole antique des Gurubashi.
@@ -13360,7 +13360,7 @@
 05-副本.md:726｜說明｜淒涼之地 葬影村第一次交完飛奧格瑪（經烈日石居、十字路口轉），出城搭格羅姆高飛艇前，在奧格瑪 榮譽谷找索維克和諾格接 2841、2842。從棘齒城坐船到藏寶海灣，或格羅姆高飛藏寶海灣；斯庫提完成 2842→2843 後，保留哥布林轉發器進入。｜Après les premiers rendus de quêtes à Proie-de-l'Ombre, en Désolace, vole vers Orgrimmar (avec escales à la Retraite de Roche-Soleil et à La Croisée). Avant de quitter la ville pour le zeppelin de Grom'gol, trouve Sovik et Nogg à la Vallée de l'Honneur d'Orgrimmar et prends 2841 et 2842. Prends le bateau de Cabestan à Baie-du-Butin, ou vole de Grom'gol à Baie-du-Butin. Quand Scooty a terminé 2842→2843, garde le Transpondeur gobelin et entre.
 03-30到45級.md:580｜說明｜仍綁在葬影村且爐石已冷卻就爐回村，冷卻中或綁在別處就沿路步行回村。｜Si ta pierre de foyer est encore liée à Proie-de-l'Ombre et prête, rentre au village avec. Si elle est en recharge ou liée ailleurs, reviens à pied par la route.
 03-30到45級.md:582｜說明｜交完到薩隆（21.60, 74.13）飛奧格瑪補技能。｜Après avoir rendu la quête, vole depuis Thalon (21.60, 74.13) vers Orgrimmar pour apprendre tes techniques.
-03-30到45級.md:757｜說明｜已開羅格瑪就從落錘鎮直飛。沒開就照多數玩家的走法搭船：落錘鎮飛幽暗城，到布瑞爾南方飛艇塔搭往奧格瑪的飛艇；在奧格瑪飛加基森（沒開加基森就飛亂風崗，經閃光平原南坡進塔納利斯，到了先開加基森）。人在卡林多就直接去塔納利斯。直飛抵達羅格瑪的跳過第 2–5 步。｜Si tu as déjà ouvert Rog’mar, vole directement depuis Trépas-d'Orgrim. Sinon, prends la route de la plupart des joueurs : vole de Trépas-d'Orgrim à Fossoyeuse, prends le zeppelin pour Orgrimmar à la tour au sud de Brill, puis vole d'Orgrimmar à Gadgetzan (si Gadgetzan n'est pas ouvert, vole au Poste de Librevent, traverse le versant sud des Shimmering Flats vers Tanaris et ouvre d'abord Gadgetzan). Si tu es déjà à Kalimdor, va directement à Tanaris. Si tu as volé directement jusqu'à Rog’mar, saute les étapes 2 à 5.
+03-30到45級.md:757｜說明｜已開羅格瑪就從落錘鎮直飛。沒開就照多數玩家的走法搭船：落錘鎮飛幽暗城，到布瑞爾南方飛艇塔搭往奧格瑪的飛艇；在奧格瑪飛加基森（沒開加基森就飛亂風崗，經閃光平原南坡進塔納利斯，到了先開加基森）。人在卡林多就直接去塔納利斯。直飛抵達羅格瑪的跳過第 2–5 步。｜Si tu as déjà ouvert Rog’mar, vole directement depuis Trépas-d'Orgrim. Sinon, prends la route de la plupart des joueurs : vole de Trépas-d'Orgrim à Fossoyeuse, prends le zeppelin pour Orgrimmar à la tour au sud de Brill, puis vole d'Orgrimmar à Gadgetzan (si Gadgetzan n'est pas ouvert, vole au Poste de Librevent, traverse le versant sud des Salines vers Tanaris et ouvre d'abord Gadgetzan). Si tu es déjà à Kalimdor, va directement à Tanaris. Si tu as volé directement jusqu'à Rog’mar, saute les étapes 2 à 5.
 03-30到45級.md:758｜說明｜搭船才接，在加基森旅店接，到火線港交。｜Uniquement si tu prends le bateau : prends-la à l'auberge de Gadgetzan et rends-la à Port de Poudremèche.
 03-30到45級.md:759｜說明｜還沒開羅格瑪、走熱砂港船線的人：到加基森東邊的熱砂港（1446 68.60, 23.00）搭船，在大河林地火線港碼頭（2548 80.60, 54.60）下船，往西走到羅格瑪。火線港飛行管理員沒有航線。｜Si tu n'as pas encore ouvert Rog’mar et que tu prends la ligne de bateau de Port Gentepression : embarque à Port Gentepression, à l'est de Gadgetzan (1446 68.60, 23.00), descends au quai de Port de Poudremèche, dans Rives Claires (2548 80.60, 54.60), puis marche vers l'ouest jusqu'à Rog’mar. Le maître de vol de Port de Poudremèche n'a aucune ligne.
 03-30到45級.md:761｜說明｜搭船抵達才順手接，到羅格瑪交克隆羅許。｜Ne la prends que si tu es arrivé en bateau ; rends-la à Krom'rosh à Rog’mar.
@@ -13372,8 +13372,8 @@
 03-30到45級.md:805｜說明｜豺狼人打完往東南到草原溪地農場，再回羅格瑪一次交齊。｜Une fois les gnolls terminés, va vers le sud-est jusqu'à la ferme de Ruissepré, puis retourne une seule fois à Rog’mar pour tout rendre.
 03-30到45級.md:824｜說明｜遠境堡營地，回程順打鱷魚｜Camp de Fort-Lointain ; tue les crocilisques au retour
 03-30到45級.md:827｜說明｜從遠境堡營地沿河回羅格瑪的路上打。｜Combats-les sur le chemin du retour, le long de la rivière, du camp de Fort-Lointain à Rog’mar.
-03-30到45級.md:833｜說明｜陽光林地｜Sunnyglade
-03-30到45級.md:841｜說明｜弗索的寶藏在陽光林地往西約 6 格。｜Le Trésor de Fuzzle se trouve à environ 6 cases à l'ouest de Sunnyglade.
+03-30到45級.md:833｜說明｜陽光林地｜Clairsoleil
+03-30到45級.md:841｜說明｜弗索的寶藏在陽光林地往西約 6 格。｜Le Trésor de Fuzzle se trouve à environ 6 cases à l'ouest de Clairsoleil.
 03-30到45級.md:856｜說明｜要先打 41 級精英喬札克（95427）才接得到後續｜Il faut d'abord tuer Chogg’Zac (95427), élite de niveau 41, pour pouvoir prendre la suite
 03-30到45級.md:863｜說明｜精英，在北線野豬區（約 69–76, 34–38）巡邏，有隊伍才接。｜Élite ; patrouille dans la zone des sangliers de la route nord (environ 69–76, 34–38). Ne la prends qu'en groupe.
 03-30到45級.md:865｜說明｜北線：史利博 → 納佐克農場 → 博德羅克｜Route nord : Slibo → ferme de Na’zok → Bolder’ok
@@ -13384,8 +13384,8 @@
 03-30到45級.md:882｜說明｜護送到博德羅克找鈍拳。｜Escorte jusqu'à Bolder’ok et trouve Poing-Serré.
 03-30到45級.md:902｜說明｜第一次先清農場、豺狼人、河岸及羅格瑪周邊野獸。Chogg’Zac 95427 和後續送頭線留有隊伍再做，博德羅克的野豬和採石可直接接。野獸鏈分三趟交，西邊伐木場、豺狼人和農場一圈跑完；北線鈍拳鏈（有隊伍）、忠忠護送和伐加斯懸賞併在這站北線。暮光之罩和海岸留大河林地博德羅克與火線港。｜Lors de la première visite, nettoie d'abord la ferme, les gnolls, la berge et les bêtes autour de Rog’mar. Garde Chogg’Zac 95427 et la chaîne de livraison de têtes qui suit pour quand tu auras un groupe ; les sangliers et la carrière de Bolder’ok peuvent être pris tout de suite. La chaîne des bêtes se rend en trois trajets, et la scierie de l'ouest, les gnolls et la ferme forment une seule boucle. La chaîne de Poing-Serré (en groupe), l'escorte de Jom-jom et la prime de Vargas sont regroupées dans la partie nord de cette étape. Suaire du Crépuscule et la côte restent pour Bolder’ok et Port de Poudremèche, dans Rives Claires.
 03-30到45級.md:908｜說明｜河南岸的遠境堡營地，密度高、普通怪。留意牧師與其他斥候一起入戰，沿河外圍清並順做 94483。｜Camp de Fort-Lointain, sur la rive sud de la rivière : monstres normaux denses. Attention : les prêtres rejoignent le combat avec les autres éclaireurs. Nettoie en périphérie le long de la rivière et avance 94483 au passage.
-03-30到45級.md:1212｜說明｜交件在菲拉斯莫沙徹營地的巫醫尤克里，第30站到了再交。｜Rends-la au Sorcier-docteur Uzer'i au Camp Mojache, en Féralas ; attends l'étape 30 pour la rendre.
-03-30到45級.md:1213｜說明｜第24站沒打喬札克、這次有隊伍時：先照第24站陽光林地的暮光不再與北線補做到交鈍拳的命令，再接迷途的戰士往西去暮光之罩。沒有就從羅格瑪直接往東到火線港。｜Si tu as sauté Chogg’Zac à l'étape 24 et que tu as maintenant un groupe : rattrape d'abord Crépuscule être nul depuis Sunnyglade à l'étape 24 et la route nord, jusqu'à avoir rendu Le décret de Poing-Serré, puis prends Le guerrier téméraire et va vers l'ouest jusqu'à Suaire du Crépuscule. Sinon, va directement de Rog’mar vers l'est jusqu'à Port de Poudremèche.
+03-30到45級.md:1212｜說明｜交件在菲拉斯莫沙徹營地的巫醫尤克里，第30站到了再交。｜Rends-la au Sorcier-docteur Uzer'i au Camp Mojache, en Feralas ; attends l'étape 30 pour la rendre.
+03-30到45級.md:1213｜說明｜第24站沒打喬札克、這次有隊伍時：先照第24站陽光林地的暮光不再與北線補做到交鈍拳的命令，再接迷途的戰士往西去暮光之罩。沒有就從羅格瑪直接往東到火線港。｜Si tu as sauté Chogg’Zac à l'étape 24 et que tu as maintenant un groupe : rattrape d'abord Crépuscule être nul depuis Clairsoleil à l'étape 24 et la route nord, jusqu'à avoir rendu Le décret de Poing-Serré, puis prends Le guerrier téméraire et va vers l'ouest jusqu'à Suaire du Crépuscule. Sinon, va directement de Rog’mar vers l'est jusqu'à Port de Poudremèche.
 03-30到45級.md:1215｜說明｜羅格瑪西側暮光之罩｜Suaire du Crépuscule, à l'ouest de Rog’mar
 03-30到45級.md:1274｜說明｜和炸船、走私快遞排同一趟往東北角。｜Fais-la dans le même trajet vers le coin nord-est que le sabordage des navires et la livraison du contrebandier.
 03-30到45級.md:1278｜說明｜就站在曲幣船長旁邊。｜Il se tient juste à côté du Capitaine Haynes.
@@ -13398,9 +13398,9 @@
 04-45到60級.md:94｜說明｜大河林地羅格瑪接了才有。｜Disponible uniquement après l'avoir prise à Rog’mar, dans Rives Claires.
 05-副本.md:1220｜說明｜優先走 95283 到 95483 的庫卡隆救援鏈；頭巾若一趟未湊滿，交件延後。出本從蕨牆村飛回奧格瑪，同一趟交索爾和伊崔格，再照灼熱峽谷・瑟銀哨塔第 1 步飛棘齒城跨海。｜Priorité à la chaîne de sauvetage des Kor’krons, de 95283 à 95483 ; si tu n'as pas tous les foulards en un seul trajet, repousse le rendu. À la sortie du donjon, vole de Mur-de-Fougères à Orgrimmar, rends à Thrall et à Eitrigg dans le même trajet, puis, selon l'étape 1 de Gorge des Vents brûlants : Halte du Thorium, vole à Cabestan pour traverser la mer.
 05-副本.md:1182｜說明｜第33站在奧格瑪交完件、飛棘齒城跨海去灼熱峽谷前，在奧格瑞瑪智慧谷索爾的大廳向伊崔格接 95283（1454 34.28, 39.35），再飛蕨牆村找納澤爾·血矛。沿東北海岸游往奧卡茲島，在島側軍士處依序交 95284、95285，拿 95309 再進島塔地下。留下 95483 至下次奧格瑞瑪。｜À l'étape 33, après avoir rendu à Orgrimmar et avant de voler à Cabestan pour traverser la mer vers la Gorge des Vents brûlants, trouve Eitrigg dans la salle de Thrall, à la Vallée de la Sagesse d'Orgrimmar, et prends 95283 (1454 34.28, 39.35) ; puis vole à Mur-de-Fougères voir Nazeer Bloodpike. Longe à la nage la côte nord-est jusqu'à l'Île d'Alcaz, rends 95284 puis 95285 au sergent à côté de l'île, prends 95309 et entre sous la tour de l'île. Garde 95483 jusqu'à ta prochaine visite à Orgrimmar.
-04-45到60級.md:619｜說明｜瓦羅莫克飛回奧格瑪，交首級和順路的石板。可再轉雷霆崖交石板，但要多一段航程；雷霆崖飛點沒開時改飛陶拉祖營地，往西進莫高雷搭升降梯上雷霆崖（1456 47.00, 49.83）開點，不想繞就略過 3518。｜Depuis Valormok, vole jusqu'à Orgrimmar et rends la tête et la tablette ramassées en chemin. Tu peux continuer jusqu'aux Pitons-du-Tonnerre pour rendre la tablette, mais cela ajoute un trajet ; si le point de vol des Pitons-du-Tonnerre n'est pas ouvert, vole plutôt au Camp Taurajo, entre à l'ouest à Mulgore et monte par l'ascenseur jusqu'aux Pitons-du-Tonnerre (1456 47.00, 49.83) pour l'ouvrir. Si tu ne veux pas faire le détour, ignore 3518.
+04-45到60級.md:619｜說明｜瓦羅莫克飛回奧格瑪，交首級和順路的石板。可再轉雷霆崖交石板，但要多一段航程；雷霆崖飛點沒開時改飛陶拉祖營地，往西進莫高雷搭升降梯上雷霆崖（1456 47.00, 49.83）開點，不想繞就略過 3518。｜Depuis Valormok, vole jusqu'à Orgrimmar et rends la tête et la tablette ramassées en chemin. Tu peux continuer jusqu'à Thunder Bluff pour rendre la tablette, mais cela ajoute un trajet ; si le point de vol de Thunder Bluff n'est pas ouvert, vole plutôt au Camp Taurajo, entre à l'ouest à Mulgore et monte par l'ascenseur jusqu'à Thunder Bluff (1456 47.00, 49.83) pour l'ouvrir. Si tu ne veux pas faire le détour, ignore 3518.
 05-副本.md:1345｜說明｜交完從卡加斯直飛幽暗城，接下一站。｜Après avoir rendu la quête, vole directement de Kargath à Fossoyeuse et passe à l'étape suivante.
-05-副本.md:1404｜說明｜回下一站菲拉斯莫沙徹營地：爐石綁永望鎮且已冷卻就爐回，飛血毒崗哨、十字路口再轉莫沙徹；爐石冷卻中就從卡加斯飛幽暗城，到布瑞爾南方搭飛艇去奧格瑪，再飛十字路口轉莫沙徹。｜Retour au Camp Mojache à l'étape suivante : si ta pierre de foyer est liée à Long-guet et prête, rentre avec, vole à Bloodvenom Post et à La Croisée, puis fais escale vers Mojache. Si elle est en recharge, vole de Kargath à Fossoyeuse, prends le zeppelin au sud de Brill pour Orgrimmar, puis vole à La Croisée et fais escale vers Mojache.
+05-副本.md:1404｜說明｜回下一站菲拉斯莫沙徹營地：爐石綁永望鎮且已冷卻就爐回，飛血毒崗哨、十字路口再轉莫沙徹；爐石冷卻中就從卡加斯飛幽暗城，到布瑞爾南方搭飛艇去奧格瑪，再飛十字路口轉莫沙徹。｜Retour au Camp Mojache à l'étape suivante : si ta pierre de foyer est liée à Long-guet et prête, rentre avec, vole au Poste de la Vénéneuse et à La Croisée, puis fais escale vers Mojache. Si elle est en recharge, vole de Kargath à Fossoyeuse, prends le zeppelin au sud de Brill pour Orgrimmar, puis vole à La Croisée et fais escale vers Mojache.
 05-副本.md:1534｜說明｜主線第56站取匣、第59站交；首趟還沒做完就略過，魔藤碎片留第59站月光林地回訪。｜Route principale : l'étape 56 récupère le coffret et l'étape 59 le rend ; si tu n'as pas fini le premier passage, ignore-la et garde les fragments de la Gangrevigne pour le retour à Reflet-de-Lune de l'étape 59.
 05-副本.md:1534｜說明｜主線第56站取匣、第59站交｜Route principale : l'étape 56 récupère le coffret et l'étape 59 le rend
 05-副本.md:1534｜說明｜首趟還沒做完就略過，魔藤碎片留第59站月光林地回訪。｜Si tu n'as pas fini le premier passage, ignore-la et garde les fragments de la Gangrevigne pour le retour à Reflet-de-Lune de l'étape 59.
@@ -13408,7 +13408,7 @@
 05-副本.md:1542｜說明｜首趟還沒做完就略過，魔藤碎片留第59站月光林地回訪。；位置：沿末段通道到奧茲恩房，打完找碎片並封印｜Si tu n'as pas fini le premier passage, ignore-la et garde les fragments de la Gangrevigne pour le retour à Reflet-de-Lune de l'étape 59. Lieu : suis le dernier couloir jusqu'à la salle d'Alzzin ; après le combat, trouve le fragment et scelle-le.
 05-副本.md:1547｜說明｜出本先回圖書館交，交後學最高階造水術，再東返莫沙徹營地。｜À la sortie du donjon, retourne d'abord à la Bibliothèque pour rendre la quête ; ensuite, apprends le rang le plus élevé de Conjuration d'eau, puis repars vers l'est jusqu'au Camp Mojache.
 05-副本.md:1675｜說明｜西瘟疫之地・第三次離開幽暗城前接。｜Maleterres de l'ouest : à prendre avant de quitter Fossoyeuse pour la troisième fois.
-05-副本.md:1670｜說明｜前往月光林地途中，經雷霆崖時可先到莫高雷西北找 Mayena Earthseeker。回安戈洛環形山 馬紹爾營地後，沿北邊石階往上找泰坦建築；97049、95926 在幽暗城煉金區接，西瘟疫之地・第三次離開幽暗城前先接；95926 的交件人仍待確認。｜En allant à Reflet-de-Lune, en passant par les Pitons-du-Tonnerre, tu peux d'abord aller voir Mayena Chercheterre au nord-ouest de Mulgore. Après être revenu au Refuge des Marshal, dans le cratère d'Un'Goro, monte par les marches de pierre du nord pour trouver la structure des Titans. 97049 et 95926 se prennent à l'Apothicarium de Fossoyeuse, avant de quitter Fossoyeuse pour la troisième fois vers les Maleterres de l'ouest ; qui reçoit le rendu de 95926 reste à confirmer.
+05-副本.md:1670｜說明｜前往月光林地途中，經雷霆崖時可先到莫高雷西北找 Mayena Earthseeker。回安戈洛環形山 馬紹爾營地後，沿北邊石階往上找泰坦建築；97049、95926 在幽暗城煉金區接，西瘟疫之地・第三次離開幽暗城前先接；95926 的交件人仍待確認。｜En allant à Reflet-de-Lune, en passant par Thunder Bluff, tu peux d'abord aller voir Mayena Chercheterre au nord-ouest de Mulgore. Après être revenu au Refuge des Marshal, dans le cratère d'Un'Goro, monte par les marches de pierre du nord pour trouver la structure des Titans. 97049 et 95926 se prennent à l'Apothicarium de Fossoyeuse, avant de quitter Fossoyeuse pour la troisième fois vers les Maleterres de l'ouest ; qui reçoit le rendu de 95926 reste à confirmer.
 05-副本.md:1833｜說明｜從卡加斯飛幽暗城，到布瑞爾南方飛艇塔搭飛艇去奧格瑪交索爾。｜Depuis Kargath, vole jusqu'à Fossoyeuse, puis prends le zeppelin à la tour au sud de Brill pour Orgrimmar et rends à Thrall.
 01-第一段-1到12級.md:241｜說明｜向迪弗拉克開飛行點；可順便向旅店老闆伯蘭德·草風綁爐石。｜Apprends le point de vol de Devrak. Au passage, tu peux lier ta pierre de foyer auprès de l'aubergiste Boorand Plainswind.
 01-第一段-1到12級.md:241｜說明｜向迪弗拉克開飛行點｜Apprends le point de vol de Devrak.
@@ -13424,17 +13424,17 @@
 01-第一段-1到12級.md:1000｜說明｜從天空守望者高原沿地面道路南下，搭雷霆崖電梯上城，向塔爾開飛行點。｜Depuis le Plateau de Guette-ciel, suis la route vers le sud, monte par l'ascenseur de Thunder Bluff et apprends le point de vol de Tal.
 01-第一段-1到12級.md:1001｜說明｜若十字路口飛點已開，可直接飛過去。初訪則沿莫高雷大道走東側山口，經陶拉祖營地向歐姆薩·雷角開飛行點，再沿大路往北。｜Si tu as déjà le point de vol de La Croisée, vole directement. À la première visite, prends le col est par la route de Mulgore, apprends le point de vol d'Omusa Thunderhorn au camp Taurajo, puis suis la route vers le nord.
 02-12到30級.md:34｜說明｜抵達十字路口先向迪弗拉克開飛行點。｜En arrivant à La Croisée, apprends d'abord le point de vol de Devrak.
-02-12到30級.md:35｜說明｜在十字路口旅店向旅店老闆伯蘭德·草風（1413 51.99, 29.89）綁爐石；保留到銀松森林 瑟伯切爾、貧瘠之地 棘齒城與陶拉祖營地回程。｜Lie ta pierre de foyer à l'auberge de La Croisée, auprès de l'aubergiste Boorand Plainswind (1413 51.99, 29.89) ; garde-la pour les retours depuis Forêt des Pins argentés The Sepulcher, Les Tarides Cabestan et le camp Taurajo.
+02-12到30級.md:35｜說明｜在十字路口旅店向旅店老闆伯蘭德·草風（1413 51.99, 29.89）綁爐石；保留到銀松森林 瑟伯切爾、貧瘠之地 棘齒城與陶拉祖營地回程。｜Lie ta pierre de foyer à l'auberge de La Croisée, auprès de l'aubergiste Boorand Plainswind (1413 51.99, 29.89) ; garde-la pour les retours depuis Forêt des Pins argentés Sépulcre, Les Tarides Cabestan et le camp Taurajo.
 02-12到30級.md:149｜說明｜第 4、5 步開十字路口並綁爐石；第一趟棘齒城開布萊格；離站到弗雷薩一側等提里斯法林地線。｜Les étapes 4 et 5 débloquent La Croisée et lient la pierre de foyer ; au premier passage, apprends le point de vol de Bragok à Cabestan ; en partant, va vers Frezza et attends la route des Clairières de Tirisfal.
-02-12到30級.md:596｜說明｜沿路上烈日石居，向薩爾姆開飛行點。｜Suis la route jusqu'à Sun Rock Retreat et apprends le point de vol de Tharm.
-02-12到30級.md:597｜說明｜在烈日石居旅店向旅店老闆傑卡（1442 47.47, 62.13）綁爐石，留到南側山口的交件完成後再用。｜Lie ta pierre de foyer à l'auberge de Sun Rock Retreat, auprès de l'aubergiste Jayka (1442 47.47, 62.13) ; ne l'utilise qu'après les remises de quêtes au col sud.
+02-12到30級.md:596｜說明｜沿路上烈日石居，向薩爾姆開飛行點。｜Suis la route jusqu'à la Retraite de Roche-Soleil et apprends le point de vol de Tharm.
+02-12到30級.md:597｜說明｜在烈日石居旅店向旅店老闆傑卡（1442 47.47, 62.13）綁爐石，留到南側山口的交件完成後再用。｜Lie ta pierre de foyer à l'auberge de la Retraite de Roche-Soleil, auprès de l'aubergiste Jayka (1442 47.47, 62.13) ; ne l'utilise qu'après les remises de quêtes au col sud.
 02-12到30級.md:681｜說明｜初訪找札瑞斯開飛行點。｜À la première visite, trouve Zarise pour apprendre le point de vol.
 02-12到30級.md:682｜說明｜在塔倫米爾旅店向旅店老闆沙恩（1424 62.78, 19.03）綁爐石。｜Lie ta pierre de foyer à l'auberge de Moulin-de-Tarren, auprès de l'aubergiste Shay (1424 62.78, 19.03).
 02-12到30級.md:792｜說明｜在布瑞爾南方飛艇塔找薩匹塔（1420 60.74, 58.87，西平台）確認奧格瑪線。抵杜洛塔後進奧格瑪飛陶拉祖；若仍在塔倫米爾才先飛幽暗城轉飛艇。有 1067 要交：已開雷霆崖就先飛雷霆崖交件再飛陶拉祖；未開就從陶拉祖往西沿莫高雷大道走到雷霆崖，搭電梯上城向塔爾開點，交完再飛回陶拉祖。｜À la tour des zeppelins au sud de Brill, trouve Zapetta (1420 60.74, 58.87, plateforme ouest) pour confirmer la ligne d'Orgrimmar. Arrivé à Durotar, entre dans Orgrimmar et vole vers le camp Taurajo ; si tu es encore à Moulin-de-Tarren, vole d'abord à Fossoyeuse et prends le zeppelin. Si tu as 1067 à rendre : si Thunder Bluff est déjà débloqué, vole d'abord là-bas, rends-la, puis vole vers Taurajo ; sinon marche depuis Taurajo vers l'ouest par la route de Mulgore jusqu'à Thunder Bluff, monte par l'ascenseur, apprends le point de vol de Tal, puis après la remise retourne en vol à Taurajo.
 02-12到30級.md:888｜說明｜抵達碎木崗哨，找烏爾格拉開飛行點（1440 73.18, 61.59）。保留塔倫米爾爐石給東部王國回程；已綁別處且想在梣谷用，找旅店老闆凱利斯克。｜Arrive au Poste de Bois-brisé et trouve Vhulgra pour apprendre le point de vol (1440 73.18, 61.59). Garde la pierre de foyer de Moulin-de-Tarren pour le retour vers les Royaumes de l'Est ; si elle est liée ailleurs et que tu veux l'utiliser à Orneval, va voir l'aubergiste Kaylisk.
 03-30到45級.md:28｜說明｜向札瑞斯開飛行點。｜Apprends le point de vol de Zarise.
 03-30到45級.md:180｜說明｜荊棘谷 藏寶海灣交給克拉茲克。｜Rends la quête à Krazek dans Vallée de Strangleronce Baie-du-Butin.
-03-30到45級.md:183｜說明｜閃光平原六個接任務點相近，先接齊再繞一圈。車手送件 1111 要飛棘齒城一趟才做；交完向碼頭管理員迪茲維格接給克拉維爾的零件（1112），回閃光平原交給克拉維爾，做完送貨給地精（1114），再接車手的傳聞（1115）留到荊棘谷 藏寶海灣交。｜Les six points de quête de Salines sont proches : prends-les toutes, puis fais un seul tour. La remise 1111 au pilote demande d'abord un détour par Cabestan ; ensuite récupère les pièces de Kravel (1112) auprès de Maître des quais Dizzywig, rapporte-les à Kravel Koalbeard dans Salines, livre la marchandise au gobelin (1114) et prends la rumeur du pilote (1115), à garder pour la rendre à Vallée de Strangleronce Baie-du-Butin.
+03-30到45級.md:183｜說明｜閃光平原六個接任務點相近，先接齊再繞一圈。車手送件 1111 要飛棘齒城一趟才做；交完向碼頭管理員迪茲維格接給克拉維爾的零件（1112），回閃光平原交給克拉維爾，做完送貨給地精（1114），再接車手的傳聞（1115）留到荊棘谷 藏寶海灣交。｜Les six points de quête de Salines sont proches : prends-les toutes, puis fais un seul tour. La remise 1111 au pilote demande d'abord un détour par Cabestan ; ensuite récupère les pièces de Kravel (1112) auprès de Maître des quais Dizzywig, rapporte-les à Kravel Koalbeard dans Salines, fais Une livraison pour les gnomes (1114) et prends la rumeur du pilote (1115), à garder pour la rendre à Vallée de Strangleronce Baie-du-Butin.
 03-30到45級.md:216｜說明｜一次只帶一頭年老的科多獸：用誘引器馴服後帶到斯米德身邊，等他開口說話，再點選科多獸，計數才會加一。｜N'emmène qu'un vieux kodo à la fois : apprivoise-le avec l'appât à kodo, conduis-le à Smeed Scrabblescrew, attends qu'il parle, puis clique sur le kodo pour que le compteur augmente.
 03-30到45級.md:218｜說明｜沿南路過吉爾吉斯村，到葬影村向薩隆開飛行點。｜Suis la route du sud en passant par le village de Gil jusqu'à Proie-de-l'Ombre, puis apprends le point de vol de Thalon.
 03-30到45級.md:219｜說明｜在葬影村旅店向旅店老闆希科瓦（1443 24.09, 68.21）綁爐石。｜Lie ta pierre de foyer à l'auberge de Proie-de-l'Ombre, auprès de l'aubergiste Sikewa (1443 24.09, 68.21).
@@ -13442,7 +13442,7 @@
 03-30到45級.md:538｜說明｜舒心草帶 3 份再出城。月鋼寬劍已有就交，特地買或鍛造會增加折返。1270 留到去灼熱峽谷前經棘齒城時交。｜Prends 3 Epices apaisantes avant de quitter la ville. Rends l'Epée d'acier lunaire si tu l'as déjà ; l'acheter ou la forger exprès ajoute des détours. Garde 1270 pour quand tu passeras par Cabestan en allant aux Gorge des Vents brûlants.
 03-30到45級.md:729｜說明｜法迪爾海灣一次接打撈、水下寶藏和船長的復仇。先完成 665 解鎖 666，接 666 領尋寶護目鏡，並順手做水下的 662／664。669 留到荊棘谷 藏寶海灣交。｜À la crique de Faldir, prends d'un coup Récupération, Trésor sous-marin et La vengeance du capitaine. Termine d'abord 665 pour débloquer 666, prends 666 pour obtenir les lunettes de chasseur de trésors, et fais au passage 662 et 664 sous l'eau. Garde 669 pour la rendre à Vallée de Strangleronce Baie-du-Butin.
 03-30到45級.md:752｜說明｜已開羅格瑪就從落錘鎮直飛。沒開就照多數玩家的走法搭船：落錘鎮飛幽暗城，到布瑞爾南方飛艇塔搭往奧格瑪的飛艇；在奧格瑪飛亂風崗，經閃光平原南坡進塔納利斯，到加基森先開點（已開加基森就直接飛）。人在卡林多就直接去塔納利斯。直飛抵達羅格瑪的跳過第 2–6 步。｜Si tu as déjà débloqué Rog'mar, vole directement depuis Trépas-d'Orgrim. Sinon, prends le bateau comme la plupart des joueurs : vole de Trépas-d'Orgrim à Fossoyeuse, prends le zeppelin de la tour au sud de Brill vers Orgrimmar ; d'Orgrimmar vole à Poste de Librevent, passe par le versant sud des Salines vers Tanaris et débloque d'abord Gadgetzan (si tu l'as déjà, vole directement). Si tu es déjà à Kalimdor, va directement à Tanaris. Saute les étapes 2-6 si tu as volé directement à Rog'mar.
-03-30到45級.md:754｜說明｜還沒開羅格瑪、走熱砂港船線的人：到加基森東邊的熱砂港（1446 68.60, 23.00）搭船，在大河林地火線港碼頭（2548 80.60, 54.60）下船。火線港飛行管理員沒有航線。｜Si tu n'as pas débloqué Rog'mar et prends la ligne de Port Gentepression : embarque à Port Gentepression, à l'est de Gadgetzan (1446 68.60, 23.00), et descends au quai de Port de Poudremèche, dans Riverglades (2548 80.60, 54.60). Le maître de vol de Port de Poudremèche n'a aucune route.
+03-30到45級.md:754｜說明｜還沒開羅格瑪、走熱砂港船線的人：到加基森東邊的熱砂港（1446 68.60, 23.00）搭船，在大河林地火線港碼頭（2548 80.60, 54.60）下船。火線港飛行管理員沒有航線。｜Si tu n'as pas débloqué Rog'mar et prends la ligne de Port Gentepression : embarque à Port Gentepression, à l'est de Gadgetzan (1446 68.60, 23.00), et descends au quai de Port de Poudremèche, dans les Rives Claires (2548 80.60, 54.60). Le maître de vol de Port de Poudremèche n'a aucune route.
 03-30到45級.md:757｜說明｜搭船到的人從火線港往西走到羅格瑪。｜Si tu es arrivé en bateau, marche vers l'ouest depuis Port de Poudremèche jusqu'à Rog'mar.
 03-30到45級.md:759｜說明｜在羅格瑪旅店向旅店老闆托卡（2548 57.58, 45.47）綁爐石。｜Lie ta pierre de foyer à l'auberge de Rog'mar, auprès de l'aubergiste Toka (2548 57.58, 45.47).
 03-30到45級.md:792｜說明｜史納戈是 40 級精英，在洞穴裡，單人不穩就不接。｜Snargl est une élite de niveau 40 dans une grotte ; si c'est instable en solo, ne prends pas la quête.
@@ -13452,7 +13452,7 @@
 03-30到45級.md:1001｜說明｜從騎術訓練師回來時，人在卡林多先飛奧格瑪，到城外飛艇塔找斯納爾克｜Au retour du maître de monte, si tu es à Kalimdor, vole d'abord à Orgrimmar et trouve Snurk Bucksquick à la tour des zeppelins, hors de la ville.
 03-30到45級.md:1001｜說明｜人在幽暗城就到布瑞爾南方飛艇塔找興登堡。搭格羅姆高線，到格羅姆高再飛藏寶海灣。｜Si tu es à Fossoyeuse, va à la tour des zeppelins au sud de Brill et trouve Hin Denburg. Prends la ligne de Grom'gol, puis vole de Grom'gol à Baie-du-Butin.
 04-45到60級.md:30｜說明｜熱砂港沿大道往西到加基森，找部落飛行管理員布科雷克·怒拳開飛行點。｜Depuis Port Gentepression, suis la route vers l'ouest jusqu'à Gadgetzan et trouve le maître de vol de la Horde, Bulkrek Ragefist, pour apprendre le point de vol.
-04-45到60級.md:31｜說明｜在加基森旅店向旅店老闆菲茲格瑞博（1446 52.51, 27.91）暫綁爐石。到費拉斯莫沙徹營地再改綁。｜Lie temporairement ta pierre de foyer à l'auberge de Gadgetzan, auprès de l'aubergiste Fizzgrimble (1446 52.51, 27.91). Tu la reliras plus tard au camp Mojache, à Féralas.
+04-45到60級.md:31｜說明｜在加基森旅店向旅店老闆菲茲格瑞博（1446 52.51, 27.91）暫綁爐石。到費拉斯莫沙徹營地再改綁。｜Lie temporairement ta pierre de foyer à l'auberge de Gadgetzan, auprès de l'aubergiste Fizzgrimble (1446 52.51, 27.91). Tu la reliras plus tard au camp Mojache, à Feralas.
 04-45到60級.md:89｜說明｜在莫沙徹營地旅店向旅店老闆格盧爾（1444 74.80, 45.18）綁爐石。｜Lie ta pierre de foyer à l'auberge du camp Mojache, auprès de l'aubergiste Greul (1444 74.80, 45.18).
 05-副本.md:1104｜說明｜洛特格里普在水池巡游；小噴泉在同一水池水面。；位置：公主洞下方跳入洛特格里普水池，找水面噴泉。；順序：可先做第 42 步，再下水｜Rotgrip patrouille dans le bassin. La petite source est à la surface du même bassin. Lieu : Saute dans le bassin de Rotgrip sous la grotte de la Princesse et trouve la source à la surface de l'eau. Ordre : Tu peux faire d'abord l'étape 42, puis entrer dans l'eau.
 05-副本.md:1104｜說明｜可先做第 42 步，再下水｜Tu peux faire d'abord l'étape 42, puis entrer dans l'eau.
@@ -13465,7 +13465,7 @@
 04-45到60級.md:438｜說明｜限已交 625 並持有 626｜Seulement si tu as rendu 625 et que tu possèdes 626.
 04-45到60級.md:438｜說明｜625 在塵泥沼澤迅猛龍洞（Bloodfen Burrow）內岩石上的發黴的卷軸交。｜Rends 625 au Parchemin moisi posé sur un rocher dans le Terrier de Sangrefougère, dans le Marécage d'Âprefange.
 04-45到60級.md:454｜說明｜守護者希坦亞是 51 級精英。｜Le Gardien Hitaya est une élite de niveau 51.
-04-45到60級.md:772｜說明｜帶到海加爾山 永恆山峰交提雅拉·白鬃。｜Apporte-le au Summit of Eternity, dans le Mont Hyjal, et rends-le à Tiala Whitemane.
+04-45到60級.md:772｜說明｜帶到海加爾山 永恆山峰交提雅拉·白鬃。｜Apporte-le au Sommet d’Éternité, dans le Mont Hyjal, et rends-le à Tiala Whitemane.
 04-45到60級.md:839｜說明｜已開烈焰峰飛行點、又不做不和諧的烈焰，就從卡加斯直接飛烈焰峰。否則先從卡加斯飛瑟銀哨塔，往南進黑石山，沿鎖鏈下到底層的磨石場。｜Si tu as le point de vol de Corniche des flammes et ne fais pas Disharmonie des flammes, vole de Kargath directement à Corniche des flammes. Sinon, vole de Kargath à la Halte du Thorium, va au sud dans le Mont Rochenoire et descends par les chaînes jusqu'à la Carrière de meules, au niveau inférieur.
 04-45到60級.md:840｜說明｜派隆是 52 級精英，在黑石深淵入口外的磨石場巡邏。｜Pyron est une élite de niveau 52 qui patrouille dans la Carrière de meules, devant l'entrée des Profondeurs de Rochenoire.
 04-45到60級.md:841｜說明｜從黑石山往燃燒平原出口走，出山後沿北側往東到烈焰峰。｜Depuis le Mont Rochenoire, dirige-toi vers la sortie vers les Steppes ardentes, puis suis le côté nord vers l'est jusqu'à Corniche des flammes.
@@ -13476,15 +13476,15 @@
 04-45到60級.md:1401｜說明｜第 1 步從木喉要塞出來先停溫泉，末步往南走暗語峽谷進海加爾山。｜Étape 1 : sors des Grumegueules et arrête-toi d'abord aux sources chaudes ; à la dernière étape, va vers le sud par Gorge du Sombre murmure jusqu'au Mont Hyjal.
 04-45到60級.md:1405｜說明｜進海加爾山前任務日誌約有 20 個，山裡最多到 28 個；日誌快滿就先放掉可跳過的舊任務。｜Avant d'entrer dans le Mont Hyjal, tu auras environ 20 quêtes dans ton journal, et jusqu'à 28 sur place ; si le journal est presque plein, abandonne d'abord les anciennes quêtes facultatives.
 04-45到60級.md:1425｜說明｜第一次進海加爾山：從永望鎮沿南路到暗語峽谷北口（1452 59.82, 74.25），貼著谷底大路往西走到底，從海加爾山東南角（約 87, 74）的德魯伊結界出谷。不用開門任務；谷口有精英霜槌巨人，谷內有精英惡魔，全程別離開道路。｜La première fois dans le Mont Hyjal : prends la route du sud depuis Long-guet jusqu'à l'entrée nord de Gorge du Sombre murmure (1452 59.82, 74.25), suis la route principale au fond de la gorge vers l'ouest jusqu'au bout et sors par la barrière druidique du coin sud-est du Mont Hyjal (environ 87, 74). Pas besoin de la quête de la porte. Un géant Cognegivre élite garde l'entrée et des démons élites rôdent à l'intérieur ; ne quitte jamais la route.
-04-45到60級.md:1426｜說明｜西瘟疫之地 亡靈壁壘帶來的；沒接就只接下一步。｜Venue des Maleterres de l'ouest, Rempart des morts-vivants. Si tu ne l'as pas, prends seulement l'étape suivante.
-04-45到60級.md:1426｜說明｜西瘟疫之地 亡靈壁壘帶來的｜Venue des Maleterres de l'ouest, Rempart des morts-vivants.
+04-45到60級.md:1426｜說明｜西瘟疫之地 亡靈壁壘帶來的；沒接就只接下一步。｜Venue des Maleterres de l'ouest, La Barricade. Si tu ne l'as pas, prends seulement l'étape suivante.
+04-45到60級.md:1426｜說明｜西瘟疫之地 亡靈壁壘帶來的｜Venue des Maleterres de l'ouest, La Barricade.
 04-45到60級.md:1426｜說明｜沒接就只接下一步。｜Si tu ne l'as pas, prends seulement l'étape suivante.
-04-45到60級.md:1427｜說明｜交古野村的歐塔克‧洛勾克，下一站到。｜Rends-le à Ortak Lomgok à Elderwild ; la prochaine étape t'y mène.
+04-45到60級.md:1427｜說明｜交古野村的歐塔克‧洛勾克，下一站到。｜Rends-le à Ortak Lomgok à Sylvancienne ; la prochaine étape t'y mène.
 04-45到60級.md:1428｜說明｜路邊鬆脫的齒輪，點一下就接。｜Un rouage détaché au bord de la route ; clique dessus pour prendre la quête.
 04-45到60級.md:1429｜說明｜費伍德森林 翡翠聖地帶來的；沒接就跳過。｜Venue de Gangrebois, Sanctuaire d'Émeraude. Si tu ne l'as pas, saute-la.
 04-45到60級.md:1429｜說明｜費伍德森林 翡翠聖地帶來的｜Venue de Gangrebois, Sanctuaire d'Émeraude.
 04-45到60級.md:1429｜說明｜沒接就跳過。｜Si tu ne l'as pas, saute-la.
-04-45到60級.md:1431｜說明｜開完污化丘陵飛行點就往北送去凱蕾娜的工坊。｜Après avoir débloqué le point de vol des Tainted Foothills, apporte la caisse au nord, à l'atelier de Kaylaena.
+04-45到60級.md:1431｜說明｜開完污化丘陵飛行點就往北送去凱蕾娜的工坊。｜Après avoir débloqué le point de vol des Contreforts Souillés, apporte la caisse au nord, à l'atelier de Kaylaena.
 04-45到60級.md:1440｜說明｜塊莖位置未標。｜La position des tubercules n'est pas indiquée.
 04-45到60級.md:1448｜說明｜沿大路往西，向 Bluebell 開飛行點。兩陣營共用。｜Suis la route vers l'ouest et apprends le point de vol de Bluebell. Partagé par les deux factions.
 04-45到60級.md:1452｜說明｜瑟拉史卓斯是 57 級精英古樹，在待會打木槿花的山坡遊走；單人不穩就不接。｜Celastrus est un ancien élite de niveau 57 qui rôde sur le versant où tu récolteras plus tard des hibiscus. Si c'est instable en solo, ne la prends pas.
@@ -13495,56 +13495,56 @@
 04-45到60級.md:1456｜說明｜第 88 步往月光林地經過永望鎮時交娜米。｜À l'étape 88, rends-la à Nami en passant par Long-guet sur la route de Reflet-de-Lune.
 04-45到60級.md:1465｜說明｜對友善古樹使用，不用打。｜Utilise-le sur un ancien amical ; pas besoin de combattre.
 04-45到60級.md:1467｜說明｜裂皮是 56 級精英古樹，單人不穩就不接。｜Sunderbark est un ancien élite de niveau 56. Si c'est instable en solo, ne la prends pas.
-04-45到60級.md:1474｜說明｜往北到魔血之痕找被關住的惡魔。｜Va vers le nord jusqu'à la Cicatrice de sang gangrené et cherche le démon emprisonné.
+04-45到60級.md:1474｜說明｜往北到魔血之痕找被關住的惡魔。｜Va vers le nord jusqu'à la Balafre gangresang et cherche le démon emprisonné.
 04-45到60級.md:1476｜說明｜筆記是同一批侍僧掉的，兩個任務一起打。｜Les notes sont lâchées par les mêmes acolytes ; combats-les pour les deux quêtes.
 04-45到60級.md:1484｜說明｜三人都是 58 級普通怪。｜Les trois sont des monstres normaux de niveau 58.
 04-45到60級.md:1496｜說明｜會喚出 58 級精英軟泥，單人不穩就不接。｜Il invoque une gelée élite de niveau 58. Si c'est instable en solo, ne la prends pas.
 04-45到60級.md:1498｜說明｜骨堆再往西一點的瀕死荒野神靈，拿到微光法杖後回烏鴉那裡交。｜Trouve l'esprit sauvage mourant un peu à l'ouest du tas d'os, puis rapporte le bâton chatoyant à Crow pour rendre la quête.
 04-45到60級.md:1503｜說明｜魔拂就在工作站這座營地，順路交。｜Felflick est juste ici, au camp de l'établi ; rends la quête au passage.
-04-45到60級.md:1508｜說明｜交古野村的澤特甘，下一站到。｜Rends-le à Zet'gan à Elderwild ; la prochaine étape t'y mène.
+04-45到60級.md:1508｜說明｜交古野村的澤特甘，下一站到。｜Rends-le à Zet'gan à Sylvancienne ; la prochaine étape t'y mène.
 04-45到60級.md:1510｜說明｜沿大路騎回東邊的隱士洞。｜Retourne à cheval vers l'est par la route jusqu'à la Grotte de l'ermite.
-04-45到60級.md:1512｜說明｜從污化丘陵（2482 54.98, 82.82）飛永望鎮。｜Vole des Tainted Foothills (2482 54.98, 82.82) à Long-guet.
+04-45到60級.md:1512｜說明｜從污化丘陵（2482 54.98, 82.82）飛永望鎮。｜Vole des Contreforts Souillés (2482 54.98, 82.82) à Long-guet.
 04-45到60級.md:1513｜說明｜後續的木箱有時限，等月光林地回來再接。｜La caisse suivante est limitée dans le temps ; prends-la à ton retour de Reflet-de-Lune.
 04-45到60級.md:1514｜說明｜在永望鎮轉飛月光林地（1450 32.09, 66.61），沿路往東北走到永夜港。月光林地飛行點在第52站開過。｜À Long-guet, prends un vol pour Reflet-de-Lune (1450 32.09, 66.61), puis suis la route vers le nord-est jusqu'à Havrenuit. Le point de vol de Reflet-de-Lune est débloqué à l'étape 52.
 04-45到60級.md:1522｜說明｜在月光林地飛行點找法斯托恩（1450 32.09, 66.61）飛永望鎮。｜Au point de vol de Reflet-de-Lune, trouve Faustron (1450 32.09, 66.61) pour voler vers Long-guet.
 04-45到60級.md:1523｜說明｜箱裡的電池約兩小時後失效；騎坐騎要走慢、別摔，壞了回娜米補。｜Les piles de la caisse cessent de fonctionner après environ deux heures. Chevauche lentement et évite les chutes ; si c'est cassé, retourne voir Nami pour le remplacer.
 04-45到60級.md:1523｜說明｜箱裡的電池約兩小時後失效｜Les piles de la caisse cessent de fonctionner après environ deux heures.
 04-45到60級.md:1523｜說明｜騎坐騎要走慢、別摔，壞了回娜米補。｜Chevauche lentement et évite les chutes ; si c'est cassé, retourne voir Nami pour le remplacer.
-04-45到60級.md:1524｜說明｜飛污化丘陵，下飛行點直接往北騎到凱蕾娜的工坊。｜Vole aux Tainted Foothills, puis chevauche droit vers le nord depuis le point de vol jusqu'à l'atelier de Kaylaena.
+04-45到60級.md:1524｜說明｜飛污化丘陵，下飛行點直接往北騎到凱蕾娜的工坊。｜Vole aux Contreforts Souillés, puis chevauche droit vers le nord depuis le point de vol jusqu'à l'atelier de Kaylaena.
 04-45到60級.md:1527｜說明｜從工坊往東南騎回隱士洞。｜Chevauche vers le sud-est depuis l'atelier pour retourner à la Grotte de l'ermite.
-04-45到60級.md:1529｜說明｜交艾維娜聖壇的傲天者歐姆奴隆，下一站到。｜Rends-le à Skylord Omnuron au Shrine of Aviana ; la prochaine étape t'y mène.
-04-45到60級.md:1531｜說明｜到祥和育所的橋上碰烏鴉肖像，下一站做。｜Toca le portrait du corbeau sur le pont de Cradle of Tranquility ; fais-le à la prochaine étape.
-04-45到60級.md:1532｜說明｜沿大路往西，經瑪洛恩隱居地（約 29, 71）轉北。｜Suis la route vers l'ouest et tourne vers le nord après Malorne's Retreat (environ 29, 71).
-04-45到60級.md:1534｜說明｜第 1 步從永望鎮走暗語峽谷進山，第 24 步開污化丘陵飛行點，第 29 步往北到凱蕾娜的工坊；第 88、98 步經永望鎮飛月光林地來回，回程第 100 步先送木箱到工坊；末步沿大路往西北。｜Étape 1 : entre depuis Long-guet par Gorge du Sombre murmure ; étape 24 : débloque le point de vol des Tainted Foothills ; étape 29 : va au nord, à l'atelier de Kaylaena ; étapes 88 et 98 : va et reviens de Reflet-de-Lune en vol via Long-guet ; au retour, à l'étape 100, dépose d'abord la caisse à l'atelier ; dernière étape : suis la route vers le nord-ouest.
-04-45到60級.md:1535｜說明｜值得做｜隱士柯薩拉斯的主線一路開到永恆山峰的山脈法杖，月光林地這趟來回是為了接上後段。｜La chaîne principale de l'ermite Ketharas mène jusqu'au Bâton de la montagne au Summit of Eternity ; l'aller-retour à Reflet-de-Lune sert à raccorder la suite.
+04-45到60級.md:1529｜說明｜交艾維娜聖壇的傲天者歐姆奴隆，下一站到。｜Rends-le à Skylord Omnuron au Sanctuaire d’Aviana ; la prochaine étape t'y mène.
+04-45到60級.md:1531｜說明｜到祥和育所的橋上碰烏鴉肖像，下一站做。｜Toca le portrait du corbeau sur le pont du Berceau de la tranquillité ; fais-le à la prochaine étape.
+04-45到60級.md:1532｜說明｜沿大路往西，經瑪洛恩隱居地（約 29, 71）轉北。｜Suis la route vers l'ouest et tourne vers le nord après la Retraite de Malorne (environ 29, 71).
+04-45到60級.md:1534｜說明｜第 1 步從永望鎮走暗語峽谷進山，第 24 步開污化丘陵飛行點，第 29 步往北到凱蕾娜的工坊；第 88、98 步經永望鎮飛月光林地來回，回程第 100 步先送木箱到工坊；末步沿大路往西北。｜Étape 1 : entre depuis Long-guet par Gorge du Sombre murmure ; étape 24 : débloque le point de vol des Contreforts Souillés ; étape 29 : va au nord, à l'atelier de Kaylaena ; étapes 88 et 98 : va et reviens de Reflet-de-Lune en vol via Long-guet ; au retour, à l'étape 100, dépose d'abord la caisse à l'atelier ; dernière étape : suis la route vers le nord-ouest.
+04-45到60級.md:1535｜說明｜值得做｜隱士柯薩拉斯的主線一路開到永恆山峰的山脈法杖，月光林地這趟來回是為了接上後段。｜La chaîne principale de l'ermite Ketharas mène jusqu'au Bâton de la montagne au Sommet d’Éternité ; l'aller-retour à Reflet-de-Lune sert à raccorder la suite.
 04-45到60級.md:1536｜說明｜有隊伍再做｜91923 的『苦痛者』瑟拉史卓斯、92959 的裂皮、96255 的甦醒魔灰軟泥怪都是精英；單人跳過，96322 也一起略過。｜91923 Celastrus l'Amer, 92959 Sunderbark et 96255 la gelée cendrée éveillée sont des élites ; saute-les en solo, ainsi que 96322.
-04-45到60級.md:1537｜說明｜先別交｜94782、96830 留古野村交；92171、96931 留下一站做；92594 等送木箱時一起交。｜Garde 94782 et 96830 pour les rendre à Elderwild ; fais 92171 et 96931 à la prochaine étape ; rends 92594 avec la caisse.
-04-45到60級.md:1538｜說明｜可跳過｜92009 的木箱約兩小時失效，所以月光林地回來才接，下飛行點直接送。後續 92011 要到古野村再往上的部落營地遺跡拾荒，QuestieDB 沒有物品位置；92328、92329 跟著略過，92329 還要引 60 級奇美拉剛蘇羅克。｜La caisse de 92009 cesse de fonctionner après environ deux heures : prends-la au retour de Reflet-de-Lune et livre-la directement depuis le point de vol. La suite 92011 demande de fouiller les ruines du camp de la Horde au nord de Elderwild, et QuestieDB n'a pas l'emplacement des objets ; saute aussi 92328 et 92329 ; 92329 exige en plus d'attirer la chimère de niveau 60 Ghansurok.
+04-45到60級.md:1537｜說明｜先別交｜94782、96830 留古野村交；92171、96931 留下一站做；92594 等送木箱時一起交。｜Garde 94782 et 96830 pour les rendre à Sylvancienne ; fais 92171 et 96931 à la prochaine étape ; rends 92594 avec la caisse.
+04-45到60級.md:1538｜說明｜可跳過｜92009 的木箱約兩小時失效，所以月光林地回來才接，下飛行點直接送。後續 92011 要到古野村再往上的部落營地遺跡拾荒，QuestieDB 沒有物品位置；92328、92329 跟著略過，92329 還要引 60 級奇美拉剛蘇羅克。｜La caisse de 92009 cesse de fonctionner après environ deux heures : prends-la au retour de Reflet-de-Lune et livre-la directement depuis le point de vol. La suite 92011 demande de fouiller les ruines du camp de la Horde au nord de Sylvancienne, et QuestieDB n'a pas l'emplacement des objets ; saute aussi 92328 et 92329 ; 92329 exige en plus d'attirer la chimère de niveau 60 Ghansurok.
 04-45到60級.md:1539｜說明｜種子、貓頭鷹蛋、塊莖、土壤、水晶、松果這些採集點 QuestieDB 都沒有座標，照任務描述在附近找，先做有座標的殺怪。｜QuestieDB n'a pas de coordonnées pour les graines, œufs de chouette, tubercules, terre, cristaux et pommes de pin ; cherche à proximité selon la description de la quête et fais d'abord les morts avec coordonnées.
 04-45到60級.md:1552｜說明｜暗語峽谷有 57–60 級精英赫達琳殺戮者，谷口另有精英霜槌巨人。沿谷底大路走，別往兩側坡上拉怪。｜Gorge du Sombre murmure abrite des Pourfendeurs Hederine élites de niveau 57-60, et un géant Cognegivre élite à l'entrée. Suis la route principale au fond de la gorge et n'attire pas de monstres depuis les pentes.
-04-45到60級.md:1553｜說明｜污化丘陵東側有 56 級精英古樹裂皮和 57 級精英『苦痛者』瑟拉史卓斯遊走，打木槿花、採集時留意。｜À l'est des Tainted Foothills rôdent l'ancien élite Sunderbark (niveau 56) et Celastrus l'Amer (élite, niveau 57) ; fais attention en tuant des hibiscus et en récoltant.
+04-45到60級.md:1553｜說明｜污化丘陵東側有 56 級精英古樹裂皮和 57 級精英『苦痛者』瑟拉史卓斯遊走，打木槿花、採集時留意。｜À l'est des Contreforts Souillés rôdent l'ancien élite Sunderbark (niveau 56) et Celastrus l'Amer (élite, niveau 57) ; fais attention en tuant des hibiscus et en récoltant.
 04-45到60級.md:1554｜說明｜骨堆旁的甦醒魔灰軟泥怪是 58 級精英，丟骨頭時別站在軟泥池裡。｜La gelée cendrée éveillée près du tas d'os est une élite de niveau 58 ; ne te tiens pas dans la mare de gelée quand tu jettes les os.
-04-45到60級.md:1542｜說明｜魔血之痕的普通術士，兩個任務都要打，密度高。營地裡有 58 級具名術士，先清外圍。｜Démonistes normaux à la Cicatrice de sang gangrené ; les deux quêtes en ont besoin et ils sont nombreux. Un démoniste nommé de niveau 58 se trouve au camp, alors nettoie d'abord les abords.
+04-45到60級.md:1542｜說明｜魔血之痕的普通術士，兩個任務都要打，密度高。營地裡有 58 級具名術士，先清外圍。｜Démonistes normaux à la Balafre gangresang ; les deux quêtes en ont besoin et ils sont nombreux. Un démoniste nommé de niveau 58 se trouve au camp, alors nettoie d'abord les abords.
 04-45到60級.md:1543｜說明｜入口隱士洞外的普通鹿，能順收鹿肉。單隻散開，適合邊走邊打。｜Cerfs normaux devant l'entrée de la Grotte de l'ermite ; tu peux récupérer de la viande de cerf au passage. Ils sont dispersés un par un et se tuent facilement en marchant.
-04-45到60級.md:1562｜說明｜從瑪洛恩隱居地的大路彎道往西，找樹皮熊怪洞外的布瑞魯法。｜Depuis le virage de la route à Malorne's Retreat, va vers l'ouest et trouve Brerufa devant la grotte des Furbolgs d'écorce.
+04-45到60級.md:1562｜說明｜從瑪洛恩隱居地的大路彎道往西，找樹皮熊怪洞外的布瑞魯法。｜Depuis le virage de la route à la Retraite de Malorne, va vers l'ouest et trouve Brerufa devant la grotte des Furbolgs d'écorce.
 04-45到60級.md:1563｜說明｜先接著，第 38 步回南邊打貓頭鷹時一起殺守護者。洞內樹皮熊怪的後續要先刷聲望，路線只做這一個。｜Prends-la pour l'instant et tue les gardiens à l'étape 38, quand tu retournes au sud chasser les chouettes. La suite dans la grotte demande d'abord de farmer la réputation ; la route ne fait que celle-ci.
-04-45到60級.md:1564｜說明｜往北去古野村的路上。｜Sur la route du nord vers Elderwild.
+04-45到60級.md:1564｜說明｜往北去古野村的路上。｜Sur la route du nord vers Sylvancienne.
 04-45到60級.md:1570｜說明｜最低 57 級；任務給的倖存者火炬要帶著。｜Niveau minimum 57. Garde la torche de survivant que te donne la quête.
 04-45到60級.md:1570｜說明｜最低 57 級｜Niveau minimum 57.
 04-45到60級.md:1570｜說明｜任務給的倖存者火炬要帶著。｜Garde la torche de survivant que te donne la quête.
-04-45到60級.md:1572｜說明｜古野村西邊的瞭望台。｜Le poste de guet à l'ouest de Elderwild.
-04-45到60級.md:1576｜說明｜沿大路往東經哀悼之眠，先到祥和育所的橋上找荒野神靈，哀悼之眠的任務等接完馬羅希斯再一起打。｜Suis la route vers l'est en traversant Mourning's Rest, et trouve d'abord l'esprit sauvage sur le pont de Cradle of Tranquility ; les quêtes de Mourning's Rest se font ensemble après avoir pris celles de Marrosis.
-04-45到60級.md:1577｜說明｜大路旁的舊廢墟；往祥和育所的路上順便裝水，第 50 步回程再交。｜Les anciennes ruines au bord de la route. Remplis l'eau en chemin vers Cradle of Tranquility et rends-la au retour, à l'étape 50.
+04-45到60級.md:1572｜說明｜古野村西邊的瞭望台。｜Le poste de guet à l'ouest de Sylvancienne.
+04-45到60級.md:1576｜說明｜沿大路往東經哀悼之眠，先到祥和育所的橋上找荒野神靈，哀悼之眠的任務等接完馬羅希斯再一起打。｜Suis la route vers l'est en traversant le Repos du deuil, et trouve d'abord l'esprit sauvage sur le pont du Berceau de la tranquillité ; les quêtes du Repos du deuil se font ensemble après avoir pris celles de Marrosis.
+04-45到60級.md:1577｜說明｜大路旁的舊廢墟；往祥和育所的路上順便裝水，第 50 步回程再交。｜Les anciennes ruines au bord de la route. Remplis l'eau en chemin vers le Berceau de la tranquillité et rends-la au retour, à l'étape 50.
 04-45到60級.md:1577｜說明｜大路旁的舊廢墟｜Les anciennes ruines au bord de la route.
-04-45到60級.md:1577｜說明｜往祥和育所的路上順便裝水，第 50 步回程再交。｜Remplis l'eau en chemin vers Cradle of Tranquility et rends-la au retour, à l'étape 50.
-04-45到60級.md:1578｜說明｜瀑布位置未標，沿大路往祥和育所方向找。｜La position de la cascade n'est pas indiquée ; cherche le long de la route vers Cradle of Tranquility.
-04-45到60級.md:1583｜說明｜交瑞納拉德，後段往永恆山峰時順路。｜Rends-le à Renalard ; c'est sur ta route quand tu iras plus tard au Summit of Eternity.
-04-45到60級.md:1589｜說明｜交柯薩拉斯，到永恆山峰後飛回去一起交。｜Rends-le à Ketharas ; reviens en vol pour tout rendre ensemble une fois au Summit of Eternity.
+04-45到60級.md:1577｜說明｜往祥和育所的路上順便裝水，第 50 步回程再交。｜Remplis l'eau en chemin vers le Berceau de la tranquillité et rends-la au retour, à l'étape 50.
+04-45到60級.md:1578｜說明｜瀑布位置未標，沿大路往祥和育所方向找。｜La position de la cascade n'est pas indiquée ; cherche le long de la route vers le Berceau de la tranquillité.
+04-45到60級.md:1583｜說明｜交瑞納拉德，後段往永恆山峰時順路。｜Rends-le à Renalard ; c'est sur ta route quand tu iras plus tard au Sommet d’Éternité.
+04-45到60級.md:1589｜說明｜交柯薩拉斯，到永恆山峰後飛回去一起交。｜Rends-le à Ketharas ; reviens en vol pour tout rendre ensemble une fois au Sommet d’Éternité.
 04-45到60級.md:1593｜說明｜剝肉搶奪者、被遺忘的士兵都會掉，避開精英亡靈哭號者。｜Les Pillards écorcheurs et les Soldats oubliés en lâchent ; évite le hurleur mort-vivant élite.
 04-45到60級.md:1594｜說明｜骨堆位置未標。｜La position du tas d'os n'est pas indiquée.
 04-45到60級.md:1607｜說明｜安荷位置未標，在瑪露克附近找。｜La position d'Anhe n'est pas indiquée ; cherche près de Maluk.
-04-45到60級.md:1610｜說明｜沿大路往東，先在嘉文關‧葉源那裡交水，再過祥和育所往東南去艾維娜聖壇。｜Suis la route vers l'est et rends d'abord l'eau à Galvinquam Leafsyre ; puis passe par Cradle of Tranquility et va au sud-est jusqu'au Shrine of Aviana.
-04-45到60級.md:1612｜說明｜行李交永恆山峰的瑪恩‧尤霍恩。｜Apporte les bagages à Marn Euhorn au Summit of Eternity.
+04-45到60級.md:1610｜說明｜沿大路往東，先在嘉文關‧葉源那裡交水，再過祥和育所往東南去艾維娜聖壇。｜Suis la route vers l'est et rends d'abord l'eau à Galvinquam Leafsyre ; puis passe par le Berceau de la tranquillité et va au sud-est jusqu'au Sanctuaire d’Aviana.
+04-45到60級.md:1612｜說明｜行李交永恆山峰的瑪恩‧尤霍恩。｜Apporte les bagages à Marn Euhorn au Sommet d’Éternité.
 04-45到60級.md:1621｜說明｜交柯薩拉斯，和 92317 同一趟。｜Rends-le à Ketharas, lors du même trajet que 92317.
 04-45到60級.md:1624｜說明｜59 級普通怪，在鷹身人群裡。｜Monstres normaux de niveau 59 parmi les harpies.
 04-45到60級.md:1630｜說明｜從聖壇往東北。｜Va vers le nord-est depuis le sanctuaire.
@@ -13552,20 +13552,20 @@
 04-45到60級.md:1631｜說明｜灰燼在戴根廢墟中央，附近有精英末日守衛，58 級單人要小心｜Les cendres se trouvent au milieu de Dae'gun, avec un garde funeste élite à proximité ; au niveau 58, sois prudent en solo.
 04-45到60級.md:1631｜說明｜拿不到就跳過山脈法杖這串（第 80–126 步）。｜Si tu ne peux pas les obtenir, saute la chaîne du Bâton de la montagne (étapes 80-126).
 04-45到60級.md:1634｜說明｜精英末日守衛就在附近，取到就退回南邊。｜Le garde funeste élite est tout près ; une fois l'objet pris, replie-toi vers le sud.
-04-45到60級.md:1636｜說明｜往東上山，向菲伊倫‧埃爾薩斯開飛行點。兩陣營共用，只飛污化丘陵。｜Monte vers l'est et apprends le point de vol de Fayran Elthas. Partagé par les deux factions ; il ne dessert que les Tainted Foothills.
+04-45到60級.md:1636｜說明｜往東上山，向菲伊倫‧埃爾薩斯開飛行點。兩陣營共用，只飛污化丘陵。｜Monte vers l'est et apprends le point de vol de Fayran Elthas. Partagé par les deux factions ; il ne dessert que les Contreforts Souillés.
 04-45到60級.md:1638｜說明｜安戈洛環形山 馬紹爾營地帶來的；沒接就跳過。｜Venue du Cratère d'Un'Goro, Refuge des Marshal. Si tu ne l'as pas, saute-la.
 04-45到60級.md:1638｜說明｜安戈洛環形山 馬紹爾營地帶來的｜Venue du Cratère d'Un'Goro, Refuge des Marshal.
 04-45到60級.md:1639｜說明｜郵包下一趟下山時送到永望鎮。｜Livre le colis postal à Long-guet lors de ta prochaine descente de la montagne.
-04-45到60級.md:1640｜說明｜從永恆山峰飛污化丘陵，騎去東邊的隱士洞交三件、拿山脈法杖。沒拿到骨灰就不用去隱士洞，92317、92500 留到第 127 步離開時一起交。｜Vole du Summit of Eternity aux Tainted Foothills, chevauche vers l'est jusqu'à la Grotte de l'ermite, rends trois quêtes et prends le Bâton de la montagne. Si tu n'as pas les cendres, inutile d'aller à la Grotte de l'ermite ; rends 92317 et 92500 ensemble en partant, à l'étape 127.
-04-45到60級.md:1645｜說明｜回污化丘陵飛永望鎮送郵包；郵件這串要上山交，做完直接從永望鎮飛回永恆山峰（經污化丘陵轉機）。｜Vole des Tainted Foothills à Long-guet pour livrer le colis postal ; la chaîne du courrier se rend en haut de la montagne, alors vole ensuite directement de Long-guet au Summit of Eternity (avec correspondance aux Tainted Foothills).
-04-45到60級.md:1647｜說明｜交完恢復通訊才有；後續巔峰郵遞送回永恆山峰的塞貝莉雅。｜Disponible seulement après avoir rendu Rétablir les communications. La suite, Courrier du sommet, retourne vers Sebelia au Summit of Eternity.
+04-45到60級.md:1640｜說明｜從永恆山峰飛污化丘陵，騎去東邊的隱士洞交三件、拿山脈法杖。沒拿到骨灰就不用去隱士洞，92317、92500 留到第 127 步離開時一起交。｜Vole du Sommet d’Éternité aux Contreforts Souillés, chevauche vers l'est jusqu'à la Grotte de l'ermite, rends trois quêtes et prends le Bâton de la montagne. Si tu n'as pas les cendres, inutile d'aller à la Grotte de l'ermite ; rends 92317 et 92500 ensemble en partant, à l'étape 127.
+04-45到60級.md:1645｜說明｜回污化丘陵飛永望鎮送郵包；郵件這串要上山交，做完直接從永望鎮飛回永恆山峰（經污化丘陵轉機）。｜Vole des Contreforts Souillés à Long-guet pour livrer le colis postal ; la chaîne du courrier se rend en haut de la montagne, alors vole ensuite directement de Long-guet au Sommet d’Éternité (avec correspondance aux Contreforts Souillés).
+04-45到60級.md:1647｜說明｜交完恢復通訊才有；後續巔峰郵遞送回永恆山峰的塞貝莉雅。｜Disponible seulement après avoir rendu Rétablir les communications. La suite, Courrier du sommet, retourne vers Sebelia au Sommet d’Éternité.
 04-45到60級.md:1647｜說明｜交完恢復通訊才有｜Disponible seulement après avoir rendu Rétablir les communications.
-04-45到60級.md:1647｜說明｜後續巔峰郵遞送回永恆山峰的塞貝莉雅。｜La suite, Courrier du sommet, retourne vers Sebelia au Summit of Eternity.
+04-45到60級.md:1647｜說明｜後續巔峰郵遞送回永恆山峰的塞貝莉雅。｜La suite, Courrier du sommet, retourne vers Sebelia au Sommet d’Éternité.
 04-45到60級.md:1648｜說明｜任務寫在永望鎮北邊的山丘；玩家攻略說郵件從東南冰薊嶺的冰薊雪人身上拿，兩處都看一下。｜La quête indique que c'est sur les collines au nord de Long-guet. Un guide de joueur dit que le courrier vient des yétis Chardon de glace des collines Chardon de glace au sud-est ; vérifie les deux endroits.
 04-45到60級.md:1648｜說明｜任務寫在永望鎮北邊的山丘｜La quête indique que c'est sur les collines au nord de Long-guet.
 04-45到60級.md:1648｜說明｜玩家攻略說郵件從東南冰薊嶺的冰薊雪人身上拿，兩處都看一下。｜Un guide de joueur dit que le courrier vient des yétis Chardon de glace des collines Chardon de glace au sud-est ; vérifie les deux endroits.
 04-45到60級.md:1650｜說明｜玩家攻略說這串獎勵 18 格背包和移動速度飾品。｜Un guide de joueur dit que cette chaîne récompense un sac de 18 emplacements et un bijou de vitesse de déplacement.
-04-45到60級.md:1651｜說明｜從永望鎮飛回永恆山峰。｜Retourne en vol au Summit of Eternity depuis Long-guet.
+04-45到60級.md:1651｜說明｜從永望鎮飛回永恆山峰。｜Retourne en vol au Sommet d’Éternité depuis Long-guet.
 04-45到60級.md:1653｜說明｜要先交山脈法杖。｜Tu dois d'abord rendre le Bâton de la montagne.
 04-45到60級.md:1660｜說明｜和下面兩個任務打同一批教徒。｜Combats les mêmes cultistes que pour les deux quêtes suivantes.
 04-45到60級.md:1662｜說明｜普通教徒也會掉，不必打精英斥候或祭司。｜Les cultistes normaux en lâchent aussi ; inutile de combattre les éclaireurs ou prêtres élites.
@@ -13574,37 +13574,37 @@
 04-45到60級.md:1679｜說明｜幽光位置未標，在樹根一帶找。｜La position de la lueur n'est pas indiquée ; cherche autour des racines.
 04-45到60級.md:1680｜說明｜遺骸位置未標，在諾達希爾一帶找。｜La position des restes n'est pas indiquée ; cherche autour de Nordrassil.
 04-45到60級.md:1684｜說明｜維漢‧爪握是 60 級精英。｜Ve'han Talongrasp est une élite de niveau 60.
-04-45到60級.md:1687｜說明｜離開時在污化丘陵下機，騎去隱士洞交。｜En partant, descends aux Tainted Foothills et chevauche jusqu'à la Grotte de l'ermite pour rendre la quête.
-04-45到60級.md:1688｜說明｜從永恆山峰飛污化丘陵。有 93848，或 92317、92500 還沒交，就騎去東邊的隱士洞交。｜Vole du Summit of Eternity aux Tainted Foothills. Si tu as 93848, ou si 92317 et 92500 ne sont pas encore rendues, chevauche vers l'est jusqu'à la Grotte de l'ermite pour les rendre.
-04-45到60級.md:1690｜說明｜從污化丘陵飛永望鎮。｜Vole des Tainted Foothills à Long-guet.
-04-45到60級.md:1693｜說明｜第 75 步開永恆山峰飛行點；第 79 步飛污化丘陵交山脈法杖的三個前置，第 84 步再轉永望鎮送郵包、做郵件這串後飛回山上；第 127 步經污化丘陵飛永望鎮，末步依是否要繞菲拉斯 亂羽高地選航線。｜Étape 75 : débloque le point de vol du Summit of Eternity ; étape 79 : vole aux Tainted Foothills pour rendre les trois prérequis du Bâton de la montagne ; étape 84 : change pour Long-guet, livre le colis postal, fais la chaîne du courrier, puis remonte en vol ; étape 127 : vole vers Long-guet via les Tainted Foothills ; dernière étape : choisis la route selon que tu fais ou non le détour par Féralas Frayfeather Highlands.
-04-45到60級.md:1694｜說明｜值得做｜古野村、哀悼之眠與祥和育所的任務都在大路兩側，殺怪和撿東西可一起做。｜Les quêtes de Elderwild, Mourning's Rest et Cradle of Tranquility sont toutes de part et d'autre de la route ; tu peux tuer et ramasser en même temps.
+04-45到60級.md:1687｜說明｜離開時在污化丘陵下機，騎去隱士洞交。｜En partant, descends aux Contreforts Souillés et chevauche jusqu'à la Grotte de l'ermite pour rendre la quête.
+04-45到60級.md:1688｜說明｜從永恆山峰飛污化丘陵。有 93848，或 92317、92500 還沒交，就騎去東邊的隱士洞交。｜Vole du Sommet d’Éternité aux Contreforts Souillés. Si tu as 93848, ou si 92317 et 92500 ne sont pas encore rendues, chevauche vers l'est jusqu'à la Grotte de l'ermite pour les rendre.
+04-45到60級.md:1690｜說明｜從污化丘陵飛永望鎮。｜Vole des Contreforts Souillés à Long-guet.
+04-45到60級.md:1693｜說明｜第 75 步開永恆山峰飛行點；第 79 步飛污化丘陵交山脈法杖的三個前置，第 84 步再轉永望鎮送郵包、做郵件這串後飛回山上；第 127 步經污化丘陵飛永望鎮，末步依是否要繞菲拉斯 亂羽高地選航線。｜Étape 75 : débloque le point de vol du Sommet d’Éternité ; étape 79 : vole aux Contreforts Souillés pour rendre les trois prérequis du Bâton de la montagne ; étape 84 : change pour Long-guet, livre le colis postal, fais la chaîne du courrier, puis remonte en vol ; étape 127 : vole vers Long-guet via les Contreforts Souillés ; dernière étape : choisis la route selon que tu fais ou non le détour par Feralas Hautes-terres des Aigreplumes.
+04-45到60級.md:1694｜說明｜值得做｜古野村、哀悼之眠與祥和育所的任務都在大路兩側，殺怪和撿東西可一起做。｜Les quêtes de Sylvancienne, Repos du deuil et le Berceau de la tranquillité sont toutes de part et d'autre de la route ; tu peux tuer et ramasser en même temps.
 04-45到60級.md:1695｜說明｜值得做｜93197→93406→93269 這串郵件趁拿法杖下山時一起跑，獎勵據玩家攻略是背包和速度飾品；郵件位置與獎勵還沒實測。｜Fais la chaîne du courrier 93197 > 93406 > 93269 en redescendant avec le bâton ; selon un guide de joueur, les récompenses sont un sac et un bijou de vitesse ; les emplacements du courrier et les récompenses ne sont pas encore testés.
 04-45到60級.md:1696｜說明｜可跳過｜92335 的骨灰在戴根廢墟中央，旁邊有精英末日守衛；單人拿不到就略過第 80–126 步裡的山脈法杖這串（92335、90647、92169，以及隊伍任務 92833、93848）。93127、93407、93547 不需要法杖，照做。｜Les cendres de 92335 sont au milieu de Dae'gun, à côté d'un garde funeste élite ; si tu ne peux pas les prendre en solo, saute la chaîne du Bâton de la montagne des étapes 80-126 (92335, 90647, 92169, et les quêtes de groupe 92833 et 93848). 93127, 93407 et 93547 n'ont pas besoin du bâton, fais-les.
 04-45到60級.md:1697｜說明｜有隊伍再做｜92833 打 60 級精英維漢‧爪握，93848 跟著它；單人略過。93422 要殺 60 級精英黑荊信差，93444 要殺精英夜刃豹守護者再引剛蘇羅克，路線都不接。｜92833 demande de combattre l'élite de niveau 60 Ve'han Talongrasp, et 93848 en découle ; saute-les en solo. 93422 demande de tuer un messager Blackthorne élite de niveau 60, et 93444 un gardien sabre-de-nuit élite puis d'attirer Ghansurok ; la route ne prend ni l'une ni l'autre.
-04-45到60級.md:1698｜說明｜可跳過｜92446 刨顱者是 60 級精英（約 35, 71）；91794 的徽記要到戴根廢墟打、再回古野村交；96998、96999 要回古野村再送森金村，都不在順路上。｜92446, le brise-crâne élite de niveau 60 (environ 35, 71) ; les insignes de 91794 se récoltent à Dae'gun puis se rendent à Elderwild ; 96998 et 96999 retournent à Elderwild puis continuent vers Sen'jin. Aucune n'est sur la route.
+04-45到60級.md:1698｜說明｜可跳過｜92446 刨顱者是 60 級精英（約 35, 71）；91794 的徽記要到戴根廢墟打、再回古野村交；96998、96999 要回古野村再送森金村，都不在順路上。｜92446, le brise-crâne élite de niveau 60 (environ 35, 71) ; les insignes de 91794 se récoltent à Dae'gun puis se rendent à Sylvancienne ; 96998 et 96999 retournent à Sylvancienne puis continuent vers Sen'jin. Aucune n'est sur la route.
 04-45到60級.md:1699｜說明｜可跳過｜戴根廢墟西側營地的 95793、92960、96959 和東北角梅里安‧瑟雷馬科斯的 97009 都要額外往返，路線不繞；有隊伍在戴根廢墟清怪再接。｜95793, 92960 et 96959 au camp à l'ouest de Dae'gun, et 97009 auprès de Maerion Thaelemaches dans le coin nord-est, demandent des allers-retours supplémentaires ; la route ne fait pas de détour. Prends-les plus tard si tu as un groupe pour nettoyer Dae'gun.
-04-45到60級.md:1700｜說明｜可跳過｜第三次大戰老兵的後續 92101、93510、92102、93567、96558 要跑千針石林、湖畔鎮等外地，路線不接。｜Les suites du Vétéran de la Troisième Guerre 92101, 93510, 92102, 93567 et 96558 t'envoient dans Mille pointes, à Lakeshire et ailleurs, très loin ; la route ne les prend pas.
+04-45到60級.md:1700｜說明｜可跳過｜第三次大戰老兵的後續 92101、93510、92102、93567、96558 要跑千針石林、湖畔鎮等外地，路線不接。｜Les suites du Vétéran de la Troisième Guerre 92101, 93510, 92102, 93567 et 96558 t'envoient dans Mille pointes, à Comté-du-Lac et ailleurs, très loin ; la route ne les prend pas.
 04-45到60級.md:1701｜說明｜可跳過｜93615 夏拉卡（31.3, 50.3，馬羅希斯旁）的小貓散在山裡，QuestieDB 沒有位置，等實測再排。93521 維漢身旁書架上的研究報告、99670 回去找傑瑞曼，QuestieDB 都沒寫前置，路線不接。｜Les chatons de 93615 de Shalla'kal (31.3, 50.3, près de Marrosis) sont dispersés dans la montagne et QuestieDB n'a pas leurs positions ; attends un test en jeu. Pour 93521 (le rapport de recherche sur l'étagère près de Ve'han) et 99670 (retourner voir Jereman), QuestieDB n'indique aucun prérequis ; la route ne les prend pas.
-04-45到60級.md:1702｜說明｜未滿 60 級可在永恆山峰教徒營地南側打黑荊教徒（75.20, 42.20），或回哀悼之眠打剝肉搶奪者。｜Sous le niveau 60, tu peux tuer des cultistes Blackthorne au sud du camp des cultistes du Summit of Eternity (75.20, 42.20), ou retourner à Mourning's Rest et tuer des Pillards écorcheurs.
-04-45到60級.md:1718｜說明｜瑪洛恩隱居地往北的林子有 60 級精英刨顱者，經過死木營地時別深入。｜La forêt au nord de Malorne's Retreat abrite un brise-crâne élite de niveau 60 ; ne t'enfonce pas en passant par le camp Deadwood.
-04-45到60級.md:1719｜說明｜哀悼之眠有 61 級精英亡靈哭號者，打剝肉搶奪者時看清楚再拉。｜Mourning's Rest abrite un hurleur mort-vivant élite de niveau 61 ; regarde bien avant d'attirer des Pillards écorcheurs.
+04-45到60級.md:1702｜說明｜未滿 60 級可在永恆山峰教徒營地南側打黑荊教徒（75.20, 42.20），或回哀悼之眠打剝肉搶奪者。｜Sous le niveau 60, tu peux tuer des cultistes Blackthorne au sud du camp des cultistes du Sommet d’Éternité (75.20, 42.20), ou retourner au Repos du deuil et tuer des Pillards écorcheurs.
+04-45到60級.md:1718｜說明｜瑪洛恩隱居地往北的林子有 60 級精英刨顱者，經過死木營地時別深入。｜La forêt au nord de la Retraite de Malorne abrite un brise-crâne élite de niveau 60 ; ne t'enfonce pas en passant par le camp Deadwood.
+04-45到60級.md:1719｜說明｜哀悼之眠有 61 級精英亡靈哭號者，打剝肉搶奪者時看清楚再拉。｜Repos du deuil abrite un hurleur mort-vivant élite de niveau 61 ; regarde bien avant d'attirer des Pillards écorcheurs.
 04-45到60級.md:1720｜說明｜戴根廢墟有精英末日守衛，拿骨灰時從南邊進出。｜Dae'gun abrite un garde funeste élite ; pour prendre les cendres, entre et sors par le sud.
-04-45到60級.md:1721｜說明｜永恆山峰北邊營地有精英黑荊斥候、祭司，維漢‧爪握也在附近。｜Le camp au nord du Summit of Eternity abrite des éclaireurs et prêtres Blackthorne élites, et Ve'han Talongrasp est aussi tout proche.
-04-45到60級.md:1705｜說明｜哀悼之眠的普通天災，和被遺忘的士兵混在一起，任務也要打。避開精英亡靈哭號者。｜Fléau normal à Mourning's Rest, mêlé aux Soldats oubliés ; les quêtes en ont aussi besoin. Évite le hurleur mort-vivant élite.
-04-45到60級.md:1706｜說明｜艾維娜聖壇西邊的鷹身人群，密度高。莎菈特‧蠕翼在同一帶。｜Les groupes denses de harpies à l'ouest du Shrine of Aviana ; Zarrat Wormwing est dans la même zone.
-04-45到60級.md:1707｜說明｜永恆山峰東邊教徒營地南側的普通教徒，三個任務共用。北邊營地有 60 級精英斥候和祭司，別往北拉。｜Cultistes normaux au sud du camp des cultistes à l'est du Summit of Eternity, communs à trois quêtes. Le camp nord compte des éclaireurs et prêtres élites de niveau 60 ; n'attire pas vers le nord.
-04-45到60級.md:1729｜說明｜從莫沙徹營地沿南路到亂羽高地；點角鷹獸蛋（55.91, 76.03；被拿走就往東找另一顆），拿 1 顆就回飛點。｜Depuis le Camp Mojache, prends la route du sud jusqu'aux Frayfeather Highlands ; clique sur l'œuf d'hippogriffe (55.91, 76.03 ; s'il a été pris, cherches-en un autre vers l'est) et retourne au point de vol après en avoir pris 1.
+04-45到60級.md:1721｜說明｜永恆山峰北邊營地有精英黑荊斥候、祭司，維漢‧爪握也在附近。｜Le camp au nord du Sommet d’Éternité abrite des éclaireurs et prêtres Blackthorne élites, et Ve'han Talongrasp est aussi tout proche.
+04-45到60級.md:1705｜說明｜哀悼之眠的普通天災，和被遺忘的士兵混在一起，任務也要打。避開精英亡靈哭號者。｜Fléau normal au Repos du deuil, mêlé aux Soldats oubliés ; les quêtes en ont aussi besoin. Évite le hurleur mort-vivant élite.
+04-45到60級.md:1706｜說明｜艾維娜聖壇西邊的鷹身人群，密度高。莎菈特‧蠕翼在同一帶。｜Les groupes denses de harpies à l'ouest du Sanctuaire d’Aviana ; Zarrat Wormwing est dans la même zone.
+04-45到60級.md:1707｜說明｜永恆山峰東邊教徒營地南側的普通教徒，三個任務共用。北邊營地有 60 級精英斥候和祭司，別往北拉。｜Cultistes normaux au sud du camp des cultistes à l'est du Sommet d’Éternité, communs à trois quêtes. Le camp nord compte des éclaireurs et prêtres élites de niveau 60 ; n'attire pas vers le nord.
+04-45到60級.md:1729｜說明｜從莫沙徹營地沿南路到亂羽高地；點角鷹獸蛋（55.91, 76.03；被拿走就往東找另一顆），拿 1 顆就回飛點。｜Depuis le Camp Mojache, prends la route du sud jusqu'aux Hautes-terres des Aigreplumes ; clique sur l'œuf d'hippogriffe (55.91, 76.03 ; s'il a été pris, cherches-en un autre vers l'est) et retourne au point de vol après en avoir pris 1.
 04-45到60級.md:1733｜說明｜可跳過｜超級測蛋器（The Super Egg-O-Matic）的一次性交件，已做過或想省跑圖時，可以直接飛加基森。｜C'est une remise unique pour le Super Oeuf-O-Matic ; si tu l'as déjà faite ou veux économiser le trajet, tu peux voler directement à Gadgetzan.
 04-45到60級.md:1734｜說明｜海加爾山之後約 58 級半，取蛋只為一次性交件。｜Après le Mont Hyjal, tu seras environ niveau 58 et demi ; l'œuf ne sert que pour une remise unique.
-04-45到60級.md:1737｜說明｜菲拉斯短訪只有角鷹獸蛋支線。等級不夠可在離開永望鎮前補，冰薊嶺雪人等級較高；洞口可能有人搶。｜La courte visite à Féralas ne comporte que la quête annexe de l'œuf d'hippogriffe. Si ton niveau est trop bas, rattrape-le avant de quitter Long-guet ; les yétis Chardon de glace sont de niveau plus élevé, et l'entrée de la grotte peut être occupée.
+04-45到60級.md:1737｜說明｜菲拉斯短訪只有角鷹獸蛋支線。等級不夠可在離開永望鎮前補，冰薊嶺雪人等級較高；洞口可能有人搶。｜La courte visite à Feralas ne comporte que la quête annexe de l'œuf d'hippogriffe. Si ton niveau est trop bas, rattrape-le avant de quitter Long-guet ; les yétis Chardon de glace sont de niveau plus élevé, et l'entrée de la grotte peut être occupée.
 04-45到60級.md:1766｜說明｜到東側水晶塔旁的平坦石頭，打開托爾瓦的麻袋，先放肉塊，再用費洛蒙引出拉克維。｜Va jusqu'au rocher plat près de la tour de cristal à l'est, ouvre la Sacoche de Torwa, dépose d'abord les morceaux de viande, puis utilise les phéromones pour faire sortir Lar'korwi.
 04-45到60級.md:1800｜說明｜海加爾山之後約 58 級半。要補進度可打火羽山普通元素或北側猩猩，留意平原巡邏的魔暴龍。｜Après le Mont Hyjal, tu seras environ niveau 58 et demi. Pour rattraper ta progression, tue des élémentaires normaux au Pic Plumefeu ou les singes du nord, et fais attention au diablosaure qui patrouille dans la plaine.
 04-45到60級.md:1862｜說明｜未滿 60 級可留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜Sous le niveau 60, reste au nord-est de la forteresse (environ 55, 29) et tue des scorpides et araignées normaux, ou les cultistes du Crépuscule au sud-ouest (environ 38, 44).
-04-45到60級.md:1883｜說明｜由奧格瑪飛梣谷碎木崗哨，沿大路向北進費伍德，先到翡翠聖地與附近路邊。已開血毒崗哨就從奧格瑪直飛，沿大路往南到翡翠聖地。｜D'Orgrimmar, vole au Poste de Bois-brisé d'Orneval, suis la route vers le nord jusqu'à Gangrebois et va d'abord au Sanctuaire d'Émeraude et au bord de route voisin. Si tu as débloqué le Bloodvenom Post, vole directement depuis Orgrimmar et suis la route vers le sud jusqu'au Sanctuaire d'Émeraude.
-04-45到60級.md:1883｜說明｜碎木崗哨北上和血毒崗哨南下哪條較快尚未實測。｜On n'a pas encore testé ce qui est le plus rapide : monter depuis le Poste de Bois-brisé ou descendre depuis le Bloodvenom Post.
-06-路線外任務.md:144｜說明｜有六份所需的鹿肉料理再交給古野村的歐塔克‧洛勾克，省下專程採買。｜Quand tu as les six plats de viande de cerf demandés, rends-les à Ortak Lomgok à Elderwild ; cela t'évite un achat dédié.
-06-路線外任務.md:148｜說明｜60 級精英，交完飛行羽毛後帶兔屍往古野村南邊森林引出；有隊伍再回澤特甘接。｜Élite de niveau 60 ; après avoir rendu la plume de vol, attire-la avec la carcasse de lapin dans la forêt au sud de Elderwild ; retourne voir Zet'gan quand tu as un groupe.
+04-45到60級.md:1883｜說明｜由奧格瑪飛梣谷碎木崗哨，沿大路向北進費伍德，先到翡翠聖地與附近路邊。已開血毒崗哨就從奧格瑪直飛，沿大路往南到翡翠聖地。｜D'Orgrimmar, vole au Poste de Bois-brisé d'Orneval, suis la route vers le nord jusqu'à Gangrebois et va d'abord au Sanctuaire d'Émeraude et au bord de route voisin. Si tu as débloqué le Poste de la Vénéneuse, vole directement depuis Orgrimmar et suis la route vers le sud jusqu'au Sanctuaire d'Émeraude.
+04-45到60級.md:1883｜說明｜碎木崗哨北上和血毒崗哨南下哪條較快尚未實測。｜On n'a pas encore testé ce qui est le plus rapide : monter depuis le Poste de Bois-brisé ou descendre depuis le Poste de la Vénéneuse.
+06-路線外任務.md:144｜說明｜有六份所需的鹿肉料理再交給古野村的歐塔克‧洛勾克，省下專程採買。｜Quand tu as les six plats de viande de cerf demandés, rends-les à Ortak Lomgok à Sylvancienne ; cela t'évite un achat dédié.
+06-路線外任務.md:148｜說明｜60 級精英，交完飛行羽毛後帶兔屍往古野村南邊森林引出；有隊伍再回澤特甘接。｜Élite de niveau 60 ; après avoir rendu la plume de vol, attire-la avec la carcasse de lapin dans la forêt au sud de Sylvancienne ; retourne voir Zet'gan quand tu as un groupe.
 01-第一段-1到12級.md:122｜說明｜剃刀嶺｜Tranchecolline
 01-第一段-1到12級.md:337｜說明｜血蹄村｜Sabot-de-Sang
 01-第一段-1到12級.md:566｜說明｜布瑞爾｜Brill
@@ -13612,19 +13612,19 @@
 04-45到60級.md:1440｜說明｜弩砲、投石車、飛行器三種殘骸各算一項，三種都要種到。｜Les épaves de baliste, de catapulte et d'engin volant comptent chacune pour un objectif ; il faut planter les trois.
 04-45到60級.md:1444｜說明｜座標是玩家回報的大致位置｜Les coordonnées sont la position approximative signalée par les joueurs.
 04-45到60級.md:1513｜說明｜在永望鎮轉飛月光林地（1450 32.09, 66.61），沿路往東北走到永夜港。月光林地飛行點在第52站開過；還沒開就從永望鎮往西騎到木喉要塞入口，走往月光林地的岔口出去，先開飛行點（1450 32.09, 66.61）；木喉熊怪聲望不到中立，下面的熊怪會打人。｜À Long-guet, prends un vol pour Reflet-de-Lune (1450 32.09, 66.61), puis suis la route vers le nord-est jusqu'à Havrenuit. Le point de vol de Reflet-de-Lune a été débloqué à l'étape 52 ; sinon, chevauche vers l'ouest depuis Long-guet jusqu'à l'entrée de Les Grumegueules, sors par l'embranchement vers Reflet-de-Lune et débloque d'abord le point de vol (1450 32.09, 66.61) ; si ta réputation auprès des Grumegueules est inférieure à neutre, les furbolgs d'en bas t'attaqueront.
-04-45到60級.md:1577｜說明｜用任務給的空葫蘆在前方瀑布裝水，不是在嘉文關身邊；瀑布位置未標，沿大路往祥和育所方向找。｜Remplis d'eau la gourde vide donnée par la quête à la cascade devant toi, pas à côté de Galvinquam. La position de la cascade n'est pas indiquée ; cherche le long de la route vers Cradle of Tranquility.
+04-45到60級.md:1577｜說明｜用任務給的空葫蘆在前方瀑布裝水，不是在嘉文關身邊；瀑布位置未標，沿大路往祥和育所方向找。｜Remplis d'eau la gourde vide donnée par la quête à la cascade devant toi, pas à côté de Galvinquam. La position de la cascade n'est pas indiquée ; cherche le long de la route vers le Berceau de la tranquillité.
 04-45到60級.md:1577｜說明｜用任務給的空葫蘆在前方瀑布裝水，不是在嘉文關身邊｜Remplis d'eau la gourde vide donnée par la quête à la cascade devant toi, pas à côté de Galvinquam.
 04-45到60級.md:1630｜說明｜灰燼在戴根廢墟中央，附近有精英末日守衛，58 級單人要小心；拿不到就只跳過 92335、90647、92169、92833、93848 的步驟（第 81、83、91、92、99、105、123–126、128 步），其他照做。｜Les cendres se trouvent au milieu de Dae'gun, avec un garde funeste élite à proximité ; au niveau 58, sois prudent en solo. Si tu ne peux pas les obtenir, saute seulement les étapes de 92335, 90647, 92169, 92833 et 93848 (étapes 81, 83, 91, 92, 99, 105, 123-126 et 128) et fais le reste.
 04-45到60級.md:1630｜說明｜拿不到就只跳過 92335、90647、92169、92833、93848 的步驟（第 81、83、91、92、99、105、123–126、128 步），其他照做。｜Si tu ne peux pas les obtenir, saute seulement les étapes de 92335, 90647, 92169, 92833 et 93848 (étapes 81, 83, 91, 92, 99, 105, 123-126 et 128) et fais le reste.
 04-45到60級.md:1632｜說明｜用接任務拿到的狐狸毛（Tuft of Fox Fur）引開惡魔，再撿 8 個被遺棄的補給品；補給不在瑞納拉德身邊。｜Utilise la touffe de poils de renard (Tuft of Fox Fur) donnée par la quête pour éloigner le démon, puis ramasse 8 provisions abandonnées. Les provisions ne sont pas à côté de Renalard.
 04-45到60級.md:1632｜說明｜用接任務拿到的狐狸毛（Tuft of Fox Fur）引開惡魔，再撿 8 個被遺棄的補給品｜Utilise la touffe de poils de renard (Tuft of Fox Fur) donnée par la quête pour éloigner le démon, puis ramasse 8 provisions abandonnées.
 04-45到60級.md:1632｜說明｜補給不在瑞納拉德身邊。｜Les provisions ne sont pas à côté de Renalard.
-04-45到60級.md:1639｜說明｜從永恆山峰飛污化丘陵，騎去東邊的隱士洞，先交被竊取的生命（92317）和天空碎片（92500）；有拿到骨灰才交 92335、接山脈法杖。｜Vole du Summit of Eternity aux Tainted Foothills et chevauche vers l'est jusqu'à la Grotte de l'ermite ; rends d'abord Vie volée (92317) et Fragment du ciel (92500) ; ne rends 92335 et ne prends le Bâton de la montagne que si tu as les cendres.
+04-45到60級.md:1639｜說明｜從永恆山峰飛污化丘陵，騎去東邊的隱士洞，先交被竊取的生命（92317）和天空碎片（92500）；有拿到骨灰才交 92335、接山脈法杖。｜Vole du Sommet d’Éternité aux Contreforts Souillés et chevauche vers l'est jusqu'à la Grotte de l'ermite ; rends d'abord Vie volée (92317) et Fragment du ciel (92500) ; ne rends 92335 et ne prends le Bâton de la montagne que si tu as les cendres.
 04-45到60級.md:1662｜說明｜北、西、南三塊石頭各算一項，三塊都要去。｜Les pierres du nord, de l'ouest et du sud comptent chacune pour un objectif ; il faut aller aux trois.
 04-45到60級.md:1678｜說明｜解放諾達希爾樹根下原本就在的幽光，不是在空地用道具召出來；位置未標，在樹根一帶找。｜Libère la lueur qui se trouve déjà sous les racines de Nordrassil, au lieu de l'invoquer avec un objet dans la clairière. La position n'est pas indiquée ; cherche autour des racines.
 04-45到60級.md:1678｜說明｜解放諾達希爾樹根下原本就在的幽光，不是在空地用道具召出來｜Libère la lueur qui se trouve déjà sous les racines de Nordrassil, au lieu de l'invoquer avec un objet dans la clairière.
 04-45到60級.md:1678｜說明｜位置未標，在樹根一帶找。｜La position n'est pas indiquée ; cherche autour des racines.
-04-45到60級.md:1687｜說明｜從永恆山峰飛污化丘陵。有 93848 才騎去東邊的隱士洞交。｜Vole du Summit of Eternity aux Tainted Foothills. Ne chevauche vers l'est jusqu'à la Grotte de l'ermite pour rendre la quête que si tu as 93848.
+04-45到60級.md:1687｜說明｜從永恆山峰飛污化丘陵。有 93848 才騎去東邊的隱士洞交。｜Vole du Sommet d’Éternité aux Contreforts Souillés. Ne chevauche vers l'est jusqu'à la Grotte de l'ermite pour rendre la quête que si tu as 93848.
 04-45到60級.md:1695｜說明｜可跳過｜92335 的骨灰在戴根廢墟中央，旁邊有精英末日守衛；單人拿不到就只略過 92335、90647、92169、92833、93848 這幾步（第 81、83、91、92、99、105、123–126、128 步）；92317、92500 照樣在第 79 步回隱士洞交，郵件這串和 93127、93407、93547、93584、92533、92017 不需要法杖，照做。｜Les cendres de 92335 sont au milieu de Dae'gun, à côté d'un garde funeste élite ; si tu ne peux pas les prendre en solo, saute seulement 92335, 90647, 92169, 92833 et 93848 (étapes 81, 83, 91, 92, 99, 105, 123-126 et 128) ; rends 92317 et 92500 comme d'habitude au retour à la Grotte de l'ermite à l'étape 79 ; la chaîne du courrier et 93127, 93407, 93547, 93584, 92533 et 92017 n'ont pas besoin du bâton, fais-les.
 04-45到60級.md:1733｜說明｜依實際等級決定後續；取蛋選做，只為一次性交件。｜Décide de la suite selon ton niveau réel ; l'œuf est facultatif et ne sert que pour une remise unique.
 04-45到60級.md:1799｜說明｜依實際等級決定要不要補怪。要補進度可打火羽山普通元素或北側猩猩，留意平原巡邏的魔暴龍。｜Décide selon ton niveau réel si tu dois rattraper des monstres. Pour cela, tue des élémentaires normaux au Pic Plumefeu ou les singes du nord, et fais attention au diablosaure qui patrouille dans la plaine.
@@ -13633,11 +13633,11 @@
 01-第一段-1到12級.md:244｜說明｜先交背信棄義的人類（784），才接得到海底沉船（825）。把沉船和沃納爾大師（818）排成同一趟。｜Rends Vaincre les traîtres (784) pour pouvoir prendre Des épaves (825). Fais Des épaves en même temps que Un esprit parfaitement éduqué (818).
 01-第一段-1到12級.md:245｜說明｜暗巷區副本接續可先留。打算下怒焰裂谷再跟索爾接隱藏的敵人任務鏈；第一段所需的軍官徽章可在北邊火刃區取得。｜Tu peux garder pour plus tard la suite de donjon de la Faille de l'Ombre. Si tu comptes faire le Gouffre de Ragefeu, prends la chaîne Ennemis cachés auprès de Thrall à ce moment-là. L'insigne d'officier nécessaire pour la première étape se trouve dans la Vallée de la Lame de feu, au nord.
 01-第一段-1到12級.md:266｜說明｜跨族起點先到血蹄村，再沿路往南上紅雲台地到納拉其營地。｜Pour le départ commun, va d'abord au Village de Sabot-de-Sang, puis suis la route vers le sud, monte sur le plateau de Nuage-Rouge et rends-toi au camp Narache.
-01-第一段-1到12級.md:1297｜說明｜血蹄村起始；後續的火焰的召喚在十字路口薩滿職業任務接續，也可從卡納爾直接接。｜Départ au Village de Sabot-de-Sang. Tu peux prendre la suite, L'appel du feu, auprès du chaman de classe à La Croisée, ou directement à Camp Narache.
+01-第一段-1到12級.md:1297｜說明｜血蹄村起始；後續的火焰的召喚在十字路口薩滿職業任務接續，也可從卡納爾直接接。｜Départ au Village de Sabot-de-Sang. Tu peux prendre la suite, L'appel du feu, auprès du chaman de classe à La Croisée, ou directement auprès de Kranal.
 01-第一段-1到12級.md:1297｜說明｜血蹄村起始｜Départ au Village de Sabot-de-Sang.
-01-第一段-1到12級.md:1297｜說明｜後續的火焰的召喚在十字路口薩滿職業任務接續，也可從卡納爾直接接。｜Tu peux prendre la suite, L'appel du feu, auprès du chaman de classe à La Croisée, ou directement à Camp Narache.
+01-第一段-1到12級.md:1297｜說明｜後續的火焰的召喚在十字路口薩滿職業任務接續，也可從卡納爾直接接。｜Tu peux prendre la suite, L'appel du feu, auprès du chaman de classe à La Croisée, ou directement auprès de Kranal.
 01-第一段-1到12級.md:477｜說明｜幻象儀祭三段、智慧儀祭和雷霆崖之旅一路做完，末段正好開飛行點。｜Fais d'une traite les trois Rites de vision, le Rite de sagesse et Voyage à Thunder Bluff ; la dernière étape débloque justement le point de vol.
-01-第一段-1到12級.md:479｜說明｜到了雷霆崖可接怒焰裂谷前置，打算進本才跟拉哈羅接試探敵人（5723）、尋找背包（5722）。｜Une fois aux Pitons-du-Tonnerre, tu peux prendre les prérequis du Gouffre de Ragefeu ; ne prends Tester la force de l'ennemi (5723) et À la recherche de la sacoche perdue (5722) auprès de Rahauro que si tu comptes faire le donjon.
+01-第一段-1到12級.md:479｜說明｜到了雷霆崖可接怒焰裂谷前置，打算進本才跟拉哈羅接試探敵人（5723）、尋找背包（5722）。｜Une fois à Thunder Bluff, tu peux prendre les prérequis du Gouffre de Ragefeu ; ne prends Tester la force de l'ennemi (5723) et À la recherche de la sacoche perdue (5722) auprès de Rahauro que si tu comptes faire le donjon.
 01-第一段-1到12級.md:480｜說明｜接近 12 級還差經驗，優先補莫高雷北邊鷹身人、赤色石或菲茲普羅克礦坑；滿 10 級先找職業訓練師。｜Vers le niveau 12, s'il te manque de l'expérience, fais en priorité les harpies au nord de Mulgore, la pierre rouge ou la mine de Fizzprock. Une fois niveau 10, va d'abord voir ton maître de classe.
 01-第一段-1到12級.md:1544｜說明｜先交無腦的殭屍（364）才會給卷軸。｜Rends d'abord Les Déchus (364) pour obtenir le parchemin.
 01-第一段-1到12級.md:1601｜說明｜先交無腦的殭屍（364）。｜Rends d'abord Les Déchus (364).
@@ -13647,9 +13647,9 @@
 02-12到30級.md:128｜說明｜先留，到銀松森林瑟伯切爾再交。｜Garde-la pour plus tard et rends-la à Sépulcre, dans la Forêt des Pins argentés.
 02-12到30級.md:150｜說明｜先完成 870、877 與 880，再接 3301，下一站直接交。｜Termine d'abord 870, 877 et 880, puis prends 3301 ; tu pourras la rendre à la prochaine étape.
 05-副本.md:91｜說明｜部落交件地點不明，出本前先確認任務日誌。｜Le lieu où rendre la quête de la Horde est inconnu ; vérifie ton journal de quêtes avant de sortir du donjon.
-05-副本.md:78｜說明｜從貧瘠之地轉往東部王國後，只有專程成就隊才從幽暗城經銀松、希爾斯布萊德、阿拉希南下濕地，經丹奧加茲到丹莫洛再進鐵爐堡。｜Après avoir quitté Les Tarides pour les Royaumes de l'Est, ne passe par Fossoyeuse, la Forêt des Pins argentés, Hillsbrad, Arathi, puis ne descends aux Paluns, à Dun Algaz, Dun Morogh et Forgefer que si tu fais un groupe dédié aux hauts faits.
-05-副本.md:18｜說明｜在貧瘠之地 十字路口開飛行點後，雷霆崖飛點已開就飛雷霆崖找拉哈羅接 5722／5723（沒開就從十字路口沿南路經陶拉祖營地往西進莫高雷，搭電梯上城開點），飛奧格瑪找索爾先做隱藏的敵人前兩段，再去暗巷區接 5761；若此輪已開幽暗城飛點，可在飛艇跨海時先向瓦里瑪薩斯領 5725。｜Après avoir débloqué le point de vol de La Croisée, dans Les Tarides, si celui des Pitons-du-Tonnerre est déjà ouvert, vole aux Pitons-du-Tonnerre et va voir Rahauro pour 5722/5723 (sinon, pars de La Croisée par la route du sud, passe le Camp Taurajo et entre à l'ouest dans Mulgore, monte par l'ascenseur et débloque le point de vol). Vole à Orgrimmar et va voir Thrall pour faire d'abord les deux premières étapes de Ennemis cachés, puis rends-toi à la Faille de l'Ombre pour prendre 5761. Si le point de vol de Fossoyeuse est déjà débloqué ce tour-ci, récupère d'abord 5725 auprès de Varimathras pendant la traversée de la mer en zeppelin.
-02-12到30級.md:345｜說明｜先解鎖 479 與永恆版 95981，同一趟掃安伯米爾；479 交回後再殺 480 的法師。｜Débloque d'abord 479 et la version Forever 95981, puis balaie Ambermill dans le même trajet. Rends 479, puis tue les mages de 480.
+05-副本.md:78｜說明｜從貧瘠之地轉往東部王國後，只有專程成就隊才從幽暗城經銀松、希爾斯布萊德、阿拉希南下濕地，經丹奧加茲到丹莫洛再進鐵爐堡。｜Après avoir quitté Les Tarides pour les Royaumes de l'Est, ne passe par Fossoyeuse, la Forêt des Pins argentés, Hautebrande, Arathi, puis ne descends aux Paluns, à Dun Algaz, Dun Morogh et Forgefer que si tu fais un groupe dédié aux hauts faits.
+05-副本.md:18｜說明｜在貧瘠之地 十字路口開飛行點後，雷霆崖飛點已開就飛雷霆崖找拉哈羅接 5722／5723（沒開就從十字路口沿南路經陶拉祖營地往西進莫高雷，搭電梯上城開點），飛奧格瑪找索爾先做隱藏的敵人前兩段，再去暗巷區接 5761；若此輪已開幽暗城飛點，可在飛艇跨海時先向瓦里瑪薩斯領 5725。｜Après avoir débloqué le point de vol de La Croisée, dans Les Tarides, si celui de Thunder Bluff est déjà ouvert, vole à Thunder Bluff et va voir Rahauro pour 5722/5723 (sinon, pars de La Croisée par la route du sud, passe le Camp Taurajo et entre à l'ouest dans Mulgore, monte par l'ascenseur et débloque le point de vol). Vole à Orgrimmar et va voir Thrall pour faire d'abord les deux premières étapes de Ennemis cachés, puis rends-toi à la Faille de l'Ombre pour prendre 5761. Si le point de vol de Fossoyeuse est déjà débloqué ce tour-ci, récupère d'abord 5725 auprès de Varimathras pendant la traversée de la mer en zeppelin.
+02-12到30級.md:345｜說明｜先解鎖 479 與永恆版 95981，同一趟掃安伯米爾；479 交回後再殺 480 的法師。｜Débloque d'abord 479 et la version Forever 95981, puis balaie Moulin-de-l'Ambre dans le même trajet. Rends 479, puis tue les mages de 480.
 02-12到30級.md:346｜說明｜焚木村一起做阿魯高的愚行與致命配方（450）；交完這段阿魯高的愚行後，一次接後續的阿魯高的愚行（98298）與 98299，到葛雷邁恩之牆一起清。｜Au Village de Boisfeu, fais ensemble La folie d'Arugal et Une recette mortelle (450). Après avoir rendu cette étape de La folie d'Arugal, prends d'un coup les suivantes (98298 et 98299) et nettoie-les ensemble au Mur de Gray Maine.
 05-副本.md:139｜說明｜15 級可接；擊殺男爵後拾取可憎頭顱，右鍵接任務。｜Disponible au niveau 15. Après avoir tué le baron, ramasse la tête abominable et fais un clic droit dessus pour prendre la quête.
 05-副本.md:139｜說明｜15 級可接｜Disponible au niveau 15.
@@ -13663,23 +13663,23 @@
 02-12到30級.md:1402｜說明｜依序為黑暗深淵與影牙城堡入口。黑暗深淵打暮光侍僧，影牙城堡打影牙黑暗之魂。｜Ce sont les entrées des Profondeurs de Brassenoire et du donjon d'Ombrecroc, dans cet ordre. Aux Profondeurs de Brassenoire, tue les acolytes du Crépuscule ; à Ombrecroc, tue les Âmes-noires d'Ombrecroc.
 05-副本.md:285｜說明｜打哥布林木匠收白石橡木。；位置：過拉克佐守門後進伐木工坊，打斯尼德旁木匠｜Tue les charpentiers gobelins pour obtenir le chêne de pierre blanche. Lieu : passe Rhahk'Zor, entre dans l'atelier de bûcheronnage et tue les charpentiers à côté de Sneed.
 05-副本.md:285｜說明｜打哥布林木匠收白石橡木。｜Tue les charpentiers gobelins pour obtenir le chêne de pierre blanche.
-02-12到30級.md:655｜說明｜暗色湖撿蓋亞之種，石爪峰清塞納留斯的遺產。交回種子後，焦炭谷四項同趟做。千針石林 亂風崗路過大升降梯再交 5881。｜Ramasse la graine de Gaea au lac Mirkfallon et fais L'héritage de Cénarius au Pic des Serres-Rocheuses. Après avoir rendu les graines, fais les quatre objectifs de Charred Vale en une seule boucle. À Mille pointes, au poste de Librevent, rends 5881 en passant par le Grand ascenseur.
+02-12到30級.md:655｜說明｜暗色湖撿蓋亞之種，石爪峰清塞納留斯的遺產。交回種子後，焦炭谷四項同趟做。千針石林 亂風崗路過大升降梯再交 5881。｜Ramasse la graine de Gaea au lac Mirkfallon et fais L'héritage de Cénarius au Pic des Serres-Rocheuses. Après avoir rendu les graines, fais les quatre objectifs du Val calciné en une seule boucle. À Mille pointes, au poste de Librevent, rends 5881 en passant par la Grande élévation.
 02-12到30級.md:656｜說明｜奧達努斯（1088）到梣谷碎木崗哨再打；新的指示與格雷蘇只有日後會回狂風峭壁才續做，少一趟棘齒城往返。｜Tue Ordanus (1088) quand tu seras au poste de Bois-brisé, en Orneval. Ne reprends D'autres instructions et Gerenzo que si tu retournes plus tard à Pierre-Griffe ; cela t'évite un aller-retour à Cabestan.
-02-12到30級.md:762｜說明｜496 在西面同一趟收集，搭配希爾斯布萊德之戰 527；501 掉率低，順手收齊才交。交 527 後才出現 546，之後殺人類時一路收頭骨。｜Rassemble 496 à l'ouest dans le même trajet, avec La bataille de Hillsbrad 527. 501 a un faible taux de drop ; ramasse-les au passage et ne la rends qu'une fois complète. Après avoir rendu 527, la quête 546 apparaît ; ramasse ensuite les crânes en tuant des humains.
+02-12到30級.md:762｜說明｜496 在西面同一趟收集，搭配希爾斯布萊德之戰 527；501 掉率低，順手收齊才交。交 527 後才出現 546，之後殺人類時一路收頭骨。｜Rassemble 496 à l'ouest dans le même trajet, avec La bataille de Hautebrande 527. 501 a un faible taux de drop ; ramasse-les au passage et ne la rends qu'une fois complète. Après avoir rendu 527, la quête 546 apparaît ; ramasse ensuite les crânes en tuant des humains.
 02-12到30級.md:763｜說明｜98094、509 順路完成馬索吉周圍的兩個任務；若接了 1066，再到敦霍爾德外圍。做 528 時，順手收顱骨。｜Fais 98094 et 509 : deux quêtes autour de Marzon, sur le trajet. Si tu as pris 1066, va aussi à la périphérie de Dun Garok. En faisant 528, ramasse les crânes au passage.
-02-12到30級.md:765｜說明｜若石爪山脈 烈日石居已接 1065，趁敦霍爾德行程完成 1066，帶 1067 給千針石林 亂風崗途經雷霆崖時交。｜Si tu as déjà pris 1065 à la Retraite de Roche-Soleil, dans les Serres-Rocheuses, termine 1066 pendant le trajet vers Dun Garok et rends 1067 à Mille pointes, au poste de Librevent, en passant par les Pitons-du-Tonnerre.
-02-12到30級.md:766｜說明｜509 → 513 完成後，希爾斯布萊德丘陵 塔倫米爾可在幽暗城接 515，再回希爾斯布萊德海岸做。｜Après 509 → 513, tu peux prendre 515 à Fossoyeuse pour Moulin-de-Tarren, dans les Contreforts d'Hillsbrad, puis le faire sur la côte d'Hillsbrad.
+02-12到30級.md:765｜說明｜若石爪山脈 烈日石居已接 1065，趁敦霍爾德行程完成 1066，帶 1067 給千針石林 亂風崗途經雷霆崖時交。｜Si tu as déjà pris 1065 à la Retraite de Roche-Soleil, dans les Serres-Rocheuses, termine 1066 pendant le trajet vers Dun Garok et rends 1067 à Mille pointes, au poste de Librevent, en passant par Thunder Bluff.
+02-12到30級.md:766｜說明｜509 → 513 完成後，希爾斯布萊德丘陵 塔倫米爾可在幽暗城接 515，再回希爾斯布萊德海岸做。｜Après 509 → 513, tu peux prendre 515 à Fossoyeuse pour Moulin-de-Tarren, dans les Contreforts de Hautebrande, puis le faire sur la côte d'Hillsbrad.
 05-副本.md:342｜說明｜濕地 1437 47.79, 56.16｜Paluns 1437 47.79, 56.16
-02-12到30級.md:861｜說明｜烈日石居的信直接交大升降梯守衛。亂風崗西邊的補給箱、三種鷹身人和耐力試煉共用區域。｜Rends la lettre de la Retraite de Roche-Soleil directement au garde du Grand ascenseur. Les caisses de ravitaillement à l'ouest de Librevent, les trois types de harpies et l'épreuve d'endurance se font dans la même zone.
-02-12到30級.md:862｜說明｜亂風崗短訪排在梣谷主線前；閃光平原整圈留到之後的閃光平原站。｜Fais la courte visite au poste de Librevent avant la chaîne principale d'Orneval. Garde tout le tour de Shimmering Flats pour la prochaine étape à Shimmering Flats.
+02-12到30級.md:861｜說明｜烈日石居的信直接交大升降梯守衛。亂風崗西邊的補給箱、三種鷹身人和耐力試煉共用區域。｜Rends la lettre de la Retraite de Roche-Soleil directement au garde de la Grande élévation. Les caisses de ravitaillement à l'ouest de Librevent, les trois types de harpies et l'épreuve d'endurance se font dans la même zone.
+02-12到30級.md:862｜說明｜亂風崗短訪排在梣谷主線前；閃光平原整圈留到之後的閃光平原站。｜Fais la courte visite au poste de Librevent avant la chaîne principale d'Orneval. Garde tout le tour des Salines pour la prochaine étape aux Salines.
 02-12到30級.md:1042｜說明｜收齊三份材料再交。死亡礦坑位於西部荒野，部落可經荊棘谷、暮色森林前往。；打哥布林木匠收白石橡木。｜Rassemble les trois lots de matériaux avant de rendre la quête. Les Mortemines se trouvent dans les Carmines ; la Horde y va par Strangleronce et le Bois de la Pénombre. Tue les charpentiers gobelins pour obtenir le chêne de pierre blanche.
 02-12到30級.md:1042｜說明｜收齊三份材料再交。死亡礦坑位於西部荒野，部落可經荊棘谷、暮色森林前往。｜Rassemble les trois lots de matériaux avant de rendre la quête. Les Mortemines se trouvent dans les Carmines ; la Horde y va par Strangleronce et le Bois de la Pénombre.
 02-12到30級.md:976｜說明｜碎木崗哨南側先驅者、西南湖元素、北側薩特各做一圈；佐拉姆加的熊怪與洞穴符咒一起解。｜Fais un tour chacun : les éclaireurs au sud du poste de Bois-brisé, les élémentaires du lac au sud-ouest et les satyres au nord. Fais Zoram'gar : tue les ours et résous les amulettes de la grotte dans le même trajet.
-02-12到30級.md:978｜說明｜29 級後若本來就要跑十字路口和奧格瑪，可先接瘋狂的蟲群：先送到奧格瑪，交件接後續，再送到閃光平原交，之後還有一段；與本段交通不順路就略過。｜Après le niveau 29, si tu dois de toute façon passer par La Croisée et Orgrimmar, tu peux prendre L'essaim s'agrandit : livre d'abord à Orgrimmar, rends la quête pour prendre la suite, puis livre à Shimmering Flats ; il reste ensuite une autre étape. Passe-la si elle n'est pas sur ton chemin.
+02-12到30級.md:978｜說明｜29 級後若本來就要跑十字路口和奧格瑪，可先接瘋狂的蟲群：先送到奧格瑪，交件接後續，再送到閃光平原交，之後還有一段；與本段交通不順路就略過。｜Après le niveau 29, si tu dois de toute façon passer par La Croisée et Orgrimmar, tu peux prendre L'essaim s'agrandit : livre d'abord à Orgrimmar, rends la quête pour prendre la suite, puis livre aux Salines ; il reste ensuite une autre étape. Passe-la si elle n'est pas sur ton chemin.
 05-副本.md:503｜說明｜接任務會拿到達拉然下水道鑰匙；污穢鑰匙只是前置。｜En prenant la quête, tu reçois la clé des égouts de Dalaran. La clé souillée n'est qu'un prérequis.
 05-副本.md:503｜說明｜接任務會拿到達拉然下水道鑰匙｜En prenant la quête, tu reçois la clé des égouts de Dalaran.
 05-副本.md:503｜說明｜污穢鑰匙只是前置。｜La clé souillée n'est qu'un prérequis.
-05-副本.md:447｜說明｜經希爾斯布萊德丘陵 塔倫米爾時可先開飛行點；從幽暗城沿提里斯法林地北路到修道院。先完成剃刀沼澤的蝙蝠的糞便（1109），再到幽暗城煉金區找法拉尼爾。先跑千針石林的話，把 1113 留到往奧特蘭克山脈時接；墓地的沃瑞爾可先做。離開墓地之後要到奧特蘭克湖岸與塔倫米爾。｜Tu peux débloquer le point de vol en passant par Moulin-de-Tarren, dans les Contreforts d'Hillsbrad. Depuis Fossoyeuse, prends la route nord des Clairières de Tirisfal jusqu'à l'abbaye. Termine d'abord Corvée de guano (1109) aux Souilles de Tranchebauge, puis va voir Faranell au quartier de l'alchimie de Fossoyeuse. Si tu fais d'abord Mille pointes, garde 1113 pour la prendre en allant vers les Montagnes d'Alterac. Tu peux d'abord faire Vorrel au cimetière. En sortant du cimetière, va à la rive du lac d'Alterac et à Moulin-de-Tarren.
+05-副本.md:447｜說明｜經希爾斯布萊德丘陵 塔倫米爾時可先開飛行點；從幽暗城沿提里斯法林地北路到修道院。先完成剃刀沼澤的蝙蝠的糞便（1109），再到幽暗城煉金區找法拉尼爾。先跑千針石林的話，把 1113 留到往奧特蘭克山脈時接；墓地的沃瑞爾可先做。離開墓地之後要到奧特蘭克湖岸與塔倫米爾。｜Tu peux débloquer le point de vol en passant par Moulin-de-Tarren, dans les Contreforts de Hautebrande. Depuis Fossoyeuse, prends la route nord des Clairières de Tirisfal jusqu'à l'abbaye. Termine d'abord Corvée de guano (1109) aux Souilles de Tranchebauge, puis va voir Faranell au quartier de l'alchimie de Fossoyeuse. Si tu fais d'abord Mille pointes, garde 1113 pour la prendre en allant vers les Montagnes d'Alterac. Tu peux d'abord faire Vorrel au cimetière. En sortant du cimetière, va à la rive du lac d'Alterac et à Moulin-de-Tarren.
 05-副本.md:695｜說明｜尾端小屋的卡爾加。；順序：打卡爾加時，同時拾取心臟與破爛筆記｜Charlga, dans la cabane au fond. Ordre : en tuant Charlga, ramasse en même temps le cœur et les notes en lambeaux.
 05-副本.md:695｜說明｜尾端小屋的卡爾加。｜Charlga, dans la cabane au fond.
 05-副本.md:695｜說明｜打卡爾加時，同時拾取心臟與破爛筆記｜En tuant Charlga, ramasse en même temps le cœur et les notes en lambeaux.
@@ -13693,7 +13693,7 @@
 05-副本.md:698｜說明｜保護他走回入口。｜Protège-le jusqu'à l'entrée.
 03-30到45級.md:283｜說明｜葬影村去西岸時一起做兩個水域任務與上古之書。雷斧堡壘先打聖光節杖與埃盧梭斯之手，若進度不足再到第二趟補交。｜Depuis Proie-de-l'Ombre, vers la côte ouest, fais ensemble les deux quêtes aquatiques et le livre ancien. À la Forteresse de Hache-Tonnerre, tue d'abord le Sceptre de lumière sacrée et la Main d'Eluzzus ; si ta progression est insuffisante, rends-les lors d'un second passage.
 03-30到45級.md:444｜說明｜祖昆達找得到吉米克斯才跑鑰匙與護送，鑰匙與遭竊貨物同區。已有人護送可直接繼續主線。｜Ne fais les clés et l'escorte à Zul'Kunda que si tu trouves Gimix ; la clé et les marchandises volées sont dans la même zone. Si quelqu'un est déjà en train d'escorter, continue directement la chaîne principale.
-03-30到45級.md:447｜說明｜血帆海盜整串、海盜的眼睛／鼻煙、贊吉爾的秘密，以及嚇唬病鬼→向馬克基雷回報→討債行動，留到 42 級回訪再做。荊棘谷熱疫、瓶中信、船長的箱子、威士卡斯利姆的酒與你自己的 OOX 先別接，留到 45 級後的藏寶海灣站。｜Garde pour la visite du niveau 42 toute la chaîne des pirates Voile-sanglant, Gardez un œil dehors / tabac à priser, Le secret de Zanzil, ainsi que Effrayer Philippe le Chancelant → rapport à Marcus → Gages vaudou. Ne prends pas encore La fièvre de Strangleronce, Message dans une bouteille, Le coffre du capitaine, la bibine de Whiskey Slim ni ton propre OOX : garde-les pour l'étape de la Baie-du-Butin après le niveau 45.
+03-30到45級.md:447｜說明｜血帆海盜整串、海盜的眼睛／鼻煙、贊吉爾的秘密，以及嚇唬病鬼→向馬克基雷回報→討債行動，留到 42 級回訪再做。荊棘谷熱疫、瓶中信、船長的箱子、威士卡斯利姆的酒與你自己的 OOX 先別接，留到 45 級後的藏寶海灣站。｜Garde pour la visite du niveau 42 toute la chaîne des pirates Voile-sanglant, Garde un œil dehors / tabac à priser, Le secret de Zanzil, ainsi que Effrayer Philippe le Chancelant → rapport à Marcus → Gages vaudou. Ne prends pas encore La fièvre de Strangleronce, Message dans une bouteille, Le coffre du capitaine, la bibine de Whiskey Slim ni ton propre OOX : garde-les pour l'étape de la Baie-du-Butin après le niveau 45.
 03-30到45級.md:448｜說明｜先把獵龍任務解到打鞭尾迅猛龍的那一段，再和 568 一起打。605 先打北邊的晶脊蜥蜴，第一趟無須繞去南谷。｜Fais la chaîne des chasseurs de dragons jusqu'à la partie des raptors queue-de-fouet, puis fais-la avec 568. Pour 605, tue d'abord les lézards à crête de cristal au nord ; tu n'as pas à aller dans la vallée du sud lors du premier passage.
 05-副本.md:800｜說明｜收不齊就繼續清船區的海盜。；位置：進鹽占海盜船區，沿路清海盜收神器。；順序：和鹽占船長同區清理｜Si tu n'en trouves pas assez, continue à nettoyer les pirates de la zone des navires. Lieu : entre dans la zone du navire pirate de Saltseer et ramasse les artefacts sur les pirates en chemin. Ordre : nettoie-le dans la même zone que le capitaine de Saltseer.
 05-副本.md:800｜說明｜和鹽占船長同區清理｜Nettoie-le dans la même zone que le capitaine de Saltseer.
@@ -13702,8 +13702,8 @@
 03-30到45級.md:729｜說明｜法迪爾海灣一次接打撈、水下寶藏和船長的復仇。完成海灣內前置、領取尋寶護目鏡後，再下水打撈，並順手做水下的 662／664；送往藏寶海灣的後續留待回港交。｜À la crique de Faldir, prends d'un coup Récupération, Le trésor englouti et Chagrin noyé. Termine d'abord les prérequis dans la crique et prends les lunettes de chasseur de trésors, puis plonge récupérer les objets et fais au passage 662 et 664 sous l'eau. La suite à livrer à la Baie-du-Butin se rend quand tu reviens au port.
 03-30到45級.md:730｜說明｜激流堡有餘力再做。要省跑圖，先做水晶和落錘近郊，激流堡後段 643–646 可跳。｜Fais Stromgarde si tu as du temps. Pour économiser des trajets, fais d'abord les cristaux et les objectifs proches de Trépas-d'Orgrim ; tu peux ignorer la fin de Stromgarde, 643-646.
 05-副本.md:851｜說明｜神像旁，貝尼斯特拉茲的火盆｜Près de la statue, le brasero de Benistrasz.
-05-副本.md:830｜說明｜離開阿拉希高地 落錘鎮時先飛幽暗城。到千針石林 閃光平原時，可先打剃刀沼澤並拾 6522。走奧特蘭克山脈至阿拉希高地那站經幽暗城時，先交瓦里瑪薩斯，再同城找安德魯接 3341。由提里斯法坐飛艇回奧格瑪，再飛雷霆崖；沒開就飛陶拉祖，走莫高雷大道。往莫高雷西北找蘇塔菈接 97196。飛陶拉祖往南，門外找麥雷姆。已在大河林地的隊員，從火線港搭船到熱砂港再北上。出本後人在卡林多，就飛加基森到熱砂港，搭船進大河林地。加基森沒開，就照大河林地 羅格瑪第一次的首步，飛亂風崗走閃光平原南坡。要先回幽暗城交 3341、6521，就從幽暗城照大河林地 羅格瑪第一次的首步走。｜En quittant Trépas-d'Orgrim, dans les Hautes-terres d'Arathi, vole d'abord à Fossoyeuse. En allant aux Salines de Mille pointes, tu peux d'abord faire le Kraal de Tranchebauge et ramasser 6522. Entre les Montagnes d'Alterac et les Hautes-terres d'Arathi, en passant par Fossoyeuse, rends d'abord la quête à Varimathras, puis va voir Andrew dans la même ville pour prendre 3341. Prends le zeppelin de Tirisfal pour retourner à Orgrimmar, puis vole aux Pitons-du-Tonnerre. S'il n'est pas débloqué, vole au Camp Taurajo et suis la route de Mulgore. Va au nord-ouest de Mulgore trouver Sutara et prends 97196. Vole au Camp Taurajo, va vers le sud et trouve Myriam devant la porte. Les membres du groupe déjà dans Rives Claires prennent le bateau de Port de Poudremèche à Port Gentepression, puis remontent vers le nord. Si tu es à Kalimdor après le donjon, vole de Gadgetzan à Port Gentepression et prends le bateau pour Rives Claires. Si Gadgetzan n'est pas débloqué, suis la première étape de la première visite à Rog'mar, en Rives Claires : vole au poste de Librevent et prends la pente sud des Salines. Si tu dois d'abord retourner à Fossoyeuse pour rendre 3341 et 6521, suis cette même première étape depuis Fossoyeuse.
-03-30到45級.md:853｜說明｜Chogg’Zac 在陽光林地洞穴內，是 41 級精英。｜Chogg'Zac se trouve dans la grotte de Sunnyglade ; c'est un élite de niveau 41.
+05-副本.md:830｜說明｜離開阿拉希高地 落錘鎮時先飛幽暗城。到千針石林 閃光平原時，可先打剃刀沼澤並拾 6522。走奧特蘭克山脈至阿拉希高地那站經幽暗城時，先交瓦里瑪薩斯，再同城找安德魯接 3341。由提里斯法坐飛艇回奧格瑪，再飛雷霆崖；沒開就飛陶拉祖，走莫高雷大道。往莫高雷西北找蘇塔菈接 97196。飛陶拉祖往南，門外找麥雷姆。已在大河林地的隊員，從火線港搭船到熱砂港再北上。出本後人在卡林多，就飛加基森到熱砂港，搭船進大河林地。加基森沒開，就照大河林地 羅格瑪第一次的首步，飛亂風崗走閃光平原南坡。要先回幽暗城交 3341、6521，就從幽暗城照大河林地 羅格瑪第一次的首步走。｜En quittant Trépas-d'Orgrim, dans les Hautes-terres Arathies, vole d'abord à Fossoyeuse. En allant aux Salines de Mille pointes, tu peux d'abord faire le Kraal de Tranchebauge et ramasser 6522. Entre les Montagnes d'Alterac et les Hautes-terres Arathies, en passant par Fossoyeuse, rends d'abord la quête à Varimathras, puis va voir Andrew dans la même ville pour prendre 3341. Prends le zeppelin de Tirisfal pour retourner à Orgrimmar, puis vole à Thunder Bluff. S'il n'est pas débloqué, vole au Camp Taurajo et suis la route de Mulgore. Va au nord-ouest de Mulgore trouver Sutara et prends 97196. Vole au Camp Taurajo, va vers le sud et trouve Myriam devant la porte. Les membres du groupe déjà dans Rives Claires prennent le bateau de Port de Poudremèche à Port Gentepression, puis remontent vers le nord. Si tu es à Kalimdor après le donjon, vole de Gadgetzan à Port Gentepression et prends le bateau pour Rives Claires. Si Gadgetzan n'est pas débloqué, suis la première étape de la première visite à Rog'mar, en Rives Claires : vole au poste de Librevent et prends la pente sud des Salines. Si tu dois d'abord retourner à Fossoyeuse pour rendre 3341 et 6521, suis cette même première étape depuis Fossoyeuse.
+03-30到45級.md:853｜說明｜Chogg’Zac 在陽光林地洞穴內，是 41 級精英。｜Chogg'Zac se trouve dans la grotte de Clairsoleil ; c'est un élite de niveau 41.
 03-30到45級.md:864｜說明｜氣體在史利博附近的沼澤噴口收。｜Récupère le gaz aux évents du marais près de Slibo.
 03-30到45級.md:871｜說明｜同任務也可找 Hamur（67.24, 21.75）。｜Tu peux aussi voir Hamur pour cette quête (67.24, 21.75).
 03-30到45級.md:903｜說明｜羅格瑪南側草地，怪物密集、普通怪。附近有 41–42 級精英野獸，沿路挑單隻；可同步補 96107 的羽毛。｜Prairie au sud de Rog'mar, nombreux monstres normaux. Des bêtes élites de niveau 41-42 rôdent à proximité ; prends-en une seule à la fois en chemin. Tu peux en même temps ramasser les plumes de 96107.
@@ -13719,12 +13719,12 @@
 03-30到45級.md:1299｜說明｜東風海岸中段，怪物密集、普通遠程怪。與海盜交錯，近戰可利用地形拉到岸側；適合補到 45 級。｜Milieu de la Côte de la Tempête, nombreux monstres à distance normaux. Mêlés aux pirates, tu peux utiliser le terrain pour les attirer vers la côte au corps à corps. Convient pour monter jusqu'au niveau 45.
 05-副本.md:1006｜說明｜從暮光之罩內的 Crag’rog 接。｜Prends-la auprès de Crag'rog, dans la Couronne du Crépuscule.
 05-副本.md:1009｜說明｜先找目前標出的三處礦工，其餘在附近找。｜Va d'abord voir les trois mineurs actuellement indiqués ; cherche les autres à proximité.
-04-45到60級.md:28｜說明｜到菲拉斯做，回熱砂港交。｜Fais-la à Féralas et rends-la à Port Gentepression.
-04-45到60級.md:31｜說明｜在加基森旅店向旅店老闆菲茲格瑞博（1446 52.51, 27.91）暫綁爐石。到菲拉斯莫沙徹營地再改綁。｜À Gadgetzan, lie temporairement ta pierre de foyer à l'auberge, auprès de l'aubergiste Fizzgrimble (1446 52.51, 27.91). Tu la reliras plus tard au camp Mojache, à Féralas.
+04-45到60級.md:28｜說明｜到菲拉斯做，回熱砂港交。｜Fais-la à Feralas et rends-la à Port Gentepression.
+04-45到60級.md:31｜說明｜在加基森旅店向旅店老闆菲茲格瑞博（1446 52.51, 27.91）暫綁爐石。到菲拉斯莫沙徹營地再改綁。｜À Gadgetzan, lie temporairement ta pierre de foyer à l'auberge, auprès de l'aubergiste Fizzgrimble (1446 52.51, 27.91). Tu la reliras plus tard au camp Mojache, à Feralas.
 04-45到60級.md:64｜說明｜第一次熱砂港把海盜帽、擊殺、通緝與貨箱一起清；從火線港乘船到熱砂港時，可先清海岸。｜Lors de la première visite à Port Gentepression, fais ensemble le chapeau de pirate, les meurtres, les avis de recherche et les caisses. En prenant le bateau de Port de Poudremèche vers Port Gentepression, tu peux d'abord nettoyer la côte.
-04-45到60級.md:149｜說明｜回奧格瑪開菲拉斯後續｜Retourne à Orgrimmar pour débloquer la suite de Féralas.
-04-45到60級.md:151｜說明｜從莫沙徹飛奧格瑪（通常經十字路口或雷霆崖）。爐石維持莫沙徹，奧格瑪交完再用爐石回菲拉斯。｜Vole du camp Mojache à Orgrimmar (en général via La Croisée ou les Pitons-du-Tonnerre). Garde ta pierre de foyer au camp Mojache, puis après avoir rendu les quêtes à Orgrimmar, utilise-la pour retourner à Féralas.
-04-45到60級.md:215｜說明｜怒痕雪人與深痕谷雪人是兩批；先在菲拉斯 莫沙徹營地交 2822，再清這次的 7734。完美的雪人毛皮只在掉落時交。｜Les yétis de Rageronce et ceux de Gouffre-de-Rageronce forment deux groupes distincts. Rends d'abord 2822 au camp Mojache, à Féralas, puis nettoie 7734 pour cette fois. Rends Une peau de yéti parfaite uniquement quand elle tombe.
+04-45到60級.md:149｜說明｜回奧格瑪開菲拉斯後續｜Retourne à Orgrimmar pour débloquer la suite de Feralas.
+04-45到60級.md:151｜說明｜從莫沙徹飛奧格瑪（通常經十字路口或雷霆崖）。爐石維持莫沙徹，奧格瑪交完再用爐石回菲拉斯。｜Vole du camp Mojache à Orgrimmar (en général via La Croisée ou Thunder Bluff). Garde ta pierre de foyer au camp Mojache, puis après avoir rendu les quêtes à Orgrimmar, utilise-la pour retourner à Feralas.
+04-45到60級.md:215｜說明｜怒痕雪人與深痕谷雪人是兩批；先在菲拉斯 莫沙徹營地交 2822，再清這次的 7734。完美的雪人毛皮只在掉落時交。｜Les yétis de Rageronce et ceux de Gouffre-de-Rageronce forment deux groupes distincts. Rends d'abord 2822 au camp Mojache, à Feralas, puis nettoie 7734 pour cette fois. Rends Une peau de yéti parfaite uniquement quand elle tombe.
 04-45到60級.md:217｜說明｜需要補等時，可在怒痕堡 55.73,33.05 至 54.39,33.10 外圈循環打怒痕雪人，優先單拉。｜Si tu as besoin d'expérience, fais une boucle à l'extérieur de la Griffe féroce, de 55.73, 33.05 à 54.39, 33.10, en tuant les yétis de Rageronce ; privilégie les combats isolés.
 04-45到60級.md:261｜說明｜廢料可由聯盟任務丟出，沒看到就沿加基森外圍找。｜La ferraille peut être lâchée par des quêtes de l'Alliance ; si tu n'en vois pas, cherche autour de Gadgetzan.
 04-45到60級.md:306｜說明｜北方水池交完先開腐化之巢；交腐化之巢開謝申克的救贖，再一起跑砂槌、灌木谷與南方蟲巢。｜Après avoir rendu la quête au bassin du nord, débloque d'abord Enquête au Repaire nuisible. Rends Enquête au Repaire nuisible pour ouvrir La rédemption de Scrimshank, puis fais ensemble la Base des Cognedunes, La vallée des Chardonniers et la ruche du sud.
@@ -13746,14 +13746,14 @@
 04-45到60級.md:475｜說明｜580 和海龜任務同一段海灘完成；梟獸 7829 與 3123 同打。｜Fais 580 sur la même section de plage que les quêtes des tortues. Fais les harfangs 7829 et 3123 ensemble.
 04-45到60級.md:525｜說明｜五個採集一起打。全交共需顎骨 ×5、野豬肺 ×6、蠍螯 ×6、蜥蜴腦 ×11、禿鷲砂囊 ×14。每次交任務會扣材料。｜Fais les cinq quêtes de collecte ensemble. Pour tout rendre, il faut en tout 5 mâchoires, 6 poumons de sanglier, 6 pinces de scorpide, 11 cervelles de lézard et 14 gésiers de vautour. Chaque remise de quête retire des matériaux.
 04-45到60級.md:563｜說明｜本趟優先交 50 級的 580。荊棘谷 格羅姆高與藏寶海灣、荊棘谷 藏寶海灣的低等任務已分次處理；仍在日誌而且已完成的，也可在同一趟港口回交。｜Pour ce passage, rends en priorité 580, de niveau 50. Les quêtes de bas niveau de Grom'gol et de la Baie-du-Butin, à Strangleronce, ont déjà été traitées séparément. Les quêtes encore dans ton journal et déjà terminées peuvent aussi être rendues au port lors du même passage.
-04-45到60級.md:627｜說明｜在奧格瑪基爾茲賓處接，再飛菲拉斯。塔納利斯 加基森與砂槌營地已交異種蠍的威脅或 7732 才接，留塔納利斯 加基森與破碎石柱。若要繞雷霆崖交 3518，先接本任務再離開奧格瑪。｜Prends-la auprès de Zilzibin à Orgrimmar, puis vole à Féralas. Ne la prends que si tu as déjà rendu L'ascension des silithides ou 7732 à Gadgetzan ou à la Base des Cognedunes, à Tanaris, et garde-la pour Gadgetzan et le Pilier brisé. Si tu comptes passer par les Pitons-du-Tonnerre pour rendre 3518, prends cette quête avant de quitter Orgrimmar.
+04-45到60級.md:627｜說明｜在奧格瑪基爾茲賓處接，再飛菲拉斯。塔納利斯 加基森與砂槌營地已交異種蠍的威脅或 7732 才接，留塔納利斯 加基森與破碎石柱。若要繞雷霆崖交 3518，先接本任務再離開奧格瑪。｜Prends-la auprès de Zilzibin à Orgrimmar, puis vole à Feralas. Ne la prends que si tu as déjà rendu L'ascension des silithides ou 7732 à Gadgetzan ou à la Base des Cognedunes, à Tanaris, et garde-la pour Gadgetzan et le Pilier brisé. Si tu comptes passer par Thunder Bluff pour rendre 3518, prends cette quête avant de quitter Orgrimmar.
 04-45到60級.md:631｜說明｜薩拉斯營地、三枚印記和雷姆托里放在一趟；埃達拉斯廢墟同步拾四塊石板與納迦符石。｜Fais le camp de base thalassien, les trois marques et Lemtorri en un seul trajet. Aux Ruines d'Eldarath, ramasse en même temps les quatre tablettes et la pierre runique naga.
 04-45到60級.md:632｜說明｜可跳過｜Ley of the Land 與 Deadliest Catch 可能要組隊打精英，本站兩個都略過。｜Facultatif : Ley of the Land et Deadliest Catch demandent peut-être un groupe pour les élites ; saute les deux à cette étape.
 04-45到60級.md:633｜說明｜3542 交幽暗城的安德隆·甘特（1458 54.81, 76.33），可留東瘟疫之地 聖光之願禮拜堂轉場。城市寄回任務要重返艾薩拉，本路線可省掉。｜Rends 3542 à Andron Gant de Fossoyeuse (1458 54.81, 76.33) ; tu peux la garder pour la transition à la Chapelle de l'Espoir de Lumière, dans les Maleterres de l'est. Les quêtes renvoyées par la ville exigent de retourner à Azshara ; cet itinéraire peut les éviter.
 04-45到60級.md:683｜說明｜3123 在莫沙徹營地交，接續 3124–3126；每個階段都要先交，下一種容器才拿得到。｜Rends 3123 au camp Mojache et prends la suite, 3124-3126. À chaque étape, rends d'abord la quête pour obtenir le type de récipient suivant.
 04-45到60級.md:729｜說明｜加基森先把 2641→2662 三段交完，接安戈洛任務後再去破碎石柱。｜À Gadgetzan, termine d'abord les trois étapes 2641 → 2662, puis va au Pilier brisé après avoir pris les quêtes d'Un'Goro.
 04-45到60級.md:731｜說明｜4504 和有前置的 4496 都在安戈洛環形山 馬紹爾營地做。4324 燃燒平原 烈焰峰與黑石山交。｜4504 et 4496, qui a un prérequis, se font toutes deux au Refuge des Marshal, à Un'Goro. Rends 4324 à Corniche des flammes, dans les Steppes ardentes, et au Mont Rochenoire.
-05-副本.md:1239｜說明｜到悲傷沼澤 斯通納德完成淚水之池，並保留 1429。從辛特蘭 惡齒村飛行點走到辛特蘭南側，向流放者交 1429，接向費澤魯爾復命與預言者迦瑪蘭。若完成祖爾法拉克石板鏈，再去辛薩羅拿卵。到菲拉斯時先接 3380。到塔納利斯加基森時，先找瑪爾馮開石環任務，飛棘齒城取物，再回瑪爾馮接兩個神廟任務。在熱砂港交卵後，可從加基森飛棘齒城，再搭船到藏寶海灣。最後飛斯通納德交向費澤魯爾復命、接阿塔哈卡神廟，再赴神廟。｜Termine Le bassin des larmes à Pierrêche, dans le Marais des Chagrins, et garde 1429. Depuis le point de vol de Revantusk, dans les Hinterlands, va au sud des Hinterlands, rends 1429 à l'exilé, puis prends De retour vers Fel'Zerul et Jammal'an le Prophète. Si tu as terminé la chaîne des tablettes de Zul'Farrak, va ensuite chercher l'œuf à Jintha'Alor. En arrivant à Féralas, prends d'abord 3380. À Tanaris, à Gadgetzan, va d'abord voir Marvon pour la quête du cercle de pierres, vole à Cabestan chercher l'objet, puis retourne voir Marvon pour les deux quêtes du temple. Après avoir rendu l'œuf à Port Gentepression, tu peux voler de Gadgetzan à Cabestan, puis prendre le bateau vers la Baie-du-Butin. Pour finir, vole à Pierrêche rendre De retour vers Fel'Zerul et prendre le temple d'Atal'Hakkar, puis rends-toi au temple.
+05-副本.md:1239｜說明｜到悲傷沼澤 斯通納德完成淚水之池，並保留 1429。從辛特蘭 惡齒村飛行點走到辛特蘭南側，向流放者交 1429，接向費澤魯爾復命與預言者迦瑪蘭。若完成祖爾法拉克石板鏈，再去辛薩羅拿卵。到菲拉斯時先接 3380。到塔納利斯加基森時，先找瑪爾馮開石環任務，飛棘齒城取物，再回瑪爾馮接兩個神廟任務。在熱砂港交卵後，可從加基森飛棘齒城，再搭船到藏寶海灣。最後飛斯通納德交向費澤魯爾復命、接阿塔哈卡神廟，再赴神廟。｜Termine Le bassin des larmes à Pierrêche, dans le Marais des Chagrins, et garde 1429. Depuis le point de vol de Revantusk, dans les Hinterlands, va au sud des Hinterlands, rends 1429 à l'exilé, puis prends De retour vers Fel'Zerul et Jammal'an le Prophète. Si tu as terminé la chaîne des tablettes de Zul'Farrak, va ensuite chercher l'œuf à Jintha'Alor. En arrivant à Feralas, prends d'abord 3380. À Tanaris, à Gadgetzan, va d'abord voir Marvon pour la quête du cercle de pierres, vole à Cabestan chercher l'objet, puis retourne voir Marvon pour les deux quêtes du temple. Après avoir rendu l'œuf à Port Gentepression, tu peux voler de Gadgetzan à Cabestan, puis prendre le bateau vers la Baie-du-Butin. Pour finir, vole à Pierrêche rendre De retour vers Fel'Zerul et prendre le temple d'Atal'Hakkar, puis rends-toi au temple.
 04-45到60級.md:761｜說明｜在奧格瑪先接才做。｜Prends-la à Orgrimmar avant de la faire.
 04-45到60級.md:784｜說明｜安戈洛猩猩／安戈洛巨猩猩／安戈洛大猩猩｜Singes d'Un'Goro / singes géants d'Un'Goro / gorilles d'Un'Goro
 04-45到60級.md:786｜說明｜在棘齒城接過才做；回棘齒城交。｜Ne la fais qu'après l'avoir prise à Cabestan. Rends-la à Cabestan.
@@ -13764,7 +13764,7 @@
 04-45到60級.md:869｜說明｜卡加斯先接 3821、4061，烈焰峰開點後集中跑巨槌石與索瑞森廢墟。｜À Kargath, prends d'abord 3821 et 4061 ; après avoir débloqué le point de vol de Corniche des flammes, fais d'un coup Pierre-Marteau et les Ruines de Thaurissan.
 04-45到60級.md:2033｜說明｜加什爾／祖羅爾／胡庫／米杉／祖羅／洛若爾｜Gasher / Zul'Lor / Hukku / Mijan / Zolo / Loro
 04-45到60級.md:939｜說明｜費爾斯通農場的瘟疫鍋和包裹在同一處，回城可把 5023、5049 一起交。｜Le chaudron de peste et le colis de la Ferme Felstone sont au même endroit ; en revenant en ville, tu peux rendre 5023 et 5049 ensemble.
-04-45到60級.md:940｜說明｜本趟完成第一口鍋，達爾松之淚的 5231 與安多哈爾的通靈學院任務留下一輪。傑雷米亞的好運護符 5050／5051 後段回西瘟疫才做。｜Termine le premier chaudron ce coup-ci ; laisse 5231, Les larmes de Darrowshire, et la quête de Scholomance d'Andorhal pour un prochain tour. Fais plus tard 5050 et 5051, le porte-bonheur de Jeremiah, en retournant dans les Maleterres de l'ouest.
+04-45到60級.md:940｜說明｜本趟完成第一口鍋，達爾松之淚的 5231 與安多哈爾的通靈學院任務留下一輪。傑雷米亞的好運護符 5050／5051 後段回西瘟疫才做。｜Termine le premier chaudron ce coup-ci ; laisse 5231, les Larmes de Dalson, et la quête de Scholomance d'Andorhal pour un prochain tour. Fais plus tard 5050 et 5051, le porte-bonheur de Jeremiah, en retournant dans les Maleterres de l'ouest.
 04-45到60級.md:2101｜說明｜先收加德納爾精華；從奧格瑪前往艾薩拉時收下一份。回東部王國後，再從斯通納德前往詛咒之地。｜Récupère d'abord l'essence de Jaedenar. Récupères-en une quand tu pars d'Orgrimmar pour Azshara. De retour dans les Royaumes de l'Est, pars de Pierrêche pour les Terres foudroyées.
 04-45到60級.md:2101｜說明｜先收加德納爾精華｜Récupère d'abord l'essence de Jaedenar.
 04-45到60級.md:2101｜說明｜從奧格瑪前往艾薩拉時收下一份。回東部王國後，再從斯通納德前往詛咒之地。｜Récupères-en une quand tu pars d'Orgrimmar pour Azshara. De retour dans les Royaumes de l'Est, pars de Pierrêche pour les Terres foudroyées.
@@ -13773,8 +13773,8 @@
 04-45到60級.md:1023｜說明｜已接腐化的力量才做｜Ne la fais qu'après avoir pris La force de la corruption.
 04-45到60級.md:1033｜說明｜北部鐵木森林一起解血琥珀與墮落的力量，最後才刷死木熊怪聲望。｜Dans le nord de Gangrebois, fais ensemble l'ambre de sang et La force de la corruption, et farme en dernier la réputation des ours Deadwood.
 04-45到60級.md:1034｜說明｜已打完 4102 先留物品，往後回翡翠聖地再交。5158 留棘齒城。｜Si tu as déjà terminé 4102, garde l'objet pour le rendre plus tard à Havre-d'Émeraude. Garde 5158 pour Cabestan.
-04-45到60級.md:1060｜說明｜到北菲拉斯取藥劑；下次回冰火溫泉再交。｜Va chercher la potion au nord de Féralas. Rends-la la prochaine fois que tu repasses aux Sources de Givrefeu.
-04-45到60級.md:1060｜說明｜到北菲拉斯取藥劑｜Va chercher la potion au nord de Féralas.
+04-45到60級.md:1060｜說明｜到北菲拉斯取藥劑；下次回冰火溫泉再交。｜Va chercher la potion au nord de Feralas. Rends-la la prochaine fois que tu repasses aux Sources de Givrefeu.
+04-45到60級.md:1060｜說明｜到北菲拉斯取藥劑｜Va chercher la potion au nord de Feralas.
 04-45到60級.md:1060｜說明｜下次回冰火溫泉再交。｜Rends-la la prochaine fois que tu repasses aux Sources de Givrefeu.
 04-45到60級.md:1063｜說明｜熊怪會掉空的火酒瓶，撿到後點開；這是冬泉谷熊怪任務鏈的前置；若還沒掉，到冬泉村外繼續打普通熊怪。｜Les furbolgs lâchent un flacon d'eau de feu vide ; ramasse-le et clique dessus. C'est le prérequis de la chaîne des furbolgs de Berceau-de-l'Hiver. S'il n'est pas encore tombé, continue de tuer des ours normaux à l'extérieur de Sources d'Hiver.
 04-45到60級.md:1063｜說明｜熊怪會掉空的火酒瓶，撿到後點開；這是冬泉谷熊怪任務鏈的前置｜Les furbolgs lâchent un flacon d'eau de feu vide ; ramasse-le et clique dessus. C'est le prérequis de la chaîne des furbolgs de Berceau-de-l'Hiver.
@@ -13794,7 +13794,7 @@
 04-45到60級.md:1116｜說明｜腐化的力量完成後交｜À rendre après avoir terminé La force de la corruption.
 04-45到60級.md:1118｜說明｜已接視靈藥劑才買｜À acheter seulement si tu as pris la potion de Videre.
 04-45到60級.md:1119｜說明｜已接視靈藥劑才做｜À faire seulement si tu as pris la potion de Videre.
-04-45到60級.md:1123｜說明｜菲拉斯 莫沙徹營地與怒痕堡接、費伍德做的 4120 是回村就能交的任務。｜4120, prise au camp Mojache, à Féralas, et à la Griffe féroce, et faite à Gangrebois, se rend dès que tu reviens au village.
+04-45到60級.md:1123｜說明｜菲拉斯 莫沙徹營地與怒痕堡接、費伍德做的 4120 是回村就能交的任務。｜4120, prise au camp Mojache, à Feralas, et à la Griffe féroce, et faite à Gangrebois, se rend dès que tu reviens au village.
 04-45到60級.md:1150｜說明｜到海岸接伊斯倫回費伍德的信。｜Va sur la côte prendre la lettre d'Islen pour Gangrebois.
 04-45到60級.md:1152｜說明｜棘齒城的怪等級偏低。未到 56 級可在轉飛艇前飛回永望鎮打東側普通雪人（約 64, 40），或到西瘟疫之地費爾斯通農場（約 38, 56）打普通亡靈。｜Les monstres de Cabestan sont de niveau plutôt bas. Si tu n'as pas encore le niveau 56 avant de changer de zeppelin, tu peux voler jusqu'à Long-guet tuer les yétis normaux à l'est (vers 64, 40), ou aller à la Ferme Felstone, dans les Maleterres de l'ouest (vers 38, 56), tuer des morts-vivants normaux.
 04-45到60級.md:1205｜說明｜瘟疫之鍋按接續順序做，嚎哭鬼屋順路完成兩段野生動物。｜Fais les chaudrons de peste dans l'ordre de la chaîne ; fais aussi les deux étapes sur la faune sauvage en passant par la Maison hantée de Hurlevent.
@@ -13804,8 +13804,8 @@
 04-45到60級.md:1326｜說明｜費爾斯通和安多哈爾連著做，末段白蟻回程剛好一起交。｜Enchaîne la Ferme Felstone et Andorhal ; à la fin, les termites reviennent juste à temps pour tout rendre ensemble.
 04-45到60級.md:1327｜說明｜克羅米其餘鏈要再跑東瘟疫；有專程回去再接。｜Le reste de la chaîne de Kromi demande de retourner aux Maleterres de l'est. Ne la prends que si tu y retournes exprès.
 05-副本.md:1727｜說明｜從安戈洛環形山經過加基森前，先準備兩塊瑟銀錠。｜Avant de passer par Gadgetzan en venant d'Un'Goro, prépare deux lingots de thorium.
-05-副本.md:1741｜說明｜南海鎮、塔倫米爾、布瑞爾與凱爾達隆是地契名稱，不用離開副本。；位置：在首廳、召喚廳後、霜語房、巴羅夫房找四張地契｜Southshore, Moulin-de-Tarren, Brill et Caer Darrow sont des noms d'actes de propriété ; tu n'as pas besoin de quitter le donjon. Lieu : trouve les quatre actes de propriété dans le hall d'entrée, derrière la salle d'invocation, dans la salle du Chuchotement du givre et dans la salle de Barov.
-05-副本.md:1741｜說明｜南海鎮、塔倫米爾、布瑞爾與凱爾達隆是地契名稱，不用離開副本。｜Southshore, Moulin-de-Tarren, Brill et Caer Darrow sont des noms d'actes de propriété ; tu n'as pas besoin de quitter le donjon.
+05-副本.md:1741｜說明｜南海鎮、塔倫米爾、布瑞爾與凱爾達隆是地契名稱，不用離開副本。；位置：在首廳、召喚廳後、霜語房、巴羅夫房找四張地契｜Austrivage, Moulin-de-Tarren, Brill et Caer Darrow sont des noms d'actes de propriété ; tu n'as pas besoin de quitter le donjon. Lieu : trouve les quatre actes de propriété dans le hall d'entrée, derrière la salle d'invocation, dans la salle du Chuchotement du givre et dans la salle de Barov.
+05-副本.md:1741｜說明｜南海鎮、塔倫米爾、布瑞爾與凱爾達隆是地契名稱，不用離開副本。｜Austrivage, Moulin-de-Tarren, Brill et Caer Darrow sont des noms d'actes de propriété ; tu n'as pas besoin de quitter le donjon.
 05-副本.md:1741｜說明｜在首廳、召喚廳後、霜語房、巴羅夫房找四張地契｜Trouve les quatre actes de propriété dans le hall d'entrée, derrière la salle d'invocation, dans la salle du Chuchotement du givre et dans la salle de Barov.
 04-45到60級.md:1352｜說明｜此為部落前往永夜港的引導；做過其他版本新的邊疆的角色可直接找哈繆爾。｜Introduction de la Horde vers Havrenuit. Les personnages qui ont fait la Nouvelle frontière d'une autre version peuvent aller directement voir Hamuul.
 04-45到60級.md:1352｜說明｜此為部落前往永夜港的引導｜Introduction de la Horde vers Havrenuit.
@@ -13818,12 +13818,12 @@
 04-45到60級.md:1454｜說明｜材料先留著｜Garde les matériaux pour plus tard.
 04-45到60級.md:1454｜說明｜從月光林地回來送木箱時，一起交給凱蕾娜。｜En rapportant la caisse de Reflet-de-Lune, remets-la aussi à Kaylaena.
 04-45到60級.md:1455｜說明｜往月光林地經過永望鎮時交娜米。｜En passant par Long-guet vers Reflet-de-Lune, rends la quête à Nami.
-04-45到60級.md:1533｜說明｜從永望鎮走暗語峽谷進山，先開污化丘陵飛行點，再往北到凱蕾娜的工坊；之後經永望鎮飛月光林地來回，回程先送木箱到工坊；最後沿大路往西北。｜Depuis Long-guet, passe par la Gorge du Sombre murmure pour entrer dans les montagnes, débloque d'abord le point de vol de Tainted Foothills, puis va au nord jusqu'à l'atelier de Kaylaena. Ensuite, vole de Long-guet à Reflet-de-Lune et reviens ; au retour, apporte d'abord la caisse à l'atelier. Enfin, suis la grande route vers le nord-ouest.
-04-45到60級.md:1534｜說明｜隱士柯薩拉斯的主線一路開到永恆山峰的山脈法杖，月光林地這趟來回是為了接上後段。｜La chaîne principale de l'ermite Ketharas se débloque jusqu'au Bâton de la montagne au Summit of Eternity ; l'aller-retour à Reflet-de-Lune sert à prendre la suite.
+04-45到60級.md:1533｜說明｜從永望鎮走暗語峽谷進山，先開污化丘陵飛行點，再往北到凱蕾娜的工坊；之後經永望鎮飛月光林地來回，回程先送木箱到工坊；最後沿大路往西北。｜Depuis Long-guet, passe par la Gorge du Sombre murmure pour entrer dans les montagnes, débloque d'abord le point de vol des Contreforts Souillés, puis va au nord jusqu'à l'atelier de Kaylaena. Ensuite, vole de Long-guet à Reflet-de-Lune et reviens ; au retour, apporte d'abord la caisse à l'atelier. Enfin, suis la grande route vers le nord-ouest.
+04-45到60級.md:1534｜說明｜隱士柯薩拉斯的主線一路開到永恆山峰的山脈法杖，月光林地這趟來回是為了接上後段。｜La chaîne principale de l'ermite Ketharas se débloque jusqu'au Bâton de la montagne au Sommet d’Éternité ; l'aller-retour à Reflet-de-Lune sert à prendre la suite.
 04-45到60級.md:1537｜說明｜可跳過｜92009 的木箱約兩小時失效，所以月光林地回來才接，下飛行點直接送。後續 92011 要到古野村再往上的部落營地遺跡拾荒，物品位置不明；92328、92329 跟著略過，92329 還要引 60 級奇美拉剛蘇羅克。｜Facultatif : La caisse de 92009 expire au bout d'environ deux heures ; prends-la donc après ton retour de Reflet-de-Lune et livre-la en descendant au point de vol. La suite, 92011, demande de fouiller les ruines du camp de la Horde au-dessus de Old Grove Village ; l'emplacement des objets est inconnu. Saute aussi 92328 et 92329 ; 92329 demande en plus d'attirer Gunsulok, la chimère de niveau 60.
 04-45到60級.md:1538｜說明｜種子、貓頭鷹蛋、塊莖、土壤、水晶、松果這些採集物，照任務描述在附近找；找不到先做附近的擊殺任務。｜Cherche à proximité, selon la description de la quête, les graines, les œufs de hibou, les tubercules, la terre, les cristaux et les pommes de pin. Si tu ne les trouves pas, fais d'abord les quêtes de meurtre à proximité.
-04-45到60級.md:1577｜說明｜用任務給的空葫蘆在前方瀑布裝水，不是在嘉文關身邊；瀑布沿大路往祥和育所方向找。｜Remplis d'eau la gourde vide donnée par la quête à la cascade devant toi, pas à côté de Galvinquam. Cherche la cascade le long de la route vers Cradle of Tranquility.
-04-45到60級.md:1577｜說明｜瀑布沿大路往祥和育所方向找。｜Cherche la cascade le long de la route vers Cradle of Tranquility.
+04-45到60級.md:1577｜說明｜用任務給的空葫蘆在前方瀑布裝水，不是在嘉文關身邊；瀑布沿大路往祥和育所方向找。｜Remplis d'eau la gourde vide donnée par la quête à la cascade devant toi, pas à côté de Galvinquam. Cherche la cascade le long de la route vers le Berceau de la tranquillité.
+04-45到60級.md:1577｜說明｜瀑布沿大路往祥和育所方向找。｜Cherche la cascade le long de la route vers le Berceau de la tranquillité.
 04-45到60級.md:1606｜說明｜安荷在瑪露克附近找。｜Anhe se trouve près de Marrosis.
 04-45到60級.md:1630｜說明｜灰燼在戴根廢墟中央，附近有精英末日守衛，58 級單人要小心；沒拿到骨灰，就略過山脈法杖與其後續；不需要法杖的山頂任務照做。｜Les cendres se trouvent au milieu de Dae'gun, avec un garde funeste élite à proximité ; au niveau 58, sois prudent en solo. Si tu ne peux pas les obtenir, saute seulement les étapes de 92335, 90647, 92169, 92833 et 93848 (étapes 81, 83, 91, 92, 99, 105, 123-126 et 128) et fais le reste. Si tu n'as pas pu prendre les cendres, saute le Bâton de la montagne et sa suite. Fais quand même les quêtes du sommet qui n'ont pas besoin du bâton.
 04-45到60級.md:1630｜說明｜灰燼在戴根廢墟中央，附近有精英末日守衛，58 級單人要小心；沒拿到骨灰，就略過山脈法杖與其後續｜Les cendres se trouvent au milieu de Dae'gun, avec un garde funeste élite à proximité ; au niveau 58, sois prudent en solo. Si tu ne peux pas les obtenir, saute seulement les étapes de 92335, 90647, 92169, 92833 et 93848 (étapes 81, 83, 91, 92, 99, 105, 123-126 et 128) et fais le reste. Si tu n'as pas pu prendre les cendres, saute le Bâton de la montagne et sa suite.
@@ -13836,8 +13836,8 @@
 04-45到60級.md:1678｜說明｜解放諾達希爾樹根下原本就在的幽光，不是在空地用道具召出來；在樹根一帶找。｜Libère la lueur qui se trouve déjà sous les racines de Nordrassil, au lieu de l'invoquer avec un objet dans la clairière. Cherche autour des racines.
 04-45到60級.md:1678｜說明｜在樹根一帶找。｜Cherche autour des racines.
 04-45到60級.md:1679｜說明｜遺骸在諾達希爾一帶找。｜Cherche les restes aux alentours de Nordrassil.
-04-45到60級.md:1692｜說明｜先開永恆山峰飛行點；再飛污化丘陵交山脈法杖的三個前置，之後轉永望鎮送郵包、做郵件這串後飛回山上；離山時經污化丘陵飛永望鎮，最後依是否要繞菲拉斯 亂羽高地選航線。｜Débloque d'abord le point de vol du Summit of Eternity. Vole ensuite à Tainted Foothills rendre les trois prérequis du Bâton de la montagne, puis à Long-guet livrer le colis, faire la chaîne du courrier et retourner à la montagne. En quittant la montagne, vole à Long-guet en passant par Tainted Foothills ; enfin, choisis ton itinéraire selon que tu passes ou non par les Hautes-terres de Plumeronce, à Féralas.
-04-45到60級.md:1693｜說明｜古野村、哀悼之眠與祥和育所的任務都在大路兩側，殺怪和撿東西可一起做。｜Les quêtes de Old Grove Village, de Mourning's Rest et de Cradle of Tranquility sont des deux côtés de la grande route ; tu peux tuer les monstres et ramasser les objets en même temps.
+04-45到60級.md:1692｜說明｜先開永恆山峰飛行點；再飛污化丘陵交山脈法杖的三個前置，之後轉永望鎮送郵包、做郵件這串後飛回山上；離山時經污化丘陵飛永望鎮，最後依是否要繞菲拉斯 亂羽高地選航線。｜Débloque d'abord le point de vol du Sommet d’Éternité. Vole ensuite aux Contreforts Souillés rendre les trois prérequis du Bâton de la montagne, puis à Long-guet livrer le colis, faire la chaîne du courrier et retourner à la montagne. En quittant la montagne, vole à Long-guet en passant par les Contreforts Souillés ; enfin, choisis ton itinéraire selon que tu passes ou non par les Hautes-terres de Plumeronce, à Feralas.
+04-45到60級.md:1693｜說明｜古野村、哀悼之眠與祥和育所的任務都在大路兩側，殺怪和撿東西可一起做。｜Les quêtes de Old Grove Village, du Repos du deuil et du Berceau de la tranquillité sont des deux côtés de la grande route ; tu peux tuer les monstres et ramasser les objets en même temps.
 04-45到60級.md:1694｜說明｜拿法杖下山時，一起送郵包並完成郵件後續（93197→93406→93269）。｜En redescendant avec le bâton, livre aussi le colis et termine la suite du courrier (93197 → 93406 → 93269).
 04-45到60級.md:1695｜說明｜可跳過｜92335 的骨灰在戴根廢墟中央，旁邊有精英末日守衛；單人拿不到就略過山脈法杖與其後續（92335、90647、92169、92833、93848）；92317、92500 照樣回隱士洞交，郵件這串和 93127、93407、93547、93584、92533、92017 不需要法杖，照做。｜Facultatif : Les cendres de 92335 sont au milieu de Dae'gun, à côté d'un garde funeste élite. Si tu ne peux pas les prendre en solo, saute le Bâton de la montagne et sa suite (92335, 90647, 92169, 92833, 93848). Rends quand même 92317 et 92500 à la Grotte de l'ermite ; la chaîne du courrier et 93127, 93407, 93547, 93584, 92533 et 92017 n'ont pas besoin du bâton, fais-les.
 04-45到60級.md:1700｜說明｜可跳過｜93615 夏拉卡（31.3, 50.3，馬羅希斯旁）的小貓散在山裡，位置不明，可略過。93521 維漢身旁書架上的研究報告、99670 回去找傑瑞曼，前置不明，路線不接。｜Facultatif : 93615 : les chatons de Shalla'kal (31.3, 50.3, près de Marrosis) sont dispersés dans la montagne et leur position est inconnue ; tu peux la sauter. 93521 (le rapport de recherche sur l'étagère près de Vehan) et 99670 (retourner voir Jeremiah) ont un prérequis inconnu ; l'itinéraire ne les prend pas.
@@ -13847,12 +13847,12 @@
 05-副本.md:1543｜說明｜每次停下都再和他說話。｜Reparle-lui chaque fois qu'il s'arrête.
 05-副本.md:1528｜說明｜從艾薩拉經奧格瑪且滿 54 級時，可向公告員高拉克接 7492。在莫沙徹營地交塔羅並先接 7489。飛到莫沙徹營地後，找拉瑞斯小亭的埃斯托爾迪。5527 可從月光林地接；到希利蘇斯南風村取匣、回月光林地永夜港交後才有 5526，可留到晚一趟。｜En venant d'Azshara par Orgrimmar au niveau 54, tu peux prendre 7492 auprès du héraut Gorlach. Rends Talo au camp Mojache et prends d'abord 7489. Une fois au camp Mojache, va voir Estoldi au kiosque de Larissa. Tu peux prendre 5527 depuis Reflet-de-Lune. Récupère la caisse à Southwind, à Silithus, et rends-la à Havrenuit, à Reflet-de-Lune, pour obtenir 5526 ; tu peux la garder pour un tour ultérieur.
 04-45到60級.md:1798｜說明｜可跳過｜超級測蛋器只在撿到蛋、還能交時才去；沒撿的不用折返。｜Facultatif : Ne va chercher le Super-Oeuf-O-Matic que si tu as ramassé les œufs et peux encore les rendre. Inutile de faire demi-tour pour ceux que tu n'as pas ramassés.
-05-副本.md:1677｜說明｜在雷霆崖西側高原接。｜À prendre sur le plateau ouest des Pitons-du-Tonnerre.
+05-副本.md:1677｜說明｜在雷霆崖西側高原接。｜À prendre sur le plateau ouest de Thunder Bluff.
 05-副本.md:1683｜說明｜在副本內找滲漏軟泥怪｜Trouve la vase suintante à l'intérieur du donjon.
 05-副本.md:1661｜說明｜入口→泰坦遺跡沿途收四色水晶→在無色水晶旁一起處理水池目標。｜Entrée → ruines des Titans, en ramassant les quatre cristaux de couleur en chemin → occupe-toi des objectifs du bassin à côté du cristal incolore.
 05-副本.md:1691｜說明｜先接 95928。若在營地沒有其他任務可接，直接跟隊進本。｜Prends d'abord 95928. Si tu n'as plus d'autre quête à prendre au camp, entre directement dans le donjon avec le groupe.
 05-副本.md:1692｜說明｜永恆版新增五人副本。由馬紹爾營地北側上坡，泰坦門前可用安戈洛採集的能量水晶。安戈洛約 48.10, 6.10 是泰坦建築的外側路標，請往建築內找入口。｜Nouveau donjon à cinq joueurs de la version Forever. Monte la pente au nord du Refuge des Marshal ; devant la porte des Titans, tu peux utiliser les cristaux d'énergie récoltés à Un'Goro. Les coordonnées d'Un'Goro à 48.10, 6.10 marquent l'extérieur du bâtiment des Titans ; cherche l'entrée à l'intérieur du bâtiment.
-05-副本.md:1673｜說明｜前往月光林地途中，經雷霆崖時可先到莫高雷西北找 Mayena Earthseeker。回安戈洛環形山 馬紹爾營地後，沿北邊石階往上找泰坦建築；97049、95926 在幽暗城煉金區接，西瘟疫之地・第三次離開幽暗城前先接。｜En allant à Reflet-de-Lune, en passant par les Pitons-du-Tonnerre, tu peux d'abord aller au nord-ouest de Mulgore voir Mayena Earthseeker. De retour au Refuge des Marshal, à Un'Goro, monte les marches de pierre au nord pour trouver le bâtiment des Titans. Prends 97049 et 95926 au quartier de l'alchimie de Fossoyeuse, à prendre avant de quitter Fossoyeuse pour la troisième fois, aux Maleterres de l'ouest.
+05-副本.md:1673｜說明｜前往月光林地途中，經雷霆崖時可先到莫高雷西北找 Mayena Earthseeker。回安戈洛環形山 馬紹爾營地後，沿北邊石階往上找泰坦建築；97049、95926 在幽暗城煉金區接，西瘟疫之地・第三次離開幽暗城前先接。｜En allant à Reflet-de-Lune, en passant par Thunder Bluff, tu peux d'abord aller au nord-ouest de Mulgore voir Mayena Earthseeker. De retour au Refuge des Marshal, à Un'Goro, monte les marches de pierre au nord pour trouver le bâtiment des Titans. Prends 97049 et 95926 au quartier de l'alchimie de Fossoyeuse, à prendre avant de quitter Fossoyeuse pour la troisième fois, aux Maleterres de l'ouest.
 05-副本.md:1664｜說明｜安戈洛環形山 1449 48.10, 6.10（泰坦建築外側路標，請往建築內找入口）｜Un'Goro 1449 48.10, 6.10 (repère extérieur du bâtiment des Titans ; cherche l'entrée à l'intérieur du bâtiment)
 04-45到60級.md:1860｜說明｜可跳過｜暗翼蝠（6135）在東瘟疫；希利蘇斯這站也略過組隊精英。｜Facultatif : La chauve-souris ailes-sombres (6135) se trouve aux Maleterres de l'est. Saute aussi les élites en groupe de Silithus à cette étape.
 04-45到60級.md:1938｜說明｜永夜港兩位 NPC 的交接在同一座村。｜Les deux PNJ de Havrenuit pour la remise sont dans le même village.
@@ -13864,7 +13864,7 @@
 05-副本.md:1809｜說明｜滿 55 級後從冬泉谷 永望鎮飛奧格瑪，再搭飛艇到東部王國先做下層 4903，回卡加斯高圖斯接 4941。可於貧瘠之地 棘齒城後回奧格瑪智慧谷向伊崔格、索爾交接並留 4974。57 級後回幽暗城煉金區接 4769，再飛卡加斯交給薇薇安，接 4768。下層至少一人完成晉升印章兩段，帶印章開門；已有持章隊友可直接打上層。｜Une fois niveau 55, vole de Long-guet, à Berceau-de-l'Hiver, jusqu'à Orgrimmar, puis prends le zeppelin vers les Royaumes de l'Est et fais d'abord 4903 à l'étage inférieur ; retourne à Kargath prendre 4941. Après Cabestan, dans Les Tarides, tu peux retourner à la Vallée de la Sagesse, à Orgrimmar, pour remettre des quêtes à Eitrigg et à Thrall et garder 4974. Après le niveau 57, retourne au quartier de l'alchimie de Fossoyeuse prendre 4769, puis vole à Kargath la rendre à Vivian et prendre 4768. À l'étage inférieur, au moins un joueur doit terminer les deux étapes du sceau d'ascension et ouvrir la porte avec le sceau. Si un coéquipier a déjà le sceau, tu peux directement faire l'étage supérieur.
 05-副本.md:1782｜說明｜沿熊怪通道找枯萎之喉與骨鼻，兩者在不同支路｜Suis le passage des ours pour trouver Rida-Racine et Os-de-Nez ; ils sont sur deux embranchements différents.
 05-副本.md:1756｜說明｜入口熊怪通道沿路收黑喉袋子→地下根系區收諾達希爾根帽→枯萎之喉與骨鼻的岔路→血鬃長老取儀祭圖騰。｜Passage des ours à l'entrée : ramasse les sacs de Black Throat en chemin → zone des racines souterraines, ramasse les chapeaux de racine de Nordrassil → embranchement de Rida-Racine et Os-de-Nez → l'ancien Crinière-sanglante donne le totem du rite.
-05-副本.md:1767｜說明｜在瓦羅莫克找傑迪加接 92346。同站可到奧汀克接 92069；滿 55 級再回艾薩拉找 Ekkal。經棘齒城回卡林多時，先飛雷霆崖到長者高地交傑迪加的信、接 92343，再往莫高雷找穆倫·地怒。最後飛瓦羅莫克，由艾薩拉地道前往副本。92343、97198 留到下次雷霆崖和莫高雷回程交。｜Va voir Jediga à Valormok pour prendre 92346. Dans la même étape, tu peux aller voir Ogtinc à Valormok pour prendre 92069. Une fois niveau 55, retourne à Azshara voir Ekkal. En retournant à Kalimdor par Cabestan, vole d'abord aux Pitons-du-Tonnerre, rends la lettre de Jediga sur la Corniche des Anciens, prends 92343, puis va au nord de Mulgore voir Muln Rageterre. Enfin, vole à Valormok et prends le tunnel d'Azshara vers le donjon. Garde 92343 et 97198 pour les rendre au retour aux Pitons-du-Tonnerre et à Mulgore.
+05-副本.md:1767｜說明｜在瓦羅莫克找傑迪加接 92346。同站可到奧汀克接 92069；滿 55 級再回艾薩拉找 Ekkal。經棘齒城回卡林多時，先飛雷霆崖到長者高地交傑迪加的信、接 92343，再往莫高雷找穆倫·地怒。最後飛瓦羅莫克，由艾薩拉地道前往副本。92343、97198 留到下次雷霆崖和莫高雷回程交。｜Va voir Jediga à Valormok pour prendre 92346. Dans la même étape, tu peux aller voir Ogtinc à Valormok pour prendre 92069. Une fois niveau 55, retourne à Azshara voir Ekkal. En retournant à Kalimdor par Cabestan, vole d'abord à Thunder Bluff, rends la lettre de Jediga sur la Corniche des Anciens, prends 92343, puis va au nord de Mulgore voir Muln Rageterre. Enfin, vole à Valormok et prends le tunnel d'Azshara vers le donjon. Garde 92343 et 97198 pour les rendre au retour à Thunder Bluff et à Mulgore.
 08-保留物品.md:43｜說明｜沙普塔隆的爪子，碎木崗哨｜Griffe de Shaptalon, poste de Bois-brisé
 08-保留物品.md:44｜說明｜烏薩茍斯的爪子，碎木崗哨｜Griffe d'Usagos, poste de Bois-brisé
 08-保留物品.md:45｜說明｜薩杜布拉的頭顱，碎木崗哨｜Crâne de Sadubra, poste de Bois-brisé
@@ -13883,7 +13883,7 @@
 06-路線外任務.md:79｜說明｜經過「捐獻符文布」的接交地點時一併做，不必專程折返。｜Faites « Un don d'étoffe runique » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:82｜說明｜經過「更多的符文布」的接交地點時一併做，不必專程折返。｜Faites « Encore de l'étoffe runique » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:115｜說明｜有學對應專業或紮營時順手做，到申德村交。｜Fais-la si tu as appris la profession correspondante ou si tu campes ; rends-la au Village de Shenthul.
-06-路線外任務.md:155｜說明｜經過 Wendel Mathers 附近時再接，回城或交件時順手完成。｜Prenez-la en passant près de Wendel Mathers ; terminez-la en revenant en ville ou en rendant des quêtes.
+06-路線外任務.md:155｜說明｜經過 Wendel Mathers 附近時再接，回城或交件時順手完成。｜Prends-la en passant près de Wendel Mathers ; termine-la en revenant en ville ou en rendant des quêtes.
 06-路線外任務.md:196｜說明｜經過「返回詛咒之地」的接交地點時一併做，不必專程折返。｜Faites « Retour aux Terres foudroyées » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:197｜說明｜經過「收集破碎的護符」的接交地點時一併做，不必專程折返。｜Faites « Réunir les morceaux de l'Amulette brisée. » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:229｜說明｜經過「心急的伍特」的接交地點時一併做，不必專程折返。｜Faites « Droit au Whuut » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
@@ -13945,7 +13945,7 @@
 06-路線外任務.md:697｜說明｜經過「塔蕾莎的禮物」的接交地點時一併做，不必專程折返。｜Faites « Le cadeau de Taretha » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:730｜說明｜經過「淒涼之地的科卡爾部族」的接交地點時一併做，不必專程折返。｜Faites « Les Kolkar de Désolace » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:732｜說明｜經過「破碎之淚」的接交地點時一併做，不必專程折返。｜Faites « Larmes brisées » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
-06-路線外任務.md:738｜說明｜經過 Molkar 附近時再接，回城或交件時順手完成。｜Prenez-la en passant près de Molkar ; terminez-la en revenant en ville ou en rendant des quêtes.
+06-路線外任務.md:738｜說明｜經過 Molkar 附近時再接，回城或交件時順手完成。｜Prends-la en passant près de Molkar ; termine-la en revenant en ville ou en rendant des quêtes.
 06-路線外任務.md:762｜說明｜經過「黑龍幻象」的接交地點時一併做，不必專程折返。｜Faites « Illusions d'Occulus » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:809｜說明｜經過「通過試煉」的接交地點時一併做，不必專程折返。｜Faites « Le dernier voyage » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:812｜說明｜經過「返回藏寶海灣」的接交地點時一併做，不必專程折返。｜Faites « Retour à Baie-du-Butin » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
@@ -13954,7 +13954,7 @@
 06-路線外任務.md:820｜說明｜經過「紮米克的困擾」的接交地點時一併做，不必專程折返。｜Faites « La diversion de Zamek » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:822｜說明｜經過「精鐵礦石」的接交地點時一併做，不必專程折返。｜Faites « Minerai d'indurium » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:824｜說明｜經過「贊吉爾的藥劑和蠢人酒」的接交地點時一併做，不必專程折返。｜Faites « La bière du sot » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
-06-路線外任務.md:825｜說明｜經過「灌醉侏儒」的接交地點時一併做，不必專程折返。｜Faites « Saoulez les gnomes » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
+06-路線外任務.md:825｜說明｜經過「灌醉侏儒」的接交地點時一併做，不必專程折返。｜Fais « Saoulez les gnomes » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:826｜說明｜經過「向菲茲巴布報告」的接交地點時一併做，不必專程折返。｜Faites « Le compte rendu à Fizzlebub » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:828｜說明｜經過「蠢人酒」的接交地點時一併做，不必專程折返。｜Faites « Bière du sot » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:834｜說明｜經過「必是此地」的接交地點時一併做，不必專程折返。｜Faites « Ça doit être ici » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
@@ -14002,7 +14002,7 @@
 06-路線外任務.md:1221｜說明｜經過「黑暗籠罩」的接交地點時一併做，不必專程折返。｜Faites « Le couvert de l'obscurité » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:1222｜說明｜經過「惡魔獵手」的接交地點時一併做，不必專程折返。｜Faites « Le chasseur de démons » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:1223｜說明｜經過「洛拉姆斯」的接交地點時一併做，不必專程折返。｜Faites « Loramus » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
-06-路線外任務.md:1224｜說明｜經過「惡魔拉瑟萊克」的接交地點時一併做，不必專程折返。｜Faites « Vous êtes Rakh'likh, démon » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
+06-路線外任務.md:1224｜說明｜經過「惡魔拉瑟萊克」的接交地點時一併做，不必專程折返。｜Fais « Tu es Rakh'likh, démon » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:1239｜說明｜經過「血瓣花除草器」的接交地點時一併做，不必專程折返。｜Faites « La baguette Pétale-de-sang » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:1251｜說明｜經過「林克的冒險」的接交地點時一併做，不必專程折返。｜Faites « L'aventure de Linken » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:1315｜說明｜經過「貝蒂娜·比格辛克」的接交地點時一併做，不必專程折返。｜Faites « Betina Bigglezink » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
@@ -14023,5 +14023,5 @@
 06-路線外任務.md:2163｜說明｜經過「瓦薩拉克領主護符的右半塊」的接交地點時一併做，不必專程折返。｜Faites « Le morceau droit de l'amulette du seigneur Valthalak » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:2168｜說明｜經過「回到原點」的接交地點時一併做，不必專程折返。｜Faites « Retour au commencement » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:2169｜說明｜經過「烈焰三巨頭」的接交地點時一併做，不必專程折返。｜Faites « Les trois rois des flammes » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
-04-45到60級.md:500｜說明｜斯通納德已開就從惡齒村選斯通納德（經卡加斯等已開點轉乘）；未開就飛羅格瑪，沿南側道路經 Terral’s Watch 南下悲傷沼澤，到斯通納德開點。沿南方道路進詛咒之地，到北部兩名血法師（50.64, 14.30）。｜Si Pierrêche est débloqué, choisis Pierrêche depuis le Village des Revantusk (correspondance par des points débloqués comme Kargath) Sinon, vole à Rog'mar, suis la route du sud en passant par Terral's Watch vers le sud jusque dans le Marais des Chagrins et débloque Pierrêche. Suis la route du sud jusqu'aux Terres foudroyées et va voir les deux mages de sang au nord (50.64, 14.30).
+04-45到60級.md:500｜說明｜斯通納德已開就從惡齒村選斯通納德（經卡加斯等已開點轉乘）；未開就飛羅格瑪，沿南側道路經 Terral’s Watch 南下悲傷沼澤，到斯通納德開點。沿南方道路進詛咒之地，到北部兩名血法師（50.64, 14.30）。｜Si Pierrêche est débloqué, choisis Pierrêche depuis le Village des Revantusk (correspondance par des points débloqués comme Kargath) Sinon, vole à Rog'mar, suis la route du sud en passant par le Guet de Terral vers le sud jusque dans le Marais des Chagrins et débloque Pierrêche. Suis la route du sud jusqu'aux Terres foudroyées et va voir les deux mages de sang au nord (50.64, 14.30).
 04-45到60級.md:1535｜說明｜有隊伍再做｜『苦痛者』瑟拉史卓斯、裂皮、甦醒魔灰軟泥怪都是精英；單人跳過這三件，96322 也一起略過。｜Celastrus l'Amer, Sunderbark et la gelée cendrée éveillée sont des élites ; saute-les en solo, ainsi que 96322.

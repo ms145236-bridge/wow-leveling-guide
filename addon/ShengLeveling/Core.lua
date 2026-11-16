@@ -146,11 +146,11 @@ local function refresh()
   if o then N.Set(o.map, o.x, o.y, o.name)
   elseif s and s.via and state.cur and state.steps[state.cur].s == s then
     local p = E.ViaTarget(state.steps[state.cur]) -- 好幾個座標的交通：指向下一個還沒走到的點
-    N.Set(p[1], p[2], p[3], MG.Clean(E.Title(s)))
+    N.Set(p[1], p[2], p[3], MG.Clean(E.Title(s, true)))
   elseif s and (s.x or s.more) then
     arrowStep = s
     local p = navPoint(s)
-    N.Set(p[1], p[2], p[3], MG.Clean(E.Title(s)))
+    N.Set(p[1], p[2], p[3], MG.Clean(E.Title(s, true)))
   else N.Clear() end
   MG.try("地圖標點", MG.P.Update, state) -- 箭頭挑好群之後才畫（目前步驟的實心點跟著箭頭）
 end
@@ -201,6 +201,7 @@ f:SetScript("OnUpdate", function(_, dt)
       local d = tostring((E.Detour(lastState))) .. tostring(danger) .. tostring(fp)
       if d ~= lastDetour then lastDetour = d; dirty = true end
       end)
+      if moved and lastState and not lastState.instance then MG.try("地圖標點", MG.P.Update, lastState) end -- 走進／走出順路點的顯示範圍（簽章沒變就不重畫）
       MG.C.memo = nil
     end
   end
@@ -235,12 +236,22 @@ local function routeQuestsByTitle(title)
 end
 local function autoOn() return UI.Get("auto") and not IsShiftKeyDown() end
 local optQ = {} -- 接任務那步標了「可跳過」的任務
+local dungQ = {} -- 只在副本前置接的任務 → 那些副本的 ID（全部選了不打就不自動接）
 for _, st in ipairs(R.stations) do
-  for _, s in ipairs(st.steps) do if s.t == "accept" and s.opt then optQ[s.q] = true end end
+  for _, s in ipairs(st.steps) do
+    if s.t == "accept" and s.opt then optQ[s.q] = true end
+    if s.t == "accept" and s.q and dungQ[s.q] ~= false then
+      if st.dungeon then local l = dungQ[s.q] or {}; l[#l + 1] = st.id; dungQ[s.q] = l else dungQ[s.q] = false end
+    end
+  end
 end
--- 路線上的任務；可跳過的只在設定開啟或已在日誌時算
+-- 路線上的任務，和引擎的判斷一致：在日誌裡的都算（交任務）；手動略過的、可跳過沒開（補經驗補回的除外）、副本選了不打的不自動接
 local function inRoute(id)
-  return id and not (issecretvalue and issecretvalue(id)) and id > 0 and R.quests[id] ~= nil and not (optQ[id] and not UI.Get("optional") and not C.IsOnQuest(id))
+  if not (id and not (issecretvalue and issecretvalue(id)) and id > 0 and R.quests[id] ~= nil) then return false end
+  if C.IsOnQuest(id) then return true end
+  if MG.db.skip["a:" .. id] or (optQ[id] and not UI.Get("optional") and not E.Fill[id]) then return false end
+  for _, d in ipairs(dungQ[id] or {}) do if not MG.db.dNo[d] then return true end end
+  return not dungQ[id]
 end
 
 -- 安全網：打開目前「接」步驟的 NPC，卻沒有這個任務可接 → 先跳過（升級或交任務後再看）。
@@ -361,10 +372,10 @@ local function onEvent(_, event, ...)
     return
   end
   if not MG.db then return end
-  -- 爐石回 X：施法成功後 60 秒內換了區域（傳送到了）才勾目前的「爐」步驟；zhTW 看得出爐石綁在別的地方（和 X 互不包含）就不勾
+  -- 爐石回 X：施法成功後 60 秒內換了區域（傳送到了）才勾目前的「爐」步驟；看得出爐石綁在別的地方（zhTW 的綁點，或其他語言記下的 boundK，和 X 互不包含）就不勾
   if hearthAt and (event == "PLAYER_ENTERING_WORLD" or event == "ZONE_CHANGED_NEW_AREA" or event == "ZONE_CHANGED" or event == "ZONE_CHANGED_INDOORS") then
     local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
-    local k, b = cur and (cur.s.bindK or cur.s.bind), MG.gameZh and C.Bind()
+    local k, b = cur and (cur.s.bindK or cur.s.bind), MG.gameZh and C.Bind() or MG.db.boundK
     local other = k and b and b ~= "" and not (b:find(k, 1, true) or k:find(b, 1, true))
     if GetTime() - hearthAt <= 60 and not other then latchCurrent("hearth") end
     hearthAt = nil
@@ -400,12 +411,22 @@ local function onEvent(_, event, ...)
     if unit == "player" and not (issecretvalue and issecretvalue(spell)) and HEARTH_SPELL[spell] then hearthAt = GetTime() end
     return
   elseif event == "HEARTHSTONE_BOUND" then
-    -- 綁爐石：目前這步是綁爐石就勾掉（任何語言；zhTW 的 GetBindLocation 比對只是「已經綁好」的捷徑）。
-    -- 記下綁的是哪間（boundK）：之後同一間的綁爐石步驟直接算過；綁在路線沒寫的地方就清掉
-    local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
-    local bind = cur and cur.s.t == "bind"
-    if bind then MG.db.latch[cur.key] = true end
-    MG.db.boundK = bind and (cur.s.bindK or cur.s.bind) or nil
+    -- 綁爐石：本站哪一步的旅店（人在那步座標旁邊，或 zhTW 的 GetBindLocation 對得上；目前這步是沒座標的綁爐石也算）就勾那步，不必是目前步驟。
+    -- 記下綁的是哪間（boundK）：之後同一間的綁爐石步驟直接算過。對不到路線的旅店時，只有 zhTW 看得出綁在別處才清掉
+    local map, x, y = C.Position()
+    local b = MG.gameZh and C.Bind()
+    local hit
+    for i, step in ipairs(lastState and not lastState.instance and lastState.steps or {}) do
+      local s, k = step.s, step.s.bindK or step.s.bind
+      if not hit and s.t == "bind" and ((s.x and map == s.map and x and (x - s.x) ^ 2 + (y - s.y) ^ 2 <= 25)
+        or (b and b ~= "" and k and (b:find(k, 1, true) or k:find(b, 1, true))) or (i == lastState.cur and not s.x and not b)) then hit = step end
+    end
+    if hit then
+      MG.db.latch[hit.key] = true
+      MG.db.boundK = hit.s.bindK or hit.s.bind
+    elseif b and b ~= "" then
+      MG.db.boundK = nil
+    end
   elseif event == "TRAINER_SHOW" then
     E.Trained(lastState)
   elseif event == "PLAYER_LEVEL_UP" then
@@ -474,10 +495,10 @@ local function onEvent(_, event, ...)
       for _, st in ipairs(E.stations) do
         for _, step in ipairs(st.list) do
           local s = step.s
-          if not dest and s.t == "fp" and s.node == cur.s.to and s.x then dest = s end
+          if not dest and s.t == "fp" and (s.nodeK or s.node) == cur.s.to and s.x then dest = s end
         end
       end
-      if dest and not isKnown(dest.map, dest.x, dest.y, dest.node) then MG.msg(string.format(L["飛行地圖上沒有%s：還沒開過這個鳥點，或中間的鳥點沒開，要先跑過去開"], L[cur.s.to] or cur.s.to)) end
+      if dest and not isKnown(dest.map, dest.x, dest.y, dest.node) then MG.msg(string.format(L["飛行地圖上沒有%s：還沒開過這個鳥點，或中間的鳥點沒開，要先跑過去開"], cur.s.toL or cur.s.to)) end
     end
     -- 名字可能和路線寫的不同（譯名、稱號）：人旁邊的飛行管理員也一律記成開過
     local map, x, y = C.Position()
@@ -641,7 +662,7 @@ SlashCmdList.METROGUIDE = function(msg)
   msg = (msg or ""):lower():gsub("^%s+", ""):gsub("%s+$", "")
   if not MG.db then return end
   if msg == "probe" then MG.try("probe", probe)
-  elseif msg == "reset" then E.Realign(); MG.Refresh(true)
+  elseif msg == "realign" or msg == "reset" then E.Realign(); MG.Refresh(true) -- reset 是舊名
   elseif msg == "config" then UI.OpenOptions()
   elseif msg == "macro" then MG.try("目標巨集", MG.T.MakeMacro)
   elseif msg == "minimap" then UI.Set("minimap", true); UI.ApplySettings()
@@ -656,5 +677,8 @@ SlashCmdList.METROGUIDE = function(msg)
     end
   elseif msg:sub(1, 3) == "rec" then MG.Rec.Slash(msg:sub(4))
   elseif msg == "" then UI.Toggle()
-  else MG.msg(L["/slv 開關｜/slv probe 檢查報告｜/slv reset 重新對齊｜/slv config 設定｜/slv macro 建立目標巨集｜/slv minimap 顯示小地圖按鈕｜/slv rec 遊戲內記錄｜/slv lang 介面語言（auto｜en｜zh｜zhCN｜deDE｜frFR｜esES｜esMX｜ruRU｜koKR｜ptBR）"]) end
+  else
+    MG.msg(L["/slv 開關｜config 設定｜realign 重新對齊｜probe 檢查報告"])
+    MG.msg(L["/slv macro 目標巨集｜minimap 小地圖按鈕｜rec 遊戲內記錄｜lang 介面語言"])
+  end
 end

@@ -134,7 +134,7 @@ end
 function I.Create(bar)
   I.bar = bar
   for k = 1, MAX do
-    local b = CreateFrame("Button", "MetroGuideItemButton" .. k, UIParent, "SecureActionButtonTemplate")
+    local b = CreateFrame("Button", "MetroGuideItemButton" .. k, bar, "SecureActionButtonTemplate") -- 掛在底座下：跟著步驟列縮放、透明度
     b:RegisterForClicks("AnyUp", "AnyDown")
     b:SetFrameStrata(bar:GetFrameStrata())
     b:SetFrameLevel((bar:GetFrameLevel() or 1) + 20)

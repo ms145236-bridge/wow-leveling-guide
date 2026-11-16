@@ -686,8 +686,8 @@
 03-30到45級.md:612｜說明｜從加基森往北沿大路進千針石林閃光平原。｜From Gadgetzan follow the road north into the Shimmering Flats in Thousand Needles.
 03-30到45級.md:736｜說明｜從洛克莫丹南邊大路往南出山口進荒蕪之地，沿路往南到挖掘營地。｜From the south road in Loch Modan, go south out of the pass into the Badlands and follow the road south to the Dig Site.
 03-30到45級.md:736｜說明｜荒蕪之地沒有聯盟飛行點｜There's no Alliance flight point in the Badlands.
-03-30到45級.md:796｜說明｜跟著加林走出食人妖營地，路上的怪會打他要保護；護送完再去他的營地開保險箱。｜Follow Galen Goodward out of the ogre camp; monsters along the way will attack him, so protect him. After the escort, go to his camp and open the safe.
-03-30到45級.md:796｜說明｜跟著加林走出食人妖營地，路上的怪會打他要保護｜Follow Galen Goodward out of the ogre camp; monsters along the way will attack him, so protect him.
+03-30到45級.md:796｜說明｜跟著加林走出食人妖營地，路上的怪會打他要保護；護送完再去他的營地開保險箱。｜Follow Galen Goodward out of the troll camp; monsters along the way will attack him, so protect him. After the escort, go to his camp and open the safe.
+03-30到45級.md:796｜說明｜跟著加林走出食人妖營地，路上的怪會打他要保護｜Follow Galen Goodward out of the troll camp; monsters along the way will attack him, so protect him.
 03-30到45級.md:796｜說明｜護送完再去他的營地開保險箱。｜After the escort, go to his camp and open the safe.
 03-30到45級.md:1043｜說明｜羽月要塞南邊海岸的憎世納迦都會掉鱗片，收齊再回要塞交。｜The Naga along the coast south of Feathermoon Stronghold all drop scales; collect them and return to the stronghold.
 03-30到45級.md:1060｜說明｜限時 6 分鐘，接任務前先回滿血、清掉圍欄附近的怪。｜Time limit of 6 minutes; before accepting, restore full health and clear the monsters near the pen.

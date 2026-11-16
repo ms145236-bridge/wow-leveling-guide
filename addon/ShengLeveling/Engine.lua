@@ -45,9 +45,11 @@ function E.Localize()
       s.npcG = s.npc
       if G then s.npcG, s.tgt = g.npc or s.npc, g.tgt; s.npcObj = g.npcObj end
       if en then
+        s.nodeK = s.node -- 鳥點中文名：飛行步驟的 to 用它對到鳥點（Core 的未開點提醒）
         s.npc, s.hint, s.text, s.node, s.preText, s.star = P(d.npc), P(d.hint), P(d.text), P(areas(d.nodeA) or d.node), P(d.preText), d.star
         s.npcObj = d.npcObj
-        s.desc, s.spot, s.bind, s.to, s.from = P(d.desc), P(d.spot), P(areas(d.bindA) or d.bind), nil, nil -- bind：爐石地點的介面語言名（build 從鳥點／地區名對照來；沒有就 nil，標題改用 hm 地圖名）
+        s.desc, s.spot, s.bind = P(d.desc), P(d.spot), P(areas(d.bindA) or d.bind) -- bind：爐石地點的介面語言名（build 從鳥點／地區名對照來；沒有就 nil，標題改用 hm 地圖名）
+        s.toL, s.fromL = P(areas(d.toA) or d.to), P(areas(d.fromA) or d.from) -- to／from 留中文（判斷用），顯示用 toL／fromL
         s.tagL = d.tag -- tag 本身是判斷用（怪多、副本前置鏈），顯示用 tagL
       end
     end
@@ -110,11 +112,10 @@ local raceMatch
 local function inList(list, v)
   for _, x in ipairs(list) do if x == v then return true end end
 end
+-- 路線的種族條件是 UnitRace 第 2 個回傳值（不隨語言變，例如 Scourge）；天裔精靈建置時統一寫成 Skyborne（見 E.Build 的 me.sky）
 function raceMatch(list)
   for _, r in ipairs(list) do
-    if r == me.race or r == me.raceL then return true end
-    -- 永恆新種族的寫法不一（部落天裔／塑風者天裔精靈）→ 互相包含就算
-    if me.raceL and me.raceL ~= "" and (r:find(me.raceL, 1, true) or me.raceL:find(r, 1, true)) then return true end
+    if r == me.race or (r == "Skyborne" and me.sky) then return true end
   end
 end
 function E.Applies(when)
@@ -162,9 +163,8 @@ function E.Build()
   end
   -- QuestieDB 把天裔精靈記成第 33（聯盟）、34（部落）位；遊戲給的種族編號不一定是這兩個，照陣營對過去
   me.bit = me.raceID
-  if (me.race and me.race:find("Sky")) or (me.raceL and me.raceL:find("天裔", 1, true)) then
-    me.bit = UnitFactionGroup("player") == "Alliance" and 33 or 34
-  end
+  me.sky = (me.race and me.race:find("Sky") or me.raceL and me.raceL:find("天裔", 1, true)) and true or false
+  if me.sky then me.bit = UnitFactionGroup("player") == "Alliance" and 33 or 34 end
   me.class = select(2, UnitClass("player"))
   wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt)
   local startKey = E.StartKey()
@@ -335,21 +335,25 @@ function E.FillPlan(st)
   -- 必做任務（不是可跳過、還沒交）的預估經驗，與它們的座標（算繞路用）
   local projected, seen, spots, cands = 0, {}, {}, {}
   -- 本站有交的任務才算任務經驗、本站有做或交的才算打怪經驗（在別站交的，到下一站前拿不到）
-  local hand, work = {}, {}
+  -- 組隊／精英任務（任一步標了）：單人不補
+  local hand, work, group = {}, {}, {}
+  local solo = not (IsInGroup and IsInGroup())
   for _, step in ipairs(st.list) do
     local s = step.s
     if s.q and s.t == "turnin" then hand[s.q] = true end
     if s.q and (s.t == "do" or s.t == "turnin") then work[s.q] = true end
+    if s.q and s.tag and (s.tag:find("隊伍", 1, true) or s.tag:find("組隊", 1, true) or s.tag:find("精英", 1, true)) then group[s.q] = true end
   end
   for _, step in ipairs(st.list) do
     local s, q = step.s, step.s.q
-    if q and E.Applies(s.when) and raceOK(q) and not turned(q) then
-      if not s.opt and not seen[q] then
+    if q and E.Applies(s.when) and raceOK(q) and not turned(q) and not MG.db.skip[step.key] and not excluded(q) then
+      -- 必做的，和已經接了的可跳過任務
+      if (not s.opt or C.IsOnQuest(q)) and not seen[q] then
         seen[q] = true
         info.questXP = info.questXP + (hand[q] and questXP(q, lv) or 0)
         info.killXP = info.killXP + (work[q] and killXP(q, lv) or 0)
       end
-      if s.opt and s.t == "accept" and not C.IsOnQuest(q) and lv >= ((R.quests[q] or {}).min or 0) and not cands[q] then
+      if s.opt and s.t == "accept" and not C.IsOnQuest(q) and not (solo and group[q]) and lv >= ((R.quests[q] or {}).min or 0) and not cands[q] then
         cands[q] = { q = q, xp = (hand[q] and questXP(q, lv) or 0) + (work[q] and killXP(q, lv) or 0), pts = {} }
       end
     end
@@ -604,7 +608,7 @@ function E.Locate(st)
   for _, step in ipairs(steps) do
     local s = step.s
     if s.t == "accept" and s.q then
-      if E.Applies(s.when) and not optOut(s) then acc[s.q] = true end -- 接取步驟本身不適用（種族、職業、可跳過沒開）就不算本站有接
+      if E.Applies(s.when) and not optOut(s) and not step.defer then acc[s.q] = true end -- 接取步驟本身不適用（種族、職業、可跳過沒開、日誌快滿先不接）就不算本站有接
       local need = s.pickLv or (R.quests[s.q] or {}).min -- 步驟沒寫接取等級就用任務資料的最低等級
       if need and lv < need and not C.IsOnQuest(s.q) and not turned(s.q) then lowQ[s.q] = need end
     end
@@ -1040,11 +1044,11 @@ function E.MakeUp(st, p)
 end
 
 -- 開了本職業訓練師（不是專業技能訓練師）：等級已到的「學」步驟都算做完，不管是哪一位訓練師
--- 跟職業訓練師說話：只勾已經走到的「去學技能」（目前提醒的那一個，或排在目前步驟前面的）；提前找訓練師不算，有沒有學不管
+-- 跟職業訓練師說話：只勾已經走到的「去學技能」（目前提醒的那一個、按「去」釘成目前步驟的，或排在目前步驟前面的）；提前找訓練師不算，有沒有學不管
 function E.Trained(state)
   if (IsTradeskillTrainer and IsTradeskillTrainer()) or not state or not state.steps then return end
   for i, step in ipairs(state.steps) do
-    if step.s.t == "train" and ((not state.na[i] and (state.train == i or (state.cur and i < state.cur))) or (state.trainHid and state.trainHid[i])) then MG.db.latch[step.key] = true end
+    if step.s.t == "train" and ((not state.na[i] and (state.train == i or (state.cur and i <= state.cur))) or (state.trainHid and state.trainHid[i])) then MG.db.latch[step.key] = true end
   end
 end
 -- 任務日誌滑鼠提示：在路線上 → 哪一站第幾步；不在 → 06 的判定，否則規則（灰 → 可放掉；路線任務的前置 → 值得做；其餘 → 之後順路）
@@ -1060,7 +1064,7 @@ function E.QuestNote(q)
   if qlv and qlv > 0 and (UnitLevel("player") or 0) - qlv > (C.GreenRange() or 8) then return L["不在路線上"], "可放掉", L["等級已過"] end
   local f = R.feeds and R.feeds[q]
   if f then return L["不在路線上"], "值得做", L["接後續："] .. questName(f) end
-  return L["不在路線上"], "之後順路", L["順路再做"]
+  return L["不在路線上"], "之後順路"
 end
 
 -- 任務出現的第一站（保留物品提示用）
@@ -1152,8 +1156,8 @@ end
 -- 副本站不在主線；它的前置（接／做／交）預設排進建議的主線站（pickAt），標「副本前置」。
 -- 任務日誌快滿（可接 < 3）時，建議等級比玩家高 5 級以上的副本前置先不接（之後再接）；主線任務不受影響。
 local function logFree()
-  local max = C_QuestLog and C_QuestLog.GetMaxNumQuestsCanAccept and C_QuestLog.GetMaxNumQuestsCanAccept() or 25
-  return (max or 25) - #(C.LogQuestIDs() or {})
+  local max = C_QuestLog and C_QuestLog.GetMaxNumQuestsCanAccept and C_QuestLog.GetMaxNumQuestsCanAccept() or 40 -- 永恆任務日誌 40 格
+  return (max or 40) - #(C.LogQuestIDs() or {})
 end
 
 -- 不經過 locate 的單步完成判定（副本分頁用；不動 fill）
@@ -1424,7 +1428,7 @@ end
 
 -- 步驟的顯示文字
 local VERB = setmetatable({}, { __index = function(_, t)
-  local zh = ({ train = "學", accept = "接", ["do"] = "做", turnin = "交", ["goto"] = "到", fp = "鳥", hearth = "爐", bind = "爐", fly = "飛", boat = "船", level = "練", travel = "行", need = "需", buy = "買" })[t]
+  local zh = ({ train = "學", accept = "接", ["do"] = "做", turnin = "交", ["goto"] = "到", fp = "鳥", hearth = "爐", bind = "綁", fly = "飛", boat = "船", level = "練", travel = "行", need = "需", buy = "買" })[t]
   return zh and L[zh]
 end })
 E.VERB = VERB
@@ -1464,7 +1468,8 @@ local function where(s)
   local zone = s.map and C.MapName(s.map)
   return (zone or "") .. (s.x and string.format(" %.0f, %.0f", s.x, s.y) or "")
 end
-function E.Title(s)
+-- 動詞框已經寫了動作，標題只留對象（飛｜奧格瑪）；full＝單獨顯示（箭頭）時的完整說法（飛往 奧格瑪）
+function E.Title(s, full)
   if s.t == "need" then return s.text or "" end
   if s.q then return E.QName(s.q) end
   -- 交通／到達沒有文字：只寫地點（動詞框已經是「去」）
@@ -1472,12 +1477,12 @@ function E.Title(s)
   if s.t == "travel" then return s.text and (E.Clause(s.text)) or (s.map and where(s)) or L["交通"]
   elseif s.t == "goto" then return s.text or (s.map and where(s)) or L["前往"]
   elseif s.t == "buy" then return (s.text or "") .. ((s.n or 1) > 1 and (" ×" .. s.n) or "")
-  elseif s.t == "fp" then return L["開鳥點："] .. (s.node or (s.map and C.MapName(s.map)) or "")
-  elseif s.t == "hearth" then return L["爐石回 "] .. (s.bind or (s.hm and C.MapName(s.hm)) or "")
-  elseif s.t == "bind" then return L["綁爐石："] .. (s.bind or (s.map and C.MapName(s.map)) or (s.hm and C.MapName(s.hm)) or "")
-  elseif s.t == "fly" then return L["飛往 "] .. (s.to or "")
-  elseif s.t == "boat" then return L["搭船／飛艇往 "] .. (s.to or "")
-  elseif s.t == "level" then return L["練到 %s 級"]:format(s.lv or "?")
-  elseif s.t == "train" then return L["去學技能："] .. (s.npc or "") .. (s.place and L["（%s）"]:format(s.place) or "") end
+  elseif s.t == "fp" then return (full and L["開鳥點："] or "") .. (s.node or (s.map and C.MapName(s.map)) or "")
+  elseif s.t == "hearth" then return (full and L["爐石回 "] or "") .. (s.bind or (s.hm and C.MapName(s.hm)) or "")
+  elseif s.t == "bind" then return (full and L["綁爐石："] or "") .. (s.bind or (s.map and C.MapName(s.map)) or (s.hm and C.MapName(s.hm)) or "")
+  elseif s.t == "fly" then return (full and L["飛往 "] or "") .. ((MG.uiZh and s.to or s.toL) or "")
+  elseif s.t == "boat" then return (full and L["搭船／飛艇往 "] or "") .. ((MG.uiZh and s.to or s.toL) or "")
+  elseif s.t == "level" then return L[full and "練到 %s 級" or "到 %s 級"]:format(s.lv or "?")
+  elseif s.t == "train" then return (full and L["去學技能："] or "") .. (s.npc or "") .. (s.place and L["（%s）"]:format(s.place) or "") end
   return s.text or ""
 end

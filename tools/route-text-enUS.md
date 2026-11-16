@@ -6,7 +6,7 @@
 
 檔名:行號｜類型｜中文原文｜英文
 
-01-第一段-1到12級.md:27｜站內交通｜跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克。完整轉乘見文首。｜From other starting zones, take the Durotar road south and enter the Valley of Trials from the east to find Kaltunk. See the travel notes above.
+01-第一段-1到12級.md:27｜站內交通｜跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克。完整轉乘見文首。｜From other starting zones, take the Durotar road south and enter the Valley of Trials from the east to find Kaltunk.
 01-第一段-1到12級.md:33｜標籤｜僅獸人／食人妖｜Orc/Troll only
 01-第一段-1到12級.md:33｜步驟說明｜持有試煉谷禮品券才接。｜Accept only if you have a Valley of Trials Gift Voucher.
 01-第一段-1到12級.md:33｜標籤｜可跳過｜Optional
@@ -152,7 +152,7 @@
 01-第一段-1到12級.md:256｜標籤｜僅獵人,戰士,盜賊｜Hunter/Warrior/Rogue only
 01-第一段-1到12級.md:259｜危險說明｜提拉加德城堡的樓梯和門框容易把樓上水兵一起引下來。先清外牆與門口。｜The stairs and doorways in Tiragarde Keep can pull sailors from upstairs. Clear the outer wall and entrance first.
 01-第一段-1到12級.md:260｜危險說明｜北岸的海巨人在納迦區活動。清掉周圍小怪再打，跑不動時從岸上撤。｜Sea giants roam the naga area on the north shore. Clear nearby mobs before pulling one. Retreat along the shore if you get in trouble.
-01-第一段-1到12級.md:266｜站內交通｜跨族起點先到血蹄村，再沿路往南上紅雲台地到納拉其營地。完整轉乘見文首。｜Coming from another starting zone? Head to Bloodhoof Village, then follow the road south up Red Cloud Mesa to Camp Narache. See the travel notes above.
+01-第一段-1到12級.md:266｜站內交通｜跨族起點先到血蹄村，再沿路往南上紅雲台地到納拉其營地。完整轉乘見文首。｜Coming from another starting zone? Head to Bloodhoof Village, then follow the road south up Red Cloud Mesa to Camp Narache.
 01-第一段-1到12級.md:269｜標籤｜僅牛頭人｜Tauren only
 01-第一段-1到12級.md:269｜步驟說明｜持有納拉其營地禮品券才接。｜Accept only if you have a Camp Narache Gift Voucher.
 01-第一段-1到12級.md:269｜標籤｜可跳過｜Optional
@@ -335,7 +335,7 @@
 01-第一段-1到12級.md:480｜練怪說明｜密集／一般怪／混有施法型鷹身人，先拉營地外側／莫高雷西北鷹身人營地，接近 12 級時補經驗｜Dense normal mobs at the harpy camp in northwest Mulgore. Pull along the edge to avoid casters. Grind here if close to level 12.
 01-第一段-1到12級.md:485｜標籤｜僅獵人,戰士,盜賊｜Hunter/Warrior/Rogue only
 01-第一段-1到12級.md:488｜危險說明｜菲茲普羅克礦坑會把巡邏與礦工一起拉入戰。先清外側，拿到筆記板就退出洞道。｜Patrols and miners can pull together inside the Venture Co. Mine. Clear the outside first, grab the clipboard, and leave the tunnel.
-01-第一段-1到12級.md:494｜站內交通｜跨族起點從布瑞爾南側飛艇塔下船，沿大道向西進喪鐘鎮。完整轉乘見文首。｜Coming from another starting zone? Get off at the zeppelin tower south of Brill and follow the road west to Deathknell. See the travel notes above.
+01-第一段-1到12級.md:494｜站內交通｜跨族起點從布瑞爾南側飛艇塔下船，沿大道向西進喪鐘鎮。完整轉乘見文首。｜Coming from another starting zone? Get off at the zeppelin tower south of Brill and follow the road west to Deathknell.
 01-第一段-1到12級.md:498｜站內提醒｜從墓穴內的 363 開始【僅不死族】。抵達喪鐘鎮後，可在暗影牧師薩維斯（1420 30.84, 66.20）接 364。若薩維斯未顯示任務，沿道路前往布瑞爾。｜Start with 363 inside the crypt (Undead only). Pick up 364 from Shadow Priest Sarvis (1420 30.84, 66.20). If he has no quest, follow the road to Brill.
 01-第一段-1到12級.md:498｜標籤｜僅不死族｜Undead only
 01-第一段-1到12級.md:499｜標籤｜僅不死族｜Undead only
@@ -13166,7 +13166,7 @@
 02-12到30級.md:888｜說明｜抵達碎木崗哨，找烏爾格拉開飛行點（1440 73.18, 61.59）。保留塔倫米爾爐石給東部王國回程；已綁別處且想在梣谷用，找旅店老闆凱利斯克。｜Arrive at Splintertree Post and find Vhulgra to learn the flight path (1440 73.18, 61.59). Keep your Tarren Mill hearth for the trip back to the Eastern Kingdoms; if you're bound elsewhere and want to use it in Ashenvale, find Innkeeper Kaylisk.
 03-30到45級.md:28｜說明｜向札瑞斯開飛行點。｜Learn Zarise's flight path.
 03-30到45級.md:180｜說明｜荊棘谷 藏寶海灣交給克拉茲克。｜Turn in to Krazek in Stranglethorn Vale Booty Bay.
-03-30到45級.md:183｜說明｜閃光平原六個接任務點相近，先接齊再繞一圈。車手送件 1111 要飛棘齒城一趟才做；交完向碼頭管理員迪茲維格接給克拉維爾的零件（1112），回閃光平原交給克拉維爾，做完送貨給地精（1114），再接車手的傳聞（1115）留到荊棘谷 藏寶海灣交。｜The six quest pickups at The Shimmering Flats are close together, so accept them all and then make one loop. Turn-in 1111 from the racer needs a trip to Ratchet first; after turning it in, get Kravel's parts (1112) from Wharfmaster Dizzywig, bring them back to The Shimmering Flats for Kravel Koalbeard, then deliver the goods to the goblin (1114) and pick up the racer's rumors (1115), which you save for turning in at Stranglethorn Vale Booty Bay.
+03-30到45級.md:183｜說明｜閃光平原六個接任務點相近，先接齊再繞一圈。車手送件 1111 要飛棘齒城一趟才做；交完向碼頭管理員迪茲維格接給克拉維爾的零件（1112），回閃光平原交給克拉維爾，做完送貨給地精（1114），再接車手的傳聞（1115）留到荊棘谷 藏寶海灣交。｜The six quest pickups at The Shimmering Flats are close together, so accept them all and then make one loop. Turn-in 1111 from the racer needs a trip to Ratchet first; after turning it in, get Kravel's parts (1112) from Wharfmaster Dizzywig, bring them back to The Shimmering Flats for Kravel Koalbeard, then do Delivery to the Gnomes (1114) and pick up the racer's rumors (1115), which you save for turning in at Stranglethorn Vale Booty Bay.
 03-30到45級.md:216｜說明｜一次只帶一頭年老的科多獸：用誘引器馴服後帶到斯米德身邊，等他開口說話，再點選科多獸，計數才會加一。｜Bring only one aged kodo at a time: tame it with the kodo lure, lead it to Smeed Scrabblescrew, wait for him to speak, then click the kodo to add to the count.
 03-30到45級.md:218｜說明｜沿南路過吉爾吉斯村，到葬影村向薩隆開飛行點。｜Follow the south road past Gill's village to Shadowprey Village and learn Thalon's flight path.
 03-30到45級.md:219｜說明｜在葬影村旅店向旅店老闆希科瓦（1443 24.09, 68.21）綁爐石。｜Set your hearth with Innkeeper Sikewa in the Shadowprey Village inn (1443 24.09, 68.21).
