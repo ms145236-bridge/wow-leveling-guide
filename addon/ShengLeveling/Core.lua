@@ -233,11 +233,12 @@ local function mapOf(node)
     nodeMap = {}
     for _, st in ipairs(R.stations) do
       for _, s in ipairs(st.steps) do
-        if s.t == "fp" and s.map and (s.nodeK or s.node) then nodeMap[s.nodeK or s.node] = s.map end
+        if s.t == "fp" and s.map and (s.nodeK or s.node) then nodeMap[s.nodeK or s.node] = s end
       end
     end
   end
-  return node and nodeMap[node]
+  local s = node and nodeMap[node]
+  if s then return s.map, s.x, s.y end
 end
 
 -- ── 自動接交任務（設定預設開；按住 Shift 暫停） ─────────────────────────────
@@ -453,6 +454,7 @@ local function onEvent(_, event, ...)
     if type(id) == "number" and not (issecretvalue and issecretvalue(id)) then
       E.session[id] = true
       wipe(MG.db.notNow) -- 交了任務：暫時接不到的重新看
+      if next(MG.db.skip) then E.RecomputeSkip() end
       trace.QUEST_TURNED_IN = id .. L["，事件當下已標記完成："] .. tostring(C.IsTurnedIn(id))
     end
   elseif event == "UNIT_SPELLCAST_SUCCEEDED" then
@@ -569,10 +571,11 @@ local function onEvent(_, event, ...)
     return
   elseif event == "PLAYER_CONTROL_GAINED" then
     if onTaxi then
-      -- 目的地對得到鳥點時，降落在那張地圖才勾（飛去別的地方不算）；對不到或讀不到位置照舊勾
+      -- 目的地對得到鳥點時，降落在那個鳥點附近才勾（飛去別張地圖、同張地圖的另一個鳥點都不算）；對不到或讀不到位置照舊勾
       local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
-      local dest, map = mapOf(cur and cur.s.to), C.Position()
-      if not (dest and map) or dest == map then latchCurrent("fly") end
+      local dest, dx, dy = mapOf(cur and cur.s.to)
+      local map, x, y = C.Position()
+      if not (dest and map) or (dest == map and not (dx and x and (x - dx) ^ 2 + (y - dy) ^ 2 > 100)) then latchCurrent("fly") end
       -- 下飛行：臨時航點收回，箭頭回到目前步驟
       MG.wpOverride = nil
       N.Forget()

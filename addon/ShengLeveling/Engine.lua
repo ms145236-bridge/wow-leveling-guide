@@ -1167,6 +1167,11 @@ function E.ToggleSkip(key)
   local skip = MG.db.skip
   local root = skip[key]
   if root then skip[root == true and key or root] = nil else skip[key] = key end
+  E.RecomputeSkip()
+end
+-- 交了任務也重算：略過的前置後來還是做了，被連帶的後續要回來
+function E.RecomputeSkip()
+  local skip = MG.db.skip
   local roots = {}
   for k, v in pairs(skip) do
     if v == k or v == true then roots[#roots + 1] = k end

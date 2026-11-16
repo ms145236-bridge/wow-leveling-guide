@@ -86,7 +86,7 @@ const tagEn = (tag) => { const out = (tag || "").split(/\s*・\s*/).map((t) => T
 const enText = (t) => String(t || "").replace(/<([^<>\/]+)\/([^<>\/]+)>/g, "$1/$2").replace(/\$[Bb]/g, " ").replace(/\$[Nn]/g, "you").replace(/\$[CcRr]/g, "adventurer").replace(/\s+/g, " ").trim();
 const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel", 買: "buy" };
 // 行尾標籤：這些不顯示；其餘（可跳過、有隊伍再做…）顯示在步驟第 3 行
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點)/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|到[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -413,6 +413,9 @@ for (const file of files.filter((f) => !sideFile(f))) {
       // 綁爐石：交通改成「綁」（地點在全部檔讀完後才認，見下方）；座標取離「綁爐石」最近的那個（旅店老闆）
       const bindAt = step.text.replace(/約/g, "").indexOf("綁爐石");
       const pts = parseCoords(step.text);
+      // 【到：地圖 x, y】：文字沒寫座標的交通，目的地寫在標籤（不顯示）；走到 3 格內就算到（和沒座標時「走到下一步附近」一樣寬）
+      const to = !pts.length && tags.find((t) => /^到[：:]/.test(t));
+      if (to) { pts.push(...parseCoords(to)); step.r = 3; }
       if (bindAt >= 0 && !/(已|仍|不改|保留|繼續)[^，。；]{0,8}綁|可(?:改|在|以)?[^，。；]*綁爐石/.test(step.text)) {
         step.t = "bind";
         step.bindAt = bindAt;
@@ -795,8 +798,9 @@ for (const st of stations) {
 }
 for (const w of classFar) issues.warn.push(w);
 
-// 職業任務段落的「回到路線」：指向插入點後面第一個有座標的主線步驟；段落最後的座標就在那附近（同地圖、10 格內）就不用
-const backAdded = [];
+// 職業任務段落的「回到路線」：指向插入點後面第一個有座標的主線步驟；段落最後的座標就在那附近（同地圖、10 格內）就不用。
+// 主線在那個座標之前（含）自己有交通步驟的也不用：不然頂框先要人到目的地，怎麼去的說明反而排在後面
+const backAdded = [], backDropped = [];
 for (const st of stations) {
   st.steps = st.steps.filter((s, i) => {
     if (!s.back) return true;
@@ -804,6 +808,8 @@ for (const st of stations) {
     const prev = st.steps.slice(0, i).reverse().find((x) => x.cls === s.cls && x.coord);
     if (prev && !next) warn(s.where, `職業任務段落後面本站沒有有座標的主線步驟，「回到路線」拿掉了（段落最後在地圖 ${prev.coord.map}）；需要的話在段落最後自己寫交通`);
     if (!next || !prev || (prev.coord.map === next.coord.map && Math.hypot(prev.coord.x - next.coord.x, prev.coord.y - next.coord.y) <= 10)) return false;
+    const own = st.steps.slice(i + 1, st.steps.indexOf(next) + 1).find((x) => !x.cls && MOVE_T.includes(x.t));
+    if (own) { backDropped.push(`- ${s.where}：段落最後在 ${prev.coord.map} ${prev.coord.x}, ${prev.coord.y}；主線接著有交通（${own.where}：${(own.raw || own.t).slice(0, 40)}）`); return false; }
     s.coord = { map: next.coord.map, x: next.coord.x, y: next.coord.y };
     backAdded.push(`- ${s.where}：回到 ${s.coord.map} ${s.coord.x}, ${s.coord.y}（${next.where}）`);
     return true;
@@ -1087,7 +1093,7 @@ const stepOut = (s, st) => ({
   star: s.star, t: s.t, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
   // 說明段用「；」接起來：句號結尾的段後面不再補「；」，完全相同的段只留一次（翻譯照原本的「；」切段，不受影響）
   desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
-  map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, via: s.via?.length ? s.via.map((p) => [p.map, p.x, p.y]) : undefined, back: s.back, hm: s.hm, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam,
+  map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, via: s.via?.length ? s.via.map((p) => [p.map, p.x, p.y]) : undefined, r: s.r, back: s.back, hm: s.hm, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam,
 });
 // 打怪經驗估算的上限：每個目標最多算 KILL_CAP 隻（掉落目標＝數量 ÷ 掉率，沒寫掉率時和 Engine.lua 的 DROP_RATE 一樣用 0.4）
 const KILL_CAP = 40, DROP_RATE = 0.4;
@@ -1671,7 +1677,7 @@ for (const [loc, c] of locCov) {
   if (process.env.LOC_REPORT) writeFileSync(join(process.env.LOC_REPORT, `names-en-${loc}.txt`), [...c.namesEn].sort().join("\n"));
 }
 for (const r of raceUnknown) warn("種族條件", `「${r}」不是已知種族，非繁中客戶端比不到（請加進 build.mjs 的 RACE）`);
-const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 順序錯誤（已自動調整 ${orderFixes.length}）\n\n${orderFixes.join("\n") || "無"}\n\n## 綁爐石步驟（${bindReport.length}）\n\n${bindReport.join("\n") || "無"}\n\n## 前置正規化（${exFixed.length}）\n\n${exFixed.join("\n") || "無"}\n\n## 互斥清單拿掉導引（${exLead.length}）\n\n${exLead.join("\n") || "無"}\n\n## 可跳過的前置改成必做（${leadReq.length}）\n\n${leadReq.join("\n") || "無"}\n\n## 職業任務段落搬到同地圖（${classMoved.length}）\n\n${classMoved.join("\n") || "無"}\n\n## 職業任務段落和前一步不同地圖（${classMap.length}，同洲；跨洲的在提醒）\n\n${classMap.join("\n") || "無"}\n\n## 職業任務回到路線（${backAdded.length}）\n\n${backAdded.join("\n") || "無"}\n`;
+const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 順序錯誤（已自動調整 ${orderFixes.length}）\n\n${orderFixes.join("\n") || "無"}\n\n## 綁爐石步驟（${bindReport.length}）\n\n${bindReport.join("\n") || "無"}\n\n## 前置正規化（${exFixed.length}）\n\n${exFixed.join("\n") || "無"}\n\n## 互斥清單拿掉導引（${exLead.length}）\n\n${exLead.join("\n") || "無"}\n\n## 可跳過的前置改成必做（${leadReq.length}）\n\n${leadReq.join("\n") || "無"}\n\n## 職業任務段落搬到同地圖（${classMoved.length}）\n\n${classMoved.join("\n") || "無"}\n\n## 職業任務段落和前一步不同地圖（${classMap.length}，同洲；跨洲的在提醒）\n\n${classMap.join("\n") || "無"}\n\n## 職業任務回到路線（${backAdded.length}）\n\n${backAdded.join("\n") || "無"}\n\n## 主線自己有交通、不加回到路線（${backDropped.length}）\n\n${backDropped.join("\n") || "無"}\n`;
 writeFileSync(REPORT, report);
 console.log(`順序錯誤已調整 ${orderFixes.length}、純對話任務的「做」拿掉 ${talkOnly}`);
 console.log(`路線外判定 ${offroute.size}、路線外前置 ${feeds.size}、保留物品 ${keep.size}、補給 ${stations.reduce((n, x) => n + (x.supply?.length || 0), 0)}、危險 ${stations.reduce((n, x) => n + (x.danger?.length || 0), 0)}`);
