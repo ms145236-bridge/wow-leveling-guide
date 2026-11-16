@@ -1,4 +1,4 @@
-# 建置報告（資料版本 926aa85c）
+# 建置報告（資料版本 a9467f50）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
 站數：94　任務數：1611
@@ -213,10 +213,9 @@
 - 01-第一段-1到12級.md：…或銀色黎明 96895／96897／968… → 詛咒神教
 - 01-第一段-1到12級.md：…96895／96897／96898，依可接… → 戰爭的殘骸
 
-## 名稱不一致（228）
+## 名稱不一致（226）
 
 - 01-第一段-1到12級.md:1151 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
-- 01-第一段-1到12級.md:1175 交｜以暗影為家：QuestieDB 沒有繁中名（Akeri Duskblade），用「阿克里‧暮刃」
 - 任務 92551：目標怪 QuestieDB 沒有繁中名（奧拉凱斯風暴召喚者、奧拉凱斯治療者、『颶語者』特戴歐爾、Galemender Delanea）
 - 任務 97257：目標怪 QuestieDB 沒有繁中名（Brazier of Offering）
 - 任務 880：目標怪 QuestieDB 沒有繁中名（綠洲鉗嘴龜、Oasis Snapjaw Hatchling）
@@ -227,10 +226,9 @@
 - 05-副本.md:1081 接｜：QuestieDB 沒有繁中名（Mithera），用「Mithera」
 - 05-副本.md:1083 交｜：QuestieDB 沒有繁中名（Mithera），用「Mithera」
 - 05-副本.md:1084 接｜：QuestieDB 沒有繁中名（Mithera），用「Mithera」
-- 05-副本.md:1086 交｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
-- 任務 93404：目標怪 QuestieDB 沒有繁中名（Woodwyrd）
-- 05-副本.md:1087 接｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
-- 05-副本.md:1116 交｜：QuestieDB 沒有繁中名（Woodwyrd），用「Woodwyrd」
+- 05-副本.md:1086 交｜：路線寫「Woodwyrd」，QuestieDB／遊戲名是「森詭」
+- 05-副本.md:1087 接｜：路線寫「Woodwyrd」，QuestieDB／遊戲名是「森詭」
+- 05-副本.md:1116 交｜：路線寫「Woodwyrd」，QuestieDB／遊戲名是「森詭」
 - 05-副本.md:1194 交｜精英中的精英：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
 - 05-副本.md:1195 接｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
 - 05-副本.md:1197 交｜對的地點，錯的時機：QuestieDB 沒有繁中名（Sergeant Ulka），用「奧卡中士」
@@ -348,7 +346,7 @@
 - 04-45到60級.md:1587 接｜遠離此地：QuestieDB 沒有繁中名（Veteran of the Third War），用「第三次大戰的老兵」
 - 04-45到60級.md:1588 交｜西邊哨站：QuestieDB 沒有繁中名（Zet'gan），用「澤特甘」
 - 04-45到60級.md:1589 交｜指引視界：QuestieDB 沒有繁中名（Ortak Lomgok），用「歐塔克‧洛勾克」
-- 任務 92609：目標怪 QuestieDB 沒有繁中名（Hyjal Owl）
+- 任務 92609：目標怪 QuestieDB 沒有繁中名（Hyjal Owl、Tainted Hyjal Owl）
 - 04-45到60級.md:1590 接｜飛行羽毛：QuestieDB 沒有繁中名（Zet'gan），用「澤特甘」
 - 任務 95026：目標怪 QuestieDB 沒有繁中名（Forgotten Soldier）
 - 任務 95026：目標怪 QuestieDB 沒有繁中名（Fleshflay Ravener）
@@ -367,7 +365,7 @@
 - 04-45到60級.md:1607 接｜獵物與掠食者：QuestieDB 沒有繁中名（Kala'th），用「卡拉斯」
 - 04-45到60級.md:1609 交｜獵物與掠食者：QuestieDB 沒有繁中名（Kala'th），用「卡拉斯」
 - 04-45到60級.md:1610 交｜生與死的平衡：QuestieDB 沒有繁中名（Marrosis），用「馬羅希斯」
-- 任務 92317：目標怪 QuestieDB 沒有繁中名（Death Wailer、Fleshflay Ravener、Forgotten Soldier）
+- 任務 92317：目標怪 QuestieDB 沒有繁中名（Death Wailer、Fleshflay Ravener、Forgotten Soldier、Fleshflayer Ravener）
 - 04-45到60級.md:1611 接｜被竊取的生命：QuestieDB 沒有繁中名（Marrosis），用「馬羅希斯」
 - 04-45到60級.md:1612 接｜吃得骨中骨：QuestieDB 沒有繁中名（Marrosis），用「馬羅希斯」
 - 04-45到60級.md:1619 交｜吃得骨中骨：QuestieDB 沒有繁中名（Marrosis），用「馬羅希斯」
@@ -479,9 +477,9 @@
 
 無
 
-## 可跳過的前置改成必做（0）
+## 可跳過的前置改成必做（1）
 
-無
+- 95418 散播傳言：前置 95427 暮光不再！ 改成必做
 
 ## 職業任務段落搬到同地圖（0）
 
