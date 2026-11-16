@@ -1169,7 +1169,7 @@ function E.ToggleSkip(key)
   if root then skip[root == true and key or root] = nil else skip[key] = key end
   E.RecomputeSkip()
 end
--- 交了任務也重算：略過的前置後來還是做了，被連帶的後續要回來
+-- 交了任務、登入後任務日誌到了也重算（Core）：略過的前置後來還是做了，被連帶的後續要回來
 function E.RecomputeSkip()
   local skip = MG.db.skip
   local roots = {}
@@ -1200,7 +1200,7 @@ function E.RecomputeSkip()
       if t ~= "t" then mark(q, k) end
     end
   end
-  -- 後續任務（遞迴）：前置斷了才連帶。已經接了或交了的不動；「任一個前置」（ps）還有別條沒被略過的也不動；只靠 next 接過來的照舊連帶
+  -- 後續任務（遞迴）：前置斷了才連帶。已經接了或交了的不動；「任一個前置」（ps）還有別條沒被略過的也不動；只靠 next 接過來的：來源還沒交才連帶
   local function gone(p) return not turned(p) and (cut[p] or rootQ[p] or skip["a:" .. p] or skip["t:" .. p]) and true or false end
   local n = 1
   while queue[n] do
@@ -1218,7 +1218,7 @@ function E.RecomputeSkip()
           if p == cur then listed = true end
           if not gone(p) then alive = true end
         end
-        if dead or not alive or not listed then
+        if dead or not alive or (not listed and gone(cur)) then
           cut[f] = true
           queue[#queue + 1] = { q = f, from = from }
           mark(f, from)

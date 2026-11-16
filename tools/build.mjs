@@ -413,9 +413,9 @@ for (const file of files.filter((f) => !sideFile(f))) {
       // 綁爐石：交通改成「綁」（地點在全部檔讀完後才認，見下方）；座標取離「綁爐石」最近的那個（旅店老闆）
       const bindAt = step.text.replace(/約/g, "").indexOf("綁爐石");
       const pts = parseCoords(step.text);
-      // 【到：地圖 x, y】：文字沒寫座標的交通，目的地寫在標籤（不顯示）；走到 3 格內就算到（和沒座標時「走到下一步附近」一樣寬）
+      // 【到：地圖 x, y】：文字沒寫座標的交通，目的地寫在標籤（不顯示）；和一般交通一樣走到 50 碼內算到
       const to = !pts.length && tags.find((t) => /^到[：:]/.test(t));
-      if (to) { pts.push(...parseCoords(to)); step.r = 3; }
+      if (to) pts.push(...parseCoords(to));
       if (bindAt >= 0 && !/(已|仍|不改|保留|繼續)[^，。；]{0,8}綁|可(?:改|在|以)?[^，。；]*綁爐石/.test(step.text)) {
         step.t = "bind";
         step.bindAt = bindAt;

@@ -1,4 +1,4 @@
-# 建置報告（資料版本 69a66980）
+# 建置報告（資料版本 5d9205fa）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
 站數：73　任務數：1553
@@ -124,11 +124,8 @@
 - 任務表：…找OOX-22/FE！（2766），菲拉… → 尋找OOX-22/FE！
 - 任務表：…找OOX-17/TN！（351），塔納… → 尋找OOX-17/TN！
 
-## 名稱不一致（279）
+## 名稱不一致（275）
 
-- 任務 33：目標怪 QuestieDB 沒有繁中名（森林狼、幼狼、蓬毛森林狼、蓬毛幼狼、TEST WOLF (ALPHA FIRST)、TEST WOLF (ALPHA SECOND)）
-- 任務 179：目標怪 QuestieDB 沒有繁中名（森林狼、幼狼、蓬毛森林狼、蓬毛幼狼、TEST WOLF (ALPHA FIRST)、TEST WOLF (ALPHA SECOND)）
-- 任務 916：目標怪 QuestieDB 沒有繁中名（樹林蜘蛛、Webwood Creeper UNUSED）
 - 任務 98067：目標怪 QuestieDB 沒有繁中名（Credit）
 - 01-第一段-1到12級.md:613 交｜戰士之道：QuestieDB 沒有繁中名（Blademaster Ren），用「大劍師蕾」
 - 任務 92551：目標怪 QuestieDB 沒有繁中名（奧拉凱斯風暴召喚者、奧拉凱斯治療者、『颶語者』特戴歐爾、Galemender Delanea）
@@ -137,7 +134,6 @@
 - 任務 92909：目標怪 QuestieDB 沒有繁中名（麥田傀儡、看守傀儡、收割傀儡、Bulky Protective Ironweave、Electrostatic Discharge Shielding）
 - 05-副本.md:16 接｜遠古的怨恨：QuestieDB 沒有繁中名（Ghostly Attendant），用「Ghostly Attendant」
 - 05-副本.md:20 交｜遠古的怨恨：QuestieDB 沒有繁中名（Ghostly Attendant），用「Ghostly Attendant」
-- 任務 101：目標怪 QuestieDB 沒有繁中名（骷髏戰士、恐怖骸骨、骷髏法師、骸骨魔、骷髏看守、骷髏醫師、骷髏襲擊者、Shambling Skeleton UNUSED）
 - 02-12到30級.md:533 接｜伊菈的匕首：路線寫「物品 伊菈的匕首」，QuestieDB／遊戲名是「觀風者巴斯拉」
 - 任務 86574：目標怪 QuestieDB 沒有繁中名（幼年巨翼蠍尾獅、巨翼蠍尾獅、巨翼捕獵者、雄性巨翼蠍尾獅、巨翼雄獸、Freewind Post Wyvern）
 - 任務 4289：目標怪 QuestieDB 沒有繁中名（安戈洛猩猩、Un'Goro Gorilla）

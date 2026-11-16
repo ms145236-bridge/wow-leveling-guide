@@ -191,6 +191,8 @@ export function openQuestieDB() {
     const zh = localName("Npc", id, "zhTW");
     return { lvl: (lo + (typeof hi === "number" ? hi : lo)) / 2, elite: [1, 2].includes(field("Npc", id, 6)), name: zh || field("Npc", id, 1), en: field("Npc", id, 1), zhMissing: !zh };
   };
+  // QuestieDB 掉落表裡的測試／停用怪：英文名「TEST …」開頭或「… UNUSED」結尾，而且沒有生成點（TEST WOLF (ALPHA FIRST)、Shambling Skeleton UNUSED…）。不列進目標，也不算進怪物等級
+  const placeholder = (id) => /^TEST |(^| )UNUSED$/.test(field("Npc", id, 1) || "") && !spawnsOf("Npc", id).length;
   const questMobs = (id) => {
     const obj = field("Quest", id, 10);
     const out = [];
@@ -204,7 +206,7 @@ export function openQuestieDB() {
       out.push(name ? { kind: "object", objects: [name], objectsEn: [field("Object", get(o, 1), 1)].filter(Boolean) } : null);
     }
     for (const it of list(get(obj, 3))) {
-      const drops = list(field("Item", get(it, 1), 2)).map(mobLevel).filter(Boolean);
+      const drops = list(field("Item", get(it, 1), 2)).filter((n) => !placeholder(n)).map(mobLevel).filter(Boolean);
       if (drops.length) {
         out.push({ lvl: drops.reduce((a, d) => a + d.lvl, 0) / drops.length, elite: drops.every((d) => d.elite), kind: "drop", names: drops.slice(0, 8).map((d) => d.name), namesEn: drops.slice(0, 8).map((d) => d.en), zhMissing: drops.slice(0, 8).some((d) => d.zhMissing) });
       } else {

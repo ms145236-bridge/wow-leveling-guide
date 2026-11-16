@@ -9,6 +9,7 @@ local f = CreateFrame("Frame")
 local registered = {} -- 事件 → 是否註冊成功（probe 用）
 local trace = {} -- 事件參數紀錄（probe 用）
 local dirty, ready, since, tick, started = false, false, 0, 0, nil
+local logSeen, skipSync = false, 0 -- 登入後連帶略過重算過了沒：1＝等不到 QUEST_LOG_UPDATE 先算過、2＝任務日誌到了以後算過
 local lastState
 
 -- ── 重算 ────────────────────────────────────────────────────────────────────
@@ -168,6 +169,13 @@ function MG.Refresh(now)
   if now then
     dirty = false
     if ready and started then
+      -- 登入：存檔裡的連帶略過照現在的任務狀態重算一次（舊版留下的、沒開插件時交掉前置的）。任務日誌到了才算數；
+      -- 等不到（3 秒）先算一次，之後日誌真的到了再算一次
+      local want = logSeen and 2 or 1
+      if skipSync < want then
+        skipSync = want
+        if next(MG.db.skip) then E.RecomputeSkip() end
+      end
       MG.C.memo = {}
       MG.try("重算", refresh)
       MG.C.memo = nil
@@ -440,6 +448,7 @@ local function onEvent(_, event, ...)
     end
   elseif event == "QUEST_LOG_UPDATE" then
     ready = true
+    logSeen = true
   elseif event == "QUEST_ACCEPTED" then
     local args = {}
     for i = 1, select("#", ...) do
