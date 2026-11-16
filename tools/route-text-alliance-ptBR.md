@@ -909,3 +909,109 @@
 01-第一段-1到12級.md:633｜說明｜爐石或走回坦德爾林地的營地找狂風艾希安（42.76, 23.66）。｜Use a Pedra de Regresso ou volte a pé ao acampamento de Thendal Grove e procure Aetheen das Ventanias (42.76, 23.66).
 01-第一段-1到12級.md:663｜說明｜在申德村旅店綁爐石（43.00, 43.20）。｜Vincule sua Pedra de Regresso na estalagem de Aldeia Sen'jin (43.00, 43.20).
 01-第一段-1到12級.md:710｜說明｜在瓦拉納爾旅店綁爐石（62.20, 72.60）。｜Vincule sua Pedra de Regresso na estalagem de Valanaar (62.20, 72.60).
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。；尾王約 35% 血會恐懼，先清小怪，再把王拉回前一個房間打。；接任務處旁有拉桿，拉下開門就能直線跑出去。｜Clique com o botão direito em Tratado de Entendimento na bolsa para aceitar a missão. O chefe final usa Medo com cerca de 35% de vida. Limpe os lacaios primeiro e depois puxe o chefe para a sala anterior. Ao lado de quem dá a missão há uma alavanca. Puxe para abrir a porta e saia em linha reta.
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。；尾王約 35% 血會恐懼，先清小怪，再把王拉回前一個房間打。｜Clique com o botão direito em Tratado de Entendimento na bolsa para aceitar a missão. O chefe final usa Medo com cerca de 35% de vida. Limpe os lacaios primeiro e depois puxe o chefe para a sala anterior.
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。｜Clique com o botão direito em Tratado de Entendimento na bolsa para aceitar a missão.
+05-副本.md:49｜說明｜右鍵背包裡的 Blood-Stained Parchment 接任務。｜Clique com o botão direito em Pergaminho Manchado de Sangue na bolsa para aceitar a missão.
+02-12到30級.md:304｜說明｜還沒開湖畔鎮飛行點，就從暴風城沿艾爾文森林大路往東走到湖畔鎮。｜Se ainda não desbloqueou o ponto de voo de Vila Plácida, vá de Ventobravo pela estrada da Floresta de Elwynn para leste até Vila Plácida.
+02-12到30級.md:1023｜說明｜小型水之靈體在西部荒野池塘的聖壇附近。｜O pequeno espírito da água fica perto do altar do lago em Cerro Oeste.
+05-副本.md:114｜說明｜留到02-第19站，經過湖畔鎮再交。｜Guarde para entregar na 02-parada 19, ao passar por Vila Plácida.
+05-副本.md:115｜說明｜留到03-第22站，經過夜色鎮再交。｜Guarde para entregar na 03-parada 22, ao passar por Vila Sombria.
+03-30到45級.md:488｜說明｜鋸刃散在豺狼人營地地上。｜As lâminas de serra estão espalhadas pelo chão do acampamento dos gnolls.
+03-30到45級.md:499｜說明｜泥鰭魚人頭顱和淡水惡魔一起打，再往北打特大螯蝦、撿新鮮肥料。｜Mate os murlocs Barbatana-de-lama pela cabeça junto com os demônios d'água doce; depois vá ao norte, mate os Lagostins Grandes e pegue Adubo Fresco.
+03-30到45級.md:500｜說明｜在泥鰭魚人營地找帽子。｜Encontre o chapéu no acampamento dos murlocs Barbatana-de-lama.
+03-30到45級.md:517｜說明｜墳墓在遠境堡的禮拜堂旁。｜O túmulo fica ao lado da capela de Farholde.
+03-30到45級.md:519｜說明｜乾草捆在遠境堡附近的田裡。｜Os fardos de feno ficam nos campos perto de Farholde.
+03-30到45級.md:529｜說明｜走失的馬在農莊附近。｜O cavalo perdido está perto da fazenda.
+03-30到45級.md:541｜說明｜工頭的木箱在透納的伐木場。｜A caixa de madeira do capataz fica na serraria de Turner.
+03-30到45級.md:546｜說明｜暮光書頁散在陽光林地。｜As páginas do Crepúsculo estão espalhadas por Solclaro.
+03-30到45級.md:471｜說明｜地圖中央的羅格瑪是部落城鎮，別靠近。｜Rog'mar, no centro do mapa, é uma cidade da Horda; não se aproxime.
+03-30到45級.md:819｜說明｜任務 47 級；若比你高 3 級以上，可先跳過。；要先交掉落觸發的 94885 才接得到。｜Missão de nível 47. Se for 3 níveis ou mais acima do seu, pode pular por ora. Só é possível aceitar depois de entregar 94885, ativada por drop.
+03-30到45級.md:819｜說明｜任務 47 級；若比你高 3 級以上，可先跳過。｜Missão de nível 47. Se for 3 níveis ou mais acima do seu, pode pular por ora.
+03-30到45級.md:819｜說明｜任務 47 級｜Missão de nível 47.
+03-30到45級.md:819｜說明｜若比你高 3 級以上，可先跳過。；要先交掉落觸發的 94885 才接得到。｜Se for 3 níveis ou mais acima do seu, pode pular por ora. Só é possível aceitar depois de entregar 94885, ativada por drop.
+03-30到45級.md:819｜說明｜若比你高 3 級以上，可先跳過。｜Se for 3 níveis ou mais acima do seu, pode pular por ora.
+03-30到45級.md:823｜說明｜新鮮的蘋果在遠境堡附近的果樹下。｜As maçãs frescas ficam sob as árvores frutíferas perto de Farholde.
+03-30到45級.md:831｜說明｜木材堆在透納的伐木場。｜As pilhas de madeira ficam na serraria de Turner.
+03-30到45級.md:839｜說明｜斥候關在暮光之罩各處。｜Os batedores estão presos em vários pontos da Mortalha do Crepúsculo.
+03-30到45級.md:851｜說明｜沼澤氣體在史利博附近的噴口收。｜Colete o gás do pântano nos respiradouros perto de Sli'bo.
+03-30到45級.md:882｜說明｜任務 45 級；若比你高 3 級以上，可先跳過。｜Missão de nível 45. Se for 3 níveis ou mais acima do seu, pode pular por ora.
+03-30到45級.md:882｜說明｜任務 45 級｜Missão de nível 45.
+03-30到45級.md:1073｜說明｜右鍵背包裡的 OOX-22/FE定位器接任務。｜Clique com o botão direito em Transmissor de Emergência OOX-22/FE na bolsa para aceitar a missão.
+04-45到60級.md:48｜說明｜右鍵背包裡的 OOX-17/TN定位器接任務。｜Clique com o botão direito em Transmissor de Emergência OOX-17/TN na bolsa para aceitar a missão.
+04-45到60級.md:105｜說明｜右鍵背包裡的 OOX-09/HL定位器接任務。｜Clique com o botão direito em Transmissor de Emergência OOX-09/HL na bolsa para aceitar a missão.
+04-45到60級.md:478｜說明｜送書任務：NPC 有提供就接，帶到海加爾山永恆山峰交；看不到任務就先略過。｜Missão de entrega de livro: aceite se o NPC a oferecer e leve ao Summit of Eternity, no Monte Hyjal, para entregar. Se não vir a missão, pule por ora.
+04-45到60級.md:478｜說明｜送書任務：NPC 有提供就接，帶到海加爾山永恆山峰交｜Missão de entrega de livro: aceite se o NPC a oferecer e leve ao Summit of Eternity, no Monte Hyjal, para entregar.
+04-45到60級.md:478｜說明｜看不到任務就先略過。｜Se não vir a missão, pule por ora.
+04-45到60級.md:515｜說明｜送信任務：NPC 有提供就接，帶到海加爾山交給隱士柯薩拉斯；看不到任務就先略過。｜Missão de entrega de carta: aceite se o NPC a oferecer e leve ao Monte Hyjal para entregar ao eremita Ketharas. Se não vir a missão, pule por ora.
+04-45到60級.md:515｜說明｜送信任務：NPC 有提供就接，帶到海加爾山交給隱士柯薩拉斯｜Missão de entrega de carta: aceite se o NPC a oferecer e leve ao Monte Hyjal para entregar ao eremita Ketharas.
+04-45到60級.md:728｜說明｜先前在費伍德森林有接這件才交。｜Só entregue se tiver aceitado esta missão antes em Selva Maleva.
+04-45到60級.md:741｜說明｜弩砲、投石車、飛行器三種殘骸各算一項，三種都要種到；在隱士洞外的山坡找。｜Os destroços da balista, da catapulta e da máquina voadora contam como um objetivo cada, e é preciso plantar nos três. Procure na encosta fora da Caverna do Eremita.
+04-45到60級.md:741｜說明｜在隱士洞外的山坡找。｜Procure na encosta fora da Caverna do Eremita.
+04-45到60級.md:898｜說明｜在死木巢穴外找池塘。｜Procure a lagoa fora do covil Madeira Morta.
+04-45到60級.md:972｜說明｜後續貝利的戒指（96077）要送去艾爾文森林的閃金鎮，回東部王國時再做。｜A continuação, O anel de Bailey (96077), vai a Vila Dourada, na Floresta de Elwynn; faça quando voltar aos Reinos do Leste.
+04-45到60級.md:1015｜說明｜先前在安戈洛環形山有接這件才交。｜Só entregue se tiver aceitado esta missão antes na Cratera Un'Goro.
+04-45到60級.md:1033｜說明｜先依任務日誌找郵件掉落處；位置尚未確認，找不到可先略過。｜Primeiro veja no diário de missões onde o correio cai. O local ainda não foi confirmado; se não achar, pode pular por ora.
+04-45到60級.md:1033｜說明｜先依任務日誌找郵件掉落處｜Primeiro veja no diário de missões onde o correio cai.
+04-45到60級.md:1033｜說明｜位置尚未確認，找不到可先略過。｜O local ainda não foi confirmado; se não achar, pode pular por ora.
+06-路線外任務.md:9｜說明｜經過03-第29站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 29 da parte 3.
+06-路線外任務.md:17｜說明｜經過03-第40站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 40 da parte 3.
+06-路線外任務.md:20｜說明｜經過04-第47站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 47 da parte 4.
+06-路線外任務.md:25｜說明｜精英、副本、要特殊材料或位置太偏，跳過不影響練級。｜Elite, masmorra, materiais especiais ou local muito afastado: pular não afeta a evolução.
+06-路線外任務.md:63｜說明｜經過01-第3站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 3 da parte 1.
+06-路線外任務.md:69｜說明｜經過01-第4站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 4 da parte 1.
+06-路線外任務.md:71｜說明｜經過01-第9站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 9 da parte 1.
+06-路線外任務.md:87｜說明｜經過02-第12站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 12 da parte 2.
+06-路線外任務.md:99｜說明｜副本任務；組好隊、進本前再接。｜Missão de masmorra. Aceite só depois de formar o grupo, antes de entrar na masmorra.
+06-路線外任務.md:147｜說明｜經過04-第49站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 49 da parte 4.
+06-路線外任務.md:372｜說明｜經過02-第20站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 20 da parte 2.
+06-路線外任務.md:400｜說明｜夏拉卡在04-第58站嘉文關‧葉源附近（31.3, 50.3）接；小貓位置需遊戲實測。｜Shalla'kal pode ser aceita na 04-parada 58, perto de Galvinquam Leafsyre (31.3, 50.3). A localização dos gatinhos precisa ser testada no jogo.
+06-路線外任務.md:401｜說明｜洞穴甲蟲位置需遊戲實測；在樹皮地穴做其他任務時可順便找。｜A localização dos besouros da caverna precisa ser testada no jogo. Dá para procurar de passagem ao fazer outras missões na Cripta da Casca.
+06-路線外任務.md:406｜說明｜要送往閃金鎮，回東部王國時再做。｜Leve a Vila Dourada e faça quando voltar aos Reinos do Leste.
+06-路線外任務.md:408｜說明｜先完成風暴凝聚才接；已做完可向 NPC 確認。｜Aceite só depois de concluir Tempestade em Formação. Se já concluiu, confirme com o NPC.
+06-路線外任務.md:409｜說明｜接交地點未確認，需遊戲實測。｜O local de início/entrega não foi confirmado; precisa ser testado no jogo.
+06-路線外任務.md:411｜說明｜先完成前置才接；法師塔位置仍需確認。｜Aceite só depois de concluir o pré-requisito. A localização da torre do mago ainda precisa ser confirmada.
+06-路線外任務.md:412｜說明｜要進永恆之井，入口位置需遊戲實測。｜Para entrar no Poço da Eternidade, a localização da entrada precisa ser testada no jogo.
+06-路線外任務.md:475｜說明｜經過04-第52站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 52 da parte 4.
+06-路線外任務.md:576｜說明｜經過01-第1站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 1 da parte 1.
+06-路線外任務.md:581｜說明｜經過01-第2站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 2 da parte 1.
+06-路線外任務.md:596｜說明｜經過02-第11站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 11 da parte 2.
+06-路線外任務.md:684｜說明｜經過02-第14站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 14 da parte 2.
+06-路線外任務.md:696｜說明｜經過04-第55站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 55 da parte 4.
+06-路線外任務.md:713｜說明｜經過04-第59站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 59 da parte 4.
+06-路線外任務.md:842｜說明｜經過03-第24站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 24 da parte 3.
+06-路線外任務.md:846｜說明｜經過03-第30站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 30 da parte 3.
+06-路線外任務.md:859｜說明｜經過04-第45站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 45 da parte 4.
+06-路線外任務.md:860｜說明｜經過04-第46站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 46 da parte 4.
+06-路線外任務.md:872｜說明｜經過02-第15站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 15 da parte 2.
+06-路線外任務.md:873｜說明｜經過02-第17站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 17 da parte 2.
+06-路線外任務.md:874｜說明｜經過02-第19站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 19 da parte 2.
+06-路線外任務.md:880｜說明｜經過04-第44站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 44 da parte 4.
+06-路線外任務.md:907｜說明｜經過04-第56站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 56 da parte 4.
+06-路線外任務.md:1022｜說明｜經過03-第23站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 23 da parte 3.
+06-路線外任務.md:1119｜說明｜經過01-第5站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 5 da parte 1.
+06-路線外任務.md:1120｜說明｜經過01-第6站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 6 da parte 1.
+06-路線外任務.md:1323｜說明｜經過03-第26站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 26 da parte 3.
+06-路線外任務.md:1335｜說明｜經過03-第33站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 33 da parte 3.
+06-路線外任務.md:1350｜說明｜經過03-第36站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 36 da parte 3.
+06-路線外任務.md:1366｜說明｜經過03-第39站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 39 da parte 3.
+06-路線外任務.md:1391｜說明｜經過03-第35站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 35 da parte 3.
+06-路線外任務.md:1498｜說明｜經過02-第16站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 16 da parte 2.
+06-路線外任務.md:1519｜說明｜經過03-第28站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 28 da parte 3.
+06-路線外任務.md:1539｜說明｜經過03-第38站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 38 da parte 3.
+06-路線外任務.md:1637｜說明｜經過03-第36站時，有空再接；下一站回遠境堡就能交。｜Aceite se tiver tempo ao passar pela parada 36 da parte 3. Dá para entregar na próxima vez que voltar a Farholde.
+06-路線外任務.md:1664｜說明｜經過03-第41站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 41 da parte 3.
+06-路線外任務.md:1676｜說明｜經過04-第50站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 50 da parte 4.
+06-路線外任務.md:1834｜說明｜經過02-第13站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 13 da parte 2.
+06-路線外任務.md:1854｜說明｜經過03-第32站、到加基森時，有空再接；03-第37站到火線港交。｜Aceite se tiver tempo ao passar pela parada 32 da parte 3, em Gadgetzan. Entregue em Porto Detonapavio na 03-parada 37.
+06-路線外任務.md:1855｜說明｜經過03-第32站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 32 da parte 3.
+06-路線外任務.md:1860｜說明｜經過04-第42站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 42 da parte 4.
+06-路線外任務.md:1869｜說明｜經過04-第51站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 51 da parte 4.
+06-路線外任務.md:1999｜說明｜經過01-第7站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 7 da parte 1.
+06-路線外任務.md:2001｜說明｜經過01-第8站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 8 da parte 1.
+06-路線外任務.md:2365｜說明｜經過04-第48站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 48 da parte 4.
+06-路線外任務.md:2395｜說明｜經過04-第43站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 43 da parte 4.
+06-路線外任務.md:2448｜說明｜經過03-第22站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 22 da parte 3.
+06-路線外任務.md:2480｜說明｜經過03-第25站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 25 da parte 3.
+06-路線外任務.md:2481｜說明｜經過03-第34站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 34 da parte 3.
+06-路線外任務.md:2488｜說明｜經過04-第54站時，有空再接。｜Aceite se tiver tempo ao passar pela parada 54 da parte 4.

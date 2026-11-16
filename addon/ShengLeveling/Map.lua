@@ -1,4 +1,4 @@
--- 地圖標點：目前站剩下的步驟在世界地圖上畫編號標點，小地圖只畫目前步驟與後 2 步。
+-- 地圖標點：世界地圖畫目前步驟＋之後 mapSteps 步的編號標點，小地圖畫目前步驟起 miniSteps 步。
 -- 用 HereBeDragons-Pins（Questie 已載入）；沒有就不畫。不動 Questie 的東西。
 -- 靠得很近的點合成一個，標最小的號碼，滑過列出全部步驟。
 local _, MG = ...
@@ -179,45 +179,63 @@ function P.Update(st, force)
   local near = UI.Get("pinMergeX") * shown * pe / pxPerPct
   local far = 3 * shown * pe / pxPerPct -- 同一步的多個座標：在這距離內只畫一個
   P.diag.thresholdPx, P.diag.pxPerPct, P.diag.pinScale = UI.Get("pinMergeX") * shown * pe, pxPerPct, pe
-  local parts = { st.st.id, tostring(st.cur), size, UI.Get("miniPinSize"), UI.Get("miniSteps"), UI.Get("pinAlpha"), math.floor(near * 100) }
+  local steps = UI.Get("mapSteps")
+  local pmap, px, py = MG.C.Position()
+  local nav = MG.navPick and MG.navPick.p
+  local parts = { st.st.id, tostring(st.cur), size, UI.Get("miniPinSize"), UI.Get("miniSteps"), UI.Get("pinAlpha"), math.floor(near * 100), steps, tostring(pmap) }
   for i in ipairs(st.steps) do if not st.done[i] and not st.na[i] then parts[#parts + 1] = i end end
-  if MG.navPick then parts[#parts + 1] = MG.navPick.x .. ":" .. MG.navPick.y end -- 箭頭換了一群怪：重畫
+  if nav then parts[#parts + 1] = nav[1] .. ":" .. nav[2] .. ":" .. nav[3] end -- 箭頭換了一群怪：重畫
+  if px and py then parts[#parts + 1] = math.floor(px / 5) .. ":" .. math.floor(py / 5) end -- 順路任務只畫玩家附近的：走遠了重畫
   local key = table.concat(parts, ",")
   if key == sig and not force then return end
   P.Clear()
   sig = key
 
-  -- 收集各點：只畫有相對編號的步驟（目前步驟＝1，之後還沒做的），近的合併
-  -- 有好幾群怪點的步驟：目前步驟畫每一群；之後的步驟只畫離前一步最近的那群（地圖上連成一條路）；
-  -- 順路任務不是目前步驟時，每群都畫但小而淡（路上遇到就打）
+  -- 收集各點：世界地圖畫目前步驟＋之後 mapSteps 步（相對編號），近的合併
+  -- 目前步驟有好幾群：箭頭指的那群照常畫，同地圖離它最近的另外 2 群小而淡；
+  -- 之後的步驟每步只畫 1 點：離前一步最近的那群（地圖上連成一條路）；順路任務只畫玩家所在地圖、10 格內最近的一群（淡點）
   local groups, mini = {}, {}
   local prev
+  local function d2(a, b) return (a[2] - b[2]) ^ 2 + (a[3] - b[3]) ^ 2 end
   for i, step in ipairs(st.steps) do
     local n = st.num[i]
+    if n and n > steps + 1 and #mini >= UI.Get("miniSteps") then break end
     if n then
       local cur = i == st.cur
       local entry = { step = step, i = i, n = n, cur = cur, at = {}, faint = step.s.roam and not cur or nil }
       local pts = points(step.s)
-      if #pts > 1 and not cur and not step.s.roam and prev then
+      local multi = #pts > 1
+      local other
+      if cur and multi then
+        local p0 = pts[1]
+        for _, p in ipairs(nav and MG.navPick.s == step.s and pts or {}) do
+          if p[1] == nav[1] and p[2] == nav[2] and p[3] == nav[3] then p0 = p end
+        end
+        local rest = {}
+        for _, p in ipairs(pts) do if p ~= p0 and p[1] == p0[1] then rest[#rest + 1] = p end end
+        table.sort(rest, function(a, b) return d2(a, p0) < d2(b, p0) end)
+        other = { step = step, i = i, n = n, at = { rest[1], rest[2] }, faint = true }
+        pts = { p0 }
+      elseif not cur and step.s.roam then
+        local best, bd
+        for _, p in ipairs(px and py and pts or {}) do
+          if p[1] == pmap and d2(p, { pmap, px, py }) <= 100 and (not bd or d2(p, { pmap, px, py }) < bd) then best, bd = p, d2(p, { pmap, px, py }) end
+        end
+        pts = { best }
+      elseif not cur and multi then
         local best, bd
         for _, p in ipairs(pts) do
-          local d = p[1] == prev[1] and (p[2] - prev[2]) ^ 2 + (p[3] - prev[3]) ^ 2 or math.huge
+          local d = prev and p[1] == prev[1] and d2(p, prev) or math.huge
           if not bd or d < bd then best, bd = p, d end
         end
         pts = { best }
       end
       if pts[1] and not step.s.roam then prev = pts[1] end
-      -- 目前步驟：箭頭指的那群照常畫，其他群另成一組小而淡的點
-      local other
-      if cur and #pts > 1 then
-        local nav = MG.navPick and MG.navPick.s == step.s and MG.navPick or { x = step.s.x, y = step.s.y }
-        local keep = {}
-        other = { step = step, i = i, n = n, at = {}, faint = true }
-        for _, p in ipairs(pts) do
-          if p[2] == nav.x and p[3] == nav.y then keep[#keep + 1] = p else other.at[#other.at + 1] = p end
-        end
-        if #keep > 0 then pts = keep else other = nil end
-      end
+      -- 小地圖：目前步驟用箭頭指的那群（好幾群的步驟不在玩家這張地圖就不畫），之後的步驟用上面挑的那點
+      entry.pt = pts[1]
+      if cur and multi and pts[1][1] ~= pmap then entry.pt = nil end
+      if (cur or (st.cur and i > st.cur)) and #mini < UI.Get("miniSteps") and entry.pt then mini[#mini + 1] = entry end
+      if n > steps + 1 then pts, other = {}, nil end -- 超過世界地圖步數：只留給小地圖
       for _, p in ipairs(other and other.at or {}) do
         local hit
         for _, g in ipairs(groups) do
@@ -244,7 +262,6 @@ function P.Update(st, force)
           if not hit.has[entry] then hit.has[entry] = true; hit[#hit + 1] = entry end
         end
       end
-      if (cur or (st.cur and i > st.cur)) and #mini < UI.Get("miniSteps") and step.s.x then mini[#mini + 1] = entry end
     end
   end
 
@@ -260,12 +277,12 @@ function P.Update(st, force)
     P.count.world = P.count.world + 1
   end
   P.Raise()
-  -- 小地圖：目前步驟與後 2 步（各取第一個座標）
+  -- 小地圖：目前步驟起 miniSteps 步（各一點）
   for _, e in ipairs(mini) do
     local b = getPin()
     b.world = false
     style(b, { e }, UI.Get("miniPinSize") + (e.cur and 3 or 0)); b:SetAlpha(UI.Get("pinAlpha") / 100)
-    pins:AddMinimapIconMap(REF, b, e.step.s.map, e.step.s.x / 100, e.step.s.y / 100, false, e.cur)
+    pins:AddMinimapIconMap(REF, b, e.pt[1], e.pt[2] / 100, e.pt[3] / 100, false, e.cur)
     raiseMini(b)
     P.count.minimap = P.count.minimap + 1
   end

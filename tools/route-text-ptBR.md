@@ -13738,3 +13738,400 @@
 04-45到60級.md:1695｜說明｜可跳過｜92335 的骨灰在戴根廢墟中央，旁邊有精英末日守衛；單人拿不到就只略過 92335、90647、92169、92833、93848 這幾步（第 81、83、91、92、99、105、123–126、128 步）；92317、92500 照樣在第 79 步回隱士洞交，郵件這串和 93127、93407、93547、93584、92533、92017 不需要法杖，照做。｜Pode pular: as cinzas de 92335 ficam no meio de Dae'gun, ao lado de um demonarca elite; se não conseguir sozinho, pule apenas 92335, 90647, 92169, 92833 e 93848 (etapas 81, 83, 91, 92, 99, 105, 123–126 e 128); entregue 92317 e 92500 como de costume na volta à Caverna do Eremita, na etapa 79; a cadeia do correio e 93127, 93407, 93547, 93584, 92533 e 92017 não precisam do cajado, então faça-as.
 04-45到60級.md:1733｜說明｜依實際等級決定後續；取蛋選做，只為一次性交件。｜Decida o que fazer depois conforme o nível real; o ovo é opcional e serve só para uma entrega única.
 04-45到60級.md:1799｜說明｜依實際等級決定要不要補怪。要補進度可打火羽山普通元素或北側猩猩，留意平原巡邏的魔暴龍。｜Decida pelo nível real se precisa compensar com monstros. Para isso, mate elementais comuns nas montanhas Pluma de Fogo ou os macacos ao norte, e cuidado com o demossauro que patrulha a planície.
+01-第一段-1到12級.md:52｜說明｜術士改找魯贊做召喚小鬼任務。｜Se você joga de bruxo, faça a missão do diabrete com Ruzan.
+01-第一段-1到12級.md:27｜說明｜跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克。｜Vindo de outra zona inicial, siga pela estrada principal de Durotar para o sul, entre no Vale das Provações pelo leste e procure Kaltunk.
+01-第一段-1到12級.md:244｜說明｜先交背信棄義的人類（784），才接得到海底沉船（825）。把沉船和沃納爾大師（818）排成同一趟。｜Entregue primeiro Aniquile os invasores (784) para poder aceitar Dos destroços... (825). Faça 825 e Um espírito solvente (818) na mesma ida.
+01-第一段-1到12級.md:245｜說明｜暗巷區副本接續可先留。打算下怒焰裂谷再跟索爾接隱藏的敵人任務鏈；第一段所需的軍官徽章可在北邊火刃區取得。｜Guarde por ora a continuação das masmorras do Antro das Sombras. Se for fazer Cavernas Ígneas, pegue depois a cadeia Inimigos ocultos com Thrall. O distintivo de oficial necessário para a primeira etapa pode ser obtido na região de Lâmina Ardente, ao norte.
+01-第一段-1到12級.md:266｜說明｜跨族起點先到血蹄村，再沿路往南上紅雲台地到納拉其營地。｜Vindo de outra zona inicial, vá primeiro à Aldeia Casco Sangrento e siga a estrada para o sul, subindo a Chapada Nuvem Vermelha, até a Aldeia Narache.
+01-第一段-1到12級.md:1297｜說明｜血蹄村起始；後續的火焰的召喚在十字路口薩滿職業任務接續，也可從卡納爾直接接。｜Início na Aldeia Casco Sangrento. Continue Clamor do Fogo nas missões de classe de xamã na Encruzilhada; também dá para aceitá-las direto com Kranal.
+01-第一段-1到12級.md:1297｜說明｜血蹄村起始｜Início na Aldeia Casco Sangrento.
+01-第一段-1到12級.md:1297｜說明｜後續的火焰的召喚在十字路口薩滿職業任務接續，也可從卡納爾直接接。｜Continue Clamor do Fogo nas missões de classe de xamã na Encruzilhada; também dá para aceitá-las direto com Kranal.
+01-第一段-1到12級.md:477｜說明｜幻象儀祭三段、智慧儀祭和雷霆崖之旅一路做完，末段正好開飛行點。｜Faça em sequência os três Ritos de Visão, o Rito de Sabedoria e Siga para o Penhasco do Trovão; a última etapa desbloqueia o ponto de voo.
+01-第一段-1到12級.md:479｜說明｜到了雷霆崖可接怒焰裂谷前置，打算進本才跟拉哈羅接試探敵人（5723）、尋找背包（5722）。｜Ao chegar ao Penhasco do Trovão, pegue os pré-requisitos de Cavernas Ígneas; só se for fazer a masmorra, aceite com Rahauro Testando a força do inimigo (5723) e Em busca da algibeira perdida (5722).
+01-第一段-1到12級.md:480｜說明｜接近 12 級還差經驗，優先補莫高雷北邊鷹身人、赤色石或菲茲普羅克礦坑；滿 10 級先找職業訓練師。｜Se ainda faltar EXP perto do nível 12, farme as harpias do norte de Mulgore, o Rochedo Vermelho ou a Mina da Empreendimentos S.A. No nível 10, procure primeiro o instrutor de classe.
+01-第一段-1到12級.md:1544｜說明｜先交無腦的殭屍（364）才會給卷軸。｜Entregue primeiro Os desmiolados (364) para receber o pergaminho.
+01-第一段-1到12級.md:1601｜說明｜先交無腦的殭屍（364）。｜Entregue primeiro Os desmiolados (364).
+01-第一段-1到12級.md:498｜說明｜跨族起點從布瑞爾南側飛艇塔下船，沿大道向西進喪鐘鎮。｜Vindo de outra zona inicial, desembarque na torre do zepelim ao sul de Montalvo e siga a estrada para oeste até Plangemortis.
+01-第一段-1到12級.md:1006｜說明｜村旁學徒和強盜任務可一起接。也可同時接角鷹獸騷擾（92516）。群爪問題給簡易皮革背袋。愛管閒事的法師可選潮汐流轉塑像。完成火之召喚可取得充能烈焰圖騰。｜Aceite juntas as missões do aprendiz e dos bandidos ao lado da aldeia. Dá para pegar também Hipogrifos hostis (92516). O gargalo das garraltivas recompensa a Algibeira de Couro Simples. Em Magos metidos, dá para escolher o Ídolo das Marés Cambiantes. Completar Clamor do Fogo dá o Totem das Chamas Carregadas.
+02-12到30級.md:79｜說明｜往綠洲打牧民，路過同區其他科卡爾怪也可補護腕。｜Vá ao oásis e mate os pastores; os outros Kolkar da mesma zona, de passagem, também servem para as braçadeiras.
+02-12到30級.md:128｜說明｜先留，到銀松森林瑟伯切爾再交。｜Guarde por ora e entregue depois, ao chegar ao Sepulcro, na Floresta de Pinhaprata.
+02-12到30級.md:150｜說明｜先完成 870、877 與 880，再接 3301，下一站直接交。｜Conclua primeiro 870, 877 e 880, depois aceite 3301 e entregue-a na próxima parada.
+05-副本.md:91｜說明｜部落交件地點不明，出本前先確認任務日誌。｜O local de entrega da Horda não foi encontrado; confira o diário de missões antes de sair da masmorra.
+05-副本.md:78｜說明｜從貧瘠之地轉往東部王國後，只有專程成就隊才從幽暗城經銀松、希爾斯布萊德、阿拉希南下濕地，經丹奧加茲到丹莫洛再進鐵爐堡。｜Depois de sair dos Sertões para os Reinos do Leste, só vá a Altaforja numa corrida organizada de conquistas: da Cidade Baixa, passe por Pinhaprata, Eira dos Montes e Arathi, desça ao sul até o Pantanal e siga por Dun Algaz até Dun Morogh para entrar em Altaforja.
+05-副本.md:18｜說明｜在貧瘠之地 十字路口開飛行點後，雷霆崖飛點已開就飛雷霆崖找拉哈羅接 5722／5723（沒開就從十字路口沿南路經陶拉祖營地往西進莫高雷，搭電梯上城開點），飛奧格瑪找索爾先做隱藏的敵人前兩段，再去暗巷區接 5761；若此輪已開幽暗城飛點，可在飛艇跨海時先向瓦里瑪薩斯領 5725。｜Depois de desbloquear o ponto de voo da Encruzilhada, nos Sertões, se o do Penhasco do Trovão já estiver aberto, voe para o Penhasco do Trovão e fale com Rahauro para 5722/5723 (se não, siga da Encruzilhada pela estrada do sul, passe pelo Acampamento Taurajo e entre a oeste em Mulgore, suba pelo elevador e desbloqueie). Voe para Orgrimmar e fale com Thrall para fazer primeiro as duas primeiras etapas de Inimigos ocultos; depois vá ao Antro das Sombras para 5761. Se o ponto de voo da Cidade Baixa já estiver desbloqueado nesta rodada, pegue antes 5725 com Varimatras enquanto atravessa o mar de zepelim.
+02-12到30級.md:345｜說明｜先解鎖 479 與永恆版 95981，同一趟掃安伯米爾；479 交回後再殺 480 的法師。｜Desbloqueie primeiro 479 e a 95981 da versão Forever, e faça Lenhâmbar na mesma ida. Depois de entregar 479, mate o mago de 480.
+02-12到30級.md:346｜說明｜焚木村一起做阿魯高的愚行與致命配方（450）；交完這段阿魯高的愚行後，一次接後續的阿魯高的愚行（98298）與 98299，到葛雷邁恩之牆一起清。｜Faça juntas, no Vilarejo Lenhardente, A loucura de Arugal e Receita mortal (450). Depois de entregar esta etapa de A loucura de Arugal, aceite de uma vez a seguinte, A loucura de Arugal (98298), e a 98299, e limpe tudo junto na Muralha Greymane.
+05-副本.md:139｜說明｜15 級可接；擊殺男爵後拾取可憎頭顱，右鍵接任務。｜Pode ser aceita no nível 15. Depois de matar o Barão, saqueie a Cabeça Abominável e clique com o botão direito para aceitar a missão.
+05-副本.md:139｜說明｜15 級可接｜Pode ser aceita no nível 15.
+05-副本.md:139｜說明｜擊殺男爵後拾取可憎頭顱，右鍵接任務。｜Depois de matar o Barão, saqueie a Cabeça Abominável e clique com o botão direito para aceitar a missão.
+05-副本.md:142｜說明｜拉斯梅爾墓園西側，食屍鬼旁的愛德華；順序：先擊敗拉斯梅爾，再調查愛德華的遺體｜Edward, perto dos carniçais, no lado oeste do cemitério de Rath'mael. Ordem: primeiro derrote Rath'mael, depois examine o corpo de Edward.
+05-副本.md:142｜說明｜拉斯梅爾墓園西側，食屍鬼旁的愛德華｜Edward, perto dos carniçais, no lado oeste do cemitério de Rath'mael.
+05-副本.md:142｜說明｜先擊敗拉斯梅爾，再調查愛德華的遺體｜Primeiro derrote Rath'mael, depois examine o corpo de Edward.
+05-副本.md:110｜說明｜先在布瑞爾向林奈確認 356 的進度。林奈另有後續一段 99156。前往銀松森林前，從布瑞爾下飛艇可順路拜訪林奈與克里斯多夫；瑟伯切爾先向塔比薩領 92401，並完成致命配方三段；幽暗城鍊金房找格雷夫與莫賓。這六類任務等副本階段再交。｜Em Montalvo, confirme primeiro com Lina o progresso de 356. Lina tem ainda uma continuação, 99156. Antes de ir a Floresta de Pinhaprata, ao desembarcar do zepelim em Montalvo, dá para visitar Lina e Kristof de passagem. No Sepulcro, aceite primeiro 92401 com Tabitha e conclua as três etapas de Receita mortal. Procure Greave e Mobin na sala de alquimia da Cidade Baixa. Entregue estes seis tipos de missão só na fase da masmorra.
+02-12到30級.md:532｜說明｜留到梣谷碎木崗哨交。｜Guarde para entregar no Posto Machadada, no Vale Gris.
+02-12到30級.md:1402｜說明｜小碎片 ×3 取自黑暗深淵暮光侍僧，大碎片 ×1 取自影牙城堡影牙黑暗之魂狼人。；依序為黑暗深淵與影牙城堡入口。黑暗深淵打暮光侍僧，影牙城堡打影牙黑暗之魂。｜Pegue 3 fragmentos pequenos dos acólitos do Crepúsculo nas Profundezas Negras e 1 fragmento grande dos lobisomens Alma Negra da Presa Negra, na Bastilha da Presa Negra. Os marcadores são, em ordem, as entradas das Profundezas Negras e da Bastilha da Presa Negra. Nas Profundezas Negras, mate acólitos do Crepúsculo; na Bastilha da Presa Negra, mate Almas Negras da Presa Negra.
+02-12到30級.md:1402｜說明｜依序為黑暗深淵與影牙城堡入口。黑暗深淵打暮光侍僧，影牙城堡打影牙黑暗之魂。｜Os marcadores são, em ordem, as entradas das Profundezas Negras e da Bastilha da Presa Negra. Nas Profundezas Negras, mate acólitos do Crepúsculo; na Bastilha da Presa Negra, mate Almas Negras da Presa Negra.
+05-副本.md:285｜說明｜打哥布林木匠收白石橡木。；位置：過拉克佐守門後進伐木工坊，打斯尼德旁木匠｜Mate Goblins Entalhadores para pegar Carvalho de Pedra Branca. Local: passe por Rhahk'Zor, entre na serraria e mate os carpinteiros ao lado de Sneed.
+05-副本.md:285｜說明｜打哥布林木匠收白石橡木。｜Mate Goblins Entalhadores para pegar Carvalho de Pedra Branca.
+02-12到30級.md:655｜說明｜暗色湖撿蓋亞之種，石爪峰清塞納留斯的遺產。交回種子後，焦炭谷四項同趟做。千針石林 亂風崗路過大升降梯再交 5881。｜Pegue as Sementes de Gaia no Lago Mirkfallon e faça O legado de Cenarius nas Torres de Pedra. Depois de devolver as sementes, faça os quatro objetivos do Vale Carbonizado numa só ida. Em Aldeia Vento Livre, em Mil Agulhas, entregue 5881 ao passar pelo Grande Elevador.
+02-12到30級.md:656｜說明｜奧達努斯（1088）到梣谷碎木崗哨再打；新的指示與格雷蘇只有日後會回狂風峭壁才續做，少一趟棘齒城往返。｜Mate Ornanos (1088) só ao chegar ao Posto Machadada, no Vale Gris. Novas instruções (1095) e Hanfritz Schaventorck (1096) só valem a pena se você for voltar ao Rochedo Cortavento mais tarde; assim se poupa uma ida e volta a Vila Catraca.
+02-12到30級.md:762｜說明｜496 在西面同一趟收集，搭配希爾斯布萊德之戰 527；501 掉率低，順手收齊才交。交 527 後才出現 546，之後殺人類時一路收頭骨。｜Colete 496 a oeste na mesma ida, junto com A batalha de Eira dos Montes (527). 501 tem drop baixo: junte tudo de passagem e só então entregue. Depois de entregar 527, aparece 546; a partir daí, colete os crânios ao matar humanos.
+02-12到30級.md:763｜說明｜98094、509 順路完成馬索吉周圍的兩個任務；若接了 1066，再到敦霍爾德外圍。做 528 時，順手收顱骨。｜98094, 509: faça de passagem as duas missões ao redor de Mazoga. Se aceitou 1066, vá também aos arredores do Forte do Desterro. Ao fazer 528, pegue os crânios de passagem.
+02-12到30級.md:765｜說明｜若石爪山脈 烈日石居已接 1065，趁敦霍爾德行程完成 1066，帶 1067 給千針石林 亂風崗途經雷霆崖時交。｜Se 1065 já foi aceita no Retiro Rocha do Sol, nas Torres de Pedra, faça 1066 durante a ida ao Forte do Desterro e entregue 1067 ao passar pelo Penhasco do Trovão a caminho de Aldeia Vento Livre, em Mil Agulhas.
+02-12到30級.md:766｜說明｜509 → 513 完成後，希爾斯布萊德丘陵 塔倫米爾可在幽暗城接 515，再回希爾斯布萊德海岸做。｜Depois de 509 → 513, na Serraria Tarren, em Eira dos Montes, dá para aceitar 515 na Cidade Baixa e depois fazê-la na costa de Eira dos Montes.
+05-副本.md:342｜說明｜濕地 1437 47.79, 56.16｜Pantanal 1437 47.79, 56.16
+02-12到30級.md:861｜說明｜烈日石居的信直接交大升降梯守衛。亂風崗西邊的補給箱、三種鷹身人和耐力試煉共用區域。｜Entregue a carta do Retiro Rocha do Sol direto ao guarda do Grande Elevador. O baú de suprimentos a oeste de Aldeia Vento Livre, os três tipos de harpias e a provação de Resistência compartilham a mesma área.
+02-12到30級.md:862｜說明｜亂風崗短訪排在梣谷主線前；閃光平原整圈留到之後的閃光平原站。｜Faça a breve visita a Aldeia Vento Livre antes da linha principal do Vale Gris. Deixe a volta completa das Planícies Brilhantes para a parada posterior das Planícies Brilhantes.
+02-12到30級.md:1042｜說明｜收齊三份材料再交。死亡礦坑位於西部荒野，部落可經荊棘谷、暮色森林前往。；打哥布林木匠收白石橡木。｜Entregue só depois de juntar os três materiais. As Minas Mortas ficam em Cerro Oeste; a Horda pode chegar lá pela Selva do Espinhaço e pela Floresta do Crepúsculo. Mate Goblins Entalhadores para pegar Carvalho de Pedra Branca.
+02-12到30級.md:1042｜說明｜收齊三份材料再交。死亡礦坑位於西部荒野，部落可經荊棘谷、暮色森林前往。｜Entregue só depois de juntar os três materiais. As Minas Mortas ficam em Cerro Oeste; a Horda pode chegar lá pela Selva do Espinhaço e pela Floresta do Crepúsculo.
+02-12到30級.md:976｜說明｜碎木崗哨南側先驅者、西南湖元素、北側薩特各做一圈；佐拉姆加的熊怪與洞穴符咒一起解。｜Faça uma volta em cada um: os pioneiros ao sul do Posto Machadada, os elementais do lago a sudoeste e os sátiros ao norte. Resolva junto os ursos de Zoram'gar e o talismã da caverna.
+02-12到30級.md:978｜說明｜29 級後若本來就要跑十字路口和奧格瑪，可先接瘋狂的蟲群：先送到奧格瑪，交件接後續，再送到閃光平原交，之後還有一段；與本段交通不順路就略過。｜Depois do nível 29, se já for passar pela Encruzilhada e por Orgrimmar, aceite antes O enxame se adensa: leve primeiro a Orgrimmar, entregue e aceite a continuação, depois leve às Planícies Brilhantes e entregue; ainda há mais uma etapa depois. Pule se não estiver no caminho desta etapa.
+05-副本.md:503｜說明｜接任務會拿到達拉然下水道鑰匙；污穢鑰匙只是前置。｜Ao aceitar a missão, você recebe a Chave do Esgoto de Dalaran. A Chave Imunda é só um pré-requisito.
+05-副本.md:503｜說明｜接任務會拿到達拉然下水道鑰匙｜Ao aceitar a missão, você recebe a Chave do Esgoto de Dalaran.
+05-副本.md:503｜說明｜污穢鑰匙只是前置。｜A Chave Imunda é só um pré-requisito.
+05-副本.md:447｜說明｜經希爾斯布萊德丘陵 塔倫米爾時可先開飛行點；從幽暗城沿提里斯法林地北路到修道院。先完成剃刀沼澤的蝙蝠的糞便（1109），再到幽暗城煉金區找法拉尼爾。先跑千針石林的話，把 1113 留到往奧特蘭克山脈時接；墓地的沃瑞爾可先做。離開墓地之後要到奧特蘭克湖岸與塔倫米爾。｜Ao passar pela Serraria Tarren, em Eira dos Montes, desbloqueie antes o ponto de voo. Da Cidade Baixa, siga pela estrada norte de Clareiras de Tirisfal até o Monastério. Primeiro conclua Matéria orguânica (1109), em Urzal dos Tuscos, e depois vá ao distrito de alquimia da Cidade Baixa falar com Faranell. Se for primeiro a Mil Agulhas, deixe 1113 para aceitar quando for às Montanhas de Alterac. Pode fazer antes Vorrel, no Cemitério. Depois de sair do Cemitério, vá à margem do Lago Alterac e à Serraria Tarren.
+05-副本.md:695｜說明｜尾端小屋的卡爾加。；順序：打卡爾加時，同時拾取心臟與破爛筆記｜Charlga, na cabana do fim. Ordem: ao matar Charlga, pegue também o coração e a nota esfarrapada.
+05-副本.md:695｜說明｜尾端小屋的卡爾加。｜Charlga, na cabana do fim.
+05-副本.md:695｜說明｜打卡爾加時，同時拾取心臟與破爛筆記｜Ao matar Charlga, pegue também o coração e a nota esfarrapada.
+05-副本.md:697｜說明｜護送從尾王旁營帳開始；先清回入口的路再接。｜A escolta começa na tenda ao lado do chefe final. Limpe primeiro o caminho de volta à entrada e só então aceite.
+05-副本.md:697｜說明｜護送從尾王旁營帳開始｜A escolta começa na tenda ao lado do chefe final.
+05-副本.md:697｜說明｜先清回入口的路再接。｜Limpe primeiro o caminho de volta à entrada e só então aceite.
+05-副本.md:698｜說明｜先清回入口的路，再接威利克斯護送；保護他走回入口。；位置：尾王旁營帳出發，跟威利克斯走回入口。｜Limpe primeiro o caminho de volta à entrada e depois aceite a escolta de Willix. Proteja-o até a entrada. Local: parta da tenda ao lado do chefe final e volte à entrada com Willix.
+05-副本.md:698｜說明｜先清回入口的路，再接威利克斯護送；保護他走回入口。｜Limpe primeiro o caminho de volta à entrada e depois aceite a escolta de Willix. Proteja-o até a entrada.
+05-副本.md:698｜說明｜先清回入口的路，再接威利克斯護送｜Limpe primeiro o caminho de volta à entrada e depois aceite a escolta de Willix.
+05-副本.md:698｜說明｜保護他走回入口。；位置：尾王旁營帳出發，跟威利克斯走回入口。｜Proteja-o até a entrada. Local: parta da tenda ao lado do chefe final e volte à entrada com Willix.
+05-副本.md:698｜說明｜保護他走回入口。｜Proteja-o até a entrada.
+03-30到45級.md:283｜說明｜葬影村去西岸時一起做兩個水域任務與上古之書。雷斧堡壘先打聖光節杖與埃盧梭斯之手，若進度不足再到第二趟補交。｜Ao ir de Aldeia Pescassombra para a costa oeste, faça junto as duas missões aquáticas e o livro antigo. Na Fortaleza Machado do Trovão, mate primeiro o Cajado da Luz Sagrada e a Mão de Iruxos; se o progresso não bastar, complete na segunda ida.
+03-30到45級.md:444｜說明｜祖昆達找得到吉米克斯才跑鑰匙與護送，鑰匙與遭竊貨物同區。已有人護送可直接繼續主線。｜Só faça a chave e a escolta se encontrar Gimix em Zul'Kunda; a chave e a carga roubada ficam na mesma área. Se alguém já estiver fazendo a escolta, pode seguir direto com a linha principal.
+03-30到45級.md:447｜說明｜血帆海盜整串、海盜的眼睛／鼻煙、贊吉爾的秘密，以及嚇唬病鬼→向馬克基雷回報→討債行動，留到 42 級回訪再做。荊棘谷熱疫、瓶中信、船長的箱子、威士卡斯利姆的酒與你自己的 OOX 先別接，留到 45 級後的藏寶海灣站。｜Deixe para a visita de volta, no nível 42, toda a cadeia dos piratas Vela Sangrenta, Os olhos dos piratas / rapé, O segredo de Zanzil e Fazendo o Sacode tremer → reportar a Macrey → Voodoo devido. Não aceite ainda Febre da Selva do Espinhaço, Mensagem na garrafa, O baú do capitão, o vinho de Whiskey Slim e a sua OOX; deixe para a parada de Angra do Butim depois do nível 45.
+03-30到45級.md:448｜說明｜先把獵龍任務解到打鞭尾迅猛龍的那一段，再和 568 一起打。605 先打北邊的晶脊蜥蜴，第一趟無須繞去南谷。｜Faça a missão de caçadores de dragões até a etapa de matar os raptores Cauda-de-chicote e depois mate-os junto com 568. Para 605, mate primeiro os basiliscos Crista de Cristal ao norte; na primeira ida não precisa ir ao vale do sul.
+05-副本.md:800｜說明｜收不齊就繼續清船區的海盜。；位置：進鹽占海盜船區，沿路清海盜收神器。；順序：和鹽占船長同區清理｜Se não conseguir juntar tudo, continue limpando piratas na área dos navios. Local: entre na área do navio pirata de Saltseer e saqueie artefatos dos piratas pelo caminho. Ordem: limpe na mesma área do Capitão Saltseer.
+05-副本.md:800｜說明｜和鹽占船長同區清理｜Limpe na mesma área do Capitão Saltseer.
+05-副本.md:742｜說明｜在清潔區找克努比，先清路，再護送回入口。｜Encontre Kernobill na Zona Limpa; limpe primeiro o caminho e depois escolte-o de volta à entrada.
+03-30到45級.md:581｜說明｜37 級缺經驗時，補做東南側半人馬和附近的燃燒軍團傳送門；在葬影村交過埃盧梭斯之手才接得到 5581。幽靈電漿可用箱子引出怪物後逐隻處理。｜Se faltar EXP no nível 37, faça os centauros ao sudeste e os portais da Legião Ardente próximos. Só é possível aceitar 5581 depois de entregar a Mão de Iruxos em Aldeia Pescassombra. Para o Plasma Espectral, use o baú para atrair os monstros e trate um por vez.
+03-30到45級.md:729｜說明｜法迪爾海灣一次接打撈、水下寶藏和船長的復仇。完成海灣內前置、領取尋寶護目鏡後，再下水打撈，並順手做水下的 662／664；送往藏寶海灣的後續留待回港交。｜Na Enseada de Faldir, aceite de uma vez Salvamento, Tesouro Submerso e A Vingança do Capitão. Depois de concluir os pré-requisitos na enseada e pegar os óculos de caçador de tesouros, mergulhe para o salvamento e faça de passagem 662/664 debaixo d'água. Guarde para entregar quando voltar ao porto a continuação que leva a Angra do Butim.
+03-30到45級.md:730｜說明｜激流堡有餘力再做。要省跑圖，先做水晶和落錘近郊，激流堡後段 643–646 可跳。｜Faça Stromgarde se sobrar fôlego. Para poupar deslocamentos, faça primeiro os cristais e os arredores da Ruína do Martelo; as últimas etapas de Stromgarde, 643–646, podem ser puladas.
+05-副本.md:851｜說明｜神像旁，貝尼斯特拉茲的火盆｜Ao lado da estátua, o braseiro de Benistrasz.
+05-副本.md:830｜說明｜離開阿拉希高地 落錘鎮時先飛幽暗城。到千針石林 閃光平原時，可先打剃刀沼澤並拾 6522。走奧特蘭克山脈至阿拉希高地那站經幽暗城時，先交瓦里瑪薩斯，再同城找安德魯接 3341。由提里斯法坐飛艇回奧格瑪，再飛雷霆崖；沒開就飛陶拉祖，走莫高雷大道。往莫高雷西北找蘇塔菈接 97196。飛陶拉祖往南，門外找麥雷姆。已在大河林地的隊員，從火線港搭船到熱砂港再北上。出本後人在卡林多，就飛加基森到熱砂港，搭船進大河林地。加基森沒開，就照大河林地 羅格瑪第一次的首步，飛亂風崗走閃光平原南坡。要先回幽暗城交 3341、6521，就從幽暗城照大河林地 羅格瑪第一次的首步走。｜Ao sair da Ruína do Martelo, no Planalto Arathi, voe primeiro para a Cidade Baixa. Ao chegar às Planícies Brilhantes, em Mil Agulhas, dá para fazer antes Urzal dos Tuscos e pegar 6522. Se estiver na etapa das Montanhas de Alterac até o Planalto Arathi e passar pela Cidade Baixa, entregue primeiro a Varimatras e depois procure André Rosado na mesma cidade para aceitar 3341. Pegue o zepelim de Tirisfal de volta a Orgrimmar e voe para o Penhasco do Trovão. Se não estiver desbloqueado, voe para o Acampamento Taurajo e siga a estrada de Mulgore. Vá ao noroeste de Mulgore, procure Sutara Espreitaprados e aceite 97196. Voe para o Acampamento Taurajo e vá ao sul; procure Mírian Lunacanto fora do portão. Os membros do grupo que já estiverem em Sendas do Rio pegam o barco do Porto Detonapavio para o Porto de Bondebico e seguem ao norte. Depois da masmorra, se estiver em Kalimdor, voe para Geringontzan e pegue o barco do Porto de Bondebico para Sendas do Rio. Se Geringontzan não estiver desbloqueada, siga o primeiro passo da primeira visita a Rog'mar, em Sendas do Rio: voe para Aldeia Vento Livre e siga pela encosta sul das Planícies Brilhantes. Se precisar voltar antes à Cidade Baixa para entregar 3341 e 6521, siga o mesmo primeiro passo a partir da Cidade Baixa.
+03-30到45級.md:853｜說明｜Chogg’Zac 在陽光林地洞穴內，是 41 級精英。｜Chogg’Zac fica numa caverna de Solclaro e é um elite de nível 41.
+03-30到45級.md:864｜說明｜氣體在史利博附近的沼澤噴口收。｜Colete o gás nos respiradouros do pântano perto de Sli'bo.
+03-30到45級.md:871｜說明｜同任務也可找 Hamur（67.24, 21.75）。｜Esta missão também pode ser aceita com Hamur (67.24, 21.75).
+03-30到45級.md:903｜說明｜羅格瑪南側草地，怪物密集、普通怪。附近有 41–42 級精英野獸，沿路挑單隻；可同步補 96107 的羽毛。｜Gramado ao sul de Rog'mar, com muitos monstros normais. Há feras elite de nível 41–42 por perto; escolha uma de cada vez pelo caminho. Dá para pegar de passagem as penas de 96107.
+03-30到45級.md:925｜說明｜已開卡加斯就從羅格瑪直飛。初訪從暮光營地北面的西側山口進荒蕪之地，往西北到卡加斯開飛點。爐石仍綁羅格瑪供後續回訪。｜Se já desbloqueou Karrath, voe direto de Rog'mar. Na primeira visita, entre nos Ermos pelo desfiladeiro a oeste, ao norte do Acampamento Crepúsculo, e siga para noroeste até Karrath para desbloquear o ponto de voo. Mantenha a Pedra de Regresso em Rog'mar para visitas futuras.
+03-30到45級.md:978｜說明｜已滿 40 級且有金幣，可以在路過本族訓練師時先學騎術。｜Se já estiver no nível 40 e tiver ouro, aprenda montaria ao passar pelo instrutor da sua raça.
+05-副本.md:909｜說明｜從正門打過雷夫洛什，到他身後房間查遺體。；順序：找到遺體後先接日記，再出本回卡加斯解鎖下一趟｜Da entrada principal, lute até Revelosh e examine os restos na sala atrás dele. Ordem: depois de achar os restos, aceite o diário e saia da masmorra para voltar a Karrath e liberar a próxima ida.
+05-副本.md:909｜說明｜找到遺體後先接日記，再出本回卡加斯解鎖下一趟｜Depois de achar os restos, aceite o diário e saia da masmorra para voltar a Karrath e liberar a próxima ida.
+05-副本.md:869｜說明｜荒蕪之地 1418 約 42.60, 10.80（正門，沿挖掘場入地下）｜Ermos 1418 cerca de 42.60, 10.80 (entrada principal; desça pela escavação até o subsolo)
+03-30到45級.md:1090｜說明｜藏寶海灣第 2 趟先交 669／600／628 等已完成任務。血帆海盜前三段先跑近岸短段，接到第四段時同做 576／587；交完第四段才接最後一段，打三船首領。609 需先交 606→607。每段都要回港交件才解鎖下一段。｜Na segunda ida a Angra do Butim, entregue primeiro as missões já concluídas, como 669/600/628. Nas três primeiras etapas dos piratas Vela Sangrenta, faça o trecho curto perto da costa; ao aceitar a quarta, faça 576/587 junto. Só aceite a última etapa depois de entregar a quarta; mate os líderes dos três navios. Antes de 609, entregue 606→607. Entregue cada etapa no porto para liberar a seguinte.
+03-30到45級.md:1171｜說明｜交完前一段後，回卡塔爾接後續。順著海岸往北補魚人智者，交前確認三種各十隻。｜Depois de entregar a etapa anterior, volte a Katar para a continuação. Siga pela costa para o norte e complete os sábios murlocs; antes de entregar, confirme os dez de cada um dos três tipos.
+03-30到45級.md:1180｜說明｜加林的逃亡（1393）是護送任務，沿路清怪再開籠。交件在保險箱，毋須回籠邊。｜A fuga de Galen (1393) é uma escolta: limpe os monstros do caminho e só então abra a jaula. A entrega é no cofre, não precisa voltar à jaula.
+03-30到45級.md:1298｜說明｜火線港北側東風海岸，怪物密集、普通怪。與火槍手混合，沿沙灘逐隻拉；可同步完成 95119。｜Costa da Lestada, ao norte de Porto Detonapavio, com muitos monstros normais, misturados com mosqueteiros; puxe um de cada vez pela praia. Dá para completar 95119 junto.
+03-30到45級.md:1299｜說明｜東風海岸中段，怪物密集、普通遠程怪。與海盜交錯，近戰可利用地形拉到岸側；適合補到 45 級。｜Meio da Costa da Lestada, com muitos monstros normais de ataque à distância, misturados com piratas; os de combate corpo a corpo podem ser puxados para o lado da praia aproveitando o terreno. Bom para chegar ao nível 45.
+05-副本.md:1006｜說明｜從暮光之罩內的 Crag’rog 接。｜Aceite de Crag’rog, dentro da Mortalha do Crepúsculo.
+05-副本.md:1009｜說明｜先找目前標出的三處礦工，其餘在附近找。｜Procure primeiro os três mineiros marcados no mapa; os demais ficam por perto.
+04-45到60級.md:28｜說明｜到菲拉斯做，回熱砂港交。｜Faça em Feralas e entregue em Porto de Bondebico.
+04-45到60級.md:31｜說明｜在加基森旅店向旅店老闆菲茲格瑞博（1446 52.51, 27.91）暫綁爐石。到菲拉斯莫沙徹營地再改綁。｜Vincule temporariamente a Pedra de Regresso com o estalajadeiro Gabor Bulho na estalagem de Geringontzan (1446 52.51, 27.91). Troque depois, na Aldeia Mojache, em Feralas.
+04-45到60級.md:64｜說明｜第一次熱砂港把海盜帽、擊殺、通緝與貨箱一起清；從火線港乘船到熱砂港時，可先清海岸。｜Na primeira ida a Porto de Bondebico, limpe juntos o chapéu de pirata, as missões de abate, as de procurado e os caixotes. Ao ir de barco de Porto Detonapavio a Porto de Bondebico, dá para limpar a costa antes.
+04-45到60級.md:149｜說明｜回奧格瑪開菲拉斯後續｜Volte a Orgrimmar para liberar a continuação de Feralas.
+04-45到60級.md:151｜說明｜從莫沙徹飛奧格瑪（通常經十字路口或雷霆崖）。爐石維持莫沙徹，奧格瑪交完再用爐石回菲拉斯。｜Voe da Aldeia Mojache para Orgrimmar (normalmente via Encruzilhada ou Penhasco do Trovão). Mantenha a Pedra de Regresso na Aldeia Mojache; depois de entregar em Orgrimmar, use-a para voltar a Feralas.
+04-45到60級.md:215｜說明｜怒痕雪人與深痕谷雪人是兩批；先在菲拉斯 莫沙徹營地交 2822，再清這次的 7734。完美的雪人毛皮只在掉落時交。｜Os yetis Cortifúria e os do Vale dos Abomináveis são dois lotes diferentes. Entregue primeiro 2822 na Aldeia Mojache, em Feralas, e depois limpe este 7734. O Pelego imaculado de Yeti só se entrega quando cair.
+04-45到60級.md:217｜說明｜需要補等時，可在怒痕堡 55.73,33.05 至 54.39,33.10 外圈循環打怒痕雪人，優先單拉。｜Se precisar de EXP, faça um circuito pelos yetis Cortifúria no perímetro externo da Bastilha Cortifúria, de 55.73,33.05 a 54.39,33.10, priorizando puxar um por vez.
+04-45到60級.md:261｜說明｜廢料可由聯盟任務丟出，沒看到就沿加基森外圍找。｜A sucata pode vir das missões da Aliança; se não aparecer, procure ao redor de Geringontzan.
+04-45到60級.md:306｜說明｜北方水池交完先開腐化之巢；交腐化之巢開謝申克的救贖，再一起跑砂槌、灌木谷與南方蟲巢。｜Depois de entregar no poço ao norte, desbloqueie o Covil Nóxio. Entregue o Covil Nóxio para desbloquear A redenção de Anilhacido; depois faça juntos Complexo Dunamalho, Vale Moitagulhas e a colmeia de silitídeos ao sul.
+04-45到60級.md:308｜說明｜先交異種蠍的威脅與 7732；4494 需 50 級，若已到門檻可在暗巷區確認，完整後續留塔納利斯 加基森與破碎石柱。｜Entregue primeiro A ameaça dos silitídeos e 7732. 4494 exige nível 50. Se já tiver atingido, confira no Antro das Sombras; deixe a continuação completa para Geringontzan, em Tanaris, e Pilar Partido.
+05-副本.md:1199｜說明｜順路先完成奧格瑪至島側的 95283–95285，再檢查軍士的任務清單。｜De passagem, conclua primeiro 95283–95285, de Orgrimmar até o lado da ilha, e depois confira a lista de missões do sargento.
+05-副本.md:1223｜說明｜優先走 95283 到 95483 的柯爾克隆救援鏈；頭巾若一趟未湊滿，交件延後。出本從蕨牆村飛回奧格瑪，同一趟交索爾和伊崔格，再飛棘齒城跨海前往灼熱峽谷。｜Priorize a cadeia de resgate dos Kor'kron, de 95283 a 95483. Se não juntou todos os turbantes em uma volta, adie a entrega. Ao sair da masmorra, voe da Aldeia Muralha Verde para Orgrimmar, entregue a Thrall e Eitrigg na mesma ida e então voe para Vila Catraca para cruzar o mar até a Garganta Abrasadora.
+05-副本.md:1185｜說明｜第33站在奧格瑪交完件、飛棘齒城跨海去灼熱峽谷前，先到奧格瑪智慧谷索爾的大廳，向伊崔格接 95283（1454 34.28, 39.35）。再飛蕨牆村找納澤爾·血矛。沿東北海岸游到奧卡茲島，找島側軍士依序交 95284、95285，接 95309 後進島塔地下。95483 留到下次回奧格瑪交。｜Na parada 33, depois de entregar em Orgrimmar e antes de voar a Vila Catraca para atravessar o mar até a Garganta Abrasadora, vá ao salão de Thrall, no Vale da Sabedoria, em Orgrimmar, e aceite 95283 de Eitrigg (1454 34.28, 39.35). Depois voe para a Aldeia Muralha Verde e procure Nazeer Lançasangrenta. Nade pela costa nordeste até a Ilha de Alcaz e procure o sargento do lado da ilha para entregar 95284 e 95285 em ordem; depois de aceitar 95309, entre no subsolo da torre da ilha. Deixe 95483 para entregar na próxima vez que voltar a Orgrimmar.
+05-副本.md:1151｜說明｜到殉教者塞卡房，清附近的聖甲蟲。；順序：清聖甲蟲時，同時擊殺塞卡拿第一塊石板｜Vá à sala de Theka, o Mártir, e limpe os escaravelhos próximos. Ordem: ao limpar os escaravelhos, mate também Theka e pegue a primeira tabuleta.
+05-副本.md:1151｜說明｜清聖甲蟲時，同時擊殺塞卡拿第一塊石板｜Ao limpar os escaravelhos, mate também Theka e pegue a primeira tabuleta.
+05-副本.md:1153｜說明｜過金字塔事件區，沿路到水池旁找維蕾薩。；順序：擊殺維蕾薩時，同時拾深淵皇冠與第二塊石板｜Passe pela área do evento da pirâmide e siga até a piscina para encontrar Velratha. Ordem: ao matar Velratha, pegue também a Coroa do Abismo e a segunda tabuleta.
+05-副本.md:1153｜說明｜擊殺維蕾薩時，同時拾深淵皇冠與第二塊石板｜Ao matar Velratha, pegue também a Coroa do Abismo e a segunda tabuleta.
+05-副本.md:1156｜說明｜塞卡在甲蟲房，維蕾薩在水池旁，各取一塊石板。｜Theka fica na sala dos escaravelhos e Velratha junto à piscina; cada um solta uma tabuleta.
+04-45到60級.md:330｜說明｜49 級可接；在安戈洛火羽山完成，回棘齒城交。｜Pode ser aceita no nível 49. Conclua no Pico Penacho de Fogo, em Un'Goro, e entregue em Vila Catraca.
+04-45到60級.md:330｜說明｜49 級可接｜Pode ser aceita no nível 49.
+04-45到60級.md:330｜說明｜在安戈洛火羽山完成，回棘齒城交。｜Conclua no Pico Penacho de Fogo, em Un'Goro, e entregue em Vila Catraca.
+04-45到60級.md:438｜說明｜限已交前一段科泰羅的謎題並已接這一段；前一段在塵泥沼澤迅猛龍洞（Bloodfen Burrow）內岩石上的發黴的卷軸交。｜Só se você já entregou a etapa anterior, O enigma de Cortello, e já aceitou esta. Entregue a etapa anterior no Pergaminho Mofado sobre uma pedra dentro da Toca de Sangrebrejo, no Pântano Vadeoso.
+04-45到60級.md:438｜說明｜限已交前一段科泰羅的謎題並已接這一段｜Só se você já entregou a etapa anterior, O enigma de Cortello, e já aceitou esta.
+04-45到60級.md:438｜說明｜前一段在塵泥沼澤迅猛龍洞（Bloodfen Burrow）內岩石上的發黴的卷軸交。｜Entregue a etapa anterior no Pergaminho Mofado sobre uma pedra dentro da Toca de Sangrebrejo, no Pântano Vadeoso.
+04-45到60級.md:475｜說明｜580 和海龜任務同一段海灘完成；梟獸 7829 與 3123 同打。｜Faça 580 na mesma praia das missões de tartaruga. Mate as bestas-coruja de 7829 e 3123 juntas.
+04-45到60級.md:525｜說明｜五個採集一起打。全交共需顎骨 ×5、野豬肺 ×6、蠍螯 ×6、蜥蜴腦 ×11、禿鷲砂囊 ×14。每次交任務會扣材料。｜Mate os cinco itens de coleta juntos. Para entregar tudo, são necessários 5 mandíbulas, 6 pulmões de javali, 6 pinças de escorpião, 11 cérebros de lagarto e 14 moelas de abutre. Cada entrega consome materiais.
+04-45到60級.md:563｜說明｜本趟優先交 50 級的 580。荊棘谷 格羅姆高與藏寶海灣、荊棘谷 藏寶海灣的低等任務已分次處理；仍在日誌而且已完成的，也可在同一趟港口回交。｜Nesta ida, priorize entregar 580, de nível 50. As missões de baixo nível de Grom'gol e de Angra do Butim, na Selva do Espinhaço, já foram feitas em idas anteriores. As que ainda estão no diário e já foram concluídas também podem ser entregues na mesma ida ao porto.
+04-45到60級.md:627｜說明｜在奧格瑪基爾茲賓處接，再飛菲拉斯。塔納利斯 加基森與砂槌營地已交異種蠍的威脅或 7732 才接，留塔納利斯 加基森與破碎石柱。若要繞雷霆崖交 3518，先接本任務再離開奧格瑪。｜Aceite com Zilzibin Tamborleiro em Orgrimmar e depois voe para Feralas. Aceite só se já tiver entregue A ameaça dos silitídeos ou 7732 em Geringontzan, Tanaris, e no Complexo Dunamalho; deixe para Geringontzan e Pilar Partido. Se for passar pelo Penhasco do Trovão para entregar 3518, aceite esta missão antes de sair de Orgrimmar.
+04-45到60級.md:631｜說明｜薩拉斯營地、三枚印記和雷姆托里放在一趟；埃達拉斯廢墟同步拾四塊石板與納迦符石。｜Faça juntos o Thalassian Base Camp, as três marcas e Remtori. Nas Ruínas de Eldarath, pegue de passagem as quatro tabuletas e a runa naga.
+04-45到60級.md:632｜說明｜可跳過｜Ley of the Land 與 Deadliest Catch 可能要組隊打精英，本站兩個都略過。｜Pode pular: Ley of the Land e Deadliest Catch podem exigir um grupo para enfrentar elites; pule as duas nesta parada.
+04-45到60級.md:633｜說明｜3542 交幽暗城的安德隆·甘特（1458 54.81, 76.33），可留東瘟疫之地 聖光之願禮拜堂轉場。城市寄回任務要重返艾薩拉，本路線可省掉。｜Entregue 3542 a Andron Gant (1458 54.81, 76.33), na Cidade Baixa; dá para guardá-la e entregar durante a transição pela Capela Esperança da Luz, nas Terras Pestilentas Orientais. A missão de devolução pela cidade exige voltar a Azshara; esta rota pode dispensá-la.
+04-45到60級.md:683｜說明｜3123 在莫沙徹營地交，接續 3124–3126；每個階段都要先交，下一種容器才拿得到。｜Entregue 3123 na Aldeia Mojache e aceite a continuação 3124–3126. Entregue cada etapa primeiro; só assim o próximo recipiente fica disponível.
+04-45到60級.md:729｜說明｜加基森先把 2641→2662 三段交完，接安戈洛任務後再去破碎石柱。｜Em Geringontzan, entregue primeiro as três etapas de 2641→2662; depois de aceitar a missão de Un'Goro, siga para Pilar Partido.
+04-45到60級.md:731｜說明｜4504 和有前置的 4496 都在安戈洛環形山 馬紹爾營地做。4324 燃燒平原 烈焰峰與黑石山交。｜4504 e 4496, que tem pré-requisito, são feitas no Refúgio do Marshal, na Cratera Un'Goro. Entregue 4324 no Monte Candente e na Montanha Rocha Negra.
+05-副本.md:1239｜說明｜到悲傷沼澤 斯通納德完成淚水之池，並保留 1429。從辛特蘭 惡齒村飛行點走到辛特蘭南側，向流放者交 1429，接向費澤魯爾復命與預言者迦瑪蘭。若完成祖爾法拉克石板鏈，再去辛薩羅拿卵。到菲拉斯時先接 3380。到塔納利斯加基森時，先找瑪爾馮開石環任務，飛棘齒城取物，再回瑪爾馮接兩個神廟任務。在熱砂港交卵後，可從加基森飛棘齒城，再搭船到藏寶海灣。最後飛斯通納德交向費澤魯爾復命、接阿塔哈卡神廟，再赴神廟。｜Em Pedregal, no Pântano das Mágoas, conclua Poço de Lágrimas e guarde 1429. Do ponto de voo da Aldeia Revantusk, nas Terras Agrestes, vá ao sul das Terras Agrestes, entregue 1429 ao exilado e aceite Retorno a Vil'zerul e Jammal'an, o Profeta. Se concluir a cadeia das tabuletas de Zul'Farrak, vá também a Jintha'Alor buscar o ovo. Em Feralas, aceite primeiro 3380. Ao chegar a Geringontzan, em Tanaris, procure Marvon para a missão do círculo de pedras, voe a Vila Catraca para buscar o item e volte a Marvon para aceitar as duas missões do templo. Depois de entregar o ovo em Porto de Bondebico, dá para voar de Geringontzan a Vila Catraca e pegar o barco para Angra do Butim. Por fim, voe para Pedregal, entregue Retorno a Vil'zerul, aceite O templo de Atal'Hakkar e siga para o templo.
+04-45到60級.md:761｜說明｜在奧格瑪先接才做。｜Aceite primeiro em Orgrimmar e só então faça.
+04-45到60級.md:784｜說明｜安戈洛猩猩／安戈洛巨猩猩／安戈洛大猩猩｜Gorila de Un'Goro / Pisoteador de Un'Goro / Trovejador de Un'Goro
+04-45到60級.md:786｜說明｜在棘齒城接過才做；回棘齒城交。｜Só faça se já tiver aceitado em Vila Catraca. Entregue em Vila Catraca.
+04-45到60級.md:786｜說明｜在棘齒城接過才做｜Só faça se já tiver aceitado em Vila Catraca.
+04-45到60級.md:786｜說明｜回棘齒城交。｜Entregue em Vila Catraca.
+04-45到60級.md:810｜說明｜能量水晶、恐龍材料、焦油和血瓣花一路並行。走近中部前留意巡邏魔暴龍。｜Cristais de energia, materiais de dinossauro, alcatrão e Pétala Sangrenta andam juntos. Antes de chegar ao centro, cuidado com o demonossauro patrulheiro.
+04-45到60級.md:812｜說明｜4300 若已打齊爪子，下次經奧格瑪找傑斯雷蒙（1454 55.52, 34.08）交。4507 需在南邊孵化並打王，可跳過。｜Se já juntou as garras de 4300, entregue-a na próxima passagem por Orgrimmar a Jes'rimon (1454 55.52, 34.08). 4507 exige chocar ao sul e matar o chefe; pode ser pulada.
+04-45到60級.md:869｜說明｜卡加斯先接 3821、4061，烈焰峰開點後集中跑巨槌石與索瑞森廢墟。｜Em Karrath, aceite primeiro 3821 e 4061; depois de desbloquear o Monte Candente, concentre-se em Rochedo Malhorrendo e Ruínas de Thaurissan.
+04-45到60級.md:2033｜說明｜加什爾／祖羅爾／胡庫／米杉／祖羅／洛若爾｜Gashar / Zul'rol / Hooku / Mishan / Zul'ro / Lo'rol
+04-45到60級.md:939｜說明｜費爾斯通農場的瘟疫鍋和包裹在同一處，回城可把 5023、5049 一起交。｜O caldeirão da peste e o pacote da Fazenda Felstone ficam no mesmo local; ao voltar à cidade, entregue 5023 e 5049 juntos.
+04-45到60級.md:940｜說明｜本趟完成第一口鍋，達爾松之淚的 5231 與安多哈爾的通靈學院任務留下一輪。傑雷米亞的好運護符 5050／5051 後段回西瘟疫才做。｜Nesta ida, conclua o primeiro caldeirão; deixe 5231, de Lágrimas de Dalson, e a missão de Scolomântia de Andorhal para a próxima rodada. O Amuleto da Sorte de Jeremiah (5050/5051) só é feito depois, na volta às Terras Pestilentas Ocidentais.
+04-45到60級.md:2101｜說明｜先收加德納爾精華；從奧格瑪前往艾薩拉時收下一份。回東部王國後，再從斯通納德前往詛咒之地。｜Colete primeiro a essência de Jaedenar. Ao ir de Orgrimmar a Azshara, pegue mais uma. Depois de voltar aos Reinos do Leste, vá de Pedregal às Terras Devastadas.
+04-45到60級.md:2101｜說明｜先收加德納爾精華｜Colete primeiro a essência de Jaedenar.
+04-45到60級.md:2101｜說明｜從奧格瑪前往艾薩拉時收下一份。回東部王國後，再從斯通納德前往詛咒之地。｜Ao ir de Orgrimmar a Azshara, pegue mais uma. Depois de voltar aos Reinos do Leste, vá de Pedregal às Terras Devastadas.
+04-45到60級.md:989｜說明｜南部死木熊怪直接開木喉聲望；加德納爾、南段洛爾和碧火薩特月井可連著跑。｜Os ursos Madeira Morta do sul dão direto reputação com os Presamatos. Jaedenar, Rell do sul e o poço lunar dos sátiros Fogoverde podem ser feitos em sequência.
+04-45到60級.md:990｜說明｜4102 先接，北邊拿齊血琥珀。採完後晚點再回南部交，省下立刻折返一趟。｜Aceite primeiro 4102 e junte o âmbar sanguíneo no norte. Depois de coletar, volte ao sul mais tarde para entregar, o que poupa uma volta imediata.
+04-45到60級.md:1023｜說明｜已接腐化的力量才做｜Só faça se já tiver aceitado A força da corrupção.
+04-45到60級.md:1033｜說明｜北部鐵木森林一起解血琥珀與墮落的力量，最後才刷死木熊怪聲望。｜No norte da Floresta Ferrárbol, resolva juntos o âmbar sanguíneo e A força da corrupção, e só por último farme a reputação com os ursos Madeira Morta.
+04-45到60級.md:1034｜說明｜已打完 4102 先留物品，往後回翡翠聖地再交。5158 留棘齒城。｜Se já concluiu 4102, guarde o item e entregue depois, na volta ao Santuário Esmeralda. Deixe 5158 em Vila Catraca.
+04-45到60級.md:1060｜說明｜到北菲拉斯取藥劑；下次回冰火溫泉再交。｜Pegue a poção no norte de Feralas. Entregue na próxima ida às Fontes Termais de Fogofrio.
+04-45到60級.md:1060｜說明｜到北菲拉斯取藥劑｜Pegue a poção no norte de Feralas.
+04-45到60級.md:1060｜說明｜下次回冰火溫泉再交。｜Entregue na próxima ida às Fontes Termais de Fogofrio.
+04-45到60級.md:1063｜說明｜熊怪會掉空的火酒瓶，撿到後點開；這是冬泉谷熊怪任務鏈的前置；若還沒掉，到冬泉村外繼續打普通熊怪。｜Os ursos soltam Garrafas Vazias de Aguardente; clique nelas depois de pegar. Este é o pré-requisito da cadeia de missões dos ursos de Hibérnia. Se ainda não caiu, continue matando ursos normais fora da Aldeia dos Invernosos.
+04-45到60級.md:1063｜說明｜熊怪會掉空的火酒瓶，撿到後點開；這是冬泉谷熊怪任務鏈的前置｜Os ursos soltam Garrafas Vazias de Aguardente; clique nelas depois de pegar. Este é o pré-requisito da cadeia de missões dos ursos de Hibérnia.
+04-45到60級.md:1063｜說明｜熊怪會掉空的火酒瓶，撿到後點開｜Os ursos soltam Garrafas Vazias de Aguardente; clique nelas depois de pegar.
+04-45到60級.md:1063｜說明｜這是冬泉谷熊怪任務鏈的前置；若還沒掉，到冬泉村外繼續打普通熊怪。｜Este é o pré-requisito da cadeia de missões dos ursos de Hibérnia. Se ainda não caiu, continue matando ursos normais fora da Aldeia dos Invernosos.
+04-45到60級.md:1063｜說明｜這是冬泉谷熊怪任務鏈的前置｜Este é o pré-requisito da cadeia de missões dos ursos de Hibérnia.
+04-45到60級.md:1063｜說明｜若還沒掉，到冬泉村外繼續打普通熊怪。｜Se ainda não caiu, continue matando ursos normais fora da Aldeia dos Invernosos.
+04-45到60級.md:1078｜說明｜與永望鎮報告一起帶到東瘟疫；這件在達隆郡交。｜Leve junto com o relatório de Visteterna para as Terras Pestilentas Orientais. Esta entrega é em Vila das Flechas.
+04-45到60級.md:1078｜說明｜與永望鎮報告一起帶到東瘟疫｜Leve junto com o relatório de Visteterna para as Terras Pestilentas Orientais.
+04-45到60級.md:1078｜說明｜這件在達隆郡交。｜Esta entrega é em Vila das Flechas.
+04-45到60級.md:1091｜說明｜冰火溫泉的多諾瓦任務先交齊，梟獸沿路清；永望鎮雪怪、奇美拉可在同趟做。｜Entregue primeiro todas as missões de Donova nas Fontes Termais de Fogofrio e mate as bestas-coruja pelo caminho. Os yetis e as quimeras de Visteterna podem ser feitos na mesma ida.
+04-45到60級.md:1093｜說明｜永望鎮報告與尼古拉斯公爵的書先放任務欄，東部王國下一輪一起交。｜Deixe no diário o relatório de Visteterna e o livro do Duque Nicholas; entregue-os juntos na próxima rodada pelos Reinos do Leste.
+05-副本.md:1391｜說明｜寶石與印章掉落機率有限，先和隊友約定分配；若只打上層，隊伍一人持完成品即可。；位置：三王各拾寶石，沿路小怪另找原始印章；順序：歐莫克→沃恩→維姆薩拉克｜A chance de drop de gemas e selos é limitada; combine antes com o grupo a divisão. Se só for fazer a parte superior, basta uma pessoa do grupo ter o item finalizado. Local: pegue uma gema de cada um dos três reis e procure o Selo Primordial nos lacaios pelo caminho. Ordem: Omokk → Voone → Wyrmthalak
+05-副本.md:1391｜說明｜寶石與印章掉落機率有限，先和隊友約定分配；若只打上層，隊伍一人持完成品即可。；位置：三王各拾寶石，沿路小怪另找原始印章｜A chance de drop de gemas e selos é limitada; combine antes com o grupo a divisão. Se só for fazer a parte superior, basta uma pessoa do grupo ter o item finalizado. Local: pegue uma gema de cada um dos três reis e procure o Selo Primordial nos lacaios pelo caminho.
+05-副本.md:1404｜說明｜先保留，飛船或飛艇回到奧格瑪時進智慧谷找伊崔格。｜Guarde e, ao voltar a Orgrimmar de navio ou zepelim, entre no Vale da Sabedoria para falar com Eitrigg.
+04-45到60級.md:1115｜說明｜從永望鎮飛莫沙徹營地；這一趟先回營地交之前接的費伍德支線，已接視靈藥劑再去北邊。｜Voe de Visteterna para a Aldeia Mojache. Nesta ida, volte primeiro ao acampamento para entregar as missões paralelas de Selva Maleva aceitas antes; vá ao norte depois de aceitar o Elixir Videre.
+04-45到60級.md:1116｜說明｜腐化的力量完成後交｜Entregue depois de concluir A força da corrupção.
+04-45到60級.md:1118｜說明｜已接視靈藥劑才買｜Compre só depois de aceitar o Elixir Videre.
+04-45到60級.md:1119｜說明｜已接視靈藥劑才做｜Faça só depois de aceitar o Elixir Videre.
+04-45到60級.md:1123｜說明｜菲拉斯 莫沙徹營地與怒痕堡接、費伍德做的 4120 是回村就能交的任務。｜4120, aceita na Aldeia Mojache e na Bastilha Cortifúria, em Feralas, e feita em Selva Maleva, pode ser entregue assim que você voltar à aldeia.
+04-45到60級.md:1150｜說明｜到海岸接伊斯倫回費伍德的信。｜Vá à costa e aceite a carta de Islen para Selva Maleva.
+04-45到60級.md:1152｜說明｜棘齒城的怪等級偏低。未到 56 級可在轉飛艇前飛回永望鎮打東側普通雪人（約 64, 40），或到西瘟疫之地費爾斯通農場（約 38, 56）打普通亡靈。｜Os monstros de Vila Catraca têm nível baixo. Se estiver abaixo do nível 56, antes de pegar o zepelim, volte de voo a Visteterna e mate yetis normais ao leste (cerca de 64, 40), ou vá à Fazenda Felstone, nas Terras Pestilentas Ocidentais (cerca de 38, 56), matar mortos-vivos normais.
+04-45到60級.md:1205｜說明｜瘟疫之鍋按接續順序做，嚎哭鬼屋順路完成兩段野生動物。｜Faça os caldeirões da praga na ordem de continuação; no Writhing Haunt, faça de passagem as duas missões de feras selvagens.
+04-45到60級.md:1268｜說明｜可跳過｜暗翼蝠（6135）在東瘟疫，是精英巡邏目標；沒隊伍可跳過。｜Pode pular: O Morcego Asa Sombria (6135) fica nas Terras Pestilentas Orientais e é um alvo elite patrulheiro. Pule se estiver sem grupo.
+05-副本.md:1502｜說明｜清通靈塔後過屠宰場，擊敗瑞文戴爾後，在同一房間找奧里克斯交談。｜Depois de limpar a torre necromântica, passe pelo matadouro, derrote o Barão Rivendare e fale com Aurius na mesma sala.
+04-45到60級.md:2013｜說明｜回提里斯法林地西南找悲慟騎士，完成後可選 Sword of Mourning。｜Procure o Cavaleiro do Luto no sudoeste de Clareiras de Tirisfal; ao concluir, dá para escolher Sword of Mourning.
+04-45到60級.md:1326｜說明｜費爾斯通和安多哈爾連著做，末段白蟻回程剛好一起交。｜Faça Felstone e Andorhal em sequência; os térmitas da última etapa são entregues juntos na volta.
+04-45到60級.md:1327｜說明｜克羅米其餘鏈要再跑東瘟疫；有專程回去再接。｜O resto da cadeia de Crona exige voltar às Terras Pestilentas Orientais. Aceite se for voltar de propósito.
+05-副本.md:1727｜說明｜從安戈洛環形山經過加基森前，先準備兩塊瑟銀錠。｜Antes de passar por Geringontzan vindo da Cratera Un'Goro, prepare duas barras de Tório.
+05-副本.md:1741｜說明｜南海鎮、塔倫米爾、布瑞爾與凱爾達隆是地契名稱，不用離開副本。；位置：在首廳、召喚廳後、霜語房、巴羅夫房找四張地契｜Costa Sul, Serraria Tarren, Montalvo e Caer Darrow são nomes de escrituras; não é preciso sair da masmorra. Local: procure as quatro escrituras no salão de entrada, atrás do salão de invocação, na sala de Ras Friomúrmuro e na sala de Barov.
+05-副本.md:1741｜說明｜南海鎮、塔倫米爾、布瑞爾與凱爾達隆是地契名稱，不用離開副本。｜Costa Sul, Serraria Tarren, Montalvo e Caer Darrow são nomes de escrituras; não é preciso sair da masmorra.
+05-副本.md:1741｜說明｜在首廳、召喚廳後、霜語房、巴羅夫房找四張地契｜Procure as quatro escrituras no salão de entrada, atrás do salão de invocação, na sala de Ras Friomúrmuro e na sala de Barov.
+04-45到60級.md:1352｜說明｜此為部落前往永夜港的引導；做過其他版本新的邊疆的角色可直接找哈繆爾。｜Este é o guia da Horda para Refúgio Noturno. Personagens que já fizeram Novas Fronteiras em outras versões podem falar direto com Hamuul.
+04-45到60級.md:1352｜說明｜此為部落前往永夜港的引導｜Este é o guia da Horda para Refúgio Noturno.
+04-45到60級.md:1352｜說明｜做過其他版本新的邊疆的角色可直接找哈繆爾。｜Personagens que já fizeram Novas Fronteiras em outras versões podem falar direto com Hamuul.
+04-45到60級.md:1368｜說明｜先接 1124 和 5527，希利蘇斯南風村能接著做同一區的任務。｜Aceite primeiro 1124 e 5527; na Aldeia Vento Sul, em Silithus, dá para continuar com as missões da mesma zona.
+04-45到60級.md:1370｜說明｜木喉熊怪若還會主動攻擊，先在要塞外打死木熊怪，或先做費伍德森林的木喉聲望任務；通過要塞後可直接前往冬泉谷永望鎮。｜Se os Presamatos ainda atacarem você, mate primeiro os ursos Madeira Morta fora do domínio ou faça antes as missões de reputação dos Presamatos em Selva Maleva. Depois de passar pelo Domínio dos Presamatos, dá para ir direto a Visteterna, em Hibérnia.
+04-45到60級.md:1398｜說明｜接完先在永望鎮對萊加奇（61.54, 38.61）使用機械雪人，另外兩人在安戈洛環形山 馬紹爾營地那站順路使用。｜Depois de aceitar, use o Yeti Mecânico em Legacki, em Visteterna (61.54, 38.61); as outras duas pessoas usam de passagem na parada do Refúgio do Marshal, na Cratera Un'Goro.
+04-45到60級.md:1403｜說明｜5163 會沿同一路線跑三張圖，接了就先在永望鎮用一次。｜5163 percorre três mapas pela mesma rota; ao aceitar, use uma vez em Visteterna.
+04-45到60級.md:1454｜說明｜材料先留著；從月光林地回來送木箱時，一起交給凱蕾娜。｜Guarde os materiais por enquanto. Ao voltar da Clareira da Lua com as caixas, entregue-as também a Kaylaena.
+04-45到60級.md:1454｜說明｜材料先留著｜Guarde os materiais por enquanto.
+04-45到60級.md:1454｜說明｜從月光林地回來送木箱時，一起交給凱蕾娜。｜Ao voltar da Clareira da Lua com as caixas, entregue-as também a Kaylaena.
+04-45到60級.md:1455｜說明｜往月光林地經過永望鎮時交娜米。｜Ao passar por Visteterna a caminho da Clareira da Lua, entregue a Nami.
+04-45到60級.md:1533｜說明｜從永望鎮走暗語峽谷進山，先開污化丘陵飛行點，再往北到凱蕾娜的工坊；之後經永望鎮飛月光林地來回，回程先送木箱到工坊；最後沿大路往西北。｜De Visteterna, entre na montanha pela Garganta do Sussurro Sombrio, desbloqueie primeiro o ponto de voo de Tainted Foothills e depois siga ao norte até a oficina de Kaylaena. Depois, voe de Visteterna à Clareira da Lua e volte; na volta, entregue primeiro as caixas na oficina. Por fim, siga a estrada grande para noroeste.
+04-45到60級.md:1534｜說明｜隱士柯薩拉斯的主線一路開到永恆山峰的山脈法杖，月光林地這趟來回是為了接上後段。｜A cadeia principal do eremita Ketharas vai até o Cajado da Montanha, no Summit of Eternity; a ida e volta à Clareira da Lua serve para engatar a parte posterior.
+04-45到60級.md:1537｜說明｜可跳過｜92009 的木箱約兩小時失效，所以月光林地回來才接，下飛行點直接送。後續 92011 要到古野村再往上的部落營地遺跡拾荒，物品位置不明；92328、92329 跟著略過，92329 還要引 60 級奇美拉剛蘇羅克。｜Pode pular: A caixa de 92009 expira em cerca de duas horas; por isso, aceite só ao voltar da Clareira da Lua e entregue direto ao descer no ponto de voo. A continuação 92011 exige vasculhar as ruínas do acampamento da Horda acima de Elderwild; o local do item é desconhecido. 92328 e 92329 também são puladas; 92329 ainda exigiria atrair a quimera de nível 60 Gensuroc.
+04-45到60級.md:1538｜說明｜種子、貓頭鷹蛋、塊莖、土壤、水晶、松果這些採集物，照任務描述在附近找；找不到先做附近的擊殺任務。｜Para sementes, ovos de coruja, tubérculos, solo, cristais e pinhas, procure por perto conforme a descrição da missão. Se não achar, faça primeiro as missões de matar próximas.
+04-45到60級.md:1577｜說明｜用任務給的空葫蘆在前方瀑布裝水，不是在嘉文關身邊；瀑布沿大路往祥和育所方向找。｜Use a cabaça vazia da missão para encher d'água na cachoeira à frente, não ao lado de Galvinquam. Procure a cachoeira ao longo da estrada rumo a Cradle of Tranquility.
+04-45到60級.md:1577｜說明｜瀑布沿大路往祥和育所方向找。｜Procure a cachoeira ao longo da estrada rumo a Cradle of Tranquility.
+04-45到60級.md:1606｜說明｜安荷在瑪露克附近找。｜Procure Anhe perto de Maruk.
+04-45到60級.md:1630｜說明｜灰燼在戴根廢墟中央，附近有精英末日守衛，58 級單人要小心；沒拿到骨灰，就略過山脈法杖與其後續；不需要法杖的山頂任務照做。｜As cinzas ficam no meio de Dae'gun, com um demonarca elite por perto; no nível 58, tenha cuidado se estiver sozinho. Se não pegou as cinzas, pule o Cajado da Montanha e o que vem depois. As missões do topo da montanha que não precisam do cajado podem ser feitas normalmente.
+04-45到60級.md:1630｜說明｜灰燼在戴根廢墟中央，附近有精英末日守衛，58 級單人要小心；沒拿到骨灰，就略過山脈法杖與其後續｜As cinzas ficam no meio de Dae'gun, com um demonarca elite por perto; no nível 58, tenha cuidado se estiver sozinho. Se não pegou as cinzas, pule o Cajado da Montanha e o que vem depois.
+04-45到60級.md:1630｜說明｜沒拿到骨灰，就略過山脈法杖與其後續；不需要法杖的山頂任務照做。｜Se não pegou as cinzas, pule o Cajado da Montanha e o que vem depois. As missões do topo da montanha que não precisam do cajado podem ser feitas normalmente.
+04-45到60級.md:1630｜說明｜沒拿到骨灰，就略過山脈法杖與其後續｜Se não pegou as cinzas, pule o Cajado da Montanha e o que vem depois.
+04-45到60級.md:1630｜說明｜不需要法杖的山頂任務照做。｜As missões do topo da montanha que não precisam do cajado podem ser feitas normalmente.
+04-45到60級.md:1647｜說明｜先依任務日誌找郵件掉落處；找不到可先略過。｜Primeiro veja no diário de missões onde o correio cai. Se não achar, pode pular.
+04-45到60級.md:1647｜說明｜先依任務日誌找郵件掉落處｜Primeiro veja no diário de missões onde o correio cai.
+04-45到60級.md:1647｜說明｜找不到可先略過。｜Se não achar, pode pular.
+04-45到60級.md:1678｜說明｜解放諾達希爾樹根下原本就在的幽光，不是在空地用道具召出來；在樹根一帶找。｜Liberte a luz tênue que já está sob as raízes de Nordrassil, em vez de invocá-la com um item na clareira. Procure perto das raízes.
+04-45到60級.md:1678｜說明｜在樹根一帶找。｜Procure perto das raízes.
+04-45到60級.md:1679｜說明｜遺骸在諾達希爾一帶找。｜Procure os restos perto de Nordrassil.
+04-45到60級.md:1692｜說明｜先開永恆山峰飛行點；再飛污化丘陵交山脈法杖的三個前置，之後轉永望鎮送郵包、做郵件這串後飛回山上；離山時經污化丘陵飛永望鎮，最後依是否要繞菲拉斯 亂羽高地選航線。｜Desbloqueie primeiro o ponto de voo do Summit of Eternity. Depois, voe para Tainted Foothills para entregar os três pré-requisitos do Cajado da Montanha; em seguida vá a Visteterna para entregar o pacote de correio e fazer a cadeia do correio, e então volte de voo à montanha. Ao sair da montanha, voe de Tainted Foothills a Visteterna; por fim, escolha a rota conforme for passar ou não por Planalto Esfiapluma, em Feralas.
+04-45到60級.md:1693｜說明｜古野村、哀悼之眠與祥和育所的任務都在大路兩側，殺怪和撿東西可一起做。｜As missões de Elderwild, Mourning's Rest e Cradle of Tranquility ficam dos dois lados da estrada; dá para matar e coletar juntos.
+04-45到60級.md:1694｜說明｜拿法杖下山時，一起送郵包並完成郵件後續（93197→93406→93269）。｜Ao descer com o cajado, entregue também o pacote de correio e conclua a continuação do correio (93197→93406→93269).
+04-45到60級.md:1695｜說明｜可跳過｜92335 的骨灰在戴根廢墟中央，旁邊有精英末日守衛；單人拿不到就略過山脈法杖與其後續（92335、90647、92169、92833、93848）；92317、92500 照樣回隱士洞交，郵件這串和 93127、93407、93547、93584、92533、92017 不需要法杖，照做。｜Pode pular: As cinzas de 92335 ficam no meio de Dae'gun, ao lado de um demonarca elite. Se não conseguir sozinho, pule o Cajado da Montanha e o que vem depois (92335, 90647, 92169, 92833, 93848). Entregue 92317 e 92500 como de costume na Caverna do Eremita; a cadeia do correio e 93127, 93407, 93547, 93584, 92533 e 92017 não precisam do cajado, então faça-as.
+04-45到60級.md:1700｜說明｜可跳過｜93615 夏拉卡（31.3, 50.3，馬羅希斯旁）的小貓散在山裡，位置不明，可略過。93521 維漢身旁書架上的研究報告、99670 回去找傑瑞曼，前置不明，路線不接。｜Pode pular: Os gatinhos de 93615 Shalla'kal (31.3, 50.3, perto de Maroshis) estão espalhados pela montanha, em locais desconhecidos; pode pular. O relatório de pesquisa na estante ao lado de Vehan, em 93521, e voltar a procurar Jerman, em 99670, têm pré-requisito desconhecido; a rota não os inclui.
+05-副本.md:1621｜說明｜打完大王取得國王身分後，原路回戈多克平民區找克雷格交談。｜Depois de derrotar o chefe e obter a condição de rei, volte pelo mesmo caminho a Praça Gordok e fale com Kreeg.
+05-副本.md:1543｜說明｜從東門與普希林交談，沿通道追到盡頭；每次停下都再和他說話。｜Fale com Pusillin pelo portão leste e siga-o pela passagem até o fim. Fale com ele de novo a cada parada.
+05-副本.md:1543｜說明｜從東門與普希林交談，沿通道追到盡頭｜Fale com Pusillin pelo portão leste e siga-o pela passagem até o fim.
+05-副本.md:1543｜說明｜每次停下都再和他說話。｜Fale com ele de novo a cada parada.
+05-副本.md:1528｜說明｜從艾薩拉經奧格瑪且滿 54 級時，可向公告員高拉克接 7492。在莫沙徹營地交塔羅並先接 7489。飛到莫沙徹營地後，找拉瑞斯小亭的埃斯托爾迪。5527 可從月光林地接；到希利蘇斯南風村取匣、回月光林地永夜港交後才有 5526，可留到晚一趟。｜Se estiver no nível 54 passando de Azshara por Orgrimmar, dá para aceitar 7492 com o anunciador Gorak. Entregue Taro na Aldeia Mojache e aceite 7489 primeiro. Depois de voar à Aldeia Mojache, procure Estoldi no Pavilhão Lariss. 5527 pode ser aceita na Clareira da Lua. Busque a caixa na Aldeia Vento Sul, em Silithus, e entregue-a em Refúgio Noturno, na Clareira da Lua; só então 5526 aparece, e pode ficar para uma ida posterior.
+04-45到60級.md:1798｜說明｜可跳過｜超級測蛋器只在撿到蛋、還能交時才去；沒撿的不用折返。｜Pode pular: Só vá ao Super Ovomático se tiver pegado um ovo e ainda puder entregá-lo. Quem não pegou não precisa voltar.
+05-副本.md:1677｜說明｜在雷霆崖西側高原接。｜Aceite no planalto a oeste do Penhasco do Trovão.
+05-副本.md:1683｜說明｜在副本內找滲漏軟泥怪｜Encontre a Gosma Infiltrante dentro da masmorra.
+05-副本.md:1661｜說明｜入口→泰坦遺跡沿途收四色水晶→在無色水晶旁一起處理水池目標。｜Entrada → siga pelas ruínas titânicas coletando os cristais de quatro cores → junto ao cristal incolor, resolva também os objetivos da poça.
+05-副本.md:1691｜說明｜先接 95928。若在營地沒有其他任務可接，直接跟隊進本。｜Aceite primeiro 95928. Se não houver outra missão no acampamento, entre direto na masmorra com o grupo.
+05-副本.md:1692｜說明｜永恆版新增五人副本。由馬紹爾營地北側上坡，泰坦門前可用安戈洛採集的能量水晶。安戈洛約 48.10, 6.10 是泰坦建築的外側路標，請往建築內找入口。｜Masmorra de cinco jogadores nova da versão Forever. Suba a encosta ao norte do Refúgio do Marshal; diante do portão titã, dá para usar os cristais de energia coletados em Un'Goro. Em Un'Goro, cerca de 48.10, 6.10, há um marco externo da construção titã; procure a entrada dentro do edifício.
+05-副本.md:1673｜說明｜前往月光林地途中，經雷霆崖時可先到莫高雷西北找 Mayena Earthseeker。回安戈洛環形山 馬紹爾營地後，沿北邊石階往上找泰坦建築；97049、95926 在幽暗城煉金區接，西瘟疫之地・第三次離開幽暗城前先接。｜A caminho da Clareira da Lua, ao passar pelo Penhasco do Trovão, vá antes ao noroeste de Mulgore falar com Mayena Earthseeker. De volta ao Refúgio do Marshal, na Cratera Un'Goro, suba a escada de pedra ao norte e procure a construção titã. 97049 e 95926 são aceitas no distrito de alquimia da Cidade Baixa; aceite-as antes da terceira saída da Cidade Baixa, nas Terras Pestilentas Ocidentais.
+05-副本.md:1664｜說明｜安戈洛環形山 1449 48.10, 6.10（泰坦建築外側路標，請往建築內找入口）｜Cratera Un'Goro 1449 48.10, 6.10 (marco externo da construção titã; procure a entrada dentro do edifício)
+04-45到60級.md:1860｜說明｜可跳過｜暗翼蝠（6135）在東瘟疫；希利蘇斯這站也略過組隊精英。｜Pode pular: O Morcego Asa Sombria (6135) fica nas Terras Pestilentas Orientais. Nesta parada de Silithus, pule também os elites de grupo.
+04-45到60級.md:1938｜說明｜永夜港兩位 NPC 的交接在同一座村。｜As entregas dos dois NPCs de Refúgio Noturno ficam na mesma aldeia.
+04-45到60級.md:1939｜說明｜5526 要進厄運之槌東區，留副本行程。｜5526 exige entrar na ala leste de Gládio Cruel; deixe para o itinerário da masmorra.
+04-45到60級.md:1978｜說明｜5087 優先找落單的信使；4842 是探索，和霜語峽谷北側的補怪點同路。｜Para 5087, priorize mensageiros isolados. 4842 é de exploração, na mesma rota do ponto de monstros ao norte da Garganta dos Sussurros Gelados.
+04-45到60級.md:1980｜說明｜未滿 60 級可在霜語峽谷北側打熊，打一般的瘋狂的裂齒熊（約 57.63, 70.83／66.68, 70.57），避開谷底精英。｜Se estiver abaixo do nível 60, mate ursos no norte da Garganta dos Sussurros Gelados: os ursos Dentesfendidos enlouquecidos normais (cerca de 57.63, 70.83 / 66.68, 70.57), evitando os elites do fundo do vale.
+05-副本.md:1839｜說明｜卡加斯和奧格瑪先接滿；黑手的命令是團隊副本傳送前置，有需求再做。｜Aceite tudo em Karrath e Orgrimmar primeiro. O Comando do Mão Negra é o pré-requisito do teletransporte para a raide; faça só se precisar.
+05-副本.md:1840｜說明｜與下層共用外門，進門後向左上去找上層鎖門；組隊先找可用晉升印章的隊友。若遇到跳台地形擋路，走上層外側步道。｜Compartilha a porta externa com a parte inferior; depois de entrar, vire à esquerda e suba para achar a fechadura da parte superior. Em grupo, procure primeiro um colega que possa usar o Selo da Ascensão. Se um terreno de plataformas bloquear o caminho, siga pela passarela externa do andar superior.
+05-副本.md:1809｜說明｜滿 55 級後從冬泉谷 永望鎮飛奧格瑪，再搭飛艇到東部王國先做下層 4903，回卡加斯高圖斯接 4941。可於貧瘠之地 棘齒城後回奧格瑪智慧谷向伊崔格、索爾交接並留 4974。57 級後回幽暗城煉金區接 4769，再飛卡加斯交給薇薇安，接 4768。下層至少一人完成晉升印章兩段，帶印章開門；已有持章隊友可直接打上層。｜Depois do nível 55, voe de Visteterna, em Hibérnia, para Orgrimmar e pegue o zepelim para os Reinos do Leste; faça primeiro a parte inferior, 4903, e volte a Karrath para aceitar 4941 com Gortus. Depois de Vila Catraca, nos Sertões, volte ao Vale da Sabedoria, em Orgrimmar, para entregar a Eitrigg e Thrall e guarde 4974. Depois do nível 57, volte ao distrito de alquimia da Cidade Baixa para aceitar 4769, voe a Karrath para entregar a Vivian e aceite 4768. Na parte inferior, pelo menos uma pessoa deve concluir as duas etapas do Selo da Ascensão e abrir a porta com o selo. Quem já tem o selo no grupo pode ir direto à parte superior.
+05-副本.md:1782｜說明｜沿熊怪通道找枯萎之喉與骨鼻，兩者在不同支路｜Siga o túnel dos ursos até Putrigórjeo e Focinhosso, o Inquebrável; ficam em ramais diferentes.
+05-副本.md:1756｜說明｜入口熊怪通道沿路收黑喉袋子→地下根系區收諾達希爾根帽→枯萎之喉與骨鼻的岔路→血鬃長老取儀祭圖騰。｜Túnel dos ursos na entrada: pegue as bolsas de Gargantanegra ao longo do caminho → colete o Capuz de raiz de Nordrassil na zona de raízes subterrâneas → bifurcação de Putrigórjeo e Focinhosso → pegue o totem ritual com o Xamã Ancião Jubassangue.
+05-副本.md:1767｜說明｜在瓦羅莫克找傑迪加接 92346。同站可到奧汀克接 92069；滿 55 級再回艾薩拉找 Ekkal。經棘齒城回卡林多時，先飛雷霆崖到長者高地交傑迪加的信、接 92343，再往莫高雷找穆倫·地怒。最後飛瓦羅莫克，由艾薩拉地道前往副本。92343、97198 留到下次雷霆崖和莫高雷回程交。｜Em Valormok, procure Jediga para 92346. Na mesma parada, vá a Ogtinc para 92069. No nível 55, volte a Azshara e procure Ekkal. Ao voltar a Kalimdor via Vila Catraca, voe primeiro ao Penhasco do Trovão e entregue a carta de Jediga no Platô dos Anciãos, aceite 92343 e depois vá a Mulgore procurar Muln Terrafúria. Por fim, voe a Valormok e siga pelo túnel de Azshara até a masmorra. Deixe 92343 e 97198 para entregar na próxima passagem de volta pelo Penhasco do Trovão e por Mulgore.
+08-保留物品.md:43｜說明｜沙普塔隆的爪子，碎木崗哨｜Garra de Sharptalon, Posto Machadada
+08-保留物品.md:44｜說明｜烏薩茍斯的爪子，碎木崗哨｜Pata de Ursangous, Posto Machadada
+08-保留物品.md:45｜說明｜薩杜布拉的頭顱，碎木崗哨｜Cabeça de Shadumbra, Posto Machadada
+08-保留物品.md:67｜說明｜水之召喚，銀松森林水之祭壇｜Clamor da água, Altar da Água, Floresta de Pinhaprata
+08-保留物品.md:69｜說明｜水之召喚，貧瘠之地棘齒城｜Clamor da água, Vila Catraca, Sertões
+08-保留物品.md:107｜說明｜向赫格拉姆報到，悲傷沼澤斯通納德｜Apresente-se a Helgrum, Pedregal, Pântano das Mágoas
+06-路線外任務.md:14｜說明｜經過「歸還書籍」的接交地點時一併做，不必專程折返。｜Faça “Devolva o livro” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:19｜說明｜經過「研究資格」的接交地點時一併做，不必專程折返。｜Faça “Acesso à pesquisa” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:28｜說明｜經過「Greater Friend of the Library」的接交地點時一併做，不必專程折返。｜Faça “Rato de biblioteca mor” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:41｜說明｜同名後續經過接交地點時一併做，不必專程折返。｜Faça a missão seguinte de mesmo nome ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:51｜說明｜經過「禁斷的知識」的接交地點時一併做，不必專程折返。｜Faça “Conhecimento proibido” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:53｜說明｜經過「進入沙漠」的接交地點時一併做，不必專程折返。｜Faça “Trabalho de campo” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:67｜說明｜經過「安戈洛的泥土」的接交地點時一併做，不必專程折返。｜Faça “Solo de Un'Goro” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:71｜說明｜經過「融合軟泥怪」的接交地點時一併做，不必專程折返。｜Faça “Amálgama de influências” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:76｜說明｜經過「雜質檢測 - 安戈洛環形山」的接交地點時一併做，不必專程折返。｜Faça “Teste de impurezas - Cratera Un'Goro” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:79｜說明｜經過「捐獻符文布」的接交地點時一併做，不必專程折返。｜Faça “Doação de runatrama” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:82｜說明｜經過「更多的符文布」的接交地點時一併做，不必專程折返。｜Faça “Runatrama nunca é demais” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:115｜說明｜有學對應專業或紮營時順手做，到申德村交。｜Se tiver a profissão correspondente ou ao acampar, faça de passagem e entregue na Aldeia de Shen'dar.
+06-路線外任務.md:155｜說明｜經過 Wendel Mathers 附近時再接，回城或交件時順手完成。｜Aceite ao passar perto de Wendel Mathers; conclua ao voltar à cidade ou ao entregar missões.
+06-路線外任務.md:196｜說明｜經過「返回詛咒之地」的接交地點時一併做，不必專程折返。｜Faça “Retorno à Barreira do Inferno” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:197｜說明｜經過「收集破碎的護符」的接交地點時一併做，不必專程折返。｜Faça “Restaurando o amuleto estilhaçado” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:229｜說明｜經過「心急的伍特」的接交地點時一併做，不必專程折返。｜Faça “Por Uqueê a pressa?” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:230｜說明｜經過「最喜歡的食物」的接交地點時一併做，不必專程折返。｜Faça “Comida preferida” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:231｜說明｜經過「歇腳石」的接交地點時一併做，不必專程折返。｜Faça “Pedra pra sentar” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:261｜說明｜經過「收集蜜糖」的接交地點時一併做，不必專程折返。｜Faça “Pega a joça!” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:276｜說明｜經過「部落的勇士」的接交地點時一併做，不必專程折返。｜Faça “O campeão da Horda” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:277｜說明｜經過「雷克薩的證明」的接交地點時一併做，不必專程折返。｜Faça “O testamento de Rexxar” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:286｜說明｜經過「壹切才剛剛開始」的接交地點時一併做，不必專程折返。｜Faça “A jornada está apenas começando” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:339｜說明｜限德魯伊，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Somente Druida: Faça “Um dispositivo sobrenatural” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:340｜說明｜限獵人，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Somente Caçador: Faça “Um dispositivo sobrenatural” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:341｜說明｜限法師，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Somente Mago: Faça “Um dispositivo sobrenatural” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:342｜說明｜限牧師，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Somente Sacerdote: Faça “Um dispositivo sobrenatural” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:343｜說明｜限盜賊，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Somente Ladino: Faça “Um dispositivo sobrenatural” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:344｜說明｜限薩滿，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Somente Xamã: Faça “Um dispositivo sobrenatural” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:345｜說明｜限術士，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Somente Bruxo: Faça “Um dispositivo sobrenatural” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:346｜說明｜限戰士，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Somente Guerreiro: Faça “Um dispositivo sobrenatural” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:347｜說明｜限德魯伊，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Somente Druida: Faça “À procura de Anthion” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:348｜說明｜限獵人，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Somente Caçador: Faça “À procura de Anthion” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:349｜說明｜限法師，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Somente Mago: Faça “À procura de Anthion” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:350｜說明｜限牧師，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Somente Sacerdote: Faça “À procura de Anthion” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:351｜說明｜限盜賊，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Somente Ladino: Faça “À procura de Anthion” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:352｜說明｜限薩滿，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Somente Xamã: Faça “À procura de Anthion” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:353｜說明｜限術士，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Somente Bruxo: Faça “À procura de Anthion” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:354｜說明｜限戰士，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Somente Guerreiro: Faça “À procura de Anthion” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:355｜說明｜限薩滿，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Somente Xamã: Faça “O infeliz destino de Bodley” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:356｜說明｜經過「公平的補償」的接交地點時一併做，不必專程折返。｜Faça “Recompensa justa” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:357｜說明｜經過「最後的獎賞」的接交地點時一併做，不必專程折返。｜Faça “Deixando o melhor para o final” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:366｜說明｜限德魯伊，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Somente Druida: Faça “O infeliz destino de Bodley” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:367｜說明｜限獵人，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Somente Caçador: Faça “O infeliz destino de Bodley” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:368｜說明｜限法師，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Somente Mago: Faça “O infeliz destino de Bodley” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:369｜說明｜限牧師，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Somente Sacerdote: Faça “O infeliz destino de Bodley” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:370｜說明｜限盜賊，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Somente Ladino: Faça “O infeliz destino de Bodley” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:371｜說明｜限術士，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Somente Bruxo: Faça “O infeliz destino de Bodley” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:372｜說明｜限戰士，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Somente Guerreiro: Faça “O infeliz destino de Bodley” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:449｜說明｜經過「惡魔之種」的接交地點時一併做，不必專程折返。｜Faça “A Semente Demoníaca” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:489｜說明｜經過「鋼齒土狼」的接交地點時一併做，不必專程折返。｜Faça “Estalaço” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:490｜說明｜經過「霜喉雪人」的接交地點時一併做，不必專程折返。｜Faça “Bocarragelo” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:493｜說明｜經過「奧丹姆的線索」的接交地點時一併做，不必專程折返。｜Faça “Os portentos de Uldum” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:494｜說明｜經過「拭目以待」的接交地點時一併做，不必專程折返。｜Faça “Ver o que acontece” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:495｜說明｜經過「石頭衛士」的接交地點時一併做，不必專程折返。｜Faça “O vigia pétreo” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:496｜說明｜經過「進壹步的任務」的接交地點時一併做，不必專程折返。｜Faça “Uma tarefa futura” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:498｜說明｜經過「晨光麥研究」的接交地點時一併做，不必專程折返。｜Faça “Pesquisa de grão-matinal” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:501｜說明｜經過「雷霆崖的晨光麥」的接交地點時一併做，不必專程折返。｜Faça “Grãos-matinais para o Penhasco do Trovão” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:557｜說明｜限獸人／牛頭人／食人妖，同名後續經過接交地點時一併做，不必專程折返。｜Somente Orc/Tauren/Troll: Faça a missão seguinte de mesmo nome ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:580｜說明｜限牛頭人，經過「雙足飛龍管理員塔爾」的接交地點時一併做，不必專程折返。｜Somente Tauren: Faça “Tal, o Mestre de Mantícoras” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:581｜說明｜限牛頭人，經過「向加翰回復」的接交地點時一併做，不必專程折返。｜Somente Tauren: Faça “Fale novamente com Jahan” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:584｜說明｜限獸人／食人妖，經過「雙足飛龍管理員多拉斯」的接交地點時一併做，不必專程折返。｜Somente Orc/Troll: Faça “Doraso, o mestre de mantícoras” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:585｜說明｜限獸人／食人妖，經過「返回十字路口」的接交地點時一併做，不必專程折返。｜Somente Orc/Troll: Faça “Retorno à Encruzilhada” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:587｜說明｜經過「高強度齒輪」的接交地點時一併做，不必專程折返。｜Faça “Chumbalheiras” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:590｜說明｜經過「主動式負載平衡器說明書」的接交地點時一併做，不必專程折返。｜Faça “Manual da rebimboca” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:600｜說明｜經過「墊腳石」的接交地點時一併做，不必專程折返。｜Faça “Degraus” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:603｜說明｜經過「匆匆忙忙」的接交地點時一併做，不必專程折返。｜Faça “Rabisco” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:608｜說明｜經過「依沙瓦克」的接交地點時一併做，不必專程折返。｜Faça “Isha Awak” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:632｜說明｜限不死族，經過「飛往幽暗城」的接交地點時一併做，不必專程折返。｜Somente Morto-vivo: Faça “Carona para a Cidade Baixa” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:633｜說明｜限不死族，經過「向博迪瑞格回報」的接交地點時一併做，不必專程折返。｜Somente Morto-vivo: Faça “Fale novamente com Rodrigo” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:634｜說明｜限不死族，經過「邁克爾·加勒特」的接交地點時一併做，不必專程折返。｜Somente Morto-vivo: Faça “Miguel Garreta” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:669｜說明｜經過「鷹之拳」的接交地點時一併做，不必專程折返。｜Faça “Punho da Águia” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:697｜說明｜經過「塔蕾莎的禮物」的接交地點時一併做，不必專程折返。｜Faça “O presente de Taretha” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:730｜說明｜經過「淒涼之地的科卡爾部族」的接交地點時一併做，不必專程折返。｜Faça “Os Kolkar de Desolação” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:732｜說明｜經過「破碎之淚」的接交地點時一併做，不必專程折返。｜Faça “Lágrimas partidas” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:738｜說明｜經過 Molkar 附近時再接，回城或交件時順手完成。｜Aceite ao passar perto de Molkar; conclua ao voltar à cidade ou ao entregar missões.
+06-路線外任務.md:762｜說明｜經過「黑龍幻象」的接交地點時一併做，不必專程折返。｜Faça “Ilusões ópticas” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:809｜說明｜經過「通過試煉」的接交地點時一併做，不必專程折返。｜Faça “Passagem final” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:812｜說明｜經過「返回藏寶海灣」的接交地點時一併做，不必專程折返。｜Faça “De volta à Angra do Butim” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:815｜說明｜經過「跟上節奏」的接交地點時一併做，不必專程折返。｜Faça “Tirando o atraso” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:817｜說明｜經過「安全第壹」的接交地點時一併做，不必專程折返。｜Faça “Segurança em primeiro lugar” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:820｜說明｜經過「紮米克的困擾」的接交地點時一併做，不必專程折返。｜Faça “A distração de Zamek” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:822｜說明｜經過「精鐵礦石」的接交地點時一併做，不必專程折返。｜Faça “Minério de Indúrio” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:824｜說明｜經過「贊吉爾的藥劑和蠢人酒」的接交地點時一併做，不必專程折返。｜Faça “Preparado de Zanzil e Cerveja Escura do Tonto” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:825｜說明｜經過「灌醉侏儒」的接交地點時一併做，不必專程折返。｜Faça “Deixe os gnomos bêbados” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:826｜說明｜經過「向菲茲巴布報告」的接交地點時一併做，不必專程折返。｜Faça “Fale novamente com Mirrabolha” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:828｜說明｜經過「蠢人酒」的接交地點時一併做，不必專程折返。｜Faça “Cerveja Escura do Tonto” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:834｜說明｜經過「必是此地」的接交地點時一併做，不必專程折返。｜Faça “Deve ser aqui” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:866｜說明｜經過「為部落效力」的接交地點時一併做，不必專程折返。｜Faça “Serviço para a Horda” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:870｜說明｜經過「奧妮克希亞的血脈」的接交地點時一併做，不必專程折返。｜Faça “A linhagem de Onyxia” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:877｜說明｜經過「挑戰莫格穆洛克」的接交地點時一併做，不必專程折返。｜Faça “Desafie o lorde supremo Mok'Morokk” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:881｜說明｜經過「龍骨試煉，斯克利爾」的接交地點時一併做，不必專程折返。｜Faça “O teste dos crânios: Áugure” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:886｜說明｜經過「黑龍勇士之血」的接交地點時一併做，不必專程折返。｜Faça “Sangue do Campeão dos Dragões Negros” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:887｜說明｜經過「更多重要的材料」的接交地點時一併做，不必專程折返。｜Faça “Mais componentes importantes” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:896｜說明｜經過「悲傷的故事」的接交地點時一併做，不必專程折返。｜Faça “Uma história de tristeza” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:929｜說明｜經過「閃光彈的制法」的接交地點時一併做，不必專程折返。｜Faça “Receita de bomba de clarão” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:931｜說明｜經過「星，手，心」的接交地點時一併做，不必專程折返。｜Faça “A estrela, a mão e o coração” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:941｜說明｜經過「大地封印」的接交地點時一併做，不必專程折返。｜Faça “O Selo da Terra” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:961｜說明｜經過「口渴的比格維茲」的接交地點時一併做，不必專程折返。｜Faça “Mate a sede” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:974｜說明｜經過「返回雷霆崖」的接交地點時一併做，不必專程折返。｜Faça “Volte ao Penhasco do Trovão” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1025｜說明｜經過「尋找外膜」的接交地點時一併做，不必專程折返。｜Faça “Em busca de ectoplasma” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1026｜說明｜經過「靈質提純器」的接交地點時一併做，不必專程折返。｜Faça “O destilador ectoplásmico” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1027｜說明｜經過「攜帶式能量泉源」的接交地點時一併做，不必專程折返。｜Faça “Fonte de energia portátil” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1028｜說明｜經過「狡猾的商人」的接交地點時一併做，不必專程折返。｜Faça “Comerciante ardiloso” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1029｜說明｜經過「回到莫克瓦那裡」的接交地點時一併做，不必專程折返。｜Faça “Fale novamente com Mokvar” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1080｜說明｜經過「完好無損的毒囊」的接交地點時一併做，不必專程折返。｜Faça “Vesícula de peçonha intacta” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1081｜說明｜經過「請教加德林大師」的接交地點時一併做，不必專程折返。｜Faça “Consulte o Mestre Gadrin” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1082｜說明｜經過「蜘蛛之神」的接交地點時一併做，不必專程折返。｜Faça “A deusa aranha” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1084｜說明｜經過「奧蘭的感謝」的接交地點時一併做，不必專程折返。｜Faça “A gratidão de Urraca” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1086｜說明｜經過「送回蜜酒」的接交地點時一併做，不必專程折返。｜Faça “Entrega de suco gami” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1094｜說明｜經過「送往幽暗城的毒藥」的接交地點時一併做，不必專程折返。｜Faça “Veneno para a Cidade Baixa” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1140｜說明｜經過「艾博希爾之眼」的接交地點時一併做，不必專程折返。｜Faça “O Olho do Mirabrasa” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1142｜說明｜經過「破壞結界」的接交地點時一併做，不必專程折返。｜Faça “Quebrando a proteção” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1145｜說明｜經過「惡魔之名」的接交地點時一併做，不必專程折返。｜Faça “O nome da fera” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1148｜說明｜經過「艾薩拉水晶」的接交地點時一併做，不必專程折返。｜Faça “Azsharita” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1149｜說明｜經過「武器的鑄造」的接交地點時一併做，不必專程折返。｜Faça “A destruição vil” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1150｜說明｜經過「魔化艾薩拉水晶武器」的接交地點時一併做，不必專程折返。｜Faça “Armamento vil de aszharita encantada” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1174｜說明｜經過「爪牙的天災石」的接交地點時一併做，不必專程折返。｜Faça “Pedra do Flagelo do Lacaio” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1185｜說明｜經過「遊蕩者目錄」的接交地點時一併做，不必專程折返。｜Faça “Catálogo do Imprevisível” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1190｜說明｜經過「亡靈萊斯·霜語」的接交地點時一併做，不必專程折返。｜Faça “Ras Friomúrmuro, o moribundo” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1191｜說明｜經過「米奈希爾的禮物」的接交地點時一併做，不必專程折返。｜Faça “Dádiva de Menethil” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1192｜說明｜經過「巫妖萊斯·霜語」的接交地點時一併做，不必專程折返。｜Faça “Ras Friomúrmuro, o lich” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1195｜說明｜經過「血色幻象」的接交地點時一併做，不必專程折返。｜Faça “Subterfúgio Escarlate” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1196｜說明｜經過「在夢中」的接交地點時一併做，不必專程折返。｜Faça “No mundo dos sonhos” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1208｜說明｜經過「丟失的命令」的接交地點時一併做，不必專程折返。｜Faça “As ordens desaparecidas” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1209｜說明｜經過「悔恨的戰士」的接交地點時一併做，不必專程折返。｜Faça “O desonrado” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1217｜說明｜經過「古代英雄」的接交地點時一併做，不必專程折返。｜Faça “Heróis de outrora” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1218｜說明｜經過「基利斯」的接交地點時一併做，不必專程折返。｜Faça “Kirith” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1220｜說明｜經過「禁錮我們的石頭」的接交地點時一併做，不必專程折返。｜Faça “As pedras que nos unem” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1221｜說明｜經過「黑暗籠罩」的接交地點時一併做，不必專程折返。｜Faça “O abrigo das trevas” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1222｜說明｜經過「惡魔獵手」的接交地點時一併做，不必專程折返。｜Faça “O caçador de demônios” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1223｜說明｜經過「洛拉姆斯」的接交地點時一併做，不必專程折返。｜Faça “Loramus” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1224｜說明｜經過「惡魔拉瑟萊克」的接交地點時一併做，不必專程折返。｜Faça “Você é Rakh'likh, demônio” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1239｜說明｜經過「血瓣花除草器」的接交地點時一併做，不必專程折返。｜Faça “Fulminadora de Pétala Sangrenta” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1251｜說明｜經過「林克的冒險」的接交地點時一併做，不必專程折返。｜Faça “A aventura de Linken” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1315｜說明｜經過「貝蒂娜·比格辛克」的接交地點時一併做，不必專程折返。｜Faça “Betina Bigozinco” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1365｜說明｜經過「達隆郡的英雄」的接交地點時一併做，不必專程折返。｜Faça “Heróis da Vila das Flechas” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1369｜說明｜經過「最後的石板」的接交地點時一併做，不必專程折返。｜Faça “As últimas tabuletas” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1375｜說明｜經過「禁錮靈魂的遺物」的接交地點時一併做，不必專程折返。｜Faça “Lembrança Vinculada” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1379｜說明｜經過「達隆郡的戰鬥」的接交地點時一併做，不必專程折返。｜Faça “A batalha pela Vila das Flechas” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1385｜說明｜經過「紅衣信使」的接交地點時一併做，不必專程折返。｜Faça “O mensageiro carmesim” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1386｜說明｜經過「納薩諾斯的計謀」的接交地點時一併做，不必專程折返。｜Faça “O ardil de Nathanos” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1387｜說明｜經過「向納薩諾斯復命」的接交地點時一併做，不必專程折返。｜Faça “Retorno a Nathanos” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1388｜說明｜經過「血色十字軍聖者，德米提雅」的接交地點時一併做，不必專程折返。｜Faça “Demétria, o Oráculo Escarlate” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1394｜說明｜經過「逝者的請求」的接交地點時一併做，不必專程折返。｜Faça “Súplica de um morto” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1395｜說明｜經過「安希恩奇怪的要求」的接交地點時一併做，不必專程折返。｜Faça “O estranho pedido de Anthion” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1396｜說明｜經過「安希恩的老朋友」的接交地點時一併做，不必專程折返。｜Faça “Um velho amigo de Anthion” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1555｜說明｜經過「特雷·萊弗治的殘骸」的接交地點時一併做，不必專程折返。｜Faça “Os Restos Mortais de Trey Forjaleve” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:1593｜說明｜經過「召喚」的接交地點時一併做，不必專程折返。｜Faça “A evocação” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:2159｜說明｜經過「瓦薩拉克護符的左半塊」的接交地點時一併做，不必專程折返。｜Faça “A parte esquerda do amuleto do Lorde Valthalak” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:2163｜說明｜經過「瓦薩拉克領主護符的右半塊」的接交地點時一併做，不必專程折返。｜Faça “A parte direita do amuleto do lorde Valthalak” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:2168｜說明｜經過「回到原點」的接交地點時一併做，不必專程折返。｜Faça “De volta ao começo” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:2169｜說明｜經過「烈焰三巨頭」的接交地點時一併做，不必專程折返。｜Faça “Três reis das chamas” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+04-45到60級.md:500｜說明｜斯通納德已開就從惡齒村選斯通納德（經卡加斯等已開點轉乘）；未開就飛羅格瑪，沿南側道路經 Terral’s Watch 南下悲傷沼澤，到斯通納德開點。沿南方道路進詛咒之地，到北部兩名血法師（50.64, 14.30）。｜Se Pedregal estiver desbloqueado, escolha Pedregal a partir da Aldeia Revatusco (baldeação por pontos desbloqueados como Karrath) Se não, voe para Rog'mar, siga a estrada do sul passando por Terral's Watch para o sul até o Pântano das Mágoas e desbloqueie Pedregal. Siga a estrada do sul até a Barreira do Inferno e vá aos dois magos de sangue ao norte (50.64, 14.30).
+04-45到60級.md:1535｜說明｜有隊伍再做｜『苦痛者』瑟拉史卓斯、裂皮、甦醒魔灰軟泥怪都是精英；單人跳過這三件，96322 也一起略過。｜Grupo recomendado: Celastrus, o Amargo, Sunderbark e a gosma de cinzas desperta são elites; pule-as se estiver sozinho, e pule também 96322.

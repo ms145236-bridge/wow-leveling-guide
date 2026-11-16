@@ -83,6 +83,7 @@ local SPEC = {
   { sub = "地圖標點" },
   { key = "miniPinSize", label = "小地圖標點大小", min = 10, max = 30, step = 1, def = 15 },
   { key = "miniSteps", label = "小地圖顯示幾步", min = 0, max = 5, step = 1, def = 3, hint = "小地圖標出從目前這步起的幾個位置；0 不標。" },
+  { key = "mapSteps", label = "世界地圖後續步數", min = 0, max = 30, step = 1, def = 10 },
   { key = "pinAlpha", label = "標點透明度", min = 30, max = 100, step = 5, def = 100, unit = "%" },
   { key = "pinMergeX", label = "合併距離", hint = "標點大小的幾倍內合成一個。", min = 0, max = 3, step = 0.1, def = 1.1 },
   { sub = "提醒" },

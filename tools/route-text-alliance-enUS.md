@@ -909,3 +909,109 @@
 01-第一段-1到12級.md:633｜說明｜爐石或走回坦德爾林地的營地找狂風艾希安（42.76, 23.66）。｜Hearth, or walk back to the camp in Thendal Grove, and find Aetheen of the Gales (42.76, 23.66).
 01-第一段-1到12級.md:663｜說明｜在申德村旅店綁爐石（43.00, 43.20）。｜Set your hearth in the Sen'jin Village inn (43.00, 43.20).
 01-第一段-1到12級.md:710｜說明｜在瓦拉納爾旅店綁爐石（62.20, 72.60）。｜Set your hearth in the Valanaar inn (62.20, 72.60).
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。；尾王約 35% 血會恐懼，先清小怪，再把王拉回前一個房間打。；接任務處旁有拉桿，拉下開門就能直線跑出去。｜Right-click Treaty of Understanding in your bags to start the quest. The last boss fears at about 35% health. Clear the adds first, then pull the boss back into the previous room. There's a lever next to the quest giver. Pull it to open the door and run straight out.
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。；尾王約 35% 血會恐懼，先清小怪，再把王拉回前一個房間打。｜Right-click Treaty of Understanding in your bags to start the quest. The last boss fears at about 35% health. Clear the adds first, then pull the boss back into the previous room.
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。｜Right-click Treaty of Understanding in your bags to start the quest.
+05-副本.md:49｜說明｜右鍵背包裡的 Blood-Stained Parchment 接任務。｜Right-click Blood-Stained Parchment in your bags to start the quest.
+02-12到30級.md:304｜說明｜還沒開湖畔鎮飛行點，就從暴風城沿艾爾文森林大路往東走到湖畔鎮。｜If you haven't unlocked the Lakeshire flight point, walk east from Stormwind along the Elwynn Forest road to Lakeshire.
+02-12到30級.md:1023｜說明｜小型水之靈體在西部荒野池塘的聖壇附近。｜The lesser water spirits are near the shrine by the pond in Westfall.
+05-副本.md:114｜說明｜留到02-第19站，經過湖畔鎮再交。｜Hold it until 02-Stop 19 and turn it in when passing through Lakeshire.
+05-副本.md:115｜說明｜留到03-第22站，經過夜色鎮再交。｜Hold it until 03-Stop 22 and turn it in when passing through Darkshire.
+03-30到45級.md:488｜說明｜鋸刃散在豺狼人營地地上。｜Saw blades are scattered on the ground in the gnoll camp.
+03-30到45級.md:499｜說明｜泥鰭魚人頭顱和淡水惡魔一起打，再往北打特大螯蝦、撿新鮮肥料。｜Kill the Mudsnout murlocs for the heads together with the freshwater fiends, then go north to kill the giant crayfish and pick up Fresh Fertilizer.
+03-30到45級.md:500｜說明｜在泥鰭魚人營地找帽子。｜Find the hats in the Mudsnout murloc camp.
+03-30到45級.md:517｜說明｜墳墓在遠境堡的禮拜堂旁。｜The grave is next to the chapel at Far Watch Post.
+03-30到45級.md:519｜說明｜乾草捆在遠境堡附近的田裡。｜The hay bales are in the fields near Far Watch Post.
+03-30到45級.md:529｜說明｜走失的馬在農莊附近。｜The runaway horse is near the farm.
+03-30到45級.md:541｜說明｜工頭的木箱在透納的伐木場。｜The foreman's crate is at Turner's Mill.
+03-30到45級.md:546｜說明｜暮光書頁散在陽光林地。｜The Twilight pages are scattered across Sunnyglade.
+03-30到45級.md:471｜說明｜地圖中央的羅格瑪是部落城鎮，別靠近。｜Rog'mar in the middle of the map is a Horde town; don't go near it.
+03-30到45級.md:819｜說明｜任務 47 級；若比你高 3 級以上，可先跳過。；要先交掉落觸發的 94885 才接得到。｜Quest level 47. If it's 3 or more levels above you, you can skip it for now. You must first turn in the drop-triggered 94885 before you can accept it.
+03-30到45級.md:819｜說明｜任務 47 級；若比你高 3 級以上，可先跳過。｜Quest level 47. If it's 3 or more levels above you, you can skip it for now.
+03-30到45級.md:819｜說明｜任務 47 級｜Quest level 47.
+03-30到45級.md:819｜說明｜若比你高 3 級以上，可先跳過。；要先交掉落觸發的 94885 才接得到。｜If it's 3 or more levels above you, you can skip it for now. You must first turn in the drop-triggered 94885 before you can accept it.
+03-30到45級.md:819｜說明｜若比你高 3 級以上，可先跳過。｜If it's 3 or more levels above you, you can skip it for now.
+03-30到45級.md:823｜說明｜新鮮的蘋果在遠境堡附近的果樹下。｜The fresh apples are under the fruit trees near Far Watch Post.
+03-30到45級.md:831｜說明｜木材堆在透納的伐木場。｜The lumber piles are at Turner's Mill.
+03-30到45級.md:839｜說明｜斥候關在暮光之罩各處。｜Scouts are imprisoned all over Twilight's Shroud.
+03-30到45級.md:851｜說明｜沼澤氣體在史利博附近的噴口收。｜Collect the swamp gas at the vents near Sleebo.
+03-30到45級.md:882｜說明｜任務 45 級；若比你高 3 級以上，可先跳過。｜Quest level 45. If it's 3 or more levels above you, you can skip it for now.
+03-30到45級.md:882｜說明｜任務 45 級｜Quest level 45.
+03-30到45級.md:1073｜說明｜右鍵背包裡的 OOX-22/FE定位器接任務。｜Right-click OOX-22/FE Distress Beacon in your bags to start the quest.
+04-45到60級.md:48｜說明｜右鍵背包裡的 OOX-17/TN定位器接任務。｜Right-click OOX-17/TN Distress Beacon in your bags to start the quest.
+04-45到60級.md:105｜說明｜右鍵背包裡的 OOX-09/HL定位器接任務。｜Right-click OOX-09/HL Distress Beacon in your bags to start the quest.
+04-45到60級.md:478｜說明｜送書任務：NPC 有提供就接，帶到海加爾山永恆山峰交；看不到任務就先略過。｜A book delivery quest: accept it if an NPC offers it, and take the book to the Summit of Eternity on Mount Hyjal to turn it in. Skip it for now if you don't see the quest.
+04-45到60級.md:478｜說明｜送書任務：NPC 有提供就接，帶到海加爾山永恆山峰交｜A book delivery quest: accept it if an NPC offers it, and take the book to the Summit of Eternity on Mount Hyjal to turn it in.
+04-45到60級.md:478｜說明｜看不到任務就先略過。｜Skip it for now if you don't see the quest.
+04-45到60級.md:515｜說明｜送信任務：NPC 有提供就接，帶到海加爾山交給隱士柯薩拉斯；看不到任務就先略過。｜A letter delivery quest: accept it if an NPC offers it, and take it to Hermit Ketharas on Mount Hyjal. Skip it for now if you don't see the quest.
+04-45到60級.md:515｜說明｜送信任務：NPC 有提供就接，帶到海加爾山交給隱士柯薩拉斯｜A letter delivery quest: accept it if an NPC offers it, and take it to Hermit Ketharas on Mount Hyjal.
+04-45到60級.md:728｜說明｜先前在費伍德森林有接這件才交。｜Turn in only if you took this in Felwood earlier.
+04-45到60級.md:741｜說明｜弩砲、投石車、飛行器三種殘骸各算一項，三種都要種到；在隱士洞外的山坡找。｜The ballista, catapult and flying machine wrecks each count as one objective, and you have to plant all three. Look on the slope outside the Hermit's Cave.
+04-45到60級.md:741｜說明｜在隱士洞外的山坡找。｜Look on the slope outside the Hermit's Cave.
+04-45到60級.md:898｜說明｜在死木巢穴外找池塘。｜Look for the pond outside the Deadwood den.
+04-45到60級.md:972｜說明｜後續貝利的戒指（96077）要送去艾爾文森林的閃金鎮，回東部王國時再做。｜The follow-up Bailey's Ring (96077) goes to Goldshire in Elwynn Forest; do it when you return to the Eastern Kingdoms.
+04-45到60級.md:1015｜說明｜先前在安戈洛環形山有接這件才交。｜Turn in only if you took this in Un'Goro Crater earlier.
+04-45到60級.md:1033｜說明｜先依任務日誌找郵件掉落處；位置尚未確認，找不到可先略過。｜First check your quest log for where the mail drops. The location hasn't been confirmed; skip it if you can't find it.
+04-45到60級.md:1033｜說明｜先依任務日誌找郵件掉落處｜First check your quest log for where the mail drops.
+04-45到60級.md:1033｜說明｜位置尚未確認，找不到可先略過。｜The location hasn't been confirmed; skip it if you can't find it.
+06-路線外任務.md:9｜說明｜經過03-第29站時，有空再接。｜Pick this up if you have time when you pass stop 29 of part 3.
+06-路線外任務.md:17｜說明｜經過03-第40站時，有空再接。｜Pick this up if you have time when you pass stop 40 of part 3.
+06-路線外任務.md:20｜說明｜經過04-第47站時，有空再接。｜Pick this up if you have time when you pass stop 47 of part 4.
+06-路線外任務.md:25｜說明｜精英、副本、要特殊材料或位置太偏，跳過不影響練級。｜Elites, dungeons, special materials or too far out; skipping them doesn't affect leveling.
+06-路線外任務.md:63｜說明｜經過01-第3站時，有空再接。｜Pick this up if you have time when you pass stop 3 of part 1.
+06-路線外任務.md:69｜說明｜經過01-第4站時，有空再接。｜Pick this up if you have time when you pass stop 4 of part 1.
+06-路線外任務.md:71｜說明｜經過01-第9站時，有空再接。｜Pick this up if you have time when you pass stop 9 of part 1.
+06-路線外任務.md:87｜說明｜經過02-第12站時，有空再接。｜Pick this up if you have time when you pass stop 12 of part 2.
+06-路線外任務.md:99｜說明｜副本任務；組好隊、進本前再接。｜Dungeon quests. Accept after forming a group, before entering the dungeon.
+06-路線外任務.md:147｜說明｜經過04-第49站時，有空再接。｜Pick this up if you have time when you pass stop 49 of part 4.
+06-路線外任務.md:372｜說明｜經過02-第20站時，有空再接。｜Pick this up if you have time when you pass stop 20 of part 2.
+06-路線外任務.md:400｜說明｜夏拉卡在04-第58站嘉文關‧葉源附近（31.3, 50.3）接；小貓位置需遊戲實測。｜Pick up Shalla'kal at 04-Stop 58 near Galvinquam Leafsyre (31.3, 50.3). The kittens' locations need in-game testing.
+06-路線外任務.md:401｜說明｜洞穴甲蟲位置需遊戲實測；在樹皮地穴做其他任務時可順便找。｜The cave beetles' locations need in-game testing. You can look for them while doing other quests at the Bark Burrow.
+06-路線外任務.md:406｜說明｜要送往閃金鎮，回東部王國時再做。｜Take it to Goldshire; do it when you return to the Eastern Kingdoms.
+06-路線外任務.md:408｜說明｜先完成風暴凝聚才接；已做完可向 NPC 確認。｜Accept only after completing Gathering Storm. If you've already done it, you can check with the NPC.
+06-路線外任務.md:409｜說明｜接交地點未確認，需遊戲實測。｜The turn-in location hasn't been confirmed and needs in-game testing.
+06-路線外任務.md:411｜說明｜先完成前置才接；法師塔位置仍需確認。｜Accept only after completing the prerequisite. The mage tower's location still needs confirmation.
+06-路線外任務.md:412｜說明｜要進永恆之井，入口位置需遊戲實測。｜To enter the Well of Eternity, the entrance location needs in-game testing.
+06-路線外任務.md:475｜說明｜經過04-第52站時，有空再接。｜Pick this up if you have time when you pass stop 52 of part 4.
+06-路線外任務.md:576｜說明｜經過01-第1站時，有空再接。｜Pick this up if you have time when you pass stop 1 of part 1.
+06-路線外任務.md:581｜說明｜經過01-第2站時，有空再接。｜Pick this up if you have time when you pass stop 2 of part 1.
+06-路線外任務.md:596｜說明｜經過02-第11站時，有空再接。｜Pick this up if you have time when you pass stop 11 of part 2.
+06-路線外任務.md:684｜說明｜經過02-第14站時，有空再接。｜Pick this up if you have time when you pass stop 14 of part 2.
+06-路線外任務.md:696｜說明｜經過04-第55站時，有空再接。｜Pick this up if you have time when you pass stop 55 of part 4.
+06-路線外任務.md:713｜說明｜經過04-第59站時，有空再接。｜Pick this up if you have time when you pass stop 59 of part 4.
+06-路線外任務.md:842｜說明｜經過03-第24站時，有空再接。｜Pick this up if you have time when you pass stop 24 of part 3.
+06-路線外任務.md:846｜說明｜經過03-第30站時，有空再接。｜Pick this up if you have time when you pass stop 30 of part 3.
+06-路線外任務.md:859｜說明｜經過04-第45站時，有空再接。｜Pick this up if you have time when you pass stop 45 of part 4.
+06-路線外任務.md:860｜說明｜經過04-第46站時，有空再接。｜Pick this up if you have time when you pass stop 46 of part 4.
+06-路線外任務.md:872｜說明｜經過02-第15站時，有空再接。｜Pick this up if you have time when you pass stop 15 of part 2.
+06-路線外任務.md:873｜說明｜經過02-第17站時，有空再接。｜Pick this up if you have time when you pass stop 17 of part 2.
+06-路線外任務.md:874｜說明｜經過02-第19站時，有空再接。｜Pick this up if you have time when you pass stop 19 of part 2.
+06-路線外任務.md:880｜說明｜經過04-第44站時，有空再接。｜Pick this up if you have time when you pass stop 44 of part 4.
+06-路線外任務.md:907｜說明｜經過04-第56站時，有空再接。｜Pick this up if you have time when you pass stop 56 of part 4.
+06-路線外任務.md:1022｜說明｜經過03-第23站時，有空再接。｜Pick this up if you have time when you pass stop 23 of part 3.
+06-路線外任務.md:1119｜說明｜經過01-第5站時，有空再接。｜Pick this up if you have time when you pass stop 5 of part 1.
+06-路線外任務.md:1120｜說明｜經過01-第6站時，有空再接。｜Pick this up if you have time when you pass stop 6 of part 1.
+06-路線外任務.md:1323｜說明｜經過03-第26站時，有空再接。｜Pick this up if you have time when you pass stop 26 of part 3.
+06-路線外任務.md:1335｜說明｜經過03-第33站時，有空再接。｜Pick this up if you have time when you pass stop 33 of part 3.
+06-路線外任務.md:1350｜說明｜經過03-第36站時，有空再接。｜Pick this up if you have time when you pass stop 36 of part 3.
+06-路線外任務.md:1366｜說明｜經過03-第39站時，有空再接。｜Pick this up if you have time when you pass stop 39 of part 3.
+06-路線外任務.md:1391｜說明｜經過03-第35站時，有空再接。｜Pick this up if you have time when you pass stop 35 of part 3.
+06-路線外任務.md:1498｜說明｜經過02-第16站時，有空再接。｜Pick this up if you have time when you pass stop 16 of part 2.
+06-路線外任務.md:1519｜說明｜經過03-第28站時，有空再接。｜Pick this up if you have time when you pass stop 28 of part 3.
+06-路線外任務.md:1539｜說明｜經過03-第38站時，有空再接。｜Pick this up if you have time when you pass stop 38 of part 3.
+06-路線外任務.md:1637｜說明｜經過03-第36站時，有空再接；下一站回遠境堡就能交。｜Pick this up if you have time when you pass stop 36 of part 3. You can turn it in at the next stop when you return to Far Watch Post.
+06-路線外任務.md:1664｜說明｜經過03-第41站時，有空再接。｜Pick this up if you have time when you pass stop 41 of part 3.
+06-路線外任務.md:1676｜說明｜經過04-第50站時，有空再接。｜Pick this up if you have time when you pass stop 50 of part 4.
+06-路線外任務.md:1834｜說明｜經過02-第13站時，有空再接。｜Pick this up if you have time when you pass stop 13 of part 2.
+06-路線外任務.md:1854｜說明｜經過03-第32站、到加基森時，有空再接；03-第37站到火線港交。｜Pick this up if you have time when you pass stop 32 of part 3, at Gadgetzan. Turn in at Powderfuse Port at 03-Stop 37.
+06-路線外任務.md:1855｜說明｜經過03-第32站時，有空再接。｜Pick this up if you have time when you pass stop 32 of part 3.
+06-路線外任務.md:1860｜說明｜經過04-第42站時，有空再接。｜Pick this up if you have time when you pass stop 42 of part 4.
+06-路線外任務.md:1869｜說明｜經過04-第51站時，有空再接。｜Pick this up if you have time when you pass stop 51 of part 4.
+06-路線外任務.md:1999｜說明｜經過01-第7站時，有空再接。｜Pick this up if you have time when you pass stop 7 of part 1.
+06-路線外任務.md:2001｜說明｜經過01-第8站時，有空再接。｜Pick this up if you have time when you pass stop 8 of part 1.
+06-路線外任務.md:2365｜說明｜經過04-第48站時，有空再接。｜Pick this up if you have time when you pass stop 48 of part 4.
+06-路線外任務.md:2395｜說明｜經過04-第43站時，有空再接。｜Pick this up if you have time when you pass stop 43 of part 4.
+06-路線外任務.md:2448｜說明｜經過03-第22站時，有空再接。｜Pick this up if you have time when you pass stop 22 of part 3.
+06-路線外任務.md:2480｜說明｜經過03-第25站時，有空再接。｜Pick this up if you have time when you pass stop 25 of part 3.
+06-路線外任務.md:2481｜說明｜經過03-第34站時，有空再接。｜Pick this up if you have time when you pass stop 34 of part 3.
+06-路線外任務.md:2488｜說明｜經過04-第54站時，有空再接。｜Pick this up if you have time when you pass stop 54 of part 4.

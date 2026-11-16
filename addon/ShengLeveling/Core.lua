@@ -40,6 +40,36 @@ local function instanceView()
   return true
 end
 
+-- 箭頭要指的點（主座標＋more 各群）：玩家所在地圖上最近的一群；這張地圖上沒有就指主座標（沒有主座標就是第一群）。
+-- 換群要比目前那群近 2.5 格以上（或不到 6 成距離）並維持 2 秒，走在兩群中間不會來回跳；換步驟、換地圖、任務進度變了就直接挑最近的
+local arrowStep -- 箭頭目前指的步驟（位置檢查時重挑點用）
+local function navPoint(s)
+  local map, x, y = C.Position()
+  local prog = ""
+  for _, o in ipairs(s.q and C.Objectives(s.q) or {}) do prog = prog .. tostring(o.have) .. tostring(o.done) .. "," end
+  local pick = MG.navPick
+  if not (pick and pick.s == s and pick.map == map and pick.prog == prog) then pick = { s = s, map = map, prog = prog } end
+  MG.navPick = pick
+  local pts = { s.x and { s.map, s.x, s.y } or nil }
+  for _, p in ipairs(s.more or {}) do pts[#pts + 1] = p end
+  local function far(p) return math.sqrt((p[2] - x) ^ 2 + (p[3] - y) ^ 2) end
+  local function same(a, b) return a and b and a[1] == b[1] and a[2] == b[2] and a[3] == b[3] end
+  local best, bd
+  for _, p in ipairs(x and y and pts or {}) do
+    if p[1] == map and (not bd or far(p) < bd) then best, bd = p, far(p) end
+  end
+  local cur = pick.p and pick.p[1] == map and pick.p
+  local nextP = cur
+  if not best then nextP, pick.cand = pts[1], nil
+  elseif not cur then nextP, pick.cand = best, nil
+  elseif same(best, cur) or not (far(cur) - bd >= 2.5 or bd < far(cur) * 0.6) then pick.cand = nil
+  elseif same(best, pick.cand) then
+    if GetTime() - pick.since >= 2 then nextP, pick.cand = best, nil end
+  else pick.cand, pick.since = best, GetTime() end
+  if not same(nextP, pick.p) then pick.p = nextP end -- 同一點留原本的表（位置檢查用 ~= 判斷有沒有換）
+  return pick.p
+end
+
 local function refresh()
   if instanceView() then return end
   if inInstance then
@@ -79,7 +109,6 @@ local function refresh()
   lastState = state
   local nextSt = st and E.Next(st)
   if UI.Visible() then UI.Render({ state = state, sug = E.Suggest(st), nextSt = nextSt }) end -- 步驟列關著就不畫（打開時會重算）
-  MG.try("地圖標點", MG.P.Update, state)
   MG.try("目標按鈕", MG.T.Update, state)
   MG.try("任務物品", MG.I.Update, state)
   -- 箭頭：目前步驟的座標；本站完成時指向下一站第一個有座標的步驟
@@ -113,29 +142,17 @@ local function refresh()
       dirty = true -- 步驟列的「原本 … 返回」要跟著收
     end
   end
+  arrowStep = nil
   if o then N.Set(o.map, o.x, o.y, o.name)
   elseif s and s.via and state.cur and state.steps[state.cur].s == s then
     local p = E.ViaTarget(state.steps[state.cur]) -- 好幾個座標的交通：指向下一個還沒走到的點
     N.Set(p[1], p[2], p[3], MG.Clean(E.Title(s)))
-  elseif s and s.x then
-    -- 有好幾群怪點：指向離玩家最近的那群；換群要近一半以上才換，走在兩群中間不會來回跳
-    local tx, ty = s.x, s.y
-    if s.more then
-      local map, x, y = C.Position()
-      if map == s.map and x and y then
-        local function d(px, py) return (px - x) ^ 2 + (py - y) ^ 2 end
-        local pick = MG.navPick and MG.navPick.s == s and MG.navPick or { s = s, x = s.x, y = s.y }
-        for _, p in ipairs(s.more) do
-          if p[1] == map and d(p[2], p[3]) < d(pick.x, pick.y) * 0.25 then pick = { s = s, x = p[2], y = p[3] } end
-        end
-        if not (MG.navPick and MG.navPick.s == s) then
-          for _, p in ipairs(s.more) do if p[1] == map and d(p[2], p[3]) < d(pick.x, pick.y) then pick = { s = s, x = p[2], y = p[3] } end end
-        end
-        MG.navPick = pick; tx, ty = pick.x, pick.y
-      end
-    end
-    N.Set(s.map, tx, ty, MG.Clean(E.Title(s)))
+  elseif s and (s.x or s.more) then
+    arrowStep = s
+    local p = navPoint(s)
+    N.Set(p[1], p[2], p[3], MG.Clean(E.Title(s)))
   else N.Clear() end
+  MG.try("地圖標點", MG.P.Update, state) -- 箭頭挑好群之後才畫（目前步驟的實心點跟著箭頭）
 end
 
 function MG.Refresh(now)
@@ -166,6 +183,13 @@ f:SetScript("OnUpdate", function(_, dt)
     local map, x, y = C.Position()
     local moved = not (lastPos and map == lastPos[1] and x and lastPos[2] and math.abs(x - lastPos[2]) + math.abs(y - lastPos[3]) < 0.2)
     lastPos = { map, x, y }
+    -- 箭頭指的是好幾群點的步驟：走動時（或等著換群時）重挑點，換了就重畫箭頭與標點
+    local pick = MG.navPick
+    if arrowStep and arrowStep.more and (moved or (pick and pick.cand)) then
+      local old = pick and pick.s == arrowStep and pick.p
+      MG.try("箭頭選點", navPoint, arrowStep)
+      if MG.navPick.p ~= old then dirty = true end
+    end
     if moved or E.DetourPending() then
       MG.C.memo = {}
       MG.try("位置檢查", function()
@@ -349,6 +373,12 @@ local function onEvent(_, event, ...)
     if not E.built then E.Build(); E.built = true end -- 每次登入建一次（換起點時 UI 會自己重建）
     N.Forget()
     started = started or GetTime()
+    -- Questie 也開著：提醒一次它的任務怪圖示也會擠地圖（不動 Questie 的設定）
+    local loaded = C_AddOns and C_AddOns.IsAddOnLoaded or IsAddOnLoaded
+    if not MetroGuideDB.questieNoted and loaded and loaded("Questie") then
+      MetroGuideDB.questieNoted = true
+      MG.msg(L["Questie 的任務怪與目標圖示也會畫在地圖上；太擠可到 Questie 的地圖設定關閉。"])
+    end
   elseif event == "QUEST_LOG_UPDATE" then
     ready = true
   elseif event == "QUEST_ACCEPTED" then

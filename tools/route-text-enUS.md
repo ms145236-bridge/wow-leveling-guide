@@ -13360,3 +13360,400 @@
 04-45到60級.md:1695｜說明｜可跳過｜92335 的骨灰在戴根廢墟中央，旁邊有精英末日守衛；單人拿不到就只略過 92335、90647、92169、92833、93848 這幾步（第 81、83、91、92、99、105、123–126、128 步）；92317、92500 照樣在第 79 步回隱士洞交，郵件這串和 93127、93407、93547、93584、92533、92017 不需要法杖，照做。｜Skip: the ashes for 92335 are in the middle of Dae'gun next to an elite doomguard; if you can't get them solo, skip only 92335, 90647, 92169, 92833 and 93848 (steps 81, 83, 91, 92, 99, 105, 123-126 and 128); turn in 92317 and 92500 on the return to the Hermit's Cave at step 79 as usual; the mail chain and 93127, 93407, 93547, 93584, 92533 and 92017 don't need the staff, so do them.
 04-45到60級.md:1733｜說明｜依實際等級決定後續；取蛋選做，只為一次性交件。｜Decide what comes next based on your actual level; the egg is optional and only for a one-time turn-in.
 04-45到60級.md:1799｜說明｜依實際等級決定要不要補怪。要補進度可打火羽山普通元素或北側猩猩，留意平原巡邏的魔暴龍。｜Decide by your actual level whether to catch up on mobs. To catch up on progress, kill normal elementals in the Firefeather mountains or the apes to the north, and watch for the devilsaur patrolling the plains.
+01-第一段-1到12級.md:52｜說明｜術士改找魯贊做召喚小鬼任務。｜Warlocks: do Ruzan's imp-summoning quest instead.
+01-第一段-1到12級.md:27｜說明｜跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克。｜From other starting zones, take the Durotar road south and enter the Valley of Trials from the east to find Kaltunk.
+01-第一段-1到12級.md:244｜說明｜先交背信棄義的人類（784），才接得到海底沉船（825）。把沉船和沃納爾大師（818）排成同一趟。｜Turn in Vanquish the Betrayers (784) first to be able to accept From The Wreckage.... (825). Group the wreckage quest with A Solvent Spirit (818) on the same trip.
+01-第一段-1到12級.md:245｜說明｜暗巷區副本接續可先留。打算下怒焰裂谷再跟索爾接隱藏的敵人任務鏈；第一段所需的軍官徽章可在北邊火刃區取得。｜Save the Cleft of Shadow dungeon follow-ups for later. If you plan to run Ragefire Chasm, take the Hidden Enemies chain from Thrall first. The officer's badge needed for the first part can be obtained from the Burning Blade camp to the north.
+01-第一段-1到12級.md:266｜說明｜跨族起點先到血蹄村，再沿路往南上紅雲台地到納拉其營地。｜From other starting zones, head to Bloodhoof Village first, then follow the road south up Red Cloud Mesa to Camp Narache.
+01-第一段-1到12級.md:1297｜說明｜血蹄村起始；後續的火焰的召喚在十字路口薩滿職業任務接續，也可從卡納爾直接接。｜Starts at Bloodhoof Village. The follow-up Call of Fire continues at the Crossroads as a shaman class quest, or you can pick it up directly from Kranal.
+01-第一段-1到12級.md:1297｜說明｜血蹄村起始｜Starts at Bloodhoof Village.
+01-第一段-1到12級.md:1297｜說明｜後續的火焰的召喚在十字路口薩滿職業任務接續，也可從卡納爾直接接。｜The follow-up Call of Fire continues at the Crossroads as a shaman class quest, or you can pick it up directly from Kranal.
+01-第一段-1到12級.md:477｜說明｜幻象儀祭三段、智慧儀祭和雷霆崖之旅一路做完，末段正好開飛行點。｜Do the three Rite of Vision quests, Rite of Wisdom and Journey into Thunder Bluff in one go; the last one conveniently unlocks the flight point.
+01-第一段-1到12級.md:479｜說明｜到了雷霆崖可接怒焰裂谷前置，打算進本才跟拉哈羅接試探敵人（5723）、尋找背包（5722）。｜Once at Thunder Bluff you can pick up the Ragefire Chasm prerequisites; take Testing an Enemy's Strength (5723) and Searching for the Lost Satchel (5722) from Rahauro only if you plan to run the dungeon.
+01-第一段-1到12級.md:480｜說明｜接近 12 級還差經驗，優先補莫高雷北邊鷹身人、赤色石或菲茲普羅克礦坑；滿 10 級先找職業訓練師。｜If you're close to level 12 and still short on XP, prioritize the harpies north of Mulgore, the Red Rocks or Fizsprocket's mine. At level 10, see your class trainer first.
+01-第一段-1到12級.md:1544｜說明｜先交無腦的殭屍（364）才會給卷軸。｜Turn in The Mindless Ones (364) first to receive the scroll.
+01-第一段-1到12級.md:1601｜說明｜先交無腦的殭屍（364）。｜Turn in The Mindless Ones (364) first.
+01-第一段-1到12級.md:498｜說明｜跨族起點從布瑞爾南側飛艇塔下船，沿大道向西進喪鐘鎮。｜From other starting zones, get off the zeppelin at the tower south of Brill and follow the road west into Deathknell.
+01-第一段-1到12級.md:1006｜說明｜村旁學徒和強盜任務可一起接。也可同時接角鷹獸騷擾（92516）。群爪問題給簡易皮革背袋。愛管閒事的法師可選潮汐流轉塑像。完成火之召喚可取得充能烈焰圖騰。｜You can pick up the apprentice and bandit quests near the village together. You can also take Hippogryph Harassment (92516) at the same time. The Problem With Prideclaws rewards a Simple Leather Satchel. For Meddlesome Mages you can choose the Tide-Turning statue. Completing Call of Fire gives you the Charged Flame Totem.
+02-12到30級.md:79｜說明｜往綠洲打牧民，路過同區其他科卡爾怪也可補護腕。｜Head to the oasis to kill the herdsmen; other Kolkar mobs in the same zone that you pass along the way can also fill out the bracers.
+02-12到30級.md:128｜說明｜先留，到銀松森林瑟伯切爾再交。｜Hold it and turn it in at the Sepulcher in Silverpine Forest.
+02-12到30級.md:150｜說明｜先完成 870、877 與 880，再接 3301，下一站直接交。｜Finish 870, 877 and 880 first, then take 3301 and turn it in directly at the next stop.
+05-副本.md:91｜說明｜部落交件地點不明，出本前先確認任務日誌。｜The Horde turn-in location is unknown; check your quest log before leaving the dungeon.
+05-副本.md:78｜說明｜從貧瘠之地轉往東部王國後，只有專程成就隊才從幽暗城經銀松、希爾斯布萊德、阿拉希南下濕地，經丹奧加茲到丹莫洛再進鐵爐堡。｜After moving from the Barrens to the Eastern Kingdoms, only dedicated achievement groups should go from Undercity through Silverpine, Hillsbrad and Arathi, south to the Wetlands, via Dun Algaz to Dun Morogh and then into Ironforge.
+05-副本.md:18｜說明｜在貧瘠之地 十字路口開飛行點後，雷霆崖飛點已開就飛雷霆崖找拉哈羅接 5722／5723（沒開就從十字路口沿南路經陶拉祖營地往西進莫高雷，搭電梯上城開點），飛奧格瑪找索爾先做隱藏的敵人前兩段，再去暗巷區接 5761；若此輪已開幽暗城飛點，可在飛艇跨海時先向瓦里瑪薩斯領 5725。｜After unlocking the flight point at the Crossroads in The Barrens, if the Thunder Bluff flight point is already open, fly to Thunder Bluff and see Rahauro for 5722/5723 (if not, go from the Crossroads along the south road past Camp Taurajo and west into Mulgore, then take the elevator up and unlock it). Fly to Orgrimmar and see Thrall to do the first two parts of Hidden Enemies first, then go to the Cleft of Shadow for 5761. If the Undercity flight point is already unlocked this round, get 5725 from Varimathras first while crossing the sea by zeppelin.
+02-12到30級.md:345｜說明｜先解鎖 479 與永恆版 95981，同一趟掃安伯米爾；479 交回後再殺 480 的法師。｜Unlock 479 and Forever's 95981 first, and sweep Ambermill on the same trip. After turning in 479, kill the mages for 480.
+02-12到30級.md:346｜說明｜焚木村一起做阿魯高的愚行與致命配方（450）；交完這段阿魯高的愚行後，一次接後續的阿魯高的愚行（98298）與 98299，到葛雷邁恩之牆一起清。｜Do Arugal's Folly and A Recipe For Death (450) together at Pyrewood Village. After turning in this part of Arugal's Folly, pick up the next Arugal's Folly (98298) and 98299 together and clear them at the Greymane Wall.
+05-副本.md:139｜說明｜15 級可接；擊殺男爵後拾取可憎頭顱，右鍵接任務。｜Available at level 15. After killing the Baron, loot the head and right-click it to accept the quest.
+05-副本.md:139｜說明｜15 級可接｜Available at level 15.
+05-副本.md:139｜說明｜擊殺男爵後拾取可憎頭顱，右鍵接任務。｜After killing the Baron, loot the head and right-click it to accept the quest.
+05-副本.md:142｜說明｜拉斯梅爾墓園西側，食屍鬼旁的愛德華；順序：先擊敗拉斯梅爾，再調查愛德華的遺體｜Edward, next to the ghouls on the west side of Rath'mael's Cemetery. Order: Defeat Rath'mael first, then investigate Edward's body.
+05-副本.md:142｜說明｜拉斯梅爾墓園西側，食屍鬼旁的愛德華｜Edward, next to the ghouls on the west side of Rath'mael's Cemetery.
+05-副本.md:142｜說明｜先擊敗拉斯梅爾，再調查愛德華的遺體｜Defeat Rath'mael first, then investigate Edward's body.
+05-副本.md:110｜說明｜先在布瑞爾向林奈確認 356 的進度。林奈另有後續一段 99156。前往銀松森林前，從布瑞爾下飛艇可順路拜訪林奈與克里斯多夫；瑟伯切爾先向塔比薩領 92401，並完成致命配方三段；幽暗城鍊金房找格雷夫與莫賓。這六類任務等副本階段再交。｜First check your progress on 356 with Linnea in Brill. Linnea also has a follow-up, 99156. Before heading to Silverpine Forest, when you get off the zeppelin at Brill you can visit Linnea and Kristof on the way. At the Sepulcher, take 92401 from Tabitha first and finish the three parts of A Recipe For Death. Find Theodore Griffs and Morbin Lightbane in the Undercity Apothecarium. Turn in these six kinds of quests at the dungeon stage.
+02-12到30級.md:532｜說明｜留到梣谷碎木崗哨交。｜Hold it and turn it in at Splintertree Post in Ashenvale.
+02-12到30級.md:1402｜說明｜小碎片 ×3 取自黑暗深淵暮光侍僧，大碎片 ×1 取自影牙城堡影牙黑暗之魂狼人。；依序為黑暗深淵與影牙城堡入口。黑暗深淵打暮光侍僧，影牙城堡打影牙黑暗之魂。｜Loot 3 small fragments from Twilight Acolytes in Blackfathom Deeps and 1 large fragment from Shadowfang Darksouls in Shadowfang Keep. In order: the entrances to Blackfathom Deeps and Shadowfang Keep. Kill Twilight Acolytes in Blackfathom Deeps and Shadowfang Darksouls in Shadowfang Keep.
+02-12到30級.md:1402｜說明｜依序為黑暗深淵與影牙城堡入口。黑暗深淵打暮光侍僧，影牙城堡打影牙黑暗之魂。｜In order: the entrances to Blackfathom Deeps and Shadowfang Keep. Kill Twilight Acolytes in Blackfathom Deeps and Shadowfang Darksouls in Shadowfang Keep.
+05-副本.md:285｜說明｜打哥布林木匠收白石橡木。；位置：過拉克佐守門後進伐木工坊，打斯尼德旁木匠｜Kill Goblin Woodcarvers to collect Whitestone Oak Lumber. Location: Pass Rhahk'Zor, enter the lumber room and kill the carpenters beside Sneed.
+05-副本.md:285｜說明｜打哥布林木匠收白石橡木。｜Kill Goblin Woodcarvers to collect Whitestone Oak Lumber.
+02-12到30級.md:655｜說明｜暗色湖撿蓋亞之種，石爪峰清塞納留斯的遺產。交回種子後，焦炭谷四項同趟做。千針石林 亂風崗路過大升降梯再交 5881。｜Pick up Gaea Seeds at Dark Lake and clear Cenarius' Legacy at Stonetalon Peak. After turning in the seeds, do the four Charred Vale quests on the same trip. In Thousand Needles, turn in 5881 when passing the Great Lift at Freewind Post.
+02-12到30級.md:656｜說明｜奧達努斯（1088）到梣谷碎木崗哨再打；新的指示與格雷蘇只有日後會回狂風峭壁才續做，少一趟棘齒城往返。｜Do Ordanus (1088) after you reach Splintertree Post in Ashenvale. Further Instructions and Gerenzo Wrenchwhistle should be continued only if you will return to Windshear Crag later, which saves one round trip to Ratchet.
+02-12到30級.md:762｜說明｜496 在西面同一趟收集，搭配希爾斯布萊德之戰 527；501 掉率低，順手收齊才交。交 527 後才出現 546，之後殺人類時一路收頭骨。｜Collect 496 in the west on the same trip, together with Battle of Hillsbrad 527. 501 has a low drop rate; collect everything before turning in. 546 only appears after you turn in 527; after that, collect skulls as you kill humans along the way.
+02-12到30級.md:763｜說明｜98094、509 順路完成馬索吉周圍的兩個任務；若接了 1066，再到敦霍爾德外圍。做 528 時，順手收顱骨。｜98094, 509: Complete the two quests around Deathstalker Masoj on the way. If you took 1066, also go to the outskirts of Durnholde Keep. While doing 528, collect the skulls along the way.
+02-12到30級.md:765｜說明｜若石爪山脈 烈日石居已接 1065，趁敦霍爾德行程完成 1066，帶 1067 給千針石林 亂風崗途經雷霆崖時交。｜If you already took 1065 at Sun Rock Retreat in Stonetalon Mountains, complete 1066 during your Durnholde trip, and turn in 1067 when you pass through Thunder Bluff on the way to Freewind Post in Thousand Needles.
+02-12到30級.md:766｜說明｜509 → 513 完成後，希爾斯布萊德丘陵 塔倫米爾可在幽暗城接 515，再回希爾斯布萊德海岸做。｜After 509 → 513, you can pick up 515 in Undercity for the Hillsbrad Foothills Tarren Mill stop, then do it back on the Hillsbrad coast.
+05-副本.md:342｜說明｜濕地 1437 47.79, 56.16｜Wetlands 1437 47.79, 56.16
+02-12到30級.md:861｜說明｜烈日石居的信直接交大升降梯守衛。亂風崗西邊的補給箱、三種鷹身人和耐力試煉共用區域。｜Turn the Sun Rock Retreat letter in directly to the Great Lift guard. The supply crates west of Freewind Post, the three kinds of harpies and the Test of Endurance share the same area.
+02-12到30級.md:862｜說明｜亂風崗短訪排在梣谷主線前；閃光平原整圈留到之後的閃光平原站。｜Do the short Freewind Post visit before the main Ashenvale line. Save the whole Shimmering Flats loop for the later Shimmering Flats stop.
+02-12到30級.md:1042｜說明｜收齊三份材料再交。死亡礦坑位於西部荒野，部落可經荊棘谷、暮色森林前往。；打哥布林木匠收白石橡木。｜Collect all three materials, then turn in. The Deadmines is in Westfall; Horde can get there via Stranglethorn Vale and Duskwood. Kill Goblin Woodcarvers to collect Whitestone Oak Lumber.
+02-12到30級.md:1042｜說明｜收齊三份材料再交。死亡礦坑位於西部荒野，部落可經荊棘谷、暮色森林前往。｜Collect all three materials, then turn in. The Deadmines is in Westfall; Horde can get there via Stranglethorn Vale and Duskwood.
+02-12到30級.md:976｜說明｜碎木崗哨南側先驅者、西南湖元素、北側薩特各做一圈；佐拉姆加的熊怪與洞穴符咒一起解。｜Do one loop each of the outrunners south of Splintertree Post, the lake elementals to the southwest and the satyrs to the north. Solve the Zoram'gar bears and the cave charms together.
+02-12到30級.md:978｜說明｜29 級後若本來就要跑十字路口和奧格瑪，可先接瘋狂的蟲群：先送到奧格瑪，交件接後續，再送到閃光平原交，之後還有一段；與本段交通不順路就略過。｜After level 29, if you're already going through the Crossroads and Orgrimmar, you can pick up The Swarm Grows first: deliver to Orgrimmar, turn in and take the follow-up, then deliver to Shimmering Flats and turn in; there is one more part after that. Skip it if it isn't on your way for this leg.
+05-副本.md:503｜說明｜接任務會拿到達拉然下水道鑰匙；污穢鑰匙只是前置。｜Accepting the quest gives you the Dalaran sewers key. The Soiled Key is only a prerequisite.
+05-副本.md:503｜說明｜接任務會拿到達拉然下水道鑰匙｜Accepting the quest gives you the Dalaran sewers key.
+05-副本.md:503｜說明｜污穢鑰匙只是前置。｜The Soiled Key is only a prerequisite.
+05-副本.md:447｜說明｜經希爾斯布萊德丘陵 塔倫米爾時可先開飛行點；從幽暗城沿提里斯法林地北路到修道院。先完成剃刀沼澤的蝙蝠的糞便（1109），再到幽暗城煉金區找法拉尼爾。先跑千針石林的話，把 1113 留到往奧特蘭克山脈時接；墓地的沃瑞爾可先做。離開墓地之後要到奧特蘭克湖岸與塔倫米爾。｜You can unlock the flight point first when passing Tarren Mill in Hillsbrad Foothills. From Undercity, take the north road through Tirisfal Glades to the Monastery. First finish Going, Going, Guano! (1109) in Razorfen Kraul, then see Faranell in the Undercity Apothecarium. If you do Thousand Needles first, hold 1113 and take it on the way to Alterac Mountains. You can do Vorrel at the graveyard first. After leaving the graveyard, go to the Alterac lakeshore and Tarren Mill.
+05-副本.md:695｜說明｜尾端小屋的卡爾加。；順序：打卡爾加時，同時拾取心臟與破爛筆記｜Charlga in the cabin at the far end. Order: When killing Charlga, loot the heart and the tattered notes at the same time.
+05-副本.md:695｜說明｜尾端小屋的卡爾加。｜Charlga in the cabin at the far end.
+05-副本.md:695｜說明｜打卡爾加時，同時拾取心臟與破爛筆記｜When killing Charlga, loot the heart and the tattered notes at the same time.
+05-副本.md:697｜說明｜護送從尾王旁營帳開始；先清回入口的路再接。｜The escort starts at the tent beside the last boss. Clear the way back to the entrance first, then accept.
+05-副本.md:697｜說明｜護送從尾王旁營帳開始｜The escort starts at the tent beside the last boss.
+05-副本.md:697｜說明｜先清回入口的路再接。｜Clear the way back to the entrance first, then accept.
+05-副本.md:698｜說明｜先清回入口的路，再接威利克斯護送；保護他走回入口。；位置：尾王旁營帳出發，跟威利克斯走回入口。｜Clear the way back to the entrance first, then accept the Willix escort. Protect him on the walk back to the entrance. Location: Starts at the tent beside the last boss; walk back to the entrance with Willix.
+05-副本.md:698｜說明｜先清回入口的路，再接威利克斯護送；保護他走回入口。｜Clear the way back to the entrance first, then accept the Willix escort. Protect him on the walk back to the entrance.
+05-副本.md:698｜說明｜先清回入口的路，再接威利克斯護送｜Clear the way back to the entrance first, then accept the Willix escort.
+05-副本.md:698｜說明｜保護他走回入口。；位置：尾王旁營帳出發，跟威利克斯走回入口。｜Protect him on the walk back to the entrance. Location: Starts at the tent beside the last boss; walk back to the entrance with Willix.
+05-副本.md:698｜說明｜保護他走回入口。｜Protect him on the walk back to the entrance.
+03-30到45級.md:283｜說明｜葬影村去西岸時一起做兩個水域任務與上古之書。雷斧堡壘先打聖光節杖與埃盧梭斯之手，若進度不足再到第二趟補交。｜When going to the west coast from Shadowprey Village, do the two water quests and Book of the Ancients together. At Thunder Axe Fortress, do Sceptre of Light and Hand of Iruxos first; if you are short on progress, finish the turn-in on a second trip.
+03-30到45級.md:444｜說明｜祖昆達找得到吉米克斯才跑鑰匙與護送，鑰匙與遭竊貨物同區。已有人護送可直接繼續主線。｜Do the key and the escort only if you can find Zimmix at Zul'Kunda; the key and the stolen cargo are in the same area. If someone is already escorting, you can continue the main line directly.
+03-30到45級.md:447｜說明｜血帆海盜整串、海盜的眼睛／鼻煙、贊吉爾的秘密，以及嚇唬病鬼→向馬克基雷回報→討債行動，留到 42 級回訪再做。荊棘谷熱疫、瓶中信、船長的箱子、威士卡斯利姆的酒與你自己的 OOX 先別接，留到 45 級後的藏寶海灣站。｜Save the whole Bloodsail Buccaneers chain, Keep An Eye Out / Up to Snuff, Zanzil's Secret, and Scaring Shaky → Return to MacKinley → Voodoo Dues for your return visit at level 42. Don't take Stranglethorn Fever, Message in a Bottle, The Captain's Chest, Whiskey Slim's Lost Grog or your own OOX yet; save them for the Booty Bay stop after level 45.
+03-30到45級.md:448｜說明｜先把獵龍任務解到打鞭尾迅猛龍的那一段，再和 568 一起打。605 先打北邊的晶脊蜥蜴，第一趟無須繞去南谷。｜Solve the Raptor Mastery quests up to the part where you kill Lashtail raptors, and do it together with 568. For 605, kill the Crystalspine lizards to the north first; you don't need to detour to the south valley on the first trip.
+05-副本.md:800｜說明｜收不齊就繼續清船區的海盜。；位置：進鹽占海盜船區，沿路清海盜收神器。；順序：和鹽占船長同區清理｜If you cannot collect enough, keep clearing pirates in the ship area. Location: Enter the Saltseer pirate ship area and loot artifacts from the pirates along the way. Order: Clear it in the same area as the Saltseer Captain.
+05-副本.md:800｜說明｜和鹽占船長同區清理｜Clear it in the same area as the Saltseer Captain.
+05-副本.md:742｜說明｜在清潔區找克努比，先清路，再護送回入口。｜Find Kernobee in the cleaning area; clear the road first, then escort him back to the entrance.
+03-30到45級.md:581｜說明｜37 級缺經驗時，補做東南側半人馬和附近的燃燒軍團傳送門；在葬影村交過埃盧梭斯之手才接得到 5581。幽靈電漿可用箱子引出怪物後逐隻處理。｜If you're short on XP at level 37, do the centaurs to the southeast and the nearby Burning Legion portal. You can only pick up 5581 after turning in Hand of Iruxos at Shadowprey Village. For Ghost-o-plasm Round Up, use the chest to pull the monsters out and handle them one by one.
+03-30到45級.md:729｜說明｜法迪爾海灣一次接打撈、水下寶藏和船長的復仇。完成海灣內前置、領取尋寶護目鏡後，再下水打撈，並順手做水下的 662／664；送往藏寶海灣的後續留待回港交。｜At Faldir's Cove, pick up Salvage, Sunken Treasure and the Captain's Revenge in one go. After finishing the prerequisites inside the cove and getting the treasure-hunting goggles, dive for the salvage and do the underwater 662/664 along the way. Save the follow-ups to Booty Bay for turning in when you return to port.
+03-30到45級.md:730｜說明｜激流堡有餘力再做。要省跑圖，先做水晶和落錘近郊，激流堡後段 643–646 可跳。｜Do Stromgarde if you have spare energy. To save running, do the crystals and the area around Hammerfall first; the later Stromgarde quests 643-646 can be skipped.
+05-副本.md:851｜說明｜神像旁，貝尼斯特拉茲的火盆｜Next to the idol, Belnistrasz's Brazier.
+05-副本.md:830｜說明｜離開阿拉希高地 落錘鎮時先飛幽暗城。到千針石林 閃光平原時，可先打剃刀沼澤並拾 6522。走奧特蘭克山脈至阿拉希高地那站經幽暗城時，先交瓦里瑪薩斯，再同城找安德魯接 3341。由提里斯法坐飛艇回奧格瑪，再飛雷霆崖；沒開就飛陶拉祖，走莫高雷大道。往莫高雷西北找蘇塔菈接 97196。飛陶拉祖往南，門外找麥雷姆。已在大河林地的隊員，從火線港搭船到熱砂港再北上。出本後人在卡林多，就飛加基森到熱砂港，搭船進大河林地。加基森沒開，就照大河林地 羅格瑪第一次的首步，飛亂風崗走閃光平原南坡。要先回幽暗城交 3341、6521，就從幽暗城照大河林地 羅格瑪第一次的首步走。｜When leaving Hammerfall in Arathi Highlands, fly to Undercity first. When you reach Shimmering Flats in Thousand Needles, you can run Razorfen Kraul first and loot 6522. On the Alterac Mountains to Arathi Highlands stop, when you pass through Undercity, turn in to Varimathras first, then find Andrew in the same city and take 3341. Take the zeppelin from Tirisfal back to Orgrimmar, then fly to Thunder Bluff. If it isn't unlocked, fly to Camp Taurajo and take the Mulgore road. Go to northwest Mulgore to find Sutara and take 97196. Fly to Camp Taurajo and go south; find Myriam outside the door. Group members already in the Riverglades should take the boat from Powderfuse Port to Steamwheedle Port and go north. After the instance, if you are in Kalimdor, fly to Gadgetzan and take the boat from Steamwheedle Port into the Riverglades. If Gadgetzan isn't unlocked, follow the first step of the first Riverglades Rog'mar visit: fly to Freewind Post and take the south slope of the Shimmering Flats. If you need to return to Undercity first to turn in 3341 and 6521, follow the first step of the first Riverglades Rog'mar visit from Undercity.
+03-30到45級.md:853｜說明｜Chogg’Zac 在陽光林地洞穴內，是 41 級精英。｜Chogg'Zac is in the cave in Sunnyglade and is a level 41 elite.
+03-30到45級.md:864｜說明｜氣體在史利博附近的沼澤噴口收。｜Collect the gas at the swamp vents near Sleebo.
+03-30到45級.md:871｜說明｜同任務也可找 Hamur（67.24, 21.75）。｜The same quest can also be taken from Hamur (67.24, 21.75).
+03-30到45級.md:903｜說明｜羅格瑪南側草地，怪物密集、普通怪。附近有 41–42 級精英野獸，沿路挑單隻；可同步補 96107 的羽毛。｜Grassland south of Rog'mar: dense normal mobs. There are level 41-42 elite beasts nearby; pull singles along the way. You can also collect the feathers for 96107 at the same time.
+03-30到45級.md:925｜說明｜已開卡加斯就從羅格瑪直飛。初訪從暮光營地北面的西側山口進荒蕪之地，往西北到卡加斯開飛點。爐石仍綁羅格瑪供後續回訪。｜If Kargath is already unlocked, fly directly from Rog'mar. On the first visit, enter the Badlands from the west pass north of the Twilight camp and go northwest to Kargath to unlock the flight point. Keep your hearthstone bound to Rog'mar for later visits.
+03-30到45級.md:978｜說明｜已滿 40 級且有金幣，可以在路過本族訓練師時先學騎術。｜If you're already level 40 and have the gold, you can learn riding when passing your own race's trainer.
+05-副本.md:909｜說明｜從正門打過雷夫洛什，到他身後房間查遺體。；順序：找到遺體後先接日記，再出本回卡加斯解鎖下一趟｜From the main entrance fight through Revelosh and check the remains in the room behind him. Order: After finding the remains, pick up the diary first, then leave the instance and return to Kargath to unlock the next run.
+05-副本.md:909｜說明｜找到遺體後先接日記，再出本回卡加斯解鎖下一趟｜After finding the remains, pick up the diary first, then leave the instance and return to Kargath to unlock the next run.
+05-副本.md:869｜說明｜荒蕪之地 1418 約 42.60, 10.80（正門，沿挖掘場入地下）｜Badlands 1418 about 42.60, 10.80 (main entrance; follow the dig site down underground)
+03-30到45級.md:1090｜說明｜藏寶海灣第 2 趟先交 669／600／628 等已完成任務。血帆海盜前三段先跑近岸短段，接到第四段時同做 576／587；交完第四段才接最後一段，打三船首領。609 需先交 606→607。每段都要回港交件才解鎖下一段。｜On your second Booty Bay visit, first turn in completed quests such as 669/600/628. For the first three parts of the Bloodsail Buccaneers chain, run the short nearshore parts first; when you take the fourth, do 576/587 at the same time. Take the last part only after turning in the fourth, and kill the three ship bosses. 609 requires turning in 606 → 607 first. You must turn in at the port after each part to unlock the next.
+03-30到45級.md:1171｜說明｜交完前一段後，回卡塔爾接後續。順著海岸往北補魚人智者，交前確認三種各十隻。｜After turning in the previous part, return to Katar for the follow-up. Follow the coast north to kill the Murloc Oracles, and confirm you have ten of each of the three kinds before turning in.
+03-30到45級.md:1180｜說明｜加林的逃亡（1393）是護送任務，沿路清怪再開籠。交件在保險箱，毋須回籠邊。｜Galen's Escape (1393) is an escort quest; clear mobs along the way and then open the cage. The turn-in is at the strongbox, so you don't need to return to the cage.
+03-30到45級.md:1298｜說明｜火線港北側東風海岸，怪物密集、普通怪。與火槍手混合，沿沙灘逐隻拉；可同步完成 95119。｜Eastwind Shore north of Powderfuse Port: dense normal mobs. They are mixed with musketeers; pull them one by one along the beach. You can also complete 95119 at the same time.
+03-30到45級.md:1299｜說明｜東風海岸中段，怪物密集、普通遠程怪。與海盜交錯，近戰可利用地形拉到岸側；適合補到 45 級。｜Mid-Eastwind Shore: dense normal ranged mobs. They are interspersed with pirates; for melee, use the terrain to pull them toward the shore. Good for leveling up to level 45.
+05-副本.md:1006｜說明｜從暮光之罩內的 Crag’rog 接。｜Accept it from Crag'rog in Twilight's Shroud.
+05-副本.md:1009｜說明｜先找目前標出的三處礦工，其餘在附近找。｜First look for the three miners currently marked, then find the rest nearby.
+04-45到60級.md:28｜說明｜到菲拉斯做，回熱砂港交。｜Do it in Feralas and turn in at Steamwheedle Port.
+04-45到60級.md:31｜說明｜在加基森旅店向旅店老闆菲茲格瑞博（1446 52.51, 27.91）暫綁爐石。到菲拉斯莫沙徹營地再改綁。｜Temporarily set your hearth with Innkeeper Fizzgrimble in the Gadgetzan inn (1446 52.51, 27.91). Rebind later at Camp Mojache in Feralas.
+04-45到60級.md:64｜說明｜第一次熱砂港把海盜帽、擊殺、通緝與貨箱一起清；從火線港乘船到熱砂港時，可先清海岸。｜On your first Steamwheedle Port visit, clear the pirate hat, kill, wanted and crate quests together. When taking the boat from Powderfuse Port to Steamwheedle Port, you can clear the coast first.
+04-45到60級.md:149｜說明｜回奧格瑪開菲拉斯後續｜Return to Orgrimmar to unlock the Feralas follow-ups.
+04-45到60級.md:151｜說明｜從莫沙徹飛奧格瑪（通常經十字路口或雷霆崖）。爐石維持莫沙徹，奧格瑪交完再用爐石回菲拉斯。｜Fly from Camp Mojache to Orgrimmar (usually via the Crossroads or Thunder Bluff). Keep your hearthstone at Mojache, then hearth back to Feralas after the Orgrimmar turn-ins.
+04-45到60級.md:215｜說明｜怒痕雪人與深痕谷雪人是兩批；先在菲拉斯 莫沙徹營地交 2822，再清這次的 7734。完美的雪人毛皮只在掉落時交。｜The Rage Scar yetis and the Feral Scar Vale yetis are two separate groups. First turn in 2822 at Camp Mojache in Feralas, then clear this round's 7734. Turn in the Perfect Yeti Hide only when it drops.
+04-45到60級.md:217｜說明｜需要補等時，可在怒痕堡 55.73,33.05 至 54.39,33.10 外圈循環打怒痕雪人，優先單拉。｜When you need to catch up on levels, loop around the outer ring of Rage Scar Hold from 55.73, 33.05 to 54.39, 33.10, killing Rage Scar Yetis, preferably one at a time.
+04-45到60級.md:261｜說明｜廢料可由聯盟任務丟出，沒看到就沿加基森外圍找。｜Scrap can be dropped by the Alliance quest; if you don't see any, look around the outskirts of Gadgetzan.
+04-45到60級.md:306｜說明｜北方水池交完先開腐化之巢；交腐化之巢開謝申克的救贖，再一起跑砂槌、灌木谷與南方蟲巢。｜After turning in at the northern pool, start Noxious Lair Investigation first. Turn in Noxious Lair Investigation to open The Scrimshank Redemption, then run Dunemaul, Thistleshrub Valley and the southern hive together.
+04-45到60級.md:308｜說明｜先交異種蠍的威脅與 7732；4494 需 50 級，若已到門檻可在暗巷區確認，完整後續留塔納利斯 加基森與破碎石柱。｜Turn in Rise of the Silithid and 7732 first. 4494 requires level 50; if you've reached the threshold, you can check it at the Cleft of Shadow, and save the full follow-up for Tanaris Gadgetzan and the Broken Pillar.
+05-副本.md:1199｜說明｜順路先完成奧格瑪至島側的 95283–95285，再檢查軍士的任務清單。｜On the way, first finish 95283-95285 from Orgrimmar to the island side, then check the sergeant's quest list.
+05-副本.md:1223｜說明｜優先走 95283 到 95483 的柯爾克隆救援鏈；頭巾若一趟未湊滿，交件延後。出本從蕨牆村飛回奧格瑪，同一趟交索爾和伊崔格，再飛棘齒城跨海前往灼熱峽谷。｜Prioritize the Kor'kron rescue chain from 95283 to 95483. If you don't collect enough headbands in one trip, delay the turn-in. After the dungeon, fly from Brackenwall Village back to Orgrimmar, turn in to Thrall and Eitrigg on the same trip, then fly to Ratchet and cross the sea to Searing Gorge.
+05-副本.md:1185｜說明｜第33站在奧格瑪交完件、飛棘齒城跨海去灼熱峽谷前，先到奧格瑪智慧谷索爾的大廳，向伊崔格接 95283（1454 34.28, 39.35）。再飛蕨牆村找納澤爾·血矛。沿東北海岸游到奧卡茲島，找島側軍士依序交 95284、95285，接 95309 後進島塔地下。95483 留到下次回奧格瑪交。｜At stop 33, after turning in at Orgrimmar and before flying to Ratchet to cross the sea to Searing Gorge, go to Thrall's hall in Orgrimmar's Valley of Wisdom and take 95283 from Eitrigg (1454 34.28, 39.35). Then fly to Brackenwall Village and find Nazeer Bloodpike. Swim along the northeast coast to Alcaz Island and find the island sergeant to turn in 95284 and 95285 in order, then take 95309 and go underground beneath the island tower. Save 95483 for turning in the next time you return to Orgrimmar.
+05-副本.md:1151｜說明｜到殉教者塞卡房，清附近的聖甲蟲。；順序：清聖甲蟲時，同時擊殺塞卡拿第一塊石板｜Go to Theka the Martyr's room and clear the nearby scarabs. Order: While clearing scarabs, also kill Theka for the first tablet.
+05-副本.md:1151｜說明｜清聖甲蟲時，同時擊殺塞卡拿第一塊石板｜While clearing scarabs, also kill Theka for the first tablet.
+05-副本.md:1153｜說明｜過金字塔事件區，沿路到水池旁找維蕾薩。；順序：擊殺維蕾薩時，同時拾深淵皇冠與第二塊石板｜Go through the pyramid event area and follow the road to Hydromancer Velratha by the pool. Order: When killing Velratha, also loot the Abyssal Crown and the second tablet.
+05-副本.md:1153｜說明｜擊殺維蕾薩時，同時拾深淵皇冠與第二塊石板｜When killing Velratha, also loot the Abyssal Crown and the second tablet.
+05-副本.md:1156｜說明｜塞卡在甲蟲房，維蕾薩在水池旁，各取一塊石板。｜Theka is in the scarab room and Velratha is by the pool; each gives one tablet.
+04-45到60級.md:330｜說明｜49 級可接；在安戈洛火羽山完成，回棘齒城交。｜Available at level 49. Complete it at Fire Plume Ridge in Un'Goro Crater and turn in at Ratchet.
+04-45到60級.md:330｜說明｜49 級可接｜Available at level 49.
+04-45到60級.md:330｜說明｜在安戈洛火羽山完成，回棘齒城交。｜Complete it at Fire Plume Ridge in Un'Goro Crater and turn in at Ratchet.
+04-45到60級.md:438｜說明｜限已交前一段科泰羅的謎題並已接這一段；前一段在塵泥沼澤迅猛龍洞（Bloodfen Burrow）內岩石上的發黴的卷軸交。｜Only if you've already turned in the previous part of Cortello's Riddle and taken this one. Turn in the previous part at the Musty Scroll on a rock inside Bloodfen Burrow in Dustwallow Marsh.
+04-45到60級.md:438｜說明｜限已交前一段科泰羅的謎題並已接這一段｜Only if you've already turned in the previous part of Cortello's Riddle and taken this one.
+04-45到60級.md:438｜說明｜前一段在塵泥沼澤迅猛龍洞（Bloodfen Burrow）內岩石上的發黴的卷軸交。｜Turn in the previous part at the Musty Scroll on a rock inside Bloodfen Burrow in Dustwallow Marsh.
+04-45到60級.md:475｜說明｜580 和海龜任務同一段海灘完成；梟獸 7829 與 3123 同打。｜Do 580 on the same stretch of beach as the turtle quest. Hunt the owlbeasts for 7829 and 3123 together.
+04-45到60級.md:525｜說明｜五個採集一起打。全交共需顎骨 ×5、野豬肺 ×6、蠍螯 ×6、蜥蜴腦 ×11、禿鷲砂囊 ×14。每次交任務會扣材料。｜Do the five gathering quests together. Turning in all of them takes jawbones x5, boar lungs x6, scorpid stingers x6, lizard brains x11 and vulture gizzards x14. Each quest turn-in consumes the materials.
+04-45到60級.md:563｜說明｜本趟優先交 50 級的 580。荊棘谷 格羅姆高與藏寶海灣、荊棘谷 藏寶海灣的低等任務已分次處理；仍在日誌而且已完成的，也可在同一趟港口回交。｜This trip, prioritize turning in the level 50 quest 580. The lower-level quests at Grom'gol and Booty Bay in Stranglethorn Vale have already been handled in separate trips. Quests that are still in your log and already complete can also be turned in on the same harbor trip.
+04-45到60級.md:627｜說明｜在奧格瑪基爾茲賓處接，再飛菲拉斯。塔納利斯 加基森與砂槌營地已交異種蠍的威脅或 7732 才接，留塔納利斯 加基森與破碎石柱。若要繞雷霆崖交 3518，先接本任務再離開奧格瑪。｜Accept it from Zilzibin in Orgrimmar, then fly to Feralas. Take it only if you have already turned in Rise of the Silithid or 7732 at Gadgetzan and the Dunemaul Compound in Tanaris; save it for Tanaris Gadgetzan and the Broken Pillar. If you plan to detour via Thunder Bluff to turn in 3518, take this quest before leaving Orgrimmar.
+04-45到60級.md:631｜說明｜薩拉斯營地、三枚印記和雷姆托里放在一趟；埃達拉斯廢墟同步拾四塊石板與納迦符石。｜Do Camp Sarano, the three seals and Rimtori in one trip. At the Ruins of Eldarath, collect the four tablets and the naga rune stone at the same time.
+04-45到60級.md:632｜說明｜可跳過｜Ley of the Land 與 Deadliest Catch 可能要組隊打精英，本站兩個都略過。｜Skip: Ley of the Land and Deadliest Catch may require a group to kill elites; skip both at this stop.
+04-45到60級.md:633｜說明｜3542 交幽暗城的安德隆·甘特（1458 54.81, 76.33），可留東瘟疫之地 聖光之願禮拜堂轉場。城市寄回任務要重返艾薩拉，本路線可省掉。｜Turn in 3542 to Andron Gant in Undercity (1458 54.81, 76.33); you can hold it for the Light's Hope Chapel stop in Eastern Plaguelands. The city turn-in that sends you back to Azshara can be skipped on this route.
+04-45到60級.md:683｜說明｜3123 在莫沙徹營地交，接續 3124–3126；每個階段都要先交，下一種容器才拿得到。｜Turn in 3123 at Camp Mojache and take the follow-ups 3124-3126. You must turn in each stage first to get the next kind of container.
+04-45到60級.md:729｜說明｜加基森先把 2641→2662 三段交完，接安戈洛任務後再去破碎石柱。｜At Gadgetzan, first turn in the three parts 2641 → 2662, then go to the Broken Pillar after taking the Un'Goro quests.
+04-45到60級.md:731｜說明｜4504 和有前置的 4496 都在安戈洛環形山 馬紹爾營地做。4324 燃燒平原 烈焰峰與黑石山交。｜Do 4504 and 4496 (which has a prerequisite) at Marshal's Refuge in Un'Goro Crater. Turn in 4324 at Flame Crest in Burning Steppes and at Blackrock Mountain.
+05-副本.md:1239｜說明｜到悲傷沼澤 斯通納德完成淚水之池，並保留 1429。從辛特蘭 惡齒村飛行點走到辛特蘭南側，向流放者交 1429，接向費澤魯爾復命與預言者迦瑪蘭。若完成祖爾法拉克石板鏈，再去辛薩羅拿卵。到菲拉斯時先接 3380。到塔納利斯加基森時，先找瑪爾馮開石環任務，飛棘齒城取物，再回瑪爾馮接兩個神廟任務。在熱砂港交卵後，可從加基森飛棘齒城，再搭船到藏寶海灣。最後飛斯通納德交向費澤魯爾復命、接阿塔哈卡神廟，再赴神廟。｜Complete Pool of Tears at Stonard in the Swamp of Sorrows and keep 1429. From the Revantusk Village flight point in the Hinterlands, walk to the south of the Hinterlands, turn in 1429 to the Exiled and take Return to Fel'Zerul and Jammal'an the Prophet. If you've finished the Zul'Farrak tablet chain, then go to Jintha'Alor for the eggs. When you reach Feralas, take 3380 first. When you reach Gadgetzan in Tanaris, find Marvon Rivetseeker first to start the stone circle quest, fly to Ratchet to fetch the item, then return to Marvon to take the two temple quests. After turning in the eggs at Steamwheedle Port, you can fly from Gadgetzan to Ratchet and then take the boat to Booty Bay. Finally fly to Stonard to turn in Return to Fel'Zerul and take the Temple of Atal'Hakkar quest, then head to the temple.
+04-45到60級.md:761｜說明｜在奧格瑪先接才做。｜Accept it in Orgrimmar first, then do it.
+04-45到60級.md:784｜說明｜安戈洛猩猩／安戈洛巨猩猩／安戈洛大猩猩｜Un'Goro Gorilla / Un'Goro Stomper / Un'Goro Thunderer
+04-45到60級.md:786｜說明｜在棘齒城接過才做；回棘齒城交。｜Do it only if you took it at Ratchet. Turn in at Ratchet.
+04-45到60級.md:786｜說明｜在棘齒城接過才做｜Do it only if you took it at Ratchet.
+04-45到60級.md:786｜說明｜回棘齒城交。｜Turn in at Ratchet.
+04-45到60級.md:810｜說明｜能量水晶、恐龍材料、焦油和血瓣花一路並行。走近中部前留意巡邏魔暴龍。｜Do the power crystals, dinosaur materials, tar and bloodpetal sprouts in parallel all the way. Watch for the patrolling devilsaur before heading to the middle.
+04-45到60級.md:812｜說明｜4300 若已打齊爪子，下次經奧格瑪找傑斯雷蒙（1454 55.52, 34.08）交。4507 需在南邊孵化並打王，可跳過。｜If you've already collected the claws for 4300, turn it in to Jes'rimon (1454 55.52, 34.08) the next time you pass through Orgrimmar. 4507 requires hatching eggs in the south and killing the boss, so you can skip it.
+04-45到60級.md:869｜說明｜卡加斯先接 3821、4061，烈焰峰開點後集中跑巨槌石與索瑞森廢墟。｜At Kargath, take 3821 and 4061 first; after unlocking Flame Crest, run Dreadmaul Rock and the Ruins of Thaurissan together.
+04-45到60級.md:2033｜說明｜加什爾／祖羅爾／胡庫／米杉／祖羅／洛若爾｜Gasher / Zul'Lor / Hukku / Mijan / Zolo / Loro
+04-45到60級.md:939｜說明｜費爾斯通農場的瘟疫鍋和包裹在同一處，回城可把 5023、5049 一起交。｜The Scourge cauldron and the package at Felstone Field are in the same place; when you return to the city you can turn in 5023 and 5049 together.
+04-45到60級.md:940｜說明｜本趟完成第一口鍋，達爾松之淚的 5231 與安多哈爾的通靈學院任務留下一輪。傑雷米亞的好運護符 5050／5051 後段回西瘟疫才做。｜Complete the first cauldron on this trip; leave Dalson's Tears 5231 and the Andorhal Scholomance quest for another round. Jeremiah's Good Luck Charm 5050/5051 is done later, when you return to Western Plaguelands.
+04-45到60級.md:2101｜說明｜先收加德納爾精華；從奧格瑪前往艾薩拉時收下一份。回東部王國後，再從斯通納德前往詛咒之地。｜Collect the Jaedenar essence first. Collect one when traveling from Orgrimmar to Azshara. After returning to the Eastern Kingdoms, go from Stonard to the Blasted Lands.
+04-45到60級.md:2101｜說明｜先收加德納爾精華｜Collect the Jaedenar essence first.
+04-45到60級.md:2101｜說明｜從奧格瑪前往艾薩拉時收下一份。回東部王國後，再從斯通納德前往詛咒之地。｜Collect one when traveling from Orgrimmar to Azshara. After returning to the Eastern Kingdoms, go from Stonard to the Blasted Lands.
+04-45到60級.md:989｜說明｜南部死木熊怪直接開木喉聲望；加德納爾、南段洛爾和碧火薩特月井可連著跑。｜Kill the southern Deadwood furbolgs directly to start the Timbermaw reputation. Jaedenar, southern Ror and the Jadefire satyr moonwell can be run back to back.
+04-45到60級.md:990｜說明｜4102 先接，北邊拿齊血琥珀。採完後晚點再回南部交，省下立刻折返一趟。｜Take 4102 first and collect all the blood amber in the north. After gathering, turn in later in the south, which saves an immediate backtrack.
+04-45到60級.md:1023｜說明｜已接腐化的力量才做｜Do it only if you've accepted The Strength of Corruption.
+04-45到60級.md:1033｜說明｜北部鐵木森林一起解血琥珀與墮落的力量，最後才刷死木熊怪聲望。｜In northern Irontree Woods, solve Blood Amber and The Strength of Corruption together, and farm Deadwood furbolg reputation last.
+04-45到60級.md:1034｜說明｜已打完 4102 先留物品，往後回翡翠聖地再交。5158 留棘齒城。｜If you've already finished 4102, keep the item and turn it in later when you return to Emerald Sanctuary. Save 5158 for Ratchet.
+04-45到60級.md:1060｜說明｜到北菲拉斯取藥劑；下次回冰火溫泉再交。｜Get the potions in northern Feralas. Turn in at Frostfire Hot Springs next time.
+04-45到60級.md:1060｜說明｜到北菲拉斯取藥劑｜Get the potions in northern Feralas.
+04-45到60級.md:1060｜說明｜下次回冰火溫泉再交。｜Turn in at Frostfire Hot Springs next time.
+04-45到60級.md:1063｜說明｜熊怪會掉空的火酒瓶，撿到後點開；這是冬泉谷熊怪任務鏈的前置；若還沒掉，到冬泉村外繼續打普通熊怪。｜Furbolgs drop an empty firewater bottle; right-click it after you pick it up. This is the prerequisite for the Winterspring furbolg quest chain. If it hasn't dropped yet, keep killing normal furbolgs outside Winterfall Village.
+04-45到60級.md:1063｜說明｜熊怪會掉空的火酒瓶，撿到後點開；這是冬泉谷熊怪任務鏈的前置｜Furbolgs drop an empty firewater bottle; right-click it after you pick it up. This is the prerequisite for the Winterspring furbolg quest chain.
+04-45到60級.md:1063｜說明｜熊怪會掉空的火酒瓶，撿到後點開｜Furbolgs drop an empty firewater bottle; right-click it after you pick it up.
+04-45到60級.md:1063｜說明｜這是冬泉谷熊怪任務鏈的前置；若還沒掉，到冬泉村外繼續打普通熊怪。｜This is the prerequisite for the Winterspring furbolg quest chain. If it hasn't dropped yet, keep killing normal furbolgs outside Winterfall Village.
+04-45到60級.md:1063｜說明｜這是冬泉谷熊怪任務鏈的前置｜This is the prerequisite for the Winterspring furbolg quest chain.
+04-45到60級.md:1063｜說明｜若還沒掉，到冬泉村外繼續打普通熊怪。｜If it hasn't dropped yet, keep killing normal furbolgs outside Winterfall Village.
+04-45到60級.md:1078｜說明｜與永望鎮報告一起帶到東瘟疫；這件在達隆郡交。｜Take it with the Everlook report to Eastern Plaguelands. Turn this one in at Darrowshire.
+04-45到60級.md:1078｜說明｜與永望鎮報告一起帶到東瘟疫｜Take it with the Everlook report to Eastern Plaguelands.
+04-45到60級.md:1078｜說明｜這件在達隆郡交。｜Turn this one in at Darrowshire.
+04-45到60級.md:1091｜說明｜冰火溫泉的多諾瓦任務先交齊，梟獸沿路清；永望鎮雪怪、奇美拉可在同趟做。｜Turn in all of Donova's quests at Frostfire Hot Springs first, and clear owlbeasts along the way. You can do the Everlook yetis and chimaeras on the same trip.
+04-45到60級.md:1093｜說明｜永望鎮報告與尼古拉斯公爵的書先放任務欄，東部王國下一輪一起交。｜Leave the Everlook report and Duke Nicholas's book in your quest log and turn them in together on the next Eastern Kingdoms round.
+05-副本.md:1391｜說明｜寶石與印章掉落機率有限，先和隊友約定分配；若只打上層，隊伍一人持完成品即可。；位置：三王各拾寶石，沿路小怪另找原始印章；順序：歐莫克→沃恩→維姆薩拉克｜Gem and seal drop rates are limited; agree on how to distribute them with your teammates first. If you only run the upper level, one party member holding the finished item is enough. Location: Loot a gem from each of the three bosses, and look for the Unadorned Seal on the trash along the way. Order: Highlord Omokk → War Master Voone → Overlord Wyrmthalak
+05-副本.md:1391｜說明｜寶石與印章掉落機率有限，先和隊友約定分配；若只打上層，隊伍一人持完成品即可。；位置：三王各拾寶石，沿路小怪另找原始印章｜Gem and seal drop rates are limited; agree on how to distribute them with your teammates first. If you only run the upper level, one party member holding the finished item is enough. Location: Loot a gem from each of the three bosses, and look for the Unadorned Seal on the trash along the way.
+05-副本.md:1404｜說明｜先保留，飛船或飛艇回到奧格瑪時進智慧谷找伊崔格。｜Hold it for now; when you return to Orgrimmar by ship or zeppelin, go into the Valley of Wisdom and find Eitrigg.
+04-45到60級.md:1115｜說明｜從永望鎮飛莫沙徹營地；這一趟先回營地交之前接的費伍德支線，已接視靈藥劑再去北邊。｜Fly from Everlook to Camp Mojache. This trip, first return to camp and turn in the Felwood side quest you took earlier; if you've taken The Videre Elixir, go north afterward.
+04-45到60級.md:1116｜說明｜腐化的力量完成後交｜Turn in after completing The Strength of Corruption.
+04-45到60級.md:1118｜說明｜已接視靈藥劑才買｜Buy it only if you've taken The Videre Elixir.
+04-45到60級.md:1119｜說明｜已接視靈藥劑才做｜Do it only if you've taken The Videre Elixir.
+04-45到60級.md:1123｜說明｜菲拉斯 莫沙徹營地與怒痕堡接、費伍德做的 4120 是回村就能交的任務。｜4120, taken at Camp Mojache in Feralas and Rage Scar Hold and done in Felwood, can be turned in as soon as you return to the village.
+04-45到60級.md:1150｜說明｜到海岸接伊斯倫回費伍德的信。｜Pick up Islen's letter back to Felwood on the coast.
+04-45到60級.md:1152｜說明｜棘齒城的怪等級偏低。未到 56 級可在轉飛艇前飛回永望鎮打東側普通雪人（約 64, 40），或到西瘟疫之地費爾斯通農場（約 38, 56）打普通亡靈。｜Mobs at Ratchet are low level. If you're under level 56, before switching to the zeppelin you can fly back to Everlook to kill normal yetis on the east side (about 64, 40), or go to Felstone Field in Western Plaguelands (about 38, 56) to kill normal undead.
+04-45到60級.md:1205｜說明｜瘟疫之鍋按接續順序做，嚎哭鬼屋順路完成兩段野生動物。｜Do the Scourge cauldrons in follow-up order, and at the Writhing Haunt finish the two wild animal parts on the way.
+04-45到60級.md:1268｜說明｜可跳過｜暗翼蝠（6135）在東瘟疫，是精英巡邏目標；沒隊伍可跳過。｜Skip: Duskwing (6135) is in Eastern Plaguelands and is an elite patrol target. Skip it if you have no group.
+05-副本.md:1502｜說明｜清通靈塔後過屠宰場，擊敗瑞文戴爾後，在同一房間找奧里克斯交談。｜After clearing the necromancer tower, go through the Slaughterhouse; after defeating Rivendare, talk to Aurius in the same room.
+04-45到60級.md:2013｜說明｜回提里斯法林地西南找悲慟騎士，完成後可選 Sword of Mourning。｜Go to the Knight of Mourning in southwest Tirisfal Glades; after completing it you can choose the Sword of Mourning.
+04-45到60級.md:1326｜說明｜費爾斯通和安多哈爾連著做，末段白蟻回程剛好一起交。｜Do Felstone and Andorhal back to back; the final termite quest on the way back happens to be turned in together.
+04-45到60級.md:1327｜說明｜克羅米其餘鏈要再跑東瘟疫；有專程回去再接。｜The rest of the Chromie chain requires another trip to Eastern Plaguelands. Take it only if you make a dedicated trip back.
+05-副本.md:1727｜說明｜從安戈洛環形山經過加基森前，先準備兩塊瑟銀錠。｜Before passing through Gadgetzan from Un'Goro Crater, prepare two Thorium Bars.
+05-副本.md:1741｜說明｜南海鎮、塔倫米爾、布瑞爾與凱爾達隆是地契名稱，不用離開副本。；位置：在首廳、召喚廳後、霜語房、巴羅夫房找四張地契｜Southshore, Tarren Mill, Brill and Caer Darrow are deed names; you don't need to leave the dungeon. Location: Find the four deeds in the first hall, behind the Hall of Summoning, in Frostwhisper's room and in Barov's room.
+05-副本.md:1741｜說明｜南海鎮、塔倫米爾、布瑞爾與凱爾達隆是地契名稱，不用離開副本。｜Southshore, Tarren Mill, Brill and Caer Darrow are deed names; you don't need to leave the dungeon.
+05-副本.md:1741｜說明｜在首廳、召喚廳後、霜語房、巴羅夫房找四張地契｜Find the four deeds in the first hall, behind the Hall of Summoning, in Frostwhisper's room and in Barov's room.
+04-45到60級.md:1352｜說明｜此為部落前往永夜港的引導；做過其他版本新的邊疆的角色可直接找哈繆爾。｜This is the Horde lead-in to Nighthaven. Characters who did the other version's New Frontier can go straight to Hamuul.
+04-45到60級.md:1352｜說明｜此為部落前往永夜港的引導｜This is the Horde lead-in to Nighthaven.
+04-45到60級.md:1352｜說明｜做過其他版本新的邊疆的角色可直接找哈繆爾。｜Characters who did the other version's New Frontier can go straight to Hamuul.
+04-45到60級.md:1368｜說明｜先接 1124 和 5527，希利蘇斯南風村能接著做同一區的任務。｜Take 1124 and 5527 first; Southwind Village in Silithus lets you continue with the quests in the same zone.
+04-45到60級.md:1370｜說明｜木喉熊怪若還會主動攻擊，先在要塞外打死木熊怪，或先做費伍德森林的木喉聲望任務；通過要塞後可直接前往冬泉谷永望鎮。｜If the Timbermaw furbolgs still attack you on sight, first kill Deadwood furbolgs outside the fortress, or do the Timbermaw reputation quest in Felwood first. After passing through the fortress, you can go straight to Everlook in Winterspring.
+04-45到60級.md:1398｜說明｜接完先在永望鎮對萊加奇（61.54, 38.61）使用機械雪人，另外兩人在安戈洛環形山 馬紹爾營地那站順路使用。｜After accepting, use the Mechanical Yeti on Legacki (61.54, 38.61) at Everlook first; the other two use it on the way at the Marshal's Refuge stop in Un'Goro Crater.
+04-45到60級.md:1403｜說明｜5163 會沿同一路線跑三張圖，接了就先在永望鎮用一次。｜5163 runs along the same route across three maps; once you've accepted it, use it once at Everlook first.
+04-45到60級.md:1454｜說明｜材料先留著；從月光林地回來送木箱時，一起交給凱蕾娜。｜Hold the materials for now. When you come back from Moonglade to deliver the crate, turn it in to Kaylaena at the same time.
+04-45到60級.md:1454｜說明｜材料先留著｜Hold the materials for now.
+04-45到60級.md:1454｜說明｜從月光林地回來送木箱時，一起交給凱蕾娜。｜When you come back from Moonglade to deliver the crate, turn it in to Kaylaena at the same time.
+04-45到60級.md:1455｜說明｜往月光林地經過永望鎮時交娜米。｜Turn in to Nami when passing Everlook on the way to Moonglade.
+04-45到60級.md:1533｜說明｜從永望鎮走暗語峽谷進山，先開污化丘陵飛行點，再往北到凱蕾娜的工坊；之後經永望鎮飛月光林地來回，回程先送木箱到工坊；最後沿大路往西北。｜From Everlook go through Whispering Gorge into the mountains, unlock the Tainted Foothills flight point first, then go north to Kaylaena's workshop. Afterward fly to Moonglade and back through Everlook; on the way back, deliver the crate to the workshop first. Finally, follow the main road northwest.
+04-45到60級.md:1534｜說明｜隱士柯薩拉斯的主線一路開到永恆山峰的山脈法杖，月光林地這趟來回是為了接上後段。｜Hermit Ketharas's main chain runs all the way to the Mountain Staff at the Summit of Eternity; the Moonglade round trip is to line up the later parts.
+04-45到60級.md:1537｜說明｜可跳過｜92009 的木箱約兩小時失效，所以月光林地回來才接，下飛行點直接送。後續 92011 要到古野村再往上的部落營地遺跡拾荒，物品位置不明；92328、92329 跟著略過，92329 還要引 60 級奇美拉剛蘇羅克。｜Skip: The crate for 92009 expires after about two hours, so take it after coming back from Moonglade and deliver it right after getting off the flight path. The follow-up 92011 requires scavenging at the ruined Horde camp above Elderwild; the item's location is unknown. Skip 92328 and 92329 as well; 92329 also requires luring the level 60 chimaera Gensuroc.
+04-45到60級.md:1538｜說明｜種子、貓頭鷹蛋、塊莖、土壤、水晶、松果這些採集物，照任務描述在附近找；找不到先做附近的擊殺任務。｜For gathering objectives such as seeds, owl eggs, tubers, soil, crystals and pine cones, look nearby according to the quest description. If you can't find them, do the nearby kill quests first.
+04-45到60級.md:1577｜說明｜用任務給的空葫蘆在前方瀑布裝水，不是在嘉文關身邊；瀑布沿大路往祥和育所方向找。｜Fill water with the empty gourd the quest gives you at the waterfall ahead, not beside Galvinquam. Look for the waterfall along the main road toward the Cradle of Tranquility.
+04-45到60級.md:1577｜說明｜瀑布沿大路往祥和育所方向找。｜Look for the waterfall along the main road toward the Cradle of Tranquility.
+04-45到60級.md:1606｜說明｜安荷在瑪露克附近找。｜Look for Anhe near Maluk.
+04-45到60級.md:1630｜說明｜灰燼在戴根廢墟中央，附近有精英末日守衛，58 級單人要小心；沒拿到骨灰，就略過山脈法杖與其後續；不需要法杖的山頂任務照做。｜The ashes are in the middle of Dae'gun, with an elite doomguard nearby; at level 58 you need to be careful solo. If you don't get the ashes, skip the Mountain Staff and its follow-ups. Do the summit quests that don't need the staff.
+04-45到60級.md:1630｜說明｜灰燼在戴根廢墟中央，附近有精英末日守衛，58 級單人要小心；沒拿到骨灰，就略過山脈法杖與其後續｜The ashes are in the middle of Dae'gun, with an elite doomguard nearby; at level 58 you need to be careful solo. If you don't get the ashes, skip the Mountain Staff and its follow-ups.
+04-45到60級.md:1630｜說明｜沒拿到骨灰，就略過山脈法杖與其後續；不需要法杖的山頂任務照做。｜If you don't get the ashes, skip the Mountain Staff and its follow-ups. Do the summit quests that don't need the staff.
+04-45到60級.md:1630｜說明｜沒拿到骨灰，就略過山脈法杖與其後續｜If you don't get the ashes, skip the Mountain Staff and its follow-ups.
+04-45到60級.md:1630｜說明｜不需要法杖的山頂任務照做。｜Do the summit quests that don't need the staff.
+04-45到60級.md:1647｜說明｜先依任務日誌找郵件掉落處；找不到可先略過。｜First check your quest log for where the mail drops. If you can't find it, you can skip it for now.
+04-45到60級.md:1647｜說明｜先依任務日誌找郵件掉落處｜First check your quest log for where the mail drops.
+04-45到60級.md:1647｜說明｜找不到可先略過。｜If you can't find it, you can skip it for now.
+04-45到60級.md:1678｜說明｜解放諾達希爾樹根下原本就在的幽光，不是在空地用道具召出來；在樹根一帶找。｜Free the glowing light that's already beneath the roots of Nordrassil, rather than summoning it with an item in the clearing. Look around the roots.
+04-45到60級.md:1678｜說明｜在樹根一帶找。｜Look around the roots.
+04-45到60級.md:1679｜說明｜遺骸在諾達希爾一帶找。｜Look for the remains around Nordrassil.
+04-45到60級.md:1692｜說明｜先開永恆山峰飛行點；再飛污化丘陵交山脈法杖的三個前置，之後轉永望鎮送郵包、做郵件這串後飛回山上；離山時經污化丘陵飛永望鎮，最後依是否要繞菲拉斯 亂羽高地選航線。｜Unlock the Summit of Eternity flight point first. Then fly to the Tainted Foothills to turn in the three prerequisites for the Mountain Staff, then continue to Everlook to deliver the mail package and do the mail chain, and fly back up the mountain. When leaving the mountain, fly to Everlook via the Tainted Foothills, and choose your route last depending on whether you detour to Feralas Highperch.
+04-45到60級.md:1693｜說明｜古野村、哀悼之眠與祥和育所的任務都在大路兩側，殺怪和撿東西可一起做。｜The quests at Elderwild, Rest of Mourning and the Cradle of Tranquility are all along both sides of the main road; killing and looting can be done together.
+04-45到60級.md:1694｜說明｜拿法杖下山時，一起送郵包並完成郵件後續（93197→93406→93269）。｜When coming down the mountain with the staff, deliver the mail package and finish the mail follow-up (93197 → 93406 → 93269) at the same time.
+04-45到60級.md:1695｜說明｜可跳過｜92335 的骨灰在戴根廢墟中央，旁邊有精英末日守衛；單人拿不到就略過山脈法杖與其後續（92335、90647、92169、92833、93848）；92317、92500 照樣回隱士洞交，郵件這串和 93127、93407、93547、93584、92533、92017 不需要法杖，照做。｜Skip: The ashes for 92335 are in the middle of Dae'gun next to an elite doomguard. If you can't get them solo, skip the Mountain Staff and its follow-ups (92335, 90647, 92169, 92833, 93848). 92317 and 92500 are still turned in at the Hermit's Cave as usual; the mail chain and 93127, 93407, 93547, 93584, 92533 and 92017 don't need the staff, so do them.
+04-45到60級.md:1700｜說明｜可跳過｜93615 夏拉卡（31.3, 50.3，馬羅希斯旁）的小貓散在山裡，位置不明，可略過。93521 維漢身旁書架上的研究報告、99670 回去找傑瑞曼，前置不明，路線不接。｜Skip: The kittens for 93615 Shalla'kal (31.3, 50.3, next to Maroshis) are scattered in the mountains and their location is unknown, so you can skip it. The research report on the bookshelf beside Weihan for 93521 and 99670 (go back and find Jeriman) have unknown prerequisites, so the route doesn't take them.
+05-副本.md:1621｜說明｜打完大王取得國王身分後，原路回戈多克平民區找克雷格交談。｜After killing the final boss and taking the king's identity, return the way you came and talk to Kreeg in Gordok Commons.
+05-副本.md:1543｜說明｜從東門與普希林交談，沿通道追到盡頭；每次停下都再和他說話。｜Talk to Pusillin from the east gate and chase him along the passage to the end. Talk to him every time he stops.
+05-副本.md:1543｜說明｜從東門與普希林交談，沿通道追到盡頭｜Talk to Pusillin from the east gate and chase him along the passage to the end.
+05-副本.md:1543｜說明｜每次停下都再和他說話。｜Talk to him every time he stops.
+05-副本.md:1528｜說明｜從艾薩拉經奧格瑪且滿 54 級時，可向公告員高拉克接 7492。在莫沙徹營地交塔羅並先接 7489。飛到莫沙徹營地後，找拉瑞斯小亭的埃斯托爾迪。5527 可從月光林地接；到希利蘇斯南風村取匣、回月光林地永夜港交後才有 5526，可留到晚一趟。｜If you come from Azshara via Orgrimmar and are level 54, you can take 7492 from Warcaller Gorlach. Turn in to Talo Thornhoof at Camp Mojache and take 7489 first. After flying to Camp Mojache, find Azj'Tordin at Lariss Pavilion. 5527 can be taken in Moonglade. After fetching the reliquary at Southwind Village in Silithus and turning it in at Nighthaven in Moonglade, 5526 becomes available; you can leave it for a later trip.
+04-45到60級.md:1798｜說明｜可跳過｜超級測蛋器只在撿到蛋、還能交時才去；沒撿的不用折返。｜Skip: Go to the Super Egg-O-Matic only if you've picked up an egg and can still turn it in. Don't go back for any you didn't pick up.
+05-副本.md:1677｜說明｜在雷霆崖西側高原接。｜Accept it on the plateau west of Thunder Bluff.
+05-副本.md:1683｜說明｜在副本內找滲漏軟泥怪｜Find the seeping ooze inside the dungeon.
+05-副本.md:1661｜說明｜入口→泰坦遺跡沿途收四色水晶→在無色水晶旁一起處理水池目標。｜Entrance → collect the four colored crystals along the Titan ruins → handle the pool objectives together next to the colorless crystal.
+05-副本.md:1691｜說明｜先接 95928。若在營地沒有其他任務可接，直接跟隊進本。｜Take 95928 first. If there are no other quests to pick up at camp, join the group and enter the dungeon directly.
+05-副本.md:1692｜說明｜永恆版新增五人副本。由馬紹爾營地北側上坡，泰坦門前可用安戈洛採集的能量水晶。安戈洛約 48.10, 6.10 是泰坦建築的外側路標，請往建築內找入口。｜Forever adds a new five-player dungeon. Climb the slope on the north side of Marshal's Refuge; at the Titan door you can use the Power Crystals gathered in Un'Goro. About 48.10, 6.10 in Un'Goro is the outer waypoint of a Titan structure; look inside the building for the entrance.
+05-副本.md:1673｜說明｜前往月光林地途中，經雷霆崖時可先到莫高雷西北找 Mayena Earthseeker。回安戈洛環形山 馬紹爾營地後，沿北邊石階往上找泰坦建築；97049、95926 在幽暗城煉金區接，西瘟疫之地・第三次離開幽暗城前先接。｜On the way to Moonglade, when passing Thunder Bluff you can first go to northwest Mulgore to find Mayena Earthseeker. After returning to Marshal's Refuge in Un'Goro Crater, climb the stone steps on the north side to find the Titan structure. 97049 and 95926 are picked up in the Undercity Apothecarium; take them before leaving Undercity for the third time on the Western Plaguelands stop.
+05-副本.md:1664｜說明｜安戈洛環形山 1449 48.10, 6.10（泰坦建築外側路標，請往建築內找入口）｜Un'Goro Crater 1449 48.10, 6.10 (outer waypoint of the Titan structure; look inside the building for the entrance)
+04-45到60級.md:1860｜說明｜可跳過｜暗翼蝠（6135）在東瘟疫；希利蘇斯這站也略過組隊精英。｜Skip: Duskwing (6135) is in Eastern Plaguelands. Skip the group elites at this Silithus stop as well.
+04-45到60級.md:1938｜說明｜永夜港兩位 NPC 的交接在同一座村。｜The hand-offs between the two Nighthaven NPCs are in the same village.
+04-45到60級.md:1939｜說明｜5526 要進厄運之槌東區，留副本行程。｜5526 requires entering the east wing of Dire Maul; keep it for the dungeon trip.
+04-45到60級.md:1978｜說明｜5087 優先找落單的信使；4842 是探索，和霜語峽谷北側的補怪點同路。｜For 5087, prioritize lone runners. 4842 is exploration, and is on the same route as the mob spot north of Frostwhisper Gorge.
+04-45到60級.md:1980｜說明｜未滿 60 級可在霜語峽谷北側打熊，打一般的瘋狂的裂齒熊（約 57.63, 70.83／66.68, 70.57），避開谷底精英。｜If you're below level 60, you can kill bears north of Frostwhisper Gorge; kill the regular Rabid Longtooth bears (about 57.63, 70.83 / 66.68, 70.57) and avoid the elites on the valley floor.
+05-副本.md:1839｜說明｜卡加斯和奧格瑪先接滿；黑手的命令是團隊副本傳送前置，有需求再做。｜Take everything at Kargath and Orgrimmar first. Blackhand's Command is the prerequisite for the raid teleport; do it if you need it.
+05-副本.md:1840｜說明｜與下層共用外門，進門後向左上去找上層鎖門；組隊先找可用晉升印章的隊友。若遇到跳台地形擋路，走上層外側步道。｜It shares the outer door with the lower level; after entering, go up and to the left to find the upper level's locked door. In a group, first find a teammate who can use the Seal of Ascension. If a platform blocks your way, take the outer walkway on the upper level.
+05-副本.md:1809｜說明｜滿 55 級後從冬泉谷 永望鎮飛奧格瑪，再搭飛艇到東部王國先做下層 4903，回卡加斯高圖斯接 4941。可於貧瘠之地 棘齒城後回奧格瑪智慧谷向伊崔格、索爾交接並留 4974。57 級後回幽暗城煉金區接 4769，再飛卡加斯交給薇薇安，接 4768。下層至少一人完成晉升印章兩段，帶印章開門；已有持章隊友可直接打上層。｜After level 55, fly from Everlook in Winterspring to Orgrimmar, then take the zeppelin to the Eastern Kingdoms and do the lower-level 4903 first; return to Warlord Goretooth in Kargath for 4941. After Ratchet in the Barrens, you can return to Orgrimmar's Valley of Wisdom to hand in to Eitrigg and Thrall and save 4974. After level 57, go back to the Undercity Apothecarium for 4769, then fly to Kargath to give it to Vivian and take 4768. At least one person in the lower level should finish the two Seal of Ascension parts and open the door with the seal. If you already have a teammate with the seal, you can go straight to the upper level.
+05-副本.md:1782｜說明｜沿熊怪通道找枯萎之喉與骨鼻，兩者在不同支路｜Follow the furbolg path to find Withered Throat and Bonenose; they are on different branches.
+05-副本.md:1756｜說明｜入口熊怪通道沿路收黑喉袋子→地下根系區收諾達希爾根帽→枯萎之喉與骨鼻的岔路→血鬃長老取儀祭圖騰。｜Entrance furbolg path: collect Blackmaw Pouches along the way → collect Nordrassil Rootcaps in the underground root area → fork to Withered Throat and Bonenose → Bloodmane Elder for the ritual totem.
+05-副本.md:1767｜說明｜在瓦羅莫克找傑迪加接 92346。同站可到奧汀克接 92069；滿 55 級再回艾薩拉找 Ekkal。經棘齒城回卡林多時，先飛雷霆崖到長者高地交傑迪加的信、接 92343，再往莫高雷找穆倫·地怒。最後飛瓦羅莫克，由艾薩拉地道前往副本。92343、97198 留到下次雷霆崖和莫高雷回程交。｜Find Jediga in Valormok to take 92346. At the same stop you can also take 92069 from Ogtinc. At level 55, return to Azshara to find Ekkal. When returning to Kalimdor via Ratchet, first fly to Thunder Bluff, turn in Jediga's letter at Elder Rise and take 92343, then go to Mulgore to find Muln Earthfury. Finally fly to Valormok and take the Azshara tunnel to the dungeon. Turn in 92343 and 97198 on your next return trip through Thunder Bluff and Mulgore.
+08-保留物品.md:43｜說明｜沙普塔隆的爪子，碎木崗哨｜Sharptalon's Claw, Splintertree Post
+08-保留物品.md:44｜說明｜烏薩茍斯的爪子，碎木崗哨｜Ursangous's Claw, Splintertree Post
+08-保留物品.md:45｜說明｜薩杜布拉的頭顱，碎木崗哨｜Shadumbra's Head, Splintertree Post
+08-保留物品.md:67｜說明｜水之召喚，銀松森林水之祭壇｜Call of Water, the Water Altar in Silverpine Forest
+08-保留物品.md:69｜說明｜水之召喚，貧瘠之地棘齒城｜Call of Water, Ratchet in the Barrens
+08-保留物品.md:107｜說明｜向赫格拉姆報到，悲傷沼澤斯通納德｜Report to Helgrum, Stonard in the Swamp of Sorrows
+06-路線外任務.md:14｜說明｜經過「歸還書籍」的接交地點時一併做，不必專程折返。｜Do “Return the Book” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:19｜說明｜經過「研究資格」的接交地點時一併做，不必專程折返。｜Do “Research Access” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:28｜說明｜經過「Greater Friend of the Library」的接交地點時一併做，不必專程折返。｜Do “Greater Friend of the Library” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:41｜說明｜同名後續經過接交地點時一併做，不必專程折返。｜Do the same-name follow-up when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:51｜說明｜經過「禁斷的知識」的接交地點時一併做，不必專程折返。｜Do “Forbidden Knowledge” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:53｜說明｜經過「進入沙漠」的接交地點時一併做，不必專程折返。｜Do “Into the Field” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:67｜說明｜經過「安戈洛的泥土」的接交地點時一併做，不必專程折返。｜Do “Un'Goro Soil” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:71｜說明｜經過「融合軟泥怪」的接交地點時一併做，不必專程折返。｜Do “Melding of Influences” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:76｜說明｜經過「雜質檢測 - 安戈洛環形山」的接交地點時一併做，不必專程折返。｜Do “Testing for Impurities - Un'Goro Crater” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:79｜說明｜經過「捐獻符文布」的接交地點時一併做，不必專程折返。｜Do “A Donation of Runecloth” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:82｜說明｜經過「更多的符文布」的接交地點時一併做，不必專程折返。｜Do “Additional Runecloth” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:115｜說明｜有學對應專業或紮營時順手做，到申德村交。｜Do it when you've learned the matching profession or are camping, and turn it in at Sen'jin Village.
+06-路線外任務.md:155｜說明｜經過 Wendel Mathers 附近時再接，回城或交件時順手完成。｜Accept this when you pass near Wendel Mathers; finish it when you return to town or turn in quests.
+06-路線外任務.md:196｜說明｜經過「返回詛咒之地」的接交地點時一併做，不必專程折返。｜Do “Return to the Blasted Lands” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:197｜說明｜經過「收集破碎的護符」的接交地點時一併做，不必專程折返。｜Do “Uniting the Shattered Amulet” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:229｜說明｜經過「心急的伍特」的接交地點時一併做，不必專程折返。｜Do “Whuut's the Rush” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:230｜說明｜經過「最喜歡的食物」的接交地點時一併做，不必專程折返。｜Do “Favorite Food” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:231｜說明｜經過「歇腳石」的接交地點時一併做，不必專程折返。｜Do “Rocks to Rests” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:261｜說明｜經過「收集蜜糖」的接交地點時一併做，不必專程折返。｜Do “A Sticky Situation” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:276｜說明｜經過「部落的勇士」的接交地點時一併做，不必專程折返。｜Do “The Champion of the Horde” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:277｜說明｜經過「雷克薩的證明」的接交地點時一併做，不必專程折返。｜Do “The Testament of Rexxar” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:286｜說明｜經過「壹切才剛剛開始」的接交地點時一併做，不必專程折返。｜Do “The Journey Has Just Begun” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:339｜說明｜限德魯伊，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Druid only: Do “A Supernatural Device” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:340｜說明｜限獵人，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Hunter only: Do “A Supernatural Device” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:341｜說明｜限法師，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Mage only: Do “A Supernatural Device” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:342｜說明｜限牧師，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Priest only: Do “A Supernatural Device” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:343｜說明｜限盜賊，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Rogue only: Do “A Supernatural Device” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:344｜說明｜限薩滿，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Shaman only: Do “A Supernatural Device” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:345｜說明｜限術士，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Warlock only: Do “A Supernatural Device” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:346｜說明｜限戰士，經過「超自然儀器」的接交地點時一併做，不必專程折返。｜Warrior only: Do “A Supernatural Device” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:347｜說明｜限德魯伊，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Druid only: Do “In Search of Anthion” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:348｜說明｜限獵人，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Hunter only: Do “In Search of Anthion” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:349｜說明｜限法師，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Mage only: Do “In Search of Anthion” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:350｜說明｜限牧師，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Priest only: Do “In Search of Anthion” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:351｜說明｜限盜賊，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Rogue only: Do “In Search of Anthion” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:352｜說明｜限薩滿，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Shaman only: Do “In Search of Anthion” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:353｜說明｜限術士，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Warlock only: Do “In Search of Anthion” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:354｜說明｜限戰士，經過「尋找安希恩」的接交地點時一併做，不必專程折返。｜Warrior only: Do “In Search of Anthion” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:355｜說明｜限薩滿，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Shaman only: Do “Bodley's Unfortunate Fate” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:356｜說明｜經過「公平的補償」的接交地點時一併做，不必專程折返。｜Do “Just Compensation” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:357｜說明｜經過「最後的獎賞」的接交地點時一併做，不必專程折返。｜Do “Saving the Best for Last” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:366｜說明｜限德魯伊，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Druid only: Do “Bodley's Unfortunate Fate” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:367｜說明｜限獵人，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Hunter only: Do “Bodley's Unfortunate Fate” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:368｜說明｜限法師，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Mage only: Do “Bodley's Unfortunate Fate” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:369｜說明｜限牧師，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Priest only: Do “Bodley's Unfortunate Fate” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:370｜說明｜限盜賊，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Rogue only: Do “Bodley's Unfortunate Fate” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:371｜說明｜限術士，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Warlock only: Do “Bodley's Unfortunate Fate” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:372｜說明｜限戰士，經過「布德利不幸的命運」的接交地點時一併做，不必專程折返。｜Warrior only: Do “Bodley's Unfortunate Fate” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:449｜說明｜經過「惡魔之種」的接交地點時一併做，不必專程折返。｜Do “The Demon Seed” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:489｜說明｜經過「鋼齒土狼」的接交地點時一併做，不必專程折返。｜Do “Steelsnap” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:490｜說明｜經過「霜喉雪人」的接交地點時一併做，不必專程折返。｜Do “Frostmaw” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:493｜說明｜經過「奧丹姆的線索」的接交地點時一併做，不必專程折返。｜Do “Portents of Uldum” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:494｜說明｜經過「拭目以待」的接交地點時一併做，不必專程折返。｜Do “Seeing What Happens” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:495｜說明｜經過「石頭衛士」的接交地點時一併做，不必專程折返。｜Do “The Stone Watcher” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:496｜說明｜經過「進壹步的任務」的接交地點時一併做，不必專程折返。｜Do “A Future Task” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:498｜說明｜經過「晨光麥研究」的接交地點時一併做，不必專程折返。｜Do “Morrowgrain Research” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:501｜說明｜經過「雷霆崖的晨光麥」的接交地點時一併做，不必專程折返。｜Do “Morrowgrain to Thunder Bluff” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:557｜說明｜限獸人／牛頭人／食人妖，同名後續經過接交地點時一併做，不必專程折返。｜Orc/Tauren/Troll only: Do the same-name follow-up when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:580｜說明｜限牛頭人，經過「雙足飛龍管理員塔爾」的接交地點時一併做，不必專程折返。｜Tauren only: Do “Tal the Wind Rider Master” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:581｜說明｜限牛頭人，經過「向加翰回復」的接交地點時一併做，不必專程折返。｜Tauren only: Do “Return to Jahan” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:584｜說明｜限獸人／食人妖，經過「雙足飛龍管理員多拉斯」的接交地點時一併做，不必專程折返。｜Orc/Troll only: Do “Doras the Wind Rider Master” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:585｜說明｜限獸人／食人妖，經過「返回十字路口」的接交地點時一併做，不必專程折返。｜Orc/Troll only: Do “Return to the Crossroads.” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:587｜說明｜經過「高強度齒輪」的接交地點時一併做，不必專程折返。｜Do “Nugget Slugs” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:590｜說明｜經過「主動式負載平衡器說明書」的接交地點時一併做，不必專程折返。｜Do “Samophlange Manual” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:600｜說明｜經過「墊腳石」的接交地點時一併做，不必專程折返。｜Do “Stepping Stones” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:603｜說明｜經過「匆匆忙忙」的接交地點時一併做，不必專程折返。｜Do “Scramble” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:608｜說明｜經過「依沙瓦克」的接交地點時一併做，不必專程折返。｜Do “Isha Awak” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:632｜說明｜限不死族，經過「飛往幽暗城」的接交地點時一併做，不必專程折返。｜Undead only: Do “Ride to the Undercity” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:633｜說明｜限不死族，經過「向博迪瑞格回報」的接交地點時一併做，不必專程折返。｜Undead only: Do “Return to Podrig” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:634｜說明｜限不死族，經過「邁克爾·加勒特」的接交地點時一併做，不必專程折返。｜Undead only: Do “Michael Garrett” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:669｜說明｜經過「鷹之拳」的接交地點時一併做，不必專程折返。｜Do “Eagle's Fist” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:697｜說明｜經過「塔蕾莎的禮物」的接交地點時一併做，不必專程折返。｜Do “Taretha's Gift” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:730｜說明｜經過「淒涼之地的科卡爾部族」的接交地點時一併做，不必專程折返。｜Do “The Kolkar of Desolace” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:732｜說明｜經過「破碎之淚」的接交地點時一併做，不必專程折返。｜Do “Broken Tears” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:738｜說明｜經過 Molkar 附近時再接，回城或交件時順手完成。｜Accept this when you pass near Molkar; finish it when you return to town or turn in quests.
+06-路線外任務.md:762｜說明｜經過「黑龍幻象」的接交地點時一併做，不必專程折返。｜Do “Oculus Illusions” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:809｜說明｜經過「通過試煉」的接交地點時一併做，不必專程折返。｜Do “Final Passage” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:812｜說明｜經過「返回藏寶海灣」的接交地點時一併做，不必專程折返。｜Do “Back to Booty Bay” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:815｜說明｜經過「跟上節奏」的接交地點時一併做，不必專程折返。｜Do “Keeping Pace” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:817｜說明｜經過「安全第壹」的接交地點時一併做，不必專程折返。｜Do “Safety First” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:820｜說明｜經過「紮米克的困擾」的接交地點時一併做，不必專程折返。｜Do “Zamek's Distraction” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:822｜說明｜經過「精鐵礦石」的接交地點時一併做，不必專程折返。｜Do “Indurium Ore” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:824｜說明｜經過「贊吉爾的藥劑和蠢人酒」的接交地點時一併做，不必專程折返。｜Do “Zanzil's Mixture and a Fool's Stout” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:825｜說明｜經過「灌醉侏儒」的接交地點時一併做，不必專程折返。｜Do “Get the Gnomes Drunk” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:826｜說明｜經過「向菲茲巴布報告」的接交地點時一併做，不必專程折返。｜Do “Report Back to Fizzlebub” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:828｜說明｜經過「蠢人酒」的接交地點時一併做，不必專程折返。｜Do “Fool's Stout” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:834｜說明｜經過「必是此地」的接交地點時一併做，不必專程折返。｜Do “This Must Be The Place” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:866｜說明｜經過「為部落效力」的接交地點時一併做，不必專程折返。｜Do “Service to the Horde” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:870｜說明｜經過「奧妮克希亞的血脈」的接交地點時一併做，不必專程折返。｜Do “The Brood of Onyxia” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:877｜說明｜經過「挑戰莫格穆洛克」的接交地點時一併做，不必專程折返。｜Do “Challenge Overlord Mok'Morokk” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:881｜說明｜經過「龍骨試煉，斯克利爾」的接交地點時一併做，不必專程折返。｜Do “The Test of Skulls, Scryer” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:886｜說明｜經過「黑龍勇士之血」的接交地點時一併做，不必專程折返。｜Do “Blood of the Black Dragon Champion” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:887｜說明｜經過「更多重要的材料」的接交地點時一併做，不必專程折返。｜Do “More Components of Importance” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:896｜說明｜經過「悲傷的故事」的接交地點時一併做，不必專程折返。｜Do “A Tale of Sorrow” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:929｜說明｜經過「閃光彈的制法」的接交地點時一併做，不必專程折返。｜Do “Flash Bomb Recipe” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:931｜說明｜經過「星，手，心」的接交地點時一併做，不必專程折返。｜Do “The Star, the Hand and the Heart” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:941｜說明｜經過「大地封印」的接交地點時一併做，不必專程折返。｜Do “Seal of the Earth” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:961｜說明｜經過「口渴的比格維茲」的接交地點時一併做，不必專程折返。｜Do “Slake That Thirst” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:974｜說明｜經過「返回雷霆崖」的接交地點時一併做，不必專程折返。｜Do “Return to Thunder Bluff” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1025｜說明｜經過「尋找外膜」的接交地點時一併做，不必專程折返。｜Do “Hunting for Ectoplasm” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1026｜說明｜經過「靈質提純器」的接交地點時一併做，不必專程折返。｜Do “The Ectoplasmic Distiller” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1027｜說明｜經過「攜帶式能量泉源」的接交地點時一併做，不必專程折返。｜Do “A Portable Power Source” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1028｜說明｜經過「狡猾的商人」的接交地點時一併做，不必專程折返。｜Do “A Shifty Merchant” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1029｜說明｜經過「回到莫克瓦那裡」的接交地點時一併做，不必專程折返。｜Do “Return to Mokvar” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1080｜說明｜經過「完好無損的毒囊」的接交地點時一併做，不必專程折返。｜Do “Undamaged Venom Sac” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1081｜說明｜經過「請教加德林大師」的接交地點時一併做，不必專程折返。｜Do “Consult Master Gadrin” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1082｜說明｜經過「蜘蛛之神」的接交地點時一併做，不必專程折返。｜Do “The Spider God” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1084｜說明｜經過「奧蘭的感謝」的接交地點時一併做，不必專程折返。｜Do “Oran's Gratitude” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1086｜說明｜經過「送回蜜酒」的接交地點時一併做，不必專程折返。｜Do “Ripple Delivery” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1094｜說明｜經過「送往幽暗城的毒藥」的接交地點時一併做，不必專程折返。｜Do “Venom to the Undercity” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1140｜說明｜經過「艾博希爾之眼」的接交地點時一併做，不必專程折返。｜Do “Eye of the Emberseer” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1142｜說明｜經過「破壞結界」的接交地點時一併做，不必專程折返。｜Do “Breaking the Ward” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1145｜說明｜經過「惡魔之名」的接交地點時一併做，不必專程折返。｜Do “The Name of the Beast” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1148｜說明｜經過「艾薩拉水晶」的接交地點時一併做，不必專程折返。｜Do “Azsharite” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1149｜說明｜經過「武器的鑄造」的接交地點時一併做，不必專程折返。｜Do “The Formation of Felbane” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1150｜說明｜經過「魔化艾薩拉水晶武器」的接交地點時一併做，不必專程折返。｜Do “Enchanted Azsharite Fel Weaponry” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1174｜說明｜經過「爪牙的天災石」的接交地點時一併做，不必專程折返。｜Do “Minion's Scourgestones” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1185｜說明｜經過「遊蕩者目錄」的接交地點時一併做，不必專程折返。｜Do “Catalogue of the Wayward” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1190｜說明｜經過「亡靈萊斯·霜語」的接交地點時一併做，不必專程折返。｜Do “The Dying, Ras Frostwhisper” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1191｜說明｜經過「米奈希爾的禮物」的接交地點時一併做，不必專程折返。｜Do “Menethil's Gift” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1192｜說明｜經過「巫妖萊斯·霜語」的接交地點時一併做，不必專程折返。｜Do “The Lich, Ras Frostwhisper” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1195｜說明｜經過「血色幻象」的接交地點時一併做，不必專程折返。｜Do “Scarlet Subterfuge” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1196｜說明｜經過「在夢中」的接交地點時一併做，不必專程折返。｜Do “In Dreams” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1208｜說明｜經過「丟失的命令」的接交地點時一併做，不必專程折返。｜Do “The Missing Orders” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1209｜說明｜經過「悔恨的戰士」的接交地點時一併做，不必專程折返。｜Do “The Disgraced One” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1217｜說明｜經過「古代英雄」的接交地點時一併做，不必專程折返。｜Do “Heroes of Old” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1218｜說明｜經過「基利斯」的接交地點時一併做，不必專程折返。｜Do “Kirith” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1220｜說明｜經過「禁錮我們的石頭」的接交地點時一併做，不必專程折返。｜Do “The Stones That Bind Us” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1221｜說明｜經過「黑暗籠罩」的接交地點時一併做，不必專程折返。｜Do “The Cover of Darkness” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1222｜說明｜經過「惡魔獵手」的接交地點時一併做，不必專程折返。｜Do “The Demon Hunter” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1223｜說明｜經過「洛拉姆斯」的接交地點時一併做，不必專程折返。｜Do “Loramus” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1224｜說明｜經過「惡魔拉瑟萊克」的接交地點時一併做，不必專程折返。｜Do “You Are Rakh'likh, Demon” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1239｜說明｜經過「血瓣花除草器」的接交地點時一併做，不必專程折返。｜Do “Bloodpetal Zapper” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1251｜說明｜經過「林克的冒險」的接交地點時一併做，不必專程折返。｜Do “Linken's Adventure” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1315｜說明｜經過「貝蒂娜·比格辛克」的接交地點時一併做，不必專程折返。｜Do “Betina Bigglezink” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1365｜說明｜經過「達隆郡的英雄」的接交地點時一併做，不必專程折返。｜Do “Heroes of Darrowshire” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1369｜說明｜經過「最後的石板」的接交地點時一併做，不必專程折返。｜Do “The Final Tablets” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1375｜說明｜經過「禁錮靈魂的遺物」的接交地點時一併做，不必專程折返。｜Do “Soulbound Keepsake” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1379｜說明｜經過「達隆郡的戰鬥」的接交地點時一併做，不必專程折返。｜Do “The Battle of Darrowshire” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1385｜說明｜經過「紅衣信使」的接交地點時一併做，不必專程折返。｜Do “The Crimson Courier” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1386｜說明｜經過「納薩諾斯的計謀」的接交地點時一併做，不必專程折返。｜Do “Nathanos' Ruse” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1387｜說明｜經過「向納薩諾斯復命」的接交地點時一併做，不必專程折返。｜Do “Return to Nathanos” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1388｜說明｜經過「血色十字軍聖者，德米提雅」的接交地點時一併做，不必專程折返。｜Do “The Scarlet Oracle, Demetria” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1394｜說明｜經過「逝者的請求」的接交地點時一併做，不必專程折返。｜Do “Dead Man's Plea” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1395｜說明｜經過「安希恩奇怪的要求」的接交地點時一併做，不必專程折返。｜Do “Anthion's Strange Request” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1396｜說明｜經過「安希恩的老朋友」的接交地點時一併做，不必專程折返。｜Do “Anthion's Old Friend” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1555｜說明｜經過「特雷·萊弗治的殘骸」的接交地點時一併做，不必專程折返。｜Do “The Remains of Trey Lightforge” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:1593｜說明｜經過「召喚」的接交地點時一併做，不必專程折返。｜Do “The Summoning” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:2159｜說明｜經過「瓦薩拉克護符的左半塊」的接交地點時一併做，不必專程折返。｜Do “The Left Piece of Lord Valthalak's Amulet” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:2163｜說明｜經過「瓦薩拉克領主護符的右半塊」的接交地點時一併做，不必專程折返。｜Do “The Right Piece of Lord Valthalak's Amulet” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:2168｜說明｜經過「回到原點」的接交地點時一併做，不必專程折返。｜Do “Back to the Beginning” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:2169｜說明｜經過「烈焰三巨頭」的接交地點時一併做，不必專程折返。｜Do “Three Kings of Flame” when you pass its quest giver or turn-in point; no need to backtrack for it.
+04-45到60級.md:500｜說明｜斯通納德已開就從惡齒村選斯通納德（經卡加斯等已開點轉乘）；未開就飛羅格瑪，沿南側道路經 Terral’s Watch 南下悲傷沼澤，到斯通納德開點。沿南方道路進詛咒之地，到北部兩名血法師（50.64, 14.30）。｜If Stonard is unlocked, choose Stonard from Revantusk Village (transfer through unlocked points such as Kargath) If not, fly to Rog'mar, follow the southern road past Terral's Watch south into the Swamp of Sorrows, and unlock Stonard. Follow the southern road into the Blasted Lands and go to the two blood mages in the north (50.64, 14.30).
+04-45到60級.md:1535｜說明｜有隊伍再做｜『苦痛者』瑟拉史卓斯、裂皮、甦醒魔灰軟泥怪都是精英；單人跳過這三件，96322 也一起略過。｜Group recommended: Celastrus the Bitter, Sunderbark and the awakened ash slime are all elites; skip them if soloing, and skip 96322 too.

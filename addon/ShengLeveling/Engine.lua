@@ -515,12 +515,25 @@ local function stepDone(step, map, x, y)
   elseif t == "fp" then return s.node ~= nil and MG.db.fpNodes ~= nil and MG.db.fpNodes[s.node] == true -- 飛行地圖上已經有這個鳥點
   elseif t == "goto" or (t == "travel" and s.x) then
     -- 好幾個座標（via）：依序走，走到最後一個才算到；路過第 k 點就記「@k」（箭頭改指下一點，見 E.ViaTarget）。
-    -- 走到別張地圖上的點（搭船、飛艇、穿過山口到了）也算到：後面的座標常是另一條路或附帶說明
+    -- 搭船、飛艇到別張地圖：那個點本來就是最後一點
+    -- 到了沒：換成世界座標比碼數（到某處 40 碼、交通 80 碼）；步驟寫了 r（地圖 %）或換算不了就用地圖 %
+    local function near(p)
+      if not s.r and C_Map and C_Map.GetWorldPosFromMapPos and CreateVector2D then
+        local _, a = C_Map.GetWorldPosFromMapPos(map, CreateVector2D(x / 100, y / 100))
+        local _, b = C_Map.GetWorldPosFromMapPos(p[1], CreateVector2D(p[2] / 100, p[3] / 100))
+        if a and b then
+          local ax, ay = a:GetXY()
+          local bx, by = b:GetXY()
+          return math.sqrt((ax - bx) ^ 2 + (ay - by) ^ 2) <= (t == "travel" and 80 or 40)
+        end
+      end
+      return math.sqrt((x - p[2]) ^ 2 + (y - p[3]) ^ 2) <= (s.r or 3)
+    end
     local n = 1 + (s.via and #s.via or 0)
     for k = n, 1, -1 do
       local p = k == 1 and { s.map, s.x, s.y } or s.via[k - 1]
-      if map ~= nil and map == p[1] and x ~= nil and math.sqrt((x - p[2]) ^ 2 + (y - p[3]) ^ 2) <= (s.r or 3) then
-        local fin = k == n or p[1] ~= s.map
+      if map ~= nil and map == p[1] and x ~= nil and near(p) then
+        local fin = k == n
         MG.db.latch[fin and step.key or (step.key .. "@" .. k)] = true
         return fin
       end

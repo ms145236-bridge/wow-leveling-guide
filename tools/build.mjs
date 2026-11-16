@@ -22,13 +22,19 @@ import { openQuestieDB, clusterCenter } from "./questiedb.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 // 任務目標座標（tools/objective-coords.md，Codex 查的 Wowhead 永恆版／QuestieDB 點位）：補到「做」步驟的 more
+// 一列＝一個目標實體（怪／物件／掉落來源）在一張地圖上的點：{ tid, name, map, pts }；同實體同地圖的列合併
 const OBJ = new Map();
 let objAdded = 0;
 for (const line of readFileSync(join(ROOT, "tools", "objective-coords.md"), "utf8").split(/\r?\n/)) {
   const f = line.split("｜");
   if (f.length < 5 || !/^\d+$/.test(f[0]) || !/^\d+$/.test(f[3])) continue;
   const pts = f[4].split(";").map((p) => p.split(",").map(Number)).filter((p) => p.length === 2 && p.every(Number.isFinite)).map(([x, y]) => ({ map: +f[3], x, y }));
-  OBJ.set(+f[0], [...(OBJ.get(+f[0]) || []), ...pts]);
+  if (!pts.length) continue;
+  const tid = (f[2].match(/#(\d+)/) || [])[1] || f[2], ents = OBJ.get(+f[0]) || [];
+  const same = ents.find((e) => e.tid === tid && e.map === +f[3]);
+  if (same) same.pts.push(...pts);
+  else ents.push({ tid, name: f[2].split(/\s*[#（(×]/)[0].trim(), map: +f[3], pts });
+  OBJ.set(+f[0], ents);
 }
 // 陣營：FACTION=A 建聯盟（route-alliance → Data/RouteA*.lua），預設部落
 const ALLY = process.env.FACTION === "A";
@@ -408,7 +414,8 @@ for (const file of files.filter((f) => !sideFile(f))) {
         step.coord = c ? { map: c.map, x: c.x, y: c.y } : null;
       } else {
         step.coord = pts[0] ? { map: pts[0].map, x: pts[0].x, y: pts[0].y } : null;
-        step.via = pts.slice(1).map((p) => ({ map: p.map, x: p.x, y: p.y })); // 其餘座標：依序指路，走到最後一個才算到
+        // 其餘座標：依序指路，走到最後一個才算到；和前一點同地圖、0.5 格內的重複點不算
+        step.via = pts.slice(1).filter((p, k) => p.map !== pts[k].map || Math.hypot(p.x - pts[k].x, p.y - pts[k].y) >= 0.5).map((p) => ({ map: p.map, x: p.x, y: p.y }));
       }
       step.pts = pts; // 地圖 ID 檢查（E4）用
     }
@@ -586,28 +593,48 @@ for (const st of stations) {
       continue;
     }
     for (const p of step.more || []) p.map ||= st.map;
-    // 目標座標補充：同地圖、跟既有點距離 0.8 以上才加；太多就平均取樣到 40 個
-    if (step.t === "do" && OBJ.has(step.id)) {
-      const have = [step.coord, ...(step.more || [])].filter(Boolean);
-      let add = OBJ.get(step.id).filter((p) => !have.some((h) => (h.map || st.map) === p.map && Math.hypot(h.x - p.x, h.y - p.y) < 0.8));
-      if (add.length > 40) add = Array.from({ length: 40 }, (_, i) => add[Math.floor((i * add.length) / 40)]);
-      if (add.length) { step.more = [...(step.more || []), ...add]; objAdded++; }
-    }
-    // 多個怪點：8 格內併成一群（取平均），地圖上一群一個點；散成 4 群以上、或範圍超過 35 格＝順路任務（不指路，路上遇到就打）
-    if (step.t === "do" && step.coord && step.more?.length) {
-      const pts = [step.coord, ...step.more].filter((p) => (p.map || st.map) === (step.coord.map || st.map));
-      const groups = [];
-      for (const p of pts) {
-        const g = groups.find((g) => Math.hypot(g.x - p.x, g.y - p.y) < 8);
-        if (g) { g.n++; g.sx += p.x; g.sy += p.y; g.x = g.sx / g.n; g.y = g.sy / g.n; } else groups.push({ n: 1, sx: p.x, sy: p.y, x: p.x, y: p.y });
+    // 「做」的多個點：路線寫的點＋這一步要找的目標實體點，按「目標＋地圖」各自 8 格內併成一群，地圖上一群一個點
+    if (step.t === "do" && (step.more?.length || OBJ.has(step.id))) {
+      const own = [step.coord, ...(step.more || [])].filter(Boolean).map((p) => ({ map: p.map || st.map, x: p.x, y: p.y }));
+      // 只加這一步要找的實體：說明寫到名字的、離路線點 8 格內的；都沒有才用路線點同地圖的（交物品、用物品的步驟不用）。
+      // 路線沒寫點：寫到名字的實體，沒寫到就全部（跨地圖的點留著，執行時按玩家所在地圖挑）
+      const ents = OBJ.get(step.id) || [];
+      const text = [step.hint, step.zh, step.en].filter(Boolean).join(" ");
+      const named = ents.filter((e) => e.name.length > 1 && text.includes(e.name));
+      const near = ents.filter((e) => e.pts.some((p) => own.some((h) => h.map === p.map && Math.hypot(h.x - p.x, h.y - p.y) < 8)));
+      const give = (step.hint || "").match(/交給|交付|帶給|拿給|放進|放入|使用|右鍵/);
+      const handIn = give && !/收集|蒐集|擊殺|殺|打|拾取|取得|採|撿|找/.test(step.hint.slice(0, give.index));
+      const pick = !own.length ? (named.length ? named : ents)
+        : named.length || near.length ? [...new Set([...named, ...near])]
+        : handIn ? [] : ents.filter((e) => own.some((h) => h.map === e.map));
+      if (pick.length) objAdded++;
+      // 分群：每群用第一個點當固定中心比距離（不會越併越歪），群中心取平均；目標點先排序，結果不受輸入順序影響
+      const clusterOf = (pts) => pts.reduce((gs, p) => {
+        const g = gs.find((g) => g.map === p.map && Math.hypot(g.ox - p.x, g.oy - p.y) < 8);
+        if (g) { g.n++; g.sx += p.x; g.sy += p.y; } else gs.push({ map: p.map, ox: p.x, oy: p.y, n: 1, sx: p.x, sy: p.y });
+        return gs;
+      }, []).map((g) => ({ map: g.map, x: g.sx / g.n, y: g.sy / g.n, n: g.n }));
+      const mine = clusterOf(own); // 路線寫的點照路線順序（第一個是主座標）
+      const objs = pick.flatMap((e) => clusterOf([...e.pts].sort((a, b) => a.x - b.x || a.y - b.y)))
+        .sort((a, b) => b.n - a.n || a.map - b.map || a.x - b.x || a.y - b.y)
+        // 路線點 8 格內的目標群不另畫；不同目標的群相距 4 格內只留點多的那群
+        .reduce((keep, g) => (mine.some((h) => h.map === g.map && Math.hypot(h.x - g.x, h.y - g.y) < 8) || keep.some((h) => h.map === g.map && Math.hypot(h.x - g.x, h.y - g.y) < 4) ? keep : [...keep, g]), []);
+      const groups = [...mine, ...objs];
+      // 散成 4 群以上、或範圍超過 35 格＝順路任務（不指路，路上遇到就打）；按地圖各自算，只看路線有寫主座標的步驟
+      if (step.coord) {
+        const raw = [...own, ...pick.flatMap((e) => e.pts)];
+        for (const map of new Set(groups.map((g) => g.map))) {
+          const on = raw.filter((p) => p.map === map);
+          const span = on.reduce((m, a) => on.reduce((m, b) => Math.max(m, Math.hypot(a.x - b.x, a.y - b.y)), m), 0);
+          if (groups.filter((g) => g.map === map).length >= 4 || span > 35) step.roam = true;
+        }
       }
-      const span = Math.max(...pts.flatMap((a) => pts.map((b) => Math.hypot(a.x - b.x, a.y - b.y))));
-      if (groups.length >= 4 || span > 35) step.roam = true;
-      const map = step.coord.map || st.map;
       const r2 = (n) => Math.round(n * 100) / 100;
-      const [first, ...rest] = groups.map((g) => ({ map, x: r2(g.x), y: r2(g.y) }));
-      step.coord = first;
-      step.more = [...rest, ...step.more.filter((p) => (p.map || st.map) !== map)];
+      // 主座標＝第一群（路線寫的第一個點；只有目標點時是點最多的那群），其他群放 more（每點帶地圖）
+      const [first, ...rest] = groups.map((g) => ({ map: g.map, x: r2(g.x), y: r2(g.y) }));
+      step.coord = first || null;
+      step.more = rest;
+      if (step.more.length && !step.coord?.map) warn(`${step.where} ${step.verb}｜${step.zh}`, "「做」有多個點但沒有可導航的主座標");
     }
     const at = `${step.where} ${step.verb}｜${step.zh}`;
     let id = step.id;
@@ -893,22 +920,42 @@ const zhTitle = (s) => {
   return (s.text || "").replace(/【[^】]*】/g, "").split(/[，。；（(]/)[0].trim().slice(0, 16) || undefined; // 交通、到、註：第一句
 };
 // 裸數字只在「不是數量」時才當任務 ID：後面接單位（金、經驗、號、型…）、前面是「約／捐／共…」、網址裡的數字都保持原樣
-const replaceIds = (text) => replaceStations(stepRefs(text, zhTitle, "zh")).replace(/(?<![\d.\w/=])(?<!(?:約|捐|共|花|付|需|值)\s?)(\d{3,6})(?![\d.,]|\s*(?:[個隻只根張份塊件頭名條把顆片枚級%金銀銅格秒次碼號型倍]|經驗|XP|xp|分鐘|小時)|\s+\d+[.,]\d)/g, (all, num, at, whole) => {
-  const id = +num;
-  if (MAP_IDS.has(id)) return all;
-  // 沒換掉的「第 N 步」「第 N–M、K 步」裡的數字是步驟編號，不是任務 ID
-  if (/第[\s\d、，,–\-~～至到和與及]*$/.test(whole.slice(0, at)) && /^[\s\d、，,–\-~～至到和與及]*步/.test(whole.slice(at + num.length))) return all;
-  const q = db.quest(id);
-  if (!q) return all;
-  const name = questName(q);
-  idStats.set(idFile, (idStats.get(idFile) || 0) + 1);
-  const before = whole.slice(0, at).replace(/[\s（(「]+$/, "");
-  const after = whole.slice(at + num.length).replace(/^[\s（(「]+/, "");
-  const sample = idFile + "：…" + whole.slice(Math.max(0, at - 12), at + num.length + 4) + "… → " + name;
-  if (idSamples.length < 40 && !idSamples.includes(sample)) idSamples.push(sample);
-  return [name, q.zhTW].some((n) => n && (before.endsWith(n) || after.startsWith(n))) ? "" : name; // 名字已寫在 ID 前或後 → 只拿掉 ID
-}).replace(/(?<![\d.])(\d{4})\s+(?=約?\s*\d{1,2}(?:\.\d+)?\s*[,，])/g, (all, num) => (MAP_IDS.has(+num) ? "" : all)) // 座標前的地圖 ID 不顯示
-  .replace(/\s+([）)，。；])/g, "$1").replace(/（\s*）|\(\s*\)/g, "").replace(/\s+$/, "");
+// 名字已寫在 ID 前面（「名」「名（英文）」「英文 中文」）時，前面那段名字要收成一個中文名，所以逐個比對、自己接字串，不用 replace callback
+const replaceIds = (text) => {
+  const src = replaceStations(stepRefs(text, zhTitle, "zh"));
+  let out = "", last = 0;
+  for (const m of src.matchAll(/(?<![\d.\w/=])(?<!(?:約|捐|共|花|付|需|值)\s?)(\d{3,6})(?![\d.,]|\s*(?:[個隻只根張份塊件頭名條把顆片枚級%金銀銅格秒次碼號型倍]|經驗|XP|xp|分鐘|小時)|\s+\d+[.,]\d)/g)) {
+    const num = m[1], at = m.index, id = +num, rest = src.slice(at + num.length);
+    out += src.slice(last, at);
+    last = at + num.length;
+    const q = db.quest(id);
+    // 地圖 ID 只在後面接座標、或前面寫「地圖／map」時保持原樣；和地圖 ID 同號的任務照樣換
+    const keep = !q || (MAP_IDS.has(id) && (/^\s*[（(]?約?\s*\d{1,2}(?:[.,]\d+)?\s*[,，]/.test(rest) || /(?:地圖|map|uiMapID)\s*(?:ID)?\s*[｜|:：]?\s*$/i.test(out)))
+      // 沒換掉的「第 N 步」「第 N–M、K 步」裡的數字是步驟編號，不是任務 ID
+      || (/第[\s\d、，,–\-~～至到和與及]*$/.test(out) && /^[\s\d、，,–\-~～至到和與及]*步/.test(rest));
+    if (keep) { out += num; continue; }
+    // 顯示路線上寫的中文任務名（QuestieDB 有些永恆版任務只有英文）
+    const name = [quests.get(id)?.n, questName(q)].find((n) => n && /\p{Script=Han}/u.test(n)) || questName(q);
+    const names = [name, questName(q), q.zhTW, q.en, quests.get(id)?.n, quests.get(id)?.zt].filter(Boolean).sort((a, b) => b.length - a.length);
+    idStats.set(idFile, (idStats.get(idFile) || 0) + 1);
+    const sample = idFile + "：…" + src.slice(Math.max(0, at - 12), at + num.length + 4) + "… → " + name;
+    if (idSamples.length < 40 && !idSamples.includes(sample)) idSamples.push(sample);
+    const sep = out.match(/[\s（(「]*$/)[0];
+    // 已寫的中文名照原樣留（路線標題和 QuestieDB 譯名不一定同一個），只有英文時才換成中文名
+    let before = out.slice(0, out.length - sep.length), ws, n, shown;
+    while ((n = names.find((x) => before.endsWith(x) || before.endsWith("（" + x + "）")))) {
+      const paren = before.endsWith("（" + n + "）");
+      const cut = before.slice(0, before.length - (paren ? n.length + 2 : n.length));
+      before = cut.trimEnd();
+      ws = cut.slice(before.length);
+      shown = paren ? (!ws && /\p{Script=Han}$/u.test(before) ? "" : shown) : /\p{Script=Han}/u.test(n) ? n : shown; // 「中文（英文）」：中文是作者寫的譯名
+    }
+    if (ws !== undefined) out = before + (shown === "" ? "" : ws + (shown || name)) + sep; // 前面的名字整段收成一個中文名，拿掉 ID
+    else if (!names.some((x) => rest.replace(/^[\s（(「]+/, "").startsWith(x))) out += name; // 名字已寫在 ID 後 → 只拿掉 ID
+  }
+  return (out + src.slice(last)).replace(/(?<![\d.])(\d{4})\s+(?=約?\s*\d{1,2}(?:\.\d+)?\s*[,，])/g, (all, num) => (MAP_IDS.has(+num) ? "" : all)) // 座標前的地圖 ID 不顯示
+    .replace(/\s+([）)，。；])/g, "$1").replace(/（\s*）|\(\s*\)/g, "").replace(/\s+$/, "");
+};
 const idSamples = [];
 const safeText = (s) => s.replace(/\s*・\s*/g, " ").replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/[―–]/g, "-");
 

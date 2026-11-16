@@ -909,3 +909,109 @@
 01-第一段-1到12級.md:633｜說明｜爐石或走回坦德爾林地的營地找狂風艾希安（42.76, 23.66）。｜Nutze den Ruhestein oder geh zurück zum Lager im Thendal-Hain und such Aetheen von den Winden auf (42.76, 23.66).
 01-第一段-1到12級.md:663｜說明｜在申德村旅店綁爐石（43.00, 43.20）。｜Binde deinen Ruhestein im Gasthaus von Sen'jin (43.00, 43.20).
 01-第一段-1到12級.md:710｜說明｜在瓦拉納爾旅店綁爐石（62.20, 72.60）。｜Binde deinen Ruhestein im Gasthaus von Valanaar (62.20, 72.60).
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。；尾王約 35% 血會恐懼，先清小怪，再把王拉回前一個房間打。；接任務處旁有拉桿，拉下開門就能直線跑出去。｜Rechtsklicke Abkommen des Einvernehmens im Rucksack, um die Quest anzunehmen. Der Endboss setzt bei etwa 35 % Gesundheit Furcht ein. Räum zuerst die Begleiter weg und zieh den Boss dann in den vorherigen Raum. Neben dem Questgeber ist ein Hebel. Zieh ihn, um die Tür zu öffnen, und lauf direkt hinaus.
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。；尾王約 35% 血會恐懼，先清小怪，再把王拉回前一個房間打。｜Rechtsklicke Abkommen des Einvernehmens im Rucksack, um die Quest anzunehmen. Der Endboss setzt bei etwa 35 % Gesundheit Furcht ein. Räum zuerst die Begleiter weg und zieh den Boss dann in den vorherigen Raum.
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。｜Rechtsklicke Abkommen des Einvernehmens im Rucksack, um die Quest anzunehmen.
+05-副本.md:49｜說明｜右鍵背包裡的 Blood-Stained Parchment 接任務。｜Rechtsklicke Blood-Stained Parchment im Rucksack, um die Quest anzunehmen.
+02-12到30級.md:304｜說明｜還沒開湖畔鎮飛行點，就從暴風城沿艾爾文森林大路往東走到湖畔鎮。｜Hast du den Flugpunkt von Seenhain noch nicht freigeschaltet, geh von Sturmwind aus die Hauptstraße im Wald von Elwynn nach Osten bis nach Seenhain.
+02-12到30級.md:1023｜說明｜小型水之靈體在西部荒野池塘的聖壇附近。｜Die kleinen Wassergeister sind in der Nähe des Altars an den Teichen im Westfall.
+05-副本.md:114｜說明｜留到02-第19站，經過湖畔鎮再交。｜Heb sie für die Abgabe bei 02-Station 19 auf, wenn du durch Seenhain kommst.
+05-副本.md:115｜說明｜留到03-第22站，經過夜色鎮再交。｜Heb sie für die Abgabe bei 03-Station 22 auf, wenn du durch Dunkelhain kommst.
+03-30到45級.md:488｜說明｜鋸刃散在豺狼人營地地上。｜Die Sägeklingen liegen verstreut am Boden im Gnolllager.
+03-30到45級.md:499｜說明｜泥鰭魚人頭顱和淡水惡魔一起打，再往北打特大螯蝦、撿新鮮肥料。｜Töte die Schlammflossen-Murlocköpfe zusammen mit den Süßwasserdämonen, geh dann nach Norden, töte die Riesenkrebse und sammle Frischen Dünger.
+03-30到45級.md:500｜說明｜在泥鰭魚人營地找帽子。｜Such den Hut im Lager der Schlammflossen-Murlocs.
+03-30到45級.md:517｜說明｜墳墓在遠境堡的禮拜堂旁。｜Das Grab liegt neben der Kapelle von Farholde.
+03-30到45級.md:519｜說明｜乾草捆在遠境堡附近的田裡。｜Die Heuballen liegen auf den Feldern nahe Farholde.
+03-30到45級.md:529｜說明｜走失的馬在農莊附近。｜Das verirrte Pferd steht in der Nähe der Farm.
+03-30到45級.md:541｜說明｜工頭的木箱在透納的伐木場。｜Die Kiste des Vorarbeiters steht im Holzfällerlager von Turner.
+03-30到45級.md:546｜說明｜暮光書頁散在陽光林地。｜Die Zwielichtseiten liegen verstreut in Sunnyglade.
+03-30到45級.md:471｜說明｜地圖中央的羅格瑪是部落城鎮，別靠近。｜Rog'mar in der Kartenmitte ist eine Hordestadt, geh nicht hin.
+03-30到45級.md:819｜說明｜任務 47 級；若比你高 3 級以上，可先跳過。；要先交掉落觸發的 94885 才接得到。｜Quest, Stufe 47. Ist sie mehr als 3 Stufen höher als du, überspring sie vorerst. Du kannst sie erst annehmen, nachdem du das durch einen Drop ausgelöste 94885 abgegeben hast.
+03-30到45級.md:819｜說明｜任務 47 級；若比你高 3 級以上，可先跳過。｜Quest, Stufe 47. Ist sie mehr als 3 Stufen höher als du, überspring sie vorerst.
+03-30到45級.md:819｜說明｜任務 47 級｜Quest, Stufe 47.
+03-30到45級.md:819｜說明｜若比你高 3 級以上，可先跳過。；要先交掉落觸發的 94885 才接得到。｜Ist sie mehr als 3 Stufen höher als du, überspring sie vorerst. Du kannst sie erst annehmen, nachdem du das durch einen Drop ausgelöste 94885 abgegeben hast.
+03-30到45級.md:819｜說明｜若比你高 3 級以上，可先跳過。｜Ist sie mehr als 3 Stufen höher als du, überspring sie vorerst.
+03-30到45級.md:823｜說明｜新鮮的蘋果在遠境堡附近的果樹下。｜Die frischen Äpfel liegen unter den Obstbäumen bei Farholde.
+03-30到45級.md:831｜說明｜木材堆在透納的伐木場。｜Der Holzstapel steht im Holzfällerlager von Turner.
+03-30到45級.md:839｜說明｜斥候關在暮光之罩各處。｜Die Späher sind überall in Twilight's Shroud eingesperrt.
+03-30到45級.md:851｜說明｜沼澤氣體在史利博附近的噴口收。｜Sammle das Sumpfgas an den Schloten in der Nähe von Sleebo.
+03-30到45級.md:882｜說明｜任務 45 級；若比你高 3 級以上，可先跳過。｜Quest, Stufe 45. Ist sie mehr als 3 Stufen höher als du, überspring sie vorerst.
+03-30到45級.md:882｜說明｜任務 45 級｜Quest, Stufe 45.
+03-30到45級.md:1073｜說明｜右鍵背包裡的 OOX-22/FE定位器接任務。｜Rechtsklicke OOX-22/FE-Notsignalgeber im Rucksack, um die Quest anzunehmen.
+04-45到60級.md:48｜說明｜右鍵背包裡的 OOX-17/TN定位器接任務。｜Rechtsklicke OOX-17/TN-Notsignalgeber im Rucksack, um die Quest anzunehmen.
+04-45到60級.md:105｜說明｜右鍵背包裡的 OOX-09/HL定位器接任務。｜Rechtsklicke OOX-09/HL-Notsignalgeber im Rucksack, um die Quest anzunehmen.
+04-45到60級.md:478｜說明｜送書任務：NPC 有提供就接，帶到海加爾山永恆山峰交；看不到任務就先略過。｜Buchlieferquest: Nimm sie an, wenn der NPC sie anbietet, und bring das Buch zum Summit of Eternity im Hyjal. Siehst du die Quest nicht, überspring sie.
+04-45到60級.md:478｜說明｜送書任務：NPC 有提供就接，帶到海加爾山永恆山峰交｜Buchlieferquest: Nimm sie an, wenn der NPC sie anbietet, und bring das Buch zum Summit of Eternity im Hyjal.
+04-45到60級.md:478｜說明｜看不到任務就先略過。｜Siehst du die Quest nicht, überspring sie.
+04-45到60級.md:515｜說明｜送信任務：NPC 有提供就接，帶到海加爾山交給隱士柯薩拉斯；看不到任務就先略過。｜Briefliefer-Quest: Nimm sie an, wenn der NPC sie anbietet, und bring den Brief in den Hyjal zum Einsiedler Ketharas. Siehst du die Quest nicht, überspring sie.
+04-45到60級.md:515｜說明｜送信任務：NPC 有提供就接，帶到海加爾山交給隱士柯薩拉斯｜Briefliefer-Quest: Nimm sie an, wenn der NPC sie anbietet, und bring den Brief in den Hyjal zum Einsiedler Ketharas.
+04-45到60級.md:728｜說明｜先前在費伍德森林有接這件才交。｜Gib sie nur ab, wenn du sie zuvor im Teufelswald angenommen hast.
+04-45到60級.md:741｜說明｜弩砲、投石車、飛行器三種殘骸各算一項，三種都要種到；在隱士洞外的山坡找。｜Die Wracks von Balliste, Katapult und Fluggerät zählen jeweils als ein Ziel. Du musst alle drei bepflanzen. Such am Hang vor der Einsiedlerhöhle.
+04-45到60級.md:741｜說明｜在隱士洞外的山坡找。｜Such am Hang vor der Einsiedlerhöhle.
+04-45到60級.md:898｜說明｜在死木巢穴外找池塘。｜Such den Teich vor dem Totenwaldbau.
+04-45到60級.md:972｜說明｜後續貝利的戒指（96077）要送去艾爾文森林的閃金鎮，回東部王國時再做。｜Die Folgequest Belles Ring (96077) musst du nach Goldhain im Wald von Elwynn bringen. Mach sie bei der Rückkehr in die Östlichen Königreiche.
+04-45到60級.md:1015｜說明｜先前在安戈洛環形山有接這件才交。｜Gib sie nur ab, wenn du sie zuvor im Un'Goro-Krater angenommen hast.
+04-45到60級.md:1033｜說明｜先依任務日誌找郵件掉落處；位置尚未確認，找不到可先略過。｜Such den Fundort der Post zuerst anhand deines Questlogs. Die Position ist noch nicht bestätigt. Findest du sie nicht, überspring sie vorerst.
+04-45到60級.md:1033｜說明｜先依任務日誌找郵件掉落處｜Such den Fundort der Post zuerst anhand deines Questlogs.
+04-45到60級.md:1033｜說明｜位置尚未確認，找不到可先略過。｜Die Position ist noch nicht bestätigt. Findest du sie nicht, überspring sie vorerst.
+06-路線外任務.md:9｜說明｜經過03-第29站時，有空再接。｜Nimm das mit, wenn du an Station 29 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:17｜說明｜經過03-第40站時，有空再接。｜Nimm das mit, wenn du an Station 40 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:20｜說明｜經過04-第47站時，有空再接。｜Nimm das mit, wenn du an Station 47 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:25｜說明｜精英、副本、要特殊材料或位置太偏，跳過不影響練級。｜Quests mit Elites, Dungeons, besonderen Materialien oder zu abgelegenen Orten kannst du ohne Nachteil für das Leveln überspringen.
+06-路線外任務.md:63｜說明｜經過01-第3站時，有空再接。｜Nimm das mit, wenn du an Station 3 von Teil 1 vorbeikommst und Zeit hast.
+06-路線外任務.md:69｜說明｜經過01-第4站時，有空再接。｜Nimm das mit, wenn du an Station 4 von Teil 1 vorbeikommst und Zeit hast.
+06-路線外任務.md:71｜說明｜經過01-第9站時，有空再接。｜Nimm das mit, wenn du an Station 9 von Teil 1 vorbeikommst und Zeit hast.
+06-路線外任務.md:87｜說明｜經過02-第12站時，有空再接。｜Nimm das mit, wenn du an Station 12 von Teil 2 vorbeikommst und Zeit hast.
+06-路線外任務.md:99｜說明｜副本任務；組好隊、進本前再接。｜Dungeonquest. Nimm sie erst an, wenn die Gruppe steht und du in den Dungeon gehst.
+06-路線外任務.md:147｜說明｜經過04-第49站時，有空再接。｜Nimm das mit, wenn du an Station 49 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:372｜說明｜經過02-第20站時，有空再接。｜Nimm das mit, wenn du an Station 20 von Teil 2 vorbeikommst und Zeit hast.
+06-路線外任務.md:400｜說明｜夏拉卡在04-第58站嘉文關‧葉源附近（31.3, 50.3）接；小貓位置需遊戲實測。｜Shalla'kal nimmst du in 04-Station 58 bei Galvinquam Leafsyre an (31.3, 50.3). Die Positionen der Kätzchen müssen im Spiel getestet werden.
+06-路線外任務.md:401｜說明｜洞穴甲蟲位置需遊戲實測；在樹皮地穴做其他任務時可順便找。｜Die Position der Höhlenkäfer muss im Spiel getestet werden. Such sie nebenbei, während du in der Baumrindengrube andere Quests erledigst.
+06-路線外任務.md:406｜說明｜要送往閃金鎮，回東部王國時再做。｜Sie muss nach Goldhain gebracht werden. Mach sie bei der Rückkehr in die Östlichen Königreiche.
+06-路線外任務.md:408｜說明｜先完成風暴凝聚才接；已做完可向 NPC 確認。｜Nimm sie erst an, nachdem du Sturmsammlung abgeschlossen hast. Hast du sie schon erledigt, kannst du das beim NPC überprüfen.
+06-路線外任務.md:409｜說明｜接交地點未確認，需遊戲實測。｜Annahme- und Abgabeort sind unbestätigt und müssen im Spiel getestet werden.
+06-路線外任務.md:411｜說明｜先完成前置才接；法師塔位置仍需確認。｜Nimm sie erst an, nachdem du die Voraussetzung abgeschlossen hast. Die Position des Magierturms muss noch bestätigt werden.
+06-路線外任務.md:412｜說明｜要進永恆之井，入口位置需遊戲實測。｜Um in den Brunnen der Ewigkeit zu gelangen, muss die Position des Eingangs im Spiel getestet werden.
+06-路線外任務.md:475｜說明｜經過04-第52站時，有空再接。｜Nimm das mit, wenn du an Station 52 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:576｜說明｜經過01-第1站時，有空再接。｜Nimm das mit, wenn du an Station 1 von Teil 1 vorbeikommst und Zeit hast.
+06-路線外任務.md:581｜說明｜經過01-第2站時，有空再接。｜Nimm das mit, wenn du an Station 2 von Teil 1 vorbeikommst und Zeit hast.
+06-路線外任務.md:596｜說明｜經過02-第11站時，有空再接。｜Nimm das mit, wenn du an Station 11 von Teil 2 vorbeikommst und Zeit hast.
+06-路線外任務.md:684｜說明｜經過02-第14站時，有空再接。｜Nimm das mit, wenn du an Station 14 von Teil 2 vorbeikommst und Zeit hast.
+06-路線外任務.md:696｜說明｜經過04-第55站時，有空再接。｜Nimm das mit, wenn du an Station 55 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:713｜說明｜經過04-第59站時，有空再接。｜Nimm das mit, wenn du an Station 59 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:842｜說明｜經過03-第24站時，有空再接。｜Nimm das mit, wenn du an Station 24 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:846｜說明｜經過03-第30站時，有空再接。｜Nimm das mit, wenn du an Station 30 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:859｜說明｜經過04-第45站時，有空再接。｜Nimm das mit, wenn du an Station 45 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:860｜說明｜經過04-第46站時，有空再接。｜Nimm das mit, wenn du an Station 46 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:872｜說明｜經過02-第15站時，有空再接。｜Nimm das mit, wenn du an Station 15 von Teil 2 vorbeikommst und Zeit hast.
+06-路線外任務.md:873｜說明｜經過02-第17站時，有空再接。｜Nimm das mit, wenn du an Station 17 von Teil 2 vorbeikommst und Zeit hast.
+06-路線外任務.md:874｜說明｜經過02-第19站時，有空再接。｜Nimm das mit, wenn du an Station 19 von Teil 2 vorbeikommst und Zeit hast.
+06-路線外任務.md:880｜說明｜經過04-第44站時，有空再接。｜Nimm das mit, wenn du an Station 44 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:907｜說明｜經過04-第56站時，有空再接。｜Nimm das mit, wenn du an Station 56 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:1022｜說明｜經過03-第23站時，有空再接。｜Nimm das mit, wenn du an Station 23 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:1119｜說明｜經過01-第5站時，有空再接。｜Nimm das mit, wenn du an Station 5 von Teil 1 vorbeikommst und Zeit hast.
+06-路線外任務.md:1120｜說明｜經過01-第6站時，有空再接。｜Nimm das mit, wenn du an Station 6 von Teil 1 vorbeikommst und Zeit hast.
+06-路線外任務.md:1323｜說明｜經過03-第26站時，有空再接。｜Nimm das mit, wenn du an Station 26 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:1335｜說明｜經過03-第33站時，有空再接。｜Nimm das mit, wenn du an Station 33 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:1350｜說明｜經過03-第36站時，有空再接。｜Nimm das mit, wenn du an Station 36 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:1366｜說明｜經過03-第39站時，有空再接。｜Nimm das mit, wenn du an Station 39 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:1391｜說明｜經過03-第35站時，有空再接。｜Nimm das mit, wenn du an Station 35 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:1498｜說明｜經過02-第16站時，有空再接。｜Nimm das mit, wenn du an Station 16 von Teil 2 vorbeikommst und Zeit hast.
+06-路線外任務.md:1519｜說明｜經過03-第28站時，有空再接。｜Nimm das mit, wenn du an Station 28 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:1539｜說明｜經過03-第38站時，有空再接。｜Nimm das mit, wenn du an Station 38 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:1637｜說明｜經過03-第36站時，有空再接；下一站回遠境堡就能交。｜Nimm das mit, wenn du an Station 36 von Teil 3 vorbeikommst und Zeit hast. Gib sie an der nächsten Station zurück in Farholde ab.
+06-路線外任務.md:1664｜說明｜經過03-第41站時，有空再接。｜Nimm das mit, wenn du an Station 41 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:1676｜說明｜經過04-第50站時，有空再接。｜Nimm das mit, wenn du an Station 50 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:1834｜說明｜經過02-第13站時，有空再接。｜Nimm das mit, wenn du an Station 13 von Teil 2 vorbeikommst und Zeit hast.
+06-路線外任務.md:1854｜說明｜經過03-第32站、到加基森時，有空再接；03-第37站到火線港交。｜Nimm das mit, wenn du an Station 32 von Teil 3 in Gadgetzan vorbeikommst und Zeit hast. Gib sie an 03-Station 37 in Powderfuse ab.
+06-路線外任務.md:1855｜說明｜經過03-第32站時，有空再接。｜Nimm das mit, wenn du an Station 32 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:1860｜說明｜經過04-第42站時，有空再接。｜Nimm das mit, wenn du an Station 42 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:1869｜說明｜經過04-第51站時，有空再接。｜Nimm das mit, wenn du an Station 51 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:1999｜說明｜經過01-第7站時，有空再接。｜Nimm das mit, wenn du an Station 7 von Teil 1 vorbeikommst und Zeit hast.
+06-路線外任務.md:2001｜說明｜經過01-第8站時，有空再接。｜Nimm das mit, wenn du an Station 8 von Teil 1 vorbeikommst und Zeit hast.
+06-路線外任務.md:2365｜說明｜經過04-第48站時，有空再接。｜Nimm das mit, wenn du an Station 48 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:2395｜說明｜經過04-第43站時，有空再接。｜Nimm das mit, wenn du an Station 43 von Teil 4 vorbeikommst und Zeit hast.
+06-路線外任務.md:2448｜說明｜經過03-第22站時，有空再接。｜Nimm das mit, wenn du an Station 22 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:2480｜說明｜經過03-第25站時，有空再接。｜Nimm das mit, wenn du an Station 25 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:2481｜說明｜經過03-第34站時，有空再接。｜Nimm das mit, wenn du an Station 34 von Teil 3 vorbeikommst und Zeit hast.
+06-路線外任務.md:2488｜說明｜經過04-第54站時，有空再接。｜Nimm das mit, wenn du an Station 54 von Teil 4 vorbeikommst und Zeit hast.

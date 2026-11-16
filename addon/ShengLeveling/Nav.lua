@@ -37,9 +37,22 @@ function N.Method()
   return "無"
 end
 
+-- 地圖上的使用者航點還是我們上次放的那個（玩家清掉、換掉就不是）
+local function ours()
+  if not (C_Map and C_Map.HasUserWaypoint and C_Map.HasUserWaypoint()) then return false end
+  local api = wpui()
+  if api and api.IsUserNavigationFlagged then return api.IsUserNavigationFlagged(FLAG) and true or false end
+  local p = C_Map.GetUserWaypoint and C_Map.GetUserWaypoint()
+  local mine = MG.db.wp
+  if not (p and mine and p.uiMapID == mine.map and p.position) then return false end
+  local x, y = xy(p.position)
+  return x ~= nil and y ~= nil and math.abs(x * 100 - mine.x) < 0.2 and math.abs(y * 100 - mine.y) < 0.2
+end
+
 local function set(map, x, y, name)
   local key = map .. ":" .. x .. ":" .. y
-  if key == last then return end
+  -- 同一點而且航點還在：不重放；玩家清掉了（又沒有別人的航點）就重放
+  if key == last and ours() then return end
   if not force and not free() then return end -- 玩家自己放了點：等它清掉（每次重算會再試）
   force = nil
   -- 地圖上的航點已經是這個位置：不重放（避免箭頭、音效重來一次）

@@ -909,3 +909,109 @@
 01-第一段-1到12級.md:633｜說明｜爐石或走回坦德爾林地的營地找狂風艾希安（42.76, 23.66）。｜Utilise ta pierre de foyer ou retourne à pied au camp de Thendal Grove et trouve Aetheen des Trombes (42.76, 23.66).
 01-第一段-1到12級.md:663｜說明｜在申德村旅店綁爐石（43.00, 43.20）。｜Lie ta pierre de foyer à l'auberge de Village Sen'jin (43.00, 43.20).
 01-第一段-1到12級.md:710｜說明｜在瓦拉納爾旅店綁爐石（62.20, 72.60）。｜Lie ta pierre de foyer à l'auberge de Valanaar (62.20, 72.60).
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。；尾王約 35% 血會恐懼，先清小怪，再把王拉回前一個房間打。；接任務處旁有拉桿，拉下開門就能直線跑出去。｜Fais un clic droit sur Traité d'entente dans ton sac pour lancer la quête. Le dernier boss lance Peur vers 35 % de vie. Nettoie d'abord les adds, puis attire le boss dans la salle précédente. Un levier se trouve à côté du donneur de quête. Actionne-le pour ouvrir la porte et sortir en ligne droite.
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。；尾王約 35% 血會恐懼，先清小怪，再把王拉回前一個房間打。｜Fais un clic droit sur Traité d'entente dans ton sac pour lancer la quête. Le dernier boss lance Peur vers 35 % de vie. Nettoie d'abord les adds, puis attire le boss dans la salle précédente.
+05-副本.md:24｜說明｜右鍵背包裡的 Treaty of Understanding 接任務。｜Fais un clic droit sur Traité d'entente dans ton sac pour lancer la quête.
+05-副本.md:49｜說明｜右鍵背包裡的 Blood-Stained Parchment 接任務。｜Fais un clic droit sur Blood-Stained Parchment dans ton sac pour lancer la quête.
+02-12到30級.md:304｜說明｜還沒開湖畔鎮飛行點，就從暴風城沿艾爾文森林大路往東走到湖畔鎮。｜Si tu n'as pas encore le point de vol de Comté-du-Lac, va de Hurlevent vers l'est par la grande route de la Forêt d'Elwynn jusqu'à Comté-du-Lac.
+02-12到30級.md:1023｜說明｜小型水之靈體在西部荒野池塘的聖壇附近。｜Les petits esprits d'eau sont près de l'autel de l'étang, dans les Maleterres de l'ouest.
+05-副本.md:114｜說明｜留到02-第19站，經過湖畔鎮再交。｜Garde-la jusqu'à l'étape 19 de 02, quand tu repasseras par Comté-du-Lac, pour la rendre.
+05-副本.md:115｜說明｜留到03-第22站，經過夜色鎮再交。｜Garde-la jusqu'à l'étape 22 de 03, quand tu repasseras par Sombre-comté, pour la rendre.
+03-30到45級.md:488｜說明｜鋸刃散在豺狼人營地地上。｜Les lames de scie sont éparpillées sur le sol du camp des gnolls.
+03-30到45級.md:499｜說明｜泥鰭魚人頭顱和淡水惡魔一起打，再往北打特大螯蝦、撿新鮮肥料。｜Tue les têtes de murlocs Vasemuche avec les démons d'eau douce, puis va au nord tuer les écrevisses géantes et ramasser le fumier frais.
+03-30到45級.md:500｜說明｜在泥鰭魚人營地找帽子。｜Trouve le chapeau dans le camp des murlocs Vasemuche.
+03-30到45級.md:517｜說明｜墳墓在遠境堡的禮拜堂旁。｜La tombe est à côté de la chapelle de Fort-Lointain.
+03-30到45級.md:519｜說明｜乾草捆在遠境堡附近的田裡。｜Les bottes de foin sont dans les champs près de Fort-Lointain.
+03-30到45級.md:529｜說明｜走失的馬在農莊附近。｜Le cheval égaré est près de la ferme.
+03-30到45級.md:541｜說明｜工頭的木箱在透納的伐木場。｜La caisse du contremaître est au camp de bûcherons de Turner.
+03-30到45級.md:546｜說明｜暮光書頁散在陽光林地。｜Les pages du Crépuscule sont éparpillées dans Sunnyglade.
+03-30到45級.md:471｜說明｜地圖中央的羅格瑪是部落城鎮，別靠近。｜Rog'mar, au centre de la carte, est une ville de la Horde ; n'approche pas.
+03-30到45級.md:819｜說明｜任務 47 級；若比你高 3 級以上，可先跳過。；要先交掉落觸發的 94885 才接得到。｜Quête de niveau 47 Si elle a 3 niveaux de plus que toi ou davantage, tu peux la sauter d'abord. Il faut d'abord rendre 94885, déclenchée par un drop, pour pouvoir la prendre.
+03-30到45級.md:819｜說明｜任務 47 級；若比你高 3 級以上，可先跳過。｜Quête de niveau 47 Si elle a 3 niveaux de plus que toi ou davantage, tu peux la sauter d'abord.
+03-30到45級.md:819｜說明｜任務 47 級｜Quête de niveau 47
+03-30到45級.md:819｜說明｜若比你高 3 級以上，可先跳過。；要先交掉落觸發的 94885 才接得到。｜Si elle a 3 niveaux de plus que toi ou davantage, tu peux la sauter d'abord. Il faut d'abord rendre 94885, déclenchée par un drop, pour pouvoir la prendre.
+03-30到45級.md:819｜說明｜若比你高 3 級以上，可先跳過。｜Si elle a 3 niveaux de plus que toi ou davantage, tu peux la sauter d'abord.
+03-30到45級.md:823｜說明｜新鮮的蘋果在遠境堡附近的果樹下。｜Les pommes fraîches sont sous les arbres fruitiers près de Fort-Lointain.
+03-30到45級.md:831｜說明｜木材堆在透納的伐木場。｜Le tas de bois est au camp de bûcherons de Turner.
+03-30到45級.md:839｜說明｜斥候關在暮光之罩各處。｜Les éclaireurs sont prisonniers dans toute la Couronne du Crépuscule.
+03-30到45級.md:851｜說明｜沼澤氣體在史利博附近的噴口收。｜Récupère le gaz des marais aux évents près de Slibo.
+03-30到45級.md:882｜說明｜任務 45 級；若比你高 3 級以上，可先跳過。｜Quête de niveau 45 Si elle a 3 niveaux de plus que toi ou davantage, tu peux la sauter d'abord.
+03-30到45級.md:882｜說明｜任務 45 級｜Quête de niveau 45
+03-30到45級.md:1073｜說明｜右鍵背包裡的 OOX-22/FE定位器接任務。｜Fais un clic droit sur la Balise de détresse OOX-22/FE dans ton sac pour lancer la quête.
+04-45到60級.md:48｜說明｜右鍵背包裡的 OOX-17/TN定位器接任務。｜Fais un clic droit sur la Balise de détresse OOX-17/TN dans ton sac pour lancer la quête.
+04-45到60級.md:105｜說明｜右鍵背包裡的 OOX-09/HL定位器接任務。｜Fais un clic droit sur Balise de détresse OOX-09/HL dans ton sac pour lancer la quête.
+04-45到60級.md:478｜說明｜送書任務：NPC 有提供就接，帶到海加爾山永恆山峰交；看不到任務就先略過。｜Quête de livraison d'un livre : prends-la si le PNJ la propose et apporte-la au Summit of Eternity, dans le Mont Hyjal, pour la rendre. Si tu ne vois pas la quête, passe-la pour l'instant.
+04-45到60級.md:478｜說明｜送書任務：NPC 有提供就接，帶到海加爾山永恆山峰交｜Quête de livraison d'un livre : prends-la si le PNJ la propose et apporte-la au Summit of Eternity, dans le Mont Hyjal, pour la rendre.
+04-45到60級.md:478｜說明｜看不到任務就先略過。｜Si tu ne vois pas la quête, passe-la pour l'instant.
+04-45到60級.md:515｜說明｜送信任務：NPC 有提供就接，帶到海加爾山交給隱士柯薩拉斯；看不到任務就先略過。｜Quête de livraison d'une lettre : prends-la si le PNJ la propose et apporte-la à l'ermite Ketharas, dans le Mont Hyjal. Si tu ne vois pas la quête, passe-la pour l'instant.
+04-45到60級.md:515｜說明｜送信任務：NPC 有提供就接，帶到海加爾山交給隱士柯薩拉斯｜Quête de livraison d'une lettre : prends-la si le PNJ la propose et apporte-la à l'ermite Ketharas, dans le Mont Hyjal.
+04-45到60級.md:728｜說明｜先前在費伍德森林有接這件才交。｜Ne la rends que si tu l'as prise plus tôt à Gangrebois.
+04-45到60級.md:741｜說明｜弩砲、投石車、飛行器三種殘骸各算一項，三種都要種到；在隱士洞外的山坡找。｜Les épaves de baliste, de catapulte et d'engin volant comptent chacune pour un objectif ; il faut planter les trois. Cherche sur le versant devant la Grotte de l'ermite.
+04-45到60級.md:741｜說明｜在隱士洞外的山坡找。｜Cherche sur le versant devant la Grotte de l'ermite.
+04-45到60級.md:898｜說明｜在死木巢穴外找池塘。｜Cherche l'étang devant le repaire Deadwood.
+04-45到60級.md:972｜說明｜後續貝利的戒指（96077）要送去艾爾文森林的閃金鎮，回東部王國時再做。｜La suite, La bague de Berry (96077), est à livrer à Goldshire, dans la Forêt d'Elwynn ; fais-la en retournant dans les Royaumes de l'Est.
+04-45到60級.md:1015｜說明｜先前在安戈洛環形山有接這件才交。｜Ne la rends que si tu l'as prise plus tôt à Un'Goro.
+04-45到60級.md:1033｜說明｜先依任務日誌找郵件掉落處；位置尚未確認，找不到可先略過。｜Cherche d'abord où se trouve le courrier d'après ton journal de quêtes. L'emplacement n'est pas confirmé ; si tu ne la trouves pas, tu peux la sauter.
+04-45到60級.md:1033｜說明｜先依任務日誌找郵件掉落處｜Cherche d'abord où se trouve le courrier d'après ton journal de quêtes.
+04-45到60級.md:1033｜說明｜位置尚未確認，找不到可先略過。｜L'emplacement n'est pas confirmé ; si tu ne la trouves pas, tu peux la sauter.
+06-路線外任務.md:9｜說明｜經過03-第29站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 29 de la partie 3.
+06-路線外任務.md:17｜說明｜經過03-第40站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 40 de la partie 3.
+06-路線外任務.md:20｜說明｜經過04-第47站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 47 de la partie 4.
+06-路線外任務.md:25｜說明｜精英、副本、要特殊材料或位置太偏，跳過不影響練級。｜Élite, donjon, matériaux spéciaux ou lieu trop isolé : la sauter ne gêne pas la progression.
+06-路線外任務.md:63｜說明｜經過01-第3站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 3 de la partie 1.
+06-路線外任務.md:69｜說明｜經過01-第4站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 4 de la partie 1.
+06-路線外任務.md:71｜說明｜經過01-第9站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 9 de la partie 1.
+06-路線外任務.md:87｜說明｜經過02-第12站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 12 de la partie 2.
+06-路線外任務.md:99｜說明｜副本任務；組好隊、進本前再接。｜Quête de donjon Prends-la une fois ton groupe formé, avant d'entrer dans le donjon.
+06-路線外任務.md:147｜說明｜經過04-第49站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 49 de la partie 4.
+06-路線外任務.md:372｜說明｜經過02-第20站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 20 de la partie 2.
+06-路線外任務.md:400｜說明｜夏拉卡在04-第58站嘉文關‧葉源附近（31.3, 50.3）接；小貓位置需遊戲實測。｜Shalla'kal peut être prise à l'étape 58 de 04, près de Galvinquam Leafsyre (31.3, 50.3) La position des chatons doit être testée en jeu.
+06-路線外任務.md:401｜說明｜洞穴甲蟲位置需遊戲實測；在樹皮地穴做其他任務時可順便找。｜La position du scarabée de la grotte doit être testée en jeu. Tu peux la chercher en passant, en faisant d'autres quêtes dans la crypte de l'écorce.
+06-路線外任務.md:406｜說明｜要送往閃金鎮，回東部王國時再做。｜À livrer à Goldshire ; fais-la en retournant dans les Royaumes de l'Est.
+06-路線外任務.md:408｜說明｜先完成風暴凝聚才接；已做完可向 NPC 確認。｜Ne la prends qu'après avoir terminé Tempête qui se prépare. Si tu l'as déjà terminée, vérifie auprès du PNJ.
+06-路線外任務.md:409｜說明｜接交地點未確認，需遊戲實測。｜Le lieu où prendre et rendre la quête n'est pas confirmé ; à tester en jeu.
+06-路線外任務.md:411｜說明｜先完成前置才接；法師塔位置仍需確認。｜Ne la prends qu'après avoir terminé le prérequis. L'emplacement de la tour du mage reste à confirmer.
+06-路線外任務.md:412｜說明｜要進永恆之井，入口位置需遊戲實測。｜Pour entrer dans le Puits d'éternité, l'emplacement de l'entrée doit être testé en jeu.
+06-路線外任務.md:475｜說明｜經過04-第52站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 52 de la partie 4.
+06-路線外任務.md:576｜說明｜經過01-第1站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 1 de la partie 1.
+06-路線外任務.md:581｜說明｜經過01-第2站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 2 de la partie 1.
+06-路線外任務.md:596｜說明｜經過02-第11站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 11 de la partie 2.
+06-路線外任務.md:684｜說明｜經過02-第14站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 14 de la partie 2.
+06-路線外任務.md:696｜說明｜經過04-第55站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 55 de la partie 4.
+06-路線外任務.md:713｜說明｜經過04-第59站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 59 de la partie 4.
+06-路線外任務.md:842｜說明｜經過03-第24站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 24 de la partie 3.
+06-路線外任務.md:846｜說明｜經過03-第30站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 30 de la partie 3.
+06-路線外任務.md:859｜說明｜經過04-第45站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 45 de la partie 4.
+06-路線外任務.md:860｜說明｜經過04-第46站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 46 de la partie 4.
+06-路線外任務.md:872｜說明｜經過02-第15站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 15 de la partie 2.
+06-路線外任務.md:873｜說明｜經過02-第17站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 17 de la partie 2.
+06-路線外任務.md:874｜說明｜經過02-第19站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 19 de la partie 2.
+06-路線外任務.md:880｜說明｜經過04-第44站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 44 de la partie 4.
+06-路線外任務.md:907｜說明｜經過04-第56站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 56 de la partie 4.
+06-路線外任務.md:1022｜說明｜經過03-第23站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 23 de la partie 3.
+06-路線外任務.md:1119｜說明｜經過01-第5站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 5 de la partie 1.
+06-路線外任務.md:1120｜說明｜經過01-第6站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 6 de la partie 1.
+06-路線外任務.md:1323｜說明｜經過03-第26站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 26 de la partie 3.
+06-路線外任務.md:1335｜說明｜經過03-第33站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 33 de la partie 3.
+06-路線外任務.md:1350｜說明｜經過03-第36站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 36 de la partie 3.
+06-路線外任務.md:1366｜說明｜經過03-第39站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 39 de la partie 3.
+06-路線外任務.md:1391｜說明｜經過03-第35站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 35 de la partie 3.
+06-路線外任務.md:1498｜說明｜經過02-第16站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 16 de la partie 2.
+06-路線外任務.md:1519｜說明｜經過03-第28站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 28 de la partie 3.
+06-路線外任務.md:1539｜說明｜經過03-第38站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 38 de la partie 3.
+06-路線外任務.md:1637｜說明｜經過03-第36站時，有空再接；下一站回遠境堡就能交。｜Prenez-la si vous avez le temps en passant à l'étape 36 de la partie 3. Tu pourras la rendre à la prochaine étape en retournant à Fort-Lointain.
+06-路線外任務.md:1664｜說明｜經過03-第41站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 41 de la partie 3.
+06-路線外任務.md:1676｜說明｜經過04-第50站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 50 de la partie 4.
+06-路線外任務.md:1834｜說明｜經過02-第13站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 13 de la partie 2.
+06-路線外任務.md:1854｜說明｜經過03-第32站、到加基森時，有空再接；03-第37站到火線港交。｜Prenez-la si vous avez le temps en passant à l'étape 32 de la partie 3, à Gadgetzan. Rends-la à Port de Poudremèche à l'étape 37 de 03.
+06-路線外任務.md:1855｜說明｜經過03-第32站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 32 de la partie 3.
+06-路線外任務.md:1860｜說明｜經過04-第42站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 42 de la partie 4.
+06-路線外任務.md:1869｜說明｜經過04-第51站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 51 de la partie 4.
+06-路線外任務.md:1999｜說明｜經過01-第7站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 7 de la partie 1.
+06-路線外任務.md:2001｜說明｜經過01-第8站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 8 de la partie 1.
+06-路線外任務.md:2365｜說明｜經過04-第48站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 48 de la partie 4.
+06-路線外任務.md:2395｜說明｜經過04-第43站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 43 de la partie 4.
+06-路線外任務.md:2448｜說明｜經過03-第22站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 22 de la partie 3.
+06-路線外任務.md:2480｜說明｜經過03-第25站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 25 de la partie 3.
+06-路線外任務.md:2481｜說明｜經過03-第34站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 34 de la partie 3.
+06-路線外任務.md:2488｜說明｜經過04-第54站時，有空再接。｜Prenez-la si vous avez le temps en passant à l'étape 54 de la partie 4.
