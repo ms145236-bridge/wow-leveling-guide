@@ -170,7 +170,7 @@ f:SetScript("OnUpdate", function(_, dt)
       MG.C.memo = {}
       MG.try("位置檢查", function()
       local cur = lastState and lastState.cur and lastState.steps[lastState.cur].s
-      if cur and (cur.t == "goto" or (cur.t == "travel" and cur.x)) then dirty = true end
+      if cur and (cur.t == "goto" or (cur.t == "travel" and cur.x) or cur.t == "hearth") then dirty = true end -- 爐石：走到下一步附近也算到（E.Locate）
       if MG.wpOverride then dirty = true end -- 臨時航點：走到了要收回
       -- 順路提醒、附近危險、沒開的飛行點：位置一變就要重看，結果有變才重畫
       local danger, fp = E.Nearby(lastState and not lastState.instance and lastState.st)
@@ -337,9 +337,12 @@ local function onEvent(_, event, ...)
     return
   end
   if not MG.db then return end
-  -- 爐石回 X：施法成功後 60 秒內換了區域（傳送到了）才勾目前的「爐」步驟
+  -- 爐石回 X：施法成功後 60 秒內換了區域（傳送到了）才勾目前的「爐」步驟；zhTW 看得出爐石綁在別的地方（和 X 互不包含）就不勾
   if hearthAt and (event == "PLAYER_ENTERING_WORLD" or event == "ZONE_CHANGED_NEW_AREA" or event == "ZONE_CHANGED" or event == "ZONE_CHANGED_INDOORS") then
-    if GetTime() - hearthAt <= 60 then latchCurrent("hearth") end
+    local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
+    local k, b = cur and (cur.s.bindK or cur.s.bind), MG.gameZh and C.Bind()
+    local other = k and b and b ~= "" and not (b:find(k, 1, true) or k:find(b, 1, true))
+    if GetTime() - hearthAt <= 60 and not other then latchCurrent("hearth") end
     hearthAt = nil
   end
   if event == "PLAYER_ENTERING_WORLD" then
@@ -367,9 +370,12 @@ local function onEvent(_, event, ...)
     if unit == "player" and not (issecretvalue and issecretvalue(spell)) and HEARTH_SPELL[spell] then hearthAt = GetTime() end
     return
   elseif event == "HEARTHSTONE_BOUND" then
-    -- 綁爐石：認得地點又是 zhTW 客戶端時看 GetBindLocation（E.Locate）；否則目前這步就是綁爐石就勾掉
+    -- 綁爐石：目前這步是綁爐石就勾掉（任何語言；zhTW 的 GetBindLocation 比對只是「已經綁好」的捷徑）。
+    -- 記下綁的是哪間（boundK）：之後同一間的綁爐石步驟直接算過；綁在路線沒寫的地方就清掉
     local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
-    if cur and cur.s.t == "bind" and not (MG.gameZh and (cur.s.bindK or cur.s.bind)) then MG.db.latch[cur.key] = true end
+    local bind = cur and cur.s.t == "bind"
+    if bind then MG.db.latch[cur.key] = true end
+    MG.db.boundK = bind and (cur.s.bindK or cur.s.bind) or nil
   elseif event == "TRAINER_SHOW" then
     E.Trained(lastState)
   elseif event == "PLAYER_LEVEL_UP" then

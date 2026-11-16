@@ -40,14 +40,14 @@ function E.Localize()
     local ds, gs = D and D.stations[st.id] or none, G and G.stations[st.id] or none
     for i, s in ipairs(st.steps) do
       s.key0 = tostring(s.node or s.bind or s.to or s.text or s.lv or "") -- 存檔用的步驟鍵不跟語言變
-      s.bindK = s.bind -- 爐石地點（中文）：zhTW 客戶端比對 GetBindLocation／區域名用，顯示用的 bind 會拿掉
+      s.bindK = s.bind -- 爐石地點（中文）：zhTW 客戶端比對 GetBindLocation／區域名用，非中文介面的 bind 換成翻譯地名
       local d, g = ds.steps and ds.steps[i] or none, gs.steps and gs.steps[i] or none
       s.npcG = s.npc
       if G then s.npcG, s.tgt = g.npc or s.npc, g.tgt; s.npcObj = g.npcObj end
       if en then
         s.npc, s.hint, s.text, s.node, s.preText, s.star = P(d.npc), P(d.hint), P(d.text), P(areas(d.nodeA) or d.node), P(d.preText), d.star
         s.npcObj = d.npcObj
-        s.desc, s.spot, s.bind, s.to, s.from = P(d.desc), P(d.spot), nil, nil, nil
+        s.desc, s.spot, s.bind, s.to, s.from = P(d.desc), P(d.spot), P(areas(d.bindA) or d.bind), nil, nil -- bind：爐石地點的介面語言名（build 從鳥點／地區名對照來；沒有就 nil，標題改用 hm 地圖名）
         s.tagL = d.tag -- tag 本身是判斷用（怪多、副本前置鏈），顯示用 tagL
       end
     end
@@ -496,12 +496,19 @@ local function stepDone(step, map, x, y)
   elseif t == "buy" then return E.ItemCount(s.item) >= (s.n or 1) or (s.fq ~= nil and (turned(s.fq) or (C.IsOnQuest(s.fq) and ready(s.fq))))
   elseif t == "level" then return (UnitLevel("player") or 0) >= (s.lv or 0)
   elseif t == "hearth" or t == "bind" then
+    local k = s.bindK or s.bind -- 中文地點
+    -- 綁爐石：之前已經在這間旅店綁過（Core 收到綁定事件時記的 boundK），任何語言都算
+    if t == "bind" and k and MG.db.boundK == k then return true end
     -- 地點只有 zhTW 客戶端比得出來（其他語言靠 Core 的事件記 latch）
-    local bk = MG.gameZh and (s.bindK or s.bind)
+    local bk = MG.gameZh and k
     if not bk then return false end
     local function same(z) return z ~= nil and z ~= "" and (z == bk or z:find(bk, 1, true) ~= nil or bk:find(z, 1, true) ~= nil) end
-    -- 綁爐石：爐石綁在這裡了
-    if t == "bind" then return same(C.Bind()) end
+    -- 綁爐石：爐石綁在這裡了（只是「已經綁好」的捷徑；綁定事件在任何語言都會勾）
+    if t == "bind" then
+      if not same(C.Bind()) then return false end
+      MG.db.boundK = bk
+      return true
+    end
     -- 爐石回 X：人已經在 X（用爐石換區時 Core 記 latch；走到下一步附近、後面任務做了也算過了，見 E.Locate）
     local sub, zone, mini = C.ZoneTexts()
     return same(sub) or same(zone) or same(mini)
@@ -781,7 +788,7 @@ function E.Locate(st)
       if #group >= maxN or (num[i] and num[i] > 9) then break end
       local s = steps[i].s
       if not done[i] and not na[i] then
-        if s.t == "travel" or s.t == "hearth" or s.t == "fly" or s.t == "boat" or s.t == "fp" then break end
+        if s.t == "travel" or s.t == "hearth" or s.t == "bind" or s.t == "fly" or s.t == "boat" or s.t == "fp" then break end
         local ok = (s.t == "do" and s.q and C.IsOnQuest(s.q)) or s.t == "accept" or (s.t == "turnin" and s.q and C.IsOnQuest(s.q) and ready(s.q))
         local p = ok and near(s)
         if p then
@@ -1454,7 +1461,7 @@ function E.Title(s)
   elseif s.t == "buy" then return (s.text or "") .. ((s.n or 1) > 1 and (" ×" .. s.n) or "")
   elseif s.t == "fp" then return L["開鳥點："] .. (s.node or (s.map and C.MapName(s.map)) or "")
   elseif s.t == "hearth" then return L["爐石回 "] .. (s.bind or (s.hm and C.MapName(s.hm)) or "")
-  elseif s.t == "bind" then return L["綁爐石："] .. (s.bind or (s.map and C.MapName(s.map)) or "")
+  elseif s.t == "bind" then return L["綁爐石："] .. (s.bind or (s.map and C.MapName(s.map)) or (s.hm and C.MapName(s.hm)) or "")
   elseif s.t == "fly" then return L["飛往 "] .. (s.to or "")
   elseif s.t == "boat" then return L["搭船／飛艇往 "] .. (s.to or "")
   elseif s.t == "level" then return L["練到 %s 級"]:format(s.lv or "?")

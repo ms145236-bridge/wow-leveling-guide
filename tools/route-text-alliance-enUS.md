@@ -668,3 +668,244 @@
 06-路線外任務.md:1968｜說明｜千針石林・第二次（第32站）到加基森時，有空再接；第37站到火線港交。｜Pick this up if you have time when you reach Gadgetzan on your 2nd visit to Thousand Needles (stop 32); turn it in at Powderfuse Port at stop 37.
 06-路線外任務.md:1969｜說明｜千針石林・第二次（第32站）經過時，有空再接。｜Pick this up if you have time when you pass through Thousand Needles (2nd visit, stop 32).
 06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第34站）經過時，有空再接。｜Pick this up if you have time when you pass through Stranglethorn Vale (2nd visit, stop 34).
+01-第一段-1到12級.md:209｜說明｜在暴風城旅店綁爐石（1453 60.50, 75.20）。｜Set your hearth in the Stormwind inn (1453 60.50, 75.20).
+01-第一段-1到12級.md:921｜說明｜在塞爾薩瑪旅店綁爐石（1432 35.40, 48.40）。｜Set your hearth in the Thelsamar inn (1432 35.40, 48.40).
+02-12到30級.md:175｜說明｜從水壩沿北邊的路往西走到山口的哨站。｜From the dam, follow the northern road west to the outpost at the pass.
+02-12到30級.md:842｜說明｜能選湖畔鎮就飛；沒開就從暴風城出城沿艾爾文大道往東進赤脊山，到湖畔鎮順開鳥點。｜If Lakeshire is selectable, just fly; if not, leave Stormwind along Elwynn Road east into Redridge, and learn the gryphon point on the way into Lakeshire.
+02-12到30級.md:903｜說明｜先清掉樹旁的怪，再點那棵塞納里奧之樹取得同心樹。｜Clear the monsters by the tree first, then click that Cenarion tree to get the heartswood.
+02-12到30級.md:305｜說明｜衛兵派克在赤脊山西邊大路通往艾爾文森林的路口。｜Guard Parker is at the junction on the main road west of Redridge that leads to Elwynn Forest.
+02-12到30級.md:333｜說明｜跟著迪菲亞叛徒走到月溪鎮，路上有怪打他要幫忙；到了再回哨兵嶺。｜Follow the Defias traitor to Moonbrook; monsters along the way will attack him, so help him. When you arrive, go back to Sentinel Hill.
+02-12到30級.md:333｜說明｜跟著迪菲亞叛徒走到月溪鎮，路上有怪打他要幫忙｜Follow the Defias traitor to Moonbrook; monsters along the way will attack him, so help him.
+02-12到30級.md:333｜說明｜到了再回哨兵嶺。｜When you arrive, go back to Sentinel Hill.
+02-12到30級.md:519｜說明｜右鍵背包裡的伊菈的匕首接任務。｜Right-click Ira's Dagger in your bags to start the quest.
+05-副本.md:203｜說明｜會經鐵爐堡轉機。｜You'll connect through Ironforge.
+05-副本.md:204｜說明｜從南海鎮往北穿過希爾斯布萊德丘陵和奧特蘭克山脈，進西瘟疫之地後往西進提里斯法林地，沿路到東北角的血色修道院。｜From Southshore, go north through Hillsbrad Foothills and the Alterac Mountains, enter Western Plaguelands and head west into Tirisfal Glades, then follow the road to the Scarlet Monastery in the northeast corner.
+03-30到45級.md:551｜說明｜跟著弗索逃跑；到終點他會帶 2 隻豺狼人翻臉打你，打倒後再去開寶藏。｜Follow Fuzzle as he flees. At the end he turns on you with 2 gnolls; defeat them, then go open the treasure.
+03-30到45級.md:551｜說明｜跟著弗索逃跑｜Follow Fuzzle as he flees.
+03-30到45級.md:551｜說明｜到終點他會帶 2 隻豺狼人翻臉打你，打倒後再去開寶藏。｜At the end he turns on you with 2 gnolls; defeat them, then go open the treasure.
+03-30到45級.md:612｜說明｜從加基森往北沿大路進千針石林閃光平原。｜From Gadgetzan follow the road north into the Shimmering Flats in Thousand Needles.
+03-30到45級.md:736｜說明｜從洛克莫丹南邊大路往南出山口進荒蕪之地，沿路往南到挖掘營地。｜From the south road in Loch Modan, go south out of the pass into the Badlands and follow the road south to the Dig Site.
+03-30到45級.md:736｜說明｜荒蕪之地沒有聯盟飛行點｜There's no Alliance flight point in the Badlands.
+03-30到45級.md:796｜說明｜跟著加林走出食人妖營地，路上的怪會打他要保護；護送完再去他的營地開保險箱。｜Follow Galen Goodward out of the ogre camp; monsters along the way will attack him, so protect him. After the escort, go to his camp and open the safe.
+03-30到45級.md:796｜說明｜跟著加林走出食人妖營地，路上的怪會打他要保護｜Follow Galen Goodward out of the ogre camp; monsters along the way will attack him, so protect him.
+03-30到45級.md:796｜說明｜護送完再去他的營地開保險箱。｜After the escort, go to his camp and open the safe.
+03-30到45級.md:1043｜說明｜羽月要塞南邊海岸的憎世納迦都會掉鱗片，收齊再回要塞交。｜The Naga along the coast south of Feathermoon Stronghold all drop scales; collect them and return to the stronghold.
+03-30到45級.md:1060｜說明｜限時 6 分鐘，接任務前先回滿血、清掉圍欄附近的怪。｜Time limit of 6 minutes; before accepting, restore full health and clear the monsters near the pen.
+04-45到60級.md:125｜說明｜要打兩隻 50 級精英黑龍，沒隊伍就跳過。｜You have to kill two level 50 elite black drakes; skip it if you have no group.
+04-45到60級.md:135｜說明｜瑪爾戈的角開灼熱峽谷鑰匙任務線；不打就跳過第 13、32–33、35、37、40–42 步，第 43 步從鐵爐堡飛回瑟銀哨塔。｜Margol's Horn opens the Key to Searing Gorge quest line; if you're not doing it, skip steps 13, 32-33, 35, 37 and 40-42, and at step 43 fly from Ironforge back to Thorium Point.
+04-45到60級.md:135｜說明｜不打就跳過第 13、32–33、35、37、40–42 步，第 43 步從鐵爐堡飛回瑟銀哨塔。｜If you're not doing it, skip steps 13, 32-33, 35, 37 and 40-42, and at step 43 fly from Ironforge back to Thorium Point.
+04-45到60級.md:147｜說明｜工頭瑪托留斯是 50 級精英，沒隊伍就跳過。｜Overseer Maltorius is a level 50 elite; skip it if you have no group.
+04-45到60級.md:163｜說明｜有館長的證明（3201）才回貝波蒂拿鑰匙；沒有就跳到第 43 步。｜Only if you have the Curator's Proof (3201) do you go back to Mountaineer Pebblebitty for the key; otherwise skip to step 43.
+04-45到60級.md:163｜說明｜沒有就跳到第 43 步。｜If you don't have it, skip to step 43.
+04-45到60級.md:219｜說明｜在鐵爐堡旅店綁爐石（1455 18.60, 51.60）。｜Set your hearth in the Ironforge inn (1455 18.60, 51.60).
+04-45到60級.md:223｜說明｜從守望堡往北出詛咒之地進悲傷沼澤，沿路往西到沼澤西邊。｜From Nethergarde Keep, go north out of the Blasted Lands into the Swamp of Sorrows and follow the road west to the western part of the swamp.
+05-副本.md:311｜說明｜從瑟銀哨塔往南穿過灼熱峽谷，走進南邊的黑石山。｜From Thorium Point, go south through the Searing Gorge and into Blackrock Mountain to the south.
+05-副本.md:323｜說明｜出黑石山往北穿過灼熱峽谷，回瑟銀哨塔再飛。｜Leave Blackrock Mountain north through the Searing Gorge, return to Thorium Point and fly from there.
+04-45到60級.md:363｜說明｜在阿斯特蘭納旅店綁爐石（1440 37.00, 49.20）。｜Set your hearth in the Astranaar inn (1440 37.00, 49.20).
+04-45到60級.md:399｜說明｜木喉要塞山洞裡有岔路通月光林地，先過去開飛行點，再回洞裡往冬泉谷走；之後海加爾山那段要飛月光林地。｜A fork in the Timbermaw Hold cave leads to Moonglade; go over first to unlock the flight path, then return to the cave and head toward Winterspring. For the Mount Hyjal part later you'll fly to Moonglade.
+04-45到60級.md:399｜說明｜木喉要塞山洞裡有岔路通月光林地，先過去開飛行點，再回洞裡往冬泉谷走｜A fork in the Timbermaw Hold cave leads to Moonglade; go over first to unlock the flight path, then return to the cave and head toward Winterspring.
+04-45到60級.md:399｜說明｜之後海加爾山那段要飛月光林地。｜For the Mount Hyjal part later you'll fly to Moonglade.
+04-45到60級.md:478｜說明｜送書任務，其他資料寫要 55 級才接得到，接不到就跳過；書帶到海加爾山永恆山峰交，不想佔任務欄就不接。｜A book delivery quest; other sources say you need to be level 55 to pick it up, so skip it if you can't. Take the book to the Summit of Eternity in Mount Hyjal and turn it in; if you don't want to use a quest log slot, skip it.
+04-45到60級.md:478｜說明｜送書任務，其他資料寫要 55 級才接得到，接不到就跳過｜A book delivery quest; other sources say you need to be level 55 to pick it up, so skip it if you can't.
+04-45到60級.md:478｜說明｜書帶到海加爾山永恆山峰交，不想佔任務欄就不接。｜Take the book to the Summit of Eternity in Mount Hyjal and turn it in; if you don't want to use a quest log slot, skip it.
+04-45到60級.md:489｜說明｜帶林格走回馬紹爾營地；他中途會暈倒，暈倒時對他使用斯普拉格的水壺。｜Lead Ringo back to Marshal's Refuge. He'll pass out along the way; use Spraggle's Canteen on him when he does.
+04-45到60級.md:489｜說明｜帶林格走回馬紹爾營地｜Lead Ringo back to Marshal's Refuge.
+04-45到60級.md:489｜說明｜他中途會暈倒，暈倒時對他使用斯普拉格的水壺。｜He'll pass out along the way; use Spraggle's Canteen on him when he does.
+04-45到60級.md:493｜說明｜秘銀外殼先在拍賣場買好，或請工程學玩家做。｜Buy the mithril casing at the auction house beforehand, or have an engineer make it.
+04-45到60級.md:497｜說明｜護送艾米 01 走回卡爾納·雷塔維那裡，路上的怪會打它要保護。｜Escort A-Me 01 back to Karna Remtravel; monsters along the way will attack it, so protect it.
+04-45到60級.md:507｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（1439 37.04, 44.13）。｜Set your hearth with Innkeeper Shaussiy in the Auberdine inn (1439 37.04, 44.13).
+04-45到60級.md:515｜說明｜送信任務，其他資料寫要 55 級才接得到，接不到就跳過；帶到海加爾山交給隱士柯薩拉斯。｜A letter delivery quest; other sources say you need to be level 55 to pick it up, so skip it if you can't. Take it to Mount Hyjal and turn it in to Hermit Ketharas.
+04-45到60級.md:515｜說明｜送信任務，其他資料寫要 55 級才接得到，接不到就跳過｜A letter delivery quest; other sources say you need to be level 55 to pick it up, so skip it if you can't.
+04-45到60級.md:515｜說明｜帶到海加爾山交給隱士柯薩拉斯。｜Take it to Mount Hyjal and turn it in to Hermit Ketharas.
+04-45到60級.md:592｜說明｜送信任務，帶到海加爾山入口附近交。｜A letter delivery quest; turn it in near the entrance to Mount Hyjal.
+04-45到60級.md:628｜說明｜在鷹巢山旅店綁爐石（1425 13.80, 41.60）。｜Set your hearth in the Aerie Peak inn (1425 13.80, 41.60).
+04-45到60級.md:724｜說明｜從蘭莎爾拉往南進暗語峽谷，沿峽谷往西走到底就進海加爾山。峽谷口有冰霜巨人精英，峽谷裡有惡魔精英，貼著路走別停。｜From Ranshalla go south into Darkwhisper Gorge and follow the gorge west to the end to enter Mount Hyjal. There's an elite frost giant at the gorge mouth and elite demons inside; stick to the road and don't stop.
+04-45到60級.md:725｜說明｜進海加爾山東南角，沿路往西走。｜Enter Mount Hyjal at the southeast corner and follow the road west.
+04-45到60級.md:728｜說明｜路旁地上的齒輪，右鍵撿起來接任務。｜A cog on the ground by the road; right-click to pick it up and start the quest.
+04-45到60級.md:729｜說明｜有在費伍德森林接才交；其他資料寫這件要 55 級才接得到。｜Only turn it in if you picked it up in Felwood. Other sources say this one needs level 55 to pick up.
+04-45到60級.md:729｜說明｜有在費伍德森林接才交｜Only turn it in if you picked it up in Felwood.
+04-45到60級.md:729｜說明｜其他資料寫這件要 55 級才接得到。｜Other sources say this one needs level 55 to pick up.
+04-45到60級.md:742｜說明｜位置未核，在隱士洞外的山坡找。｜The location hasn't been verified; look on the slope outside the Hermit's Cave.
+04-45到60級.md:749｜說明｜沿路往西走，飛行點在古樹哨站旁。｜Follow the road west; the flight point is beside the Ancients' Outpost.
+04-45到60級.md:753｜說明｜目標是 57 級精英，單人打不過就別接。｜The target is a level 57 elite; if you can't beat it solo, don't pick it up.
+04-45到60級.md:759｜說明｜之後去永望鎮時找娜米拿零件。｜When you go to Everlook later, find Nami for the parts.
+04-45到60級.md:760｜說明｜下一站回工坊交。｜Turn it in at the workshop at the next stop.
+04-45到60級.md:767｜說明｜目標裂皮是 56 級精英古樹，有隊伍再做；沒組隊就跳過第 44、84、87 步。｜The target, Sunderbark, is a level 56 elite ancient; do it when you have a group. If you haven't grouped up, skip steps 44, 84 and 87.
+04-45到60級.md:767｜說明｜目標裂皮是 56 級精英古樹，有隊伍再做｜The target, Sunderbark, is a level 56 elite ancient; do it when you have a group.
+04-45到60級.md:767｜說明｜沒組隊就跳過第 44、84、87 步。｜If you haven't grouped up, skip steps 44, 84 and 87.
+04-45到60級.md:787｜說明｜把術士骨頭丟到軟泥池旁的骨堆。｜Throw the warlock bones onto the bone pile beside the slime pool.
+04-45到60級.md:788｜說明｜會喚出 58 級精英軟泥；沒組隊就跳過第 65–66、68–69、72 步。｜It summons a level 58 elite slime. If you haven't grouped up, skip steps 65-66, 68-69 and 72.
+04-45到60級.md:788｜說明｜會喚出 58 級精英軟泥｜It summons a level 58 elite slime.
+04-45到60級.md:788｜說明｜沒組隊就跳過第 65–66、68–69、72 步。｜If you haven't grouped up, skip steps 65-66, 68-69 and 72.
+04-45到60級.md:806｜說明｜下一站到西邊的古野村交。｜Turn it in at Elderwild to the west at the next stop.
+04-45到60級.md:807｜說明｜往東回隱士洞的路上。｜On the way back east to the Hermit's Cave.
+04-45到60級.md:813｜說明｜箱子下一站帶回海加爾山給凱蕾娜。｜At the next stop, take the crate back to Mount Hyjal for Kaylaena.
+04-45到60級.md:814｜說明｜從永望鎮沿大路往西一小段到墜星村。｜From Everlook follow the road west a short way to Starfall Village.
+04-45到60級.md:815｜說明｜騎回永望鎮飛行點起飛（第49站開過月光林地飛行點）。沒開的話從墜星村沿大路往西騎到木喉要塞入口（1452 27.70, 34.50），進洞後走往月光林地的出口，到了先開飛行點（1450 48.10, 67.34）；木喉熊怪聲望不到中立會被打。德魯伊可以直接用傳送：月光林地。｜Ride back to the Everlook flight point and fly (the Moonglade flight point was unlocked at stop 49). If you haven't, ride west along the road from Starfall Village to the Timbermaw Hold entrance (1452 27.70, 34.50), go through the cave to the Moonglade exit and unlock the flight point there first (1450 48.10, 67.34). Without at least neutral reputation, the Timbermaw will attack you. Druids can use Teleport: Moonglade directly.
+04-45到60級.md:815｜說明｜騎回永望鎮飛行點起飛（第49站開過月光林地飛行點）。沒開的話從墜星村沿大路往西騎到木喉要塞入口（1452 27.70, 34.50），進洞後走往月光林地的出口，到了先開飛行點（1450 48.10, 67.34）｜Ride back to the Everlook flight point and fly (the Moonglade flight point was unlocked at stop 49). If you haven't, ride west along the road from Starfall Village to the Timbermaw Hold entrance (1452 27.70, 34.50), go through the cave to the Moonglade exit and unlock the flight point there first (1450 48.10, 67.34).
+04-45到60級.md:815｜說明｜木喉熊怪聲望不到中立會被打。德魯伊可以直接用傳送：月光林地。｜Without at least neutral reputation, the Timbermaw will attack you. Druids can use Teleport: Moonglade directly.
+04-45到60級.md:823｜說明｜月光林地飛永望鎮再轉污化丘陵。｜Fly from Moonglade to Everlook and transfer to the Tainted Foothills.
+04-45到60級.md:721｜說明｜進海加爾山前任務日誌約有 20 個，山裡最多到 25 個；日誌快滿就先放掉可跳過的舊任務。｜You'll have about 20 quests in your log before entering Mount Hyjal, and up to 25 inside; if the log is nearly full, drop skippable old quests first.
+04-45到60級.md:833｜說明｜剛蘇羅克（61 級精英奇美拉）在受污染的木槿花到凱蕾娜工坊一帶巡邏（約 x55–62.5、y61.5–72.2），打灌木和回工坊時先看位置。｜Ghansurok (level 61 elite chimaera) patrols from the tainted hibiscus to Kaylaena's workshop (about x55-62.5, y61.5-72.2); check its position when hitting bushes and when going back to the workshop.
+04-45到60級.md:834｜說明｜『苦痛者』瑟拉史卓斯（57 級精英）在受污染的木槿花一帶走動，打灌木時留意。｜Celastrus the Bitter (level 57 elite) wanders around the tainted hibiscus; watch for him when hitting bushes.
+04-45到60級.md:835｜說明｜骨堆會喚出 58 級精英軟泥，沒組隊別點第二次。｜The bone pile summons a level 58 elite slime; don't click it a second time without a group.
+04-45到60級.md:829｜說明｜魔血之痕北段，魔拂的任務都在這裡打。｜The north part of the Felblood Scar; all of Felflick's quests are fought here.
+04-45到60級.md:843｜說明｜從隱士洞往西北走到工坊。｜Walk northwest from the Hermit's Cave to the workshop.
+04-45到60級.md:845｜說明｜材料在北邊戴根廢墟的部落營地殘骸，之後經過再撿。｜The materials are in the Horde camp wreckage at Dae'gun to the north; pick them up when you pass later.
+04-45到60級.md:846｜說明｜從工坊往西南走一小段到艾維娜聖壇。｜From the workshop, walk a short way southwest to the Shrine of Aviana.
+04-45到60級.md:855｜說明｜右鍵樹上的腐化瘤接任務。｜Right-click the corrupted growth on the tree to pick up the quest.
+04-45到60級.md:862｜說明｜要到北邊祥和育所的橋上才做得了，先帶著。｜You can only do it on the bridge at the Cradle of Tranquility to the north, so carry it with you for now.
+04-45到60級.md:863｜說明｜沿山麓往西走。｜Follow the foothills west.
+04-45到60級.md:894｜說明｜護送任務，組隊時等大家都接了再開始。｜An escort quest; when grouped, wait until everyone has accepted it before starting.
+04-45到60級.md:899｜說明｜往北走。｜Head north.
+04-45到60級.md:905｜說明｜古野村旅店旁，貓頭鷹巢在南邊山谷，之後回伊露涅絲時順路收。｜Beside the Elderwild inn; the owl nests are in the valley to the south, to collect on the way when you return to Eluneth later.
+04-45到60級.md:908｜說明｜古野村西邊的觀景台。｜The overlook west of Elderwild.
+04-45到60級.md:911｜說明｜往東走的路旁，右鍵無名墳接任務。｜By the roadside heading east, right-click the unmarked grave to pick up the quest.
+04-45到60級.md:915｜說明｜行李帶到永恆山峰交。｜Take the baggage to the Summit of Eternity.
+04-45到60級.md:916｜說明｜之後到艾維娜聖壇交。｜Turn it in at the Shrine of Aviana afterward.
+04-45到60級.md:929｜說明｜往西走。｜Head west.
+04-45到60級.md:945｜說明｜從伊露涅絲往南一小段，打海加爾貓頭鷹也會掉；收完回古野村。｜A short way south of Eluneth; killing Hyjal owls drops them too. Return to Elderwild after collecting them.
+04-45到60級.md:945｜說明｜從伊露涅絲往南一小段，打海加爾貓頭鷹也會掉｜A short way south of Eluneth; killing Hyjal owls drops them too.
+04-45到60級.md:945｜說明｜收完回古野村。｜Return to Elderwild after collecting them.
+04-45到60級.md:956｜說明｜後續貝利的戒指（96077）要送去艾爾文森林的閃金鎮，路線沒排。｜The follow-up, Bailey's Ring (96077), must be delivered to Goldshire in Elwynn Forest; the route doesn't include it.
+04-45到60級.md:961｜說明｜剛蘇羅克（61 級精英奇美拉）會巡到艾維娜聖壇東邊，打鷹身人時留意。｜Ghansurok (level 61 elite chimaera) patrols east of the Shrine of Aviana; watch for him when fighting harpies.
+04-45到60級.md:969｜說明｜沿路回東邊。｜Head back east along the road.
+04-45到60級.md:989｜說明｜兩個目標都是 60 級精英惡魔；沒組隊就跳過第 21–24、59 步。｜Both targets are level 60 elite demons. If you haven't grouped up, skip steps 21-24 and 59.
+04-45到60級.md:989｜說明｜兩個目標都是 60 級精英惡魔｜Both targets are level 60 elite demons.
+04-45到60級.md:989｜說明｜沒組隊就跳過第 21–24、59 步。｜If you haven't grouped up, skip steps 21-24 and 59.
+04-45到60級.md:995｜說明｜往東南走。｜Head southeast.
+04-45到60級.md:996｜說明｜從瑞納拉德往東上山一小段，向菲伊倫‧埃爾薩斯開飛行點；先把帶上山的幾件交掉，減輕任務日誌。｜From Renalard go a short way up the mountain to the east and learn Fayran Elthas's flight path. Turn in the few quests you brought up the mountain first to lighten your quest log.
+04-45到60級.md:996｜說明｜從瑞納拉德往東上山一小段，向菲伊倫‧埃爾薩斯開飛行點｜From Renalard go a short way up the mountain to the east and learn Fayran Elthas's flight path.
+04-45到60級.md:996｜說明｜先把帶上山的幾件交掉，減輕任務日誌。｜Turn in the few quests you brought up the mountain first to lighten your quest log.
+04-45到60級.md:998｜說明｜有在安戈洛環形山接才交；其他資料寫這件要 55 級才接得到。｜Only turn it in if you picked it up in Un'Goro Crater. Other sources say this one needs level 55 to pick up.
+04-45到60級.md:998｜說明｜有在安戈洛環形山接才交｜Only turn it in if you picked it up in Un'Goro Crater.
+04-45到60級.md:1000｜說明｜信件包裹等一下在永望鎮交，接著做郵件連鎖。｜Turn in the letter package in Everlook shortly, then do the mail chain.
+04-45到60級.md:1001｜說明｜從永恆山峰往西下山經瑞納拉德，再往南到工坊；山路走不通就飛污化丘陵再往北騎。｜From the Summit of Eternity go down the mountain west past Renalard, then south to the workshop. If the mountain path is blocked, fly to the Tainted Foothills and ride north.
+04-45到60級.md:1001｜說明｜從永恆山峰往西下山經瑞納拉德，再往南到工坊｜From the Summit of Eternity go down the mountain west past Renalard, then south to the workshop.
+04-45到60級.md:1001｜說明｜山路走不通就飛污化丘陵再往北騎。｜If the mountain path is blocked, fly to the Tainted Foothills and ride north.
+04-45到60級.md:1005｜說明｜引來的剛蘇羅克是 61 級精英奇美拉。｜The Ghansurok you lure is a level 61 elite chimaera.
+04-45到60級.md:1009｜說明｜從聖壇往東南騎回隱士洞。｜Ride southeast from the shrine back to the Hermit's Cave.
+04-45到60級.md:1013｜說明｜從隱士洞往西騎到污化丘陵飛行點起飛。｜Ride west from the Hermit's Cave and take off from the Tainted Foothills flight point.
+04-45到60級.md:1016｜說明｜任務資料寫在永望鎮北邊的山丘；Method 指南寫是永望鎮東南冰薊山的雪人身上掉，兩處都看看。｜The quest data says it's in the hills north of Everlook. The Method guide says it drops from yetis on Ice Thistle Hills southeast of Everlook; check both places.
+04-45到60級.md:1016｜說明｜任務資料寫在永望鎮北邊的山丘｜The quest data says it's in the hills north of Everlook.
+04-45到60級.md:1016｜說明｜Method 指南寫是永望鎮東南冰薊山的雪人身上掉，兩處都看看。｜The Method guide says it drops from yetis on Ice Thistle Hills southeast of Everlook; check both places.
+04-45到60級.md:1018｜說明｜郵件帶回海加爾山頂交。｜Take the mail back to the top of Mount Hyjal to turn it in.
+04-45到60級.md:1019｜說明｜會經污化丘陵轉機。｜You'll connect through the Tainted Foothills.
+04-45到60級.md:1020｜說明｜Method 指南寫獎勵有 18 格背包。｜The Method guide says the reward includes an 18-slot bag.
+04-45到60級.md:1050｜說明｜會經污化丘陵、永望鎮轉機。｜You'll connect through the Tainted Foothills and Everlook.
+04-45到60級.md:1065｜說明｜剛蘇羅克（61 級精英奇美拉）在凱蕾娜工坊南邊山脊走動。｜Ghansurok (level 61 elite chimaera) wanders along the ridge south of Kaylaena's workshop.
+04-45到60級.md:1066｜說明｜馬佐苟爾（60 級精英）在戴根廢墟南邊巡邏，打獵犬時繞開。｜Mazzogore (level 60 elite) patrols south of Dae'gun; go around him when fighting hounds.
+04-45到60級.md:1067｜說明｜維漢‧爪握（60 級精英）守在諾達希爾小屋，做教徒任務別靠太近。｜Ve'han Talongrasp (level 60 elite) guards Nordrassil Lodge; don't get too close during the cultist quests.
+04-45到60級.md:1058｜說明｜戴根廢墟南半部，順收被遺棄的補給和部落殘骸材料。｜The southern half of Dae'gun; pick up the abandoned supplies and Horde wreckage materials along the way.
+04-45到60級.md:1059｜說明｜永恆山峰東側的教徒營地，山頂任務都在這裡打。｜The cultist camp east of the Summit of Eternity; the summit quests are all fought here.
+05-副本.md:368｜說明｜從冰風崗往東穿過西瘟疫之地進東瘟疫之地，沿路往北到斯坦索姆。｜From Chillwind Camp, go east through Western Plaguelands into Eastern Plaguelands, then follow the road north to Stratholme.
+05-副本.md:372｜說明｜出斯坦索姆往東南走到聖光之願禮拜堂。｜Leave Stratholme and go southeast to Light's Hope Chapel.
+05-副本.md:362｜說明｜骨架待補：找畫和出本回交還沒寫。｜Skeleton to be filled in: finding the painting and turning in after leaving the dungeon aren't written yet.
+05-副本.md:333｜說明｜前置是索瑞森廢墟（3701），04-第59站在鐵爐堡交完再接。｜The prerequisite is Ruins of Thaurissan (3701); pick it up after turning in at Ironforge at stop 59 of chapter 04.
+05-副本.md:340｜說明｜從摩根的崗哨沿燃燒平原大路往西，走進黑石山。｜From Morgan's Vigil, follow the Burning Steppes road west into Blackrock Mountain.
+06-路線外任務.md:399｜說明｜要交 6 份鹿肉料理，路線不練烹飪。｜It needs 6 venison dishes, and the route doesn't train cooking.
+06-路線外任務.md:400｜說明｜夏拉卡在第58站嘉文關‧葉源附近（31.3, 50.3）就接得到，但任務資料沒有小貓的位置，未排。｜Shalla'kal can be picked up near Galvinquam Leafsyre (31.3, 50.3) at stop 58, but the quest data has no kitten locations, so it isn't scheduled.
+06-路線外任務.md:401｜說明｜乾燥草藥的位置未核，樹皮地穴已排其他幾件。｜The dry herbs' location hasn't been verified; the Barkskin cave already schedules the other quests.
+06-路線外任務.md:402｜說明｜池塘位置未核，裝完水要回樹皮地穴交。｜The pond's location hasn't been verified; after filling the water, return to the Barkskin cave to turn in.
+06-路線外任務.md:403｜說明｜洞穴甲蟲的位置未核，樹皮地穴已排其他幾件。｜The cave beetles' location hasn't been verified; the Barkskin cave already schedules the other quests.
+06-路線外任務.md:404｜說明｜聲望任務，做樹皮地穴那幾件自然會升，不必專程。｜A reputation quest; it rises naturally as you do the Barkskin cave quests, so don't make a special trip.
+06-路線外任務.md:406｜說明｜力求平衡（93952）的後續，任務資料沒有目標和地點，未排。｜The follow-up to Striving for Balance (93952) has no objective or location in the quest data, so it isn't scheduled.
+06-路線外任務.md:407｜說明｜要去千針石林的大升降梯。｜You'd have to go to the Great Lift in Thousand Needles.
+06-路線外任務.md:408｜說明｜要去赤脊山的永靜湖。｜You'd have to go to Lake Everstill in Redridge.
+06-路線外任務.md:409｜說明｜老兵要先做千針石林那段才會出現在哀悼之眠。｜The veteran only appears at Mourning's Rest after you do the Thousand Needles part first.
+06-路線外任務.md:410｜說明｜鷹身人在艾維娜聖壇一帶，做完要回西邊樹皮地穴交。｜The harpies are around the Shrine of Aviana; after finishing, return west to the Barkskin cave to turn in.
+06-路線外任務.md:411｜說明｜要送到艾爾文森林的閃金鎮，任務資料沒有交任務的人，未排進暴風城那趟。｜It has to be delivered to Goldshire in Elwynn Forest, and the quest data has no turn-in NPC, so it isn't scheduled into the Stormwind trip.
+06-路線外任務.md:412｜說明｜要到海加爾之巔入口再回祥和育所交，折返太遠。｜You'd have to go to the entrance of the Hyjal Summit and then back to the Cradle of Tranquility to turn in; the backtrack is too long.
+06-路線外任務.md:413｜說明｜前一件風暴凝聚沒排，接不到。｜The previous quest, Storm Gathering, isn't scheduled, so you can't pick this up.
+06-路線外任務.md:414｜說明｜任務資料不全，接交地點未核。｜The quest data is incomplete, and the pickup and turn-in locations haven't been verified.
+06-路線外任務.md:415｜說明｜給任務的人在戴根廢墟東北角，要專程繞過去。｜The quest giver is in the northeast corner of Dae'gun, so you'd have to make a special detour.
+06-路線外任務.md:416｜說明｜前一件沒排；法師塔位置也未核。｜The previous quest isn't scheduled; the mage tower's location hasn't been verified either.
+06-路線外任務.md:417｜說明｜要進永恆之井，入口位置未核。｜You'd have to enter the Well of Eternity, and the entrance location hasn't been verified.
+06-路線外任務.md:418｜說明｜目標是 60 級精英，組隊才打得過。｜The target is a level 60 elite; you need a group to beat it.
+06-路線外任務.md:419｜說明｜目標是 60 級精英信使，組隊才打得過。｜The target is a level 60 elite messenger; you need a group to beat it.
+06-路線外任務.md:420｜說明｜要打 61 級精英奇美拉剛蘇羅克，組隊才打得過。｜You have to fight Ghansurok, a level 61 elite chimaera; you need a group to beat it.
+06-路線外任務.md:421｜說明｜書架在 60 級精英維漢‧爪握的小屋裡。｜The bookshelf is in the hut of Ve'han Talongrasp, a level 60 elite.
+06-路線外任務.md:422｜說明｜前一件維漢的殞落是精英任務。｜The previous quest, Ve'han's Fall, is an elite quest.
+06-路線外任務.md:425｜說明｜要從永恆山峰回祥和育所交，折返太遠。｜You'd have to turn it in at the Cradle of Tranquility, coming back from the Summit of Eternity; the backtrack is too long.
+06-路線外任務.md:718｜說明｜西瘟疫之地・第二次（第59站）經過時，有空再接。｜Western Plaguelands, second visit (stop 59): pick it up when you pass through if you have time.
+01-第一段-1到12級.md:54｜說明｜北郡修道院｜Northshire Abbey
+01-第一段-1到12級.md:95｜說明｜閃金鎮｜Goldshire
+01-第一段-1到12級.md:245｜說明｜寒脊山谷｜Coldridge Valley
+01-第一段-1到12級.md:288｜說明｜卡拉諾斯｜Kharanos
+01-第一段-1到12級.md:357｜說明｜幽影谷｜Shadowglen
+01-第一段-1到12級.md:423｜說明｜多蘭納爾｜Dolanaar
+01-第一段-1到12級.md:633｜說明｜微風島｜Zephras Isle
+04-45到60級.md:688｜說明｜要探索暗語峽谷，下一站進海加爾山時順路完成；回冬泉谷去月光林地前再交。｜Exploring Darkwhisper Gorge gets done on the way into Mount Hyjal at the next stop; turn it in before going back to Winterspring and on to Moonglade. Turn it in before going back to Winterspring and on to Moonglade.
+04-45到60級.md:688｜說明｜要探索暗語峽谷，下一站進海加爾山時順路完成｜Exploring Darkwhisper Gorge gets done on the way into Mount Hyjal at the next stop; turn it in before going back to Winterspring and on to Moonglade.
+04-45到60級.md:688｜說明｜回冬泉谷去月光林地前再交。｜Turn it in before going back to Winterspring and on to Moonglade.
+04-45到60級.md:723｜說明｜進海加爾山走峽谷就會完成，不用另外繞；任務日誌顯示完成就算數。｜Going through Mount Hyjal by the gorge completes it, so no extra detour is needed. It counts once the quest log shows it as complete.
+04-45到60級.md:723｜說明｜進海加爾山走峽谷就會完成，不用另外繞｜Going through Mount Hyjal by the gorge completes it, so no extra detour is needed.
+04-45到60級.md:723｜說明｜任務日誌顯示完成就算數。｜It counts once the quest log shows it as complete.
+04-45到60級.md:741｜說明｜弩砲、投石車、飛行器三種殘骸各算一項，三種都要種到；位置未核，在隱士洞外的山坡找。｜The ballista, catapult and flying machine wrecks each count as one objective, and you have to plant all three; the location hasn't been verified, so look on the slope outside the Hermit's Cave.
+04-45到60級.md:741｜說明｜弩砲、投石車、飛行器三種殘骸各算一項，三種都要種到｜The ballista, catapult and flying machine wrecks each count as one objective, and you have to plant all three.
+04-45到60級.md:745｜說明｜座標是玩家回報的大致位置｜The coordinates are the approximate location reported by players.
+04-45到60級.md:757｜說明｜同一批木槿花也掉樹葉止血的葉片，兩件一起打；送木箱時回工坊交。｜The same hibiscus bushes also drop the leaves that stop bleeding; kill them for both quests together. Turn it in at the workshop when you deliver the crate.
+04-45到60級.md:757｜說明｜同一批木槿花也掉樹葉止血的葉片，兩件一起打｜The same hibiscus bushes also drop the leaves that stop bleeding; kill them for both quests together.
+04-45到60級.md:757｜說明｜送木箱時回工坊交。｜Turn it in at the workshop when you deliver the crate.
+04-45到60級.md:766｜說明｜目標裂皮是 56 級精英古樹，有隊伍再做；沒組隊就跳過第 45、85、88 步。｜The target, Sunderbark, is a level 56 elite ancient; do it when you have a group. If you haven't grouped up, skip steps 45, 85 and 88.
+04-45到60級.md:766｜說明｜沒組隊就跳過第 45、85、88 步。｜If you haven't grouped up, skip steps 45, 85 and 88.
+04-45到60級.md:787｜說明｜會喚出 58 級精英軟泥；沒組隊就跳過第 66–67、69–70、73 步。｜It summons a level 58 elite slime. If you haven't grouped up, skip steps 66-67, 69-70 and 73.
+04-45到60級.md:787｜說明｜沒組隊就跳過第 66–67、69–70、73 步。｜If you haven't grouped up, skip steps 66-67, 69-70 and 73.
+04-45到60級.md:813｜說明｜從墜星村沿大路往西南騎到溫泉找多諾瓦。｜From Starfall Village ride southwest along the road to the hot spring and find Donova.
+04-45到60級.md:815｜說明｜從溫泉騎回永望鎮飛行點起飛（第49站開過月光林地飛行點）。木喉熊怪聲望已到中立的話，從溫泉往北騎到木喉要塞入口（1452 27.70, 34.50），進洞後走往月光林地的出口比較近；沒開月光林地飛行點的也走這條，到了先開飛行點（1450 48.10, 67.34）；聲望不到中立會被打。德魯伊可以直接用傳送：月光林地，傳到後先去一般飛行點（1450 48.10, 67.34）開點，回程才飛得了。｜Ride back from the hot spring to the Everlook flight point and fly (the Moonglade flight path was unlocked at stop 49). If your Timbermaw reputation is already neutral, ride north from the hot spring to the Timbermaw Hold entrance (1452 27.70, 34.50); going through the cave to the Moonglade exit is closer; if you haven't unlocked the Moonglade flight path, take this route too, and unlock the flight path first when you arrive (1450 48.10, 67.34); below neutral you'll be attacked. Druids can use Teleport: Moonglade directly; after arriving, go to the regular flight point (1450 48.10, 67.34) and unlock it so you can fly back. If you haven't unlocked the Moonglade flight path, take this route too, and unlock the flight path first when you arrive (1450 48.10, 67.34). Below neutral reputation you'll be attacked. Druids can use Teleport: Moonglade directly; after arriving, go to the regular flight point (1450 48.10, 67.34) and unlock it so you can fly back.
+04-45到60級.md:815｜說明｜從溫泉騎回永望鎮飛行點起飛（第49站開過月光林地飛行點）。木喉熊怪聲望已到中立的話，從溫泉往北騎到木喉要塞入口（1452 27.70, 34.50），進洞後走往月光林地的出口比較近；沒開月光林地飛行點的也走這條，到了先開飛行點（1450 48.10, 67.34）｜Ride back from the hot spring to the Everlook flight point and fly (the Moonglade flight path was unlocked at stop 49). If your Timbermaw reputation is already neutral, ride north from the hot spring to the Timbermaw Hold entrance (1452 27.70, 34.50); going through the cave to the Moonglade exit is closer; if you haven't unlocked the Moonglade flight path, take this route too, and unlock the flight path first when you arrive (1450 48.10, 67.34); below neutral you'll be attacked. Druids can use Teleport: Moonglade directly; after arriving, go to the regular flight point (1450 48.10, 67.34) and unlock it so you can fly back. If you haven't unlocked the Moonglade flight path, take this route too, and unlock the flight path first when you arrive (1450 48.10, 67.34).
+04-45到60級.md:815｜說明｜從溫泉騎回永望鎮飛行點起飛（第49站開過月光林地飛行點）。木喉熊怪聲望已到中立的話，從溫泉往北騎到木喉要塞入口（1452 27.70, 34.50），進洞後走往月光林地的出口比較近｜Ride back from the hot spring to the Everlook flight point and fly (the Moonglade flight path was unlocked at stop 49). If your Timbermaw reputation is already neutral, ride north from the hot spring to the Timbermaw Hold entrance (1452 27.70, 34.50); going through the cave to the Moonglade exit is closer; if you haven't unlocked the Moonglade flight path, take this route too, and unlock the flight path first when you arrive (1450 48.10, 67.34); below neutral you'll be attacked. Druids can use Teleport: Moonglade directly; after arriving, go to the regular flight point (1450 48.10, 67.34) and unlock it so you can fly back.
+04-45到60級.md:815｜說明｜沒開月光林地飛行點的也走這條，到了先開飛行點（1450 48.10, 67.34）；聲望不到中立會被打。德魯伊可以直接用傳送：月光林地，傳到後先去一般飛行點（1450 48.10, 67.34）開點，回程才飛得了。｜If you haven't unlocked the Moonglade flight path, take this route too, and unlock the flight path first when you arrive (1450 48.10, 67.34). Below neutral reputation you'll be attacked. Druids can use Teleport: Moonglade directly; after arriving, go to the regular flight point (1450 48.10, 67.34) and unlock it so you can fly back.
+04-45到60級.md:815｜說明｜沒開月光林地飛行點的也走這條，到了先開飛行點（1450 48.10, 67.34）｜If you haven't unlocked the Moonglade flight path, take this route too, and unlock the flight path first when you arrive (1450 48.10, 67.34).
+04-45到60級.md:815｜說明｜聲望不到中立會被打。德魯伊可以直接用傳送：月光林地，傳到後先去一般飛行點（1450 48.10, 67.34）開點，回程才飛得了。｜Below neutral reputation you'll be attacked. Druids can use Teleport: Moonglade directly; after arriving, go to the regular flight point (1450 48.10, 67.34) and unlock it so you can fly back.
+04-45到60級.md:823｜說明｜從月光林地的一般飛行點（1450 48.10, 67.34）起飛，在永望鎮下來接木箱。｜Take off from the regular Moonglade flight point (1450 48.10, 67.34) and get off at Everlook to pick up the crate.
+04-45到60級.md:824｜說明｜箱裡的電池約兩小時後失效，下飛行點直接送凱蕾娜。｜The batteries in the crate fail after about two hours, so deliver it straight to Kaylaena from the flight point.
+04-45到60級.md:825｜說明｜下飛行點直接往北騎到凱蕾娜的工坊，先送木箱。｜From the flight point ride straight north to Kaylaena's workshop and deliver the crate first.
+04-45到60級.md:842｜說明｜下飛行點直接往北騎到工坊，先送木箱。｜From the flight point ride straight north to the workshop and deliver the crate first.
+04-45到60級.md:848｜說明｜從隱士洞往西北騎到艾維娜聖壇。｜Ride northwest from the Hermit's Cave to the Shrine of Aviana.
+04-45到60級.md:879｜說明｜看得到任務才接；身上已有 8 串珠子才交，不夠不用刷。｜Pick it up only if you can see the quest. Only turn it in if you already have 8 strings of beads; no need to farm more.
+04-45到60級.md:879｜說明｜看得到任務才接｜Pick it up only if you can see the quest.
+04-45到60級.md:879｜說明｜身上已有 8 串珠子才交，不夠不用刷。｜Only turn it in if you already have 8 strings of beads; no need to farm more.
+04-45到60級.md:891｜說明｜看得到任務才接（要樹皮地穴聲望）。｜Pick it up only if you can see the quest (requires Barkskin cave reputation).
+04-45到60級.md:892｜說明｜看得到任務才接（要樹皮地穴聲望）；水袋到死木巢穴外的池塘裝。｜Pick it up only if you can see the quest (requires Barkskin cave reputation). Fill the waterskin at the pond outside the Deadwood den.
+04-45到60級.md:892｜說明｜看得到任務才接（要樹皮地穴聲望）｜Pick it up only if you can see the quest (requires Barkskin cave reputation).
+04-45到60級.md:892｜說明｜水袋到死木巢穴外的池塘裝。｜Fill the waterskin at the pond outside the Deadwood den.
+04-45到60級.md:894｜說明｜看得到任務才接；樹皮地穴聲望到中立才交得了。｜Pick it up only if you can see the quest. You can only turn it in once your Barkskin cave reputation reaches neutral.
+04-45到60級.md:894｜說明｜樹皮地穴聲望到中立才交得了。｜You can only turn it in once your Barkskin cave reputation reaches neutral.
+04-45到60級.md:898｜說明｜池塘位置未核，在死木巢穴外找。｜The pond's location hasn't been verified; look outside the Deadwood den.
+04-45到60級.md:905｜說明｜身上有 8 串珠子才交。｜Only turn it in if you have 8 strings of beads.
+04-45到60級.md:911｜說明｜聲望已到中立才交。｜Only turn it in once your reputation has reached neutral.
+04-45到60級.md:912｜說明｜看得到任務才接；樹皮地穴聲望到友善才交得了。｜Pick it up only if you can see the quest. You can only turn it in once your Barkskin cave reputation reaches friendly.
+04-45到60級.md:912｜說明｜樹皮地穴聲望到友善才交得了。｜You can only turn it in once your Barkskin cave reputation reaches friendly.
+04-45到60級.md:913｜說明｜聲望已到友善才交；不夠就先留著。｜Only turn it in once your reputation has reached friendly. If you don't have enough, keep it for now.
+04-45到60級.md:913｜說明｜聲望已到友善才交｜Only turn it in once your reputation has reached friendly.
+04-45到60級.md:913｜說明｜不夠就先留著。｜If you don't have enough, keep it for now.
+04-45到60級.md:929｜說明｜用任務給的空葫蘆在前方瀑布裝水，不是在嘉文關身邊。｜Fill water with the empty gourd the quest gives you at the waterfall ahead, not beside Galvinquam.
+04-45到60級.md:991｜說明｜點完東南邊那處營火，繼續往東南走到瑞納拉德，先交聰明的生物、接骨灰和狐狸任務，回頭再一次清戴根廢墟。｜After lighting the campfire to the southeast, keep going southeast to Renalard; first turn in Clever Creature, pick up the ashes and the fox quest, then clear Dae'gun once more on the way back.
+04-45到60級.md:995｜說明｜用接任務拿到的狐狸毛（Tuft of Fox Fur）引開惡魔，再撿 8 份被遺棄的補給；補給不在瑞納拉德身邊。｜Use the Tuft of Fox Fur you got from the quest to lure the demon away, then pick up 8 abandoned supplies. The supplies aren't beside Renalard.
+04-45到60級.md:995｜說明｜用接任務拿到的狐狸毛（Tuft of Fox Fur）引開惡魔，再撿 8 份被遺棄的補給｜Use the Tuft of Fox Fur you got from the quest to lure the demon away, then pick up 8 abandoned supplies.
+04-45到60級.md:995｜說明｜補給不在瑞納拉德身邊。｜The supplies aren't beside Renalard.
+04-45到60級.md:1001｜說明｜清完戴根廢墟回亞希羅這裡交。｜After clearing Dae'gun, come back here to Yashiro to turn in.
+04-45到60級.md:1003｜說明｜跟著亞希羅清路，最後打倒末日守衛 Xarkul（Doomguard Xarkul）才算完成。｜Follow Yashiro as he clears the path; it's complete once you defeat Doomguard Xarkul at the end.
+04-45到60級.md:1004｜說明｜在事件結束的地方找亞希羅交，不一定回到起點。｜Turn it in to Yashiro where the event ends, which isn't necessarily back at the start.
+04-45到60級.md:1006｜說明｜兩個目標都是 60 級精英惡魔；沒組隊就跳過第 22–25、60 步。｜Both targets are level 60 elite demons. If you haven't grouped up, skip steps 22-25 and 60.
+04-45到60級.md:1006｜說明｜沒組隊就跳過第 22–25、60 步。｜If you haven't grouped up, skip steps 22-25 and 60.
+04-45到60級.md:1023｜說明｜在工坊南邊的懸崖找鼓互動，把奇美拉引進旋刃投擲器射程，由 NPC 操作投擲器打，別拉去遠處硬打。｜Interact with the drum on the cliff south of the workshop and lure the chimaera into range of the blade-wheel thrower so the NPC operates it; don't pull it far away to fight it by force.
+04-45到60級.md:1047｜說明｜北、西、南三塊石頭各算一項，三塊都要去。｜The north, west and south stones each count as one objective, and you have to visit all three.
+04-45到60級.md:1048｜說明｜同一批教徒也算終結狂熱和扭曲的工具，先用法杖再殺，三件一起做。｜The same cultists also count for End the Frenzy and Twisted Tools; use the staff first and then kill them, and do all three together.
+04-45到60級.md:1059｜說明｜接完先去瑪恩那裡交淨化之風、接阿克蒙德之赦，兩件同一趟去做。｜After accepting it, first go to Marn to turn in Winds of Purification and pick up Archimonde's Pardon; do the two on the same trip.
+04-45到60級.md:1062｜說明｜解放樹根下原本就在的小精靈，不是在空地用道具召出來；和阿克蒙德之赦同一趟做。｜Free the wisp that's already beneath the roots, rather than summoning it with an item in the clearing. Do it on the same trip as Archimonde's Pardon.
+04-45到60級.md:1062｜說明｜解放樹根下原本就在的小精靈，不是在空地用道具召出來｜Free the wisp that's already beneath the roots, rather than summoning it with an item in the clearing.
+04-45到60級.md:1062｜說明｜和阿克蒙德之赦同一趟做。｜Do it on the same trip as Archimonde's Pardon.
+04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石；否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Only use your hearthstone if you're still bound to Aerie Peak and it's off cooldown. Otherwise take the boat backup: use the portal back to Rut'theran Village, fly to Auberdine, take the boat to Menethil Harbor, get off at Southshore, then fly to Chillwind Camp.
+04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石｜Only use your hearthstone if you're still bound to Aerie Peak and it's off cooldown.
+04-45到60級.md:1092｜說明｜否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Otherwise take the boat backup: use the portal back to Rut'theran Village, fly to Auberdine, take the boat to Menethil Harbor, get off at Southshore, then fly to Chillwind Camp.
+04-45到60級.md:1093｜說明｜已到冰風崗就跳過。飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜Skip this if you're already at Chillwind Camp. If the flight map doesn't list Chillwind Camp, walk north along the mountain road from Aerie Peak into Western Plaguelands and then west to Chillwind Camp.
+04-45到60級.md:1140｜說明｜座標是大致位置；入口和塔旁有血色十字軍守衛，一次只拉一隻。｜The coordinates are approximate. There are Scarlet Crusade guards at the entrance and by the tower; pull them one at a time.
+04-45到60級.md:1140｜說明｜座標是大致位置｜The coordinates are approximate.
+04-45到60級.md:1140｜說明｜入口和塔旁有血色十字軍守衛，一次只拉一隻。｜There are Scarlet Crusade guards at the entrance and by the tower; pull them one at a time.
+04-45到60級.md:1152｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 61–63 步，從暴風城直飛摩根的崗哨。｜Only go to Lakeshire if you have The True Master (4186); otherwise skip steps 61-63 and fly straight from Stormwind to Morgan's Vigil.
+04-45到60級.md:1152｜說明｜沒有就跳過第 61–63 步，從暴風城直飛摩根的崗哨。｜If you don't have it, skip steps 61-63 and fly straight from Stormwind to Morgan's Vigil.
+01-第一段-1到12級.md:633｜說明｜爐石或走回坦德爾林地的營地找狂風艾希安（42.76, 23.66）。｜Hearth, or walk back to the camp in Thendal Grove, and find Aetheen of the Gales (42.76, 23.66).
+01-第一段-1到12級.md:663｜說明｜在申德村旅店綁爐石（43.00, 43.20）。｜Set your hearth in the Sen'jin Village inn (43.00, 43.20).
+01-第一段-1到12級.md:710｜說明｜在瓦拉納爾旅店綁爐石（62.20, 72.60）。｜Set your hearth in the Valanaar inn (62.20, 72.60).

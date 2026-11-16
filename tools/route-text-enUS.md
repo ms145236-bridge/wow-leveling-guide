@@ -13142,3 +13142,221 @@
 05-副本.md:1675｜說明｜西瘟疫之地・第三次離開幽暗城前接。｜Western Plaguelands: pick up before leaving Undercity the third time.
 05-副本.md:1670｜說明｜前往月光林地途中，經雷霆崖時可先到莫高雷西北找 Mayena Earthseeker。回安戈洛環形山 馬紹爾營地後，沿北邊石階往上找泰坦建築；97049、95926 在幽暗城煉金區接，西瘟疫之地・第三次離開幽暗城前先接；95926 的交件人仍待確認。｜On the way to Moonglade, when you pass through Thunder Bluff, you can first find Mayena Earthseeker in northwest Mulgore. After returning to Marshal's Refuge in Un'Goro Crater, climb the north stone steps to find the Titan structure. Pick up 97049 and 95926 in the Undercity Apothecarium, before leaving Undercity the third time for Western Plaguelands; the turn-in NPC for 95926 is still to be confirmed.
 05-副本.md:1833｜說明｜從卡加斯飛幽暗城，到布瑞爾南方飛艇塔搭飛艇去奧格瑪交索爾。｜From Kargath, fly to Undercity, then take the zeppelin from the tower south of Brill to Orgrimmar and turn in to Thrall.
+01-第一段-1到12級.md:241｜說明｜向迪弗拉克開飛行點；可順便向旅店老闆伯蘭德·草風綁爐石。｜Learn Devrak's flight path. If convenient, set your hearth with Innkeeper Boorand Plainswind.
+01-第一段-1到12級.md:241｜說明｜向迪弗拉克開飛行點｜Learn Devrak's flight path.
+01-第一段-1到12級.md:241｜說明｜可順便向旅店老闆伯蘭德·草風綁爐石。｜If convenient, set your hearth with Innkeeper Boorand Plainswind.
+01-第一段-1到12級.md:474｜說明｜沿大路向北到十字路口，向迪弗拉克開飛行點。｜Follow the main road north to the Crossroads, then learn Devrak's flight path.
+01-第一段-1到12級.md:475｜說明｜在十字路口旅店向旅店老闆伯蘭德·草風（1413 51.99, 29.89）綁爐石。｜Set your hearth with Innkeeper Boorand Plainswind in the Crossroads inn (1413 51.99, 29.89).
+01-第一段-1到12級.md:681｜說明｜下塔進奧格瑪正門，向朵拉斯開飛行點。｜Come down the tower and enter Orgrimmar through the main gate, then learn Doras's flight path.
+01-第一段-1到12級.md:682｜說明｜已開十字路口飛點就直接飛；初訪沿杜洛塔大道南下剃刀嶺，再向西過橋進貧瘠之地。｜If you already have the Crossroads flight path, just fly there. On your first visit, run south along the Durotar road to Razor Hill, then cross the bridge west into the Barrens.
+01-第一段-1到12級.md:683｜說明｜向迪弗拉克開飛行點。｜Learn Devrak's flight path.
+01-第一段-1到12級.md:684｜說明｜在十字路口旅店向旅店老闆伯蘭德·草風（1413 51.99, 29.89）綁爐石，接貧瘠之地 十字路口。｜Set your hearth with Innkeeper Boorand Plainswind in the Crossroads inn (1413 51.99, 29.89), then pick up The Barrens: Crossroads.
+01-第一段-1到12級.md:996｜說明｜到瓦拉納爾小屋外的西碼頭（2521 57.90, 80.90），在塑風者碼頭管理員所在的碼頭搭割天者號。到莫高雷 天空守望者高原 南側碼頭（1412 34.30, 25.80）下船。｜Go to the west dock outside Valanaar's hut (2521 57.90, 80.90) and board the Skycutter at the dock where Windshapers Dockmaster stands. Get off at the south dock of Skywatcher Plateau in Mulgore (1412 34.30, 25.80).
+01-第一段-1到12級.md:996｜說明｜瓦拉納爾的東碼頭開往達拉然，別搭錯。｜The east dock at Valanaar leads to Dalaran, so don't board the wrong one.
+01-第一段-1到12級.md:1000｜說明｜從天空守望者高原沿地面道路南下，搭雷霆崖電梯上城，向塔爾開飛行點。｜From Skywatcher Plateau, follow the road south, take the Thunder Bluff elevator up, and learn Tal's flight path.
+01-第一段-1到12級.md:1001｜說明｜若十字路口飛點已開，可直接飛過去。初訪則沿莫高雷大道走東側山口，經陶拉祖營地向歐姆薩·雷角開飛行點，再沿大路往北。｜If you already have the Crossroads flight path, fly straight there. On your first visit, take the east pass along the Mulgore road, learn Omusa Thunderhorn's flight path at Camp Taurajo, then follow the road north.
+02-12到30級.md:34｜說明｜抵達十字路口先向迪弗拉克開飛行點。｜On arrival at the Crossroads, first learn Devrak's flight path.
+02-12到30級.md:35｜說明｜在十字路口旅店向旅店老闆伯蘭德·草風（1413 51.99, 29.89）綁爐石；保留到銀松森林 瑟伯切爾、貧瘠之地 棘齒城與陶拉祖營地回程。｜Set your hearth with Innkeeper Boorand Plainswind in the Crossroads inn (1413 51.99, 29.89); keep it for the trips back from Silverpine Forest The Sepulcher, The Barrens Ratchet and Camp Taurajo.
+02-12到30級.md:149｜說明｜第 4、5 步開十字路口並綁爐石；第一趟棘齒城開布萊格；離站到弗雷薩一側等提里斯法林地線。｜Steps 4 and 5 unlock the Crossroads and set your hearth; on the first trip, learn Bragok's flight path at Ratchet; when you leave, go toward Frezza and wait for the Tirisfal Glades route.
+02-12到30級.md:596｜說明｜沿路上烈日石居，向薩爾姆開飛行點。｜Follow the road to Sun Rock Retreat and learn Tharm's flight path.
+02-12到30級.md:597｜說明｜在烈日石居旅店向旅店老闆傑卡（1442 47.47, 62.13）綁爐石，留到南側山口的交件完成後再用。｜Set your hearth with Innkeeper Jayka in the Sun Rock Retreat inn (1442 47.47, 62.13); keep it until the turn-ins at the south pass are done.
+02-12到30級.md:681｜說明｜初訪找札瑞斯開飛行點。｜On your first visit, find Zarise to learn the flight path.
+02-12到30級.md:682｜說明｜在塔倫米爾旅店向旅店老闆沙恩（1424 62.78, 19.03）綁爐石。｜Set your hearth with Innkeeper Shay in the Tarren Mill inn (1424 62.78, 19.03).
+02-12到30級.md:792｜說明｜在布瑞爾南方飛艇塔找薩匹塔（1420 60.74, 58.87，西平台）確認奧格瑪線。抵杜洛塔後進奧格瑪飛陶拉祖；若仍在塔倫米爾才先飛幽暗城轉飛艇。有 1067 要交：已開雷霆崖就先飛雷霆崖交件再飛陶拉祖；未開就從陶拉祖往西沿莫高雷大道走到雷霆崖，搭電梯上城向塔爾開點，交完再飛回陶拉祖。｜At the zeppelin tower south of Brill, find Zapetta (1420 60.74, 58.87, west platform) to confirm the Orgrimmar route. After arriving in Durotar, enter Orgrimmar and fly to Camp Taurajo; only if you're still in Tarren Mill, fly to Undercity first and take the zeppelin. If you have 1067 to turn in: if Thunder Bluff is already unlocked, fly there first, turn it in, then fly to Taurajo; otherwise walk west from Taurajo along the Mulgore road to Thunder Bluff, take the elevator up, learn Tal's flight path, then after turning in fly back to Taurajo.
+02-12到30級.md:888｜說明｜抵達碎木崗哨，找烏爾格拉開飛行點（1440 73.18, 61.59）。保留塔倫米爾爐石給東部王國回程；已綁別處且想在梣谷用，找旅店老闆凱利斯克。｜Arrive at Splintertree Post and find Vhulgra to learn the flight path (1440 73.18, 61.59). Keep your Tarren Mill hearth for the trip back to the Eastern Kingdoms; if you're bound elsewhere and want to use it in Ashenvale, find Innkeeper Kaylisk.
+03-30到45級.md:28｜說明｜向札瑞斯開飛行點。｜Learn Zarise's flight path.
+03-30到45級.md:180｜說明｜荊棘谷 藏寶海灣交給克拉茲克。｜Turn in to Krazek in Stranglethorn Vale Booty Bay.
+03-30到45級.md:183｜說明｜閃光平原六個接任務點相近，先接齊再繞一圈。車手送件 1111 要飛棘齒城一趟才做；交完向碼頭管理員迪茲維格接給克拉維爾的零件（1112），回閃光平原交給克拉維爾，做完送貨給地精（1114），再接車手的傳聞（1115）留到荊棘谷 藏寶海灣交。｜The six quest pickups at The Shimmering Flats are close together, so accept them all and then make one loop. Turn-in 1111 from the racer needs a trip to Ratchet first; after turning it in, get Kravel's parts (1112) from Wharfmaster Dizzywig, bring them back to The Shimmering Flats for Kravel Koalbeard, then deliver the goods to the goblin (1114) and pick up the racer's rumors (1115), which you save for turning in at Stranglethorn Vale Booty Bay.
+03-30到45級.md:216｜說明｜一次只帶一頭年老的科多獸：用誘引器馴服後帶到斯米德身邊，等他開口說話，再點選科多獸，計數才會加一。｜Bring only one aged kodo at a time: tame it with the kodo lure, lead it to Smeed Scrabblescrew, wait for him to speak, then click the kodo to add to the count.
+03-30到45級.md:218｜說明｜沿南路過吉爾吉斯村，到葬影村向薩隆開飛行點。｜Follow the south road past Gill's village to Shadowprey Village and learn Thalon's flight path.
+03-30到45級.md:219｜說明｜在葬影村旅店向旅店老闆希科瓦（1443 24.09, 68.21）綁爐石。｜Set your hearth with Innkeeper Sikewa in the Shadowprey Village inn (1443 24.09, 68.21).
+03-30到45級.md:477｜說明｜在奧格瑪飛陶拉祖營地。｜Fly from Orgrimmar to Camp Taurajo.
+03-30到45級.md:538｜說明｜舒心草帶 3 份再出城。月鋼寬劍已有就交，特地買或鍛造會增加折返。1270 留到去灼熱峽谷前經棘齒城時交。｜Bring 3 Soothing Spices before leaving town. Turn in the Moonsteel Broadsword if you already have one; buying or forging one specially means extra backtracking. Keep 1270 for when you pass through Ratchet on the way to Searing Gorge.
+03-30到45級.md:729｜說明｜法迪爾海灣一次接打撈、水下寶藏和船長的復仇。先完成 665 解鎖 666，接 666 領尋寶護目鏡，並順手做水下的 662／664。669 留到荊棘谷 藏寶海灣交。｜At Faldir's Cove, pick up Salvage, Underwater Treasure and the Captain's Revenge in one go. Finish 665 first to unlock 666, take 666 and get the treasure-hunting goggles, and do the underwater 662 and 664 along the way. Save 669 for turning in at Stranglethorn Vale Booty Bay.
+03-30到45級.md:752｜說明｜已開羅格瑪就從落錘鎮直飛。沒開就照多數玩家的走法搭船：落錘鎮飛幽暗城，到布瑞爾南方飛艇塔搭往奧格瑪的飛艇；在奧格瑪飛亂風崗，經閃光平原南坡進塔納利斯，到加基森先開點（已開加基森就直接飛）。人在卡林多就直接去塔納利斯。直飛抵達羅格瑪的跳過第 2–6 步。｜If you've already unlocked Rog'mar, fly straight from Hammerfall. If not, take the boat like most players: fly from Hammerfall to Undercity, take the zeppelin from the tower south of Brill to Orgrimmar; from Orgrimmar fly to Freewind Post, go through the south slope of the Shimmering Flats into Tanaris, and unlock Gadgetzan first (if you already have it, just fly). If you're in Kalimdor already, go straight to Tanaris. Skip steps 2-6 if you flew directly to Rog'mar.
+03-30到45級.md:754｜說明｜還沒開羅格瑪、走熱砂港船線的人：到加基森東邊的熱砂港（1446 68.60, 23.00）搭船，在大河林地火線港碼頭（2548 80.60, 54.60）下船。火線港飛行管理員沒有航線。｜If you haven't unlocked Rog'mar and are taking the Steamwheedle Port boat: board at Steamwheedle Port east of Gadgetzan (1446 68.60, 23.00) and get off at Powderfuse Port dock in Riverglades (2548 80.60, 54.60). The Powderfuse Port flight master has no routes.
+03-30到45級.md:757｜說明｜搭船到的人從火線港往西走到羅格瑪。｜If you arrived by boat, walk west from Powderfuse Port to Rog'mar.
+03-30到45級.md:759｜說明｜在羅格瑪旅店向旅店老闆托卡（2548 57.58, 45.47）綁爐石。｜Set your hearth with Innkeeper Toka in the Rog'mar inn (2548 57.58, 45.47).
+03-30到45級.md:792｜說明｜史納戈是 40 級精英，在洞穴裡，單人不穩就不接。｜Snargl is a level 40 elite in a cave; skip the quest if soloing is unreliable.
+03-30到45級.md:863｜說明｜從羅格瑪往東，先繞到史利博再北上納佐克農場。｜From Rog'mar go east, detour to Sli'bo first, then north to Na'zok's farm.
+03-30到45級.md:1001｜說明｜在卡加斯就直飛藏寶海灣開下一批任務。｜If you're in Kargath, fly straight to Booty Bay to start the next batch of quests.
+03-30到45級.md:1001｜說明｜從騎術訓練師回來時，人在卡林多先飛奧格瑪，到城外飛艇塔找斯納爾克；人在幽暗城就到布瑞爾南方飛艇塔找興登堡。搭格羅姆高線，到格羅姆高再飛藏寶海灣。｜When you come back from the riding trainer and you're in Kalimdor, fly to Orgrimmar first and find Snurk Bucksquick at the zeppelin tower outside the city. If you're in Undercity, go to the zeppelin tower south of Brill and find Hin Denburg. Take the Grom'gol line, then fly from Grom'gol to Booty Bay.
+03-30到45級.md:1001｜說明｜從騎術訓練師回來時，人在卡林多先飛奧格瑪，到城外飛艇塔找斯納爾克｜When you come back from the riding trainer and you're in Kalimdor, fly to Orgrimmar first and find Snurk Bucksquick at the zeppelin tower outside the city.
+03-30到45級.md:1001｜說明｜人在幽暗城就到布瑞爾南方飛艇塔找興登堡。搭格羅姆高線，到格羅姆高再飛藏寶海灣。｜If you're in Undercity, go to the zeppelin tower south of Brill and find Hin Denburg. Take the Grom'gol line, then fly from Grom'gol to Booty Bay.
+04-45到60級.md:30｜說明｜熱砂港沿大道往西到加基森，找部落飛行管理員布科雷克·怒拳開飛行點。｜From Steamwheedle Port follow the road west to Gadgetzan and find Horde flight master Bulkrek Ragefist to learn the flight path.
+04-45到60級.md:31｜說明｜在加基森旅店向旅店老闆菲茲格瑞博（1446 52.51, 27.91）暫綁爐石。到費拉斯莫沙徹營地再改綁。｜Temporarily set your hearth with Innkeeper Fizzgrimble in the Gadgetzan inn (1446 52.51, 27.91). Rebind later at Camp Mojache in Feralas.
+04-45到60級.md:89｜說明｜在莫沙徹營地旅店向旅店老闆格盧爾（1444 74.80, 45.18）綁爐石。｜Set your hearth with Innkeeper Greul in the Camp Mojache inn (1444 74.80, 45.18).
+05-副本.md:1104｜說明｜洛特格里普在水池巡游；小噴泉在同一水池水面。；位置：公主洞下方跳入洛特格里普水池，找水面噴泉。；順序：可先做第 42 步，再下水｜Rotgrip patrols the pool. The small spring is on the surface of the same pool. Location: Jump into Rotgrip's pool below the Princess's cave and find the spring on the water surface. Order: You can do step 42 first, then go into the water.
+05-副本.md:1104｜說明｜可先做第 42 步，再下水｜You can do step 42 first, then go into the water.
+04-45到60級.md:294｜說明｜手上有 625 就先從加基森飛蕨牆村，往南到迅猛龍洞（Bloodfen Burrow）交件，再從蕨牆村飛奧格瑪。｜If you have 625, first fly from Gadgetzan to Brackenwall Village, go south to Bloodfen Burrow in Dustwallow Marsh to turn it in, then fly from Brackenwall Village to Orgrimmar.
+04-45到60級.md:329｜說明｜從奧格瑪飛棘齒城，先到碼頭找莉芙·雷茲菲克斯（1413 62.45, 38.73）。｜Fly from Orgrimmar to Ratchet and first find Liv Rizzlefix at the docks (1413 62.45, 38.73).
+04-45到60級.md:332｜說明｜坐船到藏寶海灣，再飛荒蕪之地卡加斯。｜Take the boat to Booty Bay, then fly to Kargath in the Badlands.
+04-45到60級.md:423｜說明｜加莫里塔是 48 級精英海龜，單人不穩就不接。｜Gammerita is a level 48 elite turtle; skip the quest if soloing is unreliable.
+04-45到60級.md:429｜說明｜後續找回鑰匙要殺 51 級精英守護者希坦亞，單人不穩就整條不接。｜The follow-up to recover the key requires killing Guardian Hitaya, a level 51 elite; if soloing is unreliable, skip the whole chain.
+04-45到60級.md:438｜說明｜限已交 625 並持有 626；625 在塵泥沼澤迅猛龍洞（Bloodfen Burrow）內岩石上的發黴的卷軸交。｜Only if you've turned in 625 and hold 626. Turn in 625 at the Musty Scroll on a rock inside Bloodfen Burrow in Dustwallow Marsh.
+04-45到60級.md:438｜說明｜限已交 625 並持有 626｜Only if you've turned in 625 and hold 626.
+04-45到60級.md:438｜說明｜625 在塵泥沼澤迅猛龍洞（Bloodfen Burrow）內岩石上的發黴的卷軸交。｜Turn in 625 at the Musty Scroll on a rock inside Bloodfen Burrow in Dustwallow Marsh.
+04-45到60級.md:454｜說明｜守護者希坦亞是 51 級精英。｜Guardian Hitaya is a level 51 elite.
+04-45到60級.md:772｜說明｜帶到海加爾山 永恆山峰交提雅拉·白鬃。｜Take it to the Summit of Eternity in Mount Hyjal and turn it in to Tiala Whitemane.
+04-45到60級.md:839｜說明｜已開烈焰峰飛行點、又不做不和諧的烈焰，就從卡加斯直接飛烈焰峰。否則先從卡加斯飛瑟銀哨塔，往南進黑石山，沿鎖鏈下到底層的磨石場。｜If you've unlocked the Flame Crest flight path and aren't doing Disharmony of Flame, fly from Kargath straight to Flame Crest. Otherwise fly from Kargath to Thorium Point first, go south into Blackrock Mountain, and follow the chains down to the Grinding Quarry on the bottom level.
+04-45到60級.md:840｜說明｜派隆是 52 級精英，在黑石深淵入口外的磨石場巡邏。｜Pyron is a level 52 elite patrolling the Grinding Quarry outside the entrance to Blackrock Depths.
+04-45到60級.md:841｜說明｜從黑石山往燃燒平原出口走，出山後沿北側往東到烈焰峰。｜From Blackrock Mountain head toward the exit to the Burning Steppes, then follow the north side east to Flame Crest.
+04-45到60級.md:1018｜說明｜帶到海加爾山入口的隱士洞交柯薩拉斯。｜Take it to the Hermit's Cave at the entrance of Mount Hyjal and turn it in to Ketharas.
+04-45到60級.md:1070｜說明｜在永望鎮旅店向旅店老闆維茲奇（1452 61.36, 38.83）綁爐石。｜Set your hearth with Innkeeper Vizzie in the Everlook inn (1452 61.36, 38.83).
+04-45到60級.md:1173｜說明｜帶到海加爾山入口交薩克‧葛洛克斯。｜Take it to the entrance of Mount Hyjal and turn it in to Thark Gorax.
+04-45到60級.md:1399｜說明｜出永望鎮沿南路往暗語峽谷，接著進海加爾山。｜Leave Everlook by the south road toward Darkwhisper Gorge, then enter Mount Hyjal.
+04-45到60級.md:1401｜說明｜第 1 步從木喉要塞出來先停溫泉，末步往南走暗語峽谷進海加爾山。｜Step 1: leave Timbermaw Hold and stop at the hot spring first; at the last step head south through Darkwhisper Gorge into Mount Hyjal.
+04-45到60級.md:1405｜說明｜進海加爾山前任務日誌約有 20 個，山裡最多到 28 個；日誌快滿就先放掉可跳過的舊任務。｜You'll have about 20 quests in your log before entering Mount Hyjal, and up to 28 inside; if the log is nearly full, drop skippable old quests first.
+04-45到60級.md:1425｜說明｜第一次進海加爾山：從永望鎮沿南路到暗語峽谷北口（1452 59.82, 74.25），貼著谷底大路往西走到底，從海加爾山東南角（約 87, 74）的德魯伊結界出谷。不用開門任務；谷口有精英霜槌巨人，谷內有精英惡魔，全程別離開道路。｜First time into Mount Hyjal: take the south road from Everlook to the north mouth of Darkwhisper Gorge (1452 59.82, 74.25), hug the main road along the gorge floor west to the end, and leave the gorge through the druid ward at the southeast corner of Mount Hyjal (about 87, 74). You don't need the gate quest. There's an elite Frostmaul giant at the mouth and elite demons inside; stay on the road the whole way.
+04-45到60級.md:1426｜說明｜西瘟疫之地 亡靈壁壘帶來的；沒接就只接下一步。｜Brought from Western Plaguelands, Undead Bulwark. If you don't have it, just pick up the next step.
+04-45到60級.md:1426｜說明｜西瘟疫之地 亡靈壁壘帶來的｜Brought from Western Plaguelands, Undead Bulwark.
+04-45到60級.md:1426｜說明｜沒接就只接下一步。｜If you don't have it, just pick up the next step.
+04-45到60級.md:1427｜說明｜交古野村的歐塔克‧洛勾克，下一站到。｜Turn in to Ortak Lomgok in Elderwild; you'll be there at the next stop.
+04-45到60級.md:1428｜說明｜路邊鬆脫的齒輪，點一下就接。｜A loose cog on the roadside; click it to pick up the quest.
+04-45到60級.md:1429｜說明｜費伍德森林 翡翠聖地帶來的；沒接就跳過。｜Brought from Felwood, Emerald Sanctuary. If you don't have it, skip it.
+04-45到60級.md:1429｜說明｜費伍德森林 翡翠聖地帶來的｜Brought from Felwood, Emerald Sanctuary.
+04-45到60級.md:1429｜說明｜沒接就跳過。｜If you don't have it, skip it.
+04-45到60級.md:1431｜說明｜開完污化丘陵飛行點就往北送去凱蕾娜的工坊。｜After unlocking the Tainted Foothills flight path, carry the crate north to Kaylaena's workshop.
+04-45到60級.md:1440｜說明｜塊莖位置未標。｜The tubers' location isn't marked.
+04-45到60級.md:1448｜說明｜沿大路往西，向 Bluebell 開飛行點。兩陣營共用。｜Follow the road west and learn Bluebell's flight path. Shared by both factions.
+04-45到60級.md:1452｜說明｜瑟拉史卓斯是 57 級精英古樹，在待會打木槿花的山坡遊走；單人不穩就不接。｜Celastrus is a level 57 elite ancient that roams the slope where you'll later gather hibiscus. If soloing is unreliable, don't pick it up.
+04-45到60級.md:1452｜說明｜瑟拉史卓斯是 57 級精英古樹，在待會打木槿花的山坡遊走｜Celastrus is a level 57 elite ancient that roams the slope where you'll later gather hibiscus.
+04-45到60級.md:1452｜說明｜單人不穩就不接。｜If soloing is unreliable, don't pick it up.
+04-45到60級.md:1453｜說明｜往北騎到凱蕾娜的工坊（60.1, 61.2），回程沿山坡打木槿花、收土壤，再回風信子這裡。｜Ride north to Kaylaena's workshop (60.1, 61.2); on the way back, kill hibiscus along the slope, collect soil, then return to Hyacinth.
+04-45到60級.md:1455｜說明｜打完先留著，第 100 步送木箱時一起交。｜Keep it for now and turn it in together with the crate at step 100.
+04-45到60級.md:1456｜說明｜第 88 步往月光林地經過永望鎮時交娜米。｜At step 88, turn it in to Nami when you pass Everlook on the way to Moonglade.
+04-45到60級.md:1465｜說明｜對友善古樹使用，不用打。｜Use it on a friendly ancient; no fighting needed.
+04-45到60級.md:1467｜說明｜裂皮是 56 級精英古樹，單人不穩就不接。｜Sunderbark is a level 56 elite ancient. If soloing is unreliable, don't pick it up.
+04-45到60級.md:1474｜說明｜往北到魔血之痕找被關住的惡魔。｜Go north to the Felblood Scar and look for the imprisoned demon.
+04-45到60級.md:1476｜說明｜筆記是同一批侍僧掉的，兩個任務一起打。｜The notes drop from the same acolytes, so fight them for both quests.
+04-45到60級.md:1484｜說明｜三人都是 58 級普通怪。｜All three are level 58 normal mobs.
+04-45到60級.md:1496｜說明｜會喚出 58 級精英軟泥，單人不穩就不接。｜It summons a level 58 elite slime. If soloing is unreliable, don't pick it up.
+04-45到60級.md:1498｜說明｜骨堆再往西一點的瀕死荒野神靈，拿到微光法杖後回烏鴉那裡交。｜Find the dying wild spirit a little west of the bone pile, then take the Shimmering Staff back to Crow to turn it in.
+04-45到60級.md:1503｜說明｜魔拂就在工作站這座營地，順路交。｜Felflick is right here at the workstation camp; turn in on the way.
+04-45到60級.md:1508｜說明｜交古野村的澤特甘，下一站到。｜Turn in to Zet'gan in Elderwild; you'll be there at the next stop.
+04-45到60級.md:1510｜說明｜沿大路騎回東邊的隱士洞。｜Ride back east along the road to the Hermit's Cave.
+04-45到60級.md:1512｜說明｜從污化丘陵（2482 54.98, 82.82）飛永望鎮。｜Fly from the Tainted Foothills (2482 54.98, 82.82) to Everlook.
+04-45到60級.md:1513｜說明｜後續的木箱有時限，等月光林地回來再接。｜The follow-up crate is time-limited, so pick it up after you're back from Moonglade.
+04-45到60級.md:1514｜說明｜在永望鎮轉飛月光林地（1450 32.09, 66.61），沿路往東北走到永夜港。月光林地飛行點在第52站開過。｜At Everlook, switch to a flight to Moonglade (1450 32.09, 66.61), then follow the road northeast to Nighthaven. The Moonglade flight path is unlocked at stop 52.
+04-45到60級.md:1522｜說明｜在月光林地飛行點找法斯托恩（1450 32.09, 66.61）飛永望鎮。｜At the Moonglade flight point, find Faustron (1450 32.09, 66.61) to fly to Everlook.
+04-45到60級.md:1523｜說明｜箱裡的電池約兩小時後失效；騎坐騎要走慢、別摔，壞了回娜米補。｜The batteries in the crate fail after about two hours. Ride slowly and don't fall; if it breaks, go back to Nami for a replacement.
+04-45到60級.md:1523｜說明｜箱裡的電池約兩小時後失效｜The batteries in the crate fail after about two hours.
+04-45到60級.md:1523｜說明｜騎坐騎要走慢、別摔，壞了回娜米補。｜Ride slowly and don't fall; if it breaks, go back to Nami for a replacement.
+04-45到60級.md:1524｜說明｜飛污化丘陵，下飛行點直接往北騎到凱蕾娜的工坊。｜Fly to the Tainted Foothills, then ride straight north from the flight point to Kaylaena's workshop.
+04-45到60級.md:1527｜說明｜從工坊往東南騎回隱士洞。｜Ride southeast from the workshop back to the Hermit's Cave.
+04-45到60級.md:1529｜說明｜交艾維娜聖壇的傲天者歐姆奴隆，下一站到。｜Turn in to Skylord Omnuron at the Shrine of Aviana; you'll be there at the next stop.
+04-45到60級.md:1531｜說明｜到祥和育所的橋上碰烏鴉肖像，下一站做。｜Touch the crow portrait on the bridge at the Cradle of Tranquility; do it at the next stop.
+04-45到60級.md:1532｜說明｜沿大路往西，經瑪洛恩隱居地（約 29, 71）轉北。｜Follow the road west and turn north past Malorne's Retreat (about 29, 71).
+04-45到60級.md:1534｜說明｜第 1 步從永望鎮走暗語峽谷進山，第 24 步開污化丘陵飛行點，第 29 步往北到凱蕾娜的工坊；第 88、98 步經永望鎮飛月光林地來回，回程第 100 步先送木箱到工坊；末步沿大路往西北。｜Step 1: enter from Everlook through Darkwhisper Gorge; step 24: unlock the Tainted Foothills flight path; step 29: go north to Kaylaena's workshop; steps 88 and 98: fly to Moonglade and back via Everlook; on the way back at step 100, drop the crate at the workshop first; last step: follow the road northwest.
+04-45到60級.md:1535｜說明｜值得做｜隱士柯薩拉斯的主線一路開到永恆山峰的山脈法杖，月光林地這趟來回是為了接上後段。｜Worth doing: Hermit Ketharas's main chain runs all the way to the Staff of the Mountain at the Summit of Eternity; the Moonglade round trip is to connect the later part.
+04-45到60級.md:1536｜說明｜有隊伍再做｜91923 的『苦痛者』瑟拉史卓斯、92959 的裂皮、96255 的甦醒魔灰軟泥怪都是精英；單人跳過，96322 也一起略過。｜Group recommended: 91923 Celastrus the Bitter, 92959 Sunderbark and 96255 the awakened ash slime are all elites; skip them if soloing, and skip 96322 too.
+04-45到60級.md:1537｜說明｜先別交｜94782、96830 留古野村交；92171、96931 留下一站做；92594 等送木箱時一起交。｜Don't turn in yet: keep 94782 and 96830 for Elderwild; do 92171 and 96931 at the next stop; turn in 92594 together with the crate.
+04-45到60級.md:1538｜說明｜可跳過｜92009 的木箱約兩小時失效，所以月光林地回來才接，下飛行點直接送。後續 92011 要到古野村再往上的部落營地遺跡拾荒，QuestieDB 沒有物品位置；92328、92329 跟著略過，92329 還要引 60 級奇美拉剛蘇羅克。｜Skip: the crate for 92009 fails after about two hours, so pick it up after coming back from Moonglade and deliver it straight from the flight point. The follow-up 92011 means scavenging among the Horde camp ruins north of Elderwild, and QuestieDB has no item locations; skip 92328 and 92329 too, and 92329 also requires luring the level 60 chimaera Ghansurok.
+04-45到60級.md:1539｜說明｜種子、貓頭鷹蛋、塊莖、土壤、水晶、松果這些採集點 QuestieDB 都沒有座標，照任務描述在附近找，先做有座標的殺怪。｜QuestieDB has no coordinates for the seeds, owl eggs, tubers, soil, crystals and pinecones; look nearby as the quest describes, and do the kills that have coordinates first.
+04-45到60級.md:1552｜說明｜暗語峽谷有 57–60 級精英赫達琳殺戮者，谷口另有精英霜槌巨人。沿谷底大路走，別往兩側坡上拉怪。｜Darkwhisper Gorge has level 57-60 elite Hederine Slayers, and an elite Frostmaul giant at the mouth. Follow the main road along the gorge floor and don't pull mobs from the slopes on either side.
+04-45到60級.md:1553｜說明｜污化丘陵東側有 56 級精英古樹裂皮和 57 級精英『苦痛者』瑟拉史卓斯遊走，打木槿花、採集時留意。｜East of the Tainted Foothills, level 56 elite ancient Sunderbark and level 57 elite Celastrus the Bitter wander; watch for them while killing hibiscus and gathering.
+04-45到60級.md:1554｜說明｜骨堆旁的甦醒魔灰軟泥怪是 58 級精英，丟骨頭時別站在軟泥池裡。｜The awakened ash slime next to the bone pile is a level 58 elite; don't stand in the slime pool when you toss the bones.
+04-45到60級.md:1542｜說明｜魔血之痕的普通術士，兩個任務都要打，密度高。營地裡有 58 級具名術士，先清外圍。｜Normal warlocks at the Felblood Scar; both quests need them and they're dense. A level 58 named warlock is in the camp, so clear the outskirts first.
+04-45到60級.md:1543｜說明｜入口隱士洞外的普通鹿，能順收鹿肉。單隻散開，適合邊走邊打。｜Normal deer outside the Hermit's Cave entrance; you can pick up stag meat along the way. They're spread out one by one, so they suit killing while moving.
+04-45到60級.md:1562｜說明｜從瑪洛恩隱居地的大路彎道往西，找樹皮熊怪洞外的布瑞魯法。｜From the road bend at Malorne's Retreat, go west and find Brerufa outside the barkskin furbolg cave.
+04-45到60級.md:1563｜說明｜先接著，第 38 步回南邊打貓頭鷹時一起殺守護者。洞內樹皮熊怪的後續要先刷聲望，路線只做這一個。｜Accept it for now, and kill the guardians at step 38 when you go back south to hit the owls. The follow-up inside the cave requires grinding reputation first, so the route only does this one.
+04-45到60級.md:1564｜說明｜往北去古野村的路上。｜On the way north to Elderwild.
+04-45到60級.md:1570｜說明｜最低 57 級；任務給的倖存者火炬要帶著。｜Minimum level 57. Bring the survivor's torch the quest gives you.
+04-45到60級.md:1570｜說明｜最低 57 級｜Minimum level 57.
+04-45到60級.md:1570｜說明｜任務給的倖存者火炬要帶著。｜Bring the survivor's torch the quest gives you.
+04-45到60級.md:1572｜說明｜古野村西邊的瞭望台。｜The lookout west of Elderwild.
+04-45到60級.md:1576｜說明｜沿大路往東經哀悼之眠，先到祥和育所的橋上找荒野神靈，哀悼之眠的任務等接完馬羅希斯再一起打。｜Follow the road east through Mourning's Rest and first find the wild spirit on the bridge at the Cradle of Tranquility; fight the Mourning's Rest quests together after you've picked up Marrosis's.
+04-45到60級.md:1577｜說明｜大路旁的舊廢墟；往祥和育所的路上順便裝水，第 50 步回程再交。｜The old ruins beside the road. Fill the water on the way to the Cradle of Tranquility and turn it in on the way back at step 50.
+04-45到60級.md:1577｜說明｜大路旁的舊廢墟｜The old ruins beside the road.
+04-45到60級.md:1577｜說明｜往祥和育所的路上順便裝水，第 50 步回程再交。｜Fill the water on the way to the Cradle of Tranquility and turn it in on the way back at step 50.
+04-45到60級.md:1578｜說明｜瀑布位置未標，沿大路往祥和育所方向找。｜The waterfall's location isn't marked; look along the road toward the Cradle of Tranquility.
+04-45到60級.md:1583｜說明｜交瑞納拉德，後段往永恆山峰時順路。｜Turn in to Renalard; it's on the way when you head to the Summit of Eternity later.
+04-45到60級.md:1589｜說明｜交柯薩拉斯，到永恆山峰後飛回去一起交。｜Turn in to Ketharas; fly back for it together once you reach the Summit of Eternity.
+04-45到60級.md:1593｜說明｜剝肉搶奪者、被遺忘的士兵都會掉，避開精英亡靈哭號者。｜Fleshstripper Robbers and Forgotten Soldiers both drop it; avoid the elite undead wailer.
+04-45到60級.md:1594｜說明｜骨堆位置未標。｜The bone pile's location isn't marked.
+04-45到60級.md:1607｜說明｜安荷位置未標，在瑪露克附近找。｜Anhe's location isn't marked; look near Maluk.
+04-45到60級.md:1610｜說明｜沿大路往東，先在嘉文關‧葉源那裡交水，再過祥和育所往東南去艾維娜聖壇。｜Follow the road east and turn in the water to Galvinquam Leafsyre first, then pass the Cradle of Tranquility and head southeast to the Shrine of Aviana.
+04-45到60級.md:1612｜說明｜行李交永恆山峰的瑪恩‧尤霍恩。｜Take the baggage to Marn Euhorn at the Summit of Eternity.
+04-45到60級.md:1621｜說明｜交柯薩拉斯，和 92317 同一趟。｜Turn in to Ketharas, on the same trip as 92317.
+04-45到60級.md:1624｜說明｜59 級普通怪，在鷹身人群裡。｜Level 59 normal mobs among the harpies.
+04-45到60級.md:1630｜說明｜從聖壇往東北。｜Head northeast from the shrine.
+04-45到60級.md:1631｜說明｜灰燼在戴根廢墟中央，附近有精英末日守衛，58 級單人要小心；拿不到就跳過山脈法杖這串（第 80–126 步）。｜The ashes are in the middle of Dae'gun, with an elite doomguard nearby; at level 58 you need to be careful solo. If you can't get it, skip the Staff of the Mountain chain (steps 80-126).
+04-45到60級.md:1631｜說明｜灰燼在戴根廢墟中央，附近有精英末日守衛，58 級單人要小心｜The ashes are in the middle of Dae'gun, with an elite doomguard nearby; at level 58 you need to be careful solo.
+04-45到60級.md:1631｜說明｜拿不到就跳過山脈法杖這串（第 80–126 步）。｜If you can't get it, skip the Staff of the Mountain chain (steps 80-126).
+04-45到60級.md:1634｜說明｜精英末日守衛就在附近，取到就退回南邊。｜The elite doomguard is right nearby; once you have it, back off south.
+04-45到60級.md:1636｜說明｜往東上山，向菲伊倫‧埃爾薩斯開飛行點。兩陣營共用，只飛污化丘陵。｜Head east up the mountain and learn Fayran Elthas's flight path. Shared by both factions; flies only to the Tainted Foothills.
+04-45到60級.md:1638｜說明｜安戈洛環形山 馬紹爾營地帶來的；沒接就跳過。｜Brought from Un'Goro Crater, Marshal's Refuge. If you don't have it, skip it.
+04-45到60級.md:1638｜說明｜安戈洛環形山 馬紹爾營地帶來的｜Brought from Un'Goro Crater, Marshal's Refuge.
+04-45到60級.md:1639｜說明｜郵包下一趟下山時送到永望鎮。｜Deliver the mail pouch to Everlook on your next trip down the mountain.
+04-45到60級.md:1640｜說明｜從永恆山峰飛污化丘陵，騎去東邊的隱士洞交三件、拿山脈法杖。沒拿到骨灰就不用去隱士洞，92317、92500 留到第 127 步離開時一起交。｜Fly from the Summit of Eternity to the Tainted Foothills, ride east to the Hermit's Cave to turn in three quests and take the Staff of the Mountain. If you didn't get the ashes, skip the Hermit's Cave; turn in 92317 and 92500 together when you leave at step 127.
+04-45到60級.md:1645｜說明｜回污化丘陵飛永望鎮送郵包；郵件這串要上山交，做完直接從永望鎮飛回永恆山峰（經污化丘陵轉機）。｜Fly back to Everlook from the Tainted Foothills to deliver the mail pouch; the mail chain has to be turned in up the mountain, so afterward fly straight from Everlook back to the Summit of Eternity (connecting via the Tainted Foothills).
+04-45到60級.md:1647｜說明｜交完恢復通訊才有；後續巔峰郵遞送回永恆山峰的塞貝莉雅。｜Only available after turning in Restoring Communications. The follow-up, Peak Post, goes back to Sebelia at the Summit of Eternity.
+04-45到60級.md:1647｜說明｜交完恢復通訊才有｜Only available after turning in Restoring Communications.
+04-45到60級.md:1647｜說明｜後續巔峰郵遞送回永恆山峰的塞貝莉雅。｜The follow-up, Peak Post, goes back to Sebelia at the Summit of Eternity.
+04-45到60級.md:1648｜說明｜任務寫在永望鎮北邊的山丘；玩家攻略說郵件從東南冰薊嶺的冰薊雪人身上拿，兩處都看一下。｜The quest says it's on the hills north of Everlook. A player guide says the mail comes from the Ice Thistle yetis on Ice Thistle Hills to the southeast; check both places.
+04-45到60級.md:1648｜說明｜任務寫在永望鎮北邊的山丘｜The quest says it's on the hills north of Everlook.
+04-45到60級.md:1648｜說明｜玩家攻略說郵件從東南冰薊嶺的冰薊雪人身上拿，兩處都看一下。｜A player guide says the mail comes from the Ice Thistle yetis on Ice Thistle Hills to the southeast; check both places.
+04-45到60級.md:1650｜說明｜玩家攻略說這串獎勵 18 格背包和移動速度飾品。｜A player guide says this chain rewards an 18-slot bag and a movement speed trinket.
+04-45到60級.md:1651｜說明｜從永望鎮飛回永恆山峰。｜Fly back to the Summit of Eternity from Everlook.
+04-45到60級.md:1653｜說明｜要先交山脈法杖。｜You must turn in the Staff of the Mountain first.
+04-45到60級.md:1660｜說明｜和下面兩個任務打同一批教徒。｜Fight the same cultists as the next two quests.
+04-45到60級.md:1662｜說明｜普通教徒也會掉，不必打精英斥候或祭司。｜Normal cultists drop it too; you don't need to fight the elite scouts or priests.
+04-45到60級.md:1673｜說明｜交完終結狂熱才有。｜Only available after turning in End the Frenzy.
+04-45到60級.md:1675｜說明｜交完淨化之風才有。｜Only available after turning in Winds of Purification.
+04-45到60級.md:1679｜說明｜幽光位置未標，在樹根一帶找。｜The glowing light's location isn't marked; look around the tree roots.
+04-45到60級.md:1680｜說明｜遺骸位置未標，在諾達希爾一帶找。｜The remains' location isn't marked; look around Nordrassil.
+04-45到60級.md:1684｜說明｜維漢‧爪握是 60 級精英。｜Ve'han Talongrasp is a level 60 elite.
+04-45到60級.md:1687｜說明｜離開時在污化丘陵下機，騎去隱士洞交。｜When you leave, get off at the Tainted Foothills and ride to the Hermit's Cave to turn in.
+04-45到60級.md:1688｜說明｜從永恆山峰飛污化丘陵。有 93848，或 92317、92500 還沒交，就騎去東邊的隱士洞交。｜Fly from the Summit of Eternity to the Tainted Foothills. If you have 93848, or 92317 and 92500 are still not turned in, ride east to the Hermit's Cave to turn them in.
+04-45到60級.md:1690｜說明｜從污化丘陵飛永望鎮。｜Fly from the Tainted Foothills to Everlook.
+04-45到60級.md:1693｜說明｜第 75 步開永恆山峰飛行點；第 79 步飛污化丘陵交山脈法杖的三個前置，第 84 步再轉永望鎮送郵包、做郵件這串後飛回山上；第 127 步經污化丘陵飛永望鎮，末步依是否要繞菲拉斯 亂羽高地選航線。｜Step 75: unlock the Summit of Eternity flight path; step 79: fly to the Tainted Foothills to turn in the three prerequisites for the Staff of the Mountain; step 84: transfer to Everlook to deliver the mail pouch, do the mail chain, then fly back up; step 127: fly to Everlook via the Tainted Foothills; last step: pick the route depending on whether you'll detour to Feralas, Frayfeather Highlands.
+04-45到60級.md:1694｜說明｜值得做｜古野村、哀悼之眠與祥和育所的任務都在大路兩側，殺怪和撿東西可一起做。｜Worth doing: the quests in Elderwild, Mourning's Rest and the Cradle of Tranquility all sit on both sides of the road, so you can kill and loot together.
+04-45到60級.md:1695｜說明｜值得做｜93197→93406→93269 這串郵件趁拿法杖下山時一起跑，獎勵據玩家攻略是背包和速度飾品；郵件位置與獎勵還沒實測。｜Worth doing: run the 93197 > 93406 > 93269 mail chain when you come down the mountain with the staff; per a player guide the rewards are a bag and a speed trinket; the mail locations and rewards aren't tested yet.
+04-45到60級.md:1696｜說明｜可跳過｜92335 的骨灰在戴根廢墟中央，旁邊有精英末日守衛；單人拿不到就略過第 80–126 步裡的山脈法杖這串（92335、90647、92169，以及隊伍任務 92833、93848）。93127、93407、93547 不需要法杖，照做。｜Skip: the ashes for 92335 are in the middle of Dae'gun next to an elite doomguard; if you can't get them solo, skip the Staff of the Mountain chain within steps 80-126 (92335, 90647, 92169, and the group quests 92833 and 93848). 93127, 93407 and 93547 don't need the staff, so do them.
+04-45到60級.md:1697｜說明｜有隊伍再做｜92833 打 60 級精英維漢‧爪握，93848 跟著它；單人略過。93422 要殺 60 級精英黑荊信差，93444 要殺精英夜刃豹守護者再引剛蘇羅克，路線都不接。｜Group recommended: 92833 has you fight the level 60 elite Ve'han Talongrasp, and 93848 follows it; skip them solo. 93422 means killing a level 60 elite Blackthorne messenger, and 93444 means killing an elite nightsaber guardian then luring Ghansurok; the route doesn't take either.
+04-45到60級.md:1698｜說明｜可跳過｜92446 刨顱者是 60 級精英（約 35, 71）；91794 的徽記要到戴根廢墟打、再回古野村交；96998、96999 要回古野村再送森金村，都不在順路上。｜Skip: 92446, the level 60 elite skull-crusher (about 35, 71); 91794's insignia must be farmed at Dae'gun and returned to Elderwild; 96998 and 96999 go back to Elderwild and then on to Sen'jin Village. None of them are on the way.
+04-45到60級.md:1699｜說明｜可跳過｜戴根廢墟西側營地的 95793、92960、96959 和東北角梅里安‧瑟雷馬科斯的 97009 都要額外往返，路線不繞；有隊伍在戴根廢墟清怪再接。｜Skip: 95793, 92960 and 96959 at the camp west of Dae'gun and 97009 from Maerion Thaelemaches in the northeast corner all need extra round trips, so the route doesn't detour; do them later if you have a group to clear Dae'gun.
+04-45到60級.md:1700｜說明｜可跳過｜第三次大戰老兵的後續 92101、93510、92102、93567、96558 要跑千針石林、湖畔鎮等外地，路線不接。｜Skip: the Veteran of the Third War follow-ups 92101, 93510, 92102, 93567 and 96558 send you to Thousand Needles, Lakeshire and other far-off places; the route doesn't take them.
+04-45到60級.md:1701｜說明｜可跳過｜93615 夏拉卡（31.3, 50.3，馬羅希斯旁）的小貓散在山裡，QuestieDB 沒有位置，等實測再排。93521 維漢身旁書架上的研究報告、99670 回去找傑瑞曼，QuestieDB 都沒寫前置，路線不接。｜Skip: 93615's kittens from Shalla'kal (31.3, 50.3, next to Marrosis) are scattered across the mountain and QuestieDB has no locations, so wait for in-game testing. For 93521 (the research report on the bookshelf next to Ve'han) and 99670 (go back to Jereman), QuestieDB lists no prerequisites; the route doesn't take them.
+04-45到60級.md:1702｜說明｜未滿 60 級可在永恆山峰教徒營地南側打黑荊教徒（75.20, 42.20），或回哀悼之眠打剝肉搶奪者。｜Below level 60, you can kill Blackthorne cultists at the south side of the cultist camp on the Summit of Eternity (75.20, 42.20), or go back to Mourning's Rest and kill Fleshstripper Robbers.
+04-45到60級.md:1718｜說明｜瑪洛恩隱居地往北的林子有 60 級精英刨顱者，經過死木營地時別深入。｜The forest north of Malorne's Retreat has a level 60 elite skull-crusher; don't go deep when passing the Deadwood camp.
+04-45到60級.md:1719｜說明｜哀悼之眠有 61 級精英亡靈哭號者，打剝肉搶奪者時看清楚再拉。｜Mourning's Rest has a level 61 elite undead wailer; look carefully before pulling Fleshstripper Robbers.
+04-45到60級.md:1720｜說明｜戴根廢墟有精英末日守衛，拿骨灰時從南邊進出。｜Dae'gun has an elite doomguard; enter and leave from the south when taking the ashes.
+04-45到60級.md:1721｜說明｜永恆山峰北邊營地有精英黑荊斥候、祭司，維漢‧爪握也在附近。｜The camp north of the Summit of Eternity has elite Blackthorne scouts and priests, and Ve'han Talongrasp is nearby too.
+04-45到60級.md:1705｜說明｜哀悼之眠的普通天災，和被遺忘的士兵混在一起，任務也要打。避開精英亡靈哭號者。｜Normal scourge at Mourning's Rest, mixed in with Forgotten Soldiers; the quests need them too. Avoid the elite undead wailer.
+04-45到60級.md:1706｜說明｜艾維娜聖壇西邊的鷹身人群，密度高。莎菈特‧蠕翼在同一帶。｜The dense harpy packs west of the Shrine of Aviana; Zarrat Wormwing is in the same area.
+04-45到60級.md:1707｜說明｜永恆山峰東邊教徒營地南側的普通教徒，三個任務共用。北邊營地有 60 級精英斥候和祭司，別往北拉。｜Normal cultists south of the cultist camp east of the Summit of Eternity, shared by three quests. The north camp has level 60 elite scouts and priests; don't pull north.
+04-45到60級.md:1729｜說明｜從莫沙徹營地沿南路到亂羽高地；點角鷹獸蛋（55.91, 76.03；被拿走就往東找另一顆），拿 1 顆就回飛點。｜From Camp Mojache take the south road to Frayfeather Highlands; click the hippogryph egg (55.91, 76.03; if it's been taken, look east for another), and head back to the flight point after taking 1.
+04-45到60級.md:1733｜說明｜可跳過｜超級測蛋器（The Super Egg-O-Matic）的一次性交件，已做過或想省跑圖時，可以直接飛加基森。｜Skip: it's a one-time turn-in for the Super Egg-O-Matic; if you've done it or want to save the trip, you can fly straight to Gadgetzan.
+04-45到60級.md:1734｜說明｜海加爾山之後約 58 級半，取蛋只為一次性交件。｜After Mount Hyjal you'll be about level 58½; fetching the egg is only for a one-time turn-in.
+04-45到60級.md:1737｜說明｜菲拉斯短訪只有角鷹獸蛋支線。等級不夠可在離開永望鎮前補，冰薊嶺雪人等級較高；洞口可能有人搶。｜The short visit to Feralas only has the hippogryph egg side quest. If your level is too low, make it up before leaving Everlook; the Ice Thistle yetis are higher level, and someone may be camping the cave mouth.
+04-45到60級.md:1766｜說明｜到東側水晶塔旁的平坦石頭，打開托爾瓦的麻袋，先放肉塊，再用費洛蒙引出拉克維。｜Go to the flat rock beside the crystal tower on the east side, open Torwa's Pouch, put the meat chunks down first, then use the pheromones to draw out Lar'korwi.
+04-45到60級.md:1800｜說明｜海加爾山之後約 58 級半。要補進度可打火羽山普通元素或北側猩猩，留意平原巡邏的魔暴龍。｜After Mount Hyjal you'll be about level 58½. To catch up on progress, kill normal elementals in the Firefeather mountains or the apes to the north, and watch for the devilsaur patrolling the plains.
+04-45到60級.md:1862｜說明｜未滿 60 級可留在要塞東北（約 55, 29）打普通蠍、蜘蛛或西南暮光教徒（約 38, 44）。｜Below level 60, stay northeast of the fortress (about 55, 29) and kill normal scorpids and spiders, or the Twilight cultists to the southwest (about 38, 44).
+04-45到60級.md:1883｜說明｜由奧格瑪飛梣谷碎木崗哨，沿大路向北進費伍德，先到翡翠聖地與附近路邊。已開血毒崗哨就從奧格瑪直飛，沿大路往南到翡翠聖地。｜From Orgrimmar fly to Splintertree Post in Ashenvale, follow the road north into Felwood, and first go to the Emerald Sanctuary and the nearby roadside. If you've unlocked Bloodvenom Post, fly straight from Orgrimmar and follow the road south to the Emerald Sanctuary.
+04-45到60級.md:1883｜說明｜碎木崗哨北上和血毒崗哨南下哪條較快尚未實測。｜Which is faster, going north from Splintertree Post or south from Bloodvenom Post, hasn't been tested yet.
+06-路線外任務.md:144｜說明｜有六份所需的鹿肉料理再交給古野村的歐塔克‧洛勾克，省下專程採買。｜Once you have six servings of the required venison dishes, turn them in to Ortak Lomgok in Elderwild, saving a special shopping trip.
+06-路線外任務.md:148｜說明｜60 級精英，交完飛行羽毛後帶兔屍往古野村南邊森林引出；有隊伍再回澤特甘接。｜Level 60 elite; after turning in the flight feather, lead the rabbit corpse into the forest south of Elderwild; get a group before going back to Zet'gan.
+01-第一段-1到12級.md:122｜說明｜剃刀嶺｜Razor Hill
+01-第一段-1到12級.md:337｜說明｜血蹄村｜Bloodhoof Village
+01-第一段-1到12級.md:566｜說明｜布瑞爾｜Brill
+01-第一段-1到12級.md:770｜說明｜申德村｜Sen'jin Village
+04-45到60級.md:1440｜說明｜弩砲、投石車、飛行器三種殘骸各算一項，三種都要種到。｜The ballista, catapult and flying machine wrecks each count as one objective, and you have to plant all three.
+04-45到60級.md:1444｜說明｜座標是玩家回報的大致位置｜The coordinates are the approximate location reported by players.
+04-45到60級.md:1513｜說明｜在永望鎮轉飛月光林地（1450 32.09, 66.61），沿路往東北走到永夜港。月光林地飛行點在第52站開過；還沒開就從永望鎮往西騎到木喉要塞入口，走往月光林地的岔口出去，先開飛行點（1450 32.09, 66.61）；木喉熊怪聲望不到中立，下面的熊怪會打人。｜At Everlook, switch to a flight to Moonglade (1450 32.09, 66.61), then follow the road northeast to Nighthaven. The Moonglade flight path was unlocked at stop 52; if you haven't unlocked it, ride west from Everlook to the Timbermaw Hold entrance, leave through the fork toward Moonglade and unlock the flight path first (1450 32.09, 66.61); if your Timbermaw reputation is below neutral, the furbolgs below will attack you.
+04-45到60級.md:1577｜說明｜用任務給的空葫蘆在前方瀑布裝水，不是在嘉文關身邊；瀑布位置未標，沿大路往祥和育所方向找。｜Fill water with the empty gourd the quest gives you at the waterfall ahead, not beside Galvinquam. The waterfall's location isn't marked; look along the road toward the Cradle of Tranquility.
+04-45到60級.md:1577｜說明｜用任務給的空葫蘆在前方瀑布裝水，不是在嘉文關身邊｜Fill water with the empty gourd the quest gives you at the waterfall ahead, not beside Galvinquam.
+04-45到60級.md:1630｜說明｜灰燼在戴根廢墟中央，附近有精英末日守衛，58 級單人要小心；拿不到就只跳過 92335、90647、92169、92833、93848 的步驟（第 81、83、91、92、99、105、123–126、128 步），其他照做。｜The ashes are in the middle of Dae'gun, with an elite doomguard nearby; at level 58 you need to be careful solo. If you can't get it, skip only the steps for 92335, 90647, 92169, 92833 and 93848 (steps 81, 83, 91, 92, 99, 105, 123-126 and 128) and do the rest.
+04-45到60級.md:1630｜說明｜拿不到就只跳過 92335、90647、92169、92833、93848 的步驟（第 81、83、91、92、99、105、123–126、128 步），其他照做。｜If you can't get it, skip only the steps for 92335, 90647, 92169, 92833 and 93848 (steps 81, 83, 91, 92, 99, 105, 123-126 and 128) and do the rest.
+04-45到60級.md:1632｜說明｜用接任務拿到的狐狸毛（Tuft of Fox Fur）引開惡魔，再撿 8 個被遺棄的補給品；補給不在瑞納拉德身邊。｜Use the Tuft of Fox Fur you got from the quest to lure the demon away, then pick up 8 abandoned supplies. The supplies aren't beside Renalard.
+04-45到60級.md:1632｜說明｜用接任務拿到的狐狸毛（Tuft of Fox Fur）引開惡魔，再撿 8 個被遺棄的補給品｜Use the Tuft of Fox Fur you got from the quest to lure the demon away, then pick up 8 abandoned supplies.
+04-45到60級.md:1632｜說明｜補給不在瑞納拉德身邊。｜The supplies aren't beside Renalard.
+04-45到60級.md:1639｜說明｜從永恆山峰飛污化丘陵，騎去東邊的隱士洞，先交被竊取的生命（92317）和天空碎片（92500）；有拿到骨灰才交 92335、接山脈法杖。｜Fly from the Summit of Eternity to the Tainted Foothills and ride east to the Hermit's Cave; first turn in Stolen Life (92317) and Fragment of the Sky (92500); turn in 92335 and pick up the Staff of the Mountain only if you got the ashes.
+04-45到60級.md:1662｜說明｜北、西、南三塊石頭各算一項，三塊都要去。｜The north, west and south stones each count as one objective, and you have to visit all three.
+04-45到60級.md:1678｜說明｜解放諾達希爾樹根下原本就在的幽光，不是在空地用道具召出來；位置未標，在樹根一帶找。｜Free the glowing light that's already beneath the roots of Nordrassil, rather than summoning it with an item in the clearing. The location isn't marked; look around the roots.
+04-45到60級.md:1678｜說明｜解放諾達希爾樹根下原本就在的幽光，不是在空地用道具召出來｜Free the glowing light that's already beneath the roots of Nordrassil, rather than summoning it with an item in the clearing.
+04-45到60級.md:1678｜說明｜位置未標，在樹根一帶找。｜The location isn't marked; look around the roots.
+04-45到60級.md:1687｜說明｜從永恆山峰飛污化丘陵。有 93848 才騎去東邊的隱士洞交。｜Fly from the Summit of Eternity to the Tainted Foothills. Only ride east to the Hermit's Cave to turn in if you have 93848.
+04-45到60級.md:1695｜說明｜可跳過｜92335 的骨灰在戴根廢墟中央，旁邊有精英末日守衛；單人拿不到就只略過 92335、90647、92169、92833、93848 這幾步（第 81、83、91、92、99、105、123–126、128 步）；92317、92500 照樣在第 79 步回隱士洞交，郵件這串和 93127、93407、93547、93584、92533、92017 不需要法杖，照做。｜Skip: the ashes for 92335 are in the middle of Dae'gun next to an elite doomguard; if you can't get them solo, skip only 92335, 90647, 92169, 92833 and 93848 (steps 81, 83, 91, 92, 99, 105, 123-126 and 128); turn in 92317 and 92500 on the return to the Hermit's Cave at step 79 as usual; the mail chain and 93127, 93407, 93547, 93584, 92533 and 92017 don't need the staff, so do them.
+04-45到60級.md:1733｜說明｜依實際等級決定後續；取蛋選做，只為一次性交件。｜Decide what comes next based on your actual level; the egg is optional and only for a one-time turn-in.
+04-45到60級.md:1799｜說明｜依實際等級決定要不要補怪。要補進度可打火羽山普通元素或北側猩猩，留意平原巡邏的魔暴龍。｜Decide by your actual level whether to catch up on mobs. To catch up on progress, kill normal elementals in the Firefeather mountains or the apes to the north, and watch for the devilsaur patrolling the plains.

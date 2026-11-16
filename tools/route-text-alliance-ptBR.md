@@ -668,3 +668,244 @@
 06-路線外任務.md:1968｜說明｜千針石林・第二次（第32站）到加基森時，有空再接；第37站到火線港交。｜Pegue se tiver tempo ao chegar a Geringontzan: Mil Agulhas (2ª visita, parada 32); entregue no Porto Detonapavio na parada 37.
 06-路線外任務.md:1969｜說明｜千針石林・第二次（第32站）經過時，有空再接。｜Pegue se tiver tempo, de passagem: Mil Agulhas (2ª visita, parada 32).
 06-路線外任務.md:2595｜說明｜荊棘谷・第二次（第34站）經過時，有空再接。｜Pegue se tiver tempo, de passagem: Selva do Espinhaço (2ª visita, parada 34).
+01-第一段-1到12級.md:209｜說明｜在暴風城旅店綁爐石（1453 60.50, 75.20）。｜Vincule sua Pedra de Regresso na estalagem de Ventobravo (1453 60.50, 75.20).
+01-第一段-1到12級.md:921｜說明｜在塞爾薩瑪旅店綁爐石（1432 35.40, 48.40）。｜Vincule sua Pedra de Regresso na estalagem de Thelsamar (1432 35.40, 48.40).
+02-12到30級.md:175｜說明｜從水壩沿北邊的路往西走到山口的哨站。｜Da represa, siga a estrada norte para oeste até o posto no desfiladeiro.
+02-12到30級.md:842｜說明｜能選湖畔鎮就飛；沒開就從暴風城出城沿艾爾文大道往東進赤脊山，到湖畔鎮順開鳥點。｜Se Lakeshire estiver disponível, voe; se não, saia de Ventobravo pela estrada de Elwynn para leste, entre em Montanhas Cristarrubra e abra o ponto de grifos ao chegar em Lakeshire.
+02-12到30級.md:903｜說明｜先清掉樹旁的怪，再點那棵塞納里奧之樹取得同心樹。｜Elimine primeiro os monstros ao lado da árvore e depois clique nessa árvore cenarina para obter palocórdio.
+02-12到30級.md:305｜說明｜衛兵派克在赤脊山西邊大路通往艾爾文森林的路口。｜Guarda Florestan fica no cruzamento da estrada principal a oeste de Montanhas Cristarrubra, que leva a Floresta de Elwynn.
+02-12到30級.md:333｜說明｜跟著迪菲亞叛徒走到月溪鎮，路上有怪打他要幫忙；到了再回哨兵嶺。｜Siga o traidor Défias até Arroio da Lua; os monstros no caminho o atacam, então ajude-o. Ao chegar, volte para Sentinel Hill.
+02-12到30級.md:333｜說明｜跟著迪菲亞叛徒走到月溪鎮，路上有怪打他要幫忙｜Siga o traidor Défias até Arroio da Lua; os monstros no caminho o atacam, então ajude-o.
+02-12到30級.md:333｜說明｜到了再回哨兵嶺。｜Ao chegar, volte para Sentinel Hill.
+02-12到30級.md:519｜說明｜右鍵背包裡的伊菈的匕首接任務。｜Clique com o botão direito na Adaga de Íria na mochila para aceitar a missão.
+05-副本.md:203｜說明｜會經鐵爐堡轉機。｜Você fará conexão em Altaforja.
+05-副本.md:204｜說明｜從南海鎮往北穿過希爾斯布萊德丘陵和奧特蘭克山脈，進西瘟疫之地後往西進提里斯法林地，沿路到東北角的血色修道院。｜De Costa Sul vá ao norte por Contraforte de Eira dos Montes e Montanhas de Alterac, entre em Terras Pestilentas Ocidentais e siga a oeste para Clareiras de Tirisfal; acompanhe a estrada até o Monastério Escarlate, no canto nordeste.
+03-30到45級.md:551｜說明｜跟著弗索逃跑；到終點他會帶 2 隻豺狼人翻臉打你，打倒後再去開寶藏。｜Siga Lanocinho enquanto ele foge. No final ele se volta contra você com 2 gnolls; derrote-os e depois abra o tesouro.
+03-30到45級.md:551｜說明｜跟著弗索逃跑｜Siga Lanocinho enquanto ele foge.
+03-30到45級.md:551｜說明｜到終點他會帶 2 隻豺狼人翻臉打你，打倒後再去開寶藏。｜No final ele se volta contra você com 2 gnolls; derrote-os e depois abra o tesouro.
+03-30到45級.md:612｜說明｜從加基森往北沿大路進千針石林閃光平原。｜De Geringontzan siga a estrada ao norte até Planos Cintilantes, em Mil Agulhas.
+03-30到45級.md:736｜說明｜從洛克莫丹南邊大路往南出山口進荒蕪之地，沿路往南到挖掘營地。｜Pela estrada sul de Loch Modan, saia pelo desfiladeiro para o sul, entre nos Ermos e siga a estrada ao sul até o Sítio de Escavação.
+03-30到45級.md:736｜說明｜荒蕪之地沒有聯盟飛行點｜Não há ponto de voo da Aliança nos Ermos.
+03-30到45級.md:796｜說明｜跟著加林走出食人妖營地，路上的怪會打他要保護；護送完再去他的營地開保險箱。｜Siga Galen Boaguarda para fora do acampamento dos ogros; os monstros no caminho o atacam, então proteja-o. Depois da escolta, vá ao acampamento dele e abra o cofre.
+03-30到45級.md:796｜說明｜跟著加林走出食人妖營地，路上的怪會打他要保護｜Siga Galen Boaguarda para fora do acampamento dos ogros; os monstros no caminho o atacam, então proteja-o.
+03-30到45級.md:796｜說明｜護送完再去他的營地開保險箱。｜Depois da escolta, vá ao acampamento dele e abra o cofre.
+03-30到45級.md:1043｜說明｜羽月要塞南邊海岸的憎世納迦都會掉鱗片，收齊再回要塞交。｜As nagas da costa ao sul de Feathermoon Stronghold dropam escamas; colete-as e volte à fortaleza.
+03-30到45級.md:1060｜說明｜限時 6 分鐘，接任務前先回滿血、清掉圍欄附近的怪。｜Limite de 6 minutos; antes de aceitar, recupere toda a vida e limpe os monstros perto do cercado.
+04-45到60級.md:125｜說明｜要打兩隻 50 級精英黑龍，沒隊伍就跳過。｜É preciso matar dois dracos negros elite de nível 50; pule se não tiver grupo.
+04-45到60級.md:135｜說明｜瑪爾戈的角開灼熱峽谷鑰匙任務線；不打就跳過第 13、32–33、35、37、40–42 步，第 43 步從鐵爐堡飛回瑟銀哨塔。｜O Chifre de Margol abre a linha de missões da Chave da Garganta Abrasadora; se não for fazer, pule as etapas 13, 32–33, 35, 37 e 40–42 e, na etapa 43, voe de Altaforja de volta a Posto de Tório.
+04-45到60級.md:135｜說明｜不打就跳過第 13、32–33、35、37、40–42 步，第 43 步從鐵爐堡飛回瑟銀哨塔。｜Se não for fazer, pule as etapas 13, 32–33, 35, 37 e 40–42 e, na etapa 43, voe de Altaforja de volta a Posto de Tório.
+04-45到60級.md:147｜說明｜工頭瑪托留斯是 50 級精英，沒隊伍就跳過。｜O Capataz Maltorius é uma elite de nível 50; pule se não tiver grupo.
+04-45到60級.md:163｜說明｜有館長的證明（3201）才回貝波蒂拿鑰匙；沒有就跳到第 43 步。｜Só volte a Montanhista Pedrabrita para pegar a chave se tiver a Prova do Curador (3201); senão, pule para a etapa 43.
+04-45到60級.md:163｜說明｜沒有就跳到第 43 步。｜Se não tiver, pule para a etapa 43.
+04-45到60級.md:219｜說明｜在鐵爐堡旅店綁爐石（1455 18.60, 51.60）。｜Vincule sua Pedra de Regresso na estalagem de Altaforja (1455 18.60, 51.60).
+04-45到60級.md:223｜說明｜從守望堡往北出詛咒之地進悲傷沼澤，沿路往西到沼澤西邊。｜Da Fortaleza Nethergarde, vá ao norte saindo da Barreira do Inferno rumo ao Pântano das Mágoas e siga a estrada a oeste até a parte ocidental do pântano.
+05-副本.md:311｜說明｜從瑟銀哨塔往南穿過灼熱峽谷，走進南邊的黑石山。｜De Posto de Tório, vá ao sul pela Garganta Abrasadora e entre na Montanha Rocha Negra, ao sul.
+05-副本.md:323｜說明｜出黑石山往北穿過灼熱峽谷，回瑟銀哨塔再飛。｜Saia da Montanha Rocha Negra pelo norte atravessando a Garganta Abrasadora, volte a Posto de Tório e voe de lá.
+04-45到60級.md:363｜說明｜在阿斯特蘭納旅店綁爐石（1440 37.00, 49.20）。｜Vincule sua Pedra de Regresso na estalagem de Astranaar (1440 37.00, 49.20).
+04-45到60級.md:399｜說明｜木喉要塞山洞裡有岔路通月光林地，先過去開飛行點，再回洞裡往冬泉谷走；之後海加爾山那段要飛月光林地。｜Na caverna de Domínio dos Presamatos há uma bifurcação para Clareira da Lua; vá primeiro abrir o ponto de voo e depois volte à caverna e siga para Hibérnia. Na parte do Monte Hyjal mais adiante, você voará para Clareira da Lua.
+04-45到60級.md:399｜說明｜木喉要塞山洞裡有岔路通月光林地，先過去開飛行點，再回洞裡往冬泉谷走｜Na caverna de Domínio dos Presamatos há uma bifurcação para Clareira da Lua; vá primeiro abrir o ponto de voo e depois volte à caverna e siga para Hibérnia.
+04-45到60級.md:399｜說明｜之後海加爾山那段要飛月光林地。｜Na parte do Monte Hyjal mais adiante, você voará para Clareira da Lua.
+04-45到60級.md:478｜說明｜送書任務，其他資料寫要 55 級才接得到，接不到就跳過；書帶到海加爾山永恆山峰交，不想佔任務欄就不接。｜Missão de entrega de um livro; outras fontes dizem que é preciso nível 55 para aceitar, então pule se não conseguir. Leve o livro ao Summit of Eternity no Monte Hyjal e entregue; se não quiser ocupar espaço no diário, não aceite.
+04-45到60級.md:478｜說明｜送書任務，其他資料寫要 55 級才接得到，接不到就跳過｜Missão de entrega de um livro; outras fontes dizem que é preciso nível 55 para aceitar, então pule se não conseguir.
+04-45到60級.md:478｜說明｜書帶到海加爾山永恆山峰交，不想佔任務欄就不接。｜Leve o livro ao Summit of Eternity no Monte Hyjal e entregue; se não quiser ocupar espaço no diário, não aceite.
+04-45到60級.md:489｜說明｜帶林格走回馬紹爾營地；他中途會暈倒，暈倒時對他使用斯普拉格的水壺。｜Leve Ringo de volta ao Refúgio do Marshal. Ele desmaia no caminho; quando isso acontecer, use o Cantil da Espraga nele.
+04-45到60級.md:489｜說明｜帶林格走回馬紹爾營地｜Leve Ringo de volta ao Refúgio do Marshal.
+04-45到60級.md:489｜說明｜他中途會暈倒，暈倒時對他使用斯普拉格的水壺。｜Ele desmaia no caminho; quando isso acontecer, use o Cantil da Espraga nele.
+04-45到60級.md:493｜說明｜秘銀外殼先在拍賣場買好，或請工程學玩家做。｜Compre antes o invólucro de mithril na casa de leilões ou peça a um engenheiro que o faça.
+04-45到60級.md:497｜說明｜護送艾米 01 走回卡爾納·雷塔維那裡，路上的怪會打它要保護。｜Escolte A-Me 01 de volta a Karna Trilheiro; os monstros no caminho o atacam, então proteja-o.
+04-45到60級.md:507｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（1439 37.04, 44.13）。｜Vincule sua Pedra de Regresso com Estalajadeira Shaussiy na estalagem de Auberdine (1439 37.04, 44.13).
+04-45到60級.md:515｜說明｜送信任務，其他資料寫要 55 級才接得到，接不到就跳過；帶到海加爾山交給隱士柯薩拉斯。｜Missão de entrega de uma carta; outras fontes dizem que é preciso nível 55 para aceitar, então pule se não conseguir. Leve ao Monte Hyjal e entregue ao eremita Ketharas.
+04-45到60級.md:515｜說明｜送信任務，其他資料寫要 55 級才接得到，接不到就跳過｜Missão de entrega de uma carta; outras fontes dizem que é preciso nível 55 para aceitar, então pule se não conseguir.
+04-45到60級.md:515｜說明｜帶到海加爾山交給隱士柯薩拉斯。｜Leve ao Monte Hyjal e entregue ao eremita Ketharas.
+04-45到60級.md:592｜說明｜送信任務，帶到海加爾山入口附近交。｜Missão de entrega de uma carta; entregue perto da entrada do Monte Hyjal.
+04-45到60級.md:628｜說明｜在鷹巢山旅店綁爐石（1425 13.80, 41.60）。｜Vincule sua Pedra de Regresso na estalagem de Aerie Peak (1425 13.80, 41.60).
+04-45到60級.md:724｜說明｜從蘭莎爾拉往南進暗語峽谷，沿峽谷往西走到底就進海加爾山。峽谷口有冰霜巨人精英，峽谷裡有惡魔精英，貼著路走別停。｜De Ranshalla vá ao sul para a Garganta do Sussurro Sombrio e siga o desfiladeiro a oeste até o fim para entrar no Monte Hyjal. Há um gigante de gelo elite na entrada e demônios elite lá dentro; fique na estrada e não pare.
+04-45到60級.md:725｜說明｜進海加爾山東南角，沿路往西走。｜Entre no Monte Hyjal pelo canto sudeste e siga a estrada para o oeste.
+04-45到60級.md:728｜說明｜路旁地上的齒輪，右鍵撿起來接任務。｜Uma engrenagem no chão ao lado da estrada; clique com o botão direito para pegá-la e aceitar a missão.
+04-45到60級.md:729｜說明｜有在費伍德森林接才交；其他資料寫這件要 55 級才接得到。｜Entregue só se a aceitou em Selva Maleva. Outras fontes dizem que esta exige nível 55 para aceitar.
+04-45到60級.md:729｜說明｜有在費伍德森林接才交｜Entregue só se a aceitou em Selva Maleva.
+04-45到60級.md:729｜說明｜其他資料寫這件要 55 級才接得到。｜Outras fontes dizem que esta exige nível 55 para aceitar.
+04-45到60級.md:742｜說明｜位置未核，在隱士洞外的山坡找。｜A localização não foi verificada; procure na encosta fora da Caverna do Eremita.
+04-45到60級.md:749｜說明｜沿路往西走，飛行點在古樹哨站旁。｜Siga a estrada para o oeste; o ponto de voo fica ao lado do posto dos anciões.
+04-45到60級.md:753｜說明｜目標是 57 級精英，單人打不過就別接。｜O alvo é uma elite de nível 57; se não conseguir derrotá-lo sozinho, não aceite.
+04-45到60級.md:759｜說明｜之後去永望鎮時找娜米拿零件。｜Quando for a Visteterna mais tarde, procure Nami para pegar as peças.
+04-45到60級.md:760｜說明｜下一站回工坊交。｜Entregue na oficina na próxima parada.
+04-45到60級.md:767｜說明｜目標裂皮是 56 級精英古樹，有隊伍再做；沒組隊就跳過第 44、84、87 步。｜O alvo, Sunderbark, é um ancião elite de nível 56; faça quando tiver grupo. Se não tiver grupo, pule as etapas 44, 84 e 87.
+04-45到60級.md:767｜說明｜目標裂皮是 56 級精英古樹，有隊伍再做｜O alvo, Sunderbark, é um ancião elite de nível 56; faça quando tiver grupo.
+04-45到60級.md:767｜說明｜沒組隊就跳過第 44、84、87 步。｜Se não tiver grupo, pule as etapas 44, 84 e 87.
+04-45到60級.md:787｜說明｜把術士骨頭丟到軟泥池旁的骨堆。｜Jogue os ossos do bruxo na pilha de ossos ao lado da poça de gosma.
+04-45到60級.md:788｜說明｜會喚出 58 級精英軟泥；沒組隊就跳過第 65–66、68–69、72 步。｜Invoca uma gosma elite de nível 58. Se não tiver grupo, pule as etapas 65–66, 68–69 e 72.
+04-45到60級.md:788｜說明｜會喚出 58 級精英軟泥｜Invoca uma gosma elite de nível 58.
+04-45到60級.md:788｜說明｜沒組隊就跳過第 65–66、68–69、72 步。｜Se não tiver grupo, pule as etapas 65–66, 68–69 e 72.
+04-45到60級.md:806｜說明｜下一站到西邊的古野村交。｜Entregue em Elderwild, a oeste, na próxima parada.
+04-45到60級.md:807｜說明｜往東回隱士洞的路上。｜No caminho de volta para o leste, rumo à Caverna do Eremita.
+04-45到60級.md:813｜說明｜箱子下一站帶回海加爾山給凱蕾娜。｜Na próxima parada, leve a caixa de volta ao Monte Hyjal, para Kaylaena.
+04-45到60級.md:814｜說明｜從永望鎮沿大路往西一小段到墜星村。｜De Visteterna siga a estrada para oeste por um trecho curto até Starfall Village.
+04-45到60級.md:815｜說明｜騎回永望鎮飛行點起飛（第49站開過月光林地飛行點）。沒開的話從墜星村沿大路往西騎到木喉要塞入口（1452 27.70, 34.50），進洞後走往月光林地的出口，到了先開飛行點（1450 48.10, 67.34）；木喉熊怪聲望不到中立會被打。德魯伊可以直接用傳送：月光林地。｜Cavalgue de volta ao ponto de voo de Visteterna e voe (o ponto de voo de Clareira da Lua foi aberto na parada 49). Se não abriu, cavalgue a oeste pela estrada de Starfall Village até a entrada do Domínio dos Presamatos (1452 27.70, 34.50), atravesse a caverna até a saída para Clareira da Lua e abra primeiro o ponto de voo lá (1450 48.10, 67.34). Sem reputação pelo menos neutra, os Presamatos atacam você. Druidas podem usar Teleportar: Clareira da Lua diretamente.
+04-45到60級.md:815｜說明｜騎回永望鎮飛行點起飛（第49站開過月光林地飛行點）。沒開的話從墜星村沿大路往西騎到木喉要塞入口（1452 27.70, 34.50），進洞後走往月光林地的出口，到了先開飛行點（1450 48.10, 67.34）｜Cavalgue de volta ao ponto de voo de Visteterna e voe (o ponto de voo de Clareira da Lua foi aberto na parada 49). Se não abriu, cavalgue a oeste pela estrada de Starfall Village até a entrada do Domínio dos Presamatos (1452 27.70, 34.50), atravesse a caverna até a saída para Clareira da Lua e abra primeiro o ponto de voo lá (1450 48.10, 67.34).
+04-45到60級.md:815｜說明｜木喉熊怪聲望不到中立會被打。德魯伊可以直接用傳送：月光林地。｜Sem reputação pelo menos neutra, os Presamatos atacam você. Druidas podem usar Teleportar: Clareira da Lua diretamente.
+04-45到60級.md:823｜說明｜月光林地飛永望鎮再轉污化丘陵。｜Voe de Clareira da Lua para Visteterna e faça conexão para as Tainted Foothills.
+04-45到60級.md:721｜說明｜進海加爾山前任務日誌約有 20 個，山裡最多到 25 個；日誌快滿就先放掉可跳過的舊任務。｜Antes de entrar no Monte Hyjal, seu diário terá cerca de 20 missões e, lá dentro, até 25; se estiver quase cheio, abandone primeiro as missões antigas que podem ser puladas.
+04-45到60級.md:833｜說明｜剛蘇羅克（61 級精英奇美拉）在受污染的木槿花到凱蕾娜工坊一帶巡邏（約 x55–62.5、y61.5–72.2），打灌木和回工坊時先看位置。｜Ghansurok (quimera elite de nível 61) patrulha dos hibiscos contaminados até a oficina de Kaylaena (cerca de x55–62,5, y61,5–72,2); confira a posição ao atacar os arbustos e ao voltar à oficina.
+04-45到60級.md:834｜說明｜『苦痛者』瑟拉史卓斯（57 級精英）在受污染的木槿花一帶走動，打灌木時留意。｜Celastrus, o Amargo (elite de nível 57), anda pelos hibiscos contaminados; fique atento ao atacar os arbustos.
+04-45到60級.md:835｜說明｜骨堆會喚出 58 級精英軟泥，沒組隊別點第二次。｜A pilha de ossos invoca uma gosma elite de nível 58; sem grupo, não clique uma segunda vez.
+04-45到60級.md:829｜說明｜魔血之痕北段，魔拂的任務都在這裡打。｜A parte norte da Cicatriz de Sangue Vil; todas as missões de Felflick são feitas aqui.
+04-45到60級.md:843｜說明｜從隱士洞往西北走到工坊。｜Caminhe a noroeste da Caverna do Eremita até a oficina.
+04-45到60級.md:845｜說明｜材料在北邊戴根廢墟的部落營地殘骸，之後經過再撿。｜Os materiais estão nos destroços do acampamento da Horda em Dae'gun, ao norte; pegue quando passar por lá mais tarde.
+04-45到60級.md:846｜說明｜從工坊往西南走一小段到艾維娜聖壇。｜Da oficina, caminhe um trecho curto a sudoeste até o Shrine of Aviana.
+04-45到60級.md:855｜說明｜右鍵樹上的腐化瘤接任務。｜Clique com o botão direito no crescimento corrompido na árvore para aceitar a missão.
+04-45到60級.md:862｜說明｜要到北邊祥和育所的橋上才做得了，先帶著。｜Só se pode fazer na ponte de Cradle of Tranquility ao norte; por ora, leve-a consigo.
+04-45到60級.md:863｜說明｜沿山麓往西走。｜Siga o sopé da montanha para oeste.
+04-45到60級.md:894｜說明｜護送任務，組隊時等大家都接了再開始。｜Missão de escolta; em grupo, espere todos aceitarem antes de começar.
+04-45到60級.md:899｜說明｜往北走。｜Vá para o norte.
+04-45到60級.md:905｜說明｜古野村旅店旁，貓頭鷹巢在南邊山谷，之後回伊露涅絲時順路收。｜Ao lado da estalagem de Elderwild; os ninhos de coruja ficam no vale ao sul, para coletar de passagem ao voltar a Eluneth.
+04-45到60級.md:908｜說明｜古野村西邊的觀景台。｜O mirante a oeste de Elderwild.
+04-45到60級.md:911｜說明｜往東走的路旁，右鍵無名墳接任務。｜Ao lado da estrada rumo ao leste, clique com o botão direito no túmulo sem nome para aceitar a missão.
+04-45到60級.md:915｜說明｜行李帶到永恆山峰交。｜Leve a bagagem ao Summit of Eternity.
+04-45到60級.md:916｜說明｜之後到艾維娜聖壇交。｜Entregue depois no Shrine of Aviana.
+04-45到60級.md:929｜說明｜往西走。｜Vá para o oeste.
+04-45到60級.md:945｜說明｜從伊露涅絲往南一小段，打海加爾貓頭鷹也會掉；收完回古野村。｜Um trecho curto ao sul de Eluneth; as corujas de Hyjal também dropam. Volte a Elderwild depois de coletar.
+04-45到60級.md:945｜說明｜從伊露涅絲往南一小段，打海加爾貓頭鷹也會掉｜Um trecho curto ao sul de Eluneth; as corujas de Hyjal também dropam.
+04-45到60級.md:945｜說明｜收完回古野村。｜Volte a Elderwild depois de coletar.
+04-45到60級.md:956｜說明｜後續貝利的戒指（96077）要送去艾爾文森林的閃金鎮，路線沒排。｜A continuação, Anel de Bailey (96077), deve ser entregue em Vila Dourada, na Floresta de Elwynn; a rota não a inclui.
+04-45到60級.md:961｜說明｜剛蘇羅克（61 級精英奇美拉）會巡到艾維娜聖壇東邊，打鷹身人時留意。｜Ghansurok (quimera elite de nível 61) patrulha a leste do Shrine of Aviana; fique atento ao lutar contra harpias.
+04-45到60級.md:969｜說明｜沿路回東邊。｜Volte para o leste pela estrada.
+04-45到60級.md:989｜說明｜兩個目標都是 60 級精英惡魔；沒組隊就跳過第 21–24、59 步。｜Os dois alvos são demônios elite de nível 60. Se não tiver grupo, pule as etapas 21–24 e 59.
+04-45到60級.md:989｜說明｜兩個目標都是 60 級精英惡魔｜Os dois alvos são demônios elite de nível 60.
+04-45到60級.md:989｜說明｜沒組隊就跳過第 21–24、59 步。｜Se não tiver grupo, pule as etapas 21–24 e 59.
+04-45到60級.md:995｜說明｜往東南走。｜Vá para o sudeste.
+04-45到60級.md:996｜說明｜從瑞納拉德往東上山一小段，向菲伊倫‧埃爾薩斯開飛行點；先把帶上山的幾件交掉，減輕任務日誌。｜De Renalard, suba um trecho da montanha para o leste e obtenha o ponto de voo de Fayran Elthas. Entregue primeiro as missões que trouxe para a montanha, para aliviar o diário.
+04-45到60級.md:996｜說明｜從瑞納拉德往東上山一小段，向菲伊倫‧埃爾薩斯開飛行點｜De Renalard, suba um trecho da montanha para o leste e obtenha o ponto de voo de Fayran Elthas.
+04-45到60級.md:996｜說明｜先把帶上山的幾件交掉，減輕任務日誌。｜Entregue primeiro as missões que trouxe para a montanha, para aliviar o diário.
+04-45到60級.md:998｜說明｜有在安戈洛環形山接才交；其他資料寫這件要 55 級才接得到。｜Entregue só se a aceitou na Cratera Un'Goro. Outras fontes dizem que esta exige nível 55 para aceitar.
+04-45到60級.md:998｜說明｜有在安戈洛環形山接才交｜Entregue só se a aceitou na Cratera Un'Goro.
+04-45到60級.md:1000｜說明｜信件包裹等一下在永望鎮交，接著做郵件連鎖。｜Entregue o pacote de cartas em Visteterna logo mais e depois faça a cadeia do correio.
+04-45到60級.md:1001｜說明｜從永恆山峰往西下山經瑞納拉德，再往南到工坊；山路走不通就飛污化丘陵再往北騎。｜Do Summit of Eternity, desça a montanha a oeste passando por Renalard e depois vá ao sul até a oficina. Se o caminho da montanha estiver intransitável, voe para as Tainted Foothills e cavalgue ao norte.
+04-45到60級.md:1001｜說明｜從永恆山峰往西下山經瑞納拉德，再往南到工坊｜Do Summit of Eternity, desça a montanha a oeste passando por Renalard e depois vá ao sul até a oficina.
+04-45到60級.md:1001｜說明｜山路走不通就飛污化丘陵再往北騎。｜Se o caminho da montanha estiver intransitável, voe para as Tainted Foothills e cavalgue ao norte.
+04-45到60級.md:1005｜說明｜引來的剛蘇羅克是 61 級精英奇美拉。｜O Ghansurok que você atrai é uma quimera elite de nível 61.
+04-45到60級.md:1009｜說明｜從聖壇往東南騎回隱士洞。｜Cavalgue a sudeste do santuário de volta à Caverna do Eremita.
+04-45到60級.md:1013｜說明｜從隱士洞往西騎到污化丘陵飛行點起飛。｜Cavalgue a oeste da Caverna do Eremita e parta do ponto de voo das Tainted Foothills.
+04-45到60級.md:1016｜說明｜任務資料寫在永望鎮北邊的山丘；Method 指南寫是永望鎮東南冰薊山的雪人身上掉，兩處都看看。｜Os dados da missão dizem que fica nas colinas ao norte de Visteterna. O guia do Method diz que cai dos yetis das colinas Cardo de Gelo, a sudeste de Visteterna; verifique os dois lugares.
+04-45到60級.md:1016｜說明｜任務資料寫在永望鎮北邊的山丘｜Os dados da missão dizem que fica nas colinas ao norte de Visteterna.
+04-45到60級.md:1016｜說明｜Method 指南寫是永望鎮東南冰薊山的雪人身上掉，兩處都看看。｜O guia do Method diz que cai dos yetis das colinas Cardo de Gelo, a sudeste de Visteterna; verifique os dois lugares.
+04-45到60級.md:1018｜說明｜郵件帶回海加爾山頂交。｜Leve o correio de volta ao topo do Monte Hyjal para entregar.
+04-45到60級.md:1019｜說明｜會經污化丘陵轉機。｜Você fará conexão nas Tainted Foothills.
+04-45到60級.md:1020｜說明｜Method 指南寫獎勵有 18 格背包。｜O guia do Method diz que a recompensa inclui uma bolsa de 18 espaços.
+04-45到60級.md:1050｜說明｜會經污化丘陵、永望鎮轉機。｜Você fará conexão nas Tainted Foothills e em Visteterna.
+04-45到60級.md:1065｜說明｜剛蘇羅克（61 級精英奇美拉）在凱蕾娜工坊南邊山脊走動。｜Ghansurok (quimera elite de nível 61) anda pela crista ao sul da oficina de Kaylaena.
+04-45到60級.md:1066｜說明｜馬佐苟爾（60 級精英）在戴根廢墟南邊巡邏，打獵犬時繞開。｜Mazzogore (elite de nível 60) patrulha ao sul de Dae'gun; desvie dele ao lutar contra os cães.
+04-45到60級.md:1067｜說明｜維漢‧爪握（60 級精英）守在諾達希爾小屋，做教徒任務別靠太近。｜Ve'han Talongrasp (elite de nível 60) vigia a cabana de Nordrassil; não se aproxime demais durante as missões dos cultistas.
+04-45到60級.md:1058｜說明｜戴根廢墟南半部，順收被遺棄的補給和部落殘骸材料。｜A metade sul de Dae'gun; pegue de passagem os suprimentos abandonados e os materiais dos destroços da Horda.
+04-45到60級.md:1059｜說明｜永恆山峰東側的教徒營地，山頂任務都在這裡打。｜O acampamento dos cultistas a leste do Summit of Eternity; as missões do topo são todas feitas aqui.
+05-副本.md:368｜說明｜從冰風崗往東穿過西瘟疫之地進東瘟疫之地，沿路往北到斯坦索姆。｜Do Acampamento Chillwind, vá a leste atravessando as Terras Pestilentas Ocidentais até as Terras Pestilentas Orientais e siga a estrada ao norte até Stratholme.
+05-副本.md:372｜說明｜出斯坦索姆往東南走到聖光之願禮拜堂。｜Saia de Stratholme e vá ao sudeste até a Capela Esperança da Luz.
+05-副本.md:362｜說明｜骨架待補：找畫和出本回交還沒寫。｜Esqueleto a completar: encontrar o quadro e entregar depois de sair da masmorra ainda não foram escritos.
+05-副本.md:333｜說明｜前置是索瑞森廢墟（3701），04-第59站在鐵爐堡交完再接。｜O pré-requisito é Ruínas de Thaurissan (3701); aceite depois de entregar em Altaforja na parada 59 do capítulo 04.
+05-副本.md:340｜說明｜從摩根的崗哨沿燃燒平原大路往西，走進黑石山。｜De Morgan's Vigil, siga a estrada das Estepes Ardentes a oeste até a Montanha Rocha Negra.
+06-路線外任務.md:399｜說明｜要交 6 份鹿肉料理，路線不練烹飪。｜Exige 6 pratos de cervo, e a rota não treina culinária.
+06-路線外任務.md:400｜說明｜夏拉卡在第58站嘉文關‧葉源附近（31.3, 50.3）就接得到，但任務資料沒有小貓的位置，未排。｜Shalla'kal pode ser aceita na parada 58, perto de Galvinquam Leafsyre (31.3, 50.3), mas os dados da missão não têm a localização dos gatinhos, então não foi incluída.
+06-路線外任務.md:401｜說明｜乾燥草藥的位置未核，樹皮地穴已排其他幾件。｜A localização das ervas secas não foi verificada; a caverna Casca já inclui as outras missões.
+06-路線外任務.md:402｜說明｜池塘位置未核，裝完水要回樹皮地穴交。｜A localização da lagoa não foi verificada; depois de encher a água, volte à caverna Casca para entregar.
+06-路線外任務.md:403｜說明｜洞穴甲蟲的位置未核，樹皮地穴已排其他幾件。｜A localização dos besouros da caverna não foi verificada; a caverna Casca já inclui as outras missões.
+06-路線外任務.md:404｜說明｜聲望任務，做樹皮地穴那幾件自然會升，不必專程。｜Missão de reputação; sobe naturalmente ao fazer as missões da caverna Casca, não precisa de uma viagem especial.
+06-路線外任務.md:406｜說明｜力求平衡（93952）的後續，任務資料沒有目標和地點，未排。｜A continuação de Buscando o Equilíbrio (93952) não tem objetivo nem local nos dados da missão, então não foi incluída.
+06-路線外任務.md:407｜說明｜要去千針石林的大升降梯。｜Seria preciso ir ao Grande Elevador de Mil Agulhas.
+06-路線外任務.md:408｜說明｜要去赤脊山的永靜湖。｜Seria preciso ir ao Lago Everstill, em Montanhas Cristarrubra.
+06-路線外任務.md:409｜說明｜老兵要先做千針石林那段才會出現在哀悼之眠。｜O veterano só aparece em Mourning's Rest depois de fazer primeiro a parte de Mil Agulhas.
+06-路線外任務.md:410｜說明｜鷹身人在艾維娜聖壇一帶，做完要回西邊樹皮地穴交。｜As harpias ficam perto do Shrine of Aviana; ao terminar, volte a oeste, à caverna Casca, para entregar.
+06-路線外任務.md:411｜說明｜要送到艾爾文森林的閃金鎮，任務資料沒有交任務的人，未排進暴風城那趟。｜Precisa ser entregue em Vila Dourada, na Floresta de Elwynn, e os dados da missão não têm NPC de entrega, então não foi incluída na viagem a Ventobravo.
+06-路線外任務.md:412｜說明｜要到海加爾之巔入口再回祥和育所交，折返太遠。｜Seria preciso ir à entrada do Pico Hyjal e voltar a Cradle of Tranquility para entregar; o retorno é longo demais.
+06-路線外任務.md:413｜說明｜前一件風暴凝聚沒排，接不到。｜A missão anterior, Reunião da Tempestade, não está incluída, então não dá para aceitar esta.
+06-路線外任務.md:414｜說明｜任務資料不全，接交地點未核。｜Os dados da missão estão incompletos e os locais de aceitação e entrega não foram verificados.
+06-路線外任務.md:415｜說明｜給任務的人在戴根廢墟東北角，要專程繞過去。｜Quem dá a missão fica no canto nordeste de Dae'gun; seria preciso fazer um desvio especial.
+06-路線外任務.md:416｜說明｜前一件沒排；法師塔位置也未核。｜A missão anterior não está incluída; a localização da torre de magos também não foi verificada.
+06-路線外任務.md:417｜說明｜要進永恆之井，入口位置未核。｜Seria preciso entrar no Poço da Eternidade, e a localização da entrada não foi verificada.
+06-路線外任務.md:418｜說明｜目標是 60 級精英，組隊才打得過。｜O alvo é uma elite de nível 60; só com grupo é possível derrotá-lo.
+06-路線外任務.md:419｜說明｜目標是 60 級精英信使，組隊才打得過。｜O alvo é um mensageiro elite de nível 60; só com grupo é possível derrotá-lo.
+06-路線外任務.md:420｜說明｜要打 61 級精英奇美拉剛蘇羅克，組隊才打得過。｜É preciso enfrentar Ghansurok, uma quimera elite de nível 61; só com grupo é possível derrotá-la.
+06-路線外任務.md:421｜說明｜書架在 60 級精英維漢‧爪握的小屋裡。｜A estante fica na cabana de Ve'han Talongrasp, uma elite de nível 60.
+06-路線外任務.md:422｜說明｜前一件維漢的殞落是精英任務。｜A missão anterior, A Queda de Ve'han, é uma missão elite.
+06-路線外任務.md:425｜說明｜要從永恆山峰回祥和育所交，折返太遠。｜Seria preciso entregar em Cradle of Tranquility, voltando do Summit of Eternity; o retorno é longo demais.
+06-路線外任務.md:718｜說明｜西瘟疫之地・第二次（第59站）經過時，有空再接。｜Terras Pestilentas Ocidentais, segunda visita (parada 59): aceite ao passar, se tiver tempo.
+01-第一段-1到12級.md:54｜說明｜北郡修道院｜Northshire Abbey
+01-第一段-1到12級.md:95｜說明｜閃金鎮｜Vila Dourada
+01-第一段-1到12級.md:245｜說明｜寒脊山谷｜Coldridge Valley
+01-第一段-1到12級.md:288｜說明｜卡拉諾斯｜Kharanos
+01-第一段-1到12級.md:357｜說明｜幽影谷｜Shadowglen
+01-第一段-1到12級.md:423｜說明｜多蘭納爾｜Dolanaar
+01-第一段-1到12級.md:633｜說明｜微風島｜Ilha de Zefras
+04-45到60級.md:688｜說明｜要探索暗語峽谷，下一站進海加爾山時順路完成；回冬泉谷去月光林地前再交。｜Explorar a Garganta do Sussurro Sombrio é concluído no caminho para o Monte Hyjal na próxima parada; entregue antes de voltar a Hibérnia e seguir para Clareira da Lua. Entregue antes de voltar a Hibérnia e seguir para Clareira da Lua.
+04-45到60級.md:688｜說明｜要探索暗語峽谷，下一站進海加爾山時順路完成｜Explorar a Garganta do Sussurro Sombrio é concluído no caminho para o Monte Hyjal na próxima parada; entregue antes de voltar a Hibérnia e seguir para Clareira da Lua.
+04-45到60級.md:688｜說明｜回冬泉谷去月光林地前再交。｜Entregue antes de voltar a Hibérnia e seguir para Clareira da Lua.
+04-45到60級.md:723｜說明｜進海加爾山走峽谷就會完成，不用另外繞；任務日誌顯示完成就算數。｜É concluída ao atravessar o desfiladeiro rumo ao Monte Hyjal; não precisa de desvio extra. Conta assim que o diário de missões a mostrar como concluída.
+04-45到60級.md:723｜說明｜進海加爾山走峽谷就會完成，不用另外繞｜É concluída ao atravessar o desfiladeiro rumo ao Monte Hyjal; não precisa de desvio extra.
+04-45到60級.md:723｜說明｜任務日誌顯示完成就算數。｜Conta assim que o diário de missões a mostrar como concluída.
+04-45到60級.md:741｜說明｜弩砲、投石車、飛行器三種殘骸各算一項，三種都要種到；位置未核，在隱士洞外的山坡找。｜Os destroços da balista, da catapulta e da máquina voadora contam como um objetivo cada, e é preciso plantar nos três; a localização não foi verificada, procure na encosta fora da Caverna do Eremita.
+04-45到60級.md:741｜說明｜弩砲、投石車、飛行器三種殘骸各算一項，三種都要種到｜Os destroços da balista, da catapulta e da máquina voadora contam como um objetivo cada, e é preciso plantar nos três.
+04-45到60級.md:745｜說明｜座標是玩家回報的大致位置｜As coordenadas são a localização aproximada informada pelos jogadores.
+04-45到60級.md:757｜說明｜同一批木槿花也掉樹葉止血的葉片，兩件一起打；送木箱時回工坊交。｜Os mesmos hibiscos também dropam as folhas que estancam sangramento; ataque-os para as duas missões juntas. Entregue na oficina quando levar a caixa.
+04-45到60級.md:757｜說明｜同一批木槿花也掉樹葉止血的葉片，兩件一起打｜Os mesmos hibiscos também dropam as folhas que estancam sangramento; ataque-os para as duas missões juntas.
+04-45到60級.md:757｜說明｜送木箱時回工坊交。｜Entregue na oficina quando levar a caixa.
+04-45到60級.md:766｜說明｜目標裂皮是 56 級精英古樹，有隊伍再做；沒組隊就跳過第 45、85、88 步。｜O alvo, Sunderbark, é um ancião elite de nível 56; faça quando tiver grupo. Se não tiver grupo, pule as etapas 45, 85 e 88.
+04-45到60級.md:766｜說明｜沒組隊就跳過第 45、85、88 步。｜Se não tiver grupo, pule as etapas 45, 85 e 88.
+04-45到60級.md:787｜說明｜會喚出 58 級精英軟泥；沒組隊就跳過第 66–67、69–70、73 步。｜Invoca uma gosma elite de nível 58. Se não tiver grupo, pule as etapas 66–67, 69–70 e 73.
+04-45到60級.md:787｜說明｜沒組隊就跳過第 66–67、69–70、73 步。｜Se não tiver grupo, pule as etapas 66–67, 69–70 e 73.
+04-45到60級.md:813｜說明｜從墜星村沿大路往西南騎到溫泉找多諾瓦。｜Cavalgue a sudoeste pela estrada de Starfall Village até as fontes termais e procure Donova.
+04-45到60級.md:815｜說明｜從溫泉騎回永望鎮飛行點起飛（第49站開過月光林地飛行點）。木喉熊怪聲望已到中立的話，從溫泉往北騎到木喉要塞入口（1452 27.70, 34.50），進洞後走往月光林地的出口比較近；沒開月光林地飛行點的也走這條，到了先開飛行點（1450 48.10, 67.34）；聲望不到中立會被打。德魯伊可以直接用傳送：月光林地，傳到後先去一般飛行點（1450 48.10, 67.34）開點，回程才飛得了。｜Cavalgue de volta das fontes termais ao ponto de voo de Visteterna e voe (o ponto de voo de Clareira da Lua foi aberto na parada 49). Se sua reputação com os Presamatos já for neutra, cavalgue ao norte das fontes termais até a entrada do Domínio dos Presamatos (1452 27.70, 34.50); atravessar a caverna até a saída para Clareira da Lua é mais perto; se não abriu o ponto de voo de Clareira da Lua, siga também por este caminho e abra primeiro o ponto de voo ao chegar (1450 48.10, 67.34); abaixo de neutra, você será atacado. Druidas podem usar Teleportar: Clareira da Lua diretamente; ao chegar, vá ao ponto de voo normal (1450 48.10, 67.34) e abra-o para poder voltar voando. Se não abriu o ponto de voo de Clareira da Lua, siga também por este caminho e abra primeiro o ponto de voo ao chegar (1450 48.10, 67.34). Abaixo de neutra, você será atacado. Druidas podem usar Teleportar: Clareira da Lua diretamente; ao chegar, vá ao ponto de voo normal (1450 48.10, 67.34) e abra-o para poder voltar voando.
+04-45到60級.md:815｜說明｜從溫泉騎回永望鎮飛行點起飛（第49站開過月光林地飛行點）。木喉熊怪聲望已到中立的話，從溫泉往北騎到木喉要塞入口（1452 27.70, 34.50），進洞後走往月光林地的出口比較近；沒開月光林地飛行點的也走這條，到了先開飛行點（1450 48.10, 67.34）｜Cavalgue de volta das fontes termais ao ponto de voo de Visteterna e voe (o ponto de voo de Clareira da Lua foi aberto na parada 49). Se sua reputação com os Presamatos já for neutra, cavalgue ao norte das fontes termais até a entrada do Domínio dos Presamatos (1452 27.70, 34.50); atravessar a caverna até a saída para Clareira da Lua é mais perto; se não abriu o ponto de voo de Clareira da Lua, siga também por este caminho e abra primeiro o ponto de voo ao chegar (1450 48.10, 67.34); abaixo de neutra, você será atacado. Druidas podem usar Teleportar: Clareira da Lua diretamente; ao chegar, vá ao ponto de voo normal (1450 48.10, 67.34) e abra-o para poder voltar voando. Se não abriu o ponto de voo de Clareira da Lua, siga também por este caminho e abra primeiro o ponto de voo ao chegar (1450 48.10, 67.34).
+04-45到60級.md:815｜說明｜從溫泉騎回永望鎮飛行點起飛（第49站開過月光林地飛行點）。木喉熊怪聲望已到中立的話，從溫泉往北騎到木喉要塞入口（1452 27.70, 34.50），進洞後走往月光林地的出口比較近｜Cavalgue de volta das fontes termais ao ponto de voo de Visteterna e voe (o ponto de voo de Clareira da Lua foi aberto na parada 49). Se sua reputação com os Presamatos já for neutra, cavalgue ao norte das fontes termais até a entrada do Domínio dos Presamatos (1452 27.70, 34.50); atravessar a caverna até a saída para Clareira da Lua é mais perto; se não abriu o ponto de voo de Clareira da Lua, siga também por este caminho e abra primeiro o ponto de voo ao chegar (1450 48.10, 67.34); abaixo de neutra, você será atacado. Druidas podem usar Teleportar: Clareira da Lua diretamente; ao chegar, vá ao ponto de voo normal (1450 48.10, 67.34) e abra-o para poder voltar voando.
+04-45到60級.md:815｜說明｜沒開月光林地飛行點的也走這條，到了先開飛行點（1450 48.10, 67.34）；聲望不到中立會被打。德魯伊可以直接用傳送：月光林地，傳到後先去一般飛行點（1450 48.10, 67.34）開點，回程才飛得了。｜Se não abriu o ponto de voo de Clareira da Lua, siga também por este caminho e abra primeiro o ponto de voo ao chegar (1450 48.10, 67.34). Abaixo de neutra, você será atacado. Druidas podem usar Teleportar: Clareira da Lua diretamente; ao chegar, vá ao ponto de voo normal (1450 48.10, 67.34) e abra-o para poder voltar voando.
+04-45到60級.md:815｜說明｜沒開月光林地飛行點的也走這條，到了先開飛行點（1450 48.10, 67.34）｜Se não abriu o ponto de voo de Clareira da Lua, siga também por este caminho e abra primeiro o ponto de voo ao chegar (1450 48.10, 67.34).
+04-45到60級.md:815｜說明｜聲望不到中立會被打。德魯伊可以直接用傳送：月光林地，傳到後先去一般飛行點（1450 48.10, 67.34）開點，回程才飛得了。｜Abaixo de neutra, você será atacado. Druidas podem usar Teleportar: Clareira da Lua diretamente; ao chegar, vá ao ponto de voo normal (1450 48.10, 67.34) e abra-o para poder voltar voando.
+04-45到60級.md:823｜說明｜從月光林地的一般飛行點（1450 48.10, 67.34）起飛，在永望鎮下來接木箱。｜Parta do ponto de voo normal de Clareira da Lua (1450 48.10, 67.34) e desça em Visteterna para pegar a caixa.
+04-45到60級.md:824｜說明｜箱裡的電池約兩小時後失效，下飛行點直接送凱蕾娜。｜As baterias da caixa param de funcionar após cerca de duas horas, então entregue-a direto a Kaylaena a partir do ponto de voo.
+04-45到60級.md:825｜說明｜下飛行點直接往北騎到凱蕾娜的工坊，先送木箱。｜Do ponto de voo cavalgue direto ao norte até a oficina de Kaylaena e entregue primeiro a caixa.
+04-45到60級.md:842｜說明｜下飛行點直接往北騎到工坊，先送木箱。｜Do ponto de voo cavalgue direto ao norte até a oficina e entregue primeiro a caixa.
+04-45到60級.md:848｜說明｜從隱士洞往西北騎到艾維娜聖壇。｜Cavalgue a noroeste da Caverna do Eremita até o Shrine of Aviana.
+04-45到60級.md:879｜說明｜看得到任務才接；身上已有 8 串珠子才交，不夠不用刷。｜Só aceite se conseguir ver a missão. Só entregue se já tiver 8 fios de contas; não precisa farmar mais.
+04-45到60級.md:879｜說明｜看得到任務才接｜Só aceite se conseguir ver a missão.
+04-45到60級.md:879｜說明｜身上已有 8 串珠子才交，不夠不用刷。｜Só entregue se já tiver 8 fios de contas; não precisa farmar mais.
+04-45到60級.md:891｜說明｜看得到任務才接（要樹皮地穴聲望）。｜Só aceite se conseguir ver a missão (exige reputação da caverna Casca).
+04-45到60級.md:892｜說明｜看得到任務才接（要樹皮地穴聲望）；水袋到死木巢穴外的池塘裝。｜Só aceite se conseguir ver a missão (exige reputação da caverna Casca). Encha o odre na lagoa fora do covil Madeira Morta.
+04-45到60級.md:892｜說明｜看得到任務才接（要樹皮地穴聲望）｜Só aceite se conseguir ver a missão (exige reputação da caverna Casca).
+04-45到60級.md:892｜說明｜水袋到死木巢穴外的池塘裝。｜Encha o odre na lagoa fora do covil Madeira Morta.
+04-45到60級.md:894｜說明｜看得到任務才接；樹皮地穴聲望到中立才交得了。｜Só aceite se conseguir ver a missão. Só dá para entregar quando a reputação da caverna Casca chegar a neutra.
+04-45到60級.md:894｜說明｜樹皮地穴聲望到中立才交得了。｜Só dá para entregar quando a reputação da caverna Casca chegar a neutra.
+04-45到60級.md:898｜說明｜池塘位置未核，在死木巢穴外找。｜A localização da lagoa não foi verificada; procure fora do covil Madeira Morta.
+04-45到60級.md:905｜說明｜身上有 8 串珠子才交。｜Só entregue se tiver 8 fios de contas.
+04-45到60級.md:911｜說明｜聲望已到中立才交。｜Só entregue quando a reputação chegar a neutra.
+04-45到60級.md:912｜說明｜看得到任務才接；樹皮地穴聲望到友善才交得了。｜Só aceite se conseguir ver a missão. Só dá para entregar quando a reputação da caverna Casca chegar a amistosa.
+04-45到60級.md:912｜說明｜樹皮地穴聲望到友善才交得了。｜Só dá para entregar quando a reputação da caverna Casca chegar a amistosa.
+04-45到60級.md:913｜說明｜聲望已到友善才交；不夠就先留著。｜Só entregue quando a reputação chegar a amistosa. Se não tiver o suficiente, guarde por enquanto.
+04-45到60級.md:913｜說明｜聲望已到友善才交｜Só entregue quando a reputação chegar a amistosa.
+04-45到60級.md:913｜說明｜不夠就先留著。｜Se não tiver o suficiente, guarde por enquanto.
+04-45到60級.md:929｜說明｜用任務給的空葫蘆在前方瀑布裝水，不是在嘉文關身邊。｜Encha d'água a cabaça vazia que a missão fornece na cachoeira à frente, não ao lado de Galvinquam.
+04-45到60級.md:991｜說明｜點完東南邊那處營火，繼續往東南走到瑞納拉德，先交聰明的生物、接骨灰和狐狸任務，回頭再一次清戴根廢墟。｜Depois de acender a fogueira a sudeste, siga a sudeste até Renalard; entregue primeiro Criatura Esperta, aceite as missões das cinzas e da raposa e limpe Dae'gun mais uma vez na volta.
+04-45到60級.md:995｜說明｜用接任務拿到的狐狸毛（Tuft of Fox Fur）引開惡魔，再撿 8 份被遺棄的補給；補給不在瑞納拉德身邊。｜Use o chumaço de pelo de raposa (Tuft of Fox Fur) que a missão dá para afastar o demônio e depois pegue 8 suprimentos abandonados. Os suprimentos não ficam ao lado de Renalard.
+04-45到60級.md:995｜說明｜用接任務拿到的狐狸毛（Tuft of Fox Fur）引開惡魔，再撿 8 份被遺棄的補給｜Use o chumaço de pelo de raposa (Tuft of Fox Fur) que a missão dá para afastar o demônio e depois pegue 8 suprimentos abandonados.
+04-45到60級.md:995｜說明｜補給不在瑞納拉德身邊。｜Os suprimentos não ficam ao lado de Renalard.
+04-45到60級.md:1001｜說明｜清完戴根廢墟回亞希羅這裡交。｜Depois de limpar Dae'gun, volte aqui a Yashiro para entregar.
+04-45到60級.md:1003｜說明｜跟著亞希羅清路，最後打倒末日守衛 Xarkul（Doomguard Xarkul）才算完成。｜Siga Yashiro enquanto ele abre o caminho; é concluída ao derrotar o Demonarca Xarkul (Doomguard Xarkul) no final.
+04-45到60級.md:1004｜說明｜在事件結束的地方找亞希羅交，不一定回到起點。｜Entregue a Yashiro onde o evento terminar, que não é necessariamente o ponto de partida.
+04-45到60級.md:1006｜說明｜兩個目標都是 60 級精英惡魔；沒組隊就跳過第 22–25、60 步。｜Os dois alvos são demônios elite de nível 60. Se não tiver grupo, pule as etapas 22–25 e 60.
+04-45到60級.md:1006｜說明｜沒組隊就跳過第 22–25、60 步。｜Se não tiver grupo, pule as etapas 22–25 e 60.
+04-45到60級.md:1023｜說明｜在工坊南邊的懸崖找鼓互動，把奇美拉引進旋刃投擲器射程，由 NPC 操作投擲器打，別拉去遠處硬打。｜Interaja com o tambor no penhasco ao sul da oficina e atraia a quimera para o alcance do lançador de rodas de lâminas, para que o NPC o opere; não a puxe para longe para lutar à força.
+04-45到60級.md:1047｜說明｜北、西、南三塊石頭各算一項，三塊都要去。｜As pedras norte, oeste e sul contam como um objetivo cada, e é preciso visitar as três.
+04-45到60級.md:1048｜說明｜同一批教徒也算終結狂熱和扭曲的工具，先用法杖再殺，三件一起做。｜Os mesmos cultistas também contam para Acabar com o Frenesi e Ferramentas Retorcidas; use primeiro o cajado e depois mate-os, e faça as três juntas.
+04-45到60級.md:1059｜說明｜接完先去瑪恩那裡交淨化之風、接阿克蒙德之赦，兩件同一趟去做。｜Depois de aceitar, vá primeiro a Marn Euhorn para entregar Ventos da Purificação e pegar O Perdão de Archimonde (Archimonde's Pardon); faça as duas na mesma viagem.
+04-45到60級.md:1062｜說明｜解放樹根下原本就在的小精靈，不是在空地用道具召出來；和阿克蒙德之赦同一趟做。｜Liberte o fogo-fátuo que já está sob as raízes, em vez de invocá-lo com um item na clareira. Faça na mesma viagem de O Perdão de Archimonde.
+04-45到60級.md:1062｜說明｜解放樹根下原本就在的小精靈，不是在空地用道具召出來｜Liberte o fogo-fátuo que já está sob as raízes, em vez de invocá-lo com um item na clareira.
+04-45到60級.md:1062｜說明｜和阿克蒙德之赦同一趟做。｜Faça na mesma viagem de O Perdão de Archimonde.
+04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石；否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Só use a Pedra de Regresso se ainda estiver vinculada a Aerie Peak e disponível. Caso contrário, use a rota de barco como alternativa: volte pelo portal a Aldeia Rut'theran, voe para Auberdine, pegue o barco para o Porto de Menethil, desembarque em Costa Sul e voe para o Acampamento Chillwind.
+04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石｜Só use a Pedra de Regresso se ainda estiver vinculada a Aerie Peak e disponível.
+04-45到60級.md:1092｜說明｜否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Caso contrário, use a rota de barco como alternativa: volte pelo portal a Aldeia Rut'theran, voe para Auberdine, pegue o barco para o Porto de Menethil, desembarque em Costa Sul e voe para o Acampamento Chillwind.
+04-45到60級.md:1093｜說明｜已到冰風崗就跳過。飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜Pule se já estiver no Acampamento Chillwind. Se o mapa de voo não listar o Acampamento Chillwind, vá ao norte pela estrada da montanha de Aerie Peak até as Terras Pestilentas Ocidentais e depois a oeste até o Acampamento Chillwind.
+04-45到60級.md:1140｜說明｜座標是大致位置；入口和塔旁有血色十字軍守衛，一次只拉一隻。｜As coordenadas são aproximadas. Há guardas da Cruzada Escarlate na entrada e ao lado da torre; puxe um de cada vez.
+04-45到60級.md:1140｜說明｜座標是大致位置｜As coordenadas são aproximadas.
+04-45到60級.md:1140｜說明｜入口和塔旁有血色十字軍守衛，一次只拉一隻。｜Há guardas da Cruzada Escarlate na entrada e ao lado da torre; puxe um de cada vez.
+04-45到60級.md:1152｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 61–63 步，從暴風城直飛摩根的崗哨。｜Só vá a Lakeshire se tiver O Verdadeiro Mestre (4186); senão, pule as etapas 61–63 e voe direto de Ventobravo para Morgan's Vigil.
+04-45到60級.md:1152｜說明｜沒有就跳過第 61–63 步，從暴風城直飛摩根的崗哨。｜Se não tiver, pule as etapas 61–63 e voe direto de Ventobravo para Morgan's Vigil.
+01-第一段-1到12級.md:633｜說明｜爐石或走回坦德爾林地的營地找狂風艾希安（42.76, 23.66）。｜Use a Pedra de Regresso ou volte a pé ao acampamento de Thendal Grove e procure Aetheen das Ventanias (42.76, 23.66).
+01-第一段-1到12級.md:663｜說明｜在申德村旅店綁爐石（43.00, 43.20）。｜Vincule sua Pedra de Regresso na estalagem de Aldeia Sen'jin (43.00, 43.20).
+01-第一段-1到12級.md:710｜說明｜在瓦拉納爾旅店綁爐石（62.20, 72.60）。｜Vincule sua Pedra de Regresso na estalagem de Valanaar (62.20, 72.60).

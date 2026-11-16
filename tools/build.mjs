@@ -65,7 +65,8 @@ const STATION_EN = {
   "血色修道院 墓地": "Scarlet Monastery: Graveyard", "血色修道院 圖書館": "Scarlet Monastery: Library", "血色修道院 軍械庫": "Scarlet Monastery: Armory", "血色修道院 大教堂": "Scarlet Monastery: Cathedral",
   "斯坦索姆 血色區": "Stratholme: Live", "斯坦索姆 亡靈區": "Stratholme: Undead", "厄運之槌 東區": "Dire Maul: East", "厄運之槌 西區": "Dire Maul: West", "厄運之槌 北區": "Dire Maul: North",
 };
-const NODE_EN = { 蕨牆村: "Brackenwall Village", 斯通納德: "Stonard", 卡加斯: "Kargath", 莫沙徹營地: "Camp Mojache", 瑟銀哨塔: "Thorium Point", 惡齒村: "Revantusk Village", 瓦羅莫克: "Valormok",
+const NODE_EN = { 血蹄村: "Bloodhoof Village", 剃刀嶺: "Razor Hill", 布瑞爾: "Brill", 申德村: "Shen'dar Village", 瓦拉納爾: "Valanaar", 閃金鎮: "Goldshire", 多蘭納爾: "Dolanaar", 卡拉諾斯: "Kharanos", 安威瑪: "Anvilmar", 奧達希爾: "Aldrassil", 北郡修道院: "Northshire Abbey",
+  蕨牆村: "Brackenwall Village", 斯通納德: "Stonard", 卡加斯: "Kargath", 莫沙徹營地: "Camp Mojache", 瑟銀哨塔: "Thorium Point", 惡齒村: "Revantusk Village", 瓦羅莫克: "Valormok",
   馬紹爾營地: "Marshal's Refuge", 烈焰峰: "Flame Crest", 聖光之願禮拜堂: "Light's Hope Chapel", 血毒崗哨: "Bloodvenom Post", 永望鎮: "Everlook", 月光林地: "Moonglade", 塞納里奧城堡: "Cenarion Hold",
   十字路口: "The Crossroads", 奧格瑪: "Orgrimmar", 雷霆崖: "Thunder Bluff", 塔倫米爾: "Tarren Mill", 烈日石居: "Sun Rock Retreat", 葬影村: "Shadowprey Village",
   加基森: "Gadgetzan", 羅格瑪: "Rog'mar", 遠境堡: "Farholde Keep", 污化丘陵: "Tainted Foothills", 永恆山峰: "Summit of Eternity",
@@ -723,8 +724,18 @@ for (const st of stations) {
     backAdded.push(`- ${s.where}：回到 ${s.coord.map} ${s.coord.x}, ${s.coord.y}（${next.where}）`);
     return true;
   });
-  // 爐石回 X：非中文介面沒有地名，用下一個有座標步驟的地圖名
-  st.steps.forEach((s, i) => { if (s.t === "hearth") s.hm = st.steps.slice(i + 1).find((x) => x.coord)?.coord.map; });
+}
+// 爐石回 X／綁爐石（沒座標）：非中文介面翻不到地名時的地圖名（hm）。爐石回：前面最近綁在 X 的綁爐石步驟的地圖＞X 的地圖＞前面最近一次綁爐石的地圖；
+// 不用下一步的地圖（站尾的爐石常接到別區的下一站）
+const binds = [];
+for (const st of stations) {
+  const stMap = st.map || ZONE_MAP[st.name.split(/[・·\s]/)[0]];
+  for (const s of st.steps) {
+    const race = s.when?.race || st.when?.race; // 起點路線各族分開：別族的綁爐石不算
+    if (s.t === "bind") { binds.unshift({ bind: s.bind, map: s.coord?.map || stMap, race }); if (!s.coord) s.hm = PLACE.get(s.bind) || stMap; }
+    const mine = binds.filter((b) => !race || !b.race || b.race.some((r) => race.includes(r)));
+    if (s.t === "hearth") s.hm = (s.bind && mine.find((b) => b.bind && (b.bind.includes(s.bind) || s.bind.includes(b.bind))))?.map || PLACE.get(s.bind) || mine[0]?.map || stMap;
+  }
 }
 
 // 前置（全部要做）裡互斥的任務（A 的 ex 有 B）：只能做其中一個 → 改成「任一個」（ps）
@@ -843,9 +854,45 @@ const replaceStations = (text) => text
   .replace(/(\d{2})\s*-\s*第(\d+)站/g, (all, p, n) => stationName(p + "-" + n) || all)
   .replace(/第(\d+)\s*[–\-~－到或]\s*第?(\d+)站/g, (all, a, b) => { const x = stationName(refPrefix + "-" + a), y = stationName(refPrefix + "-" + b); return x && y ? x + "或" + y : all; })
   .replace(/第(\d+)站/g, (all, n) => stationName(refPrefix + "-" + n) || all);
-const replaceIds = (text) => replaceStations(text).replace(/(?<![\d.\w])(\d{3,6})(?![\d.,]|\s*[個隻只根張份塊件頭名條把顆片枚級%]|\s+\d+[.,]\d)/g, (all, num, at, whole) => {
+// 「第 N 步」：遊戲內的步驟編號是相對的（依角色過濾、職業段落插入），換成被指的那步的短標題（同站、同段落的 md 編號）；範圍寫「從『A』到『B』」。
+// 有一步找不到或沒有標題、前面緊接地名（指別站的第 N 步）、翻譯的編號和中文對不上（翻譯舊了）就整段不換
+let refSteps = [];
+const REF_SEP = String.raw`[,，、&]|oder|или|and|und|or|ou|et|и|및|와|과|和|與|及|y|e|o`, REF_DASH = String.raw`[–\-~～至到]`;
+const REF_LIST = String.raw`\d+(?:\s*(?:${REF_SEP}|${REF_DASH})\s*\d+)*`;
+const REF_RE = {
+  zh: new RegExp(String.raw`第\s*(${REF_LIST})\s*步`, "g"),
+  ko: new RegExp(String.raw`(${REF_LIST})\s*단계`, "g"),
+  latin: new RegExp(String.raw`(?<!\p{L})(steps?|Schritte?n?|étapes?|pasos?|etapas?|passos?|шаг\p{L}*)\s+(${REF_LIST})`, "giu"),
+};
+const refItems = (list) => list.split(new RegExp(String.raw`\s*(?:${REF_SEP})\s*`)).map((p) => p.split(new RegExp(String.raw`\s*${REF_DASH}\s*`)).map(Number));
+const refNums = (text, kind) => [...text.matchAll(REF_RE[kind])].filter((m) => kind !== "zh" || ![...PLACE.keys()].some((n) => text.slice(0, m.index).endsWith(n)))
+  .flatMap((m) => refItems(m[kind === "latin" ? 2 : 1]).flat()).sort((a, b) => a - b).join();
+const stepRefs = (text, title, kind, zhSrc) => {
+  if (!text || !refSteps.length || (zhSrc !== undefined && refNums(zhSrc, "zh") !== refNums(text, kind))) return text;
+  return text.replace(REF_RE[kind], (...a) => {
+    const at = a.at(-2), [word, list] = kind === "latin" ? [a[1], a[2]] : [undefined, a[1]];
+    if (kind === "zh" && [...PLACE.keys()].some((n) => text.slice(0, at).endsWith(n))) return a[0];
+    const items = refItems(list).map((r) => r.map((n) => { const s = refSteps.find((x) => x.no === n); return s && title(s); }));
+    if (items.flat().some((x) => !x)) return a[0];
+    const q = kind === "zh" ? (x) => "『" + x + "』" : (x) => "“" + x + "”";
+    const joined = items.map((r) => (r.length > 1 ? (kind === "zh" ? `從${q(r[0])}到${q(r.at(-1))}` : `${q(r[0])}–${q(r.at(-1))}`) : q(r[0]))).join(kind === "zh" ? "、" : ", ");
+    return kind === "zh" ? joined : kind === "ko" ? joined + " 단계" : word + " " + joined;
+  });
+};
+const ZH_VERB = { accept: "接 ", do: "做 ", turnin: "交 ", fp: "開鳥點：", hearth: "爐石回 ", bind: "綁爐石", fly: "飛往 ", boat: "搭船往 ", buy: "買 " };
+const zhTitle = (s) => {
+  const q = s.zh || (s.id && db.quest(s.id) && questName(db.quest(s.id)));
+  if (["accept", "do", "turnin"].includes(s.t)) return q && ZH_VERB[s.t] + q;
+  if (s.t === "level") return `練到 ${s.lv} 級`;
+  if (s.t === "bind") return ZH_VERB.bind + (s.bind ? "：" + s.bind : "");
+  if (ZH_VERB[s.t]) return ZH_VERB[s.t] + (s.node || s.bind || s.to || s.text || "");
+  return (s.text || "").replace(/【[^】]*】/g, "").split(/[，。；（(]/)[0].trim().slice(0, 16) || undefined; // 交通、到、註：第一句
+};
+const replaceIds = (text) => replaceStations(stepRefs(text, zhTitle, "zh")).replace(/(?<![\d.\w])(\d{3,6})(?![\d.,]|\s*[個隻只根張份塊件頭名條把顆片枚級%]|\s+\d+[.,]\d)/g, (all, num, at, whole) => {
   const id = +num;
   if (MAP_IDS.has(id)) return all;
+  // 沒換掉的「第 N 步」「第 N–M、K 步」裡的數字是步驟編號，不是任務 ID
+  if (/第[\s\d、，,–\-~～至到和與及]*$/.test(whole.slice(0, at)) && /^[\s\d、，,–\-~～至到和與及]*步/.test(whole.slice(at + num.length))) return all;
   const q = db.quest(id);
   if (!q) return all;
   const name = questName(q);
@@ -885,6 +932,7 @@ let out = GUARD + `-- 由 tools/build.mjs 產生，勿手改。來源：${ALLY ?
 for (const s of stations) {
   idFile = s.file;
   refPrefix = s.dungeon ? s.after.split("-")[0] : s.id.split("-")[0];
+  refSteps = s.steps.filter((x) => !x.cls); // 站的提醒：指主線的 md 編號
   // 起點路線：從 1 級開始的種族限定站，和接在後面、種族相同的站（01-9 這種多族共用的 9 級站不是起點，照 when 過濾）
   const raceKey = s.when?.race?.join("/");
   const start = raceKey && s.lv[0] <= 12 && stations.some((x) => x.lv[0] === 1 && x.when?.race?.join("/") === raceKey) ? raceKey : undefined;
@@ -898,9 +946,10 @@ for (const s of stations) {
     if (parts.length > 1) short = short.slice(0, sp + 1) + parts[0] + "等";
   }
   out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, short=${lua(short !== full ? short : undefined)}, visit=${lua(visit > 1 ? visit : undefined)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, grind=${lua(s.grind && s.grind.length ? s.grind.map((g) => ({ mob: g.mob, lv: g.lv, map: g.map, x: g.x, y: g.y, note: g.note })) : undefined)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)}, supply=${lua(s.supply)}, danger=${lua(s.danger)},\n      steps = {\n`;
-  for (const step of s.steps) if (step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id) out += `        ${lua(stepOut(step, s))},\n`;
+  for (const step of s.steps) if (step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id) { refSteps = s.steps.filter((x) => x.cls === step.cls); out += `        ${lua(stepOut(step, s))},\n`; }
   out += `      } },\n`;
 }
+refSteps = [];
 idFile = "任務表";
 // ── 06 路線外任務：任務ID｜任務名｜等級｜區域｜判定｜理由 ──
 const VERDICT = new Set(["值得做", "之後順路", "可放掉"]);
@@ -921,7 +970,7 @@ for (const file of files.filter((f) => /^06-/.test(f))) {
 const feeds = new Map();
 for (const [id, q] of quests) for (const p of [...(q.pg || []), ...(q.ps || [])]) if (!quests.has(p) && !feeds.has(p)) feeds.set(p, id);
 // ── 07 訓練師：職業｜等級｜地點｜NPC｜座標｜順路時機 ──
-// 只讀「建議回訪等級」那一節（其他節是主城訓練師一覽、專項、武器技能，當參考）；等級欄「4、6」＝每個等級各一筆提醒，範圍「10–12」取第一個數字
+// 只讀「建議回訪等級」那一節（其他節是主城訓練師一覽、專項、武器技能，當參考）；等級欄「4、6」＝每個等級各一筆（對到同一站的再合併成最低等級那筆，見下方），範圍「10–12」取第一個數字
 const trainers = [];
 for (const file of files.filter((f) => /^07-/.test(f))) {
   let inStops = false;
@@ -959,6 +1008,16 @@ for (const file of files.filter((f) => /^07-/.test(f))) {
     }
   });
 }
+// 同職業、同 NPC、同一個（第一候選）站只留一筆、取最低等級：「24、26」這種一列多等級通常對到同一站，展開會在同站插兩個一樣的「去學技能」
+const trainerDup = [];
+for (let i = trainers.length - 1; i >= 0; i--) {
+  const t = trainers[i], j = trainers.findIndex((o) => o !== t && o.c === t.c && o.npc === t.npc && o.st[0] === t.st[0]);
+  if (j < 0) continue;
+  const keep = trainers[j].lv <= t.lv ? trainers[j] : t;
+  trainerDup.push(`${t.c} ${t.npc} ${t.st[0]}：${trainers[j].lv}／${t.lv} → ${keep.lv}`);
+  trainers.splice(keep === t ? j : i, 1);
+}
+if (trainerDup.length) console.log("訓練師同站合併：" + trainerDup.join("、"));
 // ── 08 保留物品：物品名｜物品ID｜何時拿到｜何時用到（用到的任務 ID 寫在文字裡就會在任務交掉後不再提示） ──
 const keep = new Map();
 const keepAt = new Map(); // 物品 ID → 出處（英文用途用）
@@ -1078,7 +1137,15 @@ const newCov = () => JSON.parse(JSON.stringify(cov));
 // Route_<locale>.lua 一份：X 給這個語系的換字函式（英文全是原樣）
 // T 說明文字、N 名稱（選取目標要和遊戲內一字不差）、F 固定字、station 站名、node 鳥點、qn 任務名、qd 任務目標文字、item 物品名
 const emitRoute = (X) => {
-  const { loc, T, N, F, cov, left, leftAt, missNpc } = X;
+  const { loc, N, F, cov, left, leftAt, missNpc } = X;
+  // 說明文字裡的「第 N 步」換成被指那步的名字（stepRefs）：英文帶動詞，其他語系只用任務／地點名
+  const EN_VERB = { accept: "Accept ", do: "Do ", turnin: "Turn in ", fp: "Flight path: ", hearth: "Hearth to ", bind: "Set hearth: " };
+  const title = (s) => {
+    const name = s.id && ["accept", "do", "turnin"].includes(s.t) ? X.qName(s.id, quests.get(s.id)?.en || {}) : s.t === "fp" ? X.node(s).node : (s.t === "hearth" || s.t === "bind") && s.bind ? X.node({ ...s, node: s.bind }).node : undefined;
+    return name && (loc === "enUS" ? EN_VERB[s.t] : "") + name;
+  };
+  const kind = loc === "zhCN" ? "zh" : loc === "koKR" ? "ko" : "latin";
+  const T = (where, zh) => stepRefs(X.T(where, zh), title, kind, zh);
   let en = GUARD + `-- 由 tools/build.mjs 產生，勿手改。${LUA_PREFIX}.lua 的${X.title}名稱與說明（站 ID→步驟序號、任務 ID）\n-- 包成函式：只有介面、客戶端用到的語系才建表（Engine.lua E.Localize），其餘載入後就丟掉\nlocal _, MG = ...\nMG.RouteL = MG.RouteL or {}\nMG.RouteL.${loc} = function() return {\n  stations = {\n`;
   for (const s of stations) {
     cov.stations++;
@@ -1090,6 +1157,7 @@ const emitRoute = (X) => {
     for (const step of s.steps) {
       if (!(step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id)) continue;
       k++;
+      refSteps = s.steps.filter((x) => x.cls === step.cls);
       cov.steps++;
       const e = {};
       const q = step.id && quests.get(step.id);
@@ -1112,6 +1180,8 @@ const emitRoute = (X) => {
       }
       if (step.t === "buy") { e.text = cleanName(db.l10nName("Item", step.item, loc) || db.itemEn(step.item) || "") || undefined; e.npc = N(npcEn(step.npc)); }
       if (step.t === "fp") Object.assign(e, X.node(step));
+      // 爐石地點（標題用）：其他語系拿到的只是英文名就不放，標題改用 hm 的地圖名（遊戲語言）
+      if ((step.t === "hearth" || step.t === "bind") && step.bind) { const b = X.node({ ...step, node: step.bind }); e.bind = loc === "enUS" || b.node !== NODE_EN[step.bind] ? b.node : undefined; e.bindA = b.nodeA; }
       if (step.tag) {
         // 標籤：固定對照（TAG_EN）＞翻譯檔；「目標：…」「提醒：…」翻內容
         const parts = step.tag.split(/\s*・\s*/).map((t) => t.trim()).filter(Boolean).map((t) => {
@@ -1161,6 +1231,7 @@ const emitRoute = (X) => {
     cov.zhOnly.grindNote += (s.grind || []).filter((g) => g.note).length;
     cov.zhOnly.danger += (s.danger || []).length;
     // 站的提醒／交通／取捨／說明／動線（k 是判斷用，保持中文）；翻不到的整條不放
+    refSteps = s.steps.filter((x) => !x.cls);
     const tips = s.tips.map((t) => {
       const text = T(t.where, t.raw) || (t.src && T(t.where, t.src));
       if (!text) { left.tips++; return undefined; }
@@ -1177,6 +1248,7 @@ const emitRoute = (X) => {
     const supply = {}; (s.supply || []).forEach((x, i) => { supply[i + 1] = { npc: x.npc && N(npcEn(x.npc)) }; });
     en += `    [${JSON.stringify(s.id)}] = ${plain({ name, nameA: nm.nameA, short: nm.short, shortA: nm.shortA, entrance, pickup, pickupS: pickup && enSents(s.pickupRaw, pickup, false, X.split), tips, danger, grind, supply, steps })},\n`;
   }
+  refSteps = [];
   en += `  },\n  quests = {\n`;
   for (const [id, q] of [...quests.entries()].sort((a, b) => a[0] - b[0])) {
     cov.quests++;
