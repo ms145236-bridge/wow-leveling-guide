@@ -15,7 +15,6 @@ MG.Locales.ptBR = {
   ["無"] = "nenhum",
 
   -- step verbs
-  ["學"] = "Treinar",
   ["接"] = "Aceitar",
   ["做"] = "Fazer",
   ["順"] = "Caminho",
@@ -49,7 +48,6 @@ MG.Locales.ptBR = {
   ["搭船／飛艇往 "] = "Barco/zepelim para ",
   ["練到 %s 級"] = "Farme até o nível %s",
   ["到 %s 級"] = "até o nível %s",
-  ["去學技能："] = "Treinar: ",
   ["前往下一站："] = "Próxima parada: ",
   ["%s入口"] = "Entrada: %s",
   ["目標"] = "Objetivo",
@@ -134,7 +132,6 @@ MG.Locales.ptBR = {
   ["原本"] = "Original",
   ["順路"] = "No caminho",
   ["飛行點"] = "Ponto de voo",
-  ["學技能"] = "Treinar",
 
   -- tooltips
   ["%d 級可接"] = "Disponível no nível %d",
@@ -260,7 +257,6 @@ MG.Locales.ptBR = {
   ["步驟提示框相對步驟列和清單的偏移。"] = "Desloca as dicas das etapas em relação à barra de etapas e à lista.",
   ["步驟提示框最後加上這步的補充說明。"] = "Adiciona as notas da etapa ao fim da dica dela.",
   ["小地圖標出從目前這步起的幾個位置；0 不標。"] = "Quantos locais, a partir da etapa atual, são marcados no minimapa. 0 não marca nenhum.",
-  ["到了職業訓練師有新技能的等級時，在路線中插入「去學技能」步驟。"] = "Adiciona uma etapa para visitar o treinador de classe nos níveis com novas habilidades.",
   ["走近容易拉到一堆怪的地點時，在步驟列下方提醒怎麼應對。"] = "Perto de locais onde é fácil puxar inimigos demais, uma dica sob a barra de etapas explica como lidar.",
   ["附近有比目前步驟近很多、現在就能接、做或交的任務時，提醒你順路處理。"] = "Sugere uma missão que você pode aceitar, fazer ou entregar agora quando ela está bem mais perto que a etapa atual.",
   ["等級到了副本建議等級時，提示可以去哪個副本，以及前置還差多少。"] = "Ao atingir o nível sugerido de uma masmorra, indica qual fazer e quantos pré-requisitos faltam.",
@@ -369,7 +365,7 @@ MG.Locales.ptBR = {
   ["UnitRace 第 3 回傳 raceID, 起點"] = "UnitRace 3º retorno raceID, início",
   ["適用的站數 / 路線總站數"] = "paradas para este personagem / total",
   ["任務經驗 實得/路線（中位數, 筆數，只診斷）, 已知經驗增益"] = "EXP de missão real/rota (mediana, contagem), bônus de EXP",
-  ["路線外判定 / 本職業學技能步驟"] = "veredictos fora da rota / etapas de treino da classe",
+  ["路線外判定"] = "veredictos fora da rota",
   ["目前站, 地圖, 進度"] = "parada atual, mapa, progresso",
   ["目前步驟, 自動位置, 漏掉"] = "etapa atual, posição automática, perdidas",
   ["地圖標點 世界地圖, 小地圖, HBD-Pins"] = "marcadores no mapa-múndi, minimapa, HBD-Pins",

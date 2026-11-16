@@ -384,7 +384,7 @@ local EVENTS = {
   "UNIT_QUEST_LOG_CHANGED", "PLAYER_LEVEL_UP", "ZONE_CHANGED_NEW_AREA", "PLAYER_CONTROL_GAINED", "PLAYER_CONTROL_LOST", "HEARTHSTONE_BOUND",
   "UNIT_SPELLCAST_SUCCEEDED", "ZONE_CHANGED", "ZONE_CHANGED_INDOORS",
   "TAXIMAP_OPENED", "QUEST_DETAIL", "QUEST_PROGRESS", "QUEST_COMPLETE", "GOSSIP_SHOW", "QUEST_GREETING",
-  "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "TRAINER_SHOW", "UPDATE_INVENTORY_DURABILITY",
+  "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "UPDATE_INVENTORY_DURABILITY",
 }
 for _, e in ipairs(EVENTS) do
   if (e == "UNIT_QUEST_LOG_CHANGED" or e == "UNIT_SPELLCAST_SUCCEEDED") and f.RegisterUnitEvent then registered[e] = pcall(f.RegisterUnitEvent, f, e, "player")
@@ -480,8 +480,6 @@ local function onEvent(_, event, ...)
     end
     if inn then MG.db.boundK, MG.db.boundRaw = inn.bindK or inn.bind, false -- boundRaw＝false：下次重算記下這次的綁點文字
     elseif x then MG.db.boundK, MG.db.boundRaw = nil, nil end
-  elseif event == "TRAINER_SHOW" then
-    E.Trained(lastState)
   elseif event == "PLAYER_LEVEL_UP" then
     MG.db.sugHide = nil
     wipe(MG.db.notNow)
@@ -527,9 +525,10 @@ local function onEvent(_, event, ...)
       for _, st in ipairs(E.stations) do
         for _, step in ipairs(st.list) do
           local s = step.s
-          if s.t == "fp" and s.x and not MG.db.latch[step.key] and isKnown(s.map, s.x, s.y, s.node) then
+          if s.t == "fp" and s.x and isKnown(s.map, s.x, s.y, s.node) then
             MG.db.latch[step.key] = true
             if s.node then MG.db.fpNodes[s.node] = true end
+            if s.nodeK then MG.db.fpNodes[s.nodeK] = true end -- 中文名：路線的「已開／未開鳥點」條件用
             for _, st2 in ipairs(E.stations) do -- 這個鳥點旁邊的飛行管理員
               for _, sp in ipairs(st2.supply or {}) do
                 if sp.k == "飛行管理員" and sp.map == s.map and sp.x and (sp.x - s.x) ^ 2 + (sp.y - s.y) ^ 2 <= 9 then MG.db.fpSeen[sp.npcG or sp.npc] = true end
@@ -662,7 +661,7 @@ local function probe()
   out[#out + 1] = L["  身上的增益："] .. (#auras > 0 and table.concat(auras, " | ") or L["無"])
   local off = 0
   for _ in pairs(R.offroute or {}) do off = off + 1 end
-  add("路線外判定 / 本職業學技能步驟", off, #E.trainSteps)
+  add("路線外判定", off)
   local st = lastState and lastState.st
   if st then
     local s = lastState.cur and lastState.steps[lastState.cur]

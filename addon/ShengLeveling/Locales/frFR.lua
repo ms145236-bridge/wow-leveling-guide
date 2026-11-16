@@ -15,7 +15,6 @@ MG.Locales.frFR = {
   ["無"] = "aucun",
 
   -- step verbs
-  ["學"] = "Maître",
   ["接"] = "Prendre",
   ["做"] = "Faire",
   ["順"] = "Chemin",
@@ -49,7 +48,6 @@ MG.Locales.frFR = {
   ["搭船／飛艇往 "] = "Bateau/zeppelin vers ",
   ["練到 %s 級"] = "Farmer jusqu'au niveau %s",
   ["到 %s 級"] = "jusqu'au niveau %s",
-  ["去學技能："] = "Entraînement : ",
   ["前往下一站："] = "Prochain arrêt : ",
   ["%s入口"] = "Entrée : %s",
   ["目標"] = "Objectif",
@@ -134,7 +132,6 @@ MG.Locales.frFR = {
   ["原本"] = "Étape d'origine",
   ["順路"] = "En chemin",
   ["飛行點"] = "Point de vol",
-  ["學技能"] = "Entraînement",
 
   -- tooltips
   ["%d 級可接"] = "Disponible au niveau %d",
@@ -260,7 +257,6 @@ MG.Locales.frFR = {
   ["步驟提示框相對步驟列和清單的偏移。"] = "Décale les infobulles d'étape par rapport à la barre d'étapes et à la liste.",
   ["步驟提示框最後加上這步的補充說明。"] = "Ajoute les notes de l'étape à la fin de son infobulle.",
   ["小地圖標出從目前這步起的幾個位置；0 不標。"] = "Nombre d'emplacements repérés sur la minicarte à partir de l'étape actuelle. 0 n'en affiche aucun.",
-  ["到了職業訓練師有新技能的等級時，在路線中插入「去學技能」步驟。"] = "Ajoute une étape chez le maître de classe aux niveaux où de nouvelles techniques sont disponibles.",
   ["走近容易拉到一堆怪的地點時，在步驟列下方提醒怎麼應對。"] = "Près des endroits où l'on attire facilement trop de monstres, un conseil s'affiche sous la barre d'étapes.",
   ["附近有比目前步驟近很多、現在就能接、做或交的任務時，提醒你順路處理。"] = "Propose une quête à accepter, faire ou rendre tout de suite quand elle est bien plus proche que l'étape actuelle.",
   ["等級到了副本建議等級時，提示可以去哪個副本，以及前置還差多少。"] = "Quand tu atteins le niveau conseillé d'un donjon, indique lequel faire et les prérequis restants.",
@@ -369,7 +365,7 @@ MG.Locales.frFR = {
   ["UnitRace 第 3 回傳 raceID, 起點"] = "UnitRace 3e retour raceID, départ",
   ["適用的站數 / 路線總站數"] = "arrêts pour ce personnage / total",
   ["任務經驗 實得/路線（中位數, 筆數，只診斷）, 已知經驗增益"] = "XP de quête réelle/itinéraire (médiane, nombre, diagnostic seulement), bonus d'XP connu",
-  ["路線外判定 / 本職業學技能步驟"] = "verdicts hors itinéraire / étapes d'entraînement de la classe",
+  ["路線外判定"] = "verdicts hors itinéraire",
   ["目前站, 地圖, 進度"] = "arrêt actuel, carte, progression",
   ["目前步驟, 自動位置, 漏掉"] = "étape actuelle, position automatique, manquées",
   ["地圖標點 世界地圖, 小地圖, HBD-Pins"] = "repères de carte : carte du monde, minicarte, HBD-Pins",

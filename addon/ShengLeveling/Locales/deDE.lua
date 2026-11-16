@@ -15,7 +15,6 @@ MG.Locales.deDE = {
   ["無"] = "keine",
 
   -- step verbs
-  ["學"] = "Lernen",
   ["接"] = "Annehmen",
   ["做"] = "Machen",
   ["順"] = "Unterw.",
@@ -49,7 +48,6 @@ MG.Locales.deDE = {
   ["搭船／飛艇往 "] = "Schiff/Zeppelin nach ",
   ["練到 %s 級"] = "Bis Stufe %s grinden",
   ["到 %s 級"] = "bis Stufe %s",
-  ["去學技能："] = "Zum Lehrer: ",
   ["前往下一站："] = "Nächster Halt: ",
   ["%s入口"] = "%s (Eingang)",
   ["目標"] = "Ziel",
@@ -134,7 +132,6 @@ MG.Locales.deDE = {
   ["原本"] = "Ursprünglich",
   ["順路"] = "Unterwegs",
   ["飛行點"] = "Flugpunkt",
-  ["學技能"] = "Lehrer",
 
   -- tooltips
   ["%d 級可接"] = "Annehmbar ab Stufe %d",
@@ -260,7 +257,6 @@ MG.Locales.deDE = {
   ["步驟提示框相對步驟列和清單的偏移。"] = "Verschiebt die Schritt-Tooltips gegenüber Schrittleiste und Liste.",
   ["步驟提示框最後加上這步的補充說明。"] = "Fügt am Ende der Schritt-Tooltips die zusätzlichen Hinweise zum Schritt hinzu.",
   ["小地圖標出從目前這步起的幾個位置；0 不標。"] = "So viele Orte ab dem aktuellen Schritt werden auf der Minikarte markiert. 0 zeigt keine.",
-  ["到了職業訓練師有新技能的等級時，在路線中插入「去學技能」步驟。"] = "Fügt auf Stufen mit neuen Fertigkeiten einen Schritt zum Klassenlehrer ein.",
   ["走近容易拉到一堆怪的地點時，在步驟列下方提醒怎麼應對。"] = "In der Nähe von Stellen, an denen man leicht zu viele Gegner zieht, erscheint unter der Schrittleiste ein Tipp dazu.",
   ["附近有比目前步驟近很多、現在就能接、做或交的任務時，提醒你順路處理。"] = "Schlägt eine Quest vor, die du jetzt annehmen, erledigen oder abgeben kannst, wenn sie viel näher ist als der aktuelle Schritt.",
   ["等級到了副本建議等級時，提示可以去哪個副本，以及前置還差多少。"] = "Sobald du die Stufe eines Dungeons erreichst, wird er vorgeschlagen, samt offener Vorquests.",
@@ -369,7 +365,7 @@ MG.Locales.deDE = {
   ["UnitRace 第 3 回傳 raceID, 起點"] = "UnitRace 3. Rückgabewert raceID, Startgebiet",
   ["適用的站數 / 路線總站數"] = "Halte für diesen Charakter / gesamt",
   ["任務經驗 實得/路線（中位數, 筆數，只診斷）, 已知經驗增益"] = "Quest-EP erhalten/Route (Median, Anzahl), EP-Buff",
-  ["路線外判定 / 本職業學技能步驟"] = "Abseits-der-Route-Urteile / Klassenlehrer-Schritte",
+  ["路線外判定"] = "Abseits-der-Route-Urteile",
   ["目前站, 地圖, 進度"] = "aktueller Halt, Karte, Fortschritt",
   ["目前步驟, 自動位置, 漏掉"] = "aktueller Schritt, automatische Position, verpasst",
   ["地圖標點 世界地圖, 小地圖, HBD-Pins"] = "Kartenmarkierungen Weltkarte, Minikarte, HBD-Pins",

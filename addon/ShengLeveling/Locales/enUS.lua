@@ -15,7 +15,6 @@ MG.Locales.enUS = {
   ["無"] = "none",
 
   -- step verbs
-  ["學"] = "Train",
   ["接"] = "Accept",
   ["做"] = "Do",
   ["順"] = "Roam",
@@ -49,7 +48,6 @@ MG.Locales.enUS = {
   ["搭船／飛艇往 "] = "Boat/zeppelin to ",
   ["練到 %s 級"] = "Level to %s",
   ["到 %s 級"] = "to %s",
-  ["去學技能："] = "Train: ",
   ["前往下一站："] = "Next stop: ",
   ["%s入口"] = "%s entrance",
   ["目標"] = "Objective",
@@ -134,7 +132,6 @@ MG.Locales.enUS = {
   ["原本"] = "Original",
   ["順路"] = "On the way",
   ["飛行點"] = "Flight point",
-  ["學技能"] = "Train",
 
   -- tooltips
   ["%d 級可接"] = "Accept at lv %d",
@@ -260,7 +257,6 @@ MG.Locales.enUS = {
   ["步驟提示框相對步驟列和清單的偏移。"] = "Moves step tooltips away from the step bar and list.",
   ["步驟提示框最後加上這步的補充說明。"] = "Adds the step's extra notes at the end of step tooltips.",
   ["小地圖標出從目前這步起的幾個位置；0 不標。"] = "How many locations, starting from the current step, are pinned on the minimap. 0 shows none.",
-  ["到了職業訓練師有新技能的等級時，在路線中插入「去學技能」步驟。"] = "Adds a step to visit your class trainer at levels with new skills.",
   ["走近容易拉到一堆怪的地點時，在步驟列下方提醒怎麼應對。"] = "Near spots where it's easy to pull too many mobs, a tip under the step bar says how to handle it.",
   ["附近有比目前步驟近很多、現在就能接、做或交的任務時，提醒你順路處理。"] = "Suggests a quest you can accept, do or turn in right now when it's much closer than the current step.",
   ["等級到了副本建議等級時，提示可以去哪個副本，以及前置還差多少。"] = "When you reach a dungeon's level, suggests which dungeon to run and how many prerequisites are left.",
@@ -369,7 +365,7 @@ MG.Locales.enUS = {
   ["UnitRace 第 3 回傳 raceID, 起點"] = "UnitRace 3rd return raceID, start",
   ["適用的站數 / 路線總站數"] = "stops for this character / total",
   ["任務經驗 實得/路線（中位數, 筆數，只診斷）, 已知經驗增益"] = "quest XP actual/route (median, count), XP buff",
-  ["路線外判定 / 本職業學技能步驟"] = "off-route verdicts / class training steps",
+  ["路線外判定"] = "off-route verdicts",
   ["目前站, 地圖, 進度"] = "current stop, map, progress",
   ["目前步驟, 自動位置, 漏掉"] = "current step, auto position, missed",
   ["地圖標點 世界地圖, 小地圖, HBD-Pins"] = "map pins world, minimap, HBD-Pins",

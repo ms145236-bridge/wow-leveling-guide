@@ -15,7 +15,6 @@ MG.Locales.esES = {
   ["無"] = "ninguno",
 
   -- step verbs
-  ["學"] = "Aprender",
   ["接"] = "Aceptar",
   ["做"] = "Hacer",
   ["順"] = "De paso",
@@ -49,7 +48,6 @@ MG.Locales.esES = {
   ["搭船／飛艇往 "] = "Barco/zepelín a ",
   ["練到 %s 級"] = "Farmear hasta el nivel %s",
   ["到 %s 級"] = "hasta el nivel %s",
-  ["去學技能："] = "Aprender habilidades: ",
   ["前往下一站："] = "Próxima parada: ",
   ["%s入口"] = "Entrada de %s",
   ["目標"] = "Objetivo",
@@ -134,7 +132,6 @@ MG.Locales.esES = {
   ["原本"] = "Original",
   ["順路"] = "De camino",
   ["飛行點"] = "Punto de vuelo",
-  ["學技能"] = "Aprender",
 
   -- tooltips
   ["%d 級可接"] = "Se acepta al nivel %d",
@@ -260,7 +257,6 @@ MG.Locales.esES = {
   ["步驟提示框相對步驟列和清單的偏移。"] = "Desplaza los tooltips de los pasos respecto a la barra y la lista.",
   ["步驟提示框最後加上這步的補充說明。"] = "Añade las notas del paso al final de su tooltip.",
   ["小地圖標出從目前這步起的幾個位置；0 不標。"] = "Cuántas ubicaciones, desde el paso actual, se marcan en el minimapa. 0 no muestra ninguna.",
-  ["到了職業訓練師有新技能的等級時，在路線中插入「去學技能」步驟。"] = "Añade un paso para visitar al instructor de clase en los niveles con habilidades nuevas.",
   ["走近容易拉到一堆怪的地點時，在步驟列下方提醒怎麼應對。"] = "Cerca de lugares donde es fácil atraer demasiados enemigos, aparece un consejo bajo la barra de pasos.",
   ["附近有比目前步驟近很多、現在就能接、做或交的任務時，提醒你順路處理。"] = "Sugiere una misión que puedes aceptar, hacer o entregar ya cuando está mucho más cerca que el paso actual.",
   ["等級到了副本建議等級時，提示可以去哪個副本，以及前置還差多少。"] = "Al alcanzar el nivel de una mazmorra, te la sugiere e indica cuántos requisitos previos faltan.",
@@ -369,7 +365,7 @@ MG.Locales.esES = {
   ["UnitRace 第 3 回傳 raceID, 起點"] = "UnitRace 3.er valor devuelto raceID, inicio",
   ["適用的站數 / 路線總站數"] = "paradas para este personaje / total",
   ["任務經驗 實得/路線（中位數, 筆數，只診斷）, 已知經驗增益"] = "EXP de misión real/ruta (mediana, cantidad), beneficio de EXP",
-  ["路線外判定 / 本職業學技能步驟"] = "veredictos fuera de ruta / pasos de instructor de clase",
+  ["路線外判定"] = "veredictos fuera de ruta",
   ["目前站, 地圖, 進度"] = "parada actual, mapa, progreso",
   ["目前步驟, 自動位置, 漏掉"] = "paso actual, posición automática, olvidadas",
   ["地圖標點 世界地圖, 小地圖, HBD-Pins"] = "marcadores mapa del mundo, minimapa, HBD-Pins",

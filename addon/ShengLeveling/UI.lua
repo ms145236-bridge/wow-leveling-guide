@@ -39,13 +39,12 @@ local SPEC = {
   { section = "地圖標點" },
   { key = "pinSize", label = "世界地圖標點大小", min = 14, max = 40, step = 1, def = 24, pin = true },
   { section = "提醒" },
-  { key = "trainOn", label = "學技能", def = true, hint = "到了職業訓練師有新技能的等級時，在路線中插入「去學技能」步驟。" },
   { key = "supplyOn", label = "修裝與飛行點", def = true, hint = "耐久低時提醒修裝；經過還沒開的飛行管理員時提醒。" },
   { key = "dangerOn", label = "危險", def = true, hint = "走近容易拉到一堆怪的地點時，在步驟列下方提醒怎麼應對。" },
   { key = "detourOn", label = "順路", def = true, hint = "附近有比目前步驟近很多、現在就能接、做或交的任務時，提醒你順路處理。" },
   { key = "keepOn", label = "別賣的物品", def = true, hint = "背包物品的滑鼠提示加一行之後任務會用到。" },
   { key = "dungeonHint", label = "可以下副本", def = true, hint = "等級到了副本建議等級時，提示可以去哪個副本，以及前置還差多少。" },
-  -- 按 × 關掉的提示（飛行點、學技能、副本、下一站、練怪）全部重新顯示
+  -- 按 × 關掉的提示（飛行點、副本、下一站、練怪）全部重新顯示
   { button = "重新顯示已關閉的提示", run = function()
     local db = MG.db
     wipe(db.fpSkip); wipe(db.dDismiss); wipe(db.grindSkip); db.sugHide = nil
@@ -193,7 +192,7 @@ function UI.VerbWidth()
   if MG.uiZh then return 18 end
   if not verbW then
     verbW = 18
-    for _, t in ipairs({ "accept", "do", "turnin", "goto", "fp", "hearth", "bind", "fly", "boat", "level", "travel", "train", "buy" }) do verbW = math.max(verbW, textWidth(E.VERB[t] or "", 13) + 2) end
+    for _, t in ipairs({ "accept", "do", "turnin", "goto", "fp", "hearth", "bind", "fly", "boat", "level", "travel", "buy" }) do verbW = math.max(verbW, textWidth(E.VERB[t] or "", 13) + 2) end
     for _, v in ipairs({ L["打"], L["去"] }) do verbW = math.max(verbW, textWidth(v, 13) + 2) end -- 練怪列、副本入口列也用這欄
   end
   return verbW
@@ -2422,11 +2421,6 @@ function UI.Render(S)
     if fp then
       H[#H + 1] = { tag = L["飛行點"], color = GOLD, text = fp.npc or L["飛行管理員"], actLabel = L["去"], act = function() goTo(fp, MG.Clean(fp.npc or L["飛行管理員"]), function() return MG.db.fpSeen[fp.npcG or fp.npc] end) end,
         close = function() MG.db.fpSkip[fp.npcG or fp.npc] = true end }
-    end
-    if state.train then
-      local ts = state.steps[state.train]
-      H[#H + 1] = { tag = L["學技能"], color = GOLD, text = ts.s.npc, sub = L["%d 級"]:format(ts.s.lv), actLabel = L["去"], act = pin(state.train),
-        close = function() MG.db.latch[ts.key] = true end }
     end
     g = E.GrindSuggest(st, state.fillInfo)
     if g then

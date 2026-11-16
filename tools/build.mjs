@@ -83,10 +83,10 @@ const TAG_EN = { 可跳過: "Optional", 需遊戲實測: "Unverified", 有隊伍
   巡邏掉落觸發: "Drop starts it", 掉落才接: "If it drops", 之後順路: "Later, on the way", 路過才做: "If passing by", 有餘力再做: "If time allows", 有遇到才做: "If you see it", 已遇到才做: "If you see it",
   能打高階怪再做: "Hard", 低等怪補缺口: "Fills an XP gap", 日後順路或有隊伍: "Later or with a group", 見到獵物才接: "If you see it", 材料齊才做: "When you have the items" };
 const tagEn = (tag) => { const out = (tag || "").split(/\s*・\s*/).map((t) => TAG_EN[t.trim()]).filter(Boolean); return out.length ? [...new Set(out)].join(", ") : undefined; };
-const enText = (t) => String(t || "").replace(/\$[Bb]/g, " ").replace(/\$[Nn]/g, "you").replace(/\$[CcRr]/g, "adventurer").replace(/\s+/g, " ").trim();
+const enText = (t) => String(t || "").replace(/<([^<>\/]+)\/([^<>\/]+)>/g, "$1/$2").replace(/\$[Bb]/g, " ").replace(/\$[Nn]/g, "you").replace(/\$[CcRr]/g, "adventurer").replace(/\s+/g, " ").trim();
 const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel", 買: "buy" };
 // 行尾標籤：這些不顯示；其餘（可跳過、有隊伍再做…）顯示在步驟第 3 行
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測)/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點)/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -222,7 +222,7 @@ const parseCoord = (s) => { const c = parseCoords(s)[0]; return c ? { map: c.map
 // 種族條件輸出成 UnitRace 第 2 個回傳值（不隨客戶端語言變）；天裔精靈的各種寫法（天裔、天裔精靈、塑風者天裔精靈）都是 Skyborne（引擎用 me.sky 比）
 const raceUnknown = new Set();
 const raceToken = (zh) => RACE[zh] || (/天裔/.test(zh) ? "Skyborne" : (raceUnknown.add(zh), zh));
-// 【僅獸人／食人妖】【非術士】→ when
+// 【僅獸人／食人妖】【非術士】→ when；【已開鳥點：卡加斯】【未開鳥點：卡加斯】→ when.fp／when.noFp（鳥點中文名，引擎看飛行地圖記下的）
 const parseWhen = (tags) => {
   const when = {};
   const put = (key, v) => { (when[key] ||= []).includes(v) || when[key].push(v); };
@@ -230,6 +230,8 @@ const parseWhen = (tags) => {
     const m = tag.match(/^(僅|非)(.+)$/);
     const lv = tag.match(/^(\d+)\s*級起$/);
     if (lv) when.lvMin = +lv[1];
+    const fp = tag.match(/^(已開|未開)鳥點[：:]\s*(.+)$/);
+    if (fp) when[fp[1] === "已開" ? "fp" : "noFp"] = fp[2].trim();
     if (!m) continue;
     for (const raw of m[2].split(/[／\/、,，]/).map((s) => s.trim()).filter(Boolean)) {
       if (raw === "部落" || raw === "聯盟") continue;
@@ -285,7 +287,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
     if (/^##\s/.test(line)) { st = null; return; }
     if (!st) return;
     const bold = line.match(/^\s*\*\*(.+?)\*\*\s*$/);
-    if (bold && st.steps.length) { st.steps.push({ t: "note", text: bold[1].trim(), where }); return; }
+    if (bold && st.steps.length) { st.steps.push({ t: "note", text: bold[1].trim().replace(/｜/g, "："), where }); return; }
     // 說明｜…：接在上一步，滑過步驟時顯示（護送、稀有掉落、要組隊、限時、物品要在某處使用…）
     // 不帶「-」的「說明｜」接在上一步；「- 說明｜」是整站的說明（放進 tips）
     const desc = line.match(/^\s*說明｜(.*)$/);
@@ -684,7 +686,7 @@ for (const st of stations) {
       quests.set(id, q
         ? { races: q.races && BigInt(q.races) !== HORDE ? q.races : undefined, xp: XP.get(id), mob: mobsOf(q), tgo: targetsOf(q), objs: (() => { const o = [...new Set(db.questMobs(q.id).filter((m) => m && m.kind === "object").flatMap((m) => m.objects))]; return o.length ? o : undefined; })(),
             items: [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))].length ? [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))] : undefined,
-            d: q.obj.filter(Boolean).join("\n").replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0)).replace(/\$(?![A-Za-z])/g, "") || undefined, // 全形數字轉半形；落單的「$」（任務文字控制符殘片）拿掉
+            d: q.obj.filter(Boolean).join("\n").replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0)).replace(/\$(?![A-Za-z])/g, "").replace(/<name>[，,]\s*|[，,]\s*<name>/g, "") || undefined, // 全形數字轉半形；落單的「$」（任務文字控制符殘片）、稱呼玩家的 <name> 拿掉
             n: QUEST_NAME[id] || step.zh || q.zhTW || step.en || q.en, zt: q.zhTW && q.zhTW !== (QUEST_NAME[id] || step.zh || q.zhTW) ? q.zhTW : undefined, lvl: q.level, min: q.reqLevel, pg: q.preGroup, ps: q.preSingle, ex: q.exclusiveTo, next: q.next, pa: q.flags & 2 ? true : undefined, st: st.id }
         : { n: QUEST_NAME[id] || step.zh || step.en, st: st.id });
     }
@@ -1127,62 +1129,14 @@ for (const file of files.filter((f) => /^06-/.test(f))) {
     const f = m[2].split("｜").map((x) => x.trim());
     if (!VERDICT.has(f[3])) return warn(`${file}:${li + 1}`, "判定看不懂：" + f[3]);
     if (quests.has(+m[1])) warn(`${file}:${li + 1}`, `任務 ${m[1]} 在路線上，路線外判定不會用到`);
-    offroute.set(+m[1], { v: f[3], why: f[4] || undefined });
+    offroute.set(+m[1], { v: f[3], why: (f[4] || "").replace(/【[^】]*】/g, "").trim() || undefined });
     offAt.set(+m[1], `${file}:${li + 1}`);
   });
 }
 // 路線外但是路線任務的前置 → 值得做（接後續）
 const feeds = new Map();
 for (const [id, q] of quests) for (const p of [...(q.pg || []), ...(q.ps || [])]) if (!quests.has(p) && !feeds.has(p)) feeds.set(p, id);
-// ── 07 訓練師：職業｜等級｜地點｜NPC｜座標｜順路時機 ──
-// 只讀「建議回訪等級」那一節（其他節是主城訓練師一覽、專項、武器技能，當參考）；等級欄「4、6」＝每個等級各一筆（對到同一站的再合併成最低等級那筆，見下方），範圍「10–12」取第一個數字
-const trainers = [];
-for (const file of files.filter((f) => /^07-/.test(f))) {
-  let inStops = false;
-  readFileSync(join(ROUTE, file), "utf8").split(/\r?\n/).forEach((line, li) => {
-    if (/^##\s/.test(line)) inStops = /建議回訪等級/.test(line);
-    if (!inStops) return;
-    const m = line.match(/^\s*-\s*(.+?)｜\s*(\d+[^｜]*)｜(.*)$/);
-    if (!m || !CLASS[m[1].trim()]) return;
-    const where = `${file}:${li + 1}`;
-    const [place, rawNpc, coordText, rawWhen] = m[3].split("｜").map((x) => x.trim());
-    const npc = (rawNpc || "").replace(/\s*[（(][^（）()]*[）)]\s*$/, "").trim(); // 去掉英文名，才對得上遊戲裡的 NPC 名
-    const when = (rawWhen || "").replace(/【[^】]*】/g, "");
-    const c = parseCoord(coordText);
-    const map = c?.map || ZONE_MAP[(place || "").split(/[ ・·]/)[0]];
-    if (npc && !c) warn(where, `訓練師 ${npc} 沒有座標`);
-    for (const lv of m[2].split(/[、,，／/]/).map((p) => +(p.match(/\d+/) || [])[0]).filter(Boolean)) {
-    // 候選站（依序，遊戲裡取第一個本角色有的站；起點站只有該種族有）：
-    // 寫了「0X-第N站」就用它；站名任一段出現在順路時機或地點文字裡的（等級接近的優先）；同地圖且等級涵蓋；等級涵蓋
-    const ref = (when || "").match(/(\d+)\s*-\s*第(\d+)站/);
-    const text = (when || "") + " " + (place || "");
-    const near = (a, b) => Math.abs(a.lv[0] - lv) - Math.abs(b.lv[0] - lv);
-    const main = stations.filter((x) => !x.dungeon);
-    // 有明確對到（站號或站名）就只用這些：起點區的訓練師只會出現在該起點站，不會借用到別族的起點
-    const named = [
-      ...(ref ? main.filter((x) => x.id === `${ref[1]}-${ref[2]}`) : []),
-      ...main.filter((x) => x.name.split(/[・·與／\s]/).some((t) => t.length >= 2 && text.includes(t))).sort(near),
-    ];
-    const cands = named.length ? named : [
-      ...main.filter((x) => x.map === map && x.lv[0] <= lv && lv <= x.lv[1]),
-      ...main.filter((x) => x.lv[0] <= lv && lv <= x.lv[1]),
-    ];
-    const ids = [...new Set(cands.map((x) => x.id))].slice(0, 12);
-    if (!npc || !ids.length) { warn(where, "訓練師格式看不懂或對不到站：" + line.slice(0, 50)); continue; }
-    trainers.push({ c: CLASS[m[1].trim()], lv, place, npc, map: map || main.find((x) => x.id === ids[0])?.map, x: c?.x, y: c?.y, st: ids });
-    }
-  });
-}
-// 同職業、同 NPC、同一個（第一候選）站只留一筆、取最低等級：「24、26」這種一列多等級通常對到同一站，展開會在同站插兩個一樣的「去學技能」
-const trainerDup = [];
-for (let i = trainers.length - 1; i >= 0; i--) {
-  const t = trainers[i], j = trainers.findIndex((o) => o !== t && o.c === t.c && o.npc === t.npc && o.st[0] === t.st[0]);
-  if (j < 0) continue;
-  const keep = trainers[j].lv <= t.lv ? trainers[j] : t;
-  trainerDup.push(`${t.c} ${t.npc} ${t.st[0]}：${trainers[j].lv}／${t.lv} → ${keep.lv}`);
-  trainers.splice(keep === t ? j : i, 1);
-}
-if (trainerDup.length) console.log("訓練師同站合併：" + trainerDup.join("、"));
+// 07 訓練師.md 不讀了（學技能不排進路線）
 // ── 08 保留物品：物品名｜物品ID｜何時拿到｜何時用到（用到的任務 ID 寫在文字裡就會在任務交掉後不再提示） ──
 const keep = new Map();
 const keepAt = new Map(); // 物品 ID → 出處（英文用途用）
@@ -1196,7 +1150,7 @@ for (const file of files.filter((f) => /^08-/.test(f))) {
   });
 }
 const luaMap = (m) => (m.size ? "{" + [...m].map(([k, v]) => `[${k}]=${lua(v)}`).join(", ") + "}" : "nil"); // 數字鍵（任務 ID）
-out += `  },\n  offroute = ${luaMap(offroute)},\n  feeds = ${luaMap(feeds)},\n  trainers = ${lua(trainers.length ? trainers : undefined)},\n  keep = ${luaMap(keep)},\n`;
+out += `  },\n  offroute = ${luaMap(offroute)},\n  feeds = ${luaMap(feeds)},\n  keep = ${luaMap(keep)},\n`;
 out += `  quests = {\n`;
 for (const [id, q] of [...quests.entries()].sort((a, b) => a[0] - b[0])) {
   const { st, next, en, ...rest } = q;
@@ -1260,7 +1214,7 @@ const shortEn = (n) => {
 };
 // 說明文字英文（tools/route-text-enUS.md，Codex 翻）：檔名:行號｜類型｜中文原文｜英文（原文裡有｜時，前兩個和最後一個｜切欄）
 // 先比對「檔名:行號＋原文」，再只比對原文；比對時去掉【】標記與多餘空白。英文還有中日韓字的列不用（英文介面不顯示）
-const txKey = (s) => String(s || "").replace(/【[^】]*】/g, "").replace(/\s+/g, " ").trim();
+const txKey = (s) => String(s || "").replace(/【[^】]*】/g, "").replace(/｜/g, "：").replace(/\s+/g, " ").trim(); // ｜：粗體註記的分隔，顯示時換成「：」
 const CJK = /[　-〿぀-ヿ㐀-鿿가-힯＀-￯]/;
 const TX_ROWS = [], TX_AT = new Map(), TX = new Map(), txUsed = new Set();
 // 聯盟另有 tools/route-text-alliance-<loc>.md：先讀，同檔名同行號時優先
@@ -1278,6 +1232,28 @@ for (const line of txLines("enUS")) {
   if (!TX_AT.has(row.at + "|" + row.zh)) TX_AT.set(row.at + "|" + row.zh, row.en);
   if (!TX.has(row.zh)) TX.set(row.zh, row.en);
 }
+// 譯文裡的站號（stop 29、Station 2 von Teil 1、04-parada 58、第4部分第59站、29번째 지점…）→ 該語系的站名；站號全路線不重複，不必看第幾部分。
+// 只換中文原文裡寫成「第N站」的那些號碼（法文、俄文的「étape／этап N」也拿來寫「第 N 步」，不能照字面全換）。
+// 緊跟在地名後面的括號（Tanaris (1st visit, stop 38)）只拿掉站號。建置時沒有站名的（遊戲裡用地圖名）寫成 {s:站ID}，E.Localize 換
+const STOP_W = "(?:[Ss]top|Station|l['’]étape|étape|(?:(?<![A-Za-zÀ-ÿ])la )?parada|остановк[а-яё]*|этап[а-яё]*|지점|정거장)";
+const stationRefs = (t, zh, nameOf) => {
+  const nums = new Set([...String(zh || "").matchAll(/第\s*(\d+)\s*(?:[–\-~－到或]\s*第?\s*(\d+)\s*)?站/g)].flatMap((m) => [m[1], m[2]]).filter(Boolean).map(Number));
+  if (!nums.size) return t;
+  const name = (all, n) => (nums.has(+n) && nameOf(+n)) || all;
+  const drop = (all, a, b) => (nums.has(+(a || b)) ? "" : all);
+  return t
+    .replace(new RegExp("\\s*[（(]\\s*(?:第\\s*(\\d+)\\s*站|" + STOP_W + " (\\d+)|(\\d+)번(?:째)? ?" + STOP_W + ")\\s*[)）]", "g"), (all, z, a, b) => drop(all, z || a, b))
+    .replace(new RegExp("[,，] ?(?:" + STOP_W + " (\\d+)|(\\d+)번(?:째)? ?" + STOP_W + ")(?=[)）])", "g"), drop)
+    .replace(new RegExp("(?:\\d{1,2}-)?" + STOP_W + " (\\d+) (?:of|von|de la|da|de) (?:part|chapter|Teil|partie|parte) \\d+", "g"), name)
+    .replace(new RegExp(STOP_W + " (\\d+) части \\d+", "g"), name)
+    .replace(new RegExp("\\d+부 (\\d+)번(?:째)? ?" + STOP_W, "g"), name)
+    .replace(/第\s*\d+\s*部分第\s*(\d+)\s*站/g, name)
+    .replace(new RegExp("(?<!\\d)\\d{1,2} ?- ?(?:" + STOP_W + " ?(\\d+)번?|第\\s*(\\d+)\\s*站|(\\d+)번(?:째)? ?" + STOP_W + "|(\\d+)[-‑]?(?:й|го|м)? ?" + STOP_W + ")", "g"), (all, a, b, c, d) => name(all, a || b || c || d))
+    .replace(new RegExp("(?<!\\d)\\d{1,2}, (" + STOP_W + ") (\\d+)", "g"), (all, w, n) => name(all, n))
+    .replace(new RegExp(STOP_W + " (\\d+)번?(?!\\d|[.,]\\d)", "g"), name)
+    .replace(new RegExp("(?<![\\d.,])(\\d+)(?:번(?:째)?|[-‑]?(?:й|го|м))? ?" + STOP_W, "g"), name)
+    .replace(/第\s*(\d+)\s*站/g, name);
+};
 // 英文裡的任務 ID → 英文任務名（名字已寫在旁邊就只拿掉 ID）；「02-Stop 8」→ 英文站名；座標前的地圖 ID 拿掉（hit：記下換掉的任務 ID，其他語系照著換）
 const enIds = (t, hit) => t
   .replace(/\b(\d{2})-Stop (\d+)/g, (all, p, n) => { const x = stations.find((s) => s.id === p + "-" + n); return (x && (STATION_EN[safeText(x.name)] || x.en)) || all; })
@@ -1297,7 +1273,7 @@ const tx = (where, zh) => {
   const en = k && (TX_AT.get(where + "|" + k) ?? TX.get(k));
   if (!en) { if (k && !txNeed.has(k)) txNeed.set(k, where); return undefined; }
   txUsed.add(k);
-  return enIds(en);
+  return stationRefs(enIds(en), k, (n) => { const x = stations.find((s) => s.id.endsWith("-" + n)); return x && (STATION_EN[safeText(x.name)] || x.en || "{s:" + x.id + "}"); });
 };
 // 英文句子（站的提醒、前置接取路線）：中文每句有種族／職業條件時，句數相同就逐句對上；全部同條件就整段套；對不上就不帶條件
 const enSplit = (t) => t.split(/(?<=[.;!?])\s+(?=[A-Z0-9"'(])/).map((x) => x.replace(/[.;]$/, "").trim()).filter(Boolean);
@@ -1442,7 +1418,7 @@ const emitRoute = (X) => {
     if (q.star) { const n = X.item(db.enByZh("Item", q.star[0])) || T("", q.star[0]); star = n ? [n, ...q.star.slice(1)] : undefined; }
     en += `    [${id}] = ${plain({ n: X.qName(id, e), d: X.qd(id, e), tgo: e.tgo && e.tgo.map((l) => l.map(N)), objs: e.objs && e.objs.map(N), star })},\n`;
   }
-  en += `  },\n  trainers = ${plain(Object.fromEntries(trainers.map((t, i) => [i + 1, { npc: N(npcEn(t.npc)) }])))},\n`;
+  en += `  },\n`;
   const keepEn = (id, k) => { if (k.q) return undefined; const x = T(keepAt.get(id), k.use); if (!x) left.keepUse++; return x || F.later; };
   en += `  keep = ${plain(Object.fromEntries([...keep].map(([id, k]) => [id, { n: X.itemId(id), use: keepEn(id, k) }])))},\n`;
   const offEn = (id, o) => { const x = o.why && T(offAt.get(id), o.why); if (o.why && !x) left.offrouteWhy++; return x; };
@@ -1618,10 +1594,10 @@ for (const loc of Object.keys(NAME_LOC)) {
     return out;
   };
   // 文字裡的任務 ID：只換英文版也換掉的那些（英文的判斷有前後文，避免把經驗值、金額當任務）
-  const locIds = (v, enRaw) => {
+  const locIds = (v, enRaw, zhSrc) => {
     const hit = new Set();
     if (enRaw) enIds(enRaw, hit);
-    return v
+    return stationRefs(v, zhSrc, (n) => { const x = stations.find((s) => s.id.endsWith("-" + n)); const name = x && (station(x).name || "{s:" + x.id + "}"); return name && (zh ? "「" + name + "」" : name); })
       .replace(/(?<!\d)(\d{2})-(?:第\s*(\d+)\s*站|[^\s\d,.;:()（）]+ ?(\d+))/g, (all, p, a, b) => { const x = stations.find((s) => s.id === p + "-" + (a || b)); return (x && station(x).name) || all; })
       .replace(/(?<![\d.,])(\d{3,6})(?![\d%]|[.,]\d)/g, (all, num, at, whole) => {
         if (!hit.has(+num)) return all;
@@ -1634,7 +1610,7 @@ for (const loc of Object.keys(NAME_LOC)) {
   const TL = (where, zhText) => {
     const k = txKey(zhText);
     const v = k && (AT.get(where + "|" + k) ?? ANY.get(k));
-    return v && locIds(v, TX_AT.get(where + "|" + k) ?? TX.get(k));
+    return v && locIds(v, TX_AT.get(where + "|" + k) ?? TX.get(k), k);
   };
   const T = (where, zhText) => {
     const k = txKey(zhText);
@@ -1648,7 +1624,7 @@ for (const loc of Object.keys(NAME_LOC)) {
     if (e) c.textEn++;
     return e;
   };
-  const clean = (t) => t.replace(/\$[Gg]\s*([^:;]*):[^;]*;/g, "$1").replace(/\$[Bb]/g, " ").replace(/\$[NnCcRr]/g, "").replace(/\$(?![A-Za-z])/g, "").replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0)).replace(/\s+/g, " ").trim();
+  const clean = (t) => t.replace(/<([^<>\/]+)\/([^<>\/]+)>/g, "$1/$2").replace(/<name>[,，]\s*|[,，] ?<name>/g, "").replace(/\$[Gg]\s*([^:;]*):[^;]*;/g, "$1").replace(/\$[Bb]/g, " ").replace(/\$[NnCcRr]/g, "").replace(/\$/g, "").replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0)).replace(/\s+/g, " ").trim();
   const genL = (q) => {
     const mk = q?.en?.mk;
     if (!mk) return undefined;
@@ -1658,7 +1634,7 @@ for (const loc of Object.keys(NAME_LOC)) {
   const qd = (id) => {
     c.qd++;
     const d = db.l10nObj(id, loc).map(clean).filter(Boolean).join("\n");
-    if (d) { c.qdLoc++; return d; }
+    if (d && !d.includes("<name>")) { c.qdLoc++; return d; } // <name> 還在＝QuestieDB 把名字、職業甚至冠詞換掉了，還原不了：改用下面的備援
     const q = quests.get(id);
     return genL(q) || q?.en?.d || q?.en?.gen;
   };
@@ -1695,10 +1671,10 @@ for (const [loc, c] of locCov) {
   if (process.env.LOC_REPORT) writeFileSync(join(process.env.LOC_REPORT, `names-en-${loc}.txt`), [...c.namesEn].sort().join("\n"));
 }
 for (const r of raceUnknown) warn("種族條件", `「${r}」不是已知種族，非繁中客戶端比不到（請加進 build.mjs 的 RACE）`);
-const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 順序錯誤（已自動調整 ${orderFixes.length}）\n\n${orderFixes.join("\n") || "無"}\n\n## 綁爐石步驟（${bindReport.length}）\n\n${bindReport.join("\n") || "無"}\n\n## 前置正規化（${exFixed.length}）\n\n${exFixed.join("\n") || "無"}\n\n## 互斥清單拿掉導引（${exLead.length}）\n\n${exLead.join("\n") || "無"}\n\n## 可跳過的前置改成必做（${leadReq.length}）\n\n${leadReq.join("\n") || "無"}\n\n## 職業任務段落搬到同地圖（${classMoved.length}）\n\n${classMoved.join("\n") || "無"}\n\n## 職業任務段落和前一步不同地圖（${classMap.length}，同洲；跨洲的在提醒）\n\n${classMap.join("\n") || "無"}\n\n## 職業任務回到路線（${backAdded.length}）\n\n${backAdded.join("\n") || "無"}\n\n## 學技能站（候選站依序，遊戲取第一個本角色有的）\n\n${trainers.map((t) => `- ${t.c} ${t.lv} ${t.npc}（${t.place}）→ ${t.st.slice(0, 4).map((id) => id + " " + stations.find((x) => x.id === id).name).join("、")}`).join("\n") || "無"}\n`;
+const report = `# 建置報告（資料版本 ${version}）\n\n來源：${files.join("、")}\n站數：${stations.length}　任務數：${quests.size}\n\n## 需要處理（${issues.hard.length}）\n\n${issues.hard.join("\n") || "無"}\n\n## 提醒（${issues.warn.length}）\n\n${issues.warn.join("\n") || "無"}\n\n## 副本前置鏈\n\n${chainReport.join("\n") || "無"}\n\n## 裸任務 ID 換成任務名（前 40 例）\n\n${idSamples.map((x) => "- " + x).join("\n") || "無"}\n\n## 名稱不一致（${nameIssues.length}）\n\n${nameIssues.join("\n") || "無"}\n\n## 順序錯誤（已自動調整 ${orderFixes.length}）\n\n${orderFixes.join("\n") || "無"}\n\n## 綁爐石步驟（${bindReport.length}）\n\n${bindReport.join("\n") || "無"}\n\n## 前置正規化（${exFixed.length}）\n\n${exFixed.join("\n") || "無"}\n\n## 互斥清單拿掉導引（${exLead.length}）\n\n${exLead.join("\n") || "無"}\n\n## 可跳過的前置改成必做（${leadReq.length}）\n\n${leadReq.join("\n") || "無"}\n\n## 職業任務段落搬到同地圖（${classMoved.length}）\n\n${classMoved.join("\n") || "無"}\n\n## 職業任務段落和前一步不同地圖（${classMap.length}，同洲；跨洲的在提醒）\n\n${classMap.join("\n") || "無"}\n\n## 職業任務回到路線（${backAdded.length}）\n\n${backAdded.join("\n") || "無"}\n`;
 writeFileSync(REPORT, report);
 console.log(`順序錯誤已調整 ${orderFixes.length}、純對話任務的「做」拿掉 ${talkOnly}`);
-console.log(`路線外判定 ${offroute.size}、路線外前置 ${feeds.size}、訓練師 ${trainers.length}、保留物品 ${keep.size}、補給 ${stations.reduce((n, x) => n + (x.supply?.length || 0), 0)}、危險 ${stations.reduce((n, x) => n + (x.danger?.length || 0), 0)}`);
+console.log(`路線外判定 ${offroute.size}、路線外前置 ${feeds.size}、保留物品 ${keep.size}、補給 ${stations.reduce((n, x) => n + (x.supply?.length || 0), 0)}、危險 ${stations.reduce((n, x) => n + (x.danger?.length || 0), 0)}`);
 console.log(`站 ${stations.length}、任務 ${quests.size}、需要處理 ${issues.hard.length}、提醒 ${issues.warn.length}、名稱不一致 ${nameIssues.length}`);
 console.log("裸任務 ID 換成任務名：" + ([...idStats.entries()].map(([k, v]) => k + " " + v).join("、") || "0"));
 console.log(`→ ${OUT}\n→ ${REPORT}`);
