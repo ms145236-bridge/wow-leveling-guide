@@ -117,7 +117,33 @@ E.byId = {}
 local QUEST = { accept = true, ["do"] = true, turnin = true }
 local SOFT = { ["goto"] = true, fp = true, fly = true, boat = true, travel = true, hearth = true }
 local questSt = {} -- 任務 → 有它步驟的站（主線站與副本，Build 時建）
+local dunQ = {} -- 副本站裡有步驟的任務（副本前置、副本任務；Build 時建）
 E.QUEST, E.SOFT = QUEST, SOFT
+
+-- 沒座標的交通要比對的步驟：後面已打勾的到達／交通路標，加上第一個還沒完成、適用、有座標的步驟（第二個回傳值，箭頭指它）
+function E.SoftTargets(steps, done, na, i)
+  local out = {}
+  for j = i + 1, #steps do
+    local sj = steps[j].s
+    if sj.x and not na[j] then
+      if not done[j] then out[#out + 1] = sj; return out, sj end
+      if sj.t == "goto" or sj.t == "travel" then out[#out + 1] = sj end
+    end
+  end
+  return out
+end
+-- 人在任一個比對步驟的任一群（主座標＋more）附近就算到；只查不寫。爐石也用同一個範圍：用了爐石由區域名、施法事件認（stepDone、Core），
+-- 這裡只認「人已經走到下一步」；範圍放大的話，輪到時人離下一步不遠（例如北郡礦坑到修道院）就會直接當成到了、不提示爐石
+function E.SoftNear(_, targets, map, x, y)
+  local r = 3
+  for _, sj in ipairs(targets) do
+    if sj.map == map and math.sqrt((sj.x - x) ^ 2 + (sj.y - y) ^ 2) <= r then return true end
+    for _, p in ipairs(sj.more or {}) do
+      if p[1] == map and math.sqrt((p[2] - x) ^ 2 + (p[3] - y) ^ 2) <= r then return true end
+    end
+  end
+  return false
+end
 
 -- ── 角色與條件 ──────────────────────────────────────────────────────────────
 local me = {}
@@ -131,13 +157,13 @@ function raceMatch(list)
     if r == me.race or (r == "Skyborne" and me.sky) then return true end
   end
 end
-function E.Applies(when)
+function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用）
   if not when then return true end
   if when.race and not raceMatch(when.race) then return false end
   if when.notRace and raceMatch(when.notRace) then return false end
   if when.class and not inList(when.class, me.class) then return false end
   if when.notClass and inList(when.notClass, me.class) then return false end
-  if when.lvMin and (UnitLevel("player") or 0) < when.lvMin then return false end
+  if when.lvMin and not anyLv and (UnitLevel("player") or 0) < when.lvMin then return false end
   -- 鳥點開了沒（fp＝開了才適用、noFp＝沒開才適用）：看飛行地圖記下的（Core 的 TAXIMAP_OPENED）；還沒開過飛行地圖當作沒開
   local node = when.fp or when.noFp
   if node and ((MG.db.fpNodes ~= nil and MG.db.fpNodes[node] == true) ~= (when.fp ~= nil)) then return false end
@@ -177,7 +203,7 @@ function E.Build()
   me.sky = (me.race and me.race:find("Sky") or me.raceL and me.raceL:find("天裔", 1, true)) and true or false
   if me.sky then me.bit = UnitFactionGroup("player") == "Alliance" and 33 or 34 end
   me.class = select(2, UnitClass("player"))
-  wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt)
+  wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt); wipe(dunQ)
   local startKey = E.StartKey()
   for _, st in ipairs(R.stations) do
     if st.dungeon or (st.start and st.start == startKey) or (not st.start and E.Applies(st.when)) then
@@ -210,6 +236,7 @@ function E.Build()
           local l = questSt[q] or {}
           questSt[q] = l
           if l[#l] ~= st then l[#l + 1] = st end
+          if st.dungeon then dunQ[q] = true end
         end
       end
       if st.dungeon then
@@ -341,13 +368,15 @@ function E.FillPlan(st)
   local projected, seen, spots, cands = 0, {}, {}, {}
   -- 本站有交的任務才算任務經驗、本站有做或交的才算打怪經驗（在別站交的，到下一站前拿不到）
   -- 組隊／精英任務（任一步標了）：單人不補
-  local hand, work, group = {}, {}, {}
+  -- 還沒接的任務：本站有「必做的接」才算必做（must）。接取是可跳過的（含條件入口）沒被補回就不算，別站才接得到的也不算
+  local hand, work, group, must = {}, {}, {}, {}
   local solo = not (IsInGroup and IsInGroup())
   for _, step in ipairs(st.list) do
     local s = step.s
     local on = s.q and not MG.db.skip[step.key] -- 手動略過的步驟不算（只略過「交」＝這站拿不到任務經驗）
     if on and s.t == "turnin" then hand[s.q] = true end
     if on and (s.t == "do" or s.t == "turnin") then work[s.q] = true end
+    if on and s.t == "accept" and not s.opt and E.Applies(s.when) then must[s.q] = true end
     if s.q and s.tag and (s.tag:find("隊伍", 1, true) or s.tag:find("組隊", 1, true) or s.tag:find("精英", 1, true)) then group[s.q] = true end
   end
   -- 互斥的任務（二選一）只算一個：已經算進來（必做／在日誌）或已補回的任務，它的互斥對象不再算、不再補
@@ -369,13 +398,15 @@ function E.FillPlan(st)
   for _, step in ipairs(st.list) do
     local s, q = step.s, step.s.q
     if q and E.Applies(s.when) and raceOK(q) and not turned(q) and not MG.db.skip[step.key] and not MG.db.skip["a:" .. q] and not excluded(q) and not superseded(q) then
-      -- 必做的，和已經接了的可跳過任務
-      if (not s.opt or C.IsOnQuest(q)) and not seen[q] and not clash(q) and eligible(q) then
+      -- 已經接了的，和本站必接的
+      if (C.IsOnQuest(q) or must[q]) and not seen[q] and not clash(q) and eligible(q) then
         seen[q] = true
         info.questXP = info.questXP + (hand[q] and questXP(q, lv) or 0)
         info.killXP = info.killXP + (work[q] and killXP(q, lv) or 0)
       end
-      if s.opt and s.t == "accept" and not C.IsOnQuest(q) and not (solo and group[q]) and lv >= ((R.quests[q] or {}).min or 0) and not cands[q] then
+      -- 條件入口（cond：要先有掉落物、材料、聲望或遇到人才接得到）還沒接的不補：插件看不到背包和聲望，補了會叫人去接不存在的任務
+      -- 高階怪保護（hard＝要打的怪的等級上限）：比你高 3 級以上的不補
+      if s.opt and s.t == "accept" and not C.IsOnQuest(q) and not (R.quests[q] or {}).cond and ((R.quests[q] or {}).hard or 0) - lv < 3 and not (solo and group[q]) and lv >= ((R.quests[q] or {}).min or 0) and not cands[q] then
         cands[q] = { q = q, xp = (hand[q] and questXP(q, lv) or 0) + (work[q] and killXP(q, lv) or 0), pts = {} }
       end
     end
@@ -698,7 +729,7 @@ function E.Locate(st)
   -- 軟步驟（交通、到達、鳥點、飛行、船）：後面有本站接的任務步驟已完成、或任一任務已交，就算過了（別站帶來的任務「做」完成不算）；
   -- 後面已沒有任務步驟的（往下一站的交通）不擋路，文字留給「前往下一站」顯示
   -- passed：被後面任務帶過的軟步驟（當作過了，但清單不打勾）；tails：站尾往下一站的交通（任務都做完才輪到它）
-  local tail, tails, passed, here = nil, {}, {}, {}
+  local tail, tails, passed, here, softLater = nil, {}, {}, {}, {}
   for _, step in ipairs(steps) do if step.s.t == "accept" and not step.carry then here[step.s.q] = true end end
   local nxt = E.Next(st)
   for i, step in ipairs(steps) do
@@ -710,16 +741,7 @@ function E.Locate(st)
           if done[j] and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
         end
       end
-      -- 沒座標的交通：人已經走到下一個有座標的步驟附近就算到了（記住，走開也不退回）
-      if not done[i] and later and not step.s.x and map and x then
-        for j = i + 1, n do
-          local sj = steps[j].s
-          if sj.x then
-            if sj.map == map and math.sqrt((sj.x - x) ^ 2 + (sj.y - y) ^ 2) <= (step.s.t == "hearth" and 10 or 3) then done[i] = true; db.latch[step.key] = true end -- 爐石落點和下一步常隔一段路
-            break
-          end
-        end
-      end
+      softLater[i] = not done[i] and later and not step.s.x and map ~= nil and x ~= nil -- 沒座標的交通：輪到它時才看人到了沒（見下面）
       if not later then
         tails[i] = true
         tail = tail or step.s.text
@@ -729,37 +751,48 @@ function E.Locate(st)
   end
 
   -- 由前往後找未完成；後面 8 個（別的任務的）任務步驟過半已完成 → 算漏掉
-  local auto, missedIdx, missedQ = nil, {}, {}
+  local auto, missedIdx, missedQ
   local roamQ = {} -- 順路任務還沒做完：它的交任務步驟也先不輪到
   for i = 1, n do if steps[i].s.roam and not done[i] and not na[i] then roamQ[steps[i].s.q or 0] = true end end
-  for i = 1, n do
-    local q = steps[i].s.q
-    if tails[i] or wait[i] or steps[i].s.roam or (q and roamQ[q] and steps[i].s.t == "turnin") then
-      -- 等前置的後續任務：不輪到它、也不算漏掉（前置的「交」排在它前面）
-      -- 站尾交通先跳過，任務步驟都處理完才輪到
-      -- 順路任務（怪散在整區）：不搶目前步驟，路上遇到就打；其他步驟都做完還沒完成才輪到
-    elseif not done[i] and q and missedQ[q] then
-      missedIdx[#missedIdx + 1] = i -- 同一任務前面的步驟已漏掉（例如沒接就輪到交）
-    elseif not done[i] and q and steps[i].s.t ~= "accept" and not (steps[i].s.tag and steps[i].s.tag:find("怪多", 1, true)) and C.IsOnQuest(q) then
-      auto = i; break -- 任務還在日誌裡（例如做到一半）：不算漏掉，就是目前要做的；順路先做了後面的步驟也不會被跳過去。「怪多」的可跳過任務除外（順手打到也不拉回去）
-    elseif not done[i] then
-      local seen, d, j = 0, 0, i + 1
-      while j <= n and seen < 8 do
-        local s2 = steps[j].s
-        if s2.q and s2.q ~= steps[i].s.q and not na[j] and not wait[j] then
-          seen = seen + 1
-          if done[j] then d = d + 1 end
+  local accAt = {} -- 還沒接的任務，它的「接」排在第幾步（副本前置的接插在站尾，主線的做／交可能排在它前面）
+  for i = 1, n do if steps[i].s.t == "accept" and not done[i] and not na[i] then accAt[steps[i].s.q] = accAt[steps[i].s.q] or i end end
+  repeat
+    auto, missedIdx, missedQ = nil, {}, {}
+    for i = 1, n do
+      local q = steps[i].s.q
+      if tails[i] or wait[i] or steps[i].s.roam or (q and roamQ[q] and steps[i].s.t == "turnin") or (q and steps[i].s.t ~= "accept" and (accAt[q] or 0) > i and not C.IsOnQuest(q)) then
+        -- 等前置的後續任務：不輪到它、也不算漏掉（前置的「交」排在它前面）
+        -- 站尾交通先跳過，任務步驟都處理完才輪到
+        -- 順路任務（怪散在整區）：不搶目前步驟，路上遇到就打；其他步驟都做完還沒完成才輪到
+      elseif not done[i] and q and missedQ[q] then
+        missedIdx[#missedIdx + 1] = i -- 同一任務前面的步驟已漏掉（例如沒接就輪到交）
+      elseif not done[i] and q and steps[i].s.t ~= "accept" and not (steps[i].s.tag and steps[i].s.tag:find("怪多", 1, true)) and C.IsOnQuest(q) then
+        auto = i; break -- 任務還在日誌裡（例如做到一半）：不算漏掉，就是目前要做的；順路先做了後面的步驟也不會被跳過去。「怪多」的可跳過任務除外（順手打到也不拉回去）
+      elseif not done[i] and ((steps[i].s.t == "accept" and not steps[i].s.opt) or steps[i].s.t == "level") then
+        auto = i; break -- 必做的「接」和練等步驟：適用、還沒做就輪到它，不因為後面別的任務做過了就當成漏掉（那些可能是提前做副本前置時交掉的）
+      elseif not done[i] then
+        local seen, d, j = 0, 0, i + 1
+        while j <= n and seen < 8 do
+          local s2 = steps[j].s
+          if s2.q and s2.q ~= steps[i].s.q and not na[j] and not wait[j] and not dunQ[s2.q] then -- 也是副本前置的任務不算（插進來的、主線裡同一件的都一樣）：提前做副本前置時就交掉了，不代表走過這一段
+            seen = seen + 1
+            if done[j] then d = d + 1 end
+          end
+          j = j + 1
         end
-        j = j + 1
-      end
-      if seen > 0 and d * 2 > seen then
-        missedIdx[#missedIdx + 1] = i
-        if q then missedQ[q] = true end
-      else
-        auto = i; break
+        if seen > 0 and d * 2 > seen then
+          missedIdx[#missedIdx + 1] = i
+          if q then missedQ[q] = true end
+        else
+          auto = i; break
+        end
       end
     end
-  end
+    -- 沒座標的交通輪到了，人已經走到下一個有座標的步驟附近：算到了（記住，走開也不退回），再往下找。
+    -- 還沒輪到的不看：人本來就可能站在那附近（爐石回城後的下一步常就在出發的地方），提早記成完成，真的輪到時就不提示了
+    local arrived = auto and softLater[auto] and E.SoftNear(steps[auto].s, E.SoftTargets(steps, done, na, auto), map, x, y)
+    if arrived then done[auto] = true; db.latch[steps[auto].key] = true end
+  until not arrived
   -- 前置的「交」被判成漏掉：等它的後續任務照舊不適用（依序往後，整條鏈一起收）
   local missedAt = {}
   for _, i in ipairs(missedIdx) do missedAt[i] = true end
@@ -785,6 +818,8 @@ function E.Locate(st)
     for i, step in ipairs(steps) do
       if step.key == pin.key then found = i; break end
     end
+    -- 手動釘住的沒座標交通也算輪到
+    if found and softLater[found] and not done[found] and E.SoftNear(steps[found].s, E.SoftTargets(steps, done, na, found), map, x, y) then done[found] = true; db.latch[pin.key] = true end
     if not found or (done[found] and not pin.wasDone) or found == auto or (pin.auto and (auto and steps[auto].key or "") ~= pin.auto) then
       db.pin[st.id] = nil
     else
@@ -1297,10 +1332,43 @@ end
 
 -- ── 副本 ────────────────────────────────────────────────────────────────────
 -- 副本站不在主線；它的前置（接／做／交）預設排進建議的主線站（pickAt），標「副本前置」。
--- 任務日誌快滿（可接 < 3）時，建議等級比玩家高 5 級以上的副本前置先不接（之後再接）；主線任務不受影響。
+-- 副本前置不搶主線的日誌格：空格扣掉主線往後還會多占的格數後不到 3 格，還沒接的副本前置先不接（之後再接），不分副本等級；
+-- 已接的照常做、交。只是這一刻先不接，不寫進存檔；有空格了會自己回來。主線任務不受影響。
 local function logFree()
   local max = C_QuestLog and C_QuestLog.GetMaxNumQuestsCanAccept and C_QuestLog.GetMaxNumQuestsCanAccept() or 40 -- 永恆任務日誌 40 格
   return (max or 40) - #(C.LogQuestIDs() or {})
+end
+function E.LogFull() return logFree() <= 0 end
+
+-- 主線往後還會多占幾格日誌：從這一站照步驟順序走到最後一站，數還沒接的「接」和之後的「交」，回傳比現在多出的最大值。
+-- 「交」要是會做到的那一步才算騰出一格：不適用本角色、手動略過、手動勾掉的不算（任務還占著）；後面另有會做到的「交」就算在那裡。
+-- 互斥的只算一個；補經驗補回來的可跳過任務估不到（留 3 格的餘裕）。每次用這一刻的日誌、略過、設定重算，不留到下一次
+local function mainGrowth(st)
+  local state, n, peak = {}, 0, 0 -- state[q]：1＝預估會接著、2＝預估交掉了
+  for i = st.index, #E.stations do
+    for _, step in ipairs(E.stations[i].list) do
+      local s = step.s
+      local q = s.q
+      if s.t == "accept" and q and not state[q] and not C.IsOnQuest(q) and not turned(q) and E.Applies(s.when, true) and not optOut(s) and raceOK(q) and not MG.db.skip[step.key] and not excluded(q) then
+        local clash = false
+        for _, o in ipairs((R.quests[q] or {}).ex or {}) do clash = clash or state[o] ~= nil end
+        if not clash then
+          state[q] = 1
+          n = n + 1
+          if n > peak then peak = n end
+        end
+      elseif s.t == "turnin" and q and state[q] ~= 2 and (state[q] or C.IsOnQuest(q)) and E.Applies(s.when, true) and not MG.db.skip[step.key] and MG.db.mark[step.key] ~= true then
+        state[q] = 2
+        n = n - 1
+      end
+    end
+  end
+  return peak
+end
+-- 這一刻還能不能再接副本前置：空格扣掉主線往後還會多占的格數，至少剩 3 格。步驟列的「之後」和自動接都問這裡（只查不寫）。
+-- pending＝剛按了接受、日誌還沒更新的件數
+function E.PreRoom(st, pending)
+  return logFree() - (pending or 0) - mainGrowth(st) >= 3
 end
 
 -- 不經過 locate 的單步完成判定（副本分頁用；不動 fill）
@@ -1364,15 +1432,16 @@ function dungeonPreSteps(st)
   local lv = UnitLevel("player") or 1
   local have = {}
   for _, step in ipairs(st.list) do have[step.key] = true end -- 主線本來就有的步驟不重複插
+  local room
   for _, d in ipairs(E.dungeons) do
     if d.pickAt == st.id and not MG.db.dNo[d.id] then
-      local defer = d.lv[1] > lv + 4 and logFree() < 3
+      if room == nil then room = E.PreRoom(st) end
       for _, step in ipairs(d.list) do
         local s = step.s
         if s.ph == "pre" and s.t ~= "travel" and s.t ~= "need" and not have[step.key] and (not s.pickLv or lv >= s.pickLv) then
           have[step.key] = true
           out = out or {}
-          out[#out + 1] = { s = s, key = step.key, st = d, dungeon = d, defer = defer and s.t == "accept" and not C.IsOnQuest(s.q) or nil }
+          out[#out + 1] = { s = s, key = step.key, st = d, dungeon = d, defer = not room and s.t == "accept" and not C.IsOnQuest(s.q) and not turned(s.q) or nil }
         end
       end
     end

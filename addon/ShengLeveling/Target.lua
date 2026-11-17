@@ -169,7 +169,7 @@ T.MacroText = macro
 
 -- 動作條巨集「任務目標」：內容就是同一段巨集文字（不經過 /click）
 -- 巨集名跟客戶端語言（介面語言預覽時不會多建一個巨集）
-local MACRO, OLD_MACRO = MG.gameCJK and "任務目標" or "Quest Target", "地鐵目標"
+local MACRO = MG.gameCJK and "任務目標" or "Quest Target"
 local ICON = "Ability_Hunter_SniperShot"
 local function emptyText()
   if T.objNote then return "/run ShengLv_Msg(\"" .. L["目標是地上的物件（%s），無法選取"]:format((T.objNote:gsub("\"", "'"))) .. "\")" end
@@ -179,52 +179,31 @@ local function macroBody()
   local text = macro()
   return text ~= "" and text or emptyText()
 end
--- 舊名「地鐵目標」和另一種語言的同一個巨集併成一個（見 MG.MergeMacro）
-local function renameOld()
-  MG.MergeMacro(MACRO, { MG.gameCJK and "Quest Target" or "任務目標", OLD_MACRO }, ICON, macroBody())
-end
-local lastBody
 function T.SyncMacro()
-  if not GetMacroIndexByName or InCombatLockdown() then return false end
-  renameOld()
-  local index = GetMacroIndexByName(MACRO)
-  if index and index > 0 then
-    local body = macroBody()
-    if body ~= lastBody then EditMacro(index, MACRO, ICON, body); lastBody = body end
-  end
+  if not GetMacroInfo or InCombatLockdown() then return false end
+  MG.Macro.Write("target", MACRO, ICON, macroBody(), false)
   return true
 end
 
 function T.MakeMacro()
   if InCombatLockdown() then MG.msg(L["戰鬥中不能建立巨集，脫離戰鬥再試。"]); return end
-  renameOld()
-  local index = GetMacroIndexByName(MACRO)
-  if index and index > 0 then
-    lastBody = nil
-    T.SyncMacro()
-  else
-    if GetNumMacros() >= (MAX_ACCOUNT_MACROS or 36) then MG.msg(L["帳號巨集已滿，請先刪掉一個再按「建立巨集」。"]); return end
-    index = CreateMacro(MACRO, ICON, macroBody(), nil)
-  end
-  if index and index > 0 then
+  local index, name = MG.Macro.Write("target", MACRO, ICON, macroBody(), true)
+  if name == "full" then MG.msg(L["帳號巨集已滿，請先刪掉一個再按「建立巨集」。"]); return end
+  if index then
     PickupMacro(index)
-    MG.msg(L["巨集「%s」已拿在滑鼠上，放到動作條即可。"]:format(MACRO))
+    MG.msg(L["巨集「%s」已拿在滑鼠上，放到動作條即可。"]:format(name))
   end
 end
 
--- 自動建立：設定開著、還沒有這個巨集、帳號巨集還有空位 → 默默建立（不拿到滑鼠上），第一次在聊天框說一聲
+-- 自動建立：設定開著、還沒有自己的巨集、帳號巨集還有空位 → 默默建立（不拿到滑鼠上），第一次在聊天框說一聲
 function T.AutoMacro()
-  if not GetMacroIndexByName then return end
+  if not GetMacroInfo then return end
   if InCombatLockdown() then pending = true; return end
-  renameOld() -- 改名不受「自動建立」設定影響
-  local index = GetMacroIndexByName(MACRO)
-  if index and index > 0 then lastBody = nil; T.SyncMacro(); return end
-  if not MG.UI.Get("autoMacro") then return end
-  if GetNumMacros() >= (MAX_ACCOUNT_MACROS or 36) then return end
-  index = CreateMacro(MACRO, ICON, macroBody(), nil)
-  if index and index > 0 and not MetroGuideDB.macroNoted then
+  local had = MG.Macro.Find("target")
+  local index, name = MG.Macro.Write("target", MACRO, ICON, macroBody(), MG.UI.Get("autoMacro"))
+  if index and not had and not MetroGuideDB.macroNoted then
     MetroGuideDB.macroNoted = true
-    MG.msg(L["已建立巨集『%s』，可在巨集視窗（/macro）拖到快捷列"]:format(MACRO))
+    MG.msg(L["已建立巨集『%s』，可在巨集視窗（/macro）拖到快捷列"]:format(name))
   end
 end
 
@@ -267,10 +246,9 @@ end
 
 function T.Diag()
   local out = {}
-  local index = GetMacroIndexByName and GetMacroIndexByName(MACRO) or 0
-  local body = index > 0 and GetMacroInfo and select(3, GetMacroInfo(index)) or nil
-  local old = GetMacroIndexByName and GetMacroIndexByName(OLD_MACRO) or 0
-  out[#out + 1] = L["巨集「%s」格位 %d（舊名格位 %d）內容："]:format(MACRO, index, old) .. (body and body:gsub("\n", " | ") or L["無"])
+  local index, name = MG.Macro.Find("target")
+  local body = index and select(3, GetMacroInfo(index)) or nil
+  out[#out + 1] = L["巨集「%s」格位 %d（舊名格位 %d）內容："]:format(name or MACRO, index or 0, 0) .. (body and body:gsub("\n", " | ") or L["無"])
   out[#out + 1] = "ActionButtonUseKeyDown: " .. tostring(GetCVar and GetCVar("ActionButtonUseKeyDown")) .. " | issecretvalue: " .. tostring(issecretvalue ~= nil)
   if btn then
     out[#out + 1] = L["按鈕 顯示 %s 可見 %s｜type=%s"]:format(tostring((btn:IsShown())), tostring((btn:IsVisible())), tostring((btn:GetAttribute("type"))))

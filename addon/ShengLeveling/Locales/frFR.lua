@@ -59,6 +59,7 @@ MG.Locales.frFR = {
   ["找飛行管理員"] = "Parler au maître de vol",
   ["差 %d 級"] = "Il manque %d niveau(x)",
   ["之後再接"] = "À prendre plus tard",
+  ["先交或放棄一件"] = "Rendez ou abandonnez une quête",
   ["副本 "] = "Donjon : ",
   ["補做 "] = "Rattrapage : ",
   ["建議 %d 級"] = "Niveau conseillé : %d",
@@ -72,6 +73,7 @@ MG.Locales.frFR = {
   ["略過"] = "Passée",
   ["接不到"] = "Indisponible",
   ["之後"] = "Plus tard",
+  ["日誌滿"] = "Journal plein",
   ["補做"] = "Rattraper",
   ["補經驗"] = "Bonus d'XP",
 
@@ -289,8 +291,10 @@ MG.Locales.frFR = {
   ["戰鬥中不能建立巨集，脫離戰鬥再試。"] = "Impossible de créer une macro en combat.",
   ["帳號巨集已滿，請先刪掉一個再按「建立巨集」。"] = "Les macros de compte sont pleines. Supprimes-en une, puis clique sur « Créer la macro ».",
   ["巨集「%s」已拿在滑鼠上，放到動作條即可。"] = "La macro « %s » est sur ton curseur ; dépose-la sur une barre d'action.",
+  ["巨集名稱「%s」已被其他巨集使用，沒有建立。"] = "Le nom de macro « %s » est déjà utilisé par une autre macro ; rien n'a été créé.",
+  ["「%s」已有同名巨集（不是插件建的，沒有動它），另建「%s」。"] = "Une macro nommée « %s » existe déjà (pas créée par l'addon, laissée telle quelle). « %s » a été créée à la place.",
   ["已建立巨集『%s』，可在巨集視窗（/macro）拖到快捷列"] = "Macro « %s » créée ; fais-la glisser vers une barre d'action depuis /macro.",
-  ["遊戲擋下了插件的動作（%s），請用 /slv probe 回報。"] = "Le jeu a bloqué une action de l'addon (%s). Signalez-le avec /slv probe.",
+  ["遊戲擋下了插件的動作（%s），請用 /slv probe 回報。"] = "Le jeu a bloqué une action de l'addon (%s). Signale-le avec /slv probe.",
   ["選取任務目標"] = "Cibler le monstre de quête",
 
   -- error labels (shown as "<label> error:")
@@ -305,6 +309,7 @@ MG.Locales.frFR = {
   ["任務物品"] = "Objet de quête",
   ["重算"] = "Recalcul",
   ["位置檢查"] = "Vérification de la position",
+  ["箭頭選點"] = "Point de la flèche",
   ["語言"] = "Langue",
   ["介面"] = "Interface",
   ["接不到檢查"] = "Contrôle de disponibilité",
@@ -410,7 +415,7 @@ MG.Locales.frFR = {
   ["略過了「%s」（%s）"] = "« %s » passée (%s)",
   ["%s 副本前置"] = "prérequis du donjon %s",
   ["獎勵：%s"] = "Récompense : %s",
-  ["本站有 %d 條重要任務沒排（%s）；設定開「帶上可跳過的任務」就會顯示"] = "%d suites de quêtes importantes sont laissées de côté ici (%s). Activez « Inclure les quêtes facultatives » dans les options pour les afficher.",
+  ["本站有 %d 條重要任務沒排（%s）；設定開「帶上可跳過的任務」就會顯示"] = "%d suites de quêtes importantes sont laissées de côté ici (%s). Active « Inclure les quêtes facultatives » dans les options pour les afficher.",
   ["%s等"] = "%s, etc.",
   ["已完成"] = "Terminé",
 }

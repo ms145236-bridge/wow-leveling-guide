@@ -130,10 +130,8 @@ local function refresh()
     end
   elseif state and state.cur and s and not s.x and not s.q then
     -- 沒座標的交通、提醒：指向本站後面第一個還沒完成、有座標的步驟（走到就算到了，見 E.Locate）
-    for i = state.cur + 1, #state.steps do
-      local sj = state.steps[i].s
-      if sj.x and not state.done[i] and not state.na[i] then s = sj; break end
-    end
+    local _, target = E.SoftTargets(state.steps, state.done, state.na, state.cur)
+    s = target or s
   end
   local curKey = state and state.cur and state.steps[state.cur].key
   if curKey ~= lastArrowKey then
@@ -200,7 +198,8 @@ f:SetScript("OnUpdate", function(_, dt)
     -- 門檻 0.2%；目前是到達型步驟或有臨時航點時 0.02%（大地圖上走路 0.5 秒不到 0.05%，停在到達範圍邊上也要看得到）
     local map, x, y = C.Position()
     local at = lastState and lastState.cur and lastState.steps[lastState.cur].s
-    local arrive = MG.wpOverride or (at and (at.t == "goto" or (at.t == "travel" and at.x) or at.t == "hearth"))
+    local soft = at and not at.x and E.SOFT[at.t] and not lastState.instance and not (lastState.tails and lastState.tails[lastState.cur]) -- 沒座標的交通：走到後面步驟附近算到
+    local arrive = MG.wpOverride or soft or (at and (at.t == "goto" or (at.t == "travel" and at.x) or at.t == "hearth"))
     local moved = not (lastPos and map == lastPos[1] and x and lastPos[2] and math.abs(x - lastPos[2]) + math.abs(y - lastPos[3]) < (arrive and 0.02 or 0.2))
     if moved then lastPos = { map, x, y } end
     -- 箭頭指的是好幾群點的步驟：走動時（或等著換群時）重挑點，換了就重畫箭頭與標點
@@ -215,6 +214,7 @@ f:SetScript("OnUpdate", function(_, dt)
       MG.try("位置檢查", function()
       local cur = lastState and lastState.cur and lastState.steps[lastState.cur].s
       if cur and (cur.t == "goto" or (cur.t == "travel" and cur.x) or cur.t == "hearth") then dirty = true end -- 爐石：走到下一步附近也算到（E.Locate）
+      if soft and x and E.SoftNear(cur, E.SoftTargets(lastState.steps, lastState.done, lastState.na, lastState.cur), map, x, y) then dirty = true end
       if MG.wpOverride then dirty = true end -- 臨時航點：走到了要收回
       -- 順路提醒、附近危險、沒開的飛行點：位置一變就要重看，結果有變才重畫
       local danger, fp = E.Nearby(lastState and not lastState.instance and lastState.st)
@@ -269,23 +269,33 @@ local function routeQuestsByTitle(title)
   return title and nameToQuest[title] or {}
 end
 local function autoOn() return UI.Get("auto") and not IsShiftKeyDown() end
-local accQ = {} -- 任務 → 路線上每個「接」步驟 { when, opt, d＝副本站 ID }（同一個任務可以主線必做、副本段可跳過）
+local accQ = {} -- 任務 → 路線上每個「接」步驟 { when, opt, d＝副本站 ID, at＝主線站 ID }（同一個任務可以主線必做、副本段可跳過）
 for _, st in ipairs(R.stations) do
   for _, s in ipairs(st.steps) do
     if s.t == "accept" and s.q then
       local l = accQ[s.q] or {}
       accQ[s.q] = l
-      l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or nil }
+      l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or nil, at = not st.dungeon and st.id or nil }
     end
   end
 end
 -- 路線上的任務，和引擎的判斷一致：在日誌裡的都算（交任務）；手動略過的不自動接。
 -- 其餘要有一個本角色適用的「接」步驟算數：可跳過的要設定有開或被補經驗補回，副本段的要那個副本沒選不打；路線上只有做／交的照舊算
+local autoQ = {} -- 剛自動按了接受、日誌還沒出現的任務 → 按下的時間：3 秒內每件先算占一格（連續接好幾件、日誌晚同步也都算到；只在記憶體，不寫存檔）
 local function inRoute(id)
   if not (id and not (issecretvalue and issecretvalue(id)) and id > 0 and R.quests[id] ~= nil) then return false end
   if C.IsOnQuest(id) then return true end
   if MG.db.skip["a:" .. id] then return false end
   local optional = UI.Get("optional") or E.Fill[id]
+  -- 日誌快滿先不接的副本前置：NPC 給了也不自動接。用這一刻的日誌算（和步驟列的「之後」同一個判斷），不看上次畫好的清單
+  local pre = false -- 這個任務是副本前置（那個副本沒選不打）
+  for _, a in ipairs(accQ[id] or {}) do pre = pre or (a.d ~= nil and not MG.db.dNo[a.d]) end
+  local st = pre and lastState and not lastState.instance and lastState.st
+  local pending, now = 0, GetTime()
+  for q, at in pairs(autoQ) do
+    if C.IsOnQuest(q) or now - at >= 3 then autoQ[q] = nil else pending = pending + 1 end -- 日誌看到了或過了 3 秒就放掉
+  end
+  local tight = st and not st.dungeon and not E.PreRoom(st, pending)
   for _, a in ipairs(accQ[id] or {}) do
     local when = a.when
     if when and when.lvMin then -- 等級條件不看：NPC 已經給了就接
@@ -293,7 +303,13 @@ local function inRoute(id)
       for k, v in pairs(a.when) do when[k] = v end
       when.lvMin = nil
     end
-    if E.Applies(when) and (not a.opt or optional) and not (a.d and MG.db.dNo[a.d]) then return true end
+    if E.Applies(when) and (not a.opt or optional) then
+      if a.d then
+        if not MG.db.dNo[a.d] and not tight then return true end
+      elseif not tight or (E.byId[a.at] and E.byId[a.at].index <= st.index) then
+        return true -- 主線的接。快滿時的副本前置：主線這一站或之前就排了才接，排在後面站的走到再接
+      end
+    end
   end
   return not accQ[id]
 end
@@ -351,6 +367,7 @@ function AUTO.QUEST_DETAIL()
     MG.msg(L["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"])
     return
   end
+  autoQ[id] = GetTime()
   AcceptQuest()
 end
 function AUTO.QUEST_PROGRESS()

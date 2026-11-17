@@ -120,6 +120,10 @@ export function openQuestieDB() {
     return s ? cbor(b64(s)) : undefined;
   };
 
+  // 任務目標數量更正（QuestieDB 和遊戲不符）：任務 ID → [原字, 更正]，套在繁中 obj、英文 objEn、其他語系 l10nObj 三處
+  const OBJ_FIX = { 96063: [["5", "8"], ["пять", "восемь"]] }; // 氣態黃金：遊戲內要 8 瓶
+  const fixObj = (id, l) => OBJ_FIX[id] ? l.map((t) => typeof t === "string" ? OBJ_FIX[id].reduce((s, [a, b]) => s.split(a).join(b), t) : t) : l;
+
   const quest = (id) => {
     if (!row("Quest", id)) return null;
     const starts = field("Quest", id, 2), ends = field("Quest", id, 3);
@@ -128,7 +132,7 @@ export function openQuestieDB() {
       en: field("Quest", id, 1),
       zhTW: localName("Quest", id, "zhTW"),
       zhCN: localName("Quest", id, "zhCN"),
-      obj: (() => { const t = loadType("Quest"); const c = get(t.cols.zhTW, 2); const p = t.pos.get(id); const v = c && p !== undefined ? get(c, p + 1) : undefined; return list(v ?? field("Quest", id, 8)); })(),
+      obj: (() => { const t = loadType("Quest"); const c = get(t.cols.zhTW, 2); const p = t.pos.get(id); const v = c && p !== undefined ? get(c, p + 1) : undefined; return fixObj(id, list(v ?? field("Quest", id, 8))); })(),
       reqLevel: field("Quest", id, 4) || 0,
       level: field("Quest", id, 5) || 0,
       races: field("Quest", id, 6) || 0,
@@ -139,7 +143,7 @@ export function openQuestieDB() {
       exclusiveTo: list(field("Quest", id, 16)),
       sourceItem: field("Quest", id, 11) || 0,
       requiredSourceItems: list(field("Quest", id, 21)),
-      objEn: list(field("Quest", id, 8)).filter((x) => typeof x === "string"), // enUS 目標文字（英文介面用）
+      objEn: fixObj(id, list(field("Quest", id, 8)).filter((x) => typeof x === "string")), // enUS 目標文字（英文介面用）
       zoneOrSort: field("Quest", id, 17) || 0,
       next: field("Quest", id, 22) || 0,
       flags: field("Quest", id, 23) || 0, // 2＝隊伍一起接（護送類：一人接，隊友跳確認框）
@@ -189,7 +193,7 @@ export function openQuestieDB() {
     const lo = field("Npc", id, 4), hi = field("Npc", id, 5);
     if (typeof lo !== "number") return null;
     const zh = localName("Npc", id, "zhTW");
-    return { lvl: (lo + (typeof hi === "number" ? hi : lo)) / 2, elite: [1, 2].includes(field("Npc", id, 6)), name: zh || field("Npc", id, 1), en: field("Npc", id, 1), zhMissing: !zh };
+    return { lvl: (lo + (typeof hi === "number" ? hi : lo)) / 2, hi: typeof hi === "number" ? hi : lo, elite: [1, 2].includes(field("Npc", id, 6)), friendly: field("Npc", id, 13) || "", name: zh || field("Npc", id, 1), en: field("Npc", id, 1), zhMissing: !zh };
   };
   // QuestieDB 掉落表裡的測試／停用怪：英文名「TEST …」開頭或「… UNUSED」結尾，而且沒有生成點（TEST WOLF (ALPHA FIRST)、Shambling Skeleton UNUSED…）。不列進目標，也不算進怪物等級
   const placeholder = (id) => /^TEST |(^| )UNUSED$/.test(field("Npc", id, 1) || "") && !spawnsOf("Npc", id).length;
@@ -208,7 +212,7 @@ export function openQuestieDB() {
     for (const it of list(get(obj, 3))) {
       const drops = list(field("Item", get(it, 1), 2)).filter((n) => !placeholder(n)).map(mobLevel).filter(Boolean);
       if (drops.length) {
-        out.push({ lvl: drops.reduce((a, d) => a + d.lvl, 0) / drops.length, elite: drops.every((d) => d.elite), kind: "drop", names: drops.slice(0, 8).map((d) => d.name), namesEn: drops.slice(0, 8).map((d) => d.en), zhMissing: drops.slice(0, 8).some((d) => d.zhMissing) });
+        out.push({ lvl: drops.reduce((a, d) => a + d.lvl, 0) / drops.length, hi: Math.min(...drops.map((d) => d.hi)), elite: drops.every((d) => d.elite), kind: "drop", names: drops.slice(0, 8).map((d) => d.name), namesEn: drops.slice(0, 8).map((d) => d.en), zhMissing: drops.slice(0, 8).some((d) => d.zhMissing) });
       } else {
         // 不是怪物掉的：看是不是地上的物件（箱子、植物…）
         const oids = list(field("Item", get(it, 1), 3));
@@ -244,7 +248,7 @@ export function openQuestieDB() {
   };
   const l10nAt = (type, id, loc, k) => { const p = loadType(type).pos.get(id); const col = locCol(type, loc, k); return p === undefined || !col ? undefined : get(col, p + 1) ?? undefined; };
   const l10nName = (type, id, loc) => { const v = l10nAt(type, id, loc, 1); return typeof v === "string" && v ? v : undefined; };
-  const l10nObj = (id, loc) => list(l10nAt("Quest", id, loc, 2)).filter((x) => typeof x === "string" && x);
+  const l10nObj = (id, loc) => fixObj(id, list(l10nAt("Quest", id, loc, 2)).filter((x) => typeof x === "string" && x));
   const enIds = {};
   const idByEn = (type, en) => {
     if (!enIds[type]) { enIds[type] = new Map(); for (const id of loadType(type).idList) { const n = field(type, id, 1); if (typeof n === "string" && !enIds[type].has(n)) enIds[type].set(n, id); } }

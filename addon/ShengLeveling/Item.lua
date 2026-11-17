@@ -72,22 +72,13 @@ end
 
 -- 動作條巨集「任務物品」：/use 第一個物品
 local MACRO, ICON = MG.gameCJK and "任務物品" or "Quest Item", "INV_Misc_Bag_08" -- 巨集名跟客戶端語言
-local lastBody
 local triedCreate = false
 local function macroBody()
   return items[1] and ("/use item:" .. items[1]) or ("/run ShengLv_Msg(\"" .. L["目前步驟沒有任務物品"] .. "\")")
 end
 function I.SyncMacro()
-  if not GetMacroIndexByName or InCombatLockdown() or not MG.UI.Get("itemMacro") then return end
-  local body = macroBody()
-  MG.MergeMacro(MACRO, { MG.gameCJK and "Quest Item" or "任務物品" }, ICON, body)
-  local index = GetMacroIndexByName(MACRO)
-  if index and index > 0 then
-    if body ~= lastBody then EditMacro(index, MACRO, ICON, body); lastBody = body end
-  elseif not triedCreate and GetNumMacros() < (MAX_ACCOUNT_MACROS or 36) then
-    CreateMacro(MACRO, ICON, body, nil)
-    lastBody = body
-  end
+  if not GetMacroInfo or InCombatLockdown() or not MG.UI.Get("itemMacro") then return end
+  MG.Macro.Write("item", MACRO, ICON, macroBody(), not triedCreate)
   triedCreate = true
 end
 
@@ -181,8 +172,7 @@ function I.Diag()
   local shown = {}
   for k, b in ipairs(buttons) do shown[#shown + 1] = k .. "=" .. tostring((b:IsShown())) .. "/" .. tostring((b:GetAttribute("item"))) end
   out[#out + 1] = L["按鈕："] .. table.concat(shown, "  ")
-  local index = GetMacroIndexByName and GetMacroIndexByName(MACRO) or 0
-  local body = index > 0 and GetMacroInfo and select(3, GetMacroInfo(index)) or nil
-  out[#out + 1] = L["巨集「%s」格位 %d："]:format(MACRO, index) .. tostring(body)
+  local index, name = MG.Macro.Find("item")
+  out[#out + 1] = L["巨集「%s」格位 %d："]:format(name or MACRO, index or 0) .. tostring(index and select(3, GetMacroInfo(index)) or nil)
   return out
 end

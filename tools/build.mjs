@@ -81,11 +81,16 @@ const NODE_EN = { 血蹄村: "Bloodhoof Village", 剃刀嶺: "Razor Hill", 布�
 const TAG_EN = { 可跳過: "Optional", 需遊戲實測: "Unverified", 有隊伍再做: "Group", 怪多: "Crowded", 副本前置鏈: "Dungeon prereq", 精英: "Elite", 護送: "Escort", 組隊: "Group",
   副本: "Dungeon", 組隊護送: "Group escort", 有隊伍才下: "Group only", 有隊伍或能單刷: "Group or solo", 有掉落才做: "If it drops", 掉落時才做: "If it drops", 掉落觸發: "Drop starts it",
   巡邏掉落觸發: "Drop starts it", 掉落才接: "If it drops", 之後順路: "Later, on the way", 路過才做: "If passing by", 有餘力再做: "If time allows", 有遇到才做: "If you see it", 已遇到才做: "If you see it",
-  能打高階怪再做: "Hard", 低等怪補缺口: "Fills an XP gap", 日後順路或有隊伍: "Later or with a group", 見到獵物才接: "If you see it", 材料齊才做: "When you have the items" };
+  能打高階怪再做: "Hard", 低等怪補缺口: "Fills an XP gap", 日後順路或有隊伍: "Later or with a group", 見到獵物才接: "If you see it", 材料齊才做: "When you have the items", 看得到才接: "If offered" };
 const tagEn = (tag) => { const out = (tag || "").split(/\s*・\s*/).map((t) => TAG_EN[t.trim()]).filter(Boolean); return out.length ? [...new Set(out)].join(", ") : undefined; };
 const enText = (t) => String(t || "").replace(/<([^<>\/]+)\/([^<>\/]+)>/g, "$1/$2").replace(/\$[Bb]/g, " ").replace(/\$[Nn]/g, "you").replace(/\$[CcRr]/g, "adventurer").replace(/\s+/g, " ").trim();
 const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel", 買: "buy" };
 // 行尾標籤：這些不顯示；其餘（可跳過、有隊伍再做…）顯示在步驟第 3 行
+// 條件入口：要先有掉落物、材料、聲望，或遇到巡邏的人才接得到。可跳過的接取步是「物品起始」或帶這些標籤 → 任務記 cond
+// 建置不把它升成必做；引擎補經驗時不補還沒接的（Engine.lua FillPlan）
+const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
+// 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
+const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
 const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|到[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
@@ -200,8 +205,10 @@ const mobsOf = (q) => {
   const objText = q.obj.join(" ").replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0));
   const nums = [...objText.matchAll(/(\d+)\s*[個只隻根張份塊件頭名條把顆片枚]|\b(?:Kill|Slay|Defeat|Destroy|Collect|Gather|Obtain|Retrieve|Recover|Bring)\s+(\d+)\b/gi)].map((m) => +(m[1] ?? m[2]));
   // 怪物目標其實是跟 NPC 互動（聽提里奧說話、餵受訓者、救人、把動物趕回／送回…）：目標文字是對話／餵食，或任務說明只有互動、沒有打的字眼 → 不算打怪經驗
-  const talkQ = /聽聽|聆聽|談話|交談|談一談|談壹談|對話|餵|飽餐|救出|解救|送回|趕回|趕到|馴服/.test(objText) && !/殺|擊敗|打敗|消滅|擊殺|幹掉|摧毀|征服|打死/.test(objText);
-  const talk = (m) => m.kind === "kill" && (talkQ || /\b(talk|speak|listen|feed|fed|tame)\b/i.test(m.text || ""));
+  const fight = /殺|擊敗|打敗|消滅|擊殺|幹掉|摧毀|征服|打死|制服|釋放|捕獲/.test(objText);
+  const talkQ = /聽聽|聆聽|談話|交談|談談|談一談|談壹談|對話|包紮|餵|飽餐|救出|解救|送回|趕回|趕到|馴服/.test(objText) && !fight;
+  const ownSide = (m) => (m.friendly || "").includes(ALLY ? "A" : "H"); // 目標是本陣營友善的 NPC、目標文字又沒有打的字眼：是互動
+  const talk = (m) => m.kind === "kill" && (talkQ || (ownSide(m) && !fight) || /\b(talk|speak|listen|feed|fed|tame)\b/i.test(m.text || ""));
   return mobs.map((m, k) => m && m.kind !== "object" && !talk(m)
     ? [Math.round(m.lvl * 10) / 10, m.elite ? 0 : (nums.length ? (nums[k] ?? 1) : 1), m.kind === "drop" ? 2 : 1, m.elite ? 1 : 0] // 目標文字沒數字當 1；全是精英的目標數量記 0（單人補經驗不算，在日誌裡時遊戲給的剩餘數量照算）
     : [0, 0, 1, 0]);
@@ -377,7 +384,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
     const f = body.replace(/★/g, "").split("｜").map((s) => s.trim());
     // no、raw：職業任務段落的插入點用（#K、「動詞｜文字」）
     const step = { verb, t: VERB[verb], no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
-      tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined, anyRace: tags.includes("部落可接") || undefined,
+      tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined, cond: (VERB[verb] === "accept" && tags.includes("可跳過") && (f.slice(1, 3).some((x) => /^物品\s/.test(x)) || tags.some((t) => COND_TAG.test(t)))) || undefined, keepOpt: tags.some((t) => KEEP_TAG.test(t)) || undefined, hard: (tags.includes("可跳過") && tags.includes("能打高階怪再做")) || undefined, anyRace: tags.includes("部落可接") || undefined,
       desc: [...tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")),
         ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
       spot: (tags.find((t) => /^所在[：:]/.test(t)) || "").replace(/^所在[：:]\s*/, "") || undefined, // 副本內交的人在哪（副本中目標做完時顯示）
@@ -869,7 +876,7 @@ const leadReq = [];
     if (!e) continue;
     const ps = e.ps?.length && !e.ps.some((p) => turnin(p, true)) ? e.ps.filter((p) => turnin(p)) : [];
     for (const p of [...(e.pg || []).filter((p) => !turnin(p, true) && turnin(p)), ...ps]) {
-      if (main.some((x) => x.id === p && x.opt && (x.tag || "").includes("有隊伍再做"))) continue;
+      if (main.some((x) => x.id === p && x.opt && (x.keepOpt || x.cond))) continue;
       for (const x of main.filter((x) => x.id === p && x.opt)) {
         delete x.opt;
         x.tag = (x.tag || "").split("・").filter((t) => t !== "可跳過").join("・") || undefined;
@@ -879,6 +886,10 @@ const leadReq = [];
     }
   }
 }
+// 條件入口記到任務上（引擎 FillPlan 用）
+for (const x of stations.flatMap((s) => s.steps)) if (x.cond && quests.has(x.id)) quests.get(x.id).cond = true;
+// 高階怪保護（【能打高階怪再做】【可跳過】）記到任務上（引擎 FillPlan 用）：值＝要打的怪的等級上限。每個目標取最好打的那種怪的上限，全任務取最高的目標；查不到怪的等級記 99
+for (const x of stations.flatMap((s) => s.steps)) if (x.hard && quests.has(x.id)) quests.get(x.id).hard = Math.max(...db.questMobs(x.id).filter((m) => m && m.kind !== "object").map((m) => m.hi), 0) || 99;
 // 路線上有接的任務，前置在本陣營路線完全沒有交件步驟：永遠不成立，引擎會一直藏
 {
   const all = stations.flatMap((s) => s.steps);

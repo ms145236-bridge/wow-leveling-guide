@@ -844,6 +844,7 @@ local function fillRow(row, it)
     elseif state.low and state.low[i] then status = L["%d 級"]:format(state.lowLv[i] or 0); paint(row.name, FAINT); paint(row.verb, FAINT)
     elseif MG.db.notNow[it.step.key] and not (s.q and (C.IsOnQuest(s.q) or E.Turned(s.q))) then status = L["接不到"]
     elseif it.step.defer then status = L["之後"]
+    elseif i == state.cur and s.t == "accept" and not state.done[i] and not (state.wait and state.wait[i]) and E.LogFull() then status = L["日誌滿"]
     elseif not state.done[i] then
       if it.step.carry then status = L["補做"]
       elseif s.q and state.fill[s.q] then status = L["補經驗"]
@@ -2176,6 +2177,8 @@ function UI.Render(S)
       l3, l3warn = L["差 %d 級"]:format(info.min - lv), true
     elseif step.defer then
       l3, l3warn = L["之後再接"], true
+    elseif s.t == "accept" and not state.done[state.cur] and not (state.wait and state.wait[state.cur]) and E.LogFull() then
+      l3, l3warn = L["先交或放棄一件"], true
     elseif step.dungeon then
       l3 = L["副本 "] .. step.dungeon.name
     elseif state.instance and s.spot then
