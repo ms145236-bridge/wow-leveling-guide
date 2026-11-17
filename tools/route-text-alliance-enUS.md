@@ -1251,3 +1251,46 @@
 04-45到60級.md:1330｜說明｜惡魔布可以在拍賣場買。｜Felcloth can be bought at the Auction House.
 05-副本.md:150｜說明｜走到梣谷・第一次時先接尋找凱特林（要 24 級）。｜On reaching Ashenvale (1st visit), first pick up Seeking Caitlin (requires level 24).
 03-30到45級.md:1087｜說明｜往廢土營地途中找空地使用任務道具。｜Find an open spot on the way to the Wastewander camp and use the quest item there.
+01-第一段-1到12級.md:119｜說明｜尼西是 6 級精英。｜Nimsy is a level 6 elite.
+01-第一段-1到12級.md:147｜說明｜先向基塔學附魔，蠟像才能分解；做完可放棄。｜Learn Enchanting from Kitta first so you can disenchant the wax effigy; you can abandon the quest afterward.
+01-第一段-1到12級.md:147｜說明｜先向基塔學附魔，蠟像才能分解｜Learn Enchanting from Kitta first so you can disenchant the wax effigy
+01-第一段-1到12級.md:147｜說明｜做完可放棄。｜You can abandon the quest afterward.
+02-12到30級.md:343｜說明｜死亡礦坑范克里夫掉落，右鍵接任務。｜Dropped by VanCleef in the Deadmines: right-click it to accept the quest.
+05-副本.md:76｜說明｜斯尼德的伐木機掉落。｜Dropped by Sneed's Shredder.
+02-12到30級.md:449｜說明｜純送件，搭船到米奈希爾港交給凱特林·格拉斯曼；還沒 24 級就不接，不必回頭補。｜Delivery only: take the boat to Menethil Harbor and turn it in to Caitlin Grassman; skip it if you're not level 24 yet, no need to come back for it.
+02-12到30級.md:449｜說明｜純送件，搭船到米奈希爾港交給凱特林·格拉斯曼｜Delivery only: take the boat to Menethil Harbor and turn it in to Caitlin Grassman
+02-12到30級.md:449｜說明｜還沒 24 級就不接，不必回頭補。｜Skip it if you're not level 24 yet, no need to come back for it.
+05-副本.md:150｜說明｜主線在梣谷・第一次離開阿斯特蘭納前接尋找凱特林（要 24 級），搭船到米奈希爾港就交。｜On the main route, pick up Seeking Caitlin (requires level 24) at Ashenvale (1st visit) before leaving Astranaar, then turn it in once the boat reaches Menethil Harbor.
+03-30到45級.md:460｜說明｜練到 36 級約四分之三；就在枯鬚峽谷打枯鬚狗頭人和掘地工。｜Level to about three-quarters of the way through 36; kill Drywhisker Kobolds and Drywhisker Diggers right here in Drywhisker Gorge.
+03-30到45級.md:460｜說明｜就在枯鬚峽谷打枯鬚狗頭人和掘地工。｜Kill Drywhisker Kobolds and Drywhisker Diggers right here in Drywhisker Gorge.
+03-30到45級.md:461｜說明｜東禁錮之石就在往西的路上，先拿；外禁錮之石在去避難谷地途中拿。｜The Stone of East Binding is on your way west, so get it first; get the Stone of Outer Binding on the way to Refuge Pointe.
+03-30到45級.md:461｜說明｜東禁錮之石就在往西的路上，先拿｜The Stone of East Binding is on your way west, so get it first
+03-30到45級.md:461｜說明｜外禁錮之石在去避難谷地途中拿。｜Get the Stone of Outer Binding on the way to Refuge Pointe.
+03-30到45級.md:469｜說明｜打考格雷什（39 級）前還不到 37 級，就在石拳大廳外打石拳蠻兵，或到東邊枯木村打枯木食人妖補到 37。｜If you're not level 37 before fighting Kor'gresh Coldrage (level 39), kill Boulderfist Brutes outside Boulderfist Hall, or go to Witherbark Village in the east and kill Witherbark Trolls until 37.
+03-30到45級.md:761｜說明｜任何有價值之物、吉米克斯大逃亡兩件都交了才有；純送件，到大河林地火線港交給碼頭管理員惠茲巴茲。｜Only available after turning in both Anything of Value and Zimmix's Great Escape; delivery only: turn it in to Wharfmaster Whizzbuzz at Powderfuse Port in the Riverglades.
+03-30到45級.md:761｜說明｜任何有價值之物、吉米克斯大逃亡兩件都交了才有｜Only available after turning in both Anything of Value and Zimmix's Great Escape
+03-30到45級.md:761｜說明｜純送件，到大河林地火線港交給碼頭管理員惠茲巴茲。｜Delivery only: turn it in to Wharfmaster Whizzbuzz at Powderfuse Port in the Riverglades.
+03-30到45級.md:861｜說明｜走近沉沒神廟就完成。｜Completes when you approach the Sunken Temple.
+03-30到45級.md:922｜說明｜進火線港前先往南繞到這裡撿（離大路約 12 格），到港就交給阿古‧鹽哨。｜Before entering Powderfuse Port, detour south to pick it up here (about 12 map units off the main road), then turn it in to Argo Brinewhistle when you reach the port.
+03-30到45級.md:954｜說明｜在魚人島的水下沉船旁使用誘餌召出海怪，打倒後撿頭顱。和南岸的魚人、螃蟹同一趟做。｜Use the bait next to the underwater shipwreck at the murloc island to summon the sea monster, then defeat it and loot the head. Do it on the same trip as the murlocs and crabs on the south shore.
+03-30到45級.md:980｜說明｜會經湖畔鎮轉機。身上沒有致哀、暮光威脅就不用進暴風城：爐石可用直接爐回藏寶海灣；爐石冷卻就從遠境堡經湖畔鎮、暴風城轉飛藏寶海灣。｜You'll change flights at Lakeshire. If you don't have Delivering Closure or The Twilight Threat, skip Stormwind: if your Hearthstone is ready, hearth straight back to Booty Bay; if your Hearthstone is on cooldown, fly from Farholde Keep via Lakeshire and Stormwind to Booty Bay.
+03-30到45級.md:980｜說明｜會經湖畔鎮轉機。身上沒有致哀、暮光威脅就不用進暴風城：爐石可用直接爐回藏寶海灣｜You'll change flights at Lakeshire. If you don't have Delivering Closure or The Twilight Threat, skip Stormwind: if your Hearthstone is ready, hearth straight back to Booty Bay
+03-30到45級.md:980｜說明｜爐石冷卻就從遠境堡經湖畔鎮、暴風城轉飛藏寶海灣。｜If your Hearthstone is on cooldown, fly from Farholde Keep via Lakeshire and Stormwind to Booty Bay.
+03-30到45級.md:983｜說明｜爐石沒綁藏寶海灣或還在冷卻：人在暴風城就直飛藏寶海灣；還在遠境堡就經湖畔鎮、暴風城轉飛。｜If your Hearthstone isn't set to Booty Bay or is still on cooldown: from Stormwind, fly straight to Booty Bay; if you're still at Farholde Keep, change flights at Lakeshire and Stormwind.
+03-30到45級.md:983｜說明｜爐石沒綁藏寶海灣或還在冷卻：人在暴風城就直飛藏寶海灣｜If your Hearthstone isn't set to Booty Bay or is still on cooldown: from Stormwind, fly straight to Booty Bay
+03-30到45級.md:983｜說明｜還在遠境堡就經湖畔鎮、暴風城轉飛。｜If you're still at Farholde Keep, change flights at Lakeshire and Stormwind.
+03-30到45級.md:1156｜說明｜11/16 熱修把山谷尖嘯者搬到恐怖之島海岸。先打這一帶遊蕩的山谷尖嘯者（44–46 級）；收不到靈魂再去恐怖之島海岸。｜The 11/16 hotfix moved the Vale Screechers to the Isle of Dread coast. First kill the Rogue Vale Screechers around here (level 44–46); if you can't get spirits, go to the Isle of Dread coast.
+03-30到45級.md:1156｜說明｜11/16 熱修把山谷尖嘯者搬到恐怖之島海岸。先打這一帶遊蕩的山谷尖嘯者（44–46 級）｜The 11/16 hotfix moved the Vale Screechers to the Isle of Dread coast. First kill the Rogue Vale Screechers around here (level 44–46)
+03-30到45級.md:1156｜說明｜收不到靈魂再去恐怖之島海岸。｜If you can't get spirits, go to the Isle of Dread coast.
+04-45到60級.md:151｜說明｜交件要四樣：廁所旁的賬本、晶網蜘蛛腿 ×20、塵泥沼澤的逾期包裹、悲傷沼澤加奎亞的劍。缺的不用專程去。｜The turn-in needs four things: the ledger by the outhouse, Glassweb Spider legs ×20, the overdue package from Dustwallow Marsh, and Jarquia's sword from the Swamp of Sorrows. Don't make a special trip for any you're missing.
+04-45到60級.md:153｜說明｜護送杜里奧斯往北；遇伏後在原地撿燒焦的信件交。｜Escort Dorius north; after the ambush, pick up the Singed Letter on the spot and turn it in.
+04-45到60級.md:153｜說明｜護送杜里奧斯往北｜Escort Dorius north
+04-45到60級.md:153｜說明｜遇伏後在原地撿燒焦的信件交。｜After the ambush, pick up the Singed Letter on the spot and turn it in.
+04-45到60級.md:197｜說明｜符記只有精英掉。｜Only elites drop the Symbol of Ragnaros.
+04-45到60級.md:222｜說明｜黑龍皮留著，燃燒平原交給塞勒斯。｜Keep the Black Dragonflight Molt and turn it in to Cyrus Therepentous in the Burning Steppes.
+05-副本.md:316｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。；要死亡成靈魂才看得到他：在黑石山內跳進岩漿，用靈魂狀態接完任務再跑回屍體復活。｜The Swamp of Sorrows has no Alliance flight point: head west through Deadwind Pass back to Darkshire and fly from there.; You must die and be a ghost to see him: jump into the lava inside Blackrock Mountain, accept the quest as a ghost, then run back to your corpse to resurrect.
+05-副本.md:316｜說明｜要死亡成靈魂才看得到他：在黑石山內跳進岩漿，用靈魂狀態接完任務再跑回屍體復活。｜You must die and be a ghost to see him: jump into the lava inside Blackrock Mountain, accept the quest as a ghost, then run back to your corpse to resurrect.
+04-45到60級.md:333｜說明｜食物箱在東邊（去猩猩洞、托爾瓦的路上），研究設備在西南（蟲巢往翼手龍的路上），兩處順路各撿一個。｜The Crate of Foodstuffs is in the east (on the way to the gorilla cave and Torwa), and the Research Equipment is in the southwest (on the way from the hive to the pterrordax), so grab one of each as you pass.
+04-45到60級.md:1281｜說明｜到艾薩拉交給奧汀克。｜Turn it in to Ogtinc in Azshara.
+04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan gives you bait: use it to lure Miblon away, grab the Evoroot, then come back and trade it for the Videre Elixir.
+04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Drink the Videre Elixir at the graveyard outside Gadgetzan and find Gaeriyan as a ghost.

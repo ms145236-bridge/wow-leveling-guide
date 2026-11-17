@@ -605,6 +605,7 @@ end
 
 -- 本站要顯示的步驟（跳站時帶來的「順路補」排在最前面）
 local dungeonPreSteps
+local CITY = { [1453] = true, [1454] = true, [1455] = true, [1456] = true, [1457] = true, [1458] = true } -- 暴風城、奧格瑪、鐵爐堡、雷霆崖、達納蘇斯、幽暗城
 local function stepsOf(st)
   local carry = MG.db.carry[st.id]
   local pre = not st.dungeon and dungeonPreSteps(st)
@@ -626,8 +627,32 @@ local function stepsOf(st)
   local list = st.list
   local cut = #list
   while cut > 0 and SOFT[list[cut].s.t] do cut = cut - 1 end
-  for i = 1, cut do out[#out + 1] = list[i] end
-  for _, step in ipairs(pre or {}) do out[#out + 1] = step end
+  -- 副本前置排在本站同一張地圖上最近的那個主線步驟後面（本角色會走到的才算）；本站不到那張地圖的不排，留在副本頁進本前再接。
+  -- 同一個副本的前置不往回排；前置鏈（接／做／交）有一步排不進來就整件不排
+  local place, drop = {}, {}
+  local last, lastD = 1, nil
+  for k, step in ipairs(pre or {}) do
+    local s = step.s
+    if step.dungeon ~= lastD then last, lastD = 1, step.dungeon end
+    local best, bd
+    for i = last, s.x and cut or 0 do
+      local m = list[i].s
+      if m.x and m.map == s.map and E.Applies(m.when) and not optOut(m) then
+        local d = (m.x - s.x) ^ 2 + (m.y - s.y) ^ 2
+        if (CITY[s.map] or d <= 225) and (not bd or d <= bd) then best, bd = i, d end -- 野外超過 15 格不算順路；主城內不限
+      end
+    end
+    if best then last, place[k] = best, best elseif s.q and s.tag == "副本前置鏈" then drop[s.q] = true end
+  end
+  local after = {}
+  for k, step in ipairs(pre or {}) do
+    local i = place[k]
+    if i and not (step.s.tag == "副本前置鏈" and drop[step.s.q]) then after[i] = after[i] or {}; after[i][#after[i] + 1] = step end
+  end
+  for i = 1, cut do
+    out[#out + 1] = list[i]
+    for _, step in ipairs(after[i] or {}) do out[#out + 1] = step end
+  end
   for i = cut + 1, #list do out[#out + 1] = list[i] end
   return out
 end
@@ -760,7 +785,7 @@ function E.Locate(st)
     auto, missedIdx, missedQ = nil, {}, {}
     for i = 1, n do
       local q = steps[i].s.q
-      if tails[i] or wait[i] or steps[i].s.roam or (q and roamQ[q] and steps[i].s.t == "turnin") or (q and steps[i].s.t ~= "accept" and (accAt[q] or 0) > i and not C.IsOnQuest(q)) then
+      if tails[i] or wait[i] or steps[i].s.roam or (q and steps[i].s.hold and not ready(q)) or (q and roamQ[q] and steps[i].s.t == "turnin") or (q and steps[i].s.t ~= "accept" and (accAt[q] or 0) > i and not C.IsOnQuest(q)) then
         -- 等前置的後續任務：不輪到它、也不算漏掉（前置的「交」排在它前面）
         -- 站尾交通先跳過，任務步驟都處理完才輪到
         -- 順路任務（怪散在整區）：不搶目前步驟，路上遇到就打；其他步驟都做完還沒完成才輪到

@@ -1251,3 +1251,46 @@
 04-45到60級.md:1330｜說明｜惡魔布可以在拍賣場買。｜La Gangrétoffe s'achète à l'hôtel des ventes.
 05-副本.md:150｜說明｜走到梣谷・第一次時先接尋找凱特林（要 24 級）。｜En arrivant à Orneval (1re visite), prends d'abord À la recherche de Caitlin (niveau 24 requis).
 03-30到45級.md:1087｜說明｜往廢土營地途中找空地使用任務道具。｜Trouve un espace dégagé sur le chemin du camp Bat-le-désert et utilise l'objet de quête là.
+01-第一段-1到12級.md:119｜說明｜尼西是 6 級精英。｜Nimsy est un élite de niveau 6.
+01-第一段-1到12級.md:147｜說明｜先向基塔學附魔，蠟像才能分解；做完可放棄。｜Apprends d'abord l'Enchantement auprès de Kitta pour pouvoir désenchanter l'effigie de cire ; ensuite, tu peux abandonner la quête.
+01-第一段-1到12級.md:147｜說明｜先向基塔學附魔，蠟像才能分解｜Apprends d'abord l'Enchantement auprès de Kitta pour pouvoir désenchanter l'effigie de cire
+01-第一段-1到12級.md:147｜說明｜做完可放棄。｜Ensuite, tu peux abandonner la quête.
+02-12到30級.md:343｜說明｜死亡礦坑范克里夫掉落，右鍵接任務。｜Lâché par VanCleef dans les Mortemines : clic droit dessus pour prendre la quête.
+05-副本.md:76｜說明｜斯尼德的伐木機掉落。｜Lâché par le Déchiqueteur de Sneed.
+02-12到30級.md:449｜說明｜純送件，搭船到米奈希爾港交給凱特林·格拉斯曼；還沒 24 級就不接，不必回頭補。｜Simple livraison : prends le bateau pour Port de Menethil et rends-la à Caitlin Grassman ; si tu n'es pas encore niveau 24, ne la prends pas, inutile de revenir la chercher.
+02-12到30級.md:449｜說明｜純送件，搭船到米奈希爾港交給凱特林·格拉斯曼｜Simple livraison : prends le bateau pour Port de Menethil et rends-la à Caitlin Grassman
+02-12到30級.md:449｜說明｜還沒 24 級就不接，不必回頭補。｜Si tu n'es pas encore niveau 24, ne la prends pas, inutile de revenir la chercher.
+05-副本.md:150｜說明｜主線在梣谷・第一次離開阿斯特蘭納前接尋找凱特林（要 24 級），搭船到米奈希爾港就交。｜Sur la route principale, prends À la recherche de Caitlin (niveau 24 requis) à Orneval (1re visite) avant de quitter Astranaar, et rends-la en arrivant en bateau à Port de Menethil.
+03-30到45級.md:460｜說明｜練到 36 級約四分之三；就在枯鬚峽谷打枯鬚狗頭人和掘地工。｜Monte jusqu'à environ trois quarts du niveau 36 ; tue des Kobolds Sèche-moustache et des Terrassiers Sèche-moustache ici même, dans la Gorge des Sèches-moustaches.
+03-30到45級.md:460｜說明｜就在枯鬚峽谷打枯鬚狗頭人和掘地工。｜Tue des Kobolds Sèche-moustache et des Terrassiers Sèche-moustache ici même, dans la Gorge des Sèches-moustaches.
+03-30到45級.md:461｜說明｜東禁錮之石就在往西的路上，先拿；外禁錮之石在去避難谷地途中拿。｜La Pierre de Lien orientale est sur ton chemin vers l'ouest, prends-la d'abord ; prends la Pierre de Lien extérieure en allant au Refuge de l'Ornière.
+03-30到45級.md:461｜說明｜東禁錮之石就在往西的路上，先拿｜La Pierre de Lien orientale est sur ton chemin vers l'ouest, prends-la d'abord
+03-30到45級.md:461｜說明｜外禁錮之石在去避難谷地途中拿。｜Prends la Pierre de Lien extérieure en allant au Refuge de l'Ornière.
+03-30到45級.md:469｜說明｜打考格雷什（39 級）前還不到 37 級，就在石拳大廳外打石拳蠻兵，或到東邊枯木村打枯木食人妖補到 37。｜Si tu n'es pas encore niveau 37 avant d'affronter Kor'gresh Coldrage (niveau 39), tue des Brutes Rochepoing devant le Hall Rochepoing, ou va à Fânécorce, à l'est, tuer des trolls Fânécorce jusqu'au niveau 37.
+03-30到45級.md:761｜說明｜任何有價值之物、吉米克斯大逃亡兩件都交了才有；純送件，到大河林地火線港交給碼頭管理員惠茲巴茲。｜Disponible seulement après avoir rendu Tout ce qui vaut cher et La grande évasion de Zimmix ; simple livraison : rends-la au Maître des quais Sifflebruit à Port de Poudremèche, dans Rives Claires.
+03-30到45級.md:761｜說明｜任何有價值之物、吉米克斯大逃亡兩件都交了才有｜Disponible seulement après avoir rendu Tout ce qui vaut cher et La grande évasion de Zimmix
+03-30到45級.md:761｜說明｜純送件，到大河林地火線港交給碼頭管理員惠茲巴茲。｜Simple livraison : rends-la au Maître des quais Sifflebruit à Port de Poudremèche, dans Rives Claires.
+03-30到45級.md:861｜說明｜走近沉沒神廟就完成。｜Se termine quand tu t'approches du temple englouti.
+03-30到45級.md:922｜說明｜進火線港前先往南繞到這裡撿（離大路約 12 格），到港就交給阿古‧鹽哨。｜Avant d'entrer à Port de Poudremèche, fais un détour vers le sud pour la ramasser ici (à environ 12 unités de carte de la route principale), puis rends-la à Argo Sifflécume en arrivant au port.
+03-30到45級.md:954｜說明｜在魚人島的水下沉船旁使用誘餌召出海怪，打倒後撿頭顱。和南岸的魚人、螃蟹同一趟做。｜Utilise l'appât près de l'épave engloutie, sous l'eau, à l'île des murlocs pour faire venir le monstre marin, bats-le puis ramasse sa tête. Fais-le dans le même passage que les murlocs et les crabes de la côte sud.
+03-30到45級.md:980｜說明｜會經湖畔鎮轉機。身上沒有致哀、暮光威脅就不用進暴風城：爐石可用直接爐回藏寶海灣；爐石冷卻就從遠境堡經湖畔鎮、暴風城轉飛藏寶海灣。｜Tu feras escale à Comté-du-Lac. Si tu n'as pas Derniers mots ni La menace du Crépuscule, inutile d'entrer à Hurlevent : si ta pierre de foyer est prête, rentre directement à Baie-du-Butin ; si ta pierre de foyer est en recharge, vole de Fort-Lointain à Baie-du-Butin via Comté-du-Lac et Hurlevent.
+03-30到45級.md:980｜說明｜會經湖畔鎮轉機。身上沒有致哀、暮光威脅就不用進暴風城：爐石可用直接爐回藏寶海灣｜Tu feras escale à Comté-du-Lac. Si tu n'as pas Derniers mots ni La menace du Crépuscule, inutile d'entrer à Hurlevent : si ta pierre de foyer est prête, rentre directement à Baie-du-Butin
+03-30到45級.md:980｜說明｜爐石冷卻就從遠境堡經湖畔鎮、暴風城轉飛藏寶海灣。｜Si ta pierre de foyer est en recharge, vole de Fort-Lointain à Baie-du-Butin via Comté-du-Lac et Hurlevent.
+03-30到45級.md:983｜說明｜爐石沒綁藏寶海灣或還在冷卻：人在暴風城就直飛藏寶海灣；還在遠境堡就經湖畔鎮、暴風城轉飛。｜Si ta pierre de foyer n'est pas liée à Baie-du-Butin ou est encore en recharge : depuis Hurlevent, vole directement à Baie-du-Butin ; si tu es encore à Fort-Lointain, fais escale à Comté-du-Lac et Hurlevent.
+03-30到45級.md:983｜說明｜爐石沒綁藏寶海灣或還在冷卻：人在暴風城就直飛藏寶海灣｜Si ta pierre de foyer n'est pas liée à Baie-du-Butin ou est encore en recharge : depuis Hurlevent, vole directement à Baie-du-Butin
+03-30到45級.md:983｜說明｜還在遠境堡就經湖畔鎮、暴風城轉飛。｜Si tu es encore à Fort-Lointain, fais escale à Comté-du-Lac et Hurlevent.
+03-30到45級.md:1156｜說明｜11/16 熱修把山谷尖嘯者搬到恐怖之島海岸。先打這一帶遊蕩的山谷尖嘯者（44–46 級）；收不到靈魂再去恐怖之島海岸。｜Le correctif du 11/16 a déplacé les Hurleurs des vallées sur la côte de l'Île de l'Effroi. Tue d'abord les Hurleurs des vallées insoumis du coin (niveau 44–46) ; si tu n'obtiens pas d'esprits, va sur la côte de l'Île de l'Effroi.
+03-30到45級.md:1156｜說明｜11/16 熱修把山谷尖嘯者搬到恐怖之島海岸。先打這一帶遊蕩的山谷尖嘯者（44–46 級）｜Le correctif du 11/16 a déplacé les Hurleurs des vallées sur la côte de l'Île de l'Effroi. Tue d'abord les Hurleurs des vallées insoumis du coin (niveau 44–46)
+03-30到45級.md:1156｜說明｜收不到靈魂再去恐怖之島海岸。｜Si tu n'obtiens pas d'esprits, va sur la côte de l'Île de l'Effroi.
+04-45到60級.md:151｜說明｜交件要四樣：廁所旁的賬本、晶網蜘蛛腿 ×20、塵泥沼澤的逾期包裹、悲傷沼澤加奎亞的劍。缺的不用專程去。｜Le rendu demande quatre choses : le grand livre près des latrines, des pattes d'Araignée verrière ×20, le colis en retard du Marécage d'Âprefange et l'épée de Jarquia du Marais des Chagrins. Ne fais pas de détour exprès pour ce qui manque.
+04-45到60級.md:153｜說明｜護送杜里奧斯往北；遇伏後在原地撿燒焦的信件交。｜Escorte Dorius vers le nord ; après l'embuscade, ramasse la Lettre roussie sur place et rends-la.
+04-45到60級.md:153｜說明｜護送杜里奧斯往北｜Escorte Dorius vers le nord
+04-45到60級.md:153｜說明｜遇伏後在原地撿燒焦的信件交。｜Après l'embuscade, ramasse la Lettre roussie sur place et rends-la.
+04-45到60級.md:197｜說明｜符記只有精英掉。｜Seuls les élites lâchent le Symbole de Ragnaros.
+04-45到60級.md:222｜說明｜黑龍皮留著，燃燒平原交給塞勒斯。｜Garde le Cuir de dragon noir et rends-le à Cyrus Therepentous dans les Steppes ardentes.
+05-副本.md:316｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。；要死亡成靈魂才看得到他：在黑石山內跳進岩漿，用靈魂狀態接完任務再跑回屍體復活。｜Le Marais des Chagrins n'a pas de point de vol de l'Alliance : retourne à pied vers l'ouest par le Défilé de Deuillevent jusqu'à Sombre-comté et vole de là. ; Il faut être mort, sous forme d'esprit, pour le voir : saute dans la lave à l'intérieur du Mont Rochenoire, prends la quête en esprit, puis retourne à ton corps pour ressusciter.
+05-副本.md:316｜說明｜要死亡成靈魂才看得到他：在黑石山內跳進岩漿，用靈魂狀態接完任務再跑回屍體復活。｜Il faut être mort, sous forme d'esprit, pour le voir : saute dans la lave à l'intérieur du Mont Rochenoire, prends la quête en esprit, puis retourne à ton corps pour ressusciter.
+04-45到60級.md:333｜說明｜食物箱在東邊（去猩猩洞、托爾瓦的路上），研究設備在西南（蟲巢往翼手龍的路上），兩處順路各撿一個。｜La Caisse de nourriture est à l'est (sur le chemin de la grotte des gorilles et de Torwa) et l'Equipement de recherches au sud-ouest (entre la ruche et les ptérodactyles), ramasses-en un de chaque en passant.
+04-45到60級.md:1281｜說明｜到艾薩拉交給奧汀克。｜Rends-la à Ogtinc en Azshara.
+04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan te donne un appât : sers-t'en pour éloigner Miblon, ramasse l'Evoroot, puis reviens l'échanger contre l'Elixir de Videre.
+04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Bois l'Elixir de Videre au cimetière à l'extérieur de Gadgetzan et cherche Gaeriyan sous forme d'esprit.

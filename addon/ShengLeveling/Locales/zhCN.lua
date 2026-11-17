@@ -5,8 +5,8 @@ local _, MG = ...
 MG.Locales = MG.Locales or {}
 MG.Locales.zhCN = {
   -- product, chat
-  ["|cff4fc3f7阿聖|r|cffd9b25f練等幫手|r "] = "|cff4fc3f7阿圣|r|cffd9b25f练等帮手|r ",
-  ["阿聖練等幫手"] = "阿圣练等帮手",
+  ["|cff4fc3f7阿聖|r|cffd9b25f練等幫手|r "] = "|cff4fc3f7阿圣|r|cffd9b25f练级助手|r ",
+  ["阿聖練等幫手"] = "阿圣练级助手",
   [" 出錯：|r"] = " 出错：|r",
   ["、"] = "、",
   ["："] = "：",
@@ -326,7 +326,7 @@ MG.Locales.zhCN = {
   ["任務日誌提示"] = "任务日志提示",
 
   -- reports (/slv probe, /slv rec export)
-  ["阿聖練等幫手 檢查報告：Ctrl+A 全選、Ctrl+C 複製，貼回給開發者"] = "阿圣练等帮手 检查报告：Ctrl+A 全选、Ctrl+C 复制，贴回给开发者",
+  ["阿聖練等幫手 檢查報告：Ctrl+A 全選、Ctrl+C 複製，貼回給開發者"] = "阿圣练级助手 检查报告：Ctrl+A 全选、Ctrl+C 复制，贴回给开发者",
   ["遊戲內記錄：Ctrl+A 全選、Ctrl+C 複製，貼回給開發者"] = "游戏内记录：Ctrl+A 全选、Ctrl+C 复制，贴回给开发者",
   ["遊戲內記錄：%s，%d 筆。/slv rec on|off｜export 匯出｜clear 清空｜存檔 %s"] = "游戏内记录：%s，%d 笔。/slv rec on|off｜export 导出｜clear 清空｜存档 %s",
   ["開"] = "开",
@@ -335,7 +335,7 @@ MG.Locales.zhCN = {
   ["（登出或 /reload 後寫入）"] = "（登出或 /reload 后写入）",
   ["WTF\\Account\\<帳號>\\SavedVariables\\ShengLeveling.lua"] = "WTF\\Account\\<账号>\\SavedVariables\\ShengLeveling.lua",
   [" = 錯誤："] = " = 错误：",
-  ["== 阿聖練等幫手 probe "] = "== 阿圣练等帮手 probe ",
+  ["== 阿聖練等幫手 probe "] = "== 阿圣练级助手 probe ",
   ["｜路線 "] = "｜路线 ",
   ["-- 相容層選用"] = "-- 兼容层选用",
   ["  航點 → "] = "  航点 → ",

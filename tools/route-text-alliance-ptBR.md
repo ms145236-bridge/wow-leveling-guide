@@ -1251,3 +1251,46 @@
 04-45到60級.md:1330｜說明｜惡魔布可以在拍賣場買。｜Tecido Vil pode ser comprado na casa de leilões.
 05-副本.md:150｜說明｜走到梣谷・第一次時先接尋找凱特林（要 24 級）。｜Ao chegar em Vale Gris (1ª visita), pegue primeiro Procurando Tina (requer nível 24).
 03-30到45級.md:1087｜說明｜往廢土營地途中找空地使用任務道具。｜Procure um espaço aberto no caminho para o acampamento dos Errantes e use ali o item da missão.
+01-第一段-1到12級.md:119｜說明｜尼西是 6 級精英。｜Nimsy é um elite de nível 6.
+01-第一段-1到12級.md:147｜說明｜先向基塔學附魔，蠟像才能分解；做完可放棄。｜Aprenda Encantamento com Kitta primeiro para poder desencantar a efígie de cera; depois, pode abandonar a missão.
+01-第一段-1到12級.md:147｜說明｜先向基塔學附魔，蠟像才能分解｜Aprenda Encantamento com Kitta primeiro para poder desencantar a efígie de cera
+01-第一段-1到12級.md:147｜說明｜做完可放棄。｜Depois, pode abandonar a missão.
+02-12到30級.md:343｜說明｜死亡礦坑范克里夫掉落，右鍵接任務。｜Cai do VanCleef nas Minas Mortas: clique com o botão direito para aceitar a missão.
+05-副本.md:76｜說明｜斯尼德的伐木機掉落。｜Cai do Retalhador do Sneed.
+02-12到30級.md:449｜說明｜純送件，搭船到米奈希爾港交給凱特林·格拉斯曼；還沒 24 級就不接，不必回頭補。｜Só entrega: pegue o barco para o Porto de Menethil e entregue a Tina Pastofino; se ainda não tiver nível 24, não pegue, não precisa voltar para fazer.
+02-12到30級.md:449｜說明｜純送件，搭船到米奈希爾港交給凱特林·格拉斯曼｜Só entrega: pegue o barco para o Porto de Menethil e entregue a Tina Pastofino
+02-12到30級.md:449｜說明｜還沒 24 級就不接，不必回頭補。｜Se ainda não tiver nível 24, não pegue, não precisa voltar para fazer.
+05-副本.md:150｜說明｜主線在梣谷・第一次離開阿斯特蘭納前接尋找凱特林（要 24 級），搭船到米奈希爾港就交。｜Na rota principal, pegue Procurando Tina (requer nível 24) em Vale Gris (1ª visita) antes de sair de Astranaar e entregue ao chegar de barco ao Porto de Menethil.
+03-30到45級.md:460｜說明｜練到 36 級約四分之三；就在枯鬚峽谷打枯鬚狗頭人和掘地工。｜Suba até cerca de três quartos do nível 36; mate Kobolds Bigodesseco e Escavadores Bigodesseco aqui mesmo, na Garganta Seca.
+03-30到45級.md:460｜說明｜就在枯鬚峽谷打枯鬚狗頭人和掘地工。｜Mate Kobolds Bigodesseco e Escavadores Bigodesseco aqui mesmo, na Garganta Seca.
+03-30到45級.md:461｜說明｜東禁錮之石就在往西的路上，先拿；外禁錮之石在去避難谷地途中拿。｜A Pedra da União Oriental fica no caminho para oeste, pegue primeiro; pegue a Pedra de Vínculo Exterior a caminho da Ponta do Refúgio.
+03-30到45級.md:461｜說明｜東禁錮之石就在往西的路上，先拿｜A Pedra da União Oriental fica no caminho para oeste, pegue primeiro
+03-30到45級.md:461｜說明｜外禁錮之石在去避難谷地途中拿。｜Pegue a Pedra de Vínculo Exterior a caminho da Ponta do Refúgio.
+03-30到45級.md:469｜說明｜打考格雷什（39 級）前還不到 37 級，就在石拳大廳外打石拳蠻兵，或到東邊枯木村打枯木食人妖補到 37。｜Se ainda não estiver no nível 37 antes de enfrentar Kor'gresh Furiafria (nível 39), mate Brutamontes Punho de Pedra do lado de fora do Forte Punho de Pedra ou vá à Aldeia Cascasseca, a leste, e mate Trolls Cascasseca até o 37.
+03-30到45級.md:761｜說明｜任何有價值之物、吉米克斯大逃亡兩件都交了才有；純送件，到大河林地火線港交給碼頭管理員惠茲巴茲。｜Só aparece depois de entregar Algo de valor e A grande fuga de Zimmix; só entrega: entregue ao Mestre Portuário Carrapeto em Porto Detonapavio, em Sendas do Rio.
+03-30到45級.md:761｜說明｜任何有價值之物、吉米克斯大逃亡兩件都交了才有｜Só aparece depois de entregar Algo de valor e A grande fuga de Zimmix
+03-30到45級.md:761｜說明｜純送件，到大河林地火線港交給碼頭管理員惠茲巴茲。｜Só entrega: entregue ao Mestre Portuário Carrapeto em Porto Detonapavio, em Sendas do Rio.
+03-30到45級.md:861｜說明｜走近沉沒神廟就完成。｜Conclui ao se aproximar do Templo Submerso.
+03-30到45級.md:922｜說明｜進火線港前先往南繞到這裡撿（離大路約 12 格），到港就交給阿古‧鹽哨。｜Antes de entrar em Porto Detonapavio, desvie para o sul e pegue aqui (a cerca de 12 unidades do mapa da estrada principal), e entregue a Argo Salmouro ao chegar ao porto.
+03-30到45級.md:954｜說明｜在魚人島的水下沉船旁使用誘餌召出海怪，打倒後撿頭顱。和南岸的魚人、螃蟹同一趟做。｜Use a isca ao lado do navio naufragado debaixo d'água na ilha dos murlocs para invocar o monstro marinho, derrote-o e pegue a cabeça. Faça na mesma ida que os murlocs e caranguejos da costa sul.
+03-30到45級.md:980｜說明｜會經湖畔鎮轉機。身上沒有致哀、暮光威脅就不用進暴風城：爐石可用直接爐回藏寶海灣；爐石冷卻就從遠境堡經湖畔鎮、暴風城轉飛藏寶海灣。｜Você faz escala em Vila Plácida. Se não tiver Um último adeus nem A ameaça crepuscular, não precisa entrar em Ventobravo: se a pedra de regresso estiver pronta, volte direto para a Angra do Butim; se a pedra de regresso estiver em recarga, voe da Bastilha de Ermoforte para a Angra do Butim passando por Vila Plácida e Ventobravo.
+03-30到45級.md:980｜說明｜會經湖畔鎮轉機。身上沒有致哀、暮光威脅就不用進暴風城：爐石可用直接爐回藏寶海灣｜Você faz escala em Vila Plácida. Se não tiver Um último adeus nem A ameaça crepuscular, não precisa entrar em Ventobravo: se a pedra de regresso estiver pronta, volte direto para a Angra do Butim
+03-30到45級.md:980｜說明｜爐石冷卻就從遠境堡經湖畔鎮、暴風城轉飛藏寶海灣。｜Se a pedra de regresso estiver em recarga, voe da Bastilha de Ermoforte para a Angra do Butim passando por Vila Plácida e Ventobravo.
+03-30到45級.md:983｜說明｜爐石沒綁藏寶海灣或還在冷卻：人在暴風城就直飛藏寶海灣；還在遠境堡就經湖畔鎮、暴風城轉飛。｜Se a pedra de regresso não estiver vinculada à Angra do Butim ou ainda estiver em recarga: em Ventobravo, voe direto para a Angra do Butim; se ainda estiver na Bastilha de Ermoforte, faça escala em Vila Plácida e Ventobravo.
+03-30到45級.md:983｜說明｜爐石沒綁藏寶海灣或還在冷卻：人在暴風城就直飛藏寶海灣｜Se a pedra de regresso não estiver vinculada à Angra do Butim ou ainda estiver em recarga: em Ventobravo, voe direto para a Angra do Butim
+03-30到45級.md:983｜說明｜還在遠境堡就經湖畔鎮、暴風城轉飛。｜Se ainda estiver na Bastilha de Ermoforte, faça escala em Vila Plácida e Ventobravo.
+03-30到45級.md:1156｜說明｜11/16 熱修把山谷尖嘯者搬到恐怖之島海岸。先打這一帶遊蕩的山谷尖嘯者（44–46 級）；收不到靈魂再去恐怖之島海岸。｜A correção de 11/16 moveu os Guinchadores do Vale para a costa da Ilha do Pavor. Mate primeiro os Guinchadores Errantes do Vale desta área (nível 44–46); se não conseguir espíritos, vá à costa da Ilha do Pavor.
+03-30到45級.md:1156｜說明｜11/16 熱修把山谷尖嘯者搬到恐怖之島海岸。先打這一帶遊蕩的山谷尖嘯者（44–46 級）｜A correção de 11/16 moveu os Guinchadores do Vale para a costa da Ilha do Pavor. Mate primeiro os Guinchadores Errantes do Vale desta área (nível 44–46)
+03-30到45級.md:1156｜說明｜收不到靈魂再去恐怖之島海岸。｜Se não conseguir espíritos, vá à costa da Ilha do Pavor.
+04-45到60級.md:151｜說明｜交件要四樣：廁所旁的賬本、晶網蜘蛛腿 ×20、塵泥沼澤的逾期包裹、悲傷沼澤加奎亞的劍。缺的不用專程去。｜A entrega pede quatro coisas: o livro-caixa ao lado da latrina, pernas de Aranha Teia-de-vidro ×20, o pacote atrasado do Pântano Vadeoso e a espada de Jarquia do Pântano das Mágoas. Não vá de propósito buscar o que faltar.
+04-45到60級.md:153｜說明｜護送杜里奧斯往北；遇伏後在原地撿燒焦的信件交。｜Escolte Dório para o norte; depois da emboscada, pegue a Carta Chamuscada no local e entregue.
+04-45到60級.md:153｜說明｜護送杜里奧斯往北｜Escolte Dório para o norte
+04-45到60級.md:153｜說明｜遇伏後在原地撿燒焦的信件交。｜Depois da emboscada, pegue a Carta Chamuscada no local e entregue.
+04-45到60級.md:197｜說明｜符記只有精英掉。｜Só os elites derrubam o Símbolo de Ragnaros.
+04-45到60級.md:222｜說明｜黑龍皮留著，燃燒平原交給塞勒斯。｜Guarde a Muda de Pele da Revoada Negra e entregue a Ciro Terepento nas Estepes Ardentes.
+05-副本.md:316｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。；要死亡成靈魂才看得到他：在黑石山內跳進岩漿，用靈魂狀態接完任務再跑回屍體復活。｜O Pântano das Mágoas não tem ponto de voo da Aliança: vá para oeste pela Trilha do Vento Morto de volta a Vila Sombria e voe de lá.; É preciso morrer e virar espírito para vê-lo: pule na lava dentro da Montanha Rocha Negra, aceite a missão como espírito e depois corra de volta ao corpo para ressuscitar.
+05-副本.md:316｜說明｜要死亡成靈魂才看得到他：在黑石山內跳進岩漿，用靈魂狀態接完任務再跑回屍體復活。｜É preciso morrer e virar espírito para vê-lo: pule na lava dentro da Montanha Rocha Negra, aceite a missão como espírito e depois corra de volta ao corpo para ressuscitar.
+04-45到60級.md:333｜說明｜食物箱在東邊（去猩猩洞、托爾瓦的路上），研究設備在西南（蟲巢往翼手龍的路上），兩處順路各撿一個。｜O Caixote de Comestíveis fica a leste (a caminho da caverna dos gorilas e de Torwa) e o Equipamento de Pesquisa a sudoeste (no caminho da colmeia aos pterrordáctilos), então pegue um de cada no caminho.
+04-45到60級.md:1281｜說明｜到艾薩拉交給奧汀克。｜Entregue a Ogtinc em Azshara.
+04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan dá uma isca: use-a para afastar Miblon, pegue a Raiz do Mal e volte para trocar pelo Elixir Videre.
+04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Beba o Elixir Videre no cemitério fora de Geringontzan e procure Gaeriyan como espírito.

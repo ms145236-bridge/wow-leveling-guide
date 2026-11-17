@@ -1251,3 +1251,46 @@
 04-45到60級.md:1330｜說明｜惡魔布可以在拍賣場買。｜Teufelsstoff gibt es im Auktionshaus.
 05-副本.md:150｜說明｜走到梣谷・第一次時先接尋找凱特林（要 24 級）。｜Nimm beim Eintreffen in Ashenvale (1. Besuch) zuerst Suche nach Caitlin an (benötigt Stufe 24).
 03-30到45級.md:1087｜說明｜往廢土營地途中找空地使用任務道具。｜Such dir auf dem Weg zum Lager der Wüstenläufer eine freie Stelle und benutze dort den Questgegenstand.
+01-第一段-1到12級.md:119｜說明｜尼西是 6 級精英。｜Nimsy ist ein Elitegegner der Stufe 6.
+01-第一段-1到12級.md:147｜說明｜先向基塔學附魔，蠟像才能分解；做完可放棄。｜Lerne zuerst bei Kitta Verzauberkunst, damit du das Wachsbildnis entzaubern kannst; danach kannst du die Quest abbrechen.
+01-第一段-1到12級.md:147｜說明｜先向基塔學附魔，蠟像才能分解｜Lerne zuerst bei Kitta Verzauberkunst, damit du das Wachsbildnis entzaubern kannst
+01-第一段-1到12級.md:147｜說明｜做完可放棄。｜Danach kannst du die Quest abbrechen.
+02-12到30級.md:343｜說明｜死亡礦坑范克里夫掉落，右鍵接任務。｜Droppt von van Cleef in den Todesminen: Per Rechtsklick nimmst du die Quest an.
+05-副本.md:76｜說明｜斯尼德的伐木機掉落。｜Droppt von Sneeds Schredder.
+02-12到30級.md:449｜說明｜純送件，搭船到米奈希爾港交給凱特林·格拉斯曼；還沒 24 級就不接，不必回頭補。｜Reiner Botengang: Nimm das Schiff zum Hafen von Menethil und gib sie bei Caitlin Grassman ab; ohne Stufe 24 nicht annehmen, du musst nicht dafür zurückkommen.
+02-12到30級.md:449｜說明｜純送件，搭船到米奈希爾港交給凱特林·格拉斯曼｜Reiner Botengang: Nimm das Schiff zum Hafen von Menethil und gib sie bei Caitlin Grassman ab
+02-12到30級.md:449｜說明｜還沒 24 級就不接，不必回頭補。｜Ohne Stufe 24 nicht annehmen, du musst nicht dafür zurückkommen.
+05-副本.md:150｜說明｜主線在梣谷・第一次離開阿斯特蘭納前接尋找凱特林（要 24 級），搭船到米奈希爾港就交。｜Auf der Hauptroute nimmst du in Eschental (1. Besuch) vor dem Verlassen von Astranaar Suche nach Caitlin an (benötigt Stufe 24) und gibst sie ab, sobald das Schiff im Hafen von Menethil anlegt.
+03-30到45級.md:460｜說明｜練到 36 級約四分之三；就在枯鬚峽谷打枯鬚狗頭人和掘地工。｜Level bis etwa drei Viertel von Stufe 36; töte gleich hier in der Schlucht der Trockenstoppel Kobolde der Trockenstoppel und Buddler der Trockenstoppel.
+03-30到45級.md:460｜說明｜就在枯鬚峽谷打枯鬚狗頭人和掘地工。｜Töte gleich hier in der Schlucht der Trockenstoppel Kobolde der Trockenstoppel und Buddler der Trockenstoppel.
+03-30到45級.md:461｜說明｜東禁錮之石就在往西的路上，先拿；外禁錮之石在去避難谷地途中拿。｜Der Stein der östlichen Bindung liegt auf dem Weg nach Westen, hol ihn zuerst; den Stein der äußeren Bindung holst du auf dem Weg zur Zuflucht.
+03-30到45級.md:461｜說明｜東禁錮之石就在往西的路上，先拿｜Der Stein der östlichen Bindung liegt auf dem Weg nach Westen, hol ihn zuerst
+03-30到45級.md:461｜說明｜外禁錮之石在去避難谷地途中拿。｜Den Stein der äußeren Bindung holst du auf dem Weg zur Zuflucht.
+03-30到45級.md:469｜說明｜打考格雷什（39 級）前還不到 37 級，就在石拳大廳外打石拳蠻兵，或到東邊枯木村打枯木食人妖補到 37。｜Hast du vor dem Kampf gegen Kor'gresh Frostzorn (Stufe 39) noch nicht Stufe 37, farme vor der Halle der Felsfäuste Schläger der Felsfäuste oder im Osten im Dorf der Witherbark Trolle der Witherbark bis Stufe 37.
+03-30到45級.md:761｜說明｜任何有價值之物、吉米克斯大逃亡兩件都交了才有；純送件，到大河林地火線港交給碼頭管理員惠茲巴茲。｜Erst verfügbar, wenn du Alles von Wert und Zimmix' große Flucht abgegeben hast; reiner Botengang: Gib sie bei Werftmeister Whizzbuzz im Hafen von Powderfuse in den Flusslanden ab.
+03-30到45級.md:761｜說明｜任何有價值之物、吉米克斯大逃亡兩件都交了才有｜Erst verfügbar, wenn du Alles von Wert und Zimmix' große Flucht abgegeben hast
+03-30到45級.md:761｜說明｜純送件，到大河林地火線港交給碼頭管理員惠茲巴茲。｜Reiner Botengang: Gib sie bei Werftmeister Whizzbuzz im Hafen von Powderfuse in den Flusslanden ab.
+03-30到45級.md:861｜說明｜走近沉沒神廟就完成。｜Wird abgeschlossen, sobald du dich dem Versunkenen Tempel näherst.
+03-30到45級.md:922｜說明｜進火線港前先往南繞到這裡撿（離大路約 12 格），到港就交給阿古‧鹽哨。｜Mach vor dem Hafen von Powderfuse einen Abstecher nach Süden und heb sie hier auf (etwa 12 Karteneinheiten abseits der Hauptstraße), dann gibst du sie im Hafen bei Argo Brinewhistle ab.
+03-30到45級.md:954｜說明｜在魚人島的水下沉船旁使用誘餌召出海怪，打倒後撿頭顱。和南岸的魚人、螃蟹同一趟做。｜Benutze den Köder neben dem Schiffswrack unter Wasser bei der Murlocinsel, um das Meeresungeheuer hervorzulocken, besiege es und plündere den Kopf. Erledige das in derselben Runde wie die Murlocs und Krebse an der Südküste.
+03-30到45級.md:980｜說明｜會經湖畔鎮轉機。身上沒有致哀、暮光威脅就不用進暴風城：爐石可用直接爐回藏寶海灣；爐石冷卻就從遠境堡經湖畔鎮、暴風城轉飛藏寶海灣。｜Du steigst in Seenhain um. Hast du Endgültiger Abschied oder Die Twilight-Bedrohung nicht dabei, musst du nicht nach Sturmwind: Ist der Ruhestein bereit, nimm ihn direkt zurück nach Booty Bay; hat der Ruhestein noch Abklingzeit, flieg von Burg Farholde über Seenhain und Sturmwind nach Booty Bay.
+03-30到45級.md:980｜說明｜會經湖畔鎮轉機。身上沒有致哀、暮光威脅就不用進暴風城：爐石可用直接爐回藏寶海灣｜Du steigst in Seenhain um. Hast du Endgültiger Abschied oder Die Twilight-Bedrohung nicht dabei, musst du nicht nach Sturmwind: Ist der Ruhestein bereit, nimm ihn direkt zurück nach Booty Bay
+03-30到45級.md:980｜說明｜爐石冷卻就從遠境堡經湖畔鎮、暴風城轉飛藏寶海灣。｜Hat der Ruhestein noch Abklingzeit, flieg von Burg Farholde über Seenhain und Sturmwind nach Booty Bay.
+03-30到45級.md:983｜說明｜爐石沒綁藏寶海灣或還在冷卻：人在暴風城就直飛藏寶海灣；還在遠境堡就經湖畔鎮、暴風城轉飛。｜Ist dein Ruhestein nicht auf Booty Bay gesetzt oder hat er noch Abklingzeit: Bist du in Sturmwind, flieg direkt nach Booty Bay; bist du noch in Burg Farholde, steig in Seenhain und Sturmwind um.
+03-30到45級.md:983｜說明｜爐石沒綁藏寶海灣或還在冷卻：人在暴風城就直飛藏寶海灣｜Ist dein Ruhestein nicht auf Booty Bay gesetzt oder hat er noch Abklingzeit: Bist du in Sturmwind, flieg direkt nach Booty Bay
+03-30到45級.md:983｜說明｜還在遠境堡就經湖畔鎮、暴風城轉飛。｜Bist du noch in Burg Farholde, steig in Seenhain und Sturmwind um.
+03-30到45級.md:1156｜說明｜11/16 熱修把山谷尖嘯者搬到恐怖之島海岸。先打這一帶遊蕩的山谷尖嘯者（44–46 級）；收不到靈魂再去恐怖之島海岸。｜Der 11/16-Hotfix hat die Talkreischer an die Küste der Insel des Schreckens verlegt. Töte zuerst die Wilden Talkreischer in dieser Gegend (Stufe 44–46); bekommst du keine Geister, geh zur Küste der Insel des Schreckens.
+03-30到45級.md:1156｜說明｜11/16 熱修把山谷尖嘯者搬到恐怖之島海岸。先打這一帶遊蕩的山谷尖嘯者（44–46 級）｜Der 11/16-Hotfix hat die Talkreischer an die Küste der Insel des Schreckens verlegt. Töte zuerst die Wilden Talkreischer in dieser Gegend (Stufe 44–46)
+03-30到45級.md:1156｜說明｜收不到靈魂再去恐怖之島海岸。｜Bekommst du keine Geister, geh zur Küste der Insel des Schreckens.
+04-45到60級.md:151｜說明｜交件要四樣：廁所旁的賬本、晶網蜘蛛腿 ×20、塵泥沼澤的逾期包裹、悲傷沼澤加奎亞的劍。缺的不用專程去。｜Für die Abgabe brauchst du vier Dinge: das Geschäftsbuch neben dem Abort, Beine von Glasnetzspinnen ×20, das überfällige Paket aus den Düstermarschen und Jarquias Schwert aus den Sümpfen des Elends. Für fehlende Teile lohnt sich kein Extraweg.
+04-45到60級.md:153｜說明｜護送杜里奧斯往北；遇伏後在原地撿燒焦的信件交。｜Eskortiere Dorius nach Norden; nach dem Hinterhalt hebst du vor Ort den Angesengten Brief auf und gibst ihn ab.
+04-45到60級.md:153｜說明｜護送杜里奧斯往北｜Eskortiere Dorius nach Norden
+04-45到60級.md:153｜說明｜遇伏後在原地撿燒焦的信件交。｜Nach dem Hinterhalt hebst du vor Ort den Angesengten Brief auf und gibst ihn ab.
+04-45到60級.md:197｜說明｜符記只有精英掉。｜Nur Elitegegner droppen das Symbol von Ragnaros.
+04-45到60級.md:222｜說明｜黑龍皮留著，燃燒平原交給塞勒斯。｜Behalte die Abgestreifte Haut des schwarzen Drachenschwarms und gib sie in der Brennenden Steppe bei Cyrus Therepentous ab.
+05-副本.md:316｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。；要死亡成靈魂才看得到他：在黑石山內跳進岩漿，用靈魂狀態接完任務再跑回屍體復活。｜In den Sümpfen des Elends gibt es keinen Flugpunkt der Allianz: Geh nach Westen durch den Gebirgspass der Totenwinde zurück nach Dunkelhain und flieg von dort.; Nur als Geist kannst du ihn sehen: Spring im Schwarzfels in die Lava, nimm die Quest als Geist an und lauf dann zu deiner Leiche zurück, um wiederbelebt zu werden.
+05-副本.md:316｜說明｜要死亡成靈魂才看得到他：在黑石山內跳進岩漿，用靈魂狀態接完任務再跑回屍體復活。｜Nur als Geist kannst du ihn sehen: Spring im Schwarzfels in die Lava, nimm die Quest als Geist an und lauf dann zu deiner Leiche zurück, um wiederbelebt zu werden.
+04-45到60級.md:333｜說明｜食物箱在東邊（去猩猩洞、托爾瓦的路上），研究設備在西南（蟲巢往翼手龍的路上），兩處順路各撿一個。｜Die Kiste mit Lebensmitteln liegt im Osten (auf dem Weg zur Gorillahöhle und zu Torwa), die Forscherausrüstung im Südwesten (auf dem Weg vom Silithidenstock zu den Pterrordaxen), nimm im Vorbeigehen je eins mit.
+04-45到60級.md:1281｜說明｜到艾薩拉交給奧汀克。｜Gib sie bei Ogtinc in Azshara ab.
+04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan gibt dir einen Köder: Lock damit Miblon weg, schnapp dir die Evowurzel und tausch sie danach gegen das Videre-Elixier ein.
+04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Trink am Friedhof vor Gadgetzan das Videre-Elixier und such als Geist Gaeriyan auf.
