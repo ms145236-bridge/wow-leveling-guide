@@ -32,6 +32,18 @@ for _, station in ipairs({"04-49", "04-51"}) do
 end
 
 local horde, hordeMeta, hordeQuests = route("Horde")
+-- Finish both XP-paying hand-ins before the level-58 pickup. A level-57 player
+-- can gain the last XP at Bor after taking Larksbane's follow-up on the spot.
+local silithus = horde["04-56"]
+local fragments, larksbane = find(silithus, "turnin", 8284)
+local deserter, tablet = find(silithus, "accept", 8285)
+local texts = find(silithus, "turnin", 8318)
+assert(deserter == fragments + 1 and larksbane.npc == tablet.npc)
+assert(larksbane.map == tablet.map and larksbane.x == tablet.x and larksbane.y == tablet.y)
+assert(texts == deserter + 1 and find(silithus, "accept", 8304) == texts + 1)
+assert(hordeQuests[8285].ps[1] == 8284 and hordeQuests[8304].min == 58)
+assert(not find(silithus, "accept", 8306))
+
 local camp = horde["01-3"]
 local hunt, questgiver = find(camp, "accept", 750)
 assert(find(camp, "turnin", 747) + 1 == hunt)
