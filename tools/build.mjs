@@ -759,14 +759,17 @@ for (const st of stations) {
     const objIds = step.t === "accept" ? q.startObjects : q.endObjects;
     const npcs = npcIds.map((n) => db.npc(n)).filter(Boolean);
     const namedNpc = step.npc && npcs.find((npc) => [npc.zhTW, npc.zhTW && gameName(npc.zhTW), npc.en].some((name) => name && db.norm(cleanName(name)) === db.norm(cleanName(step.npc))));
-    const giver = namedNpc || npcs[0] || objIds.map((o) => db.object(o)).find(Boolean);
-    if (!step.npc && giver) step.npc = npcs.length && giver.zhTW ? gameName(giver.zhTW) : giver.zhTW || giver.en;
+    // 共用職業任務常有兩陣營的訓練師。保留手寫指定，其餘優先採用本陣營可互動的 NPC。
+    const friendly = npcs.find((npc) => npc.faction?.includes(ALLY ? "A" : "H"));
+    const npcGiver = namedNpc || friendly || npcs.find((npc) => !npc.faction);
+    const isNpc = Boolean(npcGiver);
+    const giver = npcGiver || objIds.map((o) => db.object(o)).find(Boolean);
+    if (!step.npc && giver) step.npc = isNpc && giver.zhTW ? gameName(giver.zhTW) : giver.zhTW || giver.en;
     // 英文：給任務的 NPC／物件英文名；從物品開始的任務用物品英文名（物件、物品不當選取目標）
-    if (giver) { step.npcEn = mdEnt(id, step.npc) || cleanName(giver.en); if (step.npcEn !== cleanName(giver.en)) enDiff.npc++; if (!npcs.length) step.npcObj = true; }
+    if (giver) { step.npcEn = mdEnt(id, step.npc) || cleanName(giver.en); if (step.npcEn !== cleanName(giver.en)) enDiff.npc++; if (!isNpc) step.npcObj = true; }
     else if (step.t === "accept" && q.startItems.length) { step.npcEn = mdEnt(id, step.npc) || db.itemEn(q.startItems[0]); step.npcObj = true; }
-    if (npcs.length && giver) step.tgtEn = mdEnt(id, step.tgt) || cleanName(giver.en);
-    const isNpc = npcs.length > 0;
-    if (isNpc && giver) {
+    if (isNpc) step.tgtEn = mdEnt(id, step.tgt) || cleanName(giver.en);
+    if (isNpc) {
       const dbName = giver.zhTW ? gameName(giver.zhTW) : null;
       if (dbName) {
         step.tgt = dbName;

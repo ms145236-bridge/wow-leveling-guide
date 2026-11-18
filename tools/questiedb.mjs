@@ -166,7 +166,7 @@ export function openQuestieDB() {
   };
   const npc = (id) => row("Npc", id) && {
     id, en: field("Npc", id, 1), zhTW: localName("Npc", id, "zhTW"), zhCN: localName("Npc", id, "zhCN"),
-    spawns: spawnsOf("Npc", id),
+    faction: field("Npc", id, 13), spawns: spawnsOf("Npc", id),
   };
   const object = (id) => row("Object", id) && {
     id, en: field("Object", id, 1), zhTW: localName("Object", id, "zhTW"), spawns: spawnsOf("Object", id),

@@ -1297,3 +1297,4 @@
 02-12到30級.md:14｜說明｜沿奧伯丁南邊海岸打 9–10 級的小潮行蟹收集蟹腿。還沒接「擱淺的巨獸」的話，滿 11 級後順路回碼頭時再接。｜Recoge patas de los cangrejos de nivel 9–10 en la costa al sur de Auberdine. Si aún no tienes la misión de la criatura varada, acéptala la próxima vez que pases por el muelle a partir del nivel 11.
 
 04-45到60級.md:1298｜說明｜仍在艾薩拉就回塔倫迪斯營地飛阿斯特蘭納，往北進費伍德。已出神廟就直接到費伍德的翡翠聖地。｜Si sigues en Azshara, vuelve a Punta Talrendis, vuela a Astranaar y ve al norte hacia Frondavil. Al salir del templo, ve directamente al Santuario Esmeralda en Frondavil.
+03-30到45級.md:1202｜說明｜優美的信件由職業訓練師引介；通道內的箱子是陷阱，可用偵測陷阱。｜Tu instructor inicia Carta elegante. Usa Detectar trampas en las cajas del pasillo.
