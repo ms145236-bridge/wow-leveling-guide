@@ -658,15 +658,19 @@ function E.ViaTarget(step)
   return { s.map, s.x, s.y }
 end
 
--- 路線後面（第 idx 站含以後的主線站）會接手這個任務：已接的，後面還有本角色適用的任一步驟；
--- 還沒接的，後面要有適用的「接」。這種不用帶過來補、離站也不用提醒
+-- 路線後面（第 idx 站含以後的主線站）會接手這個任務剩下的事：已接且可交 → 後面要有「交」；已接未完成 → 後面要有「做」或「交」；
+-- 還沒接 → 後面要有「接」。等級條件看那一站的等級上限（走到那站時的等級），種族／職業等其他條件照舊。這種不用帶過來補、離站也不用提醒
 local function laterHas(q, idx)
   if not idx then return false end
-  local onLog = C.IsOnQuest(q)
+  local need = not C.IsOnQuest(q) and "accept" or C.IsReady(q) and "turnin" or nil
+  local lv = UnitLevel("player") or 0
   for _, o in ipairs(questSt[q] or {}) do
     if not o.dungeon and o.index and o.index >= idx then
       for _, step in ipairs(o.list) do
-        if step.s.q == q and (onLog or step.s.t == "accept") and E.Applies(step.s.when) then return true end
+        local s = step.s
+        local t = s.t
+        if s.q == q and (t == need or (not need and (t == "do" or t == "turnin"))) and E.Applies(s.when, true)
+          and (not s.when or not s.when.lvMin or s.when.lvMin <= math.max(lv, o.lv[2])) then return true end
       end
     end
   end
@@ -683,9 +687,13 @@ local function stepsOf(st)
   carry = carry or {}
   local here = {}
   for _, step in ipairs(st.list) do if step.s.q then here[step.s.q] = true end end
-  for k = #carry, 1, -1 do if turned(carry[k]) or laterHas(carry[k], st.index and st.index + 1) then table.remove(carry, k) end end
+  -- 交掉的才從存檔刪；後面站會接手的只在顯示時略過（之後條件變了，例如交任務要的物品丟了，還能再顯示）。重複的只顯示一次
+  for k = #carry, 1, -1 do if turned(carry[k]) then table.remove(carry, k) end end
+  local shown = {}
   for _, q in ipairs(carry) do
-    for _, other in ipairs(not here[q] and questSt[q] or {}) do
+    local hide = shown[q] or laterHas(q, st.index and st.index + 1)
+    shown[q] = true
+    for _, other in ipairs(not hide and not here[q] and questSt[q] or {}) do
       if other ~= st and not other.dungeon then
         for _, step in ipairs(other.list) do
           if step.s.q == q then out[#out + 1] = { s = step.s, key = step.key, note = step.note, st = other, carry = true } end
@@ -1113,8 +1121,8 @@ function E.JumpPlan(target)
   local from = E.Current()
   local carry, dropN = {}, 0
   if from and from.index and target.index > from.index then
+    local seen = {} -- 整趟跳站一起去重（同一任務的接／交分在不同略過的站）
     for k = from.index, target.index - 1 do
-      local seen = {}
       for _, step in ipairs(E.stations[k].list) do
         local q = step.s.q
         if q and not seen[q] and E.Applies(step.s.when) and not turned(q) and not laterHas(q, target.index) then
