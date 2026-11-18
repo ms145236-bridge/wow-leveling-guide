@@ -1299,3 +1299,7 @@
 04-45到60級.md:1298｜說明｜仍在艾薩拉就回塔倫迪斯營地飛阿斯特蘭納，往北進費伍德。已出神廟就直接到費伍德的翡翠聖地。｜Si tu es encore en Azshara, retourne à la halte de Talrendis, vole jusqu’à Astranaar, puis dirige-toi vers le nord jusqu’à Gangrebois. En sortant du temple, va directement au sanctuaire d’Émeraude à Gangrebois.
 03-30到45級.md:1202｜說明｜優美的信件由職業訓練師引介；通道內的箱子是陷阱，可用偵測陷阱。｜Ton maître de classe lance Lettre élégante. Les coffres du couloir sont piégés : utilise Détection des pièges.
 04-45到60級.md:334｜說明｜拾取東側的食物木箱｜Ramassez la caisse de vivres dans le camp à l’est.
+05-副本.md:81｜說明｜備妥 10 個粗製炸藥（物品 4358），可由工程學製作、交易或在拍賣場取得。｜Préparez 10 dynamites basiques (objet 4358). Les ingénieurs peuvent les fabriquer. Vous pouvez aussi les obtenir par échange ou à l’hôtel des ventes.
+05-副本.md:182｜說明｜在米奈希爾港找凱特林接任務。｜Prenez la quête auprès de Caitlin au port de Menethil.
+05-副本.md:117｜說明｜先在湖畔鎮接伸張正義，再到夜色鎮接罪與罰。監獄暴動需要先交范克里夫掉落的信；沒有信就先打其他任務。卡姆·深怒等在濕地完成黑鐵戰爭後再組隊。｜Prenez « Ce qui se passait ailleurs… » à Comté-du-Lac et « Crime et Châtiments » à Sombre-Comté. Pour « Les Emeutes de la Prison », rendez d’abord la lettre trouvée sur VanCleef. Si vous ne l’avez pas, faites les autres quêtes. Formez un groupe pour « Fureur dans les Profondeurs » après avoir terminé « La guerre contre les Sombrefer » dans les Paluns.
+03-30到45級.md:152｜說明｜交完黑鐵戰爭後順手接。下次組隊進暴風城監獄再做，回丹莫德時交。｜Prenez cette quête en rendant « La guerre contre les Sombrefer ». Faites-la lors de votre prochaine visite à la Prison et rendez-la en repassant à Dun Modr.

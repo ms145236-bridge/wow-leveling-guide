@@ -1299,3 +1299,7 @@
 04-45到60級.md:1298｜說明｜仍在艾薩拉就回塔倫迪斯營地飛阿斯特蘭納，往北進費伍德。已出神廟就直接到費伍德的翡翠聖地。｜From Azshara, return to Talrendis Point, fly to Astranaar, and head north into Felwood. After the temple, go straight to Emerald Sanctuary in Felwood.
 03-30到45級.md:1202｜說明｜優美的信件由職業訓練師引介；通道內的箱子是陷阱，可用偵測陷阱。｜Your trainer starts Elegant Letter. Use Detect Traps on the boxes in the passage.
 04-45到60級.md:334｜說明｜拾取東側的食物木箱｜Loot the crate of foodstuffs at the eastern camp.
+05-副本.md:81｜說明｜備妥 10 個粗製炸藥（物品 4358），可由工程學製作、交易或在拍賣場取得。｜Bring 10 Rough Dynamite (item 4358). Engineers can craft it, or you can trade for it or buy it at the auction house.
+05-副本.md:182｜說明｜在米奈希爾港找凱特林接任務。｜Pick up the quest from Caitlin in Menethil Harbor.
+05-副本.md:117｜說明｜先在湖畔鎮接伸張正義，再到夜色鎮接罪與罰。監獄暴動需要先交范克里夫掉落的信；沒有信就先打其他任務。卡姆·深怒等在濕地完成黑鐵戰爭後再組隊。｜Pick up “What Comes Around...” in Lakeshire and “Crime and Punishment” in Darkshire. “The Stockade Riots” requires turning in the letter dropped by VanCleef. If you lack the letter, continue with the other quests. Group up for “The Fury Runs Deep” after completing “The Dark Iron War” in the Wetlands.
+03-30到45級.md:152｜說明｜交完黑鐵戰爭後順手接。下次組隊進暴風城監獄再做，回丹莫德時交。｜Pick this up when you turn in “The Dark Iron War”. Complete it on your next Stockade run and turn it in on your next visit to Dun Modr.

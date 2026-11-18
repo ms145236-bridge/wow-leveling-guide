@@ -1625,7 +1625,7 @@ function E.DungeonByInstance(id)
   return all[1], all
 end
 
--- 副本裡的步驟列：這個副本的任務（路線上的＋QuestieDB 屬於這個副本區域的），只列日誌中還沒完成的（在副本內交的完成了也留著），一次全列
+-- 副本裡的步驟列：列出日誌中還沒完成的任務、可在副本內交件的任務，以及已撿到起始物品的任務。
 function E.InstanceState(d, all)
   local steps, seen, inTurn, inDo = {}, {}, {}, {}
   for _, x in ipairs(all or { d }) do
@@ -1642,8 +1642,27 @@ function E.InstanceState(d, all)
       steps[#steps + 1] = { s = (inTurn[q] and C.IsReady(q)) and inTurn[q] or inDo[q] or { t = "do", q = q }, key = "d:" .. q, st = d }
     end
   end
+  local function inPickup(s)
+    if s.when and s.when.bag then return true end
+    if s.map then return false end
+    local info = R.quests[s.q] or {}
+    for _, p in ipairs(info.pg or {}) do if inTurn[p] and turned(p) then return true end end
+    for _, p in ipairs(info.ps or {}) do if inTurn[p] and turned(p) then return true end end
+    return false
+  end
   for _, x in ipairs(all or { d }) do
-    for _, step in ipairs(x.list or {}) do add(step.s.q) end
+    for _, step in ipairs(x.list or {}) do
+      local s, q = step.s, step.s.q
+      if q and s.ph == "in" and s.t == "accept" and not seen[q] and inPickup(s)
+          and not E.QuickDone(step) and not MG.db.skip[step.key] and E.Applies(s.when)
+          and (UnitLevel("player") or 1) >= math.max(s.pickLv or 0, (R.quests[q] or {}).min or 0)
+          and raceOK(q) and available(q) and not excluded(q) and not superseded(q) then
+        seen[q] = true
+        steps[#steps + 1] = { s = s, key = step.key, st = x }
+      else
+        add(q)
+      end
+    end
     for _, q in ipairs(x.dq or {}) do add(q) end
   end
   if #steps == 0 then return nil end
@@ -1705,23 +1724,30 @@ function E.DungeonNext(d, inside)
   if kind == "past" or MG.db.dNo[d.id] then return nil end
   local lv = UnitLevel("player") or 1
   if kind == "low" then return { kind = "low", title = L["%d 級可接前置"]:format(minPickLv(d)) } end
-  local function first(ph, extra)
+  local function canDo(s)
+    local q = s.q
+    if not q then return true end
+    if not raceOK(q) then return false end
+    if s.t == "accept" then
+      return lv >= math.max(s.pickLv or 0, (R.quests[q] or {}).min or 0)
+        and available(q) and not excluded(q) and not superseded(q)
+    end
+    if s.t == "turnin" then return C.IsOnQuest(q) and ready(q) end
+    if s.t == "do" then return C.IsOnQuest(q) and not ready(q) end
+    return true
+  end
+  local function first(ph)
     for _, step in ipairs(d.list) do
       local s = step.s
-      if s.ph == ph and s.t ~= "travel" and s.t ~= "need" and E.Applies(s.when) and (not s.q or raceOK(s.q))
-        and not E.QuickDone(step) and (not extra or extra(step)) then return step end
+      if s.ph == ph and s.t ~= "travel" and s.t ~= "need" and E.Applies(s.when)
+        and not MG.db.skip[step.key] and not E.QuickDone(step) and canDo(s) then return step end
     end
   end
   if inside then
     local step = first("in")
     if step then return { kind = "in", step = step } end
   end
-  local pre = first("pre", function(step)
-    local s = step.s
-    if s.pickLv and lv < s.pickLv then return false end
-    if s.t == "accept" and s.q and not available(s.q) then return false end
-    return true
-  end)
+  local pre = first("pre")
   if pre then return { kind = "pre", step = pre } end
   if lv < d.lv[1] then return { kind = "wait", title = L["%d 級再去"]:format(d.lv[1]) } end
   if first("in") then return { kind = "ent" } end
