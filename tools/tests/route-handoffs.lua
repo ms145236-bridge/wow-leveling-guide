@@ -122,3 +122,45 @@ end
 while #journal > 37 do table.remove(journal) end
 assert(E.PreRoom(afterLast))
 print("All 20 Alliance origin combinations, conditional transport, quest handoffs and XP boundaries passed")
+
+-- A mage standing below the Azshara cliff can have the same map position as
+-- Xylem. The outstanding Sanath waypoint must take precedence over proximity.
+level, race, raceID = 52, "Human", 1
+E.Build()
+local approach, pickup
+for _,step in ipairs(E.byId["04-48"].list) do
+  local s=step.s
+  if s.t=="goto" and s.map==1447 and s.when and s.when.class and s.when.class[1]=="MAGE" then approach=step end
+  if s.t=="accept" and s.q==8251 then pickup=step end
+end
+assert(approach and pickup)
+position={pickup.s.map,pickup.s.x,pickup.s.y}
+local options={detourOn=true,detourDist=5,groupOn=true,groupMax=4,groupDist=12}
+ns.UI.Get=function(k) return options[k] end
+local seconds=0
+function GetTime() return seconds end
+local probe={cur=1,steps={approach,pickup},done={},na={},wait={},inGroup={}}
+assert(not E.Detour(probe))
+seconds=4
+assert(not E.Detour(probe))
+local earlier={key="earlier",s={t="do",q=7,map=1447,x=60,y=40}}
+probe.steps={earlier,approach,pickup}
+assert(not E.Detour(probe))
+probe.done[2]=true
+assert(not E.Detour(probe))
+seconds=8
+assert(E.Detour(probe)==3)
+-- Exercise the real nearby-group entry point with an outstanding waypoint,
+-- then mark the waypoint complete and check that adjacent pickups group again.
+wipe(active);wipe(completed);wipe(journal)
+active[7],active[33]=true,true
+local here={key="d:7",s={t="do",q=7,map=1447,x=30,y=40}}
+local nearby={key="d:33",s={t="do",q=33,map=1447,x=30,y=40}}
+local segment={id="terrain-fixture",lv={50,52},index=#E.stations,list={here,approach,nearby}}
+position={1447,35,40}
+local grouped=E.Locate(segment)
+assert(grouped.cur==1 and not grouped.inGroup[3])
+db.mark[approach.key]=true
+grouped=E.Locate(segment)
+assert(grouped.cur==1 and grouped.inGroup[3])
+print("Terrain waypoint proximity and grouping checks passed")

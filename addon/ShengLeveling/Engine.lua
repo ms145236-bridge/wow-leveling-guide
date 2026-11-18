@@ -490,6 +490,11 @@ function E.StarFor(q, s)
   return star[1]
 end
 
+-- 山口、洞口、傳送人等路標，以及必經的交通步驟，把「附近」分成不同路段。
+local function travelBoundary(s)
+  return SOFT[s.t] or s.t == "bind"
+end
+
 -- 順路提醒（回傳步驟序號，或出本交的那一步）：本站裡現在就能做（接得到、在日誌未完成、可交）、離玩家比目前步驟近很多的步驟。
 -- 條件：同地圖、距離 ≤ 設定值、且 < 目前步驟距離的 25%；不在「附近一起做」裡；同一步連續 3 秒都成立才提示；略過後 2 分鐘不再提。
 local detourKey, detourSince, detourNo = nil, 0, {}
@@ -512,7 +517,17 @@ function E.Detour(state)
   local now, lim, lv = GetTime(), MG.UI.Get("detourDist"), UnitLevel("player") or 0
   local cd = state.cur and dist(state.steps[state.cur].s) or math.huge
   local best, bd
-  for i, step in ipairs(state.steps) do
+  local first, last = 1, #state.steps
+  if state.cur then
+    for i = state.cur - 1, 1, -1 do
+      if not state.done[i] and not state.na[i] and travelBoundary(state.steps[i].s) then first = i + 1; break end
+    end
+    for i = state.cur, last do
+      if not state.done[i] and not state.na[i] and travelBoundary(state.steps[i].s) then last = i - 1; break end
+    end
+  end
+  for i = first, last do
+    local step = state.steps[i]
     local s, q = step.s, step.s.q
     if i ~= state.cur and q and not state.done[i] and not state.na[i] and not state.wait[i] and not state.inGroup[i] and now - (detourNo[step.key] or -999) >= 120 then
       local onQ = C.IsOnQuest(q)
@@ -940,7 +955,7 @@ function E.Locate(st)
   local group, inGroup = {}, {}
   local UI = MG.UI
   local cs = cur and steps[cur].s
-  if cur and UI.Get("groupOn") and cs.x then
+  if cur and UI.Get("groupOn") and cs.x and not travelBoundary(cs) then
     local maxN, dist = UI.Get("groupMax") - 1, UI.Get("groupDist")
     -- 一個步驟的所有點（主座標＋目標點）
     local function ptsOf(s)
@@ -973,7 +988,7 @@ function E.Locate(st)
       if #group >= maxN or (num[i] and num[i] > 9) then break end
       local s = steps[i].s
       if not done[i] and not na[i] then
-        if s.t == "travel" or s.t == "hearth" or s.t == "bind" or s.t == "fly" or s.t == "boat" or s.t == "fp" then break end
+        if travelBoundary(s) then break end
         -- 等前置的「接」：前置的「交」就是目前步驟或已併進來（同一個人交了接著接）才併
         local ok = (s.t == "do" and s.q and C.IsOnQuest(s.q)) or (s.t == "accept" and (not wait[i] or planned(s.q, function(j) return j ~= cur and not inGroup[j] end))) or (s.t == "turnin" and s.q and C.IsOnQuest(s.q) and ready(s.q))
         local p = ok and near(s)
