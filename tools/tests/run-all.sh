@@ -9,5 +9,6 @@ lua5.1 tools/tests/deadmines.lua
 lua5.1 tools/tests/stockades.lua
 lua5.1 tools/tests/wetlands-dungeon.lua
 lua5.1 tools/tests/scarlet-library.lua
+lua5.1 tools/tests/auberdine-choice.lua
 lua5.1 tools/tests/record-timing.lua
 python3 tools/tests/replay/check.py

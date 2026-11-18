@@ -444,12 +444,13 @@ function UI.AuberdineChoice(state)
   if dockPromptShown then return end
   auberdinePrompt(state)
 end
--- 已經問過（按 Esc 關掉或選了東渡）、還在奧伯丁的第 6 站：選單提供重選
+-- 這次登入問過（按 Esc 關掉），或存檔已選東渡（重載後也算），人還在奧伯丁的第 6 站：選單提供重選
 function UI.AuberdineCanRechoose(state)
-  return dockPromptShown and atAuberdine(state) and MG.db.auberdineChoice ~= "coast" and E.byId["02-10"] ~= nil
+  local choice = MG.db.auberdineChoice
+  return (dockPromptShown or choice == "east") and choice ~= "coast" and atAuberdine(state) and E.byId["02-10"] ~= nil
 end
+-- 重選只重開選擇框；按 Esc 取消時保留原本的決定，按下按鈕才寫入
 function UI.AuberdineRechoose(state)
-  MG.db.auberdineChoice = nil
   auberdinePrompt(state)
 end
 local showMenu
