@@ -1295,3 +1295,5 @@
 04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan gives you bait: use it to lure Miblon away, grab the Evoroot, then come back and trade it for the Videre Elixir.
 04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Drink the Videre Elixir at the graveyard outside Gadgetzan and find Gaeriyan as a ghost.
 02-12到30級.md:14｜說明｜沿奧伯丁南邊海岸打 9–10 級的小潮行蟹收集蟹腿。還沒接「擱淺的巨獸」的話，滿 11 級後順路回碼頭時再接。｜Collect legs from level 9–10 Pygmy Tide Crawlers on the shore south of Auberdine. If you still need Washed Ashore, pick it up the next time you pass the docks at level 11 or above.
+
+04-45到60級.md:1298｜說明｜仍在艾薩拉就回塔倫迪斯營地飛阿斯特蘭納，往北進費伍德。已出神廟就直接到費伍德的翡翠聖地。｜From Azshara, return to Talrendis Point, fly to Astranaar, and head north into Felwood. After the temple, go straight to Emerald Sanctuary in Felwood.

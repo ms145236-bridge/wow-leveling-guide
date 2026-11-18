@@ -1295,3 +1295,5 @@
 04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan te donne un appât : sers-t'en pour éloigner Miblon, ramasse l'Evoroot, puis reviens l'échanger contre l'Elixir de Videre.
 04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Bois l'Elixir de Videre au cimetière à l'extérieur de Gadgetzan et cherche Gaeriyan sous forme d'esprit.
 02-12到30級.md:14｜說明｜沿奧伯丁南邊海岸打 9–10 級的小潮行蟹收集蟹腿。還沒接「擱淺的巨獸」的話，滿 11 級後順路回碼頭時再接。｜Ramassez les pattes des crabes de niveau 9–10 sur le rivage au sud d’Auberdine. Si vous n’avez pas encore la quête de la créature échouée, prenez-la à votre prochain passage sur les quais à partir du niveau 11.
+
+04-45到60級.md:1298｜說明｜仍在艾薩拉就回塔倫迪斯營地飛阿斯特蘭納，往北進費伍德。已出神廟就直接到費伍德的翡翠聖地。｜Si tu es encore en Azshara, retourne à la halte de Talrendis, vole jusqu’à Astranaar, puis dirige-toi vers le nord jusqu’à Gangrebois. En sortant du temple, va directement au sanctuaire d’Émeraude à Gangrebois.
