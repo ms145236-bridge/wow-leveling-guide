@@ -15,8 +15,7 @@ MG.gameZh = MG.gameLoc == "zhTW" -- 客戶端就是底稿語言：遊戲裡的�
 MG.gameCJK = CJK[MG.gameLoc] or false -- 客戶端字型有中文字
 
 -- 插件自己的巨集（只用帳號巨集）。帳號存檔 MetroGuideDB.macros[用途] = { name＝實際名稱, body＝寫完讀回來的內容, want＝要寫的內容 }
--- 認自己的巨集：有紀錄時看名稱（帳號巨集裡剛好一個同名的）；沒有紀錄時，只接手「插件命名＋插件內容」的巨集
--- （內容只會是插件產生的 /use item:數字、/run MGTP()、/run ShengLv_Msg(...)）。玩家自己寫的巨集一律不改、不改名、不刪
+-- 認自己的巨集見 MG.Macro.Find；玩家自己寫的巨集一律不改、不改名、不刪
 MG.Macro = {}
 local MAX_ACCOUNT = MAX_ACCOUNT_MACROS or 120
 local told = {}
@@ -24,39 +23,66 @@ local function ledger()
   MetroGuideDB.macros = MetroGuideDB.macros or {}
   return MetroGuideDB.macros
 end
-local function pluginBody(body)
-  if type(body) ~= "string" then return false end
-  return body:find("ShengLv_Msg(", 1, true) or body:find("MGTP()", 1, true) or body:match("^/use item:%d+%s*$") and true or false
+-- 這個用途的插件「完整」產出格式：每一行都要是插件會寫的那種行，多一行玩家自己的命令就不算
+local MSG = '^/run ShengLv_Msg%(".*"%)$'
+local FORMAT = {
+  target = function(lines)
+    if #lines == 1 then return lines[1]:match(MSG) ~= nil end
+    if #lines < 3 or lines[1] ~= "/cleartarget" or lines[#lines] ~= "/run MGTP()" then return false end
+    local i, last = 2, #lines - 1
+    while i <= last and (lines[i]:match("^/targetexact %[noexists%] .+$") or lines[i]:match("^/tar %[noexists%] .+$")) do i = i + 1 end
+    if lines[i] ~= "/cleartarget [dead]" then return false end
+    i = i + 1
+    if i <= last and lines[i]:match("^/tm %[@target,exists,nodead,nogroup%] %d+$") then i = i + 1 end
+    return i == last + 1
+  end,
+  -- 只有提示句這種能證明是插件寫的；單行 /use item:數字 玩家也可能自己寫，沒有紀錄時不接手
+  item = function(lines) return #lines == 1 and lines[1]:match(MSG) ~= nil end,
+}
+local function pluginBody(role, body, proven)
+  if type(body) ~= "string" or not FORMAT[role] then return false end
+  local lines = {}
+  for l in (body .. "\n"):gmatch("(.-)\r?\n") do lines[#lines + 1] = l end
+  if proven and role == "item" and #lines == 1 and lines[1]:match("^/use item:%d+$") then return true end
+  return FORMAT[role](lines)
 end
 local function names(default) return { default, "SLV " .. default, "SLV " .. default .. " 2" } end
 -- 自己的巨集在第幾格。回傳 格位, 名稱；有兩個以上分不出來，回 nil, nil, true（什麼都不動）。
--- default 給了才會接手沒紀錄、但名稱與內容都是插件產生的巨集（舊版留下、或存檔紀錄遺失）
+-- 有紀錄：同名而且內容和紀錄一樣；內容不一樣時（例如伺服器同步改回舊內容），只有仍是插件完整格式才認，並讓下一次一定重寫。
+-- 沒紀錄而且給了 default：只接手名稱是插件命名、內容是可證明的插件格式、而且該名稱只有一格的巨集。
 function MG.Macro.Find(role, default)
   if not GetMacroInfo then return nil end
   local rec = ledger()[role]
   if rec then
-    local found, n, exact, ne = nil, 0, nil, 0
+    local exact, ne, fmt, nf, same = nil, 0, nil, 0, 0
     for i = 1, (GetNumMacros()) do
       local name, _, body = GetMacroInfo(i)
       if name == rec.name then
-        found, n = i, n + 1
-        if body == rec.body then exact, ne = i, ne + 1 end
+        same = same + 1
+        if body == rec.body then exact, ne = i, ne + 1
+        elseif pluginBody(role, body, true) then fmt, nf = i, nf + 1 end
       end
     end
-    if n == 1 then return found, rec.name end
+    if same > 1 then return nil, nil, true end
     if ne == 1 then return exact, rec.name end
-    if n > 1 then return nil, nil, true end
+    if nf == 1 then rec.want = nil; return fmt, rec.name end
     ledger()[role] = nil
   end
   if not default then return nil end
   for _, cand in ipairs(names(default)) do
+    local hit, n, other = nil, 0, false
     for i = 1, (GetNumMacros()) do
       local name, _, body = GetMacroInfo(i)
-      if name == cand and pluginBody(body) then
-        ledger()[role] = { name = name, body = body }
-        return i, name
+      if name == cand then
+        if pluginBody(role, body) then hit, n = i, n + 1 else other = true end
       end
     end
+    if n == 1 and not other then
+      local _, _, body = GetMacroInfo(hit)
+      ledger()[role] = { name = cand, body = body }
+      return hit, cand
+    end
+    if n > 1 then return nil, nil, true end
   end
   return nil
 end
