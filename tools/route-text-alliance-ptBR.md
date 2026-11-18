@@ -1299,3 +1299,7 @@
 04-45到60級.md:1298｜說明｜仍在艾薩拉就回塔倫迪斯營地飛阿斯特蘭納，往北進費伍德。已出神廟就直接到費伍德的翡翠聖地。｜Se ainda estiver em Azshara, volte à Ponta Talrendis, voe para Astranaar e siga ao norte até a Selva Maleva. Ao sair do templo, vá direto ao Santuário Esmeralda na Selva Maleva.
 03-30到45級.md:1202｜說明｜優美的信件由職業訓練師引介；通道內的箱子是陷阱，可用偵測陷阱。｜Seu treinador inicia Carta Elegante. Use Detectar Armadilhas nas caixas da passagem.
 04-45到60級.md:334｜說明｜拾取東側的食物木箱｜Pegue o caixote de mantimentos no acampamento a leste.
+05-副本.md:81｜說明｜備妥 10 個粗製炸藥（物品 4358），可由工程學製作、交易或在拍賣場取得。｜Separe 10 unidades de Dinamite Grosseira (item 4358). Você pode fabricá-las com Engenharia, negociar com outros jogadores ou comprá-las na casa de leilões.
+05-副本.md:182｜說明｜在米奈希爾港找凱特林接任務。｜Pegue a missão com Caitlin no Porto de Menethil.
+05-副本.md:117｜說明｜先在湖畔鎮接伸張正義，再到夜色鎮接罪與罰。監獄暴動需要先交范克里夫掉落的信；沒有信就先打其他任務。卡姆·深怒等在濕地完成黑鐵戰爭後再組隊。｜Pegue “Tudo que vai...” na Vila Plácida e “Crime e castigo” na Vila Sombria. Para “Rebelião no Cárcere”, entregue primeiro a carta de VanCleef. Se você não a tiver, faça as outras missões. Forme um grupo para “Fúria profunda” após concluir “A guerra dos Ferro Negro” no Pantanal.
+03-30到45級.md:152｜說明｜交完黑鐵戰爭後順手接。下次組隊進暴風城監獄再做，回丹莫德時交。｜Pegue esta missão ao entregar “A guerra dos Ferro Negro”. Faça-a na próxima ida ao Cárcere e entregue-a quando voltar a Dun Modr.
