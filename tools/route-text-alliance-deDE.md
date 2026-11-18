@@ -1295,3 +1295,6 @@
 04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan gibt dir einen Köder: Lock damit Miblon weg, schnapp dir die Evowurzel und tausch sie danach gegen das Videre-Elixier ein.
 04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Trink am Friedhof vor Gadgetzan das Videre-Elixier und such als Geist Gaeriyan auf.
 02-12到30級.md:14｜說明｜沿奧伯丁南邊海岸打 9–10 級的小潮行蟹收集蟹腿。還沒接「擱淺的巨獸」的話，滿 11 級後順路回碼頭時再接。｜Sammelt Krabbenbeine von den Stufe-9–10-Krabben an der Küste südlich von Auberdine. Falls die Quest zum gestrandeten Meerestier noch fehlt, nehmt sie ab Stufe 11 beim nächsten Besuch am Anleger an.
+
+04-45到60級.md:1298｜說明｜仍在艾薩拉就回塔倫迪斯營地飛阿斯特蘭納，往北進費伍德。已出神廟就直接到費伍德的翡翠聖地。｜Bist du noch in Azshara, kehre zum Talrendisspitz zurück, fliege nach Astranaar und reise nach Norden in den Teufelswald. Nach dem Tempel geht es direkt zum Smaragdrefugium im Teufelswald.
+03-30到45級.md:1202｜說明｜優美的信件由職業訓練師引介；通道內的箱子是陷阱，可用偵測陷阱。｜Dein Klassenlehrer startet Eleganter Brief. Die Kisten im Durchgang sind Fallen, nutze Fallen entdecken.

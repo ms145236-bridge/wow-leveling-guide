@@ -1295,3 +1295,6 @@
 04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan dá uma isca: use-a para afastar Miblon, pegue a Raiz do Mal e volte para trocar pelo Elixir Videre.
 04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Beba o Elixir Videre no cemitério fora de Geringontzan e procure Gaeriyan como espírito.
 02-12到30級.md:14｜說明｜沿奧伯丁南邊海岸打 9–10 級的小潮行蟹收集蟹腿。還沒接「擱淺的巨獸」的話，滿 11 級後順路回碼頭時再接。｜Colete pernas dos caranguejos de nível 9–10 na costa ao sul de Auberdine. Se ainda não tiver a missão da criatura encalhada, aceite-a na próxima passagem pelas docas a partir do nível 11.
+
+04-45到60級.md:1298｜說明｜仍在艾薩拉就回塔倫迪斯營地飛阿斯特蘭納，往北進費伍德。已出神廟就直接到費伍德的翡翠聖地。｜Se ainda estiver em Azshara, volte à Ponta Talrendis, voe para Astranaar e siga ao norte até a Selva Maleva. Ao sair do templo, vá direto ao Santuário Esmeralda na Selva Maleva.
+03-30到45級.md:1202｜說明｜優美的信件由職業訓練師引介；通道內的箱子是陷阱，可用偵測陷阱。｜Seu treinador inicia Carta Elegante. Use Detectar Armadilhas nas caixas da passagem.
