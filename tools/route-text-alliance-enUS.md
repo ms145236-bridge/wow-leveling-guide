@@ -1304,3 +1304,6 @@
 05-副本.md:117｜說明｜先在湖畔鎮接伸張正義，再到夜色鎮接罪與罰。監獄暴動需要先交范克里夫掉落的信；沒有信就先打其他任務。卡姆·深怒等在濕地完成黑鐵戰爭後再組隊。｜Pick up “What Comes Around...” in Lakeshire and “Crime and Punishment” in Darkshire. “The Stockade Riots” requires turning in the letter dropped by VanCleef. If you lack the letter, continue with the other quests. Group up for “The Fury Runs Deep” after completing “The Dark Iron War” in the Wetlands.
 03-30到45級.md:152｜說明｜交完黑鐵戰爭後順手接。下次組隊進暴風城監獄再做，回丹莫德時交。｜Pick this up when you turn in “The Dark Iron War”. Complete it on your next Stockade run and turn it in on your next visit to Dun Modr.
 04-45到60級.md:93｜說明｜圖書館打洛克希、軍械庫打赫洛德、大教堂打莫格萊尼和懷特邁恩。可以分趟完成。｜Defeat Loksey in the Library, Herod in the Armory, and Mograine and Whitemane in the Cathedral. You can finish the wings on separate runs.
+05-副本.md:229｜說明｜清潔區旁的宿舍。先清回出口的路，等全隊準備好再與克努比對話。｜In the dormitory by the Clean Zone. Clear the path back to the exit and wait for the whole party before speaking to Kernobee.
+05-副本.md:230｜說明｜等荊棘谷第一次路過藏寶海灣，再向斯庫提回報。｜Turn in to Scooty during your first pass through Booty Bay in Stranglethorn Vale.
+05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Sparklematic 5200 in the Clean Zone. Bring 3 silver.

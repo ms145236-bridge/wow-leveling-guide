@@ -1304,3 +1304,6 @@
 05-副本.md:117｜說明｜先在湖畔鎮接伸張正義，再到夜色鎮接罪與罰。監獄暴動需要先交范克里夫掉落的信；沒有信就先打其他任務。卡姆·深怒等在濕地完成黑鐵戰爭後再組隊。｜Acepta «Lo que sucede alrededor...» en Villa del Lago y «Crimen y castigo» en Villa Oscura. Para «El motín de Las Mazmorras» debes entregar primero la carta de VanCleef. Si no la tienes, haz las demás misiones. Busca grupo para «La furia mora en las profundidades» después de completar «La guerra contra los Hierro Negro» en Los Humedales.
 03-30到45級.md:152｜說明｜交完黑鐵戰爭後順手接。下次組隊進暴風城監獄再做，回丹莫德時交。｜Acepta esta misión al entregar «La guerra contra los Hierro Negro». Hazla en tu próxima visita a las Mazmorras y entrégala cuando vuelvas a Dun Modr.
 04-45到60級.md:93｜說明｜圖書館打洛克希、軍械庫打赫洛德、大教堂打莫格萊尼和懷特邁恩。可以分趟完成。｜Derrota a Loksey en la biblioteca, a Herod en la armería y a Mograine y Melenablanca en la catedral. Puedes completar las alas en visitas distintas.
+05-副本.md:229｜說明｜清潔區旁的宿舍。先清回出口的路，等全隊準備好再與克努比對話。｜En el dormitorio junto a la Zona Limpia. Despejen el camino de vuelta a la salida y esperen a todo el grupo antes de hablar con Kernobee.
+05-副本.md:230｜說明｜等荊棘谷第一次路過藏寶海灣，再向斯庫提回報。｜Entrega la misión a Scooty la primera vez que pases por Bahía del Botín en la Vega de Tuercespina.
+05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜El Destellamatic 5200, en la Zona Limpia. Lleva 3 monedas de plata.
