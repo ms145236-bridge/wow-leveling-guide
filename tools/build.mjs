@@ -558,12 +558,13 @@ for (const d of dungeons) {
       seen.add(p);
       out = out.concat(chainSteps(p, seen));
       const when = classWhen(pq.classes);
+      const outdoor = outdoorPrereqs.get(p);
       const base = { id: p, zh: questName(pq), en: pq.en, ph: "pre", tag: "副本前置鏈", chainOf: qid, where: d.where, when };
+      if (outdoor) base.outsideObjective = true;
       out.push({ ...base, t: "accept", verb: "接" });
       if (db.questMobs(p).length) {
         const work = { ...base, t: "do", verb: "做", hint: pq.obj.filter(Boolean).join(" ") };
-        const outdoor = outdoorPrereqs.get(p);
-        if (outdoor) Object.assign(work, { desc: outdoor.desc, coord: outdoor.coord, authoredPoints: outdoor.authoredPoints, outsideObjective: true });
+        if (outdoor) Object.assign(work, { desc: outdoor.desc, coord: outdoor.coord, authoredPoints: outdoor.authoredPoints });
         out.push(work);
       }
       out.push({ ...base, t: "turnin", verb: "交" });

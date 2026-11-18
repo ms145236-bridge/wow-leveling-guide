@@ -125,23 +125,29 @@ do
   -- The catalogue-only objectives have no explicit in-phase row in these guides.
   -- An outdoor prerequisite may be the next stop before entering, but never inside.
   local islandObjectives = ns.C.Objectives
+  local spiritsCollected
   ns.C.Objectives = function(q)
-    if q == 3520 then return {{have=1, need=3, done=false}} end
+    if q == 3520 then return {{have=spiritsCollected, need=3, done=spiritsCollected==3}} end
   end
   db.skip["a:2864"] = "a:2864"
   ns.C.IsTurnedIn = function(q) return q == 3445 or q == 3444 or q == 3446 or q == 3447 end
   for _, case in ipairs({{209, 45, 3042}, {109, 52, 1475}, {109, 52, 3373}}) do
     local dungeon = E.DungeonByInstance(case[1])
     level = case[2]
-    local outdoors = assert(E.DungeonNext(dungeon, false))
-    assert(outdoors.kind == "pre" and outdoors.step.s.q == 3520)
-    assert(not E.DungeonNext(dungeon, true), "outdoor prerequisite alone gives no indoor reminder")
-    active[case[3]] = true
-    local indoors = assert(E.DungeonNext(dungeon, true))
-    assert(indoors.kind == "in" and indoors.step.s.q == case[3])
-    active[case[3]] = nil
+    for _, progress in ipairs({{"accept", 0}, {"do", 1}, {"turnin", 3}}) do
+      spiritsCollected = progress[2]
+      active[3520] = spiritsCollected > 0 or nil
+      completed[3520] = spiritsCollected == 3 or nil
+      local outdoors = assert(E.DungeonNext(dungeon, false))
+      assert(outdoors.kind == "pre" and outdoors.step.s.q == 3520 and outdoors.step.s.t == progress[1])
+      assert(not E.DungeonNext(dungeon, true), "outdoor prerequisite alone gives no indoor reminder")
+      active[case[3]] = true
+      local indoors = assert(E.DungeonNext(dungeon, true))
+      assert(indoors.kind == "in" and indoors.step.s.q == case[3])
+      active[case[3]] = nil
+    end
   end
-  level, db.skip["a:2864"], active[3520] = 43, nil, nil
+  level, db.skip["a:2864"], active[3520], completed[3520] = 43, nil, nil, nil
   ns.C.IsTurnedIn, ns.C.Objectives = oldTurned, islandObjectives
 end
 

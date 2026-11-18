@@ -1857,7 +1857,7 @@ function E.DungeonNext(d, inside)
     if step then return { kind = "in", step = step } end
   end
   local pre = first("pre")
-  if inside and pre and pre.s.t == "do" and pre.s.outsideObjective then
+  if inside and pre and pre.s.outsideObjective then
     -- The journal can have work inside even when the guide has no explicit in-phase step.
     local state = E.InstanceState(d)
     for _, step in ipairs(state and state.steps or {}) do
