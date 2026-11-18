@@ -124,6 +124,17 @@ function MG.Macro.Write(role, default, icon, body, create)
   end
   return index, name
 end
+-- 「發現新的飛行路線！」：類別或文字對上才算（秘密值不比較）
+function MG.IsNewTaxiPath(kind, text)
+  local secret = issecretvalue or function() return false end
+  if LE_GAME_ERR_NEWTAXIPATH and kind ~= nil and not secret(kind) and kind == LE_GAME_ERR_NEWTAXIPATH then return true end
+  return ERR_NEWTAXIPATH ~= nil and text ~= nil and not secret(text) and text == ERR_NEWTAXIPATH
+end
+-- 人是不是就在這個「開鳥點」步驟的鳥點旁：同一張地圖、讀得到座標、10 格內；讀不到就不算
+function MG.AtFlightPoint(fp, map, x, y)
+  if not (fp and fp.t == "fp" and fp.map and fp.x and fp.y and map and x and y) then return false end
+  return map == fp.map and (x - fp.x) ^ 2 + (y - fp.y) ^ 2 <= 100
+end
 local strings
 MG.missingL = {} -- 非中文介面卻查不到翻譯的鍵（/slv probe 會列出）
 MG.L = setmetatable({}, { __index = function(_, k)
