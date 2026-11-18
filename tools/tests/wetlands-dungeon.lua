@@ -42,7 +42,7 @@ assert(use.ph == "in" and meet.ph == "in" and followup.ph == "in")
 assert(not use.map and not meet.map and not followup.map)
 assert(finish.ph == "post" and finish.map == pickup.map and finish.npc == pickup.npc)
 local targets = E.DungeonTargets(d)
-assert(#targets == 3 and targets[1].q == 95646 and targets[2].q == 98815)
+assert(#targets == 4 and targets[1].q == 95646 and targets[2].q == 98815)
 assert(targets[3].q == 95647 and #targets[3].chain == 0)
 local q = ns.Route.quests[95647]
 assert(#(q.ps or {}) == 0 and #(q.pg or {}) == 0)
@@ -128,3 +128,70 @@ for _, case in ipairs({{95646,275,270180,1},{98815,484,284845,4}}) do
   active[q], bags[item], ready[q] = nil, nil, nil
 end
 print("Wetlands same-NPC optional pickups, skips and item turn-ins passed")
+
+-- The first Wetlands visit comes before a normally leveled character can pick
+-- up Songblade Search in Lakeshire. Its checklist row never orders a detour.
+local search, need = 95772, assert(step(d, "need", 95772))
+assert(need.opt and need.ph == "pre" and not step(d, "accept", search))
+assert(not offer(E.Locate(a21), search))
+assert(not step(E.byId["02-14"], "accept", search))
+assert(not step(E.byId["02-15"], "accept", search))
+local redridge = E.byId["02-19"]
+local take, i = step(redridge, "accept", search)
+assert(take.opt and take.map == 1433 and take.when.lvMin == 24)
+assert(redridge.list[i-2].s.q == 126 and redridge.list[i+1].s.q == 169)
+assert(targets[4].q == search)
+function UnitLevel() return 23 end
+assert(not E.Applies(take.when))
+function UnitLevel() return 24 end
+assert(E.Applies(take.when))
+local atRedridge = E.Locate(redridge)
+assert(not atRedridge.na[assert(offer(atRedridge, search))])
+settings.optional = false
+assert(not E.Applies(take.when))
+atRedridge = E.Locate(redridge)
+assert(atRedridge.na[assert(offer(atRedridge,search))])
+settings.optional, settings.dPre = true, false
+assert(not E.Applies(take.when))
+settings.dPre, ns.db.dNo[d.id] = true, true
+assert(not E.Applies(take.when))
+ns.db.dNo[d.id] = nil
+
+local fallen = 95795
+local talk, handoff = step(d,"turnin",search), step(d,"accept",fallen)
+assert(talk.ph == "in" and not talk.map and handoff.ph == "in" and not handoff.map)
+assert(talk.npc == handoff.npc and ns.Route.quests[fallen].ps[1] == search)
+assert(not inside("do",search) and not inside("accept",fallen))
+active[search] = true
+assert(inside("do",search) and not inside("accept",fallen))
+ready[search] = true
+assert(inside("turnin",search) and not inside("accept",fallen))
+-- A character who cleared the normal dungeon before visiting Redridge must
+-- still be guided back for a journal-ready handoff located inside the dungeon.
+assert(E.DungeonDone(d))
+local label, state, revisit = E.DungeonStatus(d)
+assert(state == "revisit" and revisit.s == talk)
+assert(E.DungeonNext(d,false).kind == "ent")
+assert(E.DungeonNext(d,true).step.s == talk)
+active[search], ready[search], turned[search] = nil,nil,true
+assert(inside("accept",fallen))
+local back = assert(step(d,"turnin",fallen))
+assert(back.ph == "post" and back.opt and back.map == take.map and back.npc == take.npc)
+local pathBack, idx = step(E.byId["03-31"],"turnin",fallen)
+assert(idx == 2 and pathBack.npc == take.npc and not E.Applies(pathBack.when))
+local earlyReturn = assert(step(redridge, "turnin", fallen))
+local returns = {earlyReturn, pathBack, back}
+for _, row in ipairs(returns) do assert(not E.Applies(row.when)) end
+active[fallen] = true
+assert(handoff.outsideObjective)
+for _, objectives in ipairs({function() end, function() return {} end}) do
+  ns.C.Objectives = objectives
+  assert(not inside("do", fallen) and not inside("accept", fallen))
+  for _, row in ipairs(returns) do assert(not E.Applies(row.when)) end
+end
+ready[fallen] = true
+for _, row in ipairs(returns) do assert(E.Applies(row.when)) end
+assert(not inside("do",fallen) and not inside("accept",fallen))
+active[fallen], ready[fallen], turned[fallen] = nil, nil, true
+for _, row in ipairs(returns) do assert(not E.Applies(row.when)) end
+print("Wetlands Songblade first visit, level-24 group preparation, in-instance handoff and Lakeshire return passed")
