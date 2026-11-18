@@ -333,32 +333,34 @@ local lastMenu, lastAccept = 0, 0
 local function notOffered(event)
   if event ~= "QUEST_DETAIL" then lastMenu = GetTime() elseif GetTime() - lastMenu < 3 then return end
   if GetTime() - lastAccept < 3 then return end -- 剛接任務時 NPC 選單會重刷，日誌還沒更新，不判斷
-  local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
-  local s = cur and cur.s
-  if not (s and s.t == "accept" and s.q) or C.IsOnQuest(s.q) or E.Turned(s.q) then return end
-  local name = UnitName("npc")
-  if not name or (issecretvalue and issecretvalue(name)) or (name ~= (s.npcG or s.npc) and name ~= s.tgt) then return end
-  local want, offered = {}, false
-  for _, q in ipairs(s.any or { s.q }) do want[q] = true end -- 任一組：NPC 給其中任何一個都算有給
+  local ids = {} -- NPC 這次給的任務
   if event == "QUEST_DETAIL" then
     local id = GetQuestID and GetQuestID()
     if not id or (issecretvalue and issecretvalue(id)) then return end
-    offered = want[id] or false
+    ids[1] = id
   elseif event == "GOSSIP_SHOW" then
     local G = C_GossipInfo
     if not (G and G.GetAvailableQuests) then return end
     for _, q in ipairs(G.GetAvailableQuests() or {}) do
       if issecretvalue and issecretvalue(q.questID) then return end
-      if want[q.questID] then offered = true end
+      ids[#ids + 1] = q.questID
     end
   else
     for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do
-      for _, id in ipairs(routeQuestsByTitle(GetAvailableTitle(i))) do if want[id] then offered = true end end
+      for _, id in ipairs(routeQuestsByTitle(GetAvailableTitle(i))) do ids[#ids + 1] = id end
     end
   end
-  if not offered then
-    MG.db.notNow[cur.key] = true -- 清單右欄會寫「接不到」
-  end
+  -- 任一組：NPC 給了組裡任何一個，整組的「接不到」就收回（不必是目前步驟；含 1.13.15 只認剝皮時留下的 a:97924）
+  for _, id in ipairs(ids) do if anyG[id] then MG.db.notNow["a:" .. anyG[id]] = nil end end
+  local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
+  local s = cur and cur.s
+  if not (s and s.t == "accept" and s.q) or C.IsOnQuest(s.q) or E.Turned(s.q) then return end
+  local name = UnitName("npc")
+  if not name or (issecretvalue and issecretvalue(name)) or (name ~= (s.npcG or s.npc) and name ~= s.tgt) then return end
+  local want = {}
+  for _, q in ipairs(s.any or { s.q }) do want[q] = true end -- 任一組：NPC 給其中任何一個都算有給
+  for _, id in ipairs(ids) do if want[id] then return end end
+  MG.db.notNow[cur.key] = true -- 清單右欄會寫「接不到」
 end
 
 -- 自動接：灰名（太低等）的任務不接，除非就是這一站路線上要接的（例如回低等區交任務時，NPC 身上的舊任務）

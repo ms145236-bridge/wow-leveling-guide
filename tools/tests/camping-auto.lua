@@ -37,7 +37,10 @@ function CreateFrame()
 end
 local db = { skip={}, mark={}, latch={}, notNow={}, pin={}, carry={}, dNo={}, fpNodes={}, drop={}, optNote={}, skipNote={}, station="01-2" }
 local noop = function() end
-local ns = { C={}, db=db, L=setmetatable({}, { __index=function(_, k) return k end }), uiZh=true, gameZh=true }
+local ns
+-- 載入插件；old＝1.13.15 的資料形狀（紮營入門指南只有一步「接 剝皮 97924」，沒有任一組），存檔 db 共用＝升級
+local function boot(old)
+ns = { C={}, db=db, L=setmetatable({}, { __index=function(_, k) return k end }), uiZh=true, gameZh=true }
 ns.UI = { Get=function(key) if key == "optional" then return optional elseif key == "auto" then return auto end end, Visible=function() return false end }
 ns.N = { Set=noop, Clear=noop, Forget=noop }
 ns.T, ns.I, ns.P = { Update=noop }, { Update=noop }, { Update=noop }
@@ -54,11 +57,18 @@ ns.C.LogQuestIDs = function() local out = {} for q in pairs(active) do out[#out 
 ns.C.Objectives = function() return { { done=false } } end
 for _, f in ipairs({ "Data/RouteA.lua", "Engine.lua", "Core.lua" }) do
   assert(loadfile("addon/ShengLeveling/" .. f))("ShengLeveling", ns)
+  if old and f == "Data/RouteA.lua" then
+    for _, st in ipairs(ns.Route.stations) do
+      for _, s in ipairs(st.steps) do if s.any then s.q, s.any, s.text = s.any[1], nil, nil end end
+    end
+  end
 end
+scripts.OnEvent(nil, "PLAYER_ENTERING_WORLD")
+scripts.OnEvent(nil, "QUEST_LOG_UPDATE")
+end
+boot()
 function GetAvailableTitle(i) local q = ns.Route.quests[avail[i]] return q.nG or q.n end -- 每個專業的標題不同（紮營入門指南：採礦）
 local function fire(event, ...) scripts.OnEvent(nil, event, ...) end
-fire("PLAYER_ENTERING_WORLD")
-fire("QUEST_LOG_UPDATE")
 
 local CAMP = { 97924, 97915, 97916, 97917, 97918, 97920, 97921, 97922, 97923, 97925 }
 -- 前面的步驟都做完：目前步驟是紮營入門指南（任一組）的接
@@ -122,4 +132,46 @@ reset(true)
 detailId = 60
 fire("QUEST_DETAIL")
 assert(db.notNow["a:97924"], "直接打開的是別的任務，要寫接不到")
-print("Camping 101 auto: never auto-picks a profession, turn-in still auto, offered when any member is offered")
+-- 升級：1.13.15 開山姆的選單只給採礦 → 寫下 notNow["a:97924"]（舊版只認剝皮）。升級後整組被收成「接不到」、
+-- 目前步驟也離開了紮營，不會再輪到它重新判斷；NPC 給組裡任何一個（對話選單、任務招呼、直接打開任務內容）就要收回，
+-- 手動略過、打勾不動
+local function camp()
+  local state = ns.E.Locate(ns.E.byId["01-2"])
+  for i, step in ipairs(state.steps) do
+    if step.s.any then return state.na[i], state.cur and state.steps[state.cur].key end
+  end
+end
+local function upgrade(event)
+  boot(true)
+  reset(true)
+  avail = { 97923 }
+  fire("GOSSIP_SHOW")
+  assert(db.notNow["a:97924"], "1.13.15：山姆只給採礦時寫下 a:97924 的接不到")
+  db.mark["t:96627"], db.skip["a:60"] = true, true
+  boot()
+  ns.Refresh(true)
+  local keep = {}
+  for _, k in ipairs({ "skip", "mark", "latch" }) do for key in pairs(db[k]) do keep[#keep + 1] = { k, key } end end
+  local na, cur = camp()
+  assert(na and cur ~= "a:97924", "升級後舊的接不到讓整組不出現、目前步驟不是紮營（重現）")
+  now = now + 10
+  avail, detailId = { 97923 }, 97923
+  fire(event)
+  assert(not db.notNow["a:97924"], event .. "：NPC 給了組裡的採礦，舊的接不到要收回")
+  assert(#keep > 0, "升級前要有打勾或略過可比對")
+  for _, e in ipairs(keep) do assert(db[e[1]][e[2]], "打勾、手動略過不動：" .. e[1] .. " " .. e[2]) end
+  ns.Refresh(true)
+  assert(not camp(), "收回後紮營的接取步重新出現")
+end
+for _, event in ipairs({ "GOSSIP_SHOW", "QUEST_GREETING", "QUEST_DETAIL" }) do upgrade(event) end
+-- 給的不是組裡的任務：不收回
+boot(true)
+reset(true)
+avail = { 97923 }
+fire("GOSSIP_SHOW")
+boot()
+now = now + 10
+avail, detailId = { 60 }, 60
+fire("GOSSIP_SHOW")
+assert(db.notNow["a:97924"], "NPC 沒給組裡的任務，接不到留著")
+print("Camping 101 auto: never auto-picks a profession, turn-in still auto, offered when any member is offered, old 1.13.15 not-offered mark released")
