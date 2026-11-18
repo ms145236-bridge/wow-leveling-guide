@@ -13,6 +13,7 @@ lua5.1 tools/tests/gnomeregan.lua
 lua5.1 tools/tests/scarlet-library.lua
 lua5.1 tools/tests/auberdine-choice.lua
 lua5.1 tools/tests/field-marshal.lua
+lua5.1 tools/tests/camping-any.lua
 lua5.1 tools/tests/macro-adopt.lua
 lua5.1 tools/tests/record-timing.lua
 python3 -B tools/tests/replay/test_selection.py
