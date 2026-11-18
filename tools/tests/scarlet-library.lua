@@ -53,6 +53,13 @@ for n = 0, 3 do
   local nextStep = E.DungeonNext(monastery, true)
   assert(nextStep.kind == "in" and nextStep.step.s.q == 1053)
 end
+-- The dungeon hint names the unfinished quest instead of counting prerequisites.
+ns.db.dDismiss = {}
+ns.UI.Get = function(key) return key == "dungeonHint" end
+for _, d in ipairs(E.dungeons) do if d ~= monastery then ns.db.dNo[d.id] = true end end
+local hinted, hint = E.DungeonPrompt()
+assert(hinted == monastery and hint == E.QName(1053), "revisit hint should name quest 1053")
+ns.UI.Get = function() return false end
 bossCount = 4
 local turn = E.DungeonNext(monastery, false)
 assert(turn.kind == "post" and turn.step.s.q == 1053 and turn.step.s.map == 1424)
