@@ -1568,7 +1568,9 @@ function E.DungeonPrompt()
   end)
   for _, d in ipairs(list) do
     if lv >= d.lv[1] and not MG.db.dDismiss[d.id] and not MG.db.dNo[d.id] then
-      local _, kind = E.DungeonStatus(d)
+      local _, kind, revisit = E.DungeonStatus(d)
+      -- 超過等級、只因日誌裡還有本副本任務而回訪：提示那個任務，不算前置
+      if kind == "revisit" then return d, E.Title(revisit.s) end
       if kind ~= "past" then
         -- 前置鏈還沒做完：說還剩幾步；否則說前置還有幾個沒接
         local left = 0
