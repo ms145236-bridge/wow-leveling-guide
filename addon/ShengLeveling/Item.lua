@@ -172,7 +172,7 @@ function I.Diag()
   local shown = {}
   for k, b in ipairs(buttons) do shown[#shown + 1] = k .. "=" .. tostring((b:IsShown())) .. "/" .. tostring((b:GetAttribute("item"))) end
   out[#out + 1] = L["按鈕："] .. table.concat(shown, "  ")
-  local index, name = MG.Macro.Find("item")
+  local index, name = MG.Macro.Find("item", MACRO)
   out[#out + 1] = L["巨集「%s」格位 %d："]:format(name or MACRO, index or 0) .. tostring(index and select(3, GetMacroInfo(index)) or nil)
   return out
 end

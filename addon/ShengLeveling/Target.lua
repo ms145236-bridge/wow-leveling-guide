@@ -199,7 +199,7 @@ end
 function T.AutoMacro()
   if not GetMacroInfo then return end
   if InCombatLockdown() then pending = true; return end
-  local had = MG.Macro.Find("target")
+  local had = MG.Macro.Find("target", MACRO)
   local index, name = MG.Macro.Write("target", MACRO, ICON, macroBody(), MG.UI.Get("autoMacro"))
   if index and not had and not MetroGuideDB.macroNoted then
     MetroGuideDB.macroNoted = true
@@ -246,7 +246,7 @@ end
 
 function T.Diag()
   local out = {}
-  local index, name = MG.Macro.Find("target")
+  local index, name = MG.Macro.Find("target", MACRO)
   local body = index and select(3, GetMacroInfo(index)) or nil
   out[#out + 1] = L["巨集「%s」格位 %d（舊名格位 %d）內容："]:format(name or MACRO, index or 0, 0) .. (body and body:gsub("\n", " | ") or L["無"])
   out[#out + 1] = "ActionButtonUseKeyDown: " .. tostring(GetCVar and GetCVar("ActionButtonUseKeyDown")) .. " | issecretvalue: " .. tostring(issecretvalue ~= nil)

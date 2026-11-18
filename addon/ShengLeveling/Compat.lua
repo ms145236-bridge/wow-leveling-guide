@@ -14,115 +14,33 @@ MG.gameLoc = GetLocale and GetLocale() or "enUS"
 MG.gameZh = MG.gameLoc == "zhTW" -- 客戶端就是底稿語言：遊戲裡的名字直接用 Route.lua 的
 MG.gameCJK = CJK[MG.gameLoc] or false -- 客戶端字型有中文字
 
--- 插件自己的巨集（只用帳號巨集）。帳號存檔 MetroGuideDB.macros[用途] = { name＝實際名稱, body＝寫完讀回來的內容, want＝要寫的內容 }
--- 認自己的巨集見 MG.Macro.Find；玩家自己寫的巨集一律不改、不改名、不刪
+-- 插件自己的巨集（只用帳號巨集）：名稱固定「SLV ＋預設名」（例：SLV 任務物品、SLV 任務目標）。
+-- 業主 11/18 決定：帳號巨集裡有這個名稱就直接改寫（取第一格），沒有才新建；不再判斷是不是插件建的。
 MG.Macro = {}
 local MAX_ACCOUNT = MAX_ACCOUNT_MACROS or 120
-local told = {}
-local function ledger()
-  MetroGuideDB.macros = MetroGuideDB.macros or {}
-  return MetroGuideDB.macros
-end
--- 這個用途的插件「完整」產出格式：每一行都要是插件會寫的那種行，多一行玩家自己的命令就不算
-local MSG = '^/run ShengLv_Msg%("[^"]*"%)$' -- 參數只能是一個不含引號的字串常值
-local FORMAT = {
-  target = function(lines)
-    if #lines == 1 then return lines[1]:match(MSG) ~= nil end
-    if #lines < 3 or lines[1] ~= "/cleartarget" or lines[#lines] ~= "/run MGTP()" then return false end
-    local i, last = 2, #lines - 1
-    while i <= last and (lines[i]:match("^/targetexact %[noexists%] .+$") or lines[i]:match("^/tar %[noexists%] .+$")) do i = i + 1 end
-    if lines[i] ~= "/cleartarget [dead]" then return false end
-    i = i + 1
-    if i <= last and lines[i]:match("^/tm %[@target,exists,nodead,nogroup%] %d+$") then i = i + 1 end
-    return i == last + 1
-  end,
-  -- 只有提示句這種能證明是插件寫的；單行 /use item:數字 玩家也可能自己寫，沒有紀錄時不接手
-  item = function(lines) return #lines == 1 and lines[1]:match(MSG) ~= nil end,
-}
-local function pluginBody(role, body)
-  if type(body) ~= "string" or not FORMAT[role] then return false end
-  local lines = {}
-  for l in (body .. "\n"):gmatch("(.-)\r?\n") do lines[#lines + 1] = l end
-  return FORMAT[role](lines)
-end
-local function names(default) return { default, "SLV " .. default, "SLV " .. default .. " 2" } end
--- 自己的巨集在第幾格。回傳 格位, 名稱；有兩個以上分不出來，回 nil, nil, true（什麼都不動）。
--- 有紀錄：同名而且內容和紀錄一樣；內容不一樣時（例如伺服器同步改回舊內容），只有仍是插件完整格式才認，並讓下一次一定重寫。
--- 沒紀錄而且給了 default：只接手名稱是插件命名、內容是可證明的插件格式、而且該名稱只有一格的巨集。
+local function fixed(default) return "SLV " .. default end
+-- 回傳 格位, 名稱；找不到回 nil
 function MG.Macro.Find(role, default)
-  if not GetMacroInfo then return nil end
-  local rec = ledger()[role]
-  if rec then
-    local exact, ne, fmt, nf, same = nil, 0, nil, 0, 0
-    for i = 1, (GetNumMacros()) do
-      local name, _, body = GetMacroInfo(i)
-      if name == rec.name then
-        same = same + 1
-        if body == rec.body then exact, ne = i, ne + 1
-        elseif pluginBody(role, body) then fmt, nf = i, nf + 1 end
-      end
-    end
-    if ne == 1 then return exact, rec.name end
-    if same > 1 then return nil, nil, true end
-    if nf == 1 then rec.want = nil; return fmt, rec.name end
-    ledger()[role] = nil
-  end
-  if not default then return nil end
-  for _, cand in ipairs(names(default)) do
-    local hit, n, other = nil, 0, false
-    for i = 1, (GetNumMacros()) do
-      local name, _, body = GetMacroInfo(i)
-      if name == cand then
-        if pluginBody(role, body) then hit, n = i, n + 1 else other = true end
-      end
-    end
-    if n == 1 and not other then
-      local _, _, body = GetMacroInfo(hit)
-      ledger()[role] = { name = cand, body = body }
-      return hit, cand
-    end
-    if n > 1 then return nil, nil, true end
+  if not GetMacroInfo or not default then return nil end
+  local name = fixed(default)
+  for i = 1, (GetNumMacros()) do
+    if GetMacroInfo(i) == name then return i, name end
   end
   return nil
 end
--- 這個名稱有沒有被任何巨集用掉（帳號＋角色）
-local function taken(name)
-  local account, character = GetNumMacros()
-  for i = 1, account do if GetMacroInfo(i) == name then return true end end
-  for i = MAX_ACCOUNT + 1, MAX_ACCOUNT + (character or 0) do if GetMacroInfo(i) == name then return true end end
-  return false
-end
--- 唯一的寫入口：自己的就改寫；沒有而且 create 才新建（預設名被佔就用備用名，都被佔或滿了就不建，說一次）。
--- 寫完讀回來對得上才登記。回傳 格位, 名稱；沒寫成回 nil
+-- 唯一的寫入口：有就改寫（內容一樣就不動），沒有而且 create 才新建；帳號巨集滿了回 nil, "full"
 function MG.Macro.Write(role, default, icon, body, create)
   if not GetMacroInfo or InCombatLockdown() then return nil end
-  local index, name, twin = MG.Macro.Find(role, default)
-  if twin then return nil end
-  local made = not index
+  local index, name = MG.Macro.Find(role, default)
   if index then
-    if body == ledger()[role].want then return index, name end
-    index = EditMacro(index, name, icon, body) or index
-  elseif create then
-    if (GetNumMacros()) >= MAX_ACCOUNT then return nil, "full" end
-    for _, cand in ipairs(names(default)) do
-      if not taken(cand) then name = cand; break end
-    end
-    if not name then
-      if not told[role] then told[role] = true; MG.msg(MG.L["巨集名稱「%s」已被其他巨集使用，沒有建立。"]:format(default)) end
-      return nil, "taken"
-    end
-    index = CreateMacro(name, icon, body, nil)
-  else
-    return nil
+    local _, _, cur = GetMacroInfo(index)
+    if cur == body then return index, name end
+    return EditMacro(index, name, icon, body) or index, name
   end
-  local got, _, back = GetMacroInfo(index or 0)
-  if got ~= name then ledger()[role] = nil; return nil end
-  ledger()[role] = { name = name, body = back, want = body }
-  if made and name ~= default and not told[role] then
-    told[role] = true
-    MG.msg(MG.L["「%s」已有同名巨集（不是插件建的，沒有動它），另建「%s」。"]:format(default, name))
-  end
-  return index, name
+  if not create then return nil end
+  if (GetNumMacros()) >= MAX_ACCOUNT then return nil, "full" end
+  name = fixed(default)
+  return CreateMacro(name, icon, body, nil), name
 end
 local strings
 MG.missingL = {} -- 非中文介面卻查不到翻譯的鍵（/slv probe 會列出）
