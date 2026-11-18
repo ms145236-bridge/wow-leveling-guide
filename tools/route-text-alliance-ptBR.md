@@ -1,6 +1,6 @@
 # 阿聖練等幫手 ptBR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **375** 列。
+- 只收聯盟路線獨有的說明列，共 **377** 列。
 
 檔名:行號｜類型｜中文原文｜ptBR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Clique com o botão direito em Livro Mordiscado na bolsa para iniciar a missão.
@@ -1307,3 +1307,5 @@
 05-副本.md:229｜說明｜清潔區旁的宿舍。先清回出口的路，等全隊準備好再與克努比對話。｜No dormitório perto da Zona Limpa. Libere o caminho de volta à saída e espere o grupo todo antes de falar com Kernobee.
 05-副本.md:230｜說明｜等荊棘谷第一次路過藏寶海灣，再向斯庫提回報。｜Entregue a missão a Scooty na primeira passagem pela Angra do Butim, na Selva do Espinhaço.
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Fagulhomático 5200 na Zona Limpa. Leve 3 moedas de prata.
+05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜Você pode dividir a sequência entre várias visitas. Colete a primeira amostra nos túneis da entrada ou dentro da masmorra. Entregue-a a Ozzie em Kharanos para receber o frasco pesado.
+05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Use o frasco pesado em um Visgo Irradiado, um Tocaieiro Corrosivo ou um horror irradiado. A amostra dura duas horas. Se não puder chegar a Kharanos a tempo, faça a coleta na próxima visita em grupo.

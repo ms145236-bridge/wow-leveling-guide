@@ -1,6 +1,6 @@
 # 阿聖練等幫手 deDE 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **375** 列。
+- 只收聯盟路線獨有的說明列，共 **377** 列。
 
 檔名:行號｜類型｜中文原文｜deDE
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Rechtsklicke Angeknabbertes Buch im Rucksack, um die Quest anzunehmen.
@@ -1307,3 +1307,5 @@
 05-副本.md:229｜說明｜清潔區旁的宿舍。先清回出口的路，等全隊準備好再與克努比對話。｜Im Schlafsaal neben der Reinzone. Räumt den Weg zurück zum Ausgang frei und wartet auf die ganze Gruppe, bevor ihr Kernobee ansprecht.
 05-副本.md:230｜說明｜等荊棘谷第一次路過藏寶海灣，再向斯庫提回報。｜Bei eurem ersten Besuch in Beutebucht im Schlingendorntal bei Scooty abgeben.
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Funkelmat 5200 in der Reinzone. Bringt 3 Silber mit.
+05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜Ihr könnt die Reihe auf mehrere Besuche verteilen. Sammelt die erste Probe im Eingangstunnel oder in der Instanz. Gebt sie bei Ozzie in Kharanos ab, um die schwere Phiole zu erhalten.
+05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Benutzt die schwere Phiole bei einem Bestrahlten Brühschleimer, einem ätzenden Lauerer oder einem bestrahlten Schrecken. Die Probe hält zwei Stunden. Wenn ihr Kharanos nicht rechtzeitig erreicht, nehmt die Probe beim nächsten Gruppenbesuch.

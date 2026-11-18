@@ -1,6 +1,6 @@
 # 阿聖練等幫手 enUS 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **375** 列。
+- 只收聯盟路線獨有的說明列，共 **377** 列。
 
 檔名:行號｜類型｜中文原文｜enUS
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Right-click Nibbled-On Book in your bags to start the quest.
@@ -1307,3 +1307,5 @@
 05-副本.md:229｜說明｜清潔區旁的宿舍。先清回出口的路，等全隊準備好再與克努比對話。｜In the dormitory by the Clean Zone. Clear the path back to the exit and wait for the whole party before speaking to Kernobee.
 05-副本.md:230｜說明｜等荊棘谷第一次路過藏寶海灣，再向斯庫提回報。｜Turn in to Scooty during your first pass through Booty Bay in Stranglethorn Vale.
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Sparklematic 5200 in the Clean Zone. Bring 3 silver.
+05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜You can split this chain across runs. Collect the first sample in the entrance tunnels or inside the instance. Turn it in to Ozzie in Kharanos for the heavy vial.
+05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Use the heavy vial on an Irradiated Slime, Corrosive Lurker, or Irradiated Horror. The sample lasts two hours. If you cannot reach Kharanos in time, collect it on your next group run.

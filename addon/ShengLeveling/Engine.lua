@@ -1508,7 +1508,7 @@ function E.DungeonStatus(d)
       local s = step.s
       if s.q and C.IsOnQuest(s.q) and E.Applies(s.when) and raceOK(s.q)
           and not MG.db.skip[step.key] and not E.QuickDone(step) then
-        if (s.ph == "in" and s.t == "do" and not ready(s.q))
+        if ((s.ph == "in" or s.exitPriority) and s.t == "do" and not ready(s.q))
             or (s.ph == "post" and s.t == "turnin" and ready(s.q)) then
           return L["可以去"], "revisit", step
         end
@@ -1644,9 +1644,10 @@ end
 
 -- 副本裡的步驟列：列出日誌中還沒完成的任務、可在副本內交件的任務，以及已撿到起始物品的任務。
 function E.InstanceState(d, all)
-  local steps, seen, inTurn, inDo = {}, {}, {}, {}
+  local steps, seen, inTurn, inDo, outsideObjective = {}, {}, {}, {}, {}
   for _, x in ipairs(all or { d }) do
     for _, step in ipairs(x.list or {}) do
+      if step.s.outsideObjective then outsideObjective[step.s.q] = true end
       -- 有地圖座標的是在本外交（路線放在副本內段落而已）
       if step.s.ph == "in" and step.s.t == "turnin" and step.s.q and not step.s.map then inTurn[step.s.q] = step.s end
       if step.s.ph == "in" and step.s.t == "do" and step.s.q then inDo[step.s.q] = inDo[step.s.q] or step.s end -- 路線上的做法（位置補充行）
@@ -1654,6 +1655,8 @@ function E.InstanceState(d, all)
   end
   local function add(q)
     if q and not seen[q] and C.IsOnQuest(q) and (inTurn[q] or not C.IsReady(q)) then
+      -- 本內可接的送信任務交由出本步驟引導。其他分翼有明列目標時仍顯示。
+      if outsideObjective[q] and not inDo[q] and not inTurn[q] then return end
       seen[q] = true
       -- 目標做完、在副本內交的：改成「交」步驟，第二行寫找誰交
       local canTurnIn = inTurn[q] and C.IsReady(q) and E.Applies(inTurn[q].when)
@@ -1740,15 +1743,7 @@ E.MinPickLv = minPickLv
 -- 下一步：{ kind = low/in/pre/wait/ent/post, step, title }；已過或不打回 nil
 function E.DungeonNext(d, inside)
   if MG.db.dNo[d.id] then return nil end
-  local _, kind, revisit = E.DungeonStatus(d)
-  if kind == "past" then return nil end
-  if kind == "revisit" then
-    if revisit.s.ph == "post" then return { kind = "post", step = revisit } end
-    if inside then return { kind = "in", step = revisit } end
-    return { kind = "ent" }
-  end
   local lv = UnitLevel("player") or 1
-  if kind == "low" then return { kind = "low", title = L["%d 級可接前置"]:format(minPickLv(d)) } end
   local function canDo(s)
     local q = s.q
     if not q then return true end
@@ -1761,13 +1756,26 @@ function E.DungeonNext(d, inside)
     if s.t == "do" then return C.IsOnQuest(q) and not ready(q) end
     return true
   end
-  local function first(ph)
+  local function first(ph, exitOnly)
     for _, step in ipairs(d.list) do
       local s = step.s
-      if s.ph == ph and s.t ~= "travel" and s.t ~= "need" and E.Applies(s.when)
+      if s.ph == ph and (not exitOnly or s.exitPriority) and s.t ~= "travel" and s.t ~= "need" and E.Applies(s.when)
         and not MG.db.skip[step.key] and not E.QuickDone(step) and canDo(s) then return step end
     end
   end
+  -- On leaving, prioritize only authored handoffs whose live quest state allows them.
+  if not inside then
+    local handoff = first("post", true)
+    if handoff then return { kind = "post", step = handoff } end
+  end
+  local _, kind, revisit = E.DungeonStatus(d)
+  if kind == "past" then return nil end
+  if kind == "revisit" then
+    if revisit.s.ph == "post" then return { kind = "post", step = revisit } end
+    if inside then return { kind = "in", step = revisit } end
+    return { kind = "ent" }
+  end
+  if kind == "low" then return { kind = "low", title = L["%d 級可接前置"]:format(minPickLv(d)) } end
   if inside then
     local step = first("in")
     if step then return { kind = "in", step = step } end
