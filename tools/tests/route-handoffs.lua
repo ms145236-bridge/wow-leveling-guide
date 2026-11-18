@@ -151,6 +151,37 @@ do
   ns.C.IsTurnedIn, ns.C.Objectives = oldTurned, islandObjectives
 end
 
+-- Tran'rek is a city conversation even if the client has not refreshed its counters.
+do
+  local zf = E.DungeonByInstance(209)
+  local outside = assert(E.DungeonNext(zf, false)).step.s
+  assert(outside.q == 2864 and outside.t == "accept" and outside.map == 1434)
+  local originalTurned, originalObjectives = ns.C.IsTurnedIn, ns.C.Objectives
+  ns.C.IsTurnedIn = function(q) return q == 3520 or q == 3527 or q == 2865 or q == 2768 end
+  active[2864], active[3042] = true, true
+  for _, visitLevel in ipairs({45, 59}) do
+    level = visitLevel
+    for _, cityState in ipairs({"unknown", "emptyObjectives", "ready"}) do
+      completed[2864] = cityState == "ready"
+      ns.C.Objectives = function(q) if q == 2864 and cityState == "emptyObjectives" then return {} end end
+      local hud = assert(E.InstanceState(zf))
+      assert(#hud.steps == 1 and hud.steps[1].s.q == 3042)
+      local panel = assert(E.DungeonNext(zf, true))
+      assert(panel.kind == "in" and panel.step.s.q == 3042)
+      if cityState ~= "unknown" then
+        local handoff = assert(E.DungeonNext(zf, false)).step.s
+        assert(handoff.q == 2864 and handoff.t == "turnin" and handoff.map == 1446)
+      end
+      active[3042] = nil
+      assert(not E.InstanceState(zf) and not E.DungeonNext(zf, true))
+      active[3042] = true
+    end
+  end
+  assert(ns.Route.quests[2864].xp == 390)
+  level, active[2864], active[3042], completed[2864] = 43, nil, nil, nil
+  ns.C.IsTurnedIn, ns.C.Objectives = originalTurned, originalObjectives
+end
+
 local st = E.byId["03-38"]
 local function current()
   local state = E.Locate(st)

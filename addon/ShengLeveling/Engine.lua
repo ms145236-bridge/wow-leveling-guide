@@ -1839,6 +1839,23 @@ function E.DungeonNext(d, inside)
         and not MG.db.skip[step.key] and not E.QuickDone(step) and canDo(s) then return step end
     end
   end
+  local function nextJournalStep()
+    local state = E.InstanceState(d)
+    for _, step in ipairs(state and state.steps or {}) do
+      if not MG.db.skip[step.key] and not E.QuickDone(step) then return { kind = "in", step = step } end
+    end
+  end
+  if inside then
+    for _, step in ipairs(d.list) do
+      local s = step.s
+      if s.ph == "post" and s.t == "turnin" and s.outsideObjective and C.IsOnQuest(s.q) then
+        -- A city hand-in can stay in the journal throughout the run, including a return visit.
+        local current = first("in")
+        if current then return { kind = "in", step = current } end
+        return nextJournalStep()
+      end
+    end
+  end
   -- On leaving, prioritize only authored handoffs whose live quest state allows them.
   if not inside then
     local handoff = first("post", true)
@@ -1859,10 +1876,8 @@ function E.DungeonNext(d, inside)
   local pre = first("pre")
   if inside and pre and pre.s.outsideObjective then
     -- The journal can have work inside even when the guide has no explicit in-phase step.
-    local state = E.InstanceState(d)
-    for _, step in ipairs(state and state.steps or {}) do
-      if not MG.db.skip[step.key] and not E.QuickDone(step) then return { kind = "in", step = step } end
-    end
+    local current = nextJournalStep()
+    if current then return current end
     pre = nil
   end
   if pre then return { kind = "pre", step = pre } end
