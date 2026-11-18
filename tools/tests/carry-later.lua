@@ -44,3 +44,37 @@ for _, step in ipairs(state.steps) do if step.carry then shown[step.s.q] = true 
 assert(not shown[416], "saved carry of 416 must be hidden at 02-10")
 assert(shown[224], "saved carry of 224 still shown")
 print("carry-later: all passed")
+
+-- 全路線掃描：每個橫跨兩個以上主線站的任務，在它前一站與後一站之間跳站時，身上有它就不該被帶到中間的站
+local function sweep(faction, race, file)
+  return faction, race, file
+end
+local n, bad = 0, {}
+for _, st in ipairs(E.stations) do
+  if not st.dungeon then
+    for _, step in ipairs(st.list) do
+      local q = step.s.q
+      if q and E.Applies(step.s.when) then
+        -- 找下一個也有 q 的主線站
+        for k = st.index + 2, #E.stations do
+          local o = E.stations[k]
+          local later = false
+          for _, s2 in ipairs(o.list) do if s2.s.q == q and E.Applies(s2.s.when) then later = true break end end
+          if later then
+            wipe(active); active[q] = true
+            db.station = st.id
+            local mid = E.stations[st.index + 1]
+            if mid and not mid.dungeon then
+              local c = E.JumpPlan(mid)
+              n = n + 1
+              for _, x in ipairs(c) do if x == q then bad[#bad + 1] = q .. " " .. st.id .. "->" .. mid.id end end
+            end
+            break
+          end
+        end
+      end
+    end
+  end
+end
+assert(#bad == 0, "carried although a later station handles it: " .. table.concat(bad, ", "))
+print("carry-later sweep: " .. n .. " cross-station cases, none carried")

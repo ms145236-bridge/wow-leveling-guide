@@ -658,13 +658,15 @@ function E.ViaTarget(step)
   return { s.map, s.x, s.y }
 end
 
--- 這個任務在第 idx 站（含）之後的主線站還有本角色適用的步驟：路線後面會處理，不用帶過來補
+-- 路線後面（第 idx 站含以後的主線站）會接手這個任務：已接的，後面還有本角色適用的任一步驟；
+-- 還沒接的，後面要有適用的「接」。這種不用帶過來補、離站也不用提醒
 local function laterHas(q, idx)
   if not idx then return false end
+  local onLog = C.IsOnQuest(q)
   for _, o in ipairs(questSt[q] or {}) do
     if not o.dungeon and o.index and o.index >= idx then
       for _, step in ipairs(o.list) do
-        if step.s.q == q and E.Applies(step.s.when) then return true end
+        if step.s.q == q and (onLog or step.s.t == "accept") and E.Applies(step.s.when) then return true end
       end
     end
   end
@@ -1198,7 +1200,7 @@ function E.Leaving(state)
   for i, step in ipairs(state.steps) do
     local q = step.s.q
     local skipped = MG.db.skip[step.key]
-    if q and not seen[q] and not step.carry and not turned(q) and (skipped or not (state.done[i] or state.na[i] or state.wait[i])) then
+    if q and not seen[q] and not step.carry and not turned(q) and (skipped or not (state.done[i] or state.na[i] or state.wait[i])) and not laterHas(q, state.st.index and state.st.index + 1) then
       seen[q] = true
       local imp = E.Impact(q, state.st)
       if #imp > 0 then out[#out + 1] = { i = i, q = q, imp = imp } end
