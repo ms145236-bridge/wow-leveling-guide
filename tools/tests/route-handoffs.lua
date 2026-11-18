@@ -177,6 +177,22 @@ do
       active[3042] = true
     end
   end
+  active[2864], completed[2864] = nil, nil
+  ns.C.Objectives = function(q)
+    if q == 3042 then return {{have=1, need=20, done=false}} end
+  end
+  for _, cityHandedIn in ipairs({false, true}) do
+    ns.C.IsTurnedIn = function(q) return q == 2864 and cityHandedIn end
+    for _, visitLevel in ipairs({45, 59}) do
+      level = visitLevel
+      assert(E.InstanceState(zf).steps[1].s.q == 3042)
+      local current = assert(E.DungeonNext(zf, true))
+      assert(current.kind == "in" and current.step.s.q == 3042)
+      active[3042] = nil
+      assert(not E.InstanceState(zf) and not E.DungeonNext(zf, true))
+      active[3042] = true
+    end
+  end
   assert(ns.Route.quests[2864].xp == 390)
   level, active[2864], active[3042], completed[2864] = 43, nil, nil, nil
   ns.C.IsTurnedIn, ns.C.Objectives = originalTurned, originalObjectives

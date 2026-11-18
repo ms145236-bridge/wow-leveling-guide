@@ -1848,11 +1848,15 @@ function E.DungeonNext(d, inside)
   if inside then
     for _, step in ipairs(d.list) do
       local s = step.s
-      if s.ph == "post" and s.t == "turnin" and s.outsideObjective and C.IsOnQuest(s.q) then
-        -- A city hand-in can stay in the journal throughout the run, including a return visit.
-        local current = first("in")
-        if current then return { kind = "in", step = current } end
-        return nextJournalStep()
+      if s.ph == "post" and s.t == "turnin" and s.outsideObjective then
+        local cityQuestHeld = C.IsOnQuest(s.q)
+        if cityQuestHeld then
+          local current = first("in")
+          if current then return { kind = "in", step = current } end
+        end
+        -- A completed city errand can close the station while an indexed dungeon quest is still active.
+        local current = nextJournalStep()
+        if cityQuestHeld or (current and C.IsOnQuest(current.step.s.q)) then return current end
       end
     end
   end
