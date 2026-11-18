@@ -273,12 +273,16 @@ local function routeQuestsByTitle(title)
 end
 local function autoOn() return UI.Get("auto") and not IsShiftKeyDown() end
 local accQ = {} -- 任務 → 路線上每個「接」步驟 { when, opt, d＝副本站 ID, at＝主線站 ID }（同一個任務可以主線必做、副本段可跳過）
+local anyG = {} -- 任一組（例如紮營入門指南任選專業）的每個任務 → 組的第一個 ID（略過鍵 a:第一個）
 for _, st in ipairs(R.stations) do
   for _, s in ipairs(st.steps) do
     if s.t == "accept" and s.q then
-      local l = accQ[s.q] or {}
-      accQ[s.q] = l
-      l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or nil, at = not st.dungeon and st.id or nil }
+      for _, q in ipairs(s.any or { s.q }) do -- 任一組：每個成員都記同一筆（同一個可跳過、略過狀態）
+        local l = accQ[q] or {}
+        accQ[q] = l
+        l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or nil, at = not st.dungeon and st.id or nil }
+        if s.any then anyG[q] = s.any[1] end
+      end
     end
   end
 end
@@ -288,7 +292,7 @@ local autoQ = {} -- 剛自動按了接受、日誌還沒出現的任務 → 按�
 local function inRoute(id)
   if not (id and not (issecretvalue and issecretvalue(id)) and id > 0 and R.quests[id] ~= nil) then return false end
   if C.IsOnQuest(id) then return true end
-  if MG.db.skip["a:" .. id] then return false end
+  if MG.db.skip["a:" .. (anyG[id] or id)] then return false end
   local optional = UI.Get("optional") or E.Fill[id]
   -- 日誌快滿先不接的副本前置：NPC 給了也不自動接。用這一刻的日誌算（和步驟列的「之後」同一個判斷），不看上次畫好的清單
   local pre = false -- 這個任務是副本前置（那個副本沒選不打）
@@ -328,21 +332,22 @@ local function notOffered(event)
   if not (s and s.t == "accept" and s.q) or C.IsOnQuest(s.q) or E.Turned(s.q) then return end
   local name = UnitName("npc")
   if not name or (issecretvalue and issecretvalue(name)) or (name ~= (s.npcG or s.npc) and name ~= s.tgt) then return end
-  local offered = false
+  local want, offered = {}, false
+  for _, q in ipairs(s.any or { s.q }) do want[q] = true end -- 任一組：NPC 給其中任何一個都算有給
   if event == "QUEST_DETAIL" then
     local id = GetQuestID and GetQuestID()
     if not id or (issecretvalue and issecretvalue(id)) then return end
-    offered = id == s.q
+    offered = want[id] or false
   elseif event == "GOSSIP_SHOW" then
     local G = C_GossipInfo
     if not (G and G.GetAvailableQuests) then return end
     for _, q in ipairs(G.GetAvailableQuests() or {}) do
       if issecretvalue and issecretvalue(q.questID) then return end
-      if q.questID == s.q then offered = true end
+      if want[q.questID] then offered = true end
     end
   else
     for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do
-      for _, id in ipairs(routeQuestsByTitle(GetAvailableTitle(i))) do if id == s.q then offered = true end end
+      for _, id in ipairs(routeQuestsByTitle(GetAvailableTitle(i))) do if want[id] then offered = true end end
     end
   end
   if not offered then
@@ -352,6 +357,7 @@ end
 
 -- 自動接：灰名（太低等）的任務不接，除非就是這一站路線上要接的（例如回低等區交任務時，NPC 身上的舊任務）
 local function wantAccept(id)
+  if anyG[id] then return false end -- 任一組（任選專業）：玩家自己挑，不自動選、不自動接；接了以後交件照常自動
   local lv, q = UnitLevel("player") or 1, R.quests[id]
   local range = (UnitQuestTrivialLevelRange and UnitQuestTrivialLevelRange("player")) or (GetQuestGreenRange and GetQuestGreenRange()) or 8
   if not (q and q.lvl) or q.lvl >= lv - range then return true end
