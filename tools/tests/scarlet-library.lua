@@ -75,3 +75,49 @@ assert(index("03-38", "accept", 1052) == index("03-38", "turnin", 261) + 1)
 assert(index("04-44", "accept", 1053) == index("04-44", "turnin", 1052) + 1)
 assert(index("04-53", "turnin", 1053))
 print("Scarlet campaign covers its late handoff and separate wing visits")
+
+-- A character must pick up the Titans book before being directed to Ironforge.
+ns.db.dNo = {}
+local journalHasBookQuest, bookObjectiveComplete = false, false
+ns.C.IsOnQuest = function(q) return q == 1050 and journalHasBookQuest end
+ns.C.IsReady = function(q) return q == 1050 and journalHasBookQuest and bookObjectiveComplete end
+ns.C.Objectives = function(q) if q == 1050 and journalHasBookQuest then return {} end end
+local bags = {}
+function GetItemCount(id) return bags[id] or 0 end
+function UnitLevel() return 38 end
+local pickup, objective, handoff
+for _, step in ipairs(monastery.list) do
+  local s = step.s
+  if s.q == 1050 then
+    if s.ph == "pre" and s.t == "accept" then pickup = s end
+    if s.ph == "in" and s.t == "do" then objective = s end
+    if s.ph == "post" and s.t == "turnin" then handoff = s end
+
+  end
+  assert(s.ph ~= "post" or (s.t ~= "hearth" and s.t ~= "fly"))
+end
+assert(pickup and pickup.map == 1455 and pickup.pickLv == 28)
+assert(objective and objective.spot and objective.spot:find("圖書館", 1, true) and not objective.map)
+assert(handoff and handoff.map == 1455 and handoff.when.readyQuest == 1050)
+assert(handoff.when.bag.item == 5536 and handoff.exitPriority)
+assert(handoff.desc:find("南海鎮搭往米奈希爾港的船", 1, true))
+assert(handoff.desc:find("洛克莫丹", 1, true) and handoff.desc:find("礦道地鐵", 1, true))
+assert(not E.InstanceState(monastery) and not E.Applies(handoff.when))
+journalHasBookQuest = true
+local withoutBook = assert(E.InstanceState(monastery))
+assert(#withoutBook.steps == 1 and withoutBook.steps[1].s == objective)
+assert(not E.Applies(handoff.when))
+bookObjectiveComplete = true
+assert(not E.InstanceState(monastery))
+assert(not E.Applies(handoff.when))
+bags[5535] = 1
+assert(not E.Applies(handoff.when))
+bags[5536] = 1
+assert(E.Applies(handoff.when))
+local returnToIronforge = E.DungeonNext(monastery, false)
+assert(returnToIronforge.kind == "post" and returnToIronforge.step.s == handoff)
+-- Southshore lies on the way back if both the campaign and book are ready.
+ns.C.IsOnQuest = function(q) return q == 1050 or q == 1053 end
+ns.C.IsReady = ns.C.IsOnQuest
+assert(E.DungeonNext(monastery, false).step.s.q == 1053)
+print("Titans book, Southshore flight and boat fallback, and ordered exits passed")

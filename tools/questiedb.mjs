@@ -121,7 +121,7 @@ export function openQuestieDB() {
   };
 
   // 任務目標數量更正（QuestieDB 和遊戲不符）：任務 ID → [原字, 更正]，套在繁中 obj、英文 objEn、其他語系 l10nObj 三處
-  const OBJ_FIX = { 96063: [["5", "8"], ["пять", "восемь"]] }; // 氣態黃金：遊戲內要 8 瓶
+  const OBJ_FIX = { 5212: [["10", "20"]], 96063: [["5", "8"], ["пять", "восемь"]] }; // 氣態黃金：遊戲內要 8 瓶
   const fixObj = (id, l) => OBJ_FIX[id] ? l.map((t) => typeof t === "string" ? OBJ_FIX[id].reduce((s, [a, b]) => s.split(a).join(b), t) : t) : l;
 
   const quest = (id) => {

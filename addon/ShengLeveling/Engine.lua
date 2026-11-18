@@ -271,7 +271,8 @@ function E.Build()
           usedKey[key] = true
           if s.skey then
             -- 合併、改寫前的舊存檔（舊鍵依座標點分組；最後一組是這步本身）：
-            -- 途經點走過、勾過、略過 → 記成「@k」進度；這步本身的其他舊鍵 → 勾選／略過搬過來；
+            -- 途經點走過、勾過、略過 → 記成「@k」進度；這步本身的其他舊鍵 → 勾選／略過搬過來（手動略過的起點換成新鍵，
+            -- 指向它的連帶值也跟著換）；搬完就刪掉舊值，之後在新鍵上的手動調整不會被舊值蓋回去。
             -- 舊版釘在其中一點 → 釘這步，箭頭指那一點（pin.via；釘選和走過的進度分開記）
             local db = MG.db
             local pin = db.pin and db.pin[st.id]
@@ -282,13 +283,18 @@ function E.Build()
             for k, olds in ipairs(groups) do
               for _, old in ipairs(olds) do
                 local ok = st.id .. "#" .. old
+                local root = db.skip[ok]
                 if k < n then
-                  if db.latch[ok] or db.mark[ok] or db.skip[ok] then db.latch[key .. "@" .. k] = true end
+                  if db.latch[ok] or db.mark[ok] or root then db.latch[key .. "@" .. k] = true end
                 else
                   if db.latch[key] == nil then db.latch[key] = db.latch[ok] end
                   if db.mark[key] == nil then db.mark[key] = db.mark[ok] end
-                  if db.skip[key] == nil then db.skip[key] = db.skip[ok] end
+                  if root and db.skip[key] == nil then db.skip[key] = (root == ok or root == true) and key or root end
                 end
+                if root then
+                  for sk, v in pairs(db.skip) do if v == ok and sk ~= ok then db.skip[sk] = key end end
+                end
+                db.latch[ok], db.mark[ok], db.skip[ok] = nil, nil, nil
                 if pin and pin.via == nil and pin.key == ok then pin.key, pin.via = key, s.via and k or false end
                 if pin and pin.auto == ok then pin.auto = key end
               end
@@ -577,7 +583,8 @@ function E.Detour(state)
   for i = first, last do
     local step = state.steps[i]
     local s, q = step.s, step.s.q
-    if i ~= state.cur and q and not state.done[i] and not state.na[i] and not state.wait[i] and not state.inGroup[i] and now - (detourNo[step.key] or -999) >= 120 then
+    if i ~= state.cur and q and not state.done[i] and not state.na[i] and not state.wait[i] and not state.inGroup[i]
+        and E.Applies(s.when) and now - (detourNo[step.key] or -999) >= 120 then
       local onQ = C.IsOnQuest(q)
       local ok = (s.t == "accept" and not onQ and lv >= ((R.quests[q] or {}).min or 0))
         or (s.t == "do" and onQ and not ready(q)) or (s.t == "turnin" and onQ and ready(q))
@@ -589,7 +596,8 @@ function E.Detour(state)
   for _, dg in ipairs(E.dungeons) do
     for _, step in ipairs(dg.list) do
       local s, q = step.s, step.s.q
-      if s.ph == "post" and s.t == "turnin" and q and C.IsOnQuest(q) and ready(q) and now - (detourNo[step.key] or -999) >= 120 then
+      if s.ph == "post" and s.t == "turnin" and q and C.IsOnQuest(q) and ready(q) and E.Applies(s.when)
+          and now - (detourNo[step.key] or -999) >= 120 then
         local d = dist(s)
         -- 不在主線上，不比目前步驟近不近：人在附近就提示（交的人常就在下一步旁邊）
         if d and d <= lim and (not bd or d < bd) then best, bd = step, d end
@@ -692,14 +700,15 @@ local function stepDone(step, map, x, y)
     end
     if p[1] ~= map then return false end
     if k > 1 then MG.db.latch[step.key .. "@" .. (k - 1)] = true end
-    -- 不在下一點，但人已經在後面某一點（中途才開插件、從後段進來）：從那點接著走，不拉回前面
-    if not near(p) then
-      for j = n, k + 1, -1 do
-        local q = s.via[j - 1]
-        if q[1] == map and near(q) then k = j; break end
-      end
-      if k == 1 or not near(s.via[k - 1]) then return false end
+    -- 到了下一點或後面某一點（中途才開插件、從後段進來、點很近）：記最遠的那點，從那裡接著走，不拉回前面
+    local at
+    for j = n, k + 1, -1 do
+      local q = s.via[j - 1]
+      if q[1] == map and near(q) then at = j; break end
     end
+    if not at and near(p) then at = k end
+    if not at then return false end
+    k = at
     local fin = k == n
     MG.db.latch[fin and step.key or (step.key .. "@" .. k)] = true
     return fin
@@ -714,10 +723,10 @@ function E.ViaTarget(step)
   for k = #s.via, 1, -1 do
     if MG.db.latch[step.key .. "@" .. k] then walked = k; break end
   end
-  -- 舊版釘在某一點（升級時搬過來的 pin.via）：還沒走到那點前箭頭指那點
+  -- 舊版釘在某一點（升級時搬過來的 pin.via）：還沒走到那點前箭頭指那點；釘的是已走過的點（重看）就一直指它
   local pin = step.st and MG.db.pin and MG.db.pin[step.st.id]
   local v = pin and pin.key == step.key and pin.via
-  if v and v > walked then return v == 1 and { s.map, s.x, s.y } or s.via[v - 1] end
+  if v and (v > walked or pin.wasDone) then return v == 1 and { s.map, s.x, s.y } or s.via[v - 1] end
   return walked > 0 and s.via[walked] or { s.map, s.x, s.y }
 end
 
@@ -1006,7 +1015,9 @@ function E.Locate(st)
     end
     if found and not na[found] then arrive(found) end
     -- 舊版釘在合併路標的某一點（pin.via）：就算剛好是目前這步也留著，箭頭先指那一點（E.ViaTarget）
-    if not found or (done[found] and not pin.wasDone) or (found == auto and not pin.via) or (pin.auto and (auto and steps[auto].key or "") ~= pin.auto) then
+    -- 釘的那一點走到了（沒走過才釘的）：和整步完成一樣放開
+    local viaDone = found and pin.via and db.latch[pin.key .. "@" .. pin.via]
+    if not found or ((done[found] or viaDone) and not pin.wasDone) or (found == auto and not pin.via) or (pin.auto and (auto and steps[auto].key or "") ~= pin.auto) then
       db.pin[st.id] = nil
     else
       cur = found

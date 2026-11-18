@@ -39,6 +39,8 @@ local function climbSetup()
     if step.s.via and step.s.skey == "goto:沿路跑到這個點。@83,50" then at = i; break end
   end
   assert(at, "climb step missing")
+  -- 遊戲裡用世界座標 50 碼（丹莫洛約 1%）判斷到達；測試沒有 C_Map，改用 0.5% 半徑，免得相鄰的山稜點互相算到
+  st.list[at].s.r = 0.5
   -- 前面的任務都交了：輪到翻山
   for i = 1, at - 1 do db.mark[st.list[i].key] = true end
   return st, st.list[at]
@@ -292,6 +294,62 @@ st, climb = climbSetup()
 db.pin["01-9"] = { key = climb.key, wasDone = false, auto = "", via = false }
 E.Build()
 assert(db.pin["01-9"].via == false)
+
+-- 舊版釘在第 1／2／3 點、釘的時候還沒走到：走到那一點就放開（和舊版走到那個單點一樣），回到正常進度
+for v = 1, 3 do
+  reset()
+  st, climb = climbSetup()
+  local oldKey = ({ "01-9#goto:沿路跑到這個點。@79,50", "01-9#goto:沿路跑到這個點。@80,50", "01-9#goto:沿路跑到這個點。@82,50" })[v]
+  db.pin["01-9"] = { key = oldKey, wasDone = false, auto = "01-9#goto:沿路跑到這個點。@79,50" }
+  E.Build()
+  st = E.byId["01-9"]
+  for _, step in ipairs(st.list) do if step.s.skey == "goto:沿路跑到這個點。@83,50" then climb = step end end
+  position = {1426, 70, 50}
+  assert(cur(st) == climb and db.pin["01-9"].via == v)
+  assert(E.ViaTarget(climb)[2] == pts[v][2], "arrow at pinned point " .. v)
+  position = { pts[v][1], pts[v][2], pts[v][3] }
+  cur(st)
+  assert(db.pin["01-9"] == nil, "pin released on reaching pinned point " .. v)
+  assert(E.ViaTarget(climb)[2] == pts[v + 1][2], "after release the arrow follows normal progress")
+end
+-- 舊版釘在已走過的第 1 點（重看）：不放開，箭頭一直指那點
+reset()
+st, climb = climbSetup()
+db.latch["01-9#goto:沿路跑到這個點。@79,50"] = true
+db.pin["01-9"] = { key = "01-9#goto:沿路跑到這個點。@79,50", wasDone = true, auto = "01-9#goto:沿路跑到這個點。@80,50" }
+E.Build()
+st = E.byId["01-9"]
+for _, step in ipairs(st.list) do if step.s.skey == "goto:沿路跑到這個點。@83,50" then climb = step end end
+position = {1426, 70, 50}
+assert(cur(st) == climb and db.pin["01-9"], "re-view pin kept")
+assert(E.ViaTarget(climb)[2] == pts[1][2], "re-view pin points at the walked point")
+
+-- 舊版手動略過（真的 E.ToggleSkip）：升級後是新鍵上的手動略過，重算不會清掉；取消後重登不會被舊值蓋回
+race, raceID, db.start, level = "Human", 1, nil, 20
+reset()
+E.Build()
+local fallOld = "02-13#goto:沿路跑到這個點。@51,25"
+E.ToggleSkip(fallOld)
+assert(db.skip[fallOld] == fallOld)
+E.Build()
+local fall
+for _, step in ipairs(E.byId["02-13"].list) do if step.s.skey == "goto:沿路跑到這個點。@51,25~2" then fall = step end end
+assert(db.skip[fall.key] == fall.key and db.skip[fallOld] == nil, "manual skip root moved to the new key")
+E.RecomputeSkip()
+assert(db.skip[fall.key] == fall.key, "manual skip survives RecomputeSkip on login")
+E.ToggleSkip(fall.key)
+assert(db.skip[fall.key] == nil)
+E.Build(); E.RecomputeSkip()
+assert(db.skip[fall.key] == nil, "un-skip survives relog")
+-- 舊勾選：搬到新鍵後取消勾選，重登不會被舊值蓋回
+reset()
+db.mark[fallOld] = true
+E.Build()
+assert(db.mark[fall.key] == true and db.mark[fallOld] == nil)
+E.SetMark(fall.key, nil)
+E.Build()
+assert(db.mark[fall.key] == nil, "un-tick survives relog")
+race, raceID, db.start, level = "Dwarf", 3, "Dwarf/Gnome", 10
 
 -- 換區載入中：只有地圖、還沒座標，不報錯也不亂判
 reset()
