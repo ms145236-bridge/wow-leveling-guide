@@ -7,6 +7,7 @@ lua5.1 tools/tests/map-order.lua
 lua5.1 tools/tests/route-handoffs.lua
 lua5.1 tools/tests/deadmines.lua
 lua5.1 tools/tests/stockades.lua
+lua5.1 tools/tests/alcaz-prison.lua
 lua5.1 tools/tests/wetlands-dungeon.lua
 lua5.1 tools/tests/gnomeregan.lua
 lua5.1 tools/tests/scarlet-library.lua

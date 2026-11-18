@@ -1,6 +1,6 @@
 # 阿聖練等幫手 frFR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **375** 列。
+- 只收聯盟路線獨有的說明列，共 **377** 列。
 
 檔名:行號｜類型｜中文原文｜frFR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Fais un clic droit sur Livre grignoté dans ton sac pour lancer la quête.
@@ -1307,3 +1307,5 @@
 05-副本.md:229｜說明｜清潔區旁的宿舍。先清回出口的路，等全隊準備好再與克努比對話。｜Dans le dortoir près de la zone propre. Dégagez le chemin du retour vers la sortie et attendez tout le groupe avant de parler à Kernobee.
 05-副本.md:230｜說明｜等荊棘谷第一次路過藏寶海灣，再向斯庫提回報。｜Rendez la quête à Scooty lors de votre premier passage à Baie-du-Butin, dans la vallée de Strangleronce.
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Le Brille-o-Matic 5200, dans la zone propre. Prévoyez 3 pièces d’argent.
+05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜Vous pouvez répartir cette suite sur plusieurs visites. Prélevez le premier échantillon dans les tunnels d’entrée ou dans l’instance. Rapportez-le à Ozzie à Kharanos pour obtenir la fiole lourde.
+05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Utilisez la fiole lourde sur une gelée irradiée, un rôdeur corrosif ou une horreur irradiée. L’échantillon se conserve deux heures. Si vous ne pouvez pas rejoindre Kharanos à temps, prélevez-le lors de votre prochaine sortie en groupe.

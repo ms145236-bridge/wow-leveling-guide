@@ -66,6 +66,20 @@ for _, s in ipairs(horde["03-17"]) do
   end
 end
 assert(hasFlight)
+
+-- Leave the vulture objective at the northeast of the Flats, turn in on the
+-- eastern side first, and finish at Kravel before the conditional Ratchet trip.
+local flats = horde["03-17"]
+local prev = find(flats, "do", 1176)
+for _, pair in ipairs({
+  {"turnin", 1176}, {"accept", 1178}, {"turnin", 1175}, {"turnin", 1105},
+  {"turnin", 1104}, {"accept", 1106}, {"turnin", 1110}, {"accept", 1111}
+}) do
+  local i, step = find(flats, pair[1], pair[2])
+  assert(i == prev + 1 and step.map == 1441)
+  if pair[2] == 1111 or pair[2] == 1178 then assert(step.opt) end
+  prev = i
+end
 local _, ingredients = find(island, "do", 92553)
 assert(ingredients.map == 2521 and find(island, "do", 92553) < find(island, "turnin", 92553))
 assert(find(island, "do", 92516) < find(island, "turnin", 92553))

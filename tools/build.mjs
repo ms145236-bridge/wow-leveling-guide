@@ -91,7 +91,7 @@ const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 
 const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
 // 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
 const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|目標完成才交[：:]|到[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|目標完成才交[：:]|到[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -407,7 +407,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
     const keep = /★/.test(body);
     const f = body.replace(/★/g, "").split("｜").map((s) => s.trim());
     // no、raw：職業任務段落的插入點用（#K、「動詞｜文字」）
-    const step = { verb, t: VERB[verb], instancePickup: tags.includes("副本內接取") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
+    const step = { verb, t: VERB[verb], exitPriority: tags.includes("出本優先回報") || undefined, instancePickup: tags.includes("副本內接取") || undefined, outsideObjective: tags.includes("本外完成") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined, hold: (VERB[verb] !== "accept" && tags.includes("材料齊才做")) || undefined, cond: (VERB[verb] === "accept" && tags.includes("可跳過") && (f.slice(1, 3).some((x) => /^物品\s/.test(x)) || tags.some((t) => COND_TAG.test(t)))) || undefined, keepOpt: tags.some((t) => KEEP_TAG.test(t)) || undefined, hard: (tags.includes("可跳過") && tags.includes("能打高階怪再做")) || undefined, anyRace: tags.includes("部落可接") || undefined,
       desc: [...tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")),
         ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
@@ -946,7 +946,7 @@ for (const st of stations) for (const s of st.steps) {
 let talkOnly = 0;
 for (const st of stations) {
   st.steps = st.steps.filter((s) => {
-    if (s.t !== "do" || !s.id || s.desc || routeMobs(s.id).length || db.quest(s.id)?.requiredSourceItems?.length) return true; // 寫了說明的不併（例如牽馬回農莊）
+    if (s.t !== "do" || !s.id || s.desc || (s.ph === "post" && s.exitPriority) || routeMobs(s.id).length || db.quest(s.id)?.requiredSourceItems?.length) return true; // 寫了說明的不併（例如牽馬回農莊）
     // QuestieDB 沒記目標的新任務也可能要打怪、撿東西：說明看起來是要做事的就留著
     const h = s.hint || "";
     const talk = /^(把|將)[^，。；]*(交給|帶給|交還給|送給|送回|帶回|帶到|拿給)/.test(h) || /^(與|和|向|問)[^，。；]*(談一談|談話|交談|對話|報到|回報|報告)/.test(h) || /^(到|去)[^，。；]*(找|報到|向)/.test(h);
@@ -1141,6 +1141,8 @@ const stepWhen = (w, sw) => {
   return Object.keys(out).length ? out : undefined;
 };
 const stepOut = (s, st) => ({
+  exitPriority: s.ph === "post" && (s.t === "do" || s.t === "turnin") && s.exitPriority || undefined,
+  outsideObjective: s.ph === "in" && s.t === "accept" && s.outsideObjective || undefined,
   star: s.star, t: s.t, instancePickup: s.ph === "in" && s.t === "accept" && s.instancePickup || undefined, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
   // 說明段用「；」接起來：句號結尾的段後面不再補「；」，完全相同的段只留一次（翻譯照原本的「；」切段，不受影響）
   desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,

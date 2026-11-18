@@ -1,6 +1,6 @@
 # 阿聖練等幫手 esES 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **375** 列。
+- 只收聯盟路線獨有的說明列，共 **377** 列。
 
 檔名:行號｜類型｜中文原文｜esES
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Haz clic derecho en Libro mordisqueado en tu bolsa para empezar la misión.
@@ -1307,3 +1307,5 @@
 05-副本.md:229｜說明｜清潔區旁的宿舍。先清回出口的路，等全隊準備好再與克努比對話。｜En el dormitorio junto a la Zona Limpia. Despejad el camino de vuelta a la salida y esperad a todo el grupo antes de hablar con Kernobee.
 05-副本.md:230｜說明｜等荊棘谷第一次路過藏寶海灣，再向斯庫提回報。｜Entrega la misión a Scooty la primera vez que pases por Bahía del Botín en la Vega de Tuercespina.
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜El Destellamatic 5200, en la Zona Limpia. Lleva 3 monedas de plata.
+05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜Puedes repartir la cadena entre varias visitas. Recoge la primera muestra en los túneles de entrada o dentro de la mazmorra. Llévasela a Ozzie en Kharanos para recibir el vial pesado.
+05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Usa el vial pesado con una babosa irradiada, un rondador corrosivo o un horror irradiado. La muestra dura dos horas. Si no puedes volver a Kharanos a tiempo, recógela en tu próxima visita en grupo.
