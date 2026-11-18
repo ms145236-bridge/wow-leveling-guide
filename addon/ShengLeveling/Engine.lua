@@ -824,9 +824,10 @@ function E.Locate(st)
         end
       end
       softLater[i] = not done[i] and later and not step.s.x and map ~= nil and x ~= nil -- 沒座標的交通：輪到它時才看人到了沒（見下面）
-      -- 已經到下一站的地圖：站尾交通算到了；鳥點沒開不打勾，只是不再拉回去（left）
+      -- 已經到下一站的地圖：站尾交通算到了；鳥點沒開不打勾，只是不再拉回去（left）。
+      -- 鳥點和下一站同一張地圖時，人在這張地圖上不代表已經離開，照樣帶去開點
       local onNext = nxt and map and map == nxt.map
-      if step.s.t == "fp" then left[i] = onNext end
+      if step.s.t == "fp" then left[i] = onNext and step.s.map ~= map end
       if not later then
         tails[i] = true
         tail = tail or step.s.text

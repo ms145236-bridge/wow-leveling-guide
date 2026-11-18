@@ -1,14 +1,16 @@
 -- From the repository root: lua5.1 tools/tests/fp-step.lua
 -- 開鳥點只看真的開了沒（飛行地圖／對話開點），不會被後面的進度帶過、也不會因為已到下一站就打勾。
 local active, turnedQ, pos = {}, {}, { 1439, 36.6, 44.5 }
-function UnitFactionGroup() return "Alliance" end
+local who = { "Alliance", "Human", 1 }
+function UnitFactionGroup() return who[1] end
 function UnitClass() return "Priest", "PRIEST" end
-function UnitRace() return "Human", "Human", 1 end
+function UnitRace() return who[2], who[2], who[3] end
 function UnitLevel() return 12 end
 function UnitXPMax() return 8800 end
 function UnitXP() return 0 end
 function wipe(t) for k in pairs(t) do t[k] = nil end end
 local db = { skip={}, mark={}, latch={}, notNow={}, pin={}, carry={}, dNo={}, drop={}, fpNodes={}, start="Human", station="02-10" }
+local function load(route)
 local ns = { C={}, db=db, L={} }
 ns.UI = { Get=function() return false end }
 ns.C.IsOnQuest = function(q) return active[q] end
@@ -21,11 +23,13 @@ ns.C.Bind = function() end
 ns.C.LogQuestIDs = function() local out = {} for q in pairs(active) do out[#out + 1] = q end return out end
 ns.C.Objectives = function() end
 ns.C.GreenRange = function() return 8 end
-for _, file in ipairs({"Data/RouteA.lua", "Engine.lua"}) do
+for _, file in ipairs({route, "Engine.lua"}) do
   assert(loadfile("addon/ShengLeveling/" .. file))("ShengLeveling", ns)
 end
-local E = ns.E
-E.Build()
+ns.E.Build()
+return ns.E
+end
+local E = load("Data/RouteA.lua")
 local fails = 0
 local function check(cond, what)
   if not cond then fails = fails + 1; print("FAIL " .. what) else print("ok   " .. what) end
@@ -83,6 +87,23 @@ for _, c in ipairs({ { "01-2", "鐵爐堡", 1455, 55, 48 }, { "02-13", "魯瑟�
   check(state.done[i], c[1] .. " " .. c[2] .. "：開了就打勾")
 end
 
+-- 鳥點和下一站同一張地圖：人就站在鳥點旁，還是要帶去開點，不能當成已離站
+local function sameMap(id, node, m, px, py)
+  local s = assert(E.byId[id])
+  check(E.Next(s).map == m, id .. " 下一站也在地圖 " .. m)
+  reset(m, px, py)
+  allTurned(s, node)
+  local state = E.Locate(s)
+  local i = fpAt(state, node)
+  for j = 1, i - 1 do if state.tails[j] and not state.done[j] and state.steps[j].s.t ~= "fp" then db.mark[state.steps[j].key] = true end end
+  state = E.Locate(s)
+  check(state.cur == i and not state.done[i] and not state.complete, id .. " " .. node .. "：站在鳥點旁、和下一站同地圖 → 輪到開鳥點（目前 " .. curT(state) .. "）")
+  db.fpNodes[node] = true
+  state = E.Locate(s)
+  check(state.done[i] and state.cur ~= i, id .. " " .. node .. "：開了才打勾（目前 " .. curT(state) .. "）")
+end
+sameMap("03-32", "塞拉摩", 1445, 67, 51)
+
 -- 一般站尾交通：人到了下一站的地圖就算到了
 local s12 = E.byId["01-2"]
 reset(E.Next(s12).map, 50, 50)
@@ -92,5 +113,11 @@ local state = E.Locate(s12)
 local tr
 for i, step in ipairs(state.steps) do if step.s.t == "travel" and state.tails[i] then tr = i end end
 check(tr and state.done[tr], "01-2 站尾交通：到了下一站地圖就算到了")
+
+-- 部落：獸人 01-2 站在十字路口飛行管理員旁，下一站 02-8 也在貧瘠之地
+who[1], who[2], who[3] = "Horde", "Orc", 2
+db.start = "Orc"
+E = load("Data/Route.lua")
+sameMap("01-2", "十字路口", 1413, 51.5, 30.34)
 if fails > 0 then print(fails .. " failed"); os.exit(1) end
 print("fp-step: all passed")
