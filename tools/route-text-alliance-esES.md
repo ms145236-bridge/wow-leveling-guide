@@ -437,7 +437,7 @@
 04-45到60級.md:217｜說明｜守望堡沒開就飛夜色鎮，往東過逆風小徑進悲傷沼澤，再往南進詛咒之地到守望堡。｜Si no tienes el Castillo de Nethergarde, vuela a Villa Oscura, ve al este por el Paso de la Muerte hasta el Pantano de las Penas y luego al sur, a Las Tierras Devastadas, hasta el Castillo de Nethergarde.
 04-45到60級.md:229｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。｜El Pantano de las Penas no tiene punto de vuelo de la Alianza: ve al oeste por el Paso de la Muerte de vuelta a Villa Oscura y vuela desde allí.
 04-45到60級.md:285｜說明｜從塔納利斯西邊的山路走坡道下安戈洛環形山，托爾瓦·尋路者就在坡道底的入口旁。｜Desde el camino de montaña al oeste de Tanaris, baja por la rampa hasta el Cráter de Un'Goro. Abrecaminos Torwa está justo junto a la entrada, al pie de la rampa.
-04-45到60級.md:344｜說明｜爐石還在冷卻就從馬紹爾營地飛奧伯丁（經加基森、塞拉摩），跳過下兩步。｜Si tu piedra de hogar está en reutilización, vuela de Refugio de Marshal a Auberdine (con escala en Gadgetzan y Theramore) y sáltate los dos pasos siguientes.
+04-45到60級.md:354｜說明｜牧師要在鐵爐堡接「塞納裏奧議會的求助」，請等爐石冷卻。其餘角色若爐石還在冷卻，可從馬紹爾營地飛奧伯丁，接往魯瑟蘭村的行程。｜Si eres sacerdote y quieres aceptar la misión del Círculo Cenarion en Forjaz, espera a que se recargue tu piedra de hogar. En los demás casos, si sigue en tiempo de reutilización, vuela desde el Refugio de Marshal hasta Auberdine y continúa hacia la Aldea Rut’theran.
 04-45到60級.md:365｜說明｜從阿斯特蘭納沿大路往北進費伍德森林。｜Desde Astranaar, sigue el camino al norte hasta Frondavil.
 04-45到60級.md:392｜說明｜從這裡進木喉要塞的山洞，穿過去就是冬泉谷。｜Entra aquí en la cueva del Bastión Fauces de Madera y atraviésala para llegar a Cuna del Invierno.
 04-45到60級.md:429｜說明｜爐石還在冷卻就從羽月要塞飛阿斯特蘭納（經奧伯丁），再往北走進費伍德。｜Si tu piedra de hogar está en reutilización, vuela de Bastión Plumaluna a Astranaar (con escala en Auberdine) y luego camina al norte hasta Frondavil.
@@ -1294,3 +1294,4 @@
 04-45到60級.md:1281｜說明｜到艾薩拉交給奧汀克。｜Entrégala a Ogtinc en Azshara.
 04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan te da un cebo: úsalo para alejar a Miblon, coge la Raíz del mal y vuelve para cambiarla por el Elixir de Videre.
 04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Bébete el Elixir de Videre en el cementerio a las afueras de Gadgetzan y busca a Gaeriyan como espíritu.
+02-12到30級.md:14｜說明｜沿奧伯丁南邊海岸打 9–10 級的小潮行蟹收集蟹腿。還沒接「擱淺的巨獸」的話，滿 11 級後順路回碼頭時再接。｜Recoge patas de los cangrejos de nivel 9–10 en la costa al sur de Auberdine. Si aún no tienes la misión de la criatura varada, acéptala la próxima vez que pases por el muelle a partir del nivel 11.

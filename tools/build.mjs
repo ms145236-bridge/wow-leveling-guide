@@ -91,7 +91,7 @@ const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 
 const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
 // 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
 const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|持有材料[：:]|已接任一[：:]|到[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|持有材料[：:]|已接任一[：:]|到[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -117,9 +117,14 @@ const dungeonTags = (tags) => {
 };
 
 const db = openQuestieDB();
-// 任務經驗（QuestieDB 的 QuestXP 表：[id] = {等級, 經驗}）
+// 沿用永恆版 TOC 的順序，後載入的永恆實測值覆蓋初始表。
 const XP = new Map();
-for (const m of readFileSync(join(ADDONS, "QuestieDB/support/Forever/QuestXP/xpDB-classic.lua"), "utf8").matchAll(/\[(\d+)\] = \{(\d+), (\d+)\}/g)) XP.set(+m[1], +m[3]);
+const xpDir = join(ADDONS, "QuestieDB/support/Forever/QuestXP");
+for (const name of ["xpDB-classic.lua", "xpDB-traces.lua"]) {
+  const file = join(xpDir, name);
+  if (name === "xpDB-traces.lua" && !existsSync(file)) continue; // 相容還沒附實測表的 QuestieDB
+  for (const m of readFileSync(file, "utf8").matchAll(/^\s*(?:QuestXP\.db)?\[(\d+)\] = \{\d+, (\d+)\}/gm)) XP.set(+m[1], +m[2]);
+}
 // QuestieDB 沒有的（多半是永恆新任務）：tools/quest-xp.md 補（Wowhead 永恆版任務頁的獎勵經驗；任務ID｜等級｜經驗）
 for (const m of readFileSync(join(ROOT, "tools", "quest-xp.md"), "utf8").matchAll(/^(\d+)｜(\d+)｜(\d+)\s*$/gm)) if (!XP.has(+m[1]) && +m[3] > 0) XP.set(+m[1], +m[3]);
 const classBlocks = [];
@@ -237,6 +242,8 @@ const parseWhen = (tags) => {
     const m = tag.match(/^(僅|非)(.+)$/);
     const lv = tag.match(/^(\d+)\s*級起$/);
     if (lv) when.lvMin = +lv[1];
+    if (tag === "黑海岸分流：留岸") when.coastal = true;
+    if (tag === "黑海岸分流：其餘") when.coastal = false;
     const fp = tag.match(/^(已開|未開)鳥點[：:]\s*(.+)$/);
     if (fp) when[fp[1] === "已開" ? "fp" : "noFp"] = fp[2].trim();
     // 【持有材料：2592×60】只計身上可直接交付的數量。
@@ -893,8 +900,17 @@ const leadReq = [];
 }
 // 條件入口記到任務上（引擎 FillPlan 用）
 for (const x of stations.flatMap((s) => s.steps)) if (x.cond && quests.has(x.id)) quests.get(x.id).cond = true;
-// 高階怪保護（【能打高階怪再做】【可跳過】）記到任務上（引擎 FillPlan 用）：值＝要打的怪的等級上限。每個目標取最好打的那種怪的上限，全任務取最高的目標；查不到怪的等級記 99
-for (const x of stations.flatMap((s) => s.steps)) if (x.hard && quests.has(x.id)) quests.get(x.id).hard = Math.max(...db.questMobs(x.id).filter((m) => m && m.kind !== "object").map((m) => m.hi), 0) || 99;
+// 補經驗只挑單人現在能打的任務。沿用 mobsOf 已排除的對話、物件與友方互動目標。
+const optionalFights = new Set(stations.flatMap(st => st.steps.filter(s => s.opt && s.t === "accept").map(s => s.id)));
+for (const st of stations) for (const s of st.steps) {
+  const q = quests.get(s.id);
+  if (!q || !(s.hard || (s.t === "do" && optionalFights.has(s.id)))) continue;
+  const targets = db.questMobs(s.id).filter((m, i) => m && q.mob?.[i]?.[0] > 0);
+  if (targets.length) {
+    q.hard = Math.max(...targets.map(m => m.hi));
+    if (targets.some(m => m.elite)) q.soloElite = true;
+  } else if (s.hard) q.hard = 99;
+}
 // 路線上有接的任務，前置在本陣營路線完全沒有交件步驟：永遠不成立，引擎會一直藏
 {
   const all = stations.flatMap((s) => s.steps);

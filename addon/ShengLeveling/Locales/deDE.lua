@@ -4,6 +4,9 @@
 local _, MG = ...
 MG.Locales = MG.Locales or {}
 MG.Locales.deDE = {
+  ["已到奧伯丁。留在黑海岸解任務，或搭船去暴風城與朋友會合？"] = "Ihr seid in Auberdine. Wollt Ihr an der Dunkelküste bleiben oder mit dem Schiff nach Sturmwind zu Euren Freunden fahren?",
+  ["留在黑海岸"] = "An der Dunkelküste bleiben",
+  ["提早東渡"] = "Nach Sturmwind fahren",
   -- product, chat
   ["|cff4fc3f7阿聖|r|cffd9b25f練等幫手|r "] = "|cff4fc3f7Sheng|r|cffd9b25fLeveling|r ",
   ["阿聖練等幫手"] = "Sheng Leveling",

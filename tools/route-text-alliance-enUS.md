@@ -437,7 +437,7 @@
 04-45到60級.md:217｜說明｜守望堡沒開就飛夜色鎮，往東過逆風小徑進悲傷沼澤，再往南進詛咒之地到守望堡。｜If Nethergarde Keep isn't unlocked, fly to Darkshire, head east through Deadwind Pass into the Swamp of Sorrows, then south into the Blasted Lands to Nethergarde Keep.
 04-45到60級.md:229｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。｜The Swamp of Sorrows has no Alliance flight point: head west through Deadwind Pass back to Darkshire and fly from there.
 04-45到60級.md:285｜說明｜從塔納利斯西邊的山路走坡道下安戈洛環形山，托爾瓦·尋路者就在坡道底的入口旁。｜From the mountain road west of Tanaris, take the ramp down into Un'Goro Crater. Torwa Pathfinder is right by the entrance at the bottom of the ramp.
-04-45到60級.md:344｜說明｜爐石還在冷卻就從馬紹爾營地飛奧伯丁（經加基森、塞拉摩），跳過下兩步。｜If your hearthstone is on cooldown, fly from Marshal's Refuge to Auberdine (via Gadgetzan and Theramore) and skip the next two steps.
+04-45到60級.md:354｜說明｜牧師要在鐵爐堡接「塞納裏奧議會的求助」，請等爐石冷卻。其餘角色若爐石還在冷卻，可從馬紹爾營地飛奧伯丁，接往魯瑟蘭村的行程。｜Priests picking up Cenarion Aid in Ironforge should wait for their hearthstone. Otherwise, if it is on cooldown, fly from Marshal's Refuge to Auberdine and continue to Rut'theran Village.
 04-45到60級.md:365｜說明｜從阿斯特蘭納沿大路往北進費伍德森林。｜From Astranaar, follow the road north into Felwood.
 04-45到60級.md:392｜說明｜從這裡進木喉要塞的山洞，穿過去就是冬泉谷。｜Enter the Timbermaw Hold cave from here and pass through it to reach Winterspring.
 04-45到60級.md:429｜說明｜爐石還在冷卻就從羽月要塞飛阿斯特蘭納（經奧伯丁），再往北走進費伍德。｜If your hearthstone is on cooldown, fly from Feathermoon Stronghold to Astranaar (via Auberdine), then walk north into Felwood.
@@ -1294,3 +1294,4 @@
 04-45到60級.md:1281｜說明｜到艾薩拉交給奧汀克。｜Turn it in to Ogtinc in Azshara.
 04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan gives you bait: use it to lure Miblon away, grab the Evoroot, then come back and trade it for the Videre Elixir.
 04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Drink the Videre Elixir at the graveyard outside Gadgetzan and find Gaeriyan as a ghost.
+02-12到30級.md:14｜說明｜沿奧伯丁南邊海岸打 9–10 級的小潮行蟹收集蟹腿。還沒接「擱淺的巨獸」的話，滿 11 級後順路回碼頭時再接。｜Collect legs from level 9–10 Pygmy Tide Crawlers on the shore south of Auberdine. If you still need Washed Ashore, pick it up the next time you pass the docks at level 11 or above.

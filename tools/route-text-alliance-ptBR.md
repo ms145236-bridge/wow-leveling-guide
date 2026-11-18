@@ -437,7 +437,7 @@
 04-45到60級.md:217｜說明｜守望堡沒開就飛夜色鎮，往東過逆風小徑進悲傷沼澤，再往南進詛咒之地到守望堡。｜Se a Bastilha de Etergarde não estiver liberada, voe até Vila Sombria, vá para leste pela Trilha do Vento Morto até o Pântano das Mágoas e depois para o sul, pela Barreira do Inferno, até a Bastilha de Etergarde.
 04-45到60級.md:229｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。｜O Pântano das Mágoas não tem ponto de voo da Aliança: vá para oeste pela Trilha do Vento Morto de volta a Vila Sombria e voe de lá.
 04-45到60級.md:285｜說明｜從塔納利斯西邊的山路走坡道下安戈洛環形山，托爾瓦·尋路者就在坡道底的入口旁。｜Pela estrada de montanha a oeste de Tanaris, desça a rampa até a Cratera Un'Goro. Torwa Mateiro está bem ao lado da entrada, no fim da rampa.
-04-45到60級.md:344｜說明｜爐石還在冷卻就從馬紹爾營地飛奧伯丁（經加基森、塞拉摩），跳過下兩步。｜Se a pedra de regresso estiver em recarga, voe do Refúgio do Marshal até Auberdine (com conexões em Geringontzan e Theramore) e pule os dois próximos passos.
+04-45到60級.md:354｜說明｜牧師要在鐵爐堡接「塞納裏奧議會的求助」，請等爐石冷卻。其餘角色若爐石還在冷卻，可從馬紹爾營地飛奧伯丁，接往魯瑟蘭村的行程。｜Sacerdotes que quiserem pegar a missão do Círculo Cenariano em Altaforja devem esperar a Pedra de Regresso recarregar. Nos demais casos, se a pedra ainda estiver em recarga, voe do Refúgio do Marshal até Auberdine e siga para a Vila de Rut’theran.
 04-45到60級.md:365｜說明｜從阿斯特蘭納沿大路往北進費伍德森林。｜De Astranaar, siga a estrada para o norte até a Selva Maleva.
 04-45到60級.md:392｜說明｜從這裡進木喉要塞的山洞，穿過去就是冬泉谷。｜Entre aqui na caverna do Domínio dos Presamatos e atravesse-a para chegar a Hibérnia.
 04-45到60級.md:429｜說明｜爐石還在冷卻就從羽月要塞飛阿斯特蘭納（經奧伯丁），再往北走進費伍德。｜Se a pedra de regresso estiver em recarga, voe do Domínio de Plumaluna até Astranaar (com conexão em Auberdine) e depois vá a pé para o norte até a Selva Maleva.
@@ -1294,3 +1294,4 @@
 04-45到60級.md:1281｜說明｜到艾薩拉交給奧汀克。｜Entregue a Ogtinc em Azshara.
 04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan dá uma isca: use-a para afastar Miblon, pegue a Raiz do Mal e volte para trocar pelo Elixir Videre.
 04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Beba o Elixir Videre no cemitério fora de Geringontzan e procure Gaeriyan como espírito.
+02-12到30級.md:14｜說明｜沿奧伯丁南邊海岸打 9–10 級的小潮行蟹收集蟹腿。還沒接「擱淺的巨獸」的話，滿 11 級後順路回碼頭時再接。｜Colete pernas dos caranguejos de nível 9–10 na costa ao sul de Auberdine. Se ainda não tiver a missão da criatura encalhada, aceite-a na próxima passagem pelas docas a partir do nível 11.

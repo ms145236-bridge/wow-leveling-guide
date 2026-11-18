@@ -390,7 +390,7 @@ local function reloadPrompt(msgText)
 end
 -- 確認框：做了收不回來的動作（全部重設）先問一次
 local confirmPop
-local function confirmPrompt(msgText, okText, run)
+local function confirmPrompt(msgText, okText, run, otherText, otherRun)
   if not confirmPop then
     local p = CreateFrame("Frame", "MetroGuideConfirmPopup", UIParent)
     p:SetFrameStrata("FULLSCREEN_DIALOG"); p:EnableMouse(true); p:SetPoint("CENTER", 0, 120)
@@ -401,16 +401,37 @@ local function confirmPrompt(msgText, okText, run)
     p.ok:SetScript("OnClick", function() p:Hide(); p.run() end)
     p.no = goldButton(p, L["關閉"], 80)
     p.no:SetPoint("BOTTOMLEFT", p, "BOTTOM", 4, 14)
-    p.no:SetScript("OnClick", function() p:Hide() end)
+    p.no:SetScript("OnClick", function() p:Hide(); if p.otherRun then p.otherRun() end end)
     table.insert(UISpecialFrames, "MetroGuideConfirmPopup")
     confirmPop = p
   end
-  local bw = math.max(textWidth(okText, 13), textWidth(L["關閉"], 13)) + 28
-  confirmPop.ok.label:SetText(okText); confirmPop.ok:SetWidth(bw); confirmPop.no:SetWidth(bw)
+  otherText = otherText or L["關閉"]
+  local bw = math.max(textWidth(okText, 13), textWidth(otherText, 13)) + 28
+  confirmPop.ok.label:SetText(okText); confirmPop.ok:SetWidth(bw)
+  confirmPop.no.label:SetText(otherText); confirmPop.no:SetWidth(bw)
   confirmPop.text:SetText(msgText)
-  confirmPop.run = run
-  confirmPop:SetSize(312, math.ceil(confirmPop.text:GetStringHeight() or 14) + 16 + 16 + 22 + 14)
+  confirmPop.run, confirmPop.otherRun = run, otherRun
+  confirmPop:SetSize(math.max(312, bw * 2 + 28), math.ceil(confirmPop.text:GetStringHeight() or 14) + 16 + 16 + 22 + 14)
   confirmPop:Show()
+end
+-- 玩家抵達碼頭且已完成當地交接後，可以接黑海岸第一站或保留東渡行程。
+local dockPromptShown
+function UI.AuberdineChoice(state)
+  local step = state and state.cur and state.steps[state.cur].s
+  if not (step and state.st.id == "01-6" and state.st.start == "NightElf" and state.map == 1439
+      and ((step.t == "boat" and step.to == "暴風城") or C.IsOnQuest(6343)) and not MG.db.auberdineChoice) then return end
+  if InCombatLockdown and InCombatLockdown() then return end
+  local coast = E.byId["02-10"]
+  if not coast or dockPromptShown or (confirmPop and confirmPop:IsShown()) then return end
+  dockPromptShown = true
+  local function choose(stay)
+    if MG.db.station ~= state.st.id or C.Position() ~= 1439 then dockPromptShown = nil; return end
+    MG.db.auberdineChoice = stay and "coast" or "east"
+    if stay then E.Select(coast) end
+    MG.Refresh()
+  end
+  confirmPrompt(L["已到奧伯丁。留在黑海岸解任務，或搭船去暴風城與朋友會合？"],
+    L["留在黑海岸"], function() choose(true) end, L["提早東渡"], function() choose(false) end)
 end
 local showMenu
 -- 介面語言：跟隨客戶端，或客戶端字型顯示得出來的語言（中文、韓文、俄文字型以外都是拉丁字母；英文到處都能顯示）
@@ -576,6 +597,7 @@ end
 
 -- 起點路線切換
 local function setStart(key)
+  dockPromptShown, MG.db.auberdineChoice = nil, nil
   MG.db.start = key
   MG.db.station = nil
   wipe(MG.db.pin)
@@ -2189,8 +2211,8 @@ function UI.Render(S)
       l3 = L["順路打完再交"]
     elseif s.roam and s.t == "do" then
       l3 = L["順路，路上遇到就打"]
-    elseif step.note then
-      l3 = step.note
+    elseif step.note and E.Applies(step.note.when) and not E.OptOut(step.note) then
+      l3 = step.note.text
     elseif s.tag and (MG.uiZh or s.tagL) then
       l3 = MG.uiZh and s.tag or s.tagL -- tag 是中文判斷用；其他語言顯示 tagL
     elseif step.carry then

@@ -118,7 +118,10 @@ local function refresh()
   local optText = state and state.st and E.OptNotice(state)
   if optText then MG.msg(optText) end
   local nextSt = st and E.Next(st)
-  if UI.Visible() then UI.Render({ state = state, sug = E.Suggest(st), nextSt = nextSt }) end -- 步驟列關著就不畫（打開時會重算）
+  if UI.Visible() then
+    UI.Render({ state = state, sug = E.Suggest(st), nextSt = nextSt })
+    UI.AuberdineChoice(state)
+  end -- 步驟列關著就不畫（打開時會重算）
   MG.try("目標按鈕", MG.T.Update, state)
   MG.try("任務物品", MG.I.Update, state)
   -- 箭頭：目前步驟的座標；本站完成時指向下一站第一個有座標的步驟

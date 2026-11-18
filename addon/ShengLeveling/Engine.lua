@@ -161,6 +161,7 @@ function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用�
   if not when then return true end
   if when.race and not raceMatch(when.race) then return false end
   if when.notRace and raceMatch(when.notRace) then return false end
+  if when.coastal ~= nil and when.coastal ~= (MG.db.auberdineChoice == "coast") then return false end
   if when.bag and E.ItemCount(when.bag.item) < when.bag.count then return false end
   if when.onQuestAny then
     local on = false
@@ -225,7 +226,7 @@ function E.Build()
       local usedKey = {}
       for _, s in ipairs(st.steps) do
         if s.t == "note" then
-          note = s.text
+          note = s
         else
           -- 鍵用內容：路線重建後存檔裡的勾選／略過／釘選不會跑到別步；同站重複的加 ~2、~3
           local base = QUEST[s.t] and (s.t:sub(1, 1) .. ":" .. s.q)
@@ -381,10 +382,10 @@ function E.FillPlan(st)
   local solo = not (IsInGroup and IsInGroup())
   for _, step in ipairs(st.list) do
     local s = step.s
-    local on = s.q and not MG.db.skip[step.key] -- 手動略過的步驟不算（只略過「交」＝這站拿不到任務經驗）
+    local on = s.q and E.Applies(s.when) and not MG.db.skip[step.key] -- 手動略過的步驟不算（只略過「交」＝這站拿不到任務經驗）
     if on and s.t == "turnin" then hand[s.q] = true end
     if on and (s.t == "do" or s.t == "turnin") then work[s.q] = true end
-    if on and s.t == "accept" and not s.opt and E.Applies(s.when) then must[s.q] = true end
+    if on and s.t == "accept" and not s.opt then must[s.q] = true end
     if s.q and s.tag and (s.tag:find("隊伍", 1, true) or s.tag:find("組隊", 1, true) or s.tag:find("精英", 1, true)) then group[s.q] = true end
   end
   -- 互斥的任務（二選一）只算一個：已經算進來（必做／在日誌）或已補回的任務，它的互斥對象不再算、不再補
@@ -414,15 +415,16 @@ function E.FillPlan(st)
       end
       -- 條件入口（cond：要先有掉落物、材料、聲望或遇到人才接得到）還沒接的不補：插件看不到背包和聲望，補了會叫人去接不存在的任務
       -- 高階怪保護（hard＝要打的怪的等級上限）：比你高 3 級以上的不補
-      if s.opt and s.t == "accept" and not C.IsOnQuest(q) and not (R.quests[q] or {}).cond and ((R.quests[q] or {}).hard or 0) - lv < 3 and not (solo and group[q]) and lv >= ((R.quests[q] or {}).min or 0) and not cands[q] then
+      local quest = R.quests[q] or {}
+      if s.opt and s.t == "accept" and not C.IsOnQuest(q) and not quest.cond and (quest.hard or 0) - lv < 3 and not (solo and (group[q] or quest.soloElite)) and lv >= (quest.min or 0) and not cands[q] then
         cands[q] = { q = q, xp = (hand[q] and questXP(q, lv) or 0) + (work[q] and killXP(q, lv) or 0), pts = {} }
       end
     end
-    if s.x and not s.opt then spots[#spots + 1] = s end
+    if s.x and not s.opt and E.Applies(s.when) and (not q or raceOK(q)) and not MG.db.skip[step.key] then spots[#spots + 1] = s end
   end
   for _, step in ipairs(st.list) do
     local c = step.s.q and cands[step.s.q]
-    if c and step.s.x then c.pts[#c.pts + 1] = step.s end
+    if c and step.s.x and E.Applies(step.s.when) and not MG.db.skip[step.key] then c.pts[#c.pts + 1] = step.s end
   end
   -- 休息經驗：打怪經驗加倍，最多到休息池的量
   info.rested = math.min(info.killXP, GetXPExhaustion and GetXPExhaustion() or 0)
@@ -431,16 +433,19 @@ function E.FillPlan(st)
   if projected >= need then return info end
   local list = {}
   for _, c in pairs(cands) do
-    local detour = 50
+    local detour = #c.pts == 0 and 50 or 0
     for _, p in ipairs(c.pts) do
+      local nearest = 50
       for _, r in ipairs(spots) do
-        if r.map == p.map then detour = math.min(detour, math.sqrt((r.x - p.x) ^ 2 + (r.y - p.y) ^ 2)) end
+        if r.map == p.map then nearest = math.min(nearest, math.sqrt((r.x - p.x) ^ 2 + (r.y - p.y) ^ 2)) end
       end
+      -- 接取點在主路旁，也要計入實際任務目標離主路多遠。
+      detour = math.max(detour, nearest)
     end
     c.score = c.xp / (1 + detour) * (E.StarFor(c.q) and 2 or 1)
     if c.xp > 0 then list[#list + 1] = c end
   end
-  table.sort(list, function(a, b) return a.score > b.score end)
+  table.sort(list, function(a, b) return a.score > b.score or (a.score == b.score and a.q < b.q) end)
   local picked = true
   while projected < need and picked do
     picked = false
@@ -567,7 +572,7 @@ local function stepDone(step, map, x, y)
     -- 爐石回 X：人已經在 X（用爐石換區時 Core 記 latch；走到下一步附近、後面任務做了也算過了，見 E.Locate）
     local sub, zone, mini = C.ZoneTexts()
     return same(sub) or same(zone) or same(mini)
-  elseif t == "fp" then return s.node ~= nil and MG.db.fpNodes ~= nil and MG.db.fpNodes[s.node] == true -- 飛行地圖上已經有這個鳥點
+  elseif t == "fp" then return MG.db.fpNodes ~= nil and (MG.db.fpNodes[s.nodeK or s.node] == true or MG.db.fpNodes[s.node] == true) -- 飛行地圖上已經有這個鳥點
   elseif t == "goto" or (t == "travel" and s.x) then
     if not (map and x and y) then return false end
     -- 好幾個座標（via）：依序走，走到最後一個才算到；路過第 k 點就記「@k」（箭頭改指下一點，見 E.ViaTarget）。

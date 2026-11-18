@@ -437,7 +437,7 @@
 04-45到60級.md:217｜說明｜守望堡沒開就飛夜色鎮，往東過逆風小徑進悲傷沼澤，再往南進詛咒之地到守望堡。｜Ist die Burg Nethergarde nicht freigeschaltet, flieg nach Dunkelhain, geh nach Osten durch den Gebirgspass der Totenwinde in die Sümpfe des Elends und dann nach Süden in die Verwüsteten Lande zur Burg Nethergarde.
 04-45到60級.md:229｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。｜In den Sümpfen des Elends gibt es keinen Flugpunkt der Allianz: Geh nach Westen durch den Gebirgspass der Totenwinde zurück nach Dunkelhain und flieg von dort.
 04-45到60級.md:285｜說明｜從塔納利斯西邊的山路走坡道下安戈洛環形山，托爾瓦·尋路者就在坡道底的入口旁。｜Folge dem Bergpfad westlich von Tanaris die Rampe hinab in den Un'Goro-Krater. Torwa Pathfinder steht direkt am Eingang am Fuß der Rampe.
-04-45到60級.md:344｜說明｜爐石還在冷卻就從馬紹爾營地飛奧伯丁（經加基森、塞拉摩），跳過下兩步。｜Hat dein Ruhestein Abklingzeit, flieg von Marshals Zuflucht nach Auberdine (über Gadgetzan und Theramore) und überspring die nächsten zwei Schritte.
+04-45到60級.md:354｜說明｜牧師要在鐵爐堡接「塞納裏奧議會的求助」，請等爐石冷卻。其餘角色若爐石還在冷卻，可從馬紹爾營地飛奧伯丁，接往魯瑟蘭村的行程。｜Wer als Priester in Eisenschmiede die Quest „Hilfe für den Zirkel“ annehmen möchte, wartet auf den Ruhestein. Wer ihn sonst noch nicht nutzen kann, fliegt von Marschalls Zuflucht nach Auberdine und reist weiter nach Rut’theran.
 04-45到60級.md:365｜說明｜從阿斯特蘭納沿大路往北進費伍德森林。｜Folge von Astranaar der Straße nach Norden in den Teufelswald.
 04-45到60級.md:392｜說明｜從這裡進木喉要塞的山洞，穿過去就是冬泉谷。｜Betritt hier die Höhle der Holzschlundfeste und geh hindurch, dahinter liegt Winterspring.
 04-45到60級.md:429｜說明｜爐石還在冷卻就從羽月要塞飛阿斯特蘭納（經奧伯丁），再往北走進費伍德。｜Hat dein Ruhestein Abklingzeit, flieg von der Festung Feathermoon nach Astranaar (über Auberdine) und geh dann nach Norden in den Teufelswald.
@@ -1294,3 +1294,4 @@
 04-45到60級.md:1281｜說明｜到艾薩拉交給奧汀克。｜Gib sie bei Ogtinc in Azshara ab.
 04-45到60級.md:433｜說明｜格雷甘給誘餌，拿去引開米布隆、撿艾沃根，回來換視靈藥劑。｜Gregan gibt dir einen Köder: Lock damit Miblon weg, schnapp dir die Evowurzel und tausch sie danach gegen das Videre-Elixier ein.
 04-45到60級.md:465｜說明｜到加基森外的墓地喝下視靈藥劑，以靈魂狀態找加里楊。｜Trink am Friedhof vor Gadgetzan das Videre-Elixier und such als Geist Gaeriyan auf.
+02-12到30級.md:14｜說明｜沿奧伯丁南邊海岸打 9–10 級的小潮行蟹收集蟹腿。還沒接「擱淺的巨獸」的話，滿 11 級後順路回碼頭時再接。｜Sammelt Krabbenbeine von den Stufe-9–10-Krabben an der Küste südlich von Auberdine. Falls die Quest zum gestrandeten Meerestier noch fehlt, nehmt sie ab Stufe 11 beim nächsten Besuch am Anleger an.
