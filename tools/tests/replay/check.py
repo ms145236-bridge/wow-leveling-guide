@@ -6,6 +6,7 @@ import os
 import subprocess
 import tempfile
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import nullcontext
 from pathlib import Path
 from typing import NamedTuple
 
@@ -105,6 +106,7 @@ def main():
     parser.add_argument("--output", type=Path, help="write the per-character CSV here")
     parser.add_argument("--full", action="store_true", help="replay every supported combination and mode")
     parser.add_argument("--list-cases", action="store_true", help="print the selected cases without running Lua")
+    parser.add_argument("--events-dir", type=Path, help="retain per-character event TSVs in this directory")
     args = parser.parse_args()
     full = list(itineraries(json.loads((TESTS / "roster.json").read_text())))
     cases = full
@@ -114,7 +116,10 @@ def main():
     if args.list_cases:
         print("\n".join("\t".join(case) for case in cases))
         return
-    with tempfile.TemporaryDirectory() as directory:
+    if args.events_dir:
+        args.events_dir.mkdir(parents=True, exist_ok=True)
+    work = nullcontext(args.events_dir) if args.events_dir else tempfile.TemporaryDirectory()
+    with work as directory:
         with ThreadPoolExecutor(max_workers=4) as pool:
             rows = list(pool.map(lambda case: replay(case, args.lua, Path(directory)), cases))
     if args.output:
