@@ -173,6 +173,8 @@ function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用�
   if when.race and not raceMatch(when.race) then return false end
   if when.notRace and raceMatch(when.notRace) then return false end
   if when.coastal ~= nil and when.coastal ~= (MG.db.auberdineChoice == "coast") then return false end
+  if when.readyQuest and not C.IsReady(when.readyQuest) then return false end
+  if when.money and (GetMoney and GetMoney() or 0) < when.money then return false end
   if when.bag and E.ItemCount(when.bag.item) < when.bag.count then return false end
   if when.missingBag and E.ItemCount(when.missingBag.item) >= when.missingBag.count then return false end
   if when.onQuestAny then
@@ -1654,12 +1656,14 @@ function E.InstanceState(d, all)
     if q and not seen[q] and C.IsOnQuest(q) and (inTurn[q] or not C.IsReady(q)) then
       seen[q] = true
       -- 目標做完、在副本內交的：改成「交」步驟，第二行寫找誰交
-      steps[#steps + 1] = { s = (inTurn[q] and C.IsReady(q)) and inTurn[q] or inDo[q] or { t = "do", q = q }, key = "d:" .. q, st = d }
+      local canTurnIn = inTurn[q] and C.IsReady(q) and E.Applies(inTurn[q].when)
+      steps[#steps + 1] = { s = canTurnIn and inTurn[q] or inDo[q] or { t = "do", q = q }, key = "d:" .. q, st = d }
     end
   end
   local function inPickup(s)
     if s.when and s.when.bag then return true end
     if s.map then return false end
+    if s.instancePickup then return true end
     local info = R.quests[s.q] or {}
     for _, p in ipairs(info.pg or {}) do if inTurn[p] and turned(p) then return true end end
     for _, p in ipairs(info.ps or {}) do if inTurn[p] and turned(p) then return true end end

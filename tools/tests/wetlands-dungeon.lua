@@ -42,7 +42,8 @@ assert(use.ph == "in" and meet.ph == "in" and followup.ph == "in")
 assert(not use.map and not meet.map and not followup.map)
 assert(finish.ph == "post" and finish.map == pickup.map and finish.npc == pickup.npc)
 local targets = E.DungeonTargets(d)
-assert(#targets == 1 and targets[1].q == 95647 and #targets[1].chain == 0)
+assert(#targets == 3 and targets[1].q == 95646 and targets[2].q == 98815)
+assert(targets[3].q == 95647 and #targets[3].chain == 0)
 local q = ns.Route.quests[95647]
 assert(#(q.ps or {}) == 0 and #(q.pg or {}) == 0)
 assert(ns.Route.quests[95809].ps[1] == 95647)
@@ -68,3 +69,62 @@ assert(not inside("accept", 95809) and not E.DungeonDone(d))
 active[95809], turned[95809] = nil, true
 assert(not inside("accept", 95809) and E.DungeonDone(d))
 print("Wetlands excavation prep, in-instance follow-up and harbor return passed")
+
+-- At A21 both prerequisite turn-ins are already on the main route. The dungeon
+-- preparation overlay offers the follow-ups during those visits if enabled.
+local a21 = E.byId["02-21"]
+local settings = {dPre=true, optional=true}
+local bags = {}
+function GetItemCount(id) return bags[id] or 0 end
+function UnitXPMax() return 21500 end
+function UnitXP() return 0 end
+ns.UI.Get = function(key) return settings[key] end
+ns.C.XPBuff = function() return false end
+ns.C.Position = function() end
+ns.C.ZoneTexts = function() end
+ns.C.Bind = function() end
+ns.C.LogQuestIDs = function() return {} end
+ns.C.Objectives = function() end
+local function offer(state, q)
+  for i, wrapper in ipairs(state.steps) do
+    if wrapper.s.t == "accept" and wrapper.s.q == q then return i end
+  end
+end
+for _, case in ipairs({{95646,275,270180,1},{98815,484,284845,4}}) do
+  local q, pre, item, needed = unpack(case)
+  turned[pre] = true
+  local pickup = assert(step(d, "accept", q))
+  assert(pickup.opt and pickup.pickLv == 24 and ns.Route.quests[q].ps[1] == pre)
+  local state = E.Locate(a21)
+  local at = assert(offer(state, q))
+  local handIn
+  for i = 1, at - 1 do
+    local s = state.steps[i].s
+    if s.q == pre and s.t == "turnin" and s.npc == pickup.npc then handIn = i end
+  end
+  assert(handIn and not state.na[at])
+  -- James is visited twice. The overlay attaches to his last scheduled visit.
+  assert(state.steps[at - 1].s.npc == pickup.npc)
+  settings.optional = false
+  state = E.Locate(a21)
+  assert(state.na[assert(offer(state, q))])
+  settings.optional = true
+  ns.db.dNo[d.id] = true
+  assert(not offer(E.Locate(a21), q))
+  ns.db.dNo[d.id] = nil
+  settings.dPre = false
+  assert(not offer(E.Locate(a21), q))
+  settings.dPre = true
+
+  local goal = assert(step(d, "do", q))
+  local ret = assert(step(d, "turnin", q))
+  assert(not goal.map and not E.Applies(ret.when))
+  active[q] = true
+  assert(inside("do", q))
+  bags[item] = needed - 1
+  assert(not E.Applies(ret.when))
+  bags[item], ready[q] = needed, true
+  assert(E.Applies(ret.when) and not inside("do", q))
+  active[q], bags[item], ready[q] = nil, nil, nil
+end
+print("Wetlands same-NPC optional pickups, skips and item turn-ins passed")
