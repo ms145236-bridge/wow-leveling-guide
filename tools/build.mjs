@@ -227,6 +227,9 @@ const hard = (where, text) => issues.hard.push(`- ${where}：${text}`);
 const warn = (where, text) => issues.warn.push(`- ${where}：${text}`);
 
 // 「入室偷竊（Prison Break In）」→ { zh, en }
+// 「Camping 101: 專業」QuestieDB 多數沒有繁中名：照遊戲裡已有的版本補「紮營入門指南：專業」
+const PROF_ZH = { Alchemy: "鍊金術", Blacksmithing: "鍛造", Cooking: "烹飪", Enchanting: "附魔", Engineering: "工程學", "First Aid": "急救", Fishing: "釣魚", Herbalism: "草藥學", Leatherworking: "製皮", Mining: "採礦", Skinning: "剝皮", Tailoring: "裁縫" };
+const CAMP_ZH = (en) => { const p = PROF_ZH[(String(en || "").match(/^Camping 101: (.+)$/) || [])[1]]; return p && "紮營入門指南：" + p; };
 const splitName = (s) => {
   const m = s.trim().match(/^(.*?)\s*[（(]([^（）()]*)[）)]\s*$/);
   return m ? { zh: m[1].trim(), en: m[2].trim() } : { zh: s.trim(), en: "" };
@@ -420,9 +423,17 @@ for (const file of files.filter((f) => !sideFile(f))) {
     if (step.t === "accept" || step.t === "turnin" || step.t === "do") {
       Object.assign(step, splitName(f[0]));
       if (/^[?？]?$/.test(step.zh)) step.zh = ""; // 中文名未知：用 QuestieDB 的 zhTW，再不行用英文名
-      const hasId = /^(\d+|\?|？|)$/.test(f[1] ?? "");
+      // 任務 ID 欄寫一組（97924、97915…）＝這組任一：接＝玩家接哪個都算（step.any），交＝每個 ID 各展開成一步交（只顯示玩家接了的）
+      const group = /^\d+(?:\s*[、,，]\s*\d+)+$/.test(f[1] ?? "") ? f[1].split(/\s*[、,，]\s*/).map(Number) : undefined;
+      const hasId = Boolean(group) || /^(\d+|\?|？|)$/.test(f[1] ?? "");
       const rest = hasId ? f.slice(2) : f.slice(1);
-      step.id = hasId && /^\d+$/.test(f[1]) ? +f[1] : undefined;
+      step.id = group ? group[0] : hasId && /^\d+$/.test(f[1]) ? +f[1] : undefined;
+      if (group && step.t === "do") hard(where, "「做」不能寫一組任務 ID（交的那步會依玩家接的任務指路）");
+      if (group && step.t === "accept") Object.assign(step, { any: group, text: f[0].trim(), zh: db.quest(group[0])?.zhTW || CAMP_ZH(db.quest(group[0])?.en) || step.zh, en: undefined, cond: true }); // text：清單標題；zh：任務資料用第一個的名稱
+      if (group && step.t === "turnin") {
+        for (const id of group) st.steps.push({ ...structuredClone(step), id, zh: db.quest(id)?.zhTW || CAMP_ZH(db.quest(id)?.en) || "", en: db.quest(id)?.en, raw: step.raw });
+        return;
+      }
       if (step.t === "do") {
         step.hint = rest[0];
         step.coord = parseCoord(rest[1]);
@@ -921,7 +932,7 @@ const leadReq = [];
   }
 }
 // 條件入口記到任務上（引擎 FillPlan 用）
-for (const x of stations.flatMap((s) => s.steps)) if (x.cond && quests.has(x.id)) quests.get(x.id).cond = true;
+for (const x of stations.flatMap((s) => s.steps)) if (x.cond) for (const id of x.any || [x.id]) if (quests.has(id)) quests.get(id).cond = true;
 // 補經驗只挑單人現在能打的任務。沿用 mobsOf 已排除的對話、物件與友方互動目標。
 const optionalFights = new Set(stations.flatMap(st => st.steps.filter(s => s.opt && s.t === "accept").map(s => s.id)));
 for (const st of stations) for (const s of st.steps) {
@@ -1146,7 +1157,7 @@ const stepWhen = (w, sw) => {
 const stepOut = (s, st) => ({
   exitPriority: s.ph === "post" && ["accept", "do", "turnin"].includes(s.t) && s.exitPriority || undefined,
   outsideObjective: s.ph === "in" && s.t === "accept" && s.outsideObjective || undefined,
-  star: s.star, t: s.t, instancePickup: s.ph === "in" && s.t === "accept" && s.instancePickup || undefined, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
+  star: s.star, t: s.t, any: s.any, instancePickup: s.ph === "in" && s.t === "accept" && s.instancePickup || undefined, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
   // 說明段用「；」接起來：句號結尾的段後面不再補「；」，完全相同的段只留一次（翻譯照原本的「；」切段，不受影響）
   desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
   map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, via: s.via?.length ? s.via.map((p) => [p.map, p.x, p.y]) : undefined, r: s.r, back: s.back, hm: s.hm, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam, hold: s.hold,
@@ -1395,6 +1406,14 @@ const emitRoute = (X) => {
         cov.zhOnly[kind]++;
         e.text = step.text && T(step.where, step.text);
         if (!e.text) left[kind]++;
+      }
+      // 任一組的接：清單標題＝該語系任務名的共同部分（「Camping 101: 剝皮」的冒號前）＋翻譯的括號說明（route-text 的「（任選專業）」）
+      if (step.any && step.text) {
+        cov.zhOnly.travelText++;
+        const base = X.qName(step.id, quests.get(step.id)?.en || {}).replace(/\s*[:：].*$/, ""), tail = (step.text.match(/（[^（）]*）$/) || [])[0];
+        const suffix = tail && T(step.where, tail);
+        e.text = suffix ? base + (/^[（(]/.test(suffix) && /^（/.test(suffix) ? "" : " ") + suffix : undefined;
+        if (!e.text) { left.travelText++; leftAt.push(step.where + "｜任一｜" + step.text); }
       }
       if (step.t === "buy") { e.text = cleanName(db.l10nName("Item", step.item, loc) || db.itemEn(step.item) || "") || undefined; e.npc = N(npcEn(step.npc)); }
       if (step.t === "fp") Object.assign(e, X.node(step));

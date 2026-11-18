@@ -18,6 +18,8 @@ lua5.1 tools/tests/post-turnin-detour.lua
 lua5.1 tools/tests/scarlet-library.lua
 lua5.1 tools/tests/auberdine-choice.lua
 lua5.1 tools/tests/field-marshal.lua
+lua5.1 tools/tests/camping-any.lua
+lua5.1 tools/tests/camping-auto.lua
 lua5.1 tools/tests/macro-adopt.lua
 lua5.1 tools/tests/carry-later.lua
 lua5.1 tools/tests/fp-discover.lua
