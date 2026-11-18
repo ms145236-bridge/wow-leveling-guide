@@ -659,18 +659,17 @@ function E.ViaTarget(step)
   return { s.map, s.x, s.y }
 end
 
--- 路線後面（第 idx 站含以後的主線站）會接手這個任務剩下的事：已接且可交 → 後面要有「交」；已接未完成 → 後面要有「做」或「交」；
--- 還沒接 → 後面要有「接」。等級條件看那一站的等級上限（走到那站時的等級），種族／職業等其他條件照舊。這種不用帶過來補、離站也不用提醒
+-- 路線後面（第 idx 站含以後的主線站）會接手這個任務剩下的事：已接且目標都完成（或對話型）→ 後面要有「交」；
+-- 已接還有目標沒完成 → 後面要有「做」（只有「交」的站不會帶人去收集）；還沒接 → 後面要有「接」。等級條件看那一站的等級上限（走到那站時的等級），種族／職業等其他條件照舊。這種不用帶過來補、離站也不用提醒
 local function laterHas(q, idx)
   if not idx then return false end
-  local need = not C.IsOnQuest(q) and "accept" or C.IsReady(q) and "turnin" or nil
+  local need = not C.IsOnQuest(q) and "accept" or ready(q) and "turnin" or "do"
   local lv = UnitLevel("player") or 0
   for _, o in ipairs(questSt[q] or {}) do
     if not o.dungeon and o.index and o.index >= idx then
       for _, step in ipairs(o.list) do
         local s = step.s
-        local t = s.t
-        if s.q == q and (t == need or (not need and (t == "do" or t == "turnin"))) and E.Applies(s.when, true)
+        if s.q == q and s.t == need and E.Applies(s.when, true)
           and (not s.when or not s.when.lvMin or s.when.lvMin <= math.max(lv, o.lv[2])) then return true end
       end
     end
@@ -688,13 +687,14 @@ local function stepsOf(st)
   carry = carry or {}
   local here = {}
   for _, step in ipairs(st.list) do if step.s.q then here[step.s.q] = true end end
-  -- 交掉的才從存檔刪；後面站會接手的只在顯示時略過（之後條件變了，例如交任務要的物品丟了，還能再顯示）。重複的只顯示一次
+  -- 交掉的才從存檔刪；本站或後面站會接手的只在顯示時略過（之後條件變了，例如交任務要的物品丟了，還能再顯示）。重複的只顯示一次
+  -- 本站有同任務但做不了剩下的事（例如只有重複的「接」）照樣展開；副本站沒有站序，照舊看本站有沒有這個任務
   for k = #carry, 1, -1 do if turned(carry[k]) then table.remove(carry, k) end end
   local shown = {}
   for _, q in ipairs(carry) do
-    local hide = shown[q] or laterHas(q, st.index and st.index + 1)
+    local hide = shown[q] or laterHas(q, st.index) or (not st.index and here[q])
     shown[q] = true
-    for _, other in ipairs(not hide and not here[q] and questSt[q] or {}) do
+    for _, other in ipairs(not hide and questSt[q] or {}) do
       if other ~= st and not other.dungeon then
         for _, step in ipairs(other.list) do
           if step.s.q == q then out[#out + 1] = { s = step.s, key = step.key, note = step.note, st = other, carry = true } end

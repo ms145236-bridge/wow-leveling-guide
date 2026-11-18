@@ -1,7 +1,7 @@
 -- From the repository root: lua5.1 tools/tests/carry-later.lua
 -- 跳站時，身上還沒交、但路線後面的站還會交的任務（例：416 逮補狗頭人在 02-12 交），不帶到新站要人補做；
 -- 後面沒有再出現的任務（例：224 保衛國王的領土）照舊帶過去補。
-local active, ready, turned, items = {}, {}, {}, {}
+local active, ready, turned, items, objs = {}, {}, {}, {}, {}
 local me = { class = "PRIEST", lv = 12 }
 function UnitFactionGroup() return "Alliance" end
 function UnitClass() return me.class, me.class end
@@ -22,7 +22,7 @@ ns.C.Position = function() return 1439, 36, 45 end
 ns.C.ZoneTexts = function() end
 ns.C.Bind = function() end
 ns.C.LogQuestIDs = function() local out = {} for q in pairs(active) do out[#out + 1] = q end return out end
-ns.C.Objectives = function() end
+ns.C.Objectives = function(q) return objs[q] end
 ns.C.GreenRange = function() return 8 end
 for _, file in ipairs({"Data/RouteA.lua", "Engine.lua"}) do
   assert(loadfile("addon/ShengLeveling/" .. file))("ShengLeveling", ns)
@@ -66,29 +66,30 @@ local once = nCarry({ 416 })
 assert(once > 0 and nCarry({ 416, 416 }) == once, "duplicate saved carry shown once")
 print("carry-later: all passed")
 
--- 全路線掃描：每個橫跨兩個以上主線站的任務，在它前一站與後一站之間跳站時，身上有它就不該被帶到中間的站
-local function sweep(faction, race, file)
-  return faction, race, file
-end
+-- 全路線掃描：每個橫跨兩個以上主線站的任務，在它前一站與後一站之間跳站時，身上有它、且後一站做得了剩下的事
+-- （可交 → 後一站有「交」；未完成 → 後一站有「做」），就不該被帶到中間的站
 local n, bad = 0, {}
 for _, st in ipairs(E.stations) do
   if not st.dungeon then
+    local seenQ = {}
     for _, step in ipairs(st.list) do
       local q = step.s.q
-      if q and E.Applies(step.s.when) then
+      if q and not seenQ[q] and E.Applies(step.s.when) then
+        seenQ[q] = true
         -- 找下一個也有 q 的主線站
         for k = st.index + 2, #E.stations do
           local o = E.stations[k]
-          local later = false
-          for _, s2 in ipairs(o.list) do if s2.s.q == q and E.Applies(s2.s.when) then later = true break end end
-          if later then
-            wipe(active); active[q] = true
-            db.station = st.id
+          local has = {}
+          for _, s2 in ipairs(o.list) do if s2.s.q == q and E.Applies(s2.s.when) then has[s2.s.t] = true end end
+          if next(has) then
             local mid = E.stations[st.index + 1]
-            if mid and not mid.dungeon then
-              local c = E.JumpPlan(mid)
-              n = n + 1
-              for _, x in ipairs(c) do if x == q then bad[#bad + 1] = q .. " " .. st.id .. "->" .. mid.id end end
+            db.station = st.id
+            for _, isReady in ipairs({ true, false }) do
+              if has[isReady and "turnin" or "do"] and mid and not mid.dungeon then
+                wipe(active); wipe(ready); active[q] = true; ready[q] = isReady or nil
+                n = n + 1
+                for _, x in ipairs(E.JumpPlan(mid)) do if x == q then bad[#bad + 1] = q .. " " .. st.id .. "->" .. mid.id end end
+              end
             end
             break
           end
@@ -145,4 +146,25 @@ assert(db.carry["02-10"][1] == 224, "hidden carry stays saved")
 items[99999] = nil
 assert(shows(224), "item lost: the saved carry of 224 shows again")
 undo()
-print("carry-later: only-later-accept, level-up and item-lost cases passed")
+-- 本站有同任務但只有重複的「接」：存檔的補做要照樣展開「交」
+undo = inject("02-10", { t = "accept", q = 224, map = 1432, x = 22.1, y = 73.1 })
+wipe(active); wipe(ready); active[224], ready[224] = true, true
+db.carry = { ["02-10"] = { 224 } }
+db.station = "02-10"
+local turnIn = false
+for _, step in ipairs(E.Locate(E.byId["02-10"]).steps) do if step.carry and step.s.q == 224 and step.s.t == "turnin" then turnIn = true end end
+assert(turnIn, "02-10 only re-offers 224: the carried turn-in still shows")
+undo()
+-- 必改 1（第二輪）：416 坑道鼠耳朵只在 01-9 收集，02-12 只有「交」。0/12 跳 02-10 要帶、離站要提醒；12/12 交給 02-12
+wipe(active); wipe(ready); db.carry = {}
+active[416] = true
+db.station = "01-9"
+local function warns(q) for _, w in ipairs(E.Leaving(E.Locate(E.byId["01-9"]))) do if w.q == q then return true end end end
+objs[416] = { { text = "坑道鼠耳朵", have = 0, need = 12, done = false } }
+assert(count(E.JumpPlan(E.byId["02-10"]), 416) == 1, "416 at 0/12: 02-12 only turns in, carry it")
+assert(warns(416), "416 at 0/12: warn on leaving 01-9")
+objs[416] = { { text = "坑道鼠耳朵", have = 12, need = 12, done = true } }
+assert(count(E.JumpPlan(E.byId["02-10"]), 416) == 0, "416 at 12/12: 02-12 turns it in")
+assert(not warns(416), "416 at 12/12: no warning")
+objs[416] = nil
+print("carry-later: only-later-accept, level-up, item-lost, same-station accept and 416 0/12 vs 12/12 cases passed")
