@@ -4280,3 +4280,12 @@
 | 尼克撒克 | Nixxrak | 11182 | L5358 04-60 修理 · 1452 61.62 37.87 | [Wowhead 依 ID 查閱](https://www.wowhead.com/forever/npc=11182) · [本機 QuestieDB enUS](https://github.com/Questie/QuestieDB) |
 | 旅店老闆維茲奇 | Innkeeper Vizzie | 11118 | L5358 04-60 食物飲料 · 1452 61.36 38.83 | [Wowhead 依 ID 查閱](https://www.wowhead.com/forever/npc=11118) · [本機 QuestieDB enUS](https://github.com/Questie/QuestieDB) |
 | 維撒克 | Wixxrak | 11184 | L5358 04-60 彈藥 · 1452 61.72 38.03 | [Wowhead 依 ID 查閱](https://www.wowhead.com/forever/npc=11184) · [本機 QuestieDB enUS](https://github.com/Questie/QuestieDB) |
+
+## 濕地挖掘場戴文
+
+QuestieDB Forever 的 NPC 262465 名為 Daewyn Songblade，任務 95772 的台服目標稱他為戴文。[永恆版攻略中的交接](https://github.com/Harl3yVT/forever-leveling-guide/blob/175f7e670b6522209005c4b72edad540a8bdbb81/Guidelime_Bethink/guides/A-28-31_Wetlands.lua#L49-L50)
+
+| 任務 ID | 中文任務 | 英文任務 | 中文 NPC | 英文 NPC | 欄位 |
+|---|---|---|---|---|---|
+| 95772 | 尋找桑布雷德 | Songblade Search | 戴文‧桑布雷德 | Daewyn Songblade | npc |
+| 95795 | 死於沼地 | Fallen in the Fen | 戴文‧桑布雷德 | Daewyn Songblade | npc |

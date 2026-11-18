@@ -9,6 +9,7 @@ lua5.1 tools/tests/deadmines.lua
 lua5.1 tools/tests/stockades.lua
 lua5.1 tools/tests/alcaz-prison.lua
 lua5.1 tools/tests/wetlands-dungeon.lua
+lua5.1 tools/tests/dungeon-prep-room.lua
 lua5.1 tools/tests/gnomeregan.lua
 lua5.1 tools/tests/scarlet-library.lua
 lua5.1 tools/tests/auberdine-choice.lua

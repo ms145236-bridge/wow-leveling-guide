@@ -272,13 +272,13 @@ local function routeQuestsByTitle(title)
   return title and nameToQuest[title] or {}
 end
 local function autoOn() return UI.Get("auto") and not IsShiftKeyDown() end
-local accQ = {} -- 任務 → 路線上每個「接」步驟 { when, opt, d＝副本站 ID, at＝主線站 ID }（同一個任務可以主線必做、副本段可跳過）
+local accQ = {} -- 任務 → 路線上每個「接」步驟 { when, opt, d＝所屬副本前置 ID, at＝主線站 ID }
 for _, st in ipairs(R.stations) do
   for _, s in ipairs(st.steps) do
     if s.t == "accept" and s.q then
       local l = accQ[s.q] or {}
       accQ[s.q] = l
-      l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or nil, at = not st.dungeon and st.id or nil }
+      l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or (s.when and s.when.dungeonPrep), at = not st.dungeon and st.id or nil }
     end
   end
 end
@@ -291,14 +291,20 @@ local function inRoute(id)
   if MG.db.skip["a:" .. id] then return false end
   local optional = UI.Get("optional") or E.Fill[id]
   -- 日誌快滿先不接的副本前置：NPC 給了也不自動接。用這一刻的日誌算（和步驟列的「之後」同一個判斷），不看上次畫好的清單
-  local pre = false -- 這個任務是副本前置（那個副本沒選不打）
-  for _, a in ipairs(accQ[id] or {}) do pre = pre or (a.d ~= nil and not MG.db.dNo[a.d]) end
+  local pre, authored = false, false
+  for _, a in ipairs(accQ[id] or {}) do
+    if a.d and not MG.db.dNo[a.d] then
+      pre = true
+      authored = authored or a.at ~= nil
+    end
+  end
   local st = pre and lastState and not lastState.instance and lastState.st
+  local main = st and not st.dungeon and st
   local pending, now = 0, GetTime()
   for q, at in pairs(autoQ) do
     if C.IsOnQuest(q) or now - at >= 3 then autoQ[q] = nil else pending = pending + 1 end -- 日誌看到了或過了 3 秒就放掉
   end
-  local tight = st and not st.dungeon and not E.PreRoom(st, pending)
+  local tight = (main or authored) and not E.PreRoom(main, pending)
   for _, a in ipairs(accQ[id] or {}) do
     local when = a.when
     if when and when.lvMin then -- 等級條件不看：NPC 已經給了就接
@@ -309,7 +315,7 @@ local function inRoute(id)
     if E.Applies(when) and (not a.opt or optional) then
       if a.d then
         if not MG.db.dNo[a.d] and not tight then return true end
-      elseif not tight or (E.byId[a.at] and E.byId[a.at].index <= st.index) then
+      elseif not tight or not main or (E.byId[a.at] and E.byId[a.at].index <= main.index) then
         return true -- 主線的接。快滿時的副本前置：主線這一站或之前就排了才接，排在後面站的走到再接
       end
     end
