@@ -173,6 +173,7 @@ function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用�
   if when.race and not raceMatch(when.race) then return false end
   if when.notRace and raceMatch(when.notRace) then return false end
   if when.coastal ~= nil and when.coastal ~= (MG.db.auberdineChoice == "coast") then return false end
+  if when.dungeonPrep and (not MG.UI.Get("dPre") or not MG.UI.Get("optional") or MG.db.dNo[when.dungeonPrep]) then return false end
   if when.readyQuest and not C.IsReady(when.readyQuest) then return false end
   if when.money and (GetMoney and GetMoney() or 0) < when.money then return false end
   if when.bag and E.ItemCount(when.bag.item) < when.bag.count then return false end
@@ -1509,6 +1510,7 @@ function E.DungeonStatus(d)
       if s.q and C.IsOnQuest(s.q) and E.Applies(s.when) and raceOK(s.q)
           and not MG.db.skip[step.key] and not E.QuickDone(step) then
         if ((s.ph == "in" or s.exitPriority) and s.t == "do" and not ready(s.q))
+            or (s.ph == "in" and s.t == "turnin" and not s.map and ready(s.q))
             or (s.ph == "post" and s.t == "turnin" and ready(s.q)) then
           return L["可以去"], "revisit", step
         end
