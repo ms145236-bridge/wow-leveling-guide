@@ -515,18 +515,15 @@ local function onEvent(_, event, ...)
     MG.db.sugHide = nil
     wipe(MG.db.notNow)
   elseif event == "UI_INFO_MESSAGE" then
-    -- 跟飛行管理員說話就開了新鳥點（「發現新的飛行路線！」）：不用打開飛行地圖也算開了
+    -- 跟飛行管理員說話就開了新鳥點（「發現新的飛行路線！」）：確定人就在目前這個鳥點才勾；認不出來留給打開飛行地圖時補勾
     local kind, text = ...
-    local isNew = (LE_GAME_ERR_NEWTAXIPATH and kind == LE_GAME_ERR_NEWTAXIPATH) or (ERR_NEWTAXIPATH and not (issecretvalue and issecretvalue(text)) and text == ERR_NEWTAXIPATH)
-    local fp = isNew and lastState and lastState.cur and lastState.steps[lastState.cur].s
-    if fp and fp.t == "fp" then
-      local pm, px, py = C.Position()
-      if not (fp.x and px) or (pm == fp.map and (px - fp.x) ^ 2 + (py - fp.y) ^ 2 <= 100) then
-        latchCurrent("fp")
-        MG.db.fpNodes = MG.db.fpNodes or {}
-        if fp.node then MG.db.fpNodes[fp.node] = true end
-        if fp.nodeK then MG.db.fpNodes[fp.nodeK] = true end
-      end
+    if not MG.IsNewTaxiPath(kind, text) then return end
+    local fp = lastState and lastState.cur and lastState.steps[lastState.cur].s
+    if MG.AtFlightPoint(fp, C.Position()) then
+      latchCurrent("fp")
+      MG.db.fpNodes = MG.db.fpNodes or {}
+      if fp.node then MG.db.fpNodes[fp.node] = true end
+      if fp.nodeK then MG.db.fpNodes[fp.nodeK] = true end
     end
   elseif event == "TAXIMAP_OPENED" then
     -- 目前是「開鳥點」：人就在那個鳥點旁邊才勾（在別的城開飛行地圖不算；讀不到位置照舊勾）。那個鳥點已經在飛行地圖上的，下面會另外勾
