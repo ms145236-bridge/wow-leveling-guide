@@ -201,7 +201,7 @@ f:SetScript("OnUpdate", function(_, dt)
     -- 門檻 0.2%；目前是到達型步驟或有臨時航點時 0.02%（大地圖上走路 0.5 秒不到 0.05%，停在到達範圍邊上也要看得到）
     local map, x, y = C.Position()
     local at = lastState and lastState.cur and lastState.steps[lastState.cur].s
-    local soft = at and not at.x and E.SOFT[at.t] and not lastState.instance and not (lastState.tails and lastState.tails[lastState.cur]) -- 沒座標的交通：走到後面步驟附近算到
+    local soft = at and (not at.x or at.t == "boat") and E.SOFT[at.t] and not lastState.instance and not (lastState.tails and lastState.tails[lastState.cur]) -- 沒座標的交通：走到後面步驟附近算到
     local arrive = MG.wpOverride or soft or (at and (at.t == "goto" or (at.t == "travel" and at.x) or at.t == "hearth"))
     local moved = not (lastPos and map == lastPos[1] and x and lastPos[2] and math.abs(x - lastPos[2]) + math.abs(y - lastPos[3]) < (arrive and 0.02 or 0.2))
     if moved then lastPos = { map, x, y } end

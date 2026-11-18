@@ -1309,7 +1309,7 @@
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Sparklematic 5200 in the Clean Zone. Bring 3 silver.
 05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜You can split this chain across runs. Collect the first sample in the entrance tunnels or inside the instance. Turn it in to Ozzie in Kharanos for the heavy vial.
 05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Use the heavy vial on an Irradiated Slime, Corrosive Lurker, or Irradiated Horror. The sample lasts two hours. If you cannot reach Kharanos in time, collect it on your next group run.
-01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），再往下跳到洛克莫丹南部警戒塔。｜Climb over the mountain: instead of the North Gate tunnel, head east up the slope from here and follow the arrow along the ridge to the other side (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50), then drop down to Loch Modan's southern guard tower.
+01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），先往下跳到前方的平台，再落到地面，走到洛克莫丹南部警戒塔。｜Climb over the mountain: instead of the North Gate tunnel, head east up the slope from here and follow the arrow along the ridge to the other side (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50), then drop to the ledge in front first, then down to the ground, and walk to Loch Modan's southern guard tower.
 01-第一段-1到12級.md:261｜說明｜往西走到山坡下，從這裡爬上西北邊的山丘。｜Head west to the foot of the slope, then climb the hills to the northwest from here.
 01-第一段-1到12級.md:390｜說明｜從這裡沿坡道繞上大樹，獵人訓練師在樹上。｜Follow the ramp up around the great tree from here; the hunter trainer is up top.
 02-12到30級.md:218｜說明｜從這裡跳進河裡，游到瀑布下的水潭。沿路見到小月夜猛虎和狂暴薊熊就打。｜Jump into the river here and swim to the pool below the waterfall. From here on, kill any Moonstalker Runts and Rabid Thistle Bears you see.
@@ -1336,3 +1336,5 @@
 01-第一段-1到12級.md:881｜說明｜到暴風城港口的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Go to the Stormwind Harbor pier and take the boat to Auberdine (1453 21.80, 56.80).
 03-30到45級.md:715｜說明｜到棘齒城碼頭，搭往藏寶海灣的船（1413 63.35, 38.45）。｜Go to the Ratchet dock and take the boat to Booty Bay (1413 63.35, 38.45).
 04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Go to the Southshore dock and take the boat to Auberdine (1424 50.70, 70.50).
+01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Board at the pier in Stormwind Harbor.
+03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Board at the Ratchet dock.

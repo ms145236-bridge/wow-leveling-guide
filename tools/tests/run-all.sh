@@ -5,6 +5,7 @@ cd "$(dirname "$0")/../.."
 find addon/ShengLeveling -name '*.lua' -print0 | xargs -0 -n1 luac5.1 -p
 lua5.1 tools/tests/map-order.lua
 lua5.1 tools/tests/route-handoffs.lua
+lua5.1 tools/tests/merged-waypoints.lua
 lua5.1 tools/tests/deadmines.lua
 lua5.1 tools/tests/stockades.lua
 lua5.1 tools/tests/alcaz-prison.lua

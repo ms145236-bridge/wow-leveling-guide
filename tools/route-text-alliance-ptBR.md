@@ -1309,7 +1309,7 @@
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Fagulhomático 5200 na Zona Limpa. Leve 3 moedas de prata.
 05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜Você pode dividir a sequência entre várias visitas. Colete a primeira amostra nos túneis da entrada ou dentro da masmorra. Entregue-a a Ozzie em Kharanos para receber o frasco pesado.
 05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Use o frasco pesado em um Visgo Irradiado, um Tocaieiro Corrosivo ou um horror irradiado. A amostra dura duas horas. Se não puder chegar a Kharanos a tempo, faça a coleta na próxima visita em grupo.
-01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），再往下跳到洛克莫丹南部警戒塔。｜É preciso atravessar a montanha: em vez do túnel do Portão Norte, suba a encosta para o leste e siga a seta pela crista até o outro lado (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50); depois desça até a torre de vigia sul de Loch Modan.
+01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），先往下跳到前方的平台，再落到地面，走到洛克莫丹南部警戒塔。｜É preciso atravessar a montanha: em vez do túnel do Portão Norte, suba a encosta para o leste e siga a seta pela crista até o outro lado (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50); depois pule primeiro para a plataforma à frente, em seguida para o chão, e caminhe até a torre de vigia sul de Loch Modan.
 01-第一段-1到12級.md:261｜說明｜往西走到山坡下，從這裡爬上西北邊的山丘。｜Vá para oeste até o pé da encosta e daqui suba as colinas a noroeste.
 01-第一段-1到12級.md:390｜說明｜從這裡沿坡道繞上大樹，獵人訓練師在樹上。｜Daqui suba a rampa que contorna a grande árvore; o instrutor de caçadores fica lá em cima.
 02-12到30級.md:218｜說明｜從這裡跳進河裡，游到瀑布下的水潭。沿路見到小月夜猛虎和狂暴薊熊就打。｜Pule no rio aqui e nade até o poço embaixo da cachoeira. Daqui em diante, mate os Espreitalunas Raquíticos e Ursocardos Raivosos que encontrar.
@@ -1336,3 +1336,5 @@
 01-第一段-1到12級.md:881｜說明｜到暴風城港口的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Vá ao cais do porto de Ventobravo e pegue o barco para Auberdine (1453 21.80, 56.80).
 03-30到45級.md:715｜說明｜到棘齒城碼頭，搭往藏寶海灣的船（1413 63.35, 38.45）。｜Vá ao cais de Vila Catraca e pegue o barco para a Angra do Butim (1413 63.35, 38.45).
 04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Vá ao cais de Costa Sul e pegue o barco para Auberdine (1424 50.70, 70.50).
+01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Embarque no cais do porto de Ventobravo.
+03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Embarque no cais de Vila Catraca.

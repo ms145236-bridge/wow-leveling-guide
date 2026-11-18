@@ -245,11 +245,18 @@ function E.Build()
           note = s
         else
           -- 鍵用內容：路線重建後存檔裡的勾選／略過／釘選不會跑到別步；同站重複的加 ~2、~3
+          -- 改寫、合併過的步驟寫了舊鍵（skey）就沿用；船的座標是碼頭，加上去前的存檔沒有，不放進鍵
           local base = QUEST[s.t] and (s.t:sub(1, 1) .. ":" .. s.q)
-            or (st.id .. "#" .. s.t .. ":" .. (s.key0 or tostring(s.node or s.bind or s.to or s.text or s.lv or "")) .. (s.x and string.format("@%.0f,%.0f", s.x, s.y) or ""))
+            or (s.skey and (st.id .. "#" .. s.skey))
+            or (st.id .. "#" .. s.t .. ":" .. (s.key0 or tostring(s.node or s.bind or s.to or s.text or s.lv or "")) .. (s.x and s.t ~= "boat" and string.format("@%.0f,%.0f", s.x, s.y) or ""))
           local key, k = base, 2
           while usedKey[key] do key = base .. "~" .. k; k = k + 1 end
           usedKey[key] = true
+          -- 合併前一點一步的舊存檔：走過的途經點記成「@k」
+          for k, old in ipairs(s.vkeys or {}) do
+            local ok = st.id .. "#" .. old
+            if MG.db.latch[ok] or MG.db.mark[ok] or MG.db.skip[ok] then MG.db.latch[key .. "@" .. k] = true end
+          end
           list[#list + 1] = { s = s, key = key, note = note, st = st }
           note = nil
         end
@@ -639,12 +646,17 @@ local function stepDone(step, map, x, y)
     end
     if p[1] ~= map then return false end
     if k > 1 then MG.db.latch[step.key .. "@" .. (k - 1)] = true end
-    if near(p) then
-      local fin = k == n
-      MG.db.latch[fin and step.key or (step.key .. "@" .. k)] = true
-      return fin
+    -- 不在下一點，但人已經在後面某一點（中途才開插件、從後段進來）：從那點接著走，不拉回前面
+    if not near(p) then
+      for j = n, k + 1, -1 do
+        local q = s.via[j - 1]
+        if q[1] == map and near(q) then k = j; break end
+      end
+      if k == 1 or not near(s.via[k - 1]) then return false end
     end
-    return false
+    local fin = k == n
+    MG.db.latch[fin and step.key or (step.key .. "@" .. k)] = true
+    return fin
   end
   return false
 end
@@ -823,7 +835,7 @@ function E.Locate(st)
           if done[j] and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
         end
       end
-      softLater[i] = not done[i] and later and not step.s.x and map ~= nil and x ~= nil -- 沒座標的交通：輪到它時才看人到了沒（見下面）
+      softLater[i] = not done[i] and later and (not step.s.x or step.s.t == "boat") and map ~= nil and x ~= nil -- 沒座標的交通（船的座標是碼頭）：輪到它時才看人到了沒（見下面）
       if not later then
         tails[i] = true
         tail = tail or step.s.text
@@ -843,7 +855,11 @@ function E.Locate(st)
     if done[i] or db.mark[step.key] == false then return false end
     local s = step.s
     if s.x and (s.t == "goto" or s.t == "travel") then
-      if not stepDone(step, map, x, y) then return false end
+      if not stepDone(step, map, x, y) then
+        -- 好幾點的路標：人已經走到下一步那裡（例如翻過山站在洛克莫丹的巡山人旁）就算走完了
+        if not (s.via and E.SoftNear(s, E.SoftTargets(steps, done, na, i), map, x, y)) then return false end
+        db.latch[step.key] = true
+      end
     elseif softLater[i] and E.SoftNear(s, E.SoftTargets(steps, done, na, i), map, x, y) then
       db.latch[step.key] = true
     else

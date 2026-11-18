@@ -1309,7 +1309,7 @@
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Funkelmat 5200 in der Reinzone. Bringt 3 Silber mit.
 05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜Ihr könnt die Reihe auf mehrere Besuche verteilen. Sammelt die erste Probe im Eingangstunnel oder in der Instanz. Gebt sie bei Ozzie in Kharanos ab, um die schwere Phiole zu erhalten.
 05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Benutzt die schwere Phiole bei einem Bestrahlten Brühschleimer, einem ätzenden Lauerer oder einem bestrahlten Schrecken. Die Probe hält zwei Stunden. Wenn ihr Kharanos nicht rechtzeitig erreicht, nehmt die Probe beim nächsten Gruppenbesuch.
-01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），再往下跳到洛克莫丹南部警戒塔。｜Über den Berg klettern: Statt durch den Nordtor-Tunnel von hier aus nach Osten den Hang hinauf und dem Pfeil am Grat entlang auf die andere Seite folgen (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50), dann zum südlichen Wachturm von Loch Modan hinunterspringen.
+01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），先往下跳到前方的平台，再落到地面，走到洛克莫丹南部警戒塔。｜Über den Berg klettern: Statt durch den Nordtor-Tunnel von hier aus nach Osten den Hang hinauf und dem Pfeil am Grat entlang auf die andere Seite folgen (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50), dann zuerst auf die Plattform davor springen, von dort auf den Boden und zum südlichen Wachturm von Loch Modan gehen.
 01-第一段-1到12級.md:261｜說明｜往西走到山坡下，從這裡爬上西北邊的山丘。｜Geh nach Westen bis zum Fuß des Hangs und steig von hier auf die Hügel im Nordwesten.
 01-第一段-1到12級.md:390｜說明｜從這裡沿坡道繞上大樹，獵人訓練師在樹上。｜Folge von hier der Rampe um den großen Baum nach oben; der Jägerlehrer ist oben.
 02-12到30級.md:218｜說明｜從這裡跳進河裡，游到瀑布下的水潭。沿路見到小月夜猛虎和狂暴薊熊就打。｜Spring hier in den Fluss und schwimm zum Becken unter dem Wasserfall. Töte ab jetzt unterwegs alle Mondpirscherwichte und Tollwütigen Distelbären.
@@ -1336,3 +1336,5 @@
 01-第一段-1到12級.md:881｜說明｜到暴風城港口的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Geh zum Pier im Hafen von Sturmwind und nimm das Schiff nach Auberdine (1453 21.80, 56.80).
 03-30到45級.md:715｜說明｜到棘齒城碼頭，搭往藏寶海灣的船（1413 63.35, 38.45）。｜Geh zum Kai von Ratchet und nimm das Schiff nach Beutebucht (1413 63.35, 38.45).
 04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Geh zum Pier von Southshore und nimm das Schiff nach Auberdine (1424 50.70, 70.50).
+01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Am Pier im Hafen von Sturmwind an Bord gehen.
+03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Am Kai von Ratchet an Bord gehen.

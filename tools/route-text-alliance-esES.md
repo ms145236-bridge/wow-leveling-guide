@@ -1309,7 +1309,7 @@
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜El Destellamatic 5200, en la Zona Limpia. Lleva 3 monedas de plata.
 05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜Puedes repartir la cadena entre varias visitas. Recoge la primera muestra en los túneles de entrada o dentro de la mazmorra. Llévasela a Ozzie en Kharanos para recibir el vial pesado.
 05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Usa el vial pesado con una babosa irradiada, un rondador corrosivo o un horror irradiado. La muestra dura dos horas. Si no puedes volver a Kharanos a tiempo, recógela en tu próxima visita en grupo.
-01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），再往下跳到洛克莫丹南部警戒塔。｜Hay que cruzar la montaña: en lugar del túnel de la Puerta Norte, sube por la ladera hacia el este y sigue la flecha por la cresta hasta el otro lado (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50); luego salta hasta la torre de vigilancia sur de Loch Modan.
+01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），先往下跳到前方的平台，再落到地面，走到洛克莫丹南部警戒塔。｜Hay que cruzar la montaña: en lugar del túnel de la Puerta Norte, sube por la ladera hacia el este y sigue la flecha por la cresta hasta el otro lado (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50); luego salta primero a la plataforma de delante, después al suelo, y camina hasta la torre de vigilancia sur de Loch Modan.
 01-第一段-1到12級.md:261｜說明｜往西走到山坡下，從這裡爬上西北邊的山丘。｜Ve al oeste hasta el pie de la ladera y sube desde aquí a las colinas del noroeste.
 01-第一段-1到12級.md:390｜說明｜從這裡沿坡道繞上大樹，獵人訓練師在樹上。｜Desde aquí sube por la rampa que rodea el gran árbol; el instructor de cazadores está arriba.
 02-12到30級.md:218｜說明｜從這裡跳進河裡，游到瀑布下的水潭。沿路見到小月夜猛虎和狂暴薊熊就打。｜Salta al río aquí y nada hasta la poza bajo la cascada. A partir de aquí, mata a los Jabatos Acechalunas y Osos Cardo rabiosos que veas.
@@ -1336,3 +1336,5 @@
 01-第一段-1到12級.md:881｜說明｜到暴風城港口的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Ve al muelle del puerto de Ventormenta y toma el barco a Auberdine (1453 21.80, 56.80).
 03-30到45級.md:715｜說明｜到棘齒城碼頭，搭往藏寶海灣的船（1413 63.35, 38.45）。｜Ve al muelle de Trinquete y toma el barco a Bahía del Botín (1413 63.35, 38.45).
 04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Ve al muelle de Costasur y toma el barco a Auberdine (1424 50.70, 70.50).
+01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Embarca en el muelle del puerto de Ventormenta.
+03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Embarca en el muelle de Trinquete.
