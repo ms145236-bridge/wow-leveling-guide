@@ -1828,7 +1828,7 @@ function E.DungeonNext(d, inside)
       return lv >= math.max(s.pickLv or 0, (R.quests[q] or {}).min or 0)
         and available(q) and not excluded(q) and not superseded(q)
     end
-    if s.t == "turnin" then return C.IsOnQuest(q) and ready(q) end
+    if s.t == "turnin" then return not (inside and s.outsideHandoff) and C.IsOnQuest(q) and ready(q) end
     if s.t == "do" then return C.IsOnQuest(q) and not ready(q) end
     return true
   end
@@ -1868,6 +1868,7 @@ function E.DungeonNext(d, inside)
   local _, kind, revisit = E.DungeonStatus(d)
   if kind == "past" then return nil end
   if kind == "revisit" then
+    if inside and revisit.s.outsideHandoff then return nextJournalStep() end
     if revisit.s.ph == "post" then return { kind = "post", step = revisit } end
     if inside then return { kind = "in", step = revisit } end
     return { kind = "ent" }

@@ -193,6 +193,18 @@ do
       active[3042] = true
     end
   end
+  ns.C.IsTurnedIn = function(q) return q ~= 3042 end
+  ns.C.Objectives = function(q)
+    if q == 3042 then return {{have=20, need=20, done=true}} end
+  end
+  completed[3042] = true
+  for _, visitLevel in ipairs({45, 59}) do
+    level = visitLevel
+    assert(not E.InstanceState(zf) and not E.DungeonNext(zf, true))
+    local city = assert(E.DungeonNext(zf, false)).step.s
+    assert(city.t == "turnin" and city.q == 3042 and city.map == 1446)
+  end
+  completed[3042] = nil
   assert(ns.Route.quests[2864].xp == 390)
   level, active[2864], active[3042], completed[2864] = 43, nil, nil, nil
   ns.C.IsTurnedIn, ns.C.Objectives = originalTurned, originalObjectives

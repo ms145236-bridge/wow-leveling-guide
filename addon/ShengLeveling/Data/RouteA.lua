@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "6cb8fc4b",
+  built = "cc329baf",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -3464,7 +3464,7 @@ MG.Route = {
         {t="accept", q=3042, ph="pre", pickLv=40, recLv=45, opt=true, tag="可跳過", npc="特倫頓·輕錘", tgt="特倫頓·輕錘", map=1446, x=51.41, y=28.75},
         {t="travel", text="前往 祖爾法拉克 入口", map=1446, x=38.7, y=20.1},
         {outsideObjective=true, t="turnin", q=2864, ph="post", npc="特蘭雷克", tgt="特蘭雷克", map=1446, x=51.6, y=26.8},
-        {t="turnin", q=3042, ph="post", opt=true, tag="可跳過", npc="特倫頓·輕錘", tgt="特倫頓·輕錘", map=1446, x=51.41, y=28.75},
+        {outsideHandoff=true, t="turnin", q=3042, ph="post", opt=true, tag="可跳過", npc="特倫頓·輕錘", tgt="特倫頓·輕錘", map=1446, x=51.41, y=28.75},
         {t="turnin", q=2768, ph="post", opt=true, tag="可跳過", npc="首席工程師沙克斯·比格維茲", tgt="首席工程師沙克斯·比格維茲", map=1446, x=52.46, y=28.51},
         {t="turnin", q=2865, ph="post", opt=true, tag="可跳過", npc="特蘭雷克", tgt="特蘭雷克", map=1446, x=51.57, y=26.76},
         {t="turnin", q=3527, ph="post", opt=true, tag="可跳過", npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},

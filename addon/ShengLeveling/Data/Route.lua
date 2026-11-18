@@ -2,7 +2,7 @@ if UnitFactionGroup("player") == "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route/*.md
 local _, MG = ...
 MG.Route = {
-  built = "52b3bea0",
+  built = "681ae91f",
   stations = {
     { id="01-1", start="Orc/Troll", name="試煉谷", short=nil, visit=nil, map=1411, lv={1, 6}, video="03:16", test=nil, alt=nil, when={race={"Orc", "Troll"}}, tips={{k="交通", text="跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克。", s={{"跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克"}}}, {k="取捨", text="失而復得的武器（Wayward Weapons）、懶惰的苦工（Lazy Peons）和火刃洞穴兩件可以併成兩趟。", s={{"失而復得的武器（Wayward Weapons）、懶惰的苦工（Lazy Peons）和火刃洞穴兩件可以併成兩趟"}}}, {k="取捨", text="先完成邪靈劣魔的小鬼任務，再找同一位祖雷薩接燃刃勳章（Burning Blade Medallion）。", s={{"先完成邪靈劣魔的小鬼任務，再找同一位祖雷薩接燃刃勳章（Burning Blade Medallion）", {class={"WARLOCK"}}}}}, {k="提醒", text="不足 6 級就沿路打雜斑野豬、工蠍或邪靈劣魔，再前往森金村。", s={{"不足 6 級就沿路打雜斑野豬、工蠍或邪靈劣魔，再前往森金村"}}}}, dungeon=nil, grind={{mob="雜斑野豬", lv={1, 2}, map=1411, x=44.49, y=65.1, note="密集／一般怪／多為中立，可逐隻開怪／試煉谷北側空地，1-2 級接續小試身手"}, {mob="工蠍", lv={3, 3}, map=1411, x=41.37, y=63.37, note="密集／一般怪／多為中立，可逐隻開怪／大獸穴西北方，做工蠍的尾巴時順打"}, {mob="邪靈劣魔", lv={3, 4}, map=1411, x=44.24, y=55.26, note="密集／一般怪／洞口易多拉，先打外圍／火刃洞穴一帶，離谷前補到 6 級"}}, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="拉克", map=1411, x=40.48, y=67.82}, {k="食物飲料", npc="茲拉克", map=1411, x=42.64, y=67.19}, {k="彈藥", npc="多克納", map=1411, x=42.59, y=67.34, c={"WARRIOR", "HUNTER", "ROGUE"}}}, danger={{text="火刃洞穴轉角會疊到劣魔刷新點。拿鎬前先清入口，留出退路。", map=1411, x=44.24, y=55.26}},
       steps = {
@@ -4189,7 +4189,7 @@ MG.Route = {
         {t="do", q=2768, ph="in", desc="先開牢籠完成階梯事件，清完下方波次再翻臉。位置：沿主路到金字塔頂開牢籠，下階梯守波次。順序：守完波次再挑戰布萊中士", spot="沿主路到金字塔頂開牢籠，下階梯守波次。", hint="在金字塔上與布萊中士交談，守住三波攻勢，再擊殺布萊中士並拿探水棒 ×1。"},
         {t="do", q=3527, ph="in", desc="位置：塞卡在甲蟲房，維蕾薩在水池旁，各取一塊石板。", spot="塞卡在甲蟲房，維蕾薩在水池旁，各取一塊石板。", hint="擊殺殉教者塞卡與水占師維蕾薩，分別拾第一塊和第二塊摩沙魯石板，各 1。"},
         {t="turnin", q=2865, ph="post", npc="特蘭雷克", tgt="特蘭雷克", map=1446, x=51.57, y=26.76},
-        {t="turnin", q=3042, ph="post", npc="特倫頓·輕錘", tgt="特倫頓·輕錘", map=1446, x=51.41, y=28.75},
+        {outsideHandoff=true, t="turnin", q=3042, ph="post", npc="特倫頓·輕錘", tgt="特倫頓·輕錘", map=1446, x=51.41, y=28.75},
         {t="turnin", q=2768, ph="post", npc="首席工程師沙克斯·比格維茲", tgt="首席工程師沙克斯·比格維茲", map=1446, x=52.46, y=28.51},
         {t="turnin", q=3527, ph="post", npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},
         {t="accept", q=4787, ph="post", pickLv=40, recLv=50, share=1, preText="摩沙魯的預言", desc="這次只接並保留；辛薩羅取蛋，之後進阿塔哈卡神廟。", npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},

@@ -105,3 +105,18 @@ for _, case in ipairs({{209, 45, 3042}, {109, 52, 3446}}) do
   end
 end
 print("Horde 3520 preparation stays outdoors while ZF and Temple journal objectives stay available")
+
+local zf = E.DungeonByInstance(209)
+wipe(journal)
+wipe(ready)
+ns.C.IsTurnedIn = function(q) return q ~= 3042 end
+journal[3042] = true
+for _, lv in ipairs({45, 59}) do
+  UnitLevel = function() return lv end
+  ready[3042] = false
+  assert(action(zf, 3042).t == "do" and E.DungeonNext(zf, true).step.s.q == 3042)
+  ready[3042] = true
+  assert(not action(zf, 3042) and not E.DungeonNext(zf, true))
+  local city = assert(E.DungeonNext(zf, false)).step.s
+  assert(city.t == "turnin" and city.q == 3042 and city.map == 1446)
+end

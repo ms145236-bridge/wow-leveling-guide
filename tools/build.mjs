@@ -91,7 +91,7 @@ const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 
 const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
 // 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
 const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|限用路線座標|共用野外前置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|目標完成才交[：:]|到[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|限用路線座標|共用野外前置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|出本後才提示交件|本外完成|目標完成才交[：:]|到[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -478,6 +478,12 @@ for (const file of files.filter((f) => !sideFile(f))) {
       step.pts = pts; // 地圖 ID 檢查（E4）用
     }
     if (st.dungeon) Object.assign(step, { ph: st.phase }, dungeonTags(tags));
+    if (tags.includes("出本後才提示交件")) {
+      if (step.ph !== "post" || step.t !== "turnin" || !step.coord) {
+        throw new Error(step.where + " 「出本後才提示交件」需要出本交件步驟及世界座標");
+      }
+      step.outsideHandoff = true;
+    }
     // 副本內的「做」：位置那段也當成副本中清單的補充行（spot）
     if (st.dungeon && step.ph === "in" && step.t === "do" && !step.spot) step.spot = (tags.find((t) => /^位置[：:]/.test(t)) || "").replace(/^位置[：:]\s*/, "") || undefined;
     st.steps.push(step);
@@ -1170,6 +1176,7 @@ const stepWhen = (w, sw) => {
 };
 const stepOut = (s, st) => ({
   exitPriority: s.ph === "post" && ["accept", "do", "turnin"].includes(s.t) && s.exitPriority || undefined,
+  outsideHandoff: s.outsideHandoff || undefined,
   outsideObjective: s.ph && s.outsideObjective || undefined,
   star: s.star, t: s.t, any: s.any, instancePickup: s.ph === "in" && s.t === "accept" && s.instancePickup || undefined, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
   // 說明段用「；」接起來：句號結尾的段後面不再補「；」，完全相同的段只留一次（翻譯照原本的「；」切段，不受影響）
