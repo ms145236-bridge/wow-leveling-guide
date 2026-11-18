@@ -1,7 +1,7 @@
 -- 遊戲內記錄：任務接交 NPC 與座標、目標進度位置、真實經驗表、飛行點、爐石、副本、事件參數。
 -- 存 MetroGuideRecDB（帳號共用）。每筆一行：鍵欄位 \t@\t 時間 \t 等級 \t 其他欄位。同鍵只記一次；最多 MAX 筆，滿了丟最舊的。
 -- 不讀秘密值：UnitGUID/UnitName 是秘密值就整欄留空。離線用 tools/import-rec.mjs 讀。
-local _, MG = ...
+local ADDON, MG = ...
 local C, UI = MG.C, MG.UI
 local Rec = {}
 MG.Rec = Rec
@@ -48,6 +48,32 @@ local function add(kind, keys, ...)
     local s = old:find(SEP, 1, true)
     if s then seen[old:sub(1, s - 1)] = nil end
   end
+end
+
+-- Compare a quest pickup to its hand-in in the same character session.
+-- Keeping starts in memory avoids mixing alts or counting time spent logged out.
+local timedQuests = { [3881] = true, [7729] = true, [2581] = true }
+local starts = {}
+function Rec.ResetTimings() wipe(starts) end
+
+local function startTiming(id)
+  if timedQuests[id] then
+    starts[id] = { clock = GetTime(), wall = time(), level = UnitLevel("player"),
+      grouped = IsInGroup and IsInGroup() }
+  end
+end
+
+local function finishTiming(id)
+  local start = starts[id]
+  if not start then return end
+  starts[id] = nil
+  local _, class = UnitClass("player")
+  local _, race = UnitRace("player")
+  local group = start.grouped or (IsInGroup and IsInGroup())
+  local version = C_AddOns and C_AddOns.GetAddOnMetadata and C_AddOns.GetAddOnMetadata(ADDON, "Version")
+  add("timing", { id, start.wall, UnitFactionGroup("player"), race, class },
+    math.floor(GetTime() - start.clock + 0.5), start.level, group and 1 or 0,
+    version or "", MG.Route and MG.Route.built or "")
 end
 
 -- 事件參數形狀（每種事件、每種型別組合記一次，順便留一組實際值）
@@ -146,7 +172,7 @@ local function xp() add("xp", { UnitLevel("player"), UnitXPMax("player") }) end
 
 local SHAPE = { QUEST_ACCEPTED = true, QUEST_TURNED_IN = true, QUEST_DETAIL = true, QUEST_COMPLETE = true, QUEST_REMOVED = true, PLAYER_LEVEL_UP = true, TAXIMAP_OPENED = true, HEARTHSTONE_BOUND = true }
 local f = CreateFrame("Frame")
-for _, e in ipairs({ "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_TURNED_IN", "QUEST_DETAIL", "QUEST_COMPLETE", "QUEST_REMOVED", "QUEST_LOG_UPDATE", "PLAYER_XP_UPDATE", "PLAYER_LEVEL_UP", "TAXIMAP_OPENED", "HEARTHSTONE_BOUND", "ZONE_CHANGED_NEW_AREA", "QUEST_WATCH_UPDATE", "UI_INFO_MESSAGE" }) do
+for _, e in ipairs({ "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_TURNED_IN", "QUEST_DETAIL", "QUEST_COMPLETE", "QUEST_REMOVED", "QUEST_LOG_UPDATE", "PLAYER_XP_UPDATE", "PLAYER_LEVEL_UP", "TAXIMAP_OPENED", "HEARTHSTONE_BOUND", "ZONE_CHANGED_NEW_AREA", "GROUP_ROSTER_UPDATE", "QUEST_WATCH_UPDATE", "UI_INFO_MESSAGE" }) do
   pcall(f.RegisterEvent, f, e)
 end
 f:SetScript("OnEvent", function(_, event, ...)
@@ -160,6 +186,12 @@ f:SetScript("OnEvent", function(_, event, ...)
     end
   end
   if not on() then return end
+  if event == "GROUP_ROSTER_UPDATE" then
+    if IsInGroup and IsInGroup() then
+      for _, start in pairs(starts) do start.grouped = true end
+    end
+    return
+  end
   if SHAPE[event] then MG.try("記錄", shape, event, ...) end
   MG.try("記錄", function(...)
     if event == "QUEST_DETAIL" or event == "QUEST_COMPLETE" then
@@ -171,10 +203,12 @@ f:SetScript("OnEvent", function(_, event, ...)
       local n = select("#", ...)
       local id = n > 0 and select(n, ...) -- 經典式 (logIndex, questID)；新式 (questID)
       if secret(id) then return end
+      startTiming(id)
       quest("accept", id, nil, npcCache[id])
     elseif event == "QUEST_TURNED_IN" then
       local id, gain, money = ...
       if secret(id) then return end
+      finishTiming(id)
       if secret(gain) then gain = nil end
       local who = npcCache[id] or npc()
       local map, x, y = pos()
@@ -230,6 +264,6 @@ function Rec.Slash(arg)
     UI.ShowReport(table.concat(out, "\n"), MG.L["遊戲內記錄：Ctrl+A 全選、Ctrl+C 複製，貼回給開發者"])
     return
   end
-  if arg == "clear" and db then db.log, seen, prev = {}, {}, {}; n = 0 end
+  if arg == "clear" and db then db.log, seen, prev = {}, {}, {}; Rec.ResetTimings(); n = 0 end
   MG.msg(MG.L["遊戲內記錄：%s，%d 筆。/slv rec on|off｜export 匯出｜clear 清空｜存檔 %s"]:format(UI.Get("rec") and MG.L["開"] or MG.L["關"], n, MG.L[PATH]))
 end

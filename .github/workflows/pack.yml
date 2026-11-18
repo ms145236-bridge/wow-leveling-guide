@@ -16,6 +16,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
+      - name: 驗證路線與角色模擬
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y lua5.1
+          find addon/ShengLeveling -name '*.lua' -print0 | xargs -0 -n1 luac5.1 -p
+          lua5.1 tools/tests/map-order.lua
+          lua5.1 tools/tests/route-handoffs.lua
+          lua5.1 tools/tests/record-timing.lua
+          python3 tools/tests/replay/check.py
       - name: 壓縮
         run: |
           cd addon

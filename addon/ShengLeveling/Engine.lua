@@ -174,6 +174,7 @@ function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用�
   if when.notRace and raceMatch(when.notRace) then return false end
   if when.coastal ~= nil and when.coastal ~= (MG.db.auberdineChoice == "coast") then return false end
   if when.bag and E.ItemCount(when.bag.item) < when.bag.count then return false end
+  if when.missingBag and E.ItemCount(when.missingBag.item) >= when.missingBag.count then return false end
   if when.onQuestAny then
     local on = false
     for _, id in ipairs(when.onQuestAny) do

@@ -1,0 +1,82 @@
+{
+  "Horde": {
+    "Orc": [
+      "HUNTER",
+      "MAGE",
+      "ROGUE",
+      "SHAMAN",
+      "WARLOCK",
+      "WARRIOR"
+    ],
+    "Tauren": [
+      "DRUID",
+      "HUNTER",
+      "SHAMAN",
+      "WARRIOR"
+    ],
+    "Troll": [
+      "HUNTER",
+      "MAGE",
+      "PRIEST",
+      "ROGUE",
+      "SHAMAN",
+      "WARLOCK",
+      "WARRIOR"
+    ],
+    "Scourge": [
+      "MAGE",
+      "PALADIN",
+      "PRIEST",
+      "ROGUE",
+      "WARLOCK",
+      "WARRIOR"
+    ],
+    "Skyborne": [
+      "DRUID",
+      "HUNTER",
+      "ROGUE",
+      "SHAMAN",
+      "WARRIOR"
+    ]
+  },
+  "Alliance": {
+    "Dwarf": [
+      "HUNTER",
+      "PALADIN",
+      "PRIEST",
+      "ROGUE",
+      "SHAMAN",
+      "WARRIOR"
+    ],
+    "Gnome": [
+      "MAGE",
+      "PRIEST",
+      "ROGUE",
+      "WARLOCK",
+      "WARRIOR"
+    ],
+    "Human": [
+      "HUNTER",
+      "MAGE",
+      "PALADIN",
+      "PRIEST",
+      "ROGUE",
+      "WARLOCK",
+      "WARRIOR"
+    ],
+    "NightElf": [
+      "DRUID",
+      "HUNTER",
+      "PRIEST",
+      "ROGUE",
+      "WARRIOR"
+    ],
+    "Skyborne": [
+      "DRUID",
+      "HUNTER",
+      "MAGE",
+      "ROGUE",
+      "WARRIOR"
+    ]
+  }
+}

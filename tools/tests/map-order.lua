@@ -86,3 +86,49 @@ local _, relic = find(hold.steps, "do", 99187)
 assert(relic.ph == "in" and relic.when.class[1] == "PALADIN" and relic.when.race[1] == "Scourge")
 print("Dungeon scheduling, class phases and Alliance-friendly quest trainers passed")
 print("Same-map gathering, Felwood hand-ins and Horde class revisits passed")
+
+local crater = alliance["04-48"]
+local food
+for i, s in ipairs(crater) do
+  if s.when and s.when.missingBag and s.when.missingBag.item == 11113 then food = i end
+end
+assert(food and crater[food].map == 1449 and crater[food].when.onQuestAny[1] == 3881)
+assert(find(crater, "accept", 3881) < food and food < find(crater, "do", 3883))
+assert(find(crater, "do", 3883) < find(crater, "do", 3881))
+assert(find(crater, "do", 3882) < find(crater, "turnin", 3882))
+assert(allianceMeta["04-49"].lv[1] == 51)
+local gorge = horde["04-34"]
+assert(find(gorge, "turnin", 3442) < find(gorge, "accept", 3443))
+assert(find(gorge, "accept", 3443) < find(gorge, "do", 7729))
+local lands = horde["04-36"]
+for q, item in pairs({[2521]=8244, [3501]=10593}) do
+  for _, verb in ipairs({"accept", "do", "turnin"}) do
+    local _, s = find(lands, verb, q)
+    assert(s.when.bag.item == item and s.when.bag.count == 1)
+  end
+end
+assert(find(lands, "accept", 8423) < find(lands, "accept", 2583))
+assert(find(lands, "turnin", 8423) < find(lands, "turnin", 2621))
+assert(find(lands, "turnin", 2784) < find(lands, "accept", 2621))
+assert(find(lands, "turnin", 2621) < find(lands, "accept", 2622))
+assert(lands[#lands].t == "fly" and lands[#lands].to == "藏寶海灣")
+
+-- Exercise the instance UI with just the player's own quest in the journal.
+local carried, ready
+local ns = { C = {
+  IsOnQuest = function(q) return q == carried end,
+  IsReady = function() return ready end
+} }
+assert(loadfile("addon/ShengLeveling/Engine.lua"))("ShengLeveling", ns)
+local temple = {list={}}
+for _, s in ipairs(horde["05-d23"]) do table.insert(temple.list, {s=s}) end
+for _, q in ipairs({8425, 8232, 8413, 8253, 8422, 8236, 9053, 8257}) do
+  carried, ready = q, false
+  local state = assert(ns.E.InstanceState(temple))
+  assert(#state.steps == 1)
+  local s = state.steps[1].s
+  assert(s.ph == "in" and s.q == q and s.hint and not s.map)
+  ready = true
+  assert(not ns.E.InstanceState(temple))
+end
+print("Un'Goro supplies, Searing Gorge, Blasted Lands and Horde temple objectives passed")

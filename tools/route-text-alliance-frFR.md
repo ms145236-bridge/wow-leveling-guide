@@ -1298,3 +1298,4 @@
 
 04-45到60級.md:1298｜說明｜仍在艾薩拉就回塔倫迪斯營地飛阿斯特蘭納，往北進費伍德。已出神廟就直接到費伍德的翡翠聖地。｜Si tu es encore en Azshara, retourne à la halte de Talrendis, vole jusqu’à Astranaar, puis dirige-toi vers le nord jusqu’à Gangrebois. En sortant du temple, va directement au sanctuaire d’Émeraude à Gangrebois.
 03-30到45級.md:1202｜說明｜優美的信件由職業訓練師引介；通道內的箱子是陷阱，可用偵測陷阱。｜Ton maître de classe lance Lettre élégante. Les coffres du couloir sont piégés : utilise Détection des pièges.
+04-45到60級.md:334｜說明｜拾取東側的食物木箱｜Ramassez la caisse de vivres dans le camp à l’est.

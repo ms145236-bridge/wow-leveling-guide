@@ -129,7 +129,10 @@ function UI.Get(key)
   if sp.choices and type(v) ~= "number" then return sp.def end -- 舊版設定頁把選項畫成勾選框，可能存了 true/false
   return v
 end
-function UI.Set(key, v) store(SPEC_BY[key])[key] = v end
+function UI.Set(key, v)
+  store(SPEC_BY[key])[key] = v
+  if key == "rec" and not v and MG.Rec then MG.Rec.ResetTimings() end
+end
 function UI.Reset(key) UI.Set(key, nil) end
 -- 存檔只留玩家改過的值（沒改過＝nil＝用目前的預設，之後改預設會跟著變）。
 -- 設定版本 2：清掉舊版寫進去的預設值；「顯示剩餘步數」「顯示任務等級」一律回到新預設（關）。

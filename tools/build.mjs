@@ -91,7 +91,7 @@ const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 
 const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
 // 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
 const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|持有材料[：:]|已接任一[：:]|到[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|已接任一[：:]|到[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -255,8 +255,8 @@ const parseWhen = (tags) => {
     const fp = tag.match(/^(已開|未開)鳥點[：:]\s*(.+)$/);
     if (fp) when[fp[1] === "已開" ? "fp" : "noFp"] = fp[2].trim();
     // 【持有材料：2592×60】只計身上可直接交付的數量。
-    const bag = tag.match(/^持有材料[：:]\s*(\d+)\s*×\s*(\d+)$/);
-    if (bag) when.bag = { item: +bag[1], count: +bag[2] };
+    const bag = tag.match(/^(持有|缺少)材料[：:]\s*(\d+)\s*×\s*(\d+)$/);
+    if (bag) when[bag[1] === "持有" ? "bag" : "missingBag"] = { item: +bag[2], count: +bag[3] };
     const log = tag.match(/^已接任一[：:]\s*(\d+(?:、\d+)*)$/);
     if (log) when.onQuestAny = log[1].split("、").map(Number);
     if (!m) continue;
@@ -786,7 +786,7 @@ for (const st of stations) {
       if (dbAt && dbAt.map === step.coord.map && Math.hypot(dbAt.x - step.coord.x, dbAt.y - step.coord.y) > 8)
         warn(at, `座標 ${step.coord.x},${step.coord.y} 與 QuestieDB（${dbAt.x},${dbAt.y}）差距大`);
     } else if (dbAt) step.coord = dbAt;
-    else if (step.t !== "do") warn(at, "缺座標（QuestieDB 也沒有）");
+    else if (!(step.t === "accept" && q.startItems.length && !npcIds.length && !objIds.length)) warn(at, "缺座標（QuestieDB 也沒有）");
   }
   const noCoord = st.steps.filter((s) => s.t === "do" && !s.coord).length;
   if (noCoord) warn(`${st.id} ${st.name}`, `${noCoord} 個「做」步驟沒有座標（不會出現箭頭）`);

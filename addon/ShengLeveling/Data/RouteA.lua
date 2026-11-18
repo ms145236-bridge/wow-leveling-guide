@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "c9c5957c",
+  built = "c51b0276",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -3704,7 +3704,6 @@ MG.Route = {
         {t="turnin", q=3844, npc="物件 小背包", map=1449, x=63.11, y=69.06},
         {t="accept", q=3845, npc="物件 小背包", map=1449, x=63.11, y=69.06},
         {t="do", q=4290, hint="找到拉克維剛剛獵殺的動物的屍體，從屍體上偷取一塊蛇頸龍肉塊，然後回到安戈洛環形山的托爾瓦·尋路者那裡。", map=1449, x=68.7, y=56.7},
-        {t="level", desc="在 67.7, 30.7 一帶打植物，練到 49 級一半。", lv=49},
         {t="turnin", q=4290, npc="托爾瓦·尋路者", tgt="托爾瓦·尋路者", map=1449, x=71.64, y=75.96},
         {t="accept", q=4291, npc="托爾瓦·尋路者", tgt="托爾瓦·尋路者", map=1449, x=71.64, y=75.96},
         {t="do", q=4291, hint="將2份暴掠龍訊息素交給安戈洛爾環形山入口附近的托爾瓦·尋路者。", map=1449, x=66.2, y=62.6, more={{1449, 61.55, 76.85}, {1449, 67.1, 73.3}}},
@@ -3722,9 +3721,11 @@ MG.Route = {
         {t="accept", q=4501, npc="物件 當心翼手龍", map=1449, x=43.53, y=8.44},
         {t="accept", q=4141, npc="莫爾金", tgt="莫爾金", map=1449, x=42.94, y=9.64},
         {t="accept", q=4503, npc="希茲爾", tgt="希茲爾", map=1449, x=44.23, y=11.59},
+        {t="do", q=3882, hint="沿營地東側打雙帆龍，收集8根恐龍骨頭。", map=1449, x=50.8, y=19.2, more={{1449, 53.85, 29.2}, {1449, 42.7, 18.2}}},
         {t="do", q=4289, opt=true, tag="能打高階怪再做 可跳過", hint="將2塊安戈洛猩猩的皮、2塊安戈洛大猩猩的皮和2塊安戈洛巨猩猩的皮交給安戈洛環形山入口處的托爾瓦·尋路者。", map=1449, x=66.1, y=16.1},
         {t="level", desc="還不到 50 級，就留在猩猩洞外打安戈洛猩猩補到 50。", lv=50},
-        {t="do", q=3881, desc="食物箱在東邊（去猩猩洞、托爾瓦的路上），研究設備在西南（蟲巢往翼手龍的路上），兩處順路各撿一個。", hint="將食物箱和研究設備交給安戈洛環形山的威利德·馬紹爾。", map=1449, x=68.54, y=36.54, more={{1449, 38.45, 66.06}}, roam=true},
+        {t="do", q=4141, hint="從安戈洛爾環形山的血瓣花猛擊者和血瓣花掠奪者身上收集15個血瓣花，然後向穆爾金回復。", map=1449, x=67.5, y=31.3},
+        {t="goto", text="拾取東側的食物木箱", map=1449, x=68.54, y=36.54, when={onQuestAny={3881}, missingBag={item=11113, count=1}}},
         {t="turnin", q=4289, npc="托爾瓦·尋路者", tgt="托爾瓦·尋路者", map=1449, x=71.64, y=75.96},
         {t="accept", q=4301, npc="托爾瓦·尋路者", tgt="托爾瓦·尋路者", map=1449, x=71.64, y=75.96},
         {t="turnin", q=4292, npc="托爾瓦·尋路者", tgt="托爾瓦·尋路者", map=1449, x=71.64, y=75.96},
@@ -3732,8 +3733,8 @@ MG.Route = {
         {t="goto", text="沿路跑到這個點。", map=1449, x=48.7, y=85.2},
         {t="do", q=3883, hint="使用採集瓶從安戈洛環形山的某個格里什蟲巢的孵化室中收集一份巢穴側壁的樣本，在有懸掛著的蟲卵的房間里收集樣本。 將蟲穴內壁樣本交給安戈洛環形山的霍萊伊·馬紹爾。", map=1449, x=48.7, y=85.3},
         {t="note", text="把手上的擊殺、收集任務做完。"},
+        {t="do", q=3881, desc="食物箱在東邊（去猩猩洞、托爾瓦的路上），研究設備在西南（蟲巢往翼手龍的路上），兩處順路各撿一個。", hint="將食物箱和研究設備交給安戈洛環形山的威利德·馬紹爾。", map=1449, x=38.45, y=66.06, more={{1449, 68.47, 36.48}}, roam=true},
         {t="do", q=4503, hint="為馬紹爾營地的希茲爾收集8塊精細的雙帆龍鱗片和8塊精細的翼手龍鱗片。", map=1449, x=52, y=62.9, more={{1449, 27.7, 41.5}, {1449, 55.3, 10.41}, {1449, 48.6, 21.77}, {1449, 56.2, 18.33}, {1449, 53.85, 29.2}, {1449, 42.7, 18.2}}, roam=true},
-        {t="do", q=4141, hint="從安戈洛爾環形山的血瓣花猛擊者和血瓣花掠奪者身上收集15個血瓣花，然後向穆爾金回復。", map=1449, x=67.5, y=31.3},
         {t="do", q=4501, hint="殺掉 10 隻翼手龍和 15 隻狂怒的翼手龍，然後向馬紹爾營地的斯普拉格·弗勞克報告。", map=1449, x=57, y=10.2, more={{1449, 27.7, 41.5}}, roam=true},
         {t="turnin", q=4503, npc="希茲爾", tgt="希茲爾", map=1449, x=44.23, y=11.59},
         {t="turnin", q=4141, npc="莫爾金", tgt="莫爾金", map=1449, x=42.94, y=9.64},
@@ -3742,7 +3743,7 @@ MG.Route = {
         {t="turnin", q=3882, npc="斯巴克·尼米爾", tgt="斯巴克·尼米爾", map=1449, x=43.5, y=7.42},
         {t="turnin", q=3883, npc="霍萊伊·馬紹爾", tgt="霍萊伊·馬紹爾", map=1449, x=43.89, y=7.24},
         {t="turnin", q=3881, npc="威利德·馬紹爾", tgt="威利德·馬紹爾", map=1449, x=43.95, y=7.14},
-        {t="accept", q=3884, opt=true, desc="打怪拾到被撕破的日記才右鍵接。", tag="可跳過", npc="物品 被撕破的日記", map=1449, x=42.41, y=49.84},
+        {t="accept", q=3884, opt=true, desc="打怪拾到被撕破的日記才右鍵接。", tag="可跳過", npc="物品 被撕破的日記"},
         {t="turnin", q=3884, opt=true, tag="可跳過", npc="威利德·馬紹爾", tgt="威利德·馬紹爾", map=1449, x=43.95, y=7.14},
         {t="level", desc="還不到 51 級，就在營地東邊打翼手龍，或南邊焦油坑打焦油潛伏者補到 51。", lv=51},
         {t="hearth", desc="牧師要在鐵爐堡接「塞納里奧議會的求助」，請等爐石冷卻。其餘角色若爐石還在冷卻，可從馬紹爾營地飛奧伯丁，接往魯瑟蘭村的行程。", bind="鐵爐堡", hm=1455},
@@ -3797,7 +3798,7 @@ MG.Route = {
         {t="turnin", q=8232, opt=true, desc="綠龍在阿塔哈卡神廟。", tag="有隊伍再做 可跳過", npc="奧汀克", tgt="奧汀克", map=1447, x=42.4, y=42.62, when={lvMin=50, class={"HUNTER"}}},
         {t="travel", text="回塔倫迪斯營地飛阿斯特蘭納，再沿大路往北進費伍德森林。", when={lvMin=50, class={"HUNTER"}}},
       } },
-    { id="04-49", start=nil, name="費伍德森林 第一次", short="費伍德森林", visit=nil, map=1448, lv={52, 52}, video=nil, test=nil, alt=nil, when=nil, tips={}, dungeon=nil, grind={{mob="加德納爾守護者", lv={50, 51}, map=1448, x=37.3, y=60.4, note="加德納爾入口一帶，普通怪。"}, {mob="加德納爾祭司", lv={51, 52}, map=1448, x=37.3, y=61.1, note="和守護者混在一起，施法怪。"}}, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply=nil, danger=nil,
+    { id="04-49", start=nil, name="費伍德森林 第一次", short="費伍德森林", visit=nil, map=1448, lv={51, 52}, video=nil, test=nil, alt=nil, when=nil, tips={}, dungeon=nil, grind={{mob="加德納爾守護者", lv={50, 51}, map=1448, x=37.3, y=60.4, note="加德納爾入口一帶，普通怪。"}, {mob="加德納爾祭司", lv={51, 52}, map=1448, x=37.3, y=61.1, note="和守護者混在一起，施法怪。"}}, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply=nil, danger=nil,
       steps = {
         {t="travel", tag="提醒：還沒開這個飛行點，第一次要用跑的", text="從阿斯特蘭納沿大路往北進費伍德森林。", map=1448, x=54.1, y=86.8},
         {t="accept", q=4101, npc="阿拉珊蒂絲·銀空", tgt="阿拉珊蒂絲·銀空", map=1448, x=54.1, y=86.8},

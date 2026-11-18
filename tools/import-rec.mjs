@@ -105,6 +105,20 @@ const shownSrc = src.replace(/([\\/]Account[\\/])[^\\/]+/i, "$1<帳號>");
 const out = [`# 遊戲內記錄報告`, ``, `來源：${shownSrc}｜${rows.length} 筆`, ``];
 const patches = [];
 
+const timings = by("timing");
+if (timings.length) {
+  out.push("## 接任到交任的實跑秒數", "",
+    "同一角色在同次登入接取與交付。耗時包含等候與停留，曾組隊的路段另標。", "",
+    "| 任務 | 陣營 | 種族 | 職業 | 等級 | 秒 | 曾組隊 | 版本 | 路線資料 |",
+    "|---|---|---|---|---|---:|---|---|---|");
+  for (const r of timings) {
+    const [id, , faction, race, cls] = r.k;
+    const [seconds, from, grouped, version, build] = r.x;
+    out.push(`| ${id} ${quests[id]?.n || ""} | ${faction} | ${race} | ${cls} | ${from} → ${r.lv} | ${seconds} | ${grouped === "1" ? "是" : "否"} | ${version} | ${build} |`);
+  }
+  out.push("");
+}
+
 // 任務：接／交
 out.push(`## 任務接交`, ``);
 const seenQ = {};

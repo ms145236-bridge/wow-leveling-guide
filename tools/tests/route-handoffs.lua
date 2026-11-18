@@ -164,3 +164,15 @@ db.mark[approach.key]=true
 grouped=E.Locate(segment)
 assert(grouped.cur==1 and grouped.inGroup[3])
 print("Terrain waypoint proximity and grouping checks passed")
+
+local food = {onQuestAny={3881}, missingBag={item=11113, count=1}}
+local count = 0
+C_Item = {GetItemCount=function(id) return id == 11113 and count or 0 end}
+active[3881] = nil
+assert(not E.Applies(food))
+active[3881] = true
+assert(E.Applies(food))
+count = 1
+assert(not E.Applies(food))
+assert(E.Applies({bag={item=11113, count=1}}))
+print("Supply waypoint follows quest log and carried item")

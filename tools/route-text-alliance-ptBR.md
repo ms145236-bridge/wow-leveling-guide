@@ -1298,3 +1298,4 @@
 
 04-45到60級.md:1298｜說明｜仍在艾薩拉就回塔倫迪斯營地飛阿斯特蘭納，往北進費伍德。已出神廟就直接到費伍德的翡翠聖地。｜Se ainda estiver em Azshara, volte à Ponta Talrendis, voe para Astranaar e siga ao norte até a Selva Maleva. Ao sair do templo, vá direto ao Santuário Esmeralda na Selva Maleva.
 03-30到45級.md:1202｜說明｜優美的信件由職業訓練師引介；通道內的箱子是陷阱，可用偵測陷阱。｜Seu treinador inicia Carta Elegante. Use Detectar Armadilhas nas caixas da passagem.
+04-45到60級.md:334｜說明｜拾取東側的食物木箱｜Pegue o caixote de mantimentos no acampamento a leste.

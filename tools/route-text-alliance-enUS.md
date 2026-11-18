@@ -1298,3 +1298,4 @@
 
 04-45到60級.md:1298｜說明｜仍在艾薩拉就回塔倫迪斯營地飛阿斯特蘭納，往北進費伍德。已出神廟就直接到費伍德的翡翠聖地。｜From Azshara, return to Talrendis Point, fly to Astranaar, and head north into Felwood. After the temple, go straight to Emerald Sanctuary in Felwood.
 03-30到45級.md:1202｜說明｜優美的信件由職業訓練師引介；通道內的箱子是陷阱，可用偵測陷阱。｜Your trainer starts Elegant Letter. Use Detect Traps on the boxes in the passage.
+04-45到60級.md:334｜說明｜拾取東側的食物木箱｜Loot the crate of foodstuffs at the eastern camp.
