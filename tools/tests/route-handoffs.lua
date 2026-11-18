@@ -176,3 +176,45 @@ count = 1
 assert(not E.Applies(food))
 assert(E.Applies({bag={item=11113, count=1}}))
 print("Supply waypoint follows quest log and carried item")
+
+-- A player can unlock the tablets before a first run or later at the Searing Gorge hand-in.
+local uldaman = E.byId["05-d9"]
+local advisorReturns = 0
+local carryingTablet = false
+C_Item.GetItemCount = function(id) return carryingTablet and id == 5824 and 1 or 0 end
+wipe(active)
+wipe(completed)
+assert(ns.Route.quests[1139].ps[1] == 762)
+for _, step in ipairs(uldaman.list) do
+  local s = step.s
+  if s.q == 1139 then
+    assert(s.opt)
+    if s.t == "accept" then assert(s.ph == "pre") end
+    if s.t == "turnin" then
+      assert(s.ph == "post" and s.map == 1455)
+      carryingTablet = false
+      assert(not E.Applies(s.when))
+      carryingTablet = true
+      assert(E.Applies(s.when))
+      advisorReturns = advisorReturns + 1
+    end
+  end
+end
+assert(advisorReturns == 2)
+assert(not E.InstanceState(uldaman))
+active[1139] = true
+local tablet = E.InstanceState(uldaman).steps[1].s
+assert(tablet.q == 1139 and tablet.t == "do" and tablet.ph == "in" and not tablet.map)
+completed[1139] = true
+assert(not E.InstanceState(uldaman))
+local foundLateOffer = false
+for i, step in ipairs(E.byId["04-45"].list) do
+  if step.s.q == 1139 then
+    local previous = E.byId["04-45"].list[i - 1].s
+    assert(step.s.t == "accept" and step.s.opt and previous.t == "turnin" and previous.q == 762)
+    assert(step.s.npc == previous.npc)
+    foundLateOffer = true
+  end
+end
+assert(foundLateOffer)
+print("Uldaman tablets checked for initial and repeat visits")
