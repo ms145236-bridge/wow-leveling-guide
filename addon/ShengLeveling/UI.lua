@@ -54,7 +54,7 @@ local SPEC = {
   { key = "showTarget", label = "顯示目標按鈕", def = true, hint = "步驟列上的準星按鈕：點一下選取這步要找的怪或 NPC，也能綁快捷鍵。" },
   { key = "markOn", label = "選取時標上團隊標記", def = true, hint = "用目標按鈕或巨集選到目標時，順便標上團隊標記。" },
   { key = "showItem", label = "顯示任務物品按鈕", def = true, hint = "目前任務有可使用的物品時，在步驟列旁顯示物品按鈕，點了就使用。" },
-  { button = "建立巨集", run = function() MG.T.MakeMacro() end, hint = "建立「任務目標」巨集並拿在滑鼠上，放到快捷列就能一鍵選取目標。" },
+  { button = "建立巨集", run = function() MG.T.MakeMacro() end, hint = "建立「{target}」巨集並拿在滑鼠上，放到快捷列就能一鍵選取目標。" },
   { section = "副本" },
   { key = "dPre", label = "順路接副本前置", def = true, hint = "把副本的前置任務排進主線，在附近的站順路接、做、交。" },
   { key = "dungeonOnly", label = "副本中只顯示副本任務", def = true, hint = "在副本裡只列出這個副本的任務（一次全列），不顯示主線步驟、箭頭和地圖標點；對不到副本或沒有任務時整個隱藏，出副本後恢復。" },
@@ -97,8 +97,8 @@ local SPEC = {
   { key = "markIcon", label = "標記圖示", def = 1, choices = { "星星", "圓圈", "鑽石", "三角", "月亮", "方塊", "叉叉", "骷髏" } },
   { key = "itemPos", label = "任務物品位置", def = 1, choices = { "步驟列內", "左側", "右側" } },
   { key = "itemSize", label = "任務物品大小", min = 20, max = 48, step = 2, def = 32, hint = "放在左側或右側時的大小。" },
-  { key = "itemMacro", label = "自動建立任務物品巨集", def = true, hint = "建立帳號巨集「任務物品」，內容自動改成使用目前步驟的任務物品（戰鬥中等脫離戰鬥再改）。" },
-  { key = "autoMacro", label = "自動建立目標巨集", def = true, hint = "登入時若沒有「任務目標」巨集就自動建立（帳號巨集有空位時）。刪掉後下次登入會再建立；關掉這項就不會。" },
+  { key = "itemMacro", label = "自動建立任務物品巨集", def = true, hint = "建立帳號巨集「{item}」，內容自動改成使用目前步驟的任務物品（戰鬥中等脫離戰鬥再改）。" },
+  { key = "autoMacro", label = "自動建立目標巨集", def = true, hint = "登入時若沒有「{target}」巨集就自動建立（帳號巨集有空位時）。刪掉後下次登入會再建立；關掉這項就不會。" },
   { sub = "其他" },
   { key = "miniBtnAlpha", label = "小地圖按鈕透明度", min = 0, max = 100, step = 5, def = 100, unit = "%" },
   { key = "rec", label = "遊戲內記錄", def = true, acct = true, hint = "記下任務 NPC 與座標、經驗表、飛行點，用來修正路線。/slv rec export 匯出。" },
@@ -1930,7 +1930,7 @@ function UI.CreateOptions()
   -- 整列說明：滑鼠移到標籤或控制項上，標題＝標籤，內文＝說明
   local function explain(title, hint, ...)
     if not hint then return end
-    local function show(self) tipOpen(self, title); tipLine(L[hint], TEXT, true); GameTooltip:Show() end
+    local function show(self) tipOpen(self, title); tipLine((L[hint]:gsub("{(%a+)}", MG.Macro.Name)), TEXT, true); GameTooltip:Show() end
     local function hide() GameTooltip:Hide() end
     for _, f in ipairs({ ... }) do f:HookScript("OnEnter", show); f:HookScript("OnLeave", hide) end
   end

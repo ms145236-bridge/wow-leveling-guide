@@ -71,7 +71,7 @@ local function layout(bar)
 end
 
 -- 動作條巨集「任務物品」：/use 第一個物品
-local MACRO, ICON = MG.gameCJK and "任務物品" or "Quest Item", "INV_Misc_Bag_08" -- 巨集名跟客戶端語言
+local MACRO, ICON = MG.Macro.default.item, "INV_Misc_Bag_08"
 local triedCreate = false
 local function macroBody()
   return items[1] and ("/use item:" .. items[1]) or ("/run ShengLv_Msg(\"" .. L["目前步驟沒有任務物品"] .. "\")")
@@ -172,7 +172,7 @@ function I.Diag()
   local shown = {}
   for k, b in ipairs(buttons) do shown[#shown + 1] = k .. "=" .. tostring((b:IsShown())) .. "/" .. tostring((b:GetAttribute("item"))) end
   out[#out + 1] = L["按鈕："] .. table.concat(shown, "  ")
-  local index, name = MG.Macro.Find("item")
-  out[#out + 1] = L["巨集「%s」格位 %d："]:format(name or MACRO, index or 0) .. tostring(index and select(3, GetMacroInfo(index)) or nil)
+  local index, name = MG.Macro.Find("item", MACRO)
+  out[#out + 1] = L["巨集「%s」格位 %d："]:format(name or MG.Macro.Name("item"), index or 0) .. tostring(index and select(3, GetMacroInfo(index)) or nil)
   return out
 end
