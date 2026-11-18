@@ -1309,3 +1309,30 @@
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Le Brille-o-Matic 5200, dans la zone propre. Prévoyez 3 pièces d’argent.
 05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜Vous pouvez répartir cette suite sur plusieurs visites. Prélevez le premier échantillon dans les tunnels d’entrée ou dans l’instance. Rapportez-le à Ozzie à Kharanos pour obtenir la fiole lourde.
 05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Utilisez la fiole lourde sur une gelée irradiée, un rôdeur corrosif ou une horreur irradiée. L’échantillon se conserve deux heures. Si vous ne pouvez pas rejoindre Kharanos à temps, prélevez-le lors de votre prochaine sortie en groupe.
+01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），再往下跳到洛克莫丹南部警戒塔。｜Il faut franchir la montagne : au lieu du tunnel de la Porte Nord, montez la pente vers l'est et suivez la flèche le long de la crête jusqu'à l'autre versant (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50), puis descendez jusqu'à la tour de guet sud du Loch Modan.
+01-第一段-1到12級.md:261｜說明｜往西走到山坡下，從這裡爬上西北邊的山丘。｜Va vers l'ouest jusqu'au pied de la pente, puis grimpe d'ici sur les collines au nord-ouest.
+01-第一段-1到12級.md:390｜說明｜從這裡沿坡道繞上大樹，獵人訓練師在樹上。｜D'ici, suis la rampe qui fait le tour du grand arbre ; le maître des chasseurs est en haut.
+02-12到30級.md:218｜說明｜從這裡跳進河裡，游到瀑布下的水潭。沿路見到小月夜猛虎和狂暴薊熊就打。｜Saute dans la rivière ici et nage jusqu'au bassin sous la cascade. Désormais, tue les Traquelunes chétifs et les Ours des chardons enragés que tu croises.
+02-12到30級.md:474｜說明｜先沿大路往東走，到挖掘場北邊的路口再往南下去。｜Suis d'abord la grand-route vers l'est, puis descends vers le sud jusqu'au site de fouilles à l'embranchement situé au nord.
+02-12到30級.md:678｜說明｜出阿斯特蘭納先往東走到岔路口，再沿路往北。｜Quitte Astranaar vers l'est jusqu'à l'embranchement, puis suis la route vers le nord.
+02-12到30級.md:681｜說明｜從湖心島往南游回岸上（46.80, 49.20 → 47.00, 51.70），再往東走。｜Depuis l'île du lac, nage vers le sud jusqu'à la rive (46.80, 49.20 → 47.00, 51.70), puis va vers l'est.
+02-12到30級.md:706｜說明｜走到山洞口（42.30, 71.00），穿過山洞進石爪山脈。｜Va jusqu'à l'entrée de la grotte (42.30, 71.00) et traverse-la pour entrer dans les Serres-Rocheuses.
+03-30到45級.md:33｜說明｜往西進西部荒野，到哨兵嶺搭鳥。｜Va vers l'ouest dans la Marche de l'Ouest et prends un vol à la Colline des Sentinelles.
+03-30到45級.md:127｜說明｜薩爾圖斯在山坡上，要照箭頭從西邊繞上去（31.99, 48.68 → 31.15, 49.05 → 32.41, 50.92）。｜Ta cible est en haut de la colline ; suis la flèche pour monter par l'ouest (31.99, 48.68 → 31.15, 49.05 → 32.41, 50.92).
+03-30到45級.md:378｜說明｜先繞到北邊，從這裡進狼嚎谷。｜Fais le tour par le nord et entre dans la vallée d'ici.
+03-30到45級.md:381｜說明｜回到北邊的大路，從這裡的路口進夜道谷。｜Reviens sur la grand-route au nord et entre dans la vallée à cet embranchement.
+03-30到45級.md:413｜說明｜搭大升降梯下到底。｜Prends la Grande élévation jusqu'en bas.
+03-30到45級.md:653｜說明｜往南進塔納利斯，到加基森搭鳥。｜Va vers le sud jusqu'à Tanaris et prends un vol à Gadgetzan.
+03-30到45級.md:668｜說明｜去警戒崗哨搜索亨德爾下士的消息，走到就完成，再回塞拉摩交。｜Fouille le poste de garde pour trouver des nouvelles du soldat Hendel. Y arriver suffit à terminer la quête ; reviens ensuite la rendre à Theramore.
+03-30到45級.md:733｜說明｜先往西北出迷霧谷，再往北走。｜Sors d'abord de la vallée par le nord-ouest, puis va vers le nord.
+03-30到45級.md:1173｜說明｜蟲繭在痛苦深淵的洞裡，從洞口走進去（73.20, 63.90 → 72.30, 64.20）。｜Le cocon est dans la grotte ; entre par l'entrée (73.20, 63.90 → 72.30, 64.20).
+04-45到60級.md:69｜說明｜謝申克在洞裡，從洞口沿坡道往下走（55.00, 70.00 → 54.20, 72.90 → 56.30, 72.20）。｜L'équipement est au fond de la grotte ; descends la rampe depuis l'entrée (55.00, 70.00 → 54.20, 72.90 → 56.30, 72.20).
+04-45到60級.md:93｜說明｜往東北走山路進辛特蘭。｜Prends le sentier de montagne vers le nord-est pour entrer dans les Hinterlands.
+04-45到60級.md:126｜說明｜往南出洛克莫丹，從這裡的山路進荒蕪之地。｜Quitte le Loch Modan par le sud et prends ici le sentier de montagne vers les Terres ingrates.
+04-45到60級.md:300｜說明｜往西北走到去安戈洛環形山的山路口。｜Va vers le nord-ouest jusqu'au début du chemin vers le cratère d'Un'Goro.
+04-45到60級.md:340｜說明｜要進蟲巢採樣：往西南走到洞口再往裡走（50.40, 78.80 → 48.70, 85.20）。｜Pour l'échantillon, entre dans la ruche : va vers le sud-ouest jusqu'à l'entrée de la grotte, puis avance à l'intérieur (50.40, 78.80 → 48.70, 85.20).
+04-45到60級.md:676｜說明｜往東南走，從這裡的山路進辛特蘭。｜Va vers le sud-est et prends ici le sentier de montagne vers les Hinterlands.
+01-第一段-1到12級.md:59｜說明｜打算練剝皮再選剝皮卡。｜Ne choisis la carte de Dépeçage que si tu comptes dépecer.
+01-第一段-1到12級.md:881｜說明｜到暴風城港口的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Va au quai du port de Hurlevent et prends le bateau pour Auberdine (1453 21.80, 56.80).
+03-30到45級.md:715｜說明｜到棘齒城碼頭，搭往藏寶海灣的船（1413 63.35, 38.45）。｜Va au quai de Cabestan et prends le bateau pour Baie-du-Butin (1413 63.35, 38.45).
+04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Va au quai d'Austrivage et prends le bateau pour Auberdine (1424 50.70, 70.50).

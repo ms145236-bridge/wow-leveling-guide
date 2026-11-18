@@ -1309,3 +1309,30 @@
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Fagulhomático 5200 na Zona Limpa. Leve 3 moedas de prata.
 05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜Você pode dividir a sequência entre várias visitas. Colete a primeira amostra nos túneis da entrada ou dentro da masmorra. Entregue-a a Ozzie em Kharanos para receber o frasco pesado.
 05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Use o frasco pesado em um Visgo Irradiado, um Tocaieiro Corrosivo ou um horror irradiado. A amostra dura duas horas. Se não puder chegar a Kharanos a tempo, faça a coleta na próxima visita em grupo.
+01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），再往下跳到洛克莫丹南部警戒塔。｜É preciso atravessar a montanha: em vez do túnel do Portão Norte, suba a encosta para o leste e siga a seta pela crista até o outro lado (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50); depois desça até a torre de vigia sul de Loch Modan.
+01-第一段-1到12級.md:261｜說明｜往西走到山坡下，從這裡爬上西北邊的山丘。｜Vá para oeste até o pé da encosta e daqui suba as colinas a noroeste.
+01-第一段-1到12級.md:390｜說明｜從這裡沿坡道繞上大樹，獵人訓練師在樹上。｜Daqui suba a rampa que contorna a grande árvore; o instrutor de caçadores fica lá em cima.
+02-12到30級.md:218｜說明｜從這裡跳進河裡，游到瀑布下的水潭。沿路見到小月夜猛虎和狂暴薊熊就打。｜Pule no rio aqui e nade até o poço embaixo da cachoeira. Daqui em diante, mate os Espreitalunas Raquíticos e Ursocardos Raivosos que encontrar.
+02-12到30級.md:474｜說明｜先沿大路往東走，到挖掘場北邊的路口再往南下去。｜Siga primeiro a estrada principal para leste e, na entrada ao norte da escavação, desça para o sul.
+02-12到30級.md:678｜說明｜出阿斯特蘭納先往東走到岔路口，再沿路往北。｜Saia de Astranaar para leste até a bifurcação e depois siga a estrada para o norte.
+02-12到30級.md:681｜說明｜從湖心島往南游回岸上（46.80, 49.20 → 47.00, 51.70），再往東走。｜Da ilha do lago, nade para o sul de volta à margem (46.80, 49.20 → 47.00, 51.70) e depois siga para leste.
+02-12到30級.md:706｜說明｜走到山洞口（42.30, 71.00），穿過山洞進石爪山脈。｜Vá até a entrada da caverna (42.30, 71.00) e atravesse-a para entrar na Cordilheira das Torres de Pedra.
+03-30到45級.md:33｜說明｜往西進西部荒野，到哨兵嶺搭鳥。｜Vá para oeste até Cerro Oeste e pegue o voo no Morro da Sentinela.
+03-30到45級.md:127｜說明｜薩爾圖斯在山坡上，要照箭頭從西邊繞上去（31.99, 48.68 → 31.15, 49.05 → 32.41, 50.92）。｜Seu alvo fica no alto da encosta; siga a seta e suba contornando pelo oeste (31.99, 48.68 → 31.15, 49.05 → 32.41, 50.92).
+03-30到45級.md:378｜說明｜先繞到北邊，從這裡進狼嚎谷。｜Contorne pelo norte e entre no vale por aqui.
+03-30到45級.md:381｜說明｜回到北邊的大路，從這裡的路口進夜道谷。｜Volte à estrada principal ao norte e entre no vale por esta entrada.
+03-30到45級.md:413｜說明｜搭大升降梯下到底。｜Desça até o fim no Grande Elevador.
+03-30到45級.md:653｜說明｜往南進塔納利斯，到加基森搭鳥。｜Vá para o sul até Tanaris e pegue o voo em Geringontzan.
+03-30到45級.md:668｜說明｜去警戒崗哨搜索亨德爾下士的消息，走到就完成，再回塞拉摩交。｜Procure notícias do Recruta Remos no posto de sentinela. Chegar lá conclui a missão; depois volte a Theramore para entregá-la.
+03-30到45級.md:733｜說明｜先往西北出迷霧谷，再往北走。｜Saia primeiro do vale pelo noroeste e depois siga para o norte.
+03-30到45級.md:1173｜說明｜蟲繭在痛苦深淵的洞裡，從洞口走進去（73.20, 63.90 → 72.30, 64.20）。｜O casulo fica dentro da caverna; entre pela boca (73.20, 63.90 → 72.30, 64.20).
+04-45到60級.md:69｜說明｜謝申克在洞裡，從洞口沿坡道往下走（55.00, 70.00 → 54.20, 72.90 → 56.30, 72.20）。｜O equipamento fica no fundo da caverna; desça a rampa a partir da entrada (55.00, 70.00 → 54.20, 72.90 → 56.30, 72.20).
+04-45到60級.md:93｜說明｜往東北走山路進辛特蘭。｜Pegue a trilha da montanha para nordeste até as Terras Agrestes.
+04-45到60級.md:126｜說明｜往南出洛克莫丹，從這裡的山路進荒蕪之地。｜Saia de Loch Modan pelo sul e pegue aqui a trilha da montanha para os Ermos.
+04-45到60級.md:300｜說明｜往西北走到去安戈洛環形山的山路口。｜Vá para noroeste até o início da trilha para a Cratera Un'Goro.
+04-45到60級.md:340｜說明｜要進蟲巢採樣：往西南走到洞口再往裡走（50.40, 78.80 → 48.70, 85.20）。｜Para a amostra, entre na colmeia: vá para sudoeste até a entrada da caverna e siga para dentro (50.40, 78.80 → 48.70, 85.20).
+04-45到60級.md:676｜說明｜往東南走，從這裡的山路進辛特蘭。｜Vá para sudeste e pegue aqui a trilha da montanha para as Terras Agrestes.
+01-第一段-1到12級.md:59｜說明｜打算練剝皮再選剝皮卡。｜Escolha a carta de Esfolamento só se pretende esfolar.
+01-第一段-1到12級.md:881｜說明｜到暴風城港口的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Vá ao cais do porto de Ventobravo e pegue o barco para Auberdine (1453 21.80, 56.80).
+03-30到45級.md:715｜說明｜到棘齒城碼頭，搭往藏寶海灣的船（1413 63.35, 38.45）。｜Vá ao cais de Vila Catraca e pegue o barco para a Angra do Butim (1413 63.35, 38.45).
+04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Vá ao cais de Costa Sul e pegue o barco para Auberdine (1424 50.70, 70.50).
