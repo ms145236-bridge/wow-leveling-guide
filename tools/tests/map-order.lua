@@ -49,6 +49,16 @@ for _, s in ipairs(horde["03-17"]) do
   end
 end
 assert(hasFlight)
+local _, ingredients = find(island, "do", 92553)
+assert(ingredients.map == 2521 and find(island, "do", 92553) < find(island, "turnin", 92553))
+assert(find(island, "do", 92516) < find(island, "turnin", 92553))
+local mine = alliance["01-9"]
+assert(find(mine, "do", 432) + 1 == find(mine, "do", 433))
+assert(find(mine, "do", 433) < find(mine, "turnin", 432))
+local crater = horde["04-41"]
+assert(find(crater, "do", 3883) < find(crater, "turnin", 3884))
+assert(find(crater, "turnin", 3884) + 1 == find(crater, "turnin", 3881))
+
 local temple = allianceMeta["05-d14"]
 assert(temple.after == "04-49" and temple.inst[1] == 109)
 for quest, class in pairs({[8253]="MAGE", [8257]="PRIEST", [8232]="HUNTER"}) do
