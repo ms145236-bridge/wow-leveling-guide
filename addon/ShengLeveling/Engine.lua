@@ -831,25 +831,29 @@ function E.Locate(st)
   -- 軟步驟（交通、到達、鳥點、飛行、船）：後面有本站接的任務步驟已完成、或任一任務已交，就算過了（別站帶來的任務「做」完成不算）；
   -- 後面已沒有任務步驟的（往下一站的交通）不擋路，文字留給「前往下一站」顯示
   -- passed：被後面任務帶過的軟步驟（當作過了，但清單不打勾）；tails：站尾往下一站的交通（任務都做完才輪到它）
-  local tail, tails, passed, here, softLater = nil, {}, {}, {}, {}
+  local tail, tails, passed, here, softLater, left = nil, {}, {}, {}, {}, {}
   for _, step in ipairs(steps) do if step.s.t == "accept" and not step.carry then here[step.s.q] = true end end
   local nxt = E.Next(st)
   for i, step in ipairs(steps) do
-    if not done[i] and SOFT[step.s.t] then
+    if not done[i] and SOFT[step.s.t] then -- 開鳥點不會被後面的進度帶過：要真的開了（飛行地圖／對話開點）才算
       local later = false
       for j = i + 1, n do
         -- 後面仍要綁爐石或補給，前往該處的路標就不是站尾交通。
         if not done[j] and not SOFT[steps[j].s.t] and not na[j] then later = true end
         if steps[j].s.q and not na[j] then
           later = true
-          if done[j] and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
+          if step.s.t ~= "fp" and done[j] and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
         end
       end
       softLater[i] = not done[i] and later and not step.s.x and map ~= nil and x ~= nil -- 沒座標的交通：輪到它時才看人到了沒（見下面）
+      -- 已經到下一站的地圖：站尾交通算到了；鳥點沒開不打勾，只是不再拉回去（left）。
+      -- 鳥點和下一站同一張地圖時，人在這張地圖上不代表已經離開，照樣帶去開點
+      local onNext = nxt and map and map == nxt.map
+      if step.s.t == "fp" then left[i] = onNext and step.s.map ~= map end
       if not later then
         tails[i] = true
         tail = tail or step.s.text
-        if nxt and map and map == nxt.map then done[i] = true end -- 已經到下一站的地圖
+        if onNext and step.s.t ~= "fp" then done[i] = true end
       end
     end
   end
@@ -882,6 +886,8 @@ function E.Locate(st)
         -- 等前置的後續任務：不輪到它、也不算漏掉（前置的「交」排在它前面）
         -- 站尾交通先跳過，任務步驟都處理完才輪到
         -- 順路任務（怪散在整區）：不搶目前步驟，路上遇到就打；其他步驟都做完還沒完成才輪到
+      elseif not done[i] and steps[i].s.t == "fp" then
+        if not left[i] then auto = i; break end -- 開鳥點沒有任務可推斷：沒開就輪到它，不算漏掉；人已到下一站就不拉回去
       elseif not done[i] and q and missedQ[q] then
         missedIdx[#missedIdx + 1] = i -- 同一任務前面的步驟已漏掉（例如沒接就輪到交）
       elseif not done[i] and q and steps[i].s.t ~= "accept" and not (steps[i].s.tag and steps[i].s.tag:find("怪多", 1, true)) and C.IsOnQuest(q) then
@@ -910,7 +916,7 @@ function E.Locate(st)
       for i = 1, n do if steps[i].s.roam and not done[i] and not na[i] then auto = i; break end end
     end
     if not auto then
-      for i = 1, n do if tails[i] and not done[i] and not na[i] then auto = i; break end end
+      for i = 1, n do if tails[i] and not done[i] and not na[i] and not left[i] then auto = i; break end end
     end
     local arrived = auto and arrive(auto)
   until not arrived
