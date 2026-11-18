@@ -8,9 +8,9 @@
 |---|---:|---:|---|
 | 正式 1.13.15，8f601b6 | 55／137 | 82／234 | 巨集版沿用 1.13.14 路線 |
 | 1.13.16 路線候選，8ea0dab | 53／137 | 82／234 | 聯盟濕地 95772、95795 加入接取 |
-| 推演至 1.13.17，以上列加聯盟 5251 | 52／137 | 82／234 | 斯坦索姆 5251 排入禮拜堂接取 |
+| 副本路線審核快照 2742352，以上列加聯盟 5251 | 52／137 | 82／234 | 斯坦索姆 5251 排入禮拜堂接取 |
 
-正式版與 1.13.16 候選可在固定提交執行 `lua5.1 tools/audit-dungeon-coverage.lua Alliance` 和 `lua5.1 tools/audit-dungeon-coverage.lua Horde` 核對。1.13.17 列是對候選內容的推演，本表固定於這組 ID。1050、5848 原已有接取步驟。部落 7938、92065、92066 為日誌條件提示，所屬兩個副本站缺區域索引，所以分母與缺接取數維持原值。[正式 1.13.15](https://github.com/ms145236-bridge/wow-leveling-guide/tree/8f601b6d85bc4323c2c88e20b94b1d3b5f65cafe) · [1.13.16 路線候選](https://github.com/ms145236-bridge/wow-leveling-guide/tree/8ea0daba62b6286a485d74b10fca942d2861d368) · [QuestieDB Forever v1.1.2](https://github.com/Questie/QuestieDB/releases/tag/v1.1.2)
+正式版與 1.13.16 候選可在固定提交執行 `lua5.1 tools/audit-dungeon-coverage.lua Alliance` 和 `lua5.1 tools/audit-dungeon-coverage.lua Horde` 核對。最後一列以副本工作樹 2742352bf70b029720874ca400206ee3ca83f62f 的任務 ID 推演，當時新增的明確接取為聯盟 5251。134 筆工作表固定在這組條件。鳥點修正預留 1.13.17，下一個副本路線版本預留 1.13.18，正式發布後依實際接取 ID 另列差額。1050、5848 原已有接取步驟。部落 7938、92065、92066 為日誌條件提示，所屬兩個副本站缺區域索引，所以分母與缺接取數維持原值。[正式 1.13.15](https://github.com/ms145236-bridge/wow-leveling-guide/tree/8f601b6d85bc4323c2c88e20b94b1d3b5f65cafe) · [1.13.16 路線候選](https://github.com/ms145236-bridge/wow-leveling-guide/tree/8ea0daba62b6286a485d74b10fca942d2861d368) · [QuestieDB Forever v1.1.2](https://github.com/Questie/QuestieDB/releases/tag/v1.1.2)
 
 ## 如何使用工作表
 
