@@ -1499,8 +1499,21 @@ end
 
 function E.DungeonStatus(d)
   local lv = UnitLevel("player") or 1
-  if E.DungeonDone(d) then return L["已完成"], "past" end
-  if lv > d.lv[2] + 3 then return L["已過"], "past" end
+  local done = E.DungeonDone(d)
+  if done or lv > d.lv[2] + 3 then
+    -- A later wing or a return visit may still have an objective in the player's journal.
+    for _, step in ipairs(d.list) do
+      local s = step.s
+      if s.q and C.IsOnQuest(s.q) and E.Applies(s.when) and raceOK(s.q)
+          and not MG.db.skip[step.key] and not E.QuickDone(step) then
+        if (s.ph == "in" and s.t == "do" and not ready(s.q))
+            or (s.ph == "post" and s.t == "turnin" and ready(s.q)) then
+          return L["可以去"], "revisit", step
+        end
+      end
+    end
+    return done and L["已完成"] or L["已過"], "past"
+  end
   local minPick = d.lv[1]
   for _, step in ipairs(d.list) do if step.s.pickLv and step.s.pickLv < minPick then minPick = step.s.pickLv end end
   if lv < minPick then return L["%d 級"]:format(minPick), "low" end
@@ -1720,8 +1733,14 @@ E.MinPickLv = minPickLv
 
 -- 下一步：{ kind = low/in/pre/wait/ent/post, step, title }；已過或不打回 nil
 function E.DungeonNext(d, inside)
-  local _, kind = E.DungeonStatus(d)
-  if kind == "past" or MG.db.dNo[d.id] then return nil end
+  if MG.db.dNo[d.id] then return nil end
+  local _, kind, revisit = E.DungeonStatus(d)
+  if kind == "past" then return nil end
+  if kind == "revisit" then
+    if revisit.s.ph == "post" then return { kind = "post", step = revisit } end
+    if inside then return { kind = "in", step = revisit } end
+    return { kind = "ent" }
+  end
   local lv = UnitLevel("player") or 1
   if kind == "low" then return { kind = "low", title = L["%d 級可接前置"]:format(minPickLv(d)) } end
   local function canDo(s)

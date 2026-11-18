@@ -8,7 +8,7 @@ local function route(side)
     stations[station.id] = station.steps
     metadata[station.id] = station
   end
-  return stations, metadata
+  return stations, metadata, ns.Route.quests
 end
 
 local function find(steps, verb, id)
@@ -31,7 +31,24 @@ for _, station in ipairs({"04-49", "04-51"}) do
   assert(blood.npc == alliance[station][i - 1].npc)
 end
 
-local horde, hordeMeta = route("Horde")
+local horde, hordeMeta, hordeQuests = route("Horde")
+local camp = horde["01-3"]
+local hunt, questgiver = find(camp, "accept", 750)
+assert(find(camp, "turnin", 747) + 1 == hunt)
+local delivery = find(camp, "accept", 1656)
+for quest, class in pairs({[3091]="WARRIOR", [3092]="HUNTER", [3093]="SHAMAN", [3094]="DRUID"}) do
+  local pickup, note = find(camp, "accept", quest)
+  local turnin, trainer = find(camp, "turnin", quest)
+  assert(hunt < pickup and pickup < turnin and turnin < delivery)
+  assert(note.npc == questgiver.npc and note.x == questgiver.x and note.y == questgiver.y)
+  assert(hordeQuests[quest].races == 32 and hordeQuests[quest].ps[1] == 747)
+  assert(note.when.class[1] == class)
+  assert(trainer.when.class[1] == class)
+  for i = hunt + 1, pickup - 1 do
+    local condition = camp[i].when
+    assert(condition and condition.class and condition.class[1] ~= class)
+  end
+end
 for _, check in ipairs({
   {"03-17", 1718, 30, "WARRIOR"}, {"03-17", 1719, 30, "WARRIOR"},
   {"03-25", 97022, 40, "PALADIN"}, {"03-25", 94971, 40, "PALADIN"},

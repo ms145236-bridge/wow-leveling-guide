@@ -58,6 +58,12 @@
 | 黑暗深淵・版本實證待補 | 78916 和 78917 都進入區域索引，但僅有物品／任務記錄尚無法確認永恆服當前掉落來源。兩陣營暫列待驗。 [永恆版聯盟記錄](https://nether.wowhead.com/forever/tooltip/quest/78916?locale=0) |
 | 後續野外交通 | 牛頭人卷軸 3091–3094 可在交 747 的格盧爾面前依職業接取；對照各職業實際插入點。濕地薩多爾大橋先核對橋下信件 637 到阿拉希炸藥 633 的可爬出口。 |
 
+## 1.13.10 血色修道院分翼回訪
+
+聯盟主線 36–37 級開放第一次血色修道院，43 級才在淒涼之地交 261。第 38 站向安東修士交 261 後可同地接 1052。已自行完成前置的角色可以在首趟去副本前到南海鎮交接；跟主線的角色在第 44 站飛抵南海鎮時交 1052，再接 1053。任務最低 34 級，圖書館的洛克希、軍械庫的赫洛德、大教堂的莫格萊尼與懷特邁恩可分趟擊敗。比對永恆版目標及分翼攻略。 [永恆版目標](https://nether.wowhead.com/forever/tooltip/quest/1053?locale=0) · [Bethink 首趟](https://github.com/Harl3yVT/forever-leveling-guide/blob/175f7e670b6522209005c4b72edad540a8bdbb81/Guidelime_Bethink/guides/A-35-37_Desolace.lua) · [Bethink 後兩翼](https://github.com/Harl3yVT/forever-leveling-guide/blob/175f7e670b6522209005c4b72edad540a8bdbb81/Guidelime_Bethink/guides/A-39-42_Stranglethorn_Vale.lua)
+
+超過副本建議等級或已交過一般任務後，日誌中尚需進本或出本回報的明列任務可繼續導航。47 級角色的專項測試包含未接、0–3 名首領、4 名首領與停用此副本。四名全數完成才顯示回南海鎮交付。第 44 與 53 站經南海鎮時也能順交。這次補回 1053，使聯盟副本區域索引內缺接取步驟的 ID 再減一。
+
 ## 重現方式
 
 在專案根目錄用 Python 3 和 Lua 5.1 執行以下命令。打包工作流程會先跑相同的角色與專項檢查。
