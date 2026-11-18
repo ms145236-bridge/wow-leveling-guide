@@ -351,6 +351,43 @@ E.Build()
 assert(db.mark[fall.key] == nil, "un-tick survives relog")
 race, raceID, db.start, level = "Dwarf", 3, "Dwarf/Gnome", 10
 
+-- 舊版釘在還沒走到的第 1 點、站到 79.4,49.9：有世界座標換算（50 碼）和只用地圖 %（3%，會一次記到第 3 點）都要放開
+for _, world in ipairs({ true, false }) do
+  if world then
+    -- 丹莫洛約 4900 碼寬：1% ≈ 49 碼
+    CreateVector2D = function(x, y) return { x = x, y = y } end
+    C_Map = { GetWorldPosFromMapPos = function(_, v)
+      return 0, { GetXY = function() return v.x * 4900, v.y * 3266 end }
+    end }
+  end
+  reset()
+  st, climb = climbSetup()
+  climb.s.r = nil
+  db.pin["01-9"] = { key = "01-9#goto:沿路跑到這個點。@79,50", wasDone = false, auto = "01-9#goto:沿路跑到這個點。@79,50" }
+  E.Build()
+  st = E.byId["01-9"]
+  for _, step in ipairs(st.list) do if step.s.skey == "goto:沿路跑到這個點。@83,50" then climb = step end end
+  position = {1426, 70, 50}
+  assert(cur(st) == climb and E.ViaTarget(climb)[2] == pts[1][2])
+  position = { pts[1][1], pts[1][2], pts[1][3] }
+  cur(st)
+  assert(E.ViaWalked(climb) >= 1)
+  assert(db.pin["01-9"] == nil, "pin on point 1 released (" .. (world and "world yards" or "map percent") .. ")")
+  assert(E.ViaTarget(climb)[2] ~= pts[1][2], "arrow moves on after release")
+  C_Map, CreateVector2D = nil, nil
+end
+-- 翻山走完後重新釘它（重看）：保留，箭頭照舊可指
+reset()
+st, climb = climbSetup()
+db.latch[climb.key] = true
+position = {1426, 70, 50}
+local state = E.Locate(st)
+assert(state.steps[state.cur] ~= climb)
+for i, step in ipairs(state.steps) do if step == climb then E.PinIndex(state, i) end end
+assert(db.pin["01-9"] and db.pin["01-9"].via == false and db.pin["01-9"].wasDone)
+assert(cur(st) == climb and db.pin["01-9"], "re-pin after completion is kept")
+climb.s.r = 0.5
+
 -- 換區載入中：只有地圖、還沒座標，不報錯也不亂判
 reset()
 st, climb = climbSetup()
