@@ -91,7 +91,7 @@ const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 
 const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
 // 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
 const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|持有材料[：:]|已接任一[：:]|到[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|持有材料[：:]|已接任一[：:]|到[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -117,6 +117,9 @@ const dungeonTags = (tags) => {
 };
 
 const db = openQuestieDB();
+// 路線明確安排採買的任務物品，不把商人列入擊殺目標。
+const boughtForQuest = new Map();
+const routeMobs = (id) => db.questMobs(id, boughtForQuest.get(id));
 // 沿用永恆版 TOC 的順序，後載入的永恆實測值覆蓋初始表。
 const XP = new Map();
 const xpDir = join(ADDONS, "QuestieDB/support/Forever/QuestXP");
@@ -199,16 +202,16 @@ for (const [, id, numericArea, namedArea] of readFileSync(join(ZONES, "instanceI
 // 數量從目標文字依序抓「N個／只／根…」；抓到的比目標少時，其餘當 1（多半是指名的首領），完全沒數字用 1。
 // 每個目標的怪物名稱（和 mob 同順序；選取目標／標記用）
 const targetsOf = (q) => {
-  const per = db.questMobs(q.id).map((m) => (m && m.names ? [...new Set(m.names.filter(Boolean).map(cleanName))] : []));
-  for (const m of db.questMobs(q.id)) if (m && m.names && m.zhMissing) nameIssues.push(`- 任務 ${q.id}：目標怪 QuestieDB 沒有繁中名（${m.names.join("、")}）`);
+  const per = routeMobs(q.id).map((m) => (m && m.names ? [...new Set(m.names.filter(Boolean).map(cleanName))] : []));
+  for (const m of routeMobs(q.id)) if (m && m.names && m.zhMissing) nameIssues.push(`- 任務 ${q.id}：目標怪 QuestieDB 沒有繁中名（${m.names.join("、")}）`);
   return per.some((n) => n.length) ? per : undefined;
 };
 const mobsOf = (q) => {
-  const mobs = db.questMobs(q.id);
+  const mobs = routeMobs(q.id);
   if (!mobs.length) return undefined;
   // 全形數字先轉半形；中文「N 個…」之外也認英文目標的「Kill／Defeat… N」（永恆新任務常只有英文）
   const objText = q.obj.join(" ").replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0));
-  const nums = [...objText.matchAll(/(\d+)\s*[個只隻根張份塊件頭名條把顆片枚台臺]|\b(?:Kill|Slay|Defeat|Destroy|Collect|Gather|Obtain|Retrieve|Recover|Bring)\s+(\d+)\b/gi)].map((m) => +(m[1] ?? m[2]));
+  const nums = [...objText.matchAll(/(\d+)\s*(?:[大小]?塊|[個只隻根張份束件頭名條把顆片枚台臺])|\b(?:Kill|Slay|Defeat|Destroy|Collect|Gather|Obtain|Retrieve|Recover|Bring)\s+(\d+)\b/gi)].map((m) => +(m[1] ?? m[2]));
   // 怪物目標其實是跟 NPC 互動（聽提里奧說話、餵受訓者、救人、把動物趕回／送回…）：目標文字是對話／餵食，或任務說明只有互動、沒有打的字眼 → 不算打怪經驗
   const fight = /殺|擊敗|打敗|消滅|擊殺|幹掉|摧毀|征服|打死|制服|釋放|捕獲/.test(objText);
   const talkQ = /聽聽|聆聽|談話|交談|談談|談一談|談壹談|對話|包紮|餵|飽餐|救出|解救|送回|趕回|趕到|馴服/.test(objText) && !fight;
@@ -240,6 +243,11 @@ const parseWhen = (tags) => {
   const put = (key, v) => { (when[key] ||= []).includes(v) || when[key].push(v); };
   for (const tag of tags) {
     const m = tag.match(/^(僅|非)(.+)$/);
+    const origin = tag.match(/^(排除起點|種族或起點|排除種族與起點)：(.+)$/);
+    if (origin) {
+      const key = { 排除起點: "notOrigin", 種族或起點: "raceOrOrigin", 排除種族與起點: "neitherRaceNorOrigin" }[origin[1]];
+      for (const name of origin[2].split("／")) put(key, raceToken(name.trim()));
+    }
     const lv = tag.match(/^(\d+)\s*級起$/);
     if (lv) when.lvMin = +lv[1];
     if (tag === "黑海岸分流：留岸") when.coastal = true;
@@ -420,6 +428,10 @@ for (const file of files.filter((f) => !sideFile(f))) {
       const m = f[0].match(/^(.*?)\s*[×x]\s*(\d+)$/);
       Object.assign(step, { text: m ? m[1] : f[0], n: m ? +m[2] : 1, item: +f[1], fq: +f[2] || undefined, npc: f[3] || undefined, coord: parseCoord(f[4]) });
       if (!step.item) warn(step.where, "買：物品 ID 看不懂");
+      if (step.item && step.fq && !step.opt && !step.when) {
+        if (!boughtForQuest.has(step.fq)) boughtForQuest.set(step.fq, new Set());
+        boughtForQuest.get(step.fq).add(step.item);
+      }
     }
     else if (step.t === "fp") { step.node = f[0]; step.coord = parseCoord(f[1]); }
     else if (step.t === "hearth") step.bind = f[0];
@@ -706,14 +718,14 @@ for (const st of stations) {
     const q = db.quest(id);
     if (!quests.has(id)) {
       quests.set(id, q
-        ? { races: q.races && BigInt(q.races) !== HORDE ? q.races : undefined, xp: XP.get(id), mob: mobsOf(q), tgo: targetsOf(q), objs: (() => { const o = [...new Set(db.questMobs(q.id).filter((m) => m && m.kind === "object").flatMap((m) => m.objects))]; return o.length ? o : undefined; })(),
+        ? { races: q.races && BigInt(q.races) !== HORDE ? q.races : undefined, xp: XP.get(id), mob: mobsOf(q), tgo: targetsOf(q), objs: (() => { const o = [...new Set(routeMobs(q.id).filter((m) => m && m.kind === "object").flatMap((m) => m.objects))]; return o.length ? o : undefined; })(),
             items: [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))].length ? [...new Set([q.sourceItem, ...q.requiredSourceItems].filter((x) => x > 0))] : undefined,
             d: q.obj.filter(Boolean).join("\n").replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0)).replace(/\$(?![A-Za-z])/g, "").replace(/<name>[，,]\s*|[，,]\s*<name>/g, "") || undefined, // 全形數字轉半形；落單的「$」（任務文字控制符殘片）、稱呼玩家的 <name> 拿掉
             n: QUEST_NAME[id] || step.zh || q.zhTW || step.en || q.en, zt: q.zhTW && q.zhTW !== (QUEST_NAME[id] || step.zh || q.zhTW) ? q.zhTW : undefined, lvl: q.level, min: q.reqLevel, pg: q.preGroup, ps: q.preSingle, ex: q.exclusiveTo, next: q.next, pa: q.flags & 2 ? true : undefined, st: st.id }
         : { n: QUEST_NAME[id] || step.zh || step.en, st: st.id });
     }
     if (q && !quests.get(id).en) {
-      const mobs = db.questMobs(id);
+      const mobs = routeMobs(id);
       const tgoEn = mobs.map((m) => (m && m.namesEn ? [...new Set(m.namesEn.filter(Boolean).map(cleanName))] : []));
       const objsEn = [...new Set(mobs.filter((m) => m && m.kind === "object").flatMap((m) => m.objectsEn || []))];
       // 沒有英文目標文字：用目標怪／物件湊一句
@@ -905,7 +917,7 @@ const optionalFights = new Set(stations.flatMap(st => st.steps.filter(s => s.opt
 for (const st of stations) for (const s of st.steps) {
   const q = quests.get(s.id);
   if (!q || !(s.hard || (s.t === "do" && optionalFights.has(s.id)))) continue;
-  const targets = db.questMobs(s.id).filter((m, i) => m && q.mob?.[i]?.[0] > 0);
+  const targets = routeMobs(s.id).filter((m, i) => m && q.mob?.[i]?.[0] > 0);
   if (targets.length) {
     q.hard = Math.max(...targets.map(m => m.hi));
     if (targets.some(m => m.elite)) q.soloElite = true;
@@ -927,7 +939,7 @@ for (const st of stations) for (const s of st.steps) {
 let talkOnly = 0;
 for (const st of stations) {
   st.steps = st.steps.filter((s) => {
-    if (s.t !== "do" || !s.id || s.desc || db.questMobs(s.id).length || db.quest(s.id)?.requiredSourceItems?.length) return true; // 寫了說明的不併（例如牽馬回農莊）
+    if (s.t !== "do" || !s.id || s.desc || routeMobs(s.id).length || db.quest(s.id)?.requiredSourceItems?.length) return true; // 寫了說明的不併（例如牽馬回農莊）
     // QuestieDB 沒記目標的新任務也可能要打怪、撿東西：說明看起來是要做事的就留著
     const h = s.hint || "";
     const talk = /^(把|將)[^，。；]*(交給|帶給|交還給|送給|送回|帶回|帶到|拿給)/.test(h) || /^(與|和|向|問)[^，。；]*(談一談|談話|交談|對話|報到|回報|報告)/.test(h) || /^(到|去)[^，。；]*(找|報到|向)/.test(h);

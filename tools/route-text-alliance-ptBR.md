@@ -395,7 +395,7 @@
 01-第一段-1到12級.md:902｜說明｜飛行地圖沒有鐵爐堡就往西穿過山口回丹莫洛，直接走到卡拉諾斯。｜Se Altaforja não estiver no seu mapa de voo, vá para oeste pela passagem de volta a Dun Morogh e siga direto a pé até Kharanos.
 01-第一段-1到12級.md:933｜說明｜爐石還在冷卻就從塞爾薩瑪飛鐵爐堡，再搭礦道地鐵到暴風城。｜Se a pedra de regresso ainda estiver em recarga, voe de Thelsamar a Altaforja e depois pegue o Metrô Correfundo até Ventobravo.
 01-第一段-1到12級.md:936｜說明｜飛行地圖沒有鐵爐堡就往西穿過山口回丹莫洛，沿大路走進鐵爐堡。｜Se Altaforja não estiver no seu mapa de voo, vá para oeste pela passagem de volta a Dun Morogh e siga a estrada até entrar em Altaforja.
-01-第一段-1到12級.md:872｜說明｜人類從暴風城搭礦道地鐵到鐵爐堡；夜精靈搭船到暴風城再轉地鐵。天裔精靈不走這站：第8站從達拉然走傳送門到暴風城，再搭船到黑海岸。｜Humanos: peguem o Metrô Correfundo de Ventobravo para Altaforja. Elfos noturnos: peguem o barco para Ventobravo e depois o metrô. Os Skyborne pulam esta parada: na parada 8, vão de Dalaran a Ventobravo pelo portal e depois de barco até a Costa Negra.
+01-第一段-1到12級.md:885｜說明｜從暴風城出發可搭礦道地鐵到鐵爐堡。從泰達希爾提早東渡的角色先在奧伯丁搭船到暴風城，再轉地鐵。｜Em Ventobravo, pegue o Metrô Correfundo para Altaforja. Se saiu cedo de Teldrassil, primeiro pegue o barco de Auberdine para Ventobravo e depois o metrô.
 02-12到30級.md:70｜說明｜爐石沒綁暴風城或還在冷卻，就在奧伯丁碼頭搭船到暴風城。｜Se a pedra de regresso não estiver vinculada a Ventobravo ou estiver em recarga, pegue o barco no cais de Auberdine até Ventobravo.
 02-12到30級.md:79｜說明｜出暴風城沿艾爾文森林大路往西，經閃金鎮過橋進西部荒野，再沿大道往南到哨兵嶺。｜Saia de Ventobravo e siga a estrada da Floresta de Elwynn para oeste, passe pela Vila d'Ouro e atravesse a ponte até Cerro Oeste; depois siga a estrada principal para o sul até o Morro da Sentinela.
 02-12到30級.md:146｜說明｜出鐵爐堡沿大路往東，穿過東邊山口的隧道進洛克莫丹，再沿路往東北到塞爾薩瑪。｜Saia de Altaforja e siga a estrada para leste, atravesse o túnel da passagem oriental até Loch Modan e depois siga a estrada para nordeste até Thelsamar.

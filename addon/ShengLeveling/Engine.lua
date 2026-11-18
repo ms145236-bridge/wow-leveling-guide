@@ -123,10 +123,12 @@ E.QUEST, E.SOFT = QUEST, SOFT
 -- 沒座標的交通要比對的步驟：後面已打勾的到達／交通路標，加上第一個還沒完成、適用、有座標的步驟（第二個回傳值，箭頭指它）
 function E.SoftTargets(steps, done, na, i)
   local out = {}
+  local from = steps[i].s
   for j = i + 1, #steps do
     local sj = steps[j].s
     if sj.x and not na[j] then
-      if not done[j] then out[#out + 1] = sj; return out, sj end
+      local destination = from.t == "fly" and sj.t == "fp" and from.to == (sj.nodeK or sj.node)
+      if destination or not done[j] then out[#out + 1] = sj; return out, sj end
       if sj.t == "goto" or sj.t == "travel" then out[#out + 1] = sj end
     end
   end
@@ -146,7 +148,7 @@ function E.SoftNear(_, targets, map, x, y)
 end
 
 -- ── 角色與條件 ──────────────────────────────────────────────────────────────
-local me = {}
+local me = { originRaces = {} }
 local raceMatch
 local function inList(list, v)
   for _, x in ipairs(list) do if x == v then return true end end
@@ -157,8 +159,17 @@ function raceMatch(list)
     if r == me.race or (r == "Skyborne" and me.sky) then return true end
   end
 end
+local function originMatch(list)
+  for _, race in ipairs(list) do if me.originRaces[race] then return true end end
+end
 function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用）
   if not when then return true end
+  if when.notOrigin and originMatch(when.notOrigin) then return false end
+  local routeRaces = when.raceOrOrigin or when.neitherRaceNorOrigin
+  if routeRaces then
+    local matches = raceMatch(routeRaces) or originMatch(routeRaces)
+    if (matches and true or false) ~= (when.raceOrOrigin ~= nil) then return false end
+  end
   if when.race and not raceMatch(when.race) then return false end
   if when.notRace and raceMatch(when.notRace) then return false end
   if when.coastal ~= nil and when.coastal ~= (MG.db.auberdineChoice == "coast") then return false end
@@ -214,6 +225,8 @@ function E.Build()
   me.class = select(2, UnitClass("player"))
   wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt); wipe(dunQ)
   local startKey = E.StartKey()
+  wipe(me.originRaces)
+  for race in (startKey or ""):gmatch("[^/]+") do me.originRaces[race] = true end
   for _, st in ipairs(R.stations) do
     if st.dungeon or (st.start and st.start == startKey) or (not st.start and E.Applies(st.when)) then
       local list, note = {}, nil
@@ -345,7 +358,9 @@ end
 local function killXP(q, lv)
   local info = R.quests[q]
   if not (info and info.mob) or turned(q) then return 0 end
-  local obj = C.IsOnQuest(q) and C.Objectives(q)
+  local inLog = C.IsOnQuest(q)
+  if inLog and C.IsReady(q) then return 0 end
+  local obj = inLog and C.Objectives(q)
   local total = 0
   for k, m in ipairs(info.mob) do
     local left = m[2]
@@ -366,7 +381,7 @@ function E.FillPlan(st)
   local info = { need = 0, projected = 0, questXP = 0, killXP = 0, rested = 0, added = {} }
   if MG.UI.Get("optional") then return info end
   local nxt = E.Next(st)
-  local target = nxt and nxt.lv[1] or (st.lv[2] + 1)
+  local target = math.min(60, nxt and nxt.lv[1] or (st.lv[2] + 1))
   local lv = UnitLevel("player") or 1
   if lv >= target then return info end
   local need = (UnitXPMax("player") or 0) - (UnitXP("player") or 0)
@@ -385,7 +400,10 @@ function E.FillPlan(st)
     local on = s.q and E.Applies(s.when) and not MG.db.skip[step.key] -- 手動略過的步驟不算（只略過「交」＝這站拿不到任務經驗）
     if on and s.t == "turnin" then hand[s.q] = true end
     if on and (s.t == "do" or s.t == "turnin") then work[s.q] = true end
-    if on and s.t == "accept" and not s.opt then must[s.q] = true end
+    if on and s.t == "accept" and not s.opt then
+      local min = s.pickLv or (R.quests[s.q] or {}).min or 0
+      if min < target then must[s.q] = true end -- 抵達目標等級後才可接的任務無法用來升到該級
+    end
     if s.q and s.tag and (s.tag:find("隊伍", 1, true) or s.tag:find("組隊", 1, true) or s.tag:find("精英", 1, true)) then group[s.q] = true end
   end
   -- 互斥的任務（二選一）只算一個：已經算進來（必做／在日誌）或已補回的任務，它的互斥對象不再算、不再補
@@ -397,9 +415,9 @@ function E.FillPlan(st)
   local function eligible(q)
     if available(q) then return true end
     local qi = R.quests[q] or {}
-    for _, p in ipairs(qi.pg or {}) do if not (turned(p) or (hand[p] and seen[p]) or fill[p]) then return false end end
+    for _, p in ipairs(qi.pg or {}) do if not (turned(p) or (hand[p] and (seen[p] or fill[p]))) then return false end end
     if qi.ps and #qi.ps > 0 then
-      for _, p in ipairs(qi.ps) do if turned(p) or (hand[p] and seen[p]) or fill[p] then return true end end
+      for _, p in ipairs(qi.ps) do if turned(p) or (hand[p] and (seen[p] or fill[p])) then return true end end
       return false
     end
     return true
@@ -416,7 +434,7 @@ function E.FillPlan(st)
       -- 條件入口（cond：要先有掉落物、材料、聲望或遇到人才接得到）還沒接的不補：插件看不到背包和聲望，補了會叫人去接不存在的任務
       -- 高階怪保護（hard＝要打的怪的等級上限）：比你高 3 級以上的不補
       local quest = R.quests[q] or {}
-      if s.opt and s.t == "accept" and not C.IsOnQuest(q) and not quest.cond and (quest.hard or 0) - lv < 3 and not (solo and (group[q] or quest.soloElite)) and lv >= (quest.min or 0) and not cands[q] then
+      if s.opt and s.t == "accept" and not C.IsOnQuest(q) and not quest.cond and (quest.hard or 0) - lv < 3 and not (solo and (group[q] or quest.soloElite)) and lv >= (s.pickLv or quest.min or 0) and not cands[q] then
         cands[q] = { q = q, xp = (hand[q] and questXP(q, lv) or 0) + (work[q] and killXP(q, lv) or 0), pts = {} }
       end
     end
@@ -1039,6 +1057,9 @@ function E.Current()
 end
 
 function E.Next(st)
+  if st and st.id == "01-6" and st.start == "NightElf" and MG.db.auberdineChoice == "coast" then
+    return E.byId["02-10"]
+  end
   if st and st.dungeon then return nil end
   return st and E.stations[st.index + 1]
 end

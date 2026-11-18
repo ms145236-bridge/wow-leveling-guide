@@ -395,7 +395,7 @@
 01-第一段-1到12級.md:902｜說明｜飛行地圖沒有鐵爐堡就往西穿過山口回丹莫洛，直接走到卡拉諾斯。｜If Ironforge isn't on your flight map, head west through the pass back to Dun Morogh and walk straight to Kharanos.
 01-第一段-1到12級.md:933｜說明｜爐石還在冷卻就從塞爾薩瑪飛鐵爐堡，再搭礦道地鐵到暴風城。｜If your hearthstone is still on cooldown, fly from Thelsamar to Ironforge, then take the Deeprun Tram to Stormwind.
 01-第一段-1到12級.md:936｜說明｜飛行地圖沒有鐵爐堡就往西穿過山口回丹莫洛，沿大路走進鐵爐堡。｜If Ironforge isn't on your flight map, head west through the pass back to Dun Morogh and follow the road into Ironforge.
-01-第一段-1到12級.md:872｜說明｜人類從暴風城搭礦道地鐵到鐵爐堡；夜精靈搭船到暴風城再轉地鐵。天裔精靈不走這站：第8站從達拉然走傳送門到暴風城，再搭船到黑海岸。｜Humans: take the Deeprun Tram from Stormwind to Ironforge. Night Elves: take the boat to Stormwind, then the tram. Skyborne skip this stop: at stop 8, take the portal from Dalaran to Stormwind, then a boat to Darkshore.
+01-第一段-1到12級.md:885｜說明｜從暴風城出發可搭礦道地鐵到鐵爐堡。從泰達希爾提早東渡的角色先在奧伯丁搭船到暴風城，再轉地鐵。｜From Stormwind, take the Deeprun Tram to Ironforge. If you left Teldrassil early, sail from Auberdine to Stormwind first, then take the tram.
 02-12到30級.md:70｜說明｜爐石沒綁暴風城或還在冷卻，就在奧伯丁碼頭搭船到暴風城。｜If your hearthstone isn't bound to Stormwind or is on cooldown, take the boat from the Auberdine dock to Stormwind.
 02-12到30級.md:79｜說明｜出暴風城沿艾爾文森林大路往西，經閃金鎮過橋進西部荒野，再沿大道往南到哨兵嶺。｜Leave Stormwind and follow the Elwynn Forest road west, pass through Goldshire and cross the bridge into Westfall, then follow the main road south to Sentinel Hill.
 02-12到30級.md:146｜說明｜出鐵爐堡沿大路往東，穿過東邊山口的隧道進洛克莫丹，再沿路往東北到塞爾薩瑪。｜Leave Ironforge and follow the road east, pass through the tunnel in the eastern pass into Loch Modan, then follow the road northeast to Thelsamar.

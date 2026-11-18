@@ -197,7 +197,7 @@ export function openQuestieDB() {
   };
   // QuestieDB 掉落表裡的測試／停用怪：英文名「TEST …」開頭或「… UNUSED」結尾，而且沒有生成點（TEST WOLF (ALPHA FIRST)、Shambling Skeleton UNUSED…）。不列進目標，也不算進怪物等級
   const placeholder = (id) => /^TEST |(^| )UNUSED$/.test(field("Npc", id, 1) || "") && !spawnsOf("Npc", id).length;
-  const questMobs = (id) => {
+  const questMobs = (id, purchasedItems) => {
     const obj = field("Quest", id, 10);
     const out = [];
     for (const c of list(get(obj, 1))) {
@@ -210,6 +210,10 @@ export function openQuestieDB() {
       out.push(name ? { kind: "object", objects: [name], objectsEn: [field("Object", get(o, 1), 1)].filter(Boolean) } : null);
     }
     for (const it of list(get(obj, 3))) {
+      if (purchasedItems?.has(get(it, 1))) {
+        out.push(null); // 保留日誌的目標序號，只略過這一項的擊殺來源
+        continue;
+      }
       const drops = list(field("Item", get(it, 1), 2)).filter((n) => !placeholder(n)).map(mobLevel).filter(Boolean);
       if (drops.length) {
         out.push({ lvl: drops.reduce((a, d) => a + d.lvl, 0) / drops.length, hi: Math.min(...drops.map((d) => d.hi)), elite: drops.every((d) => d.elite), kind: "drop", names: drops.slice(0, 8).map((d) => d.name), namesEn: drops.slice(0, 8).map((d) => d.en), zhMissing: drops.slice(0, 8).some((d) => d.zhMissing) });
