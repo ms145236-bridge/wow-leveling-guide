@@ -533,7 +533,8 @@ function E.Detour(state)
   for i = first, last do
     local step = state.steps[i]
     local s, q = step.s, step.s.q
-    if i ~= state.cur and q and not state.done[i] and not state.na[i] and not state.wait[i] and not state.inGroup[i] and now - (detourNo[step.key] or -999) >= 120 then
+    if i ~= state.cur and q and not state.done[i] and not state.na[i] and not state.wait[i] and not state.inGroup[i]
+        and E.Applies(s.when) and now - (detourNo[step.key] or -999) >= 120 then
       local onQ = C.IsOnQuest(q)
       local ok = (s.t == "accept" and not onQ and lv >= ((R.quests[q] or {}).min or 0))
         or (s.t == "do" and onQ and not ready(q)) or (s.t == "turnin" and onQ and ready(q))
@@ -545,7 +546,8 @@ function E.Detour(state)
   for _, dg in ipairs(E.dungeons) do
     for _, step in ipairs(dg.list) do
       local s, q = step.s, step.s.q
-      if s.ph == "post" and s.t == "turnin" and q and C.IsOnQuest(q) and ready(q) and now - (detourNo[step.key] or -999) >= 120 then
+      if s.ph == "post" and s.t == "turnin" and q and C.IsOnQuest(q) and ready(q) and E.Applies(s.when)
+          and now - (detourNo[step.key] or -999) >= 120 then
         local d = dist(s)
         -- 不在主線上，不比目前步驟近不近：人在附近就提示（交的人常就在下一步旁邊）
         if d and d <= lim and (not bd or d < bd) then best, bd = step, d end
