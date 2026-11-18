@@ -722,13 +722,13 @@ local function buildItems()
       if not folded(d) or UI.dPastOpen then items[#items + 1] = { kind = "dg", d = d } end
       if UI.dOpen == d.id then
         local inside = false
-        if state and state.instance then
+        if (state and state.instance) or (IsInInstance and IsInInstance()) then
           local _, all = E.DungeonByInstance(GetInstanceInfo and select(8, GetInstanceInfo()))
           for _, x in ipairs(all or {}) do if x == d then inside = true end end
         end
         local nx = E.DungeonNext(d, inside)
         if nx then items[#items + 1] = { kind = "dnext", d = d, nx = nx } end
-        local phase = UI.dPhase[d.id] or (nx and (nx.kind == "ent" and "in" or (nx.step and nx.step.s.ph))) or "pre"
+        local phase = UI.dPhase[d.id] or (nx and ((nx.kind == "ent" or nx.kind == "in") and "in" or (nx.step and nx.step.s.ph))) or "pre"
         items[#items + 1] = { kind = "dphase", d = d, phase = phase }
         if phase == "pre" then
           for _, t in ipairs(E.DungeonTargets(d)) do

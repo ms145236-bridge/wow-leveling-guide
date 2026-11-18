@@ -1857,6 +1857,14 @@ function E.DungeonNext(d, inside)
     if step then return { kind = "in", step = step } end
   end
   local pre = first("pre")
+  if inside and pre and pre.s.t == "do" and pre.s.outsideObjective then
+    -- The journal can have work inside even when the guide has no explicit in-phase step.
+    local state = E.InstanceState(d)
+    for _, step in ipairs(state and state.steps or {}) do
+      if not MG.db.skip[step.key] and not E.QuickDone(step) then return { kind = "in", step = step } end
+    end
+    pre = nil
+  end
   if pre then return { kind = "pre", step = pre } end
   if lv < d.lv[1] then return { kind = "wait", title = L["%d 級再去"]:format(d.lv[1]) } end
   if first("in") then return { kind = "ent" } end
