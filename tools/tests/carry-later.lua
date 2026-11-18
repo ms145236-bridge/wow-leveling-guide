@@ -167,4 +167,25 @@ objs[416] = { { text = "坑道鼠耳朵", have = 12, need = 12, done = true } }
 assert(count(E.JumpPlan(E.byId["02-10"]), 416) == 0, "416 at 12/12: 02-12 turns it in")
 assert(not warns(416), "416 at 12/12: no warning")
 objs[416] = nil
-print("carry-later: only-later-accept, level-up, item-lost, same-station accept and 416 0/12 vs 12/12 cases passed")
+-- 必改（第三輪）：同一個角色照建議連跳兩次（12 級 01-9 → 02-10，15 級 02-10 → 02-11），第一次帶來的 416 不能在第二次掉
+for _, c in ipairs({ { have = 0, want = true }, { have = 11, want = true }, { have = 12, want = false }, { turned = true, want = false } }) do
+  wipe(active); wipe(ready); wipe(turned); db.carry = {}; db.drop = {}
+  if c.turned then turned[416] = true else active[416] = true end
+  objs[416] = c.have and { { text = "坑道鼠耳朵", have = c.have, need = 12, done = c.have == 12 } } or nil
+  local name = c.turned and "turned in" or (c.have .. "/12")
+  me.lv = 12; db.station = "01-9"
+  local t1 = E.Suggest(E.Current())
+  assert(t1 and t1.id == "02-10", "level 12 suggests 02-10, got " .. tostring(t1 and t1.id))
+  E.Jump(t1)
+  assert(count(db.carry["02-10"] or {}, 416) == (c.want and 1 or 0), "first jump, 416 " .. name)
+  me.lv = 15
+  local t2 = E.Suggest(E.Current())
+  assert(t2 and t2.id == "02-11", "level 15 suggests 02-11, got " .. tostring(t2 and t2.id))
+  E.Jump(t2)
+  assert(count(db.carry["02-11"] or {}, 416) == (c.want and 1 or 0), "second jump keeps carry, 416 " .. name)
+  local shown = false
+  for _, step in ipairs(E.Locate(E.byId["02-11"]).steps) do if step.carry and step.s.q == 416 and step.s.t == "do" then shown = true end end
+  assert(shown == c.want, "02-11 shows the 416 collect step: " .. name)
+end
+wipe(turned); objs[416] = nil; me.lv = 12; db.carry = {}; db.drop = {}
+print("carry-later: only-later-accept, level-up, item-lost, same-station accept, 416 0/12 vs 12/12 and two-jump cases passed")

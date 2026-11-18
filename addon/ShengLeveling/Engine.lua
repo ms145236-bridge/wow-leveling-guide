@@ -1150,14 +1150,18 @@ function E.JumpPlan(target)
   local carry, dropN = {}, 0
   if from and from.index and target.index > from.index then
     local seen = {} -- 整趟跳站一起去重（同一任務的接／交分在不同略過的站）
+    local function add(q)
+      if not seen[q] and not turned(q) and not laterHas(q, target.index) then
+        seen[q] = true
+        local info = R.quests[q] or {}
+        if info.chain or info.keep or (C.IsOnQuest(q) and not gray(q)) then carry[#carry + 1] = q else dropN = dropN + 1 end
+      end
+    end
+    -- 出發站之前帶來的補做也一起往下帶（連跳兩次時第一次帶來、還沒做完的不會掉）
+    for _, q in ipairs(MG.db.carry[from.id] or {}) do add(q) end
     for k = from.index, target.index - 1 do
       for _, step in ipairs(E.stations[k].list) do
-        local q = step.s.q
-        if q and not seen[q] and E.Applies(step.s.when) and not turned(q) and not laterHas(q, target.index) then
-          seen[q] = true
-          local info = R.quests[q] or {}
-          if info.chain or info.keep or (C.IsOnQuest(q) and not gray(q)) then carry[#carry + 1] = q else dropN = dropN + 1 end
-        end
+        if step.s.q and E.Applies(step.s.when) then add(step.s.q) end
       end
     end
   end
