@@ -678,6 +678,23 @@ function E.ViaTarget(step)
   return { s.map, s.x, s.y }
 end
 
+-- 路線後面（第 idx 站含以後的主線站）會接手這個任務剩下的事：已接且目標都完成（或對話型）→ 後面要有「交」；
+-- 已接還有目標沒完成 → 後面要有「做」（只有「交」的站不會帶人去收集）；還沒接 → 後面要有「接」。等級條件看那一站的等級上限（走到那站時的等級），種族／職業等其他條件照舊。這種不用帶過來補、離站也不用提醒
+local function laterHas(q, idx)
+  if not idx then return false end
+  local need = not C.IsOnQuest(q) and "accept" or ready(q) and "turnin" or "do"
+  local lv = UnitLevel("player") or 0
+  for _, o in ipairs(questSt[q] or {}) do
+    if not o.dungeon and o.index and o.index >= idx then
+      for _, step in ipairs(o.list) do
+        local s = step.s
+        if s.q == q and s.t == need and E.Applies(s.when, true)
+          and (not s.when or not s.when.lvMin or s.when.lvMin <= math.max(lv, o.lv[2])) then return true end
+      end
+    end
+  end
+  return false
+end
 -- 本站要顯示的步驟（跳站時帶來的「順路補」排在最前面）
 local dungeonPreSteps
 local CITY = { [1453] = true, [1454] = true, [1455] = true, [1456] = true, [1457] = true, [1458] = true } -- 暴風城、奧格瑪、鐵爐堡、雷霆崖、達納蘇斯、幽暗城
@@ -689,9 +706,14 @@ local function stepsOf(st)
   carry = carry or {}
   local here = {}
   for _, step in ipairs(st.list) do if step.s.q then here[step.s.q] = true end end
+  -- 交掉的才從存檔刪；本站或後面站會接手的只在顯示時略過（之後條件變了，例如交任務要的物品丟了，還能再顯示）。重複的只顯示一次
+  -- 本站有同任務但做不了剩下的事（例如只有重複的「接」）照樣展開；副本站沒有站序，照舊看本站有沒有這個任務
   for k = #carry, 1, -1 do if turned(carry[k]) then table.remove(carry, k) end end
+  local shown = {}
   for _, q in ipairs(carry) do
-    for _, other in ipairs(not here[q] and questSt[q] or {}) do
+    local hide = shown[q] or laterHas(q, st.index) or (not st.index and here[q])
+    shown[q] = true
+    for _, other in ipairs(not hide and questSt[q] or {}) do
       if other ~= st and not other.dungeon then
         for _, step in ipairs(other.list) do
           if step.s.q == q then out[#out + 1] = { s = step.s, key = step.key, note = step.note, st = other, carry = true } end
@@ -1146,15 +1168,19 @@ function E.JumpPlan(target)
   local from = E.Current()
   local carry, dropN = {}, 0
   if from and from.index and target.index > from.index then
+    local seen = {} -- 整趟跳站一起去重（同一任務的接／交分在不同略過的站）
+    local function add(q)
+      if not seen[q] and not turned(q) and not laterHas(q, target.index) then
+        seen[q] = true
+        local info = R.quests[q] or {}
+        if info.chain or info.keep or (C.IsOnQuest(q) and not gray(q)) then carry[#carry + 1] = q else dropN = dropN + 1 end
+      end
+    end
+    -- 出發站之前帶來的補做也一起往下帶（連跳兩次時第一次帶來、還沒做完的不會掉）
+    for _, q in ipairs(MG.db.carry[from.id] or {}) do add(q) end
     for k = from.index, target.index - 1 do
-      local seen = {}
       for _, step in ipairs(E.stations[k].list) do
-        local q = step.s.q
-        if q and not seen[q] and E.Applies(step.s.when) and not turned(q) then
-          seen[q] = true
-          local info = R.quests[q] or {}
-          if info.chain or info.keep or (C.IsOnQuest(q) and not gray(q)) then carry[#carry + 1] = q else dropN = dropN + 1 end
-        end
+        if step.s.q and E.Applies(step.s.when) then add(step.s.q) end
       end
     end
   end
@@ -1233,7 +1259,7 @@ function E.Leaving(state)
   for i, step in ipairs(state.steps) do
     local q = step.s.q
     local skipped = MG.db.skip[step.key]
-    if q and not seen[q] and not step.carry and not turned(q) and (skipped or not (state.done[i] or state.na[i] or state.wait[i])) then
+    if q and not seen[q] and not step.carry and not turned(q) and (skipped or not (state.done[i] or state.na[i] or state.wait[i])) and not laterHas(q, state.st.index and state.st.index + 1) then
       seen[q] = true
       local imp = E.Impact(q, state.st)
       if #imp > 0 then out[#out + 1] = { i = i, q = q, imp = imp } end
