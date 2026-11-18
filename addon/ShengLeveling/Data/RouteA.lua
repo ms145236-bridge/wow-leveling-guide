@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "9f3e1aaa",
+  built = "76e7c622",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -3456,7 +3456,7 @@ MG.Route = {
       steps = {
         {t="accept", q=2864, ph="pre", pickLv=40, recLv=45, npc="克拉茲克", tgt="克拉茲克", map=1434, x=26.95, y=77.21},
         {t="accept", q=3520, ph="pre", tag="副本前置鏈", npc="葉基亞", tgt="葉基亞", map=1446, x=67, y=22.4},
-        {t="do", q=3520, ph="pre", tag="副本前置鏈", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。", map=1444, x=47.59, y=48.26, more={{1444, 57.58, 51.05}, {1444, 46.33, 39.87}}},
+        {outsideObjective=true, t="do", q=3520, ph="pre", desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41-43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", tag="副本前置鏈", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。"},
         {t="turnin", q=3520, ph="pre", tag="副本前置鏈", npc="葉基亞", tgt="葉基亞", map=1446, x=67, y=22.4},
         {t="accept", q=3527, ph="pre", pickLv=40, recLv=47, opt=true, tag="可跳過", npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},
         {t="accept", q=2865, ph="pre", pickLv=40, recLv=45, opt=true, tag="可跳過", npc="特蘭雷克", tgt="特蘭雷克", map=1446, x=51.57, y=26.76},
@@ -3493,9 +3493,10 @@ MG.Route = {
         {t="turnin", q=2869, npc="拉托尼庫斯·月矛", tgt="拉托尼庫斯·月矛", map=1444, x=30.38, y=46.17},
         {t="accept", q=2870, opt=true, tag="能打高階怪再做 可跳過", npc="拉托尼庫斯·月矛", tgt="拉托尼庫斯·月矛", map=1444, x=30.38, y=46.17},
         {t="do", q=2870, opt=true, tag="能打高階怪再做 可跳過", hint="消滅沙爾紮魯，然後把神秘遺物交給羽月要塞的拉托尼庫斯·月矛。", map=1444, x=28.49, y=70.46},
+        {t="note", text="恐怖之島海岸：對屍體用樹枝，再與靈魂交談。"},
+        {t="do", q=3520, desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41-43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。"},
         {t="turnin", q=4125, npc="物件 擱淺的小船", map=1444, x=45.44, y=64.96},
         {t="accept", q=4127, npc="物件 擱淺的小船", map=1444, x=45.44, y=64.96},
-        {t="do", q=3520, desc="11/16 熱修把山谷尖嘯者搬到恐怖之島海岸。先打這一帶遊蕩的山谷尖嘯者（44-46 級）；收不到靈魂再去恐怖之島海岸。", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。", map=1444, x=44.7, y=37.6, more={{1444, 47.59, 48.26}, {1444, 57.58, 51.05}}},
         {t="hearth", bind="羽月要塞", hm=1444},
         {t="turnin", q=4127, npc="基恩諾·燃爐", tgt="基恩諾·燃爐", map=1444, x=31.86, y=45.13},
         {t="accept", q=4129, npc="基恩諾·燃爐", tgt="基恩諾·燃爐", map=1444, x=31.86, y=45.13},
@@ -3979,7 +3980,7 @@ MG.Route = {
         {t="accept", q=3446, ph="pre", pickLv=46, recLv=51, share=2, preText="石環", npc="瑪爾馮·瑞文斯克", tgt="瑪爾馮·瑞文斯克", map=1446, x=52.71, y=45.92},
         {t="accept", q=3447, ph="pre", pickLv=46, recLv=51, share=1, preText="石環", npc="瑪爾馮·瑞文斯克", tgt="瑪爾馮·瑞文斯克", map=1446, x=52.71, y=45.92},
         {t="accept", q=3520, ph="pre", tag="副本前置鏈", npc="葉基亞", tgt="葉基亞", map=1446, x=67, y=22.4},
-        {t="do", q=3520, ph="pre", tag="副本前置鏈", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。", map=1444, x=47.59, y=48.26, more={{1444, 57.58, 51.05}, {1444, 46.33, 39.87}}},
+        {outsideObjective=true, t="do", q=3520, ph="pre", desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41-43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", tag="副本前置鏈", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。"},
         {t="turnin", q=3520, ph="pre", tag="副本前置鏈", npc="葉基亞", tgt="葉基亞", map=1446, x=67, y=22.4},
         {t="accept", q=3527, ph="pre", tag="副本前置鏈", npc="葉基亞", tgt="葉基亞", map=1446, x=67, y=22.4},
         {t="do", q=3527, ph="pre", tag="副本前置鏈", hint="將第一塊和第二塊摩沙魯石板交給塔納利斯的葉基亞。"},

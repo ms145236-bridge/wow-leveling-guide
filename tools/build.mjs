@@ -91,7 +91,7 @@ const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 
 const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
 // 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
 const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|目標完成才交[：:]|到[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|限用路線座標|共用野外前置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|目標完成才交[：:]|到[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -413,7 +413,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
     const keep = /★/.test(body);
     const f = body.replace(/★/g, "").split("｜").map((s) => s.trim());
     // no、raw：職業任務段落的插入點用（#K、「動詞｜文字」）
-    const step = { verb, t: VERB[verb], exitPriority: tags.includes("出本優先回報") || undefined, instancePickup: tags.includes("副本內接取") || undefined, outsideObjective: tags.includes("本外完成") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
+    const step = { verb, t: VERB[verb], authoredPoints: tags.includes("限用路線座標"), sharedOutdoorPrereq: tags.includes("共用野外前置"), exitPriority: tags.includes("出本優先回報") || undefined, instancePickup: tags.includes("副本內接取") || undefined, outsideObjective: tags.includes("本外完成") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined, hold: (VERB[verb] !== "accept" && tags.includes("材料齊才做")) || undefined, cond: (VERB[verb] === "accept" && tags.includes("可跳過") && (f.slice(1, 3).some((x) => /^物品\s/.test(x)) || tags.some((t) => COND_TAG.test(t)))) || undefined, keepOpt: tags.some((t) => KEEP_TAG.test(t)) || undefined, hard: (tags.includes("可跳過") && tags.includes("能打高階怪再做")) || undefined, anyRace: tags.includes("部落可接") || undefined,
       desc: [...tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")),
         ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
@@ -491,6 +491,14 @@ const classWhen = (mask) => {
   return cls.length && cls.length < Object.keys(CLASS_BIT).length ? { class: cls } : undefined;
 };
 
+// 野外主線可提供同一任務在各副本前置清單的說明與座標規則。
+const outdoorPrereqs = new Map();
+for (const station of stations) {
+  for (const step of station.steps) {
+    if (step.t === "do" && step.sharedOutdoorPrereq) outdoorPrereqs.set(step.id, step);
+  }
+}
+
 // 副本站：接 → 前往入口 → 副本內 → 出本後交，插在指定站的後面
 for (const d of dungeons) {
   const at = stations.findIndex((x) => x.id === d.after);
@@ -552,7 +560,12 @@ for (const d of dungeons) {
       const when = classWhen(pq.classes);
       const base = { id: p, zh: questName(pq), en: pq.en, ph: "pre", tag: "副本前置鏈", chainOf: qid, where: d.where, when };
       out.push({ ...base, t: "accept", verb: "接" });
-      if (db.questMobs(p).length) out.push({ ...base, t: "do", verb: "做", hint: pq.obj.filter(Boolean).join(" ") });
+      if (db.questMobs(p).length) {
+        const work = { ...base, t: "do", verb: "做", hint: pq.obj.filter(Boolean).join(" ") };
+        const outdoor = outdoorPrereqs.get(p);
+        if (outdoor) Object.assign(work, { desc: outdoor.desc, coord: outdoor.coord, authoredPoints: outdoor.authoredPoints, outsideObjective: true });
+        out.push(work);
+      }
       out.push({ ...base, t: "turnin", verb: "交" });
       listed.add(p);
       added.push(p);
@@ -652,7 +665,7 @@ for (const st of stations) {
     }
     for (const p of step.more || []) p.map ||= st.map;
     // 「做」的多個點：路線寫的點＋這一步要找的目標實體點，按「目標＋地圖」各自 8 格內併成一群，地圖上一群一個點
-    if (step.t === "do" && (step.more?.length || OBJ.has(step.id))) {
+    if (step.t === "do" && !step.authoredPoints && (step.more?.length || OBJ.has(step.id))) {
       const own = [step.coord, ...(step.more || [])].filter(Boolean).map((p) => ({ map: p.map || st.map, x: p.x, y: p.y }));
       // 只加這一步要找的實體：說明寫到名字的、離路線點 8 格內的；都沒有才用路線點同地圖的（交物品、用物品的步驟不用）。
       // 路線沒寫點：寫到名字的實體，沒寫到就全部（跨地圖的點留著，執行時按玩家所在地圖挑）
@@ -1156,7 +1169,7 @@ const stepWhen = (w, sw) => {
 };
 const stepOut = (s, st) => ({
   exitPriority: s.ph === "post" && ["accept", "do", "turnin"].includes(s.t) && s.exitPriority || undefined,
-  outsideObjective: s.ph === "in" && s.t === "accept" && s.outsideObjective || undefined,
+  outsideObjective: s.ph && s.outsideObjective || undefined,
   star: s.star, t: s.t, any: s.any, instancePickup: s.ph === "in" && s.t === "accept" && s.instancePickup || undefined, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
   // 說明段用「；」接起來：句號結尾的段後面不再補「；」，完全相同的段只留一次（翻譯照原本的「；」切段，不受影響）
   desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,

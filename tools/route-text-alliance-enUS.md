@@ -1328,3 +1328,5 @@
 05-副本.md:445｜說明｜要向西瘟疫凱爾達隆的畫家接「愛與家庭」，可先飛冰風崗。已接畫作或只想在禮拜堂接任務，直接和隊友會合。｜Fly to Chillwind Camp if you need to see the painter on Caer Darrow in the Western Plaguelands for Of Love and Family. If you already have the quest or only need the chapel pickups, meet your group directly.
 05-副本.md:451｜說明｜從聖光之願禮拜堂隨隊前往斯坦索姆。入口標記是血色正門，去市場或血色堡壘走這裡；只打亡靈區，和能開側門的隊友在東邊的側門會合。｜From Light's Hope Chapel, join your group for Stratholme. The entrance pin marks the Scarlet main gate for the market and Scarlet Bastion. For an undead-only run, meet a party member who can open the eastern service entrance.
 05-副本.md:440｜說明｜東瘟疫之地 1423 26.52, 10.36（血色正門；亡靈側門在 43.50, 19.40）｜Eastern Plaguelands 26.52, 10.36 (Scarlet main gate; undead service entrance at 43.50, 19.40)
+03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41–43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Kill Vale Screechers (levels 41–43) on the coast of the Isle of Dread in Feralas. Use Yeh'kinya's Bramble on each corpse, then speak to the spirit that appears. Repeat until your quest log shows three spirits.
+03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Isle of Dread coast: use the bramble on a corpse, then speak to its spirit.

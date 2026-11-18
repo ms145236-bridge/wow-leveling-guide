@@ -57,6 +57,74 @@ for name, id in pairs({Human=1, Dwarf=3, Gnome=7, NightElf=4, Skyborne=33}) do
 end
 race, raceID, db.start, level = "Human", 1, nil, 43
 E.Build()
+-- The 16 November Forever hotfix moved Vale Screechers to the Isle of Dread.
+-- The island is verified, but no individual post-hotfix spawn is confirmed.
+do
+  local coast = E.byId["03-41"].list
+  local function find(steps, verb, quest)
+    for i, step in ipairs(steps) do
+      if step.s.t == verb and step.s.q == quest then return i, step end
+    end
+  end
+  assert(find(E.byId["03-40"].list, "accept", 3520))
+  assert(find(E.byId["04-43"].list, "turnin", 3520))
+  local islandBoss = find(coast, "do", 2870)
+  local spiritsIndex, spirits = find(coast, "do", 3520)
+  local wreck = find(coast, "turnin", 4125)
+  local pickup = find(coast, "accept", 4127)
+  assert(islandBoss + 1 == spiritsIndex and spiritsIndex + 1 == wreck and wreck + 1 == pickup)
+  local _, earlyGroup = find(E.byId["05-d10"].list, "do", 3520)
+  local temple = E.DungeonByInstance(109)
+  local _, templeSpirits = find(temple.list, "do", 3520)
+  local workCount = 0
+  for _, station in ipairs(ns.Route.stations) do
+    for _, step in ipairs(station.steps) do
+      if step.q == 3520 and step.t == "do" then
+        workCount = workCount + 1
+        assert(not step.x and not step.y and not step.more)
+        assert(step.desc == spirits.s.desc)
+        if station.dungeon then assert(step.ph == "pre" and step.outsideObjective) end
+      end
+    end
+  end
+  assert(workCount == 3 and spirits.s.desc:find("恐怖之島海岸", 1, true))
+  assert(spirits.s.desc:find("葉基亞的樹枝", 1, true))
+  local _, relic = find(coast, "do", 2870)
+  local _, courierReturn = find(coast, "turnin", 4125)
+  local _, wreckOffer = find(coast, "accept", 4127)
+  local oldTurned = ns.C.IsTurnedIn
+  active[3520] = true
+  for _, clearedCave in ipairs({false, true}) do
+    for _, clearedWreck in ipairs({false, true}) do
+      ns.C.IsTurnedIn = function(q)
+        return (q == 2870 and clearedCave) or ((q == 4125 or q == 4127) and clearedWreck)
+      end
+      assert(E.QuickDone(relic) == clearedCave)
+      assert(E.QuickDone(courierReturn) == clearedWreck and E.QuickDone(wreckOffer) == clearedWreck)
+      assert(not E.QuickDone(spirits))
+      completed[3520] = true
+      assert(E.QuickDone(spirits) and E.QuickDone(earlyGroup) and E.QuickDone(templeSpirits))
+      completed[3520] = nil
+    end
+  end
+  ns.C.IsTurnedIn = oldTurned
+  for _, case in ipairs({{209,3527}, {109,3446}}) do
+    local dungeon, all = E.DungeonByInstance(case[1])
+    for _, journal in ipairs({{}, {3527}, {3446}, {3527,3446}}) do
+      for _, quest in ipairs(journal) do active[quest] = true end
+      local found = false
+      local state = E.InstanceState(dungeon, all)
+      for _, w in ipairs(state and state.steps or {}) do
+        assert(w.s.q ~= 3520, "outdoor spirits cannot be collected inside either dungeon")
+        if w.s.q == case[2] then found = true end
+      end
+      assert(found == (active[case[2]] == true))
+      for _, quest in ipairs(journal) do active[quest] = nil end
+    end
+  end
+  active[3520] = nil
+end
+
 local st = E.byId["03-38"]
 local function current()
   local state = E.Locate(st)
