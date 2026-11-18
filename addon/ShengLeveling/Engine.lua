@@ -117,6 +117,7 @@ E.byId = {}
 local QUEST = { accept = true, ["do"] = true, turnin = true }
 local SOFT = { ["goto"] = true, fp = true, fly = true, boat = true, travel = true, hearth = true }
 local questSt = {} -- 任務 → 有它步驟的站（主線站與副本，Build 時建）
+local anyQ = {} -- 任一組（s.any）裡的任務：沒接的不算站的進度（Build 時建）
 local dunQ = {} -- 副本站裡有步驟的任務（副本前置、副本任務；Build 時建）
 E.QUEST, E.SOFT = QUEST, SOFT
 
@@ -227,7 +228,7 @@ function E.Build()
   me.sky = (me.race and me.race:find("Sky") or me.raceL and me.raceL:find("天裔", 1, true)) and true or false
   if me.sky then me.bit = UnitFactionGroup("player") == "Alliance" and 33 or 34 end
   me.class = select(2, UnitClass("player"))
-  wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt); wipe(dunQ)
+  wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt); wipe(dunQ); wipe(anyQ)
   local startKey = E.StartKey()
   wipe(me.originRaces)
   for race in (startKey or ""):gmatch("[^/]+") do me.originRaces[race] = true end
@@ -246,7 +247,7 @@ function E.Build()
           note = s
         else
           -- 鍵用內容：路線重建後存檔裡的勾選／略過／釘選不會跑到別步；同站重複的加 ~2、~3
-          local base = QUEST[s.t] and (s.t:sub(1, 1) .. ":" .. s.q)
+          local base = QUEST[s.t] and (s.t:sub(1, 1) .. ":" .. (s.any and s.any[1] or s.q)) -- 任一組的接：s.q 執行時會換成玩家接的那個，鍵固定用第一個
             or (st.id .. "#" .. s.t .. ":" .. (s.key0 or tostring(s.node or s.bind or s.to or s.text or s.lv or "")) .. (s.x and string.format("@%.0f,%.0f", s.x, s.y) or ""))
           local key, k = base, 2
           while usedKey[key] do key = base .. "~" .. k; k = k + 1 end
@@ -257,7 +258,8 @@ function E.Build()
       end
       st.list = list
       for _, step in ipairs(list) do
-        local q = step.s.q
+        local q = step.s.any and step.s.any[1] or step.s.q
+        for _, id in ipairs(step.s.any or {}) do anyQ[id] = true end
         if q then
           local l = questSt[q] or {}
           questSt[q] = l
@@ -327,6 +329,21 @@ local function optOut(s)
   return s.opt and not MG.UI.Get("optional") and not (s.q and (C.IsOnQuest(s.q) or fill[s.q])) or false
 end
 E.OptOut = optOut
+
+-- 任一組的接（s.any，例如紮營入門指南任選專業）：s.q 換成玩家日誌裡的那個，其次已交的，都沒有就用第一個還能接的。
+-- 接取步因此照一般任務判斷完成；交的那幾步各自是一般的交，沒接的不適用（本站的 acc 不算任一組）
+local function pickAny(list)
+  for _, step in ipairs(list) do
+    local s = step.s
+    if s.any then
+      local pick
+      for _, q in ipairs(s.any) do if C.IsOnQuest(q) then pick = q; break end end
+      if not pick then for _, q in ipairs(s.any) do if turned(q) then pick = q; break end end end
+      if not pick then for _, q in ipairs(s.any) do if raceOK(q) and not excluded(q) then pick = q; break end end end
+      s.q = pick or s.any[1]
+    end
+  end
+end
 
 -- ── 經驗補足 ────────────────────────────────────────────────────────────────
 -- 經典版每級所需經驗（升到下一級）；本級用 UnitXPMax
@@ -533,7 +550,8 @@ function E.Detour(state)
   for i = first, last do
     local step = state.steps[i]
     local s, q = step.s, step.s.q
-    if i ~= state.cur and q and not state.done[i] and not state.na[i] and not state.wait[i] and not state.inGroup[i] and now - (detourNo[step.key] or -999) >= 120 then
+    if i ~= state.cur and q and not state.done[i] and not state.na[i] and not state.wait[i] and not state.inGroup[i]
+        and E.Applies(s.when) and now - (detourNo[step.key] or -999) >= 120 then
       local onQ = C.IsOnQuest(q)
       local ok = (s.t == "accept" and not onQ and lv >= ((R.quests[q] or {}).min or 0))
         or (s.t == "do" and onQ and not ready(q)) or (s.t == "turnin" and onQ and ready(q))
@@ -545,7 +563,8 @@ function E.Detour(state)
   for _, dg in ipairs(E.dungeons) do
     for _, step in ipairs(dg.list) do
       local s, q = step.s, step.s.q
-      if s.ph == "post" and s.t == "turnin" and q and C.IsOnQuest(q) and ready(q) and now - (detourNo[step.key] or -999) >= 120 then
+      if s.ph == "post" and s.t == "turnin" and q and C.IsOnQuest(q) and ready(q) and E.Applies(s.when)
+          and now - (detourNo[step.key] or -999) >= 120 then
         local d = dist(s)
         -- 不在主線上，不比目前步驟近不近：人在附近就提示（交的人常就在下一步旁邊）
         if d and d <= lim and (not bd or d < bd) then best, bd = step, d end
@@ -659,6 +678,23 @@ function E.ViaTarget(step)
   return { s.map, s.x, s.y }
 end
 
+-- 路線後面（第 idx 站含以後的主線站）會接手這個任務剩下的事：已接且目標都完成（或對話型）→ 後面要有「交」；
+-- 已接還有目標沒完成 → 後面要有「做」（只有「交」的站不會帶人去收集）；還沒接 → 後面要有「接」。等級條件看那一站的等級上限（走到那站時的等級），種族／職業等其他條件照舊。這種不用帶過來補、離站也不用提醒
+local function laterHas(q, idx)
+  if not idx then return false end
+  local need = not C.IsOnQuest(q) and "accept" or ready(q) and "turnin" or "do"
+  local lv = UnitLevel("player") or 0
+  for _, o in ipairs(questSt[q] or {}) do
+    if not o.dungeon and o.index and o.index >= idx then
+      for _, step in ipairs(o.list) do
+        local s = step.s
+        if s.q == q and s.t == need and E.Applies(s.when, true)
+          and (not s.when or not s.when.lvMin or s.when.lvMin <= math.max(lv, o.lv[2])) then return true end
+      end
+    end
+  end
+  return false
+end
 -- 本站要顯示的步驟（跳站時帶來的「順路補」排在最前面）
 local dungeonPreSteps
 local CITY = { [1453] = true, [1454] = true, [1455] = true, [1456] = true, [1457] = true, [1458] = true } -- 暴風城、奧格瑪、鐵爐堡、雷霆崖、達納蘇斯、幽暗城
@@ -670,9 +706,14 @@ local function stepsOf(st)
   carry = carry or {}
   local here = {}
   for _, step in ipairs(st.list) do if step.s.q then here[step.s.q] = true end end
+  -- 交掉的才從存檔刪；本站或後面站會接手的只在顯示時略過（之後條件變了，例如交任務要的物品丟了，還能再顯示）。重複的只顯示一次
+  -- 本站有同任務但做不了剩下的事（例如只有重複的「接」）照樣展開；副本站沒有站序，照舊看本站有沒有這個任務
   for k = #carry, 1, -1 do if turned(carry[k]) then table.remove(carry, k) end end
+  local shown = {}
   for _, q in ipairs(carry) do
-    for _, other in ipairs(not here[q] and questSt[q] or {}) do
+    local hide = shown[q] or laterHas(q, st.index) or (not st.index and here[q])
+    shown[q] = true
+    for _, other in ipairs(not hide and questSt[q] or {}) do
       if other ~= st and not other.dungeon then
         for _, step in ipairs(other.list) do
           if step.s.q == q then out[#out + 1] = { s = step.s, key = step.key, note = step.note, st = other, carry = true } end
@@ -765,8 +806,10 @@ end
 function E.Locate(st)
   local db = MG.db
   bindCheck()
+  pickAny(st.list)
   local fillInfo = E.FillPlan(st)
   local steps = stepsOf(st)
+  pickAny(steps)
   if not st.dungeon then steps = deferAuthoredPrep(st, steps) end
   local n = #steps
   local map, x, y = C.Position()
@@ -779,7 +822,7 @@ function E.Locate(st)
   for _, step in ipairs(steps) do
     local s = step.s
     if s.t == "accept" and s.q then
-      if E.Applies(s.when) and not optOut(s) and not step.defer then acc[s.q] = true end -- 接取步驟本身不適用（種族、職業、可跳過沒開、日誌快滿先不接）就不算本站有接
+      if E.Applies(s.when) and not optOut(s) and not step.defer and not s.any then acc[s.q] = true end -- 接取步驟本身不適用（種族、職業、可跳過沒開、日誌快滿先不接）就不算本站有接
       local need = s.pickLv or (R.quests[s.q] or {}).min -- 步驟沒寫接取等級就用任務資料的最低等級
       if need and lv < need and not C.IsOnQuest(s.q) and not turned(s.q) then lowQ[s.q] = need end
     end
@@ -952,7 +995,7 @@ function E.Locate(st)
   end
   for _, i in ipairs(missedIdx) do
     local q = steps[i].s.q
-    if q and not seenQ[q] then
+    if q and not seenQ[q] and not steps[i].s.any then -- 任一組的接是自選的，沒接不算漏掉
       seenQ[q] = true
       local info = R.quests[q] or {}
       local onQ = C.IsOnQuest(q)
@@ -1046,7 +1089,7 @@ function E.Progress(st)
   local total, got, seen = 0, 0, {}
   for _, step in ipairs(st.list) do
     local q = step.s.q
-    if q and not seen[q] and E.Applies(step.s.when) and not optOut(step.s) and raceOK(q) and not superseded(q) then
+    if q and not seen[q] and E.Applies(step.s.when) and not optOut(step.s) and raceOK(q) and not superseded(q) and not (anyQ[q] and not C.IsOnQuest(q) and not turned(q)) then
       seen[q] = true
       total = total + 1
       local m = MG.db.mark["t:" .. q]
@@ -1125,15 +1168,19 @@ function E.JumpPlan(target)
   local from = E.Current()
   local carry, dropN = {}, 0
   if from and from.index and target.index > from.index then
+    local seen = {} -- 整趟跳站一起去重（同一任務的接／交分在不同略過的站）
+    local function add(q)
+      if not seen[q] and not turned(q) and not laterHas(q, target.index) then
+        seen[q] = true
+        local info = R.quests[q] or {}
+        if info.chain or info.keep or (C.IsOnQuest(q) and not gray(q)) then carry[#carry + 1] = q else dropN = dropN + 1 end
+      end
+    end
+    -- 出發站之前帶來的補做也一起往下帶（連跳兩次時第一次帶來、還沒做完的不會掉）
+    for _, q in ipairs(MG.db.carry[from.id] or {}) do add(q) end
     for k = from.index, target.index - 1 do
-      local seen = {}
       for _, step in ipairs(E.stations[k].list) do
-        local q = step.s.q
-        if q and not seen[q] and E.Applies(step.s.when) and not turned(q) then
-          seen[q] = true
-          local info = R.quests[q] or {}
-          if info.chain or info.keep or (C.IsOnQuest(q) and not gray(q)) then carry[#carry + 1] = q else dropN = dropN + 1 end
-        end
+        if step.s.q and E.Applies(step.s.when) then add(step.s.q) end
       end
     end
   end
@@ -1212,7 +1259,7 @@ function E.Leaving(state)
   for i, step in ipairs(state.steps) do
     local q = step.s.q
     local skipped = MG.db.skip[step.key]
-    if q and not seen[q] and not step.carry and not turned(q) and (skipped or not (state.done[i] or state.na[i] or state.wait[i])) then
+    if q and not seen[q] and not step.carry and not turned(q) and (skipped or not (state.done[i] or state.na[i] or state.wait[i])) and not laterHas(q, state.st.index and state.st.index + 1) then
       seen[q] = true
       local imp = E.Impact(q, state.st)
       if #imp > 0 then out[#out + 1] = { i = i, q = q, imp = imp } end
@@ -1863,6 +1910,7 @@ end
 -- 動詞框已經寫了動作，標題只留對象（飛｜奧格瑪）；full＝單獨顯示（箭頭）時的完整說法（飛往 奧格瑪）
 function E.Title(s, full)
   if s.t == "need" then return s.text or "" end
+  if s.any and s.text then return s.text end -- 任一組的接：「紮營入門指南（任選專業）」
   if s.q then return E.QName(s.q) end
   -- 交通／到達沒有文字：只寫地點（動詞框已經是「去」）
   if s.t == "travel" and s.back then return L["回到路線："] .. where(s) end -- 職業任務段落做完：回主線

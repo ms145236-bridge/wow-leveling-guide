@@ -14343,3 +14343,6 @@
 03-30到45級.md:150｜說明｜到奧格瑪後，已開亂風崗就直接飛；未開就飛陶拉祖營地，沿南路搭大升降梯下谷底，往東搭亂風崗升降梯，向奈瑟開飛行點 45.14, 49.11。｜In Orgrimmar flieg direkt zum Freiwindposten, wenn du ihn schon freigeschaltet hast. Wenn nicht, flieg nach Camp Taurajo, folge der Südstraße zum Großen Aufzug, fahr ins Tal hinunter, geh nach Osten und nimm den Aufzug zum Freiwindposten hinauf. Schalte dort den Flugpunkt bei Nyse frei (45.14, 49.11).
 03-30到45級.md:172｜說明｜有車手送件或勇士島任務在身時，回亂風崗飛棘齒城；交完貨、辦完島上的事再飛回。｜Wenn du eine Lieferung von der Rennbahn oder eine Quest auf der Insel des Fray hast, kehre zum Freiwindposten zurück und fliege nach Ratschet. Erledige die Lieferungen und die Aufgaben auf der Insel vor dem Rückflug.
 04-45到60級.md:504｜說明｜斯通納德已開就從惡齒村選斯通納德（經卡加斯等已開點轉乘）；未開就飛羅格瑪，沿南側道路經 Terral’s Watch 南下悲傷沼澤，到斯通納德開點。｜Ist Stonard freigeschaltet, wähle von Revantusk aus Stonard (Umstieg über freigeschaltete Punkte wie Kargath) Sonst flieg nach Rog'mar, folge der Südstraße an Terrals Wacht vorbei nach Süden in die Sümpfe des Elends und schalte Stonard frei.
+01-第一段-1到12級.md:116｜說明｜（任選專業）｜(beliebiger Beruf)
+05-副本.md:289｜說明｜帶著占卜籤，穿過傳送門後找箱子。｜Nimm den Wahrsagespruch mit und suche die Truhe hinter dem Instanzportal.
+05-副本.md:1470｜說明｜正門進市場，開煙草店的箱子後擊敗艾茲拉‧格里姆。｜Geht vom Haupttor zum Markt. Öffnet die Kiste am Tabakladen und besiegt Ezra Grimm.

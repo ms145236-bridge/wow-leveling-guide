@@ -7,10 +7,10 @@
 | 固定比對點 | 聯盟缺接取／索引 | 部落缺接取／索引 | 相對前一列的改變 |
 |---|---:|---:|---|
 | 正式 1.13.15，8f601b6 | 55／137 | 82／234 | 巨集版沿用 1.13.14 路線 |
-| 1.13.16 路線候選，8ea0dab | 53／137 | 82／234 | 聯盟濕地 95772、95795 加入接取 |
+| 正式 1.13.16，7d8bfb3 | 53／137 | 82／234 | 聯盟濕地 95772、95795 加入接取 |
 | 副本路線審核快照 2742352，以上列加聯盟 5251 | 52／137 | 82／234 | 斯坦索姆 5251 排入禮拜堂接取 |
 
-正式版與 1.13.16 候選可在固定提交執行 `lua5.1 tools/audit-dungeon-coverage.lua Alliance` 和 `lua5.1 tools/audit-dungeon-coverage.lua Horde` 核對。最後一列以副本工作樹 2742352bf70b029720874ca400206ee3ca83f62f 的任務 ID 推演，當時新增的明確接取為聯盟 5251。134 筆工作表固定在這組條件。鳥點修正預留 1.13.17，下一個副本路線版本預留 1.13.18，正式發布後依實際接取 ID 另列差額。1050、5848 原已有接取步驟。部落 7938、92065、92066 為日誌條件提示，所屬兩個副本站缺區域索引，所以分母與缺接取數維持原值。[正式 1.13.15](https://github.com/ms145236-bridge/wow-leveling-guide/tree/8f601b6d85bc4323c2c88e20b94b1d3b5f65cafe) · [1.13.16 路線候選](https://github.com/ms145236-bridge/wow-leveling-guide/tree/8ea0daba62b6286a485d74b10fca942d2861d368) · [QuestieDB Forever v1.1.2](https://github.com/Questie/QuestieDB/releases/tag/v1.1.2)
+兩個正式版本可在固定提交執行 `lua5.1 tools/audit-dungeon-coverage.lua Alliance` 和 `lua5.1 tools/audit-dungeon-coverage.lua Horde` 核對。最後一列以副本工作樹 2742352bf70b029720874ca400206ee3ca83f62f 的任務 ID 推演，當時新增的明確接取為聯盟 5251。134 筆工作表固定在這組條件。鳥點修正預留 1.13.17，下一個副本路線版本預留 1.13.18，正式發布後依實際接取 ID 另列差額。1050、5848 原已有接取步驟。部落 7938、92065、92066 為日誌條件提示，所屬兩個副本站缺區域索引，所以分母與缺接取數維持原值。[正式 1.13.15](https://github.com/ms145236-bridge/wow-leveling-guide/tree/8f601b6d85bc4323c2c88e20b94b1d3b5f65cafe) · [正式 1.13.16](https://github.com/ms145236-bridge/wow-leveling-guide/tree/7d8bfb339b35af28bc7cb1127ec8629d136b606d) · [QuestieDB Forever v1.1.2](https://github.com/Questie/QuestieDB/releases/tag/v1.1.2)
 
 ## 如何使用工作表
 
@@ -28,3 +28,5 @@
 2. **斯坦索姆 5243、5214、5212**。三項最低 55 級都在聖光之願禮拜堂接交。聖水 13180 需五瓶，煙草 13172 需一盒，肉塊 13174 需二十個。三種物品各自一疊就夠。先查隊伍走正門或側門，沿路見到木箱或相關敵人才採集，交件時按現存數量決定。永恆繁中 5214 為「偉大的艾茲拉‧格里姆」，部分舊庫仍稱「弗拉斯·希亞比」。 [5243](https://nether.wowhead.com/forever/tooltip/quest/5243?locale=10) · [5214](https://nether.wowhead.com/forever/tooltip/quest/5214?locale=10) · [5212](https://nether.wowhead.com/forever/tooltip/quest/5212?locale=10)
 
 後續處置可在對應版本記錄陣營、任務 ID、覆蓋的接／做／交步驟和遊戲實測缺口，保留這份表作為比較起點。
+
+聯盟 22 筆與部落 43 筆另有永恆版任務來源、玩家條件和實跑待查事項，可按陣營及任務 ID 和本表對讀。[65 筆後續查證](../audits/dungeon-followup.md)

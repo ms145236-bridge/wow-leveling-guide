@@ -14730,3 +14730,6 @@
 03-30到45級.md:150｜說明｜到奧格瑪後，已開亂風崗就直接飛；未開就飛陶拉祖營地，沿南路搭大升降梯下谷底，往東搭亂風崗升降梯，向奈瑟開飛行點 45.14, 49.11。｜En Orgrimmar, vuela directo a Poblado Viento Libre si ya lo tienes abierto. Si no, vuela a Campamento Taurajo, sigue el camino del sur hasta el Gran Elevador, baja al fondo del valle, ve al este y sube por el elevador de Poblado Viento Libre; allí aprende el punto de vuelo de Nyse (45.14, 49.11).
 03-30到45級.md:172｜說明｜有車手送件或勇士島任務在身時，回亂風崗飛棘齒城；交完貨、辦完島上的事再飛回。｜Si tienes una entrega del circuito o una misión en la Isla de la Disputa, vuelve al Poblado Viento Libre y vuela a Trinquete. Haz las entregas y termina los encargos de la isla antes de volver.
 04-45到60級.md:504｜說明｜斯通納德已開就從惡齒村選斯通納德（經卡加斯等已開點轉乘）；未開就飛羅格瑪，沿南側道路經 Terral’s Watch 南下悲傷沼澤，到斯通納德開點。｜Si Rocal está desbloqueado, elige Rocal desde Poblado Sañadiente (con transbordo por puntos desbloqueados como Kargath) Si no, vuela a Rog'mar, sigue el camino del sur pasando Avanzada de Terral hacia el sur hasta Pantano de las Penas y desbloquea Rocal.
+01-第一段-1到12級.md:116｜說明｜（任選專業）｜(cualquier profesión)
+05-副本.md:289｜說明｜帶著占卜籤，穿過傳送門後找箱子。｜Lleva la fortuna contigo y busca el cofre tras cruzar el portal de la mazmorra.
+05-副本.md:1470｜說明｜正門進市場，開煙草店的箱子後擊敗艾茲拉‧格里姆。｜Desde la puerta principal, ve al mercado. Abre el cajón de la tabaquería y derrota a Ezra Grimm.
