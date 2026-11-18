@@ -418,14 +418,11 @@ local function confirmPrompt(msgText, okText, run, otherText, otherRun)
   confirmPop:Show()
 end
 -- 玩家抵達碼頭且已完成當地交接後，可以接黑海岸第一站或保留東渡行程。
+-- 按 Esc 關掉或先選了東渡：人還在奧伯丁時，可從步驟列選單重新選（見 openMenu）。
 local dockPromptShown
-function UI.AuberdineChoice(state)
-  local step = state and state.cur and state.steps[state.cur].s
-  if not (step and state.st.id == "01-6" and state.st.start == "NightElf" and state.map == 1439
-      and ((step.t == "boat" and step.to == "暴風城") or C.IsOnQuest(6343)) and not MG.db.auberdineChoice) then return end
-  if InCombatLockdown and InCombatLockdown() then return end
+local function auberdinePrompt(state)
   local coast = E.byId["02-10"]
-  if not coast or dockPromptShown or (confirmPop and confirmPop:IsShown()) then return end
+  if not coast or (confirmPop and confirmPop:IsShown()) then return end
   dockPromptShown = true
   local function choose(stay)
     if MG.db.station ~= state.st.id or C.Position() ~= 1439 then dockPromptShown = nil; return end
@@ -435,6 +432,26 @@ function UI.AuberdineChoice(state)
   end
   confirmPrompt(L["已到奧伯丁。留在黑海岸解任務，或搭船去暴風城與朋友會合？"],
     L["留在黑海岸"], function() choose(true) end, L["提早東渡"], function() choose(false) end)
+end
+local function atAuberdine(state)
+  return state and state.st and state.st.id == "01-6" and state.st.start == "NightElf" and state.map == 1439
+end
+function UI.AuberdineChoice(state)
+  local step = state and state.cur and state.steps[state.cur].s
+  if not (step and atAuberdine(state)
+      and ((step.t == "boat" and step.to == "暴風城") or C.IsOnQuest(6343)) and not MG.db.auberdineChoice) then return end
+  if InCombatLockdown and InCombatLockdown() then return end
+  if dockPromptShown then return end
+  auberdinePrompt(state)
+end
+-- 這次登入問過（按 Esc 關掉），或存檔已選東渡（重載後也算），人還在奧伯丁的第 6 站：選單提供重選
+function UI.AuberdineCanRechoose(state)
+  local choice = MG.db.auberdineChoice
+  return (dockPromptShown or choice == "east") and choice ~= "coast" and atAuberdine(state) and E.byId["02-10"] ~= nil
+end
+-- 重選只重開選擇框；按 Esc 取消時保留原本的決定，按下按鈕才寫入
+function UI.AuberdineRechoose(state)
+  auberdinePrompt(state)
 end
 local showMenu
 -- 介面語言：跟隨客戶端，或客戶端字型顯示得出來的語言（中文、韓文、俄文字型以外都是拉丁字母；英文到處都能顯示）
@@ -461,6 +478,9 @@ local function openMenu()
   if cur then entries[#entries + 1] = { L["略過這步"], function() E.ToggleSkip(cur.key) end } end
   if cur and cur.s.share == 1 and cur.s.q and C.IsOnQuest(cur.s.q) and IsInGroup and IsInGroup() then
     entries[#entries + 1] = { L["分享這個任務"], function() C.ShareQuest(cur.s.q) end }
+  end
+  if UI.AuberdineCanRechoose(state) then
+    entries[#entries + 1] = { L["重新選擇黑海岸路線"], function() UI.AuberdineRechoose(state) end }
   end
   entries[#entries + 1] = { L["重新對齊"], function() E.Realign() end }
   for _, sp in ipairs(SPEC) do
