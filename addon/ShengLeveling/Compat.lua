@@ -24,7 +24,7 @@ local function ledger()
   return MetroGuideDB.macros
 end
 -- 這個用途的插件「完整」產出格式：每一行都要是插件會寫的那種行，多一行玩家自己的命令就不算
-local MSG = '^/run ShengLv_Msg%(".*"%)$'
+local MSG = '^/run ShengLv_Msg%("[^"]*"%)$' -- 參數只能是一個不含引號的字串常值
 local FORMAT = {
   target = function(lines)
     if #lines == 1 then return lines[1]:match(MSG) ~= nil end
@@ -39,11 +39,10 @@ local FORMAT = {
   -- 只有提示句這種能證明是插件寫的；單行 /use item:數字 玩家也可能自己寫，沒有紀錄時不接手
   item = function(lines) return #lines == 1 and lines[1]:match(MSG) ~= nil end,
 }
-local function pluginBody(role, body, proven)
+local function pluginBody(role, body)
   if type(body) ~= "string" or not FORMAT[role] then return false end
   local lines = {}
   for l in (body .. "\n"):gmatch("(.-)\r?\n") do lines[#lines + 1] = l end
-  if proven and role == "item" and #lines == 1 and lines[1]:match("^/use item:%d+$") then return true end
   return FORMAT[role](lines)
 end
 local function names(default) return { default, "SLV " .. default, "SLV " .. default .. " 2" } end
@@ -60,11 +59,11 @@ function MG.Macro.Find(role, default)
       if name == rec.name then
         same = same + 1
         if body == rec.body then exact, ne = i, ne + 1
-        elseif pluginBody(role, body, true) then fmt, nf = i, nf + 1 end
+        elseif pluginBody(role, body) then fmt, nf = i, nf + 1 end
       end
     end
-    if same > 1 then return nil, nil, true end
     if ne == 1 then return exact, rec.name end
+    if same > 1 then return nil, nil, true end
     if nf == 1 then rec.want = nil; return fmt, rec.name end
     ledger()[role] = nil
   end

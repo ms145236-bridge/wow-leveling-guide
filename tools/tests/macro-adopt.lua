@@ -77,5 +77,22 @@ check(n == "任務目標" and #macros == 3 and #msgs == 0, "接手預設名，�
 i, n = MG.Macro.Write("target", "任務目標", "ICON", T3, true)
 check(n == "任務目標" and #macros == 3 and macros[1].body == T3, "重複呼叫穩定")
 
+-- 9. 有紀錄的物品巨集被玩家改成別的物品：不覆寫，另建備用名
+reset({ { name = "任務物品", body = "/use item:2589" } })
+MetroGuideDB.macros = { item = { name = "任務物品", body = "/use item:5056", want = "/use item:5056" } }
+i, n = MG.Macro.Write("item", "任務物品", "ICON", "/use item:6000", true)
+check(macros[1].body == "/use item:2589" and n == "SLV 任務物品", "玩家改成別的物品時保留原格位")
+
+-- 10. 同名兩格、只有一格和紀錄完全相同：只改那一格
+reset({ { name = "任務目標", body = "/cast 治療術" }, { name = "任務目標", body = T1 } })
+MetroGuideDB.macros = { target = { name = "任務目標", body = T1, want = T1 } }
+i = MG.Macro.Write("target", "任務目標", "ICON", T2, true)
+check(i == 2 and macros[2].body == T2 and macros[1].body == "/cast 治療術", "同名兩格只改紀錄相符的那格")
+
+-- 11. 同一行先提示再做自己的事：不算插件的
+reset({ { name = "任務目標", body = '/run ShengLv_Msg("a") print("b")' } })
+i, n = MG.Macro.Write("target", "任務目標", "ICON", T2, true)
+check(macros[1].body == '/run ShengLv_Msg("a") print("b")' and n == "SLV 任務目標", "提示句後面多了自訂動作不接手")
+
 if fails > 0 then print(fails .. " failed"); os.exit(1) end
 print("macro-adopt: all passed")
