@@ -132,3 +132,27 @@ for _, q in ipairs({8425, 8232, 8413, 8253, 8422, 8236, 9053, 8257}) do
   assert(not ns.E.InstanceState(temple))
 end
 print("Un'Goro supplies, Searing Gorge, Blasted Lands and Horde temple objectives passed")
+
+-- Complete the monolith before starting the escort. Both operations happen in the same ruins.
+local feralas = alliance["04-50"]
+local shay = find(feralas, "turnin", 2844)
+assert(find(feralas, "accept", 2942) + 1 == shay)
+assert(shay + 1 == find(feralas, "accept", 2845))
+assert(shay + 2 == find(feralas, "do", 2845))
+assert(find(feralas, "turnin", 2879) == find(feralas, "do", 2879) + 1)
+local zephras = alliance["01-7"]
+local lorian = find(zephras, "accept", 92464)
+local leylines = find(zephras, "accept", 92597)
+for _, q in ipairs({92481, 92485, 92532, 92482, 92483, 92484}) do
+  local idx, profession = find(zephras, "accept", q)
+  assert(idx > lorian and idx < leylines and profession.when.class)
+end
+for _, port in ipairs({alliance["03-37"], horde["03-28"]}) do
+  local dockmaster = find(port, "turnin", 95119)
+  assert(find(port, "accept", 95123) == dockmaster + 1)
+  assert(find(port, "accept", 95122) == dockmaster + 2)
+end
+assert(find(alliance["01-1"], "accept", 91745) + 1 == find(alliance["01-1"], "accept", 5623))
+assert(find(alliance["03-34"], "accept", 193) == find(alliance["03-34"], "turnin", 192) + 1)
+assert(find(alliance["03-34"], "accept", 607) == find(alliance["03-34"], "turnin", 606) + 1)
+assert(find(alliance["05-d7"], "turnin", 2930) == find(alliance["05-d7"], "turnin", 2931) + 1)
