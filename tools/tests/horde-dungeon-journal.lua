@@ -71,3 +71,37 @@ for _, dungeon in ipairs({mines, hold}) do
   end
 end
 print("Horde Deadmines fortune and Blackmaw journal objectives passed")
+
+-- The Horde route still uses its own Feralas field locations. Neither the
+-- spirit collection nor its Steamwheedle Port handoffs take place in a dungeon.
+local turned = {}
+ns.C.IsTurnedIn = function(q) return turned[q] end
+ns.C.Objectives = function(q)
+  if q == 3520 then return {{have=ready[q] and 3 or 1, need=3, done=ready[q] or false}} end
+end
+for _, case in ipairs({{209, 45, 3042}, {109, 52, 3446}}) do
+  local dungeon = E.DungeonByInstance(case[1])
+  UnitLevel = function() return case[2] end
+  wipe(turned)
+  wipe(journal)
+  wipe(ready)
+  -- Represent the normal visit after the preceding preparation in this guide.
+  for _, step in ipairs(dungeon.list) do
+    if step.s.q == 3520 then break end
+    if step.s.q then turned[step.s.q] = true end
+  end
+  for _, verb in ipairs({"accept", "do", "turnin"}) do
+    journal[3520] = verb ~= "accept"
+    ready[3520] = verb == "turnin"
+    local outside = assert(E.DungeonNext(dungeon, false)).step.s
+    assert(outside.q == 3520 and outside.t == verb and outside.outsideObjective)
+    assert(outside.map == (verb == "do" and 1444 or 1446))
+    local inside = E.DungeonNext(dungeon, true)
+    assert(not action(dungeon, 3520) and not (inside and inside.step and inside.step.s.q == 3520))
+    local q = case[3]
+    turned[q], journal[q] = nil, true
+    assert(action(dungeon, q) and E.DungeonNext(dungeon, true).step.s.q == q)
+    journal[q], turned[q] = nil, true
+  end
+end
+print("Horde 3520 preparation stays outdoors while ZF and Temple journal objectives stay available")
