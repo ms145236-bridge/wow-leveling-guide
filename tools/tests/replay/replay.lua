@@ -67,6 +67,8 @@ local function unavailable(q,i)
     return "prereq",table.concat(i.ps,"/")
   end
 end
+-- Quest objects picked up when the recorded in-instance interaction is performed.
+local instanceObjects = {[1050]=5536, [5848]=14679}
 local function run(st, isRun)
   local parent = st.main or st
   local function refresh() E.FillPlan(parent) end
@@ -128,11 +130,13 @@ local function run(st, isRun)
       else
         if (i.hard or 0)>=level+3 or i.soloElite then stats.hard=stats.hard+1;log("difficulty",s,(i.hard or 0)..(i.soloElite and " elite" or "")) end
         local xp=(s.ph=="in" or st.temple) and 0 or E.KillXP(q,level)*factor
+        if s.ph=="in" and instanceObjects[q] then drops[instanceObjects[q]]=1 end
         worked[q]=true;log("worked",s,math.floor(xp));grant("combat",xp,s)
       end
     elseif s.t=="turnin" and have[q] and (not s.hold or worked[q]) and (not (q==95036 or q==templeQuest or q==99187 or instanceWork[q]) or worked[q]) then
       local xp=E.QuestXP(q,level)
       if collect[q] then drops[collect[q]]=nil end
+      if instanceObjects[q] then drops[instanceObjects[q]]=nil end
       turned[q],have[q]=true,nil;open=open-1;stats.hand=stats.hand+1
       log("turned",s,math.floor(xp));grant("turnin",xp,s)
     elseif not q and s.when and s.when.class and (s.t=="travel" or s.t=="fly") then log("class-travel",s,s.text or s.desc or s.to) end

@@ -144,6 +144,7 @@ const GAME_NAME = {
 };
 // 遊戲內任務名跟路線／QuestieDB 不同的任務（阿莫比玩家紀錄）：任務 ID｜遊戲名
 const QUEST_NAME = {
+  5214: "偉大的艾茲拉‧格里姆", // 永恆版任務名稱，見 quest tooltip 5214。
   23: "烏薩苟斯的爪子", 27: "一堂必修的課程", 264: "直到死亡把我們分離", 364: "無腦的殭屍", 382: "十字軍信差", 398: "通緝：蛆眼", 421: "證明你的價值", 439: "腐皮線索", 442: "突襲芬里斯島", 447: "致命配方",
   450: "致命配方", 451: "致命配方", 544: "入室偷竊", 580: "威士卡斯利姆的酒", 752: "一件瑣事", 753: "一件瑣事", 754: "淨化冰蹄之井", 758: "淨化雷角之井", 760: "淨化蠻鬃之井", 794: "燃刃勳章", 825: "海底沉船",
   826: "札拉贊恩", 842: "十字路口的徵兵行動", 852: "赫茲盧爾·血印", 853: "藥劑師札瑪", 869: "迅猛龍小偷", 893: "選擇武器", 894: "什麼什麼平衡器", 900: "什麼什麼平衡器", 901: "什麼什麼平衡器", 902: "什麼什麼平衡器",
@@ -1143,7 +1144,7 @@ const stepWhen = (w, sw) => {
   return Object.keys(out).length ? out : undefined;
 };
 const stepOut = (s, st) => ({
-  exitPriority: s.ph === "post" && (s.t === "do" || s.t === "turnin") && s.exitPriority || undefined,
+  exitPriority: s.ph === "post" && ["accept", "do", "turnin"].includes(s.t) && s.exitPriority || undefined,
   outsideObjective: s.ph === "in" && s.t === "accept" && s.outsideObjective || undefined,
   star: s.star, t: s.t, instancePickup: s.ph === "in" && s.t === "accept" && s.instancePickup || undefined, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
   // 說明段用「；」接起來：句號結尾的段後面不再補「；」，完全相同的段只留一次（翻譯照原本的「；」切段，不受影響）
