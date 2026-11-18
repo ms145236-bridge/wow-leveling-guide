@@ -42,15 +42,15 @@ function MG.Macro.Write(role, default, icon, body, create)
   local index, name = MG.Macro.Find(role, default)
   if index then
     local _, _, cur = GetMacroInfo(index)
-    if cur == body then return index, name end
-    return EditMacro(index, name, icon, body) or index, name
+    if cur ~= body then index = EditMacro(index, name, icon, body) or index end
+  elseif not create then return nil
+  elseif (GetNumMacros()) >= MAX_ACCOUNT then return nil, "full"
+  else
+    name = fixed(default)
+    index = CreateMacro(name, icon, body, nil)
   end
-  if not create then return nil end
-  if (GetNumMacros()) >= MAX_ACCOUNT then return nil, "full" end
-  name = fixed(default)
-  local index = CreateMacro(name, icon, body, nil)
   -- 舊版玩家：帳號裡還有沒前綴的舊巨集（多半拖在快捷列上，按的還是它）→ 提醒一次把新巨集拖回原快捷格
-  -- 用新旗標 macroMoved，看過舊的 macroNoted 提示的玩家也會收到
+  -- 找到或新建都檢查（1.13.15 可能兩個名稱都已存在）；用新旗標 macroMoved，看過舊的 macroNoted 提示的玩家也會收到
   local moved = MetroGuideDB.macroMoved or {}
   MetroGuideDB.macroMoved = moved
   if index and not moved[role] and indexOf(default) then

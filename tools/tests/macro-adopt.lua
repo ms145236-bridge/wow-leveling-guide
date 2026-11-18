@@ -2,7 +2,7 @@
 -- 插件巨集固定叫「SLV 任務物品」「SLV 任務目標」（業主 11/18 決定）：有這個名稱就改寫，沒有才建；不碰其他名稱的巨集。
 local macros = {}
 function GetMacroInfo(i) local m = macros[i]; if m then return m.name, m.icon, m.body end end
-function GetNumMacros() return #macros, 0 end
+function GetNumMacros() local n = 0; for k = 1, 120 do if macros[k] then n = k end end; return n, 0 end -- 只算帳號巨集（121 起是角色巨集）
 function CreateMacro(name, icon, body) macros[#macros + 1] = { name = name, icon = icon, body = body }; return #macros end
 function EditMacro(i, name, icon, body) macros[i] = { name = name, icon = icon, body = body }; return i end
 function InCombatLockdown() return false end
@@ -72,6 +72,22 @@ check(#said == 0, "新玩家沒有舊巨集不提醒")
 -- 10. 設定說明和診斷用的完整名稱
 check(MG.Macro.Name("item") == "SLV 任務物品" and MG.Macro.Name("target") == "SLV 任務目標" and MG.Macro.Name("x") == nil, "完整巨集名")
 check(("建立「{target}」巨集"):gsub("{(%a+)}", MG.Macro.Name) == "建立「SLV 任務目標」巨集", "設定說明換成完整名稱")
+
+-- 11. 1.13.15 升級：兩個名稱都已存在（舊快捷格綁舊名、macroNoted 已讀），固定格內容一樣也要提醒一次
+for _, same in ipairs({ true, false }) do
+  said = {}; MetroGuideDB = { macroNoted = true }
+  reset({ { name = "任務目標", body = "/run MGTP()" }, { name = "SLV 任務目標", body = same and "/run MGTP()" or "/cast 舊" } })
+  i, n = MG.Macro.Write("target", "任務目標", "ICON", "/run MGTP()", false)
+  check(i == 2 and macros[2].body == "/run MGTP()" and #said == 1 and said[1]:find("SLV 任務目標", 1, true), "兩個名稱都在（固定格內容" .. (same and "一樣" or "要改寫") .. "）也提醒")
+  MG.Macro.Write("target", "任務目標", "ICON", "/run MGTP()", false)
+  check(#said == 1, "兩個名稱都在：只提醒一次")
+end
+-- 12. 角色巨集（121 起）叫舊名不算：不提醒、也不改寫它
+said = {}; MetroGuideDB = {}
+reset({ { name = "SLV 任務物品", body = "/use item:1" } })
+macros[121] = { name = "任務物品", body = "/use item:9" }
+i = MG.Macro.Write("item", "任務物品", "ICON", "/use item:2", true)
+check(i == 1 and #said == 0 and macros[121].body == "/use item:9", "角色巨集叫舊名不提醒、不動")
 
 if fails > 0 then print(fails .. " failed"); os.exit(1) end
 print("macro-adopt: all passed")
