@@ -161,6 +161,14 @@ function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用�
   if not when then return true end
   if when.race and not raceMatch(when.race) then return false end
   if when.notRace and raceMatch(when.notRace) then return false end
+  if when.bag and E.ItemCount(when.bag.item) < when.bag.count then return false end
+  if when.onQuestAny then
+    local on = false
+    for _, id in ipairs(when.onQuestAny) do
+      if C.IsOnQuest(id) then on = true; break end
+    end
+    if not on then return false end
+  end
   if when.class and not inList(when.class, me.class) then return false end
   if when.notClass and inList(when.notClass, me.class) then return false end
   if when.lvMin and not anyLv and (UnitLevel("player") or 0) < when.lvMin then return false end
@@ -561,6 +569,7 @@ local function stepDone(step, map, x, y)
     return same(sub) or same(zone) or same(mini)
   elseif t == "fp" then return s.node ~= nil and MG.db.fpNodes ~= nil and MG.db.fpNodes[s.node] == true -- 飛行地圖上已經有這個鳥點
   elseif t == "goto" or (t == "travel" and s.x) then
+    if not (map and x and y) then return false end
     -- 好幾個座標（via）：依序走，走到最後一個才算到；路過第 k 點就記「@k」（箭頭改指下一點，見 E.ViaTarget）。
     -- 搭船、飛艇到別張地圖：那個點本來就是最後一點
     -- 到了沒：換成世界座標比碼數（到某處 25 碼、交通 50 碼）；步驟寫了 r（地圖 %）或換算不了就用地圖 %
@@ -577,17 +586,22 @@ local function stepDone(step, map, x, y)
       return math.sqrt((x - p[2]) ^ 2 + (y - p[3]) ^ 2) <= (s.r or 3)
     end
     local n = 1 + (s.via and #s.via or 0)
-    -- 人已經在後面某一點的地圖上：前面別張地圖的點都算過了（過山口、下船後箭頭直接指下一點，不必踩到前一點）
-    for k = 2, n do
-      if map ~= nil and s.via[k - 1][1] == map and (k == 2 and s.map or s.via[k - 2][1]) ~= map then MG.db.latch[step.key .. "@" .. (k - 1)] = true end
+    local k = 1
+    for i = n - 1, 1, -1 do
+      if MG.db.latch[step.key .. "@" .. i] then k = i + 1; break end
     end
-    for k = n, 1, -1 do
-      local p = k == 1 and { s.map, s.x, s.y } or s.via[k - 1]
-      if map ~= nil and map == p[1] and x ~= nil and near(p) then
-        local fin = k == n
-        MG.db.latch[fin and step.key or (step.key .. "@" .. k)] = true
-        return fin
-      end
+    local p = k == 1 and { s.map, s.x, s.y } or s.via[k - 1]
+    -- 已換地圖可從該圖的第一個點接回，同圖的路標仍依序走。
+    while p[1] ~= map and k < n do
+      k = k + 1
+      p = s.via[k - 1]
+    end
+    if p[1] ~= map then return false end
+    if k > 1 then MG.db.latch[step.key .. "@" .. (k - 1)] = true end
+    if near(p) then
+      local fin = k == n
+      MG.db.latch[fin and step.key or (step.key .. "@" .. k)] = true
+      return fin
     end
     return false
   end
@@ -743,7 +757,7 @@ function E.Locate(st)
     elseif not na[i] and s.q and lowQ[s.q] and QUEST[s.t] then
       na[i], low[i], lowLv[i] = true, true, lowQ[s.q]
     end
-    local auto = stepDone(step, map, x, y)
+    local auto = stepDone(step) -- 先讀既有進度，位置到達只在輪到該步時寫入
     autoDone[i] = auto
     local mark = db.mark[step.key]
     if mark ~= nil and mark == auto then db.mark[step.key] = nil; mark = nil end
@@ -761,6 +775,8 @@ function E.Locate(st)
     if not done[i] and SOFT[step.s.t] then
       local later = false
       for j = i + 1, n do
+        -- 後面仍要綁爐石或補給，前往該處的路標就不是站尾交通。
+        if not done[j] and not SOFT[steps[j].s.t] and not na[j] then later = true end
         if steps[j].s.q and not na[j] then
           later = true
           if done[j] and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
@@ -781,6 +797,20 @@ function E.Locate(st)
   for i = 1, n do if steps[i].s.roam and not done[i] and not na[i] then roamQ[steps[i].s.q or 0] = true end end
   local accAt = {} -- 還沒接的任務，它的「接」排在第幾步（副本前置的接插在站尾，主線的做／交可能排在它前面）
   for i = 1, n do if steps[i].s.t == "accept" and not done[i] and not na[i] then accAt[steps[i].s.q] = accAt[steps[i].s.q] or i end end
+  local function arrive(i)
+    local step = steps[i]
+    if done[i] or db.mark[step.key] == false then return false end
+    local s = step.s
+    if s.x and (s.t == "goto" or s.t == "travel") then
+      if not stepDone(step, map, x, y) then return false end
+    elseif softLater[i] and E.SoftNear(s, E.SoftTargets(steps, done, na, i), map, x, y) then
+      db.latch[step.key] = true
+    else
+      return false
+    end
+    done[i], autoDone[i] = true, true
+    return true
+  end
   repeat
     auto, missedIdx, missedQ = nil, {}, {}
     for i = 1, n do
@@ -813,10 +843,13 @@ function E.Locate(st)
         end
       end
     end
-    -- 沒座標的交通輪到了，人已經走到下一個有座標的步驟附近：算到了（記住，走開也不退回），再往下找。
-    -- 還沒輪到的不看：人本來就可能站在那附近（爐石回城後的下一步常就在出發的地方），提早記成完成，真的輪到時就不提示了
-    local arrived = auto and softLater[auto] and E.SoftNear(steps[auto].s, E.SoftTargets(steps, done, na, auto), map, x, y)
-    if arrived then done[auto] = true; db.latch[steps[auto].key] = true end
+    if not auto then
+      for i = 1, n do if steps[i].s.roam and not done[i] and not na[i] then auto = i; break end end
+    end
+    if not auto then
+      for i = 1, n do if tails[i] and not done[i] and not na[i] then auto = i; break end end
+    end
+    local arrived = auto and arrive(auto)
   until not arrived
   -- 前置的「交」被判成漏掉：等它的後續任務照舊不適用（依序往後，整條鏈一起收）
   local missedAt = {}
@@ -828,13 +861,6 @@ function E.Locate(st)
       if turnAt[q] == i then turnAt[q] = nil end
     end
   end
-  if not auto then
-    for i = 1, n do if steps[i].s.roam and not done[i] and not na[i] then auto = i; break end end
-  end
-  if not auto then
-    for i = 1, n do if tails[i] and not done[i] and not na[i] then auto = i; break end end
-  end
-
   -- 手動釘住的步驟：原本未完成、後來完成了就放掉；釘回自動位置也放掉
   local cur = auto
   local pin = db.pin[st.id]
@@ -843,8 +869,7 @@ function E.Locate(st)
     for i, step in ipairs(steps) do
       if step.key == pin.key then found = i; break end
     end
-    -- 手動釘住的沒座標交通也算輪到
-    if found and softLater[found] and not done[found] and E.SoftNear(steps[found].s, E.SoftTargets(steps, done, na, found), map, x, y) then done[found] = true; db.latch[pin.key] = true end
+    if found and not na[found] then arrive(found) end
     if not found or (done[found] and not pin.wasDone) or found == auto or (pin.auto and (auto and steps[auto].key or "") ~= pin.auto) then
       db.pin[st.id] = nil
     else

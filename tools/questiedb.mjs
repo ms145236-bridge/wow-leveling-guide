@@ -3,7 +3,7 @@
 import { readFileSync } from "node:fs";
 import { inflateSync } from "node:zlib";
 
-const ADDONS = process.env.WOW_ADDONS || "C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns"; // 可用 WOW_ADDONS 指到別的安裝
+export const ADDONS = process.env.WOW_ADDONS || "C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns"; // 可用 WOW_ADDONS 指到別的安裝
 const TOC = `${ADDONS}/QuestieDB/QuestieDB_Forever.toc`;
 const AREA_MAP = `${ADDONS}/QuestieDB/support/Forever/Zones/areaIdToUiMapId.lua`;
 

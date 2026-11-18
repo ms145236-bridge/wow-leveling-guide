@@ -18,7 +18,7 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { openQuestieDB, clusterCenter } from "./questiedb.mjs";
+import { ADDONS, openQuestieDB, clusterCenter } from "./questiedb.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 // 任務目標座標（tools/objective-coords.md，Codex 查的 Wowhead 永恆版／QuestieDB 點位）：補到「做」步驟的 more
@@ -91,7 +91,7 @@ const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 
 const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
 // 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
 const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|到[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|持有材料[：:]|已接任一[：:]|到[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -119,7 +119,7 @@ const dungeonTags = (tags) => {
 const db = openQuestieDB();
 // 任務經驗（QuestieDB 的 QuestXP 表：[id] = {等級, 經驗}）
 const XP = new Map();
-for (const m of readFileSync("C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns/QuestieDB/support/Forever/QuestXP/xpDB-classic.lua", "utf8").matchAll(/\[(\d+)\] = \{(\d+), (\d+)\}/g)) XP.set(+m[1], +m[3]);
+for (const m of readFileSync(join(ADDONS, "QuestieDB/support/Forever/QuestXP/xpDB-classic.lua"), "utf8").matchAll(/\[(\d+)\] = \{(\d+), (\d+)\}/g)) XP.set(+m[1], +m[3]);
 // QuestieDB 沒有的（多半是永恆新任務）：tools/quest-xp.md 補（Wowhead 永恆版任務頁的獎勵經驗；任務ID｜等級｜經驗）
 for (const m of readFileSync(join(ROOT, "tools", "quest-xp.md"), "utf8").matchAll(/^(\d+)｜(\d+)｜(\d+)\s*$/gm)) if (!XP.has(+m[1]) && +m[3] > 0) XP.set(+m[1], +m[3]);
 const classBlocks = [];
@@ -179,19 +179,19 @@ const mdName = (zh) => zh && MD_NAME.get(db.norm(cleanName(zh)));
 const nameIssues = []; // 名稱不一致（建置報告）
 const dungeons = []; // 副本站：插在指定的站後面，引擎當成可選站
 // 副本區域（QuestieDB support/Forever/Zones）：areaId → { name, alts }；instanceID → areaId
-const ZONES = "C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns/QuestieDB/support/Forever/Zones/";
+const ZONES = join(ADDONS, "QuestieDB/support/Forever/Zones");
 const DUNGEON_AREA = new Map();
-for (const m of readFileSync(ZONES + "dungeons.lua", "utf8").matchAll(/\[(\d+)\]\s*=\s*\{"([^"]+)",(nil|\{[\d,]*\})/g)) {
+for (const m of readFileSync(join(ZONES, "dungeons.lua"), "utf8").matchAll(/\[(\d+)\]\s*=\s*\{"([^"]+)",(nil|\{[\d,]*\})/g)) {
   DUNGEON_AREA.set(+m[1], { name: m[2], alts: m[3] === "nil" ? [] : m[3].replace(/[{}]/g, "").split(",").filter(Boolean).map(Number) });
 }
 const CONST_NAME = (n) => n.toUpperCase().replace(/'/g, "").replace(/[^A-Z0-9]+/g, "_");
 const INSTANCE_AREA = new Map();
-for (const [, id, numericArea, namedArea] of readFileSync(ZONES + "instanceIdToAreaId.lua", "utf8").matchAll(/\[(\d+)\]\s*=\s*(?:(\d+)|ZoneDB\.zoneIDs\.([A-Z0-9_]+))/g)) {
+for (const [, id, numericArea, namedArea] of readFileSync(join(ZONES, "instanceIdToAreaId.lua"), "utf8").matchAll(/\[(\d+)\]\s*=\s*(?:(\d+)|ZoneDB\.zoneIDs\.([A-Z0-9_]+))/g)) {
   const area = numericArea ? +numericArea : [...DUNGEON_AREA.entries()].find(([, d]) => CONST_NAME(d.name) === namedArea)?.[0];
   if (DUNGEON_AREA.has(area)) INSTANCE_AREA.set(+id, area);
 }
 // 打怪經驗用：每個目標 { 怪物平均等級, 數量, 1＝殺／2＝掉落物, 1＝精英 }。
-// 數量從目標文字依序抓「N個／只／根…」；抓到的比目標少時，其餘當 1（多半是指名的首領），完全沒數字用 6。
+// 數量從目標文字依序抓「N個／只／根…」；抓到的比目標少時，其餘當 1（多半是指名的首領），完全沒數字用 1。
 // 每個目標的怪物名稱（和 mob 同順序；選取目標／標記用）
 const targetsOf = (q) => {
   const per = db.questMobs(q.id).map((m) => (m && m.names ? [...new Set(m.names.filter(Boolean).map(cleanName))] : []));
@@ -203,7 +203,7 @@ const mobsOf = (q) => {
   if (!mobs.length) return undefined;
   // 全形數字先轉半形；中文「N 個…」之外也認英文目標的「Kill／Defeat… N」（永恆新任務常只有英文）
   const objText = q.obj.join(" ").replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0));
-  const nums = [...objText.matchAll(/(\d+)\s*[個只隻根張份塊件頭名條把顆片枚]|\b(?:Kill|Slay|Defeat|Destroy|Collect|Gather|Obtain|Retrieve|Recover|Bring)\s+(\d+)\b/gi)].map((m) => +(m[1] ?? m[2]));
+  const nums = [...objText.matchAll(/(\d+)\s*[個只隻根張份塊件頭名條把顆片枚台臺]|\b(?:Kill|Slay|Defeat|Destroy|Collect|Gather|Obtain|Retrieve|Recover|Bring)\s+(\d+)\b/gi)].map((m) => +(m[1] ?? m[2]));
   // 怪物目標其實是跟 NPC 互動（聽提里奧說話、餵受訓者、救人、把動物趕回／送回…）：目標文字是對話／餵食，或任務說明只有互動、沒有打的字眼 → 不算打怪經驗
   const fight = /殺|擊敗|打敗|消滅|擊殺|幹掉|摧毀|征服|打死|制服|釋放|捕獲/.test(objText);
   const talkQ = /聽聽|聆聽|談話|交談|談談|談一談|談壹談|對話|包紮|餵|飽餐|救出|解救|送回|趕回|趕到|馴服/.test(objText) && !fight;
@@ -239,6 +239,11 @@ const parseWhen = (tags) => {
     if (lv) when.lvMin = +lv[1];
     const fp = tag.match(/^(已開|未開)鳥點[：:]\s*(.+)$/);
     if (fp) when[fp[1] === "已開" ? "fp" : "noFp"] = fp[2].trim();
+    // 【持有材料：2592×60】只計身上可直接交付的數量。
+    const bag = tag.match(/^持有材料[：:]\s*(\d+)\s*×\s*(\d+)$/);
+    if (bag) when.bag = { item: +bag[1], count: +bag[2] };
+    const log = tag.match(/^已接任一[：:]\s*(\d+(?:、\d+)*)$/);
+    if (log) when.onQuestAny = log[1].split("、").map(Number);
     if (!m) continue;
     for (const raw of m[2].split(/[／\/、,，]/).map((s) => s.trim()).filter(Boolean)) {
       if (raw === "部落" || raw === "聯盟") continue;
@@ -1481,7 +1486,7 @@ console.log(`english-names.md：任務 ${MD_QUEST.size}、實體 ${MD_ENT.size}�
 // 名稱：tools/names-<locale>.md（英文名 → 該語系，Codex 查的永恆客戶端名）＞ QuestieDB 該語系＞英文
 // 說明文字：tools/route-text-<locale>.md（格式同 enUS）＞英文；任務名、任務目標文字：QuestieDB 該語系＞英文（遊戲內的任務名執行時另由 API 取）
 // 站名：區域名用 Questie 的區域翻譯；城鎮寫成 {a:地區ID}（執行時換成遊戲的地區名），換不到就用只有區域的 name
-const QZ = join(dirname(ZONES.replace(/\/$/, "")), "..", "..", "..", "Questie", "Localization", "Translations", "Zones");
+const QZ = join(ADDONS, "Questie/Localization/Translations/Zones");
 const ZONE_L = new Map(); // 英文區域名 → { deDE: …, … }
 for (const f of readdirSync(QZ)) for (const m of readFileSync(join(QZ, f), "utf8").matchAll(/\["([^"]+)"\]\s*=\s*\{([^}]*)\}/g)) {
   if (ZONE_L.has(m[1])) continue;
@@ -1491,7 +1496,7 @@ for (const f of readdirSync(QZ)) for (const m of readFileSync(join(QZ, f), "utf8
 const AREA_ID = new Map(); // 英文地區名 → [{ id, parent }]（QuestieDB 的註解）
 const AREA_NAMES = new Map(); // ID → 註解裡出現過的名字；兩個檔名字不同的 ID（永恆改用過的）不用
 for (const f of ["subZoneToParentZone.lua", "areaIdToUiMapId.lua"]) {
-  for (const m of readFileSync(ZONES + f, "utf8").matchAll(/\[(\d+)\]\s*=\s*\d+,\s*--\s*(.+?)\s*->\s*(.+?)\s*$/gm)) {
+  for (const m of readFileSync(join(ZONES, f), "utf8").matchAll(/\[(\d+)\]\s*=\s*\d+,\s*--\s*(.+?)\s*->\s*(.+?)\s*$/gm)) {
     AREA_NAMES.set(+m[1], (AREA_NAMES.get(+m[1]) || new Set()).add(m[2]));
     if (!AREA_ID.has(m[2])) AREA_ID.set(m[2], []);
     AREA_ID.get(m[2]).push({ id: +m[1], parent: m[3] });
