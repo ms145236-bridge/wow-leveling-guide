@@ -19,13 +19,21 @@ MG.gameCJK = CJK[MG.gameLoc] or false -- 客戶端字型有中文字
 MG.Macro = {}
 local MAX_ACCOUNT = MAX_ACCOUNT_MACROS or 120
 local function fixed(default) return "SLV " .. default end
+-- 預設名跟客戶端語言（介面語言預覽時不會多建一個巨集）
+MG.Macro.default = { item = MG.gameCJK and "任務物品" or "Quest Item", target = MG.gameCJK and "任務目標" or "Quest Target" }
+-- 這個客戶端實際的完整巨集名（設定說明的 {item}／{target} 用這個換）
+function MG.Macro.Name(role) return MG.Macro.default[role] and fixed(MG.Macro.default[role]) end
+local function indexOf(name)
+  for i = 1, (GetNumMacros()) do
+    if GetMacroInfo(i) == name then return i end
+  end
+end
 -- 回傳 格位, 名稱；找不到回 nil
 function MG.Macro.Find(role, default)
   if not GetMacroInfo or not default then return nil end
   local name = fixed(default)
-  for i = 1, (GetNumMacros()) do
-    if GetMacroInfo(i) == name then return i, name end
-  end
+  local i = indexOf(name)
+  if i then return i, name end
   return nil
 end
 -- 唯一的寫入口：有就改寫（內容一樣就不動），沒有而且 create 才新建；帳號巨集滿了回 nil, "full"
@@ -40,7 +48,16 @@ function MG.Macro.Write(role, default, icon, body, create)
   if not create then return nil end
   if (GetNumMacros()) >= MAX_ACCOUNT then return nil, "full" end
   name = fixed(default)
-  return CreateMacro(name, icon, body, nil), name
+  local index = CreateMacro(name, icon, body, nil)
+  -- 舊版玩家：帳號裡還有沒前綴的舊巨集（多半拖在快捷列上，按的還是它）→ 提醒一次把新巨集拖回原快捷格
+  -- 用新旗標 macroMoved，看過舊的 macroNoted 提示的玩家也會收到
+  local moved = MetroGuideDB.macroMoved or {}
+  MetroGuideDB.macroMoved = moved
+  if index and not moved[role] and indexOf(default) then
+    moved[role] = true
+    MG.msg(MG.L["巨集改名為「%s」，請在巨集視窗（/macro）把新巨集拖回原快捷格"]:format(name))
+  end
+  return index, name
 end
 local strings
 MG.missingL = {} -- 非中文介面卻查不到翻譯的鍵（/slv probe 會列出）

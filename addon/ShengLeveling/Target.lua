@@ -168,8 +168,7 @@ end
 T.MacroText = macro
 
 -- 動作條巨集「任務目標」：內容就是同一段巨集文字（不經過 /click）
--- 巨集名跟客戶端語言（介面語言預覽時不會多建一個巨集）
-local MACRO = MG.gameCJK and "任務目標" or "Quest Target"
+local MACRO = MG.Macro.default.target
 local ICON = "Ability_Hunter_SniperShot"
 local function emptyText()
   if T.objNote then return "/run ShengLv_Msg(\"" .. L["目標是地上的物件（%s），無法選取"]:format((T.objNote:gsub("\"", "'"))) .. "\")" end
@@ -248,7 +247,7 @@ function T.Diag()
   local out = {}
   local index, name = MG.Macro.Find("target", MACRO)
   local body = index and select(3, GetMacroInfo(index)) or nil
-  out[#out + 1] = L["巨集「%s」格位 %d（舊名格位 %d）內容："]:format(name or MACRO, index or 0, 0) .. (body and body:gsub("\n", " | ") or L["無"])
+  out[#out + 1] = L["巨集「%s」格位 %d："]:format(name or MG.Macro.Name("target"), index or 0) .. (body and body:gsub("\n", " | ") or L["無"])
   out[#out + 1] = "ActionButtonUseKeyDown: " .. tostring(GetCVar and GetCVar("ActionButtonUseKeyDown")) .. " | issecretvalue: " .. tostring(issecretvalue ~= nil)
   if btn then
     out[#out + 1] = L["按鈕 顯示 %s 可見 %s｜type=%s"]:format(tostring((btn:IsShown())), tostring((btn:IsVisible())), tostring((btn:GetAttribute("type"))))

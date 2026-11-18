@@ -13,6 +13,8 @@ function CreateFrame() return setmetatable({}, anyMeta) end
 local MG = {}
 MetroGuideDB = {}
 assert(loadfile("addon/ShengLeveling/Compat.lua"))("ShengLeveling", MG)
+local said = {}
+MG.msg = function(s) said[#said + 1] = s end
 
 local fails = 0
 local function check(cond, what)
@@ -47,6 +49,29 @@ reset({})
 for k = 1, 120 do macros[k] = { name = "x" .. k, body = "" } end
 i, n = MG.Macro.Write("item", "任務物品", "ICON", "/use item:1", true)
 check(i == nil and n == "full", "滿了回 full")
+
+-- 7. 舊版玩家（必改 1）：帳號裡有舊「任務目標」（已拖在快捷列）、舊旗標 macroNoted 已讀 → 新建時提醒一次拖回原快捷格
+said = {}
+MetroGuideDB = { macroNoted = true }
+reset({ { name = "任務目標", body = "/run MGTP()" } })
+i, n = MG.Macro.Write("target", "任務目標", "ICON", "/run MGTP()", true)
+check(n == "SLV 任務目標" and #said == 1 and said[1]:find("SLV 任務目標", 1, true) and said[1]:find("拖回原快捷格", 1, true), "舊玩家（舊旗標已讀）也收到拖回提示")
+check(MetroGuideDB.macroMoved.target == true and macros[1].name == "任務目標", "記下新旗標、舊巨集不動")
+-- 8. 只提醒一次：刪掉新巨集再建，不再說
+macros[2] = nil
+MG.Macro.Write("target", "任務目標", "ICON", "/run MGTP()", true)
+check(#said == 1, "拖回提示只出一次")
+-- 9. 物品巨集各自提醒一次；新玩家（沒有舊巨集）不提醒
+macros[#macros + 1] = { name = "任務物品", body = "/use item:1" }
+MG.Macro.Write("item", "任務物品", "ICON", "/use item:2", true)
+check(#said == 2 and said[2]:find("SLV 任務物品", 1, true), "物品巨集也提醒一次")
+said = {}; MetroGuideDB = {}
+reset({})
+MG.Macro.Write("target", "任務目標", "ICON", "/run MGTP()", true)
+check(#said == 0, "新玩家沒有舊巨集不提醒")
+-- 10. 設定說明和診斷用的完整名稱
+check(MG.Macro.Name("item") == "SLV 任務物品" and MG.Macro.Name("target") == "SLV 任務目標" and MG.Macro.Name("x") == nil, "完整巨集名")
+check(("建立「{target}」巨集"):gsub("{(%a+)}", MG.Macro.Name) == "建立「SLV 任務目標」巨集", "設定說明換成完整名稱")
 
 if fails > 0 then print(fails .. " failed"); os.exit(1) end
 print("macro-adopt: all passed")
