@@ -1,0 +1,20 @@
+[
+  ["Alliance", "Human", "PRIEST", "default", "solo"],
+  ["Alliance", "Human", "MAGE", "default", "party"],
+  ["Alliance", "Dwarf", "PALADIN", "default", "party"],
+  ["Alliance", "Dwarf", "SHAMAN", "default", "allparty"],
+  ["Alliance", "Gnome", "WARLOCK", "default", "allparty"],
+  ["Alliance", "Gnome", "WARRIOR", "default", "party"],
+  ["Alliance", "NightElf", "DRUID", "default", "allparty"],
+  ["Alliance", "NightElf", "HUNTER", "coast", "solo"],
+  ["Alliance", "Skyborne", "ROGUE", "default", "party"],
+  ["Horde", "Scourge", "PALADIN", "default", "solo"],
+  ["Horde", "Troll", "PRIEST", "default", "party"],
+  ["Horde", "Troll", "MAGE", "default", "allparty"],
+  ["Horde", "Orc", "WARLOCK", "default", "party"],
+  ["Horde", "Orc", "ROGUE", "default", "allparty"],
+  ["Horde", "Skyborne", "HUNTER", "default", "party"],
+  ["Horde", "Skyborne", "DRUID", "default", "solo"],
+  ["Horde", "Tauren", "SHAMAN", "default", "allparty"],
+  ["Horde", "Tauren", "WARRIOR", "default", "solo"]
+]

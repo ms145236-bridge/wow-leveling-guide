@@ -94,12 +94,11 @@
 
 ## 重現方式
 
-在專案根目錄用 Python 3 和 Lua 5.1 執行以下命令。打包工作流程會先跑相同的角色與專項檢查。
+在專案根目錄用 Python 3 和 Lua 5.1 執行以下命令。PR 與打包共用測試清單。
 
 ```sh
-lua5.1 tools/tests/map-order.lua
-lua5.1 tools/tests/route-handoffs.lua
-lua5.1 tools/tests/record-timing.lua
+bash tools/tests/run-all.sh
+python3 tools/tests/replay/check.py --list-cases
 python3 tools/tests/replay/check.py --output characters.csv
 lua5.1 tools/audit-dungeon-coverage.lua Alliance > alliance-dungeon-quests.tsv
 lua5.1 tools/audit-dungeon-coverage.lua Horde > horde-dungeon-quests.tsv
@@ -107,6 +106,19 @@ lua5.1 tools/audit-map-order.lua Alliance > alliance-revisits.tsv
 lua5.1 tools/audit-map-order.lua Horde > horde-revisits.tsv
 ```
 
-角色重播以 56 種陣營、種族、職業組合和夜精靈雙路線構成 61 種行程。每種跑純野外、遇隊、所有適等副本。起始為空日誌，預設沒有罕見德萊尼掉落。建議進站等級不足時模型會記一筆額外練級，再接下一站。比較版本時看這筆經驗、交件集合、職業門檻、日誌峰值和難度事件。副本小怪經驗、死亡及船班等待沒有估值。
+日常驗收固定跑 18 趟。聯盟與部落各選一個角色代表各自的九種職業，也覆蓋兩陣營所有原生種族、兩個天裔起點、夜精靈黑海岸和東渡、兩陣營的三種副本情境。每趟只有一個職業，因此要維持各陣營職業覆蓋，至少需要 18 趟。角色與情境在 [代表清單](tools/tests/replay/representative.json) 可直接核對。
+
+| 陣營 | 情境 | 代表角色 |
+|---|---|---|
+| 聯盟 | 純野外 | 人類牧師、夜精靈獵人（留黑海岸） |
+| 聯盟 | 選定副本 | 人類法師、矮人聖騎士、地精戰士、天裔盜賊 |
+| 聯盟 | 所有適等副本 | 矮人薩滿、地精術士、夜精靈德魯伊（東渡） |
+| 部落 | 純野外 | 不死族聖騎士、天裔德魯伊、牛頭人戰士 |
+| 部落 | 選定副本 | 食人妖牧師、獸人術士、天裔獵人 |
+| 部落 | 所有適等副本 | 食人妖法師、獸人盜賊、牛頭人薩滿 |
+
+清單會對照受支援的種族職業組合。漏掉新身分、跨陣營誤用同名種族、少一條夜精靈分支、少一種副本情境或重複列入時，測試會報出缺項。這 18 趟能檢查共同主線和代表性的職業與副本交接。其餘合法的種族職業搭配另由專項測試或需要時指定 `python3 tools/tests/replay/check.py --full --output characters-full.csv` 檢查。完整重播由 56 種組合與夜精靈分流構成 61 種行程，每種跑三個情境，共 183 趟。
+
+重播從空日誌起跑，預設沒有罕見德萊尼掉落。建議進站等級不足時模型會記一筆額外練級，再接下一站。比較版本時看這筆經驗、交件集合、職業門檻、日誌峰值和難度事件。副本小怪經驗、死亡及船班等待仍待玩家樣本。
 
 既有「遊戲內記錄」開啟時，3881、7729、2581 會在同次登入內從接取計到交付，保留版本、起訖等級、職業與曾否組隊。計時含途中停留。角色切換、重載或關閉記錄會捨棄未完成的樣本。沿用 `/slv rec export` 及 `node tools/import-rec.mjs <匯出檔或存檔>` 即可在報告查看。紀錄存在本機，發布與測試不會上傳玩家資料。
