@@ -15,6 +15,7 @@ lua5.1 tools/tests/auberdine-choice.lua
 lua5.1 tools/tests/field-marshal.lua
 lua5.1 tools/tests/macro-adopt.lua
 lua5.1 tools/tests/fp-discover.lua
+lua5.1 tools/tests/fp-step.lua
 lua5.1 tools/tests/record-timing.lua
 python3 -B tools/tests/replay/test_selection.py
 python3 tools/tests/replay/check.py

@@ -813,14 +813,14 @@ function E.Locate(st)
   for _, step in ipairs(steps) do if step.s.t == "accept" and not step.carry then here[step.s.q] = true end end
   local nxt = E.Next(st)
   for i, step in ipairs(steps) do
-    if not done[i] and SOFT[step.s.t] then
+    if not done[i] and SOFT[step.s.t] then -- 開鳥點不會被後面的進度帶過：要真的開了（飛行地圖／對話開點）才算
       local later = false
       for j = i + 1, n do
         -- 後面仍要綁爐石或補給，前往該處的路標就不是站尾交通。
         if not done[j] and not SOFT[steps[j].s.t] and not na[j] then later = true end
         if steps[j].s.q and not na[j] then
           later = true
-          if done[j] and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
+          if step.s.t ~= "fp" and done[j] and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
         end
       end
       softLater[i] = not done[i] and later and not step.s.x and map ~= nil and x ~= nil -- 沒座標的交通：輪到它時才看人到了沒（見下面）
