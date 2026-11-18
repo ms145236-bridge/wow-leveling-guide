@@ -15,7 +15,8 @@ MG.gameZh = MG.gameLoc == "zhTW" -- 客戶端就是底稿語言：遊戲裡的�
 MG.gameCJK = CJK[MG.gameLoc] or false -- 客戶端字型有中文字
 
 -- 插件自己的巨集（只用帳號巨集）。帳號存檔 MetroGuideDB.macros[用途] = { name＝實際名稱, body＝寫完讀回來的內容, want＝要寫的內容 }
--- 帳號巨集裡剛好只有一個「名稱、內容都和紀錄相同」的才算自己的；沒有紀錄的（含舊版留下的）一律當玩家的，不改、不改名、不刪
+-- 認自己的巨集：有紀錄時看名稱（帳號巨集裡剛好一個同名的）；沒有紀錄時，只接手「插件命名＋插件內容」的巨集
+-- （內容只會是插件產生的 /use item:數字、/run MGTP()、/run ShengLv_Msg(...)）。玩家自己寫的巨集一律不改、不改名、不刪
 MG.Macro = {}
 local MAX_ACCOUNT = MAX_ACCOUNT_MACROS or 120
 local told = {}
@@ -23,18 +24,40 @@ local function ledger()
   MetroGuideDB.macros = MetroGuideDB.macros or {}
   return MetroGuideDB.macros
 end
--- 自己的巨集在第幾格。回傳 格位, 名稱；找不到（被刪、被玩家改過內容或名稱）就放掉紀錄回 nil；有兩個以上一樣的分不出來，回 nil, nil, true（什麼都不動）
-function MG.Macro.Find(role)
+local function pluginBody(body)
+  if type(body) ~= "string" then return false end
+  return body:find("ShengLv_Msg(", 1, true) or body:find("MGTP()", 1, true) or body:match("^/use item:%d+%s*$") and true or false
+end
+local function names(default) return { default, "SLV " .. default, "SLV " .. default .. " 2" } end
+-- 自己的巨集在第幾格。回傳 格位, 名稱；有兩個以上分不出來，回 nil, nil, true（什麼都不動）。
+-- default 給了才會接手沒紀錄、但名稱與內容都是插件產生的巨集（舊版留下、或存檔紀錄遺失）
+function MG.Macro.Find(role, default)
+  if not GetMacroInfo then return nil end
   local rec = ledger()[role]
-  if not rec or not GetMacroInfo then return nil end
-  local found, n = nil, 0
-  for i = 1, (GetNumMacros()) do
-    local name, _, body = GetMacroInfo(i)
-    if name == rec.name and body == rec.body then found, n = i, n + 1 end
+  if rec then
+    local found, n, exact, ne = nil, 0, nil, 0
+    for i = 1, (GetNumMacros()) do
+      local name, _, body = GetMacroInfo(i)
+      if name == rec.name then
+        found, n = i, n + 1
+        if body == rec.body then exact, ne = i, ne + 1 end
+      end
+    end
+    if n == 1 then return found, rec.name end
+    if ne == 1 then return exact, rec.name end
+    if n > 1 then return nil, nil, true end
+    ledger()[role] = nil
   end
-  if n == 1 then return found, rec.name end
-  if n > 1 then return nil, nil, true end
-  ledger()[role] = nil
+  if not default then return nil end
+  for _, cand in ipairs(names(default)) do
+    for i = 1, (GetNumMacros()) do
+      local name, _, body = GetMacroInfo(i)
+      if name == cand and pluginBody(body) then
+        ledger()[role] = { name = name, body = body }
+        return i, name
+      end
+    end
+  end
   return nil
 end
 -- 這個名稱有沒有被任何巨集用掉（帳號＋角色）
@@ -48,7 +71,7 @@ end
 -- 寫完讀回來對得上才登記。回傳 格位, 名稱；沒寫成回 nil
 function MG.Macro.Write(role, default, icon, body, create)
   if not GetMacroInfo or InCombatLockdown() then return nil end
-  local index, name, twin = MG.Macro.Find(role)
+  local index, name, twin = MG.Macro.Find(role, default)
   if twin then return nil end
   local made = not index
   if index then
@@ -56,7 +79,7 @@ function MG.Macro.Write(role, default, icon, body, create)
     index = EditMacro(index, name, icon, body) or index
   elseif create then
     if (GetNumMacros()) >= MAX_ACCOUNT then return nil, "full" end
-    for _, cand in ipairs({ default, "SLV " .. default, "SLV " .. default .. " 2" }) do
+    for _, cand in ipairs(names(default)) do
       if not taken(cand) then name = cand; break end
     end
     if not name then
