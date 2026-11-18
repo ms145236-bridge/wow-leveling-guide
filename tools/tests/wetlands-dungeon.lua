@@ -195,3 +195,32 @@ assert(not inside("do",fallen) and not inside("accept",fallen))
 active[fallen], ready[fallen], turned[fallen] = nil, nil, true
 for _, row in ipairs(returns) do assert(not E.Applies(row.when)) end
 print("Wetlands Songblade first visit, level-24 group preparation, in-instance handoff and Lakeshire return passed")
+
+-- The level-55 Stratholme rows must not reserve slots at level 26. Actual
+-- accepted quests, mandatory future steps and pending accept clicks still count.
+settings.optional, settings.dPre = true, true
+function UnitLevel() return 26 end
+local _, requiredIndex = step(E.byId["03-23"], "accept", 299)
+local _, prepIndex = step(E.byId["04-56"], "accept", 5212)
+local required = E.byId["03-23"].list[requiredIndex]
+local prep = E.byId["04-56"].list[prepIndex]
+assert(not required.s.opt and prep.s.when.dungeonPrep)
+local savedStations = E.stations
+local plan = {index=1, list={required, prep}}
+E.stations = {plan}
+local journal = {}
+ns.C.LogQuestIDs = function() return journal end
+for free = 0, 5 do
+  journal = {}
+  for slot = 1, 40 - free do journal[slot] = 100000 + slot end
+  for pending = 0, 2 do
+    assert(E.PreRoom(plan, pending) == (free - pending - 1 >= 3))
+  end
+end
+assert(E.PreRoom(plan, 1))
+active[5212] = true
+journal[#journal + 1] = 5212
+assert(E.PreRoom(plan) and not E.PreRoom(plan, 1))
+active[5212], journal[#journal] = nil, nil
+E.stations = savedStations
+print("Dungeon-prep log capacity preserves real, mandatory and pending slots")

@@ -14188,3 +14188,5 @@
 03-30到45級.md:172｜說明｜有車手送件或勇士島任務在身時，回亂風崗飛棘齒城；交完貨、辦完島上的事再飛回。｜If you have a raceway delivery or a Fray Island quest, return to Freewind Post and fly to Ratchet. Finish your deliveries and island business before flying back.
 04-45到60級.md:504｜說明｜斯通納德已開就從惡齒村選斯通納德（經卡加斯等已開點轉乘）；未開就飛羅格瑪，沿南側道路經 Terral’s Watch 南下悲傷沼澤，到斯通納德開點。｜If Stonard is unlocked, choose Stonard from Revantusk Village (transfer through unlocked points such as Kargath) If not, fly to Rog'mar, follow the southern road past Terral's Watch south into the Swamp of Sorrows, and unlock Stonard.
 01-第一段-1到12級.md:116｜說明｜（任選專業）｜(any profession)
+05-副本.md:289｜說明｜帶著占卜籤，穿過傳送門後找箱子。｜Keep the fortune with you and look for the chest after entering the instance portal.
+05-副本.md:1470｜說明｜正門進市場，開煙草店的箱子後擊敗艾茲拉‧格里姆。｜From the main gate, head into the market. Open the smoke shop crate and defeat Ezra Grimm.

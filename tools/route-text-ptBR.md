@@ -14567,3 +14567,5 @@
 03-30到45級.md:172｜說明｜有車手送件或勇士島任務在身時，回亂風崗飛棘齒城；交完貨、辦完島上的事再飛回。｜Se tiver uma entrega da pista ou uma missão na Ilha da Contenda, volte ao Posto do Vento Livre e voe para a Vila Catraca. Termine as entregas e as tarefas da ilha antes de voltar.
 04-45到60級.md:504｜說明｜斯通納德已開就從惡齒村選斯通納德（經卡加斯等已開點轉乘）；未開就飛羅格瑪，沿南側道路經 Terral’s Watch 南下悲傷沼澤，到斯通納德開點。｜Se Pedregal estiver desbloqueado, escolha Pedregal a partir da Aldeia Revatusco (baldeação por pontos desbloqueados como Karrath) Se não, voe para Rog'mar, siga a estrada do sul passando por Mirante de Terral para o sul até o Pântano das Mágoas e desbloqueie Pedregal.
 01-第一段-1到12級.md:116｜說明｜（任選專業）｜(qualquer profissão)
+05-副本.md:289｜說明｜帶著占卜籤，穿過傳送門後找箱子。｜Leve a sorte com você e procure o baú depois de passar pelo portal da masmorra.
+05-副本.md:1470｜說明｜正門進市場，開煙草店的箱子後擊敗艾茲拉‧格里姆。｜Do portão principal, vá ao mercado. Abra o caixote da tabacaria e derrote Ezra Carranca.
