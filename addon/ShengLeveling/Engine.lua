@@ -658,6 +658,18 @@ function E.ViaTarget(step)
   return { s.map, s.x, s.y }
 end
 
+-- 這個任務在第 idx 站（含）之後的主線站還有本角色適用的步驟：路線後面會處理，不用帶過來補
+local function laterHas(q, idx)
+  if not idx then return false end
+  for _, o in ipairs(questSt[q] or {}) do
+    if not o.dungeon and o.index and o.index >= idx then
+      for _, step in ipairs(o.list) do
+        if step.s.q == q and E.Applies(step.s.when) then return true end
+      end
+    end
+  end
+  return false
+end
 -- 本站要顯示的步驟（跳站時帶來的「順路補」排在最前面）
 local dungeonPreSteps
 local CITY = { [1453] = true, [1454] = true, [1455] = true, [1456] = true, [1457] = true, [1458] = true } -- 暴風城、奧格瑪、鐵爐堡、雷霆崖、達納蘇斯、幽暗城
@@ -669,7 +681,7 @@ local function stepsOf(st)
   carry = carry or {}
   local here = {}
   for _, step in ipairs(st.list) do if step.s.q then here[step.s.q] = true end end
-  for k = #carry, 1, -1 do if turned(carry[k]) then table.remove(carry, k) end end
+  for k = #carry, 1, -1 do if turned(carry[k]) or laterHas(carry[k], st.index and st.index + 1) then table.remove(carry, k) end end
   for _, q in ipairs(carry) do
     for _, other in ipairs(not here[q] and questSt[q] or {}) do
       if other ~= st and not other.dungeon then
@@ -1103,7 +1115,7 @@ function E.JumpPlan(target)
       local seen = {}
       for _, step in ipairs(E.stations[k].list) do
         local q = step.s.q
-        if q and not seen[q] and E.Applies(step.s.when) and not turned(q) then
+        if q and not seen[q] and E.Applies(step.s.when) and not turned(q) and not laterHas(q, target.index) then
           seen[q] = true
           local info = R.quests[q] or {}
           if info.chain or info.keep or (C.IsOnQuest(q) and not gray(q)) then carry[#carry + 1] = q else dropN = dropN + 1 end
