@@ -1,6 +1,6 @@
 # 阿聖練等幫手 frFR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **377** 列。
+- 只收聯盟路線獨有的說明列，共 **381** 列。
 
 檔名:行號｜類型｜中文原文｜frFR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Fais un clic droit sur Livre grignoté dans ton sac pour lancer la quête.
@@ -1338,3 +1338,9 @@
 04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Va au quai d'Austrivage et prends le bateau pour Auberdine (1424 50.70, 70.50).
 01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Embarquez au quai du port de Hurlevent.
 03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Embarquez au quai de Cabestan.
+02-12到30級.md:620｜說明｜若先打過濕地挖掘場，在湖畔鎮接下這個任務，留到下次組隊進本找戴文。｜Si vous avez déjà terminé le site de fouilles des Paluns, acceptez cette quête à Comté-du-Lac et cherchez Daewyn lors de votre prochaine sortie en groupe.
+05-副本.md:204｜說明｜再經湖畔鎮時，向多林回報弟弟的下落。｜Lors de votre prochain passage à Comté-du-Lac, dites à Dorin ce qui est arrivé à son frère.
+05-副本.md:386｜說明｜一般跟線可在安戈洛第二趟結束、回到鐵爐堡後組隊，下站就是燃燒平原。提早在灼熱峽谷組到隊，也可從峽谷南端進黑石山。｜Sur le parcours principal, formez un groupe à Forgefer après votre deuxième passage à Un’Goro. Vous irez ensuite aux Steppes ardentes. Si vous trouvez un groupe plus tôt dans la gorge des Vents brûlants, entrez dans le mont Rochenoire par le sud de la gorge.
+05-副本.md:388｜說明｜在鐵爐堡能飛就飛瑟銀哨塔，從灼熱峽谷南端進黑石山。飛不到就從丹莫洛東側進洛克莫丹，往南進荒蕪之地，再往西繞開卡加斯進灼熱峽谷。→在冬泉谷組到隊，可飛奧伯丁。飛不到就循木喉要塞原路回費伍德，經梣谷走到黑海岸的奧伯丁。搭船去暴風城，再飛瑟銀哨塔。沒開東部飛點就從暴風城走艾爾文森林、赤脊山，沿湖畔鎮北路進燃燒平原，再往西進黑石山。→續燃燒平原主線就從黑石山南門出去，沿大路往東到摩根的崗哨。→若正要回羽月要塞，爐石綁阿斯特蘭納且可用就先爐回去。否則從燃燒平原經赤脊山、艾爾文森林到暴風城港搭船回奧伯丁。回到卡林多再飛羽月要塞。沒有航線就從梣谷經石爪山脈、淒涼之地進菲拉斯，到西岸碼頭搭船上島。｜Depuis Forgefer, volez jusqu’à la halte du Thorium si vous le pouvez, puis entrez dans le mont Rochenoire par le sud de la gorge des Vents brûlants. Sans ce vol, quittez Dun Morogh par l’est vers le Loch Modan. Descendez vers les terres Ingrates, puis allez vers l’ouest en contournant Kargath pour rejoindre la gorge. → Si vous trouvez un groupe au Berceau-de-l’Hiver, volez jusqu’à Auberdine. Sans ce vol, repassez par le repaire des Grumegueules vers Gangrebois et traversez Orneval jusqu’à Auberdine, à Sombrivage. Prenez le bateau pour Hurlevent, puis volez jusqu’à la halte du Thorium. Sans les trajets aériens de l’est, quittez Hurlevent par la forêt d’Elwynn vers les Carmines. Prenez la route au nord de Comté-du-Lac vers les Steppes ardentes, puis dirigez-vous vers l’ouest pour entrer dans le mont Rochenoire. → Pour continuer dans les Steppes ardentes, sortez du mont Rochenoire par la porte sud et suivez la route vers l’est jusqu’à la Veille de Morgan. → Pour retourner au bastion de Pennelune, utilisez votre pierre de foyer si elle est prête et liée à Astranaar. Sinon, quittez les Steppes ardentes par les Carmines et la forêt d’Elwynn jusqu’au port de Hurlevent. Prenez le bateau pour Auberdine, puis volez jusqu’au bastion de Pennelune. Sans ce vol, partez d’Orneval, traversez les Serres-Rocheuses puis Désolace pour rejoindre Féralas et prenez le bateau pour l’île au quai de la côte ouest.
+05-副本.md:392｜說明｜在黑石山內用靈魂狀態找弗蘭克羅恩，接、交第一段並接第二段後再復活。各地進山路線見本頁的動線。｜Parlez à Franclorn sous forme de fantôme dans le mont Rochenoire. Acceptez et rendez la première partie, puis acceptez la deuxième avant de ressusciter. Consultez l’itinéraire de cette page pour rejoindre le mont.
+05-副本.md:399｜說明｜在此交完黑鐵的遺產。續燃燒平原主線走黑石山南門，需回卡林多則按本頁動線搭船或用爐石。｜Rendez ici la quête Héritage Sombrefer. Pour poursuivre dans les Steppes ardentes, prenez la porte sud du mont Rochenoire. Pour regagner Kalimdor, suivez les indications de cette page pour le bateau ou la pierre de foyer.

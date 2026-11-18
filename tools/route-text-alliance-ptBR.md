@@ -1,6 +1,6 @@
 # 阿聖練等幫手 ptBR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **377** 列。
+- 只收聯盟路線獨有的說明列，共 **381** 列。
 
 檔名:行號｜類型｜中文原文｜ptBR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Clique com o botão direito em Livro Mordiscado na bolsa para iniciar a missão.
@@ -1338,3 +1338,9 @@
 04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Vá ao cais de Costa Sul e pegue o barco para Auberdine (1424 50.70, 70.50).
 01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Embarque no cais do porto de Ventobravo.
 03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Embarque no cais de Vila Catraca.
+02-12到30級.md:620｜說明｜若先打過濕地挖掘場，在湖畔鎮接下這個任務，留到下次組隊進本找戴文。｜Se já concluiu a escavação do Pantanal, aceite a missão em Vila Plácida e procure Daewyn na próxima visita em grupo.
+05-副本.md:204｜說明｜再經湖畔鎮時，向多林回報弟弟的下落。｜Na próxima vez que passar por Vila Plácida, conte a Dorin o que aconteceu com o irmão dele.
+05-副本.md:386｜說明｜一般跟線可在安戈洛第二趟結束、回到鐵爐堡後組隊，下站就是燃燒平原。提早在灼熱峽谷組到隊，也可從峽谷南端進黑石山。｜Na rota principal, forme um grupo em Altaforja depois da segunda visita à Cratera Un’Goro. O próximo destino é a Estepe Ardente. Se encontrar um grupo antes na Garganta Abrasadora, entre na Montanha Rocha Negra pela ponta sul da garganta.
+05-副本.md:388｜說明｜在鐵爐堡能飛就飛瑟銀哨塔，從灼熱峽谷南端進黑石山。飛不到就從丹莫洛東側進洛克莫丹，往南進荒蕪之地，再往西繞開卡加斯進灼熱峽谷。→在冬泉谷組到隊，可飛奧伯丁。飛不到就循木喉要塞原路回費伍德，經梣谷走到黑海岸的奧伯丁。搭船去暴風城，再飛瑟銀哨塔。沒開東部飛點就從暴風城走艾爾文森林、赤脊山，沿湖畔鎮北路進燃燒平原，再往西進黑石山。→續燃燒平原主線就從黑石山南門出去，沿大路往東到摩根的崗哨。→若正要回羽月要塞，爐石綁阿斯特蘭納且可用就先爐回去。否則從燃燒平原經赤脊山、艾爾文森林到暴風城港搭船回奧伯丁。回到卡林多再飛羽月要塞。沒有航線就從梣谷經石爪山脈、淒涼之地進菲拉斯，到西岸碼頭搭船上島。｜De Altaforja, voe para o Posto de Tório se tiver o voo e entre na Montanha Rocha Negra pela ponta sul da Garganta Abrasadora. Sem o voo, saia de Dun Morogh pelo leste para Loch Modan. Vá para o sul até os Ermos e depois para oeste, contornando Karrath, até a Garganta Abrasadora. → Se encontrar um grupo em Hibérnia, voe para Auberdine. Sem o voo, volte pelo Domínio dos Presamatos até a Selva Maleva e atravesse o Vale Gris até Auberdine, na Costa Negra. Pegue o barco para Ventobravo e voe para o Posto de Tório. Sem os pontos de voo no leste, saia de Ventobravo pela Floresta de Elwynn rumo às Montanhas Cristarrubra. Siga a estrada ao norte de Vila Plácida até a Estepe Ardente e vá para oeste até a Montanha Rocha Negra. → Para continuar na Estepe Ardente, saia pelo portão sul da Montanha Rocha Negra e siga a estrada para leste até a Vigia de Morgan. → Para retornar ao Domínio de Plumaluna, use a pedra de regresso se estiver disponível e vinculada a Astranaar. Caso contrário, saia da Estepe Ardente e atravesse as Montanhas Cristarrubra e a Floresta de Elwynn até o porto de Ventobravo. Pegue o barco para Auberdine e voe para o Domínio de Plumaluna. Sem o voo, saia do Vale Gris, atravesse a Cordilheira das Torres de Pedra e Desolação até Feralas e pegue o barco para a ilha no cais da costa oeste.
+05-副本.md:392｜說明｜在黑石山內用靈魂狀態找弗蘭克羅恩，接、交第一段並接第二段後再復活。各地進山路線見本頁的動線。｜Fale com Franclorn como fantasma dentro da Montanha Rocha Negra. Aceite e entregue a primeira parte e aceite a segunda antes de ressuscitar. Veja nesta página as rotas para chegar à montanha.
+05-副本.md:399｜說明｜在此交完黑鐵的遺產。續燃燒平原主線走黑石山南門，需回卡林多則按本頁動線搭船或用爐石。｜Entregue aqui a missão Legado dos Ferro Negro. Para continuar na Estepe Ardente, use o portão sul da Montanha Rocha Negra. Para voltar a Kalimdor, siga as indicações desta página para o barco ou a pedra de regresso.

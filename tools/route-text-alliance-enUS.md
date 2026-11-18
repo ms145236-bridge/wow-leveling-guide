@@ -1,6 +1,6 @@
 # 阿聖練等幫手 enUS 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **377** 列。
+- 只收聯盟路線獨有的說明列，共 **381** 列。
 
 檔名:行號｜類型｜中文原文｜enUS
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Right-click Nibbled-On Book in your bags to start the quest.
@@ -1338,3 +1338,9 @@
 04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Go to the Southshore dock and take the boat to Auberdine (1424 50.70, 70.50).
 01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Board at the pier in Stormwind Harbor.
 03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Board at the Ratchet dock.
+02-12到30級.md:620｜說明｜若先打過濕地挖掘場，在湖畔鎮接下這個任務，留到下次組隊進本找戴文。｜If you have already cleared the Wetlands Excavation Site, pick this up in Lakeshire and look for Daewyn on your next group run.
+05-副本.md:204｜說明｜再經湖畔鎮時，向多林回報弟弟的下落。｜Tell Dorin what happened to his brother the next time you visit Lakeshire.
+05-副本.md:386｜說明｜一般跟線可在安戈洛第二趟結束、回到鐵爐堡後組隊，下站就是燃燒平原。提早在灼熱峽谷組到隊，也可從峽谷南端進黑石山。｜On the main route, form your group in Ironforge after your second visit to Un’Goro. The Burning Steppes are next. If you find a group earlier in Searing Gorge, enter Blackrock Mountain at the south end of the gorge.
+05-副本.md:388｜說明｜在鐵爐堡能飛就飛瑟銀哨塔，從灼熱峽谷南端進黑石山。飛不到就從丹莫洛東側進洛克莫丹，往南進荒蕪之地，再往西繞開卡加斯進灼熱峽谷。→在冬泉谷組到隊，可飛奧伯丁。飛不到就循木喉要塞原路回費伍德，經梣谷走到黑海岸的奧伯丁。搭船去暴風城，再飛瑟銀哨塔。沒開東部飛點就從暴風城走艾爾文森林、赤脊山，沿湖畔鎮北路進燃燒平原，再往西進黑石山。→續燃燒平原主線就從黑石山南門出去，沿大路往東到摩根的崗哨。→若正要回羽月要塞，爐石綁阿斯特蘭納且可用就先爐回去。否則從燃燒平原經赤脊山、艾爾文森林到暴風城港搭船回奧伯丁。回到卡林多再飛羽月要塞。沒有航線就從梣谷經石爪山脈、淒涼之地進菲拉斯，到西岸碼頭搭船上島。｜From Ironforge, fly to Thorium Point if you can and enter Blackrock Mountain at the south end of Searing Gorge. Without that flight, leave Dun Morogh to the east for Loch Modan. Go south into the Badlands, then west around Kargath into Searing Gorge. → If you find a group in Winterspring, fly to Auberdine. Without the flight, retrace your steps through Timbermaw Hold to Felwood and travel through Ashenvale to Auberdine in Darkshore. Take the boat to Stormwind, then fly to Thorium Point. Without the eastern flight paths, leave Stormwind through Elwynn Forest for Redridge. Take the road north from Lakeshire into the Burning Steppes, then head west into Blackrock Mountain. → To continue the Burning Steppes route, leave Blackrock Mountain by the south gate and follow the road east to Morgan’s Vigil. → To return to Feathermoon Stronghold, hearth to Astranaar if you are bound there and your Hearthstone is ready. Otherwise, travel from the Burning Steppes through Redridge and Elwynn Forest to Stormwind Harbor. Take the boat to Auberdine, then fly to Feathermoon Stronghold. Without that flight, follow the road from Ashenvale through the Stonetalon Mountains and Desolace to Feralas, then take the boat from the west-coast dock to the island.
+05-副本.md:392｜說明｜在黑石山內用靈魂狀態找弗蘭克羅恩，接、交第一段並接第二段後再復活。各地進山路線見本頁的動線。｜Speak to Franclorn inside Blackrock Mountain as a ghost. Accept and turn in the first part and accept the second before resurrecting. See the route on this page for ways into the mountain.
+05-副本.md:399｜說明｜在此交完黑鐵的遺產。續燃燒平原主線走黑石山南門，需回卡林多則按本頁動線搭船或用爐石。｜Turn in Dark Iron Legacy here. Use Blackrock Mountain’s south gate to continue in the Burning Steppes. To return to Kalimdor, follow this page’s boat or Hearthstone directions.

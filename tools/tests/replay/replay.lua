@@ -5,8 +5,9 @@ local alliance=faction=="Alliance"
 local raceID=assert(({Human=1,Orc=2,Dwarf=3,NightElf=4,Scourge=5,Tauren=6,Gnome=7,Troll=8,Skyborne=alliance and 33 or 34})[race])
 local initialBind=({Human="北郡修道院",Orc="試煉谷",Dwarf="安威瑪",NightElf="奧達希爾",Scourge="喪鐘鎮",Tauren="納拉其營地",Gnome="安威瑪",Troll="試煉谷",Skyborne="坦德爾林地"})[race]
 local mode=arg[4] or "raw"
-assert(mode=="raw" or mode=="solo" or mode=="party" or mode=="early" or mode=="allparty")
-local party=(mode=="party" or mode=="early" or mode=="allparty")
+local allDungeons = mode=="allparty" or mode=="allparty-window"
+assert(mode=="raw" or mode=="solo" or mode=="party" or mode=="early" or allDungeons)
+local party=(mode=="party" or mode=="early" or allDungeons)
 local instanceFraction=tonumber(arg[5] or 0)
 assert(instanceFraction>=0 and instanceFraction<=1)
 local selected = alliance and {3,4,5,7,8,9,10,11,13,14} or {1,3,5,6,8,11,14,17,18,21,23,24,33}
@@ -31,8 +32,8 @@ function UnitLevel() return level end
 function UnitXP() return bar end
 function UnitXPMax() return maxXP[level] or 0 end
 function wipe(t) for k in pairs(t) do t[k]=nil end end
-local db={skip={},drop={},fpNodes={},notNow={},pin={},mark={},latch={},carry={}}
-local ns={db=db, UI={Get=function() return false end}, C={}}
+local db={skip={},drop={},fpNodes={},notNow={},pin={},mark={},latch={},carry={},dNo={}}
+local ns={db=db, L=setmetatable({}, {__index=function(_,k) return k end}), UI={Get=function() return false end}, C={}}
 function ns.C.IsTurnedIn(q) return turned[q] end
 function ns.C.IsOnQuest(q) return have[q] end
 function ns.C.IsReady(q) return worked[q] end
@@ -44,7 +45,7 @@ local E=ns.E
 E.Build()
 local instanceWork,selectedWork={},{}
 for _,d in ipairs(E.dungeons) do
-  if mode=="allparty" then chosen[d.id]=true end
+  if allDungeons then chosen[d.id]=true end
   for _,step in ipairs(d.list) do
     local s=step.s
     if s.q and s.ph=="in" and s.t=="do" and E.Applies(s.when,true) then
@@ -146,6 +147,7 @@ local function run(st, isRun)
 end
 -- Count only XP explicitly represented by the objectives. All instance trash XP is
 -- deliberately left unpriced. Top-ups are the residual supplied at a station boundary.
+local mayEnter = assert(loadfile("tools/tests/replay/dungeon-entry.lua"))()
 local anchorsSeen={}
 local st=E.stations[1]
 while st do
@@ -154,7 +156,7 @@ while st do
   if party then
     for _,d in ipairs(E.dungeons) do
       local timely=anchorsSeen[d.after] or (mode=="early" and not alliance and d.id=="05-d33" and have[99187] and level>=55)
-      if chosen[d.id] and timely and not ran[d.id] and level>=d.lv[1] and level<=d.lv[2] then
+      if chosen[d.id] and timely and not ran[d.id] and mayEnter(E,d,level,mode,db.dNo[d.id]) then
         ran[d.id]=true;d.main=st;run(d,true)
       end
     end

@@ -126,21 +126,80 @@ position = { inside.s.via[1][1], inside.s.via[1][2], inside.s.via[1][3] }
 assert(cur(hive) ~= inside, "already inside the hive: the chain is done")
 race, raceID, db.start, level = "Dwarf", 3, "Dwarf/Gnome", 10
 
--- 文字改寫的單點步驟沿用舊鍵：舊勾選、略過都還在
+-- 舊鍵回歸：下面這些是改版前 main（f08c041）實際建出的 Data/RouteA.lua 裡、這次改寫或合併的步驟的存檔鍵
+-- （lua5.1 的 %.0f 進位，例如 30.5 → 30）。每一個都要對到現在某一步的鍵或它的舊鍵，存檔才不會掉
 reset()
 level = 50
 race, raceID, db.start = "Human", 1, nil
 E.Build()
-local found = 0
-for _, s0 in pairs(E.byId) do
-  for _, step in ipairs(s0.list) do
-    if step.s.skey and not step.s.vkeys then
-      found = found + 1
-      assert(step.key == s0.id .. "#" .. step.s.skey, step.key)
-    end
+local OLD_KEYS = {
+  "01-3#goto:沿路跑到這個點。@26,68",
+  "01-5#goto:沿路跑到這個點。@58,42",
+  "01-8#buy:閃光的小珠",
+  "01-8#buy:夜色蟲",
+  "01-9#goto:沿路跑到這個點。@83,50",
+  "01-9#goto:沿路跑到這個點。@79,50",
+  "01-9#goto:沿路跑到這個點。@80,50",
+  "01-9#goto:沿路跑到這個點。@82,50",
+  "02-13#goto:沿路跑到這個點。@51,25~2",
+  "02-13#goto:沿路跑到這個點。@51,25",
+  "02-21#goto:沿路跑到這個點。@34,41",
+  "02-20#goto:沿路跑到這個點。@44,50",
+  "02-20#goto:沿路跑到這個點。@47,52",
+  "02-20#goto:沿路跑到這個點。@47,49",
+  "02-20#travel:穿過山洞進石爪山脈。",
+  "02-20#goto:沿路跑到這個點。@42,71",
+  "03-22#goto:沿路跑到這個點。@56,53",
+  "03-23#goto:沿路跑到這個點。@32,51",
+  "03-23#goto:沿路跑到這個點。@32,49",
+  "03-23#goto:沿路跑到這個點。@31,49",
+  "03-28#goto:沿路跑到這個點。@54,33",
+  "03-28#goto:沿路跑到這個點。@64,44",
+  "03-29#goto:沿路跑到這個點。@32,24",
+  "03-32#goto:沿路跑到這個點。@51,29",
+  "03-33#goto:沿路跑到這個點。@60,41",
+  "03-34#goto:沿路跑到這個點。@30,54",
+  "03-41#goto:沿路跑到這個點。@72,64",
+  "03-41#goto:沿路跑到這個點。@73,64",
+  "04-43#goto:沿路跑到這個點。@56,72",
+  "04-43#goto:沿路跑到這個點。@55,70",
+  "04-43#goto:沿路跑到這個點。@54,73",
+  "04-44#goto:沿路跑到這個點。@85,32",
+  "04-44#goto:沿路跑到這個點。@47,78",
+  "04-47#goto:沿路跑到這個點。@27,57",
+  "04-48#goto:沿路跑到這個點。@49,85",
+  "04-48#goto:沿路跑到這個點。@50,79",
+  "04-49#goto:沿路跑到這個點。@66,3",
+  "04-55#goto:沿路跑到這個點。@65,87",
+}
+local known = {}
+for _, s0 in ipairs(ns.Route.stations) do
+  for _, s in ipairs(s0.steps) do
+    if s.skey then known[s0.id .. "#" .. s.skey] = true end
+    for _, a in ipairs(s.akeys or {}) do known[s0.id .. "#" .. a] = true end
+    for _, g in ipairs(s.vkeys or {}) do for _, a in ipairs(g) do known[s0.id .. "#" .. a] = true end end
   end
 end
-assert(found > 0)
+for _, k in ipairs(OLD_KEYS) do assert(known[k], "old save key not carried over: " .. k) end
+for _, s0 in pairs(E.byId) do
+  for _, step in ipairs(s0.list) do
+    if step.s.skey then assert(step.key == s0.id .. "#" .. step.s.skey, step.key) end
+  end
+end
+-- 黑海岸瀑布（02-13）兩個舊點合成一點：任一個舊點有勾都算到
+reset()
+db.latch["02-13#goto:沿路跑到這個點。@51,25"] = true
+E.Build()
+for _, step in ipairs(E.byId["02-13"].list) do
+  if step.s.skey == "goto:沿路跑到這個點。@51,25~2" then assert(db.latch[step.key], "02-13 first old point carries over") end
+end
+-- 迷霧谷（03-34）：舊鍵是 @30,54
+reset()
+db.skip["03-34#goto:沿路跑到這個點。@30,54"] = true
+E.Build()
+local mist
+for _, step in ipairs(E.byId["03-34"].list) do if step.s.skey then mist = step end end
+assert(mist.key == "03-34#goto:沿路跑到這個點。@30,54" and db.skip[mist.key], "Mistvale old skip carries over")
 
 -- 搭船：碼頭座標放在船那步，沒有另一個「到碼頭」的步驟；船的鍵和以前一樣
 local boats = 0
@@ -177,4 +236,68 @@ for _, step in ipairs(hills and hills.list or {}) do
   if step.s.t == "boat" and step.s.map == 1424 then alt = step.s end
 end
 assert(alt and alt.more and alt.more[1][1] == 1453, "Southshore boat lists the Stormwind dock as an alternative")
+
+-- 下船後才登入（船那步沒勾、994 還沒接）：人在奧伯丁，不指回暴風城港口
+reset()
+E.Build()
+ash = E.byId["02-20"]
+position = {1439, 45, 60}
+assert(cur(ash) ~= ash.list[1], "logged in at Auberdine: boat counts as taken")
+-- 還在暴風城等船：照舊指暴風城碼頭
+reset()
+E.Build()
+position = {1453, 21.8, 56.8}
+assert(cur(ash) == ash.list[1], "waiting at the Stormwind dock")
+-- 南海鎮那班：在南海鎮或暴風城等船都還是船那步；到了黑海岸就算搭過
+local function boatOf(s0)
+  for i, step in ipairs(s0.list) do if step.s.t == "boat" and step.s.map == 1424 then return i, step end end
+end
+reset()
+E.Build()
+hills = E.byId["04-53"]
+local bi, boat = boatOf(hills)
+for i = 1, bi - 1 do db.mark[hills.list[i].key] = true end
+position = {1424, 50.7, 70.5}
+assert(cur(hills) == boat, "waiting at Southshore")
+position = {1453, 21.8, 56.8}
+assert(cur(hills) == boat, "waiting at Stormwind harbor (alternative)")
+position = {1439, 45, 60}
+assert(cur(hills) ~= boat, "arrived in Darkshore from either port")
+
+-- 舊版釘選：釘在翻山第二點 → 釘到合併後那步，箭頭指第二點（走過的進度不變）
+race, raceID, db.start, level = "Dwarf", 3, "Dwarf/Gnome", 10
+reset()
+st, climb = climbSetup()
+db.pin["01-9"] = { key = "01-9#goto:沿路跑到這個點。@80,50", wasDone = false, auto = "01-9#goto:沿路跑到這個點。@79,50" }
+E.Build()
+st = E.byId["01-9"]
+for _, step in ipairs(st.list) do if step.s.skey == "goto:沿路跑到這個點。@83,50" then climb = step end end
+position = {1426, 70, 50}
+assert(cur(st) == climb, "pinned merged step is current")
+assert(db.pin["01-9"] and db.pin["01-9"].key == climb.key and db.pin["01-9"].via == 2, "old pin moved to the merged step")
+assert(E.ViaTarget(climb)[2] == pts[2][2], "arrow at the pinned point 2")
+assert(not db.latch[climb.key .. "@1"], "pinning does not count as walking")
+-- 釘在最後一點（鍵沒變）：箭頭指最後一點，不是第一點
+reset()
+st, climb = climbSetup()
+db.pin["01-9"] = { key = climb.key, wasDone = false, auto = "01-9#goto:沿路跑到這個點。@79,50" }
+E.Build()
+st = E.byId["01-9"]
+for _, step in ipairs(st.list) do if step.s.skey == "goto:沿路跑到這個點。@83,50" then climb = step end end
+assert(cur(st) == climb)
+assert(E.ViaTarget(climb)[2] == pts[4][2], "arrow at the pinned last point")
+-- 新版釘選（via = false）不會被當成舊釘選
+reset()
+st, climb = climbSetup()
+db.pin["01-9"] = { key = climb.key, wasDone = false, auto = "", via = false }
+E.Build()
+assert(db.pin["01-9"].via == false)
+
+-- 換區載入中：只有地圖、還沒座標，不報錯也不亂判
+reset()
+st, climb = climbSetup()
+position = {1432}
+assert(cur(st) == climb, "no coordinates yet: stay on the climb")
+position = {1432, 22.1, 73.1}
+assert(cur(st).s.q == 224)
 print("merged-waypoints ok")
