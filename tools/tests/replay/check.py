@@ -104,6 +104,8 @@ def main():
     parser.add_argument("--lua", default=os.getenv("LUA", "lua5.1"))
     parser.add_argument("--output", type=Path, help="write the per-character CSV here")
     parser.add_argument("--full", action="store_true", help="replay every supported combination and mode")
+    parser.add_argument("--allparty-window", action="store_true",
+                        help="use the historical recommended-level window for all-dungeon cases")
     parser.add_argument("--list-cases", action="store_true", help="print the selected cases without running Lua")
     args = parser.parse_args()
     full = list(itineraries(json.loads((TESTS / "roster.json").read_text())))
@@ -111,6 +113,8 @@ def main():
     if not args.full:
         cases = [Case(*row) for row in json.loads((TESTS / "representative.json").read_text())]
         validate_representative(cases, full)
+    if args.allparty_window:
+        cases = [case._replace(mode="allparty-window") if case.mode == "allparty" else case for case in cases]
     if args.list_cases:
         print("\n".join("\t".join(case) for case in cases))
         return
