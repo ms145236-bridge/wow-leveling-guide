@@ -10,7 +10,7 @@ function UnitXPMax() return 7600 end
 function UnitXP() return 0 end
 function wipe(t) for k in pairs(t) do t[k] = nil end end
 local db = { skip={}, mark={}, latch={}, notNow={}, pin={}, carry={}, dNo={}, fpNodes={} }
-local ns = { C={}, db=db, UI={Get=function() return false end}, L={} }
+local ns = { C={}, db=db, UI={Get=function() return false end}, L=setmetatable({}, {__index=function(_, key) return key end}) }
 ns.C.IsOnQuest = function(q) return active[q] end
 ns.C.IsReady = function(q) return completed[q] end
 ns.C.IsTurnedIn = function() return false end
@@ -218,3 +218,39 @@ for i, step in ipairs(E.byId["04-45"].list) do
 end
 assert(foundLateOffer)
 print("Uldaman tablets checked for initial and repeat visits")
+
+-- A party can still pick up Dark Iron Legacy early. The scheduled visit belongs
+-- between the return to the Eastern Kingdoms and the Burning Steppes chapter.
+local depths = E.byId["05-d11"]
+assert(depths.after == "04-52" and depths.pickAt == "04-45")
+assert(E.Next(E.byId[depths.after]).id == "04-54")
+local anchor = E.byId[depths.after].list
+local ship, lastHandIn
+for _, step in ipairs(anchor) do
+  local s = step.s
+  if s.t == "boat" then ship = s end
+  if s.t == "turnin" then lastHandIn = s end
+end
+assert(ship.from == "奧伯丁" and ship.to == "米奈希爾港" and lastHandIn.map == 1455)
+for _, step in ipairs(depths.list) do
+  assert(step.s.t ~= "fly" and step.s.t ~= "hearth", "BRD must not impose a fixed departure or return transit")
+end
+wipe(active)
+wipe(completed)
+wipe(db.fpNodes)
+level = 52
+local early = E.DungeonNext(depths, false)
+assert(early and early.step.s.q == 3801 and early.step.s.t == "accept")
+ns.C.IsTurnedIn = function(q) return q == 3801 end
+active[3802] = true
+local objective = E.DungeonNext(depths, true)
+assert(objective and objective.step.s.ph == "in" and objective.step.s.t == "do" and objective.step.s.q == 3802)
+completed[3802] = true
+local monument = E.DungeonNext(depths, true)
+assert(monument and monument.step.s.ph == "in" and monument.step.s.t == "turnin" and monument.step.s.q == 3802)
+active[3802] = nil
+ns.C.IsTurnedIn = function(q) return q == 3801 or q == 3802 end
+local _, status = E.DungeonStatus(depths)
+assert(status == "past")
+assert(not E.DungeonNext(depths, false))
+print("Blackrock Depths reaches the Eastern Kingdoms by boat, retains early pickup and finishes inside")

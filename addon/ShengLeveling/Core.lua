@@ -272,7 +272,7 @@ local function routeQuestsByTitle(title)
   return title and nameToQuest[title] or {}
 end
 local function autoOn() return UI.Get("auto") and not IsShiftKeyDown() end
-local accQ = {} -- 任務 → 路線上每個「接」步驟 { when, opt, d＝副本站 ID, at＝主線站 ID }（同一個任務可以主線必做、副本段可跳過）
+local accQ = {} -- 任務 → 路線上每個「接」步驟 { when, opt, d＝所屬副本前置 ID, at＝主線站 ID }
 local anyG = {} -- 任一組（例如紮營入門指南任選專業）的每個任務 → 組的第一個 ID（略過鍵 a:第一個）
 for _, st in ipairs(R.stations) do
   for _, s in ipairs(st.steps) do
@@ -280,7 +280,7 @@ for _, st in ipairs(R.stations) do
       for _, q in ipairs(s.any or { s.q }) do -- 任一組：每個成員都記同一筆（同一個可跳過、略過狀態）
         local l = accQ[q] or {}
         accQ[q] = l
-        l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or nil, at = not st.dungeon and st.id or nil }
+        l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or (s.when and s.when.dungeonPrep), at = not st.dungeon and st.id or nil }
         if s.any then anyG[q] = s.any[1] end
       end
     end
@@ -295,14 +295,20 @@ local function inRoute(id)
   if MG.db.skip["a:" .. (anyG[id] or id)] then return false end
   local optional = UI.Get("optional") or E.Fill[id]
   -- 日誌快滿先不接的副本前置：NPC 給了也不自動接。用這一刻的日誌算（和步驟列的「之後」同一個判斷），不看上次畫好的清單
-  local pre = false -- 這個任務是副本前置（那個副本沒選不打）
-  for _, a in ipairs(accQ[id] or {}) do pre = pre or (a.d ~= nil and not MG.db.dNo[a.d]) end
+  local pre, authored = false, false
+  for _, a in ipairs(accQ[id] or {}) do
+    if a.d and not MG.db.dNo[a.d] then
+      pre = true
+      authored = authored or a.at ~= nil
+    end
+  end
   local st = pre and lastState and not lastState.instance and lastState.st
+  local main = st and not st.dungeon and st
   local pending, now = 0, GetTime()
   for q, at in pairs(autoQ) do
     if C.IsOnQuest(q) or now - at >= 3 then autoQ[q] = nil else pending = pending + 1 end -- 日誌看到了或過了 3 秒就放掉
   end
-  local tight = st and not st.dungeon and not E.PreRoom(st, pending)
+  local tight = (main or authored) and not E.PreRoom(main, pending)
   for _, a in ipairs(accQ[id] or {}) do
     local when = a.when
     if when and when.lvMin then -- 等級條件不看：NPC 已經給了就接
@@ -313,7 +319,7 @@ local function inRoute(id)
     if E.Applies(when) and (not a.opt or optional) then
       if a.d then
         if not MG.db.dNo[a.d] and not tight then return true end
-      elseif not tight or (E.byId[a.at] and E.byId[a.at].index <= st.index) then
+      elseif not tight or not main or (E.byId[a.at] and E.byId[a.at].index <= main.index) then
         return true -- 主線的接。快滿時的副本前置：主線這一站或之前就排了才接，排在後面站的走到再接
       end
     end
@@ -418,7 +424,7 @@ local EVENTS = {
   "ADDON_LOADED", "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_REMOVED", "QUEST_TURNED_IN", "QUEST_LOG_UPDATE",
   "UNIT_QUEST_LOG_CHANGED", "PLAYER_LEVEL_UP", "PLAYER_MONEY", "ZONE_CHANGED_NEW_AREA", "PLAYER_CONTROL_GAINED", "PLAYER_CONTROL_LOST", "HEARTHSTONE_BOUND",
   "UNIT_SPELLCAST_SUCCEEDED", "ZONE_CHANGED", "ZONE_CHANGED_INDOORS",
-  "TAXIMAP_OPENED", "QUEST_DETAIL", "QUEST_PROGRESS", "QUEST_COMPLETE", "GOSSIP_SHOW", "QUEST_GREETING",
+  "TAXIMAP_OPENED", "UI_INFO_MESSAGE", "QUEST_DETAIL", "QUEST_PROGRESS", "QUEST_COMPLETE", "GOSSIP_SHOW", "QUEST_GREETING",
   "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "UPDATE_INVENTORY_DURABILITY",
 }
 for _, e in ipairs(EVENTS) do
@@ -520,6 +526,17 @@ local function onEvent(_, event, ...)
   elseif event == "PLAYER_LEVEL_UP" then
     MG.db.sugHide = nil
     wipe(MG.db.notNow)
+  elseif event == "UI_INFO_MESSAGE" then
+    -- 跟飛行管理員說話就開了新鳥點（「發現新的飛行路線！」）：確定人就在目前這個鳥點才勾；認不出來留給打開飛行地圖時補勾
+    local kind, text = ...
+    if not MG.IsNewTaxiPath(kind, text) then return end
+    local fp = lastState and lastState.cur and lastState.steps[lastState.cur].s
+    if MG.AtFlightPoint(fp, C.Position()) then
+      latchCurrent("fp")
+      MG.db.fpNodes = MG.db.fpNodes or {}
+      if fp.node then MG.db.fpNodes[fp.node] = true end
+      if fp.nodeK then MG.db.fpNodes[fp.nodeK] = true end
+    end
   elseif event == "TAXIMAP_OPENED" then
     -- 目前是「開鳥點」：人就在那個鳥點旁邊才勾（在別的城開飛行地圖不算；讀不到位置照舊勾）。那個鳥點已經在飛行地圖上的，下面會另外勾
     local fp, pm, px, py = lastState and lastState.cur and lastState.steps[lastState.cur].s, C.Position()
