@@ -1303,3 +1303,4 @@
 05-副本.md:182｜說明｜在米奈希爾港找凱特林接任務。｜Prenez la quête auprès de Caitlin au port de Menethil.
 05-副本.md:117｜說明｜先在湖畔鎮接伸張正義，再到夜色鎮接罪與罰。監獄暴動需要先交范克里夫掉落的信；沒有信就先打其他任務。卡姆·深怒等在濕地完成黑鐵戰爭後再組隊。｜Prenez « Ce qui se passait ailleurs… » à Comté-du-Lac et « Crime et Châtiments » à Sombre-Comté. Pour « Les Emeutes de la Prison », rendez d’abord la lettre trouvée sur VanCleef. Si vous ne l’avez pas, faites les autres quêtes. Formez un groupe pour « Fureur dans les Profondeurs » après avoir terminé « La guerre contre les Sombrefer » dans les Paluns.
 03-30到45級.md:152｜說明｜交完黑鐵戰爭後順手接。下次組隊進暴風城監獄再做，回丹莫德時交。｜Prenez cette quête en rendant « La guerre contre les Sombrefer ». Faites-la lors de votre prochaine visite à la Prison et rendez-la en repassant à Dun Modr.
+04-45到60級.md:93｜說明｜圖書館打洛克希、軍械庫打赫洛德、大教堂打莫格萊尼和懷特邁恩。可以分趟完成。｜Battez Loksey dans la bibliothèque, Herod dans l’armurerie, puis Mograine et Whitemane dans la cathédrale. Vous pouvez faire les ailes en plusieurs visites.

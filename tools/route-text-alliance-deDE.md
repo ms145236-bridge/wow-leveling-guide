@@ -1303,3 +1303,4 @@
 05-副本.md:182｜說明｜在米奈希爾港找凱特林接任務。｜Nehmt die Quest bei Caitlin im Hafen von Menethil an.
 05-副本.md:117｜說明｜先在湖畔鎮接伸張正義，再到夜色鎮接罪與罰。監獄暴動需要先交范克里夫掉落的信；沒有信就先打其他任務。卡姆·深怒等在濕地完成黑鐵戰爭後再組隊。｜Nehmt „Verbrechen lohnt sich nicht“ in Seenhain und „Verbrechen und Strafe“ in Dunkelhain an. Für „Aufstand im Verlies“ müsst Ihr zuerst den Brief von VanCleef abgeben. Ohne den Brief könnt Ihr die anderen Quests erledigen. Sucht für „Tief empfundener Zorn“ eine Gruppe, nachdem Ihr „Der Dunkeleisenkrieg“ im Sumpfland abgeschlossen habt.
 03-30到45級.md:152｜說明｜交完黑鐵戰爭後順手接。下次組隊進暴風城監獄再做，回丹莫德時交。｜Nehmt die Quest bei der Abgabe von „Der Dunkeleisenkrieg“ an. Erledigt sie beim nächsten Besuch im Verlies und gebt sie bei Eurer Rückkehr nach Dun Modr ab.
+04-45到60級.md:93｜說明｜圖書館打洛克希、軍械庫打赫洛德、大教堂打莫格萊尼和懷特邁恩。可以分趟完成。｜Besiegt Loksey in der Bibliothek, Herod in der Waffenkammer sowie Mograine und Whitemane in der Kathedrale. Ihr könnt die Flügel bei getrennten Besuchen abschließen.
