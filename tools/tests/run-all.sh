@@ -8,9 +8,13 @@ lua5.1 tools/tests/route-handoffs.lua
 lua5.1 tools/tests/deadmines.lua
 lua5.1 tools/tests/stockades.lua
 lua5.1 tools/tests/alcaz-prison.lua
+lua5.1 tools/tests/horde-dungeon-journal.lua
 lua5.1 tools/tests/wetlands-dungeon.lua
 lua5.1 tools/tests/dungeon-prep-room.lua
+lua5.1 tools/tests/wetlands-relic.lua
 lua5.1 tools/tests/gnomeregan.lua
+lua5.1 tools/tests/stratholme.lua
+lua5.1 tools/tests/post-turnin-detour.lua
 lua5.1 tools/tests/scarlet-library.lua
 lua5.1 tools/tests/auberdine-choice.lua
 lua5.1 tools/tests/field-marshal.lua
