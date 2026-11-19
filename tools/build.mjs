@@ -18,7 +18,7 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { ADDONS, openQuestieDB, clusterCenter } from "./questiedb.mjs";
+import { ADDONS, openQuestieDB, clusterCenter, localVersion, readSnapshot, diffSnapshot, SNAPSHOT_COLS } from "./questiedb.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 // 任務目標座標（tools/objective-coords.md，Codex 查的 Wowhead 永恆版／QuestieDB 點位）：補到「做」步驟的 more
@@ -1266,6 +1266,28 @@ out = out
 const version = createHash("sha1").update(out).digest("hex").slice(0, 8);
 out = out.replace("@@BUILT@@", version);
 writeFileSync(OUT, out);
+// QuestieDB 快照與釘選版本：記下這份 Data 用到的任務欄位（路線任務與它們的前置），CI 不用 QuestieDB 也能核對 Data。
+// 本機版本和上次建置不同時，列出路線任務的欄位變動（建置前也可先跑 node tools/questiedb-drift.mjs）
+{
+  const side = ALLY ? "Alliance" : "Horde";
+  const dir = process.env.OUT_LUA ? dirname(OUT) : join(ROOT, "tools"); // 測試建置寫到輸出旁邊，不動 repo 的快照
+  const snapFile = join(dir, "questiedb-snapshot.tsv"), verFile = join(dir, "questiedb-version.txt");
+  const oldText = existsSync(snapFile) ? readFileSync(snapFile, "utf8") : "";
+  const before = readSnapshot(oldText);
+  const ids = [...new Set([...quests.keys()].flatMap((id) => { const q = db.quest(id); return q ? [id, ...q.preGroup.map(Math.abs), ...q.preSingle] : []; }))].filter((id) => db.quest(id)).sort((a, b) => a - b);
+  const after = new Map(ids.map((id) => [`${side}\t${id}`, `${side}\t${db.snapshot(id)}`]));
+  const pins = new Map((existsSync(verFile) ? readFileSync(verFile, "utf8") : "").split(/\r?\n/).filter((l) => l && !l.startsWith("#")).map((l) => [l.split("\t")[0], l]));
+  const local = localVersion(), pinned = pins.get(side)?.split("\t")[1];
+  if (pinned !== local) {
+    const changes = diffSnapshot(before, after);
+    console.warn(`警告：本機 QuestieDB（${local}）和上次建置釘選的（${pinned || "無"}）不同；路線任務欄位變動 ${changes.length} 筆，逐筆核對後記進 ROUTE-AUDIT.md：\n${changes.join("\n")}`);
+  }
+  const rows = [...[...before].filter(([k]) => !k.startsWith(side + "\t")).map(([, l]) => l), ...after.values()]
+    .sort((a, b) => b.startsWith("Horde") - a.startsWith("Horde") || +a.split("\t")[1] - +b.split("\t")[1]); // 部落在前，再依任務 ID
+  writeFileSync(snapFile, `# ${SNAPSHOT_COLS.join("\t")}\n# 由 tools/build.mjs 產生，勿手改\n${rows.join("\n")}\n`);
+  pins.set(side, `${side}\t${local}\t${version}`);
+  writeFileSync(verFile, `# 陣營\tQuestieDB 版本\tData 資料版本（built）：由 tools/build.mjs 產生，勿手改\n${["Horde", "Alliance"].filter((k) => pins.has(k)).map((k) => pins.get(k)).join("\n")}\n`);
+}
 console.log(`簡體硬轉字改回台灣寫法 ${[...zhFixed.values()].reduce((a, b) => a + b, 0)} 處：${[...zhFixed].map(([k, n]) => `${k} ${n}`).join("、") || "無"}`);
 
 // ── Data/Route_enUS.lua：英文介面／英文客戶端用的名稱與說明（站 ID＋步驟序號、任務 ID 對到 Route.lua）──
