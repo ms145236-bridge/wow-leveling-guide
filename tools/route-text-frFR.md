@@ -14459,3 +14459,5 @@
 01-第一段-1到12級.md:116｜說明｜（任選專業）｜(n'importe quel métier)
 05-副本.md:289｜說明｜帶著占卜籤，穿過傳送門後找箱子。｜Gardez la prédiction sur vous et cherchez le coffre après avoir franchi le portail de l’instance.
 05-副本.md:1470｜說明｜正門進市場，開煙草店的箱子後擊敗艾茲拉‧格里姆。｜Depuis la porte principale, gagnez le marché. Ouvrez la caisse du bureau de tabac et battez Ezra Grimm.
+03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Choisissez d'abord l'option de dialogue de Sovik ; la quête apparaît ensuite.
+05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Choisissez d'abord l'option de dialogue de Sovik ; la quête apparaît ensuite.

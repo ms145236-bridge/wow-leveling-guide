@@ -175,3 +175,20 @@ avail, detailId = { 60 }, 60
 fire("GOSSIP_SHOW")
 assert(db.notNow["a:97924"], "NPC 沒給組裡的任務，接不到留著")
 print("Camping 101 auto: never auto-picks a profession, turn-in still auto, offered when any member is offered, old 1.13.15 not-offered mark released")
+-- 索維克式的對話選單：第一頁只有對話選項、還沒列出任務，不寫接不到；之後 NPC 給了，舊的自動記錄收回，手動略過不動
+boot()
+reset(true)
+C_GossipInfo.GetOptions = function() return { { name = "talk" } } end
+fire("GOSSIP_SHOW")
+assert(not db.notNow["a:97924"], "第一頁只有對話選項，不能寫接不到")
+C_GossipInfo.GetOptions = nil
+now = now + 10
+fire("GOSSIP_SHOW")
+assert(db.notNow["a:97924"], "沒有對話選項也沒有任務，照舊寫接不到")
+db.notNow["a:61"], db.skip["a:60"] = true, true
+now = now + 10
+avail = { 61 }
+fire("GOSSIP_SHOW")
+assert(not db.notNow["a:61"], "NPC 給了 61，舊的自動接不到要收回")
+assert(db.skip["a:60"], "手動略過不動")
+print("Gossip-first NPC: no false not-offered mark, old automatic mark released when offered")

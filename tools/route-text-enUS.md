@@ -14190,3 +14190,5 @@
 01-第一段-1到12級.md:116｜說明｜（任選專業）｜(any profession)
 05-副本.md:289｜說明｜帶著占卜籤，穿過傳送門後找箱子。｜Keep the fortune with you and look for the chest after entering the instance portal.
 05-副本.md:1470｜說明｜正門進市場，開煙草店的箱子後擊敗艾茲拉‧格里姆。｜From the main gate, head into the market. Open the smoke shop crate and defeat Ezra Grimm.
+03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Pick Sovik's gossip option first; then the quest appears.
+05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Pick Sovik's gossip option first; then the quest appears.

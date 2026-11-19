@@ -94,6 +94,7 @@ MG.Locales.ptBR = {
   ["%d 級再去"] = "No nv. %d",
   ["前置 "] = "Pré-requisitos ",
   ["前置可接"] = "Pré-requisitos disponíveis",
+  ["前置 %d 級可接"] = "Pré-requisito no nível %d",
   ["前置未接 %d／共 %d"] = "%d de %d pré-requisitos não aceitos",
   ["先做前置鏈（%d 步）"] = "Faça antes a cadeia de pré-requisitos (%d etapas)",
   ["%d 級可接前置"] = "Pré-requisitos no nv. %d",

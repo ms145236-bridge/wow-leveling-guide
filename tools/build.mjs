@@ -915,13 +915,21 @@ const leadReq = [];
 {
   const main = stations.filter((s) => !s.dungeon).flatMap((s) => s.steps);
   const turnin = (p, req) => main.some((x) => x.t === "turnin" && x.id === p && (!req || !x.opt));
+  // 明確可選的入口（精英、太強、條件入口）後面的整條：前置沒做時後續本來就該藏，不升成必做
+  const optRoot = (p, seen = new Set()) => {
+    if (seen.has(p)) return false;
+    seen.add(p);
+    if (main.some((x) => x.id === p && x.opt && (x.keepOpt || x.cond))) return true;
+    const e = quests.get(p);
+    return [...(e?.pg || []), ...(e?.ps || [])].some((pp) => main.some((x) => x.id === pp && x.opt) && optRoot(pp, seen));
+  };
   const queue = [...new Set(main.filter((x) => x.t === "accept" && x.id && !x.opt).map((x) => x.id))];
   for (let qi = 0; qi < queue.length; qi++) {
     const e = quests.get(queue[qi]);
     if (!e) continue;
     const ps = e.ps?.length && !e.ps.some((p) => turnin(p, true)) ? e.ps.filter((p) => turnin(p)) : [];
     for (const p of [...(e.pg || []).filter((p) => !turnin(p, true) && turnin(p)), ...ps]) {
-      if (main.some((x) => x.id === p && x.opt && (x.keepOpt || x.cond))) continue;
+      if (optRoot(p)) continue;
       for (const x of main.filter((x) => x.id === p && x.opt)) {
         delete x.opt;
         x.tag = (x.tag || "").split("・").filter((t) => t !== "可跳過").join("・") || undefined;

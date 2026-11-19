@@ -1600,9 +1600,18 @@ function E.DungeonStatus(d)
   local tg, tt = E.DungeonTargetCount(d)
   if got > 0 then return L["前置 "] .. tg .. "/" .. tt, "some" end
   -- 前置任務本身還有前置（任務鏈沒做）→ 先做前置鏈（見前置接取路線）
+  -- 前置接取和下一步用同一個最低等級：還不到時照樣可以進本，另寫前置幾級可接
+  local later
   for _, step in ipairs(d.list) do
     local st = step.s
-    if st.ph == "pre" and st.t == "accept" and st.q and E.Applies(st.when) and available(st.q) then return L["前置可接"], "pick" end
+    if st.ph == "pre" and st.t == "accept" and st.q and E.Applies(st.when) and available(st.q) then
+      local need = math.max(st.pickLv or 0, (R.quests[st.q] or {}).min or 0)
+      if lv >= need then return L["前置可接"], "pick" end
+      if not later or need < later then later = need end
+    end
+  end
+  if later then
+    return (lv >= d.lv[1] and L["可以去"] or L["%d 級再去"]:format(d.lv[1])) .. "・" .. L["前置 %d 級可接"]:format(later), "ready"
   end
   local tg, tt = E.DungeonTargetCount(d)
   return L["前置 "] .. tg .. "/" .. tt, "chain"

@@ -94,6 +94,7 @@ MG.Locales.esES = {
   ["%d 級再去"] = "Al nivel %d",
   ["前置 "] = "Requisitos ",
   ["前置可接"] = "Requisitos disponibles",
+  ["前置 %d 級可接"] = "Requisito al nivel %d",
   ["前置未接 %d／共 %d"] = "%d de %d requisitos sin aceptar",
   ["先做前置鏈（%d 步）"] = "Haz primero la cadena de requisitos (%d pasos)",
   ["%d 級可接前置"] = "Requisitos al nivel %d",
