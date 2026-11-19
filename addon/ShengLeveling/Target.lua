@@ -20,8 +20,11 @@ T.stats = { presses = 0, targetChanged = 0, lastPress = 0, lastTarget = -1 }
 
 -- 目前步驟要找的名字：做＝還沒完成的目標的怪（掉落物就是掉它的怪）；接／交＝NPC（物件、物品不算）
 local function mobsOf(q, out, seen)
-  local per = (MG.Route.quests[q] or {}).tgo or {}
-  local obj = C.IsOnQuest(q) and C.Objectives(q)
+  local info = MG.Route.quests[q] or {}
+  if info.requiredLoot and MG.E.ItemCount(info.requiredLoot) >= (info.lootCount or 1) then return end
+  local per = info.tgo or {}
+  -- A journal row can still say 1/1 after the trophy leaves the bag.
+  local obj = not info.requiredLoot and not info.killCount and C.IsOnQuest(q) and C.Objectives(q)
   for k, list in ipairs(per) do
     -- 遊戲任務日誌的目標順序可能和資料不同：先用目標文字裡的怪名對，對不到才照位置
     local o
@@ -37,15 +40,36 @@ local function mobsOf(q, out, seen)
     end
   end
 end
+local function workTargets(s, out, seen)
+  local info = MG.Route.quests[s.q]
+  if info and info.riftTools then
+    local name = s.componentNpcG or s.componentNpc
+    if MG.E.RiftPhase() == "capture" and name and not seen[name] then out[#out+1] = name; seen[name] = true end
+  elseif info and info.farmMaterial then
+    -- The bags decide whether this single plotted objective is still outstanding.
+    if MG.E.ItemCount(info.farmMaterial.item) < info.farmMaterial.count then
+      for _, group in ipairs(info.tgo or {}) do
+        for _, name in ipairs(group) do if not seen[name] then out[#out+1]=name; seen[name]=true end end
+      end
+    end
+  elseif s.ph == "in" and s.when and s.when.missingBag then
+    -- An instance component has its own source. World NPCs or the other dungeon's mobs are not targets here.
+    local mob = s.componentNpcG or s.componentNpc
+    if mob and not seen[mob] then seen[mob] = true; out[#out + 1] = mob end
+  else
+    mobsOf(s.q, out, seen)
+  end
+end
 function T.Targets(state)
   local step = state and state.cur and state.steps[state.cur]
   if not step then return {} end
   local s = step.s
+  if s.missingWeapon or s.farmDone or (s.riftPhase and s.riftPhase ~= "capture") then T.objNote = nil; return {} end
   local out, seen = {}, {}
   local gm = MG.grindActive and (MG.grindActive.mobG or MG.grindActive.mob) -- 客戶端語言的怪名
   if gm then out[1] = gm; seen[gm] = true end
   if s.t == "do" and s.q then
-    mobsOf(s.q, out, seen)
+    workTargets(s, out, seen)
   elseif (s.t == "accept" or s.t == "turnin") and (s.tgt or s.npcG or s.npc) and not s.npcObj and not (s.npcG or s.npc or ""):find("^物件") and not (s.npcG or s.npc or ""):find("^物品") then
     -- 用建置時從 QuestieDB 取的遊戲名（tgt，客戶端語言）；沒有才用路線上的名字，去掉引號類符號
     local n = s.tgt
@@ -58,11 +82,11 @@ function T.Targets(state)
   -- 同組（附近一起做）的「做」步驟的怪也算進來
   for _, i in ipairs(state.group or {}) do
     local g = state.steps[i].s
-    if g.t == "do" and g.q then mobsOf(g.q, out, seen) end
+    if g.t == "do" and g.q and not g.missingWeapon and not g.farmDone then workTargets(g, out, seen) end
   end
   -- 沒有怪可選、目標是地上的物件（箱子、植物…）→ 巨集印說明
   T.objNote = nil
-  if #out == 0 and s.t == "do" and s.q then
+  if #out == 0 and s.t == "do" and s.q and not s.noObjectTarget then
     local objs = (MG.Route.quests[s.q] or {}).objs
     if objs then
       -- 巨集上限 255 位元組：名字太長就只列前幾個
@@ -223,7 +247,7 @@ function T.Update(state)
   local step = state and state.cur and state.steps[state.cur]
   local sk = step and step.key or ""
   T.visible = MG.UI.Get("showTarget") and #list > 0
-  local k = sk .. "|" .. table.concat(list, "|") .. tostring(T.visible) .. tostring(MetroGuideFrame and MetroGuideFrame:IsShown()) .. tostring(MG.UI.Get("markOn")) .. MG.UI.Get("markIcon")
+  local k = sk .. "|" .. table.concat(list, "|") .. "|" .. (T.objNote or "") .. tostring(T.visible) .. tostring(MetroGuideFrame and MetroGuideFrame:IsShown()) .. tostring(MG.UI.Get("markOn")) .. MG.UI.Get("markIcon")
   if k == key and not pending then return end
   if sk ~= stepKey or table.concat(list, "|") ~= table.concat(names, "|") then rot = 0 end
   stepKey = sk

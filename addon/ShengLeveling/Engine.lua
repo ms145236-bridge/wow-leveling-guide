@@ -54,9 +54,11 @@ function E.Localize()
   for _, st in ipairs(R.stations) do
     local ds, gs = D and D.stations[st.id] or none, G and G.stations[st.id] or none
     for i, s in ipairs(st.steps) do
-      s.key0 = tostring(s.node or s.bind or s.to or s.text or s.lv or "") -- 存檔用的步驟鍵不跟語言變
+      s.key0 = s.key0 or tostring(s.node or s.bind or s.to or s.text or s.lv or "") -- 存檔用的步驟鍵不跟語言變
       s.bindK = s.bind -- 爐石地點（中文）：zhTW 客戶端比對 GetBindLocation／區域名用，非中文介面的 bind 換成翻譯地名
       local d, g = ds.steps and ds.steps[i] or none, gs.steps and gs.steps[i] or none
+      s.componentNpcG = G and g.componentNpc or s.componentNpc
+      if en then s.componentNpc = d.componentNpc end
       s.npcG = s.npc
       if G then
         s.npcG, s.tgt = g.npc or s.npc, g.tgt; s.npcObj = g.npcObj
@@ -116,6 +118,7 @@ E.byId = {}
 
 local QUEST = { accept = true, ["do"] = true, turnin = true }
 local SOFT = { ["goto"] = true, fp = true, fly = true, boat = true, travel = true, hearth = true }
+local localVisitFrom = {} -- 只在原定回訪點補做的任務，不將早站步驟搬來異地。
 local questSt = {} -- 任務 → 有它步驟的站（主線站與副本，Build 時建）
 local anyQ = {} -- 任一組（s.any）裡的任務：沒接的不算站的進度（Build 時建）
 local dunQ = {} -- 副本站裡有步驟的任務（副本前置、副本任務；Build 時建）
@@ -163,7 +166,84 @@ end
 local function originMatch(list)
   for _, race in ipairs(list) do if me.originRaces[race] then return true end end
 end
-function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用）
+-- 日誌依客戶端語言逐項比對。空白、缺項及不認得的文字不能當作偵察已完成。
+local function surveyProgress(q, survey)
+  local labels = survey.labels[MG.gameLoc or (GetLocale and GetLocale()) or "enUS"]
+  if not labels then return nil, false end
+  local status, duplicate = {}, {}
+  for _, objective in ipairs(C.Objectives(q) or {}) do
+    local name = objective.text
+    if name and name ~= "" then
+      local done = objective.done == true
+      if objective.need and objective.need > 0 and objective.have and objective.have < objective.need then done = false end
+      if status[name] ~= nil then duplicate[name] = true end
+      status[name] = done
+    end
+  end
+  local event = status[labels.event]
+  if duplicate[labels.event] then event = nil end
+  local allBadges, incompleteBadge = true, false
+  for _, name in ipairs(labels.badges) do
+    if status[name] ~= true or duplicate[name] then allBadges = false end
+    if status[name] == false then incompleteBadge = true end
+  end
+  return event, allBadges, incompleteBadge
+end
+
+local function hasWeapon(item)
+  return E.ItemCount(item) > 0 or (GetInventoryItemID and GetInventoryItemID("player", 16) == item)
+end
+
+local function hasAll(items)
+  for _, item in ipairs(items) do if E.ItemCount(item) < 1 then return false end end
+  return true
+end
+
+-- Ordinary counts are physical items. The charge count only decides whether the box can catch another spawn.
+function E.RiftPhase()
+  if E.ItemCount(7308) < 1 then return "scroll" end
+  if E.ItemCount(7247) < 1 then return "chest" end
+  if E.ItemCount(7292) >= 3 then return "journal" end
+  local count = C_Item and C_Item.GetItemCount or GetItemCount
+  if count and count(7247, false, true) == 0 then return "chest" end
+  return "capture"
+end
+
+local function hasQuantities(items)
+  for _, need in ipairs(items) do
+    if E.ItemCount(need.item) < need.count then return false end
+  end
+  return true
+end
+
+-- These counted hunts have a single native objective. Never infer kills from bags or coordinates.
+local function huntCount(q, info)
+  local objectives = C.Objectives(q)
+  local o = objectives and #objectives == 1 and objectives[1]
+  if o and o.need == info.killCount and type(o.have) == "number" then return o.have end
+end
+E.HuntCount = huntCount
+
+local function journalReady(q)
+  if not C.IsReady(q) then return false end
+  local info = R.quests[q]
+  if info and info.requiredLoot and E.ItemCount(info.requiredLoot) < (info.lootCount or 1) then return false end
+  if info and info.combatWeapon and not hasWeapon(info.combatWeapon) then return false end
+  if info and info.deliveryItems and not hasQuantities(info.deliveryItems) then return false end
+  if info and info.riftTools and E.RiftPhase() ~= "journal" then return false end
+  if info and info.supply and E.ItemCount(info.supply.item) < info.supply.count then return false end
+  if info and info.farmMaterial and E.ItemCount(info.farmMaterial.item) < info.farmMaterial.count then return false end
+  if info and info.requiredItems and not hasAll(info.requiredItems) then return false end
+  if info and (info.confirmInteraction or info.requiredLoot or info.supply or info.requiredItems) then
+    for _, o in ipairs(C.Objectives(q) or {}) do
+      if o.done == false or (o.need and o.need > 0 and o.have and o.have < o.need) then return false end
+    end
+  end
+  return true
+end
+
+local function turned(q) return E.session[q] or C.IsTurnedIn(q) end
+function E.Applies(when, anyLv, keepReady) -- 往後預估不看等級；指定交接仍核對日誌
   if not when then return true end
   if when.notOrigin and originMatch(when.notOrigin) then return false end
   local routeRaces = when.raceOrOrigin or when.neitherRaceNorOrigin
@@ -175,13 +255,55 @@ function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用�
   if when.notRace and raceMatch(when.notRace) then return false end
   if when.coastal ~= nil and when.coastal ~= (MG.db.auberdineChoice == "coast") then return false end
   if when.dungeonPrep and (not MG.UI.Get("dPre") or not MG.UI.Get("optional") or MG.db.dNo[when.dungeonPrep]) then return false end
-  -- 往後預估（anyLv）不看日誌當下的可交／失敗：之後會交的照樣算交掉
-  if when.readyQuest and not anyLv and not C.IsReady(when.readyQuest) then return false end
+  if when.readyQuest and (not anyLv or keepReady) then
+    if not journalReady(when.readyQuest) then return false end
+    local info = R.quests[when.readyQuest]
+    if info and info.survey then
+      for _, badge in ipairs(info.survey.badges) do if E.ItemCount(badge[1]) < 1 then return false end end
+      local event, _, incompleteBadge = surveyProgress(when.readyQuest, info.survey)
+      if event == false or incompleteBadge then return false end
+    end
+  end
+  if when.turnedQuest and not E.Turned(when.turnedQuest) then return false end
+  if when.additionalBags and not hasQuantities(when.additionalBags) then return false end
+  if when.workMap then
+    if not C.Position or (UnitOnTaxi and UnitOnTaxi("player")) then return false end
+    local map,x,y = C.Position()
+    if map ~= when.workMap or not x or not y then return false end
+  end
+  if when.nearPoint and (not when.localRaces or raceMatch(when.localRaces)) then
+    if not C.Position or (UnitOnTaxi and UnitOnTaxi("player")) then return false end
+    local point = when.nearPoint
+    local map, x, y = C.Position()
+    if map ~= point[1] or not x or not y or (x - point[2])^2 + (y - point[3])^2 > 0.8^2 then return false end
+  end
+  if when.manualPickup then
+    if not MG.UI.Get("optional") then return false end
+    local free, used, visible = E.QuestLogSpace()
+    if free <= (MG.PendingAccepts and MG.PendingAccepts(used, visible) or 0) then return false end
+  end
+  if when.withTurnin then
+    local q = when.withTurnin
+    local key = "t:" .. q
+    if MG.db.skip[key] or MG.db.mark[key] or turned(q)
+      or not C.IsOnQuest(q) or not C.IsReady(q) then return false end
+  end
   if when.failedQuest and not anyLv and not (C.IsFailed and C.IsFailed(when.failedQuest)) then return false end
   if when.notFailedQuest and not anyLv and C.IsFailed and C.IsFailed(when.notFailedQuest) then return false end
   if when.money and (GetMoney and GetMoney() or 0) < when.money then return false end
+  if when.bagOrWorn and not hasWeapon(when.bagOrWorn) then return false end
   if when.bag and E.ItemCount(when.bag.item) < when.bag.count then return false end
+  if when.additionalBags then
+    for _, requirement in ipairs(when.additionalBags) do
+      if E.ItemCount(requirement.item) < requirement.count then return false end
+    end
+  end
   if when.missingBag and E.ItemCount(when.missingBag.item) >= when.missingBag.count then return false end
+  if when.canStart then
+    local q = when.canStart
+    local key = "a:" .. q
+    if C.IsOnQuest(q) or turned(q) or MG.db.skip[key] or MG.db.mark[key] or E.LogFull() then return false end
+  end
   if when.onQuestAny then
     local on = false
     for _, id in ipairs(when.onQuestAny) do
@@ -224,6 +346,16 @@ local function raceOK(q)
   return math.floor(info.races / 2 ^ (me.bit - 1)) % 2 == 1
 end
 
+-- 同一目標隨背包狀態換點。各處都讀同一個 step.s，箭頭、地圖、釘選與手動完成沿用原步驟鍵。
+local objectiveLocations = { __index = function(step, field)
+  if field == "s" then
+    for _, location in ipairs(step.locations) do
+      if E.Applies(location.when) then return location end
+    end
+    return step.locations[1] -- 全部不適用時，Locate 依原條件隱藏這一步。
+  end
+end }
+
 function E.Build()
   me.raceL, me.race, me.raceID = UnitRace("player")
   -- QuestieDB 把天裔精靈記成第 33（聯盟）、34（部落）位；遊戲給的種族編號不一定是這兩個，照陣營對過去
@@ -231,7 +363,7 @@ function E.Build()
   me.sky = (me.race and me.race:find("Sky") or me.raceL and me.raceL:find("天裔", 1, true)) and true or false
   if me.sky then me.bit = UnitFactionGroup("player") == "Alliance" and 33 or 34 end
   me.class = select(2, UnitClass("player"))
-  wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt); wipe(dunQ); wipe(anyQ)
+  wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt); wipe(localVisitFrom); wipe(dunQ); wipe(anyQ)
   local startKey = E.StartKey()
   wipe(me.originRaces)
   for race in (startKey or ""):gmatch("[^/]+") do me.originRaces[race] = true end
@@ -246,9 +378,37 @@ function E.Build()
       end
       local usedKey = {}
       for _, s in ipairs(st.steps) do
+        if s.ungoroExit == "camp" or s.ungoroExit == "port" then
+          st.ungoroHints = st.ungoroHints or {}
+          st.ungoroHints[s.ungoroExit] = s.desc
+          -- The description belongs to the Kalimdor alternative, not to the
+          -- original east-coast flight's tooltip. Keep the source for rebuilds.
+          local flight = {}
+          for key, value in pairs(s) do if key ~= "desc" then flight[key] = value end end
+          s = flight
+        end
+        if s.t == "hearth" and s.ungoroExit == "east" then
+          st.ungoroHearth = s
+          note = note or {text=s.desc}
+        end
+        if s.t == "accept" and (s.ungoroExit == "east" or s.ungoroExit == "teacher") then
+          st.ungoroTrainers = st.ungoroTrainers or {}
+          local trainers = st.ungoroTrainers[s.q] or {}
+          st.ungoroTrainers[s.q], trainers[s.map] = trainers, s
+        end
         if s.t == "note" then
-          note = s
-        else
+          if s.ungoroExit then st.ungoroHints[s.ungoroExit] = s.text else note = s end
+        elseif s.sameObjective then
+          local step = list[#list]
+          if not step.locations then
+            step.locations = { step.s }
+            step.s = nil
+            setmetatable(step, objectiveLocations)
+          end
+          step.locations[#step.locations + 1] = s
+        elseif s.ungoroExit == "ironReturn" then
+          st.ungoroIronReturn = s
+        elseif s.ungoroExit ~= "teacher" then -- alternate trainers use the original accept key
           -- 鍵用內容：路線重建後存檔裡的勾選／略過／釘選不會跑到別步；同站重複的加 ~2、~3
           local base = QUEST[s.t] and (s.t:sub(1, 1) .. ":" .. (s.any and s.any[1] or s.q)) -- 任一組的接：s.q 執行時會換成玩家接的那個，鍵固定用第一個
             or (st.id .. "#" .. s.t .. ":" .. (s.key0 or tostring(s.node or s.bind or s.to or s.text or s.lv or "")) .. (s.x and string.format("@%.0f,%.0f", s.x, s.y) or ""))
@@ -260,7 +420,9 @@ function E.Build()
         end
       end
       st.list = list
+      st.componentVisit = nil
       for _, step in ipairs(list) do
+        if st.dungeon and (step.s.instanceMaterial or (step.s.ph == "in" and step.s.when and step.s.when.missingBag)) then st.componentVisit = true end
         local q = step.s.any and step.s.any[1] or step.s.q
         for _, id in ipairs(step.s.any or {}) do anyQ[id] = true end
         if q then
@@ -275,6 +437,12 @@ function E.Build()
       else
         st.index = #E.stations + 1
         E.stations[st.index] = st
+        for _, w in ipairs(st.list) do
+          local s = w.s
+          if s.q and s.opt and s.when and s.when.localVisit and not localVisitFrom[s.q] then
+            localVisitFrom[s.q] = st.index
+          end
+        end
       end
       E.byId[st.id] = st
     end
@@ -284,11 +452,16 @@ end
 E.me = me
 
 -- ── done ────────────────────────────────────────────────────────────────────
-local function turned(q) return E.session[q] or C.IsTurnedIn(q) end
 E.Turned = turned
+
+local function isCleanedRingReturn(q)
+  return q == 2947 or q == 2949
+end
 
 -- 目標全部完成；日誌查不到目標（對話型任務）視為完成
 local function ready(q)
+  if isCleanedRingReturn(q) then return C.IsOnQuest(q) and E.ItemCount(9362) > 0 and journalReady(q) end
+  if R.quests[q] and (R.quests[q].supply or R.quests[q].confirmInteraction or R.quests[q].requiredLoot or R.quests[q].requiredItems) then return journalReady(q) end
   if C.IsReady(q) then return true end
   if C.IsFailed and C.IsFailed(q) then return false end -- 護送失敗：目標清單可能是空的，不能當成做完
   local obj = C.Objectives(q)
@@ -384,11 +557,25 @@ local function killXP(q, lv)
   local info = R.quests[q]
   if not (info and info.mob) or turned(q) then return 0 end
   local inLog = C.IsOnQuest(q)
-  if inLog and C.IsReady(q) then return 0 end
-  local obj = inLog and C.Objectives(q)
+  local lootLeft
+  if info.requiredLoot and inLog then
+    lootLeft = math.max(0,(info.lootCount or 1) - E.ItemCount(info.requiredLoot))
+    if lootLeft == 0 then return 0 end
+  end
+  if info.farmMaterial and inLog then
+    local mat = info.farmMaterial
+    local left = math.max(0, mat.count-E.ItemCount(mat.item))
+    for _, m in ipairs(info.mob) do
+      if m[3]==2 then return left / (info.rate or DROP_RATE) * mobXP(m[1],lv,m[4]==1) * (1+KILL_EXTRA) end
+    end
+    return 0
+  end
+  local kills = inLog and info.killCount and huntCount(q, info)
+  if inLog and not info.requiredLoot and not kills and C.IsReady(q) then return 0 end
+  local obj = inLog and not info.requiredLoot and C.Objectives(q)
   local total = 0
   for k, m in ipairs(info.mob) do
-    local left = m[2]
+    local left = lootLeft or m[2]
     if obj and #obj == #info.mob and obj[k].need then left = obj[k].need - (obj[k].have or 0) end
     if left > 0 then
       local kills = m[3] == 2 and left / (info.rate or DROP_RATE) or left
@@ -423,6 +610,8 @@ function E.FillPlan(st)
   for _, step in ipairs(st.list) do
     local s = step.s
     local on = s.q and E.Applies(s.when) and not MG.db.skip[step.key] -- 手動略過的步驟不算（只略過「交」＝這站拿不到任務經驗）
+    -- 同站有安排且仍打算做的工作，可以預估其後的交件。當下點交仍須通過日誌與實物條件。
+    if s.afterWork and work[s.q] and not MG.db.skip[step.key] then on = true end
     if on and s.t == "turnin" then hand[s.q] = true end
     if on and (s.t == "do" or s.t == "turnin") then work[s.q] = true end
     if on and s.t == "accept" and not s.opt then
@@ -605,12 +794,63 @@ function E.ItemCount(id)
   return GetItemCount and GetItemCount(id) or 0
 end
 
+-- 保留原進度鍵；只在本次顯示的步驟上替換尚未收集的遺體或已證實未完成的偵察點。
+local function surveyStep(step, survey)
+  local row, view = {}, {}
+  for k, v in pairs(step) do row[k] = v end
+  for k, v in pairs(step.s) do view[k] = v end
+  row.s, row.note = view, {text = view.desc}
+  view.map, view.x, view.y, view.more = nil, nil, nil, nil
+  local remaining = {}
+  for _, badge in ipairs(survey.badges) do
+    if E.ItemCount(badge[1]) < 1 then
+      remaining[#remaining + 1] = tostring(badge[1])
+      if not view.x then view.map, view.x, view.y = badge[2], badge[3], badge[4]
+      else
+        view.more = view.more or {}
+        view.more[#view.more + 1] = {badge[2], badge[3], badge[4]}
+      end
+    end
+  end
+  view.surveyState = table.concat(remaining, ",")
+  if #remaining == 0 then
+    local event, badgesComplete, incompleteBadge = surveyProgress(view.q, survey)
+    view.surveyComplete = event ~= false and not incompleteBadge and C.IsReady(view.q)
+    view.noObjectTarget = true
+    if event == false and badgesComplete then
+      view.map, view.x, view.y = unpack(survey.event)
+      view.surveyState = "event"
+    end
+  end
+  return row
+end
+
 local function stepDone(step, map, x, y)
   local s = step.s
-  if MG.db.latch[step.key] then return true end
+  -- An old flight, boat or hearth arrival cannot complete a different leg shown on the same key.
+  -- Manual marks and skips are applied independently in Locate.
+  if not s.classTransfer and MG.db.latch[step.key] then return true end
   local t, q = s.t, s.q
   if t == "accept" or t == "need" then return C.IsOnQuest(q) or turned(q)
-  elseif t == "do" then return turned(q) or (C.IsOnQuest(q) and (s.native and C.IsReady(q) or not s.native and ready(q))) -- native：護送等只認日誌的完成旗標
+  elseif t == "do" and s.surveyState ~= nil then return turned(q) or s.surveyComplete
+  elseif t == "do" then
+    if s.strictReady or s.native then return turned(q) or (C.IsOnQuest(q) and C.IsReady(q)) end
+    local need = s.when and s.when.onQuestAny and s.when.missingBag
+    if need then return turned(q) or (C.IsOnQuest(q) and E.ItemCount(need.item) >= need.count) end
+    local info = R.quests[q]
+    if info and info.requiredItems and not (s.ph == "in") then
+      return turned(q) or (C.IsOnQuest(q) and hasAll(info.requiredItems))
+    end
+    local supply = info and info.supply
+    if supply then
+      local farm = info.farmMaterial
+      return turned(q) or (C.IsOnQuest(q) and E.ItemCount(supply.item) >= supply.count
+        and (not farm or journalReady(q)))
+    end
+    if info and info.requiredLoot and info.lootFinishesWork then
+      return turned(q) or (C.IsOnQuest(q) and E.ItemCount(info.requiredLoot) >= (info.lootCount or 1))
+    end
+    return turned(q) or (C.IsOnQuest(q) and ready(q))
   elseif t == "turnin" then return turned(q)
   elseif t == "buy" then return E.ItemCount(s.item) >= (s.n or 1) or (s.fq ~= nil and (turned(s.fq) or (C.IsOnQuest(s.fq) and ready(s.fq))))
   elseif t == "level" then return (UnitLevel("player") or 0) >= (s.lv or 0)
@@ -686,6 +926,13 @@ end
 -- 已接還有目標沒完成 → 後面要有「做」（只有「交」的站不會帶人去收集）；還沒接 → 後面要有「接」。等級條件看那一站的等級上限（走到那站時的等級），種族／職業等其他條件照舊。這種不用帶過來補、離站也不用提醒
 local function laterHas(q, idx)
   if not idx then return false end
+  local origin = questSt[q] and questSt[q][1]
+  local info = R.quests[q] or {}
+  if origin and origin.index and idx > origin.index then
+    if info.localVisit then return true end
+    if info.localPickupRaces and raceMatch(info.localPickupRaces) and not C.IsOnQuest(q) then return true end
+  end
+  if localVisitFrom[q] and idx >= localVisitFrom[q] then return true end
   local need = not C.IsOnQuest(q) and "accept" or ready(q) and "turnin" or "do"
   local lv = UnitLevel("player") or 0
   for _, o in ipairs(questSt[q] or {}) do
@@ -802,35 +1049,319 @@ local function bindCheck()
       end
     end
   end
-  if other and not mine then db.boundK = nil else db.boundRaw = b end
+  if other and not mine then
+    db.boundK = nil
+  else
+    db.boundRaw = b
+  end
+end
+
+-- These two points are the Un'Goro flight master and the camp quest givers.
+-- For ports we also reject an explicit different subzone (the sea shares the map).
+local function nearPoint(x, y, px, py)
+  return x and y and (x - px)^2 + (y - py)^2 <= 2.25
+end
+
+local function portArea(id, chinese)
+  local sub, zone, mini = C.ZoneTexts()
+  -- On a map transition the parent zone can still report the departure coast
+  -- even after the subzone or minimap has changed to the destination port.
+  if zone and zone ~= "" then
+    local otherMap = id == 442 and 1438 or 1439
+    local otherZone = C.MapName and C.MapName(otherMap)
+    if not otherZone or otherZone == "" then otherZone = id == 442 and "泰達希爾" or "黑海岸" end
+    if zone == otherZone then return false end
+  end
+  local expected = C.AreaName and C.AreaName(id)
+  if not expected or expected == "" then expected = chinese end
+  if sub and sub ~= "" and sub ~= expected then return false end
+  if mini and mini ~= "" and mini ~= zone and mini ~= expected then return false end
+  return sub == expected or mini == expected
+end
+
+function E.AtRutheranFlightMaster(map, x, y)
+  return map == 1438 and nearPoint(x, y, 58.4, 94.02) and portArea(702, "魯瑟蘭村")
+end
+
+local function escortRecovery(steps)
+  local patched
+  for i, step in ipairs(steps) do
+    local s = step.s
+    if s.strictReady and C.IsFailed and C.IsOnQuest(s.q) and C.IsFailed(s.q) then
+      patched = patched or {}
+      patched[i] = { s = { t = "note", q = s.q, opt = s.opt, text = L["護送失敗。放棄後重接或略過。"] },
+        key = step.key, st = step.st, carry = step.carry }
+    end
+  end
+  if not patched then return steps end
+  for i, step in ipairs(steps) do patched[i] = patched[i] or step end
+  return patched
+end
+
+local function ungoroOrigin(map, x, y)
+  if map == 1449 and (nearPoint(x, y, 45.23, 5.83) or nearPoint(x, y, 43.95, 7.14)) then return "camp" end
+  if not map or (map == 1439 or map == 1438) and (not x or not y or x < 0 or y < 0 or x > 100 or y > 100) then return "wait" end
+  if map == 1439 then
+    if portArea(442, "奧伯丁") then return "port" end -- Still valid while walking between piers.
+    return "wait" -- Darkshore also covers the sea. Wait for the port to be identifiable.
+  end
+  if map == 1438 then
+    if E.AtRutheranFlightMaster(map, x, y) or (nearPoint(x, y, 55.5, 92.05) and portArea(702, "魯瑟蘭村")) then return "arrived" end
+    return "wait" -- The boat and the pier at (54.8,97.2) report the same location.
+  end
+end
+
+local function ungoroCityPickup()
+  local q
+  if me.class == "PRIEST" then q = 8254
+  elseif me.class == "MAGE" and (MG.UI.Get("optional") or fill[8250]) then q = 8250 end
+  if not q then return false end
+  local key = "a:" .. q
+  if not (C.IsOnQuest(q) or turned(q) or superseded(q) or MG.db.skip[key] or MG.db.mark[key] or MG.db.notNow[key]) then return q end
+end
+
+-- Opening a menu at a trainer confirms the player's choice. Unknown NPC/map
+-- leaves the ordinary manual button available; held/finished quests are untouched.
+function E.UngoroTrainerOffer(id)
+  local st = E.byId[MG.db.station]
+  local trainers = st and st.ungoroTrainers and st.ungoroTrainers[id]
+  if not trainers then return true end
+  if ungoroCityPickup() ~= id or E.LogFull() then return false end
+  local map = C.Position()
+  local trainer = map and trainers[map]
+  local name = UnitName and UnitName("npc")
+  return trainer and name and not (issecretvalue and issecretvalue(name)) and name == (trainer.npcG or trainer.npc)
+end
+
+local function boundToIronforge(st)
+  local raw = C.Bind()
+  if not raw or raw == "" then return false end
+  -- Older versions could seed boundRaw from an unrelated inn on login.
+  -- Compare with the actual game-language city name; never trust that cache here.
+  return raw == st.ungoroHearth.bindG or raw == (C.MapName and C.MapName(1455)) or raw == "鐵爐堡"
+end
+
+-- A city map can include the incoming ship. Only a positively identified city
+-- can supply a trainer; the harbor and incomplete location readings get text.
+local function classCity(st, q, map, x, y)
+  if map ~= 1453 and map ~= 1455 then return end
+  if not q then
+    local cityQuest = me.class == "PRIEST" and 8254 or me.class == "MAGE" and 8250
+    if not cityQuest or not (C.IsOnQuest(cityQuest) or turned(cityQuest) or superseded(cityQuest)) then return end
+  end
+  if not x or not y then return q and "eastWait" or "wait" end
+  local sub, zone, mini = C.ZoneTexts()
+  local chinese = map == 1453 and "暴風城" or "鐵爐堡"
+  local city = (C.MapName and C.MapName(map)) or chinese
+  local region = (C.AreaName and C.AreaName(map == 1453 and 1519 or 1537)) or city
+  local trainer = q and st.ungoroTrainers[q][map]
+  local name = UnitName and UnitName("npc")
+  local speaking = name and not (issecretvalue and issecretvalue(name)) and trainer and nearPoint(x,y,trainer.x,trainer.y) and name == (trainer.npcG or trainer.npc)
+  local coast = (C.MapName and C.MapName(1439)) or "黑海岸"
+  local auberdine = (C.AreaName and C.AreaName(442)) or "奧伯丁"
+  if zone == coast or sub == coast or mini == coast or sub == auberdine or mini == auberdine then return q and "eastWait" or "wait" end
+  if not speaking and (zone ~= city and zone ~= region and sub ~= city and mini ~= city) then return q and "eastWait" or "wait" end
+  if map == 1453 then
+    if not q then return "stormReturn" end
+    local harbor = (C.AreaName and C.AreaName(17203)) or "暴風港"
+    if not speaking and (sub == harbor or mini == harbor or nearPoint(x, y, 21.8, 56.9)) then return "stormDock" end
+  end
+  return q and "cityPickup" or "ironReturn"
+end
+
+local function eastItinerary(steps, st, stage, q, map)
+  local out = {}
+  for i, w in ipairs(steps) do
+    local s = w.s
+    if stage == "ironReturn" and s.ungoroExit == "camp" then
+      -- The pin is the local departure desk. Only landing at Menethil completes the flight.
+      local source = st.ungoroIronReturn
+      out[i] = {s={t="fly", to=s.to, toL=s.toL, map=source.map, x=source.x, y=source.y,
+        desc=source.text, classTransfer=true, ironReturn=true}, note=source, key=w.key, st=w.st}
+    elseif not s.ungoroExit or s.ungoroExit == "islandPortal"
+      or (stage == "ironReturn" and s.ungoroExit ~= "east") then out[i] = w
+    elseif stage == "cityPickup" and s.t == "accept" and s.q == q then
+      out[i] = {s=st.ungoroTrainers[q][map], key=w.key, note=w.note, st=w.st}
+    elseif (s.t == "hearth" and st.ungoroHints[stage] and stage ~= "stormReturn")
+      or (s.ungoroExit == "ship" and stage == "stormReturn") then
+      out[i] = {s={t="travel", text=st.ungoroHints[stage], classTransfer=true}, key=w.key, st=w.st}
+    else
+      out[i] = {s=s, key=w.key, note=w.note, st=w.st, transferHidden=true}
+    end
+  end
+  return out
+end
+
+-- Keep the original last flight key for pins and manual progress. Only its
+-- current instruction changes; the serialized itinerary is never rewritten.
+local function ungoroTransfer(steps, hint)
+  local result = {}
+  for i, step in ipairs(steps) do
+    local s = step.s
+    if s.ungoroExit == "port" and hint then
+      result[i] = {key=step.key, st=step.st, s={t="travel", text=hint, to=s.to, localTransfer=true}}
+    else
+      result[i] = step
+    end
+  end
+  return result
+end
+
+local function instanceMaterialAction(s)
+  local item = R.keep[s.instanceMaterial]
+  local hunt = item and (item.n .. " ×1")
+  if hunt and s.componentNpc then hunt = s.componentNpc .. " / " .. hunt end
+  return { t = "do", q = s.q, ph = "in", when = s.when, hint = hunt, componentNpc=s.componentNpc, componentNpcG=s.componentNpcG }
+end
+
+-- In the active route HUD an outdoor contact is unavailable while the native client is inside,
+-- even on the frame before its instance ID becomes known. Manual phase previews are separate.
+local function worldContact(s)
+  return s.outsideHandoff or (s.outsideObjective and s.ph == "pre")
+end
+
+-- A completed component awaiting its outdoor recipient keeps a deliberately selected run open.
+function E.OutdoorHandoff(st)
+  if not (st and st.dungeon and st.componentVisit) then return nil end
+  for _, row in ipairs(st.list) do
+    local s = row.s
+    if s.t == "turnin" and worldContact(s) and C.IsOnQuest(s.q) and not turned(s.q)
+        and not MG.db.skip[row.key] and not MG.db.mark[row.key] and E.Applies(s.when) then
+      return s.q
+    end
+  end
+end
+
+-- Record only a selected side-run which really deferred its ready world handoff.
+-- The station id survives a reload. Explicit station selection or cancellation clears it.
+function E.DeferOutdoorHandoff(st, id)
+  local q = E.OutdoorHandoff(st)
+  if q and MG.db.station == st.id and MG.db.dungeonFrom and (not id or id == 0 or inList(st.inst or {}, id)) then
+    MG.db.deferredHandoffRun = st.id
+  end
+  return q
 end
 
 -- ── locate ──────────────────────────────────────────────────────────────────
+local function shallowCopy(source)
+  local copy = {}
+  for k, value in pairs(source) do copy[k] = value end
+  return copy
+end
+
 -- 回 { st, steps, done[], na[], cur, auto, missed = { {q, i}... }, complete }
 function E.Locate(st)
   local db = MG.db
   bindCheck()
   pickAny(st.list)
   local fillInfo = E.FillPlan(st)
-  local steps = stepsOf(st)
+  local steps = escortRecovery(stepsOf(st))
   pickAny(steps)
   if not st.dungeon then steps = deferAuthoredPrep(st, steps) end
+  -- 同一工作和舊釘選仍有效，失去破盾武器時暫收精英的目標與地圖點。
+  local adjusted
+  local physical = IsInInstance and IsInInstance()
+  local id = physical and GetInstanceInfo and select(8, GetInstanceInfo())
+  for i, step in ipairs(steps) do
+    local s = step.s
+    local info = s.t == "do" and s.q and R.quests[s.q]
+    local weapon = info and info.combatWeapon
+    local farm = info and info.farmMaterial
+    local trophyHeld = info and info.requiredLoot and E.ItemCount(info.requiredLoot) >= (info.lootCount or 1)
+    local killsDone = info and info.killCount and (huntCount(s.q, info) or 0) >= info.killCount
+    local farmDone = trophyHeld or killsDone or (farm and E.ItemCount(farm.item) >= farm.count)
+    local action
+    if s.t == "turnin" and s.providedVisit and C.IsOnQuest(s.q) and not turned(s.q)
+        and E.ItemCount(s.providedVisit) > 0 and not journalReady(s.q) then
+      -- The object can be visited with the issued item; only the server can confirm the hand-in.
+      action = {}
+      for k,v in pairs(s) do action[k] = v end
+      action.t, action.hint, action.when = "do", s.desc, {}
+      for k,v in pairs(s.when) do if k ~= "readyQuest" then action.when[k] = v end end
+    elseif info and info.riftTools then
+      action = {}
+      for k, v in pairs(s) do action[k] = v end
+      action.riftPhase = E.RiftPhase()
+      local p = info.riftTools[action.riftPhase]
+      if p then action.map, action.x, action.y = p[1], p[2], p[3]
+      elseif action.riftPhase == "journal" then action.map, action.x, action.y = nil, nil, nil end
+    elseif farmDone or (weapon and not hasWeapon(weapon)) then
+      action = {}
+      for k, v in pairs(s) do action[k] = v end
+      action.map, action.x, action.y, action.more = nil, nil, nil, nil
+      action.missingWeapon = weapon and true or nil
+      action.farmDone = farmDone
+      action.awaitJournal = farm and farmDone and (not info.supply or E.ItemCount(info.supply.item) >= info.supply.count)
+    elseif s.instanceMaterial and physical and inList(st.inst or {}, id) then
+      action = instanceMaterialAction(s)
+    end
+    if action then
+      adjusted = adjusted or {unpack(steps)}
+      local row = {}
+      for k, v in pairs(step) do row[k] = v end
+      row.s = action
+      adjusted[i] = row
+    end
+  end
+  steps = adjusted or steps
+  local surveySteps
+  for i, step in ipairs(steps) do
+    local q = step.s.q
+    local survey = step.s.t == "do" and q and R.quests[q] and R.quests[q].survey
+    if survey and C.IsOnQuest(q) then
+      surveySteps = surveySteps or {unpack(steps)}
+      surveySteps[i] = surveyStep(step, survey)
+    end
+  end
+  steps = surveySteps or steps
   local n = #steps
   local map, x, y = C.Position()
   local done, na, autoDone, low = {}, {}, {}, {}
   local lv = UnitLevel("player") or 0
+  local transfer, classNeedsSpace
+  if st.ungoroHints and lv >= 51 then
+    local q = ungoroCityPickup()
+    local origin = ungoroOrigin(map, x, y)
+    local stage = classCity(st, q, map, x, y)
+    classNeedsSpace = q and E.LogFull()
+    if classNeedsSpace and stage then stage = "eastWait" end
+    if not stage and q and origin then
+      if classNeedsSpace and (origin == "camp" or origin == "port") then
+        transfer = origin -- Existing local turn-ins can free the needed slot.
+      elseif classNeedsSpace or origin == "wait" then stage = "eastWait"
+      elseif not boundToIronforge(st) then
+        stage = origin == "camp" and "eastCamp" or origin == "port" and "eastPort" or "eastWait"
+      end
+    end
+    if stage then steps = eastItinerary(steps, st, stage, q, map)
+    elseif transfer or (not q and origin) then
+      transfer = origin
+      steps = ungoroTransfer(steps, st.ungoroHints[transfer])
+    end
+  end
   -- 本站有接取步驟的任務；沒有的（在之前的站接）不在日誌就不能做也不能交，不排進來
   local acc = {}
+  local portableSteps
   -- 接取等級還不夠的任務（不在日誌、沒交過）：接、做、交都先列出來但不輪到它
   local lowQ = {}
-  for _, step in ipairs(steps) do
+  for i, step in ipairs(steps) do
     local s = step.s
+    if s.pickupItem and E.ItemCount(s.pickupItem) > 0 then
+      -- 拾取點只在物品尚未入袋時使用。沿用原步驟鍵，讓舊釘選和手動進度照常生效。
+      portableSteps = portableSteps or shallowCopy(steps)
+      local portable = shallowCopy(s)
+      portable.map, portable.x, portable.y, portable.more = nil, nil, nil, nil
+      local row = shallowCopy(step)
+      row.s, row.note = portable, portable.desc and {text=portable.desc}
+      portableSteps[i] = row
+    end
     if s.t == "accept" and s.q then
       if E.Applies(s.when) and not optOut(s) and not step.defer and not s.any then acc[s.q] = true end -- 接取步驟本身不適用（種族、職業、可跳過沒開、日誌快滿先不接）就不算本站有接
       local need = s.pickLv or (R.quests[s.q] or {}).min -- 步驟沒寫接取等級就用任務資料的最低等級
       if need and lv < need and not C.IsOnQuest(s.q) and not turned(s.q) then lowQ[s.q] = need end
     end
   end
+  steps = portableSteps or steps
   local lowLv = {}
   -- 「接不到」記在接取步驟的鍵上（同站同任務第二個接取點是 a:任務~2）：換成任務 ID，接、做、交一起收起來
   local notNowQ = {}
@@ -851,10 +1382,18 @@ function E.Locate(st)
     end
     return true
   end
+  local mainland = transfer == "camp" or transfer == "port"
+  local fullOnMainland = mainland and E.LogFull()
+  local localLeg, islandErrand
+  local waitingRingReturn
   for i, step in ipairs(steps) do
     local s = step.s
     local open = not s.q or available(s.q)
-    na[i] =((s.t == "do" or s.t == "turnin") and s.q and not acc[s.q] and not C.IsOnQuest(s.q) and not turned(s.q)) or step.defer or (s.q and notNowQ[s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or superseded(s.q) or not (open or planned(s.q)))) or (s.fq and (excluded(s.fq) or not raceOK(s.fq) or turned(s.fq))) or false
+    na[i] = step.transferHidden or (transfer and s.ungoroExit ~= nil and s.ungoroExit ~= "islandPortal") or (physical and (worldContact(s) or s.instanceMaterial)) or ((s.t == "do" or s.t == "turnin") and s.q and not acc[s.q] and not C.IsOnQuest(s.q) and not turned(s.q)) or step.defer or (s.q and notNowQ[s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or superseded(s.q) or not (open or planned(s.q)))) or (s.fq and (excluded(s.fq) or not raceOK(s.fq) or turned(s.fq))) or false
+    if s.t == "turnin" and s.outsideObjective and isCleanedRingReturn(s.q) and not turned(s.q)
+        and (physical or not ready(s.q)) then
+      na[i], waitingRingReturn = true, i
+    end
     -- 只差等級（【N 級起】）的步驟：現在不能做，但清單照樣列出來（灰、寫幾級），免得以為這站快做完了
     if na[i] and s.when and s.when.lvMin and lv < s.when.lvMin and not turned(s.q or 0) and not db.skip[step.key] then
       local w = {}
@@ -872,6 +1411,31 @@ function E.Locate(st)
     done[i] = na[i] or (mark ~= nil and mark) or (mark == nil and auto)
     wait[i] = not na[i] and not open or nil
     if s.t == "turnin" and s.q and not done[i] then turnAt[s.q] = i end
+    if transfer then
+      if s.localTransfer then
+        localLeg = i
+      elseif not done[i] and not wait[i] and (s.map == 1438 or s.map == 1457) then
+        -- Use the route's own race, class, prerequisites, skips and current log.
+        -- A quest already held for a later Azshara hand-in is not an island pickup.
+        if s.t == "accept" and not C.IsOnQuest(s.q) and not turned(s.q) then
+          if fullOnMainland then na[i], done[i] = true, true else islandErrand = true end
+        elseif s.t == "turnin" and C.IsOnQuest(s.q) and ready(s.q) then
+          islandErrand = true
+        end
+      end
+    end
+  end
+  if localLeg and not islandErrand then
+    if classNeedsSpace then
+      steps[localLeg].s.text = st.ungoroHints.eastWait
+    else
+      na[localLeg], done[localLeg] = true, true
+    end
+    if mainland then
+      for i, step in ipairs(steps) do
+        if step.s.ungoroExit == "islandPortal" then na[i], done[i] = true, true end
+      end
+    end
   end
   -- 軟步驟（交通、到達、鳥點、飛行、船）：後面有本站接的任務步驟已完成、或任一任務已交，就算過了（別站帶來的任務「做」完成不算）；
   -- 後面已沒有任務步驟的（往下一站的交通）不擋路，文字留給「前往下一站」顯示
@@ -880,17 +1444,17 @@ function E.Locate(st)
   for _, step in ipairs(steps) do if step.s.t == "accept" and not step.carry then here[step.s.q] = true end end
   local nxt = E.Next(st)
   for i, step in ipairs(steps) do
-    if not done[i] and SOFT[step.s.t] then -- 開鳥點不會被後面的進度帶過：要真的開了（飛行地圖／對話開點）才算
+    if not done[i] and SOFT[step.s.t] and not step.s.classTransfer then -- 開鳥點不會被後面的進度帶過：要真的開了（飛行地圖／對話開點）才算
       local later = false
       for j = i + 1, n do
         -- 後面仍要綁爐石或補給，前往該處的路標就不是站尾交通。
         if not done[j] and not SOFT[steps[j].s.t] and not na[j] then later = true end
-        if steps[j].s.q and not na[j] then
+        if steps[j].s.q and not na[j] and not (step.s.localTransfer or step.s.classTransfer) then
           later = true
           if step.s.t ~= "fp" and done[j] and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
         end
       end
-      softLater[i] = not done[i] and later and not step.s.x and map ~= nil and x ~= nil -- 沒座標的交通：輪到它時才看人到了沒（見下面）
+      softLater[i] = not (step.s.localTransfer or step.s.classTransfer) and not done[i] and later and not step.s.x and map ~= nil and x ~= nil -- 沒座標的交通：輪到它時才看人到了沒（見下面）
       -- 已經到下一站的地圖：站尾交通算到了；鳥點沒開不打勾，只是不再拉回去（left）。
       -- 鳥點和下一站同一張地圖時，人在這張地圖上不代表已經離開，照樣帶去開點
       local onNext = nxt and map and map == nxt.map
@@ -937,7 +1501,7 @@ function E.Locate(st)
         missedIdx[#missedIdx + 1] = i -- 同一任務前面的步驟已漏掉（例如沒接就輪到交）
       elseif not done[i] and q and steps[i].s.t ~= "accept" and not (steps[i].s.tag and steps[i].s.tag:find("怪多", 1, true)) and C.IsOnQuest(q) then
         auto = i; break -- 任務還在日誌裡（例如做到一半）：不算漏掉，就是目前要做的；順路先做了後面的步驟也不會被跳過去。「怪多」的可跳過任務除外（順手打到也不拉回去）
-      elseif not done[i] and ((steps[i].s.t == "accept" and not steps[i].s.opt) or steps[i].s.t == "level") then
+      elseif not done[i] and ((steps[i].s.t == "accept" and not steps[i].s.opt) or steps[i].s.t == "level" or steps[i].s.localTransfer or steps[i].s.classTransfer) then
         auto = i; break -- 必做的「接」和練等步驟：適用、還沒做就輪到它，不因為後面別的任務做過了就當成漏掉（那些可能是提前做副本前置時交掉的）
       elseif not done[i] then
         local seen, d, j = 0, 0, i + 1
@@ -984,7 +1548,20 @@ function E.Locate(st)
       if step.key == pin.key then found = i; break end
     end
     if found and not na[found] then arrive(found) end
-    if not found or (done[found] and not pin.wasDone) or found == auto or (pin.auto and (auto and steps[auto].key or "") ~= pin.auto) then
+    local pinned = found and steps[found].s
+    local waitingMaterials = pinned and pinned.t == "turnin" and R.quests[pinned.q] and (R.quests[pinned.q].farmMaterial or R.quests[pinned.q].riftTools or R.quests[pinned.q].deliveryItems)
+      and C.IsOnQuest(pinned.q) and not journalReady(pinned.q)
+    local pinInfo = pinned and pinned.q and R.quests[pinned.q]
+    local visitQuest = pinInfo and (pinInfo.localVisit or pinInfo.providedVisit or pinInfo.requiredLoot or pinInfo.killCount)
+    local unavailableVisit = pinned and pinned.when and ((pinned.when.workMap and not turned(pinned.q)) or pinned.when.localVisit or (visitQuest and not turned(pinned.q))) and not E.Applies(pinned.when)
+    local unavailableHunt = pinInfo and (pinInfo.requiredLoot or pinInfo.killCount) and pinned.t == "do" and not turned(pinned.q)
+      and (not C.IsOnQuest(pinned.q) or journalReady(pinned.q))
+    if (found and found == waitingRingReturn) or unavailableHunt or unavailableVisit or waitingMaterials or (pinned and physical and (worldContact(pinned) or pinned.instanceMaterial)) then
+      -- Leave the saved pin in place and use the available work until it becomes actionable.
+    elseif pinned and pinned.t == "turnin" and pinned.outsideObjective and isCleanedRingReturn(pinned.q) and not done[found] then
+      -- An unfinished ring return keeps its pin when a prerequisite elsewhere becomes available.
+      cur = found
+    elseif not found or (done[found] and not pin.wasDone) or found == auto or (pin.auto and (auto and steps[auto].key or "") ~= pin.auto) then
       db.pin[st.id] = nil
     else
       cur = found
@@ -1084,7 +1661,9 @@ function E.Locate(st)
       inGroup[i] = true
     end
   end
-  return { roamQ = roamQ, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, wait = wait, low = low, lowLv = lowLv, cur = cur, auto = auto, missed = missed, complete = auto == nil, map = map, tail = tail, tails = tails, passed = passed }
+  local deferred = physical and E.DeferOutdoorHandoff(st, id)
+  local pendingExit = not cur and deferred or nil
+  return { pendingExit = pendingExit, roamQ = roamQ, group = group, inGroup = inGroup, fill = fill, fillInfo = fillInfo, num = num, total = total, autoDone = autoDone, st = st, steps = steps, done = done, na = na, wait = wait, low = low, lowLv = lowLv, cur = cur, auto = auto, missed = missed, complete = auto == nil and not pendingExit, map = map, tail = tail, tails = tails, passed = passed }
 end
 
 -- ── 站 ──────────────────────────────────────────────────────────────────────
@@ -1192,6 +1771,7 @@ function E.JumpPlan(target)
 end
 function E.Jump(target)
   local db = MG.db
+  db.deferredHandoffRun = nil
   local carry, _, from = E.JumpPlan(target)
   if from and from.index and target.index > from.index then
     for k = from.index + 1, target.index - 1 do db.drop[E.stations[k].id] = true end
@@ -1203,6 +1783,7 @@ function E.Jump(target)
 end
 
 function E.Select(st)
+  MG.db.deferredHandoffRun = nil
   MG.db.station = st.id
   MG.db.drop[st.id] = nil
 end
@@ -1322,6 +1903,28 @@ function E.QuestNote(q)
   local f = R.feeds and R.feeds[q]
   if f then return L["不在路線上"], "值得做", L["接後續："] .. questName(f) end
   return L["不在路線上"], "之後順路"
+end
+
+-- 背包提示先找日誌中的用途，再看此角色尚未交付的後續任務。
+function E.KeepQuest(item)
+  if not item.uses then
+    if item.q and not turned(item.q) then return item.q end
+    return nil
+  end
+  local nextQuest, active, counted, total = nil, {}, {}, 0
+  for _, use in ipairs(item.uses) do
+    if not turned(use.q) and E.Applies(use.when, true) then
+      nextQuest = nextQuest or use
+      if C.IsOnQuest(use.q) and not counted[use.q] then
+        active[#active + 1] = use
+        counted[use.q] = true
+        if total and use.count then total = total + use.count else total = nil end
+      end
+    end
+  end
+  if #active > 1 and total then return active[1].q, total, active end
+  local use = active[1] or nextQuest
+  if use then return use.q, use.count end
 end
 
 -- 任務出現的第一站（保留物品提示用）
@@ -1505,11 +2108,18 @@ end
 -- 副本站不在主線；它的前置（接／做／交）預設排進建議的主線站（pickAt），標「副本前置」。
 -- 副本前置不搶主線的日誌格：空格扣掉主線往後還會多占的格數後不到 3 格，還沒接的副本前置先不接（之後再接），不分副本等級；
 -- 已接的照常做、交。只是這一刻先不接，不寫進存檔；有空格了會自己回來。主線任務不受影響。
-local function logFree()
-  local max = C_QuestLog and C_QuestLog.GetMaxNumQuestsCanAccept and C_QuestLog.GetMaxNumQuestsCanAccept() or 40 -- 永恆任務日誌 40 格
-  return (max or 40) - #(C.LogQuestIDs() or {})
+function E.QuestLogSpace()
+  local max = C_QuestLog and C_QuestLog.GetMaxNumQuestsCanAccept and C_QuestLog.GetMaxNumQuestsCanAccept()
+  if (issecretvalue and issecretvalue(max)) or type(max) ~= "number" or max <= 0 then max = 40 end -- 永恆任務日誌上限
+  local entries = C_QuestLog and C_QuestLog.GetNumQuestLogEntries or GetNumQuestLogEntries
+  local used = entries and select(2, entries()) -- 首個回傳是畫面列數，第二個才含摺疊分類內的任務
+  if (issecretvalue and issecretvalue(used)) or type(used) ~= "number" then used = 0 end
+  -- 接受事件後，日誌已新增一列時，總數有時晚一更新才會跟上。
+  local visible = C.LogQuestIDs() or {}
+  used = math.max(used, #visible)
+  return max - used, used, visible
 end
-function E.LogFull() return logFree() <= 0 end
+function E.LogFull() return E.QuestLogSpace() <= 0 end
 
 -- 主線往後還會多占幾格日誌：從這一站照步驟順序走到最後一站，數還沒接的「接」和之後的「交」，回傳比現在多出的最大值。
 -- 「交」要是會做到的那一步才算騰出一格：不適用本角色、手動略過、手動勾掉的不算（任務還占著）；後面另有會做到的「交」就算在那裡。
@@ -1518,10 +2128,12 @@ function E.LogFull() return logFree() <= 0 end
 local function mainGrowth(st)
   local state, n, peak = {}, 0, 0 -- state[q]：1＝預估會接著、2＝預估交掉了
   for i = st.index, #E.stations do
+    local plannedWork = {}
     for _, step in ipairs(E.stations[i].list) do
       local s = step.s
       local q = s.q
-      if s.t == "accept" and q and not (s.when and s.when.dungeonPrep) and not state[q] and not C.IsOnQuest(q)
+      if s.t == "accept" and q and not (s.when and s.when.dungeonPrep) and (not s.reserveOnVisit or st.index == i)
+          and not state[q] and not C.IsOnQuest(q)
           and not turned(q) and E.Applies(s.when, true) and not optOut(s) and raceOK(q) and not MG.db.skip[step.key] and not excluded(q) then
         local clash = false
         for _, o in ipairs((R.quests[q] or {}).ex or {}) do clash = clash or state[o] ~= nil end
@@ -1530,7 +2142,14 @@ local function mainGrowth(st)
           n = n + 1
           if n > peak then peak = n end
         end
-      elseif s.t == "turnin" and q and state[q] ~= 2 and (state[q] or C.IsOnQuest(q)) and E.Applies(s.when, true) and not MG.db.skip[step.key] and MG.db.mark[step.key] ~= true then
+      elseif s.t == "do" and q and (R.quests[q].requiredLoot or R.quests[q].killCount or (i == st.index and R.quests[q].confirmInteraction)) and (state[q] == 1 or C.IsOnQuest(q))
+          and E.Applies(s.when, true) and not optOut(s) and not MG.db.skip[step.key] and not MG.db.mark[step.key] then
+        plannedWork[q] = true
+      elseif s.t == "turnin" and q and state[q] ~= 2 and (state[q] or C.IsOnQuest(q))
+          and (E.Applies(s.when, true, s.afterWork or s.providedVisit) or (s.afterWork and plannedWork[q])
+            -- This authored visit uses the item issued by the projected acceptance. Held quests still use live eligibility.
+            or (s.providedVisit and state[q] == 1 and not optOut(s)))
+          and not MG.db.skip[step.key] and MG.db.mark[step.key] ~= true then
         state[q] = 2
         n = n - 1
       end
@@ -1540,8 +2159,8 @@ local function mainGrowth(st)
 end
 -- 這一刻還能不能再接副本前置：空格扣掉主線往後還會多占的格數，至少剩 3 格。步驟列的「之後」和自動接都問這裡（只查不寫）。
 -- pending＝剛按了接受、日誌還沒更新的件數
-function E.PreRoom(st, pending)
-  return logFree() - (pending or 0) - (st and mainGrowth(st) or 0) >= 3
+function E.PreRoom(st, pending, free)
+  return (free or E.QuestLogSpace()) - (pending or 0) - (st and mainGrowth(st) or 0) >= 3
 end
 
 -- 不經過 locate 的單步完成判定（副本分頁用；不動 fill）
@@ -1685,6 +2304,7 @@ end
 
 -- 設為目標：步驟列改走這個副本的流程；打完（或離開副本）再回主線
 function E.RunDungeon(d)
+  MG.db.deferredHandoffRun = nil
   local from = MG.db.station and E.byId[MG.db.station]
   if not (from and from.dungeon) then MG.db.dungeonFrom = MG.db.station end -- 已在副本流程中換副本：保留原本的主線站
   MG.db.station = d.id
@@ -1738,18 +2358,22 @@ function E.DungeonByInstance(id)
 end
 
 -- 副本裡的步驟列：列出日誌中還沒完成的任務、可在副本內交件的任務，以及已撿到起始物品的任務。
+
 function E.InstanceState(d, all)
   local steps, seen, inTurn, inDo, outsideObjective = {}, {}, {}, {}, {}
   for _, x in ipairs(all or { d }) do
     for _, step in ipairs(x.list or {}) do
       if step.s.outsideObjective then outsideObjective[step.s.q] = true end
+      if step.s.instanceMaterial then inDo[step.s.q] = instanceMaterialAction(step.s) end
       -- 有地圖座標的是在本外交（路線放在副本內段落而已）
       if step.s.ph == "in" and step.s.t == "turnin" and step.s.q and not step.s.map then inTurn[step.s.q] = step.s end
       if step.s.ph == "in" and step.s.t == "do" and step.s.q then inDo[step.s.q] = inDo[step.s.q] or step.s end -- 路線上的做法（位置補充行）
     end
   end
   local function add(q)
-    if q and not seen[q] and C.IsOnQuest(q) and (inTurn[q] or not C.IsReady(q)) then
+    if q and not seen[q] and C.IsOnQuest(q) and (inTurn[q] or (inDo[q] and inDo[q].when and inDo[q].when.missingBag) or not C.IsReady(q)) then
+      local condition = inDo[q] and inDo[q].when
+      if condition and condition.missingBag and not E.Applies(condition) then return end
       -- 本內可接的送信任務交由出本步驟引導。其他分翼有明列目標時仍顯示。
       if outsideObjective[q] and not inDo[q] and not inTurn[q] then return end
       seen[q] = true
@@ -1839,7 +2463,21 @@ E.MinPickLv = minPickLv
 function E.DungeonNext(d, inside)
   if MG.db.dNo[d.id] then return nil end
   local lv = UnitLevel("player") or 1
+  -- Only routes with a component that can actually be obtained in this instance need this distinction.
+  local loading = false
+  if d.componentVisit and IsInInstance then
+    local physical = IsInInstance()
+    if physical ~= nil then
+      local id = GetInstanceInfo and select(8, GetInstanceInfo())
+      loading = physical and (not id or id == 0)
+      inside = physical and inList(d.inst or {}, id) or false
+    end
+  end
+  local function external(s)
+    return (inside or loading) and (s.outsideHandoff or s.instanceMaterial or (s.ph == "pre" and s.outsideObjective))
+  end
   local function canDo(s)
+    if external(s) then return false end
     local q = s.q
     if not q then return true end
     if not raceOK(q) then return false end
@@ -1851,21 +2489,56 @@ function E.DungeonNext(d, inside)
     if s.t == "do" then return C.IsOnQuest(q) and not ready(q) end
     return true
   end
-  local function first(ph, exitOnly)
+  local function first(ph, eligible)
     for _, step in ipairs(d.list) do
       local s = step.s
-      if s.ph == ph and (not exitOnly or s.exitPriority) and s.t ~= "travel" and s.t ~= "need" and E.Applies(s.when)
+      if s.ph == ph and (not eligible or eligible(s)) and s.t ~= "travel" and s.t ~= "need" and E.Applies(s.when)
         and not MG.db.skip[step.key] and not E.QuickDone(step) and canDo(s) then return step end
+    end
+  end
+  -- 城市回報已在誌，但人仍在這個副本：先顯示本內可做的任務。
+  if inside then
+    for _, wrapper in ipairs(d.list) do
+      local s = wrapper.s
+      if s.ph == "post" and s.t == "turnin" and s.outsideObjective and C.IsOnQuest(s.q) then
+        local step = first("in")
+        if step then return { kind = "in", step = step } end
+        local state = E.InstanceState(d)
+        for _, current in ipairs(state and state.steps or {}) do
+          if not MG.db.skip[current.key] and not E.QuickDone(current) then return { kind = "in", step = current } end
+        end
+        return nil
+      end
     end
   end
   -- On leaving, prioritize only authored handoffs whose live quest state allows them.
   if not inside then
-    local handoff = first("post", true)
+    local handoff = first("post", function(s) return s.exitPriority end)
+    if not handoff and C.Position and not (IsInInstance and IsInInstance()) then
+      local map, x, y = C.Position()
+      if map and x and y then
+        handoff = first("post", function(s)
+          return s.t == "turnin" and s.outsideObjective and s.map == map and s.x and s.y
+            and (s.x - x)^2 + (s.y - y)^2 <= 0.8^2
+        end)
+      end
+    end
     if handoff then return { kind = "post", step = handoff } end
   end
+  local function materialInInstance()
+    if not inside or not d.componentVisit then return end
+    for _, step in ipairs(d.list) do
+      local s = step.s
+      if s.instanceMaterial and C.IsOnQuest(s.q) and not turned(s.q) and E.Applies(s.when)
+          and not MG.db.skip[step.key] and not E.QuickDone(step) then
+        return {kind="in", step={s=instanceMaterialAction(s), key=step.key, st=d}}
+      end
+    end
+  end
   local _, kind, revisit = E.DungeonStatus(d)
-  if kind == "past" then return nil end
+  if kind == "past" then return materialInInstance() end
   if kind == "revisit" then
+    if external(revisit.s) then return nil end
     if revisit.s.ph == "post" then return { kind = "post", step = revisit } end
     if inside then return { kind = "in", step = revisit } end
     return { kind = "ent" }
@@ -1874,6 +2547,8 @@ function E.DungeonNext(d, inside)
   if inside then
     local step = first("in")
     if step then return { kind = "in", step = step } end
+    local alternate = materialInInstance()
+    if alternate then return alternate end
   end
   local pre = first("pre")
   if pre then return { kind = "pre", step = pre } end

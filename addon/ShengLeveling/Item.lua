@@ -25,6 +25,15 @@ end
 -- 一個任務可用的物品 ID 清單
 local function questItems(q, out, seen)
   if not (q and C.IsOnQuest(q)) then return end
+  local info = MG.Route.quests[q]
+  if info and info.riftTools then
+    if MG.E.RiftPhase() == "capture" then
+      for _, id in ipairs({7308, 7247}) do
+        if not seen[id] then seen[id] = true; out[#out + 1] = id end
+      end
+    end
+    return
+  end
   local idx = C.LogIndex(q)
   if idx and GetQuestLogSpecialItemInfo then
     local link = MG.try("任務物品", GetQuestLogSpecialItemInfo, idx)
@@ -150,6 +159,7 @@ function I.Create(bar)
   local f = CreateFrame("Frame")
   pcall(f.RegisterEvent, f, "PLAYER_REGEN_ENABLED")
   pcall(f.RegisterEvent, f, "BAG_UPDATE_DELAYED")
+  pcall(f.RegisterEvent, f, "PLAYER_EQUIPMENT_CHANGED")
   pcall(f.RegisterEvent, f, "BAG_UPDATE_COOLDOWN")
   pcall(f.RegisterEvent, f, "SPELL_UPDATE_COOLDOWN")
   f:SetScript("OnEvent", function(_, event)
@@ -161,7 +171,7 @@ function I.Create(bar)
           b.cd:SetCooldown(start or 0, dur or 0)
         end
       end
-    elseif event == "BAG_UPDATE_DELAYED" then key = ""; MG.Refresh() elseif pending then MG.try("任務物品", I.Apply) end
+    elseif event == "BAG_UPDATE_DELAYED" or event == "PLAYER_EQUIPMENT_CHANGED" then key = ""; MG.Refresh() elseif pending then MG.try("任務物品", I.Apply) end
   end)
   C.impl.Item = GetQuestLogSpecialItemInfo and "GetQuestLogSpecialItemInfo" or "只有 QuestieDB 任務物品"
 end

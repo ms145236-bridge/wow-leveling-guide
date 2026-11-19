@@ -4,6 +4,13 @@
 local _, MG = ...
 MG.Locales = MG.Locales or {}
 MG.Locales.esES = {
+  ["在發任者身後拿顯形卷軸。"] = "Recoge el Canto de Manifestación detrás de quien te da la misión.",
+  ["在發任者身後拿一盒封靈箱，捕捉前確認還有使用次數。"] = "Recoge el Cofre de arcas de contención detrás de quien te da la misión. Comprueba las cargas antes de capturar otra criatura.",
+  ["三個裝滿的箱子與兩件工具已備齊，等任務日誌顯示可交。"] = "Tienes tres arcas llenas y los dos útiles. Espera a que el registro confirme la entrega.",
+  ["擊殺數已達標，等任務日誌顯示可交。"] = "Ya tienes las bajas necesarias. Espera a que el registro indique que puedes entregar la misión.",
+  ["已取得戰利品，等任務日誌顯示可交。"] = "Ya tienes el trofeo. Espera a que el registro indique que puedes entregar la misión.",
+  ["材料已齊。請核對任務日誌，可交時再找裁縫。"] = "Ya tienes los materiales. Consulta el registro de misiones y ve al sastre cuando puedas entregarlos.",
+  ["護送失敗。放棄後重接或略過。"] = "Escolta fallida. Abandona la misión y vuelve a aceptarla o sáltala.",
   ["已到奧伯丁。留在黑海岸解任務，或搭船去暴風城與朋友會合？"] = "Has llegado a Auberdine. ¿Quieres hacer misiones en Costa Oscura o ir en barco a Ventormenta para reunirte con tus amigos?",
   ["留在黑海岸"] = "Quedarme en Costa Oscura",
   ["提早東渡"] = "Navegar a Ventormenta",
