@@ -149,9 +149,11 @@ function E.SoftTargets(steps, done, na, i)
   local from = steps[i].s
   for j = i + 1, #steps do
     local sj = steps[j].s
+    -- 飛的目的地是同名鳥點：就算因「已開」不列出，也用它的座標判斷到了沒（步行初訪開點後不會倒退成「飛」去腳下）
+    local destination = sj.x and from.t == "fly" and sj.t == "fp" and from.to == (sj.nodeK or sj.node)
+    if destination then out[#out + 1] = sj; return out, sj end
     if sj.x and not na[j] then
-      local destination = from.t == "fly" and sj.t == "fp" and from.to == (sj.nodeK or sj.node)
-      if destination or not done[j] then out[#out + 1] = sj; return out, sj end
+      if not done[j] then out[#out + 1] = sj; return out, sj end
       if sj.t == "goto" or sj.t == "travel" then out[#out + 1] = sj end
     end
   end
