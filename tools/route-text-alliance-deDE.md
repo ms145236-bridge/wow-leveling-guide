@@ -1418,3 +1418,8 @@
 04-45到60級.md:54｜說明｜遇到圖加且準備好步行護送才接。｜Nimm die Quest nur an, wenn du Tooga antriffst und ihn zu Fuß begleiten kannst.
 04-45到60級.md:55｜說明｜跟著圖加步行，護送到熱砂港西南邊的托爾塔。注意沿途伏擊。｜Eskortiere Tooga zu Fuß zu Torta südwestlich des Dampfdruckhafens. Achte unterwegs auf Hinterhalte.
 04-45到60級.md:62｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜Toogas Eskorte ist fehlgeschlagen. Du kannst der Hauptroute folgen. Für einen neuen Versuch brich die Quest ab und suche Tooga erneut.
+06-路線外任務.md:1709｜說明｜已向摩根哨站的麥克斯韋爾交 4242 後，若回黑石深淵拾到弄皺的便箋，就用便箋起任，交給監獄內的溫德索爾。｜Gib 4242 bei Marschall Maxwell in Morgans Wacht ab. Falls du bei einem weiteren Besuch der Schwarzfelstiefen die zerknitterte Notiz findest, benutze sie und bring sie zu Windsor im Gefängnis.
+06-路線外任務.md:1710｜說明｜交完便箋後向溫德索爾接取。隊伍若會打安格弗將軍和阿格曼奇，各拾一份情報，再回同一間囚室交件。｜Nimm die Quest nach Abgabe der Notiz bei Windsor an. Wenn deine Gruppe General Zornesschmied und Argelmach bekämpft, plündere von jedem einen Hinweis und kehre in dieselbe Zelle zurück.
+06-路線外任務.md:1711｜說明｜交完兩份情報且全隊準備好後，在囚室向溫德索爾手動接取並護送。任務日誌確認成功後，順路回摩根哨站向麥克斯韋爾交件。｜Warte nach Abgabe beider Hinweise, bis die Gruppe bereit ist. Nimm die Quest bei Windsor in seiner Zelle manuell an und eskortiere ihn. Sobald das Questlog den Erfolg bestätigt, gib sie bei deinem nächsten Besuch in Morgans Wacht bei Maxwell ab.
+05-副本.md:247｜說明｜依序換卡：本外 3005-A 白換黃；本內 3005-B 黃換藍、3005-C 藍換紅、3005-D 紅換彩色。｜Tauscht die Karten der Reihe nach. Draußen tauscht 3005-A Weiß gegen Gelb. Im Inneren gibt 3005-B Blau, 3005-C Rot und 3005-D die Prismalochkarte.
+05-副本.md:224｜說明｜搶救資料先從小怪拾白色穿孔卡片，進本前在電梯北側的本外通道找 3005-A 換黃卡。｜Plündert für die Datenrettung eine weiße Lochkarte von den Gegnern. Tauscht sie vor dem Betreten des Dungeons im äußeren Gang nördlich des Aufzugs an 3005-A gegen Gelb.

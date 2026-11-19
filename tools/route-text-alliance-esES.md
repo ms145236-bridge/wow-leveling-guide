@@ -1418,3 +1418,8 @@
 04-45到60級.md:54｜說明｜遇到圖加且準備好步行護送才接。｜Acepta la misión solo si encuentras a Tooga y puedes escoltarlo a pie.
 04-45到60級.md:55｜說明｜跟著圖加步行，護送到熱砂港西南邊的托爾塔。注意沿途伏擊。｜Escolta a Tooga a pie hasta Torta, al suroeste de Puerto Bonvapor. Ten cuidado con las emboscadas.
 04-45到60級.md:62｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜La escolta de Tooga ha fallado. Puedes seguir la ruta principal. Para reintentarlo, abandona la misión y vuelve a buscar a Tooga.
+06-路線外任務.md:1709｜說明｜已向摩根哨站的麥克斯韋爾交 4242 後，若回黑石深淵拾到弄皺的便箋，就用便箋起任，交給監獄內的溫德索爾。｜Tras entregar la misión 4242 al mariscal Maxwell en el Vigilante de Morgan, usa la nota arrugada si la saqueas al volver a las Profundidades de Roca Negra. Entrégasela a Windsor en la prisión.
+06-路線外任務.md:1710｜說明｜交完便箋後向溫德索爾接取。隊伍若會打安格弗將軍和阿格曼奇，各拾一份情報，再回同一間囚室交件。｜Acepta la misión de Windsor después de entregar la nota. Si tu grupo va a luchar contra el general Forjainquina y Argelmach, recoge un informe de cada uno y vuelve a la misma celda.
+06-路線外任務.md:1711｜說明｜交完兩份情報且全隊準備好後，在囚室向溫德索爾手動接取並護送。任務日誌確認成功後，順路回摩根哨站向麥克斯韋爾交件。｜Tras entregar los dos informes, espera a que el grupo esté listo, acepta manualmente la misión de Windsor en su celda y escóltalo. Cuando el registro confirme el éxito, entrégasela a Maxwell la próxima vez que pases por el Vigilante de Morgan.
+05-副本.md:247｜說明｜依序換卡：本外 3005-A 白換黃；本內 3005-B 黃換藍、3005-C 藍換紅、3005-D 紅換彩色。｜Cambia las tarjetas en orden. Fuera, cambia la blanca por la amarilla en 3005-A. Dentro, consigue la azul en 3005-B, la roja en 3005-C y la prismática en 3005-D.
+05-副本.md:224｜說明｜搶救資料先從小怪拾白色穿孔卡片，進本前在電梯北側的本外通道找 3005-A 換黃卡。｜Para Rescate de datos, recoge una tarjeta blanca de los enemigos cercanos. Antes de entrar en la mazmorra, cambia a amarilla en el terminal 3005-A del pasadizo exterior al norte del ascensor.

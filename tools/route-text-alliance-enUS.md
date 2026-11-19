@@ -1418,3 +1418,8 @@
 04-45到60級.md:54｜說明｜遇到圖加且準備好步行護送才接。｜Accept only if you meet Tooga and are ready to escort him on foot.
 04-45到60級.md:55｜說明｜跟著圖加步行，護送到熱砂港西南邊的托爾塔。注意沿途伏擊。｜Escort Tooga on foot to Torta, southwest of Steamwheedle Port. Watch for ambushes.
 04-45到60級.md:62｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜Tooga’s escort failed. Continue with the main route, or abandon the quest and find Tooga again if you want to retry.
+06-路線外任務.md:1709｜說明｜已向摩根哨站的麥克斯韋爾交 4242 後，若回黑石深淵拾到弄皺的便箋，就用便箋起任，交給監獄內的溫德索爾。｜After turning in 4242 to Marshal Maxwell at Morgan’s Vigil, use the Crumpled Up Note if you loot it on a return to Blackrock Depths. Turn it in to Windsor in the prison.
+06-路線外任務.md:1710｜說明｜交完便箋後向溫德索爾接取。隊伍若會打安格弗將軍和阿格曼奇，各拾一份情報，再回同一間囚室交件。｜Accept from Windsor after turning in the note. If your group plans to fight General Angerforge and Argelmach, loot one piece of information from each and return to the same cell.
+06-路線外任務.md:1711｜說明｜交完兩份情報且全隊準備好後，在囚室向溫德索爾手動接取並護送。任務日誌確認成功後，順路回摩根哨站向麥克斯韋爾交件。｜After turning in both pieces of information, wait until your group is ready, then manually accept from Windsor in his cell and escort him. Once your quest log confirms success, turn in to Maxwell the next time you pass Morgan’s Vigil.
+05-副本.md:247｜說明｜依序換卡：本外 3005-A 白換黃；本內 3005-B 黃換藍、3005-C 藍換紅、3005-D 紅換彩色。｜Exchange the cards in order. Outside, use 3005-A to swap white for yellow. Inside, use 3005-B for blue, 3005-C for red, and 3005-D for prismatic.
+05-副本.md:224｜說明｜搶救資料先從小怪拾白色穿孔卡片，進本前在電梯北側的本外通道找 3005-A 換黃卡。｜For Data Rescue, loot a white punch card from the nearby enemies. Before entering the dungeon, use 3005-A in the outer passage north of the elevator to get a yellow card.

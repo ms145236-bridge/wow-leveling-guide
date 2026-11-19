@@ -2527,7 +2527,9 @@ function E.InstanceState(d, all)
     end
   end
   local function add(q)
-    if q and not seen[q] and C.IsOnQuest(q) and (inTurn[q] or (inDo[q] and inDo[q].when and inDo[q].when.missingBag) or not C.IsReady(q)) then
+    local info = q and R.quests[q]
+    local nativeReady = inDo[q] and info and info.requiredLoot and journalReady or C.IsReady
+    if q and not seen[q] and C.IsOnQuest(q) and (inTurn[q] or (inDo[q] and inDo[q].when and inDo[q].when.missingBag) or not nativeReady(q)) then
       local condition = inDo[q] and inDo[q].when
       if condition and condition.missingBag and not E.Applies(condition) then return end
       -- 本內可接的送信任務交由出本步驟引導。其他分翼有明列目標時仍顯示。

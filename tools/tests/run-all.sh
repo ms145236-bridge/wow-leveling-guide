@@ -36,6 +36,7 @@ lua5.1 tools/tests/dungeon-intake-followup.lua Alliance
 lua5.1 tools/tests/dungeon-intake-followup.lua Horde
 lua5.1 tools/tests/wetlands-relic.lua
 lua5.1 tools/tests/gnomeregan.lua
+lua5.1 tools/tests/gnomeregan-punchcard.lua
 lua5.1 tools/tests/gnomeregan-ring-return.lua
 lua5.1 tools/tests/stratholme.lua
 lua5.1 tools/tests/stratholme-alliance-followups.lua
@@ -60,5 +61,6 @@ lua5.1 tools/tests/questiedb-guard.lua
 lua5.1 tools/tests/replay/dungeon-entry-test.lua
 python3 -B tools/tests/replay/test_selection.py
 python3 -B tools/tests/replay/test_skips.py
+python3 -B tools/tests/replay/test_punchcard.py
 python3 tools/tests/replay/held_items.py
 python3 tools/tests/replay/check.py

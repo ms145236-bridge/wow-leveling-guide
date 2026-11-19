@@ -14618,3 +14618,6 @@
 
 04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escolte Tooga até Torta no Porto do Cartel e aguarde até que o registro indique que a missão pode ser entregue.
 04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Volte a Geringontzan para entregar as missões e aceite Bom Gosto e Análise de Partes de Insetos.
+06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑澗深淵中的惡魔」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Só aceite esta missão se você já estiver no Terraço dos Artesãos em Darnassus e Vigilalva Saedlass oferecê-la. Você pode aceitar a missão da Horda “Vilania das Profundezas” diretamente com Thaelrid dentro da masmorra, sem ir a Darnassus.
+04-45到60級.md:264｜說明｜跟著圖加步行。｜Siga Tooga a pé.
+04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜A escolta de Tooga falhou. Você pode continuar pela rota principal. Para tentar de novo, abandone a missão e procure Tooga outra vez.
