@@ -28,9 +28,6 @@ local standard = tonumber(arg[10]) == nil and arg[11] == nil
 -- Provide cloth only in an explicitly supplied replay. The normal itinerary makes no drop assumption.
 local suppliedLinen = tonumber(arg[10]) or 0
 if suppliedLinen > 0 then drops[2589] = suppliedLinen end
--- Alliance 91741/96391 start from kobold/Dark Iron drops met while doing the surrounding quests. The route now
--- shows them only with the item in the bag (audit A-B9); the normal itinerary keeps the earlier assumption that it drops.
-if standard then drops[247834], drops[274268] = 1, 1 end
 -- Optional explicit successful interactions/drop scenarios. Simply visiting a dungeon supplies nothing.
 local weaponLoot = {}
 for id in (arg[11] or ""):gmatch("%d+") do weaponLoot[tonumber(id)] = true end
@@ -82,7 +79,7 @@ function UnitXP() return bar end
 function UnitXPMax() return maxXP[level] or 0 end
 function wipe(t) for k in pairs(t) do t[k]=nil end end
 local db={skip={},drop={},fpNodes={},notNow={},pin={},mark={},latch={},carry={},dNo={}}
-local ns={db=db, L=setmetatable({}, {__index=function(_,k) return k end}), UI={Get=function(key) return arg[10]=="optional" and key=="optional" end}, C={}}
+local ns={db=db, L=setmetatable({}, {__index=function(_,k) return k end}), UI={Get=function(key) return arg[10]=="optional" and (key=="optional" or key=="dPre") end}, C={}}
 function ns.C.IsTurnedIn(q) return turned[q] end
 function ns.C.IsOnQuest(q) return have[q] end
 -- Quests with no objective step anywhere on the route are ready once accepted.
@@ -221,6 +218,8 @@ local function run(st, isRun)
       -- Explicit held-item conditions were already checked by E.Applies; other conditional entries stay unmodelled.
       if not why and i.cond and not (s.when and s.when.bag) then why="conditional" end
       if not why and level<math.max(i.min or 0,s.pickLv or 0) then why,detail="low",math.max(i.min or 0,s.pickLv or 0) end
+      -- Authored mainline dungeon prep waits while the log lacks the 3-slot reserve (Engine deferAuthoredPrep).
+      if not why and not isRun and s.when and s.when.dungeonPrep and not E.PreRoom(st) then why="prep-deferred" end
       if not why and open>=40 then why="full" end
       if why then log(why,s,detail);if stats[why] then stats[why]=stats[why]+1 end
       else

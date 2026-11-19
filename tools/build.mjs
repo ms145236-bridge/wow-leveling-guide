@@ -728,9 +728,9 @@ for (const d of dungeons) {
       const when = classWhen(pq.classes);
       const outdoor = outdoorPrereqs.get(p);
       const base = { id: p, zh: questName(pq), en: pq.en, ph: "pre", tag: "副本前置鏈", chainOf: qid, where: d.where, when, outsideObjective: Boolean(outdoor) };
-      // 野外接取寫了持物條件（物品起始、撿到才接）：補的接取沿用同一條件，沒撿到就不出現
+      // 野外接取寫了持物條件（物品起始、撿到才接）：補的接取沿用同一條件與可跳過，沒撿到就不出現
       const heldAccept = stations.flatMap((x) => x.steps).find((x) => x.t === "accept" && x.id === p && x.when?.bag);
-      out.push({ ...base, t: "accept", verb: "接", when: heldAccept ? { ...when, bag: heldAccept.when.bag } : when });
+      out.push({ ...base, t: "accept", verb: "接", when: heldAccept ? { ...when, bag: heldAccept.when.bag } : when, ...(heldAccept?.opt ? { opt: true } : {}) });
       if (outdoor || db.questMobs(p).length) {
         const work = { ...base, t: "do", verb: "做", hint: pq.obj.filter(Boolean).join(" ") };
         if (outdoor) Object.assign(work, { desc: outdoor.desc, coord: outdoor.coord, authoredPoints: outdoor.authoredPoints });

@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "7c7048cb",
+  built = "77be1923",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -14,7 +14,7 @@ MG.Route = {
         {t="accept", q=33, npc="伊根·派特斯金納", tgt="伊根·派特斯金納", map=1429, x=48.94, y=40.16},
         {t="do", q=33, hint="帶8塊硬狼肉給北郡修道院外的伊根·派特斯金納。", map=1429, x=47.9, y=38.2},
         {t="do", q=7, hint="殺死10隻狗頭人歹徒，然後向治安官瑪克布萊德覆命。", map=1429, x=49.2, y=36.3},
-        {t="accept", q=91741, desc="右鍵背包裡的被啃過的書接任務。", npc="物品 被啃過的書", map=1429, x=49.2, y=36.3, when={bag={item=247834, count=1}}},
+        {t="accept", q=91741, opt=true, desc="右鍵背包裡的被啃過的書接任務。", tag="掉落才接 可跳過", npc="物品 被啃過的書", map=1429, x=49.2, y=36.3, when={bag={item=247834, count=1}}},
         {t="turnin", q=33, npc="伊根·派特斯金納", tgt="伊根·派特斯金納", map=1429, x=48.94, y=40.16},
         {t="turnin", q=7, npc="治安官瑪克布萊德", tgt="治安官瑪克布萊德", map=1429, x=48.92, y=41.61},
         {t="accept", q=15, npc="治安官瑪克布萊德", tgt="治安官瑪克布萊德", map=1429, x=48.92, y=41.61},
@@ -26,7 +26,7 @@ MG.Route = {
         {t="accept", q=3104, npc="治安官瑪克布萊德", tgt="治安官瑪克布萊德", map=1429, x=48.92, y=41.61, when={class={"MAGE"}}},
         {t="accept", q=92479, npc="治安官瑪克布萊德", tgt="治安官瑪克布萊德", map=1429, x=48.92, y=41.61, when={class={"HUNTER"}}},
         {t="turnin", q=91741, npc="帕克斯頓修士", tgt="帕克斯頓修士", map=1429, x=49.61, y=40.41, when={onQuestAny={91741}}},
-        {t="accept", q=92124, npc="帕克斯頓修士", tgt="帕克斯頓修士", map=1429, x=49.61, y=40.41},
+        {t="accept", q=92124, npc="帕克斯頓修士", tgt="帕克斯頓修士", map=1429, x=49.61, y=40.41, when={turnedQuest=91741}},
         {t="turnin", q=92124, npc="丹尼爾", tgt="丹尼爾", map=1429, x=49.48, y=40.67},
         {t="accept", q=91743, npc="帕克斯頓修士", tgt="帕克斯頓修士", map=1429, x=49.61, y=40.41},
         {t="accept", q=18, npc="維里副隊長", tgt="維里副隊長", map=1429, x=48.17, y=42.94},
@@ -947,7 +947,7 @@ MG.Route = {
         {t="accept", q=433, npc="參議員梅爾·聖石", tgt="參議員梅爾·聖石", map=1426, x=68.67, y=55.97},
         {t="accept", q=432, npc="工頭喬尼·石眉", tgt="工頭喬尼·石眉", map=1426, x=69.08, y=56.33},
         {t="do", q=96390, hint="在丹莫洛殺死10個黑鐵間諜。", map=1426, x=77.5, y=61.2},
-        {t="accept", q=96391, desc="右鍵背包裡的黑鐵地圖接任務。", npc="物品 黑鐵地圖", map=1426, x=77.5, y=61.2, when={bag={item=274268, count=1}}},
+        {t="accept", q=96391, opt=true, desc="右鍵背包裡的黑鐵地圖接任務。", tag="掉落才接 可跳過", npc="物品 黑鐵地圖", map=1426, x=77.5, y=61.2, when={bag={item=274268, count=1}}},
         {t="do", q=432, hint="在古博拉採掘場裡替工頭喬尼·石眉殺死6個石齶擊顱者。", map=1426, x=70.95, y=55.98},
         {t="do", q=433, hint="到古博拉採掘場裡替參議員梅爾·聖石殺死10個石齶斷骨者。", map=1426, x=71.7, y=53},
         {t="turnin", q=432, npc="工頭喬尼·石眉", tgt="工頭喬尼·石眉", map=1426, x=69.08, y=56.33},
@@ -1246,9 +1246,9 @@ MG.Route = {
       } },
     { id="05-d1", start=nil, name="領主大廳", short=nil, visit=nil, map=1455, lv={13, 18}, video=nil, test=nil, alt=nil, when=nil, tips={}, dungeon=true, grind=nil, after="02-11", entrance="鐵爐堡 27.63, 47.83", pickup="走到丹莫洛與洛克莫丹時先接進本前的任務，進本前不必專程回頭。天裔精靈不走 「丹莫洛與洛克莫丹」：第一次到鐵爐堡時往東到丹莫洛找大地先知法森，補做法森的遠視能力、防患於未然和地底地圖再回鐵爐堡；不想繞路就略過舊鐵爐堡入侵。", pickupS={{"走到丹莫洛與洛克莫丹時先接進本前的任務，進本前不必專程回頭"}, {"天裔精靈不走 「丹莫洛與洛克莫丹」：第一次到鐵爐堡時往東到丹莫洛找大地先知法森，補做法森的遠視能力、防患於未然和地底地圖再回鐵爐堡", {race={"Skyborne"}}}, {"不想繞路就略過舊鐵爐堡入侵"}}, pickAt="01-9", inst={3065}, dq={96393, 96394, 96395, 96403}, supply=nil, danger=nil,
       steps = {
-        {t="accept", q=96391, ph="pre", tag="副本前置鏈", when={bag={item=274268, count=1}}},
+        {t="accept", q=96391, ph="pre", opt=true, tag="副本前置鏈", when={bag={item=274268, count=1}}},
         {t="turnin", q=96391, ph="pre", tag="副本前置鏈", npc="大地先知法森", tgt="大地先知法森", map=1426, x=64.9, y=58.5},
-        {t="accept", q=96393, ph="pre", pickLv=9, recLv=16, npc="大地先知法森", tgt="大地先知法森", map=1426, x=64.87, y=58.47},
+        {t="accept", q=96393, ph="pre", pickLv=9, recLv=16, npc="大地先知法森", tgt="大地先知法森", map=1426, x=64.87, y=58.47, when={turnedQuest=96391}},
         {t="accept", q=96394, ph="pre", pickLv=10, recLv=15, npc="阿琺卓‧頓沃", tgt="阿琺卓‧頓沃", map=1455, x=33.23, y=48},
         {t="accept", q=96403, ph="pre", pickLv=10, recLv=15, npc="索姆‧費奇", tgt="索姆‧費奇", map=1455, x=32.18, y=44.5},
         {t="travel", text="前往 領主大廳 入口", map=1455, x=27.63, y=47.83},
@@ -6094,7 +6094,7 @@ MG.Route = {
     [91732] = {xp=315, mob={{0, 0, 1, 0}}, objs={"Mining Tools"}, d="從玉石礦坑收集4件採礦工具，然後回到東谷伐木場找哈嘉爾‧洛威。", n="優質鋼鐵", lvl=7, min=6},
     [91733] = {xp=630, mob={{0, 0, 1, 0}, {0, 0, 1, 0}, {0, 0, 1, 0}}, objs={"Waterlogged Axe", "Waterlogged Saw", "Waterlogged Toolbox"}, d="收集從東谷伐木場被沖到下游的浸水的斧頭、浸水的鋸子和浸水的工具箱，然後回去找歐銘‧佩佛德。", n="下游", lvl=10, min=7},
     [91740] = {xp=880, items={247826}, d="將呱奇的頭顱交給山巔之塔的梅瑞兒‧羅斯。", n="呱奇的頭顱", lvl=11, min=7, cond=true},
-    [91741] = {xp=85, items={247857}, d="將書還給帕克斯頓修士。", n="被啃過的書", lvl=2, min=1, fol={92124}},
+    [91741] = {xp=85, items={247857}, d="將書還給帕克斯頓修士。", n="被啃過的書", lvl=2, min=1, cond=true, fol={92124}},
     [91743] = {xp=170, mob={{2.7, 1, 2, 0}}, tgo={{"狗頭人歹徒", "狗頭人苦力", "狗頭人勞工"}}, d="在北郡山谷取回8本遭竊的書，然後送還給帕克斯頓修士。", n="調皮的鼠輩", lvl=2, min=1, ps={92124}, fol={91745}},
     [91745] = {xp=25, d="到北郡山谷的回音山礦坑外，與凱爾希‧法戈談話。", n="採礦顧問", lvl=3, min=1, ps={91743}, fol={91752}},
     [91752] = {xp=315, mob={{3, 0, 2, 1}}, tgo={{"亮亮搜尋者納夫"}}, d="從亮亮搜尋者納夫手中取回一袋「圖畫」書。將書架交給北郡修道院內的治安官瑪克布萊德。", n="顧全大局", lvl=3, min=1, ps={91745}, fol={91758}},
@@ -6453,7 +6453,7 @@ MG.Route = {
     [96321] = {xp=620, d="Find someone on Mount Hyjal who may be interested in the Faintly Glowing Staff.", n="垂死之神", lvl=58, min=0, fol={96131}},
     [96322] = {xp=7750, d="Speak to Felflick.", n="復仇的苦澀", lvl=58, min=0, ps={96255}},
     [96390] = {xp=910, mob={{10, 10, 1, 0}}, tgo={{"黑鐵間諜"}}, d="在丹莫洛殺死10個黑鐵間諜。", n="防患於未然", lvl=13, min=9, ps={96392}},
-    [96391] = {xp=1050, items={274268}, d="把黑鐵地圖交給丹莫洛的大地先知法森。", n="地底地圖", lvl=15, min=9, fol={96393}, chain=true},
+    [96391] = {xp=1050, items={274268}, d="把黑鐵地圖交給丹莫洛的大地先知法森。", n="地底地圖", lvl=15, min=9, cond=true, fol={96393}, chain=true},
     [96392] = {xp=680, mob={{0, 0, 1, 0}}, tgo={{"大地先知法森"}}, d="與大地先知法森交談，借用他的視界術，觀察黑鐵矮人的威脅。", n="法森的遠視能力", lvl=13, min=9, fol={96390}},
     [96393] = {xp=3200, mob={{0, 0, 1, 0}}, d="進入舊鐵爐堡下的族長之廳，並砍下杜爾根‧戴格哈默的頭。", n="舊鐵爐堡入侵", lvl=16, min=9, ps={96391}},
     [96394] = {xp=2369, mob={{0, 0, 1, 0}, {0, 0, 1, 0}}, d="殺死15個狂怒的亡魂和10個痛苦的靈魂，讓安威瑪的靈魂能夠安息。", n="死不瞑目", lvl=15, min=10},

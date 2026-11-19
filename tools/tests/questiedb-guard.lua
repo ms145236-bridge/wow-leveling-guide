@@ -1,6 +1,6 @@
 -- From the repository root: lua5.1 tools/tests/questiedb-guard.lua
 -- 用建置時的 QuestieDB 快照（tools/questiedb-snapshot.tsv）核對 Data，CI 不需要 QuestieDB：
--- 1. 只能由物品起始、起始物品由 2 種以上的怪隨機掉落的任務，接取步要有【可跳過】加【掉落才接】類標籤，或持物條件（撿到才出現，不必可跳過），
+-- 1. 只能由物品起始、起始物品由 2 種以上的怪隨機掉落的任務，接取步要有【可跳過】加【掉落才接】類標籤或持物條件，
 --    否則沒掉就停在這一步（單一首領掉落、地上物件、NPC 給的物品不算）。
 -- 2. 路線【前置：… ID】標籤加的前置，要是 QuestieDB 的前置（或它的互斥替代）；不是的話，同任務的步驟說明要寫到
 --    這個前置（任務名或 ID），否則任務可能永遠不出現。
@@ -65,7 +65,7 @@ for _, faction in ipairs({ "Horde", "Alliance" }) do
         for _, item in ipairs(db[q].items) do starts = starts or item == bag.item end
         if not starts then report("持物:" .. q, ("%s %s 接 %d %s：持物條件 %d 不是起始物品（%s）"):format(faction, st.id, q, route.quests[q].n or "", bag.item, table.concat(db[q].items, ","))) end
       end
-      if q and db[q] and db[q].randomDrop and not ((s.opt and route.quests[q].cond) or (s.when and s.when.bag)) then
+      if q and db[q] and db[q].randomDrop and not (s.opt and (route.quests[q].cond or (s.when and s.when.bag))) then
         report("掉落起始:" .. q, ("%s %s 接 %d %s：起始物品由 %d 種怪隨機掉落，要加【掉落才接】【可跳過】或持物條件"):format(faction, st.id, q, route.quests[q].n or "", db[q].randomDrop))
       end
     end
