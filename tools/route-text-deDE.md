@@ -14399,3 +14399,6 @@
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Folge Tooga zu Fuß.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜Toogas Eskorte ist fehlgeschlagen. Du kannst der Hauptroute folgen. Für einen neuen Versuch brich die Quest ab und suche Tooga erneut.
 06-路線外任務.md:1731｜路線外理由｜若本來就安排厄運之槌北區貢品，且克羅卡斯確實提供這個任務，才選接。跨翼取物與回報請依遊戲內任務日誌。｜Nimm die Quest nur an, wenn ohnehin ein Tributlauf im Nordflügel von Düsterbruch geplant ist und Captain Kromcrush sie dir anbietet. Folge beim Sammeln und Abgeben über die Flügel hinweg deinem Questlog im Spiel.
+06-路線外任務.md:1805｜路線外理由｜已交 8555 且實際接到後，依任務日誌到泰達希爾，在達納蘇斯城牆外找瑪法里恩的代理人。若沒有安排這段旅程，可略過。｜Wenn du 8555 abgegeben und diese Quest tatsächlich angenommen hast, folge dem Questlog nach Teldrassil und suche Malfurions Mittelsmann außerhalb der Mauern von Darnassus. Ist die Reise nicht geplant, kannst du die Quest auslassen.
+06-路線外任務.md:482｜路線外理由｜交完 4001 後，順路在奧格瑪向索爾接取並當場交件。此任務全程在奧格瑪完成。｜Wenn du 4001 abgegeben hast und ohnehin in Orgrimmar bist, nimm die Quest bei Thrall an und gib sie gleich bei ihm ab. Die gesamte Quest findet in Orgrimmar statt.
+06-路線外任務.md:486｜路線外理由｜若已接任務且順訪荒蕪之地卡加斯，可向薇薇安·拉格雷回報。未接可略過，無須專程回幽暗城。｜Wenn du diese Quest bereits hast und ohnehin nach Kargath im Ödland kommst, gib sie bei Vivian Lagrave ab. Ohne die Quest kannst du sie auslassen und musst nicht eigens nach Unterstadt zurückkehren.

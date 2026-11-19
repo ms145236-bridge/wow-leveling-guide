@@ -371,6 +371,8 @@ for (const file of files.filter((f) => !sideFile(f))) {
       }
       const iid = line.match(/^\s*-\s*副本\s*ID[｜：:]\s*(\d+)/);
       if (iid) { st.instance = +iid[1]; return; }
+      const outsideIndexed = line.match(/^\s*-\s*索引本外目標[｜：:]\s*(\d+(?:[、,]\s*\d+)*)\s*$/);
+      if (outsideIndexed) { st.outsideIndexed = outsideIndexed[1].split(/[、,]/).map(Number); return; }
       const ph = line.match(/^\s*-?\s*(進本前要接|副本內|出本後交)/);
       if (ph) { st.phase = { 進本前要接: "pre", 副本內: "in", 出本後交: "post" }[ph[1]]; return; }
     }
@@ -692,6 +694,9 @@ for (const d of dungeons) {
     // 這個副本區域的所有部落任務（在副本裡只顯示日誌中屬於這裡的任務）
     const zones = new Set([area, ...info.alts]);
     d.dq = db.allQuestIds().filter((id) => { const q = db.quest(id); return q && zones.has(q.zoneOrSort) && horde(q); });
+  }
+  for (const id of d.outsideIndexed || []) {
+    if (!d.dq?.includes(id)) hard(d.where, "索引本外目標不在本站副本索引：" + id);
   }
   if (!d.inst) warn(d.where, "副本「" + d.name + "」缺副本 ID（可加「- 副本ID｜N」）");
   // 沒寫地圖的座標：前置／交任務通常在插入點那站的區域，用那站的地圖（不是副本入口的地圖）
@@ -1419,7 +1424,7 @@ for (const s of stations) {
     const parts = short.slice(sp + 1).split(/與|／|、/);
     if (parts.length > 1) short = short.slice(0, sp + 1) + parts[0] + "等";
   }
-  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, short=${lua(short !== full ? short : undefined)}, visit=${lua(visit > 1 ? visit : undefined)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, grind=${lua(s.grind && s.grind.length ? s.grind.map((g) => ({ mob: g.mob, lv: g.lv, map: g.map, x: g.x, y: g.y, note: g.note })) : undefined)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)}, supply=${lua(s.supply)}, danger=${lua(s.danger)},\n      steps = {\n`;
+  out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, short=${lua(short !== full ? short : undefined)}, visit=${lua(visit > 1 ? visit : undefined)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, grind=${lua(s.grind && s.grind.length ? s.grind.map((g) => ({ mob: g.mob, lv: g.lv, map: g.map, x: g.x, y: g.y, note: g.note })) : undefined)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)}${s.outsideIndexed ? `, outsideIndexed=${lua(s.outsideIndexed)}` : ""}, supply=${lua(s.supply)}, danger=${lua(s.danger)},\n      steps = {\n`;
   for (const [i, step] of s.steps.entries()) {
     if (!step.sameObjective) continue;
     const previous = s.steps[i - 1];
