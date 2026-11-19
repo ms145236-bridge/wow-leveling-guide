@@ -2418,6 +2418,18 @@ local function placePre(st, pre, gone, hold, early)
   while cut > 0 and SOFT[list[cut].s.t] do cut = cut - 1 end
   local placed, drop = {}, {}
   local lastQ, wait, here, noDo = {}, {}, {}, {}
+  -- 前置任務 p 在本站什麼時候成立：nil＝已成立（遊戲裡已交，或前面的站已交）；數字＝排在本站第幾步之後（第二個值：那步是主線的交）；false＝本站還不成立
+  local function prereqAt(p)
+    if turned(p) then return nil end
+    local main, prep = mainTurnin[p], preTurnin[p]
+    if prep and here[prep] then return here[prep] end
+    if (prep and gone[prep] and gone[prep] ~= st) or (main and main.index < st.index) then return nil end
+    if main == st or (prep and gone[prep] == st) then
+      for i = cut, 1, -1 do if list[i].s.t == "turnin" and list[i].s.q == p then return i, i end end
+    end
+    if main or prep then return false end
+    return nil
+  end
   for k, step in ipairs(pre) do
     local s = step.s
     local q = s.q
@@ -2425,16 +2437,20 @@ local function placePre(st, pre, gone, hold, early)
     local blocked = (q and (wait[q] or (noDo[q] and not (s.when and s.when.bag)))) or hold[step]
     local gate -- 前置在本站交的那一步：它的條件（例如身上有物品）這時不一定成立，照樣可以排在它後面
     if s.t == "accept" and q and not blocked then
+      -- 前置先看遊戲裡已交的；沒交的才照排法等。和接取驗證一樣：ps 任一成立、pg 全部成立
       local info = R.quests[q] or {}
-      for _, list2 in ipairs({info.ps or {}, info.pg or {}}) do
-        for _, p in ipairs(list2) do
-          local main, prep = mainTurnin[p], preTurnin[p]
-          if prep and here[prep] then first = math.max(first, here[prep])
-          elseif (prep and gone[prep] and gone[prep] ~= st) or (main and main.index < st.index) then -- 前面的站已交
-          elseif main == st or (prep and gone[prep] == st) then -- 本站主線交：排在交的那步後面
-            for i = 1, cut do if list[i].s.t == "turnin" and list[i].s.q == p and i > first then first, gate = i, i end end
-          elseif main or prep then blocked = true -- 之後的站才交
-          end
+      for _, p in ipairs(info.pg or {}) do
+        local at, host = prereqAt(p)
+        if at == false then blocked = true elseif at then first = math.max(first, at); gate = host or gate end
+      end
+      if info.ps and #info.ps > 0 and not blocked then
+        local soon, soonHost, met
+        for _, p in ipairs(info.ps) do
+          local at, host = prereqAt(p)
+          if at == nil then met = true elseif at and (not soon or at < soon) then soon, soonHost = at, host end
+        end
+        if not met then
+          if soon then first = math.max(first, soon); gate = soonHost or gate else blocked = true end
         end
       end
     end
@@ -2510,7 +2526,8 @@ function dungeonPreSteps(st)
         local placed, drop = placePre(station, left, gone, hold, early)
         for k, step in ipairs(left) do
           if placed[k] and not (step.s.tag == "副本前置鏈" and drop[step.s.q]) then
-            gone[step] = station
+            -- 前面的站排過、但沒真的接／做／交（當時等級不夠、日誌預留延後、沒去做）：之後順路的站再排
+            if i == st.index or E.QuickDone(step) then gone[step] = station end
             if i == st.index then
               local s = step.s
               if room == nil then room = E.PreRoom(st) end

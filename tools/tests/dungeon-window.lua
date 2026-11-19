@@ -80,3 +80,53 @@ assert(not at["05-d32:turnin:5802"] and not at["05-d32:accept:5511"])
 -- 錨點站（亡靈新手區）不在獸人路線：羅德隆廢墟改在插入站（第9站）幽暗城接
 assert(at["05-d3:accept:92421"] and at["05-d3:accept:92421"].st == "02-9")
 print("Dungeon prerequisites are placed on the way from the anchor to the dungeon")
+
+-- 等級與日誌狀態在兩次順路之間變了（Astra 審查 #46）：前面的站排過但沒真的接，之後順路的站再排；已交的前置看遊戲狀態
+do
+  local lv, turnedQ, onQ = 49, {}, {}
+  function UnitFactionGroup() return "Horde" end
+  function UnitClass() return "Warrior", "WARRIOR" end
+  function UnitRace() return "Orc", "Orc", 2 end
+  function UnitLevel() return lv end
+  function UnitXP() return 0 end
+  function UnitXPMax() return 10000 end
+  function GetTime() return 100 end
+  function wipe(t) for k in pairs(t) do t[k] = nil end end
+  local ns = {
+    C = {IsOnQuest=function(q) return onQ[q] end, IsReady=function() return false end,
+         IsTurnedIn=function(q) return turnedQ[q] end, LogQuestIDs=function() return {} end,
+         XPBuff=function() return false end, Position=function() end, ZoneTexts=function() end,
+         Bind=function() end, Objectives=function() end},
+    db = {skip={}, mark={}, latch={}, notNow={}, pin={}, carry={}, dNo={}, dDismiss={}, fpNodes={}},
+    UI = {Get=function(k) return k == "optional" or k == "dPre" end},
+    L = setmetatable({}, {__index=function(_, key) return key end}),
+    msg = function() end, try = function(_, f, ...) return f(...) end,
+  }
+  for _, file in ipairs({"Data/Route.lua", "Engine.lua"}) do
+    assert(loadfile("addon/ShengLeveling/" .. file))("ShengLeveling", ns)
+  end
+  local E = ns.E
+  E.Build()
+  local function shown(id, t, q)
+    ns.db.station = id
+    local state = E.Locate(E.byId[id])
+    return index(state.steps, t, q, "05-d24") or index(state.steps, t, q, "05-d28")
+  end
+  -- 49 級經卡加斯（04-34）接不到 4134（50 級），53 級回卡加斯（04-42）要再提示
+  assert(not shown("04-34", "accept", 4134), "4134 needs level 50")
+  lv = 53
+  assert(shown("04-42", "accept", 4134), "4134 shows again at the next Kargath visit")
+  -- 04-34 已接（例如之前日誌預留延後、這次才接）：04-42 不重複
+  onQ[4134] = true
+  assert(not shown("04-42", "accept", 4134), "an accepted pickup is not repeated")
+  onQ[4134] = nil
+  -- 菲拉斯：52 級到莫沙徹（04-39）接不到 7441／7489，55 級回莫沙徹（04-48）再提示
+  lv = 52
+  assert(not shown("04-39", "accept", 7441) and not shown("04-39", "accept", 7489), "7441/7489 need level 54")
+  lv = 55
+  assert(shown("04-48", "accept", 7441) and shown("04-48", "accept", 7489), "7441/7489 show at the next Camp Mojache visit")
+  -- 自己已交 3906 的 49 級：04-34 卡加斯就接 3907／7201，不等主線第42站
+  lv, turnedQ[3906] = 49, true
+  assert(shown("04-34", "accept", 3907) and shown("04-34", "accept", 7201), "turned-in 3906 unlocks 3907/7201 at 04-34")
+  print("Dungeon prerequisites follow level and quest-log changes between visits")
+end
