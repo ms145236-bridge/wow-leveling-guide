@@ -124,6 +124,21 @@ local anyQ = {} -- 任一組（s.any）裡的任務：沒接的不算站的進�
 local dunQ = {} -- 副本站裡有步驟的任務（副本前置、副本任務；Build 時建）
 E.QUEST, E.SOFT = QUEST, SOFT
 
+-- 鳥點名 → 該鳥點的地圖與座標（搭船、飛行的目的地判斷用）
+local nodeMap
+function E.NodeMap(node)
+  if not nodeMap then
+    nodeMap = {}
+    for _, st in ipairs(R.stations) do
+      for _, s in ipairs(st.steps) do
+        if s.t == "fp" and s.map and (s.nodeK or s.node) then nodeMap[s.nodeK or s.node] = s end
+      end
+    end
+  end
+  local s = node and nodeMap[node]
+  if s then return s.map, s.x, s.y end
+end
+
 -- 沒座標的交通要比對的步驟：後面已打勾的到達／交通路標，加上第一個還沒完成、適用、有座標的步驟（第二個回傳值，箭頭指它）
 function E.SoftTargets(steps, done, na, i)
   local out = {}
@@ -141,6 +156,7 @@ end
 -- 人在任一個比對步驟的任一群（主座標＋more）附近就算到；只查不寫。爐石也用同一個範圍：用了爐石由區域名、施法事件認（stepDone、Core），
 -- 這裡只認「人已經走到下一步」；範圍放大的話，輪到時人離下一步不遠（例如北郡礦坑到修道院）就會直接當成到了、不提示爐石
 function E.SoftNear(_, targets, map, x, y)
+  if not (map and x and y) then return false end -- 載入中只有地圖、還沒有座標：等下一次更新
   local r = 3
   for _, sj in ipairs(targets) do
     if sj.map == map and math.sqrt((sj.x - x) ^ 2 + (sj.y - y) ^ 2) <= r then return true end
@@ -417,11 +433,45 @@ function E.Build()
           st.ungoroIronReturn = s
         elseif s.ungoroExit ~= "teacher" then -- alternate trainers use the original accept key
           -- 鍵用內容：路線重建後存檔裡的勾選／略過／釘選不會跑到別步；同站重複的加 ~2、~3
+          -- 改寫、合併過的步驟寫了舊鍵（skey）就沿用；船的座標是碼頭，加上去前的存檔沒有，不放進鍵
           local base = QUEST[s.t] and (s.t:sub(1, 1) .. ":" .. (s.any and s.any[1] or s.q)) -- 任一組的接：s.q 執行時會換成玩家接的那個，鍵固定用第一個
-            or (st.id .. "#" .. s.t .. ":" .. (s.key0 or tostring(s.node or s.bind or s.to or s.text or s.lv or "")) .. (s.x and string.format("@%.0f,%.0f", s.x, s.y) or ""))
+            or (s.skey and (st.id .. "#" .. s.skey))
+            or (st.id .. "#" .. s.t .. ":" .. (s.key0 or tostring(s.node or s.bind or s.to or s.text or s.lv or "")) .. (s.x and s.t ~= "boat" and string.format("@%.0f,%.0f", s.x, s.y) or ""))
           local key, k = base, 2
           while usedKey[key] do key = base .. "~" .. k; k = k + 1 end
           usedKey[key] = true
+          if s.skey then
+            -- 合併、改寫前的舊存檔（舊鍵依座標點分組；最後一組是這步本身）：
+            -- 途經點走過、勾過、略過 → 記成「@k」進度；這步本身的其他舊鍵 → 勾選／略過搬過來（手動略過的起點換成新鍵，
+            -- 指向它的連帶值也跟著換）；搬完就刪掉舊值，之後在新鍵上的手動調整不會被舊值蓋回去。
+            -- 舊版釘在其中一點 → 釘這步，箭頭指那一點（pin.via；釘選和走過的進度分開記）
+            local db = MG.db
+            local pin = db.pin and db.pin[st.id]
+            local groups = {}
+            for k, olds in ipairs(s.vkeys or {}) do groups[k] = olds end
+            local n = #groups + 1
+            groups[n] = s.akeys or {}
+            for k, olds in ipairs((db.latch and db.mark and db.skip) and groups or {}) do -- 測試用的精簡存檔可能沒有這些表
+              for _, old in ipairs(olds) do
+                local ok = st.id .. "#" .. old
+                local root = db.skip[ok]
+                if k < n then
+                  if db.latch[ok] or db.mark[ok] or root then db.latch[key .. "@" .. k] = true end
+                else
+                  if db.latch[key] == nil then db.latch[key] = db.latch[ok] end
+                  if db.mark[key] == nil then db.mark[key] = db.mark[ok] end
+                  if root and db.skip[key] == nil then db.skip[key] = (root == ok or root == true) and key or root end
+                end
+                if root then
+                  for sk, v in pairs(db.skip) do if v == ok and sk ~= ok then db.skip[sk] = key end end
+                end
+                db.latch[ok], db.mark[ok], db.skip[ok] = nil, nil, nil
+                if pin and pin.via == nil and pin.key == ok then pin.key, pin.via = key, s.via and k or false end
+                if pin and pin.auto == ok then pin.auto = key end
+              end
+            end
+            if pin and pin.via == nil and pin.key == key then pin.via = s.via and n or false end
+          end
           list[#list + 1] = { s = s, key = key, note = note, st = st }
           note = nil
         end
@@ -879,6 +929,14 @@ local function stepDone(step, map, x, y)
     -- 爐石回 X：人已經在 X（用爐石換區時 Core 記 latch；走到下一步附近、後面任務做了也算過了，見 E.Locate）
     local sub, zone, mini = C.ZoneTexts()
     return same(sub) or same(zone) or same(mini)
+  elseif t == "boat" then
+    -- 人已經在目的地那張地圖（例如下船後才登入、沒收到換區事件）：算搭過了。出發港和目的地同一張地圖時看不出來，照舊
+    local dest, dock = E.NodeMap(s.to), s.map or E.NodeMap(s.from)
+    if map and dest and dest ~= dock and map == dest then
+      MG.db.latch[step.key] = true
+      return true
+    end
+    return false
   elseif t == "fp" then return MG.db.fpNodes ~= nil and (MG.db.fpNodes[s.nodeK or s.node] == true or MG.db.fpNodes[s.node] == true) -- 飛行地圖上已經有這個鳥點
   elseif t == "goto" or (t == "travel" and s.x) then
     if not (map and x and y) then return false end
@@ -910,23 +968,38 @@ local function stepDone(step, map, x, y)
     end
     if p[1] ~= map then return false end
     if k > 1 then MG.db.latch[step.key .. "@" .. (k - 1)] = true end
-    if near(p) then
-      local fin = k == n
-      MG.db.latch[fin and step.key or (step.key .. "@" .. k)] = true
-      return fin
+    -- 到了下一點或後面某一點（中途才開插件、從後段進來、點很近）：記最遠的那點，從那裡接著走，不拉回前面
+    local at
+    for j = n, k + 1, -1 do
+      local q = s.via[j - 1]
+      if q[1] == map and near(q) then at = j; break end
     end
-    return false
+    if not at and near(p) then at = k end
+    if not at then return false end
+    k = at
+    local fin = k == n
+    MG.db.latch[fin and step.key or (step.key .. "@" .. k)] = true
+    return fin
   end
   return false
 end
 
+-- 好幾個座標的交通：已走到最遠的第幾點（0＝一點都還沒到）
+function E.ViaWalked(step)
+  for k = #step.s.via, 1, -1 do
+    if MG.db.latch[step.key .. "@" .. k] then return k end
+  end
+  return 0
+end
 -- 好幾個座標的交通：下一個還沒走到的點 { map, x, y }
 function E.ViaTarget(step)
   local s = step.s
-  for k = #s.via, 1, -1 do
-    if MG.db.latch[step.key .. "@" .. k] then return s.via[k] end
-  end
-  return { s.map, s.x, s.y }
+  local walked = E.ViaWalked(step)
+  -- 舊版釘在某一點（升級時搬過來的 pin.via）：還沒走到那點前箭頭指那點；釘的是已走過的點（重看）就一直指它
+  local pin = step.st and MG.db.pin and MG.db.pin[step.st.id]
+  local v = pin and pin.key == step.key and pin.via
+  if v and (v > walked or pin.wasDone) then return v == 1 and { s.map, s.x, s.y } or s.via[v - 1] end
+  return walked > 0 and s.via[walked] or { s.map, s.x, s.y }
 end
 
 -- 路線後面（第 idx 站含以後的主線站）會接手這個任務剩下的事：已接且目標都完成（或對話型）→ 後面要有「交」；
@@ -1461,7 +1534,7 @@ function E.Locate(st)
           if step.s.t ~= "fp" and done[j] and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
         end
       end
-      softLater[i] = not (step.s.localTransfer or step.s.classTransfer) and not done[i] and later and not step.s.x and map ~= nil and x ~= nil -- 沒座標的交通：輪到它時才看人到了沒（見下面）
+      softLater[i] = not (step.s.localTransfer or step.s.classTransfer) and not done[i] and later and (not step.s.x or step.s.t == "boat") and map ~= nil and x ~= nil and y ~= nil -- 沒座標的交通（船的座標是碼頭）：輪到它時才看人到了沒（見下面）
       -- 已經到下一站的地圖：站尾交通算到了；鳥點沒開不打勾，只是不再拉回去（left）。
       -- 鳥點和下一站同一張地圖時，人在這張地圖上不代表已經離開，照樣帶去開點
       local onNext = nxt and map and map == nxt.map
@@ -1485,7 +1558,13 @@ function E.Locate(st)
     if done[i] or db.mark[step.key] == false then return false end
     local s = step.s
     if s.x and (s.t == "goto" or s.t == "travel") then
-      if not stepDone(step, map, x, y) then return false end
+      if not stepDone(step, map, x, y) then
+        -- 好幾點的路標：人已經走到下一步那裡（例如翻過山站在洛克莫丹的巡山人旁）就算走完了
+        if not (s.via and map and x and y and E.SoftNear(s, E.SoftTargets(steps, done, na, i), map, x, y)) then return false end
+        db.latch[step.key] = true
+      end
+    elseif s.t == "boat" and stepDone(step, map, x, y) then
+      -- 已在對岸（stepDone 記下了）
     elseif softLater[i] and E.SoftNear(s, E.SoftTargets(steps, done, na, i), map, x, y) then
       db.latch[step.key] = true
     else
@@ -1556,6 +1635,9 @@ function E.Locate(st)
     end
     if found and not na[found] then arrive(found) end
     local pinned = found and steps[found].s
+    -- 舊版釘在合併路標的某一點（pin.via）：就算剛好是目前這步也留著，箭頭先指那一點（E.ViaTarget）
+    -- 釘的那一點走到了、或已走到更後面的點（沒走過才釘的）：和整步完成一樣放開
+    local viaDone = found and pin.via and steps[found].s.via and E.ViaWalked(steps[found]) >= pin.via
     local waitingMaterials = pinned and pinned.t == "turnin" and R.quests[pinned.q] and (R.quests[pinned.q].farmMaterial or R.quests[pinned.q].riftTools or R.quests[pinned.q].deliveryItems)
       and C.IsOnQuest(pinned.q) and not journalReady(pinned.q)
     local pinInfo = pinned and pinned.q and R.quests[pinned.q]
@@ -1568,7 +1650,7 @@ function E.Locate(st)
     elseif pinned and pinned.t == "turnin" and pinned.outsideObjective and isCleanedRingReturn(pinned.q) and not done[found] then
       -- An unfinished ring return keeps its pin when a prerequisite elsewhere becomes available.
       cur = found
-    elseif not found or (done[found] and not pin.wasDone) or found == auto or (pin.auto and (auto and steps[auto].key or "") ~= pin.auto) then
+    elseif not found or ((done[found] or viaDone) and not pin.wasDone) or (found == auto and not pin.via) or (pin.auto and (auto and steps[auto].key or "") ~= pin.auto) then
       db.pin[st.id] = nil
     else
       cur = found
@@ -1808,7 +1890,7 @@ end
 function E.PinIndex(state, i)
   local step = state.steps[i]
   if not step then return end
-  MG.db.pin[state.st.id] = { key = step.key, wasDone = state.done[i] and true or false, auto = state.auto and state.steps[state.auto].key or "" }
+  MG.db.pin[state.st.id] = { key = step.key, wasDone = state.done[i] and true or false, auto = state.auto and state.steps[state.auto].key or "", via = false }
 end
 
 -- 略過（連帶）：略過「接」或「做」→ 這個任務的接／做／交 ＋ 後續任務的全部步驟；略過「交」→ 只連帶後續任務。

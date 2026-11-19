@@ -1301,6 +1301,35 @@
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Funkelmat 5200 in der Reinzone. Bringt 3 Silber mit.
 05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜Ihr könnt die Reihe auf mehrere Besuche verteilen. Sammelt die erste Probe im Eingangstunnel oder in der Instanz. Gebt sie bei Ozzie in Kharanos ab, um die schwere Phiole zu erhalten.
 05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Benutzt die schwere Phiole bei einem Bestrahlten Brühschleimer, einem ätzenden Lauerer oder einem bestrahlten Schrecken. Die Probe hält zwei Stunden. Wenn ihr Kharanos nicht rechtzeitig erreicht, nehmt die Probe beim nächsten Gruppenbesuch.
+01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），先往下跳到前方的平台，再落到地面，走到洛克莫丹南部警戒塔。｜Über den Berg klettern: Statt durch den Nordtor-Tunnel von hier aus nach Osten den Hang hinauf und dem Pfeil am Grat entlang auf die andere Seite folgen (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50), dann zuerst auf die Plattform davor springen, von dort auf den Boden und zum südlichen Wachturm von Loch Modan gehen.
+01-第一段-1到12級.md:261｜說明｜往西走到山坡下，從這裡爬上西北邊的山丘。｜Geh nach Westen bis zum Fuß des Hangs und steig von hier auf die Hügel im Nordwesten.
+01-第一段-1到12級.md:390｜說明｜從這裡沿坡道繞上大樹，獵人訓練師在樹上。｜Folge von hier der Rampe um den großen Baum nach oben; der Jägerlehrer ist oben.
+02-12到30級.md:218｜說明｜從這裡跳進河裡，游到瀑布下的水潭。沿路見到小月夜猛虎和狂暴薊熊就打。｜Spring hier in den Fluss und schwimm zum Becken unter dem Wasserfall. Töte ab jetzt unterwegs alle Mondpirscherwichte und Tollwütigen Distelbären.
+02-12到30級.md:474｜說明｜先沿大路往東走，到挖掘場北邊的路口再往南下去。｜Folge zuerst der Hauptstraße nach Osten und biege an der Abzweigung nördlich der Ausgrabung nach Süden hinunter ab.
+02-12到30級.md:678｜說明｜出阿斯特蘭納先往東走到岔路口，再沿路往北。｜Verlass Astranaar nach Osten bis zur Gabelung und folge dann der Straße nach Norden.
+02-12到30級.md:681｜說明｜從湖心島往南游回岸上（46.80, 49.20 → 47.00, 51.70），再往東走。｜Schwimm von der Insel im See nach Süden zurück ans Ufer (46.80, 49.20 → 47.00, 51.70) und geh dann nach Osten.
+02-12到30級.md:706｜說明｜走到山洞口（42.30, 71.00），穿過山洞進石爪山脈。｜Geh zum Höhleneingang (42.30, 71.00) und durch die Höhle ins Steinkrallengebirge.
+03-30到45級.md:33｜說明｜往西進西部荒野，到哨兵嶺搭鳥。｜Geh nach Westen nach Westfall und flieg von der Späherkuppe.
+03-30到45級.md:127｜說明｜薩爾圖斯在山坡上，要照箭頭從西邊繞上去（31.99, 48.68 → 31.15, 49.05 → 32.41, 50.92）。｜Dein Ziel ist oben am Hang; folge dem Pfeil und steig von Westen hinauf (31.99, 48.68 → 31.15, 49.05 → 32.41, 50.92).
+03-30到45級.md:378｜說明｜先繞到北邊，從這裡進狼嚎谷。｜Geh außen herum auf die Nordseite und betritt das Tal von hier.
+03-30到45級.md:381｜說明｜回到北邊的大路，從這裡的路口進夜道谷。｜Geh zurück zur Hauptstraße im Norden und biege hier ins Tal ab.
+03-30到45級.md:413｜說明｜搭大升降梯下到底。｜Fahr mit dem Großen Aufzug ganz nach unten.
+03-30到45級.md:653｜說明｜往南進塔納利斯，到加基森搭鳥。｜Geh nach Süden nach Tanaris und flieg von Gadgetzan.
+03-30到45級.md:668｜說明｜去警戒崗哨搜索亨德爾下士的消息，走到就完成，再回塞拉摩交。｜Durchsuche den Wachposten nach Hinweisen auf Gefreiten Hendel. Sobald du dort bist, ist die Quest erfüllt; gib sie dann in Theramore ab.
+03-30到45級.md:733｜說明｜先往西北出迷霧谷，再往北走。｜Verlass das Tal zuerst nach Nordwesten und geh dann nach Norden.
+03-30到45級.md:1173｜說明｜蟲繭在痛苦深淵的洞裡，從洞口走進去（73.20, 63.90 → 72.30, 64.20）。｜Der Kokon liegt in der Höhle; geh vom Eingang hinein (73.20, 63.90 → 72.30, 64.20).
+04-45到60級.md:69｜說明｜謝申克在洞裡，從洞口沿坡道往下走（55.00, 70.00 → 54.20, 72.90 → 56.30, 72.20）。｜Die Ausrüstung liegt unten in der Höhle; folge vom Eingang der Rampe nach unten (55.00, 70.00 → 54.20, 72.90 → 56.30, 72.20).
+04-45到60級.md:93｜說明｜往東北走山路進辛特蘭。｜Nimm den Bergpfad nach Nordosten ins Hinterland.
+04-45到60級.md:126｜說明｜往南出洛克莫丹，從這裡的山路進荒蕪之地。｜Verlass Loch Modan nach Süden und nimm hier den Bergpfad ins Ödland.
+04-45到60級.md:300｜說明｜往西北走到去安戈洛環形山的山路口。｜Geh nach Nordwesten zum Anfang des Pfads in den Un'Goro-Krater.
+04-45到60級.md:340｜說明｜要進蟲巢採樣：往西南走到洞口再往裡走（50.40, 78.80 → 48.70, 85.20）。｜Für die Probe in den Bau: Geh nach Südwesten zum Höhleneingang und dann hinein (50.40, 78.80 → 48.70, 85.20).
+04-45到60級.md:676｜說明｜往東南走，從這裡的山路進辛特蘭。｜Geh nach Südosten und nimm hier den Bergpfad ins Hinterland.
+01-第一段-1到12級.md:59｜說明｜打算練剝皮再選剝皮卡。｜Wähle die Kürschnerei-Karte nur, wenn du kürschnern willst.
+01-第一段-1到12級.md:881｜說明｜到暴風城港口的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Geh zum Pier im Hafen von Sturmwind und nimm das Schiff nach Auberdine (1453 21.80, 56.80).
+03-30到45級.md:715｜說明｜到棘齒城碼頭，搭往藏寶海灣的船（1413 63.35, 38.45）。｜Geh zum Kai von Ratchet und nimm das Schiff nach Beutebucht (1413 63.35, 38.45).
+04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Geh zum Pier von Southshore und nimm das Schiff nach Auberdine (1424 50.70, 70.50).
+01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Am Pier im Hafen von Sturmwind an Bord gehen.
+03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Am Kai von Ratchet an Bord gehen.
 02-12到30級.md:620｜說明｜若先打過濕地挖掘場，在湖畔鎮接下這個任務，留到下次組隊進本找戴文。｜Wenn ihr die Ausgrabungsstätte im Sumpfland schon besucht habt, nehmt die Quest in Seenhain an und sucht Daewyn beim nächsten Gruppenbesuch.
 05-副本.md:204｜說明｜再經湖畔鎮時，向多林回報弟弟的下落。｜Berichtet Dorin beim nächsten Besuch in Seenhain, was mit seinem Bruder geschehen ist.
 05-副本.md:386｜說明｜一般跟線可在安戈洛第二趟結束、回到鐵爐堡後組隊，下站就是燃燒平原。提早在灼熱峽谷組到隊，也可從峽谷南端進黑石山。｜Bildet auf der Hauptroute nach eurem zweiten Besuch in Un’Goro eine Gruppe in Eisenschmiede. Als Nächstes geht es in die Brennende Steppe. Findet ihr schon in der Sengenden Schlucht eine Gruppe, betretet den Schwarzfels am Südende der Schlucht.

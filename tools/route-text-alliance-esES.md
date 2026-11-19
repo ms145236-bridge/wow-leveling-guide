@@ -1301,6 +1301,35 @@
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜El Destellamatic 5200, en la Zona Limpia. Lleva 3 monedas de plata.
 05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜Puedes repartir la cadena entre varias visitas. Recoge la primera muestra en los túneles de entrada o dentro de la mazmorra. Llévasela a Ozzie en Kharanos para recibir el vial pesado.
 05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Usa el vial pesado con una babosa irradiada, un rondador corrosivo o un horror irradiado. La muestra dura dos horas. Si no puedes volver a Kharanos a tiempo, recógela en tu próxima visita en grupo.
+01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），先往下跳到前方的平台，再落到地面，走到洛克莫丹南部警戒塔。｜Hay que cruzar la montaña: en lugar del túnel de la Puerta Norte, sube por la ladera hacia el este y sigue la flecha por la cresta hasta el otro lado (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50); luego salta primero a la plataforma de delante, después al suelo, y camina hasta la torre de vigilancia sur de Loch Modan.
+01-第一段-1到12級.md:261｜說明｜往西走到山坡下，從這裡爬上西北邊的山丘。｜Ve al oeste hasta el pie de la ladera y sube desde aquí a las colinas del noroeste.
+01-第一段-1到12級.md:390｜說明｜從這裡沿坡道繞上大樹，獵人訓練師在樹上。｜Desde aquí sube por la rampa que rodea el gran árbol; el instructor de cazadores está arriba.
+02-12到30級.md:218｜說明｜從這裡跳進河裡，游到瀑布下的水潭。沿路見到小月夜猛虎和狂暴薊熊就打。｜Salta al río aquí y nada hasta la poza bajo la cascada. A partir de aquí, mata a los Jabatos Acechalunas y Osos Cardo rabiosos que veas.
+02-12到30級.md:474｜說明｜先沿大路往東走，到挖掘場北邊的路口再往南下去。｜Sigue primero la carretera principal hacia el este y, en el desvío al norte de la excavación, baja hacia el sur.
+02-12到30級.md:678｜說明｜出阿斯特蘭納先往東走到岔路口，再沿路往北。｜Sal de Astranaar hacia el este hasta el cruce y luego sigue el camino hacia el norte.
+02-12到30級.md:681｜說明｜從湖心島往南游回岸上（46.80, 49.20 → 47.00, 51.70），再往東走。｜Desde la isla del lago, nada hacia el sur hasta la orilla (46.80, 49.20 → 47.00, 51.70) y luego ve al este.
+02-12到30級.md:706｜說明｜走到山洞口（42.30, 71.00），穿過山洞進石爪山脈。｜Ve a la entrada de la cueva (42.30, 71.00) y atraviésala para entrar en Sierra Espolón.
+03-30到45級.md:33｜說明｜往西進西部荒野，到哨兵嶺搭鳥。｜Ve al oeste a los Páramos de Poniente y toma el vuelo en la Colina del Centinela.
+03-30到45級.md:127｜說明｜薩爾圖斯在山坡上，要照箭頭從西邊繞上去（31.99, 48.68 → 31.15, 49.05 → 32.41, 50.92）。｜Tu objetivo está en lo alto de la ladera; sigue la flecha y sube rodeando por el oeste (31.99, 48.68 → 31.15, 49.05 → 32.41, 50.92).
+03-30到45級.md:378｜說明｜先繞到北邊，從這裡進狼嚎谷。｜Rodea por el norte y entra en el valle desde aquí.
+03-30到45級.md:381｜說明｜回到北邊的大路，從這裡的路口進夜道谷。｜Vuelve a la carretera principal del norte y entra en el valle por este desvío.
+03-30到45級.md:413｜說明｜搭大升降梯下到底。｜Baja hasta el fondo en el Gran Elevador.
+03-30到45級.md:653｜說明｜往南進塔納利斯，到加基森搭鳥。｜Ve al sur a Tanaris y toma el vuelo en Gadgetzan.
+03-30到45級.md:668｜說明｜去警戒崗哨搜索亨德爾下士的消息，走到就完成，再回塞拉摩交。｜Busca noticias del Soldado Hendel en el puesto de vigía. Llegar allí completa la misión; luego vuelve a Theramore a entregarla.
+03-30到45級.md:733｜說明｜先往西北出迷霧谷，再往北走。｜Sal primero del valle por el noroeste y luego ve hacia el norte.
+03-30到45級.md:1173｜說明｜蟲繭在痛苦深淵的洞裡，從洞口走進去（73.20, 63.90 → 72.30, 64.20）。｜El capullo está dentro de la cueva; entra por la boca (73.20, 63.90 → 72.30, 64.20).
+04-45到60級.md:69｜說明｜謝申克在洞裡，從洞口沿坡道往下走（55.00, 70.00 → 54.20, 72.90 → 56.30, 72.20）。｜El equipo está al fondo de la cueva; baja por la rampa desde la entrada (55.00, 70.00 → 54.20, 72.90 → 56.30, 72.20).
+04-45到60級.md:93｜說明｜往東北走山路進辛特蘭。｜Toma el sendero de montaña hacia el noreste para entrar en Tierras del Interior.
+04-45到60級.md:126｜說明｜往南出洛克莫丹，從這裡的山路進荒蕪之地。｜Sal de Loch Modan por el sur y toma aquí el sendero de montaña hacia las Tierras Inhóspitas.
+04-45到60級.md:300｜說明｜往西北走到去安戈洛環形山的山路口。｜Ve al noroeste hasta el comienzo del sendero hacia el Cráter de Un'Goro.
+04-45到60級.md:340｜說明｜要進蟲巢採樣：往西南走到洞口再往裡走（50.40, 78.80 → 48.70, 85.20）。｜Para la muestra hay que entrar en la colmena: ve al suroeste hasta la entrada de la cueva y adéntrate (50.40, 78.80 → 48.70, 85.20).
+04-45到60級.md:676｜說明｜往東南走，從這裡的山路進辛特蘭。｜Ve al sureste y toma aquí el sendero de montaña hacia Tierras del Interior.
+01-第一段-1到12級.md:59｜說明｜打算練剝皮再選剝皮卡。｜Elige la carta de Desuello solo si piensas desollar.
+01-第一段-1到12級.md:881｜說明｜到暴風城港口的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Ve al muelle del puerto de Ventormenta y toma el barco a Auberdine (1453 21.80, 56.80).
+03-30到45級.md:715｜說明｜到棘齒城碼頭，搭往藏寶海灣的船（1413 63.35, 38.45）。｜Ve al muelle de Trinquete y toma el barco a Bahía del Botín (1413 63.35, 38.45).
+04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Ve al muelle de Costasur y toma el barco a Auberdine (1424 50.70, 70.50).
+01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Embarca en el muelle del puerto de Ventormenta.
+03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Embarca en el muelle de Trinquete.
 02-12到30級.md:620｜說明｜若先打過濕地挖掘場，在湖畔鎮接下這個任務，留到下次組隊進本找戴文。｜Si ya completaste el Sitio de Excavación de Los Humedales, acepta esta misión en Villa del Lago y busca a Daewyn la próxima vez que entres con un grupo.
 05-副本.md:204｜說明｜再經湖畔鎮時，向多林回報弟弟的下落。｜La próxima vez que pases por Villa del Lago, cuéntale a Dorin qué le ocurrió a su hermano.
 05-副本.md:386｜說明｜一般跟線可在安戈洛第二趟結束、回到鐵爐堡後組隊，下站就是燃燒平原。提早在灼熱峽谷組到隊，也可從峽谷南端進黑石山。｜En la ruta principal, forma un grupo en Forjaz al terminar tu segunda visita a Un’Goro. La siguiente parada son las Estepas Ardientes. Si ya encuentras grupo en la Garganta de Fuego, entra en la Montaña Roca Negra por el extremo sur de la garganta.
