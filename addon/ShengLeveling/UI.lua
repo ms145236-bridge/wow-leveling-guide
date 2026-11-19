@@ -420,21 +420,35 @@ end
 -- 玩家抵達碼頭且已完成當地交接後，可以接黑海岸第一站或保留東渡行程。
 -- 按 Esc 關掉或先選了東渡：人還在奧伯丁時，可從步驟列選單重新選（見 openMenu）。
 local dockPromptShown
+local function atAuberdine(state)
+  if not (state and state.st and state.st.id == "01-6" and state.st.start == "NightElf" and state.map == 1439) then return false end
+  local map, x, y = C.Position()
+  if map ~= 1439 or not x or not y or x <= 0 or y <= 0 or x > 100 or y > 100 or (UnitOnTaxi and UnitOnTaxi("player")) then return false end
+  local town, coast = C.AreaName(442), C.MapName(1439)
+  local sub, zone, mini = C.ZoneTexts()
+  if coast and zone and zone ~= "" and zone ~= coast and zone ~= town then return false end
+  if town then
+    if sub and sub ~= "" and sub ~= town and sub ~= coast then return false end
+    if mini and mini ~= "" and mini ~= town and mini ~= coast then return false end
+    -- Use the central pier and the usual five-point nearby range. A stale
+    -- town name while crossing Darkshore must not offer the choice far away.
+    if sub == town or mini == town then return (x - 33.7)^2 + (y - 42.1)^2 <= 25 end
+  end
+  -- Clients without usable area names can still offer the choice at Laird's handoff.
+  return (x - 36.77)^2 + (y - 44.28)^2 <= 1.5^2
+end
 local function auberdinePrompt(state)
   local coast = E.byId["02-10"]
   if not coast or (confirmPop and confirmPop:IsShown()) then return end
   dockPromptShown = true
   local function choose(stay)
-    if MG.db.station ~= state.st.id or C.Position() ~= 1439 then dockPromptShown = nil; return end
+    if MG.db.station ~= state.st.id or not atAuberdine(state) then dockPromptShown = nil; return end
     MG.db.auberdineChoice = stay and "coast" or "east"
     if stay then E.Select(coast) end
     MG.Refresh()
   end
   confirmPrompt(L["已到奧伯丁。留在黑海岸解任務，或搭船去暴風城與朋友會合？"],
     L["留在黑海岸"], function() choose(true) end, L["提早東渡"], function() choose(false) end)
-end
-local function atAuberdine(state)
-  return state and state.st and state.st.id == "01-6" and state.st.start == "NightElf" and state.map == 1439
 end
 function UI.AuberdineChoice(state)
   local step = state and state.cur and state.steps[state.cur].s
@@ -451,7 +465,7 @@ function UI.AuberdineCanRechoose(state)
 end
 -- 重選只重開選擇框；按 Esc 取消時保留原本的決定，按下按鈕才寫入
 function UI.AuberdineRechoose(state)
-  auberdinePrompt(state)
+  if atAuberdine(state) then auberdinePrompt(state) end
 end
 local showMenu
 -- 介面語言：跟隨客戶端，或客戶端字型顯示得出來的語言（中文、韓文、俄文字型以外都是拉丁字母；英文到處都能顯示）
@@ -721,12 +735,16 @@ local function buildItems()
     for _, d in ipairs(E.dungeons) do
       if not folded(d) or UI.dPastOpen then items[#items + 1] = { kind = "dg", d = d } end
       if UI.dOpen == d.id then
-        local inside = false
-        if (state and state.instance) or (IsInInstance and IsInInstance()) then
-          local _, all = E.DungeonByInstance(GetInstanceInfo and select(8, GetInstanceInfo()))
+        local inside, waitingForID = false, false
+        local physicallyInside = IsInInstance and IsInInstance()
+        if physicallyInside or (physicallyInside == nil and state and state.instance) then
+          local instanceID = GetInstanceInfo and select(8, GetInstanceInfo())
+          -- 進本讀圖時可能只有「已進本」旗標。等副本 ID 到齊再推薦下一步，仍可翻閱各階段。
+          waitingForID = physicallyInside and (not instanceID or instanceID == 0)
+          local _, all = E.DungeonByInstance(instanceID)
           for _, x in ipairs(all or {}) do if x == d then inside = true end end
         end
-        local nx = E.DungeonNext(d, inside)
+        local nx = not waitingForID and E.DungeonNext(d, inside)
         if nx then items[#items + 1] = { kind = "dnext", d = d, nx = nx } end
         local phase = UI.dPhase[d.id] or (nx and ((nx.kind == "ent" or nx.kind == "in") and "in" or (nx.step and nx.step.s.ph))) or "pre"
         items[#items + 1] = { kind = "dphase", d = d, phase = phase }
@@ -1312,7 +1330,7 @@ function UI.WaypointEntrance(d)
 end
 function UI.DungeonAction(act, d)
   if act == "run" then E.RunDungeon(d); tab = "steps"; scroll = 0; lastCurKey = nil; MG.wpOverride = nil; MG.N.Forget(true)
-  elseif act == "back" then MG.db.station = MG.db.dungeonFrom; MG.db.dungeonFrom = nil; lastCurKey = nil; MG.wpOverride = nil; MG.N.Forget(true)
+  elseif act == "back" then MG.db.deferredHandoffRun = nil; MG.db.station = MG.db.dungeonFrom; MG.db.dungeonFrom = nil; lastCurKey = nil; MG.wpOverride = nil; MG.N.Forget(true)
   elseif act == "more" then UI.dMore[d.id] = not UI.dMore[d.id] or nil; UI.ScrollToDungeon(d)
   elseif act == "no" then MG.db.dNo[d.id] = not MG.db.dNo[d.id] or nil; UI.dOpen = nil; clearTabOverride() end
   MG.Refresh(true)
@@ -1567,9 +1585,16 @@ function UI.Create()
         local id = data and data.id
         if not id or (issecretvalue and issecretvalue(id)) then return end
         local k = keep[id]
-        if not k or (k.q and E.Turned(k.q)) then return end
-        local st = k.q and E.QuestStation(k.q)
-        local line = k.q and (L["別賣："] .. E.Title({ t = "accept", q = k.q }) .. (st and L["（%s）"]:format(UI.StName(st)) or "") .. L["會用到"]) or (k.use and (k.use:find("^別賣") and k.use or (L["別賣："] .. k.use)))
+        if not k then return end
+        local q, count, active = E.KeepQuest(k)
+        if k.q and not q then return end
+        local st = q and E.QuestStation(q)
+        local line = q and (L["別賣："] .. E.Title({ t = "accept", q = q }) .. (st and L["（%s）"]:format(UI.StName(st)) or "") .. L["會用到"]) or (k.use and (k.use:find("^別賣") and k.use or (L["別賣："] .. k.use)))
+        if active then
+          local uses = {}
+          for _, use in ipairs(active) do uses[#uses + 1] = E.QName(use.q) .. " ×" .. use.count end
+          line = L["別賣："] .. table.concat(uses, " + ") .. " = " .. count
+        elseif line and count then line = line .. " ×" .. count end
         if line then tip:AddLine(MG.Clean(line), AMBER[1], AMBER[2], AMBER[3], true) end
       end)
     end)
@@ -2210,9 +2235,22 @@ function UI.Render(S)
     right = UI.Get("showLevel") and info and info.lvl and tostring(info.lvl) or ""
     if s.t == "accept" or s.t == "turnin" then l2 = s.npc
     elseif s.t == "buy" then l2, l2num = s.npc, math.min(E.ItemCount(s.item), s.n or 1) .. "/" .. (s.n or 1)
+    elseif s.riftPhase == "scroll" then l2 = L["在發任者身後拿顯形卷軸。"]
+    elseif s.riftPhase == "chest" then l2 = L["在發任者身後拿一盒封靈箱，捕捉前確認還有使用次數。"]
+    elseif s.riftPhase == "journal" then l2 = L["三個裝滿的箱子與兩件工具已備齊，等任務日誌顯示可交。"]
+    elseif s.riftPhase == "capture" then l2 = s.hint
+    elseif s.farmDone and info and info.requiredLoot then l2 = L["已取得戰利品，等任務日誌顯示可交。"]
+    elseif s.farmDone and info and info.killCount then l2 = L["擊殺數已達標，等任務日誌顯示可交。"]
+    elseif s.t == "do" and info and info.requiredLoot then
+      l2, l2num = s.hint, E.ItemCount(info.requiredLoot).."/"..(info.lootCount or 1)
+    elseif s.awaitJournal then l2 = L["材料已齊。請核對任務日誌，可交時再找裁縫。"]
+    elseif (s.missingWeapon or s.farmDone) and step.note then l2 = step.note.text
+    elseif s.t == "do" and s.providedVisit then l2 = s.hint
+    elseif s.t == "do" and info and (info.farmMaterial or (info.requiredItems and s.when and s.when.workMap)) then l2 = s.hint
     elseif s.t == "do" then
       local one, header, lines, num = objectiveLines(s.q)
       if lines then l2, objList = header, lines else l2, l2num = one or s.hint, one and num end
+    elseif s.t == "note" then l2 = s.text
     elseif s.t == "level" then l2 = L["目前 %d 級"]:format(lv)
     elseif s.t == "bind" then l2 = s.text or L["找旅店老闆"]
     elseif s.t == "fp" then l2 = L["找飛行管理員"]
@@ -2224,6 +2262,10 @@ function UI.Render(S)
       l3, l3warn = L["之後再接"], true
     elseif s.t == "accept" and not state.done[state.cur] and not (state.wait and state.wait[state.cur]) and E.LogFull() then
       l3, l3warn = L["先交或放棄一件"], true
+    elseif s.t == "do" and info and (info.requiredLoot or info.killCount) and not s.farmDone and s.desc then
+      l3 = s.desc
+    elseif s.t == "turnin" and info and info.providedVisit and s.desc then
+      l3 = s.desc
     elseif step.dungeon then
       l3 = L["副本 "] .. step.dungeon.name
     elseif state.instance and s.spot then
@@ -2234,7 +2276,9 @@ function UI.Render(S)
       l3 = L["順路打完再交"]
     elseif s.roam and s.t == "do" then
       l3 = L["順路，路上遇到就打"]
-    elseif step.note and E.Applies(step.note.when) and not E.OptOut(step.note) then
+    elseif s.chooseGrindSpot or s.strictReady then
+      l3 = s.desc
+    elseif not (s.missingWeapon or s.farmDone) and step.note and E.Applies(step.note.when) and not E.OptOut(step.note) then
       l3 = step.note.text
     elseif s.tag and (MG.uiZh or s.tagL) then
       l3 = MG.uiZh and s.tag or s.tagL -- tag 是中文判斷用；其他語言顯示 tagL
@@ -2244,6 +2288,8 @@ function UI.Render(S)
       l3, l3warn = L["建議 %d 級"]:format(state.st.lv[1]), true
     end
     if state.cur ~= state.auto then strip = DIM end
+  elseif state.pendingExit then
+    title = L["出本交 "] .. E.QName(state.pendingExit)
   else
     local nxt = S.nextSt
     verb = "→"

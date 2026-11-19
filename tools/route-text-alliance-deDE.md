@@ -1,6 +1,6 @@
 # 阿聖練等幫手 deDE 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **386** 列。
+- 只收聯盟路線獨有的說明列，共 **397** 列。
 
 檔名:行號｜類型｜中文原文｜deDE
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Rechtsklicke Angeknabbertes Buch im Rucksack, um die Quest anzunehmen.
@@ -336,7 +336,7 @@
 02-12到30級.md:893｜說明｜暴風城接，到鐵爐堡交，學防護恐懼結界。｜Nimm sie in Sturmwind an, gib sie in Ironforge ab und lerne Furchtzauberschutz.
 02-12到30級.md:898｜說明｜暴風城接，到丹莫洛交。｜Nimm sie in Sturmwind an und gib sie in Dun Morogh ab.
 02-12到30級.md:905｜說明｜藍色隱士酒吧在暴風城法師區。｜Die Taverne Zum Blauen Eremiten ist im Magierviertel von Sturmwind.
-02-12到30級.md:908｜說明｜交 10 塊亞麻布和 6 顆充能裂隙寶石，寶石可在拍賣場買。｜Gib 10 Leinenstoff und 6 Aufgeladene Rissedelsteine ab. Die Edelsteine gibt es im Auktionshaus.
+02-12到30級.md:935｜說明｜需帶亞麻布 ×10 和充能裂隙寶石 ×6。若順路回洛克莫丹，可從銀泉礦坑北口（約 35.9,18.2）進洞開礦工聯盟的木箱。缺材料先走主線；材料齊且日誌可交時，到暴風城找威恩。｜Ihr braucht 10× Leinenstoff und 6× Aufgeladener Rissedelstein. Wenn ihr später wieder in Loch Modan seid, nehmt den Nordeingang der Silberquellmine (etwa 35.9,18.2) und öffnet die Truhen der Minenarbeiter. Folgt bis dahin eurer Route. Sucht Wynne in Sturmwind auf, sobald das Questlog die Abgabe bestätigt.
 02-12到30級.md:910｜說明｜獎勵法紋長袍。｜Belohnung: Managewirkte Robe.
 02-12到30級.md:921｜說明｜在梣谷擊殺薩特取得同心樹。｜Töte Satyrn in Ashenvale für das Herzholz.
 02-12到30級.md:925｜說明｜在加科因旁的召喚法陣使用，擊敗召喚出的魅魔。｜Benutze ihn am Beschwörungskreis neben Gakin dem Dunkelbinder und besiege den beschworenen Sukkubus.
@@ -405,7 +405,6 @@
 02-12到30級.md:300｜說明｜從暴風城沿艾爾文森林大路往東進赤脊山，順大路到湖畔鎮。｜Folge von Sturmwind aus der Straße durch den Wald von Elwynn nach Osten ins Rotkammgebirge und bleib auf der Straße bis Seenhain.
 02-12到30級.md:303｜說明｜第2站沒開湖畔鎮飛行點，就從暴風城沿艾爾文森林大路往東走到湖畔鎮。｜Hast du in Station 2 den Flugpunkt Seenhain nicht freigeschaltet, geh von Sturmwind auf der Straße durch den Wald von Elwynn nach Osten bis Seenhain.
 02-12到30級.md:400｜說明｜從黑海岸南邊沿大路往南進梣谷，先到邁斯特拉崗哨。｜Folge von der Südseite der Dunkelküste der Straße nach Süden nach Ashenvale und geh zuerst zu Maestras Posten.
-02-12到30級.md:431｜說明｜這班船中途停南海鎮，到米奈希爾港再下船。｜Dieses Schiff hält unterwegs in Southshore. Steig erst in Menethil aus.
 02-12到30級.md:502｜說明｜已開夜色鎮飛行點就直接飛夜色鎮。沒開就飛湖畔鎮，落地後沿大路往西到赤脊山西邊的路口，再往南進暮色森林到夜色鎮。｜Hast du den Flugpunkt Dunkelhain freigeschaltet, flieg direkt nach Dunkelhain. Sonst flieg nach Seenhain, folge dort der Straße nach Westen bis zur Kreuzung am Westrand des Rotkammgebirges und geh dann nach Süden durch den Dämmerwald nach Dunkelhain.
 03-30到45級.md:190｜說明｜在米奈希爾港北邊碼頭搭往奧伯丁的船，中途在南海鎮下船。｜Nimm am nördlichen Pier von Menethil das Schiff nach Auberdine und steig unterwegs in Southshore aus.
 03-30到45級.md:270｜說明｜從暮色森林西邊沿大路往南進荊棘谷，先到反抗軍營地。｜Folge vom Westrand des Dämmerwalds der Straße nach Süden ins Schlingendorntal und geh zuerst zum Rebellenlager.
@@ -437,7 +436,6 @@
 04-45到60級.md:217｜說明｜守望堡沒開就飛夜色鎮，往東過逆風小徑進悲傷沼澤，再往南進詛咒之地到守望堡。｜Ist die Burg Nethergarde nicht freigeschaltet, flieg nach Dunkelhain, geh nach Osten durch den Gebirgspass der Totenwinde in die Sümpfe des Elends und dann nach Süden in die Verwüsteten Lande zur Burg Nethergarde.
 04-45到60級.md:229｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。｜In den Sümpfen des Elends gibt es keinen Flugpunkt der Allianz: Geh nach Westen durch den Gebirgspass der Totenwinde zurück nach Dunkelhain und flieg von dort.
 04-45到60級.md:285｜說明｜從塔納利斯西邊的山路走坡道下安戈洛環形山，托爾瓦·尋路者就在坡道底的入口旁。｜Folge dem Bergpfad westlich von Tanaris die Rampe hinab in den Un'Goro-Krater. Torwa Pathfinder steht direkt am Eingang am Fuß der Rampe.
-04-45到60級.md:354｜說明｜牧師要在鐵爐堡接「塞納裏奧議會的求助」，請等爐石冷卻。其餘角色若爐石還在冷卻，可從馬紹爾營地飛奧伯丁，接往魯瑟蘭村的行程。｜Wer als Priester in Eisenschmiede die Quest „Hilfe für den Zirkel“ annehmen möchte, wartet auf den Ruhestein. Wer ihn sonst noch nicht nutzen kann, fliegt von Marschalls Zuflucht nach Auberdine und reist weiter nach Rut’theran.
 04-45到60級.md:365｜說明｜從阿斯特蘭納沿大路往北進費伍德森林。｜Folge von Astranaar der Straße nach Norden in den Teufelswald.
 04-45到60級.md:392｜說明｜從這裡進木喉要塞的山洞，穿過去就是冬泉谷。｜Betritt hier die Höhle der Holzschlundfeste und geh hindurch, dahinter liegt Winterspring.
 04-45到60級.md:429｜說明｜爐石還在冷卻就從羽月要塞飛阿斯特蘭納（經奧伯丁），再往北走進費伍德。｜Hat dein Ruhestein Abklingzeit, flieg von der Festung Feathermoon nach Astranaar (über Auberdine) und geh dann nach Norden in den Teufelswald.
@@ -456,8 +454,6 @@
 04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機；飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Du steigst an der Chillwindspitze oder am Aerie Peak um; ist Southshore nicht auf deiner Flugkarte, flieg wie gewohnt nach Sturmwind und nimm im Hafen das Schiff nach Auberdine.
 04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機｜Du steigst an der Chillwindspitze oder am Aerie Peak um
 04-45到60級.md:665｜說明｜飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Ist Southshore nicht auf deiner Flugkarte, flieg wie gewohnt nach Sturmwind und nimm im Hafen das Schiff nach Auberdine.
-04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快；改飛暴風城的話在暴風城港口上船。｜Am Pier von Southshore legt direkt ein Schiff nach Auberdine ab; das geht schneller, als nach Sturmwind zu fliegen und umzusteigen. Fliegst du stattdessen nach Sturmwind, geh im Hafen von Sturmwind an Bord.
-04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快｜Am Pier von Southshore legt direkt ein Schiff nach Auberdine ab; das geht schneller, als nach Sturmwind zu fliegen und umzusteigen
 04-45到60級.md:666｜說明｜改飛暴風城的話在暴風城港口上船。｜Fliegst du stattdessen nach Sturmwind, geh im Hafen von Sturmwind an Bord.
 04-45到60級.md:716｜說明｜爐石還在冷卻就走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Hat dein Ruhestein Abklingzeit, geh durch das Portal zurück nach Rut'theran, flieg nach Auberdine, nimm das Schiff nach Menethil, steig in Southshore aus und flieg dann zur Chillwindspitze.
 04-45到60級.md:717｜說明｜飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜Ist die Chillwindspitze nicht auf deiner Flugkarte, geh vom Aerie Peak auf dem Bergpfad nach Norden in die Westlichen Pestländer und lauf dann nach Westen zur Chillwindspitze.
@@ -488,7 +484,6 @@
 02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城；爐石在冷卻就往北回奧伯丁搭船到暴風城。｜Benutze nach Ashenvale deinen Ruhestein nach Sturmwind. Hat der Ruhestein Abklingzeit, geh nach Norden zurück nach Auberdine und nimm das Schiff nach Sturmwind.
 02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城｜Benutze nach Ashenvale deinen Ruhestein nach Sturmwind
 02-12到30級.md:901｜說明｜爐石在冷卻就往北回奧伯丁搭船到暴風城。｜Hat der Ruhestein Abklingzeit, geh nach Norden zurück nach Auberdine und nimm das Schiff nach Sturmwind.
-05-副本.md:40｜說明｜遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭往米奈希爾港的船在南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 02-第14站。｜Optional und weit entfernt: Der Eingang liegt in den Ruinen von Lordaeron über Undercity, du musst also durch Horde-Gebiet. Nimm das Schiff von Auberdine nach Menethil, steig in Southshore aus und entdecke den Flugpunkt, dann geh nach Norden durch das Vorgebirge von Hillsbrad und den Silberwald nach Tirisfal. Benutze nach dem Dungeon deinen Ruhestein nach Sturmwind und steig bei 02-Station 14 wieder ein.
 02-12到30級.md:992｜說明｜從永夜港找希爾瓦·菲納雯斯搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。｜Such in Nighthaven Silva Fil'naveth auf, nimm den Flug nur für Druiden nach Rut'theran und geh dort durch das Portal im Dorf nach Darnassus.
 02-12到30級.md:1009｜說明｜米奈希爾港北碼頭搭船到奧伯丁（中途停南海鎮不用下船），飛阿斯特蘭納取水；回程飛奧伯丁搭船回米奈希爾港，再走回赫妲娜的洞穴。｜Nimm am Nordanleger von Menethil das Schiff nach Auberdine (es hält unterwegs in Southshore; du musst nicht aussteigen) und flieg dann nach Astranaar, um das Wasser zu holen. Flieg auf dem Rückweg nach Auberdine, nimm das Schiff nach Menethil und geh dann zu Fuß zurück zu Hervdanas Höhle.
 02-12到30級.md:1009｜說明｜米奈希爾港北碼頭搭船到奧伯丁（中途停南海鎮不用下船），飛阿斯特蘭納取水｜Nimm am Nordanleger von Menethil das Schiff nach Auberdine (es hält unterwegs in Southshore; du musst nicht aussteigen) und flieg dann nach Astranaar, um das Wasser zu holen
@@ -615,7 +610,6 @@
 04-45到60級.md:823｜說明｜找薩納斯對話，請他把你傳送上懸崖找大法師克希雷姆。｜Sprich mit Sanath Lim-yo und bitte ihn, dich auf die Klippe zu Erzmagier Xylem zu teleportieren.
 04-45到60級.md:826｜說明｜塵埃在山下，回去同樣找薩納斯傳送上來。｜Der Staub liegt unten am Berg; lass dich genauso von Sanath Lim-yo wieder hinaufteleportieren.
 04-45到60級.md:832｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項（需遊戲實測）。｜Morphaz ist im Tempel von Atal'Hakkar. Zum Abstieg von der Klippe benutze deinen Ruhestein oder such die Teleportoption neben Xylem (im Spiel prüfen).
-04-45到60級.md:492｜說明｜托爾瓦旁沒有飛行點：從他身後的坡道出安戈洛環形山進塔納利斯，往東北跑到加基森。｜Bei Torwa gibt es keinen Flugpunkt: Verlass den Un'Goro-Krater über die Rampe hinter ihm nach Tanaris und lauf nach Nordosten nach Gadgetzan.
 04-45到60級.md:499｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（37.04, 44.13）。｜Binde deinen Ruhestein bei Gastwirtin Shaussiy im Gasthaus von Auberdine (37.04, 44.13).
 04-45到60級.md:683｜說明｜從死木蒸鍋往南走到刺枝林地飛行點（1448 62.49, 24.24）起飛，會經奧伯丁轉機。｜Geh vom Kessel der Totenwaldfelle nach Süden zum Flugpunkt Nachtlaublichtung (1448 62.49, 24.24) und flieg von dort ab; du steigst in Auberdine um.
 04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜Geh nur mit Die wahren Meister (4186) nach Seenhain. Hast du sie nicht, überspring die Schritte 60-62 und flieg direkt von Sturmwind nach Morgans Wacht.
@@ -897,9 +891,7 @@
 04-45到60級.md:1062｜說明｜解放樹根下原本就在的小精靈，不是在空地用道具召出來；和阿克蒙德之赦同一趟做。｜Befreie das Irrlicht, das schon unter den Wurzeln steckt, und beschwöre es nicht mit einem Gegenstand auf der Lichtung. Mach sie auf demselben Weg wie „Archimondes Begnadigung“.
 04-45到60級.md:1062｜說明｜解放樹根下原本就在的小精靈，不是在空地用道具召出來｜Befreie das Irrlicht, das schon unter den Wurzeln steckt, und beschwöre es nicht mit einem Gegenstand auf der Lichtung.
 04-45到60級.md:1062｜說明｜和阿克蒙德之赦同一趟做。｜Mach sie auf demselben Weg wie „Archimondes Begnadigung“.
-04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石；否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Nutze den Ruhestein nur, wenn er noch an Aerie Peak gebunden und einsatzbereit ist. Sonst nimm die Schiffsroute als Ausweichplan: Geh durch das Portal zurück nach Rut'theran, flieg nach Auberdine, nimm das Schiff nach Menethil, steig in Southshore aus und flieg dann zum Lager Chillwind.
 04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石｜Nutze den Ruhestein nur, wenn er noch an Aerie Peak gebunden und einsatzbereit ist.
-04-45到60級.md:1092｜說明｜否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Sonst nimm die Schiffsroute als Ausweichplan: Geh durch das Portal zurück nach Rut'theran, flieg nach Auberdine, nimm das Schiff nach Menethil, steig in Southshore aus und flieg dann zum Lager Chillwind.
 04-45到60級.md:1093｜說明｜已到冰風崗就跳過。飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜Überspring das, wenn du schon im Lager Chillwind bist. Fehlt das Lager Chillwind auf der Flugkarte, geh von Aerie Peak auf dem Bergweg nach Norden in die Westliche Pestländer und dann nach Westen zum Lager Chillwind.
 04-45到60級.md:1140｜說明｜座標是大致位置；入口和塔旁有血色十字軍守衛，一次只拉一隻。｜Die Koordinaten sind ungefähr. Am Eingang und am Turm stehen Wachen des Scharlachroten Kreuzzugs; zieh sie einzeln.
 04-45到60級.md:1140｜說明｜座標是大致位置｜Die Koordinaten sind ungefähr.
@@ -1328,5 +1320,57 @@
 05-副本.md:445｜說明｜要向西瘟疫凱爾達隆的畫家接「愛與家庭」，可先飛冰風崗。已接畫作或只想在禮拜堂接任務，直接和隊友會合。｜Fliegt zum Zugwindlager, wenn ihr für „Von Liebe und Familie“ zur Malerin auf Caer Darrow in den Westlichen Pestländern müsst. Habt ihr die Quest bereits oder braucht nur die Quests der Kapelle, trefft direkt eure Gruppe.
 05-副本.md:451｜說明｜從聖光之願禮拜堂隨隊前往斯坦索姆。入口標記是血色正門，去市場或血色堡壘走這裡；只打亡靈區，和能開側門的隊友在東邊的側門會合。｜Brecht von der Kapelle des hoffnungsvollen Lichts mit eurer Gruppe nach Stratholme auf. Die Eingangsmarkierung zeigt das scharlachrote Haupttor zum Markt und zur Bastion. Für den Untotenflügel trefft im Osten ein Gruppenmitglied, das den Dienstboteneingang öffnen kann.
 05-副本.md:440｜說明｜東瘟疫之地 1423 26.52, 10.36（血色正門；亡靈側門在 43.50, 19.40）｜Östliche Pestländer 26.52, 10.36 (Scharlachrotes Haupttor; Dienstboteneingang zum Untotenflügel bei 43.50, 19.40)
+02-12到30級.md:933｜步驟目標｜到暴風城法師區的藍色隱士旅店，用卷軸顯形。打到裂隙怒靈昏迷，再用封靈箱，拾取地上的裝滿的箱子；共需三個。｜Benutzt die Formel im Blauen Eremiten im Magierviertel von Sturmwind. Schwächt eine Risskreatur, bis sie betäubt ist, benutzt die Truhe und plündert den Behälter am Boden. Sammelt drei.
+02-12到30級.md:643｜說明｜沿赤脊山伊爾加拉之塔的樓梯上樓，從書架取書。塔內有守衛和精英；太危險可稍後再來。｜Steigt im Turm von Ilgalar im Rotkammgebirge die Treppe hinauf und nehmt das Buch aus dem Regal. Achtet auf die Wachen und den Elitegegner. Kommt später wieder, wenn der Weg zu gefährlich ist.
+02-12到30級.md:643｜說明｜沿赤脊山伊爾加拉之塔的樓梯上樓，從書架取書。塔內有守衛和精英｜Steigt im Turm von Ilgalar im Rotkammgebirge die Treppe hinauf und nehmt das Buch aus dem Regal. Achtet auf die Wachen und den Elitegegner.
+02-12到30級.md:643｜說明｜太危險可稍後再來。｜Kommt später wieder, wenn der Weg zu gefährlich ist.
+02-12到30級.md:670｜說明｜收集 8 份任務蜘蛛絲。夜色鎮東南有小型黑寡婦蜘蛛；西側烏鴉嶺地表也有小型黑寡婦蜘蛛和食腐獨行蛛。｜Sammelt 8 Stück Questseide. Südöstlich von Dunkelhain findet ihr Junges einer Schwarzen Witwe. Auf dem Rabenflucht-Hügel im Westen können Junges einer Schwarzen Witwe und Aaskrabbler die Seide fallen lassen.
+02-12到30級.md:1094｜說明｜接下任務後，順路經過暮色森林時收集蜘蛛絲。下一次在烏鴉嶺做「懲罰圖騰」也會經過掉落地。｜Sammelt die Seide nach der Annahme bei eurem nächsten Besuch im Dämmerwald. Für das Totem des Gegenschlags kommt ihr bei den Spinnen im Westen vorbei.
+02-12到30級.md:635｜說明｜到伊爾加拉之塔東側，在塔外找石獅子放置飾品。｜Sucht östlich des Turms von Ilgalar draußen die Löwenstatue und legt die Glyphe dort ab.
+02-12到30級.md:636｜說明｜若找不到任務配發的飾品，先檢查背包、銀行和任務日誌。｜Falls die erhaltene Glyphe fehlt, überprüft Taschen, Bank und Questlog.
+02-12到30級.md:637｜說明｜從石獅子往西，到石望要塞旁的完整哨塔。沿塔內坡道上到塔頂，找桶上的空瓶子。留意精英守衛。｜Geht vom Löwen nach Westen zum intakten Wachturm neben der Burg Steinwacht. Folgt der Rampe im Turm auf das Dach. Das leere Gefäß steht auf den Fässern. Achtet auf die Elitewachen.
+02-12到30級.md:644｜說明｜從南側沿谷地東側向北找范高雷中尉。在營地外先清附近的暗皮豺狼人，再靠近他；仍缺墜飾可沿路收。｜Folgt der Ostseite des Tals nach Norden zu Leutnant Fangor. Erledigt zunächst vom Lagerrand aus die nahen Gnolle der Dunkelfelle. Sammelt unterwegs noch fehlende Anhänger.
+02-12到30級.md:642｜說明｜沿谷地東側往北營地前進，沿途擊殺暗皮豺狼人收墜飾。也可在谷地外圍找較低等的豺狼人。｜Folgt dem Ostrand des Tals nach Norden zum Lager und sammelt unterwegs Anhänger von den Gnollen der Dunkelfelle. Am Talrand findet Ihr auch Gnolle niedrigerer Stufen.
+02-12到30級.md:646｜說明｜沿通往燃燒平原的道路到西側營地。先在洞口附近找黑石勇士，擊殺數未滿再往洞內找。以任務日誌為準。｜Folgt der Straße zur Brennenden Steppe bis zum Lager auf ihrer Westseite. Sucht zuerst am Höhleneingang nach Champions der Schwarzfelsschar. Geht hinein, wenn im Questlog noch besiegte Gegner fehlen.
+04-45到60級.md:724｜說明｜從三具遺體各取一枚徽章。帶齊後核對日誌的偵察項目；若仍未完成，到調查點附近偵察，避開精英。｜Nehmt von jeder der drei Leichen eine Insignie. Prüft mit allen drei Insignien das Erkundungsziel im Questlog. Ist es noch offen, erkundet die Umgebung des markierten Punkts und haltet Abstand vom Elitegegner.
+03-30到45級.md:157｜說明｜從濕地側找東側橋體內的樓梯，下樓找伊貝尼瑟。交件後在同一具屍體接下一段，再沿原樓梯返回丹莫德。附近有精英，單人可等空檔或找人同行。｜Sucht von der Sumpflandseite aus die Treppe im Inneren der östlichen Brücke und steigt zu Ebenezer hinab. An derselben Leiche abgeben und die Folgequest annehmen, über die Treppe zurück und nach Dun Modr gehen. In der Nähe stehen Elitegegner. Allein auf eine Lücke warten oder Hilfe suchen.
+03-30到45級.md:161｜說明｜從丹莫德向北走完整的大石橋。到阿拉希高地的橋頭右轉，過小吊橋進黑鐵營地，摧毀車上的炸藥。｜Geht von Dun Modr nach Norden über die unbeschädigte große Steinbrücke. Biegt am Brückenende im Arathihochland rechts ab und überquert die kleine Hängebrücke zum Dunkeleisenlager. Zerstört den Sprengstoff auf dem Wagen.
+03-30到45級.md:162｜說明｜回丹莫德途中取信。先認清可以原路返回的河岸，再下水。潛到斷橋下方的河底，在碎石壓住的矮人手邊拾取浸水的信封，右鍵信封接任務。沿下水處返回岸上，再回濕地的拉格。｜Den Brief auf dem Rückweg nach Dun Modr holen. Vor dem Einstieg ins Wasser eine Uferstelle suchen, an der man wieder herauskommt. Unter der zerstörten Brücke zum Flussgrund tauchen. Der durchnässte Umschlag liegt bei der Hand des unter Trümmern eingeklemmten Zwergs. Den Umschlag plündern und mit Rechtsklick die Quest annehmen. Zum Einstiegsufer und dann zu Rhag im Sumpfland zurückkehren.
+03-30到45級.md:169｜說明｜在鐵爐堡把接任務時取得的信交給薩拉。浸水的信封是用來開始任務的。｜Übergebt Sara in Eisenschmiede den Brief, den ihr bei der Questannahme erhalten habt. Der durchnässte Umschlag startet die Quest.
+04-45到60級.md:192｜說明｜還差經驗時，可留在剛打燻火龍的礦坑，沿已清過的通道逐隻打普通燻火龍補到 48。洞內沒有安全的目標，再沿原路退出，到大熔爐外圍打黑鐵工頭或奴隸販子。｜Falls noch EP bis Stufe 48 fehlen, in der Mine bleiben und auf dem bereits geräumten Weg einzelne normale Incendosaurier bekämpfen. Gibt es drinnen keinen sicheren Kampf, auf demselben Weg hinausgehen und am Rand des Kessels Dunkeleisenaufseher oder Sklavenjäger bekämpfen.
+04-45到60級.md:195｜說明｜上層平台可能有精英工頭瑪托留斯或黑鐵斥候守著。單人先觀察桌子附近，安全時再拿圖紙。懸賞才需要擊殺工頭。｜Aufseher Maltorius oder eine Elitewache kann die obere Plattform bewachen. Allein erst prüfen, ob der Weg zum Tisch frei ist. Nur für das Kopfgeld muss der Aufseher sterben.
+04-45到60級.md:195｜說明｜從東側圖紙路線過橋進大廳後左轉。圖紙在上層平台、工頭身後的桌上。精英守著時可先略過，有安全空檔或隊伍再恢復。｜Auf dem östlichen Weg zu den Plänen die Brücke überqueren und im großen Raum links abbiegen. Die Pläne liegen auf der oberen Plattform auf dem Tisch hinter dem Aufseher. Bei Elitewachen den Schritt überspringen und später oder mit einer Gruppe reaktivieren.
+04-45到60級.md:191｜說明｜從東側有礦工的入口進入時，向右沿下層岩漿旁的通道走到燻火龍洞。｜Vom östlichen Eingang mit den Bergleuten aus rechts halten und dem unteren Gang an der Lava entlang bis zur Incendosaurierhöhle folgen.
+02-12到30級.md:453｜說明｜在奧伯丁搭往米奈希爾港的船，下一站就是米奈希爾港。｜Nimm in Auberdine das Schiff nach Menethil. Steig am nächsten Halt aus.
+04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁；改飛暴風城的話在暴風城港口上船。｜Nimm am Pier von Southshore das Schiff nach Auberdine. Fliegst du stattdessen nach Sturmwind, geh im Hafen von Sturmwind an Bord.
+04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁｜Nimm am Pier von Southshore das Schiff nach Auberdine
+05-副本.md:40｜說明｜遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭船先到米奈希爾港，再循北線到南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 02-第14站。｜Optional und weit entfernt: Der Eingang liegt in den Ruinen von Lordaeron über Undercity, du musst also durch Horde-Gebiet. Fahr von Auberdine zuerst mit dem Schiff nach Menethil und dann auf der Nordroute weiter nach Southshore. Steig dort aus und entdecke den Flugpunkt, dann geh nach Norden durch das Vorgebirge von Hillsbrad und den Silberwald nach Tirisfal. Benutze nach dem Dungeon deinen Ruhestein nach Sturmwind und steig bei 02-Station 14 wieder ein.
+04-45到60級.md:558｜說明｜仍在北側且沒有要找托爾瓦的任務，就到馬紹爾營地看飛行圖，能選加基森就飛。要交尤爾查的毛皮，或要辦托爾瓦的德魯伊任務，先去東南找他。在托爾瓦旁或不能飛時，走東南坡進塔納利斯，再往東北到加基森。｜Seid Ihr noch im Norden und habt bei Torwa nichts zu erledigen, prüft die Flugkarte in Marschalls Zuflucht und fliegt nach Gadgetzan, wenn das Ziel verfügbar ist. Wollt Ihr U'chas Pelz abgeben oder Torwas Druidenquests erledigen, sucht ihn zuerst im Südosten auf. Von Torwa aus oder wenn kein Flug verfügbar ist, nehmt den südöstlichen Aufstieg nach Tanaris und folgt dem Weg nach Nordosten bis Gadgetzan.
+04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石；否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭船先到米奈希爾港，再循北線到南海鎮下船，再飛冰風崗。｜Nutze den Ruhestein nur, wenn er noch an Aerie Peak gebunden und einsatzbereit ist. Sonst nimm die Schiffsroute als Ausweichplan: Geh durch das Portal zurück nach Rut'theran, flieg nach Auberdine, fahr zuerst mit dem Schiff nach Menethil und dann auf der Nordroute weiter nach Southshore, steig dort aus und flieg dann zum Lager Chillwind.
+04-45到60級.md:1092｜說明｜否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭船先到米奈希爾港，再循北線到南海鎮下船，再飛冰風崗。｜Sonst nimm die Schiffsroute als Ausweichplan: Geh durch das Portal zurück nach Rut'theran, flieg nach Auberdine, fahr zuerst mit dem Schiff nach Menethil und dann auf der Nordroute weiter nach Southshore, steig dort aus und flieg dann zum Lager Chillwind.
+04-45到60級.md:323｜說明｜先用背包裡的水晶灌注鱗片接微晶污染，再向托爾瓦交這兩件任務。｜Benutzt die Kristalldurchdrungene Schuppe in eurer Tasche, um Mikrokristallkontamination zu starten. Gebt dann beide Quests bei Torwa ab.
+04-45到60級.md:334｜說明｜沿路撿四色能量水晶。第一次見科琳時，四色各有七塊就當面交，還缺就留到下次。｜Sammelt auf dem Weg Machtkristalle. Habt ihr beim ersten Treffen mit J.D. Collie sieben von jeder Farbe, gebt sie gleich ab. Fehlende Kristalle könnt ihr bis zum nächsten Besuch sammeln.
+04-45到60級.md:365｜說明｜在馬紹爾營地查看航班，能到奧伯丁或魯瑟蘭村才搭。沒有合適航班，可沿東南坡回塔納利斯，到加基森再查。｜Prüfe in Marschalls Zuflucht die Flugkarte. Fliege nach Auberdine oder Rut'theran, wenn der Flug angeboten wird. Sonst nimm die südöstliche Rampe nach Tanaris und prüfe die Flüge in Gadgetzan.
+04-45到60級.md:367｜說明｜在奧伯丁轉往魯瑟蘭村。若仍在船上，靠岸後下船；可選航班就飛，否則到北碼頭（33.3，39.8）搭船。｜Steige in Auberdine nach Rut'theran um. Wenn du auf dem Schiff bist, gehe nach dem Anlegen von Bord. Nimm einen verfügbaren Flug oder das Schiff am Nordsteg (33.3, 39.8).
+04-45到60級.md:378｜說明｜先確認所在位置。若在船上，等目的港靠岸再下船；在奧伯丁轉往魯瑟蘭村，已在魯瑟蘭村岸上就去交件。｜Prüfe deinen Standort. Wenn du an Bord bist, gehe erst am Zielhafen von Bord. Steige in Auberdine nach Rut'theran um. Sobald du dort an Land bist, gib deine Quests ab.
+04-45到60級.md:364｜說明｜若爐石綁在鐵爐堡，等可用時回城。牧師可向高階牧師洛漢接「幫助塞納里奧」；法師想接「法師公會」可找丁克。｜Wenn dein Ruhestein an Eisenschmiede gebunden ist, benutze ihn, sobald er bereit ist. Priester können bei Hohepriester Rohan die Quest „Cenarische Hilfe“ annehmen, Magier bei Dink optional „Geschick der Magier“.
+04-45到60級.md:379｜說明｜去東部接職業任務前，先在馬紹爾營地查往奧伯丁的航班。沒有合適航班，可沿東南坡回塔納利斯到加基森再查；抵達奧伯丁後搭暴風城直船。｜Für die Klassenquest in den Östlichen Königreichen prüfe in Marschalls Zuflucht die Flüge nach Auberdine. Gibt es keinen passenden Flug, nimm die südöstliche Rampe nach Tanaris und prüfe die Flüge in Gadgetzan. Nimm in Auberdine das direkte Schiff nach Sturmwind.
+04-45到60級.md:380｜說明｜從奧伯丁搭暴風城直船。若還在船上，靠穩後下船，去暴風城棧橋（30.5，40.9）等船。｜Nimm in Auberdine das direkte Schiff nach Sturmwind. Wenn du noch an Bord bist, gehe nach dem Anlegen von Bord und warte am Steg nach Sturmwind (30.5, 40.9).
+04-45到60級.md:381｜說明｜從暴風港搭船回奧伯丁。到往奧伯丁的棧橋（21.8，56.9）等船，靠岸後接回卡林多路線。｜Fahre vom Hafen von Sturmwind zurück nach Auberdine. Warte am Steg nach Auberdine (21.8, 56.9) und setze nach dem Anlegen deine Route in Kalimdor fort.
+04-45到60級.md:382｜說明｜先確認位置與日誌空格。若要到東部接職業任務，請先留一格；若仍在船上，等目的港靠穩再下船。｜Prüfe deinen Standort und dein Questlog. Halte vor der Überfahrt einen Platz für die Klassenquest frei. Bleibe an Bord, bis das Schiff im Zielhafen anlegt.
+04-45到60級.md:383｜說明｜在暴風港靠穩後下船，再到城內找職業任務的發任人。若還在海上，先留在船上。｜Gehe nach dem Anlegen im Hafen von Sturmwind von Bord und suche den Geber der Klassenquest in der Stadt auf. Bleibe auf See an Bord.
+04-45到60級.md:386｜說明｜先到鐵爐堡飛行管理員查看米奈希爾港的航班。若不能搭，可改搭礦道地鐵到暴風城，再從暴風港搭船去奧伯丁。｜Fragt beim Flugmeister in Eisenschmiede nach einem Flug zum Hafen von Menethil. Gibt es keinen passenden Flug, nehmt die Tiefenbahn nach Sturmwind und vom Hafen dort das Schiff nach Auberdine.
+04-45到60級.md:527｜說明｜沿山徑上火羽山測溫。若已接火元素的灰燼任務就順手收集，測好溫度後沿山徑去找林格；開始護送後直接往北回馬紹爾營地。｜Folgt dem Pfad auf den Feuersäulengrat und messt die Temperatur. Sammelt unterwegs Asche, falls ihr die Quest habt. Nach der Messung folgt dem Pfad zu Ringo. Führt ihn nach Beginn der Eskorte direkt nach Norden zu Marshals Zuflucht.
+04-45到60級.md:547｜說明｜在南部蟲巢一帶找格里什異種蠍或工蠍取得訊息素，沿途從土堆補足五份泥土。單人可挑落單的蟲，毋須深入找蜂后。｜Sucht im Süden beim Schwarmbau nach Gorishiwespen oder Gorishiarbeitern für die Duftdrüse. Sammelt unterwegs fünf Portionen Erde aus Erdhaufen. Allein könnt ihr einzelne Insekten bekämpfen, ohne tiefer zur Königin vorzudringen.
+05-副本.md:436｜說明｜聽卡蘭說完他的故事。｜Hört euch Kharans ganze Geschichte an.
+03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.
+04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.
+04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.
+
+05-副本.md:385｜說明｜在階梯戰擊敗耐克魯姆，拾取徽章。｜Besiegt Nekrum auf der Pyramidentreppe und plündert sein Medaillon.
+
+05-副本.md:505｜說明｜擊敗尾王後，右鍵自己拾取的精華接任。｜Besiegt den Endboss und rechtsklickt auf die selbst erbeutete Essenz, um die Quest anzunehmen.
+
+05-副本.md:506｜說明｜在尾王旁的精華之泉放入精華。｜Legt die Essenz neben dem Endboss in den Essenzborn.
 03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41–43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Tötet Talkreischer (Stufe 41–43) an der Küste der Insel des Schreckens in Feralas. Benutzt Yeh'kinyas Dornbusch auf jedem Kadaver und sprecht mit dem erscheinenden Geist, bis das Questlog drei Geister zählt.
 03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Küste der Insel des Schreckens: Benutzt den Dornbusch am Kadaver und sprecht mit dem Geist.

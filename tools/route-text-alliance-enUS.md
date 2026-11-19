@@ -1,6 +1,6 @@
 # 阿聖練等幫手 enUS 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **386** 列。
+- 只收聯盟路線獨有的說明列，共 **397** 列。
 
 檔名:行號｜類型｜中文原文｜enUS
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Right-click Nibbled-On Book in your bags to start the quest.
@@ -336,7 +336,7 @@
 02-12到30級.md:893｜說明｜暴風城接，到鐵爐堡交，學防護恐懼結界。｜Accept it in Stormwind, turn it in at Ironforge and learn Fear Ward.
 02-12到30級.md:898｜說明｜暴風城接，到丹莫洛交。｜Accept it in Stormwind and turn it in at Dun Morogh.
 02-12到30級.md:905｜說明｜藍色隱士酒吧在暴風城法師區。｜The Blue Recluse tavern is in the Mage Quarter of Stormwind.
-02-12到30級.md:908｜說明｜交 10 塊亞麻布和 6 顆充能裂隙寶石，寶石可在拍賣場買。｜Turn in 10 Linen Cloth and 6 Charged Rift Gems. You can buy the gems at the Auction House.
+02-12到30級.md:935｜說明｜需帶亞麻布 ×10 和充能裂隙寶石 ×6。若順路回洛克莫丹，可從銀泉礦坑北口（約 35.9,18.2）進洞開礦工聯盟的木箱。缺材料先走主線；材料齊且日誌可交時，到暴風城找威恩。｜Bring 10 Linen Cloth and 6 Charged Rift Gems. On a later visit to Loch Modan, enter Silver Stream Mine from the north (about 35.9,18.2) and open the miners’ chests. Continue your route while short on materials. Visit Wynne in Stormwind when your journal shows the quest is ready.
 02-12到30級.md:910｜說明｜獎勵法紋長袍。｜Rewards Manaweave Robe.
 02-12到30級.md:921｜說明｜在梣谷擊殺薩特取得同心樹。｜Kill satyrs in Ashenvale for the Heartswood.
 02-12到30級.md:925｜說明｜在加科因旁的召喚法陣使用，擊敗召喚出的魅魔。｜Use it at the summoning circle next to Gakin the Darkbinder and defeat the summoned succubus.
@@ -405,7 +405,6 @@
 02-12到30級.md:300｜說明｜從暴風城沿艾爾文森林大路往東進赤脊山，順大路到湖畔鎮。｜From Stormwind, follow the Elwynn Forest road east into Redridge Mountains and stay on the road to Lakeshire.
 02-12到30級.md:303｜說明｜第2站沒開湖畔鎮飛行點，就從暴風城沿艾爾文森林大路往東走到湖畔鎮。｜If you didn't unlock the Lakeshire flight point at stop 2, walk from Stormwind east along the Elwynn Forest road to Lakeshire.
 02-12到30級.md:400｜說明｜從黑海岸南邊沿大路往南進梣谷，先到邁斯特拉崗哨。｜From the south of Darkshore, follow the road south into Ashenvale and go to Maestra's Post first.
-02-12到30級.md:431｜說明｜這班船中途停南海鎮，到米奈希爾港再下船。｜This boat stops at Southshore on the way. Don't get off until Menethil Harbor.
 02-12到30級.md:502｜說明｜已開夜色鎮飛行點就直接飛夜色鎮。沒開就飛湖畔鎮，落地後沿大路往西到赤脊山西邊的路口，再往南進暮色森林到夜色鎮。｜If you've unlocked the Darkshire flight point, fly straight to Darkshire. If not, fly to Lakeshire, then follow the road west to the junction on the west side of Redridge Mountains and head south through Duskwood to Darkshire.
 03-30到45級.md:190｜說明｜在米奈希爾港北邊碼頭搭往奧伯丁的船，中途在南海鎮下船。｜Board the boat to Auberdine at the north dock in Menethil Harbor and get off at Southshore on the way.
 03-30到45級.md:270｜說明｜從暮色森林西邊沿大路往南進荊棘谷，先到反抗軍營地。｜From the west side of Duskwood, follow the road south into Stranglethorn Vale and go to Rebel Camp first.
@@ -437,7 +436,6 @@
 04-45到60級.md:217｜說明｜守望堡沒開就飛夜色鎮，往東過逆風小徑進悲傷沼澤，再往南進詛咒之地到守望堡。｜If Nethergarde Keep isn't unlocked, fly to Darkshire, head east through Deadwind Pass into the Swamp of Sorrows, then south into the Blasted Lands to Nethergarde Keep.
 04-45到60級.md:229｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。｜The Swamp of Sorrows has no Alliance flight point: head west through Deadwind Pass back to Darkshire and fly from there.
 04-45到60級.md:285｜說明｜從塔納利斯西邊的山路走坡道下安戈洛環形山，托爾瓦·尋路者就在坡道底的入口旁。｜From the mountain road west of Tanaris, take the ramp down into Un'Goro Crater. Torwa Pathfinder is right by the entrance at the bottom of the ramp.
-04-45到60級.md:354｜說明｜牧師要在鐵爐堡接「塞納裏奧議會的求助」，請等爐石冷卻。其餘角色若爐石還在冷卻，可從馬紹爾營地飛奧伯丁，接往魯瑟蘭村的行程。｜Priests picking up Cenarion Aid in Ironforge should wait for their hearthstone. Otherwise, if it is on cooldown, fly from Marshal's Refuge to Auberdine and continue to Rut'theran Village.
 04-45到60級.md:365｜說明｜從阿斯特蘭納沿大路往北進費伍德森林。｜From Astranaar, follow the road north into Felwood.
 04-45到60級.md:392｜說明｜從這裡進木喉要塞的山洞，穿過去就是冬泉谷。｜Enter the Timbermaw Hold cave from here and pass through it to reach Winterspring.
 04-45到60級.md:429｜說明｜爐石還在冷卻就從羽月要塞飛阿斯特蘭納（經奧伯丁），再往北走進費伍德。｜If your hearthstone is on cooldown, fly from Feathermoon Stronghold to Astranaar (via Auberdine), then walk north into Felwood.
@@ -456,8 +454,6 @@
 04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機；飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜You'll connect through Chillwind Camp or Aerie Peak; if Southshore isn't on your flight map, fly to Stormwind as usual and take the boat to Auberdine from the harbor.
 04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機｜You'll connect through Chillwind Camp or Aerie Peak
 04-45到60級.md:665｜說明｜飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜If Southshore isn't on your flight map, fly to Stormwind as usual and take the boat to Auberdine from the harbor.
-04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快；改飛暴風城的話在暴風城港口上船。｜There's a boat to Auberdine right at the Southshore dock, which is faster than flying to Stormwind and changing boats. If you fly to Stormwind instead, board at the Stormwind harbor.
-04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快｜There's a boat to Auberdine right at the Southshore dock, which is faster than flying to Stormwind and changing boats
 04-45到60級.md:666｜說明｜改飛暴風城的話在暴風城港口上船。｜If you fly to Stormwind instead, board at the Stormwind harbor.
 04-45到60級.md:716｜說明｜爐石還在冷卻就走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜If your hearthstone is on cooldown, take the portal back to Rut'theran Village, fly to Auberdine, board the boat to Menethil Harbor, get off at Southshore and then fly to Chillwind Camp.
 04-45到60級.md:717｜說明｜飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜If Chillwind Camp isn't on your flight map, take the mountain road north from Aerie Peak into the Western Plaguelands, then run west to Chillwind Camp.
@@ -488,7 +484,6 @@
 02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城；爐石在冷卻就往北回奧伯丁搭船到暴風城。｜After finishing Ashenvale, hearth back to Stormwind. If your Hearthstone is on cooldown, head north back to Auberdine and take the boat to Stormwind.
 02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城｜After finishing Ashenvale, hearth back to Stormwind
 02-12到30級.md:901｜說明｜爐石在冷卻就往北回奧伯丁搭船到暴風城。｜If your Hearthstone is on cooldown, head north back to Auberdine and take the boat to Stormwind.
-05-副本.md:40｜說明｜遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭往米奈希爾港的船在南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 02-第14站。｜Optional, far-off quest: the entrance is in the Ruins of Lordaeron above Undercity, which means crossing Horde territory. Take the Auberdine boat to Menethil Harbor, get off at Southshore and unlock its flight point, then go north through Hillsbrad Foothills and Silverpine Forest to Tirisfal Glades. After the dungeon, hearth back to Stormwind and rejoin 02-Stop 14.
 02-12到30級.md:992｜說明｜從永夜港找希爾瓦·菲納雯斯搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。｜Find Silva Fil'naveth at Nighthaven for the druid-only flight to Rut'theran Village, then use the portal in the village to enter Darnassus.
 02-12到30級.md:1009｜說明｜米奈希爾港北碼頭搭船到奧伯丁（中途停南海鎮不用下船），飛阿斯特蘭納取水；回程飛奧伯丁搭船回米奈希爾港，再走回赫妲娜的洞穴。｜Take the boat from the north dock at Menethil Harbor to Auberdine (it stops at Southshore on the way; no need to get off), then fly to Astranaar to fetch the water. On the way back, fly to Auberdine, take the boat to Menethil Harbor, then walk back to Hervdana's cave.
 02-12到30級.md:1009｜說明｜米奈希爾港北碼頭搭船到奧伯丁（中途停南海鎮不用下船），飛阿斯特蘭納取水｜Take the boat from the north dock at Menethil Harbor to Auberdine (it stops at Southshore on the way; no need to get off), then fly to Astranaar to fetch the water
@@ -615,7 +610,6 @@
 04-45到60級.md:823｜說明｜找薩納斯對話，請他把你傳送上懸崖找大法師克希雷姆。｜Talk to Sanath Lim-yo and ask him to teleport you up the cliff to find Archmage Xylem.
 04-45到60級.md:826｜說明｜塵埃在山下，回去同樣找薩納斯傳送上來。｜The dust is at the foot of the mountain; go back to Sanath Lim-yo the same way to be teleported up.
 04-45到60級.md:832｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項（需遊戲實測）。｜Morphaz is in the Temple of Atal'Hakkar. To get down the cliff, use your Hearthstone or look for the teleport option next to Xylem (needs in-game testing).
-04-45到60級.md:492｜說明｜托爾瓦旁沒有飛行點：從他身後的坡道出安戈洛環形山進塔納利斯，往東北跑到加基森。｜There's no flight point near Torwa: leave Un'Goro Crater by the ramp behind him into Tanaris and run northeast to Gadgetzan.
 04-45到60級.md:499｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（37.04, 44.13）。｜Set your Hearthstone with Innkeeper Shaussiy at the Auberdine inn (37.04, 44.13).
 04-45到60級.md:683｜說明｜從死木蒸鍋往南走到刺枝林地飛行點（1448 62.49, 24.24）起飛，會經奧伯丁轉機。｜From the Deadwood Cauldron, head south to the Talonbranch Glade flight point (1448 62.49, 24.24) and take off from there; you'll change flights at Auberdine.
 04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜Only go to Lakeshire if you have The True Masters (4186). If you don't, skip steps 60-62 and fly straight from Stormwind to Morgan's Vigil.
@@ -897,9 +891,7 @@
 04-45到60級.md:1062｜說明｜解放樹根下原本就在的小精靈，不是在空地用道具召出來；和阿克蒙德之赦同一趟做。｜Free the wisp that's already beneath the roots, rather than summoning it with an item in the clearing. Do it on the same trip as Archimonde's Pardon.
 04-45到60級.md:1062｜說明｜解放樹根下原本就在的小精靈，不是在空地用道具召出來｜Free the wisp that's already beneath the roots, rather than summoning it with an item in the clearing.
 04-45到60級.md:1062｜說明｜和阿克蒙德之赦同一趟做。｜Do it on the same trip as Archimonde's Pardon.
-04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石；否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Only use your hearthstone if you're still bound to Aerie Peak and it's off cooldown. Otherwise take the boat backup: use the portal back to Rut'theran Village, fly to Auberdine, take the boat to Menethil Harbor, get off at Southshore, then fly to Chillwind Camp.
 04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石｜Only use your hearthstone if you're still bound to Aerie Peak and it's off cooldown.
-04-45到60級.md:1092｜說明｜否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Otherwise take the boat backup: use the portal back to Rut'theran Village, fly to Auberdine, take the boat to Menethil Harbor, get off at Southshore, then fly to Chillwind Camp.
 04-45到60級.md:1093｜說明｜已到冰風崗就跳過。飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜Skip this if you're already at Chillwind Camp. If the flight map doesn't list Chillwind Camp, walk north along the mountain road from Aerie Peak into Western Plaguelands and then west to Chillwind Camp.
 04-45到60級.md:1140｜說明｜座標是大致位置；入口和塔旁有血色十字軍守衛，一次只拉一隻。｜The coordinates are approximate. There are Scarlet Crusade guards at the entrance and by the tower; pull them one at a time.
 04-45到60級.md:1140｜說明｜座標是大致位置｜The coordinates are approximate.
@@ -1328,5 +1320,57 @@
 05-副本.md:445｜說明｜要向西瘟疫凱爾達隆的畫家接「愛與家庭」，可先飛冰風崗。已接畫作或只想在禮拜堂接任務，直接和隊友會合。｜Fly to Chillwind Camp if you need to see the painter on Caer Darrow in the Western Plaguelands for Of Love and Family. If you already have the quest or only need the chapel pickups, meet your group directly.
 05-副本.md:451｜說明｜從聖光之願禮拜堂隨隊前往斯坦索姆。入口標記是血色正門，去市場或血色堡壘走這裡；只打亡靈區，和能開側門的隊友在東邊的側門會合。｜From Light's Hope Chapel, join your group for Stratholme. The entrance pin marks the Scarlet main gate for the market and Scarlet Bastion. For an undead-only run, meet a party member who can open the eastern service entrance.
 05-副本.md:440｜說明｜東瘟疫之地 1423 26.52, 10.36（血色正門；亡靈側門在 43.50, 19.40）｜Eastern Plaguelands 26.52, 10.36 (Scarlet main gate; undead service entrance at 43.50, 19.40)
+02-12到30級.md:933｜步驟目標｜到暴風城法師區的藍色隱士旅店，用卷軸顯形。打到裂隙怒靈昏迷，再用封靈箱，拾取地上的裝滿的箱子；共需三個。｜At the Blue Recluse in Stormwind’s Mage Quarter, use the cantation. Weaken a Rift Spawn until stunned, use the chest, then loot the coffer on the ground. Collect three.
+02-12到30級.md:643｜說明｜沿赤脊山伊爾加拉之塔的樓梯上樓，從書架取書。塔內有守衛和精英；太危險可稍後再來。｜Climb the stairs inside the Tower of Ilgalar in Redridge and take the book from the bookshelf. Guards and an elite patrol the tower. Return later if the way is unsafe.
+02-12到30級.md:643｜說明｜沿赤脊山伊爾加拉之塔的樓梯上樓，從書架取書。塔內有守衛和精英｜Climb the stairs inside the Tower of Ilgalar in Redridge and take the book from the bookshelf. Guards and an elite patrol the tower.
+02-12到30級.md:643｜說明｜太危險可稍後再來。｜Return later if the way is unsafe.
+02-12到30級.md:670｜說明｜收集 8 份任務蜘蛛絲。夜色鎮東南有小型黑寡婦蜘蛛；西側烏鴉嶺地表也有小型黑寡婦蜘蛛和食腐獨行蛛。｜Collect 8 quest silks. Look for Black Widow Hatchling southeast of Darkshire. On the surface at Raven Hill in the west, either Black Widow Hatchling or Carrion Recluse can drop the silk.
+02-12到30級.md:1094｜說明｜接下任務後，順路經過暮色森林時收集蜘蛛絲。下一次在烏鴉嶺做「懲罰圖騰」也會經過掉落地。｜After accepting, collect the silk when your route takes you through Duskwood. The Totem of Infliction takes you to the same spiders near Raven Hill.
+02-12到30級.md:635｜說明｜到伊爾加拉之塔東側，在塔外找石獅子放置飾品。｜Find the lion statue outside, east of the Tower of Ilgalar, and place the glyph there.
+02-12到30級.md:636｜說明｜若找不到任務配發的飾品，先檢查背包、銀行和任務日誌。｜If the issued glyph is missing, check your bags, bank and quest log.
+02-12到30級.md:637｜說明｜從石獅子往西，到石望要塞旁的完整哨塔。沿塔內坡道上到塔頂，找桶上的空瓶子。留意精英守衛。｜Head west from the lion to the intact watchtower beside Stonewatch Keep. Follow the ramp to the roof and find the empty jar on the barrels. Watch for elite guards.
+02-12到30級.md:644｜說明｜從南側沿谷地東側向北找范高雷中尉。在營地外先清附近的暗皮豺狼人，再靠近他；仍缺墜飾可沿路收。｜Follow the east side of the valley north to find Lieutenant Fangore. Clear the nearby Shadowhide gnolls from the edge of the camp before approaching him. Collect pendants along the way if you still need them.
+02-12到30級.md:642｜說明｜沿谷地東側往北營地前進，沿途擊殺暗皮豺狼人收墜飾。也可在谷地外圍找較低等的豺狼人。｜Head north along the east side of the valley, collecting pendants from Shadowhide gnolls on the way to the northern camp. Lower-level gnolls also roam the edge of the valley.
+02-12到30級.md:646｜說明｜沿通往燃燒平原的道路到西側營地。先在洞口附近找黑石勇士，擊殺數未滿再往洞內找。以任務日誌為準。｜Follow the road toward the Burning Steppes to the camp on its west side. Look for Blackrock Champions near the cave mouth first. Enter the cave if you still need kills according to your quest log.
+04-45到60級.md:724｜說明｜從三具遺體各取一枚徽章。帶齊後核對日誌的偵察項目；若仍未完成，到調查點附近偵察，避開精英。｜Take one insignia from each of the three bodies. Once you have all three, check the scouting objective in your log. If it is incomplete, scout near the marked site and give the elite a wide berth.
+03-30到45級.md:157｜說明｜從濕地側找東側橋體內的樓梯，下樓找伊貝尼瑟。交件後在同一具屍體接下一段，再沿原樓梯返回丹莫德。附近有精英，單人可等空檔或找人同行。｜From the Wetlands side, find the stairs inside the eastern span and descend to Ebenezer. Turn in and take the next quest from the same corpse, then climb the same stairs and return to Dun Modr. There are elites nearby. Wait for an opening or bring help if alone.
+03-30到45級.md:161｜說明｜從丹莫德向北走完整的大石橋。到阿拉希高地的橋頭右轉，過小吊橋進黑鐵營地，摧毀車上的炸藥。｜From Dun Modr, head north across the intact stone bridge. Turn right at the Arathi Highlands end and cross the small suspension bridge into the Dark Iron camp. Destroy the explosives on the cart.
+03-30到45級.md:162｜說明｜回丹莫德途中取信。先認清可以原路返回的河岸，再下水。潛到斷橋下方的河底，在碎石壓住的矮人手邊拾取浸水的信封，右鍵信封接任務。沿下水處返回岸上，再回濕地的拉格。｜Pick up the letter on your way back to Dun Modr. Before entering the water, find a bank you can use to climb back out. Dive to the riverbed under the broken bridge. Loot the waterlogged envelope beside the dwarf’s hand under the rubble, then right-click it to accept the quest. Return to the bank where you entered and go back to Rhag in the Wetlands.
+03-30到45級.md:169｜說明｜在鐵爐堡把接任務時取得的信交給薩拉。浸水的信封是用來開始任務的。｜Give Sara in Ironforge the letter you received on accepting the quest. The Waterlogged Envelope starts the quest.
+04-45到60級.md:192｜說明｜還差經驗時，可留在剛打燻火龍的礦坑，沿已清過的通道逐隻打普通燻火龍補到 48。洞內沒有安全的目標，再沿原路退出，到大熔爐外圍打黑鐵工頭或奴隸販子。｜If you still need XP, stay in the mine where you fought the Incendosaurs and pull normal Incendosaurs one at a time along the passage you cleared. If there are no safe pulls inside, retrace your steps and finish level 48 on Dark Iron taskmasters or slavers around the Cauldron.
+04-45到60級.md:195｜說明｜上層平台可能有精英工頭瑪托留斯或黑鐵斥候守著。單人先觀察桌子附近，安全時再拿圖紙。懸賞才需要擊殺工頭。｜Overseer Maltorius or an elite Black Iron Sentry may guard the upper platform. Check the table before approaching solo. Only the bounty requires killing the overseer.
+04-45到60級.md:195｜說明｜從東側圖紙路線過橋進大廳後左轉。圖紙在上層平台、工頭身後的桌上。精英守著時可先略過，有安全空檔或隊伍再恢復。｜On the eastern approach to the plans, cross the bridge into the large room and turn left. The plans are on the upper platform, on the table behind the overseer. If elites guard it, skip this step and restore it when clear or with a group.
+04-45到60級.md:191｜說明｜從東側有礦工的入口進入時，向右沿下層岩漿旁的通道走到燻火龍洞。｜From the eastern entrance with the miners, turn right and follow the lower passage beside the lava to the Incendosaur cavern.
+02-12到30級.md:453｜說明｜在奧伯丁搭往米奈希爾港的船，下一站就是米奈希爾港。｜In Auberdine, board the boat to Menethil Harbor. Get off at the next stop.
+04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁；改飛暴風城的話在暴風城港口上船。｜Board the boat to Auberdine at the Southshore dock. If you fly to Stormwind instead, board at the Stormwind harbor.
+04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁｜Board the boat to Auberdine at the Southshore dock
+05-副本.md:40｜說明｜遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭船先到米奈希爾港，再循北線到南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 02-第14站。｜Optional, far-off quest: the entrance is in the Ruins of Lordaeron above Undercity, which means crossing Horde territory. From Auberdine, sail first to Menethil Harbor, then take the northern boat route to Southshore. Get off there and unlock its flight point, then go north through Hillsbrad Foothills and Silverpine Forest to Tirisfal Glades. After the dungeon, hearth back to Stormwind and rejoin 02-Stop 14.
+04-45到60級.md:558｜說明｜仍在北側且沒有要找托爾瓦的任務，就到馬紹爾營地看飛行圖，能選加基森就飛。要交尤爾查的毛皮，或要辦托爾瓦的德魯伊任務，先去東南找他。在托爾瓦旁或不能飛時，走東南坡進塔納利斯，再往東北到加基森。｜If you're still in the north and have no business with Torwa, check the flight map at Marshal's Refuge and fly to Gadgetzan if it's available. If you have U'cha's Pelt to deliver or want to do Torwa's druid quests, visit him in the southeast first. From Torwa, or if you can't fly, take the southeastern ramp into Tanaris and head northeast to Gadgetzan.
+04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石；否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭船先到米奈希爾港，再循北線到南海鎮下船，再飛冰風崗。｜Only use your hearthstone if you're still bound to Aerie Peak and it's off cooldown. Otherwise take the boat backup: use the portal back to Rut'theran Village, fly to Auberdine, sail first to Menethil Harbor, then follow the northern boat route to Southshore and get off there, then fly to Chillwind Camp.
+04-45到60級.md:1092｜說明｜否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭船先到米奈希爾港，再循北線到南海鎮下船，再飛冰風崗。｜Otherwise take the boat backup: use the portal back to Rut'theran Village, fly to Auberdine, sail first to Menethil Harbor, then follow the northern boat route to Southshore and get off there, then fly to Chillwind Camp.
+04-45到60級.md:323｜說明｜先用背包裡的水晶灌注鱗片接微晶污染，再向托爾瓦交這兩件任務。｜Use the Crystal Infused Scale in your bag to start Microcrystal Contamination, then turn in both quests to Torwa.
+04-45到60級.md:334｜說明｜沿路撿四色能量水晶。第一次見科琳時，四色各有七塊就當面交，還缺就留到下次。｜Collect Power Crystals as you travel. If you have seven of each color when you first meet J.D. Collie, turn them in on the spot. Otherwise, finish on your next visit.
+04-45到60級.md:365｜說明｜在馬紹爾營地查看航班，能到奧伯丁或魯瑟蘭村才搭。沒有合適航班，可沿東南坡回塔納利斯，到加基森再查。｜Check the flight map at Marshal's Refuge. Fly to Auberdine or Rut'theran Village if offered. Otherwise, take the southeast ramp into Tanaris and check flights at Gadgetzan.
+04-45到60級.md:367｜說明｜在奧伯丁轉往魯瑟蘭村。若仍在船上，靠岸後下船；可選航班就飛，否則到北碼頭（33.3，39.8）搭船。｜Transfer at Auberdine for Rut'theran Village. If aboard, get off when the ship docks. Fly if offered, or take the ship from the north pier (33.3, 39.8).
+04-45到60級.md:378｜說明｜先確認所在位置。若在船上，等目的港靠岸再下船；在奧伯丁轉往魯瑟蘭村，已在魯瑟蘭村岸上就去交件。｜Check your location. If aboard, wait for your destination before getting off. At Auberdine, transfer to Rut'theran Village. Once ashore at Rut'theran, turn in your quests.
+04-45到60級.md:364｜說明｜若爐石綁在鐵爐堡，等可用時回城。牧師可向高階牧師洛漢接「幫助塞納里奧」；法師想接「法師公會」可找丁克。｜If your Hearthstone is bound to Ironforge, use it when available. Priests can accept Cenarion Aid from High Priest Rohan; mages can take the optional Magecraft from Dink.
+04-45到60級.md:379｜說明｜去東部接職業任務前，先在馬紹爾營地查往奧伯丁的航班。沒有合適航班，可沿東南坡回塔納利斯到加基森再查；抵達奧伯丁後搭暴風城直船。｜For your class quest in the Eastern Kingdoms, check flights to Auberdine at Marshal's Refuge. If none is available, take the southeast ramp into Tanaris and check at Gadgetzan. From Auberdine, take the direct ship to Stormwind.
+04-45到60級.md:380｜說明｜從奧伯丁搭暴風城直船。若還在船上，靠穩後下船，去暴風城棧橋（30.5，40.9）等船。｜Take the direct ship from Auberdine to Stormwind. If you are still aboard another ship, get off when it docks and wait at the Stormwind pier (30.5, 40.9).
+04-45到60級.md:381｜說明｜從暴風港搭船回奧伯丁。到往奧伯丁的棧橋（21.8，56.9）等船，靠岸後接回卡林多路線。｜Return to Auberdine from Stormwind Harbor. Wait at the Auberdine pier (21.8, 56.9); once ashore, continue your route in Kalimdor.
+04-45到60級.md:382｜說明｜先確認位置與日誌空格。若要到東部接職業任務，請先留一格；若仍在船上，等目的港靠穩再下船。｜Check your location and quest log. Leave a free slot before crossing for the class quest. If aboard, stay on the ship until it docks at your destination.
+04-45到60級.md:383｜說明｜在暴風港靠穩後下船，再到城內找職業任務的發任人。若還在海上，先留在船上。｜Disembark once the ship docks in Stormwind Harbor, then visit your class quest giver in the city. If still at sea, stay aboard.
+04-45到60級.md:386｜說明｜先到鐵爐堡飛行管理員查看米奈希爾港的航班。若不能搭，可改搭礦道地鐵到暴風城，再從暴風港搭船去奧伯丁。｜Check with the Ironforge flight master for a flight to Menethil Harbor. If none is available, take the Deeprun Tram to Stormwind and sail from Stormwind Harbor to Auberdine.
+04-45到60級.md:527｜說明｜沿山徑上火羽山測溫。若已接火元素的灰燼任務就順手收集，測好溫度後沿山徑去找林格；開始護送後直接往北回馬紹爾營地。｜Follow the path up Fire Plume Ridge to take the temperature. Collect ash along the way if you have that quest. After taking the reading, follow the path to Ringo. After starting the escort, go straight north to Marshal’s Refuge.
+04-45到60級.md:547｜說明｜在南部蟲巢一帶找格里什異種蠍或工蠍取得訊息素，沿途從土堆補足五份泥土。單人可挑落單的蟲，毋須深入找蜂后。｜Look for Gorishi Wasps or Workers at the southern hive for the scent gland. Pick up soil from dirt piles along the way until you have five. Solo players can pull isolated insects without going deeper to find the queen.
+05-副本.md:436｜說明｜聽卡蘭說完他的故事。｜Listen to Kharan's full story.
+03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escort failed: abandon the quest in your quest log, then accept it again from the robot.
+04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escort failed: abandon the quest in your quest log, then accept it again from the robot.
+04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escort failed: abandon the quest in your quest log, then accept it again from the robot.
+
+05-副本.md:385｜說明｜在階梯戰擊敗耐克魯姆，拾取徽章。｜Defeat Nekrum on the pyramid steps and loot his medallion.
+
+05-副本.md:505｜說明｜擊敗尾王後，右鍵自己拾取的精華接任。｜After defeating the final boss, right-click the essence you looted to start the quest.
+
+05-副本.md:506｜說明｜在尾王旁的精華之泉放入精華。｜Place the essence in the Essence Font beside the final boss.
 03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41–43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Kill Vale Screechers (levels 41–43) on the coast of the Isle of Dread in Feralas. Use Yeh'kinya's Bramble on each corpse, then speak to the spirit that appears. Repeat until your quest log shows three spirits.
 03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Isle of Dread coast: use the bramble on a corpse, then speak to its spirit.

@@ -191,7 +191,7 @@ function MG.try(where, fn, ...) return after(where, pcall(fn, ...)) end
 local QL = C_QuestLog
 local function fn(t, k) return type(t) == "table" and type(t[k]) == "function" and t[k] or nil end
 -- 一次重算內重複查同一個任務的結果共用（C.memo 由 MG.Refresh／位置檢查開關）
-local MEMO = { IsOnQuest = true, IsTurnedIn = true, IsReady = true, Objectives = true, Title = true, QuestLevel = true }
+local MEMO = { IsOnQuest = true, IsTurnedIn = true, IsReady = true, IsFailed = true, Objectives = true, Title = true, QuestLevel = true }
 local function pick(name, ...)
   local list, n = { ... }, select("#", ...) -- 中間可能有 nil，不能用 #list
   for i = 1, n, 2 do
@@ -253,6 +253,18 @@ pick("IsReady",
   "GetQuestLogTitle", GetQuestLogTitle and function(id)
     local i = logIndex(id)
     return i and select(6, GetQuestLogTitle(i)) == 1 or false
+  end)
+
+-- 失敗狀態依序查現代 API、經典日誌和現代日誌列；無資料時回 nil。
+pick("IsFailed", "quest status", (fn(QL, "IsFailed") or GetQuestLogTitle or fn(QL, "GetInfo")) and function(id)
+    local failed = fn(QL, "IsFailed") and QL.IsFailed(id)
+    if type(failed) == "boolean" then return failed end
+    local i = logIndex(id)
+    if not i then return nil end
+    local state = GetQuestLogTitle and select(6, GetQuestLogTitle(i))
+    if type(state) == "number" then return state == -1 end
+    local info = fn(QL, "GetInfo") and QL.GetInfo(i)
+    if info and type(info.isFailed) == "boolean" then return info.isFailed end
   end)
 
 -- 回 { {text, have, need, done}, ... }；查不到回 nil

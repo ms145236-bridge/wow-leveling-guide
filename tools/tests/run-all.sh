@@ -4,19 +4,39 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 find addon/ShengLeveling -name '*.lua' -print0 | xargs -0 -n1 luac5.1 -p
 lua5.1 tools/tests/map-order.lua
+lua5.1 tools/tests/keep-quest.lua
+lua5.1 tools/tests/mage-materials.lua
+lua5.1 tools/tests/mage-captures.lua Alliance
+lua5.1 tools/tests/mage-captures.lua Horde
+lua5.1 tools/tests/mage-robe-alliance.lua
+lua5.1 tools/tests/mage-silk-alliance.lua
+lua5.1 tools/tests/stonewatch-objects.lua
+lua5.1 tools/tests/redridge-trophies.lua
+lua5.1 tools/tests/ungoro-escort.lua
 lua5.1 tools/tests/route-handoffs.lua
+lua5.1 tools/tests/portable-map-pin.lua
+lua5.1 tools/tests/thandol-chain.lua
 lua5.1 tools/tests/deadmines.lua
+lua5.1 tools/tests/brd-prison-visit.lua Alliance
+lua5.1 tools/tests/brd-prison-visit.lua Horde
 lua5.1 tools/tests/stockades.lua
 lua5.1 tools/tests/alcaz-prison.lua
 lua5.1 tools/tests/horde-dungeon-journal.lua
 lua5.1 tools/tests/wetlands-dungeon.lua
 lua5.1 tools/tests/dungeon-prep-room.lua
+lua5.1 tools/tests/dungeon-intake-followup.lua Alliance
+lua5.1 tools/tests/dungeon-intake-followup.lua Horde
 lua5.1 tools/tests/wetlands-relic.lua
 lua5.1 tools/tests/gnomeregan.lua
+lua5.1 tools/tests/gnomeregan-ring-return.lua
 lua5.1 tools/tests/stratholme.lua
+lua5.1 tools/tests/stratholme-target.lua
 lua5.1 tools/tests/post-turnin-detour.lua
 lua5.1 tools/tests/scarlet-library.lua
 lua5.1 tools/tests/auberdine-choice.lua
+lua5.1 tools/tests/auberdine-corruption.lua
+lua5.1 tools/tests/flint-second-visit.lua
+lua5.1 tools/tests/blightcaller-survey.lua
 lua5.1 tools/tests/field-marshal.lua
 lua5.1 tools/tests/camping-any.lua
 lua5.1 tools/tests/camping-auto.lua
@@ -25,6 +45,8 @@ lua5.1 tools/tests/carry-later.lua
 lua5.1 tools/tests/fp-discover.lua
 lua5.1 tools/tests/fp-step.lua
 lua5.1 tools/tests/record-timing.lua
+lua5.1 tools/tests/audit-1119.lua
 lua5.1 tools/tests/replay/dungeon-entry-test.lua
 python3 -B tools/tests/replay/test_selection.py
+python3 tools/tests/replay/held_items.py
 python3 tools/tests/replay/check.py

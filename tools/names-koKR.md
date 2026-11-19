@@ -1486,7 +1486,7 @@
 | NPC／怪物 | 11044 | Doctor Martin Felben | 박사 마틴 펠벤 | [本機 QuestieDB Forever koKR](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |
 | NPC／怪物 | 11055 | Shadow Priestess Vandis | 어둠의여사제 반디스 | [本機 QuestieDB Forever koKR](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |
 | NPC／怪物 | 11057 | Apothecary Dithers | 연금술사 디더스 | [本機 QuestieDB Forever koKR](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |
-| NPC／怪物 | 11058 | Ezra Grimm | 프라스 샤비 | [Wowhead Forever koKR](https://nether.wowhead.com/forever/tooltip/npc/11058?locale=1) · [本機 QuestieDB Forever koKR](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) · 【另見】에즈라 그림（同 ID，可能為性別詞形或來源版本差異） |
+| NPC／怪物 | 11058 | Ezra Grimm | 에즈라 그림 | [Wowhead Forever koKR](https://nether.wowhead.com/forever/tooltip/npc/11058?locale=1) · [本機 QuestieDB Forever koKR](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) · 已與永恆版任務 5214 及煙草 13172 核對 |
 | NPC／怪物 | 11063 | Carlin Redpath | 카를린 레드패스 | [本機 QuestieDB Forever koKR](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |
 | NPC／怪物 | 11064 | Darrowshire Spirit | 다로우샤이어 영혼 | [本機 QuestieDB Forever koKR](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |
 | NPC／怪物 | 11075 | Cauldron Lord Bilemaw | 가마솥군주 창자아귀 | [本機 QuestieDB Forever koKR](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |
