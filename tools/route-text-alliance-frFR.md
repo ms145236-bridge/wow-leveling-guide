@@ -1,6 +1,6 @@
 # 阿聖練等幫手 frFR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **397** 列。
+- 只收聯盟路線獨有的說明列，共 **404** 列。
 
 檔名:行號｜類型｜中文原文｜frFR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Fais un clic droit sur Livre grignoté dans ton sac pour lancer la quête.
@@ -1466,3 +1466,10 @@
 03-30到45級.md:505｜說明｜把幽靈磁鐵箱放在白骨之地兩具巨型骸骨之間，退開一點，等半人馬鬼魂被吸過來再一隻一隻打，撿幽靈電漿 ×8。附近 38–40 級的怪先清掉或繞開，打不過就略過 6134。｜Pose la caisse d'aimants à fantômes entre les deux squelettes géants de la Vallée des Ossements, recule et tue un par un les esprits de centaures attirés jusqu'à avoir 8 ectoplasmes. Nettoie ou évite les monstres de niveau 38 à 40 autour ; si c'est trop dur, passe 6134.
 03-30到45級.md:508｜說明｜從比布里的小屋往西北到艾瑟雷索塔交聖光節杖，再往北到海岸打滑刃納迦，最後沿北邊大路回尼耶爾前哨站一次交完。｜Depuis la cabane de Bibbly, va au nord-ouest à Ethel Rethor rendre le Sceptre de lumière, monte au nord sur la côte pour les nagas Ondulame, puis reprends la route du nord jusqu'à la Pointe de Nijel pour tout rendre d'un coup.
 03-30到45級.md:1078｜說明｜還在石爪山脈：爐石可用就爐回藏寶海灣；爐石冷卻就從石爪峰飛棘齒城（經阿斯特蘭納、塔倫迪斯營地），再搭船到藏寶海灣。｜Encore dans les Serres-Rocheuses : si ta pierre de foyer est prête, reviens à Baie-du-Butin ; sinon, vole du pic des Serres-Rocheuses à Cabestan (via Astranaar et la pointe de Talrendis) et prends le bateau pour Baie-du-Butin.
+02-12到30級.md:116｜說明｜月溪鎮專程一趟；有接月溪鎮諜戰就同一趟撿補給品，趕路可跳過。｜Ruisselune est un détour à part. Si tu as pris l'espionnage de Ruisselune, ramasse ses fournitures pendant le même trajet. Passe-le si tu es pressé.
+02-12到30級.md:116｜說明｜月溪鎮專程一趟｜Ruisselune est un détour à part.
+02-12到30級.md:116｜說明｜有接月溪鎮諜戰就同一趟撿補給品，趕路可跳過。｜Si tu as pris l'espionnage de Ruisselune, ramasse ses fournitures pendant le même trajet. Passe-le si tu es pressé.
+02-12到30級.md:117｜說明｜和人民軍同一趟，在月溪鎮撿可疑的補給箱。｜Même trajet que la milice populaire : ramasse les caisses de fournitures suspectes à Ruisselune.
+02-12到30級.md:342｜說明｜第11站沒撿完的補給箱，追信差時在月溪鎮順手撿。｜Caisses de fournitures que tu n'as pas finies en Marche de l'Ouest : ramasse-les à Ruisselune en poursuivant le messager.
+05-副本.md:78｜說明｜任務文字寫劣質火藥，以物品為準：備妥 10 個粗製炸藥（物品 4358），可由工程學製作、交易或在拍賣場取得。｜Le texte de la quête cite un autre explosif ; fie-toi à l'objet : garde 10 exemplaires de l'objet 4358, fabriqués par l'ingénierie, échangés ou achetés à l'hôtel des ventes.
+05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜Lors de ta première visite aux Carmines, après avoir rendu l'escorte en Marche de l'Ouest, prends la Confrérie défias et les bandanas en soie rouge à la colline des Sentinelles. Au dernier retour à Hurlevent, prends les trois quêtes de la ville, pour ne pas faire de trajet spécial avant le donjon.

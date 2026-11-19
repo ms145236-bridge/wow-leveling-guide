@@ -1,6 +1,6 @@
 # 阿聖練等幫手 esES 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **397** 列。
+- 只收聯盟路線獨有的說明列，共 **404** 列。
 
 檔名:行號｜類型｜中文原文｜esES
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Haz clic derecho en Libro mordisqueado en tu bolsa para empezar la misión.
@@ -1466,3 +1466,10 @@
 03-30到45級.md:505｜說明｜把幽靈磁鐵箱放在白骨之地兩具巨型骸骨之間，退開一點，等半人馬鬼魂被吸過來再一隻一隻打，撿幽靈電漿 ×8。附近 38–40 級的怪先清掉或繞開，打不過就略過 6134。｜Coloca la caja de imanes fantasmales entre los dos esqueletos gigantes del Valle de los Huesos, apártate y mata uno a uno los espíritus de centauro atraídos hasta tener 8 ectoplasmas. Limpia o evita los enemigos de nivel 38–40 cercanos; si no puedes, omite 6134.
 03-30到45級.md:508｜說明｜從比布里的小屋往西北到艾瑟雷索塔交聖光節杖，再往北到海岸打滑刃納迦，最後沿北邊大路回尼耶爾前哨站一次交完。｜Desde la cabaña de Bibbly, ve al noroeste a Ethel Rethor a entregar el Cetro de Luz, sube al norte a la costa a por los nagas Filozante y vuelve por el camino del norte a Punta de Nijel para entregarlo todo de una vez.
 03-30到45級.md:1078｜說明｜還在石爪山脈：爐石可用就爐回藏寶海灣；爐石冷卻就從石爪峰飛棘齒城（經阿斯特蘭納、塔倫迪斯營地），再搭船到藏寶海灣。｜Si sigues en el Espolón: usa la piedra de hogar para volver a Bahía del Botín si está lista; si no, vuela del Pico del Espolón a Trinquete (por Astranaar y Punta Talrendis) y toma el barco a Bahía del Botín.
+02-12到30級.md:116｜說明｜月溪鎮專程一趟；有接月溪鎮諜戰就同一趟撿補給品，趕路可跳過。｜Arroyo de la Luna es un desvío aparte. Si aceptaste el espionaje de Arroyo de la Luna, recoge sus suministros en el mismo viaje. Sáltalo si tienes prisa.
+02-12到30級.md:116｜說明｜月溪鎮專程一趟｜Arroyo de la Luna es un desvío aparte.
+02-12到30級.md:116｜說明｜有接月溪鎮諜戰就同一趟撿補給品，趕路可跳過。｜Si aceptaste el espionaje de Arroyo de la Luna, recoge sus suministros en el mismo viaje. Sáltalo si tienes prisa.
+02-12到30級.md:117｜說明｜和人民軍同一趟，在月溪鎮撿可疑的補給箱。｜En el mismo viaje que la milicia popular: recoge las cajas de suministros sospechosas en Arroyo de la Luna.
+02-12到30級.md:342｜說明｜第11站沒撿完的補給箱，追信差時在月溪鎮順手撿。｜Cajas de suministros que no terminaste en los Páramos de Poniente: recógelas en Arroyo de la Luna mientras persigues al mensajero.
+05-副本.md:78｜說明｜任務文字寫劣質火藥，以物品為準：備妥 10 個粗製炸藥（物品 4358），可由工程學製作、交易或在拍賣場取得。｜El texto de la misión nombra otro explosivo; guíate por el objeto: ten 10 unidades del objeto 4358, fabricadas con Ingeniería, intercambiadas o compradas en la casa de subastas.
+05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜En tu primera visita a las Montañas Crestagrana, tras entregar la escolta de vuelta en los Páramos de Poniente, acepta la Hermandad Defias y los pañuelos de seda roja en la Colina del Centinela. Al volver por última vez a Ventormenta, acepta las tres misiones de la ciudad, para no hacer un viaje especial antes de la mazmorra.
