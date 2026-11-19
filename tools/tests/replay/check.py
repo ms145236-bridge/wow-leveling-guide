@@ -27,6 +27,46 @@ class Case(NamedTuple):
     mode: str
 
 
+# Replay events that mean a step was not taken. "difficulty" is only a mandatory-step problem outside dungeons.
+# "unturned" is reported separately: a non-optional accept that is never turned in, e.g. work blocked on a material.
+SKIPS = {"low", "prereq", "race", "class-low", "difficulty", "exclusive", "superseded", "conditional"}
+ALLOWLIST = TESTS / "skip-allowlist.tsv"
+
+
+def mandatory_skips(log):
+    """Non-optional quest steps the character was meant to do but could not, as (kind, station, quest)."""
+    mentioned = {row[4] for row in log}
+    later_turned = {}
+    for n, row in enumerate(log):
+        if row[3] == "turned":
+            later_turned.setdefault(row[4], n)
+    taken = {row[4] for row in log if row[3] in ("accepted", "turned")}
+    out = set()
+    for n, row in enumerate(log):
+        kind, station, quest = row[3], row[0], row[4]
+        if kind not in SKIPS or row[8] == "opt" or not quest:
+            continue
+        if kind == "difficulty":
+            if station.startswith("05-d"):
+                continue
+        elif quest in taken:
+            continue  # A later catch-up step picked it up.
+        # A prereq skip counts when a missing prereq is turned in later in the same run (ordering bug), or when
+        # no missing prereq has any event at all (dropped from the route). A prereq that was optional, for another
+        # class or race, or skipped for its own reason has an event and is judged on that event instead.
+        missing = row[7].split("/")
+        if kind == "prereq" and not any(later_turned.get(p, -1) > n for p in missing) and any(p in mentioned for p in missing):
+            continue
+        out.add((kind, station, quest))
+    accepted = {}
+    for row in log:
+        if row[3] == "accepted" and row[8] != "opt":
+            accepted.setdefault(row[4], row[0])
+    turned = {row[4] for row in log if row[3] == "turned"}
+    out.update(("unturned", station, quest) for quest, station in accepted.items() if quest not in turned)
+    return out
+
+
 SOLO_WITNESSES = {
     Case("Alliance", "Human", "PRIEST", "default", "solo"),
     Case("Horde", "Scourge", "PALADIN", "default", "solo"),
@@ -97,7 +137,7 @@ def replay(case, lua, work):
     if faction == "Horde":
         assert {"2621", "2622", "2784"} <= turned, case
         assert not {"2521", "3501"} & turned, case  # No rare drops supplied.
-    return (*case, sum(int(row[12]) for row in stations), len(turned), peak)
+    return (*case, sum(int(row[12]) for row in stations), len(turned), peak), mandatory_skips(log)
 
 
 def main():
@@ -125,7 +165,22 @@ def main():
     work = nullcontext(args.events_dir) if args.events_dir else tempfile.TemporaryDirectory()
     with work as directory:
         with ThreadPoolExecutor(max_workers=4) as pool:
-            rows = list(pool.map(lambda case: replay(case, args.lua, Path(directory)), cases))
+            results = list(pool.map(lambda case: replay(case, args.lua, Path(directory)), cases))
+    rows = [row for row, _ in results]
+    seen = {}
+    for case, (_, skips) in zip(cases, results):
+        for key in skips:
+            seen.setdefault(key, []).append("-".join(case))
+    allowed = {tuple(line.split("\t")[:3]) for line in ALLOWLIST.read_text(encoding="utf-8").splitlines()
+               if line.strip() and not line.startswith("#")}
+    new = sorted(set(seen) - allowed)
+    if new:
+        lines = [f"  {kind}\t{station}\t{quest}\t({len(seen[(kind, station, quest)])}: {', '.join(seen[(kind, station, quest)][:3])})"
+                 for kind, station, quest in new]
+        raise SystemExit("Mandatory steps skipped (fix the route, or add to skip-allowlist.tsv with a reason):\n" + "\n".join(lines))
+    if args.full:
+        for key in sorted(allowed - set(seen)):
+            print("Allowlisted skip no longer happens:", "\t".join(key))
     if args.output:
         with args.output.open("w", encoding="utf-8-sig", newline="") as stream:
             writer = csv.writer(stream)

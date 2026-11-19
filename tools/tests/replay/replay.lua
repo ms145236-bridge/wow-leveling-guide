@@ -20,12 +20,18 @@ local drops = arg[9] == "both" and {[8244]=1,[10593]=1} or {}
 -- "items:8623,8704" supplies held world drops so explicit held-item entries can be checked.
 for id in (arg[9] or ""):match("^items:(.*)$") and arg[9]:sub(7):gmatch("%d+") or function() end do drops[tonumber(id)]=1 end
 local collect = {[2521]=8244,[3501]=10593}
+-- Without explicit scenario arguments (arg 10 a number, or arg 11+), the character completes the authored
+-- gathering work: route-listed cloth, farmed and hand-in materials, the rift capture with the scroll and coffer
+-- beside the trainer, and the blade materials from the selected dungeons. Class lines then stay covered by
+-- the mandatory-step check in check.py. Scenario runs keep the explicit no-drop assumption.
+local standard = tonumber(arg[10]) == nil and arg[11] == nil
 -- Provide cloth only in an explicitly supplied replay. The normal itinerary makes no drop assumption.
 local suppliedLinen = tonumber(arg[10]) or 0
 if suppliedLinen > 0 then drops[2589] = suppliedLinen end
 -- Optional explicit successful interactions/drop scenarios. Simply visiting a dungeon supplies nothing.
 local weaponLoot = {}
 for id in (arg[11] or ""):gmatch("%d+") do weaponLoot[tonumber(id)] = true end
+if standard then for _, id in ipairs({267454,6994,267361,6995}) do weaponLoot[id] = true end end
 if party and weaponLoot[268484] then classQuest[95140] = true end
 local bladeItems = {267454,6994,267361,272448}
 local function hasBladeItems()
@@ -83,8 +89,8 @@ function ns.C.IsReady(q)
   if q == 91 then return have[q] and GetItemCount(1075) >= 10 end
   if q == 128 then return have[q] and championKills >= 15 end
   if q == 94 or q == 248 then return have[q] and glyphFlag(q,glyphReady) end
-  if q == 1938 or q == 1940 then return have[q] and arg[17] == "ready" end
-  if q == 1921 then return have[q] and arg[15] == "ready" end
+  if q == 1938 or q == 1940 then return have[q] and (standard or arg[17] == "ready") end
+  if q == 1921 then return have[q] and (standard or arg[15] == "ready") end
   return worked[q] or (have[q] and not hasDo[q]) or false
 end
 function ns.C.Objectives(q)
@@ -177,12 +183,21 @@ local function run(st, isRun)
       if q == 1938 and book > 0 then drops[7266] = book end
       if q == 1940 and silk > 0 then drops[7267] = silk end
     end
+    -- A worked quest holds the items its hand-in asks for (Stratholme's 20 plagued flesh, 5 holy water).
+    if standard and s.t=="turnin" and worked[q] and s.when and s.when.bag then
+      local needs = {s.when.bag}
+      for _, need in ipairs(s.when.additionalBags or {}) do needs[#needs+1] = need end
+      for _, need in ipairs(needs) do
+        if GetItemCount(need.item) < need.count then drops[need.item] = need.count; log("material",s,need.item) end
+      end
+    end
     if not E.Applies(s.when) then
-      if s.when and s.when.class and E.Applies(s.when,true) and (s.t=="accept" or s.t=="travel") then log("class-low",s,s.when.lvMin) end
+      if s.when and s.when.class and E.Applies(s.when,true) and (s.t=="accept" or s.t=="travel") then log("class-low",s,s.when.lvMin)
+      elseif s.t=="accept" and q then log("not-applicable",s) end -- Lets check.py tell another branch's prereq from a missing one.
     elseif collect[q] and not drops[collect[q]] then log("no-drop",s)
     elseif s.q==95042 and not have[95036] then log("missing-parent",s,95036)
     elseif E.OptOut(s) and not (party and (isRun or classQuest[q] or (s.when and s.when.class and selectedWork[q]))) then
-      if s.t=="accept" and s.when and s.when.class then log("optional-off",s) end
+      if s.t=="accept" and q then log("optional-off",s) end
     elseif s.t=="fp" and s.node then db.fpNodes[s.node]=true;log("learn-fp",s,s.node)
     elseif s.t=="boat" then log("boat",s,(s.from or "?").." → "..(s.to or "?"))
     elseif s.t=="fly" and s.to and db.fpNodes[s.to] then log("known-flight",s,s.to)
@@ -202,6 +217,10 @@ local function run(st, isRun)
       if why then log(why,s,detail);if stats[why] then stats[why]=stats[why]+1 end
       else
         have[q]=true;open=open+1;peak=math.max(peak,open);log("accepted",s)
+        -- Hand-in-only deliveries (1921's cloth and rift gems) are gathered along the way.
+        for _, need in ipairs(standard and i.deliveryItems or {}) do
+          if GetItemCount(need.item) < need.count then drops[need.item] = need.count; log("material",s,need.item) end
+        end
         if q==94 or q==248 then
           drops[1083] = glyphFlag(q,glyphScenario) and 1 or nil
         end
@@ -212,6 +231,10 @@ local function run(st, isRun)
       end
     elseif s.t=="do" and have[q] and not worked[q] then
       -- These two quests explicitly require instance materials or a boss for these roles.
+      for _, need in pairs(standard and {i.supply or false, i.farmMaterial or false} or {}) do
+        if need and GetItemCount(need.item) < need.count then drops[need.item] = need.count; log("material",s,need.item) end
+      end
+      if standard and i.riftTools then drops[7308], drops[7247], drops[7292] = 1, 1, 3; log("material",s,7292) end
       if q==1938 and GetItemCount(7266)<1 then log("missing-material",s,7266)
       elseif i.riftTools and E.RiftPhase() ~= "journal" then log("missing-capture",s,E.RiftPhase())
       elseif i.supply and GetItemCount(i.supply.item) < i.supply.count then log("missing-material",s,i.supply.item)

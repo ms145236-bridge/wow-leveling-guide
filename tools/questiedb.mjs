@@ -2,6 +2,7 @@
 // 只讀不寫。對照 QuestieDB/src/read/baked.lua、src/l10n/overlay.lua。
 import { readFileSync } from "node:fs";
 import { inflateSync } from "node:zlib";
+import { createHash } from "node:crypto";
 
 export const ADDONS = process.env.WOW_ADDONS || "C:/Program Files (x86)/World of Warcraft/_forever_/Interface/AddOns"; // 可用 WOW_ADDONS 指到別的安裝
 const TOC = `${ADDONS}/QuestieDB/QuestieDB_Forever.toc`;
@@ -63,6 +64,23 @@ function cbor(buf) {
 // Lua 式表：CBOR map 的整數鍵 1..n → 陣列（索引 0 = 第 1 個）；其他維持 Map
 const get = (t, k) => (t instanceof Map ? t.get(k) : Array.isArray(t) ? t[k - 1] : undefined);
 const list = (t) => (t instanceof Map ? [...t.values()] : Array.isArray(t) ? t : []);
+
+// 本機 QuestieDB 版本：TOC 的 Version 加檔案雜湊（同一個版號也可能更新資料）
+export const localVersion = () => {
+  const toc = readFileSync(TOC);
+  return `${(toc.toString("utf8").match(/^## Version: ([^\r\n]+)/m) || [])[1]} toc-sha256:${createHash("sha256").update(toc).digest("hex").slice(0, 12)}`;
+};
+// tools/questiedb-snapshot.tsv：Data 建置時用到的任務欄位（路線任務與它們的前置）。CI 的 questiedb-guard.lua、questiedb-drift.mjs 讀它
+export const SNAPSHOT_COLS = ["陣營", "任務ID", "最低等級", "等級", "種族", "職業", "前置全部", "前置任一", "互斥", "後續", "起點（NPC;物件;物品）", "起始物品掉落怪數", "目標（怪;物件;物品）", "目標文字"];
+export const SNAPSHOT_GONE = "（QuestieDB 沒有這個任務）";
+export const readSnapshot = (text) => new Map(text.split(/\r?\n/).filter((l) => l && !l.startsWith("#")).map((l) => [l.split("\t").slice(0, 2).join("\t"), l]));
+// 兩份快照裡同一筆任務的欄位變動（路線新增或拿掉的任務不列）
+export const diffSnapshot = (before, after) => [...after].filter(([k, row]) => before.has(k) && before.get(k) !== row).map(([k, row]) => {
+  const a = before.get(k).split("\t"), b = row.split("\t");
+  if (b[2] === SNAPSHOT_GONE) return `- ${k.replace("\t", " ")}：QuestieDB 已沒有這個任務（原目標文字：${a[13] || "無"}）`;
+  if (a[2] === SNAPSHOT_GONE) return `- ${k.replace("\t", " ")}：QuestieDB 新增這個任務`;
+  return `- ${k.replace("\t", " ")}：` + SNAPSHOT_COLS.map((c, i) => a[i] !== b[i] && `${c} ${a[i] || "（空）"} → ${b[i] || "（空）"}`).filter(Boolean).join("；");
+});
 
 export function openQuestieDB() {
   const meta = new Map();
@@ -291,7 +309,16 @@ export function openQuestieDB() {
     if (!enIds[type]) { enIds[type] = new Map(); for (const id of loadType(type).idList) { const n = field(type, id, 1); if (typeof n === "string" && !enIds[type].has(n)) enIds[type].set(n, id); } }
     return enIds[type].get(en);
   };
-  return { field, quest, npc, object, questsByName, questMobs, allQuestIds: () => loadType("Quest").idList, norm, enByZh, itemEn, l10nName, l10nObj, idByEn };
+  // 快照列（不含陣營欄）：QUEST_FIX、OBJ_FIX 套用後的值；起始物品掉落怪數＝起始物品裡掉落來源最多的怪物種數（2 以上算隨機掉落）
+  const snapshot = (id) => {
+    const q = quest(id);
+    if (!q) return null;
+    const obj = field("Quest", id, 10);
+    return [id, q.reqLevel, q.level, q.races, q.classes, q.preGroup.join(","), q.preSingle.join(","), q.exclusiveTo.join(","), q.next,
+      [q.startNpcs, q.startObjects, q.startItems].map((a) => a.join(",")).join(";"), Math.max(0, ...q.startItems.map((it) => list(field("Item", it, 2)).length)), [1, 2, 3].map((k) => list(get(obj, k)).map((c) => get(c, 1)).join(",")).join(";"),
+      q.obj.filter((t) => typeof t === "string").join(" / ").replace(/\s+/g, " ")].join("\t");
+  };
+  return { field, quest, npc, object, questsByName, questMobs, allQuestIds: () => loadType("Quest").idList, norm, enByZh, itemEn, l10nName, l10nObj, idByEn, snapshot };
 }
 
 // 一群點取最密集一群的中心（同地圖、距離 5 以內算一群）
