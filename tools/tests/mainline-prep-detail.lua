@@ -73,4 +73,30 @@ ns.db.dNo[prep] = true
 assert(not tryAccept(), "選「不打」不接")
 ns.db.dNo[prep] = nil
 assert(tryAccept(), "空日誌、沒選不打才接")
-print("Mainline dungeon prep: QUEST_DETAIL before the first HUD refresh keeps the saved station's reservation")
+-- 主卡刷新成副本卡（設諾莫瑞根為目標）時，用出發的主線站算預留；回到主線後用主線卡
+local upvalue
+for i = 1, math.huge do
+  local key = debug.getupvalue(handlers.OnUpdate, i)
+  if key == "lastState" then upvalue = i; break end
+  if not key then break end
+end
+assert(upvalue, "inject the state Core's regular refresh supplies")
+local gnomeregan = assert(E.byId[prep])
+E.RunDungeon(gnomeregan)
+assert(ns.db.station == prep and ns.db.dungeonFrom == "03-18")
+debug.setupvalue(handlers.OnUpdate, upvalue, {st = gnomeregan, steps = {}})
+for held = 0, 39 do
+  fillLog(held)
+  assert(tryAccept() == E.PreRoom(st), ("副本卡、日誌 %d 格：用出發站 03-18 的預留"):format(held))
+end
+for _, held in ipairs({34, 35, 36, 37}) do
+  fillLog(held)
+  assert(not tryAccept(), ("副本卡、日誌 %d 格不接副本前置"):format(held))
+end
+ns.db.station, ns.db.dungeonFrom = "03-18", nil
+debug.setupvalue(handlers.OnUpdate, upvalue, E.Locate(st))
+for held = 0, 39 do
+  fillLog(held)
+  assert(tryAccept() == E.PreRoom(st), ("回到主線卡、日誌 %d 格：預留一致"):format(held))
+end
+print("Mainline dungeon prep: QUEST_DETAIL keeps the main-station reservation before the first refresh, on the dungeon card and back on the main card")

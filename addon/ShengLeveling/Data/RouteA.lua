@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "52b5c98c",
+  built = "cfb0b274",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -1185,6 +1185,18 @@ MG.Route = {
         {t="accept", q=1788, desc="交任務學救贖。", npc="傑生·坦諾姆", tgt="傑生·坦諾姆", map=1453, x=49.53, y=44.99, when={lvMin=12, class={"PALADIN"}, race={"Human"}}},
         {t="turnin", q=1788, desc="交任務學救贖。", npc="達索瑞恩·拉爾", tgt="達索瑞恩·拉爾", map=1453, x=50.48, y=47.49, when={lvMin=12, class={"PALADIN"}, race={"Human"}}},
         {t="travel", tag="提醒：還沒開這個飛行點，第一次要用跑的", text="出暴風城沿艾爾文森林大路往西，經閃金鎮過橋進西部荒野，再沿大道往南到哨兵嶺。"},
+        {t="accept", q=94792, npc="約瑟芬‧卡森", tgt="約瑟芬‧卡森", map=1429, x=41.15, y=66.23, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
+        {t="do", q=94792, hint="使用馴獸棒馴服一隻石皮野豬。練習你的技能，然後將馴獸棒還給約瑟芬‧卡森。", map=1429, x=61.6, y=77.6, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
+        {t="turnin", q=94792, npc="約瑟芬‧卡森", tgt="約瑟芬‧卡森", map=1429, x=41.15, y=66.23, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
+        {t="accept", q=94863, npc="約瑟芬‧卡森", tgt="約瑟芬‧卡森", map=1429, x=41.15, y=66.23, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
+        {t="do", q=94863, hint="使用馴獸棒馴服一隻森林灰狼。練習你的技能，然後將馴獸棒還給約瑟芬‧卡森。", map=1429, x=61.9, y=64, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
+        {t="turnin", q=94863, npc="約瑟芬‧卡森", tgt="約瑟芬‧卡森", map=1429, x=41.15, y=66.23, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
+        {t="accept", q=94864, npc="約瑟芬‧卡森", tgt="約瑟芬‧卡森", map=1429, x=41.15, y=66.23, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
+        {t="do", q=94864, hint="使用馴獸棒馴服一隻小森林熊。練習你的技能，然後將馴獸棒還給約瑟芬‧卡森。", map=1429, x=62.7, y=78, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
+        {t="turnin", q=94864, npc="約瑟芬‧卡森", tgt="約瑟芬‧卡森", map=1429, x=41.15, y=66.23, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
+        {t="accept", q=94793, npc="約瑟芬‧卡森", tgt="約瑟芬‧卡森", map=1429, x=41.15, y=66.23, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
+        {t="turnin", q=94793, npc="艾薩克‧查", tgt="艾薩克‧查", map=1429, x=41.79, y=66.37, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
+        {t="travel", map=1429, x=24.23, y=74.45, back=true, when={lvMin=10, class={"HUNTER"}, race={"Human"}}},
         {t="accept", q=109, npc="瑞尼爾副隊長", tgt="瑞尼爾副隊長", map=1429, x=24.23, y=74.45},
         {t="accept", q=64, npc="農夫法布隆", tgt="農夫法布隆", map=1436, x=60, y=19.4},
         {t="accept", q=36, npc="弗娜·法布隆", tgt="弗娜·法布隆", map=1436, x=59.92, y=19.42},

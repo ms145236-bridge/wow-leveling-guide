@@ -351,10 +351,11 @@ local function inRoute(id, forAccept)
     end
   end
   local st = pre and lastState and not lastState.instance and lastState.st
-  -- 主線上寫的副本前置：主卡還沒刷新（登入、重載後第一次對話）時，用存檔的站（副本流程中用出發的主線站）算預留
-  if authored and not lastState then
-    st = E.Current()
-    if st and st.dungeon then st = MG.db.dungeonFrom and E.byId[MG.db.dungeonFrom] end
+  -- 主線上寫的副本前置：主卡還沒刷新（登入、重載後第一次對話），或主卡是副本卡時，用存檔的站（副本流程中用出發的主線站）算預留
+  if authored and not (st and not st.dungeon) then
+    local saved = E.Current()
+    if saved and saved.dungeon then saved = MG.db.dungeonFrom and E.byId[MG.db.dungeonFrom] end
+    st = saved or st
   end
   local main = st and not st.dungeon and st
   local pending, nextSlot, free = 0, nil, nil
