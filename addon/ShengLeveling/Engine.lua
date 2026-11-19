@@ -1875,6 +1875,16 @@ function E.PickStation()
 end
 
 function E.Current()
+  -- 1.13.47：聯盟 03-38 從 43 級的淒涼之地改成 35–37 級的新站。更新前就停在 03-38 的 40 級以上存檔是舊版那趟，
+  -- 直接接第39站（步驟存檔照舊）；看過一次等級就記下，之後真的在新站的角色不會被搬走
+  local lv = UnitLevel and UnitLevel("player") or 0
+  if MG.db.desolace3537 == nil and lv > 1 then
+    if lv >= 40 and E.byId["03-38"] and E.byId["03-39"] and E.byId["03-38"].lv[2] < 40 then
+      if MG.db.station == "03-38" then MG.db.station = "03-39" end
+      if MG.db.dungeonFrom == "03-38" then MG.db.dungeonFrom = "03-39" end -- 從舊第38站去打副本：回主線時接第39站，副本進度不動
+    end
+    MG.db.desolace3537 = true
+  end
   local st = MG.db.station and E.byId[MG.db.station]
   if not st then
     st = E.PickStation()
