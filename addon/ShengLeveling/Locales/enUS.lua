@@ -40,6 +40,7 @@ MG.Locales.enUS = {
   ["行"] = "Go",
   ["需"] = "Need",
   ["買"] = "Buy",
+  ["撿"] = "Loot",
   ["打"] = "Kill",
   ["打 "] = "Kill ",
   ["去"] = "Go",

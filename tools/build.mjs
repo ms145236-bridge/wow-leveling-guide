@@ -84,7 +84,7 @@ const TAG_EN = { 可跳過: "Optional", 需遊戲實測: "Unverified", 有隊伍
   能打高階怪再做: "Hard", 低等怪補缺口: "Fills an XP gap", 日後順路或有隊伍: "Later or with a group", 見到獵物才接: "If you see it", 材料齊才做: "When you have the items", 看得到才接: "If offered" };
 const tagEn = (tag) => { const out = (tag || "").split(/\s*・\s*/).map((t) => TAG_EN[t.trim()]).filter(Boolean); return out.length ? [...new Set(out)].join(", ") : undefined; };
 const enText = (t) => String(t || "").replace(/<([^<>\/]+)\/([^<>\/]+)>/g, "$1/$2").replace(/\$[Bb]/g, " ").replace(/\$[Nn]/g, "you").replace(/\$[CcRr]/g, "adventurer").replace(/\s+/g, " ").trim();
-const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel", 買: "buy" };
+const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel", 買: "buy", 撿: "buy" };
 // 行尾標籤：這些不顯示；其餘（可跳過、有隊伍再做…）顯示在步驟第 3 行
 // 條件入口：要先有掉落物、材料、聲望，或遇到巡邏的人才接得到。可跳過的接取步是「物品起始」或帶這些標籤 → 任務記 cond
 // 建置不把它升成必做；引擎補經驗時不補還沒接的（Engine.lua FillPlan）
@@ -427,7 +427,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
       }
       return;
     }
-    const sm = line.match(/^\s*(?:(\d+)\s*[.、)]\s*|[-*]\s*)?(交通|接|做|交|到|鳥|爐|飛|船|練|註|買)｜(.*)$/);
+    const sm = line.match(/^\s*(?:(\d+)\s*[.、)]\s*|[-*]\s*)?(交通|接|做|交|到|鳥|爐|飛|船|練|註|買|撿)｜(.*)$/);
     if (!sm) return;
     const [, no, verb, rest0] = sm;
     const tags = [...rest0.matchAll(/【([^】]*)】/g)].map((m) => m[1]);
@@ -436,7 +436,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
     const exitLeg = tags.find(t => t.startsWith("安戈洛離站："))?.slice("安戈洛離站：".length);
     const f = body.replace(/★/g, "").split("｜").map((s) => s.trim());
     // no、raw：職業任務段落的插入點用（#K、「動詞｜文字」）
-    const step = { surveyTag: tags.find(t => /^徽章偵察[：:]/.test(t)), verb, ungoroExit: ({東岸:"east", 北營:"camp", 北線船:"ship", 奧伯丁:"port", 確認位置:"wait", 島內傳送門:"islandPortal", 東渡北營:"eastCamp", 東渡碼頭:"eastPort", 暴風回程:"stormReturn", 東渡待確認:"eastWait", 暴風靠岸:"stormDock", 另一位發任人:"teacher", 鐵堡回程:"ironReturn"})[exitLeg], t: VERB[verb], authoredPoints: tags.includes("限用路線座標"), sharedOutdoorPrereq: tags.includes("共用野外前置"), sameObjective: tags.includes("同一步座標") || undefined, sameMapPreview: tags.includes("同圖才預覽下一點") || undefined, reserveOnVisit: tags.includes("到站再預留") || undefined, strictReady: tags.includes("護送完成才勾") || undefined, exitPriority: tags.includes("出本優先回報") || undefined, instancePickup: tags.includes("副本內接取") || undefined, outsideObjective: tags.includes("本外完成") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
+    const step = { pick: verb === "撿" || undefined, surveyTag: tags.find(t => /^徽章偵察[：:]/.test(t)), verb, ungoroExit: ({東岸:"east", 北營:"camp", 北線船:"ship", 奧伯丁:"port", 確認位置:"wait", 島內傳送門:"islandPortal", 東渡北營:"eastCamp", 東渡碼頭:"eastPort", 暴風回程:"stormReturn", 東渡待確認:"eastWait", 暴風靠岸:"stormDock", 另一位發任人:"teacher", 鐵堡回程:"ironReturn"})[exitLeg], t: VERB[verb], authoredPoints: tags.includes("限用路線座標"), sharedOutdoorPrereq: tags.includes("共用野外前置"), sameObjective: tags.includes("同一步座標") || undefined, sameMapPreview: tags.includes("同圖才預覽下一點") || undefined, reserveOnVisit: tags.includes("到站再預留") || undefined, strictReady: tags.includes("護送完成才勾") || undefined, exitPriority: tags.includes("出本優先回報") || undefined, instancePickup: tags.includes("副本內接取") || undefined, outsideObjective: tags.includes("本外完成") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined, hold: (VERB[verb] !== "accept" && tags.includes("材料齊才做")) || undefined, native: (VERB[verb] === "do" && tags.includes("原生可交")) || undefined, cond: (VERB[verb] === "accept" && tags.includes("可跳過") && (f.slice(1, 3).some((x) => /^物品\s/.test(x)) || tags.some((t) => COND_TAG.test(t)))) || undefined, keepOpt: tags.some((t) => KEEP_TAG.test(t)) || undefined, hard: (tags.includes("可跳過") && tags.includes("能打高階怪再做")) || undefined, anyRace: tags.includes("部落可接") || undefined,
       desc: [...tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")),
         ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
@@ -607,8 +607,8 @@ for (const file of files.filter((f) => !sideFile(f))) {
       throw new Error(step.where + " 「限真實副本」需要相符的副本內步驟");
     }
     if (tags.includes("手動物品起任")) {
-      if (step.t !== "accept" || !step.when?.instanceID || !db.quest(step.id)?.startItems.includes(step.when.bag?.item)) {
-        throw new Error(step.where + " 「手動物品起任」需要副本限制和真正的起始物品");
+      if (step.t !== "accept" || (step.ph === "in" && !step.when?.instanceID) || !db.quest(step.id)?.startItems.includes(step.when?.bag?.item)) {
+        throw new Error(step.where + " 「手動物品起任」需要真正的起始物品；副本內的接取另要副本限制");
       }
       step.manualAccept = true;
     }
@@ -745,7 +745,7 @@ for (const blk of classBlocks) {
     blk.anchor = target.steps[k];
     // 回到路線：座標在解析完任務座標後才補（見下方），用不到就拿掉
     const last = blk.steps[blk.steps.length - 1];
-    if (last && !MOVE_T.includes(last.t)) blk.steps.push({ t: "travel", verb: "交通", back: true, cls: blk, when: { ...blk.when }, where: blk.where });
+    if (last && !MOVE_T.includes(last.t)) blk.steps.push({ t: "travel", verb: "交通", back: true, cls: blk, when: { ...blk.when, ...(last.t === "buy" && last.when?.onQuestAny ? { onQuestAny: last.when.onQuestAny } : {}) }, where: blk.where }); // 段落最後是撿任務物品：只有撿的人才要回路線
   } else while (at > 0 && ["travel", "note", "boat", "fly", "hearth"].includes(target.steps[at - 1].t)) at--;
   target.steps.splice(at, 0, ...blk.steps);
 }
@@ -1370,7 +1370,7 @@ const stepOut = (s, st) => ({
   outsideObjective: s.ph && s.outsideObjective || undefined,
   star: s.star, t: s.t, any: s.any, instancePickup: s.ph === "in" && s.t === "accept" && s.instancePickup || undefined, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
   // 說明段用「；」接起來：句號結尾的段後面不再補「；」，完全相同的段只留一次（翻譯照原本的「；」切段，不受影響）
-  desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, key0: s.key0, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
+  desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, key0: s.key0, item: s.item, n: s.n, fq: s.fq, pick: s.pick, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
   map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, via: s.via?.length ? s.via.map((p) => [p.map, p.x, p.y]) : undefined, skey: s.oldKeys?.length ? s.oldKeys.at(-1).at(-1) : undefined, akeys: s.oldKeys?.at(-1)?.length > 1 ? s.oldKeys.at(-1).slice(0, -1) : undefined, vkeys: s.oldKeys?.length > 1 ? s.oldKeys.slice(0, -1) : undefined, r: s.r, back: s.back, hm: s.hm, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam, hold: s.hold, native: s.native,
 });
 // 打怪經驗估算的上限：每個目標最多算 KILL_CAP 隻（掉落目標＝數量 ÷ 掉率，沒寫掉率時和 Engine.lua 的 DROP_RATE 一樣用 0.4）

@@ -1587,6 +1587,8 @@ function E.Locate(st)
         missedIdx[#missedIdx + 1] = i -- 同一任務前面的步驟已漏掉（例如沒接就輪到交）
       elseif not done[i] and q and steps[i].s.t ~= "accept" and not (steps[i].s.tag and steps[i].s.tag:find("怪多", 1, true)) and C.IsOnQuest(q) then
         auto = i; break -- 任務還在日誌裡（例如做到一半）：不算漏掉，就是目前要做的；順路先做了後面的步驟也不會被跳過去。「怪多」的可跳過任務除外（順手打到也不拉回去）
+      elseif not done[i] and steps[i].s.pick and steps[i].s.fq and C.IsOnQuest(steps[i].s.fq) then
+        auto = i; break -- 撿任務物品：關聯任務還在日誌、東西還沒撿到，就是目前要做的；同站其他任務做完了也不算漏掉（手動略過照舊）
       elseif not done[i] and ((steps[i].s.t == "accept" and not steps[i].s.opt) or steps[i].s.t == "level" or steps[i].s.localTransfer or steps[i].s.classTransfer) then
         auto = i; break -- 必做的「接」和練等步驟：適用、還沒做就輪到它，不因為後面別的任務做過了就當成漏掉（那些可能是提前做副本前置時交掉的）
       elseif not done[i] then
@@ -2676,6 +2678,7 @@ local IMPERATIVE = { Go = true, Leave = true, Take = true, Fly = true, Ride = tr
   Hearth = true, Travel = true, Follow = true, Swim = true, Walk = true, Cross = true, Board = true, Exit = true, Get = true, Continue = true, Back = true, From = true, At = true, After = true, If = true }
 function E.Verb(s)
   if s.roam and s.t == "do" then return L["順"] end -- 順路任務：路上遇到就打
+  if s.pick then return L["撿"] end -- 撿任務物品：和「買」一樣看背包數量完成
   if not MG.uiZh and (s.t == "travel" or s.t == "goto") and IMPERATIVE[(E.Title(s) or ""):match("^(%a+)") or ""] then return "" end
   return VERB[s.t] or ""
 end
