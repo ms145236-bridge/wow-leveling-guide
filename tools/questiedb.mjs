@@ -100,6 +100,7 @@ export function openQuestieDB() {
     return names[type];
   };
   const localName = (type, id, locale) => {
+    if (locale === "zhTW" && LOCAL_FIX[type]?.[id]) return LOCAL_FIX[type][id];
     const t = loadType(type);
     const col = get(t.cols[locale], 1);
     const p = t.pos.get(id);
@@ -120,13 +121,25 @@ export function openQuestieDB() {
     return s ? cbor(b64(s)) : undefined;
   };
 
+  // QuestieDB 1.1.3（11/19）退步、用永恆客戶端資料核對過的欄位（證據見 ROUTE-AUDIT.md「QuestieDB 1.1.3 資料變動」）：
+  // 前置任一：客戶端 nextQuestId 兩條導引都指向該任務；種族：客戶端 raceMask 0x10（只有不死族）
+  const QUEST_FIX = {
+    935: { preSingle: [934, 7383] }, 5244: { preSingle: [5249, 5250] }, 6101: { preSingle: [6063, 94013] }, 95809: { preSingle: [95647] },
+    91862: { races: 16 }, 94440: { races: 16 }, 96204: { races: 16 },
+  };
+  // 繁中名退步：A-Me 01 沒有繁中名、Warlord Goretooth 是督軍（沿用 1.1.2 的名稱）
+  const LOCAL_FIX = { Npc: { 9623: "艾米 01", 9077: "督軍高圖斯" } };
   // 任務目標數量更正（QuestieDB 和遊戲不符）：任務 ID → [原字, 更正]，套在繁中 obj、英文 objEn、其他語系 l10nObj 三處
-  const OBJ_FIX = { 5212: [["10", "20"]], 96063: [["5", "8"], ["пять", "восемь"]] }; // 氣態黃金：遊戲內要 8 瓶
+  // 4145：QuestieDB 11/19 版繁中短文只寫兩種各 10；永恆版任務要求是四種各 5（https://nether.wowhead.com/forever/tooltip/quest/4145?locale=10）
+  const OBJ_FIX = { 5212: [["10", "20"]], 96063: [["5", "8"], ["пять", "восемь"]], 4145: [["殺掉10個血瓣花鞭笞者和10個血瓣花捕獸者", "殺掉5個血瓣花鞭笞者、5個血瓣花捕獸者、5個血瓣花掠奪者和5個血瓣花猛擊者"]] }; // 氣態黃金：遊戲內要 8 瓶
   const fixObj = (id, l) => OBJ_FIX[id] ? l.map((t) => typeof t === "string" ? OBJ_FIX[id].reduce((s, [a, b]) => s.split(a).join(b), t) : t) : l;
 
   const quest = (id) => {
     if (!row("Quest", id)) return null;
     const starts = field("Quest", id, 2), ends = field("Quest", id, 3);
+    return { ...questRow(id, starts, ends), ...QUEST_FIX[id] };
+  };
+  const questRow = (id, starts, ends) => {
     return {
       id,
       en: field("Quest", id, 1),
