@@ -14776,3 +14776,6 @@
 03-30到45級.md:1615｜說明｜術士地獄獵犬：書還沒撿到的，先從卡加斯飛塔倫米爾，往西南到希爾斯布萊德西南岸撿書，再照下一步飛幽暗城。｜Manáfago de brujo: si aún te falta el libro, vuela de Kargath a Molino Tarren, ve al suroeste hasta la costa suroeste de Trabalomas por el Escrito mohoso y luego vuela a Entrañas, como en el siguiente paso.
 03-30到45級.md:1616｜說明｜術士地獄獵犬：書和手稿都齊了，飛幽暗城交陰謀之書（從卡加斯或塔倫米爾起飛）。｜Manáfago de brujo: con el libro y el manuscrito, vuela a Entrañas para entregar El tomo de la Cábala (desde Kargath o Molino Tarren).
 03-30到45級.md:1619｜說明｜術士地獄獵犬：飛落錘鎮（剛在幽暗城交完書就從幽暗城起飛，還在卡加斯就從卡加斯起飛），往南過索拉丁大橋進濕地，到東邊龍喉骸骨守衛出沒的山區打導能魔棒。｜Manáfago de brujo: vuela a Sentencia (desde Entrañas si acabas de entregar ahí el libro, desde Kargath si sigues ahí), cruza al sur el Puente Thandol para entrar a Los Humedales y consigue las Varas de canalización en las montañas del este donde rondan los Guardahuesos Faucedraco.
+05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Acepta la misión en la meseta de los Vigías del Cielo de Mulgore si elegiste Zul'Farrak.
+05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Después de la sala de escarabajos de Theka, derrota al médico brujo Zum'rah en el cementerio y recoge su cabeza.
+05-副本.md:1168｜說明｜下次順訪高臺再交。｜Entrega la misión la próxima vez que pases por la meseta.

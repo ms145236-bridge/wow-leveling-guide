@@ -23,6 +23,7 @@ lua5.1 tools/tests/brd-prison-visit.lua Horde
 lua5.1 tools/tests/stockades.lua
 lua5.1 tools/tests/alcaz-prison.lua
 lua5.1 tools/tests/horde-dungeon-journal.lua
+lua5.1 tools/tests/zulfarrak-96775.lua
 lua5.1 tools/tests/wetlands-dungeon.lua
 lua5.1 tools/tests/dungeon-prep-room.lua
 lua5.1 tools/tests/dungeon-intake-followup.lua Alliance

@@ -288,7 +288,7 @@ local localRecovery = {}
 local anyG = {} -- 任一組（例如紮營入門指南任選專業）的每個任務 → 組的第一個 ID（略過鍵 a:第一個）
 for _, st in ipairs(R.stations) do
   for _, s in ipairs(st.steps) do
-    if s.when and (s.when.workMap or s.when.localVisit or (s.q and (R.quests[s.q] or {}).providedVisit) or (s.when.readyQuest and ((R.quests[s.q] or {}).deliveryItems or s.afterWork))) then
+    if s.when and (s.when.hubArea or s.when.workMap or s.when.localVisit or (s.q and (R.quests[s.q] or {}).providedVisit) or (s.when.readyQuest and ((R.quests[s.q] or {}).deliveryItems or s.afterWork))) then
       visitChecks[st.id] = visitChecks[st.id] or {}
       table.insert(visitChecks[st.id], s.when)
     end
@@ -360,7 +360,7 @@ local function inRoute(id, forAccept)
   local tight = (main or authored) and not E.PreRoom(main, pending, free)
   for _, a in ipairs(accQ[id] or {}) do
     local when = a.when
-    if when and when.lvMin and not when.canStart then -- 普通 NPC 已給的任務不看等級；明列條件的物品起始任務仍須符合。
+    if when and when.lvMin and not (when.canStart or when.hubArea) then -- 普通 NPC 已給的任務不看等級；明列條件的物品起始和順訪任務仍須符合。
       when = {}
       for k, v in pairs(a.when) do when[k] = v end
       when.lvMin = nil
