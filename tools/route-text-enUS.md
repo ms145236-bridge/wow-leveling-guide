@@ -14239,7 +14239,10 @@
 
 04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escort Tooga to Torta in Steamwheedle Port and wait for your quest log to show that it is ready to turn in.
 04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Return to Gadgetzan to turn in your quests, then pick up In Good Taste and Insect Part Analysis.
-06-路線外任務.md:658｜路線外理由｜聯盟任務，部落接不到。部落在黑澗深淵內直接向塞爾瑞德接「黑暗深淵中的邪惡」。｜Alliance quest; the Horde cannot take it. Horde players accept Blackfathom Villainy from Argent Guard Thaelrid inside Blackfathom Deeps.
+06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑暗深淵中的邪惡」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Only pick up this quest if you are already at the Craftsmen’s Terrace in Darnassus and Dawnwatcher Shaedlass offers it. You can pick up the Horde quest Blackfathom Villainy directly from Thaelrid inside Blackfathom Deeps without going to Darnassus.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Follow Tooga on foot.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜Tooga’s escort failed. Continue with the main route, or abandon the quest and find Tooga again if you want to retry.
 06-路線外任務.md:1731｜路線外理由｜若本來就安排厄運之槌北區貢品，且克羅卡斯確實提供這個任務，才選接。跨翼取物與回報請依遊戲內任務日誌。｜Only pick up this quest if you already plan to run Dire Maul North for tribute and Captain Kromcrush offers it. Follow the in-game quest log for collecting the item and turning it in across wings.
+06-路線外任務.md:1805｜路線外理由｜已交 8555 且實際接到後，依任務日誌到泰達希爾，在達納蘇斯城牆外找瑪法里恩的代理人。若沒有安排這段旅程，可略過。｜After turning in 8555 and actually accepting this quest, follow your quest log to Teldrassil and find Malfurion’s agent outside the walls of Darnassus. Skip this if you have no plans to make that trip.
+06-路線外任務.md:482｜路線外理由｜交完 4001 後，順路在奧格瑪向索爾接取並當場交件。此任務全程在奧格瑪完成。｜After turning in 4001, accept and turn in this quest with Thrall while you are already in Orgrimmar. The entire quest takes place in Orgrimmar.
+06-路線外任務.md:486｜路線外理由｜若已接任務且順訪荒蕪之地卡加斯，可向薇薇安·拉格雷回報。未接可略過，無須專程回幽暗城。｜If this quest is already in your log and you are passing through Kargath in the Badlands, turn it in to Vivian Lagrave. If you have not accepted it, you can skip it and avoid a separate trip back to Undercity.

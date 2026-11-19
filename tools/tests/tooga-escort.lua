@@ -90,7 +90,7 @@ expect(97530,"turnin",true)
 optional=true
 event("QUEST_LOG_UPDATE")
 expect(97530,"turnin",true)
-x,y=29.80,65.20
+x,y=31.80,74.15
 length=40
 event("QUEST_LOG_UPDATE")
 expect(97530,"turnin",true)
@@ -98,7 +98,7 @@ length=39
 x,y=66.99,22.36
 event("QUEST_LOG_UPDATE")
 assert(shown.na[acceptIndex])
-x,y=29.80,65.20
+x,y=31.80,74.15
 callbacks.OnUpdate(nil,.51)
 callbacks.OnUpdate(nil,.51)
 assert(ns.E.Applies(accept.s.when) and not shown.na[acceptIndex])

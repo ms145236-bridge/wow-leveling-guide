@@ -14783,7 +14783,10 @@
 
 04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escolta a Tooga hasta Torta en Puerto Bonvapor y espera a que el registro indique que ya puedes entregar la misión.
 04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Vuelve a Gadgetzan para entregar las misiones y recoge Buen gusto y Análisis de partes de insectos.
-06-路線外任務.md:658｜路線外理由｜聯盟任務，部落接不到。部落在黑澗深淵內直接向塞爾瑞德接「黑暗深淵中的邪惡」。｜Misión de la Alianza; la Horda no puede aceptarla. La Horda acepta «La vileza de Brazanegra» de Guardia Argenta Thaelrid dentro de Cavernas de Brazanegra.
+06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑暗深淵中的邪惡」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Acepta esta misión solo si ya estás en la zona de artesanos de Darnassus y Shaedlass Guardalbas te la ofrece. Puedes aceptar la misión de la Horda «La vileza de Brazanegra» directamente de Thaelrid dentro de la mazmorra sin ir a Darnassus.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Sigue a Tooga a pie.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜La escolta de Tooga ha fallado. Puedes seguir la ruta principal. Para reintentarlo, abandona la misión y vuelve a buscar a Tooga.
 06-路線外任務.md:1731｜路線外理由｜若本來就安排厄運之槌北區貢品，且克羅卡斯確實提供這個任務，才選接。跨翼取物與回報請依遊戲內任務日誌。｜Acepta la misión solo si ya tienes previsto hacer una ruta de tributo en el ala norte de La Masacre y el capitán Kromcrush te la ofrece. Consulta el registro de misiones del juego para recoger el objeto y entregar la misión entre las alas.
+06-路線外任務.md:1805｜路線外理由｜已交 8555 且實際接到後，依任務日誌到泰達希爾，在達納蘇斯城牆外找瑪法里恩的代理人。若沒有安排這段旅程，可略過。｜Si has entregado la misión 8555 y has aceptado esta, sigue el registro de misiones hasta Teldrassil y busca al agente de Malfurion fuera de las murallas de Darnassus. Puedes omitirla si no tienes previsto ese viaje.
+06-路線外任務.md:482｜路線外理由｜交完 4001 後，順路在奧格瑪向索爾接取並當場交件。此任務全程在奧格瑪完成。｜Tras entregar la misión 4001, acepta y entrega esta a Thrall cuando ya estés en Orgrimmar. Toda la misión se realiza en Orgrimmar.
+06-路線外任務.md:486｜路線外理由｜若已接任務且順訪荒蕪之地卡加斯，可向薇薇安·拉格雷回報。未接可略過，無須專程回幽暗城。｜Si ya tienes esta misión y pasas por Kargath en Tierras Inhóspitas, entrégasela a Vivian Lagrave. Si no la has aceptado, puedes omitirla sin volver expresamente a Entrañas.

@@ -14508,7 +14508,10 @@
 
 04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escortez Tooga jusqu’à Torta au port Gentepression et attendez que le journal indique que la quête peut être rendue.
 04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Retournez à Gadgetzan pour rendre les quêtes et prenez Bon goût et Analyse des parties d’insectes.
-06-路線外任務.md:658｜路線外理由｜聯盟任務，部落接不到。部落在黑澗深淵內直接向塞爾瑞德接「黑暗深淵中的邪惡」。｜Quête de l’Alliance ; la Horde ne peut pas la prendre. La Horde accepte « L'infamie de Brassenoire » auprès du Garde d’argent Thaelrid dans les profondeurs de Brassenoire.
+06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑暗深淵中的邪惡」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Accepte cette quête seulement si tu es déjà à la terrasse des Artisans de Darnassus et que le veilleur de l’aube Shaedlass te la propose. Tu peux accepter la quête de la Horde « L’infamie de Brassenoire » directement auprès de Thaelrid dans le donjon, sans passer par Darnassus.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Suis Tooga à pied.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜L’escorte de Tooga a échoué. Tu peux poursuivre la route principale. Pour réessayer, abandonne la quête et retrouve Tooga.
 06-路線外任務.md:1731｜路線外理由｜若本來就安排厄運之槌北區貢品，且克羅卡斯確實提供這個任務，才選接。跨翼取物與回報請依遊戲內任務日誌。｜Accepte cette quête seulement si tu as déjà prévu une tournée de tribut dans l’aile nord d’Hache-Tripes et que le capitaine Kromcrush te la propose. Suis le journal de quêtes en jeu pour récupérer l’objet et rendre la quête d’une aile à l’autre.
+06-路線外任務.md:1805｜路線外理由｜已交 8555 且實際接到後，依任務日誌到泰達希爾，在達納蘇斯城牆外找瑪法里恩的代理人。若沒有安排這段旅程，可略過。｜Si vous avez rendu la quête 8555 et accepté celle-ci, suivez le journal de quêtes jusqu’à Teldrassil et cherchez l’agent de Malfurion à l’extérieur des murs de Darnassus. Vous pouvez passer cette quête si ce déplacement n’est pas prévu.
+06-路線外任務.md:482｜路線外理由｜交完 4001 後，順路在奧格瑪向索爾接取並當場交件。此任務全程在奧格瑪完成。｜Après avoir rendu la quête 4001, acceptez et rendez celle-ci auprès de Thrall lors d’un passage à Orgrimmar. Toute la quête se déroule à Orgrimmar.
+06-路線外任務.md:486｜路線外理由｜若已接任務且順訪荒蕪之地卡加斯，可向薇薇安·拉格雷回報。未接可略過，無須專程回幽暗城。｜Si vous avez déjà cette quête et passez par Kargath dans les Terres ingrates, rendez-la à Vivian Lagrave. Sinon, vous pouvez la passer sans faire un détour par Fossoyeuse.

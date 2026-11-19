@@ -14618,7 +14618,10 @@
 
 04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escolte Tooga até Torta no Porto do Cartel e aguarde até que o registro indique que a missão pode ser entregue.
 04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Volte a Geringontzan para entregar as missões e aceite Bom Gosto e Análise de Partes de Insetos.
-06-路線外任務.md:658｜路線外理由｜聯盟任務，部落接不到。部落在黑澗深淵內直接向塞爾瑞德接「黑暗深淵中的邪惡」。｜Missão da Aliança; a Horda não pode aceitá-la. A Horda aceita "Vilania das Profundezas" com Guarda Argênteo Thaelrid dentro das Profundezas Negras.
+06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑暗深淵中的邪惡」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Só aceite esta missão se você já estiver no Terraço dos Artesãos em Darnassus e Vigilalva Saedlass oferecê-la. Você pode aceitar a missão da Horda “Vilania das Profundezas” diretamente com Thaelrid dentro da masmorra, sem ir a Darnassus.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Siga Tooga a pé.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜A escolta de Tooga falhou. Você pode continuar pela rota principal. Para tentar de novo, abandone a missão e procure Tooga outra vez.
 06-路線外任務.md:1731｜路線外理由｜若本來就安排厄運之槌北區貢品，且克羅卡斯確實提供這個任務，才選接。跨翼取物與回報請依遊戲內任務日誌。｜Só aceite esta missão se já estiver planejando uma incursão de tributo na ala norte do Gládio Cruel e o capitão Kebrapaw a oferecer. Siga o registro de missões do jogo para pegar o item e entregar a missão entre as alas.
+06-路線外任務.md:1805｜路線外理由｜已交 8555 且實際接到後，依任務日誌到泰達希爾，在達納蘇斯城牆外找瑪法里恩的代理人。若沒有安排這段旅程，可略過。｜Se você já entregou a missão 8555 e aceitou esta, siga o registro de missões até Teldrassil e procure o agente de Malfurion fora das muralhas de Darnassus. Você pode pular a missão se não tiver essa viagem planejada.
+06-路線外任務.md:482｜路線外理由｜交完 4001 後，順路在奧格瑪向索爾接取並當場交件。此任務全程在奧格瑪完成。｜Depois de entregar a missão 4001, aceite e entregue esta com Thrall quando já estiver em Orgrimmar. A missão inteira acontece em Orgrimmar.
+06-路線外任務.md:486｜路線外理由｜若已接任務且順訪荒蕪之地卡加斯，可向薇薇安·拉格雷回報。未接可略過，無須專程回幽暗城。｜Se você já aceitou esta missão e vai passar por Kargath, nas Terras Áridas, entregue-a a Vivian Lagrave. Se ainda não a aceitou, pode ignorá-la sem fazer uma viagem separada à Cidade Baixa.

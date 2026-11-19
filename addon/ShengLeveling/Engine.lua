@@ -1707,7 +1707,10 @@ function E.Locate(st)
     local leftLocalContact = pinned and st.dungeon and pinned.when and pinned.when.nearPoint and not E.Applies(pinned.when)
     local escortUnavailable = pinned and pinned.q and pinned.when and pinned.when.onQuestAny and pinned.when.notFailedQuest == pinned.q
       and not turned(pinned.q) and not E.Applies(pinned.when)
-    if (found and found == waitingRingReturn) or unavailableWingStep or leftLocalContact or escortUnavailable or unavailableHunt or unavailableVisit or waitingMaterials or (pinned and physical and (worldContact(pinned) or pinned.instanceMaterial)) then
+    -- 副本前置的接取：關了副本前置或這本選「不打」時先不跟，釘選保留，重新打開就回來（已接的照常放開）
+    local prepOff = pinned and pinned.t == "accept" and pinned.when and pinned.when.dungeonPrep and not C.IsOnQuest(pinned.q) and not turned(pinned.q)
+      and not E.Applies(pinned.when)
+    if prepOff or (found and found == waitingRingReturn) or unavailableWingStep or leftLocalContact or escortUnavailable or unavailableHunt or unavailableVisit or waitingMaterials or (pinned and physical and (worldContact(pinned) or pinned.instanceMaterial)) then
       -- Leave the saved pin in place and use the available work until it becomes actionable.
     elseif pinned and pinned.t == "turnin" and pinned.outsideObjective and isCleanedRingReturn(pinned.q) and not done[found] then
       -- An unfinished ring return keeps its pin when a prerequisite elsewhere becomes available.
@@ -2566,7 +2569,10 @@ function E.InstanceState(d, all)
         add(q)
       end
     end
-    for _, q in ipairs(x.dq or {}) do add(q) end
+    -- Preserve the full index for lookup, but omit objectives that take place outside this instance.
+    for _, q in ipairs(x.dq or {}) do
+      if not x.outsideIndexed or not inList(x.outsideIndexed, q) then add(q) end
+    end
   end
   if #steps == 0 then return nil end
   local done, na, num, group, inGroup = {}, {}, {}, {}, {}

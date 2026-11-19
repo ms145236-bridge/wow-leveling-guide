@@ -101,7 +101,7 @@ do
       active[q], log[i] = true, q
     end
     ns.C.LogQuestIDs = function() return log end
-    for i = 0, 4 do
+    for i = 0, 6 do -- up to 8 held: both sides of the 7-slot threshold
       if i > 0 then log[#log + 1] = 900000 + i end
       local state = E.Locate(a21)
       for _, q in ipairs({95646,98815}) do
