@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "991fea6a",
+  built = "d9af49a6",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -1458,7 +1458,7 @@ MG.Route = {
         {t="travel", ph="pre", opt=true, tag="可跳過", text="遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭船先到米奈希爾港，再循北線到南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 「赤脊山 第一次」。", key0="遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭往米奈希爾港的船在南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 「赤脊山 第一次」。"},
         {t="travel", text="前往 羅德隆廢墟 入口", map=1458, x=72.41, y=11.37},
         {t="accept", q=95250, ph="in", pickLv=15, recLv=21},
-        {t="accept", q=95195, ph="in", pickLv=15, recLv=22, opt=true, desc="右鍵背包裡的染血徽記接任務。", tag="掉落才接 可跳過", npc="物品 染血徽記", when={bag={item=268535, count=1}}},
+        {manualAccept=true, t="accept", q=95195, ph="in", pickLv=15, recLv=22, opt=true, desc="右鍵背包裡的染血徽記接任務。", tag="掉落才接 可跳過", npc="物品 染血徽記", when={bag={item=268535, count=1}, instanceID=2999}},
         {t="do", q=95195, ph="in", opt=true, tag="可跳過", hint="收集10個染血徽記並將它們交給暴風城的馬庫斯‧喬納森將軍。"},
         {t="accept", q=95189, ph="in", pickLv=15, recLv=22, desc="右鍵背包裡的羅德隆紋章接任務。", npc="物品 羅德隆紋章"},
         {t="accept", q=92415, ph="in", pickLv=15, recLv=22, desc="右鍵背包裡的 Blood-Stained Parchment 接任務。", npc="物品 Blood-Stained Parchment"},
@@ -3076,7 +3076,7 @@ MG.Route = {
         {t="do", q=17, ph="in", hint="收集12顆紫色蘑菇，把它們交給塞爾薩瑪的加克。", map=1418, x=37.3, y=13.3},
         {t="do", q=709, ph="in", hint="把雷烏納石板帶給迷失者塞爾杜林。", map=1418, x=39.3, y=18.8},
         {t="do", q=1360, ph="in", opt=true, tag="有隊伍再做 可跳過", hint="到奧達曼的北部大廳去找到克羅姆·粗臂的箱子，從裡面拿出他的寶貴財產，然後回到鐵爐堡把東西交給他。", map=1418, x=35.6, y=23.5},
-        {t="accept", q=2198, ph="in", pickLv=37, recLv=41, opt=true, desc="右鍵背包裡的破碎的項鏈接任務。項鏈任務線要回鐵爐堡兩次，後段在出本後第二趟進本做。", tag="掉落才接 可跳過", npc="物品 破碎的項鏈", when={bag={item=7666, count=1}}},
+        {manualAccept=true, t="accept", q=2198, ph="in", pickLv=37, recLv=41, opt=true, desc="右鍵背包裡的破碎的項鏈接任務。項鏈任務線要回鐵爐堡兩次，後段在出本後第二趟進本做。", tag="掉落才接 可跳過", npc="物品 破碎的項鏈", when={bag={item=7666, count=1}, instanceID=70}},
         {t="turnin", q=2398, ph="in", opt=true, tag="有隊伍再做 可跳過", npc="巴爾洛戈", tgt="巴爾洛戈"},
         {t="accept", q=2240, ph="in", pickLv=35, recLv=40, npc="巴爾洛戈", tgt="巴爾洛戈"},
         {t="do", q=1139, ph="in", opt=true, tag="可跳過 有隊伍再做", hint="找到意誌石板，把它們交給鐵爐堡的顧問貝爾格拉姆。"},
@@ -3450,7 +3450,7 @@ MG.Route = {
       steps = {
         {outsideObjective=true, t="accept", q=2864, ph="pre", pickLv=40, recLv=45, npc="克拉茲克", tgt="克拉茲克", map=1434, x=26.95, y=77.21},
         {outsideObjective=true, t="accept", q=3520, ph="pre", tag="副本前置鏈", npc="葉基亞", tgt="葉基亞", map=1446, x=67, y=22.4},
-        {outsideObjective=true, t="do", q=3520, ph="pre", desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41-43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", tag="副本前置鏈", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。"},
+        {outsideObjective=true, t="do", q=3520, ph="pre", desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", tag="副本前置鏈", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。"},
         {outsideObjective=true, t="turnin", q=3520, ph="pre", tag="副本前置鏈", npc="葉基亞", tgt="葉基亞", map=1446, x=67, y=22.4},
         {t="accept", q=3527, ph="pre", pickLv=40, recLv=47, opt=true, tag="可跳過", npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},
         {t="accept", q=2865, ph="pre", pickLv=40, recLv=45, opt=true, tag="可跳過", npc="特蘭雷克", tgt="特蘭雷克", map=1446, x=51.57, y=26.76},
@@ -3490,7 +3490,7 @@ MG.Route = {
         {t="accept", q=2870, opt=true, tag="能打高階怪再做 可跳過", npc="拉托尼庫斯·月矛", tgt="拉托尼庫斯·月矛", map=1444, x=30.38, y=46.17},
         {t="do", q=2870, opt=true, tag="能打高階怪再做 可跳過", hint="消滅沙爾紮魯，然後把神秘遺物交給羽月要塞的拉托尼庫斯·月矛。", map=1444, x=28.49, y=70.46},
         {t="note", text="恐怖之島海岸：對屍體用樹枝，再與靈魂交談。"},
-        {t="do", q=3520, desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41-43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。"},
+        {t="do", q=3520, desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。"},
         {t="turnin", q=4125, npc="物件 擱淺的小船", map=1444, x=45.44, y=64.96},
         {t="accept", q=4127, npc="物件 擱淺的小船", map=1444, x=45.44, y=64.96},
         {t="hearth", bind="羽月要塞", hm=1444},
@@ -3991,7 +3991,7 @@ MG.Route = {
         {t="accept", q=3446, ph="pre", pickLv=46, recLv=51, share=2, preText="石環", npc="瑪爾馮·瑞文斯克", tgt="瑪爾馮·瑞文斯克", map=1446, x=52.71, y=45.92},
         {t="accept", q=3447, ph="pre", pickLv=46, recLv=51, share=1, preText="石環", npc="瑪爾馮·瑞文斯克", tgt="瑪爾馮·瑞文斯克", map=1446, x=52.71, y=45.92},
         {outsideObjective=true, t="accept", q=3520, ph="pre", tag="副本前置鏈", npc="葉基亞", tgt="葉基亞", map=1446, x=67, y=22.4},
-        {outsideObjective=true, t="do", q=3520, ph="pre", desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41-43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", tag="副本前置鏈", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。"},
+        {outsideObjective=true, t="do", q=3520, ph="pre", desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", tag="副本前置鏈", hint="到菲拉斯捕獲3個尖叫者的靈魂，然後回到熱砂港的葉金亞那裡。"},
         {outsideObjective=true, t="turnin", q=3520, ph="pre", tag="副本前置鏈", npc="葉基亞", tgt="葉基亞", map=1446, x=67, y=22.4},
         {t="accept", q=3527, ph="pre", tag="副本前置鏈", npc="葉基亞", tgt="葉基亞", map=1446, x=67, y=22.4},
         {t="do", q=3527, ph="pre", tag="副本前置鏈", hint="將第一塊和第二塊摩沙魯石板交給塔納利斯的葉基亞。"},

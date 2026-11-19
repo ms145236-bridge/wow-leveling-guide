@@ -1402,5 +1402,5 @@
 
 05-副本.md:506｜說明｜在尾王旁的精華之泉放入精華。｜Legt die Essenz neben dem Endboss in den Essenzborn.
 06-路線外任務.md:1782｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Seit dem 16.11. gibt die wiederholte Abgabe keine Erfahrung mehr, nur noch Ruf. Die erste Abgabe 1707 gibt weiterhin Erfahrung.
-03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41–43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Tötet Talkreischer (Stufe 41–43) an der Küste der Insel des Schreckens in Feralas. Benutzt Yeh'kinyas Dornbusch auf jedem Kadaver und sprecht mit dem erscheinenden Geist, bis das Questlog drei Geister zählt.
+03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Tötet Talschreier an der Küste der Insel des Schreckens in Feralas. Benutzt Yeh'kinyas Dornbusch auf jedem Kadaver und sprecht mit dem erscheinenden Geist, bis das Questlog drei Geister zählt.
 03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Küste der Insel des Schreckens: Benutzt den Dornbusch am Kadaver und sprecht mit dem Geist.

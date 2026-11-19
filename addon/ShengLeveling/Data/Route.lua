@@ -2,7 +2,7 @@ if UnitFactionGroup("player") == "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route/*.md
 local _, MG = ...
 MG.Route = {
-  built = "b775db2d",
+  built = "7b245288",
   stations = {
     { id="01-1", start="Orc/Troll", name="試煉谷", short=nil, visit=nil, map=1411, lv={1, 6}, video="03:16", test=nil, alt=nil, when={race={"Orc", "Troll"}}, tips={{k="交通", text="跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克。", s={{"跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克"}}}, {k="取捨", text="失而復得的武器（Wayward Weapons）、懶惰的苦工（Lazy Peons）和火刃洞穴兩件可以併成兩趟。", s={{"失而復得的武器（Wayward Weapons）、懶惰的苦工（Lazy Peons）和火刃洞穴兩件可以併成兩趟"}}}, {k="取捨", text="先完成邪靈劣魔的小鬼任務，再找同一位祖雷薩接燃刃勳章（Burning Blade Medallion）。", s={{"先完成邪靈劣魔的小鬼任務，再找同一位祖雷薩接燃刃勳章（Burning Blade Medallion）", {class={"WARLOCK"}}}}}, {k="提醒", text="不足 6 級就沿路打雜斑野豬、工蠍或邪靈劣魔，再前往森金村。", s={{"不足 6 級就沿路打雜斑野豬、工蠍或邪靈劣魔，再前往森金村"}}}}, dungeon=nil, grind={{mob="雜斑野豬", lv={1, 2}, map=1411, x=44.49, y=65.1, note="密集／一般怪／多為中立，可逐隻開怪／試煉谷北側空地，1-2 級接續小試身手"}, {mob="工蠍", lv={3, 3}, map=1411, x=41.37, y=63.37, note="密集／一般怪／多為中立，可逐隻開怪／大獸穴西北方，做工蠍的尾巴時順打"}, {mob="邪靈劣魔", lv={3, 4}, map=1411, x=44.24, y=55.26, note="密集／一般怪／洞口易多拉，先打外圍／火刃洞穴一帶，離谷前補到 6 級"}}, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="拉克", map=1411, x=40.48, y=67.82}, {k="食物飲料", npc="茲拉克", map=1411, x=42.64, y=67.19}, {k="彈藥", npc="多克納", map=1411, x=42.59, y=67.34, c={"WARRIOR", "HUNTER", "ROGUE"}}}, danger={{text="火刃洞穴轉角會疊到劣魔刷新點。拿鎬前先清入口，留出退路。", map=1411, x=44.24, y=55.26}},
       steps = {
@@ -2701,7 +2701,7 @@ MG.Route = {
         {t="do", q=1109, ph="in", desc="位置：前往尾王前的蝙蝠洞，打穴居蝙蝠。", spot="前往尾王前的蝙蝠洞，打穴居蝙蝠。", hint="在尾王前一廳的穴居蝙蝠身上拾沼澤蝙蝠的糞便 ×1。"},
         {t="do", q=1102, ph="in", desc="位置：出蝙蝠洞上平台，到尾端小屋打卡爾加。", spot="出蝙蝠洞上平台，到尾端小屋打卡爾加。", hint="擊殺卡爾加·刺肋並拾心臟 ×1。"},
         {t="do", q=79360, ph="in", opt=true, desc="位置：尾端小屋的卡爾加。順序：打卡爾加時，同時拾取心臟與破爛筆記", spot="尾端小屋的卡爾加。", tag="可跳過", hint="擊殺卡爾加·刺肋並取得野豬人計畫的破爛筆記。", when={class={"SHAMAN"}}},
-        {t="accept", q=6522, ph="in", pickLv=28, recLv=36, share=2, opt=true, desc="卡爾加·刺肋掉小卷軸；右鍵接，留幽暗城。", tag="可跳過 掉落才接", npc="物品 小卷軸", when={bag={item=17008, count=1}}},
+        {manualAccept=true, t="accept", q=6522, ph="in", pickLv=28, recLv=36, share=2, opt=true, desc="卡爾加·刺肋掉小卷軸；右鍵接，留幽暗城。", tag="可跳過 掉落才接", npc="物品 小卷軸", when={bag={item=17008, count=1}, instanceID=47}},
         {t="accept", q=1144, ph="in", pickLv=23, recLv=30, share=0, desc="護送從尾王旁營帳開始；先清回入口的路再接。", npc="進口商威利克斯", tgt="進口商威利克斯"},
         {t="do", q=1144, ph="in", desc="先清回入口的路，再接威利克斯護送；保護他走回入口。位置：尾王旁營帳出發，跟威利克斯走回入口。", spot="尾王旁營帳出發，跟威利克斯走回入口。", hint="先清回程路，再護送進口商威利克斯往入口，抵達後在副本內找他交。"},
         {t="turnin", q=1144, ph="in", desc="護送從副本內 NPC 開始。", spot="副本入口處，護送終點", npc="進口商威利克斯", tgt="進口商威利克斯"},
@@ -3982,7 +3982,7 @@ MG.Route = {
         {t="turnin", q=7003, npc="索爾賓·范達瑟", tgt="索爾賓·范達瑟", map=1444, x=44.81, y=43.42},
         {t="do", q=7721, hint="打沿岸的海元素和巨型海元素，收水元素核心 ×10。", map=1444, x=44.97, y=46.29, more={{1444, 42.23, 38.35}}},
         {t="turnin", q=7721, npc="索爾賓·范達瑟", tgt="索爾賓·范達瑟", map=1444, x=44.81, y=43.42},
-        {t="do", q=3520, desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41-43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", hint="在費拉斯擊殺山谷尖嘯者等尖嘯者，用葉基亞的樹枝召出靈魂並交談，完成 ×3。"},
+        {t="do", q=3520, desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", hint="在費拉斯擊殺山谷尖嘯者等尖嘯者，用葉基亞的樹枝召出靈魂並交談，完成 ×3。", when={onQuestAny={3520}}},
         {t="travel", text="打完深痕谷或海岸，爐石回莫沙徹營地集中交。"},
         {t="turnin", q=2822, npc="杉多爾·迅蹄", tgt="杉多爾·迅蹄", map=1444, x=74.43, y=42.91},
         {t="turnin", q=2973, npc="克魯伊格·劈顱", tgt="克魯伊格·劈顱", map=1444, x=75.94, y=42.74},
@@ -4178,7 +4178,7 @@ MG.Route = {
         {t="accept", q=2865, ph="pre", pickLv=40, recLv=45, share=1, preText="無", npc="特蘭雷克", tgt="特蘭雷克", map=1446, x=51.57, y=26.76},
         {t="accept", q=3042, ph="pre", pickLv=40, recLv=45, share=1, preText="無", npc="特倫頓·輕錘", tgt="特倫頓·輕錘", map=1446, x=51.41, y=28.75},
         {outsideObjective=true, t="accept", q=3520, ph="pre", pickLv=40, recLv=44, share=2, preText="無", desc="先在熱砂港接，再跑菲拉斯；回熱砂港交後立即接 摩沙魯的預言。", npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},
-        {outsideObjective=true, t="do", q=3520, ph="pre", desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41-43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", hint="在菲拉斯擊殺尖嘯者，對屍體使用葉基亞的樹枝，再與出現的靈魂交談，共 3 個。"},
+        {outsideObjective=true, t="do", q=3520, ph="pre", desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", hint="在菲拉斯擊殺尖嘯者，對屍體使用葉基亞的樹枝，再與出現的靈魂交談，共 3 個。"},
         {outsideObjective=true, t="turnin", q=3520, ph="pre", npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},
         {t="accept", q=3527, ph="pre", pickLv=40, recLv=47, share=1, preText="尖嘯者的靈魂", npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},
         {t="accept", q=2770, ph="pre", pickLv=40, recLv=50, share=1, preText="無", opt=true, desc="隊伍至少一人帶加茲瑞拉之槌可確保能敲鑼。若先順跑辛特蘭，可在祖爾祭壇取聖槌，再到辛薩羅祭壇轉化。", tag="可跳過", npc="維茲爾·銅栓", tgt="維茲爾·銅栓", map=1441, x=78.14, y=77.12},
@@ -4548,7 +4548,7 @@ MG.Route = {
         {t="accept", q=3446, ph="pre", pickLv=46, recLv=51, share=2, preText="石環", npc="瑪爾馮·瑞文斯克", tgt="瑪爾馮·瑞文斯克", map=1446, x=52.71, y=45.92},
         {t="accept", q=3447, ph="pre", pickLv=46, recLv=51, share=1, preText="石環", npc="瑪爾馮·瑞文斯克", tgt="瑪爾馮·瑞文斯克", map=1446, x=52.71, y=45.92},
         {outsideObjective=true, t="accept", q=3520, ph="pre", pickLv=40, recLv=44, share=2, preText="無", desc="先在熱砂港接，再跑菲拉斯；回熱砂港交後立即接 摩沙魯的預言。", npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},
-        {outsideObjective=true, t="do", q=3520, ph="pre", desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41-43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", hint="在菲拉斯擊殺尖嘯者，對屍體使用葉基亞的樹枝，再與出現的靈魂交談，共 3 個。"},
+        {outsideObjective=true, t="do", q=3520, ph="pre", desc="在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。", hint="在菲拉斯擊殺尖嘯者，對屍體使用葉基亞的樹枝，再與出現的靈魂交談，共 3 個。"},
         {outsideObjective=true, t="turnin", q=3520, ph="pre", npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},
         {t="accept", q=3527, ph="pre", pickLv=40, recLv=47, share=1, preText="尖嘯者的靈魂", npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},
         {t="do", q=3527, ph="pre", desc="為神廟任務 神靈哈卡 留下後續 遠古之卵。", hint="擊殺殉教者塞卡與水占師維蕾薩，分別拾第一塊和第二塊摩沙魯石板，各 1。"},
