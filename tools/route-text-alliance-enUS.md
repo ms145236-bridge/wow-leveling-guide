@@ -1,6 +1,6 @@
 # 阿聖練等幫手 enUS 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **397** 列。
+- 只收聯盟路線獨有的說明列，共 **406** 列。
 
 檔名:行號｜類型｜中文原文｜enUS
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Right-click Nibbled-On Book in your bags to start the quest.
@@ -1466,3 +1466,12 @@
 03-30到45級.md:505｜說明｜把幽靈磁鐵箱放在白骨之地兩具巨型骸骨之間，退開一點，等半人馬鬼魂被吸過來再一隻一隻打，撿幽靈電漿 ×8。附近 38–40 級的怪先清掉或繞開，打不過就略過 6134。｜Place the ghost magnet crate between the two giant skeletons in the Valley of Bones, step back, and kill the centaur spirits one at a time as they are pulled in until you have 8 Ghost-o-plasm. Clear or avoid the level 38–40 mobs nearby; if you can't manage, skip 6134.
 03-30到45級.md:508｜說明｜從比布里的小屋往西北到艾瑟雷索塔交聖光節杖，再往北到海岸打滑刃納迦，最後沿北邊大路回尼耶爾前哨站一次交完。｜From Bibbly's hut, head northwest to Ethel Rethor to turn in the Sceptre of Light, go north to the coast for the Slitherblade naga, then take the northern road back to Nijel's Point and turn everything in at once.
 03-30到45級.md:1078｜說明｜還在石爪山脈：爐石可用就爐回藏寶海灣；爐石冷卻就從石爪峰飛棘齒城（經阿斯特蘭納、塔倫迪斯營地），再搭船到藏寶海灣。｜Still in Stonetalon Mountains: hearth to Booty Bay if your hearthstone is ready; otherwise fly from Stonetalon Peak to Ratchet (via Astranaar and Talrendis Point) and take the boat to Booty Bay.
+02-12到30級.md:116｜說明｜月溪鎮專程一趟；有接月溪鎮諜戰就同一趟撿補給品，趕路可跳過。｜Moonbrook is a dedicated trip. If you took Moonbrook Espionage, collect its supplies on the same trip. Skip it if you're in a hurry.
+02-12到30級.md:116｜說明｜月溪鎮專程一趟｜Moonbrook is a dedicated trip.
+02-12到30級.md:116｜說明｜有接月溪鎮諜戰就同一趟撿補給品，趕路可跳過。｜If you took Moonbrook Espionage, collect its supplies on the same trip. Skip it if you're in a hurry.
+02-12到30級.md:117｜說明｜和人民軍同一趟，在月溪鎮撿可疑的補給箱。｜Same trip as the People's Militia: pick up the suspicious supply crates in Moonbrook.
+02-12到30級.md:342｜說明｜第11站沒撿完的補給箱，追信差時在月溪鎮順手撿。｜Supply crates you didn't finish in Westfall: pick them up in Moonbrook while chasing the courier.
+05-副本.md:78｜說明｜任務文字寫劣質火藥，以物品為準：備妥 10 個粗製炸藥（物品 4358），可由工程學製作、交易或在拍賣場取得。｜The quest text names a different explosive; go by the item: have 10 of item 4358 (Rough Dynamite), made with Engineering, traded, or bought at the Auction House.
+05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜On your first Redridge visit, after you hand in the escort back in Westfall, pick up The Defias Brotherhood and Red Silk Bandanas at Sentinel Hill. On your last return to Stormwind, pick up Underground Assault, Oh Brother. . . and Collecting Memories, so you don't need a special trip before the dungeon.
+02-12到30級.md:116｜說明｜和月溪鎮諜戰同一趟，在月溪鎮打迪菲亞。｜Same trip as Moonbrook Espionage: kill the Defias in Moonbrook.
+02-12到30級.md:341｜說明｜西部荒野沒接到的，去追信差前在哨兵嶺補接。｜If you didn't take it in Westfall, pick it up at Sentinel Hill before chasing the courier.
