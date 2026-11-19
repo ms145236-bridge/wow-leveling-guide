@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "bf119923",
+  built = "5f92be8f",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -1570,9 +1570,9 @@ MG.Route = {
         {t="accept", q=92747, desc="西部荒野沒接到的，去追信差前在哨兵嶺補接。", npc="艾芭‧皎月", tgt="艾芭‧皎月", map=1436, x=52.48, y=52.97},
         {t="do", q=142, hint="追蹤西部荒野的迪菲亞信差，並將他身上攜帶的信件交給斯托曼。", map=1436, x=45.1, y=69.3},
         {t="do", q=92747, desc="「西部荒野」沒撿完的補給箱，追信差時在月溪鎮順手撿。", hint="從月溪鎮收集8個可疑的工業補給品。", map=1436, x=43.4, y=68.45},
-        {t="turnin", q=142, npc="格里安·斯托曼", tgt="格里安·斯托曼", map=1436, x=56.33, y=47.52},
         {t="turnin", q=92747, npc="艾芭‧皎月", tgt="艾芭‧皎月", map=1436, x=52.48, y=52.97},
         {t="accept", q=92748, npc="艾芭‧皎月", tgt="艾芭‧皎月", map=1436, x=52.48, y=52.97},
+        {t="turnin", q=142, npc="格里安·斯托曼", tgt="格里安·斯托曼", map=1436, x=56.33, y=47.52},
         {t="accept", q=155, npc="迪菲亞叛徒", tgt="迪菲亞叛徒", map=1436, x=55.68, y=47.5},
         {t="do", q=155, desc="跟著迪菲亞叛徒走到月溪鎮，路上有怪打他要幫忙；到了再回哨兵嶺。", tag="護送", hint="護送迪菲亞叛徒前往迪菲亞兄弟會的秘密藏身處。", map=1436, x=42.5, y=71.7},
         {t="turnin", q=155, npc="格里安·斯托曼", tgt="格里安·斯托曼", map=1436, x=56.33, y=47.52},

@@ -122,7 +122,7 @@ local localVisitFrom = {} -- 只在原定回訪點補做的任務，不將早站
 local questSt = {} -- 任務 → 有它步驟的站（主線站與副本，Build 時建）
 local anyQ = {} -- 任一組（s.any）裡的任務：沒接的不算站的進度（Build 時建）
 local dunQ = {} -- 副本站裡有步驟的任務（副本前置、副本任務；Build 時建）
-local mainKeyLast = {} -- 主線步驟鍵 → { at＝最後出現的站序, step }（Build 時建）
+local mainKeyLast = {} -- 主線步驟鍵 → { at＝最後出現的站序, pos＝站內第幾步, step }（Build 時建）
 local mainKeyAt = {} -- 主線步驟鍵 → 出現的 { 站序, 步驟 }（Build 時建）
 local mainTurnin = {} -- 任務 → 主線上第一個交它的站（Build 時建）
 local preTurnin = {} -- 排副本前置時：任務 → 這本前置裡交它的步驟
@@ -527,8 +527,8 @@ function E.Build()
       else
         st.index = #E.stations + 1
         E.stations[st.index] = st
-        for _, w in ipairs(st.list) do
-          mainKeyLast[w.key] = { at = st.index, step = w }
+        for pos, w in ipairs(st.list) do
+          mainKeyLast[w.key] = { at = st.index, pos = pos, step = w }
           mainKeyAt[w.key] = mainKeyAt[w.key] or {}
           table.insert(mainKeyAt[w.key], { st.index, w.s })
           if w.s.t == "turnin" and w.s.q and not mainTurnin[w.s.q] then mainTurnin[w.s.q] = st end
@@ -2570,9 +2570,14 @@ function E.DungeonPrompt()
           local m = at and mainKeyLast[key]
           if not m or m.at < at then return false end
           local s = m.step.s
-          if not E.Applies(s.when) or optOut(s) or (s.q and not raceOK(s.q)) or MG.db.skip[m.step.key] then return false end
-          if s.t == "accept" or not s.q or C.IsOnQuest(s.q) or turned(s.q) then return true end
-          return ahead("a:" .. s.q)
+          if optOut(s) or (s.q and not raceOK(s.q)) or MG.db.skip[m.step.key] then return false end
+          if s.t == "accept" or not s.q or C.IsOnQuest(s.q) or turned(s.q) then return E.Applies(s.when) end
+          -- 還沒接：要主線在這一步之前有會出現的接；接了以後「日誌裡有這個任務」的條件就成立
+          local a = mainKeyLast["a:" .. s.q]
+          if not (a and (a.at < m.at or (a.at == m.at and a.pos < m.pos)) and ahead("a:" .. s.q)) then return false end
+          local w = s.when
+          if w and w.onQuestAny then w = shallowCopy(w); w.onQuestAny = nil end
+          return E.Applies(w)
         end
         local left = 0
         for _, step in ipairs(d.list) do
