@@ -120,3 +120,19 @@ for _, lv in ipairs({45, 59}) do
   local city = assert(E.DungeonNext(zf, false)).step.s
   assert(city.t == "turnin" and city.q == 3042 and city.map == 1446)
 end
+-- Krol'dok (instance 3039): the outdoor rock gathering for 95183 is not an in-instance objective,
+-- while the real in-instance objectives still show.
+local kroldok = assert(E.DungeonByInstance(3039))
+UnitLevel = function() return 42 end
+wipe(journal)
+wipe(ready)
+ns.C.IsTurnedIn = function() return false end
+journal[95183] = true
+assert(not action(kroldok, 95183), "95183 rock gathering listed inside Krol'dok")
+local inside = E.DungeonNext(kroldok, true)
+assert(not (inside and inside.step and inside.step.s.q == 95183))
+journal[94968] = true
+local mugg = assert(action(kroldok, 94968), "Missing Krol'dok objective 94968")
+assert(mugg.t == "do" and mugg.ph == "in")
+assert(not action(kroldok, 95183))
+print("Horde Krol'dok keeps 95183 outdoors while 94968 stays an instance objective")

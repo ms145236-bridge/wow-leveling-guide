@@ -32,6 +32,7 @@ lua5.1 tools/tests/zulfarrak-96775.lua
 lua5.1 tools/tests/zulfarrak-alliance-handoffs.lua
 lua5.1 tools/tests/wetlands-dungeon.lua
 lua5.1 tools/tests/dungeon-prep-room.lua
+lua5.1 tools/tests/mainline-prep-detail.lua
 lua5.1 tools/tests/dungeon-intake-followup.lua Alliance
 lua5.1 tools/tests/dungeon-intake-followup.lua Horde
 lua5.1 tools/tests/wetlands-relic.lua
@@ -56,6 +57,7 @@ lua5.1 tools/tests/fp-step.lua
 lua5.1 tools/tests/record-timing.lua
 lua5.1 tools/tests/audit-1119.lua
 lua5.1 tools/tests/class-pickups.lua
+lua5.1 tools/tests/hunter-taming-catchup.lua
 lua5.1 tools/tests/questiedb-guard.lua
 lua5.1 tools/tests/replay/dungeon-entry-test.lua
 python3 -B tools/tests/replay/test_selection.py

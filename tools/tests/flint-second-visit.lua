@@ -27,13 +27,15 @@ local function row(st,qid,verb)
   for i,w in ipairs(st.list) do if w.s.q==qid and w.s.t==verb then return i,w end end
 end
 local city,early,late=E.byId["04-54"],E.byId["04-55"],E.byId["04-59"]
-local _,accept= row(city,q,"accept")
+-- 6183 moved to the A59 Stormwind visit (after this Chillwind visit), so 6184 has no route accept.
+assert(not row(city,q,"accept"))
 local _,original = row(early,q,"turnin")
 local i,handoff = row(late,q,"turnin")
-assert(accept.key=="a:6184" and original.key=="t:6184" and handoff.key==original.key)
+assert(original.key=="t:6184" and handoff.key==original.key)
 assert(late.list[i-1].s.q==5223 and late.list[i+1].s.q==6185)
 assert(row(late,6389,"turnin") > i and not row(late,q,"accept"))
-assert(not row(late,6182,"accept") and not row(late,6183,"accept"))
+local emma = row(late,5048,"turnin")
+assert(row(late,6182,"accept") > emma and row(late,6183,"accept") > row(late,6182,"accept") and row(late,6182,"accept") > i)
 assert(not original.s.when or not original.s.when.nearPoint)
 -- Isolate the moment just after Nathaniel's turn-in; all other rows keep their old keys.
 ns.db.station=late.id
@@ -65,7 +67,7 @@ for _,lv in ipairs({59,60}) do
 end
 map,x,y=1422,43.61,84.51; optional=false
 active[q],ready[q]=true,true
-ns.db.skip[accept.key]=true;assert(shown(),"a player who later picked up the quest can deliver it")
+ns.db.skip["a:6184"]=true;assert(shown(),"a player who later picked up the quest can deliver it")
 ns.db.skip[handoff.key]=true;assert(not shown());ns.db.skip[handoff.key]=nil
 ns.db.mark[handoff.key]=true;assert(not shown());ns.db.mark[handoff.key]=nil
 -- An earlier carried copy cannot restore the distant A55 waypoint after jumping.

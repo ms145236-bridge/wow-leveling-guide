@@ -1402,6 +1402,7 @@
 06-路線外任務.md:1782｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Seit dem 16.11. gibt die wiederholte Abgabe keine Erfahrung mehr, nur noch Ruf. Die erste Abgabe 1707 gibt weiterhin Erfahrung.
 03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Tötet Talschreier an der Küste der Insel des Schreckens in Feralas. Benutzt Yeh'kinyas Dornbusch auf jedem Kadaver und sprecht mit dem erscheinenden Geist, bis das Questlog drei Geister zählt.
 03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Küste der Insel des Schreckens: Benutzt den Dornbusch am Kadaver und sprecht mit dem Geist.
+05-副本.md:442｜說明｜要回燃燒平原找麥克斯韋爾元帥交；之後不去燃燒平原就別接。｜Abgabe bei Feldmarschall Maxwell in der Brennenden Steppe. Nicht annehmen, wenn du nicht mehr in die Brennende Steppe zurückkehrst.
 05-副本.md:477｜說明｜亡靈區三座通靈塔逐座搜，找到資料小箱後自己拾取。｜Durchsuche die drei Ziggurats im Untotenflügel nach der kleinen Truhe und nimm die Aufzeichnungen selbst heraus.
 05-副本.md:479｜說明｜沿斯坦索姆街道找幽靈居民，先用伊根的爆破槍，再對現身的靈魂用一次，共釋放十五個。｜Suche auf den Straßen von Stratholme nach geisterhaften Bürgern. Benutze Egans Blaster zuerst auf einen Bürger und dann auf die erschienene Seele. Befreie fünfzehn Seelen.
 05-副本.md:478｜說明｜亡靈區經屠宰場，擊敗瑞文戴爾男爵後自己拾取頭顱。｜Durchquere das Schlachthaus im Untotenflügel, besiege Baron Totenschwur und plündere seinen Kopf selbst.
