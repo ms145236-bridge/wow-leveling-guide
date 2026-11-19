@@ -14587,3 +14587,6 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Escolha primeiro a opção de diálogo de Sovik; depois a missão aparece.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Escolha primeiro a opção de diálogo de Sovik; depois a missão aparece.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta falhou: abandone a missão no registro e aceite-a de novo com o robô.
+05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Aceite a missão no Platô dos Vigilantes Celestes, em Mulgore, se Zul'Farrak for a masmorra selecionada.
+05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Depois da sala dos escaravelhos de Theka, derrote o médico-feiticeiro Zum'rah no cemitério e saqueie a cabeça dele.
+05-副本.md:1168｜說明｜下次順訪高臺再交。｜Entregue a missão na próxima vez que passar pelo platô.

@@ -14364,3 +14364,6 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Wählt bei Sovik zuerst die Gesprächsoption, dann erscheint die Quest.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Wählt bei Sovik zuerst die Gesprächsoption, dann erscheint die Quest.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.
+05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Nehmt die Quest auf dem Himmelswachtplateau in Mulgore an, wenn Zul'Farrak euer ausgewählter Dungeon ist.
+05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Besiegt hinter Thekas Skarabäenraum den Hexendoktor Zum'rah auf dem Friedhof und plündert seinen Kopf.
+05-副本.md:1168｜說明｜下次順訪高臺再交。｜Gebt die Quest beim nächsten Besuch auf dem Himmelswachtplateau ab.

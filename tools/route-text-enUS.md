@@ -14208,3 +14208,6 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Pick Sovik's gossip option first; then the quest appears.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Pick Sovik's gossip option first; then the quest appears.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escort failed: abandon the quest in your quest log, then accept it again from the robot.
+05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Pick this up on Skywatcher Plateau in Mulgore once Zul'Farrak is your selected dungeon.
+05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Past Theka's scarab room, defeat Witch Doctor Zum'rah in the graveyard and loot his head.
+05-副本.md:1168｜說明｜下次順訪高臺再交。｜Turn this in the next time you visit Skywatcher Plateau.

@@ -265,6 +265,18 @@ local function inInstance(instanceID)
   return not (issecretvalue and issecretvalue(id)) and id == instanceID
 end
 
+local function atHandoffArea(when)
+  if IsInInstance and IsInInstance() then return false end
+  local area = C.AreaName and C.AreaName(when.hubArea)
+  if area and C.ZoneTexts then
+    local sub, _, minimap = C.ZoneTexts()
+    if sub == area or minimap == area then return true end
+  end
+  local guid = UnitGUID and UnitGUID("npc")
+  if type(guid) ~= "string" or (issecretvalue and issecretvalue(guid)) then return false end
+  return tonumber(guid:match("^Creature%-[^-]*%-[^-]*%-[^-]*%-[^-]*%-(%d+)%-")) == when.hubNpc
+end
+
 function E.Applies(when, anyLv, keepReady) -- 往後預估不看等級；指定交接仍核對日誌
   if not when then return true end
   if when.notOrigin and originMatch(when.notOrigin) then return false end
@@ -277,6 +289,15 @@ function E.Applies(when, anyLv, keepReady) -- 往後預估不看等級；指定�
   if when.notRace and raceMatch(when.notRace) then return false end
   if when.coastal ~= nil and when.coastal ~= (MG.db.auberdineChoice == "coast") then return false end
   if when.dungeonPrep and (not MG.UI.Get("dPre") or not MG.UI.Get("optional") or MG.db.dNo[when.dungeonPrep]) then return false end
+  if when.hubArea then
+    if not atHandoffArea(when) then return false end
+    if when.dungeonPrep then
+      if MG.db.station ~= when.dungeonPrep then return false end
+      local free, used, visible = E.QuestLogSpace()
+      local pending = MG.PendingAccepts and MG.PendingAccepts(used, visible) or 0
+      if not E.PreRoom(E.byId[MG.db.dungeonFrom], pending, free) then return false end
+    end
+  end
   if when.readyQuest and (not anyLv or keepReady) then
     if not journalReady(when.readyQuest) then return false end
     local info = R.quests[when.readyQuest]
@@ -298,7 +319,8 @@ function E.Applies(when, anyLv, keepReady) -- 往後預估不看等級；指定�
     if not C.Position or (UnitOnTaxi and UnitOnTaxi("player")) then return false end
     local point = when.nearPoint
     local map, x, y = C.Position()
-    if map ~= point[1] or not x or not y or (x - point[2])^2 + (y - point[3])^2 > 0.8^2 then return false end
+    local radius = when.hubArea and when.dungeonPrep and 3 or 0.8
+    if map ~= point[1] or not x or not y or (x - point[2])^2 + (y - point[3])^2 > radius^2 then return false end
   end
   if when.manualPickup then
     if not MG.UI.Get("optional") then return false end
@@ -2278,12 +2300,17 @@ function E.DungeonDone(d)
   return any -- 沒有出本要交的任務（例如厄運之槌北區）就不算「已過」，交給等級判斷
 end
 
+-- 已接的順訪前置，離開發任地點後仍留在已備妥清單。
+local function listedDungeonPrep(s)
+  return (s.when and s.when.hubArea and C.IsOnQuest(s.q)) or E.Applies(s.when)
+end
+
 -- 前置任務：{ total, accepted }（接受或已交都算）
 function E.DungeonPre(d)
   local total, got, seen = 0, 0, {}
   for _, step in ipairs(d.list) do
     local s = step.s
-    if s.ph == "pre" and (s.t == "accept" or s.t == "need") and s.q and not seen[s.q] and E.Applies(s.when) then
+    if s.ph == "pre" and (s.t == "accept" or s.t == "need") and s.q and not seen[s.q] and listedDungeonPrep(s) then
       seen[s.q] = true
       total = total + 1
       if C.IsOnQuest(s.q) or turned(s.q) then got = got + 1 end
@@ -2522,7 +2549,7 @@ function E.DungeonTargets(d)
   local targets, seenT, pending, seenC = {}, {}, {}, {}
   for _, step in ipairs(d.list) do
     local s = step.s
-    if s.ph == "pre" and s.q and E.Applies(s.when) and raceOK(s.q) then
+    if s.ph == "pre" and s.q and listedDungeonPrep(s) and raceOK(s.q) then
       if preTurn[s.q] then
         if not seenC[s.q] then seenC[s.q] = true; pending[#pending + 1] = step end
       elseif (s.t == "accept" or s.t == "need") and not seenT[s.q] then
@@ -2626,6 +2653,10 @@ function E.DungeonNext(d, inside)
       end
     end
     if handoff then return { kind = "post", step = handoff } end
+    local turnin = first("post", function(s) return s.t == "turnin" and s.when and s.when.hubArea end)
+    if turnin then return { kind = "post", step = turnin } end
+    local pickup = first("pre", function(s) return s.t == "accept" and s.when and s.when.hubArea end)
+    if pickup then return { kind = "pre", step = pickup } end
   end
   local function materialInInstance()
     if not inside or not d.componentVisit then return end

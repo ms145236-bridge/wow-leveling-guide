@@ -14477,3 +14477,6 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Choisissez d'abord l'option de dialogue de Sovik ; la quête apparaît ensuite.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Choisissez d'abord l'option de dialogue de Sovik ; la quête apparaît ensuite.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.
+05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Acceptez la quête sur le plateau des Guetteurs du ciel à Mulgore si Zul'Farrak est le donjon sélectionné.
+05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Après la salle aux scarabées de Theka, tuez le sorcier-docteur Zum’rah au cimetière et récupérez sa tête.
+05-副本.md:1168｜說明｜下次順訪高臺再交。｜Rendez la quête lors de votre prochain passage sur le plateau.
