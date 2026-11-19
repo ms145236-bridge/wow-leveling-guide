@@ -73,10 +73,12 @@ export const localVersion = () => {
 // tools/questiedb-snapshot.tsv：Data 建置時用到的任務欄位（路線任務與它們的前置）。CI 的 questiedb-guard.lua、questiedb-drift.mjs 讀它
 export const SNAPSHOT_COLS = ["陣營", "任務ID", "最低等級", "等級", "種族", "職業", "前置全部", "前置任一", "互斥", "後續", "起點（NPC;物件;物品）", "起始物品掉落怪數", "目標（怪;物件;物品）", "目標文字"];
 export const SNAPSHOT_GONE = "（QuestieDB 沒有這個任務）";
-export const readSnapshot =(text) => new Map(text.split(/\r?\n/).filter((l) => l && !l.startsWith("#")).map((l) => [l.split("\t").slice(0, 2).join("\t"), l]));
+export const readSnapshot = (text) => new Map(text.split(/\r?\n/).filter((l) => l && !l.startsWith("#")).map((l) => [l.split("\t").slice(0, 2).join("\t"), l]));
 // 兩份快照裡同一筆任務的欄位變動（路線新增或拿掉的任務不列）
 export const diffSnapshot = (before, after) => [...after].filter(([k, row]) => before.has(k) && before.get(k) !== row).map(([k, row]) => {
   const a = before.get(k).split("\t"), b = row.split("\t");
+  if (b[2] === SNAPSHOT_GONE) return `- ${k.replace("\t", " ")}：QuestieDB 已沒有這個任務（原目標文字：${a[13] || "無"}）`;
+  if (a[2] === SNAPSHOT_GONE) return `- ${k.replace("\t", " ")}：QuestieDB 新增這個任務`;
   return `- ${k.replace("\t", " ")}：` + SNAPSHOT_COLS.map((c, i) => a[i] !== b[i] && `${c} ${a[i] || "（空）"} → ${b[i] || "（空）"}`).filter(Boolean).join("；");
 });
 

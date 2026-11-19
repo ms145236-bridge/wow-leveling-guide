@@ -94,6 +94,9 @@ for _, faction in ipairs({ "Horde", "Alliance" }) do
     end
   end
 end
+local unique, seen = {}, {}
+for _, p in ipairs(problems) do if not seen[p] then seen[p] = true; unique[#unique + 1] = p end end
+problems = unique
 table.sort(problems)
 for key in pairs(allow) do if not used[key] then print("例外已不需要：" .. key) end end
 if #problems > 0 then
