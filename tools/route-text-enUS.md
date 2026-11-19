@@ -14225,3 +14225,6 @@
 03-30到45級.md:1615｜說明｜術士地獄獵犬：書還沒撿到的，先從卡加斯飛塔倫米爾，往西南到希爾斯布萊德西南岸撿書，再照下一步飛幽暗城。｜Warlock felhunter: if you still lack the book, fly from Kargath to Tarren Mill, go southwest to the southwest coast of Hillsbrad for the Moldy Tome, then fly to Undercity as in the next step.
 03-30到45級.md:1616｜說明｜術士地獄獵犬：書和手稿都齊了，飛幽暗城交陰謀之書（從卡加斯或塔倫米爾起飛）。｜Warlock felhunter: with both the book and the manuscript, fly to Undercity to turn in Tome of the Cabal (from Kargath or Tarren Mill).
 03-30到45級.md:1619｜說明｜術士地獄獵犬：飛落錘鎮（剛在幽暗城交完書就從幽暗城起飛，還在卡加斯就從卡加斯起飛），往南過索拉丁大橋進濕地，到東邊龍喉骸骨守衛出沒的山區打導能魔棒。｜Warlock felhunter: fly to Hammerfall (from Undercity if you just turned in the book there, from Kargath if you are still there), go south across the Thandol Span into the Wetlands, and farm Rods of Channeling in the eastern hills where the Dragonmaw Bone Warders roam.
+05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Pick this up on Skywatcher Plateau in Mulgore once Zul'Farrak is your selected dungeon.
+05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Past Theka's scarab room, defeat Witch Doctor Zum'rah in the graveyard and loot his head.
+05-副本.md:1168｜說明｜下次順訪高臺再交。｜Turn this in the next time you visit Skywatcher Plateau.

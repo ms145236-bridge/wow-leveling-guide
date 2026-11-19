@@ -14381,3 +14381,6 @@
 03-30到45級.md:1615｜說明｜術士地獄獵犬：書還沒撿到的，先從卡加斯飛塔倫米爾，往西南到希爾斯布萊德西南岸撿書，再照下一步飛幽暗城。｜Hexenmeister-Teufelsjäger: Fehlt dir noch der Foliant, flieg von Kargath nach Tarrens Mühle, geh nach Südwesten an die Südwestküste von Hillsbrad zum Schimmligen Folianten und flieg dann wie im nächsten Schritt nach Unterstadt.
 03-30到45級.md:1616｜說明｜術士地獄獵犬：書和手稿都齊了，飛幽暗城交陰謀之書（從卡加斯或塔倫米爾起飛）。｜Hexenmeister-Teufelsjäger: Hast du Foliant und Manuskript, flieg nach Unterstadt und gib Foliant der Kabale ab (ab Kargath oder Tarrens Mühle).
 03-30到45級.md:1619｜說明｜術士地獄獵犬：飛落錘鎮（剛在幽暗城交完書就從幽暗城起飛，還在卡加斯就從卡加斯起飛），往南過索拉丁大橋進濕地，到東邊龍喉骸骨守衛出沒的山區打導能魔棒。｜Hexenmeister-Teufelsjäger: Flieg nach Hammerfall (ab Unterstadt, wenn du den Folianten gerade dort abgegeben hast, sonst ab Kargath), überquere im Süden den Thandolübergang ins Sumpfland und sammle in den östlichen Bergen, in denen die Knochenwärter der Dragonmaw umherstreifen, die Kanalisierungsruten.
+05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Nehmt die Quest auf dem Himmelswachtplateau in Mulgore an, wenn Zul'Farrak euer ausgewählter Dungeon ist.
+05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Besiegt hinter Thekas Skarabäenraum den Hexendoktor Zum'rah auf dem Friedhof und plündert seinen Kopf.
+05-副本.md:1168｜說明｜下次順訪高臺再交。｜Gebt die Quest beim nächsten Besuch auf dem Himmelswachtplateau ab.

@@ -1,3 +1,3 @@
 # 陣營	QuestieDB 版本	Data 資料版本（built）：由 tools/build.mjs 產生，勿手改
-Horde	1.1.3 toc-sha256:ace910659975	c868c31e
+Horde	1.1.3 toc-sha256:ace910659975	5cbfbd25
 Alliance	1.1.3 toc-sha256:ace910659975	243d02f5

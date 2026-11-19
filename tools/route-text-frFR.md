@@ -14494,3 +14494,6 @@
 03-30到45級.md:1615｜說明｜術士地獄獵犬：書還沒撿到的，先從卡加斯飛塔倫米爾，往西南到希爾斯布萊德西南岸撿書，再照下一步飛幽暗城。｜Chasseur corrompu du démoniste : s’il te manque encore le livre, vole de Kargath à Moulin-de-Tarren, va au sud-ouest jusqu’à la côte sud-ouest de Hautebrande pour le Tome moisi, puis vole à Fossoyeuse comme à l’étape suivante.
 03-30到45級.md:1616｜說明｜術士地獄獵犬：書和手稿都齊了，飛幽暗城交陰謀之書（從卡加斯或塔倫米爾起飛）。｜Chasseur corrompu du démoniste : avec le livre et le manuscrit, vole à Fossoyeuse pour rendre le Tome de la Cabale (depuis Kargath ou Moulin-de-Tarren).
 03-30到45級.md:1619｜說明｜術士地獄獵犬：飛落錘鎮（剛在幽暗城交完書就從幽暗城起飛，還在卡加斯就從卡加斯起飛），往南過索拉丁大橋進濕地，到東邊龍喉骸骨守衛出沒的山區打導能魔棒。｜Chasseur corrompu du démoniste : vole à Trépas-d’Orgrim (depuis Fossoyeuse si tu viens d’y rendre le livre, depuis Kargath si tu y es encore), traverse au sud le Viaduc de Thandol pour entrer dans les Paluns et récupère les Bâtons de canalisation dans les montagnes de l’est où rôdent les Gardiens Dragonmaw.
+05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Acceptez la quête sur le plateau des Guetteurs du ciel à Mulgore si Zul'Farrak est le donjon sélectionné.
+05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Après la salle aux scarabées de Theka, tuez le sorcier-docteur Zum’rah au cimetière et récupérez sa tête.
+05-副本.md:1168｜說明｜下次順訪高臺再交。｜Rendez la quête lors de votre prochain passage sur le plateau.

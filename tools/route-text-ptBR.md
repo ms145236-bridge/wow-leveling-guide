@@ -14604,3 +14604,6 @@
 03-30到45級.md:1615｜說明｜術士地獄獵犬：書還沒撿到的，先從卡加斯飛塔倫米爾，往西南到希爾斯布萊德西南岸撿書，再照下一步飛幽暗城。｜Caçador Vil do bruxo: se ainda falta o livro, voe de Karrath para Serraria Tarren, siga para sudoeste até a costa sudoeste de Eira dos Montes para pegar o Tomo Mofado e depois voe para a Cidade Baixa, como no próximo passo.
 03-30到45級.md:1616｜說明｜術士地獄獵犬：書和手稿都齊了，飛幽暗城交陰謀之書（從卡加斯或塔倫米爾起飛）。｜Caçador Vil do bruxo: com o livro e o manuscrito, voe para a Cidade Baixa para entregar o Tomo da Cabala (de Karrath ou de Serraria Tarren).
 03-30到45級.md:1619｜說明｜術士地獄獵犬：飛落錘鎮（剛在幽暗城交完書就從幽暗城起飛，還在卡加斯就從卡加斯起飛），往南過索拉丁大橋進濕地，到東邊龍喉骸骨守衛出沒的山區打導能魔棒。｜Caçador Vil do bruxo: voe para Ruína do Martelo (da Cidade Baixa se acabou de entregar o livro lá, de Karrath se ainda estiver lá), atravesse a Ponte Thandol ao sul para entrar no Pantanal e consiga os Bastões de Canalização nas montanhas a leste, onde circulam os Guarda-ossos Presa do Dragão.
+05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Aceite a missão no Platô dos Vigilantes Celestes, em Mulgore, se Zul'Farrak for a masmorra selecionada.
+05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Depois da sala dos escaravelhos de Theka, derrote o médico-feiticeiro Zum'rah no cemitério e saqueie a cabeça dele.
+05-副本.md:1168｜說明｜下次順訪高臺再交。｜Entregue a missão na próxima vez que passar pelo platô.
