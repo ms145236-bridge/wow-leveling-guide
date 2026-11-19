@@ -1395,3 +1395,9 @@
 03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.
 04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.
 04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.
+
+05-副本.md:385｜說明｜在階梯戰擊敗耐克魯姆，拾取徽章。｜Battez Nekrum sur les marches de la pyramide et ramassez son médaillon.
+
+05-副本.md:505｜說明｜擊敗尾王後，右鍵自己拾取的精華接任。｜Après avoir vaincu le dernier boss, faites un clic droit sur l’essence que vous avez ramassée pour lancer la quête.
+
+05-副本.md:506｜說明｜在尾王旁的精華之泉放入精華。｜Placez l’essence dans le réceptacle d’essence à côté du dernier boss.

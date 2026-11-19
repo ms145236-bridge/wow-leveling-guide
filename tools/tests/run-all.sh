@@ -25,6 +25,8 @@ lua5.1 tools/tests/alcaz-prison.lua
 lua5.1 tools/tests/horde-dungeon-journal.lua
 lua5.1 tools/tests/wetlands-dungeon.lua
 lua5.1 tools/tests/dungeon-prep-room.lua
+lua5.1 tools/tests/dungeon-intake-followup.lua Alliance
+lua5.1 tools/tests/dungeon-intake-followup.lua Horde
 lua5.1 tools/tests/wetlands-relic.lua
 lua5.1 tools/tests/gnomeregan.lua
 lua5.1 tools/tests/gnomeregan-ring-return.lua

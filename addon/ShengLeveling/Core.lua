@@ -297,7 +297,7 @@ for _, st in ipairs(R.stations) do
       for _, q in ipairs(s.any or { s.q }) do -- 任一組：每個成員都記同一筆（同一個可跳過、略過狀態）
         local l = accQ[q] or {}
         accQ[q] = l
-        l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or (s.when and s.when.dungeonPrep), at = not st.dungeon and st.id or nil }
+        l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or (s.when and s.when.dungeonPrep), at = not st.dungeon and st.id or nil, manual = s.manualAccept }
         if s.when and s.when.manualPickup then manualFrom[q] = { station = st.id, step = s } end
         if s.any then anyG[q] = s.any[1] end
       end
@@ -365,7 +365,7 @@ local function inRoute(id, forAccept)
       for k, v in pairs(a.when) do when[k] = v end
       when.lvMin = nil
     end
-    if E.Applies(when) and (not a.opt or optional) then
+    if not a.manual and E.Applies(when) and (not a.opt or optional) then
       if a.d then
         if not MG.db.dNo[a.d] and not tight then return true, nextSlot end
       elseif not tight or not main or (E.byId[a.at] and E.byId[a.at].index <= main.index) then

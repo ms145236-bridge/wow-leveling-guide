@@ -1395,3 +1395,9 @@
 03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.
 04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.
 04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.
+
+05-副本.md:385｜說明｜在階梯戰擊敗耐克魯姆，拾取徽章。｜Besiegt Nekrum auf der Pyramidentreppe und plündert sein Medaillon.
+
+05-副本.md:505｜說明｜擊敗尾王後，右鍵自己拾取的精華接任。｜Besiegt den Endboss und rechtsklickt auf die selbst erbeutete Essenz, um die Quest anzunehmen.
+
+05-副本.md:506｜說明｜在尾王旁的精華之泉放入精華。｜Legt die Essenz neben dem Endboss in den Essenzborn.
