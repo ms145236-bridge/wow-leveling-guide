@@ -40,6 +40,7 @@ MG.Locales.ptBR = {
   ["行"] = "Ir",
   ["需"] = "Requer",
   ["買"] = "Comprar",
+  ["撿"] = "Pegar",
   ["打"] = "Matar",
   ["打 "] = "Matar ",
   ["去"] = "Ir",
