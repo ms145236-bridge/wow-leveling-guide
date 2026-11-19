@@ -163,7 +163,8 @@ export function openQuestieDB() {
   const LOCAL_FIX = { Npc: { 9623: "艾米 01", 9077: "督軍高圖斯" } };
   // 任務目標數量更正（QuestieDB 和遊戲不符）：任務 ID → [原字, 更正]，套在繁中 obj、英文 objEn、其他語系 l10nObj 三處
   // 4145：QuestieDB 11/19 版繁中短文只寫兩種各 10；永恆版任務要求是四種各 5（https://nether.wowhead.com/forever/tooltip/quest/4145?locale=10）
-  const OBJ_FIX = { 545: [["12 Elemental Slaves", "8 Elemental Slaves"]], 5212: [["10", "20"]], 5214: [["弗拉斯·希亞比", "艾茲拉‧格里姆"], ["希亞比的煙草", "格里姆的特級煙草"]], 96063: [["5", "8"], ["пять", "восемь"]], 4145: [["殺掉10個血瓣花鞭笞者和10個血瓣花捕獸者", "殺掉5個血瓣花鞭笞者、5個血瓣花捕獸者、5個血瓣花掠奪者和5個血瓣花猛擊者"]] }; // 氣態黃金：遊戲內要 8 瓶
+  // 97284：QuestieDB 繁中只寫「殺死燃刃獸人」；永恆版要四種各 4（https://urgametips.com/wow-forever/quest-guides/vahlarriels-vengeance-burning-blade-thunder-axe/）。1459：「7瓶」的量詞建置數不到，改「7份」
+  const OBJ_FIX = { 97284: [["殺死燃刃獸人", "殺死4個火刃占兆師、4個燃刃劫奪者、4個燃刃老兵和4個燃刃魔僕"]], 1459: [["收集7瓶", "收集7份"]], 545: [["12 Elemental Slaves", "8 Elemental Slaves"]], 5212: [["10", "20"]], 5214: [["弗拉斯·希亞比", "艾茲拉‧格里姆"], ["希亞比的煙草", "格里姆的特級煙草"]], 96063: [["5", "8"], ["пять", "восемь"]], 4145: [["殺掉10個血瓣花鞭笞者和10個血瓣花捕獸者", "殺掉5個血瓣花鞭笞者、5個血瓣花捕獸者、5個血瓣花掠奪者和5個血瓣花猛擊者"]] }; // 氣態黃金：遊戲內要 8 瓶
   const fixObj = (id, l) => OBJ_FIX[id] ? l.map((t) => typeof t === "string" ? OBJ_FIX[id].reduce((s, [a, b]) => s.split(a).join(b), t) : t) : l;
 
   // The Forever client lists the starter item, minimum level and Un'Goro zone for 87494.
