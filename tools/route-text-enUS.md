@@ -14248,3 +14248,5 @@
 06-路線外任務.md:486｜路線外理由｜若已接任務且順訪荒蕪之地卡加斯，可向薇薇安·拉格雷回報。未接可略過，無須專程回幽暗城。｜If this quest is already in your log and you are passing through Kargath in the Badlands, turn it in to Vivian Lagrave. If you have not accepted it, you can skip it and avoid a separate trip back to Undercity.
 04-45到60級.md:617｜說明｜先接，留待安戈洛環形山 馬紹爾營地安戈洛打暴掠龍。｜Pick up now, then kill Ravasaurs in Un'Goro.
 04-45到60級.md:1005｜說明｜奧格瑪接，並在安戈洛環形山 馬紹爾營地打齊白色暴掠龍爪。｜Pick up in Orgrimmar, then collect the White Ravasaur Claws at Marshal's Refuge in Un'Goro Crater.
+01-第一段-1到12級.md:884｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Windfield wanders two or three yards north through the orchard. If she isn't here, look north.
+01-第一段-1到12級.md:886｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Windfield wanders two or three yards north through the orchard. If she isn't here, look north.

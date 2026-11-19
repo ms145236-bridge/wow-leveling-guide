@@ -14404,3 +14404,5 @@
 06-路線外任務.md:486｜路線外理由｜若已接任務且順訪荒蕪之地卡加斯，可向薇薇安·拉格雷回報。未接可略過，無須專程回幽暗城。｜Wenn du diese Quest bereits hast und ohnehin nach Kargath im Ödland kommst, gib sie bei Vivian Lagrave ab. Ohne die Quest kannst du sie auslassen und musst nicht eigens nach Unterstadt zurückkehren.
 04-45到60級.md:617｜說明｜先接，留待安戈洛環形山 馬紹爾營地安戈洛打暴掠龍。｜Nimm sie jetzt an und heb sie für die Ravasaurier im Krater von Un'Goro auf.
 04-45到60級.md:1005｜說明｜奧格瑪接，並在安戈洛環形山 馬紹爾營地打齊白色暴掠龍爪。｜In Orgrimmar annehmen und die weißen Ravasaurierklauen bei Marshals Zuflucht im Krater von Un'Goro sammeln.
+01-第一段-1到12級.md:884｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Windfield läuft im Obstgarten zwei, drei Schritte nach Norden. Ist sie nicht hier, sucht im Norden.
+01-第一段-1到12級.md:886｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Windfield läuft im Obstgarten zwei, drei Schritte nach Norden. Ist sie nicht hier, sucht im Norden.

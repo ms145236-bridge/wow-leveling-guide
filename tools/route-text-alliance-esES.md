@@ -1454,6 +1454,12 @@
 04-45到60級.md:259｜說明｜從血法師營地接回北側大路，往北出詛咒之地進悲傷沼澤，再沿大路往西到沼澤西邊。｜Desde el campamento de los magos de sangre, vuelve al camino del norte, sal de las Tierras Devastadas hacia el norte al Pantano de las Penas y sigue el camino hacia el oeste hasta el lado oeste del pantano.
 04-45到60級.md:295｜說明｜交完 349 就會召出莫克。猩猩牙不夠或擋不住猩猩波，就略過這步和下面交 348，不影響後面。｜Al entregar 349 aparece Mokk. Si te faltan colmillos de gorila o no aguantas las oleadas de gorilas, omite este paso y la entrega de 348 de abajo; nada posterior depende de ello.
 04-45到60級.md:296｜說明｜還不到 49 級，就留在迷霧谷繼續打猩猩補到 49。｜Si aún no eres nivel 49, sigue matando gorilas en el Valle Nebuloso hasta el 49.
+01-第一段-1到12級.md:949｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montaraz Kadrell va y viene por el camino de Thelsamar (32.6, 49.7 a 36.8, 42.0). Si no está aquí, sigue el camino.
+01-第一段-1到12級.md:950｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montaraz Kadrell va y viene por el camino de Thelsamar (32.6, 49.7 a 36.8, 42.0). Si no está aquí, sigue el camino.
+01-第一段-1到12級.md:960｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montaraz Kadrell va y viene por el camino de Thelsamar (32.6, 49.7 a 36.8, 42.0). Si no está aquí, sigue el camino.
+02-12到30級.md:150｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montaraz Kadrell va y viene por el camino de Thelsamar (32.6, 49.7 a 36.8, 42.0). Si no está aquí, sigue el camino.
+01-第一段-1到12級.md:765｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campovento se mueve un par de pasos al norte por el huerto. Si no está aquí, búscala al norte.
+01-第一段-1到12級.md:767｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campovento se mueve un par de pasos al norte por el huerto. Si no está aquí, búscala al norte.
 03-30到45級.md:447｜說明｜從閃光平原沿大路往南進塔納利斯，到加基森開飛行點。｜Desde El Desierto de Sal, sigue el camino al sur hasta Tanaris y abre el punto de vuelo de Gadgetzan.
 03-30到45級.md:460｜說明｜加基森第一次來還飛不到石爪峰：從加基森往北走回千針石林的閃光平原，搭大升降梯上貧瘠之地，繞開陶拉祖營地往東到棘齒城，再飛石爪峰。｜Si es tu primera visita a Gadgetzan y aún no puedes volar al Pico del Espolón: vuelve al norte a El Desierto de Sal en Las Mil Agujas, sube al gran elevador hasta Los Baldíos, rodea el Campamento Taurajo hacia el este hasta Trinquete y vuela al Pico del Espolón.
 03-30到45級.md:499｜說明｜每頭牽到斯米德身邊，等他說要檢查，再右鍵那頭馴服的科多獸，計數加一才去牽下一頭。往返時順手撿 5501 的科多獸骨，留意撿骨引出的科多幽靈。｜Lleva cada kodo hasta Smeed, espera a que pida revisarlo y haz clic derecho en el kodo domado; ve por el siguiente solo cuando suba el contador. Recoge de paso los huesos de kodo de 5501 y cuidado con las apariciones de kodo que pueden salir al recogerlos.

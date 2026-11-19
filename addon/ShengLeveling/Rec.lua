@@ -1,4 +1,5 @@
--- 遊戲內記錄：任務接交 NPC 與座標、目標進度位置、真實經驗表、飛行點、爐石、副本、事件參數。
+-- 遊戲內記錄：任務接交 NPC 與座標、目標進度位置、真實經驗表、飛行點、爐石、副本、事件參數；
+-- NPC 列出的可接任務、路線持物條件物品的掉落、搭船／飛艇的上下船點與換地圖前後位置。
 -- 存 MetroGuideRecDB（帳號共用）。每筆一行：鍵欄位 \t@\t 時間 \t 等級 \t 其他欄位。同鍵只記一次；最多 MAX 筆，滿了丟最舊的。
 -- 不讀秘密值：UnitGUID/UnitName 是秘密值就整欄留空。離線用 tools/import-rec.mjs 讀。
 local ADDON, MG = ...
@@ -170,9 +171,128 @@ end
 
 local function xp() add("xp", { UnitLevel("player"), UnitXPMax("player") }) end
 
+-- NPC 這次列出哪些可接任務（沒列也記一次）：前置、種族職業限制是不是真的。讀到秘密值就整筆不記
+local function offers(event)
+  local who = npc()
+  local list = {}
+  if event == "GOSSIP_SHOW" then
+    local G = C_GossipInfo
+    for _, q in ipairs(G and G.GetAvailableQuests and G.GetAvailableQuests() or {}) do
+      if secret(q.questID) then return end
+      list[#list + 1] = q.questID
+    end
+    table.sort(list)
+  else -- QUEST_GREETING 只給標題
+    for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do
+      local title = GetAvailableTitle(i)
+      if title == nil or secret(title) then return end
+      list[#list + 1] = field(title)
+    end
+  end
+  local map, x, y = pos()
+  add("offer", { who.id ~= "" and who.id or who.name, table.concat(list, ";") }, who.name, who.kind, map, x, y)
+end
+
+-- 路線用「背包有某物品」判斷的物品：從屍體撿到、第一次進背包時，記是哪種怪（怪物 ID）、這種怪撿到第幾隻才拿到、在哪裡。
+-- 來源認撿屍視窗的 GetLootSourceInfo（屍體 GUID），不認目標；同一具屍體重開只算一次。
+-- 讀不到來源就記「來源未確認」（怪物 ID、次數留空）。撿屍視窗裡沒真的拿走這件、或記錄關過，就不記
+local watch, had, kills, base, corpses, slots, taken = nil, nil, {}, {}, {}, nil, {}
+local function watchItems()
+  if watch then return watch end
+  watch = {}
+  for _, list in ipairs({ MG.Route.stations or {}, MG.Route.dungeons or {} }) do
+    for _, st in ipairs(list) do
+      for _, s in ipairs(st.steps or {}) do
+        local bag = s.when and s.when.bag
+        if bag and bag.item then watch[bag.item] = s.q or watch[bag.item] or "" end
+      end
+    end
+  end
+  return watch
+end
+local function lootReset()
+  had, slots = nil, nil
+  wipe(kills); wipe(base); wipe(corpses); wipe(taken)
+end
+local function bagBase()
+  had = {}
+  for id in pairs(watchItems()) do had[id] = MG.E.ItemCount(id) end
+end
+-- 每具屍體第一次打開時就定好它是這種怪上次掉落之後的第幾隻（corpses[GUID]），之後分幾次拿也用同一個數。
+-- 一格只認得出一具屍體才算來源；有兩具以上（就算同種怪）、或任何一個來源讀不到／是秘密值，就當來源未確認
+local function looted()
+  slots = {}
+  for i = 1, (GetNumLootItems and GetNumLootItems() or 0) do
+    local link = GetLootSlotLink and GetLootSlotLink(i)
+    local id = link and not secret(link) and tonumber(link:match("item:(%d+)"))
+    local src = GetLootSourceInfo and { GetLootSourceInfo(i) } or {} -- 回傳 GUID, 數量, GUID, 數量…：整串都要留
+    local one, known = nil, #src > 0
+    for k = 1, #src, 2 do
+      local guid = src[k]
+      local mob = guid ~= nil and not secret(guid) and tostring(guid):match("^Creature%-[^-]*%-[^-]*%-[^-]*%-[^-]*%-(%d+)")
+      if not mob then known = false
+      else
+        if not corpses[guid] then
+          kills[mob] = (kills[mob] or 0) + 1
+          corpses[guid] = { mob = mob, serial = kills[mob], n = kills[mob] - (base[mob] or 0) }
+        end
+        if one then known = false end
+        one = guid
+      end
+    end
+    slots[i] = { id = id, corpse = known and one and corpses[one] or nil }
+  end
+end
+local function slotCleared(i)
+  local s = slots and slots[i]
+  if s and s.id and watchItems()[s.id] then taken[s.id] = { corpse = s.corpse, at = GetTime() } end
+end
+local function bagItems()
+  if not had then bagBase(); return end
+  for id, q in pairs(watchItems()) do
+    local n = MG.E.ItemCount(id)
+    local t = taken[id]
+    if n > had[id] and had[id] == 0 and t and GetTime() - t.at < 10 then
+      local c, map, x, y = t.corpse, pos()
+      add("loot", { id, c and c.mob or "", c and c.n or "", map, x ~= "" and math.floor(tonumber(x)) or "", y ~= "" and math.floor(tonumber(y)) or "" }, q, x, y)
+      if c then base[c.mob] = math.max(base[c.mob] or 0, c.serial) end
+    end
+    if n > 0 then taken[id] = nil end
+    had[id] = n
+  end
+end
+
+-- 船、飛艇、電梯：自己沒在走、也不在鳥上，位置卻在變＝被載著走。記上船前站的點與停下來的點；換地圖時記讀取畫面前後的位置。
+-- 航行中跳下（掉落）就作廢這一趟；航行中自己走動過，停下的點只算候選（可能是走上岸後停下）
+local last, anchor, carried, ride, from = nil, nil, 0, nil, nil
+local function sample()
+  local map, x, y = C.Position()
+  if not x then last = nil; return end
+  local d = last and last.map == map and math.sqrt((x - last.x) ^ 2 + (y - last.y) ^ 2)
+  local moving, falling = IsPlayerMoving and IsPlayerMoving(), IsFalling and IsFalling()
+  local still = not moving and not falling and not (UnitOnTaxi and UnitOnTaxi("player"))
+  if falling and ride then ride = nil end
+  if d and d > 0.15 and still then
+    carried = carried + 1
+    if carried == 2 and not ride and anchor then
+      ride = { walked = false }
+      add("board", { anchor.map, math.floor(anchor.x), math.floor(anchor.y) }, num(anchor.x), num(anchor.y))
+    end
+  else
+    carried = 0
+    if ride and moving then ride.walked = true end
+    if ride and d and d < 0.02 and still then
+      add("stop", { map, math.floor(x), math.floor(y) }, num(x), num(y), ride.walked and 1 or 0)
+      ride = nil
+    end
+    anchor = { map = map, x = x, y = y }
+  end
+  last = { map = map, x = x, y = y }
+end
+
 local SHAPE = { QUEST_ACCEPTED = true, QUEST_TURNED_IN = true, QUEST_DETAIL = true, QUEST_COMPLETE = true, QUEST_REMOVED = true, PLAYER_LEVEL_UP = true, TAXIMAP_OPENED = true, HEARTHSTONE_BOUND = true }
 local f = CreateFrame("Frame")
-for _, e in ipairs({ "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_TURNED_IN", "QUEST_DETAIL", "QUEST_COMPLETE", "QUEST_REMOVED", "QUEST_LOG_UPDATE", "PLAYER_XP_UPDATE", "PLAYER_LEVEL_UP", "TAXIMAP_OPENED", "HEARTHSTONE_BOUND", "ZONE_CHANGED_NEW_AREA", "GROUP_ROSTER_UPDATE", "QUEST_WATCH_UPDATE", "UI_INFO_MESSAGE" }) do
+for _, e in ipairs({ "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_TURNED_IN", "QUEST_DETAIL", "QUEST_COMPLETE", "QUEST_REMOVED", "QUEST_LOG_UPDATE", "PLAYER_XP_UPDATE", "PLAYER_LEVEL_UP", "TAXIMAP_OPENED", "HEARTHSTONE_BOUND", "ZONE_CHANGED_NEW_AREA", "GROUP_ROSTER_UPDATE", "QUEST_WATCH_UPDATE", "UI_INFO_MESSAGE", "GOSSIP_SHOW", "QUEST_GREETING", "LOOT_OPENED", "LOOT_SLOT_CLEARED", "LOOT_CLOSED", "BAG_UPDATE_DELAYED", "LOADING_SCREEN_ENABLED" }) do
   pcall(f.RegisterEvent, f, e)
 end
 f:SetScript("OnEvent", function(_, event, ...)
@@ -184,8 +304,14 @@ f:SetScript("OnEvent", function(_, event, ...)
       local s = line:find(SEP, 1, true)
       if s then seen[line:sub(1, s - 1)] = true end
     end
+    if C_Timer and C_Timer.NewTicker then
+      C_Timer.NewTicker(2, function()
+        if on() then MG.try("記錄", sample) elseif had then lootReset(); ride = nil end -- 從設定關掉時不一定有事件：在這裡清掉
+      end)
+    end
   end
-  if not on() then return end
+  if not on() then lootReset(); ride = nil; return end -- 關著時背包、船上的事都不知道：重開時重新對齊
+  if not had then bagBase() end
   if event == "GROUP_ROSTER_UPDATE" then
     if IsInGroup and IsInGroup() then
       for _, start in pairs(starts) do start.grouped = true end
@@ -230,7 +356,22 @@ f:SetScript("OnEvent", function(_, event, ...)
     elseif event == "PLAYER_XP_UPDATE" or event == "PLAYER_LEVEL_UP" then xp()
     elseif event == "TAXIMAP_OPENED" then taxi()
     elseif event == "HEARTHSTONE_BOUND" then bind("bound")
-    elseif event == "PLAYER_ENTERING_WORLD" then xp(); bind("login"); instance()
+    elseif event == "GOSSIP_SHOW" or event == "QUEST_GREETING" then offers(event)
+    elseif event == "LOOT_OPENED" then looted()
+    elseif event == "LOOT_SLOT_CLEARED" then slotCleared(...)
+    elseif event == "LOOT_CLOSED" then slots = nil
+    elseif event == "BAG_UPDATE_DELAYED" then bagItems()
+    elseif event == "LOADING_SCREEN_ENABLED" then
+      local map, x, y = C.Position()
+      from = x and { map = map, x = x, y = y } or nil
+    elseif event == "PLAYER_ENTERING_WORLD" then
+      local login, reload = ...
+      if from and not login and not reload then
+        local map, x, y = pos()
+        add("load", { from.map, math.floor(from.x), math.floor(from.y), map }, num(from.x), num(from.y), x, y)
+      end
+      from, last, carried = nil, nil, 0
+      xp(); bind("login"); instance()
     elseif event == "ZONE_CHANGED_NEW_AREA" then instance()
     end
   end, ...)
@@ -256,7 +397,7 @@ end
 local PATH = "WTF\\Account\\<帳號>\\SavedVariables\\ShengLeveling.lua"
 function Rec.Slash(arg)
   arg = arg:gsub("^%s+", "")
-  if arg == "on" or arg == "off" then UI.Set("rec", arg == "on") end
+  if arg == "on" or arg == "off" then UI.Set("rec", arg == "on"); lootReset() end
   local n = db and #db.log or 0
   if arg == "export" then
     local out = { "#MGREC1 " .. n .. MG.L[" 筆｜存檔："] .. MG.L[PATH] .. MG.L["（登出或 /reload 後寫入）"] }

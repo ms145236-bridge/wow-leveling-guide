@@ -14627,3 +14627,5 @@
 06-路線外任務.md:486｜路線外理由｜若已接任務且順訪荒蕪之地卡加斯，可向薇薇安·拉格雷回報。未接可略過，無須專程回幽暗城。｜Se você já aceitou esta missão e vai passar por Kargath, nas Terras Áridas, entregue-a a Vivian Lagrave. Se ainda não a aceitou, pode ignorá-la sem fazer uma viagem separada à Cidade Baixa.
 04-45到60級.md:617｜說明｜先接，留待安戈洛環形山 馬紹爾營地安戈洛打暴掠龍。｜Pegue agora e mate Ravasaurs em Un'Goro.
 04-45到60級.md:1005｜說明｜奧格瑪接，並在安戈洛環形山 馬紹爾營地打齊白色暴掠龍爪。｜Pegue em Orgrimmar e colete as Garras de Ravassauro Branco no Refúgio de Marshal, na Cratera Un'Goro.
+01-第一段-1到12級.md:884｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campo de Vento anda alguns passos para o norte no pomar. Se não estiver aqui, procure ao norte.
+01-第一段-1到12級.md:886｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campo de Vento anda alguns passos para o norte no pomar. Se não estiver aqui, procure ao norte.
