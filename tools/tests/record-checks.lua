@@ -1,6 +1,6 @@
 -- 遊戲內記錄的實測項目：NPC 列出的任務、持物條件物品掉落、上下船點與讀取畫面前後位置。
-local handler, tick, enabled = nil, nil, true
-local map, x, y, moving, falling, target, bag, lootItems = 1429, 48.0, 36.0, false, false, nil, {}, {}
+local handler, tick, enabled, now = nil, nil, true, 0
+local map, x, y, moving, falling, target, bag, lootSlots = 1429, 48.0, 36.0, false, false, nil, {}, {}
 local available = {}
 function CreateFrame()
   return {RegisterEvent=function() end, SetScript=function(_, _, fn) handler = fn end}
@@ -8,7 +8,7 @@ end
 C_Timer = {NewTicker=function(_, fn) tick = fn end}
 C_GossipInfo = {GetAvailableQuests=function() return available end}
 function time() return 1700000000 end
-function GetTime() return 0 end
+function GetTime() return now end
 function UnitLevel() return 2 end
 function UnitXPMax() return 400 end
 function UnitGUID(u) return u == "npc" and "Creature-0-1-2-3-951-0000" or nil end
@@ -20,8 +20,10 @@ function UnitOnTaxi() return false end
 function IsFalling() return falling end
 function GetBindLocation() return nil end
 function IsInInstance() return false end
-function GetNumLootItems() return #lootItems end
-function GetLootSlotLink(i) return lootItems[i] and ("|Hitem:" .. lootItems[i] .. "::|h[x]|h") end
+-- 撿屍視窗：每格 {物品 ID, 來源屍體 GUID}
+function GetNumLootItems() return #lootSlots end
+function GetLootSlotLink(i) return lootSlots[i] and lootSlots[i][1] and ("|Hitem:" .. lootSlots[i][1] .. "::|h[x]|h") end
+function GetLootSourceInfo(i) return lootSlots[i] and lootSlots[i][2], 1 end
 function wipe(t) for k in pairs(t) do t[k] = nil end end
 local ns = {db={}, UI={Get=function() return enabled end},
   Route={stations={{steps={{t="accept", q=91741, when={bag={item=247834, count=1}}}, {t="accept", q=7}}}},
@@ -38,55 +40,68 @@ local function find(prefix)
   end
   return out
 end
-local function loot(mob, ...)
-  target, lootItems = mob, {...}
+local function kobold(n) return "Creature-0-1-2-3-6-" .. n end
+-- 打開一具屍體：items 是這具屍體掉的物品；take＝全部拿走（觸發 LOOT_SLOT_CLEARED 與背包變化）
+local function loot(guid, items, take)
+  lootSlots = {}
+  for _, id in ipairs(items or {}) do lootSlots[#lootSlots + 1] = { id, guid } end
+  if #lootSlots == 0 then lootSlots[1] = { 2589, guid } end -- 一般掉落（亞麻布）
   fire("LOOT_OPENED")
+  if take then
+    for i, s in ipairs(lootSlots) do fire("LOOT_SLOT_CLEARED", i); bag[s[1]] = (bag[s[1]] or 0) + 1 end
+  end
+  fire("LOOT_CLOSED")
+  if take then fire("BAG_UPDATE_DELAYED") end
 end
+local function drop(id) bag[id] = 0; fire("BAG_UPDATE_DELAYED") end
 
 -- 登入時背包已有的不算；登入後第一個背包事件就是第一隻掉的也要記
 bag[9280] = 1
 fire("PLAYER_ENTERING_WORLD", true, false)
 assert(tick, "記錄開始時要有取樣計時器")
-loot("Kobold", 247834)
-bag[247834] = 1
-fire("BAG_UPDATE_DELAYED")
+loot(kobold(1), {247834}, true)
 local rows = find("loot\t")
 assert(#rows == 1, "登入後第一隻掉的要記，背包原有的不算")
-assert(rows[1]:find("^loot\t247834\tKobold\t1\t1429\t48\t36\t@\t"), rows[1])
+assert(rows[1]:find("^loot\t247834\t6\t1\t1429\t48\t36\t@\t"), rows[1])
 assert(rows[1]:find("\t91741\t48.00\t36.00$"), rows[1])
--- 第 3 隻才掉：前兩隻撿屍沒有這件
-bag[247834] = 0
-fire("BAG_UPDATE_DELAYED")
-loot("Kobold"); loot("Kobold"); loot("Kobold", 247834)
+-- 第 3 隻才掉：前兩隻沒掉
+drop(247834)
+loot(kobold(2), nil, true); loot(kobold(3), nil, true); loot(kobold(4), {247834}, true)
+assert(find("loot\t247834\t6\t3\t")[1], "從上次掉落之後重新數")
+-- 同一次撿屍有兩件監看物品：兩筆都是同一個次數
+drop(247834); drop(9280)
+loot(kobold(5), nil, true); loot(kobold(6), {247834, 9280}, true)
+assert(find("loot\t247834\t6\t2\t")[1] and find("loot\t9280\t6\t2\t")[1], "同次兩件不可出現第 0 次")
+-- 重現 1：選著 A、撿的是 B：認屍體不認目標
+drop(247834)
+target = "Wolf"
+loot("Creature-0-1-2-3-299-7", {247834}, true)
+assert(find("loot\t247834\t299\t1\t")[1], "來源要認屍體 GUID")
+target = nil
+-- 重現 2：同一具屍體開關三次只算一隻
+drop(247834)
+x = 50.0
+loot(kobold(8)); loot(kobold(8)); loot(kobold(8), {247834}, true)
+assert(find("loot\t247834\t6\t1\t1429\t50\t")[1], "同一具屍體重開只算一次")
+assert(not find("loot\t247834\t6\t3\t1429\t50\t")[1])
+-- 重現 3：視窗有這件但沒拿就關掉，關記錄再開，之後背包才有：不記
+drop(247834)
+local before = #find("loot\t")
+loot(kobold(9), {247834})
+enabled = false; tick(); enabled = true
 bag[247834] = 1
 fire("BAG_UPDATE_DELAYED")
-assert(find("loot\t247834\tKobold\t3\t")[1], "從上次掉落之後重新數")
--- 同一次撿屍有兩件監看物品：兩筆都是同一隻的次數
-bag[247834], bag[9280] = 0, 0
-fire("BAG_UPDATE_DELAYED")
-loot("Kobold"); loot("Kobold", 247834, 9280)
-bag[247834], bag[9280] = 1, 1
-fire("BAG_UPDATE_DELAYED")
-assert(find("loot\t247834\tKobold\t2\t")[1] and find("loot\t9280\tKobold\t2\t")[1], "同次兩件不可出現第 0 次")
-assert(not find("loot\t9280\tKobold\t0\t")[1])
--- 不是從屍體來的（撿屍視窗沒有這件）不算
-bag[247834] = 0
-fire("BAG_UPDATE_DELAYED")
-loot("Wolf")
+assert(#find("loot\t") == before, "關掉的視窗不能算來源")
+-- 不是從屍體來的（沒有拿走的格子）不算
+drop(247834)
 bag[247834] = 1
 fire("BAG_UPDATE_DELAYED")
-assert(not find("loot\t247834\tWolf\t")[1], "撿屍沒有這件就不記")
--- 關記錄期間進背包的，重開後不記
-bag[247834] = 0
-fire("BAG_UPDATE_DELAYED")
-loot("Kobold")
-enabled = false
-fire("BAG_UPDATE_DELAYED")
-bag[247834] = 1
-enabled = true
-fire("BAG_UPDATE_DELAYED")
-local n = #find("loot\t")
-assert(n == 4, "關記錄時進背包的不算：" .. n)
+assert(#find("loot\t") == before)
+-- 讀不到來源：記「來源未確認」，怪物 ID 和次數留空
+drop(247834)
+GetLootSourceInfo = nil
+loot(nil, {247834}, true)
+assert(find("loot\t247834\t\t\t1429\t")[1], "沒來源就留空")
 
 -- NPC 列出的任務：排序後一行；沒有任務也記一次
 available = {{questID=98240}, {questID=1838}}

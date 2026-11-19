@@ -260,7 +260,7 @@ const show = (r) => {
     return `${when(r)}｜${QUEST_KINDS[r.kind]} ${r.k[0]} ${title || quests[r.k[0]]?.n || ""}｜${npc ? `${npc}（${kind === "GameObject" ? "物件" : kind === "Creature" ? "NPC" : kind || "?"} ${r.k[1]}）` : "沒有 NPC（物品或自動接）"}${x ? `｜${map} ${x}, ${y}` : ""}`;
   }
   if (r.kind === "offer") return `${when(r)}｜${r.x[0] || r.k[0]}（${r.k[0]}）列出：${r.k[1] ? r.k[1].split(";").map((id) => `${id} ${quests[id]?.n || ""}`.trim()).join("、") : "沒有可接任務"}｜${r.x[2]} ${r.x[3]}, ${r.x[4]}`;
-  if (r.kind === "loot") return `${when(r)}｜撿到物品 ${r.k[0]}（任務 ${r.x[0]}）：${r.k[1] || "沒選目標"} 第 ${r.k[2]} 次撿屍｜${r.k[3]} ${r.x[1]}, ${r.x[2]}`;
+  if (r.kind === "loot") return `${when(r)}｜撿到物品 ${r.k[0]}（任務 ${r.x[0]}）：${r.k[1] ? `怪物 ${r.k[1]} 上次之後第 ${r.k[2]} 隻（同一具屍體只算一次）` : "背包首次出現、來源未確認"}｜${r.k[3]} ${r.x[1]}, ${r.x[2]}`;
   if (r.kind === "board") return `${when(r)}｜上船／飛艇前站的點：${r.k[0]} ${r.x[0]}, ${r.x[1]}`;
   if (r.kind === "stop") return `${when(r)}｜船／飛艇停下的點${r.x[2] === "1" ? "（候選：航行中自己走動過，可能是走上岸後停下）" : ""}：${r.k[0]} ${r.x[0]}, ${r.x[1]}`;
   if (r.kind === "load") return `${when(r)}｜參考，不是上下船點｜換地圖：${r.k[0]} ${r.x[0]}, ${r.x[1]} → ${r.k[3]} ${r.x[2]}, ${r.x[3]}`;
