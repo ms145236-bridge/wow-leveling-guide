@@ -26,6 +26,7 @@ lua5.1 tools/tests/fp-discover.lua
 lua5.1 tools/tests/fp-step.lua
 lua5.1 tools/tests/record-timing.lua
 lua5.1 tools/tests/audit-1119.lua
+lua5.1 tools/tests/class-pickups.lua
 lua5.1 tools/tests/replay/dungeon-entry-test.lua
 python3 -B tools/tests/replay/test_selection.py
 python3 tools/tests/replay/held_items.py

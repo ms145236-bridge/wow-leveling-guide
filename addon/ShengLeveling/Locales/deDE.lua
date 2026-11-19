@@ -33,6 +33,7 @@ MG.Locales.deDE = {
   ["行"] = "Gehen",
   ["需"] = "Benötigt",
   ["買"] = "Kaufen",
+  ["撿"] = "Aufheben",
   ["打"] = "Töten",
   ["打 "] = "Töte ",
   ["去"] = "Gehen",

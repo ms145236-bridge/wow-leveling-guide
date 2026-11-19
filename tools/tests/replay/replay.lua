@@ -11,7 +11,7 @@ local party=(mode=="party" or mode=="early" or allDungeons)
 local instanceFraction=tonumber(arg[5] or 0)
 assert(instanceFraction>=0 and instanceFraction<=1)
 local selected = alliance and {3,4,5,7,8,9,10,11,13,14} or {1,3,5,6,8,11,14,17,18,21,23,24,33}
-local chosen,ran,materials={},{},{}
+local chosen,ran,materials,picked={},{},{},{}
 for _,n in ipairs(selected) do chosen["05-d"..n]=true end
 local classQuest={[95036]=true,[95042]=true,[95111]=true,[95125]=true,[95126]=true,[8257]=true,[93030]=true,[99187]=true}
 local events = assert(io.open(arg[3], "w"))
@@ -111,6 +111,11 @@ local function run(st, isRun)
     elseif s.t=="fp" and s.node then db.fpNodes[s.node]=true;log("learn-fp",s,s.node)
     elseif s.t=="boat" then log("boat",s,(s.from or "?").." → "..(s.to or "?"))
     elseif s.t=="fly" and s.to and db.fpNodes[s.to] then log("known-flight",s,s.to)
+    elseif s.t=="buy" and s.pick then
+      -- Quest-object pickups: the item lands in the bag only while the linked quest is in the log.
+      if s.fq and have[s.fq] and (drops[s.item] or 0)==0 then
+        drops[s.item]=1;picked[s.fq]=picked[s.fq] or {};table.insert(picked[s.fq],s.item);log("picked",s,s.item)
+      end
     elseif s.t=="travel" or s.t=="goto" then log("route-waypoint",s,s.text or s.desc or "")
     elseif s.t=="fly" and s.to and not db.fpNodes[s.to] then stats.flight=stats.flight+1;log("unrecorded-flight",s,s.to.." "..(s.desc or ""))
     elseif s.t=="bind" then bind=s.bind or bind;log("bind",s,bind)
@@ -143,6 +148,8 @@ local function run(st, isRun)
     elseif s.t=="turnin" and have[q] and (not s.hold or worked[q]) and (not (q==95036 or q==templeQuest or q==99187 or instanceWork[q]) or worked[q]) then
       local xp=E.QuestXP(q,level)
       if collect[q] then drops[collect[q]]=nil end
+      for _,item in ipairs(picked[q] or {}) do drops[item]=nil end
+      picked[q]=nil
       if instanceObjects[q] then drops[instanceObjects[q]]=nil end
       turned[q],have[q]=true,nil;open=open-1;stats.hand=stats.hand+1
       log("turned",s,math.floor(xp));grant("turnin",xp,s)

@@ -84,7 +84,7 @@ const TAG_EN = { 可跳過: "Optional", 需遊戲實測: "Unverified", 有隊伍
   能打高階怪再做: "Hard", 低等怪補缺口: "Fills an XP gap", 日後順路或有隊伍: "Later or with a group", 見到獵物才接: "If you see it", 材料齊才做: "When you have the items", 看得到才接: "If offered" };
 const tagEn = (tag) => { const out = (tag || "").split(/\s*・\s*/).map((t) => TAG_EN[t.trim()]).filter(Boolean); return out.length ? [...new Set(out)].join(", ") : undefined; };
 const enText = (t) => String(t || "").replace(/<([^<>\/]+)\/([^<>\/]+)>/g, "$1/$2").replace(/\$[Bb]/g, " ").replace(/\$[Nn]/g, "you").replace(/\$[CcRr]/g, "adventurer").replace(/\s+/g, " ").trim();
-const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel", 買: "buy" };
+const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 爐: "hearth", 飛: "fly", 船: "boat", 練: "level", 註: "note", 交通: "travel", 買: "buy", 撿: "buy" };
 // 行尾標籤：這些不顯示；其餘（可跳過、有隊伍再做…）顯示在步驟第 3 行
 // 條件入口：要先有掉落物、材料、聲望，或遇到巡邏的人才接得到。可跳過的接取步是「物品起始」或帶這些標籤 → 任務記 cond
 // 建置不把它升成必做；引擎補經驗時不補還沒接的（Engine.lua FillPlan）
@@ -266,7 +266,9 @@ const parseWhen = (tags) => {
     const money = tag.match(/^銀幣至少[：:]\s*(\d+)$/);
     if (money) when.money = +money[1] * 100;
     const bag = tag.match(/^(持有|缺少)材料[：:]\s*(\d+)\s*×\s*(\d+)$/);
-    if (bag) when[bag[1] === "持有" ? "bag" : "missingBag"] = { item: +bag[2], count: +bag[3] };
+    // 【持有材料】可寫多個（例如兩塊墜飾都在身上才合成）：第一個放 bag，其餘放 bagMore
+    if (bag && bag[1] === "持有" && when.bag) (when.bagMore ||= []).push({ item: +bag[2], count: +bag[3] });
+    else if (bag) when[bag[1] === "持有" ? "bag" : "missingBag"] = { item: +bag[2], count: +bag[3] };
     // 【任務失敗：648】只在日誌回報失敗時適用；【任務未失敗：648】反之
     const failed = tag.match(/^任務(未?)失敗[：:]\s*(\d+)$/);
     if (failed) when[failed[1] ? "notFailedQuest" : "failedQuest"] = +failed[2];
@@ -408,7 +410,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
       }
       return;
     }
-    const sm = line.match(/^\s*(?:(\d+)\s*[.、)]\s*|[-*]\s*)?(交通|接|做|交|到|鳥|爐|飛|船|練|註|買)｜(.*)$/);
+    const sm = line.match(/^\s*(?:(\d+)\s*[.、)]\s*|[-*]\s*)?(交通|接|做|交|到|鳥|爐|飛|船|練|註|買|撿)｜(.*)$/);
     if (!sm) return;
     const [, no, verb, rest0] = sm;
     const tags = [...rest0.matchAll(/【([^】]*)】/g)].map((m) => m[1]);
@@ -416,7 +418,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
     const keep = /★/.test(body);
     const f = body.replace(/★/g, "").split("｜").map((s) => s.trim());
     // no、raw：職業任務段落的插入點用（#K、「動詞｜文字」）
-    const step = { verb, t: VERB[verb], exitPriority: tags.includes("出本優先回報") || undefined, instancePickup: tags.includes("副本內接取") || undefined, outsideObjective: tags.includes("本外完成") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
+    const step = { verb, t: VERB[verb], pick: verb === "撿" || undefined, exitPriority: tags.includes("出本優先回報") || undefined, instancePickup: tags.includes("副本內接取") || undefined, outsideObjective: tags.includes("本外完成") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined, hold: (VERB[verb] !== "accept" && tags.includes("材料齊才做")) || undefined, native: (VERB[verb] === "do" && tags.includes("原生可交")) || undefined, cond: (VERB[verb] === "accept" && tags.includes("可跳過") && (f.slice(1, 3).some((x) => /^物品\s/.test(x)) || tags.some((t) => COND_TAG.test(t)))) || undefined, keepOpt: tags.some((t) => KEEP_TAG.test(t)) || undefined, hard: (tags.includes("可跳過") && tags.includes("能打高階怪再做")) || undefined, anyRace: tags.includes("部落可接") || undefined,
       desc: [...tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")),
         ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
@@ -588,7 +590,7 @@ for (const blk of classBlocks) {
     blk.anchor = target.steps[k];
     // 回到路線：座標在解析完任務座標後才補（見下方），用不到就拿掉
     const last = blk.steps[blk.steps.length - 1];
-    if (last && !MOVE_T.includes(last.t)) blk.steps.push({ t: "travel", verb: "交通", back: true, cls: blk, when: { ...blk.when }, where: blk.where });
+    if (last && !MOVE_T.includes(last.t)) blk.steps.push({ t: "travel", verb: "交通", back: true, cls: blk, when: { ...blk.when, ...(last.t === "buy" && last.when?.onQuestAny ? { onQuestAny: last.when.onQuestAny } : {}) }, where: blk.where }); // 段落最後是撿任務物品：只有撿的人才要回路線
   } else while (at > 0 && ["travel", "note", "boat", "fly", "hearth"].includes(target.steps[at - 1].t)) at--;
   target.steps.splice(at, 0, ...blk.steps);
 }
@@ -1170,7 +1172,7 @@ const stepOut = (s, st) => ({
   outsideObjective: s.ph === "in" && s.t === "accept" && s.outsideObjective || undefined,
   star: s.star, t: s.t, any: s.any, instancePickup: s.ph === "in" && s.t === "accept" && s.instancePickup || undefined, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
   // 說明段用「；」接起來：句號結尾的段後面不再補「；」，完全相同的段只留一次（翻譯照原本的「；」切段，不受影響）
-  desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
+  desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, pick: s.pick, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
   map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, via: s.via?.length ? s.via.map((p) => [p.map, p.x, p.y]) : undefined, r: s.r, back: s.back, hm: s.hm, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam, hold: s.hold, native: s.native,
 });
 // 打怪經驗估算的上限：每個目標最多算 KILL_CAP 隻（掉落目標＝數量 ÷ 掉率，沒寫掉率時和 Engine.lua 的 DROP_RATE 一樣用 0.4）

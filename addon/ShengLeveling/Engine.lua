@@ -181,6 +181,7 @@ function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用�
   if when.notFailedQuest and not anyLv and C.IsFailed and C.IsFailed(when.notFailedQuest) then return false end
   if when.money and (GetMoney and GetMoney() or 0) < when.money then return false end
   if when.bag and E.ItemCount(when.bag.item) < when.bag.count then return false end
+  for _, b in ipairs(when.bagMore or {}) do if E.ItemCount(b.item) < b.count then return false end end
   if when.missingBag and E.ItemCount(when.missingBag.item) >= when.missingBag.count then return false end
   if when.onQuestAny then
     local on = false
@@ -1895,6 +1896,7 @@ local IMPERATIVE = { Go = true, Leave = true, Take = true, Fly = true, Ride = tr
   Hearth = true, Travel = true, Follow = true, Swim = true, Walk = true, Cross = true, Board = true, Exit = true, Get = true, Continue = true, Back = true, From = true, At = true, After = true, If = true }
 function E.Verb(s)
   if s.roam and s.t == "do" then return L["順"] end -- 順路任務：路上遇到就打
+  if s.pick then return L["撿"] end -- 撿任務物品：和「買」一樣看背包數量完成
   if not MG.uiZh and (s.t == "travel" or s.t == "goto") and IMPERATIVE[(E.Title(s) or ""):match("^(%a+)") or ""] then return "" end
   return VERB[s.t] or ""
 end
