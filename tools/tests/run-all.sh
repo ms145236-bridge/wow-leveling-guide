@@ -11,6 +11,7 @@ lua5.1 tools/tests/mage-captures.lua Horde
 lua5.1 tools/tests/mage-robe-alliance.lua
 lua5.1 tools/tests/mage-silk-alliance.lua
 lua5.1 tools/tests/stonewatch-objects.lua
+lua5.1 tools/tests/loch-modan-parcel.lua
 lua5.1 tools/tests/redridge-trophies.lua
 lua5.1 tools/tests/ungoro-escort.lua
 lua5.1 tools/tests/route-handoffs.lua
@@ -24,6 +25,7 @@ lua5.1 tools/tests/stockades.lua
 lua5.1 tools/tests/alcaz-prison.lua
 lua5.1 tools/tests/horde-dungeon-journal.lua
 lua5.1 tools/tests/zulfarrak-96775.lua
+lua5.1 tools/tests/zulfarrak-alliance-handoffs.lua
 lua5.1 tools/tests/wetlands-dungeon.lua
 lua5.1 tools/tests/dungeon-prep-room.lua
 lua5.1 tools/tests/mainline-prep-detail.lua

@@ -609,7 +609,6 @@
 04-45到60級.md:822｜說明｜有接導引才在這裡交。｜Ne la rends ici que si tu as pris l'introduction.
 04-45到60級.md:823｜說明｜找薩納斯對話，請他把你傳送上懸崖找大法師克希雷姆。｜Parle à Sanath Lim-yo et demande-lui de te téléporter sur la falaise pour trouver l'archimage Xylem.
 04-45到60級.md:826｜說明｜塵埃在山下，回去同樣找薩納斯傳送上來。｜La poussière est au pied de la montagne ; retourne voir Sanath Lim-yo de la même façon pour être téléporté en haut.
-04-45到60級.md:832｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項（需遊戲實測）。｜Morphaz est dans le temple d'Atal'Hakkar. Pour descendre de la falaise, utilise ta pierre de foyer ou cherche l'option de téléportation près de Xylem (à vérifier en jeu).
 04-45到60級.md:499｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（37.04, 44.13）。｜Lie ta pierre de foyer auprès de Shaussiy l'aubergiste à l'auberge d'Auberdine (37.04, 44.13).
 04-45到60級.md:683｜說明｜從死木蒸鍋往南走到刺枝林地飛行點（1448 62.49, 24.24）起飛，會經奧伯丁轉機。｜Depuis le Chaudron des Mort-bois, va vers le sud jusqu'au point de vol de la Clairière de Griffebranche (1448 62.49, 24.24) et décolle de là ; tu feras escale à Auberdine.
 04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜Ne va à Comté-du-Lac que si tu as Les véritables maîtres (4186). Si tu ne l'as pas, passe les étapes 60-62 et vole directement de Hurlevent à la Veille de Morgan.
@@ -1149,7 +1148,6 @@
 04-45到60級.md:366｜說明｜還不到 51 級，就在營地東邊打翼手龍，或南邊焦油坑打焦油潛伏者補到 51。｜Si tu n'es pas encore niveau 51, monte au niveau 51 en tuant des pterreurdactyles à l'est du camp, ou des Rôdeurs du goudron aux fosses de goudron, au sud.
 04-45到60級.md:1261｜說明｜要接暴風城的導引才去：在鐵爐堡搭礦道地鐵到暴風城。｜N'y va que si tu veux prendre l'introduction de Hurlevent : prends le tram des profondeurs de Forgefer à Hurlevent.
 04-45到60級.md:1263｜說明｜從暴風城飛米奈希爾港，接回路線。｜Vole de Hurlevent au Port de Menethil et reprends l'itinéraire.
-04-45到60級.md:1279｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項。｜Morphaz est dans le temple d'Atal'Hakkar. Pour descendre de la falaise, utilise ta pierre de foyer ou cherche l'option de téléportation près de Xylem.
 04-45到60級.md:1280｜說明｜回塔倫迪斯營地飛阿斯特蘭納，再沿大路往北進費伍德森林。｜Retourne à la Halte de Talrendis et vole jusqu'à Astranaar, puis suis la route vers le nord jusqu'à Gangrebois.
 04-45到60級.md:383｜說明｜東側的植物群，剛進環形山時打。｜Les plantes du côté est ; tue-les dès ton entrée dans le cratère.
 04-45到60級.md:384｜說明｜東北猩猩洞外，和猩猩皮同一批。｜Devant la grotte des gorilles, au nord-est ; les mêmes monstres que pour les peaux de gorille.
@@ -1411,3 +1409,10 @@
 05-副本.md:476｜說明｜交過檔案管理員後，右鍵自己從巴納札爾拾取的頭顱接任。｜Après avoir rendu L’archiviste, faites un clic droit sur la tête que vous avez récupérée sur Balnazzar pour lancer la quête.
 05-副本.md:488｜說明｜下次隊伍走亡靈區時再做。｜Faites-la la prochaine fois que votre groupe parcourt l’aile des morts-vivants.
 06-路線外任務.md:884｜說明｜只在本來會去恐懼谷時向禮拜堂護理者奧林接，找伊根交件並接 5282。｜Si vous passez déjà par le val de la Terreur, prenez la quête auprès du gardien Alen à la chapelle. Rendez-la à Egan et acceptez la suite (5282).
+
+05-副本.md:387｜說明｜在水池打水占師維蕾薩，拾取皇冠。｜Battez l’hydromancienne Velratha près du bassin et prenez sa tiare.
+05-副本.md:388｜說明｜隊伍至少一人帶祖爾法拉克之槌，可在水池敲鑼召喚；首領已出現就直接打，拾鱗片。｜Un membre du groupe doit avoir le Maillet de Zul’Farrak pour invoquer Gahz’rilla avec le gong du bassin. Si le boss est déjà présent, terrassez-le et ramassez son écaille.
+04-45到60級.md:1312｜說明｜經阿斯特蘭納前往費伍德森林。爐石綁在阿斯特蘭納且可用時，可直接回旅店。安全下崖並到平地後，在塔倫迪斯營地查飛行圖。能飛就飛阿斯特蘭納，否則沿梣谷東邊的大路向西回去。到阿斯特蘭納後，沿大路往北。｜Passe par Astranaar pour rejoindre Gangrebois. Si ta pierre de foyer est liée à Astranaar et disponible, utilise-la pour retourner à l’auberge. Une fois en bas de la falaise et en sécurité, consulte la carte des vols à la Halte de Talrendis. Si le vol est disponible, prends-le jusqu’à Astranaar. Sinon, suis la route principale vers l’ouest depuis l’est d’Orneval. Depuis Astranaar, suis la route principale vers le nord jusqu’à Gangrebois.
+
+06-路線外任務.md:1010｜說明｜順訪辛特蘭夏德拉洛時，38 級起可向西南側神殿岩臺上的阿塔萊流放者接取。已接任務且隊伍清東廊時，先打六個陽臺的守衛解除屏障，再擊敗迦瑪蘭拾頭顱。下次順訪向同一位流放者交件。｜Si vous passez déjà par Shadra’Alor dans les Hinterlands, prenez la quête dès le niveau 38 auprès de l’Exilé atal’ai, sur le rebord du temple au sud-ouest. Si vous avez la quête et que votre groupe nettoie le passage est, éliminez les six gardiens des balcons pour lever la barrière, puis battez Jammal’an et ramassez sa tête. Rapportez-la au même exilé lors de votre prochaine visite.
+06-路線外任務.md:1768｜說明｜永恆版起任方式待確認。無須為此先去達納蘇斯。若確實接到任務，依遊戲內任務日誌回報。｜La façon de lancer cette quête dans WoW Forever reste à confirmer. Inutile de passer à Darnassus au préalable. Si tu reçois la quête, suis les indications du journal des quêtes pour la rendre.

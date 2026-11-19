@@ -609,7 +609,6 @@
 04-45到60級.md:822｜說明｜有接導引才在這裡交。｜Só entregue aqui se tiver aceitado a introdução.
 04-45到60級.md:823｜說明｜找薩納斯對話，請他把你傳送上懸崖找大法師克希雷姆。｜Fale com Sanath Lim-yo e peça que ele o teleporte ao alto do penhasco para encontrar o Arquimago Tauriel.
 04-45到60級.md:826｜說明｜塵埃在山下，回去同樣找薩納斯傳送上來。｜A poeira fica ao pé da montanha; volte a Sanath Lim-yo do mesmo modo para ser teleportado para cima.
-04-45到60級.md:832｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項（需遊戲實測）。｜Morphaz fica no Templo de Atal'Hakkar. Para descer o penhasco, use a pedra de regresso ou procure a opção de teleporte ao lado de Xylem (verificar no jogo).
 04-45到60級.md:499｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（37.04, 44.13）。｜Vincule sua pedra de regresso com a estalajadeira Shaussiy na estalagem de Auberdine (37.04, 44.13).
 04-45到60級.md:683｜說明｜從死木蒸鍋往南走到刺枝林地飛行點（1448 62.49, 24.24）起飛，會經奧伯丁轉機。｜Do Caldeirão de Lenha Morta, vá para o sul até o ponto de voo de Clareira da Galhaça (1448 62.49, 24.24) e decole de lá; você faz escala em Auberdine.
 04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜Só vá a Vila Plácida se tiver Os verdadeiros mestres (4186). Se não tiver, pule os passos 60-62 e voe direto de Ventobravo para a Vigia de Morgan.
@@ -1149,7 +1148,6 @@
 04-45到60級.md:366｜說明｜還不到 51 級，就在營地東邊打翼手龍，或南邊焦油坑打焦油潛伏者補到 51。｜Se ainda não estiver no nível 51, mate pterrordaxes a leste do acampamento ou Tocaieiros de Piche nos poços de piche ao sul até o 51.
 04-45到60級.md:1261｜說明｜要接暴風城的導引才去：在鐵爐堡搭礦道地鐵到暴風城。｜Só vá se quiser aceitar a missão de introdução de Ventobravo: pegue o Metrô Correfundo de Altaforja para Ventobravo.
 04-45到60級.md:1263｜說明｜從暴風城飛米奈希爾港，接回路線。｜Voe de Ventobravo para o Porto de Menethil e retome a rota.
-04-45到60級.md:1279｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項。｜Morphaz fica no Templo de Atal'Hakkar. Para descer o penhasco, use a pedra de regresso ou procure a opção de teleporte ao lado do Arquimago Tauriel.
 04-45到60級.md:1280｜說明｜回塔倫迪斯營地飛阿斯特蘭納，再沿大路往北進費伍德森林。｜Volte ao Campo Talrendis e voe para Astranaar; depois siga a estrada para o norte até entrar na Selva Maleva.
 04-45到60級.md:383｜說明｜東側的植物群，剛進環形山時打。｜As plantas do lado leste; mate-as assim que entrar na cratera.
 04-45到60級.md:384｜說明｜東北猩猩洞外，和猩猩皮同一批。｜Do lado de fora da caverna dos gorilas, a nordeste; os mesmos monstros das peles de gorila.
@@ -1411,3 +1409,10 @@
 05-副本.md:476｜說明｜交過檔案管理員後，右鍵自己從巴納札爾拾取的頭顱接任。｜Depois de entregar O Arquivista, clique com o botão direito na cabeça que você saqueou de Balnazzar para iniciar a missão.
 05-副本.md:488｜說明｜下次隊伍走亡靈區時再做。｜Faça na próxima vez que o grupo for à ala dos mortos-vivos.
 06-路線外任務.md:884｜說明｜只在本來會去恐懼谷時向禮拜堂護理者奧林接，找伊根交件並接 5282。｜Se já for passar pelo Vale do Terror, aceite a missão com o zelador Alen na capela. Entregue-a a Egan e aceite a continuação (5282).
+
+05-副本.md:387｜說明｜在水池打水占師維蕾薩，拾取皇冠。｜Derrote a Hidromante Velratha perto da piscina e saqueie a tiara.
+05-副本.md:388｜說明｜隊伍至少一人帶祖爾法拉克之槌，可在水池敲鑼召喚；首領已出現就直接打，拾鱗片。｜Um membro do grupo precisa da Marreta de Zul’Farrak para invocar Gahz’rilla no gongo da piscina. Se o chefe já estiver lá, derrote-o e saqueie a escama.
+04-45到60級.md:1312｜說明｜經阿斯特蘭納前往費伍德森林。爐石綁在阿斯特蘭納且可用時，可直接回旅店。安全下崖並到平地後，在塔倫迪斯營地查飛行圖。能飛就飛阿斯特蘭納，否則沿梣谷東邊的大路向西回去。到阿斯特蘭納後，沿大路往北。｜Siga para a Selva Maleva via Astranaar. Se a sua Pedra de Regresso estiver vinculada a Astranaar e disponível, use-a para voltar à estalagem. Depois de descer do penhasco com segurança, consulte o mapa de voo no Campo Talrendis. Voe para Astranaar se puder. Caso contrário, siga a estrada principal para oeste pela parte leste do Vale Gris. De Astranaar, siga a estrada principal para o norte até a Selva Maleva.
+
+06-路線外任務.md:1010｜說明｜順訪辛特蘭夏德拉洛時，38 級起可向西南側神殿岩臺上的阿塔萊流放者接取。已接任務且隊伍清東廊時，先打六個陽臺的守衛解除屏障，再擊敗迦瑪蘭拾頭顱。下次順訪向同一位流放者交件。｜Se já passar por Shadra’Alor, nas Terras Agrestes, aceite a missão a partir do nível 38 com o Exilado Atal’ai na saliência do templo a sudoeste. Se estiver com a missão e seu grupo for pelo corredor leste, derrote os seis guardas das sacadas para remover a barreira. Depois derrote Jammal’an e saqueie a cabeça dele. Entregue-a ao mesmo exilado na próxima visita.
+06-路線外任務.md:1768｜說明｜永恆版起任方式待確認。無須為此先去達納蘇斯。若確實接到任務，依遊戲內任務日誌回報。｜Ainda não foi confirmado como iniciar esta missão no WoW Forever. Não é preciso ir a Darnassus antes. Se receber a missão, siga o diário de missões do jogo para entregá-la.

@@ -609,7 +609,6 @@
 04-45到60級.md:822｜說明｜有接導引才在這裡交。｜Gib sie hier nur ab, wenn du die Einführung angenommen hast.
 04-45到60級.md:823｜說明｜找薩納斯對話，請他把你傳送上懸崖找大法師克希雷姆。｜Sprich mit Sanath Lim-yo und bitte ihn, dich auf die Klippe zu Erzmagier Xylem zu teleportieren.
 04-45到60級.md:826｜說明｜塵埃在山下，回去同樣找薩納斯傳送上來。｜Der Staub liegt unten am Berg; lass dich genauso von Sanath Lim-yo wieder hinaufteleportieren.
-04-45到60級.md:832｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項（需遊戲實測）。｜Morphaz ist im Tempel von Atal'Hakkar. Zum Abstieg von der Klippe benutze deinen Ruhestein oder such die Teleportoption neben Xylem (im Spiel prüfen).
 04-45到60級.md:499｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（37.04, 44.13）。｜Binde deinen Ruhestein bei Gastwirtin Shaussiy im Gasthaus von Auberdine (37.04, 44.13).
 04-45到60級.md:683｜說明｜從死木蒸鍋往南走到刺枝林地飛行點（1448 62.49, 24.24）起飛，會經奧伯丁轉機。｜Geh vom Kessel der Totenwaldfelle nach Süden zum Flugpunkt Nachtlaublichtung (1448 62.49, 24.24) und flieg von dort ab; du steigst in Auberdine um.
 04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜Geh nur mit Die wahren Meister (4186) nach Seenhain. Hast du sie nicht, überspring die Schritte 60-62 und flieg direkt von Sturmwind nach Morgans Wacht.
@@ -1149,7 +1148,6 @@
 04-45到60級.md:366｜說明｜還不到 51 級，就在營地東邊打翼手龍，或南邊焦油坑打焦油潛伏者補到 51。｜Hast du noch nicht Stufe 51, farme östlich des Lagers Pterrordax oder an den Teergruben im Süden Teerlauerer bis Stufe 51.
 04-45到60級.md:1261｜說明｜要接暴風城的導引才去：在鐵爐堡搭礦道地鐵到暴風城。｜Geh nur hin, wenn du die Einführungsquest in Sturmwind annehmen willst: Nimm in Ironforge die Tiefenbahn nach Sturmwind.
 04-45到60級.md:1263｜說明｜從暴風城飛米奈希爾港，接回路線。｜Flieg von Sturmwind zum Hafen von Menethil, um wieder auf die Route zu kommen.
-04-45到60級.md:1279｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項。｜Morphaz ist im Tempel von Atal'Hakkar. Zum Abstieg von der Klippe benutze deinen Ruhestein oder such die Teleportoption neben Xylem.
 04-45到60級.md:1280｜說明｜回塔倫迪斯營地飛阿斯特蘭納，再沿大路往北進費伍德森林。｜Kehr zur Talrendisspitze zurück und flieg nach Astranaar, folge dann der Straße nach Norden in den Teufelswald.
 04-45到60級.md:383｜說明｜東側的植物群，剛進環形山時打。｜Die Pflanzengegner auf der Ostseite; töte sie, wenn du gerade in den Krater gekommen bist.
 04-45到60級.md:384｜說明｜東北猩猩洞外，和猩猩皮同一批。｜Vor der Gorillahöhle im Nordosten; dieselben Gegner wie für die Gorillapelze.
@@ -1411,3 +1409,10 @@
 05-副本.md:476｜說明｜交過檔案管理員後，右鍵自己從巴納札爾拾取的頭顱接任。｜Gebt zuerst „Der Archivar“ ab. Startet danach die Quest per Rechtsklick auf den selbst erbeuteten Kopf von Balnazzar.
 05-副本.md:488｜說明｜下次隊伍走亡靈區時再做。｜Erledigt dies, wenn eure Gruppe das nächste Mal den Untotenflügel besucht.
 06-路線外任務.md:884｜說明｜只在本來會去恐懼谷時向禮拜堂護理者奧林接，找伊根交件並接 5282。｜Wenn ihr ohnehin ins Schreckensdell geht, nehmt die Quest bei Verwalter Alen an der Kapelle an. Gebt sie bei Egan ab und nehmt seine Folgequest (5282) an.
+
+05-副本.md:387｜說明｜在水池打水占師維蕾薩，拾取皇冠。｜Besiegt Hydromantin Velratha am Becken und nehmt ihre Tiara an euch.
+05-副本.md:388｜說明｜隊伍至少一人帶祖爾法拉克之槌，可在水池敲鑼召喚；首領已出現就直接打，拾鱗片。｜Ein Gruppenmitglied braucht den Schlaghammer von Zul’Farrak, um Gahz’rilla am Becken mit dem Gong zu beschwören. Ist er schon da, besiegt ihn und nehmt die Schuppe.
+04-45到60級.md:1312｜說明｜經阿斯特蘭納前往費伍德森林。爐石綁在阿斯特蘭納且可用時，可直接回旅店。安全下崖並到平地後，在塔倫迪斯營地查飛行圖。能飛就飛阿斯特蘭納，否則沿梣谷東邊的大路向西回去。到阿斯特蘭納後，沿大路往北。｜Reise über Astranaar in den Teufelswald. Ist dein Ruhestein an Astranaar gebunden und einsatzbereit, kannst du damit direkt zum Gasthaus zurück. Sobald du sicher unten bist, prüfe die Flugkarte an der Talrendisspitze. Ist Astranaar als Ziel verfügbar, flieg dorthin. Folge sonst der Hauptstraße durch das östliche Eschental nach Westen. Folge von Astranaar aus der Hauptstraße nach Norden in den Teufelswald.
+
+06-路線外任務.md:1010｜說明｜順訪辛特蘭夏德拉洛時，38 級起可向西南側神殿岩臺上的阿塔萊流放者接取。已接任務且隊伍清東廊時，先打六個陽臺的守衛解除屏障，再擊敗迦瑪蘭拾頭顱。下次順訪向同一位流放者交件。｜Wenn ihr ohnehin in Shadra’Alor im Hinterland seid, könnt ihr die Quest ab Stufe 38 beim Verbannten der Atal’ai auf dem Vorsprung am südwestlichen Tempel annehmen. Habt ihr die Quest und geht eure Gruppe in den Ostgang, besiegt zuerst die sechs Balkonwachen, um die Barriere zu öffnen. Besiegt dann Jammal’an und nehmt seinen Kopf mit. Gebt ihn beim nächsten Besuch demselben Verbannten.
+06-路線外任務.md:1768｜說明｜永恆版起任方式待確認。無須為此先去達納蘇斯。若確實接到任務，依遊戲內任務日誌回報。｜Wie diese Quest in WoW Forever beginnt, ist noch unklar. Dafür müsst ihr vorher nicht nach Darnassus reisen. Wenn ihr die Quest erhaltet, folgt zur Abgabe den Angaben im Questlog.
