@@ -23,7 +23,13 @@ function IsInInstance() return false end
 -- 撿屍視窗：每格 {物品 ID, 來源屍體 GUID}
 function GetNumLootItems() return #lootSlots end
 function GetLootSlotLink(i) return lootSlots[i] and lootSlots[i][1] and ("|Hitem:" .. lootSlots[i][1] .. "::|h[x]|h") end
-function GetLootSourceInfo(i) return lootSlots[i] and lootSlots[i][2], 1 end
+local function sources(i)
+  local s = lootSlots[i]
+  if not s then return end
+  if s[3] then return s[2], 1, s[3], 1 end
+  return s[2], 1
+end
+GetLootSourceInfo = sources
 function wipe(t) for k in pairs(t) do t[k] = nil end end
 local ns = {db={}, UI={Get=function() return enabled end},
   Route={stations={{steps={{t="accept", q=91741, when={bag={item=247834, count=1}}}, {t="accept", q=7}}}},
@@ -102,6 +108,37 @@ drop(247834)
 GetLootSourceInfo = nil
 loot(nil, {247834}, true)
 assert(find("loot\t247834\t\t\t1429\t")[1], "沒來源就留空")
+GetLootSourceInfo = sources
+-- 一格有兩具屍體（同種怪也一樣）、或第二個來源是秘密值：來源未確認
+local function multi(second, px)
+  drop(247834)
+  x = px
+  lootSlots = { { 247834, kobold(20 + px), second } }
+  fire("LOOT_OPENED"); fire("LOOT_SLOT_CLEARED", 1); bag[247834] = 1; fire("LOOT_CLOSED"); fire("BAG_UPDATE_DELAYED")
+  assert(find("loot\t247834\t\t\t1429\t" .. px .. "\t")[1], "多來源要留空：" .. tostring(second))
+end
+multi(kobold(40), 60)
+issecretvalue = function(v) return v == "secret" end
+multi("secret", 61)
+issecretvalue = nil
+-- 同一具屍體兩件監看物品分兩次拿：兩筆都是同一個次數
+x = 69
+drop(247834); loot(kobold(49), {247834}, true) -- 先掉一次，次數從這裡重新數
+drop(247834); drop(9280)
+x = 70
+loot(kobold(50), nil, true)
+lootSlots = { { 247834, kobold(51) }, { 9280, kobold(51) } }
+fire("LOOT_OPENED")
+fire("LOOT_SLOT_CLEARED", 1); bag[247834] = 1; fire("BAG_UPDATE_DELAYED")
+fire("LOOT_SLOT_CLEARED", 2); bag[9280] = 1; fire("BAG_UPDATE_DELAYED")
+fire("LOOT_CLOSED")
+assert(find("loot\t247834\t6\t2\t1429\t70\t")[1], "第一批")
+assert(find("loot\t9280\t6\t2\t1429\t70\t")[1], "分兩批拿也要同一個次數")
+-- 掉落之後重新數
+drop(247834)
+loot(kobold(52), {247834}, true)
+assert(find("loot\t247834\t6\t1\t1429\t70\t")[1], "掉落後從 1 重新數")
+x = 48.0
 
 -- NPC 列出的任務：排序後一行；沒有任務也記一次
 available = {{questID=98240}, {questID=1838}}

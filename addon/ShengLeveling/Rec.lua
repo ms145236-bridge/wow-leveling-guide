@@ -196,7 +196,7 @@ end
 -- 路線用「背包有某物品」判斷的物品：從屍體撿到、第一次進背包時，記是哪種怪（怪物 ID）、這種怪撿到第幾隻才拿到、在哪裡。
 -- 來源認撿屍視窗的 GetLootSourceInfo（屍體 GUID），不認目標；同一具屍體重開只算一次。
 -- 讀不到來源就記「來源未確認」（怪物 ID、次數留空）。撿屍視窗裡沒真的拿走這件、或記錄關過，就不記
-local watch, had, kills, corpses, slots, taken = nil, nil, {}, {}, nil, {}
+local watch, had, kills, base, corpses, slots, taken = nil, nil, {}, {}, {}, nil, {}
 local function watchItems()
   if watch then return watch end
   watch = {}
@@ -212,51 +212,54 @@ local function watchItems()
 end
 local function lootReset()
   had, slots = nil, nil
-  wipe(kills); wipe(corpses); wipe(taken)
+  wipe(kills); wipe(base); wipe(corpses); wipe(taken)
 end
 local function bagBase()
   had = {}
   for id in pairs(watchItems()) do had[id] = MG.E.ItemCount(id) end
 end
+-- 每具屍體第一次打開時就定好它是這種怪上次掉落之後的第幾隻（corpses[GUID]），之後分幾次拿也用同一個數。
+-- 一格只認得出一具屍體才算來源；有兩具以上（就算同種怪）、或任何一個來源讀不到／是秘密值，就當來源未確認
 local function looted()
   slots = {}
   for i = 1, (GetNumLootItems and GetNumLootItems() or 0) do
     local link = GetLootSlotLink and GetLootSlotLink(i)
     local id = link and not secret(link) and tonumber(link:match("item:(%d+)"))
-    local src = { GetLootSourceInfo and GetLootSourceInfo(i) }
-    local npcs = {}
+    local src = GetLootSourceInfo and { GetLootSourceInfo(i) } or {} -- 回傳 GUID, 數量, GUID, 數量…：整串都要留
+    local one, known = nil, #src > 0
     for k = 1, #src, 2 do
       local guid = src[k]
-      local mob = guid and not secret(guid) and tostring(guid):match("^Creature%-[^-]*%-[^-]*%-[^-]*%-[^-]*%-(%d+)")
-      if mob then
-        npcs[mob] = true
-        if not corpses[guid] then corpses[guid] = true; kills[mob] = (kills[mob] or 0) + 1 end
+      local mob = guid ~= nil and not secret(guid) and tostring(guid):match("^Creature%-[^-]*%-[^-]*%-[^-]*%-[^-]*%-(%d+)")
+      if not mob then known = false
+      else
+        if not corpses[guid] then
+          kills[mob] = (kills[mob] or 0) + 1
+          corpses[guid] = { mob = mob, serial = kills[mob], n = kills[mob] - (base[mob] or 0) }
+        end
+        if one then known = false end
+        one = guid
       end
     end
-    local one, n = nil, 0
-    for mob in pairs(npcs) do one, n = mob, n + 1 end
-    slots[i] = { id = id, mob = n == 1 and one or nil }
+    slots[i] = { id = id, corpse = known and one and corpses[one] or nil }
   end
 end
 local function slotCleared(i)
   local s = slots and slots[i]
-  if s and s.id and watchItems()[s.id] then taken[s.id] = { mob = s.mob, at = GetTime() } end
+  if s and s.id and watchItems()[s.id] then taken[s.id] = { corpse = s.corpse, at = GetTime() } end
 end
 local function bagItems()
   if not had then bagBase(); return end
-  local map, x, y, done = nil, nil, nil, {}
   for id, q in pairs(watchItems()) do
     local n = MG.E.ItemCount(id)
     local t = taken[id]
     if n > had[id] and had[id] == 0 and t and GetTime() - t.at < 10 then
-      if not map then map, x, y = pos() end
-      add("loot", { id, t.mob or "", t.mob and kills[t.mob] or "", map, x ~= "" and math.floor(tonumber(x)) or "", y ~= "" and math.floor(tonumber(y)) or "" }, q, x, y)
-      if t.mob then done[t.mob] = true end
+      local c, map, x, y = t.corpse, pos()
+      add("loot", { id, c and c.mob or "", c and c.n or "", map, x ~= "" and math.floor(tonumber(x)) or "", y ~= "" and math.floor(tonumber(y)) or "" }, q, x, y)
+      if c then base[c.mob] = math.max(base[c.mob] or 0, c.serial) end
     end
     if n > 0 then taken[id] = nil end
     had[id] = n
   end
-  for mob in pairs(done) do kills[mob] = 0 end -- 同一次拿到兩件時兩筆都用同一個次數
 end
 
 -- 船、飛艇、電梯：自己沒在走、也不在鳥上，位置卻在變＝被載著走。記上船前站的點與停下來的點；換地圖時記讀取畫面前後的位置。
