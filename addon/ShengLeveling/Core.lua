@@ -298,7 +298,11 @@ for _, st in ipairs(R.stations) do
         local l = accQ[q] or {}
         accQ[q] = l
         l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or (s.when and s.when.dungeonPrep), at = not st.dungeon and st.id or nil, manual = s.manualAccept }
-        if s.when and s.when.manualPickup then manualFrom[q] = { station = st.id, step = s } end
+        if s.when and s.when.manualPickup then
+          local source = manualFrom[q] or { visits = {} }
+          source.station, source.visits[st.id] = st.id, s
+          manualFrom[q] = source
+        end
         if s.any then anyG[q] = s.any[1] end
       end
     end
@@ -335,7 +339,7 @@ local function inRoute(id, forAccept)
   local start = manualFrom[id] and E.byId[manualFrom[id].station]
   if start then
     local visit = E.byId[MG.db.station] or (lastState and lastState.st)
-    if not visit or not visit.index or visit.index >= start.index then return false end
+    if not start.index or not visit or not visit.index or visit.index >= start.index then return false end
   end
   local optional = UI.Get("optional") or E.Fill[id]
   -- 日誌快滿先不接的副本前置：NPC 給了也不自動接。用這一刻的日誌算（和步驟列的「之後」同一個判斷），不看上次畫好的清單
@@ -383,12 +387,13 @@ local function speakingTo(s)
   return name and not (issecretvalue and issecretvalue(name)) and (name == (s.npcG or s.npc) or name == s.tgt)
 end
 local function restoreManualOffer(id)
-  local visit = manualFrom[id]
-  if not visit or MG.db.station ~= visit.station then return end
+  local source = manualFrom[id]
+  local step = source and source.visits[MG.db.station]
+  if not step then return end
   local key = "a:" .. id
   local db = MG.db
   if not db.notNow[key] or db.skip[key] or db.mark[key] ~= nil or C.IsOnQuest(id) or E.Turned(id) then return end
-  if E.Applies(visit.step.when) and speakingTo(visit.step) then
+  if E.Applies(step.when) and speakingTo(step) then
     db.notNow[key] = nil
   end
 end

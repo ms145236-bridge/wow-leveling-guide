@@ -1405,3 +1405,9 @@
 03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Kill Vale Screamers on the coast of the Isle of Dread in Feralas. Use Yeh'kinya's Bramble on each corpse, then speak to the spirit that appears. Repeat until your quest log shows three spirits.
 03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Isle of Dread coast: use the bramble on a corpse, then speak to its spirit.
 05-副本.md:442｜說明｜要回燃燒平原找麥克斯韋爾元帥交；之後不去燃燒平原就別接。｜Turn in to Field Marshal Maxwell in Burning Steppes. Skip it if you won't go back to Burning Steppes.
+05-副本.md:477｜說明｜亡靈區三座通靈塔逐座搜，找到資料小箱後自己拾取。｜Search each of the three undead ziggurats for the small chest and loot the data yourself.
+05-副本.md:479｜說明｜沿斯坦索姆街道找幽靈居民，先用伊根的爆破槍，再對現身的靈魂用一次，共釋放十五個。｜Find Ghostly or Spectral Citizens along the streets of Stratholme. Use Egan’s Blaster on a citizen, then on the soul that appears. Free fifteen souls.
+05-副本.md:478｜說明｜亡靈區經屠宰場，擊敗瑞文戴爾男爵後自己拾取頭顱。｜Cross the Slaughterhouse in the undead wing, defeat Baron Rivendare and loot his head yourself.
+05-副本.md:476｜說明｜交過檔案管理員後，右鍵自己從巴納札爾拾取的頭顱接任。｜After turning in The Archivist, right-click the head you looted from Balnazzar to start this quest.
+05-副本.md:488｜說明｜下次隊伍走亡靈區時再做。｜Do this the next time your group runs the undead wing.
+06-路線外任務.md:884｜說明｜只在本來會去恐懼谷時向禮拜堂護理者奧林接，找伊根交件並接 5282。｜If you already plan to pass through Terror Dale, pick this up from Caretaker Alen at the chapel. Turn it in to Egan and accept his follow-up (5282).

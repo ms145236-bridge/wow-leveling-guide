@@ -322,11 +322,6 @@ function E.Applies(when, anyLv, keepReady) -- 往後預估不看等級；指定�
     local radius = when.hubArea and when.dungeonPrep and 3 or 0.8
     if map ~= point[1] or not x or not y or (x - point[2])^2 + (y - point[3])^2 > radius^2 then return false end
   end
-  if when.manualPickup then
-    if not MG.UI.Get("optional") then return false end
-    local free, used, visible = E.QuestLogSpace()
-    if free <= (MG.PendingAccepts and MG.PendingAccepts(used, visible) or 0) then return false end
-  end
   if when.withTurnin then
     local q = when.withTurnin
     local key = "t:" .. q
@@ -344,6 +339,18 @@ function E.Applies(when, anyLv, keepReady) -- 往後預估不看等級；指定�
     end
   end
   if when.missingBag and E.ItemCount(when.missingBag.item) >= when.missingBag.count then return false end
+  if when.manualPickup or when.reserveDungeonPrep then
+    if not MG.UI.Get("optional") then return false end
+    local free, used, visible = E.QuestLogSpace()
+    local pending = MG.PendingAccepts and MG.PendingAccepts(used, visible) or 0
+    if when.manualPickup == "dungeon" or when.reserveDungeonPrep then
+      local main = E.byId[MG.db.station]
+      if not main or not main.index then main = E.byId[MG.db.dungeonFrom] end
+      if not E.PreRoom(main and main.index and main or nil, pending, free) then return false end
+    elseif free <= pending then
+      return false
+    end
+  end
   if when.canStart then
     local q = when.canStart
     local key = "a:" .. q
@@ -1316,10 +1323,32 @@ local function instanceMaterialAction(s)
   return { t = "do", q = s.q, ph = "in", when = s.when, hint = hunt, componentNpc=s.componentNpc, componentNpcG=s.componentNpcG }
 end
 
+local function instanceZone()
+  return { GetSubZoneText and GetSubZoneText() or "", GetMinimapZoneText and GetMinimapZoneText() or "" },
+    GetLocale and GetLocale() or "zhTW"
+end
+
+local function inNamedWing(stationId, texts, loc)
+  local names = MG.Wings and MG.Wings[stationId]
+  for _, name in ipairs(names and (names[loc] or names.enUS) or {}) do
+    for _, text in ipairs(texts) do if text ~= "" and text == name then return true end end
+  end
+  return false
+end
+
+local function stratholmeWing(d)
+  if not inList(d.inst or {}, 329) then return end
+  local texts, loc = instanceZone()
+  local scarlet = inNamedWing("05-d26", texts, loc)
+  local undead = inNamedWing("05-d27", texts, loc)
+  if scarlet ~= undead then return scarlet and "scarlet" or "undead" end
+end
+
 -- In the active route HUD an outdoor contact is unavailable while the native client is inside,
 -- even on the frame before its instance ID becomes known. Manual phase previews are separate.
 local function worldContact(s)
-  return s.outsideHandoff or (s.outsideObjective and s.ph == "pre")
+  return s.outsideHandoff or (s.ph == "post" and (s.manualAccept or (s.when and s.when.manualPickup)))
+    or (s.outsideObjective and s.ph == "pre")
 end
 
 -- A completed component awaiting its outdoor recipient keeps a deliberately selected run open.
@@ -1364,6 +1393,7 @@ function E.Locate(st)
   local adjusted
   local physical = IsInInstance and IsInInstance()
   local id = physical and GetInstanceInfo and select(8, GetInstanceInfo())
+  local wing = id == 329 and st.dungeon and stratholmeWing(st)
   for i, step in ipairs(steps) do
     local s = step.s
     local info = s.t == "do" and s.q and R.quests[s.q]
@@ -1491,7 +1521,8 @@ function E.Locate(st)
   for i, step in ipairs(steps) do
     local s = step.s
     local open = not s.q or available(s.q)
-    na[i] = step.transferHidden or (transfer and s.ungoroExit ~= nil and s.ungoroExit ~= "islandPortal") or (physical and (worldContact(s) or s.instanceMaterial)) or ((s.t == "do" or s.t == "turnin") and s.q and not acc[s.q] and not C.IsOnQuest(s.q) and not turned(s.q)) or step.defer or (s.q and notNowQ[s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or superseded(s.q) or not (open or planned(s.q)))) or (s.fq and (excluded(s.fq) or not raceOK(s.fq) or turned(s.fq))) or false
+    local wrongWing = s.wing and (id ~= 329 or (s.wing ~= "either" and s.wing ~= wing))
+    na[i] = wrongWing or step.transferHidden or (transfer and s.ungoroExit ~= nil and s.ungoroExit ~= "islandPortal") or (physical and (worldContact(s) or s.instanceMaterial)) or ((s.t == "do" or s.t == "turnin") and s.q and not acc[s.q] and not C.IsOnQuest(s.q) and not turned(s.q)) or step.defer or (s.q and notNowQ[s.q] and not C.IsOnQuest(s.q)) or s.t == "need" or not E.Applies(s.when) or (s.q and not raceOK(s.q)) or db.skip[step.key] or optOut(s) or (s.q and (excluded(s.q) or superseded(s.q) or not (open or planned(s.q)))) or (s.fq and (excluded(s.fq) or not raceOK(s.fq) or turned(s.fq))) or false
     if s.t == "turnin" and s.outsideObjective and isCleanedRingReturn(s.q) and not turned(s.q)
         and (physical or not ready(s.q)) then
       na[i], waitingRingReturn = true, i
@@ -1669,7 +1700,9 @@ function E.Locate(st)
     local unavailableVisit = pinned and pinned.when and ((pinned.when.workMap and not turned(pinned.q)) or pinned.when.localVisit or (visitQuest and not turned(pinned.q))) and not E.Applies(pinned.when)
     local unavailableHunt = pinInfo and (pinInfo.requiredLoot or pinInfo.killCount) and pinned.t == "do" and not turned(pinned.q)
       and (not C.IsOnQuest(pinned.q) or journalReady(pinned.q))
-    if (found and found == waitingRingReturn) or unavailableHunt or unavailableVisit or waitingMaterials or (pinned and physical and (worldContact(pinned) or pinned.instanceMaterial)) then
+    local unavailableWingStep = pinned and pinned.wing and na[found]
+    local leftLocalContact = pinned and st.dungeon and pinned.when and pinned.when.nearPoint and not E.Applies(pinned.when)
+    if (found and found == waitingRingReturn) or unavailableWingStep or leftLocalContact or unavailableHunt or unavailableVisit or waitingMaterials or (pinned and physical and (worldContact(pinned) or pinned.instanceMaterial)) then
       -- Leave the saved pin in place and use the available work until it becomes actionable.
     elseif pinned and pinned.t == "turnin" and pinned.outsideObjective and isCleanedRingReturn(pinned.q) and not done[found] then
       -- An unfinished ring return keeps its pin when a prerequisite elsewhere becomes available.
@@ -2330,7 +2363,7 @@ function E.DungeonStatus(d)
       local s = step.s
       if s.q and C.IsOnQuest(s.q) and E.Applies(s.when) and raceOK(s.q)
           and not MG.db.skip[step.key] and not E.QuickDone(step) then
-        if ((s.ph == "in" or s.exitPriority) and s.t == "do" and not ready(s.q))
+        if ((s.ph == "in" or s.exitPriority) and s.t == "do" and not s.wing and not ready(s.q))
             or (s.ph == "in" and s.t == "turnin" and not s.map and ready(s.q))
             or (s.ph == "post" and s.t == "turnin" and ready(s.q)) then
           return L["可以去"], "revisit", step
@@ -2438,15 +2471,10 @@ function E.DungeonByInstance(id)
   -- 同一個副本 ID 有好幾區（例如血色修道院：墓地、圖書館、軍械庫、大教堂）：用目前區域文字挑出所在的那一區
   if #all > 1 then
     -- 遊戲回傳的區域名（各語系）對照 Data\Wings.lua（客戶端 AreaTable 的各區房間名，例如軍械庫＝十字軍武器庫、勇士大廳…）
-    local texts = { GetSubZoneText and GetSubZoneText() or "", GetMinimapZoneText and GetMinimapZoneText() or "" }
-    local loc = GetLocale and GetLocale() or "zhTW"
+    local texts, loc = instanceZone()
     local pick
     for k, d in ipairs(all) do
-      local names = MG.Wings and MG.Wings[d.id] and (MG.Wings[d.id][loc] or MG.Wings[d.id].enUS)
-      for _, n in ipairs(names or {}) do
-        for _, t in ipairs(texts) do if t ~= "" and t == n then pick = k end end
-      end
-      if pick then break end
+      if inNamedWing(d.id, texts, loc) then pick = k; break end
     end
     -- 對照表沒有時退回比對路線站名的最後一個詞（例如「血色修道院 墓地」的「墓地」）
     if not pick then
@@ -2479,13 +2507,18 @@ end
 
 function E.InstanceState(d, all)
   local steps, seen, inTurn, inDo, outsideObjective = {}, {}, {}, {}, {}
+  local wing, otherWing = stratholmeWing(d), {}
   for _, x in ipairs(all or { d }) do
     for _, step in ipairs(x.list or {}) do
       if step.s.outsideObjective then outsideObjective[step.s.q] = true end
       if step.s.instanceMaterial then inDo[step.s.q] = instanceMaterialAction(step.s) end
       -- 有地圖座標的是在本外交（路線放在副本內段落而已）
       if step.s.ph == "in" and step.s.t == "turnin" and step.s.q and not step.s.map then inTurn[step.s.q] = step.s end
-      if step.s.ph == "in" and step.s.t == "do" and step.s.q then inDo[step.s.q] = inDo[step.s.q] or step.s end -- 路線上的做法（位置補充行）
+      if step.s.ph == "in" and step.s.t == "do" and step.s.q then
+        local q, wanted = step.s.q, step.s.wing
+        if wing and wanted and wanted ~= "either" and wanted ~= wing then otherWing[q] = true
+        else inDo[q] = inDo[q] or step.s end
+      end
     end
   end
   local function add(q)
@@ -2493,7 +2526,7 @@ function E.InstanceState(d, all)
       local condition = inDo[q] and inDo[q].when
       if condition and condition.missingBag and not E.Applies(condition) then return end
       -- 本內可接的送信任務交由出本步驟引導。其他分翼有明列目標時仍顯示。
-      if outsideObjective[q] and not inDo[q] and not inTurn[q] then return end
+      if (outsideObjective[q] or otherWing[q]) and not inDo[q] and not inTurn[q] then return end
       local authored = inTurn[q] or inDo[q]
       local instanceID = authored and authored.when and authored.when.instanceID
       if instanceID and not inInstance(instanceID) then return end
@@ -2596,10 +2629,14 @@ function E.DungeonNext(d, inside)
     end
   end
   local function external(s)
-    return (inside or loading) and (s.outsideHandoff or s.instanceMaterial or (s.ph == "pre" and s.outsideObjective))
+    return (inside or loading) and (worldContact(s) or s.instanceMaterial)
+  end
+  local wing = inside and stratholmeWing(d)
+  local function wingApplies(s)
+    return not s.wing or (inside and (s.wing == "either" or s.wing == wing))
   end
   local function canDo(s)
-    if external(s) then return false end
+    if external(s) or not wingApplies(s) then return false end
     local q = s.q
     if not q then return true end
     if not raceOK(q) then return false end
@@ -2621,7 +2658,7 @@ function E.DungeonNext(d, inside)
   local function nextJournalStep()
     local state = E.InstanceState(d)
     for _, current in ipairs(state and state.steps or {}) do
-      if not MG.db.skip[current.key] and not E.QuickDone(current) then return { kind = "in", step = current } end
+      if wingApplies(current.s) and not MG.db.skip[current.key] and not E.QuickDone(current) then return { kind = "in", step = current } end
     end
   end
   -- 進本後優先顯示本內目標。前置或城市對話可能尚未完成，也可能已交過。
@@ -2672,7 +2709,7 @@ function E.DungeonNext(d, inside)
   end
   local _, kind, revisit = E.DungeonStatus(d)
   if kind == "past" then
-    local pickup = inside and first("in", function(s) return s.manualAccept end)
+    local pickup = inside and first("in", function(s) return s.manualAccept or s.wing end)
     if pickup then return { kind = "in", step = pickup } end
     return materialInInstance()
   end
