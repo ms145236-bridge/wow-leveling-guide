@@ -17,6 +17,7 @@ lua5.1 tools/tests/ungoro-escort.lua
 lua5.1 tools/tests/tooga-escort.lua
 lua5.1 tools/tests/tooga-escort.lua legacy
 lua5.1 tools/tests/tooga-horde.lua
+lua5.1 tools/tests/hyjal-crate.lua
 lua5.1 tools/tests/route-handoffs.lua
 lua5.1 tools/tests/duskwood-comb.lua
 lua5.1 tools/tests/merged-waypoints.lua
@@ -65,4 +66,5 @@ python3 -B tools/tests/replay/test_selection.py
 python3 -B tools/tests/replay/test_skips.py
 python3 -B tools/tests/replay/test_punchcard.py
 python3 tools/tests/replay/held_items.py
+python3 tools/tests/replay/hyjal_crate.py
 python3 tools/tests/replay/check.py
