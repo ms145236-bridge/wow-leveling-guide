@@ -223,7 +223,7 @@ f:SetScript("OnUpdate", function(_, dt)
       end
     end
     local at = lastState and lastState.cur and lastState.steps[lastState.cur].s
-    local soft = at and not at.x and E.SOFT[at.t] and not lastState.instance and not (lastState.tails and lastState.tails[lastState.cur]) -- 沒座標的交通：走到後面步驟附近算到
+    local soft = at and (not at.x or at.t == "boat") and E.SOFT[at.t] and not lastState.instance and not (lastState.tails and lastState.tails[lastState.cur]) -- 沒座標的交通：走到後面步驟附近算到
     local arrive = MG.wpOverride or soft or (at and (at.t == "goto" or (at.t == "travel" and at.x) or at.t == "hearth"))
     local moved = not (lastPos and map == lastPos[1] and x and lastPos[2] and math.abs(x - lastPos[2]) + math.abs(y - lastPos[3]) < (arrive and 0.02 or 0.2))
     if moved then lastPos = { map, x, y } end
@@ -260,19 +260,7 @@ local function latchCurrent(t)
   if cur and cur.s.t == t then MG.db.latch[cur.key] = true end
 end
 -- 飛／船的目的地、出發地（鳥點中文名）在哪張地圖：路線上有這個鳥點才查得到
-local nodeMap
-local function mapOf(node)
-  if not nodeMap then
-    nodeMap = {}
-    for _, st in ipairs(R.stations) do
-      for _, s in ipairs(st.steps) do
-        if s.t == "fp" and s.map and (s.nodeK or s.node) then nodeMap[s.nodeK or s.node] = s end
-      end
-    end
-  end
-  local s = node and nodeMap[node]
-  if s then return s.map, s.x, s.y end
-end
+local mapOf = function(node) return E.NodeMap(node) end
 
 -- ── 自動接交任務（設定預設開；按住 Shift 暫停） ─────────────────────────────
 -- 同名任務很多（例如「馴服野獸」有 10 個 ID），所以標題對到的是 ID 清單

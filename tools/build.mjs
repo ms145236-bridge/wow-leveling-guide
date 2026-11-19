@@ -91,7 +91,7 @@ const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 
 const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
 // 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
 const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|當地補接種族[：:]|本次做完後回報|限用路線座標|共用野外前置|計數擊殺[：:]|收取任務物品[：:]|取得後繼續路線|攜物尋訪[：:]|在地辦理[：:]|人在任務點附近|順訪不追回|前任已交[：:]|限真實副本[：:]|手動物品起任|裂隙捕捉|就地採集[：:]|自備材料[：:]|交回物品[：:]|副本材料怪[：:]|本內亦可取得[：:]|出本後才提示交件|戰鬥武器[：:]|持有或裝備[：:]|日誌確認互動|目標完成才交[：:]|任務未?失敗[：:]|原生可交|到[：:]|手動順路補接|徽章偵察[：:]|永恆接取等級|到站再預留|背包物品接取[：:]|怪物[：:]|自行選點補級|原進度文字[：:]|隨同交件[：:]|尚可接取[：:]|同一步座標|護送完成才勾|同圖才預覽下一點|安戈洛離站[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|舊鍵[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|當地補接種族[：:]|本次做完後回報|限用路線座標|共用野外前置|計數擊殺[：:]|收取任務物品[：:]|取得後繼續路線|攜物尋訪[：:]|在地辦理[：:]|人在任務點附近|順訪不追回|前任已交[：:]|限真實副本[：:]|手動物品起任|裂隙捕捉|就地採集[：:]|自備材料[：:]|交回物品[：:]|副本材料怪[：:]|本內亦可取得[：:]|出本後才提示交件|戰鬥武器[：:]|持有或裝備[：:]|日誌確認互動|目標完成才交[：:]|任務未?失敗[：:]|原生可交|到[：:]|手動順路補接|徽章偵察[：:]|永恆接取等級|到站再預留|背包物品接取[：:]|怪物[：:]|自行選點補級|原進度文字[：:]|隨同交件[：:]|尚可接取[：:]|同一步座標|護送完成才勾|同圖才預覽下一點|安戈洛離站[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -442,7 +442,9 @@ for (const file of files.filter((f) => !sideFile(f))) {
         ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
       spot: (tags.find((t) => /^所在[：:]/.test(t)) || "").replace(/^所在[：:]\s*/, "") || undefined, // 副本內交的人在哪（副本中目標做完時顯示）
       star: starOf(tags), rate: (tags.map((t) => t.match(/^掉率\s*(\d+(?:\.\d+)?)\s*%/)).find(Boolean) || [])[1],
-      pre: tags.map((t) => t.match(/^前置[：:].*?(\d{2,6})\s*$/)).filter(Boolean).map((m) => +m[1]) };
+      pre: tags.map((t) => t.match(/^前置[：:].*?(\d{2,6})\s*$/)).filter(Boolean).map((m) => +m[1]),
+      // 【舊鍵：a／b＋c】：改寫、合併過的步驟沿用舊存檔鍵。「／」分座標點（依序，最後一點是這步本身），「＋」是同一點的其他舊鍵（最後一個當這步的鍵）
+      oldKeys: (tags.find((t) => /^舊鍵[：:]/.test(t)) || "").replace(/^舊鍵[：:]\s*/, "").split("／").map((p) => p.split("＋").map((s) => s.trim()).filter(Boolean)).filter((p) => p.length) };
     if (step.t === "accept" || step.t === "turnin" || step.t === "do") {
       Object.assign(step, splitName(f[0]));
       if (/^[?？]?$/.test(step.zh)) step.zh = ""; // 中文名未知：用 QuestieDB 的 zhTW，再不行用英文名
@@ -514,7 +516,8 @@ for (const file of files.filter((f) => !sideFile(f))) {
     else if (step.t === "fp") { step.node = f[0]; step.coord = parseCoord(f[1]); }
     else if (step.t === "hearth") step.bind = f[0];
     else if (step.t === "fly") step.to = f[0];
-    else if (step.t === "boat") { step.to = f[0]; step.from = f[1]; }
+    // 船｜目的地｜出發地｜碼頭座標（「／」接別的上船處）：箭頭指去碼頭，搭上船才算完成
+    else if (step.t === "boat") { step.to = f[0]; step.from = f[1]; step.coord = parseCoord(f[2]); step.more = String(f[2] || "").split("／").slice(1).map(parseCoord).filter(Boolean); }
     else if (step.t === "level") {
       step.lv = +f[0];
       step.chooseGrindSpot = tags.includes("自行選點補級") || undefined;
@@ -1368,7 +1371,7 @@ const stepOut = (s, st) => ({
   star: s.star, t: s.t, any: s.any, instancePickup: s.ph === "in" && s.t === "accept" && s.instancePickup || undefined, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
   // 說明段用「；」接起來：句號結尾的段後面不再補「；」，完全相同的段只留一次（翻譯照原本的「；」切段，不受影響）
   desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, key0: s.key0, item: s.item, n: s.n, fq: s.fq, pick: s.pick, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
-  map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, via: s.via?.length ? s.via.map((p) => [p.map, p.x, p.y]) : undefined, r: s.r, back: s.back, hm: s.hm, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam, hold: s.hold, native: s.native,
+  map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, via: s.via?.length ? s.via.map((p) => [p.map, p.x, p.y]) : undefined, skey: s.oldKeys?.length ? s.oldKeys.at(-1).at(-1) : undefined, akeys: s.oldKeys?.at(-1)?.length > 1 ? s.oldKeys.at(-1).slice(0, -1) : undefined, vkeys: s.oldKeys?.length > 1 ? s.oldKeys.slice(0, -1) : undefined, r: s.r, back: s.back, hm: s.hm, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam, hold: s.hold, native: s.native,
 });
 // 打怪經驗估算的上限：每個目標最多算 KILL_CAP 隻（掉落目標＝數量 ÷ 掉率，沒寫掉率時和 Engine.lua 的 DROP_RATE 一樣用 0.4）
 const KILL_CAP = 40, DROP_RATE = 0.4;

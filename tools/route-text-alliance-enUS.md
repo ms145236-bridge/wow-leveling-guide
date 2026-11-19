@@ -1301,6 +1301,35 @@
 05-副本.md:226｜說明｜清潔區的超級清潔器 5200 型。需要 3 銀。｜Sparklematic 5200 in the Clean Zone. Bring 3 silver.
 05-副本.md:232｜說明｜任務可分趟做。在入口通道或副本內取第一瓶樣本，回卡拉諾斯交給奧齊再領重鉛瓶。｜You can split this chain across runs. Collect the first sample in the entrance tunnels or inside the instance. Turn it in to Ozzie in Kharanos for the heavy vial.
 05-副本.md:233｜說明｜帶重鉛瓶找輻射泥漿怪、酸性潛伏者或輻射水元素。取樣後兩小時內交回卡拉諾斯；來不及就留到下次組隊再取樣。｜Use the heavy vial on an Irradiated Slime, Corrosive Lurker, or Irradiated Horror. The sample lasts two hours. If you cannot reach Kharanos in time, collect it on your next group run.
+01-第一段-1到12級.md:916｜說明｜要翻山：不走北門隧道，從這裡往東爬上山坡，照箭頭沿山稜走到山的另一邊（79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50），先往下跳到前方的平台，再落到地面，走到洛克莫丹南部警戒塔。｜Climb over the mountain: instead of the North Gate tunnel, head east up the slope from here and follow the arrow along the ridge to the other side (79.40, 49.90 → 80.40, 49.70 → 81.50, 50.10 → 83.10, 49.50), then drop to the ledge in front first, then down to the ground, and walk to Loch Modan's southern guard tower.
+01-第一段-1到12級.md:261｜說明｜往西走到山坡下，從這裡爬上西北邊的山丘。｜Head west to the foot of the slope, then climb the hills to the northwest from here.
+01-第一段-1到12級.md:390｜說明｜從這裡沿坡道繞上大樹，獵人訓練師在樹上。｜Follow the ramp up around the great tree from here; the hunter trainer is up top.
+02-12到30級.md:218｜說明｜從這裡跳進河裡，游到瀑布下的水潭。沿路見到小月夜猛虎和狂暴薊熊就打。｜Jump into the river here and swim to the pool below the waterfall. From here on, kill any Moonstalker Runts and Rabid Thistle Bears you see.
+02-12到30級.md:474｜說明｜先沿大路往東走，到挖掘場北邊的路口再往南下去。｜Follow the main road east first, then turn south down into the dig site at the turnoff north of it.
+02-12到30級.md:678｜說明｜出阿斯特蘭納先往東走到岔路口，再沿路往北。｜Leave Astranaar heading east to the fork, then follow the road north.
+02-12到30級.md:681｜說明｜從湖心島往南游回岸上（46.80, 49.20 → 47.00, 51.70），再往東走。｜Swim south from the lake island back to shore (46.80, 49.20 → 47.00, 51.70), then head east.
+02-12到30級.md:706｜說明｜走到山洞口（42.30, 71.00），穿過山洞進石爪山脈。｜Walk to the cave entrance (42.30, 71.00) and go through the cave into Stonetalon Mountains.
+03-30到45級.md:33｜說明｜往西進西部荒野，到哨兵嶺搭鳥。｜Head west into Westfall and take a flight from Sentinel Hill.
+03-30到45級.md:127｜說明｜薩爾圖斯在山坡上，要照箭頭從西邊繞上去（31.99, 48.68 → 31.15, 49.05 → 32.41, 50.92）。｜Sarltooth is up on the hillside; follow the arrow around and up from the west (31.99, 48.68 → 31.15, 49.05 → 32.41, 50.92).
+03-30到45級.md:378｜說明｜先繞到北邊，從這裡進狼嚎谷。｜Go around to the north side and enter the Howling Vale from here.
+03-30到45級.md:381｜說明｜回到北邊的大路，從這裡的路口進夜道谷。｜Head back to the main road to the north and enter Night Run at this turnoff.
+03-30到45級.md:413｜說明｜搭大升降梯下到底。｜Ride the Great Lift all the way down.
+03-30到45級.md:653｜說明｜往南進塔納利斯，到加基森搭鳥。｜Head south into Tanaris and take a flight from Gadgetzan.
+03-30到45級.md:668｜說明｜去警戒崗哨搜索亨德爾下士的消息，走到就完成，再回塞拉摩交。｜Search Sentry Point for news of Private Hendel. Reaching it completes the quest; then return to Theramore to turn it in.
+03-30到45級.md:733｜說明｜先往西北出迷霧谷，再往北走。｜Leave Mistvale Valley to the northwest first, then head north.
+03-30到45級.md:1173｜說明｜蟲繭在痛苦深淵的洞裡，從洞口走進去（73.20, 63.90 → 72.30, 64.20）。｜The cocoon is inside the Writhing Deep cave; walk in from the entrance (73.20, 63.90 → 72.30, 64.20).
+04-45到60級.md:69｜說明｜謝申克在洞裡，從洞口沿坡道往下走（55.00, 70.00 → 54.20, 72.90 → 56.30, 72.20）。｜Scrimshank is down in the cave; follow the ramp down from the entrance (55.00, 70.00 → 54.20, 72.90 → 56.30, 72.20).
+04-45到60級.md:93｜說明｜往東北走山路進辛特蘭。｜Take the mountain path northeast into the Hinterlands.
+04-45到60級.md:126｜說明｜往南出洛克莫丹，從這裡的山路進荒蕪之地。｜Leave Loch Modan to the south and take the mountain path here into the Badlands.
+04-45到60級.md:300｜說明｜往西北走到去安戈洛環形山的山路口。｜Head northwest to the start of the path down to Un'Goro Crater.
+04-45到60級.md:340｜說明｜要進蟲巢採樣：往西南走到洞口再往裡走（50.40, 78.80 → 48.70, 85.20）。｜Into the hive for the sample: head southwest to the cave entrance and go inside (50.40, 78.80 → 48.70, 85.20).
+04-45到60級.md:676｜說明｜往東南走，從這裡的山路進辛特蘭。｜Head southeast and take the mountain path here into the Hinterlands.
+01-第一段-1到12級.md:59｜說明｜打算練剝皮再選剝皮卡。｜Pick the Skinning card only if you plan to skin.
+01-第一段-1到12級.md:881｜說明｜到暴風城港口的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Go to the Stormwind Harbor pier and take the boat to Auberdine (1453 21.80, 56.80).
+03-30到45級.md:715｜說明｜到棘齒城碼頭，搭往藏寶海灣的船（1413 63.35, 38.45）。｜Go to the Ratchet dock and take the boat to Booty Bay (1413 63.35, 38.45).
+04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Go to the Southshore dock and take the boat to Auberdine (1424 50.70, 70.50).
+01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Board at the pier in Stormwind Harbor.
+03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Board at the Ratchet dock.
 02-12到30級.md:620｜說明｜若先打過濕地挖掘場，在湖畔鎮接下這個任務，留到下次組隊進本找戴文。｜If you have already cleared the Wetlands Excavation Site, pick this up in Lakeshire and look for Daewyn on your next group run.
 05-副本.md:204｜說明｜再經湖畔鎮時，向多林回報弟弟的下落。｜Tell Dorin what happened to his brother the next time you visit Lakeshire.
 05-副本.md:386｜說明｜一般跟線可在安戈洛第二趟結束、回到鐵爐堡後組隊，下站就是燃燒平原。提早在灼熱峽谷組到隊，也可從峽谷南端進黑石山。｜On the main route, form your group in Ironforge after your second visit to Un’Goro. The Burning Steppes are next. If you find a group earlier in Searing Gorge, enter Blackrock Mountain at the south end of the gorge.
