@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "9e11b001",
+  built = "34b7f26d",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -1281,7 +1281,7 @@ MG.Route = {
         {t="fp", node="鐵爐堡", map=1455, x=55.5, y=47.8},
         {t="fly", to="塞爾薩瑪", when={fp="塞爾薩瑪"}},
         {t="travel", tag="提醒：還沒開這個飛行點，第一次要用跑的", text="出鐵爐堡沿大路往東，穿過東邊山口的隧道進洛克莫丹，再沿路往東北到塞爾薩瑪。", when={noFp="塞爾薩瑪"}},
-        {t="fp", node="塞爾薩瑪", map=1432, x=33.9, y=51},
+        {t="fp", node="塞爾薩瑪", map=1432, x=33.9, y=51, when={noFp="塞爾薩瑪"}},
         {t="turnin", q=416, desc="巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。", npc="巡山人卡德雷爾", tgt="巡山人卡德雷爾", map=1432, x=35.68, y=46.67},
         {t="accept", q=86585, npc="巡山人伊爾娃", tgt="巡山人伊爾娃", map=1432, x=31.79, y=86.33},
         {t="do", q=237, hint="南部警戒塔的巡山人格拉維戈要你殺掉10個碎石怪擊顱者和10個碎石怪先知，然後回去向他彙報。", map=1432, x=31.2, y=84.95, when={notRace={"Skyborne"}}},
@@ -1455,7 +1455,7 @@ MG.Route = {
         {t="accept", q=5061, desc="交任務學水棲形態。", npc="德迪利特·星焰", tgt="德迪利特·星焰", map=1450, x=56.21, y=30.64, when={lvMin=16, class={"DRUID"}, race={"NightElf"}}},
         {t="turnin", q=5061, desc="交任務學水棲形態。從永夜港搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。", npc="瑪斯雷·馭熊者", tgt="瑪斯雷·馭熊者", map=1457, x=35.37, y=8.4, when={lvMin=16, class={"DRUID"}, race={"NightElf"}}},
         {t="travel", text="走進達納蘇斯的傳送門回魯瑟蘭村。"},
-        {t="fp", node="魯瑟蘭村", map=1438, x=58.4, y=94},
+        {t="fp", node="魯瑟蘭村", map=1438, x=58.4, y=94, when={noFp="魯瑟蘭村"}},
         {t="fly", to="奧伯丁"},
         {t="do", q=2139, hint="找到雌薊熊，然後殺掉它。", map=1439, x=51.5, y=38.3},
         {t="do", q=4763, hint="在空的淨化碗裡盛滿奧伯丁月井的井水。 在黑木熊怪的北部營地裡收集水果、堅果和榖物各一份。 將水和三種食物混合起來，放置在壁泉河附近的營火邊，這樣就會召來喚引誘熊怪墮落的薩特。 取回墮落護符，將它交給奧伯丁的桑迪斯·織風。", map=1439, x=52.5, y=33.4},
@@ -2656,7 +2656,7 @@ MG.Route = {
         {t="fly", desc="已開尼耶爾前哨站就直接飛過去（經塞拉摩），跳過下一步。石爪峰沒開就飛阿斯特蘭納，從梣谷南邊的山洞進石爪山脈。", to="石爪峰", when={noFp="尼耶爾前哨站"}},
         {t="travel", tag="提醒：還沒開這個飛行點，第一次要用跑的", text="從石爪峰沿大路往南下山，經過烈日石居時繞開部落營地，從石爪山脈西南邊進淒涼之地，尼耶爾前哨站在淒涼之地北邊。", when={noFp="尼耶爾前哨站"}},
         {t="fly", to="尼耶爾前哨站", when={fp="尼耶爾前哨站"}},
-        {t="fp", node="尼耶爾前哨站", map=1443, x=64.7, y=10.4},
+        {t="fp", node="尼耶爾前哨站", map=1443, x=64.7, y=10.4, when={noFp="尼耶爾前哨站"}},
         {t="turnin", q=1453, npc="克雷迪格·安戈爾", tgt="克雷迪格·安戈爾", map=1443, x=66.2, y=9.63},
         {t="accept", q=1458, npc="克雷迪格·安戈爾", tgt="克雷迪格·安戈爾", map=1443, x=66.2, y=9.63},
         {t="accept", q=1454, npc="克雷迪格·安戈爾", tgt="克雷迪格·安戈爾", map=1443, x=66.2, y=9.63},
