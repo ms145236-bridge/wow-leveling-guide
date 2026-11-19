@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "d52d2c85",
+  built = "99afed11",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -3343,7 +3343,8 @@ MG.Route = {
     { id="03-39", start=nil, name="荊棘谷 第三次", short="荊棘谷", visit=3, map=1434, lv={43, 44}, video=nil, test=nil, alt=nil, when=nil, tips={}, dungeon=nil, grind={{mob="納迦探險者", lv={43, 44}, map=1434, x=26.2, y=62, note="藏寶海灣北邊海岸，普通怪，數量集中。"}, {mob="血帆槳手", lv={43, 44}, map=1434, x=31.5, y=89.1, note="南邊海灘的血帆營地，和血帆任務同一批。"}}, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply=nil, danger=nil,
       steps = {
         {t="hearth", desc="爐石還在冷卻就從尼耶爾前哨站飛棘齒城（經塞拉摩），再搭船到藏寶海灣。", bind="藏寶海灣", hm=1434, when={workMap=1443}},
-        {t="boat", to="藏寶海灣", from="棘齒城", map=1413, x=63.35, y=38.45, when={workMap=1413}},
+        {t="travel", text="還在石爪山脈：爐石可用就爐回藏寶海灣；爐石冷卻就從石爪峰飛棘齒城（經阿斯特蘭納、塔倫迪斯營地），再搭船到藏寶海灣。", when={workMap=1442, canStart=621}},
+        {t="boat", to="藏寶海灣", from="棘齒城", map=1413, x=63.35, y=38.45, when={workMap=1413, canStart=621}},
         {t="accept", q=600, npc="克蘭克·菲茲巴布", tgt="克蘭克·菲茲巴布", map=1434, x=27.12, y=77.21},
         {t="accept", q=621, npc="克蘭克·菲茲巴布", tgt="克蘭克·菲茲巴布", map=1434, x=27.12, y=77.21},
         {t="accept", q=587, npc="迪格", tgt="迪格", map=1434, x=26.92, y=77.35},

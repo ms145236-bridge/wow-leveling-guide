@@ -65,4 +65,24 @@ assert(s.t == "boat" and s.to == "藏寶海灣")
 position = { 1434, 27.1, 77.2 }
 s = current()
 assert(s.t == "accept", "in Booty Bay the stop starts with its pickups")
+-- 舊第38站從棘齒城飛石爪峰出發、人還在石爪山脈：先回藏寶海灣
+position = { 1442, 36.45, 7.07 }
+s = current()
+assert(s.t == "travel" and s.text:find("石爪峰", 1, true), "Stonetalon start: hearth or fly back to Ratchet")
+-- 新路線照常走：已在藏寶海灣接了 621，後來坐船到棘齒城，不會被返程的船拉回去
+active[621] = true
+position = { 1413, 62.5, 35.5 }
+s = current()
+assert(not (s.t == "boat" and s.to == "藏寶海灣") and s.t ~= "travel", "Ratchet later in the stop: no return boat")
+active[621] = nil
+
+-- 舊第38站去打副本（奧達曼），回主線時接第39站；目前的副本和進度不動
+db.station, db.dungeonFrom, db.desolace3537, me.lv = "05-d9", "03-38", nil, 43
+assert(E.Current().id == "05-d9" and db.dungeonFrom == "03-39" and db.desolace3537 == true)
+db.station, db.dungeonFrom = db.dungeonFrom, nil -- UI「回主線」
+assert(E.Current().id == "03-39")
+-- 36 級從新第38站去打副本的不動
+db.station, db.dungeonFrom, db.desolace3537, me.lv = "05-d9", "03-38", nil, 36
+E.Current()
+assert(db.dungeonFrom == "03-38")
 print("Desolace 35–37 move: old saves continue at 03-39, Desolace and Ratchet returns, new characters stay")
