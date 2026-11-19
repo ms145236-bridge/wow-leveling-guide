@@ -95,7 +95,7 @@ for _, case in ipairs({{209, 45, 3042}, {109, 52, 3446}}) do
     ready[3520] = verb == "turnin"
     local outside = assert(E.DungeonNext(dungeon, false)).step.s
     assert(outside.q == 3520 and outside.t == verb and outside.outsideObjective)
-    assert(outside.map == (verb == "do" and 1444 or 1446))
+    assert(verb == "do" and outside.map == nil or outside.map == 1446) -- 3520 島岸只用文字引路
     local inside = E.DungeonNext(dungeon, true)
     assert(not action(dungeon, 3520) and not (inside and inside.step and inside.step.s.q == 3520))
     local q = case[3]

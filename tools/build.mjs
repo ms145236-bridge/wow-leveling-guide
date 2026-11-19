@@ -607,8 +607,8 @@ for (const file of files.filter((f) => !sideFile(f))) {
       throw new Error(step.where + " 「限真實副本」需要相符的副本內步驟");
     }
     if (tags.includes("手動物品起任")) {
-      if (step.t !== "accept" || !step.when?.instanceID || !db.quest(step.id)?.startItems.includes(step.when.bag?.item)) {
-        throw new Error(step.where + " 「手動物品起任」需要副本限制和真正的起始物品");
+      if (step.t !== "accept" || (step.ph === "in" && !step.when?.instanceID) || !db.quest(step.id)?.startItems.includes(step.when?.bag?.item)) {
+        throw new Error(step.where + " 「手動物品起任」需要真正的起始物品；副本內的接取另要副本限制");
       }
       step.manualAccept = true;
     }
