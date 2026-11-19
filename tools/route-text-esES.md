@@ -14748,3 +14748,6 @@
 05-副本.md:752｜步驟所在｜清潔區內提供戒指任務的清潔器｜La máquina que ofrece la misión del anillo en la Zona Limpia
 05-副本.md:1334｜說明｜卡加斯交派隆後，隊伍要走監獄就向賈拉瑪弗接。｜Tras entregar la misión de Pyron en Kargath, habla con Galamav si tu grupo piensa pasar por la prisión.
 05-副本.md:1344｜說明｜隊友能開牢門就直接進。若門鎖著，先擊敗審訊官格斯塔恩取得監獄牢房鑰匙，再回來找哥沙克。｜Si alguien del grupo puede abrir la celda, entra. Si está cerrada, consigue la llave de la celda de la alta interrogadora Gerstahn y vuelve con Gor’shak.
+03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Elige primero la opción de diálogo de Sovik; después aparece la misión.
+05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Elige primero la opción de diálogo de Sovik; después aparece la misión.
+04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta fallida: abandona la misión en el registro y vuelve a aceptarla del robot.

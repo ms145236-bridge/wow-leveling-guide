@@ -1363,3 +1363,6 @@
 04-45到60級.md:527｜說明｜沿山徑上火羽山測溫。若已接火元素的灰燼任務就順手收集，測好溫度後沿山徑去找林格；開始護送後直接往北回馬紹爾營地。｜Suivez le sentier du mont de la Fournaise pour prendre la température. Si vous avez la quête des cendres, ramassez-les en chemin. Après la mesure, suivez le sentier jusqu’à Ringo. Dès le début de l’escorte, partez directement au nord vers le refuge des Marshal.
 04-45到60級.md:547｜說明｜在南部蟲巢一帶找格里什異種蠍或工蠍取得訊息素，沿途從土堆補足五份泥土。單人可挑落單的蟲，毋須深入找蜂后。｜Cherchez des guêpes ou des ouvriers Gorishi près de la ruche du sud pour obtenir la glande. Ramassez cinq portions de terre dans les tas en chemin. En solo, attirez des insectes isolés sans vous enfoncer à la recherche de la reine.
 05-副本.md:436｜說明｜聽卡蘭說完他的故事。｜Écoutez toute l’histoire de Kharan.
+03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.
+04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.
+04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.

@@ -1363,3 +1363,6 @@
 04-45到60級.md:527｜說明｜沿山徑上火羽山測溫。若已接火元素的灰燼任務就順手收集，測好溫度後沿山徑去找林格；開始護送後直接往北回馬紹爾營地。｜Folgt dem Pfad auf den Feuersäulengrat und messt die Temperatur. Sammelt unterwegs Asche, falls ihr die Quest habt. Nach der Messung folgt dem Pfad zu Ringo. Führt ihn nach Beginn der Eskorte direkt nach Norden zu Marshals Zuflucht.
 04-45到60級.md:547｜說明｜在南部蟲巢一帶找格里什異種蠍或工蠍取得訊息素，沿途從土堆補足五份泥土。單人可挑落單的蟲，毋須深入找蜂后。｜Sucht im Süden beim Schwarmbau nach Gorishiwespen oder Gorishiarbeitern für die Duftdrüse. Sammelt unterwegs fünf Portionen Erde aus Erdhaufen. Allein könnt ihr einzelne Insekten bekämpfen, ohne tiefer zur Königin vorzudringen.
 05-副本.md:436｜說明｜聽卡蘭說完他的故事。｜Hört euch Kharans ganze Geschichte an.
+03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.
+04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.
+04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.

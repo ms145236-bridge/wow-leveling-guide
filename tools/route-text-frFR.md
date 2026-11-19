@@ -14473,3 +14473,6 @@
 05-副本.md:752｜步驟所在｜清潔區內提供戒指任務的清潔器｜La machine qui propose la quête de l’anneau dans la Zone propre
 05-副本.md:1334｜說明｜卡加斯交派隆後，隊伍要走監獄就向賈拉瑪弗接。｜Après avoir rendu la quête de Pyron à Kargath, parlez à Galamav si votre groupe compte passer par la prison.
 05-副本.md:1344｜說明｜隊友能開牢門就直接進。若門鎖著，先擊敗審訊官格斯塔恩取得監獄牢房鑰匙，再回來找哥沙克。｜Si votre groupe peut ouvrir la cellule, entrez. Sinon, prenez la clé sur la grande inquisitrice Gerstahn et retournez auprès de Gor’shak.
+03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Choisissez d'abord l'option de dialogue de Sovik ; la quête apparaît ensuite.
+05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Choisissez d'abord l'option de dialogue de Sovik ; la quête apparaît ensuite.
+04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.

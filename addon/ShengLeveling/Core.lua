@@ -422,6 +422,8 @@ local function notOffered(event)
       if issecretvalue and issecretvalue(q.questID) then return end
       ids[#ids + 1] = q.questID
     end
+    -- 第一頁只有對話選項（例如索維克要先點對話才列任務）：還看不出給不給，不判斷
+    if #ids == 0 and G.GetOptions and #(G.GetOptions() or {}) > 0 then return end
   else
     for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do
       for _, id in ipairs(routeQuestsByTitle(GetAvailableTitle(i))) do ids[#ids + 1] = id end
@@ -441,6 +443,13 @@ local function notOffered(event)
   if recent then return end
   -- 任一組：NPC 給了組裡任何一個，整組的「接不到」就收回（不必是目前步驟；含 1.13.15 只認剝皮時留下的 a:97924）
   for _, id in ipairs(ids) do if anyG[id] then MG.db.notNow["a:" .. anyG[id]] = nil end end
+  -- NPC 現在給了：之前自動記下的「接不到」收回，不論記在哪一站、鍵有沒有 ~2 後綴（手動略過記在 skip，不動）
+  local offered = {}
+  for _, id in ipairs(ids) do offered[id] = true end
+  for key in pairs(MG.db.notNow) do
+    local q = tonumber(tostring(key):match("^a:(%d+)"))
+    if q and offered[q] and not manualFrom[q] and not localRecovery[q] then MG.db.notNow[key] = nil end
+  end
   local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
   local s = cur and cur.s
   if not (s and s.t == "accept" and s.q) or C.IsOnQuest(s.q) or E.Turned(s.q) then return end

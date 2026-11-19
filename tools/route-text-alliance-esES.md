@@ -1363,3 +1363,6 @@
 04-45到60級.md:527｜說明｜沿山徑上火羽山測溫。若已接火元素的灰燼任務就順手收集，測好溫度後沿山徑去找林格；開始護送後直接往北回馬紹爾營地。｜Sube por el sendero de la Cresta del Penacho en Llamas para medir la temperatura. Recoge cenizas por el camino si tienes esa misión. Tras medir la temperatura, sigue el sendero hasta Ringo. Al comenzar la escolta, ve directamente al norte hasta el Refugio de Marshal.
 04-45到60級.md:547｜說明｜在南部蟲巢一帶找格里什異種蠍或工蠍取得訊息素，沿途從土堆補足五份泥土。單人可挑落單的蟲，毋須深入找蜂后。｜Busca avispas u obreros Gorishi junto a la colmena del sur para conseguir la glándula. Recoge tierra de los montones que encuentres hasta tener cinco. En solitario puedes atraer insectos aislados sin adentrarte en busca de la reina.
 05-副本.md:436｜說明｜聽卡蘭說完他的故事。｜Escucha la historia completa de Kharan.
+03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta fallida: abandona la misión en el registro y vuelve a aceptarla del robot.
+04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta fallida: abandona la misión en el registro y vuelve a aceptarla del robot.
+04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta fallida: abandona la misión en el registro y vuelve a aceptarla del robot.

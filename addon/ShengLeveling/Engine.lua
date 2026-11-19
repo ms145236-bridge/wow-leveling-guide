@@ -243,7 +243,7 @@ local function journalReady(q)
 end
 
 local function turned(q) return E.session[q] or C.IsTurnedIn(q) end
-function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用）
+function E.Applies(when, anyLv, keepReady) -- 往後預估不看等級；指定交接仍核對日誌
   if not when then return true end
   if when.notOrigin and originMatch(when.notOrigin) then return false end
   local routeRaces = when.raceOrOrigin or when.neitherRaceNorOrigin
@@ -255,7 +255,7 @@ function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用�
   if when.notRace and raceMatch(when.notRace) then return false end
   if when.coastal ~= nil and when.coastal ~= (MG.db.auberdineChoice == "coast") then return false end
   if when.dungeonPrep and (not MG.UI.Get("dPre") or not MG.UI.Get("optional") or MG.db.dNo[when.dungeonPrep]) then return false end
-  if when.readyQuest then
+  if when.readyQuest and (not anyLv or keepReady) then
     if not journalReady(when.readyQuest) then return false end
     local info = R.quests[when.readyQuest]
     if info and info.survey then
@@ -288,6 +288,8 @@ function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用�
     if MG.db.skip[key] or MG.db.mark[key] or turned(q)
       or not C.IsOnQuest(q) or not C.IsReady(q) then return false end
   end
+  if when.failedQuest and not anyLv and not (C.IsFailed and C.IsFailed(when.failedQuest)) then return false end
+  if when.notFailedQuest and not anyLv and C.IsFailed and C.IsFailed(when.notFailedQuest) then return false end
   if when.money and (GetMoney and GetMoney() or 0) < when.money then return false end
   if when.bagOrWorn and not hasWeapon(when.bagOrWorn) then return false end
   if when.bag and E.ItemCount(when.bag.item) < when.bag.count then return false end
@@ -461,6 +463,7 @@ local function ready(q)
   if isCleanedRingReturn(q) then return C.IsOnQuest(q) and E.ItemCount(9362) > 0 and journalReady(q) end
   if R.quests[q] and (R.quests[q].supply or R.quests[q].confirmInteraction or R.quests[q].requiredLoot or R.quests[q].requiredItems) then return journalReady(q) end
   if C.IsReady(q) then return true end
+  if C.IsFailed and C.IsFailed(q) then return false end -- 護送失敗：目標清單可能是空的，不能當成做完
   local obj = C.Objectives(q)
   if not obj then return false end
   if #obj == 0 then return true end
@@ -831,7 +834,7 @@ local function stepDone(step, map, x, y)
   if t == "accept" or t == "need" then return C.IsOnQuest(q) or turned(q)
   elseif t == "do" and s.surveyState ~= nil then return turned(q) or s.surveyComplete
   elseif t == "do" then
-    if s.strictReady then return turned(q) or (C.IsOnQuest(q) and C.IsReady(q)) end
+    if s.strictReady or s.native then return turned(q) or (C.IsOnQuest(q) and C.IsReady(q)) end
     local need = s.when and s.when.onQuestAny and s.when.missingBag
     if need then return turned(q) or (C.IsOnQuest(q) and E.ItemCount(need.item) >= need.count) end
     local info = R.quests[q]
@@ -1555,6 +1558,9 @@ function E.Locate(st)
       and (not C.IsOnQuest(pinned.q) or journalReady(pinned.q))
     if (found and found == waitingRingReturn) or unavailableHunt or unavailableVisit or waitingMaterials or (pinned and physical and (worldContact(pinned) or pinned.instanceMaterial)) then
       -- Leave the saved pin in place and use the available work until it becomes actionable.
+    elseif pinned and pinned.t == "turnin" and pinned.outsideObjective and isCleanedRingReturn(pinned.q) and not done[found] then
+      -- An unfinished ring return keeps its pin when a prerequisite elsewhere becomes available.
+      cur = found
     elseif not found or (done[found] and not pin.wasDone) or found == auto or (pin.auto and (auto and steps[auto].key or "") ~= pin.auto) then
       db.pin[st.id] = nil
     else
@@ -2140,7 +2146,7 @@ local function mainGrowth(st)
           and E.Applies(s.when, true) and not optOut(s) and not MG.db.skip[step.key] and not MG.db.mark[step.key] then
         plannedWork[q] = true
       elseif s.t == "turnin" and q and state[q] ~= 2 and (state[q] or C.IsOnQuest(q))
-          and (E.Applies(s.when, true) or (s.afterWork and plannedWork[q])
+          and (E.Applies(s.when, true, s.afterWork or s.providedVisit) or (s.afterWork and plannedWork[q])
             -- This authored visit uses the item issued by the projected acceptance. Held quests still use live eligibility.
             or (s.providedVisit and state[q] == 1 and not optOut(s)))
           and not MG.db.skip[step.key] and MG.db.mark[step.key] ~= true then
@@ -2169,7 +2175,13 @@ function E.DungeonDone(d)
   local any = false
   for _, step in ipairs(d.list) do
     local s = step.s
-    if s.t == "turnin" and (s.ph == "post" or s.ph == "in") and s.q and not s.opt and E.Applies(s.when) and raceOK(s.q) then
+    -- 「日誌可交」只決定下一步要不要指去交，不決定這本有哪些要交：交完後日誌不再回報可交，不能因此把任務從清單拿掉
+    local w = s.when
+    if w and w.readyQuest then
+      w = {}
+      for k, v in pairs(s.when) do if k ~= "readyQuest" then w[k] = v end end
+    end
+    if s.t == "turnin" and (s.ph == "post" or s.ph == "in") and s.q and not s.opt and E.Applies(w) and raceOK(s.q) then
       any = true
       if not turned(s.q) then return false end
     end
@@ -2217,9 +2229,18 @@ function E.DungeonStatus(d)
   local tg, tt = E.DungeonTargetCount(d)
   if got > 0 then return L["前置 "] .. tg .. "/" .. tt, "some" end
   -- 前置任務本身還有前置（任務鏈沒做）→ 先做前置鏈（見前置接取路線）
+  -- 前置接取和下一步用同一個最低等級：還不到時照樣可以進本，另寫前置幾級可接
+  local later
   for _, step in ipairs(d.list) do
     local st = step.s
-    if st.ph == "pre" and st.t == "accept" and st.q and E.Applies(st.when) and available(st.q) then return L["前置可接"], "pick" end
+    if st.ph == "pre" and st.t == "accept" and st.q and E.Applies(st.when) and available(st.q) then
+      local need = math.max(st.pickLv or 0, (R.quests[st.q] or {}).min or 0)
+      if lv >= need then return L["前置可接"], "pick" end
+      if not later or need < later then later = need end
+    end
+  end
+  if later then
+    return (lv >= d.lv[1] and L["可以去"] or L["%d 級再去"]:format(d.lv[1])) .. "・" .. L["前置 %d 級可接"]:format(later), "ready"
   end
   local tg, tt = E.DungeonTargetCount(d)
   return L["前置 "] .. tg .. "/" .. tt, "chain"

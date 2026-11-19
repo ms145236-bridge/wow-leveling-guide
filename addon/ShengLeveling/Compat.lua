@@ -255,16 +255,15 @@ pick("IsReady",
     return i and select(6, GetQuestLogTitle(i)) == 1 or false
   end)
 
--- 經典式日誌的 -1 是明確失敗；沒有提供狀態時回 nil。
-pick("IsFailed",
-  "GetQuestLogTitle", GetQuestLogTitle and function(id)
+-- 失敗狀態依序查現代 API、經典日誌和現代日誌列；無資料時回 nil。
+pick("IsFailed", "quest status", (fn(QL, "IsFailed") or GetQuestLogTitle or fn(QL, "GetInfo")) and function(id)
+    local failed = fn(QL, "IsFailed") and QL.IsFailed(id)
+    if type(failed) == "boolean" then return failed end
     local i = logIndex(id)
-    local state = i and select(6, GetQuestLogTitle(i))
+    if not i then return nil end
+    local state = GetQuestLogTitle and select(6, GetQuestLogTitle(i))
     if type(state) == "number" then return state == -1 end
-  end,
-  "C_QuestLog.GetInfo", fn(QL, "GetInfo") and function(id)
-    local i = logIndex(id)
-    local info = i and QL.GetInfo(i)
+    local info = fn(QL, "GetInfo") and QL.GetInfo(i)
     if info and type(info.isFailed) == "boolean" then return info.isFailed end
   end)
 

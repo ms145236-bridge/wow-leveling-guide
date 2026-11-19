@@ -101,6 +101,7 @@ MG.Locales.enUS = {
   ["%d 級再去"] = "At lv %d",
   ["前置 "] = "Prereqs ",
   ["前置可接"] = "Prereqs open",
+  ["前置 %d 級可接"] = "Prereq at lv %d",
   ["前置未接 %d／共 %d"] = "%d of %d prereqs not accepted",
   ["先做前置鏈（%d 步）"] = "Do the prereq chain (%d steps)",
   ["%d 級可接前置"] = "Prereqs at lv %d",

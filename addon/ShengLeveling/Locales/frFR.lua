@@ -101,6 +101,7 @@ MG.Locales.frFR = {
   ["%d 級再去"] = "Au niveau %d",
   ["前置 "] = "Prérequis ",
   ["前置可接"] = "Prérequis disponibles",
+  ["前置 %d 級可接"] = "Prérequis au niv. %d",
   ["前置未接 %d／共 %d"] = "%d prérequis sur %d non acceptés",
   ["先做前置鏈（%d 步）"] = "Faire d'abord la chaîne de prérequis (%d étapes)",
   ["%d 級可接前置"] = "Prérequis au niveau %d",
