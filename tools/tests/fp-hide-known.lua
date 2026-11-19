@@ -5,7 +5,7 @@ local who = { "Alliance", "Dwarf", 3 }
 function UnitFactionGroup() return who[1] end
 function UnitClass() return "Warrior", "WARRIOR" end
 function UnitRace() return who[2], who[2], who[3] end
-function UnitLevel() return 17 end
+function UnitLevel() return who.lv end
 function UnitXPMax() return 8800 end
 function UnitXP() return 0 end
 function wipe(t) for k in pairs(t) do t[k] = nil end end
@@ -39,10 +39,10 @@ end
 
 -- 聯盟洛克莫丹（02-12）、荒蕪之地卡加斯（部落 03-25）：前一步「飛」只在已開時出現，後面的「鳥」只在沒開時出現
 for _, c in ipairs({
-  { "Alliance", "Dwarf", 3, "Dwarf", "Data/RouteA.lua", "02-12", "塞爾薩瑪", { 1432, 33.9, 51 }, { "鐵爐堡" } },
-  { "Horde", "Orc", 2, "Orc", "Data/Route.lua", "03-25", "卡加斯", { 1418, 3.99, 44.78 }, {} },
+  { "Alliance", "Dwarf", 3, "Dwarf", "Data/RouteA.lua", "02-12", "塞爾薩瑪", { 1432, 33.9, 51 }, { "鐵爐堡" }, 17 },
+  { "Horde", "Orc", 2, "Orc", "Data/Route.lua", "03-25", "卡加斯", { 1418, 3.99, 44.78 }, {}, 41 },
 }) do
-  who[1], who[2], who[3], db.start, db.station = c[1], c[2], c[3], c[4], c[6]
+  who[1], who[2], who[3], who.lv, db.start, db.station = c[1], c[2], c[3], c[10], c[4], c[6]
   local E = load(c[5])
   local st = assert(E.byId[c[6]])
   local node = c[7]
@@ -67,6 +67,7 @@ for _, c in ipairs({
   db.fpNodes[node] = true
   state = E.Locate(st)
   check(state.na[fp] and state.cur ~= fp and state.cur ~= nil, c[6] .. " " .. node .. " 剛開：往下一步")
+  check(state.done[fly] and state.cur > fp, c[6] .. " " .. node .. " 剛開：飛這步算到了，不倒退")
 end
 
 if fails > 0 then error(fails .. " failures") end
