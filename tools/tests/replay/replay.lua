@@ -28,6 +28,9 @@ local standard = tonumber(arg[10]) == nil and arg[11] == nil
 -- Provide cloth only in an explicitly supplied replay. The normal itinerary makes no drop assumption.
 local suppliedLinen = tonumber(arg[10]) or 0
 if suppliedLinen > 0 then drops[2589] = suppliedLinen end
+-- Alliance 91741/96391 start from kobold/Dark Iron drops met while doing the surrounding quests. The route now
+-- shows them only with the item in the bag (audit A-B9); the normal itinerary keeps the earlier assumption that it drops.
+if standard then drops[247834], drops[274268] = 1, 1 end
 -- Optional explicit successful interactions/drop scenarios. Simply visiting a dungeon supplies nothing.
 local weaponLoot = {}
 for id in (arg[11] or ""):gmatch("%d+") do weaponLoot[tonumber(id)] = true end

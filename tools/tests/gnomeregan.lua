@@ -76,8 +76,8 @@ end
 assert(ringReturn and ringReturn.ph == "post" and ringReturn.opt and ringReturn.map == 1455 and E.Applies(ringReturn.when))
 print("Gnomeregan escort, item-start ring, machine follow-up and on-route hand-ins passed")
 
--- The second vial can be accepted on the way in by prepared characters, or
--- at the same NPC when handing in the first sample on the way home.
+-- The second vial is accepted on the way in by characters who already handed in the first sample.
+-- There is no exit pickup: the timed sample only drops inside, and the route never re-enters (audit A-B5).
 local samples, bags = {}, {}
 for _, step in ipairs(gnomeregan.list) do
   local s = step.s
@@ -99,9 +99,9 @@ local function sample(q, phase, action)
 end
 local first = sample(2926, "pre", "accept")
 local second = sample(2962, "pre", "accept")
-local later = sample(2962, "post", "accept")
-assert(second.pickLv == 20 and later.pickLv == 20 and second.npc == first.npc)
-assert(first.map == 1426 and second.map == first.map and later.map == first.map)
+assert(not samples["2962/post/accept"])
+assert(second.pickLv == 20 and second.npc == first.npc)
+assert(first.map == 1426 and second.map == first.map)
 level = 31
 assert(nextSample(false) == first)
 active[2926], bags[9283] = true, 1
@@ -118,7 +118,7 @@ assert(nextSample(false) == second)
 for _, step in ipairs(gnomeregan.list) do
   if step.s == second then ns.db.skip[step.key] = true end
 end
-assert(nextSample(false) == later)
+assert(not nextSample(false))
 active[2962], bags[9364] = true, 1
 local secondReturn = sample(2962, "post", "turnin")
 assert(not E.Applies(secondReturn.when))
@@ -144,4 +144,4 @@ bags[9365] = 0
 assert(nextSample(false) ~= secondReturn)
 ns.db.dNo[gnomeregan.id] = true
 assert(not E.DungeonNext(gnomeregan, false))
-print("Gnomeregan ordered vial chain, alternate pickup, timed sample and optional revisit passed")
+print("Gnomeregan ordered vial chain, prepared pickup, timed sample and optional revisit passed")

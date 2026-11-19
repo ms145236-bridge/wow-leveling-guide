@@ -1404,3 +1404,4 @@
 06-路線外任務.md:1782｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Desde 16/11, as entregas repetidas não dão mais experiência, só reputação. A primeira, 1707, continua dando experiência.
 03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Mate gritadores do vale na costa da Ilha do Medo, em Feralas. Use a Morácea de Yeh'Kinya em cada cadáver e fale com o espírito que aparecer, até o registro de missões contar três.
 03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Costa da Ilha do Medo: use a morácea no cadáver e fale com o espírito.
+05-副本.md:442｜說明｜要回燃燒平原找麥克斯韋爾元帥交；之後不去燃燒平原就別接。｜Entregue ao Marechal de Campo Maxwell nas Estepes Ardentes. Não pegue se não for voltar lá.

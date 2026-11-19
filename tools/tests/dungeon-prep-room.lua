@@ -108,7 +108,10 @@ do
   wipe(ready)
   wipe(turned)
   local gorge = E.byId["04-45"]
-  fillLog(10)
+  -- The fullest log that still has exactly one prep slot left (depends on the mainline accepts ahead).
+  local held = 0
+  repeat held = held + 1; fillLog(held) until not E.PreRoom(gorge, 1) or held == 40
+  fillLog(held)
   local state = E.Locate(gorge)
   assert(E.PreRoom(gorge) and not E.PreRoom(gorge, 1))
   assert(tryAccept(3801, state))

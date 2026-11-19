@@ -1404,3 +1404,4 @@
 06-路線外任務.md:1782｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Since 11/16, repeat turn-ins no longer give XP, only reputation. The first-time 1707 still gives XP.
 03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Kill Vale Screamers on the coast of the Isle of Dread in Feralas. Use Yeh'kinya's Bramble on each corpse, then speak to the spirit that appears. Repeat until your quest log shows three spirits.
 03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Isle of Dread coast: use the bramble on a corpse, then speak to its spirit.
+05-副本.md:442｜說明｜要回燃燒平原找麥克斯韋爾元帥交；之後不去燃燒平原就別接。｜Turn in to Field Marshal Maxwell in Burning Steppes. Skip it if you won't go back to Burning Steppes.
