@@ -11,6 +11,7 @@ local trace = {} -- 事件參數紀錄（probe 用）
 local dirty, ready, since, tick, started = false, false, 0, 0, nil
 local logSeen, skipSync = false, 0 -- 登入後連帶略過重算過了沒：1＝等不到 QUEST_LOG_UPDATE 先算過、2＝任務日誌到了以後算過
 local lastState
+local visitChecks, priorVisit = {}, {}
 
 -- ── 重算 ────────────────────────────────────────────────────────────────────
 -- 副本裡：只列這個副本的任務（一次全列），不顯示主線、箭頭、地圖標點；對不到就整個隱藏。出副本後回主線並重新對齊。
@@ -25,6 +26,7 @@ local function instanceView()
   if not (inside and (kind == "party" or kind == "raid") and UI.Get("dungeonOnly")) then return false end
   if not inInstance then inInstance, enterLevel = true, UnitLevel("player") end
   local id = select(8, GetInstanceInfo())
+  E.DeferOutdoorHandoff(E.byId[MG.db.station], id)
   local d, all = E.DungeonByInstance(id)
   local ist = d and E.InstanceState(d, all)
   lastState = ist
@@ -82,7 +84,8 @@ local function refresh()
     MG.wpOverride, MG.grindActive = nil, nil
     N.Forget()
     local cur = MG.db.station and E.byId[MG.db.station]
-    if (cur and cur.dungeon) or (UnitLevel("player") or 0) > (enterLevel or 99) then
+    if not (cur and MG.db.deferredHandoffRun == cur.id and E.OutdoorHandoff(cur)) and ((cur and cur.dungeon) or (UnitLevel("player") or 0) > (enterLevel or 99)) then
+      MG.db.deferredHandoffRun = nil
       MG.db.station = MG.db.dungeonFrom
       MG.db.dungeonFrom = nil
       if MG.db.station and E.byId[MG.db.station] then
@@ -95,7 +98,8 @@ local function refresh()
   local state = st and E.Locate(st)
   -- 副本流程做完（出本後交完）→ 回主線
   if st and st.dungeon and state and state.complete then
-    MG.db.station = nil
+    MG.db.station = MG.db.deferredHandoffRun == st.id and MG.db.dungeonFrom or nil
+    MG.db.deferredHandoffRun = nil
     MG.db.dungeonFrom = nil
     st = E.Current()
     state = st and E.Locate(st)
@@ -107,6 +111,12 @@ local function refresh()
       E.Select(nxt)
       st, state = nxt, E.Locate(nxt)
     end
+  end
+  local previous = lastState and lastState.cur and lastState.steps[lastState.cur]
+  local current = state and state.cur and state.steps[state.cur]
+  if previous and previous.s.chooseGrindSpot and (not current or current.key ~= previous.key) and MG.grindActive then
+    MG.grindActive = nil
+    if MG.wpOverride and MG.wpOverride.grind then MG.wpOverride = nil end
   end
   lastState = state
   -- 手動略過的任務本身或後面有副本任務、好獎勵：聊天框提一次；可跳過沒開的整站合成一句
@@ -127,14 +137,19 @@ local function refresh()
   -- 箭頭：目前步驟的座標；本站完成時指向下一站第一個有座標的步驟
   local s = state and state.cur and state.steps[state.cur].s
   -- 本站完成，或目前是站尾交通但沒有座標 → 指向下一站第一個有座標的步驟
-  if state and nextSt and (not state.cur or (state.tails and state.tails[state.cur] and not (s and s.x))) then
+  if state and not state.pendingExit and nextSt and (not state.cur or (state.tails and state.tails[state.cur] and not (s and s.x))) then
     for _, step in ipairs(nextSt.list) do
       if step.s.x and E.Applies(step.s.when) then s = step.s; break end
     end
-  elseif state and state.cur and s and not s.x and not s.q then
+  elseif state and state.cur and s and not s.x and not s.q and not s.chooseGrindSpot and not (s.localTransfer or s.classTransfer) then
     -- 沒座標的交通、提醒：指向本站後面第一個還沒完成、有座標的步驟（走到就算到了，見 E.Locate）
     local _, target = E.SoftTargets(state.steps, state.done, state.na, state.cur)
-    s = target or s
+    if s.sameMapPreview then
+      local map, x, y = C.Position()
+      if target and x and y and target.map == map then s = target end
+    else
+      s = target or s
+    end
   end
   local curKey = state and state.cur and state.steps[state.cur].key
   if curKey ~= lastArrowKey then
@@ -200,6 +215,13 @@ f:SetScript("OnUpdate", function(_, dt)
     -- 沒移動而且沒有等待中的順路提醒就不用重看。和上次檢查時的位置比（不是上一次取樣）：慢慢走的小位移會累積到門檻。
     -- 門檻 0.2%；目前是到達型步驟或有臨時航點時 0.02%（大地圖上走路 0.5 秒不到 0.05%，停在到達範圍邊上也要看得到）
     local map, x, y = C.Position()
+    local checks = lastState and not lastState.instance and lastState.st and visitChecks[lastState.st.id]
+    if checks then
+      for _, when in ipairs(checks) do
+        local applies = E.Applies(when)
+        if priorVisit[when] ~= applies then priorVisit[when], dirty = applies, true end
+      end
+    end
     local at = lastState and lastState.cur and lastState.steps[lastState.cur].s
     local soft = at and not at.x and E.SOFT[at.t] and not lastState.instance and not (lastState.tails and lastState.tails[lastState.cur]) -- 沒座標的交通：走到後面步驟附近算到
     local arrive = MG.wpOverride or soft or (at and (at.t == "goto" or (at.t == "travel" and at.x) or at.t == "hearth"))
@@ -273,14 +295,22 @@ local function routeQuestsByTitle(title)
 end
 local function autoOn() return UI.Get("auto") and not IsShiftKeyDown() end
 local accQ = {} -- 任務 → 路線上每個「接」步驟 { when, opt, d＝所屬副本前置 ID, at＝主線站 ID }
+local manualFrom = {} -- A later manual pickup must not inherit its earlier station's automatic accept.
+local localRecovery = {}
 local anyG = {} -- 任一組（例如紮營入門指南任選專業）的每個任務 → 組的第一個 ID（略過鍵 a:第一個）
 for _, st in ipairs(R.stations) do
   for _, s in ipairs(st.steps) do
+    if s.when and (s.when.workMap or s.when.localVisit or (s.q and (R.quests[s.q] or {}).providedVisit) or (s.when.readyQuest and ((R.quests[s.q] or {}).deliveryItems or s.afterWork))) then
+      visitChecks[st.id] = visitChecks[st.id] or {}
+      table.insert(visitChecks[st.id], s.when)
+    end
     if s.t == "accept" and s.q then
+      if s.when and s.when.localRaces then localRecovery[s.q] = s.when end
       for _, q in ipairs(s.any or { s.q }) do -- 任一組：每個成員都記同一筆（同一個可跳過、略過狀態）
         local l = accQ[q] or {}
         accQ[q] = l
-        l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or (s.when and s.when.dungeonPrep), at = not st.dungeon and st.id or nil }
+        l[#l + 1] = { when = s.when, opt = s.opt, d = st.dungeon and st.id or (s.when and s.when.dungeonPrep), at = not st.dungeon and st.id or nil, manual = s.manualAccept }
+        if s.when and s.when.manualPickup then manualFrom[q] = { station = st.id, step = s } end
         if s.any then anyG[q] = s.any[1] end
       end
     end
@@ -288,11 +318,37 @@ for _, st in ipairs(R.stations) do
 end
 -- 路線上的任務，和引擎的判斷一致：在日誌裡的都算（交任務）；手動略過的不自動接。
 -- 其餘要有一個本角色適用的「接」步驟算數：可跳過的要設定有開或被補經驗補回，副本段的要那個副本沒選不打；路線上只有做／交的照舊算
-local autoQ = {} -- 剛自動按了接受、日誌還沒出現的任務 → 按下的時間：3 秒內每件先算占一格（連續接好幾件、日誌晚同步也都算到；只在記憶體，不寫存檔）
-local function inRoute(id)
+local autoQ = {} -- 最近三秒自動接取，記錄當次接受後預期的日誌數量
+
+local function releaseAutoSlot(id)
+  local rec = autoQ[id]
+  if not rec then return end
+  autoQ[id] = nil
+  if GetTime() - rec.at >= 3 then return end
+  -- 後接任務的預期數量含這一格。已知移除的任務只回收一次。
+  for _, later in pairs(autoQ) do
+    if later.at >= rec.at and later.slot > rec.slot then later.slot = later.slot - 1 end
+  end
+end
+
+function MG.PendingAccepts(used, visible)
+  local listed, pending, now = {}, 0, GetTime()
+  for _, q in ipairs(visible) do listed[q] = true end
+  for q, rec in pairs(autoQ) do
+    if now - rec.at >= 3 then autoQ[q] = nil
+    elseif not listed[q] and not (used >= rec.slot and (rec.confirmed or C.IsOnQuest(q))) then pending = pending + 1 end
+  end
+  return pending, listed
+end
+local function inRoute(id, forAccept)
   if not (id and not (issecretvalue and issecretvalue(id)) and id > 0 and R.quests[id] ~= nil) then return false end
-  if C.IsOnQuest(id) then return true end
+  if C.IsOnQuest(id) then return not forAccept end
   if MG.db.skip["a:" .. (anyG[id] or id)] then return false end
+  local start = manualFrom[id] and E.byId[manualFrom[id].station]
+  if start then
+    local visit = E.byId[MG.db.station] or (lastState and lastState.st)
+    if not visit or not visit.index or visit.index >= start.index then return false end
+  end
   local optional = UI.Get("optional") or E.Fill[id]
   -- 日誌快滿先不接的副本前置：NPC 給了也不自動接。用這一刻的日誌算（和步驟列的「之後」同一個判斷），不看上次畫好的清單
   local pre, authored = false, false
@@ -304,35 +360,56 @@ local function inRoute(id)
   end
   local st = pre and lastState and not lastState.instance and lastState.st
   local main = st and not st.dungeon and st
-  local pending, now = 0, GetTime()
-  for q, at in pairs(autoQ) do
-    if C.IsOnQuest(q) or now - at >= 3 then autoQ[q] = nil else pending = pending + 1 end -- 日誌看到了或過了 3 秒就放掉
+  local pending, nextSlot, free = 0, nil, nil
+  if forAccept or main or authored then
+    local used, visible
+    free, used, visible = E.QuestLogSpace()
+    local listed
+    pending, listed = MG.PendingAccepts(used, visible)
+    if forAccept and (listed[id] or autoQ[id] or free <= pending) then return false end
+    nextSlot = used + pending + 1
   end
-  local tight = (main or authored) and not E.PreRoom(main, pending)
+  local tight = (main or authored) and not E.PreRoom(main, pending, free)
   for _, a in ipairs(accQ[id] or {}) do
     local when = a.when
-    if when and when.lvMin then -- 等級條件不看：NPC 已經給了就接
+    if when and when.lvMin and not when.canStart then -- 普通 NPC 已給的任務不看等級；明列條件的物品起始任務仍須符合。
       when = {}
       for k, v in pairs(a.when) do when[k] = v end
       when.lvMin = nil
     end
-    if E.Applies(when) and (not a.opt or optional) then
+    if not a.manual and E.Applies(when) and (not a.opt or optional) then
       if a.d then
-        if not MG.db.dNo[a.d] and not tight then return true end
+        if not MG.db.dNo[a.d] and not tight then return true, nextSlot end
       elseif not tight or not main or (E.byId[a.at] and E.byId[a.at].index <= main.index) then
-        return true -- 主線的接。快滿時的副本前置：主線這一站或之前就排了才接，排在後面站的走到再接
+        return true, nextSlot -- 主線的接。快滿時的副本前置：主線這一站或之前就排了才接，排在後面站的走到再接
       end
     end
   end
-  return not accQ[id]
+  return not accQ[id], nextSlot
 end
 
 -- 安全網：打開目前「接」步驟的 NPC，卻沒有這個任務可接 → 先跳過（升級或交任務後再看）。
 -- 只直接跳出任務內容（沒有先開對話選單）才看 QUEST_DETAIL，避免自動接交選了別的任務時誤判。
+local function speakingTo(s)
+  local name = UnitName and UnitName("npc")
+  return name and not (issecretvalue and issecretvalue(name)) and (name == (s.npcG or s.npc) or name == s.tgt)
+end
+local function restoreManualOffer(id)
+  local visit = manualFrom[id]
+  if not visit or MG.db.station ~= visit.station then return end
+  local key = "a:" .. id
+  local db = MG.db
+  if not db.notNow[key] or db.skip[key] or db.mark[key] ~= nil or C.IsOnQuest(id) or E.Turned(id) then return end
+  if E.Applies(visit.step.when) and speakingTo(visit.step) then
+    db.notNow[key] = nil
+  end
+end
 local lastMenu, lastAccept = 0, 0
 local function notOffered(event)
-  if event ~= "QUEST_DETAIL" then lastMenu = GetTime() elseif GetTime() - lastMenu < 3 then return end
-  if GetTime() - lastAccept < 3 then return end -- 剛接任務時 NPC 選單會重刷，日誌還沒更新，不判斷
+  local now = GetTime()
+  local recent = (event == "QUEST_DETAIL" and now - lastMenu < 3) or now - lastAccept < 3
+  if event ~= "QUEST_DETAIL" then lastMenu = now end
+  if recent and not next(MG.db.notNow) then return end -- 剛接任務時 NPC 選單會重刷，日誌還沒更新，不判斷
   local ids = {} -- NPC 這次給的任務
   if event == "QUEST_DETAIL" then
     local id = GetQuestID and GetQuestID()
@@ -345,18 +422,38 @@ local function notOffered(event)
       if issecretvalue and issecretvalue(q.questID) then return end
       ids[#ids + 1] = q.questID
     end
+    -- 第一頁只有對話選項（例如索維克要先點對話才列任務）：還看不出給不給，不判斷
+    if #ids == 0 and G.GetOptions and #(G.GetOptions() or {}) > 0 then return end
   else
     for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do
       for _, id in ipairs(routeQuestsByTitle(GetAvailableTitle(i))) do ids[#ids + 1] = id end
     end
   end
+  if event ~= "QUEST_GREETING" then
+    for _,id in ipairs(ids) do
+      restoreManualOffer(id)
+      local w = localRecovery[id]
+      local key = "a:"..id
+      if w and MG.db.notNow[key] and not MG.db.skip[key] and not MG.db.mark[key]
+        and not C.IsOnQuest(id) and not E.Turned(id) and E.Applies(w) and E.Applies({nearPoint=w.nearPoint}) then
+        MG.db.notNow[key] = nil
+      end
+    end
+  end
+  if recent then return end
   -- 任一組：NPC 給了組裡任何一個，整組的「接不到」就收回（不必是目前步驟；含 1.13.15 只認剝皮時留下的 a:97924）
   for _, id in ipairs(ids) do if anyG[id] then MG.db.notNow["a:" .. anyG[id]] = nil end end
+  -- NPC 現在給了：之前自動記下的「接不到」收回，不論記在哪一站、鍵有沒有 ~2 後綴（手動略過記在 skip，不動）
+  local offered = {}
+  for _, id in ipairs(ids) do offered[id] = true end
+  for key in pairs(MG.db.notNow) do
+    local q = tonumber(tostring(key):match("^a:(%d+)"))
+    if q and offered[q] and not manualFrom[q] and not localRecovery[q] then MG.db.notNow[key] = nil end
+  end
   local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
   local s = cur and cur.s
   if not (s and s.t == "accept" and s.q) or C.IsOnQuest(s.q) or E.Turned(s.q) then return end
-  local name = UnitName("npc")
-  if not name or (issecretvalue and issecretvalue(name)) or (name ~= (s.npcG or s.npc) and name ~= s.tgt) then return end
+  if not speakingTo(s) then return end
   local want = {}
   for _, q in ipairs(s.any or { s.q }) do want[q] = true end -- 任一組：NPC 給其中任何一個都算有給
   for _, id in ipairs(ids) do if want[id] then return end end
@@ -365,7 +462,15 @@ end
 
 -- 自動接：灰名（太低等）的任務不接，除非就是這一站路線上要接的（例如回低等區交任務時，NPC 身上的舊任務）
 local function wantAccept(id)
+  if not E.UngoroTrainerOffer(id) then return false end
   if anyG[id] then return false end -- 任一組（任選專業）：玩家自己挑，不自動選、不自動接；接了以後交件照常自動
+  -- inRoute also serves turn-ins and accepts logged quests. An item-start offer
+  -- may outlive the journal update; do not press Accept again for that quest.
+  if C.IsOnQuest(id) then
+    for _, source in ipairs(accQ[id] or {}) do
+      if source.when and source.when.canStart == id then return false end
+    end
+  end
   local lv, q = UnitLevel("player") or 1, R.quests[id]
   local range = (UnitQuestTrivialLevelRange and UnitQuestTrivialLevelRange("player")) or (GetQuestGreenRange and GetQuestGreenRange()) or 8
   if not (q and q.lvl) or q.lvl >= lv - range then return true end
@@ -378,13 +483,15 @@ local AUTO = {}
 local function plain(v) return v ~= nil and not (issecretvalue and issecretvalue(v)) end
 function AUTO.QUEST_DETAIL()
   local id = GetQuestID and GetQuestID()
-  if not (plain(id) and inRoute(id) and wantAccept(id)) then return end
+  if not plain(id) then return end
+  local allowed, nextSlot = inRoute(id, true)
+  if not allowed or not wantAccept(id) then return end
   -- 護送、觸發事件的任務（一人接，隊友跳確認框一起開始）：組隊時讓玩家自己按，確認大家準備好
   if R.quests[id].pa and IsInGroup and IsInGroup() then
     MG.msg(L["組隊中：這個任務會讓隊友一起開始，準備好再自己按接受"])
     return
   end
-  autoQ[id] = GetTime()
+  autoQ[id] = {at=GetTime(), slot=nextSlot}
   AcceptQuest()
 end
 function AUTO.QUEST_PROGRESS()
@@ -404,7 +511,7 @@ function AUTO.GOSSIP_SHOW()
     if plain(q.questID) and q.isComplete and inRoute(q.questID) then G.SelectActiveQuest(q.questID); return end
   end
   for _, q in ipairs(G.GetAvailableQuests and G.GetAvailableQuests() or {}) do
-    if plain(q.questID) and inRoute(q.questID) and wantAccept(q.questID) then G.SelectAvailableQuest(q.questID); return end
+    if plain(q.questID) and inRoute(q.questID, true) and wantAccept(q.questID) then G.SelectAvailableQuest(q.questID); return end
   end
 end
 function AUTO.QUEST_GREETING()
@@ -416,7 +523,7 @@ function AUTO.QUEST_GREETING()
   for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do
     -- 只是打開任務內容；真正接不接由 QUEST_DETAIL 用遊戲給的 ID 判斷，選到同名的別環也不會接錯
     for _, id in ipairs(routeQuestsByTitle(GetAvailableTitle(i))) do
-      if inRoute(id) and wantAccept(id) and not E.Turned(id) and not C.IsOnQuest(id) then SelectAvailableQuest(i); return end
+      if inRoute(id, true) and wantAccept(id) and not E.Turned(id) and not C.IsOnQuest(id) then SelectAvailableQuest(i); return end
     end
   end
 end
@@ -424,7 +531,7 @@ end
 -- ── 事件 ────────────────────────────────────────────────────────────────────
 local EVENTS = {
   "ADDON_LOADED", "PLAYER_ENTERING_WORLD", "QUEST_ACCEPTED", "QUEST_REMOVED", "QUEST_TURNED_IN", "QUEST_LOG_UPDATE",
-  "UNIT_QUEST_LOG_CHANGED", "PLAYER_LEVEL_UP", "PLAYER_MONEY", "ZONE_CHANGED_NEW_AREA", "PLAYER_CONTROL_GAINED", "PLAYER_CONTROL_LOST", "HEARTHSTONE_BOUND",
+  "BAG_UPDATE_DELAYED", "UNIT_QUEST_LOG_CHANGED", "PLAYER_LEVEL_UP", "PLAYER_MONEY", "ZONE_CHANGED_NEW_AREA", "PLAYER_CONTROL_GAINED", "PLAYER_CONTROL_LOST", "HEARTHSTONE_BOUND",
   "UNIT_SPELLCAST_SUCCEEDED", "ZONE_CHANGED", "ZONE_CHANGED_INDOORS",
   "TAXIMAP_OPENED", "UI_INFO_MESSAGE", "QUEST_DETAIL", "QUEST_PROGRESS", "QUEST_COMPLETE", "GOSSIP_SHOW", "QUEST_GREETING",
   "USER_WAYPOINT_UPDATED", "SUPER_TRACKING_CHANGED", "UPDATE_INVENTORY_DURABILITY",
@@ -435,6 +542,12 @@ for _, e in ipairs(EVENTS) do
 end
 
 local function onEvent(_, event, ...)
+  if event == "BAG_UPDATE_DELAYED" then
+    local row = lastState and lastState.cur and lastState.steps[lastState.cur]
+    if (row and row.s.q and (R.quests[row.s.q] or {}).riftTools)
+      or (lastState and lastState.st and visitChecks[lastState.st.id]) then dirty = true end
+    return
+  end
   if event == "ADDON_LOADED" then
     if ... ~= ADDON then return end
     MetroGuideCharDB = MetroGuideCharDB or {}
@@ -462,7 +575,7 @@ local function onEvent(_, event, ...)
   -- 船／飛艇：目的地對得到鳥點（而且和出發地不同張地圖）→ 人到了那張地圖才勾，走路換到別區不算；對不到 → 照舊，換到別的地圖（離開碼頭那張）就勾
   if event == "PLAYER_ENTERING_WORLD" or event == "ZONE_CHANGED_NEW_AREA" or event == "ZONE_CHANGED" or event == "ZONE_CHANGED_INDOORS" then
     local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
-    if cur and cur.s.t == "boat" then
+    if cur and cur.s.t == "boat" and cur.s.ungoroExit ~= "ship" then
       local map = C.Position()
       local dest, dock = mapOf(cur.s.to), cur.s.map or mapOf(cur.s.from)
       if dest and map and dest ~= dock then
@@ -484,6 +597,9 @@ local function onEvent(_, event, ...)
     ready = true
     logSeen = true
   elseif event == "QUEST_ACCEPTED" then
+    local id = ...
+    if select("#", ...) >= 2 then id = select(2, ...) end -- 舊式事件第一欄是日誌列號
+    if plain(id) and autoQ[id] then autoQ[id].confirmed = true end
     local args = {}
     for i = 1, select("#", ...) do
       local v = select(i, ...)
@@ -492,9 +608,13 @@ local function onEvent(_, event, ...)
     trace.QUEST_ACCEPTED = table.concat(args, ", ")
     lastAccept = GetTime()
     wipe(MG.db.notNow) -- 接了任務：暫時接不到的重新看
+  elseif event == "QUEST_REMOVED" then
+    local id = ...
+    if plain(id) and type(id) == "number" then releaseAutoSlot(id) end
   elseif event == "QUEST_TURNED_IN" then
     local id = ...
     if type(id) == "number" and not (issecretvalue and issecretvalue(id)) then
+      releaseAutoSlot(id)
       E.session[id] = true
       wipe(MG.db.notNow) -- 交了任務：暫時接不到的重新看
       if next(MG.db.skip) then E.RecomputeSkip() end
@@ -629,7 +749,16 @@ local function onEvent(_, event, ...)
       local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
       local dest, dx, dy = mapOf(cur and cur.s.to)
       local map, x, y = C.Position()
-      if not (dest and map) or (dest == map and not (dx and x and (x - dx) ^ 2 + (y - dy) ^ 2 > 100)) then latchCurrent("fly") end
+      if cur and cur.s.ironReturn then
+        local landing, lx, ly = mapOf(cur.s.to)
+        if map == landing and lx and ly and x and y and (x - lx)^2 + (y - ly)^2 <= 2.25 then
+          MG.db.latch[cur.key] = true
+        end
+      elseif cur and (cur.s.ungoroExit == "port" or cur.s.localTransfer) then
+        if E.AtRutheranFlightMaster(map, x, y) then MG.db.latch[cur.key] = true end
+      elseif not (dest and map) or (dest == map and not (dx and x and (x - dx) ^ 2 + (y - dy) ^ 2 > 100)) then
+        latchCurrent("fly")
+      end
       -- 下飛行：臨時航點收回，箭頭回到目前步驟
       MG.wpOverride = nil
       N.Forget()

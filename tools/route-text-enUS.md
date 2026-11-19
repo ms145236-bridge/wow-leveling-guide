@@ -7191,7 +7191,7 @@
 05-副本.md:1161｜標籤｜可跳過｜Optional
 05-副本.md:1163｜站內取捨｜優先加基森三任與摩沙魯石板；已有木槌再打加茲瑞拉；塔貝薩留給會經塵泥沼澤的角色。｜Prioritize the three Gadgetzan quests and the Tablets of Mosh'aru. Fight Gahz'rilla if you have the mallet. Save Tabetha for a Dustwallow visit.
 05-副本.md:1164｜站內說明｜可在塔納利斯 熱砂港與加基森先刷一次；走完整葉基亞前置才建議塔納利斯 加基森與砂槌營地刷。摩沙魯石板亦為哈卡鏈前置。｜Run once on the Steamwheedle Port and Gadgetzan leg. If doing Yeh'kinya's full chain, wait until the Gadgetzan and Dunemaul visit. The Tablets of Mosh'aru are also a prerequisite for the Hakkar chain.
-05-副本.md:1168｜副本動線｜入口上層牢房找弗卡爾→打典獄長監督者瑞克斯取鑰匙→清審問者和海潮主母並收頭巾→開下層牢門打『清潔者』卡特莉娜與燃吼→在尾王身後密室查看紙條，再回上層牢房找弗卡爾。｜Find Commander Folkar in the upper cells → kill Overseer Wrex for the key → clear The Questioner and Tidemistress Ca'zass, looting bandanas → open the lower cells for Katerina the Cleaner and Blazeroar → read the note in the hidden room and return to Folkar upstairs.
+05-副本.md:1168｜副本動線｜入口上層牢房找弗卡爾→打典獄長監督者瑞克斯取鑰匙→清海潮主母並收頭巾。一般團也打審問者，選做「被鐵鍊束縛的男人」才先留他→開下層牢門打『清潔者』卡特莉娜與燃吼→在尾王身後密室查看紙條，再回上層牢房找弗卡爾。｜Find Commander Folkar in the upper cells → kill Overseer Wrex for the key → kill Tidemistress Ca'zass and loot bandanas. Kill The Questioner here on a normal run, or leave him alive for the optional prisoner quest → open the lower cells for Katerina the Cleaner and Blazeroar → read the note in the hidden room and return to Folkar upstairs.
 05-副本.md:1171｜副本入口｜塵泥沼澤 1445 75.30, 14.10｜Dustwallow Marsh 1445 75.30, 14.10
 05-副本.md:1180｜站內前置接取路線｜前往悲傷沼澤時，未到 48 級可先開塵泥沼澤 蕨牆村飛行點。前往灼熱峽谷前，在奧格瑞瑪智慧谷索爾的大廳向伊崔格接 95283（1454 34.28, 39.35），再飛蕨牆村找納澤爾·血矛。沿東北海岸游往奧卡茲島，在島側軍士處依序交 95284、95285，拿 95309 再進島塔地下。留下 95483 至下次奧格瑞瑪。｜Below level 48? Unlock Brackenwall Village on the way to Swamp of Sorrows. Before Searing Gorge, take 95283 from Eitrigg in Thrall's chamber in the Valley of Wisdom (1454 34.28, 39.35). Fly to Brackenwall Village and see Nazeer Bloodpike. Swim from the northeast coast to Alcaz Island. Turn in 95284 and 95285 to the sergeant by the island, then take 95309 before going under the tower. Save 95483 for Orgrimmar.
 05-副本.md:1180｜標籤｜接取錨點 第31站｜Pick up anchor point Stop 31
@@ -7256,6 +7256,7 @@
 05-副本.md:1216｜標籤｜可跳過｜Optional
 05-副本.md:1218｜站內取捨｜優先走 95283 到 95483 的庫卡隆救援鏈；頭巾若一趟未湊滿，交件延後。｜Prioritize the Kor'kron rescue chain from 95283 to 95483. If you're short on bandanas after one run, save that turn-in.
 05-副本.md:1219｜站內說明｜部落可避開塞拉摩；由蕨牆村到東北海岸後游泳。軍士在島側，副本門位於島塔地下走廊。｜Avoid Theramore. Go from Brackenwall Village to the northeast coast and swim across. The sergeant is by the island, and the dungeon portal is in the corridor under the tower.
+05-副本.md:1232｜站內提醒｜選做被鐵鍊束縛的男人（48 級起）：出團前約好先留審問者。擊敗尾王後詢問上鐐銬的囚犯，接到任務再回頭打審問者取鑰匙，交回囚犯。｜Optional at level 48: agree before entering to leave The Questioner alive. After defeating the final boss, speak to the shackled prisoner. Once you have the quest, go back to kill The Questioner for the key and return it to the prisoner.
 05-副本.md:1223｜副本動線｜入口右側平路→下層環廊查祭壇並點雕像→阿塔拉利恩→上層六座陽台清守衛→獻祭之穴東廊打迦瑪蘭→西廊可選召哈卡→四龍獸→伊蘭尼庫斯與精華之泉。沿途打阿塔萊食人妖收神像。｜Take the right entrance path to the lower ring → check the altar, activate the statues and kill Atal'alarion → clear the six upper balconies → east from the Pit of Sacrifice for Jammal'an → optional Hakkar event west → four dragonkin → Eranikus and the Essence Font. Loot idols from Atal'ai trolls throughout.
 05-副本.md:1226｜副本入口｜悲傷沼澤 1435 69.50, 52.50（神廟建築外部路標）｜Swamp of Sorrows (1435), 69.50, 52.50. Marks the outside of the temple.
 05-副本.md:1234｜站內前置接取路線｜到悲傷沼澤 斯通納德完成 1424 並保留 1429；從辛特蘭 惡齒村飛行點走到辛特蘭南側流放者交 1429、接 1444 與 1446，若完成祖爾法拉克石板鏈再去辛薩羅拿卵。菲拉斯先接 3380；塔納利斯 加基森與砂槌營地先到瑪爾馮開石環任務，飛棘齒城取物，再回瑪爾馮接兩個神廟任務。在塔納利斯 熱砂港交卵後，可從加基森飛棘齒城，再搭船到藏寶海灣，飛斯通納德交 1444、接 1445 並赴神廟。｜Finish 1424 in Stonard and keep 1429. From Revantusk Village, walk to the exile in the southern Hinterlands. Turn in 1429 and take 1444 and 1446. Get the egg at Jintha'Alor if you've finished the Zul'Farrak tablet chain. Take 3380 in Feralas. On the Gadgetzan and Dunemaul leg, start the Stone Circle quest with Marvon, get the item in Ratchet, then return to Marvon for both temple quests. Turn in the egg at Steamwheedle Port. Fly Gadgetzan → Ratchet, boat to Booty Bay, then fly to Stonard to turn in 1444 and take 1445 before entering.
@@ -14190,3 +14191,20 @@
 01-第一段-1到12級.md:116｜說明｜（任選專業）｜(any profession)
 05-副本.md:289｜說明｜帶著占卜籤，穿過傳送門後找箱子。｜Keep the fortune with you and look for the chest after entering the instance portal.
 05-副本.md:1470｜說明｜正門進市場，開煙草店的箱子後擊敗艾茲拉‧格里姆。｜From the main gate, head into the market. Open the smoke shop crate and defeat Ezra Grimm.
+01-第一段-1到12級.md:1107｜說明｜亞麻布需 10 塊。可打低等人形怪收集，也能向玩家交易或在拍賣場購買。｜You need 10 Linen Cloth. Collect it from low-level humanoids, trade with other players, or check the auction house.
+02-12到30級.md:1062｜說明｜月銀刃在背包時先裝備到主手。若主手和背包都沒有，先找回武器，再去挑戰老火眼。｜If the Moonsilver Blade is in your bags, equip it in your main hand. If it is missing from both, recover it before facing Old Fire-Eye.
+05-副本.md:285｜說明｜接後與崔凡談話拿武器筆記。進死亡礦坑打木匠時把筆記帶在背包。｜Speak with Trevan for his notes. Carry them in your bags when you fight the woodcarvers in the Deadmines.
+02-12到30級.md:1451｜步驟目標｜在安伯米爾西側打達拉然學徒或達拉然保衛者，收集達拉然法力寶石 ×6。｜On the west side of Ambermill, hunt Dalaran Apprentices or Dalaran Protectors for 6 Dalaran Mana Gems.
+02-12到30級.md:1447｜步驟目標｜到幽暗城鍊金房的奧格諾恩鍊金店，用卷軸顯形。打到裂隙怒靈昏迷，再用封靈箱，拾取地上的裝滿的箱子；共需三個。｜At Algernon’s shop in the Apothecarium in Undercity, use the cantation. Weaken a Rift Spawn until stunned, use the chest, then loot the coffer on the ground. Collect three.
+06-路線外任務.md:191｜路線外理由｜25 級起，進本到清潔區，選一台提供首次清洗的機器，投入 1 個「髒兮兮的東西」和 3 銀。｜From level 25, use a machine offering the first wash in the clean room inside the dungeon. Insert one Grime-Encrusted Object and 3 silver.
+06-路線外任務.md:192｜路線外理由｜首次清洗後，等機器停下。看到領取選項就直接拿盒子，不用再投物品或付費。｜After the first wash, wait for the machine to stop. Collect the box when offered. No extra item or payment is needed.
+06-路線外任務.md:193｜路線外理由｜在副本清潔區看到「再次使用」時，可再投 1 個「髒兮兮的東西」和 3 銀換一盒。｜When a machine in the dungeon’s clean room offers another wash, trade one more Grime-Encrusted Object and 3 silver for a box.
+05-副本.md:721｜副本動線｜從正門進入發條小徑，沿左側走廊下坡到清潔區→右側宿舍護送克努比→電刑器→群體打擊者→瑟瑪普拉格，拾密碼開保險箱。打到髒戒指後回清潔區用超級清潔器。｜From the main entrance in the Clockwerk Run, follow the left corridor downhill to the Clean Zone → escort Kernobee from the quarters on the right → Electrocutioner 6000 → Crowd Pummeler 9-60 → Thermaplugg, then use his code on the safe. Use the Sparklematic in the Clean Zone if you loot a Grime-Encrusted Ring.
+05-副本.md:748｜說明｜清潔區旁的宿舍。先清回出口的路，等全隊準備好再與克努比對話。｜In the dormitory by the Clean Zone. Clear the path back to the exit and wait for the whole party before speaking to Kernobee.
+05-副本.md:751｜說明｜從黑鐵特工取得戒指後，回清潔區找提供戒指任務的清潔器，備妥 3 銀依對話操作。｜After looting the ring from a Dark Iron Agent, return to the Clean Zone. Bring 3 silver and use the machine that offers the ring quest.
+05-副本.md:752｜步驟所在｜清潔區內提供戒指任務的清潔器｜The machine offering the ring quest in the Clean Zone
+05-副本.md:1334｜說明｜卡加斯交派隆後，隊伍要走監獄就向賈拉瑪弗接。｜After turning in Pyron at Kargath, speak to Galamav if your group plans to visit the prison.
+05-副本.md:1344｜說明｜隊友能開牢門就直接進。若門鎖著，先擊敗審訊官格斯塔恩取得監獄牢房鑰匙，再回來找哥沙克。｜If a party member can open the cell, go straight in. Otherwise get the Prison Cell Key from High Interrogator Gerstahn and return to Gor'shak.
+03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Pick Sovik's gossip option first; then the quest appears.
+05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Pick Sovik's gossip option first; then the quest appears.
+04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escort failed: abandon the quest in your quest log, then accept it again from the robot.

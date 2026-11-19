@@ -130,6 +130,41 @@ assert(relic.ph == "in" and relic.when.class[1] == "PALADIN" and relic.when.race
 print("Dungeon scheduling, class phases and Alliance-friendly quest trainers passed")
 print("Same-map gathering, Felwood hand-ins and Horde class revisits passed")
 
+-- On the return visit to Un'Goro, finish the volcano before starting Ringo's
+-- escort. The hive and the western turn-in stay outside the escort sequence.
+local craterReturn = alliance["04-52"]
+-- Torwa is an optional stop for characters without U'cha's Pelt. Druids
+-- still have their own quests there. The return to Gadgetzan uses the next
+-- eligible destination so a walker can go straight to the quest giver.
+local uchaIndex, ucha = find(craterReturn, "turnin", 4301)
+assert(ucha.when.onQuestAny[1] == 4301 and ucha.when.readyQuest == 4301)
+assert(ucha.when.bag.item == 11476 and ucha.when.bag.count == 1)
+local druidEnd = find(craterReturn, "turnin", 9053)
+assert(uchaIndex < find(craterReturn, "accept", 9052) and druidEnd > uchaIndex)
+local exit = craterReturn[druidEnd + 1]
+assert(exit.t == "travel" and exit.sameMapPreview and not exit.x and not exit.when)
+assert(exit.key0 == "托爾瓦旁沒有飛行點：從他身後的坡道出安戈洛環形山進塔納利斯，往東北跑到加基森。")
+assert(exit.text:find("馬紹爾營地", 1, true) and exit.text:find("東南坡", 1, true))
+assert(find(craterReturn, "turnin", 4504) == druidEnd + 2)
+assert(find(craterReturn, "turnin", 4496) < find(craterReturn, "turnin", 4502))
+local summit = find(craterReturn, "do", 974)
+local ringo = find(craterReturn, "turnin", 4492)
+local home = find(craterReturn, "turnin", 4491)
+assert(find(craterReturn, "do", 4502) < summit and summit+1 == ringo)
+assert(home == ringo+3 and craterReturn[ringo+1].q == 4491)
+local east = find(craterReturn, "do", 4287)
+local hive, gland = find(craterReturn, "do", 4496)
+local west = find(craterReturn, "do", 4288)
+local report = find(craterReturn, "turnin", 974)
+assert(home < east and east < hive and hive < west)
+assert(gland.opt and gland.map == 1449 and gland.x==51.46 and #gland.more==1)
+assert(gland.when.missingBag.item==11837)
+local soil=craterReturn[hive+1]
+assert(soil.sameObjective and soil.q==4496 and soil.opt and soil.when.bag.item==11837)
+assert(soil.when.missingBag.item==11018 and soil.when.missingBag.count==5 and #soil.more==2)
+assert(west+1 == report and report+1 == find(craterReturn, "accept", 980))
+assert(report < find(craterReturn, "turnin", 4285))
+
 local crater = alliance["04-48"]
 local food
 for i, s in ipairs(crater) do
@@ -139,10 +174,25 @@ assert(food and crater[food].map == 1449 and crater[food].when.onQuestAny[1] == 
 assert(find(crater, "accept", 3881) < food and food < find(crater, "do", 3883))
 assert(find(crater, "do", 3883) < find(crater, "do", 3881))
 assert(find(crater, "do", 3882) < find(crater, "turnin", 3882))
+local craterGates = {}
+for _, step in ipairs(crater) do
+  if step.t == "level" then craterGates[step.lv] = step end
+end
+assert(craterGates[50] and not craterGates[50].chooseGrindSpot)
+assert(craterGates[51] and craterGates[51].chooseGrindSpot and not craterGates[51].x)
 assert(allianceMeta["04-49"].lv[1] == 51)
 local gorge = horde["04-34"]
 assert(find(gorge, "turnin", 3442) < find(gorge, "accept", 3443))
 assert(find(gorge, "accept", 3443) < find(gorge, "do", 7729))
+
+-- Keep the level gate after the underground kills and before the guarded plans.
+local allianceGorge = alliance["04-45"]
+local dinosaurs = find(allianceGorge, "do", 7727)
+local plans, planStep = find(allianceGorge, "do", 7722)
+local levelGate = allianceGorge[dinosaurs + 1]
+assert(levelGate.t == "level" and levelGate.lv == 48 and levelGate.desc and levelGate.chooseGrindSpot)
+assert(dinosaurs + 1 < plans and planStep.desc and allianceGorge[plans - 1].t == "note")
+
 local lands = horde["04-36"]
 for q, item in pairs({[2521]=8244, [3501]=10593}) do
   for _, verb in ipairs({"accept", "do", "turnin"}) do
@@ -163,6 +213,13 @@ local ns = { C = {
   IsReady = function() return ready end
 } }
 assert(loadfile("addon/ShengLeveling/Engine.lua"))("ShengLeveling", ns)
+local inventory={}
+carried = 4496
+function GetItemCount(id) return inventory[id] or 0 end
+for _, items in ipairs({{0,0,true,false},{0,5,true,false},{1,0,false,true},{1,4,false,true},{1,5,false,false}}) do
+  inventory[11837],inventory[11018]=items[1],items[2]
+  assert(ns.E.Applies(gland.when)==items[3] and ns.E.Applies(soil.when)==items[4])
+end
 local temple = {list={}}
 for _, s in ipairs(horde["05-d23"]) do table.insert(temple.list, {s=s}) end
 for _, q in ipairs({8425, 8232, 8413, 8253, 8422, 8236, 9053, 8257}) do
