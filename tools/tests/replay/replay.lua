@@ -192,11 +192,12 @@ local function run(st, isRun)
       end
     end
     if not E.Applies(s.when) then
-      if s.when and s.when.class and E.Applies(s.when,true) and (s.t=="accept" or s.t=="travel") then log("class-low",s,s.when.lvMin) end
+      if s.when and s.when.class and E.Applies(s.when,true) and (s.t=="accept" or s.t=="travel") then log("class-low",s,s.when.lvMin)
+      elseif s.t=="accept" and q then log("not-applicable",s) end -- Lets check.py tell another branch's prereq from a missing one.
     elseif collect[q] and not drops[collect[q]] then log("no-drop",s)
     elseif s.q==95042 and not have[95036] then log("missing-parent",s,95036)
     elseif E.OptOut(s) and not (party and (isRun or classQuest[q] or (s.when and s.when.class and selectedWork[q]))) then
-      if s.t=="accept" and s.when and s.when.class then log("optional-off",s) end
+      if s.t=="accept" and q then log("optional-off",s) end
     elseif s.t=="fp" and s.node then db.fpNodes[s.node]=true;log("learn-fp",s,s.node)
     elseif s.t=="boat" then log("boat",s,(s.from or "?").." → "..(s.to or "?"))
     elseif s.t=="fly" and s.to and db.fpNodes[s.to] then log("known-flight",s,s.to)

@@ -18,7 +18,7 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { ADDONS, openQuestieDB, clusterCenter, localVersion, readSnapshot, diffSnapshot, SNAPSHOT_COLS } from "./questiedb.mjs";
+import { ADDONS, openQuestieDB, clusterCenter, localVersion, readSnapshot, diffSnapshot, SNAPSHOT_COLS, SNAPSHOT_GONE } from "./questiedb.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 // 任務目標座標（tools/objective-coords.md，Codex 查的 Wowhead 永恆版／QuestieDB 點位）：補到「做」步驟的 more
@@ -1463,8 +1463,9 @@ writeFileSync(OUT, out);
   const snapFile = join(dir, "questiedb-snapshot.tsv"), verFile = join(dir, "questiedb-version.txt");
   const oldText = existsSync(snapFile) ? readFileSync(snapFile, "utf8") : "";
   const before = readSnapshot(oldText);
-  const ids = [...new Set([...quests.keys()].flatMap((id) => { const q = db.quest(id); return q ? [id, ...q.preGroup.map(Math.abs), ...q.preSingle] : []; }))].filter((id) => db.quest(id)).sort((a, b) => a - b);
-  const after = new Map(ids.map((id) => [`${side}\t${id}`, `${side}\t${db.snapshot(id)}`]));
+  // 路線任務、Data 裡的前置、QuestieDB 的前置都要有列；QuestieDB 沒有的記 SNAPSHOT_GONE，消失時才會列進變動，guard 也能查缺列
+  const ids = [...new Set([...quests].flatMap(([id, e]) => { const q = db.quest(id); return [id, ...(e.pg || []), ...(e.ps || []), ...(q ? [...q.preGroup.map(Math.abs), ...q.preSingle] : [])]; }))].sort((a, b) => a - b);
+  const after = new Map(ids.map((id) => [`${side}\t${id}`, `${side}\t${db.snapshot(id) ?? `${id}\t${SNAPSHOT_GONE}`}`]));
   const pins = new Map((existsSync(verFile) ? readFileSync(verFile, "utf8") : "").split(/\r?\n/).filter((l) => l && !l.startsWith("#")).map((l) => [l.split("\t")[0], l]));
   const local = localVersion(), pinned = pins.get(side)?.split("\t")[1];
   if (pinned !== local) {

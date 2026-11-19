@@ -35,6 +35,7 @@ ALLOWLIST = TESTS / "skip-allowlist.tsv"
 
 def mandatory_skips(log):
     """Non-optional quest steps the character was meant to do but could not, as (kind, station, quest)."""
+    mentioned = {row[4] for row in log}
     later_turned = {}
     for n, row in enumerate(log):
         if row[3] == "turned":
@@ -50,9 +51,11 @@ def mandatory_skips(log):
                 continue
         elif quest in taken:
             continue  # A later catch-up step picked it up.
-        # A prereq skip is an ordering bug when the missing prereq is turned in later in the same run;
-        # prereqs that never get turned in belong to optional or branch-specific chains.
-        if kind == "prereq" and not any(later_turned.get(p, -1) > n for p in row[7].split("/")):
+        # A prereq skip counts when a missing prereq is turned in later in the same run (ordering bug), or when
+        # no missing prereq has any event at all (dropped from the route). A prereq that was optional, for another
+        # class or race, or skipped for its own reason has an event and is judged on that event instead.
+        missing = row[7].split("/")
+        if kind == "prereq" and not any(later_turned.get(p, -1) > n for p in missing) and any(p in mentioned for p in missing):
             continue
         out.add((kind, station, quest))
     accepted = {}

@@ -4,7 +4,7 @@
 import { readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { openQuestieDB, localVersion, readSnapshot, diffSnapshot } from "./questiedb.mjs";
+import { openQuestieDB, localVersion, readSnapshot, diffSnapshot, SNAPSHOT_GONE } from "./questiedb.mjs";
 
 const TOOLS = dirname(fileURLToPath(import.meta.url));
 const before = readSnapshot(readFileSync(join(TOOLS, "questiedb-snapshot.tsv"), "utf8"));
@@ -12,7 +12,7 @@ const db = openQuestieDB();
 const after = new Map([...before.keys()].map((k) => {
   const [side, id] = k.split("\t");
   const row = db.snapshot(+id);
-  return [k, row ? `${side}\t${row}` : `${side}\t${id}\t（QuestieDB 已沒有這個任務）`];
+  return [k, `${side}\t${row ?? `${id}\t${SNAPSHOT_GONE}`}`];
 }));
 const local = localVersion();
 for (const line of readFileSync(join(TOOLS, "questiedb-version.txt"), "utf8").split(/\r?\n/).filter((l) => l && !l.startsWith("#"))) {

@@ -30,8 +30,12 @@ end
 
 local snap, built = { Horde = {}, Alliance = {} }, {}
 for _, c in ipairs(rows("tools/questiedb-snapshot.tsv")) do
-  local start = split(c[11], ";")
-  snap[c[1]][tonumber(c[2])] = { pre = ids(c[7] .. "," .. c[8]), ex = ids(c[9]), randomDrop = start[1] == "" and start[2] == "" and tonumber(c[12]) >= 2 and tonumber(c[12]) }
+  if c[3] == "（QuestieDB 沒有這個任務）" then snap[c[1]][tonumber(c[2])] = { pre = {}, ex = {} }
+  else
+    local start = split(c[11], ";")
+    local itemOnly = start[1] == "" and start[2] == "" and start[3] ~= ""
+    snap[c[1]][tonumber(c[2])] = { pre = ids(c[7] .. "," .. c[8]), ex = ids(c[9]), items = itemOnly and ids(start[3]), randomDrop = itemOnly and tonumber(c[12]) >= 2 and tonumber(c[12]) }
+  end
 end
 for _, c in ipairs(rows("tools/questiedb-version.txt")) do built[c[1]] = c[3] end
 local allow = {}
@@ -55,12 +59,24 @@ for _, faction in ipairs({ "Horde", "Alliance" }) do
     for _, s in ipairs(st.steps) do
       if s.q and s.desc then notes[s.q] = (notes[s.q] or "") .. s.desc end
       local q = s.t == "accept" and not s.any and s.q
+      local bag = q and db[q] and db[q].items and s.when and s.when.bag
+      if bag then
+        local starts = false
+        for _, item in ipairs(db[q].items) do starts = starts or item == bag.item end
+        if not starts then report("持物:" .. q, ("%s %s 接 %d %s：持物條件 %d 不是起始物品（%s）"):format(faction, st.id, q, route.quests[q].n or "", bag.item, table.concat(db[q].items, ","))) end
+      end
       if q and db[q] and db[q].randomDrop and not (s.opt and (route.quests[q].cond or (s.when and s.when.bag))) then
         report("掉落起始:" .. q, ("%s %s 接 %d %s：起始物品由 %d 種怪隨機掉落，要加【掉落才接】【可跳過】或持物條件"):format(faction, st.id, q, route.quests[q].n or "", db[q].randomDrop))
       end
     end
   end
   for q, e in pairs(route.quests) do
+    -- 路線任務和 Data 前置都要有快照列（QuestieDB 沒有的也有一列標記），缺列表示快照不完整
+    for _, list in ipairs({ { q }, e.pg or {}, e.ps or {} }) do
+      for _, p in ipairs(list) do
+        if not db[p] then problems[#problems + 1] = ("%s 快照缺任務 %d（重跑 node tools/build.mjs）"):format(faction, p) end
+      end
+    end
     local row = db[q]
     if row and (e.pg or e.ps) then
       local ok = {}

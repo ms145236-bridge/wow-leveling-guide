@@ -47,5 +47,6 @@ lua5.1 tools/tests/audit-1119.lua
 lua5.1 tools/tests/questiedb-guard.lua
 lua5.1 tools/tests/replay/dungeon-entry-test.lua
 python3 -B tools/tests/replay/test_selection.py
+python3 -B tools/tests/replay/test_skips.py
 python3 tools/tests/replay/held_items.py
 python3 tools/tests/replay/check.py
