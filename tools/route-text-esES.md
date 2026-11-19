@@ -14752,3 +14752,8 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Elige primero la opción de diálogo de Sovik; después aparece la misión.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Elige primero la opción de diálogo de Sovik; después aparece la misión.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta fallida: abandona la misión en el registro y vuelve a aceptarla del robot.
+03-30到45級.md:912｜說明｜11/17 起接任務後，石堆改由尋找礦物顯示；採礦的角色開尋找礦物，小地圖就看得到。｜Desde el 17/11, los montones de rocas se muestran con Encontrar minerales mientras tienes la misión. Si eres minero, activa Encontrar minerales y los verás en el minimapa.
+03-30到45級.md:912｜說明｜11/17 起接任務後，石堆改由尋找礦物顯示｜Desde el 17/11, los montones de rocas se muestran con Encontrar minerales mientras tienes la misión
+03-30到45級.md:912｜說明｜採礦的角色開尋找礦物，小地圖就看得到。｜Si eres minero, activa Encontrar minerales y los verás en el minimapa.
+05-副本.md:1230｜說明｜優先走 95283 到 95483 的柯爾克隆救援鏈；頭巾 11/16 起掉率調高，同一趟出本前核對 ×8 即可。出本從蕨牆村飛回奧格瑪，同一趟交索爾和伊崔格，再飛棘齒城跨海前往灼熱峽谷。｜Prioriza la cadena de rescate de los Kor'kron, de 95283 a 95483. Desde la corrección del 16/11 las capuchas caen más a menudo; comprueba que tienes ×8 antes de salir en la misma pasada. Al salir de la mazmorra, vuela de Poblado Murohelecho a Orgrimmar, entrega a Thrall y a Eitrigg en el mismo viaje y luego vuela a Trinquete para cruzar el mar hacia la Garganta de Fuego.
+06-路線外任務.md:907｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Desde el 16/11, las entregas repetidas ya no dan experiencia, solo reputación. La primera, 1707, sigue dando experiencia.

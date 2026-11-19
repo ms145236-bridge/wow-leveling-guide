@@ -1372,3 +1372,4 @@
 05-副本.md:505｜說明｜擊敗尾王後，右鍵自己拾取的精華接任。｜Tras derrotar al jefe final, haz clic derecho en la esencia que has recogido para iniciar la misión.
 
 05-副本.md:506｜說明｜在尾王旁的精華之泉放入精華。｜Coloca la esencia en la fuente de esencia junto al jefe final.
+06-路線外任務.md:1782｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Desde el 16/11, las entregas repetidas ya no dan experiencia, solo reputación. La primera, 1707, sigue dando experiencia.

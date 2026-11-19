@@ -1372,3 +1372,4 @@
 05-副本.md:505｜說明｜擊敗尾王後，右鍵自己拾取的精華接任。｜Besiegt den Endboss und rechtsklickt auf die selbst erbeutete Essenz, um die Quest anzunehmen.
 
 05-副本.md:506｜說明｜在尾王旁的精華之泉放入精華。｜Legt die Essenz neben dem Endboss in den Essenzborn.
+06-路線外任務.md:1782｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Seit dem 16.11. gibt die wiederholte Abgabe keine Erfahrung mehr, nur noch Ruf. Die erste Abgabe 1707 gibt weiterhin Erfahrung.

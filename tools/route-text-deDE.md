@@ -14364,3 +14364,8 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Wählt bei Sovik zuerst die Gesprächsoption, dann erscheint die Quest.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Wählt bei Sovik zuerst die Gesprächsoption, dann erscheint die Quest.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.
+03-30到45級.md:912｜說明｜11/17 起接任務後，石堆改由尋找礦物顯示；採礦的角色開尋找礦物，小地圖就看得到。｜Seit dem 17.11. werden die Steinhaufen während der Quest über Mineraliensuche angezeigt. Bergbauer aktivieren Mineraliensuche und sehen sie dann auf der Minikarte.
+03-30到45級.md:912｜說明｜11/17 起接任務後，石堆改由尋找礦物顯示｜Seit dem 17.11. werden die Steinhaufen während der Quest über Mineraliensuche angezeigt
+03-30到45級.md:912｜說明｜採礦的角色開尋找礦物，小地圖就看得到。｜Bergbauer aktivieren Mineraliensuche und sehen sie dann auf der Minikarte.
+05-副本.md:1230｜說明｜優先走 95283 到 95483 的柯爾克隆救援鏈；頭巾 11/16 起掉率調高，同一趟出本前核對 ×8 即可。出本從蕨牆村飛回奧格瑪，同一趟交索爾和伊崔格，再飛棘齒城跨海前往灼熱峽谷。｜Gib der Rettungskette der Kor'kron von 95283 bis 95483 Vorrang. Seit dem Hotfix vom 16.11. droppen die Bandanas häufiger; prüf vor dem Verlassen desselben Laufs, ob du ×8 hast. Flieg nach dem Dungeon von Brackenwall zurück nach Orgrimmar, gib auf derselben Runde bei Thrall und Eitrigg ab und flieg dann nach Ratchet, um übers Meer in die Sengende Schlucht zu reisen.
+06-路線外任務.md:907｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Seit dem 16.11. gibt die wiederholte Abgabe keine Erfahrung mehr, nur noch Ruf. Die erste Abgabe 1707 gibt weiterhin Erfahrung.

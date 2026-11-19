@@ -14477,3 +14477,8 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Choisissez d'abord l'option de dialogue de Sovik ; la quête apparaît ensuite.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Choisissez d'abord l'option de dialogue de Sovik ; la quête apparaît ensuite.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.
+03-30到45級.md:912｜說明｜11/17 起接任務後，石堆改由尋找礦物顯示；採礦的角色開尋找礦物，小地圖就看得到。｜Depuis le 17/11, les tas de pierres s'affichent avec Découverte de gisements pendant la quête. Si tu es mineur, active Découverte de gisements pour les voir sur la minicarte.
+03-30到45級.md:912｜說明｜11/17 起接任務後，石堆改由尋找礦物顯示｜Depuis le 17/11, les tas de pierres s'affichent avec Découverte de gisements pendant la quête
+03-30到45級.md:912｜說明｜採礦的角色開尋找礦物，小地圖就看得到。｜Si tu es mineur, active Découverte de gisements pour les voir sur la minicarte.
+05-副本.md:1230｜說明｜優先走 95283 到 95483 的柯爾克隆救援鏈；頭巾 11/16 起掉率調高，同一趟出本前核對 ×8 即可。出本從蕨牆村飛回奧格瑪，同一趟交索爾和伊崔格，再飛棘齒城跨海前往灼熱峽谷。｜Suis en priorité la chaîne de sauvetage de Kolkron de 95283 à 95483. Depuis le correctif du 16/11, les foulards tombent plus souvent ; vérifie que tu en as ×8 avant de sortir, dans le même passage. En sortant du donjon, vole de Mur-de-Fougères à Orgrimmar, rends la quête à Thrall et à Eitrigg dans le même trajet, puis vole à Cabestan pour traverser la mer vers la Gorge des Vents brûlants.
+06-路線外任務.md:907｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Depuis le 16/11, les remises répétées ne donnent plus d'expérience, seulement de la réputation. La première remise, 1707, en donne toujours.

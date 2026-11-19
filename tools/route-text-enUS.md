@@ -14208,3 +14208,8 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Pick Sovik's gossip option first; then the quest appears.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Pick Sovik's gossip option first; then the quest appears.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escort failed: abandon the quest in your quest log, then accept it again from the robot.
+03-30到45級.md:912｜說明｜11/17 起接任務後，石堆改由尋找礦物顯示；採礦的角色開尋找礦物，小地圖就看得到。｜Since 11/17, the rock piles show up under Find Minerals while you're on the quest. Miners can turn on Find Minerals to see them on the minimap.
+03-30到45級.md:912｜說明｜11/17 起接任務後，石堆改由尋找礦物顯示｜Since 11/17, the rock piles show up under Find Minerals while you're on the quest
+03-30到45級.md:912｜說明｜採礦的角色開尋找礦物，小地圖就看得到。｜Miners can turn on Find Minerals to see them on the minimap.
+05-副本.md:1230｜說明｜優先走 95283 到 95483 的柯爾克隆救援鏈；頭巾 11/16 起掉率調高，同一趟出本前核對 ×8 即可。出本從蕨牆村飛回奧格瑪，同一趟交索爾和伊崔格，再飛棘齒城跨海前往灼熱峽谷。｜Prioritize the Kor'kron rescue chain from 95283 to 95483. The 11/16 hotfix raised the bandana drop rate, so just check for ×8 before leaving on the same run. After the dungeon, fly from Brackenwall Village back to Orgrimmar, turn in to Thrall and Eitrigg on the same trip, then fly to Ratchet and cross the sea to Searing Gorge.
+06-路線外任務.md:907｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Since 11/16, repeat turn-ins no longer give XP, only reputation. The first-time 1707 still gives XP.

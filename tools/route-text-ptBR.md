@@ -14587,3 +14587,8 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Escolha primeiro a opção de diálogo de Sovik; depois a missão aparece.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Escolha primeiro a opção de diálogo de Sovik; depois a missão aparece.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta falhou: abandone a missão no registro e aceite-a de novo com o robô.
+03-30到45級.md:912｜說明｜11/17 起接任務後，石堆改由尋找礦物顯示；採礦的角色開尋找礦物，小地圖就看得到。｜Desde 17/11, os montes de pedras aparecem com Encontrar Minérios enquanto você está na missão. Se você for minerador, ative Encontrar Minérios para vê-los no minimapa.
+03-30到45級.md:912｜說明｜11/17 起接任務後，石堆改由尋找礦物顯示｜Desde 17/11, os montes de pedras aparecem com Encontrar Minérios enquanto você está na missão
+03-30到45級.md:912｜說明｜採礦的角色開尋找礦物，小地圖就看得到。｜Se você for minerador, ative Encontrar Minérios para vê-los no minimapa.
+05-副本.md:1230｜說明｜優先走 95283 到 95483 的柯爾克隆救援鏈；頭巾 11/16 起掉率調高，同一趟出本前核對 ×8 即可。出本從蕨牆村飛回奧格瑪，同一趟交索爾和伊崔格，再飛棘齒城跨海前往灼熱峽谷。｜Priorize a cadeia de resgate dos Kor'kron, de 95283 a 95483. Desde a correção de 16/11 os turbantes caem com mais frequência; confira se tem ×8 antes de sair na mesma volta. Ao sair da masmorra, voe da Aldeia Muralha Verde para Orgrimmar, entregue a Thrall e Eitrigg na mesma ida e então voe para Vila Catraca para cruzar o mar até a Garganta Abrasadora.
+06-路線外任務.md:907｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Desde 16/11, as entregas repetidas não dão mais experiência, só reputação. A primeira, 1707, continua dando experiência.
