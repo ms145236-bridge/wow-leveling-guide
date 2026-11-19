@@ -1,6 +1,6 @@
 # 阿聖練等幫手 ptBR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **397** 列。
+- 只收聯盟路線獨有的說明列，共 **406** 列。
 
 檔名:行號｜類型｜中文原文｜ptBR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Clique com o botão direito em Livro Mordiscado na bolsa para iniciar a missão.
@@ -1466,3 +1466,12 @@
 03-30到45級.md:505｜說明｜把幽靈磁鐵箱放在白骨之地兩具巨型骸骨之間，退開一點，等半人馬鬼魂被吸過來再一隻一隻打，撿幽靈電漿 ×8。附近 38–40 級的怪先清掉或繞開，打不過就略過 6134。｜Coloque a caixa de ímãs fantasmagóricos entre os dois esqueletos gigantes do Vale dos Ossos, afaste-se e mate um a um os espíritos de centauro atraídos até ter 8 ectoplasmas. Limpe ou evite os monstros de nível 38–40 por perto; se não conseguir, pule 6134.
 03-30到45級.md:508｜說明｜從比布里的小屋往西北到艾瑟雷索塔交聖光節杖，再往北到海岸打滑刃納迦，最後沿北邊大路回尼耶爾前哨站一次交完。｜Da cabana de Bibbly, siga para o noroeste até Ethel Rethor para entregar o Cetro da Luz, depois para o norte até a costa atrás dos nagas Lâmina Sinuosa e volte pela estrada do norte até a Ponta de Nijel para entregar tudo de uma vez.
 03-30到45級.md:1078｜說明｜還在石爪山脈：爐石可用就爐回藏寶海灣；爐石冷卻就從石爪峰飛棘齒城（經阿斯特蘭納、塔倫迪斯營地），再搭船到藏寶海灣。｜Ainda nas Montanhas da Garra de Pedra: use a pedra de regresso para voltar à Angra do Butim se estiver pronta; senão, voe do Pico da Garra de Pedra até Vila Catraca (via Astranaar e Ponta Talrendis) e pegue o barco para a Angra do Butim.
+02-12到30級.md:116｜說明｜月溪鎮專程一趟；有接月溪鎮諜戰就同一趟撿補給品，趕路可跳過。｜Arroio da Lua é um desvio à parte. Se você pegou a espionagem de Arroio da Lua, colete os suprimentos na mesma viagem. Pule se estiver com pressa.
+02-12到30級.md:116｜說明｜月溪鎮專程一趟｜Arroio da Lua é um desvio à parte.
+02-12到30級.md:116｜說明｜有接月溪鎮諜戰就同一趟撿補給品，趕路可跳過。｜Se você pegou a espionagem de Arroio da Lua, colete os suprimentos na mesma viagem. Pule se estiver com pressa.
+02-12到30級.md:117｜說明｜和人民軍同一趟，在月溪鎮撿可疑的補給箱。｜Na mesma viagem da milícia popular: pegue as caixas de suprimentos suspeitas em Arroio da Lua.
+02-12到30級.md:342｜說明｜第11站沒撿完的補給箱，追信差時在月溪鎮順手撿。｜Caixas de suprimentos que faltaram em Cerro Oeste: pegue-as em Arroio da Lua enquanto persegue o mensageiro.
+05-副本.md:78｜說明｜任務文字寫劣質火藥，以物品為準：備妥 10 個粗製炸藥（物品 4358），可由工程學製作、交易或在拍賣場取得。｜O texto da missão cita outro explosivo; guie-se pelo item: tenha 10 unidades do item 4358, feitas com Engenharia, trocadas ou compradas na casa de leilões.
+05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜Na primeira visita às Montanhas Cristarrubra, depois de entregar a escolta de volta em Cerro Oeste, pegue a Irmandade Défias e as bandanas de seda vermelha no Morro da Sentinela. Na última volta a Ventobravo, pegue as três missões da cidade, para não fazer uma viagem especial antes da masmorra.
+02-12到30級.md:116｜說明｜和月溪鎮諜戰同一趟，在月溪鎮打迪菲亞。｜Na mesma viagem da espionagem de Arroio da Lua: derrote os Défias em Arroio da Lua.
+02-12到30級.md:341｜說明｜西部荒野沒接到的，去追信差前在哨兵嶺補接。｜Se você não a pegou em Cerro Oeste, pegue-a no Morro da Sentinela antes de perseguir o mensageiro.
