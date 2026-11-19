@@ -4,6 +4,13 @@
 local _, MG = ...
 MG.Locales = MG.Locales or {}
 MG.Locales.frFR = {
+  ["在發任者身後拿顯形卷軸。"] = "Prenez les Chants de manifestation derrière le donneur de quête.",
+  ["在發任者身後拿一盒封靈箱，捕捉前確認還有使用次數。"] = "Prenez la Caisse de coffres de stockage derrière le donneur de quête. Vérifiez ses charges avant la prochaine capture.",
+  ["三個裝滿的箱子與兩件工具已備齊，等任務日誌顯示可交。"] = "Vous avez trois coffrets pleins et les deux outils. Attendez que le journal confirme la remise.",
+  ["擊殺數已達標，等任務日誌顯示可交。"] = "Vous avez vaincu assez d’ennemis. Attendez que le journal indique que la quête peut être rendue.",
+  ["已取得戰利品，等任務日誌顯示可交。"] = "Vous avez le trophée. Attendez que le journal indique que la quête peut être rendue.",
+  ["材料已齊。請核對任務日誌，可交時再找裁縫。"] = "Vous avez les composants. Consultez le journal de quêtes et allez voir le tailleur quand vous pourrez rendre la quête.",
+  ["護送失敗。放棄後重接或略過。"] = "Escorte échouée. Abandonnez et reprenez la quête ou passez-la.",
   ["已到奧伯丁。留在黑海岸解任務，或搭船去暴風城與朋友會合？"] = "Vous êtes à Auberdine. Continuer les quêtes à Sombrivage ou prendre le bateau pour rejoindre vos amis à Hurlevent ?",
   ["留在黑海岸"] = "Rester à Sombrivage",
   ["提早東渡"] = "Partir pour Hurlevent",

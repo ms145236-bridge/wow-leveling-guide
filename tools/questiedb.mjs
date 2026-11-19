@@ -99,11 +99,24 @@ export function openQuestieDB() {
     names[type] = { idList, pos, cols };
     return names[type];
   };
+  // Missing localized rows from the Forever quest and item tooltips. Columns 1 and 2
+  // match the baked schema (name and quest objective); an updated baked row wins.
+  const missingLocaleRows = {
+    Item: {280459: {zhTW: {1: "水晶灌注鱗片"}, esES: {1: "Escama imbuida con cristales"}, esMX: {1: "Escama de cristal imbuido"}, ptBR: {1: "Escama Infusa com Cristal"}}},
+    Quest: {87494: {
+      zhTW: {1: "微晶污染", 2: ["將水晶灌注鱗片交給托爾瓦‧尋路者。"]},
+      esES: {1: "Contaminación de microcristales", 2: ["Llévale la escama imbuida con cristales a Torwa Abrecaminos."]},
+      esMX: {1: "Contaminación microcristálica", 2: ["Llévale la escama de cristal imbuido a Torwa Abrecaminos."]},
+      ptBR: {1: "Contaminação microcristalina", 2: ["Leve a Escama Infusa com Cristal a Torwa Mateiro."]}
+    }}
+  };
   const localName = (type, id, locale) => {
+    // Forever NPC 11058 and tobacco 13172 use the renamed shopkeeper.
+    if (type === "Npc" && id === 11058 && locale === "zhTW") return "艾茲拉‧格里姆";
     const t = loadType(type);
     const col = get(t.cols[locale], 1);
     const p = t.pos.get(id);
-    return p === undefined || !col ? undefined : get(col, p + 1) ?? undefined;
+    return (p === undefined || !col ? undefined : get(col, p + 1)) ?? missingLocaleRows[type]?.[id]?.[locale]?.[1];
   };
   const row = (type, id) => {
     if (cache[type].has(id)) return cache[type].get(id);
@@ -121,30 +134,35 @@ export function openQuestieDB() {
   };
 
   // 任務目標數量更正（QuestieDB 和遊戲不符）：任務 ID → [原字, 更正]，套在繁中 obj、英文 objEn、其他語系 l10nObj 三處
-  const OBJ_FIX = { 5212: [["10", "20"]], 96063: [["5", "8"], ["пять", "восемь"]] }; // 氣態黃金：遊戲內要 8 瓶
+  const OBJ_FIX = { 5212: [["10", "20"]], 5214: [["弗拉斯·希亞比", "艾茲拉‧格里姆"], ["希亞比的煙草", "格里姆的特級煙草"]], 96063: [["5", "8"], ["пять", "восемь"]] }; // 氣態黃金：遊戲內要 8 瓶
   const fixObj = (id, l) => OBJ_FIX[id] ? l.map((t) => typeof t === "string" ? OBJ_FIX[id].reduce((s, [a, b]) => s.split(a).join(b), t) : t) : l;
 
+  // The Forever client lists the starter item, minimum level and Un'Goro zone for 87494.
+  // Earlier QuestieDB bundles omit these fields. Prefer the baked row when populated.
+  const missingQuestFields = { 87494: { min: 45, zone: 490, startItems: [280459] } };
   const quest = (id) => {
     if (!row("Quest", id)) return null;
     const starts = field("Quest", id, 2), ends = field("Quest", id, 3);
+    const fallback = missingQuestFields[id];
+    const startItems = list(get(starts, 3));
     return {
       id,
       en: field("Quest", id, 1),
       zhTW: localName("Quest", id, "zhTW"),
       zhCN: localName("Quest", id, "zhCN"),
-      obj: (() => { const t = loadType("Quest"); const c = get(t.cols.zhTW, 2); const p = t.pos.get(id); const v = c && p !== undefined ? get(c, p + 1) : undefined; return fixObj(id, list(v ?? field("Quest", id, 8))); })(),
-      reqLevel: field("Quest", id, 4) || 0,
+      obj: (() => { const t = loadType("Quest"); const c = get(t.cols.zhTW, 2); const p = t.pos.get(id); const v = c && p !== undefined ? get(c, p + 1) : undefined; return fixObj(id, list(v ?? missingLocaleRows.Quest[id]?.zhTW?.[2] ?? field("Quest", id, 8))); })(),
+      reqLevel: field("Quest", id, 4) || fallback?.min || 0,
       level: field("Quest", id, 5) || 0,
       races: field("Quest", id, 6) || 0,
       classes: field("Quest", id, 7) || 0,
-      startNpcs: list(get(starts, 1)), startObjects: list(get(starts, 2)), startItems: list(get(starts, 3)),
+      startNpcs: list(get(starts, 1)), startObjects: list(get(starts, 2)), startItems: startItems.length ? startItems : fallback?.startItems || [],
       endNpcs: list(get(ends, 1)), endObjects: list(get(ends, 2)),
       preGroup: list(field("Quest", id, 12)), preSingle: list(field("Quest", id, 13)),
       exclusiveTo: list(field("Quest", id, 16)),
       sourceItem: field("Quest", id, 11) || 0,
       requiredSourceItems: list(field("Quest", id, 21)),
       objEn: fixObj(id, list(field("Quest", id, 8)).filter((x) => typeof x === "string")), // enUS 目標文字（英文介面用）
-      zoneOrSort: field("Quest", id, 17) || 0,
+      zoneOrSort: field("Quest", id, 17) || fallback?.zone || 0,
       next: field("Quest", id, 22) || 0,
       flags: field("Quest", id, 23) || 0, // 2＝隊伍一起接（護送類：一人接，隊友跳確認框）
     };
@@ -197,7 +215,7 @@ export function openQuestieDB() {
   };
   // QuestieDB 掉落表裡的測試／停用怪：英文名「TEST …」開頭或「… UNUSED」結尾，而且沒有生成點（TEST WOLF (ALPHA FIRST)、Shambling Skeleton UNUSED…）。不列進目標，也不算進怪物等級
   const placeholder = (id) => /^TEST |(^| )UNUSED$/.test(field("Npc", id, 1) || "") && !spawnsOf("Npc", id).length;
-  const questMobs = (id, purchasedItems) => {
+  const questMobs = (id, purchasedItems, localDrops) => {
     const obj = field("Quest", id, 10);
     const out = [];
     for (const c of list(get(obj, 1))) {
@@ -214,7 +232,8 @@ export function openQuestieDB() {
         out.push(null); // 保留日誌的目標序號，只略過這一項的擊殺來源
         continue;
       }
-      const drops = list(field("Item", get(it, 1), 2)).filter((n) => !placeholder(n)).map(mobLevel).filter(Boolean);
+      const sources = localDrops?.get(get(it, 1)) || list(field("Item", get(it, 1), 2));
+      const drops = [...sources].filter((n) => !placeholder(n)).map(mobLevel).filter(Boolean);
       if (drops.length) {
         out.push({ lvl: drops.reduce((a, d) => a + d.lvl, 0) / drops.length, hi: Math.min(...drops.map((d) => d.hi)), elite: drops.every((d) => d.elite), kind: "drop", names: drops.slice(0, 8).map((d) => d.name), namesEn: drops.slice(0, 8).map((d) => d.en), zhMissing: drops.slice(0, 8).some((d) => d.zhMissing) });
       } else {
@@ -250,7 +269,7 @@ export function openQuestieDB() {
     if (!(key in locCols)) locCols[key] = l10n(type, loc);
     return get(locCols[key], k);
   };
-  const l10nAt = (type, id, loc, k) => { const p = loadType(type).pos.get(id); const col = locCol(type, loc, k); return p === undefined || !col ? undefined : get(col, p + 1) ?? undefined; };
+  const l10nAt = (type, id, loc, k) => { const p = loadType(type).pos.get(id); const col = locCol(type, loc, k); return (p === undefined || !col ? undefined : get(col, p + 1)) ?? missingLocaleRows[type]?.[id]?.[loc]?.[k]; };
   const l10nName = (type, id, loc) => { const v = l10nAt(type, id, loc, 1); return typeof v === "string" && v ? v : undefined; };
   const l10nObj = (id, loc) => fixObj(id, list(l10nAt("Quest", id, loc, 2)).filter((x) => typeof x === "string" && x));
   const enIds = {};

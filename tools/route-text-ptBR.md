@@ -14569,3 +14569,17 @@
 01-第一段-1到12級.md:116｜說明｜（任選專業）｜(qualquer profissão)
 05-副本.md:289｜說明｜帶著占卜籤，穿過傳送門後找箱子。｜Leve a sorte com você e procure o baú depois de passar pelo portal da masmorra.
 05-副本.md:1470｜說明｜正門進市場，開煙草店的箱子後擊敗艾茲拉‧格里姆。｜Do portão principal, vá ao mercado. Abra o caixote da tabacaria e derrote Ezra Carranca.
+01-第一段-1到12級.md:1107｜說明｜亞麻布需 10 塊。可打低等人形怪收集，也能向玩家交易或在拍賣場購買。｜Você precisa de 10 Linhos. Consiga-os com humanoides de nível baixo, negocie com outros jogadores ou procure na casa de leilões.
+02-12到30級.md:1062｜說明｜月銀刃在背包時先裝備到主手。若主手和背包都沒有，先找回武器，再去挑戰老火眼。｜Se a lâmina estiver nas bolsas, equipe-a na mão principal. Se não estiver nem equipada nem nas bolsas, recupere-a antes de enfrentar o inimigo.
+05-副本.md:285｜說明｜接後與崔凡談話拿武器筆記。進死亡礦坑打木匠時把筆記帶在背包。｜Fale com Trevan para obter as anotações. Leve-as nas bolsas ao enfrentar os entalhadores nas Minas Mortas.
+02-12到30級.md:1451｜步驟目標｜在安伯米爾西側打達拉然學徒或達拉然保衛者，收集達拉然法力寶石 ×6。｜Recolha 6 gemas de mana de Dalaran dos aprendizes ou protetores de Dalaran no lado oeste de Lenhâmbar.
+02-12到30級.md:1447｜步驟目標｜到幽暗城鍊金房的奧格諾恩鍊金店，用卷軸顯形。打到裂隙怒靈昏迷，再用封靈箱，拾取地上的裝滿的箱子；共需三個。｜Use o encantamento na loja de Algernon, no bairro dos boticários da Cidade Baixa. Enfraqueça a criatura da fenda até atordoá-la, use o baú e saqueie o cofre no chão. Recolha três.
+06-路線外任務.md:191｜路線外理由｜25 級起，進本到清潔區，選一台提供首次清洗的機器，投入 1 個「髒兮兮的東西」和 3 銀。｜A partir do nível 25, procure na sala limpa da masmorra uma máquina que ofereça a primeira limpeza. Insira um Objeto Encardido e 3 moedas de prata.
+06-路線外任務.md:192｜路線外理由｜首次清洗後，等機器停下。看到領取選項就直接拿盒子，不用再投物品或付費。｜Após a primeira limpeza, espere a máquina parar. Pegue a caixa quando a opção aparecer. Não é preciso entregar outro item nem pagar de novo.
+06-路線外任務.md:193｜路線外理由｜在副本清潔區看到「再次使用」時，可再投 1 個「髒兮兮的東西」和 3 銀換一盒。｜Se uma máquina na sala limpa da masmorra oferecer outra limpeza, você pode trocar mais um Objeto Encardido e 3 moedas de prata por uma caixa.
+05-副本.md:721｜副本動線｜從正門進入發條小徑，沿左側走廊下坡到清潔區→右側宿舍護送克努比→電刑器→群體打擊者→瑟瑪普拉格，拾密碼開保險箱。打到髒戒指後回清潔區用超級清潔器。｜A partir da entrada principal, desça pelo corredor à esquerda até a Zona Limpa → nos alojamentos à direita, escolte Kernobill → Eletrocutor 6000 → Espanca-gente 9-60 → Termaplugue; pegue a senha e abra o cofre. Se pegar o Anel Encardido, volte à Zona Limpa e use o Sparklematic.
+05-副本.md:748｜說明｜清潔區旁的宿舍。先清回出口的路，等全隊準備好再與克努比對話。｜No dormitório perto da Zona Limpa. Libere o caminho de volta à saída e espere o grupo todo antes de falar com Kernobee.
+05-副本.md:751｜說明｜從黑鐵特工取得戒指後，回清潔區找提供戒指任務的清潔器，備妥 3 銀依對話操作。｜Depois de obter o anel de um Agente Ferro Negro, volte à Zona Limpa. Leve 3 moedas de prata e use a máquina que oferece a missão do anel.
+05-副本.md:752｜步驟所在｜清潔區內提供戒指任務的清潔器｜A máquina que oferece a missão do anel na Zona Limpa
+05-副本.md:1334｜說明｜卡加斯交派隆後，隊伍要走監獄就向賈拉瑪弗接。｜Depois de entregar a missão de Pyron em Karrath, fale com Galamav se o grupo for passar pela prisão.
+05-副本.md:1344｜說明｜隊友能開牢門就直接進。若門鎖著，先擊敗審訊官格斯塔恩取得監獄牢房鑰匙，再回來找哥沙克。｜Se alguém puder abrir a cela, entre. Caso esteja trancada, pegue a chave da cela com a Alta-interrogadora Gerstahn e volte a Gor’shak.

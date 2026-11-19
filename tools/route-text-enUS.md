@@ -14190,3 +14190,17 @@
 01-第一段-1到12級.md:116｜說明｜（任選專業）｜(any profession)
 05-副本.md:289｜說明｜帶著占卜籤，穿過傳送門後找箱子。｜Keep the fortune with you and look for the chest after entering the instance portal.
 05-副本.md:1470｜說明｜正門進市場，開煙草店的箱子後擊敗艾茲拉‧格里姆。｜From the main gate, head into the market. Open the smoke shop crate and defeat Ezra Grimm.
+01-第一段-1到12級.md:1107｜說明｜亞麻布需 10 塊。可打低等人形怪收集，也能向玩家交易或在拍賣場購買。｜You need 10 Linen Cloth. Collect it from low-level humanoids, trade with other players, or check the auction house.
+02-12到30級.md:1062｜說明｜月銀刃在背包時先裝備到主手。若主手和背包都沒有，先找回武器，再去挑戰老火眼。｜If the Moonsilver Blade is in your bags, equip it in your main hand. If it is missing from both, recover it before facing Old Fire-Eye.
+05-副本.md:285｜說明｜接後與崔凡談話拿武器筆記。進死亡礦坑打木匠時把筆記帶在背包。｜Speak with Trevan for his notes. Carry them in your bags when you fight the woodcarvers in the Deadmines.
+02-12到30級.md:1451｜步驟目標｜在安伯米爾西側打達拉然學徒或達拉然保衛者，收集達拉然法力寶石 ×6。｜On the west side of Ambermill, hunt Dalaran Apprentices or Dalaran Protectors for 6 Dalaran Mana Gems.
+02-12到30級.md:1447｜步驟目標｜到幽暗城鍊金房的奧格諾恩鍊金店，用卷軸顯形。打到裂隙怒靈昏迷，再用封靈箱，拾取地上的裝滿的箱子；共需三個。｜At Algernon’s shop in the Apothecarium in Undercity, use the cantation. Weaken a Rift Spawn until stunned, use the chest, then loot the coffer on the ground. Collect three.
+06-路線外任務.md:191｜路線外理由｜25 級起，進本到清潔區，選一台提供首次清洗的機器，投入 1 個「髒兮兮的東西」和 3 銀。｜From level 25, use a machine offering the first wash in the clean room inside the dungeon. Insert one Grime-Encrusted Object and 3 silver.
+06-路線外任務.md:192｜路線外理由｜首次清洗後，等機器停下。看到領取選項就直接拿盒子，不用再投物品或付費。｜After the first wash, wait for the machine to stop. Collect the box when offered. No extra item or payment is needed.
+06-路線外任務.md:193｜路線外理由｜在副本清潔區看到「再次使用」時，可再投 1 個「髒兮兮的東西」和 3 銀換一盒。｜When a machine in the dungeon’s clean room offers another wash, trade one more Grime-Encrusted Object and 3 silver for a box.
+05-副本.md:721｜副本動線｜從正門進入發條小徑，沿左側走廊下坡到清潔區→右側宿舍護送克努比→電刑器→群體打擊者→瑟瑪普拉格，拾密碼開保險箱。打到髒戒指後回清潔區用超級清潔器。｜From the main entrance in the Clockwerk Run, follow the left corridor downhill to the Clean Zone → escort Kernobee from the quarters on the right → Electrocutioner 6000 → Crowd Pummeler 9-60 → Thermaplugg, then use his code on the safe. Use the Sparklematic in the Clean Zone if you loot a Grime-Encrusted Ring.
+05-副本.md:748｜說明｜清潔區旁的宿舍。先清回出口的路，等全隊準備好再與克努比對話。｜In the dormitory by the Clean Zone. Clear the path back to the exit and wait for the whole party before speaking to Kernobee.
+05-副本.md:751｜說明｜從黑鐵特工取得戒指後，回清潔區找提供戒指任務的清潔器，備妥 3 銀依對話操作。｜After looting the ring from a Dark Iron Agent, return to the Clean Zone. Bring 3 silver and use the machine that offers the ring quest.
+05-副本.md:752｜步驟所在｜清潔區內提供戒指任務的清潔器｜The machine offering the ring quest in the Clean Zone
+05-副本.md:1334｜說明｜卡加斯交派隆後，隊伍要走監獄就向賈拉瑪弗接。｜After turning in Pyron at Kargath, speak to Galamav if your group plans to visit the prison.
+05-副本.md:1344｜說明｜隊友能開牢門就直接進。若門鎖著，先擊敗審訊官格斯塔恩取得監獄牢房鑰匙，再回來找哥沙克。｜If a party member can open the cell, go straight in. Otherwise get the Prison Cell Key from High Interrogator Gerstahn and return to Gor'shak.

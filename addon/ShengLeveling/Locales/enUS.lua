@@ -4,6 +4,13 @@
 local _, MG = ...
 MG.Locales = MG.Locales or {}
 MG.Locales.enUS = {
+  ["在發任者身後拿顯形卷軸。"] = "Take the Cantation of Manifestation from behind the quest giver.",
+  ["在發任者身後拿一盒封靈箱，捕捉前確認還有使用次數。"] = "Get a Chest of Containment Coffers behind the quest giver. Check its charges before trapping another spawn.",
+  ["三個裝滿的箱子與兩件工具已備齊，等任務日誌顯示可交。"] = "You have three filled coffers and both tools. Wait for your journal to show the quest is ready.",
+  ["擊殺數已達標，等任務日誌顯示可交。"] = "You have enough kills. Wait for your quest log to show the quest is ready.",
+  ["已取得戰利品，等任務日誌顯示可交。"] = "You have the trophy. Wait for your quest log to show it is ready to turn in.",
+  ["材料已齊。請核對任務日誌，可交時再找裁縫。"] = "You have the materials. Check your quest log and visit the tailor when it is ready to turn in.",
+  ["護送失敗。放棄後重接或略過。"] = "Escort failed. Abandon and retake the quest, or skip.",
   ["已到奧伯丁。留在黑海岸解任務，或搭船去暴風城與朋友會合？"] = "You reached Auberdine. Quest in Darkshore or sail to Stormwind to meet friends?",
   ["留在黑海岸"] = "Stay in Darkshore",
   ["提早東渡"] = "Sail to Stormwind",

@@ -14346,3 +14346,17 @@
 01-第一段-1到12級.md:116｜說明｜（任選專業）｜(beliebiger Beruf)
 05-副本.md:289｜說明｜帶著占卜籤，穿過傳送門後找箱子。｜Nimm den Wahrsagespruch mit und suche die Truhe hinter dem Instanzportal.
 05-副本.md:1470｜說明｜正門進市場，開煙草店的箱子後擊敗艾茲拉‧格里姆。｜Geht vom Haupttor zum Markt. Öffnet die Kiste am Tabakladen und besiegt Ezra Grimm.
+01-第一段-1到12級.md:1107｜說明｜亞麻布需 10 塊。可打低等人形怪收集，也能向玩家交易或在拍賣場購買。｜Ihr braucht 10 Leinenstoff. Sammelt ihn bei niedrigstufigen Humanoiden, handelt mit anderen Spielern oder schaut im Auktionshaus nach.
+02-12到30級.md:1062｜說明｜月銀刃在背包時先裝備到主手。若主手和背包都沒有，先找回武器，再去挑戰老火眼。｜Ist die Klinge im Gepäck, legt sie in der Waffenhand an. Fehlt sie auch dort, besorgt sie euch wieder, bevor ihr den Gegner herausfordert.
+05-副本.md:285｜說明｜接後與崔凡談話拿武器筆記。進死亡礦坑打木匠時把筆記帶在背包。｜Sprecht mit Trevan, um seine Notizen zu erhalten. Tragt sie in der Tasche, wenn Ihr die Holzschnitzer in den Todesminen bekämpft.
+02-12到30級.md:1451｜步驟目標｜在安伯米爾西側打達拉然學徒或達拉然保衛者，收集達拉然法力寶石 ×6。｜Sammelt an den markierten Stellen im Silberwald 6 Manaedelsteine aus Dalaran bei Lehrlingen oder Beschützern von Dalaran.
+02-12到30級.md:1447｜步驟目標｜到幽暗城鍊金房的奧格諾恩鍊金店，用卷軸顯形。打到裂隙怒靈昏迷，再用封靈箱，拾取地上的裝滿的箱子；共需三個。｜Benutzt die Formel in Algernons Laden im Apothekerviertel von Unterstadt. Schwächt eine Risskreatur, bis sie betäubt ist, benutzt die Truhe und plündert den Behälter am Boden. Sammelt drei.
+06-路線外任務.md:191｜路線外理由｜25 級起，進本到清潔區，選一台提供首次清洗的機器，投入 1 個「髒兮兮的東西」和 3 銀。｜Ab Stufe 25 kannst du im Reinraum des Dungeons eine Maschine benutzen, die die erste Reinigung anbietet. Wirf ein schmutzverkrustetes Objekt und 3 Silber ein.
+06-路線外任務.md:192｜路線外理由｜首次清洗後，等機器停下。看到領取選項就直接拿盒子，不用再投物品或付費。｜Warte nach der ersten Reinigung, bis die Maschine anhält. Hole den Kasten ab, sobald die Option erscheint. Dafür brauchst du weder einen weiteren Gegenstand noch mehr Silber.
+06-路線外任務.md:193｜路線外理由｜在副本清潔區看到「再次使用」時，可再投 1 個「髒兮兮的東西」和 3 銀換一盒。｜Bietet eine Maschine im Reinraum des Dungeons eine weitere Reinigung an, kannst du ein weiteres schmutzverkrustetes Objekt und 3 Silber gegen einen Kasten tauschen.
+05-副本.md:721｜副本動線｜從正門進入發條小徑，沿左側走廊下坡到清潔區→右側宿舍護送克努比→電刑器→群體打擊者→瑟瑪普拉格，拾密碼開保險箱。打到髒戒指後回清潔區用超級清潔器。｜Vom Haupteingang führt der linke Gang bergab zur Clean Zone → eskortiere Kernobee aus den Quartieren auf der rechten Seite → Elektrokutor 6000 → Meuteverprügler 9-60 → Thermaplugg, danach seinen Code für den Safe verwenden. Hast du den Schmutzverkrusteten Ring erbeutet, geh zurück zur Clean Zone und benutze die Sparklematic.
+05-副本.md:748｜說明｜清潔區旁的宿舍。先清回出口的路，等全隊準備好再與克努比對話。｜Im Schlafsaal neben der Reinzone. Räumt den Weg zurück zum Ausgang frei und wartet auf die ganze Gruppe, bevor ihr Kernobee ansprecht.
+05-副本.md:751｜說明｜從黑鐵特工取得戒指後，回清潔區找提供戒指任務的清潔器，備妥 3 銀依對話操作。｜Wenn du den Ring von einem Agenten der Dunkeleisenzwerge hast, kehre zur Clean Zone zurück. Nimm 3 Silber mit und benutze die Maschine, die die Ringquest anbietet.
+05-副本.md:752｜步驟所在｜清潔區內提供戒指任務的清潔器｜Die Maschine mit der Ringquest in der Clean Zone
+05-副本.md:1334｜說明｜卡加斯交派隆後，隊伍要走監獄就向賈拉瑪弗接。｜Gebt den Auftrag zu Pyron in Kargath ab. Will die Gruppe ins Gefängnis, sprecht dort mit Galamav.
+05-副本.md:1344｜說明｜隊友能開牢門就直接進。若門鎖著，先擊敗審訊官格斯塔恩取得監獄牢房鑰匙，再回來找哥沙克。｜Kann jemand die Zelle öffnen, geht direkt hinein. Holt sonst den Gefängniszellenschlüssel von Verhörmeisterin Gerstahn und kehrt zu Gor’shak zurück.
