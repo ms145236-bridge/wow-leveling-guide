@@ -1357,3 +1357,6 @@
 05-副本.md:445｜說明｜要向西瘟疫凱爾達隆的畫家接「愛與家庭」，可先飛冰風崗。已接畫作或只想在禮拜堂接任務，直接和隊友會合。｜Vuela al Campamento del Orvallo si necesitas visitar a la pintora de Castel Darrow, en las Tierras de la Peste del Oeste, para tomar De amor y familia. Si ya tienes la misión o solo necesitas las de la capilla, reúnete directamente con tu grupo.
 05-副本.md:451｜說明｜從聖光之願禮拜堂隨隊前往斯坦索姆。入口標記是血色正門，去市場或血色堡壘走這裡；只打亡靈區，和能開側門的隊友在東邊的側門會合。｜Parte de la Capilla de la Esperanza de la Luz con tu grupo hacia Stratholme. La marca señala la puerta principal escarlata que lleva al mercado y al Bastión Escarlata. Para el ala de los no-muertos, reúnete en la entrada de servicio del este con alguien que pueda abrirla.
 05-副本.md:440｜說明｜東瘟疫之地 1423 26.52, 10.36（血色正門；亡靈側門在 43.50, 19.40）｜Tierras de la Peste del Este 26.52, 10.36 (puerta principal escarlata; entrada de servicio de los no-muertos en 43.50, 19.40)
+03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta fallida: abandona la misión en el registro y vuelve a aceptarla del robot.
+04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta fallida: abandona la misión en el registro y vuelve a aceptarla del robot.
+04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta fallida: abandona la misión en el registro y vuelve a aceptarla del robot.

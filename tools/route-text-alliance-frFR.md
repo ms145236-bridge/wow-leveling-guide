@@ -1357,3 +1357,6 @@
 05-副本.md:445｜說明｜要向西瘟疫凱爾達隆的畫家接「愛與家庭」，可先飛冰風崗。已接畫作或只想在禮拜堂接任務，直接和隊友會合。｜Volez vers le camp du Noroît si vous devez voir la peintre de Caer Darrow dans les Maleterres de l’Ouest pour Amour et famille. Si vous avez déjà la quête ou ne voulez que celles de la chapelle, rejoignez directement votre groupe.
 05-副本.md:451｜說明｜從聖光之願禮拜堂隨隊前往斯坦索姆。入口標記是血色正門，去市場或血色堡壘走這裡；只打亡靈區，和能開側門的隊友在東邊的側門會合。｜Depuis la chapelle de l’Espoir de Lumière, rejoignez votre groupe pour Stratholme. Le repère indique la porte principale écarlate menant au marché et au bastion Écarlate. Pour l’aile des morts-vivants, rejoignez à l’entrée de service à l’est un membre qui peut l’ouvrir.
 05-副本.md:440｜說明｜東瘟疫之地 1423 26.52, 10.36（血色正門；亡靈側門在 43.50, 19.40）｜Maleterres de l’Est 26.52, 10.36 (porte principale écarlate ; entrée de service des morts-vivants en 43.50, 19.40)
+03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.
+04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.
+04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escorte échouée : abandonnez la quête dans le journal, puis reprenez-la auprès du robot.

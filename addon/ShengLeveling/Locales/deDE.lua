@@ -94,6 +94,7 @@ MG.Locales.deDE = {
   ["%d 級再去"] = "Ab Stufe %d",
   ["前置 "] = "Vorquests ",
   ["前置可接"] = "Vorquests verfügbar",
+  ["前置 %d 級可接"] = "Vorquest ab Stufe %d",
   ["前置未接 %d／共 %d"] = "%d von %d Vorquests nicht angenommen",
   ["先做前置鏈（%d 步）"] = "Erst die Vorquestkette erledigen (%d Schritte)",
   ["%d 級可接前置"] = "Vorquests ab Stufe %d",

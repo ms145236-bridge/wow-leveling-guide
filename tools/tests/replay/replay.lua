@@ -17,6 +17,8 @@ local classQuest={[95036]=true,[95042]=true,[95111]=true,[95125]=true,[95126]=tr
 local events = assert(io.open(arg[3], "w"))
 -- Compare the same loot scenario on both releases. These two hand-ins consume world drops.
 local drops = arg[9] == "both" and {[8244]=1,[10593]=1} or {}
+-- "items:8623,8704" supplies held world drops so explicit held-item entries can be checked.
+for id in (arg[9] or ""):match("^items:(.*)$") and arg[9]:sub(7):gmatch("%d+") or function() end do drops[tonumber(id)]=1 end
 local collect = {[2521]=8244,[3501]=10593}
 function GetItemCount(id) return drops[id] or 0 end
 local level, bar, open, bind = 1, 0, 0, initialBind
@@ -33,16 +35,19 @@ function UnitXP() return bar end
 function UnitXPMax() return maxXP[level] or 0 end
 function wipe(t) for k in pairs(t) do t[k]=nil end end
 local db={skip={},drop={},fpNodes={},notNow={},pin={},mark={},latch={},carry={},dNo={}}
-local ns={db=db, L=setmetatable({}, {__index=function(_,k) return k end}), UI={Get=function() return false end}, C={}}
+local ns={db=db, L=setmetatable({}, {__index=function(_,k) return k end}), UI={Get=function(key) return arg[10]=="optional" and key=="optional" end}, C={}}
 function ns.C.IsTurnedIn(q) return turned[q] end
 function ns.C.IsOnQuest(q) return have[q] end
-function ns.C.IsReady(q) return worked[q] end
+-- Quests with no objective step anywhere on the route (deliveries such as 5083) are ready once accepted.
+local hasDo={}
+function ns.C.IsReady(q) return worked[q] or (have[q] and not hasDo[q]) or false end
 function ns.C.Objectives() end
 function ns.C.XPBuff() return false end
 local data=alliance and "Data/RouteA.lua" or "Data/Route.lua"
 for _,file in ipairs({data, "Engine.lua"}) do assert(loadfile("addon/ShengLeveling/"..file))("",ns) end
 local E=ns.E
 E.Build()
+for _,group in ipairs({E.stations,E.dungeons}) do for _,st in ipairs(group) do for _,step in ipairs(st.list) do if step.s.t=="do" and step.s.q then hasDo[step.s.q]=true end end end end
 local instanceWork,selectedWork={},{}
 for _,d in ipairs(E.dungeons) do
   if allDungeons then chosen[d.id]=true end
@@ -115,7 +120,8 @@ local function run(st, isRun)
       while level<s.lv do grant("grind",maxXP[level]-bar,s) end
     elseif s.t=="accept" and not have[q] and not turned[q] then
       local why,detail=unavailable(q,i)
-      if not why and i.cond then why="conditional" end
+      -- Explicit held-item conditions were already checked by E.Applies; other conditional entries stay unmodelled.
+      if not why and i.cond and not (s.when and s.when.bag) then why="conditional" end
       if not why and level<math.max(i.min or 0,s.pickLv or 0) then why,detail="low",math.max(i.min or 0,s.pickLv or 0) end
       if not why and open>=40 then why="full" end
       if why then log(why,s,detail);if stats[why] then stats[why]=stats[why]+1 end
