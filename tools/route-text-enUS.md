@@ -14239,6 +14239,6 @@
 
 04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escort Tooga to Torta in Steamwheedle Port and wait for your quest log to show that it is ready to turn in.
 04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Return to Gadgetzan to turn in your quests, then pick up In Good Taste and Insect Part Analysis.
-06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑暗深淵中的邪惡」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Only pick up this quest if you are already at the Craftsmen’s Terrace in Darnassus and Dawnwatcher Shaedlass offers it. You can pick up the Horde quest Blackfathom Villainy directly from Thaelrid inside Blackfathom Deeps without going to Darnassus.
+06-路線外任務.md:658｜路線外理由｜聯盟任務，部落接不到。部落在黑澗深淵內直接向塞爾瑞德接「黑暗深淵中的邪惡」。｜Alliance quest; the Horde cannot take it. Horde players accept Blackfathom Villainy from Argent Guard Thaelrid inside Blackfathom Deeps.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Follow Tooga on foot.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜Tooga’s escort failed. Continue with the main route, or abandon the quest and find Tooga again if you want to retry.

@@ -105,7 +105,8 @@ do
       if i > 0 then log[#log + 1] = 900000 + i end
       local state = E.Locate(a21)
       for _, q in ipairs({95646,98815}) do
-        assert((not state.na[assert(offer(state, q))]) == (#log < 4))
+        -- The Gnomeregan accepts ahead carry dungeon-prep tags, so they no longer count as mainline growth.
+        assert((not state.na[assert(offer(state, q))]) == (#log < 7))
       end
     end
     active[4301],active[4496] = nil,nil
