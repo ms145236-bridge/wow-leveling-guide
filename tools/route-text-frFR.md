@@ -14508,6 +14508,6 @@
 
 04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escortez Tooga jusqu’à Torta au port Gentepression et attendez que le journal indique que la quête peut être rendue.
 04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Retournez à Gadgetzan pour rendre les quêtes et prenez Bon goût et Analyse des parties d’insectes.
-06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑澗深淵中的惡魔」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Accepte cette quête seulement si tu es déjà à la terrasse des Artisans de Darnassus et que le veilleur de l’aube Shaedlass te la propose. Tu peux accepter la quête de la Horde « L’infamie de Brassenoire » directement auprès de Thaelrid dans le donjon, sans passer par Darnassus.
+06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑暗深淵中的邪惡」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Accepte cette quête seulement si tu es déjà à la terrasse des Artisans de Darnassus et que le veilleur de l’aube Shaedlass te la propose. Tu peux accepter la quête de la Horde « L’infamie de Brassenoire » directement auprès de Thaelrid dans le donjon, sans passer par Darnassus.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Suis Tooga à pied.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜L’escorte de Tooga a échoué. Tu peux poursuivre la route principale. Pour réessayer, abandonne la quête et retrouve Tooga.

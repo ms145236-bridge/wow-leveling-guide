@@ -14783,6 +14783,6 @@
 
 04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escolta a Tooga hasta Torta en Puerto Bonvapor y espera a que el registro indique que ya puedes entregar la misión.
 04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Vuelve a Gadgetzan para entregar las misiones y recoge Buen gusto y Análisis de partes de insectos.
-06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑澗深淵中的惡魔」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Acepta esta misión solo si ya estás en la zona de artesanos de Darnassus y Shaedlass Guardalbas te la ofrece. Puedes aceptar la misión de la Horda «La vileza de Brazanegra» directamente de Thaelrid dentro de la mazmorra sin ir a Darnassus.
+06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑暗深淵中的邪惡」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Acepta esta misión solo si ya estás en la zona de artesanos de Darnassus y Shaedlass Guardalbas te la ofrece. Puedes aceptar la misión de la Horda «La vileza de Brazanegra» directamente de Thaelrid dentro de la mazmorra sin ir a Darnassus.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Sigue a Tooga a pie.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜La escolta de Tooga ha fallado. Puedes seguir la ruta principal. Para reintentarlo, abandona la misión y vuelve a buscar a Tooga.

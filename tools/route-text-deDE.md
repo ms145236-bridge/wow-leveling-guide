@@ -14395,6 +14395,6 @@
 
 04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Eskortiert Tooga zu Torta im Dampfdruckhafen und wartet, bis das Questlog die Abgabe bestätigt.
 04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Kehrt nach Gadgetzan zurück, gebt eure Quests ab und nehmt Guter Geschmack und Insektenteilanalyse an.
-06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑澗深淵中的惡魔」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Nimm diese Quest nur an, wenn du ohnehin auf der Handwerkerterrasse in Darnassus bist und Dämmerungsbehüter Shaedlass sie dir anbietet. Die Horde-Quest „Blackfathom-Schurkerei“ kannst du direkt bei Thaelrid in der Instanz annehmen. Dafür musst du nicht nach Darnassus.
+06-路線外任務.md:671｜路線外理由｜若本來就在達納蘇斯工匠區，且哨兵山德拉斯確實提供這個任務，才酌情接取。部落的「黑暗深淵中的邪惡」可在副本內直接向塞爾瑞德接取，無須為此去達納蘇斯。｜Nimm diese Quest nur an, wenn du ohnehin auf der Handwerkerterrasse in Darnassus bist und Dämmerungsbehüter Shaedlass sie dir anbietet. Die Horde-Quest „Blackfathom-Schurkerei“ kannst du direkt bei Thaelrid in der Instanz annehmen. Dafür musst du nicht nach Darnassus.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Folge Tooga zu Fuß.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜Toogas Eskorte ist fehlgeschlagen. Du kannst der Hauptroute folgen. Für einen neuen Versuch brich die Quest ab und suche Tooga erneut.

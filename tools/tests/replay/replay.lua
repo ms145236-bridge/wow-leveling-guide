@@ -81,7 +81,7 @@ function UnitXP() return bar end
 function UnitXPMax() return maxXP[level] or 0 end
 function wipe(t) for k in pairs(t) do t[k]=nil end end
 local db={skip={},drop={},fpNodes={},notNow={},pin={},mark={},latch={},carry={},dNo={}}
-local ns={db=db, L=setmetatable({}, {__index=function(_,k) return k end}), UI={Get=function(key) return arg[10]=="optional" and key=="optional" end}, C={}}
+local ns={db=db, L=setmetatable({}, {__index=function(_,k) return k end}), UI={Get=function(key) return arg[10]=="optional" and (key=="optional" or key=="dPre") end}, C={}}
 function ns.C.IsTurnedIn(q) return turned[q] end
 function ns.C.IsOnQuest(q) return have[q] end
 -- Quests with no objective step anywhere on the route are ready once accepted.
@@ -183,6 +183,10 @@ local function run(st, isRun)
       if book and s.when and s.when.workMap == 1453 and visitMap == 1453 and s.x then
         visitX, visitY = s.x, s.y
       end
+    elseif st.id == "02-11" then
+      -- The Westfall leg walks Stormwind -> Goldshire -> bridge; rows with coordinates are visited where authored,
+      -- so Elwynn-only catch-up rows (workMap 1429) apply on that walk and nowhere else.
+      if s.map then visitMap, visitX, visitY = s.map, s.x, s.y end
     else visitMap, visitX, visitY = nil, nil, nil end
     if book and have[q] and s.t == "do" and s.map == visitMap then
       -- Supplied observations, never an automatic drop merely for arriving at the map.
@@ -225,6 +229,8 @@ local function run(st, isRun)
       -- Explicit held-item conditions were already checked by E.Applies; other conditional entries stay unmodelled.
       if not why and i.cond and not (s.when and s.when.bag) and not observedToogaPickup then why="conditional" end
       if not why and level<math.max(i.min or 0,s.pickLv or 0) then why,detail="low",math.max(i.min or 0,s.pickLv or 0) end
+      -- Authored mainline dungeon prep waits while the log lacks the 3-slot reserve (Engine deferAuthoredPrep).
+      if not why and not isRun and s.when and s.when.dungeonPrep and not E.PreRoom(st) then why="prep-deferred" end
       if not why and open>=40 then why="full" end
       if why then log(why,s,detail);if stats[why] then stats[why]=stats[why]+1 end
       else

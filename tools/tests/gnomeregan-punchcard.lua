@@ -55,7 +55,7 @@ for _, row in ipairs(dungeon.list) do
   if row.s.q ~= 2930 then ns.db.skip[row.key] = true end
   if row.key == "d:2930" then work = row.s end
 end
-assert(work and work.ph == "in" and not work.map and work.spot:find("3005%-D"))
+assert(work and work.ph == "in" and not work.map and not work.spot and work.hint:find("3005%-D"))
 
 local function check(label, shouldTurnIn)
   local state = E.Locate(dungeon)
