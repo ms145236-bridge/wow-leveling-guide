@@ -56,6 +56,17 @@ def main():
     held = events(lua, "Alliance", "Human", [247834, 274268])
     for q in sorted(chain - {96393}):  # 96393 is Hall of Thanes work; this solo replay does not enter dungeons.
         assert ("accepted", q) in held and ("turned", q) in held, f"drop held: {q} not done"
+    # Alliance 624 starts from Cortello's Riddle (4056), a random drop; 625 follows only after 624 is turned in.
+    riddle = {624, 625}
+    for optional in (True, False):
+        rows = replay_rows(lua, "Alliance", "Human", [], optional)
+        taken = {int(row[4]) for row in rows if len(row) > 4 and row[4] and row[3] in ("accepted", "turned")}
+        assert not taken & riddle, f"no riddle: offered {sorted(taken & riddle)}"
+        missed = {int(q) for _, _, q in mandatory_skips(rows)}
+        assert not missed & riddle, f"no riddle: reported as missed {sorted(missed & riddle)}"
+    held = events(lua, "Alliance", "Human", [4056])
+    for event in (("accepted", 624), ("turned", 624), ("accepted", 625), ("turned", 625)):
+        assert event in held, f"riddle held: missing {event}"
     print("Replay held-item entries: empty, wrong, held, accepted and turned-in cases passed")
 
 

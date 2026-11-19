@@ -14790,3 +14790,5 @@
 06-路線外任務.md:1805｜路線外理由｜已交 8555 且實際接到後，依任務日誌到泰達希爾，在達納蘇斯城牆外找瑪法里恩的代理人。若沒有安排這段旅程，可略過。｜Si has entregado la misión 8555 y has aceptado esta, sigue el registro de misiones hasta Teldrassil y busca al agente de Malfurion fuera de las murallas de Darnassus. Puedes omitirla si no tienes previsto ese viaje.
 06-路線外任務.md:482｜路線外理由｜交完 4001 後，順路在奧格瑪向索爾接取並當場交件。此任務全程在奧格瑪完成。｜Tras entregar la misión 4001, acepta y entrega esta a Thrall cuando ya estés en Orgrimmar. Toda la misión se realiza en Orgrimmar.
 06-路線外任務.md:486｜路線外理由｜若已接任務且順訪荒蕪之地卡加斯，可向薇薇安·拉格雷回報。未接可略過，無須專程回幽暗城。｜Si ya tienes esta misión y pasas por Kargath en Tierras Inhóspitas, entrégasela a Vivian Lagrave. Si no la has aceptado, puedes omitirla sin volver expresamente a Entrañas.
+04-45到60級.md:617｜說明｜先接，留待安戈洛環形山 馬紹爾營地安戈洛打暴掠龍。｜Acéptala ahora y mata ravasaurios en Un'Goro más adelante.
+04-45到60級.md:1005｜說明｜奧格瑪接，並在安戈洛環形山 馬紹爾營地打齊白色暴掠龍爪。｜Acéptala en Orgrimmar y consigue las garras de ravasaurio blanco en el Refugio de Marshal, en el Cráter de Un'Goro.
