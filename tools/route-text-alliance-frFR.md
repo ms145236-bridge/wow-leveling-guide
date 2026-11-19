@@ -1442,3 +1442,9 @@
 04-45到60級.md:259｜說明｜從血法師營地接回北側大路，往北出詛咒之地進悲傷沼澤，再沿大路往西到沼澤西邊。｜Depuis le camp des mages de sang, rejoins la route du nord, sors des Terres foudroyées par le nord vers le Marais des Chagrins, puis suis la route vers l'ouest jusqu'au côté ouest du marais.
 04-45到60級.md:295｜說明｜交完 349 就會召出莫克。猩猩牙不夠或擋不住猩猩波，就略過這步和下面交 348，不影響後面。｜Rendre 349 fait apparaître Mokk. S'il te manque des crocs de gorille ou si tu ne tiens pas face aux vagues de gorilles, passe cette étape et la remise de 348 plus bas ; rien ensuite n'en dépend.
 04-45到60級.md:296｜說明｜還不到 49 級，就留在迷霧谷繼續打猩猩補到 49。｜Si tu n'es pas encore niveau 49, continue de tuer des gorilles dans la vallée des Brumes jusqu'au niveau 49.
+01-第一段-1到12級.md:949｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Le Montagnard Kadrell fait des allers-retours sur la route de Thelsamar (32.6, 49.7 à 36.8, 42.0). S'il n'est pas ici, suivez la route.
+01-第一段-1到12級.md:950｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Le Montagnard Kadrell fait des allers-retours sur la route de Thelsamar (32.6, 49.7 à 36.8, 42.0). S'il n'est pas ici, suivez la route.
+01-第一段-1到12級.md:960｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Le Montagnard Kadrell fait des allers-retours sur la route de Thelsamar (32.6, 49.7 à 36.8, 42.0). S'il n'est pas ici, suivez la route.
+02-12到30級.md:150｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Le Montagnard Kadrell fait des allers-retours sur la route de Thelsamar (32.6, 49.7 à 36.8, 42.0). S'il n'est pas ici, suivez la route.
+01-第一段-1到12級.md:765｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Champ-des-Vents se déplace de quelques pas vers le nord dans le verger. Si elle n'est pas ici, cherchez au nord.
+01-第一段-1到12級.md:767｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Champ-des-Vents se déplace de quelques pas vers le nord dans le verger. Si elle n'est pas ici, cherchez au nord.

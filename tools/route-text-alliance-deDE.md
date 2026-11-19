@@ -1442,3 +1442,9 @@
 04-45到60級.md:259｜說明｜從血法師營地接回北側大路，往北出詛咒之地進悲傷沼澤，再沿大路往西到沼澤西邊。｜Geh vom Lager der Blutmagier zurück zur nördlichen Straße, verlass die Verwüsteten Lande nach Norden in die Sümpfe des Elends und folge dann der Straße nach Westen bis an den Westrand des Sumpfes.
 04-45到60級.md:295｜說明｜交完 349 就會召出莫克。猩猩牙不夠或擋不住猩猩波，就略過這步和下面交 348，不影響後面。｜Mit der Abgabe von 349 erscheint Mokk. Fehlen dir Gorillahauer oder hältst du die Gorillawellen nicht aus, überspringe diesen Schritt und die Abgabe von 348 darunter; später hängt nichts davon ab.
 04-45到60級.md:296｜說明｜還不到 49 級，就留在迷霧谷繼續打猩猩補到 49。｜Hast du noch nicht Stufe 49, töte im Nebeltal weiter Gorillas bis Stufe 49.
+01-第一段-1到12級.md:949｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Gebirgsjäger Kadrell läuft auf der Straße durch Thelsamar hin und her (32.6, 49.7 bis 36.8, 42.0). Ist er nicht hier, folgt der Straße.
+01-第一段-1到12級.md:950｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Gebirgsjäger Kadrell läuft auf der Straße durch Thelsamar hin und her (32.6, 49.7 bis 36.8, 42.0). Ist er nicht hier, folgt der Straße.
+01-第一段-1到12級.md:960｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Gebirgsjäger Kadrell läuft auf der Straße durch Thelsamar hin und her (32.6, 49.7 bis 36.8, 42.0). Ist er nicht hier, folgt der Straße.
+02-12到30級.md:150｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Gebirgsjäger Kadrell läuft auf der Straße durch Thelsamar hin und her (32.6, 49.7 bis 36.8, 42.0). Ist er nicht hier, folgt der Straße.
+01-第一段-1到12級.md:765｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Windfield läuft im Obstgarten zwei, drei Schritte nach Norden. Ist sie nicht hier, sucht im Norden.
+01-第一段-1到12級.md:767｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Windfield läuft im Obstgarten zwei, drei Schritte nach Norden. Ist sie nicht hier, sucht im Norden.

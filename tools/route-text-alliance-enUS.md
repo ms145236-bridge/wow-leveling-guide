@@ -1442,3 +1442,9 @@
 04-45到60級.md:259｜說明｜從血法師營地接回北側大路，往北出詛咒之地進悲傷沼澤，再沿大路往西到沼澤西邊。｜From the blood mage camp, rejoin the northern road, leave the Blasted Lands north into the Swamp of Sorrows, then follow the road west to the western side of the swamp.
 04-45到60級.md:295｜說明｜交完 349 就會召出莫克。猩猩牙不夠或擋不住猩猩波，就略過這步和下面交 348，不影響後面。｜Turning in 349 summons Mokk. If you are short of gorilla fangs or can't hold off the gorilla waves, skip this step and the 348 turn-in below; nothing later depends on it.
 04-45到60級.md:296｜說明｜還不到 49 級，就留在迷霧谷繼續打猩猩補到 49。｜If you're not level 49 yet, keep killing gorillas in Mistvale Valley until 49.
+01-第一段-1到12級.md:949｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Mountaineer Kadrell walks back and forth along the Thelsamar road (32.6, 49.7 to 36.8, 42.0). If he isn't here, follow the road.
+01-第一段-1到12級.md:950｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Mountaineer Kadrell walks back and forth along the Thelsamar road (32.6, 49.7 to 36.8, 42.0). If he isn't here, follow the road.
+01-第一段-1到12級.md:960｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Mountaineer Kadrell walks back and forth along the Thelsamar road (32.6, 49.7 to 36.8, 42.0). If he isn't here, follow the road.
+02-12到30級.md:150｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Mountaineer Kadrell walks back and forth along the Thelsamar road (32.6, 49.7 to 36.8, 42.0). If he isn't here, follow the road.
+01-第一段-1到12級.md:765｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Windfield wanders two or three yards north through the orchard. If she isn't here, look north.
+01-第一段-1到12級.md:767｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Windfield wanders two or three yards north through the orchard. If she isn't here, look north.

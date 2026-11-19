@@ -14517,3 +14517,5 @@
 06-路線外任務.md:486｜路線外理由｜若已接任務且順訪荒蕪之地卡加斯，可向薇薇安·拉格雷回報。未接可略過，無須專程回幽暗城。｜Si vous avez déjà cette quête et passez par Kargath dans les Terres ingrates, rendez-la à Vivian Lagrave. Sinon, vous pouvez la passer sans faire un détour par Fossoyeuse.
 04-45到60級.md:617｜說明｜先接，留待安戈洛環形山 馬紹爾營地安戈洛打暴掠龍。｜Prends-la maintenant, puis tue les Ravasaures à Un'Goro (Refuge des Marshal).
 04-45到60級.md:1005｜說明｜奧格瑪接，並在安戈洛環形山 馬紹爾營地打齊白色暴掠龍爪。｜À prendre à Orgrimmar ; récupère les griffes de ravasaure blanc au Refuge des Marshal, dans le cratère d'Un'Goro.
+01-第一段-1到12級.md:884｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Champ-des-Vents se déplace de quelques pas vers le nord dans le verger. Si elle n'est pas ici, cherchez au nord.
+01-第一段-1到12級.md:886｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Champ-des-Vents se déplace de quelques pas vers le nord dans le verger. Si elle n'est pas ici, cherchez au nord.

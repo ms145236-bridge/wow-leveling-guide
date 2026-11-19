@@ -1442,3 +1442,9 @@
 04-45到60級.md:259｜說明｜從血法師營地接回北側大路，往北出詛咒之地進悲傷沼澤，再沿大路往西到沼澤西邊。｜Desde el campamento de los magos de sangre, regresa al camino del norte, sal de las Tierras Devastadas hacia el norte al Pantano de las Penas y sigue el camino al oeste hasta el lado oeste del pantano.
 04-45到60級.md:295｜說明｜交完 349 就會召出莫克。猩猩牙不夠或擋不住猩猩波，就略過這步和下面交 348，不影響後面。｜Al entregar 349 aparece Mokk. Si te faltan colmillos de gorila o no aguantas las oleadas de gorilas, omite este paso y la entrega de 348 de abajo; nada posterior depende de eso.
 04-45到60級.md:296｜說明｜還不到 49 級，就留在迷霧谷繼續打猩猩補到 49。｜Si aún no eres nivel 49, sigue matando gorilas en el Valle Nebuloso hasta el 49.
+01-第一段-1到12級.md:949｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montaraz Kadrell va y viene por el camino de Thelsamar (32.6, 49.7 a 36.8, 42.0). Si no está aquí, sigue el camino.
+01-第一段-1到12級.md:950｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montaraz Kadrell va y viene por el camino de Thelsamar (32.6, 49.7 a 36.8, 42.0). Si no está aquí, sigue el camino.
+01-第一段-1到12級.md:960｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montaraz Kadrell va y viene por el camino de Thelsamar (32.6, 49.7 a 36.8, 42.0). Si no está aquí, sigue el camino.
+02-12到30級.md:150｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montaraz Kadrell va y viene por el camino de Thelsamar (32.6, 49.7 a 36.8, 42.0). Si no está aquí, sigue el camino.
+01-第一段-1到12級.md:765｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campo de Viento se mueve un par de pasos al norte por el huerto. Si no está aquí, búscala al norte.
+01-第一段-1到12級.md:767｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campo de Viento se mueve un par de pasos al norte por el huerto. Si no está aquí, búscala al norte.

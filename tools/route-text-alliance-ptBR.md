@@ -1442,3 +1442,9 @@
 04-45到60級.md:259｜說明｜從血法師營地接回北側大路，往北出詛咒之地進悲傷沼澤，再沿大路往西到沼澤西邊。｜Do acampamento dos magos de sangue, volte à estrada do norte, saia das Terras Devastadas para o norte, entrando no Pântano das Mágoas, e siga a estrada para o oeste até o lado oeste do pântano.
 04-45到60級.md:295｜說明｜交完 349 就會召出莫克。猩猩牙不夠或擋不住猩猩波，就略過這步和下面交 348，不影響後面。｜Entregar 349 invoca Mokk. Se faltarem presas de gorila ou não aguentar as ondas de gorilas, pule esta etapa e a entrega de 348 abaixo; nada depois depende disso.
 04-45到60級.md:296｜說明｜還不到 49 級，就留在迷霧谷繼續打猩猩補到 49。｜Se ainda não estiver no nível 49, continue matando gorilas no Vale da Névoa até o 49.
+01-第一段-1到12級.md:949｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montanhista Kadrell vai e volta pela estrada de Thelsamar (32.6, 49.7 a 36.8, 42.0). Se não estiver aqui, siga a estrada.
+01-第一段-1到12級.md:950｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montanhista Kadrell vai e volta pela estrada de Thelsamar (32.6, 49.7 a 36.8, 42.0). Se não estiver aqui, siga a estrada.
+01-第一段-1到12級.md:960｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montanhista Kadrell vai e volta pela estrada de Thelsamar (32.6, 49.7 a 36.8, 42.0). Se não estiver aqui, siga a estrada.
+02-12到30級.md:150｜說明｜巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。｜Montanhista Kadrell vai e volta pela estrada de Thelsamar (32.6, 49.7 a 36.8, 42.0). Se não estiver aqui, siga a estrada.
+01-第一段-1到12級.md:765｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campo de Vento anda alguns passos para o norte no pomar. Se não estiver aqui, procure ao norte.
+01-第一段-1到12級.md:767｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campo de Vento anda alguns passos para o norte no pomar. Se não estiver aqui, procure ao norte.

@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "a9842d0a",
+  built = "20b5b340",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -785,9 +785,9 @@ MG.Route = {
         {t="do", q=92683, hint="從風莓低地的振翼蝶身上收集5個振翼蝶粉末。", map=2521, x=50.4, y=79.3},
         {t="do", q=92682, hint="在荒原果園收集10個熟透的風暴蘋果並殺死5個飢餓的強盜。", map=2521, x=47.85, y=81.15},
         {t="turnin", q=92698, npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
-        {t="turnin", q=92684, npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
+        {t="turnin", q=92684, desc="阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。", npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
         {t="turnin", q=92683, npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
-        {t="turnin", q=92682, npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
+        {t="turnin", q=92682, desc="阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。", npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
         {t="accept", q=92685, npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
         {t="do", q=92685, hint="從風莓低地的強盜路霸身上收集7個染血強盜面罩。", map=2521, x=48.9, y=75.4},
         {t="turnin", q=92685, npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
@@ -1024,8 +1024,8 @@ MG.Route = {
         {t="fp", node="塞爾薩瑪", map=1432, x=33.9, y=51},
         {t="bind", text="在塞爾薩瑪旅店綁爐石（35.40, 48.40）。", bind="塞爾薩瑪", map=1432, x=35.4, y=48.4, when={raceOrOrigin={"Dwarf", "Gnome"}}},
         {t="accept", q=6387, npc="布洛克·尋石者", tgt="布洛克·尋石者", map=1432, x=37.02, y=47.81, when={race={"Dwarf", "Gnome"}}},
-        {t="accept", q=1339, npc="巡山人卡德雷爾", tgt="巡山人卡德雷爾", map=1432, x=32.63, y=49.74},
-        {t="accept", q=416, npc="巡山人卡德雷爾", tgt="巡山人卡德雷爾", map=1432, x=32.63, y=49.74},
+        {t="accept", q=1339, desc="巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。", npc="巡山人卡德雷爾", tgt="巡山人卡德雷爾", map=1432, x=35.68, y=46.67},
+        {t="accept", q=416, desc="巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。", npc="巡山人卡德雷爾", tgt="巡山人卡德雷爾", map=1432, x=35.68, y=46.67},
         {t="turnin", q=353, npc="巡山人格林戈·雷矛", tgt="巡山人格林戈·雷矛", map=1432, x=24.76, y=18.4},
         {t="turnin", q=1339, npc="巡山人格林戈·雷矛", tgt="巡山人格林戈·雷矛", map=1432, x=24.76, y=18.4},
         {t="accept", q=1338, npc="巡山人格林戈·雷矛", tgt="巡山人格林戈·雷矛", map=1432, x=24.76, y=18.4},
@@ -1035,7 +1035,7 @@ MG.Route = {
         {t="buy", opt=true, desc="限量商品，有貨才買。", tag="可跳過", npc="尼爾倫·安德瑪", text="重型尖刺釘錘", item=4778, n=1, map=1432, x=42.8, y=10, when={class={"WARRIOR", "PALADIN"}}},
         {t="turnin", q=307, npc="巡山人格林戈·雷矛", tgt="巡山人格林戈·雷矛", map=1432, x=24.76, y=18.4},
         {t="hearth", bind="塞爾薩瑪", hm=1432, when={raceOrOrigin={"Dwarf", "Gnome"}}},
-        {t="turnin", q=416, tag="材料齊才做", npc="巡山人卡德雷爾", tgt="巡山人卡德雷爾", map=1432, x=32.63, y=49.74, when={raceOrOrigin={"Dwarf", "Gnome"}}, hold=true},
+        {t="turnin", q=416, desc="巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。", tag="材料齊才做", npc="巡山人卡德雷爾", tgt="巡山人卡德雷爾", map=1432, x=35.68, y=46.67, when={raceOrOrigin={"Dwarf", "Gnome"}}, hold=true},
         {t="hearth", desc="爐石還在冷卻就從塞爾薩瑪飛鐵爐堡，再搭礦道地鐵到暴風城。", bind="暴風城", hm=1453, when={neitherRaceNorOrigin={"Dwarf", "Gnome"}}},
         {t="turnin", q=6387, npc="索格拉姆·伯雷森", tgt="索格拉姆·伯雷森", map=1432, x=33.94, y=50.95, when={race={"Dwarf", "Gnome"}}},
         {t="accept", q=6391, npc="索格拉姆·伯雷森", tgt="索格拉姆·伯雷森", map=1432, x=33.94, y=50.95, when={race={"Dwarf", "Gnome"}}},
@@ -1282,7 +1282,7 @@ MG.Route = {
         {t="fly", to="塞爾薩瑪", when={fp="塞爾薩瑪"}},
         {t="travel", tag="提醒：還沒開這個飛行點，第一次要用跑的", text="出鐵爐堡沿大路往東，穿過東邊山口的隧道進洛克莫丹，再沿路往東北到塞爾薩瑪。", when={noFp="塞爾薩瑪"}},
         {t="fp", node="塞爾薩瑪", map=1432, x=33.9, y=51},
-        {t="turnin", q=416, npc="巡山人卡德雷爾", tgt="巡山人卡德雷爾", map=1432, x=32.63, y=49.74},
+        {t="turnin", q=416, desc="巡山人卡德雷爾在塞爾薩瑪大路上來回走（32.6, 49.7 到 36.8, 42.0），不在這點就沿路找。", npc="巡山人卡德雷爾", tgt="巡山人卡德雷爾", map=1432, x=35.68, y=46.67},
         {t="accept", q=86585, npc="巡山人伊爾娃", tgt="巡山人伊爾娃", map=1432, x=31.79, y=86.33},
         {t="do", q=237, hint="南部警戒塔的巡山人格拉維戈要你殺掉10個碎石怪擊顱者和10個碎石怪先知，然後回去向他彙報。", map=1432, x=31.2, y=84.95, when={notRace={"Skyborne"}}},
         {t="do", q=86585, hint="揚起鐵爐堡的旌旗，叫出穴居怪劈頭者並擊殺。", map=1432, x=30.8, y=84.93},

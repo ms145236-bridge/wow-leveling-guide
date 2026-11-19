@@ -14791,3 +14791,5 @@
 06-路線外任務.md:486｜路線外理由｜若已接任務且順訪荒蕪之地卡加斯，可向薇薇安·拉格雷回報。未接可略過，無須專程回幽暗城。｜Si ya tienes esta misión y pasas por Kargath en Tierras Inhóspitas, entrégasela a Vivian Lagrave. Si aún no la aceptaste, puedes omitirla sin volver a Entrañas solo por ella.
 04-45到60級.md:617｜說明｜先接，留待安戈洛環形山 馬紹爾營地安戈洛打暴掠龍。｜Acéptala ahora y mata ravasaurios en Un'Goro, desde el Refugio de Marshal.
 04-45到60級.md:1005｜說明｜奧格瑪接，並在安戈洛環形山 馬紹爾營地打齊白色暴掠龍爪。｜Acéptala en Orgrimmar y consigue las garras de ravasaurio blanco en el Refugio de Marshal, en el Cráter de Un'Goro.
+01-第一段-1到12級.md:884｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campo de Viento se mueve un par de pasos al norte por el huerto. Si no está aquí, búscala al norte.
+01-第一段-1到12級.md:886｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campo de Viento se mueve un par de pasos al norte por el huerto. Si no está aquí, búscala al norte.
