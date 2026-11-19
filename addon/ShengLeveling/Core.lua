@@ -288,7 +288,9 @@ local localRecovery = {}
 local anyG = {} -- 任一組（例如紮營入門指南任選專業）的每個任務 → 組的第一個 ID（略過鍵 a:第一個）
 for _, st in ipairs(R.stations) do
   for _, s in ipairs(st.steps) do
-    if s.when and (s.when.hubArea or s.when.workMap or s.when.localVisit or (s.q and (R.quests[s.q] or {}).providedVisit) or (s.when.readyQuest and ((R.quests[s.q] or {}).deliveryItems or s.afterWork))) then
+    if s.when and (s.when.hubArea or s.when.workMap or s.when.localVisit
+      or (s.when.manualPickup and s.when.nearPoint) or (s.q and (R.quests[s.q] or {}).providedVisit)
+      or (s.when.readyQuest and ((R.quests[s.q] or {}).deliveryItems or s.afterWork))) then
       visitChecks[st.id] = visitChecks[st.id] or {}
       table.insert(visitChecks[st.id], s.when)
     end

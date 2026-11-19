@@ -1416,3 +1416,6 @@
 
 06-路線外任務.md:1010｜說明｜順訪辛特蘭夏德拉洛時，38 級起可向西南側神殿岩臺上的阿塔萊流放者接取。已接任務且隊伍清東廊時，先打六個陽臺的守衛解除屏障，再擊敗迦瑪蘭拾頭顱。下次順訪向同一位流放者交件。｜Si ya pasas por Shadra’Alor, en Tierras del Interior, puedes aceptar la misión a partir del nivel 38 del Exiliado Atal’ai, en la cornisa junto al templo del suroeste. Si tienes la misión y tu grupo limpia el pasillo este, derrota primero a los seis guardias de los balcones para abrir la barrera. Luego derrota a Jammal’an y recoge su cabeza. Entrégasela al mismo exiliado en tu próxima visita.
 06-路線外任務.md:1768｜說明｜永恆版起任方式待確認。無須為此先去達納蘇斯。若確實接到任務，依遊戲內任務日誌回報。｜Aún no se ha confirmado cómo se inicia esta misión en WoW Forever. No hace falta ir antes a Darnassus. Si recibes la misión, sigue las indicaciones del registro de misiones para entregarla.
+04-45到60級.md:54｜說明｜遇到圖加且準備好步行護送才接。｜Acepta la misión solo si encuentras a Tooga y puedes escoltarlo a pie.
+04-45到60級.md:55｜說明｜跟著圖加步行，護送到熱砂港西南邊的托爾塔。注意沿途伏擊。｜Escolta a Tooga a pie hasta Torta, al suroeste de Puerto Bonvapor. Ten cuidado con las emboscadas.
+04-45到60級.md:62｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜La escolta de Tooga ha fallado. Puedes seguir la ruta principal. Para reintentarlo, abandona la misión y vuelve a buscar a Tooga.

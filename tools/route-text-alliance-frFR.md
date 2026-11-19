@@ -1416,3 +1416,6 @@
 
 06-路線外任務.md:1010｜說明｜順訪辛特蘭夏德拉洛時，38 級起可向西南側神殿岩臺上的阿塔萊流放者接取。已接任務且隊伍清東廊時，先打六個陽臺的守衛解除屏障，再擊敗迦瑪蘭拾頭顱。下次順訪向同一位流放者交件。｜Si vous passez déjà par Shadra’Alor dans les Hinterlands, prenez la quête dès le niveau 38 auprès de l’Exilé atal’ai, sur le rebord du temple au sud-ouest. Si vous avez la quête et que votre groupe nettoie le passage est, éliminez les six gardiens des balcons pour lever la barrière, puis battez Jammal’an et ramassez sa tête. Rapportez-la au même exilé lors de votre prochaine visite.
 06-路線外任務.md:1768｜說明｜永恆版起任方式待確認。無須為此先去達納蘇斯。若確實接到任務，依遊戲內任務日誌回報。｜La façon de lancer cette quête dans WoW Forever reste à confirmer. Inutile de passer à Darnassus au préalable. Si tu reçois la quête, suis les indications du journal des quêtes pour la rendre.
+04-45到60級.md:54｜說明｜遇到圖加且準備好步行護送才接。｜Accepte la quête si tu rencontres Tooga et que tu peux l’escorter à pied.
+04-45到60級.md:55｜說明｜跟著圖加步行，護送到熱砂港西南邊的托爾塔。注意沿途伏擊。｜Escorte Tooga à pied jusqu’à Torta, au sud-ouest du port Gentepression. Attention aux embuscades.
+04-45到60級.md:62｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜L’escorte de Tooga a échoué. Tu peux poursuivre la route principale. Pour réessayer, abandonne la quête et retrouve Tooga.

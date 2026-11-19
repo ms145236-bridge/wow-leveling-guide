@@ -1416,3 +1416,6 @@
 
 06-路線外任務.md:1010｜說明｜順訪辛特蘭夏德拉洛時，38 級起可向西南側神殿岩臺上的阿塔萊流放者接取。已接任務且隊伍清東廊時，先打六個陽臺的守衛解除屏障，再擊敗迦瑪蘭拾頭顱。下次順訪向同一位流放者交件。｜Wenn ihr ohnehin in Shadra’Alor im Hinterland seid, könnt ihr die Quest ab Stufe 38 beim Verbannten der Atal’ai auf dem Vorsprung am südwestlichen Tempel annehmen. Habt ihr die Quest und geht eure Gruppe in den Ostgang, besiegt zuerst die sechs Balkonwachen, um die Barriere zu öffnen. Besiegt dann Jammal’an und nehmt seinen Kopf mit. Gebt ihn beim nächsten Besuch demselben Verbannten.
 06-路線外任務.md:1768｜說明｜永恆版起任方式待確認。無須為此先去達納蘇斯。若確實接到任務，依遊戲內任務日誌回報。｜Wie diese Quest in WoW Forever beginnt, ist noch unklar. Dafür müsst ihr vorher nicht nach Darnassus reisen. Wenn ihr die Quest erhaltet, folgt zur Abgabe den Angaben im Questlog.
+04-45到60級.md:54｜說明｜遇到圖加且準備好步行護送才接。｜Nimm die Quest nur an, wenn du Tooga antriffst und ihn zu Fuß begleiten kannst.
+04-45到60級.md:55｜說明｜跟著圖加步行，護送到熱砂港西南邊的托爾塔。注意沿途伏擊。｜Eskortiere Tooga zu Fuß zu Torta südwestlich des Dampfdruckhafens. Achte unterwegs auf Hinterhalte.
+04-45到60級.md:62｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜Toogas Eskorte ist fehlgeschlagen. Du kannst der Hauptroute folgen. Für einen neuen Versuch brich die Quest ab und suche Tooga erneut.

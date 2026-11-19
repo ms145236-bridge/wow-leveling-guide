@@ -14,7 +14,11 @@ lua5.1 tools/tests/stonewatch-objects.lua
 lua5.1 tools/tests/loch-modan-parcel.lua
 lua5.1 tools/tests/redridge-trophies.lua
 lua5.1 tools/tests/ungoro-escort.lua
+lua5.1 tools/tests/tooga-escort.lua
+lua5.1 tools/tests/tooga-escort.lua legacy
+lua5.1 tools/tests/tooga-horde.lua
 lua5.1 tools/tests/route-handoffs.lua
+lua5.1 tools/tests/duskwood-comb.lua
 lua5.1 tools/tests/merged-waypoints.lua
 lua5.1 tools/tests/portable-map-pin.lua
 lua5.1 tools/tests/thandol-chain.lua

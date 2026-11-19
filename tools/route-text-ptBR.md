@@ -14615,3 +14615,6 @@
 05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Aceite a missão no Platô dos Vigilantes Celestes, em Mulgore, se Zul'Farrak for a masmorra selecionada.
 05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Depois da sala dos escaravelhos de Theka, derrote o médico-feiticeiro Zum'rah no cemitério e saqueie a cabeça dele.
 05-副本.md:1168｜說明｜下次順訪高臺再交。｜Entregue a missão na próxima vez que passar pelo platô.
+
+04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escolte Tooga até Torta no Porto do Cartel e aguarde até que o registro indique que a missão pode ser entregue.
+04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Volte a Geringontzan para entregar as missões e aceite Bom Gosto e Análise de Partes de Insetos.
