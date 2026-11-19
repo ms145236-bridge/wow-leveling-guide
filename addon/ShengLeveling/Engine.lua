@@ -2566,7 +2566,10 @@ function E.InstanceState(d, all)
         add(q)
       end
     end
-    for _, q in ipairs(x.dq or {}) do add(q) end
+    -- Preserve the full index for lookup, but omit objectives that take place outside this instance.
+    for _, q in ipairs(x.dq or {}) do
+      if not x.outsideIndexed or not inList(x.outsideIndexed, q) then add(q) end
+    end
   end
   if #steps == 0 then return nil end
   local done, na, num, group, inGroup = {}, {}, {}, {}, {}

@@ -14622,3 +14622,4 @@
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Siga Tooga a pé.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜A escolta de Tooga falhou. Você pode continuar pela rota principal. Para tentar de novo, abandone a missão e procure Tooga outra vez.
 06-路線外任務.md:1731｜路線外理由｜若本來就安排厄運之槌北區貢品，且克羅卡斯確實提供這個任務，才選接。跨翼取物與回報請依遊戲內任務日誌。｜Só aceite esta missão se já estiver planejando uma incursão de tributo na ala norte do Gládio Cruel e o capitão Kebrapaw a oferecer. Siga o registro de missões do jogo para pegar o item e entregar a missão entre as alas.
+06-路線外任務.md:1805｜路線外理由｜已交 8555 且實際接到後，依任務日誌到泰達希爾，在達納蘇斯城牆外找瑪法里恩的代理人。若沒有安排這段旅程，可略過。｜Se você já entregou a missão 8555 e aceitou esta, siga o registro de missões até Teldrassil e procure o agente de Malfurion fora das muralhas de Darnassus. Você pode pular a missão se não tiver essa viagem planejada.
