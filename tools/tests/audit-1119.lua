@@ -108,6 +108,12 @@ assert(not E.Applies(firewater.when), "5083 已接、帶著瓶子但日誌未完
 env.ready[5083], env.bags = true, {}
 assert(E.Applies(firewater.when), "5083 日誌可交、瓶子不在身上：照樣顯示交件")
 env.active, env.ready = {}, {}
+-- QuestieDB 1.1.3 退步的前置用客戶端 nextQuestId 補回（兩條導引擇一）
+for q, pre in pairs({ [935] = { 934, 7383 }, [5244] = { 5249, 5250 }, [6101] = { 6063, 94013 }, [95809] = { 95647 } }) do
+  local ps = ns.Route.quests[q].ps or {}
+  assert(#ps == #pre, q .. " 前置任一")
+  for k, v in ipairs(pre) do assert(ps[k] == v, q .. " 前置 " .. v) end
+end
 print("Alliance drop-started quests, escorts and Winterfall Firewater passed")
 
 -- ── 部落 ──
@@ -215,4 +221,22 @@ for _, e in ipairs({ { "02-9", 1013 }, { "02-9", 1014 }, { "05-d6", 1013 }, { "0
   env.active, env.ready = {}, {}
 end
 
+-- 副本是否「已完成」不看日誌可交：交完的任務不再回報可交
+env.active, env.ready, env.turned, env.objectives = {}, {}, { [1048] = true }, {}
+env.level = 39
+assert(E.DungeonDone(cathedral), "1048 交完：大教堂已完成")
+env.level = 25
+local sfk = E.byId["05-d6"]
+env.turned = { [1098] = true }
+env.active = { [1013] = true, [1014] = true }
+assert(not E.DungeonDone(sfk), "只交 1098、1013／1014 還在日誌：影牙不算完成")
+env.active = {}
+env.turned = { [1098] = true, [1013] = true, [1014] = true }
+assert(E.DungeonDone(sfk), "三件都交：影牙已完成")
+env.turned = {}
+-- 不死族限定的任務保留種族；督軍高圖斯、艾米 01 的選取名沿用遊戲名
+for _, q in ipairs({ 91862, 94440, 96204 }) do assert(ns.Route.quests[q].races == 16, q .. " 只有不死族") end
+local names = {}
+for _, st in ipairs(ns.Route.stations) do for _, x in ipairs(st.steps) do if x.tgt then names[x.tgt] = true end end end
+assert(names["督軍高圖斯"] and names["艾米 01"] and not names["軍官高圖斯"] and not names["A-Me 01"], "選取名")
 print("Horde 361/5083/4489/5652, Shadowfang, 1150 and Scarlet 1048 passed")

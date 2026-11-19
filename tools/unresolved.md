@@ -1,4 +1,4 @@
-# 建置報告（資料版本 401e52eb）
+# 建置報告（資料版本 b553e418）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
 站數：94　任務數：1656
@@ -202,7 +202,7 @@
 - 01-第一段-1到12級.md：…或銀色黎明 96895／96897／968… → 詛咒神教
 - 01-第一段-1到12級.md：…96895／96897／96898，依可接… → 戰爭的殘骸
 
-## 名稱不一致（229）
+## 名稱不一致（221）
 
 - 任務 92551：目標怪 QuestieDB 沒有繁中名（奧拉凱斯風暴召喚者、奧拉凱斯治療者、『颶語者』特戴歐爾、Galemender Delanea）
 - 任務 97257：目標怪 QuestieDB 沒有繁中名（Brazier of Offering）
@@ -237,15 +237,10 @@
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（胡庫、米杉、Hukku、Mijan）
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（祖羅、洛若爾、Loro、Zolo）
 - 任務 4289：目標怪 QuestieDB 沒有繁中名（安戈洛猩猩、Un'Goro Gorilla）
-- 04-45到60級.md:819 交｜找回A-Me 01：路線寫「艾米 01」，QuestieDB／遊戲名是「A-Me 01」
-- 05-副本.md:1360 交｜格殺勿論：黑鐵矮人：路線寫「督軍高圖斯」，QuestieDB／遊戲名是「軍官高圖斯」
 - 任務 7602：目標怪 QuestieDB 沒有繁中名（雷加斯薩特、雷加斯盜賊、雷加斯喚魔者、Legashi Soulstealer、Legashi Hellraiser、Legashi Blackguard）
 - 任務 97327：目標怪 QuestieDB 沒有繁中名（Blackmaw Berserker、Blackmaw Thrall、Blackmaw Headhunter、Swarming Imp、Legashi Slayer、Blackmaw Champion、Legashi Satyr）
 - 05-副本.md:1792 接｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
 - 05-副本.md:1808 交｜黑喉袋子：QuestieDB 沒有繁中名（Ekkal），用「Ekkal」
-- 05-副本.md:1388 接｜高圖斯的命令：路線寫「督軍高圖斯」，QuestieDB／遊戲名是「軍官高圖斯」
-- 05-副本.md:1413 交｜高圖斯的命令：路線寫「督軍高圖斯」，QuestieDB／遊戲名是「軍官高圖斯」
-- 05-副本.md:1419 接｜伊崔格的智慧：路線寫「督軍高圖斯」，QuestieDB／遊戲名是「軍官高圖斯」
 - 04-45到60級.md:1278 接｜聖光研究：路線寫「物件 書籍」，QuestieDB／遊戲名是「奧蘭·斯內克威瑟」
 - 04-45到60級.md:1396 接｜奪回希利蘇斯：路線寫「塞納里奧使者黑蹄」，QuestieDB／遊戲名是「塞納里奧使者托爾·黑蹄」
 - 04-45到60級.md:1474 交｜旅外表兄：QuestieDB 沒有繁中名（Thark Gorax），用「薩克‧葛洛克斯」
@@ -430,9 +425,6 @@
 - 04-45到60級.md:1735 接｜任務完成：QuestieDB 沒有繁中名（Tiala Whitemane），用「提雅拉·白鬃」
 - 04-45到60級.md:1737 交｜任務完成：QuestieDB 沒有繁中名（Ketharas），用「柯薩拉斯」
 - 05-副本.md:1702 交｜結晶元素：路線寫「大地探尋者瑪耶娜（Mayena Earthseeker）」，QuestieDB／遊戲名是「瑪雅娜‧尋地者」
-- 05-副本.md:1833 接｜高圖斯的命令：路線寫「督軍高圖斯」，QuestieDB／遊戲名是「軍官高圖斯」
-- 05-副本.md:1835 交｜高圖斯的命令：路線寫「督軍高圖斯」，QuestieDB／遊戲名是「軍官高圖斯」
-- 05-副本.md:1836 接｜伊崔格的智慧：路線寫「督軍高圖斯」，QuestieDB／遊戲名是「軍官高圖斯」
 
 ## 順序錯誤（已自動調整 1）
 

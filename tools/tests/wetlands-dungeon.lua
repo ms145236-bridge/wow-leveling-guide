@@ -46,8 +46,7 @@ assert(#targets == 4 and targets[1].q == 95646 and targets[2].q == 98815)
 assert(targets[3].q == 95647 and #targets[3].chain == 0)
 local q = ns.Route.quests[95647]
 assert(#(q.ps or {}) == 0 and #(q.pg or {}) == 0)
-local heart = ns.Route.quests[95809]
-assert(((heart.ps or {})[1] or (heart.pg or {})[1]) == 95647) -- QuestieDB 11/19 版拿掉了 preSingle，路線用【前置】補回
+assert(ns.Route.quests[95809].ps[1] == 95647)
 local function inside(t, id)
   local state = E.InstanceState(d)
   if state then

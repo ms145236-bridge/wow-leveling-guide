@@ -1556,7 +1556,13 @@ function E.DungeonDone(d)
   local any = false
   for _, step in ipairs(d.list) do
     local s = step.s
-    if s.t == "turnin" and (s.ph == "post" or s.ph == "in") and s.q and not s.opt and E.Applies(s.when) and raceOK(s.q) then
+    -- 「日誌可交」只決定下一步要不要指去交，不決定這本有哪些要交：交完後日誌不再回報可交，不能因此把任務從清單拿掉
+    local w = s.when
+    if w and w.readyQuest then
+      w = {}
+      for k, v in pairs(s.when) do if k ~= "readyQuest" then w[k] = v end end
+    end
+    if s.t == "turnin" and (s.ph == "post" or s.ph == "in") and s.q and not s.opt and E.Applies(w) and raceOK(s.q) then
       any = true
       if not turned(s.q) then return false end
     end
