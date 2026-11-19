@@ -122,6 +122,7 @@ local localVisitFrom = {} -- 只在原定回訪點補做的任務，不將早站
 local questSt = {} -- 任務 → 有它步驟的站（主線站與副本，Build 時建）
 local anyQ = {} -- 任一組（s.any）裡的任務：沒接的不算站的進度（Build 時建）
 local dunQ = {} -- 副本站裡有步驟的任務（副本前置、副本任務；Build 時建）
+local mainKeyLast = {} -- 主線步驟鍵 → 最後出現的站序（Build 時建）
 E.QUEST, E.SOFT = QUEST, SOFT
 
 -- 鳥點名 → 該鳥點的地圖與座標（搭船、飛行的目的地判斷用）
@@ -415,7 +416,7 @@ function E.Build()
   me.sky = (me.race and me.race:find("Sky") or me.raceL and me.raceL:find("天裔", 1, true)) and true or false
   if me.sky then me.bit = UnitFactionGroup("player") == "Alliance" and 33 or 34 end
   me.class = select(2, UnitClass("player"))
-  wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt); wipe(localVisitFrom); wipe(dunQ); wipe(anyQ)
+  wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt); wipe(localVisitFrom); wipe(dunQ); wipe(mainKeyLast); wipe(anyQ)
   local startKey = E.StartKey()
   wipe(me.originRaces)
   for race in (startKey or ""):gmatch("[^/]+") do me.originRaces[race] = true end
@@ -523,6 +524,7 @@ function E.Build()
       else
         st.index = #E.stations + 1
         E.stations[st.index] = st
+        for _, w in ipairs(st.list) do mainKeyLast[w.key] = st.index end
         for _, w in ipairs(st.list) do
           local s = w.s
           if s.q and s.opt and s.when and s.when.localVisit and not localVisitFrom[s.q] then
@@ -2460,11 +2462,16 @@ function E.DungeonPrompt()
       -- 超過等級、只因日誌裡還有本副本任務而回訪：提示那個任務，不算前置
       if kind == "revisit" then return d, E.Title(revisit.s) end
       if kind ~= "past" then
-        -- 前置鏈還沒做完：說還剩幾步；否則說前置還有幾個沒接
+        -- 前置鏈還沒做完：說還剩幾步；否則說前置還有幾個沒接。主線之後會帶到的不算：還沒到接取錨點站就不提前置
+        local cur = MG.db.station and E.byId[MG.db.station]
+        local at = cur and cur.index
+        local pick = d.pickAt and E.byId[d.pickAt]
+        if at and pick and pick.index and pick.index > at then return d, nil end
         local left = 0
         for _, step in ipairs(d.list) do
           local s = step.s
-          if s.tag == "副本前置鏈" and E.Applies(s.when) and (not s.q or raceOK(s.q)) and not E.QuickDone(step) then left = left + 1 end
+          if s.tag == "副本前置鏈" and E.Applies(s.when) and (not s.q or raceOK(s.q)) and not E.QuickDone(step)
+              and not (at and (mainKeyLast[step.key] or 0) >= at) then left = left + 1 end
         end
         if left > 0 then return d, L["先做前置鏈（%d 步）"]:format(left) end
         local total, got = E.DungeonPre(d)

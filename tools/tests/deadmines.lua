@@ -67,7 +67,7 @@ local live = {
        IsTurnedIn=function(q) return turned[q] end, LogQuestIDs=function() return {} end,
        Position=function() end, ZoneTexts=function() end, XPBuff=function() return false end, Objectives=function() end, Bind=function() end},
   db = {skip={}, mark={}, latch={}, notNow={}, pin={}, carry={}, dNo={}, dDismiss={}, fpNodes={}},
-  UI = {Get=function(k) return k == "dPre" end},
+  UI = {Get=function(k) return k == "dPre" or k == "dungeonHint" end},
   L = setmetatable({}, {__index=function(_, key) return key end}),
 }
 for _, file in ipairs({"Data/RouteA.lua", "Engine.lua"}) do
@@ -92,5 +92,12 @@ assert(redridge.escort and redridge[166] and redridge[214], "Sentinel Hill picku
 assert(redridge[166] > redridge.escort and redridge[214] > redridge.escort, "166 and 214 follow the 155 hand-in")
 for _, q in ipairs({2040, 167, 168}) do
   assert(redridge[q] and redridge[q] > redridge.hearth, "Stormwind pickup after the hearth: " .. q)
+end
+-- 西部荒野時主線之後會帶到前置鏈和接取：副本提示不再叫玩家「先做前置鏈」
+live.db.station = "02-11"
+local hinted, why = E.DungeonPrompt()
+assert(hinted and hinted.id == "05-d3" and why == nil, "no prereq-chain nag before the anchor station")
+for _, row in ipairs(rows("02-11") and E.Locate(E.byId["02-11"]).steps) do
+  if row.s.q == 92747 or row.s.q == 13 then assert(not row.s.opt, "Moonbrook trip is mandatory") end
 end
 print("Deadmines pickups follow the escort hand-in and the last Stormwind return")

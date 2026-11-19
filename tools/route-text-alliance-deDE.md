@@ -1,6 +1,6 @@
 # 阿聖練等幫手 deDE 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **404** 列。
+- 只收聯盟路線獨有的說明列，共 **405** 列。
 
 檔名:行號｜類型｜中文原文｜deDE
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Rechtsklicke Angeknabbertes Buch im Rucksack, um die Quest anzunehmen.
@@ -1473,3 +1473,4 @@
 02-12到30級.md:342｜說明｜第11站沒撿完的補給箱，追信差時在月溪鎮順手撿。｜Versorgungskisten, die in Westfall noch fehlen: Sammle sie in Mondbruch, während du den Kurier verfolgst.
 05-副本.md:78｜說明｜任務文字寫劣質火藥，以物品為準：備妥 10 個粗製炸藥（物品 4358），可由工程學製作、交易或在拍賣場取得。｜Der Questtext nennt einen anderen Sprengstoff; maßgeblich ist der Gegenstand: Halte 10 Stück von Gegenstand 4358 bereit, hergestellt mit Ingenieurskunst, ertauscht oder im Auktionshaus gekauft.
 05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜Bei deinem ersten Besuch im Rotkammgebirge nimmst du nach der Eskorte zurück in Westfall auf der Späherkuppe die Bruderschaft der Defias und die roten Seidenbandanas an. Bei der letzten Rückkehr nach Sturmwind nimmst du die drei Quests aus der Stadt an, damit du vor dem Dungeon keinen eigenen Weg brauchst.
+02-12到30級.md:116｜說明｜和月溪鎮諜戰同一趟，在月溪鎮打迪菲亞。｜Auf demselben Weg wie die Spionage in Mondbruch: Besiege die Defias in Mondbruch.
