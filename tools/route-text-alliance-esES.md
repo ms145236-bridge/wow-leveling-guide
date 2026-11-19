@@ -1,6 +1,6 @@
 # 阿聖練等幫手 esES 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **405** 列。
+- 只收聯盟路線獨有的說明列，共 **406** 列。
 
 檔名:行號｜類型｜中文原文｜esES
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Haz clic derecho en Libro mordisqueado en tu bolsa para empezar la misión.
@@ -1474,3 +1474,4 @@
 05-副本.md:78｜說明｜任務文字寫劣質火藥，以物品為準：備妥 10 個粗製炸藥（物品 4358），可由工程學製作、交易或在拍賣場取得。｜El texto de la misión nombra otro explosivo; guíate por el objeto: ten 10 unidades del objeto 4358, fabricadas con Ingeniería, intercambiadas o compradas en la casa de subastas.
 05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜En tu primera visita a las Montañas Crestagrana, tras entregar la escolta de vuelta en los Páramos de Poniente, acepta la Hermandad Defias y los pañuelos de seda roja en la Colina del Centinela. Al volver por última vez a Ventormenta, acepta las tres misiones de la ciudad, para no hacer un viaje especial antes de la mazmorra.
 02-12到30級.md:116｜說明｜和月溪鎮諜戰同一趟，在月溪鎮打迪菲亞。｜En el mismo viaje que el espionaje de Arroyo de la Luna: mata a los Defias de Arroyo de la Luna.
+02-12到30級.md:341｜說明｜西部荒野沒接到的，去追信差前在哨兵嶺補接。｜Si no la aceptaste en los Páramos de Poniente, acéptala en la Colina del Centinela antes de perseguir al mensajero.

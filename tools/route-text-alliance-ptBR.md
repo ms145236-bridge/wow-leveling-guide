@@ -1,6 +1,6 @@
 # 阿聖練等幫手 ptBR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **405** 列。
+- 只收聯盟路線獨有的說明列，共 **406** 列。
 
 檔名:行號｜類型｜中文原文｜ptBR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Clique com o botão direito em Livro Mordiscado na bolsa para iniciar a missão.
@@ -1474,3 +1474,4 @@
 05-副本.md:78｜說明｜任務文字寫劣質火藥，以物品為準：備妥 10 個粗製炸藥（物品 4358），可由工程學製作、交易或在拍賣場取得。｜O texto da missão cita outro explosivo; guie-se pelo item: tenha 10 unidades do item 4358, feitas com Engenharia, trocadas ou compradas na casa de leilões.
 05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜Na primeira visita às Montanhas Cristarrubra, depois de entregar a escolta de volta em Cerro Oeste, pegue a Irmandade Défias e as bandanas de seda vermelha no Morro da Sentinela. Na última volta a Ventobravo, pegue as três missões da cidade, para não fazer uma viagem especial antes da masmorra.
 02-12到30級.md:116｜說明｜和月溪鎮諜戰同一趟，在月溪鎮打迪菲亞。｜Na mesma viagem da espionagem de Arroio da Lua: derrote os Défias em Arroio da Lua.
+02-12到30級.md:341｜說明｜西部荒野沒接到的，去追信差前在哨兵嶺補接。｜Se você não a pegou em Cerro Oeste, pegue-a no Morro da Sentinela antes de perseguir o mensageiro.

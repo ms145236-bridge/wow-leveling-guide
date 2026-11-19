@@ -122,7 +122,7 @@ local localVisitFrom = {} -- 只在原定回訪點補做的任務，不將早站
 local questSt = {} -- 任務 → 有它步驟的站（主線站與副本，Build 時建）
 local anyQ = {} -- 任一組（s.any）裡的任務：沒接的不算站的進度（Build 時建）
 local dunQ = {} -- 副本站裡有步驟的任務（副本前置、副本任務；Build 時建）
-local mainKeyLast = {} -- 主線步驟鍵 → 最後出現的站序（Build 時建）
+local mainKeyLast = {} -- 主線步驟鍵 → { at＝最後出現的站序, step }（Build 時建）
 local mainKeyAt = {} -- 主線步驟鍵 → 出現的 { 站序, 步驟 }（Build 時建）
 local mainTurnin = {} -- 任務 → 主線上第一個交它的站（Build 時建）
 local preTurnin = {} -- 排副本前置時：任務 → 這本前置裡交它的步驟
@@ -528,7 +528,7 @@ function E.Build()
         st.index = #E.stations + 1
         E.stations[st.index] = st
         for _, w in ipairs(st.list) do
-          mainKeyLast[w.key] = st.index
+          mainKeyLast[w.key] = { at = st.index, step = w }
           mainKeyAt[w.key] = mainKeyAt[w.key] or {}
           table.insert(mainKeyAt[w.key], { st.index, w.s })
           if w.s.t == "turnin" and w.s.q and not mainTurnin[w.s.q] then mainTurnin[w.s.q] = st end
@@ -2565,11 +2565,20 @@ function E.DungeonPrompt()
         local at = cur and cur.index
         local pick = d.pickAt and E.byId[d.pickAt]
         if at and pick and pick.index and pick.index > at then return d, nil end
+        -- 主線之後真的會帶到（這個角色、這些設定與條件下會出現；做／交要任務在日誌，或之後主線的接會出現）
+        local function ahead(key)
+          local m = at and mainKeyLast[key]
+          if not m or m.at < at then return false end
+          local s = m.step.s
+          if not E.Applies(s.when) or optOut(s) or (s.q and not raceOK(s.q)) or MG.db.skip[m.step.key] then return false end
+          if s.t == "accept" or not s.q or C.IsOnQuest(s.q) or turned(s.q) then return true end
+          return ahead("a:" .. s.q)
+        end
         local left = 0
         for _, step in ipairs(d.list) do
           local s = step.s
           if s.tag == "副本前置鏈" and E.Applies(s.when) and (not s.q or raceOK(s.q)) and not E.QuickDone(step)
-              and not (at and (mainKeyLast[step.key] or 0) >= at) then left = left + 1 end
+              and not ahead(step.key) then left = left + 1 end
         end
         if left > 0 then return d, L["先做前置鏈（%d 步）"]:format(left) end
         local total, got = E.DungeonPre(d)

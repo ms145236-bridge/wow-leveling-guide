@@ -57,7 +57,9 @@ print("Deadmines prerequisites, forge, exit detonator, and Edwin's letter checke
 local turned, active = {}, {}
 function UnitClass() return "Priest", "PRIEST" end
 function UnitRace() return "Human", "Human", 1 end
-function UnitLevel() return 21 end
+local level, bag = 21, {}
+function UnitLevel() return level end
+function GetItemCount(id) return bag[id] or 0 end
 function UnitXP() return 0 end
 function UnitXPMax() return 10000 end
 function GetTime() return 100 end
@@ -100,4 +102,35 @@ assert(hinted and hinted.id == "05-d3" and why == nil, "no prereq-chain nag befo
 for _, row in ipairs(rows("02-11") and E.Locate(E.byId["02-11"]).steps) do
   if row.s.q == 92747 or row.s.q == 13 then assert(not row.s.opt, "Moonbrook trip is mandatory") end
 end
+-- 西部荒野：交 12、接 65／13 在格里安一起做完，再去艾芭交 92745、接 92747
+local order = {}
+for i, row in ipairs(E.byId["02-11"].list) do
+  local key = row.s.t .. (row.s.q or "")
+  order[key] = order[key] or i
+end
+assert(order.turnin12 + 1 == order.accept65 and order.accept65 + 1 == order.accept13, "Gryan hand-in and pickups stay together")
+assert(order.accept13 < order.turnin92745 and order.turnin92745 < order.accept92747 and order.accept92747 < order.do13)
+-- 舊版已過西部荒野（92745 交了、92747 沒接），選做關閉：第14站第一次去月溪鎮前補接
+turned[92745] = true
+live.db.station = "02-14"
+local function locate14()
+  local found, state = {}, E.Locate(E.byId["02-14"])
+  for i, row in ipairs(state.steps) do
+    local key = row.s.t .. (row.s.q or "")
+    if not found[key] then found[key] = { i = i, na = state.na[i], done = state.done[i] } end
+  end
+  return found
+end
+local late = locate14()
+assert(late.accept92747 and not late.accept92747.na and not late.accept92747.done, "catch-up pickup shows with optional off")
+assert(late.accept92747.i < late.do142.i and late.do142.i < late["do92747"].i, "catch-up pickup comes before the first Moonbrook visit")
+turned[92747], turned[92748] = true, true
+local finished = locate14()
+assert(finished.accept92747.done and finished.turnin92747.done, "finished players keep their progress")
+turned[92745], turned[92747], turned[92748] = nil, nil, nil
+-- 領主大廳錨點 01-9：背包有黑鐵地圖、選做關閉，主線不會帶 96391 → 前置鏈照算
+level, bag[274268], live.db.station = 13, 1, "01-9"
+local thanes, chain = E.DungeonPrompt()
+assert(thanes and thanes.id == "05-d1" and chain == "先做前置鏈（2 步）", tostring(chain))
+level, bag[274268] = 21, nil
 print("Deadmines pickups follow the escort hand-in and the last Stormwind return")
