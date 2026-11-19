@@ -256,7 +256,8 @@ local function run(st, isRun)
         if need and GetItemCount(need.item) < need.count then drops[need.item] = need.count; log("material",s,need.item) end
       end
       if standard and i.riftTools then drops[7308], drops[7247], drops[7292] = 1, 1, 3; log("material",s,7292) end
-      if q==1938 and GetItemCount(7266)<1 then log("missing-material",s,7266)
+      if q==2930 and GetItemCount(9316)<1 then log("missing-material",s,9316)
+      elseif q==1938 and GetItemCount(7266)<1 then log("missing-material",s,7266)
       elseif i.riftTools and E.RiftPhase() ~= "journal" then log("missing-capture",s,E.RiftPhase())
       elseif i.supply and GetItemCount(i.supply.item) < i.supply.count then log("missing-material",s,i.supply.item)
       elseif i.farmMaterial and GetItemCount(i.farmMaterial.item) < i.farmMaterial.count then log("missing-material",s,i.farmMaterial.item)
@@ -280,7 +281,7 @@ local function run(st, isRun)
         if q==91 then drops[1075]=pendants end
         if q==128 then xp=xp*champions/15;championKills=champions end
         if trophyDrops[trophy[q]] then drops[trophy[q]] = 1 end
-        if i.requiredLoot and q ~= 91 and not trophy[q] then drops[i.requiredLoot] = 1 end
+        if i.requiredLoot and q ~= 91 and q ~= 2930 and not trophy[q] then drops[i.requiredLoot] = 1 end
         worked[q]=true;log("worked",s,math.floor(xp));grant("combat",xp,s)
       end
     elseif s.t=="turnin" and have[q] and (not s.hold or worked[q]) and (not (q==95036 or q==95042 or q==templeQuest or q==99187 or instanceWork[q]) or worked[q]) then

@@ -290,7 +290,7 @@ for _, st in ipairs(R.stations) do
   for _, s in ipairs(st.steps) do
     if s.when and (s.when.hubArea or s.when.workMap or s.when.localVisit
       or (s.when.manualPickup and s.when.nearPoint) or (s.q and (R.quests[s.q] or {}).providedVisit)
-      or (s.when.readyQuest and ((R.quests[s.q] or {}).deliveryItems or s.afterWork))) then
+      or (s.when.readyQuest and ((R.quests[s.q] or {}).deliveryItems or (R.quests[s.q] or {}).requiredLoot or s.afterWork))) then
       visitChecks[st.id] = visitChecks[st.id] or {}
       table.insert(visitChecks[st.id], s.when)
     end
