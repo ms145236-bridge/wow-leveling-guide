@@ -14392,3 +14392,6 @@
 05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Nehmt die Quest auf dem Himmelswachtplateau in Mulgore an, wenn Zul'Farrak euer ausgewählter Dungeon ist.
 05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Besiegt hinter Thekas Skarabäenraum den Hexendoktor Zum'rah auf dem Friedhof und plündert seinen Kopf.
 05-副本.md:1168｜說明｜下次順訪高臺再交。｜Gebt die Quest beim nächsten Besuch auf dem Himmelswachtplateau ab.
+
+04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Eskortiert Tooga zu Torta im Dampfdruckhafen und wartet, bis das Questlog die Abgabe bestätigt.
+04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Kehrt nach Gadgetzan zurück, gebt eure Quests ab und nehmt Guter Geschmack und Insektenteilanalyse an.

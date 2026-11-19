@@ -920,10 +920,13 @@ local function stepDone(step, map, x, y)
   if t == "accept" or t == "need" then return C.IsOnQuest(q) or turned(q)
   elseif t == "do" and s.surveyState ~= nil then return turned(q) or s.surveyComplete
   elseif t == "do" then
-    if s.strictReady or s.native then return turned(q) or (C.IsOnQuest(q) and C.IsReady(q)) end
+    local info = R.quests[q]
+    if s.strictReady or s.native then
+      local nativeReady = info and info.confirmInteraction and journalReady or C.IsReady
+      return turned(q) or (C.IsOnQuest(q) and nativeReady(q))
+    end
     local need = s.when and s.when.onQuestAny and s.when.missingBag
     if need then return turned(q) or (C.IsOnQuest(q) and E.ItemCount(need.item) >= need.count) end
-    local info = R.quests[q]
     if info and info.requiredItems and not (s.ph == "in") then
       return turned(q) or (C.IsOnQuest(q) and hasAll(info.requiredItems))
     end
@@ -1702,7 +1705,9 @@ function E.Locate(st)
       and (not C.IsOnQuest(pinned.q) or journalReady(pinned.q))
     local unavailableWingStep = pinned and pinned.wing and na[found]
     local leftLocalContact = pinned and st.dungeon and pinned.when and pinned.when.nearPoint and not E.Applies(pinned.when)
-    if (found and found == waitingRingReturn) or unavailableWingStep or leftLocalContact or unavailableHunt or unavailableVisit or waitingMaterials or (pinned and physical and (worldContact(pinned) or pinned.instanceMaterial)) then
+    local escortUnavailable = pinned and pinned.q and pinned.when and pinned.when.onQuestAny and pinned.when.notFailedQuest == pinned.q
+      and not turned(pinned.q) and not E.Applies(pinned.when)
+    if (found and found == waitingRingReturn) or unavailableWingStep or leftLocalContact or escortUnavailable or unavailableHunt or unavailableVisit or waitingMaterials or (pinned and physical and (worldContact(pinned) or pinned.instanceMaterial)) then
       -- Leave the saved pin in place and use the available work until it becomes actionable.
     elseif pinned and pinned.t == "turnin" and pinned.outsideObjective and isCleanedRingReturn(pinned.q) and not done[found] then
       -- An unfinished ring return keeps its pin when a prerequisite elsewhere becomes available.

@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "7e847de0",
+  built = "eb2b9f2b",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -1967,7 +1967,7 @@ MG.Route = {
         {t="accept", q=154, npc="盲眼瑪麗", tgt="盲眼瑪麗", map=1431, x=81.99, y=59.09},
         {t="turnin", q=177, npc="維克托·安特拉斯", tgt="維克托·安特拉斯", map=1431, x=79.8, y=48.02},
         {t="accept", q=181, npc="維克托·安特拉斯", tgt="維克托·安特拉斯", map=1431, x=79.8, y=48.02},
-        {t="turnin", q=154, npc="伊瓦夫人", tgt="伊瓦夫人", map=1431, x=75.79, y=45.32},
+        {providedVisit=1518, t="turnin", q=154, npc="伊瓦夫人", tgt="伊瓦夫人", map=1431, x=75.79, y=45.32, when={onQuestAny={154}, bag={item=1518, count=1}, readyQuest=154}},
         {t="accept", q=157, npc="伊瓦夫人", tgt="伊瓦夫人", map=1431, x=75.79, y=45.32},
         {t="fly", to="暴風城"},
         {t="turnin", q=69, npc="旅店老闆法雷", tgt="旅店老闆法雷", map=1429, x=43.8, y=65.8},
@@ -3575,13 +3575,15 @@ MG.Route = {
         {t="do", q=2605, hint="找到1個飽滿的露水腺，把它交給加基森的馬林·諾格弗格。", map=1446, x=30.38, y=65.51},
         {t="do", q=3362, opt=true, tag="能打高階怪再做 可跳過", hint="加基森的特蘭雷克要你殺掉8隻長瘤的灌木獸和8隻灌木塑根者。", map=1446, x=30.19, y=66.38},
         {t="accept", q=351, opt=true, desc="右鍵背包裡的 OOX-17/TN定位器接任務。", tag="掉落才接 可跳過", npc="物品 OOX-17/TN定位器", when={bag={item=8623, count=1}}},
-        {t="accept", q=1560, npc="圖加", tgt="圖加", map=1446, x=31.8, y=74.15},
+        {t="accept", q=1560, opt=true, desc="遇到圖加且準備好步行護送才接。", tag="可跳過 護送 有遇到才做", npc="圖加", tgt="圖加", map=1446, x=31.8, y=74.15, when={canStart=1560, nearPoint={1446, 31.8, 74.15}, manualPickup=true}},
+        {t="do", q=1560, opt=true, desc="跟著圖加步行，護送到熱砂港西南邊的托爾塔。注意沿途伏擊。", tag="可跳過 護送", hint="跟著圖加步行，護送到熱砂港西南邊的托爾塔。注意沿途伏擊。", when={onQuestAny={1560}, notFailedQuest=1560}, native=true},
         {t="turnin", q=351, opt=true, desc="護送任務：組隊時等大家進度一致再接，並關掉自動接交。", tag="可跳過", npc="自動導航機器人OOX-17/TN", tgt="自動導航機器人OOX-17/TN", map=1446, x=60.23, y=64.72},
         {t="accept", q=648, opt=true, tag="可跳過", npc="自動導航機器人OOX-17/TN", tgt="自動導航機器人OOX-17/TN", map=1446, x=60.23, y=64.72},
         {t="do", q=648, opt=true, tag="可跳過", hint="將OOX-17/TN護送到熱砂港，然後向藏寶海灣的奧格索普·奧布諾提斯報告。", map=1446, x=60.23, y=64.72, more={{1446, 67.06, 23.16}}, when={notFailedQuest=648}, native=true},
         {t="do", q=648, opt=true, desc="護送失敗：在任務日誌放棄這個任務，再找機器人重接。", tag="可跳過", hint="護送失敗：在任務日誌放棄這個任務，再找機器人重接。", map=1446, x=60.23, y=64.72, when={failedQuest=648}},
         {t="turnin", q=3520, npc="葉基亞", tgt="葉基亞", map=1446, x=66.99, y=22.36},
-        {t="turnin", q=1560, npc="托爾塔", tgt="托爾塔", map=1446, x=66.58, y=25.67},
+        {t="turnin", q=1560, opt=true, tag="可跳過 護送", npc="托爾塔", tgt="托爾塔", map=1446, x=66.58, y=25.67, when={onQuestAny={1560}, notFailedQuest=1560, readyQuest=1560}},
+        {t="note", text="圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。", when={onQuestAny={1560}, failedQuest=1560}},
         {t="turnin", q=97530, npc="安全主管吉羅姆·比格維茲", tgt="安全主管吉羅姆·比格維茲", map=1446, x=67.06, y=23.89},
         {t="turnin", q=5863, opt=true, tag="可跳過", npc="安迪·利恩", tgt="安迪·利恩", map=1446, x=52.82, y=27.4},
         {t="turnin", q=2605, npc="馬林·諾格弗格", tgt="馬林·諾格弗格", map=1446, x=51.81, y=28.66},
@@ -5070,7 +5072,7 @@ MG.Route = {
     [150] = {xp=1550, mob={{21.8, 8, 2, 0}}, tgo={{"魚人食腐者", "魚人夜行者", "魚人招潮者", "魚人小招潮者", "魚人斥候", "藍腮魚人", "藍腮污水魚人", "藍腮強盜"}}, d="帶8片魚人的鰭回來給湖畔鎮的碼頭管理員巴倫。", n="魚人偷獵者", lvl=20, min=20},
     [151] = {xp=1250, mob={{0, 0, 1, 0}}, objs={"一袋燕麥", "諾格的背袋"}, d="西部荒野的弗娜·法布隆要你帶8捧燕麥給她。", n="可憐的老布蘭契", lvl=14, min=9},
     [153] = {xp=1050, mob={{14.8, 15, 2, 0}}, tgo={{"迪菲亞走私者", "迪菲亞巡路者", "迪菲亞路霸", "迪菲亞拳匪", "迪菲亞叛節法師", "迪菲亞攔路賊", "本尼·布蘭科", "迪菲亞捕獸者"}}, d="帶15條紅色皮質面罩回來給哨兵嶺的哨兵加里安。", n="紅色皮面罩", lvl=15, min=10},
-    [154] = {xp=195, items={1518}, d="把幽靈的梳子拿回去給夜色鎮的伊娃夫人。", n="歸還梳子", lvl=24, min=20, ps={149}, fol={157}},
+    [154] = {xp=195, items={1518}, d="把幽靈的梳子拿回去給夜色鎮的伊娃夫人。", n="歸還梳子", lvl=24, min=20, ps={149}, providedVisit=1518, confirmInteraction=true, fol={157}},
     [155] = {xp=1700, d="護送迪菲亞叛徒前往迪菲亞兄弟會的秘密藏身處。一旦迪菲亞叛徒把你帶到范克里夫和他的手下的藏匿地點之後，儘快回去向格萊恩·斯托曼彙報相關資訊。", n="迪菲亞兄弟會", lvl=18, min=14, ps={142}, pa=true, fol={166, 214}, chain=true},
     [156] = {xp=970, mob={{16.3, 8, 2, 0}}, tgo={{"恐怖骸骨", "骸骨魔", "骷髏魔(暴怒狀態)"}}, d="收集8個腐敗之花，然後交給夜色鎮的旅店老闆史密茲。", n="收集腐敗之花", lvl=24, min=20, ps={158}, fol={159}},
     [157] = {xp=1450, items={1596}, d="把幽靈的髮絲交給亞伯克隆比，他住在烏鴉嶺墓園北邊的房子裡。", n="幽靈的發絲", lvl=24, min=20, ps={154}, fol={158}, chain=true},
@@ -5507,7 +5509,7 @@ MG.Route = {
     [1450] = {xp=890, d="與辛特蘭的鷹巢山獅鷲獸飼養場裡的獅鷲獸管理員沙拉克·鷹斧談話。", n="獅鷲管理員", zt="獅鷲獸管理員", lvl=43, min=38, ps={1449}, fol={1451}},
     [1451] = {xp=1800, d="去辛特蘭找到拉普索迪·鐵鏟。", n="拉普索迪·鐵鏟", lvl=43, min=38, ps={1450}},
     [1477] = {xp=970, d="和守衛隊長索里加爾談話。", n="重要的補給", lvl=45, min=40},
-    [1560] = {xp=5900, mob={{0, 0, 1, 0}}, tgo={{"托爾塔"}}, d="把圖加帶回到他的妻子托爾塔身邊。", n="圖加的任務", lvl=50, min=40, pa=true},
+    [1560] = {xp=5900, mob={{0, 0, 1, 0}}, tgo={{"托爾塔"}}, d="把圖加帶回到他的妻子托爾塔身邊。", n="圖加的任務", lvl=50, min=40, pa=true, confirmInteraction=true, cond=true},
     [1598] = {xp=355, mob={{0, 0, 1, 0}}, objs={"Stolen Books"}, d="為杜希拉·拉薩雷找回《虛空靈能》。", n="失竊的典籍", lvl=4, min=1, ex={1599}},
     [1599] = {xp=355, mob={{3.5, 3, 2, 0}}, tgo={{"霜鬃食人妖新兵"}}, d="帶3個羽毛符咒給安威瑪的阿拉瑪爾·格里姆。", n="開端", lvl=4, min=1, ex={1598}},
     [1638] = {xp=85, d="和哈里·伯加德談一談。", n="戰士的訓練", lvl=10, min=10, ex={1678, 1683, 1639}, fol={1639}},

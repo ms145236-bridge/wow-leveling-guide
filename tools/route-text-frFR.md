@@ -14505,3 +14505,6 @@
 05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Acceptez la quête sur le plateau des Guetteurs du ciel à Mulgore si Zul'Farrak est le donjon sélectionné.
 05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Après la salle aux scarabées de Theka, tuez le sorcier-docteur Zum’rah au cimetière et récupérez sa tête.
 05-副本.md:1168｜說明｜下次順訪高臺再交。｜Rendez la quête lors de votre prochain passage sur le plateau.
+
+04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escortez Tooga jusqu’à Torta au port Gentepression et attendez que le journal indique que la quête peut être rendue.
+04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Retournez à Gadgetzan pour rendre les quêtes et prenez Bon goût et Analyse des parties d’insectes.

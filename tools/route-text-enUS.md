@@ -14236,3 +14236,6 @@
 05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Pick this up on Skywatcher Plateau in Mulgore once Zul'Farrak is your selected dungeon.
 05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Past Theka's scarab room, defeat Witch Doctor Zum'rah in the graveyard and loot his head.
 05-副本.md:1168｜說明｜下次順訪高臺再交。｜Turn this in the next time you visit Skywatcher Plateau.
+
+04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escort Tooga to Torta in Steamwheedle Port and wait for your quest log to show that it is ready to turn in.
+04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Return to Gadgetzan to turn in your quests, then pick up In Good Taste and Insect Part Analysis.
