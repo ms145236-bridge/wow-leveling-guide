@@ -2507,19 +2507,28 @@ function E.DungeonNext(d, inside)
         and not MG.db.skip[step.key] and not E.QuickDone(step) and canDo(s) then return step end
     end
   end
-  -- 城市回報已在誌，但人仍在這個副本：先顯示本內可做的任務。
+  local function nextJournalStep()
+    local state = E.InstanceState(d)
+    for _, current in ipairs(state and state.steps or {}) do
+      if not MG.db.skip[current.key] and not E.QuickDone(current) then return { kind = "in", step = current } end
+    end
+  end
+  -- 進本後優先顯示本內目標。前置或城市對話可能尚未完成，也可能已交過。
   if inside then
+    local hasOutdoorWork = false
     for _, wrapper in ipairs(d.list) do
       local s = wrapper.s
+      if s.ph == "pre" and s.t == "do" and s.outsideObjective then hasOutdoorWork = true end
       if s.ph == "post" and s.t == "turnin" and s.outsideObjective and C.IsOnQuest(s.q) then
         local step = first("in")
         if step then return { kind = "in", step = step } end
-        local state = E.InstanceState(d)
-        for _, current in ipairs(state and state.steps or {}) do
-          if not MG.db.skip[current.key] and not E.QuickDone(current) then return { kind = "in", step = current } end
-        end
-        return nil
+        return nextJournalStep()
       end
+    end
+    if hasOutdoorWork then
+      local step = first("in")
+      if step then return { kind = "in", step = step } end
+      return nextJournalStep()
     end
   end
   -- On leaving, prioritize only authored handoffs whose live quest state allows them.
