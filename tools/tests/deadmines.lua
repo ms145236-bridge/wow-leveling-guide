@@ -57,7 +57,7 @@ print("Deadmines prerequisites, forge, exit detonator, and Edwin's letter checke
 local turned, active = {}, {}
 function UnitClass() return "Priest", "PRIEST" end
 function UnitRace() return "Human", "Human", 1 end
-local level, bag = 21, {}
+local level, bag, optionalOn = 21, {}, false
 function UnitLevel() return level end
 function GetItemCount(id) return bag[id] or 0 end
 function UnitXP() return 0 end
@@ -69,7 +69,7 @@ local live = {
        IsTurnedIn=function(q) return turned[q] end, LogQuestIDs=function() return {} end,
        Position=function() end, ZoneTexts=function() end, XPBuff=function() return false end, Objectives=function() end, Bind=function() end},
   db = {skip={}, mark={}, latch={}, notNow={}, pin={}, carry={}, dNo={}, dDismiss={}, fpNodes={}},
-  UI = {Get=function(k) return k == "dPre" or k == "dungeonHint" end},
+  UI = {Get=function(k) return k == "dPre" or k == "dungeonHint" or (k == "optional" and optionalOn) end},
   L = setmetatable({}, {__index=function(_, key) return key end}),
 }
 for _, file in ipairs({"Data/RouteA.lua", "Engine.lua"}) do
@@ -124,6 +124,7 @@ end
 local late = locate14()
 assert(late.accept92747 and not late.accept92747.na and not late.accept92747.done, "catch-up pickup shows with optional off")
 assert(late.accept92747.i < late.do142.i and late.do142.i < late["do92747"].i, "catch-up pickup comes before the first Moonbrook visit")
+assert(late.turnin92747.i < late.turnin142.i and late.accept92748.i < late.turnin142.i, "Aiba before Gryan at Sentinel Hill")
 turned[92747], turned[92748] = true, true
 local finished = locate14()
 assert(finished.accept92747.done and finished.turnin92747.done, "finished players keep their progress")
@@ -132,5 +133,10 @@ turned[92745], turned[92747], turned[92748] = nil, nil, nil
 level, bag[274268], live.db.station = 13, 1, "01-9"
 local thanes, chain = E.DungeonPrompt()
 assert(thanes and thanes.id == "05-d1" and chain == "先做前置鏈（2 步）", tostring(chain))
+-- 開選做：主線本站會先接 96391 再交，前置鏈都由主線帶，不再叫玩家「先做前置鏈」
+optionalOn = true
+thanes, chain = E.DungeonPrompt()
+assert(thanes and thanes.id == "05-d1" and not (chain or ""):find("先做前置鏈", 1, true), tostring(chain))
+optionalOn = false
 level, bag[274268] = 21, nil
 print("Deadmines pickups follow the escort hand-in and the last Stormwind return")
