@@ -1366,3 +1366,9 @@
 03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta fallida: abandona la misión en el registro y vuelve a aceptarla del robot.
 04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta fallida: abandona la misión en el registro y vuelve a aceptarla del robot.
 04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta fallida: abandona la misión en el registro y vuelve a aceptarla del robot.
+
+05-副本.md:385｜說明｜在階梯戰擊敗耐克魯姆，拾取徽章。｜Derrota a Nekrum en la escalinata de la pirámide y recoge su medallón.
+
+05-副本.md:505｜說明｜擊敗尾王後，右鍵自己拾取的精華接任。｜Tras derrotar al jefe final, haz clic derecho en la esencia que recogiste para iniciar la misión.
+
+05-副本.md:506｜說明｜在尾王旁的精華之泉放入精華。｜Coloca la esencia en la fuente de esencia junto al jefe final.

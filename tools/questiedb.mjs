@@ -157,6 +157,7 @@ export function openQuestieDB() {
   const QUEST_FIX = {
     935: { preSingle: [934, 7383] }, 5244: { preSingle: [5249, 5250] }, 6101: { preSingle: [6063, 94013] }, 95809: { preSingle: [95647] },
     91862: { races: 16 }, 94440: { races: 16 }, 96204: { races: 16 },
+    96003: { sourceItem: 271879 }, // 永恆客戶端 startItemId：接任時配發無盡影響之眼
   };
   // 繁中名退步：A-Me 01 沒有繁中名、Warlord Goretooth 是督軍（沿用 1.1.2 的名稱）
   const LOCAL_FIX = { Npc: { 9623: "艾米 01", 9077: "督軍高圖斯" } };
