@@ -14193,3 +14193,8 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Pick Sovik's gossip option first; then the quest appears.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Pick Sovik's gossip option first; then the quest appears.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escort failed: abandon the quest in your quest log, then accept it again from the robot.
+02-12到30級.md:1361｜說明｜從幽暗城飛瑟伯切爾，往西北到銀松外海沉船處潛水撿水獸耐力墜飾（1421 29.56, 29.20），再回瑟伯切爾照下一步走南路去塔倫米爾。｜Fly from Undercity to The Sepulcher, head northwest to the shipwreck off the Silverpine coast and dive for the Half Pendant of Aquatic Endurance (1421 29.56, 29.20), then return to The Sepulcher and take the south road to Tarren Mill as in the next step.
+02-12到30級.md:1367｜說明｜飛十字路口，沿北路往莫爾杉壁壘，到壁壘前往東進泥漿沼澤，潛到水底撿水獸敏捷墜飾（1413 56.67, 8.32），再回北路照下一步進梣谷。｜Fly to the Crossroads and follow the north road toward Mor'shan Rampart. Before the rampart, turn east into the Sludge Fen and dive for the Half Pendant of Aquatic Agility (1413 56.67, 8.32), then return to the north road and continue into Ashenvale as in the next step.
+03-30到45級.md:1540｜說明｜35 級前不接。奧格瑪導引；與 4969 擇一；沒接導引時寶珠碎片可能不會出現。｜Don't accept before level 35. Orgrimmar breadcrumb; take either this or 4969; without a breadcrumb the orb fragments may not appear.
+03-30到45級.md:1543｜說明｜35 級前不接。幽暗城導引；與 4967 擇一；沒接導引時寶珠碎片可能不會出現。｜Don't accept before level 35. Undercity breadcrumb; take either this or 4967; without a breadcrumb the orb fragments may not appear.
+04-45到60級.md:2190｜說明｜從塔倫米爾沿山路到拉文霍德莊園交，可和莊園的其他交件同一趟。｜From Tarren Mill, take the mountain path to Ravenholdt Manor to turn in; combine it with your other turn-ins at the manor.

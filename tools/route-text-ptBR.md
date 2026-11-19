@@ -14572,3 +14572,8 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Escolha primeiro a opção de diálogo de Sovik; depois a missão aparece.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Escolha primeiro a opção de diálogo de Sovik; depois a missão aparece.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta falhou: abandone a missão no registro e aceite-a de novo com o robô.
+02-12到30級.md:1361｜說明｜從幽暗城飛瑟伯切爾，往西北到銀松外海沉船處潛水撿水獸耐力墜飾（1421 29.56, 29.20），再回瑟伯切爾照下一步走南路去塔倫米爾。｜Voe da Cidade Baixa para o Sepulcro, siga para noroeste até o naufrágio ao largo da costa da Floresta de Pinhaprata e mergulhe para pegar o Meio-pingente da Resistência Aquática (1421 29.56, 29.20). Depois volte ao Sepulcro e pegue a estrada sul para Serraria Tarren, como no próximo passo.
+02-12到30級.md:1367｜說明｜飛十字路口，沿北路往莫爾杉壁壘，到壁壘前往東進泥漿沼澤，潛到水底撿水獸敏捷墜飾（1413 56.67, 8.32），再回北路照下一步進梣谷。｜Voe para a Encruzilhada e siga a estrada norte rumo ao Baluarte de Mor'shan. Antes do baluarte, vá para o leste até o Charco de Lodo e mergulhe para pegar o Meio-pingente da Agilidade Aquática (1413 56.67, 8.32). Depois volte à estrada norte e siga para o Vale Gris, como no próximo passo.
+03-30到45級.md:1540｜說明｜35 級前不接。奧格瑪導引；與 4969 擇一；沒接導引時寶珠碎片可能不會出現。｜Não aceite antes do nível 35. Missão introdutória de Orgrimmar; escolha esta ou a 4969; sem a missão introdutória, os fragmentos do orbe podem não aparecer.
+03-30到45級.md:1543｜說明｜35 級前不接。幽暗城導引；與 4967 擇一；沒接導引時寶珠碎片可能不會出現。｜Não aceite antes do nível 35. Missão introdutória da Cidade Baixa; escolha esta ou a 4967; sem a missão introdutória, os fragmentos do orbe podem não aparecer.
+04-45到60級.md:2190｜說明｜從塔倫米爾沿山路到拉文霍德莊園交，可和莊園的其他交件同一趟。｜De Serraria Tarren, siga a trilha da montanha até a mansão Corvoforte para entregar; aproveite a viagem para as outras entregas na mansão.

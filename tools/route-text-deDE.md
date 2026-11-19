@@ -14349,3 +14349,8 @@
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Wählt bei Sovik zuerst die Gesprächsoption, dann erscheint die Quest.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Wählt bei Sovik zuerst die Gesprächsoption, dann erscheint die Quest.
 04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Eskorte gescheitert: Gebt die Quest im Questlog auf und nehmt sie beim Roboter erneut an.
+02-12到30級.md:1361｜說明｜從幽暗城飛瑟伯切爾，往西北到銀松外海沉船處潛水撿水獸耐力墜飾（1421 29.56, 29.20），再回瑟伯切爾照下一步走南路去塔倫米爾。｜Flieg von Unterstadt zum Grabmal, geh nach Nordwesten zum Schiffswrack vor der Küste des Silberwalds und tauch nach dem Halben Anhänger der Wasser-Belastbarkeit (1421 29.56, 29.20). Kehr dann zum Grabmal zurück und nimm wie im nächsten Schritt die Südstraße nach Tarrens Mühle.
+02-12到30級.md:1367｜說明｜飛十字路口，沿北路往莫爾杉壁壘，到壁壘前往東進泥漿沼澤，潛到水底撿水獸敏捷墜飾（1413 56.67, 8.32），再回北路照下一步進梣谷。｜Flieg nach Crossroads und folge der Nordstraße zum Mor'shan-Wall. Bieg vor dem Wall nach Osten ins Schlickermoor ab und tauch nach dem Halben Anhänger der Wasser-Beweglichkeit (1413 56.67, 8.32). Kehr dann zur Nordstraße zurück und geh wie im nächsten Schritt weiter nach Ashenvale.
+03-30到45級.md:1540｜說明｜35 級前不接。奧格瑪導引；與 4969 擇一；沒接導引時寶珠碎片可能不會出現。｜Erst ab Stufe 35 annehmen. Einführungsquest aus Orgrimmar; wähl diese Quest oder 4969; ohne Einführungsquest erscheinen die Kugelfragmente möglicherweise nicht.
+03-30到45級.md:1543｜說明｜35 級前不接。幽暗城導引；與 4967 擇一；沒接導引時寶珠碎片可能不會出現。｜Erst ab Stufe 35 annehmen. Einführungsquest aus Undercity; wähl diese Quest oder 4967; ohne Einführungsquest erscheinen die Kugelfragmente möglicherweise nicht.
+04-45到60級.md:2190｜說明｜從塔倫米爾沿山路到拉文霍德莊園交，可和莊園的其他交件同一趟。｜Geh von Tarrens Mühle über den Bergpfad zum Ravenholdt-Anwesen und gib die Quest dort ab; erledige das zusammen mit deinen anderen Abgaben im Anwesen.
