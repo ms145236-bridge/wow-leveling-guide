@@ -18,7 +18,7 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { ADDONS, openQuestieDB, clusterCenter } from "./questiedb.mjs";
+import { ADDONS, openQuestieDB, clusterCenter, localVersion, readSnapshot, diffSnapshot, SNAPSHOT_COLS, SNAPSHOT_GONE } from "./questiedb.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 // 任務目標座標（tools/objective-coords.md，Codex 查的 Wowhead 永恆版／QuestieDB 點位）：補到「做」步驟的 more
@@ -91,7 +91,7 @@ const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 
 const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
 // 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
 const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|舊鍵[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|當地補接種族[：:]|本次做完後回報|限用路線座標|計數擊殺[：:]|收取任務物品[：:]|取得後繼續路線|攜物尋訪[：:]|在地辦理[：:]|人在任務點附近|順訪不追回|前任已交[：:]|限真實副本[：:]|手動物品起任|裂隙捕捉|就地採集[：:]|自備材料[：:]|交回物品[：:]|副本材料怪[：:]|本內亦可取得[：:]|出本後才提示交件|戰鬥武器[：:]|持有或裝備[：:]|日誌確認互動|目標完成才交[：:]|任務未?失敗[：:]|原生可交|到[：:]|手動順路補接|徽章偵察[：:]|永恆接取等級|到站再預留|背包物品接取[：:]|怪物[：:]|自行選點補級|原進度文字[：:]|隨同交件[：:]|尚可接取[：:]|同一步座標|護送完成才勾|同圖才預覽下一點|安戈洛離站[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|舊鍵[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|當地補接種族[：:]|本次做完後回報|限用路線座標|共用野外前置|計數擊殺[：:]|收取任務物品[：:]|取得後繼續路線|攜物尋訪[：:]|在地辦理[：:]|人在任務點附近|順訪不追回|前任已交[：:]|限真實副本[：:]|手動物品起任|裂隙捕捉|就地採集[：:]|自備材料[：:]|交回物品[：:]|副本材料怪[：:]|本內亦可取得[：:]|出本後才提示交件|戰鬥武器[：:]|持有或裝備[：:]|日誌確認互動|目標完成才交[：:]|任務未?失敗[：:]|原生可交|到[：:]|手動順路補接|徽章偵察[：:]|永恆接取等級|到站再預留|背包物品接取[：:]|怪物[：:]|自行選點補級|原進度文字[：:]|隨同交件[：:]|尚可接取[：:]|同一步座標|護送完成才勾|同圖才預覽下一點|安戈洛離站[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -436,7 +436,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
     const exitLeg = tags.find(t => t.startsWith("安戈洛離站："))?.slice("安戈洛離站：".length);
     const f = body.replace(/★/g, "").split("｜").map((s) => s.trim());
     // no、raw：職業任務段落的插入點用（#K、「動詞｜文字」）
-    const step = { surveyTag: tags.find(t => /^徽章偵察[：:]/.test(t)), verb, ungoroExit: ({東岸:"east", 北營:"camp", 北線船:"ship", 奧伯丁:"port", 確認位置:"wait", 島內傳送門:"islandPortal", 東渡北營:"eastCamp", 東渡碼頭:"eastPort", 暴風回程:"stormReturn", 東渡待確認:"eastWait", 暴風靠岸:"stormDock", 另一位發任人:"teacher", 鐵堡回程:"ironReturn"})[exitLeg], t: VERB[verb], authoredPoints: tags.includes("限用路線座標"), sameObjective: tags.includes("同一步座標") || undefined, sameMapPreview: tags.includes("同圖才預覽下一點") || undefined, reserveOnVisit: tags.includes("到站再預留") || undefined, strictReady: tags.includes("護送完成才勾") || undefined, exitPriority: tags.includes("出本優先回報") || undefined, instancePickup: tags.includes("副本內接取") || undefined, outsideObjective: tags.includes("本外完成") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
+    const step = { surveyTag: tags.find(t => /^徽章偵察[：:]/.test(t)), verb, ungoroExit: ({東岸:"east", 北營:"camp", 北線船:"ship", 奧伯丁:"port", 確認位置:"wait", 島內傳送門:"islandPortal", 東渡北營:"eastCamp", 東渡碼頭:"eastPort", 暴風回程:"stormReturn", 東渡待確認:"eastWait", 暴風靠岸:"stormDock", 另一位發任人:"teacher", 鐵堡回程:"ironReturn"})[exitLeg], t: VERB[verb], authoredPoints: tags.includes("限用路線座標"), sharedOutdoorPrereq: tags.includes("共用野外前置"), sameObjective: tags.includes("同一步座標") || undefined, sameMapPreview: tags.includes("同圖才預覽下一點") || undefined, reserveOnVisit: tags.includes("到站再預留") || undefined, strictReady: tags.includes("護送完成才勾") || undefined, exitPriority: tags.includes("出本優先回報") || undefined, instancePickup: tags.includes("副本內接取") || undefined, outsideObjective: tags.includes("本外完成") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined, hold: (VERB[verb] !== "accept" && tags.includes("材料齊才做")) || undefined, native: (VERB[verb] === "do" && tags.includes("原生可交")) || undefined, cond: (VERB[verb] === "accept" && tags.includes("可跳過") && (f.slice(1, 3).some((x) => /^物品\s/.test(x)) || tags.some((t) => COND_TAG.test(t)))) || undefined, keepOpt: tags.some((t) => KEEP_TAG.test(t)) || undefined, hard: (tags.includes("可跳過") && tags.includes("能打高階怪再做")) || undefined, anyRace: tags.includes("部落可接") || undefined,
       desc: [...tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")),
         ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
@@ -638,6 +638,14 @@ const classWhen = (mask) => {
   return cls.length && cls.length < Object.keys(CLASS_BIT).length ? { class: cls } : undefined;
 };
 
+// 野外路線可共用同一任務在副本前置清單的指引。
+const outdoorPrereqs = new Map();
+for (const station of stations) {
+  for (const step of station.steps) {
+    if (step.t === "do" && step.sharedOutdoorPrereq) outdoorPrereqs.set(step.id, step);
+  }
+}
+
 // 副本站：接 → 前往入口 → 副本內 → 出本後交，插在指定站的後面
 for (const d of dungeons) {
   const at = stations.findIndex((x) => x.id === d.after);
@@ -697,9 +705,14 @@ for (const d of dungeons) {
       seen.add(p);
       out = out.concat(chainSteps(p, seen));
       const when = classWhen(pq.classes);
-      const base = { id: p, zh: questName(pq), en: pq.en, ph: "pre", tag: "副本前置鏈", chainOf: qid, where: d.where, when };
+      const outdoor = outdoorPrereqs.get(p);
+      const base = { id: p, zh: questName(pq), en: pq.en, ph: "pre", tag: "副本前置鏈", chainOf: qid, where: d.where, when, outsideObjective: Boolean(outdoor) };
       out.push({ ...base, t: "accept", verb: "接" });
-      if (db.questMobs(p).length) out.push({ ...base, t: "do", verb: "做", hint: pq.obj.filter(Boolean).join(" ") });
+      if (outdoor || db.questMobs(p).length) {
+        const work = { ...base, t: "do", verb: "做", hint: pq.obj.filter(Boolean).join(" ") };
+        if (outdoor) Object.assign(work, { desc: outdoor.desc, coord: outdoor.coord, authoredPoints: outdoor.authoredPoints });
+        out.push(work);
+      }
       out.push({ ...base, t: "turnin", verb: "交" });
       listed.add(p);
       added.push(p);
@@ -1470,6 +1483,29 @@ out = out
 const version = createHash("sha1").update(out).digest("hex").slice(0, 8);
 out = out.replace("@@BUILT@@", version);
 writeFileSync(OUT, out);
+// QuestieDB 快照與釘選版本：記下這份 Data 用到的任務欄位（路線任務與它們的前置），CI 不用 QuestieDB 也能核對 Data。
+// 本機版本和上次建置不同時，列出路線任務的欄位變動（建置前也可先跑 node tools/questiedb-drift.mjs）
+{
+  const side = ALLY ? "Alliance" : "Horde";
+  const dir = process.env.OUT_LUA ? dirname(OUT) : join(ROOT, "tools"); // 測試建置寫到輸出旁邊，不動 repo 的快照
+  const snapFile = join(dir, "questiedb-snapshot.tsv"), verFile = join(dir, "questiedb-version.txt");
+  const oldText = existsSync(snapFile) ? readFileSync(snapFile, "utf8") : "";
+  const before = readSnapshot(oldText);
+  // 路線任務、Data 裡的前置、QuestieDB 的前置都要有列；QuestieDB 沒有的記 SNAPSHOT_GONE，消失時才會列進變動，guard 也能查缺列
+  const ids = [...new Set([...quests].flatMap(([id, e]) => { const q = db.quest(id); return [id, ...(e.pg || []), ...(e.ps || []), ...(q ? [...q.preGroup.map(Math.abs), ...q.preSingle] : [])]; }))].sort((a, b) => a - b);
+  const after = new Map(ids.map((id) => [`${side}\t${id}`, `${side}\t${db.snapshot(id) ?? `${id}\t${SNAPSHOT_GONE}`}`]));
+  const pins = new Map((existsSync(verFile) ? readFileSync(verFile, "utf8") : "").split(/\r?\n/).filter((l) => l && !l.startsWith("#")).map((l) => [l.split("\t")[0], l]));
+  const local = localVersion(), pinned = pins.get(side)?.split("\t")[1];
+  if (pinned !== local) {
+    const changes = diffSnapshot(before, after);
+    console.warn(`警告：本機 QuestieDB（${local}）和上次建置釘選的（${pinned || "無"}）不同；路線任務欄位變動 ${changes.length} 筆，逐筆核對後記進 ROUTE-AUDIT.md：\n${changes.join("\n")}`);
+  }
+  const rows = [...[...before].filter(([k]) => !k.startsWith(side + "\t")).map(([, l]) => l), ...after.values()]
+    .sort((a, b) => b.startsWith("Horde") - a.startsWith("Horde") || +a.split("\t")[1] - +b.split("\t")[1]); // 部落在前，再依任務 ID
+  writeFileSync(snapFile, `# ${SNAPSHOT_COLS.join("\t")}\n# 由 tools/build.mjs 產生，勿手改\n${rows.join("\n")}\n`);
+  pins.set(side, `${side}\t${local}\t${version}`);
+  writeFileSync(verFile, `# 陣營\tQuestieDB 版本\tData 資料版本（built）：由 tools/build.mjs 產生，勿手改\n${["Horde", "Alliance"].filter((k) => pins.has(k)).map((k) => pins.get(k)).join("\n")}\n`);
+}
 console.log(`簡體硬轉字改回台灣寫法 ${[...zhFixed.values()].reduce((a, b) => a + b, 0)} 處：${[...zhFixed].map(([k, n]) => `${k} ${n}`).join("、") || "無"}`);
 
 // ── Data/Route_enUS.lua：英文介面／英文客戶端用的名稱與說明（站 ID＋步驟序號、任務 ID 對到 Route.lua）──

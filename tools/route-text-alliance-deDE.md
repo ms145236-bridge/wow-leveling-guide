@@ -1401,3 +1401,5 @@
 05-副本.md:505｜說明｜擊敗尾王後，右鍵自己拾取的精華接任。｜Besiegt den Endboss und rechtsklickt auf die selbst erbeutete Essenz, um die Quest anzunehmen.
 
 05-副本.md:506｜說明｜在尾王旁的精華之泉放入精華。｜Legt die Essenz neben dem Endboss in den Essenzborn.
+03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（41–43 級）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Tötet Talkreischer (Stufe 41–43) an der Küste der Insel des Schreckens in Feralas. Benutzt Yeh'kinyas Dornbusch auf jedem Kadaver und sprecht mit dem erscheinenden Geist, bis das Questlog drei Geister zählt.
+03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Küste der Insel des Schreckens: Benutzt den Dornbusch am Kadaver und sprecht mit dem Geist.

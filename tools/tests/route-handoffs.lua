@@ -198,6 +198,163 @@ do
   level, GetItemCount, ns.UI.Get = oldLevel, oldItem, oldUI
 end
 
+-- The 16 November Forever hotfix moved Vale Screechers to the Isle of Dread.
+-- The island is verified, but no individual post-hotfix spawn is confirmed.
+do
+  local coast = E.byId["03-41"].list
+  local function find(steps, verb, quest)
+    for i, step in ipairs(steps) do
+      if step.s.t == verb and step.s.q == quest then return i, step end
+    end
+  end
+  assert(find(E.byId["03-40"].list, "accept", 3520))
+  assert(find(E.byId["04-43"].list, "turnin", 3520))
+  local islandBoss = find(coast, "do", 2870)
+  local spiritsIndex, spirits = find(coast, "do", 3520)
+  local wreck = find(coast, "turnin", 4125)
+  local pickup = find(coast, "accept", 4127)
+  assert(islandBoss + 1 == spiritsIndex and spiritsIndex + 1 == wreck and wreck + 1 == pickup)
+  local _, earlyGroup = find(E.byId["05-d10"].list, "do", 3520)
+  local temple = E.DungeonByInstance(109)
+  local _, templeSpirits = find(temple.list, "do", 3520)
+  local workCount = 0
+  for _, station in ipairs(ns.Route.stations) do
+    for _, step in ipairs(station.steps) do
+      if step.q == 3520 and step.t == "do" then
+        workCount = workCount + 1
+        assert(not step.x and not step.y and not step.more)
+        assert(step.desc == spirits.s.desc)
+        if station.dungeon then assert(step.ph == "pre" and step.outsideObjective) end
+      end
+    end
+  end
+  assert(workCount == 3 and spirits.s.desc:find("恐怖之島海岸", 1, true))
+  assert(spirits.s.desc:find("葉基亞的樹枝", 1, true))
+  local _, relic = find(coast, "do", 2870)
+  local _, courierReturn = find(coast, "turnin", 4125)
+  local _, wreckOffer = find(coast, "accept", 4127)
+  local oldTurned = ns.C.IsTurnedIn
+  active[3520] = true
+  for _, clearedCave in ipairs({false, true}) do
+    for _, clearedWreck in ipairs({false, true}) do
+      ns.C.IsTurnedIn = function(q)
+        return (q == 2870 and clearedCave) or ((q == 4125 or q == 4127) and clearedWreck)
+      end
+      assert(E.QuickDone(relic) == clearedCave)
+      assert(E.QuickDone(courierReturn) == clearedWreck and E.QuickDone(wreckOffer) == clearedWreck)
+      assert(not E.QuickDone(spirits))
+      completed[3520] = true
+      assert(E.QuickDone(spirits) and E.QuickDone(earlyGroup) and E.QuickDone(templeSpirits))
+      completed[3520] = nil
+    end
+  end
+  ns.C.IsTurnedIn = oldTurned
+  for _, case in ipairs({{209,3527}, {109,3446}}) do
+    local dungeon, all = E.DungeonByInstance(case[1])
+    for _, journal in ipairs({{}, {3527}, {3446}, {3527,3446}}) do
+      for _, quest in ipairs(journal) do active[quest] = true end
+      local found = false
+      local state = E.InstanceState(dungeon, all)
+      for _, w in ipairs(state and state.steps or {}) do
+        assert(w.s.q ~= 3520, "outdoor spirits cannot be collected inside either dungeon")
+        if w.s.q == case[2] then found = true end
+      end
+      assert(found == (active[case[2]] == true))
+      for _, quest in ipairs(journal) do active[quest] = nil end
+    end
+  end
+  -- The catalogue-only objectives have no explicit in-phase row in these guides.
+  -- An outdoor prerequisite may be the next stop before entering, but never inside.
+  local islandObjectives = ns.C.Objectives
+  local spiritsCollected
+  ns.C.Objectives = function(q)
+    if q == 3520 then return {{have=spiritsCollected, need=3, done=spiritsCollected==3}} end
+  end
+  db.skip["a:2864"] = "a:2864"
+  ns.C.IsTurnedIn = function(q) return q == 3445 or q == 3444 or q == 3446 or q == 3447 end
+  for _, case in ipairs({{209, 45, 3042}, {109, 52, 1475}, {109, 52, 3373}}) do
+    local dungeon = E.DungeonByInstance(case[1])
+    level = case[2]
+    for _, progress in ipairs({{"accept", 0}, {"do", 1}, {"turnin", 3}}) do
+      spiritsCollected = progress[2]
+      active[3520] = spiritsCollected > 0 or nil
+      completed[3520] = spiritsCollected == 3 or nil
+      local outdoors = assert(E.DungeonNext(dungeon, false))
+      assert(outdoors.kind == "pre" and outdoors.step.s.q == 3520 and outdoors.step.s.t == progress[1])
+      local priorInstance, priorInfo = IsInInstance, GetInstanceInfo
+      IsInInstance = function() return true, "party" end
+      GetInstanceInfo = function() return nil,nil,nil,nil,nil,nil,nil,case[1] end
+      assert(not E.DungeonNext(dungeon, true), "outdoor prerequisite alone gives no indoor reminder")
+      active[case[3]] = true
+      local indoors = assert(E.DungeonNext(dungeon, true))
+      assert(indoors.kind == "in" and indoors.step.s.q == case[3])
+      active[case[3]] = nil
+      IsInInstance, GetInstanceInfo = priorInstance, priorInfo
+    end
+  end
+  level, db.skip["a:2864"], active[3520], completed[3520] = 43, nil, nil, nil
+  ns.C.IsTurnedIn, ns.C.Objectives = oldTurned, islandObjectives
+end
+
+-- Tran'rek is a city conversation even if the client has not refreshed its counters.
+do
+  local zf = E.DungeonByInstance(209)
+  local outside = assert(E.DungeonNext(zf, false)).step.s
+  assert(outside.q == 2864 and outside.t == "accept" and outside.map == 1434)
+  local originalTurned, originalObjectives = ns.C.IsTurnedIn, ns.C.Objectives
+  ns.C.IsTurnedIn = function(q) return q == 3520 or q == 3527 or q == 2865 or q == 2768 end
+  active[2864], active[3042] = true, true
+  for _, visitLevel in ipairs({45, 59}) do
+    level = visitLevel
+    for _, cityState in ipairs({"unknown", "emptyObjectives", "ready"}) do
+      completed[2864] = cityState == "ready"
+      ns.C.Objectives = function(q) if q == 2864 and cityState == "emptyObjectives" then return {} end end
+      local hud = assert(E.InstanceState(zf))
+      assert(#hud.steps == 1 and hud.steps[1].s.q == 3042)
+      local panel = assert(E.DungeonNext(zf, true))
+      assert(panel.kind == "in" and panel.step.s.q == 3042)
+      if cityState ~= "unknown" then
+        local handoff = assert(E.DungeonNext(zf, false)).step.s
+        assert(handoff.q == 2864 and handoff.t == "turnin" and handoff.map == 1446)
+      end
+      active[3042] = nil
+      assert(not E.InstanceState(zf) and not E.DungeonNext(zf, true))
+      active[3042] = true
+    end
+  end
+  active[2864], completed[2864] = nil, nil
+  ns.C.Objectives = function(q)
+    if q == 3042 then return {{have=1, need=20, done=false}} end
+  end
+  for _, cityHandedIn in ipairs({false, true}) do
+    ns.C.IsTurnedIn = function(q) return q == 2864 and cityHandedIn end
+    for _, visitLevel in ipairs({45, 59}) do
+      level = visitLevel
+      assert(E.InstanceState(zf).steps[1].s.q == 3042)
+      local current = assert(E.DungeonNext(zf, true))
+      assert(current.kind == "in" and current.step.s.q == 3042)
+      active[3042] = nil
+      assert(not E.InstanceState(zf) and not E.DungeonNext(zf, true))
+      active[3042] = true
+    end
+  end
+  ns.C.IsTurnedIn = function(q) return q ~= 3042 end
+  ns.C.Objectives = function(q)
+    if q == 3042 then return {{have=20, need=20, done=true}} end
+  end
+  completed[3042] = true
+  for _, visitLevel in ipairs({45, 59}) do
+    level = visitLevel
+    assert(not E.InstanceState(zf) and not E.DungeonNext(zf, true))
+    local city = assert(E.DungeonNext(zf, false)).step.s
+    assert(city.t == "turnin" and city.q == 3042 and city.map == 1446)
+  end
+  completed[3042] = nil
+  assert(ns.Route.quests[2864].xp == 390)
+  level, active[2864], active[3042], completed[2864] = 43, nil, nil, nil
+  ns.C.IsTurnedIn, ns.C.Objectives = originalTurned, originalObjectives
+end
+
 local st = E.byId["03-38"]
 local function current()
   local state = E.Locate(st)
