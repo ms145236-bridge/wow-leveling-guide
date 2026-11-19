@@ -1707,17 +1707,20 @@ function E.Locate(st)
     local leftLocalContact = pinned and st.dungeon and pinned.when and pinned.when.nearPoint and not E.Applies(pinned.when)
     local escortUnavailable = pinned and pinned.q and pinned.when and pinned.when.onQuestAny and pinned.when.notFailedQuest == pinned.q
       and not turned(pinned.q) and not E.Applies(pinned.when)
-    -- 副本前置的接取：關了副本前置或這本選「不打」時先不跟，釘選保留，重新打開就回來（已接的照常放開）
+    -- 副本前置的接取：關了副本前置、這本選「不打」或日誌到預留門檻先不接時先不跟，釘選保留（記 suspended），
+    -- 重新可接就回來；暫停期間主線自動步可能已往前，恢復時不拿舊的 pin.auto 比。已接、已交照常放開
     local prepOff = pinned and pinned.t == "accept" and pinned.when and pinned.when.dungeonPrep and not C.IsOnQuest(pinned.q) and not turned(pinned.q)
-      and not E.Applies(pinned.when)
+      and (steps[found].defer or not E.Applies(pinned.when))
     if prepOff or (found and found == waitingRingReturn) or unavailableWingStep or leftLocalContact or escortUnavailable or unavailableHunt or unavailableVisit or waitingMaterials or (pinned and physical and (worldContact(pinned) or pinned.instanceMaterial)) then
       -- Leave the saved pin in place and use the available work until it becomes actionable.
+      if prepOff then pin.suspended = true end
     elseif pinned and pinned.t == "turnin" and pinned.outsideObjective and isCleanedRingReturn(pinned.q) and not done[found] then
       -- An unfinished ring return keeps its pin when a prerequisite elsewhere becomes available.
       cur = found
-    elseif not found or ((done[found] or viaDone) and not pin.wasDone) or (found == auto and not pin.via) or (pin.auto and (auto and steps[auto].key or "") ~= pin.auto) then
+    elseif not found or ((done[found] or viaDone) and not pin.wasDone) or (found == auto and not pin.via) or (pin.auto and not pin.suspended and (auto and steps[auto].key or "") ~= pin.auto) then
       db.pin[st.id] = nil
     else
+      if pin.suspended then pin.suspended, pin.auto = nil, auto and steps[auto].key or "" end
       cur = found
     end
   end
