@@ -228,6 +228,9 @@ local function run(st, isRun)
         end
         if q==94 or q==248 then
           drops[1083] = glyphFlag(q,glyphScenario) and 1 or nil
+        elseif i.providedVisit then
+          -- Accepting a courier quest supplies its parcel. It is not a world drop.
+          drops[i.providedVisit] = 1
         end
         if q==95036 and weaponLoot[267454] then drops[267454]=1;log("material",s,267454) end
         -- The authored pickup opens the fixed underwater container. Opening its envelope accepts
@@ -269,7 +272,7 @@ local function run(st, isRun)
       end
     elseif s.t=="turnin" and have[q] and (not s.hold or worked[q]) and (not (q==95036 or q==95042 or q==templeQuest or q==99187 or instanceWork[q]) or worked[q]) then
       local xp=E.QuestXP(q,level)
-      if q==94 or q==248 then drops[1083]=nil end
+      if i.providedVisit then drops[i.providedVisit]=nil end
       if i.requiredLoot then drops[i.requiredLoot]=nil end
       if q==1938 then drops[7266]=nil end
       if q==95036 then for _, item in ipairs(bladeItems) do drops[item]=nil end end

@@ -609,7 +609,6 @@
 04-45到60級.md:822｜說明｜有接導引才在這裡交。｜Turn it in here only if you picked up the introduction.
 04-45到60級.md:823｜說明｜找薩納斯對話，請他把你傳送上懸崖找大法師克希雷姆。｜Talk to Sanath Lim-yo and ask him to teleport you up the cliff to find Archmage Xylem.
 04-45到60級.md:826｜說明｜塵埃在山下，回去同樣找薩納斯傳送上來。｜The dust is at the foot of the mountain; go back to Sanath Lim-yo the same way to be teleported up.
-04-45到60級.md:832｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項（需遊戲實測）。｜Morphaz is in the Temple of Atal'Hakkar. To get down the cliff, use your Hearthstone or look for the teleport option next to Xylem (needs in-game testing).
 04-45到60級.md:499｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（37.04, 44.13）。｜Set your Hearthstone with Innkeeper Shaussiy at the Auberdine inn (37.04, 44.13).
 04-45到60級.md:683｜說明｜從死木蒸鍋往南走到刺枝林地飛行點（1448 62.49, 24.24）起飛，會經奧伯丁轉機。｜From the Deadwood Cauldron, head south to the Talonbranch Glade flight point (1448 62.49, 24.24) and take off from there; you'll change flights at Auberdine.
 04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜Only go to Lakeshire if you have The True Masters (4186). If you don't, skip steps 60-62 and fly straight from Stormwind to Morgan's Vigil.
@@ -1149,7 +1148,6 @@
 04-45到60級.md:366｜說明｜還不到 51 級，就在營地東邊打翼手龍，或南邊焦油坑打焦油潛伏者補到 51。｜If you're not level 51 yet, kill pterrordax east of the camp, or Tar Lurkers at the tar pits to the south, until 51.
 04-45到60級.md:1261｜說明｜要接暴風城的導引才去：在鐵爐堡搭礦道地鐵到暴風城。｜Go only if you want the Stormwind breadcrumb: take the Deeprun Tram from Ironforge to Stormwind.
 04-45到60級.md:1263｜說明｜從暴風城飛米奈希爾港，接回路線。｜Fly from Stormwind to Menethil Harbor and rejoin the route.
-04-45到60級.md:1279｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項。｜Morphaz is in the Temple of Atal'Hakkar. To get down the cliff, use your Hearthstone or the teleport option from the NPC next to Xylem.
 04-45到60級.md:1280｜說明｜回塔倫迪斯營地飛阿斯特蘭納，再沿大路往北進費伍德森林。｜Return to Talrendis Point and fly to Astranaar, then follow the road north into Felwood.
 04-45到60級.md:383｜說明｜東側的植物群，剛進環形山時打。｜The plant mobs on the east side; kill them when you first enter the crater.
 04-45到60級.md:384｜說明｜東北猩猩洞外，和猩猩皮同一批。｜Outside the gorilla cave in the northeast; the same mobs as for the gorilla pelts.
@@ -1410,3 +1408,10 @@
 05-副本.md:476｜說明｜交過檔案管理員後，右鍵自己從巴納札爾拾取的頭顱接任。｜After turning in The Archivist, right-click the head you looted from Balnazzar to start this quest.
 05-副本.md:488｜說明｜下次隊伍走亡靈區時再做。｜Do this the next time your group runs the undead wing.
 06-路線外任務.md:884｜說明｜只在本來會去恐懼谷時向禮拜堂護理者奧林接，找伊根交件並接 5282。｜If you already plan to pass through Terror Dale, pick this up from Caretaker Alen at the chapel. Turn it in to Egan and accept his follow-up (5282).
+
+05-副本.md:387｜說明｜在水池打水占師維蕾薩，拾取皇冠。｜Defeat Hydromancer Velratha at the pool and loot her tiara.
+05-副本.md:388｜說明｜隊伍至少一人帶祖爾法拉克之槌，可在水池敲鑼召喚；首領已出現就直接打，拾鱗片。｜One party member needs the Mallet of Zul’Farrak to summon Gahz’rilla at the pool gong. If the boss is already present, defeat it and loot the scale.
+04-45到60級.md:1312｜說明｜經阿斯特蘭納前往費伍德森林。爐石綁在阿斯特蘭納且可用時，可直接回旅店。安全下崖並到平地後，在塔倫迪斯營地查飛行圖。能飛就飛阿斯特蘭納，否則沿梣谷東邊的大路向西回去。到阿斯特蘭納後，沿大路往北。｜Head to Felwood via Astranaar. If your Hearthstone is bound to Astranaar and ready, use it to return to the inn. Once safely down from the cliff, check the flight map at Talrendis Point. Fly to Astranaar if you can, or take the main road west through eastern Ashenvale. From Astranaar, follow the main road north into Felwood.
+
+06-路線外任務.md:1010｜說明｜順訪辛特蘭夏德拉洛時，38 級起可向西南側神殿岩臺上的阿塔萊流放者接取。已接任務且隊伍清東廊時，先打六個陽臺的守衛解除屏障，再擊敗迦瑪蘭拾頭顱。下次順訪向同一位流放者交件。｜If you are already visiting Shadra’Alor in the Hinterlands, pick up the quest at level 38 or higher from the Atal’ai Exile on the ledge by the southwestern temple. If you have the quest and your group is clearing the east passage, defeat the six balcony guards to open the barrier, then defeat Jammal’an and loot his head. Turn it in to the same Exile on your next visit.
+06-路線外任務.md:1768｜說明｜永恆版起任方式待確認。無須為此先去達納蘇斯。若確實接到任務，依遊戲內任務日誌回報。｜How to start this quest in WoW Forever is still unconfirmed. There is no need to visit Darnassus for it beforehand. If you receive the quest, follow the in-game quest log to turn it in.
