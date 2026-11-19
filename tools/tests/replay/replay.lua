@@ -27,6 +27,7 @@ local collect = {[2521]=8244,[3501]=10593}
 local standard = tonumber(arg[10]) == nil and arg[11] == nil
 -- Explicit successful Tooga escort scenario. The default route assumes no encounter.
 local toogaComplete = arg[22] == "tooga-complete"
+local crateScenario = arg[23]
 -- Provide cloth only in an explicitly supplied replay. The normal itinerary makes no drop assumption.
 local suppliedLinen = tonumber(arg[10]) or 0
 if suppliedLinen > 0 then drops[2589] = suppliedLinen end
@@ -84,6 +85,7 @@ local db={skip={},drop={},fpNodes={},notNow={},pin={},mark={},latch={},carry={},
 local ns={db=db, L=setmetatable({}, {__index=function(_,k) return k end}), UI={Get=function(key) return arg[10]=="optional" and (key=="optional" or key=="dPre") end}, C={}}
 function ns.C.IsTurnedIn(q) return turned[q] end
 function ns.C.IsOnQuest(q) return have[q] end
+function ns.C.IsFailed(q) return alliance and q == 92009 and crateScenario == "crate-failed" end
 -- Quests with no objective step anywhere on the route are ready once accepted.
 local hasDo = {}
 function ns.C.Position() return visitMap, visitX, visitY end
@@ -171,7 +173,11 @@ local function run(st, isRun)
       db.auberdineChoice="coast";log("coast-branch",s);break
     end
     if s.opt and s.t=="accept" then refresh() end
-    if toogaComplete and q == 1560 then
+    if alliance and q == 92009 and (s.t == "do" or s.t == "turnin") then
+      -- The authored hand-in is at the workshop reached from the flight point.
+      visitMap, visitX, visitY = s.map, s.x, s.y
+      if crateScenario == "crate-lost" then drops[250725] = nil end
+    elseif toogaComplete and q == 1560 then
       toogaX, toogaY = s.x or toogaX, s.y or toogaY
       visitMap, visitX, visitY = 1446, toogaX, toogaY
     elseif st.id == "02-19" or st.id == "03-22" then
@@ -244,6 +250,9 @@ local function run(st, isRun)
         elseif i.providedVisit then
           -- The quest giver supplies this item when the quest is accepted.
           drops[i.providedVisit] = 1
+        elseif alliance and q == 92009 then
+          -- Nami issues the crate on acceptance. This source item is absent from the pinned database.
+          drops[250725] = 1
         end
         if q==95036 and weaponLoot[267454] then drops[267454]=1;log("material",s,267454) end
         -- The authored pickup opens the fixed underwater container. Opening its envelope accepts
@@ -286,7 +295,8 @@ local function run(st, isRun)
       end
     elseif s.t=="turnin" and have[q] and (not s.hold or worked[q]) and (not (q==95036 or q==95042 or q==templeQuest or q==99187 or instanceWork[q]) or worked[q]) then
       local xp=E.QuestXP(q,level)
-      if i.providedVisit then drops[i.providedVisit]=nil end
+      if i.providedVisit then drops[i.providedVisit]=nil
+      elseif alliance and q == 92009 then drops[250725]=nil end
       if i.requiredLoot then drops[i.requiredLoot]=nil end
       if q==1938 then drops[7266]=nil end
       if q==95036 then for _, item in ipairs(bladeItems) do drops[item]=nil end end
