@@ -62,7 +62,7 @@ assert(find(horde["04-34"], "turnin", 3631))
 local hasFlight
 for _, s in ipairs(horde["03-17"]) do
   if s.t == "travel" and s.when and s.when.onQuestAny then
-    if table.concat(s.when.onQuestAny, ",") == "1178,1111,1718,1719" then hasFlight = not s.opt end
+    if table.concat(s.when.onQuestAny, ",") == "1178,1111,1718,1719,2996" then hasFlight = not s.opt end
   end
 end
 assert(hasFlight)

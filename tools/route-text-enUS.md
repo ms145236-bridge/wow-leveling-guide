@@ -14198,3 +14198,10 @@
 03-30到45級.md:1540｜說明｜35 級前不接。奧格瑪導引；與 4969 擇一；沒接導引時寶珠碎片可能不會出現。｜Don't accept before level 35. Orgrimmar breadcrumb; take either this or 4969; without a breadcrumb the orb fragments may not appear.
 03-30到45級.md:1543｜說明｜35 級前不接。幽暗城導引；與 4967 擇一；沒接導引時寶珠碎片可能不會出現。｜Don't accept before level 35. Undercity breadcrumb; take either this or 4967; without a breadcrumb the orb fragments may not appear.
 04-45到60級.md:2190｜說明｜從塔倫米爾沿山路到拉文霍德莊園交，可和莊園的其他交件同一趟。｜From Tarren Mill, take the mountain path to Ravenholdt Manor to turn in; combine it with your other turn-ins at the manor.
+03-30到45級.md:173｜說明｜有車手送件、勇士島任務或術士尋找斯坦哈德在身時，回亂風崗飛棘齒城；交完貨、辦完島上與術士的事再飛回。｜If you have a raceway delivery, a Fray Island quest or the warlock quest Seeking Strahad, return to Freewind Post and fly to Ratchet. Finish your deliveries, island business and warlock quests before flying back.
+03-30到45級.md:1604｜說明｜術士地獄獵犬：陰謀之書接好了；棘齒城其他的事也辦完，就從棘齒城飛回亂風崗。｜Warlock felhunter: once you have Tome of the Cabal and your other Ratchet business is done, fly from Ratchet back to Freewind Post.
+03-30到45級.md:1608｜說明｜術士地獄獵犬：從塔倫米爾往西南走到希爾斯布萊德西南岸撿發黴的書籍（1424 27.78, 72.79），再走回塔倫米爾。｜Warlock felhunter: from Tarren Mill, walk southwest to the southwest coast of Hillsbrad and pick up the Moldy Tome (1424 27.78, 72.79), then walk back to Tarren Mill.
+03-30到45級.md:1588｜說明｜術士地獄獵犬：從棘齒城飛亂風崗，下台地到半人馬洞取破損的手稿，再回亂風崗；之後照下一步去塔納利斯。｜Warlock felhunter: fly from Ratchet to Freewind Post, go down the mesa to the centaur cave for the Tattered Manuscript, then return to Freewind Post and continue to Tanaris as in the next step.
+03-30到45級.md:1614｜說明｜術士地獄獵犬：從卡加斯飛幽暗城交陰謀之書。｜Warlock felhunter: fly from Kargath to Undercity to turn in Tome of the Cabal.
+03-30到45級.md:1617｜說明｜術士地獄獵犬：從幽暗城飛落錘鎮，往南過索拉丁大橋進濕地，到東邊龍喉骸骨守衛出沒的山區打導能魔棒。｜Warlock felhunter: fly from Undercity to Hammerfall, go south across the Thandol Span into the Wetlands, and farm Rods of Channeling in the eastern hills where the Dragonmaw Bone Warders roam.
+03-30到45級.md:1619｜說明｜術士地獄獵犬：魔棒拿齊後回落錘鎮飛卡加斯，接回往荊棘谷的路。｜Warlock felhunter: once you have all the rods, return to Hammerfall and fly to Kargath, then continue toward Stranglethorn Vale.
