@@ -59,6 +59,7 @@ lua5.1 tools/tests/carry-later.lua
 lua5.1 tools/tests/fp-discover.lua
 lua5.1 tools/tests/fp-step.lua
 lua5.1 tools/tests/record-timing.lua
+lua5.1 tools/tests/record-checks.lua
 lua5.1 tools/tests/audit-1119.lua
 lua5.1 tools/tests/class-pickups.lua
 lua5.1 tools/tests/hunter-taming-catchup.lua

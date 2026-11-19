@@ -81,15 +81,18 @@ if (at >= 0) {
   lines = raw.split(/\r?\n/).filter((l) => l.includes("\t@\t")).map((l) => l.replace(/\|\|/g, "|"));
 }
 
-const routeText = readFileSync(join(ROOT, "addon", "ShengLeveling", "Data", "Route.lua"), "utf8");
-const route = parseLua(routeText, routeText.indexOf("{", routeText.indexOf("MG.Route")));
+// 兩個陣營的路線都比；站號前加 部落／聯盟
 const quests = {};
-for (const [k, v] of Object.entries(route.quests)) if (k !== "_") quests[k] = v;
 const routeSteps = {}; // q → { accept: [step+station], turnin: [...] }
-for (const st of [...(route.stations || []), ...(route.dungeons || [])]) {
-  for (const s of st.steps || []) {
-    if (!s.q || (s.t !== "accept" && s.t !== "turnin")) continue;
-    ((routeSteps[s.q] ??= {})[s.t] ??= []).push({ ...s, station: st.id });
+for (const [file, side] of [["Route.lua", "部落"], ["RouteA.lua", "聯盟"]]) {
+  const routeText = readFileSync(join(ROOT, "addon", "ShengLeveling", "Data", file), "utf8");
+  const route = parseLua(routeText, routeText.indexOf("{", routeText.indexOf("MG.Route")));
+  for (const [k, v] of Object.entries(route.quests)) if (k !== "_") quests[k] ??= v;
+  for (const st of [...(route.stations || []), ...(route.dungeons || [])]) {
+    for (const s of st.steps || []) {
+      if (!s.q || (s.t !== "accept" && s.t !== "turnin")) continue;
+      ((routeSteps[s.q] ??= {})[s.t] ??= []).push({ ...s, station: `${side} ${st.id}` });
+    }
   }
 }
 
@@ -146,7 +149,7 @@ for (const e of Object.values(seenQ)) {
     const g = got[0];
     for (const w of want) {
       const where = `${w.station} ${t === "accept" ? "接" : "交"} ${e.id} ${q.n}`;
-      if (g.npc && w.npc && !w.npc.startsWith("物品") && g.npc !== w.npc) {
+      if (g.npc && w.npc && !w.npc.startsWith("物品") && g.npc !== w.npc.replace(/^物件 /, "")) {
         issues.push(`- ${where}：NPC 路線「${w.npc}」→ 實測「${g.npc}」（${g.kind || "?"} ${g.npcId}）`);
         patches.push(`- ${where}：NPC 改「${g.npc}」`);
       }
@@ -242,6 +245,69 @@ out.push(``, `## 進過的副本`, ``);
 for (const r of by("inst")) out.push(`- ${r.x[0]}：instanceID ${r.k[0]}，${r.x[1]}，難度 ${r.x[2]}`);
 out.push(``, `## 事件參數形狀`, ``);
 for (const r of by("args")) out.push(`- ${r.k[0]}(${r.k[1]})：例 ${r.x[0]}`);
+
+// 需實測清單（claude-qa/route-audit-1119c.md「需實測」、ROUTE-AUDIT.md 待實測）：把記錄對到每一項
+const QUEST_KINDS = { detail: "看到任務內容", accept: "接", complete: "交件畫面", turnin: "交" };
+const when = (r) => `${new Date(r.ts * 1000).toISOString().slice(0, 16).replace("T", " ")}｜${r.lv} 級`;
+const show = (r) => {
+  if (QUEST_KINDS[r.kind]) {
+    const [title, npc, kind, map, x, y] = r.x;
+    return `${when(r)}｜${QUEST_KINDS[r.kind]} ${r.k[0]} ${title || quests[r.k[0]]?.n || ""}｜${npc ? `${npc}（${kind === "GameObject" ? "物件" : kind === "Creature" ? "NPC" : kind || "?"} ${r.k[1]}）` : "沒有 NPC（物品或自動接）"}${x ? `｜${map} ${x}, ${y}` : ""}`;
+  }
+  if (r.kind === "offer") return `${when(r)}｜${r.x[0] || r.k[0]}（${r.k[0]}）列出：${r.k[1] ? r.k[1].split(";").map((id) => `${id} ${quests[id]?.n || ""}`.trim()).join("、") : "沒有可接任務"}｜${r.x[2]} ${r.x[3]}, ${r.x[4]}`;
+  if (r.kind === "loot") return `${when(r)}｜撿到物品 ${r.k[0]}（任務 ${r.x[0]}）：${r.k[1] || "沒選目標"} 第 ${r.k[2]} 次撿屍｜${r.k[3]} ${r.x[1]}, ${r.x[2]}`;
+  if (r.kind === "board") return `${when(r)}｜上船／飛艇前站的點：${r.k[0]} ${r.x[0]}, ${r.x[1]}`;
+  if (r.kind === "stop") return `${when(r)}｜船／飛艇停下的點：${r.k[0]} ${r.x[0]}, ${r.x[1]}`;
+  if (r.kind === "load") return `${when(r)}｜換地圖：${r.k[0]} ${r.x[0]}, ${r.x[1]} → ${r.k[3]} ${r.x[2]}, ${r.x[3]}`;
+  if (r.kind === "obj") return `${when(r)}｜${r.k[0]} ${quests[r.k[0]]?.n || ""} 目標 ${r.k[1]}：${r.k[2]}/${r.x[0]} ${r.x[1]}｜${r.k[3]} ${r.x[2]}, ${r.x[3]}`;
+  return `${when(r)}｜${r.kind} ${r.k.join(" ")}`;
+};
+const CHECKS = [
+  { id: "T1", what: "天裔部落德魯伊在雷霆崖：圖拉克有沒有熊形態系列、6126 解毒線", q: [5926, 5927, 5928, 5922, 5930, 5932, 6002, 6126, 6127, 6128, 6129, 6130], npc: ["3033"] },
+  { id: "T1b", what: "天裔聯盟德魯伊在達納蘇斯：瑪斯雷有沒有 6125", q: [6121, 6122, 6123, 6124, 6125], npc: ["4217"] },
+  { id: "T2", what: "天裔部落薩滿 30 級後有沒有 79442", q: [79366, 79442] },
+  { id: "T3", what: "聯盟薩滿交 94502 後還有沒有 94503／94505", q: [94502, 94503, 94505] },
+  { id: "T4", what: "96137 怎麼起任（NPC 或物品）", q: [96137, 96138] },
+  { id: "T5", what: "交 98245 後哈洛倫給不給 98240", q: [98245, 98240], pre: [[98240, 98245]] },
+  { id: "T6", what: "非獸人／不死族在克里斯多夫有沒有 92422", q: [92422, 99156], pre: [[92422, 99156]] },
+  { id: "T7", what: "北郡被啃過的書：第幾隻狗頭人掉", q: [91741, 7], items: [247834], obj: true },
+  { id: "T9", what: "1838／95288／95602 的前置是不是真的", q: [1838, 1825, 95288, 93976, 95602, 95417], pre: [[1838, 1825], [95288, 93976], [95602, 95417]] },
+  { id: "T10", what: "碼頭上船點（奧伯丁、米奈希爾、塞拉摩、微風島）", transport: true },
+  { id: "T11", what: "96003、3520 島岸、96775 相位", q: [96003, 3520, 96775] },
+  { id: "T12", what: "圖加站的座標（路線 1446 31.80, 74.15）", q: [1560] },
+  { id: "T13", what: "諾莫瑞根 3005-A 換卡機在本外（記錄器抓不到換卡機，只列 2930 接交）", q: [2930] },
+  { id: "T14", what: "暮色森林梳子 154：盲眼瑪麗補不補", q: [154, 157] },
+  { id: "7844", what: "辛特蘭割顱者、占卜者的位置與數量", q: [7844, 7839], obj: true },
+  { id: "血法師", what: "詛咒之地血法師營地對聯盟友不友善", q: [2581, 2583, 2585, 2601, 2603] },
+  { id: "羅哈圖", what: "艾薩拉幽靈與薩特座標", q: [5535, 5536], obj: true },
+  { id: "淒涼之地", what: "雷斧堡壘、科多獸骨、白骨之地單人難度", q: [1438, 1439, 5501, 5561, 6134, 97284], obj: true },
+  { id: "1139", what: "奧達曼打完後 1139 的接取還出不出現", q: [1139] },
+];
+out.push(`## 需實測`, ``);
+for (const c of CHECKS) {
+  const qs = new Set((c.q || []).map(String)), items = new Set((c.items || []).map(String)), npcs = new Set(c.npc || []);
+  const hits = rows.filter((r) =>
+    (QUEST_KINDS[r.kind] && qs.has(r.k[0])) ||
+    (r.kind === "offer" && (npcs.has(r.k[0]) || r.k[1].split(";").some((id) => qs.has(id)))) ||
+    (r.kind === "loot" && items.has(r.k[0])) ||
+    (c.transport && ["board", "stop", "load"].includes(r.kind)) ||
+    (c.obj && r.kind === "obj" && qs.has(r.k[0])));
+  out.push(`### ${c.id} ${c.what}`, ``);
+  for (const [q, pre] of c.pre || []) {
+    const seen = rows.find((r) => ((r.kind === "detail" || r.kind === "accept") && r.k[0] === String(q)) || (r.kind === "offer" && r.k[1].split(";").includes(String(q))));
+    const done = rows.find((r) => r.kind === "turnin" && r.k[0] === String(pre));
+    if (seen && (!done || seen.ts < done.ts)) out.push(`- 結論：${q} 在交 ${pre} 之前就出現了，前置不成立。`);
+    else if (seen) out.push(`- ${q} 在交 ${pre} 之後才看到（還要看交前 NPC 有沒有列出它）。`);
+    const giver = rows.find((r) => r.kind === "accept" && r.k[0] === String(q) && /^\d+$/.test(r.k[1]))?.k[1];
+    const before = giver && done && rows.find((r) => r.kind === "offer" && r.k[0] === giver && r.ts < done.ts && !r.k[1].split(";").includes(String(q)));
+    if (before) out.push(`- 結論：交 ${pre} 之前，${before.x[0] || giver} 沒有列出 ${q}，前置成立。`);
+  }
+  if (!hits.length) out.push(`- 還沒有記錄`);
+  for (const r of hits.slice(0, 40)) out.push(`- ${show(r)}`);
+  if (hits.length > 40) out.push(`- 另有 ${hits.length - 40} 筆`);
+  out.push(``);
+}
+
 out.push(``, `## 建議修改（不會自動改 route/*.md）`, ``, ...(patches.length ? patches : ["（無）"]), ``);
 
 writeFileSync(process.env.OUT_REPORT || join(ROOT, "tools", "rec-report.md"), out.join("\n")); // 測試時用 OUT_REPORT 寫到別處
