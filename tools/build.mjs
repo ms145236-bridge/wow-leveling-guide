@@ -1469,7 +1469,7 @@ writeFileSync(OUT, out);
   const local = localVersion(), pinned = pins.get(side)?.split("\t")[1];
   if (pinned !== local) {
     const changes = diffSnapshot(before, after);
-    console.warn(`警告：本機 QuestieDB（${local}）和上次建置釘選的（${pinned || "無"}）不同；路線任務欄位變動 ${changes.length} 筆，逐筆核對後記進 ROUTE-AUDIT.md：\n${changes.join("\n")}`);
+    console.warn(`⚠ 本機 QuestieDB（${local}）和上次建置釘選的（${pinned || "無"}）不同；路線任務欄位變動 ${changes.length} 筆，逐筆核對後記進 ROUTE-AUDIT.md：\n${changes.join("\n")}`);
   }
   const rows = [...[...before].filter(([k]) => !k.startsWith(side + "\t")).map(([, l]) => l), ...after.values()]
     .sort((a, b) => b.startsWith("Horde") - a.startsWith("Horde") || +a.split("\t")[1] - +b.split("\t")[1]); // 部落在前，再依任務 ID

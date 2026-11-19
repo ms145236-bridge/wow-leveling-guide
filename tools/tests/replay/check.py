@@ -28,6 +28,7 @@ class Case(NamedTuple):
 
 
 # Replay events that mean a step was not taken. "difficulty" is only a mandatory-step problem outside dungeons.
+# "unturned" is reported separately: a non-optional accept that is never turned in, e.g. work blocked on a material.
 SKIPS = {"low", "prereq", "race", "class-low", "difficulty", "exclusive", "superseded", "conditional"}
 ALLOWLIST = TESTS / "skip-allowlist.tsv"
 
@@ -54,6 +55,12 @@ def mandatory_skips(log):
         if kind == "prereq" and not any(later_turned.get(p, -1) > n for p in row[7].split("/")):
             continue
         out.add((kind, station, quest))
+    accepted = {}
+    for row in log:
+        if row[3] == "accepted" and row[8] != "opt":
+            accepted.setdefault(row[4], row[0])
+    turned = {row[4] for row in log if row[3] == "turned"}
+    out.update(("unturned", station, quest) for quest, station in accepted.items() if quest not in turned)
     return out
 
 
