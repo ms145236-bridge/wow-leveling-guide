@@ -183,6 +183,10 @@ local function run(st, isRun)
       if book and s.when and s.when.workMap == 1453 and visitMap == 1453 and s.x then
         visitX, visitY = s.x, s.y
       end
+    elseif st.id == "02-11" then
+      -- The Westfall leg walks Stormwind -> Goldshire -> bridge; rows with coordinates are visited where authored,
+      -- so Elwynn-only catch-up rows (workMap 1429) apply on that walk and nowhere else.
+      if s.map then visitMap, visitX, visitY = s.map, s.x, s.y end
     else visitMap, visitX, visitY = nil, nil, nil end
     if book and have[q] and s.t == "do" and s.map == visitMap then
       -- Supplied observations, never an automatic drop merely for arriving at the map.
