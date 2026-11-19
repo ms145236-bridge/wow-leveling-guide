@@ -243,6 +243,12 @@ local function journalReady(q)
 end
 
 local function turned(q) return E.session[q] or C.IsTurnedIn(q) end
+local function inInstance(instanceID)
+  if not (IsInInstance and GetInstanceInfo and IsInInstance()) then return false end
+  local id = select(8, GetInstanceInfo())
+  return not (issecretvalue and issecretvalue(id)) and id == instanceID
+end
+
 function E.Applies(when, anyLv, keepReady) -- 往後預估不看等級；指定交接仍核對日誌
   if not when then return true end
   if when.notOrigin and originMatch(when.notOrigin) then return false end
@@ -265,6 +271,7 @@ function E.Applies(when, anyLv, keepReady) -- 往後預估不看等級；指定�
     end
   end
   if when.turnedQuest and not E.Turned(when.turnedQuest) then return false end
+  if when.instanceID and not inInstance(when.instanceID) then return false end
   if when.additionalBags and not hasQuantities(when.additionalBags) then return false end
   if when.workMap then
     if not C.Position or (UnitOnTaxi and UnitOnTaxi("player")) then return false end
@@ -2376,6 +2383,9 @@ function E.InstanceState(d, all)
       if condition and condition.missingBag and not E.Applies(condition) then return end
       -- 本內可接的送信任務交由出本步驟引導。其他分翼有明列目標時仍顯示。
       if outsideObjective[q] and not inDo[q] and not inTurn[q] then return end
+      local authored = inTurn[q] or inDo[q]
+      local instanceID = authored and authored.when and authored.when.instanceID
+      if instanceID and not inInstance(instanceID) then return end
       seen[q] = true
       -- 目標做完、在副本內交的：改成「交」步驟，第二行寫找誰交
       local canTurnIn = inTurn[q] and C.IsReady(q) and E.Applies(inTurn[q].when)
@@ -2394,8 +2404,9 @@ function E.InstanceState(d, all)
   for _, x in ipairs(all or { d }) do
     for _, step in ipairs(x.list or {}) do
       local s, q = step.s, step.s.q
-      if q and s.ph == "in" and s.t == "accept" and not seen[q] and inPickup(s)
-          and not E.QuickDone(step) and not MG.db.skip[step.key] and E.Applies(s.when)
+      if q and s.ph == "in" and s.t == "accept" and not seen[q] and inPickup(s) and E.Applies(s.when)
+          and not E.QuickDone(step) and not MG.db.skip[step.key]
+          and (not s.manualAccept or (not MG.db.dNo[x.id] and not optOut(s) and not E.LogFull()))
           and (UnitLevel("player") or 1) >= math.max(s.pickLv or 0, (R.quests[q] or {}).min or 0)
           and raceOK(q) and available(q) and not excluded(q) and not superseded(q) then
         seen[q] = true
@@ -2482,7 +2493,7 @@ function E.DungeonNext(d, inside)
     if not q then return true end
     if not raceOK(q) then return false end
     if s.t == "accept" then
-      return lv >= math.max(s.pickLv or 0, (R.quests[q] or {}).min or 0)
+      return (not s.manualAccept or (not optOut(s) and not E.LogFull())) and lv >= math.max(s.pickLv or 0, (R.quests[q] or {}).min or 0)
         and available(q) and not excluded(q) and not superseded(q)
     end
     if s.t == "turnin" then return C.IsOnQuest(q) and ready(q) end
@@ -2536,7 +2547,11 @@ function E.DungeonNext(d, inside)
     end
   end
   local _, kind, revisit = E.DungeonStatus(d)
-  if kind == "past" then return materialInInstance() end
+  if kind == "past" then
+    local pickup = inside and first("in", function(s) return s.manualAccept end)
+    if pickup then return { kind = "in", step = pickup } end
+    return materialInInstance()
+  end
   if kind == "revisit" then
     if external(revisit.s) then return nil end
     if revisit.s.ph == "post" then return { kind = "post", step = revisit } end
