@@ -101,12 +101,13 @@ do
       active[q], log[i] = true, q
     end
     ns.C.LogQuestIDs = function() return log end
-    for i = 0, 6 do -- up to 8 held: both sides of the 7-slot threshold
+    for i = 0, 6 do -- up to 8 held: both sides of the 5-slot threshold
       if i > 0 then log[#log + 1] = 900000 + i end
       local state = E.Locate(a21)
       for _, q in ipairs({95646,98815}) do
         -- The Gnomeregan accepts ahead carry dungeon-prep tags, so they no longer count as mainline growth.
-        assert((not state.na[assert(offer(state, q))]) == (#log < 7))
+        -- 1.13.47 起淒涼之地在 35–37 級一次接較多主線，往後的主線預留多 2 格
+        assert((not state.na[assert(offer(state, q))]) == (#log < 5))
       end
     end
     active[4301],active[4496] = nil,nil

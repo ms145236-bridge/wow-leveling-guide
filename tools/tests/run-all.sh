@@ -56,6 +56,7 @@ lua5.1 tools/tests/camping-any.lua
 lua5.1 tools/tests/camping-auto.lua
 lua5.1 tools/tests/macro-adopt.lua
 lua5.1 tools/tests/carry-later.lua
+lua5.1 tools/tests/desolace-legacy.lua
 lua5.1 tools/tests/fp-discover.lua
 lua5.1 tools/tests/fp-step.lua
 lua5.1 tools/tests/record-timing.lua

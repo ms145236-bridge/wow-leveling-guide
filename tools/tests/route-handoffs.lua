@@ -360,12 +360,18 @@ local function current()
   local state = E.Locate(st)
   return state.steps[assert(state.cur)].s
 end
+-- 1.13.47：千針石林第一次之後從加基森出發；塞拉摩還沒開時加基森飛不到石爪峰，先走回升降梯到棘齒城
+db.fpNodes["塞拉摩"] = nil
+position = {1446, 51.0, 29.3}
+assert(current().t == "travel" and current().text:find("棘齒城", 1, true))
+db.fpNodes["塞拉摩"] = true
 position = {1413, 62.5, 35.5}
 assert(current().to == "石爪峰")
 db.fpNodes["尼耶爾前哨站"] = true
 assert(current().to == "尼耶爾前哨站")
 position = {1443, 64.7, 10.4}
-assert(current().t == "accept" and current().q == 261)
+-- 1.13.47：淒涼之地改在 35–37 級；沒接鐵爐堡 1453 的角色看不到尋物公司 1458、1454，第一件是瓦拉里爾 1437
+assert(current().t == "accept" and current().q == 1437)
 assert(ns.Route.quests[313].mob[1][2] == 8)
 local jetsteam = ns.Route.quests[317].mob
 assert(jetsteam[1][2] == 4 and jetsteam[2][2] == 2)
