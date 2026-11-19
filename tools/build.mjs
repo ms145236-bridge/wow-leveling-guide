@@ -91,7 +91,7 @@ const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 
 const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
 // 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
 const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|當地補接種族[：:]|本次做完後回報|限用路線座標|計數擊殺[：:]|收取任務物品[：:]|取得後繼續路線|攜物尋訪[：:]|在地辦理[：:]|人在任務點附近|順訪不追回|前任已交[：:]|裂隙捕捉|就地採集[：:]|自備材料[：:]|交回物品[：:]|副本材料怪[：:]|本內亦可取得[：:]|出本後才提示交件|戰鬥武器[：:]|持有或裝備[：:]|日誌確認互動|目標完成才交[：:]|任務未?失敗[：:]|原生可交|到[：:]|手動順路補接|徽章偵察[：:]|永恆接取等級|到站再預留|背包物品接取[：:]|怪物[：:]|自行選點補級|原進度文字[：:]|隨同交件[：:]|尚可接取[：:]|同一步座標|護送完成才勾|同圖才預覽下一點|安戈洛離站[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|當地補接種族[：:]|本次做完後回報|限用路線座標|計數擊殺[：:]|收取任務物品[：:]|取得後繼續路線|攜物尋訪[：:]|在地辦理[：:]|人在任務點附近|順訪不追回|前任已交[：:]|限真實副本[：:]|手動物品起任|裂隙捕捉|就地採集[：:]|自備材料[：:]|交回物品[：:]|副本材料怪[：:]|本內亦可取得[：:]|出本後才提示交件|戰鬥武器[：:]|持有或裝備[：:]|日誌確認互動|目標完成才交[：:]|任務未?失敗[：:]|原生可交|到[：:]|手動順路補接|徽章偵察[：:]|永恆接取等級|到站再預留|背包物品接取[：:]|怪物[：:]|自行選點補級|原進度文字[：:]|隨同交件[：:]|尚可接取[：:]|同一步座標|護送完成才勾|同圖才預覽下一點|安戈洛離站[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -287,6 +287,8 @@ const parseWhen = (tags) => {
     // 【任務失敗：648】只在日誌回報失敗時適用；【任務未失敗：648】反之
     const failed = tag.match(/^任務(未?)失敗[：:]\s*(\d+)$/);
     if (failed) when[failed[1] ? "notFailedQuest" : "failedQuest"] = +failed[2];
+    const instance = tag.match(/^限真實副本[：:]\s*(\d+)$/);
+    if (instance) when.instanceID = Number(instance[1]);
     const log = tag.match(/^已接任一[：:]\s*(\d+(?:、\d+)*)$/);
     if (log) when.onQuestAny = log[1].split("、").map(Number);
     if (!m) continue;
@@ -597,6 +599,15 @@ for (const file of files.filter((f) => !sideFile(f))) {
         throw new Error(step.where + " 背包物品接取需要拾取座標及 QuestieDB 的任務起始物品");
       }
       step.pickupItem = item;
+    }
+    if (step.when?.instanceID && (!st.dungeon || step.ph !== "in" || st.instance !== step.when.instanceID)) {
+      throw new Error(step.where + " 「限真實副本」需要相符的副本內步驟");
+    }
+    if (tags.includes("手動物品起任")) {
+      if (step.t !== "accept" || !step.when?.instanceID || !db.quest(step.id)?.startItems.includes(step.when.bag?.item)) {
+        throw new Error(step.where + " 「手動物品起任」需要副本限制和真正的起始物品");
+      }
+      step.manualAccept = true;
     }
     // 副本內的「做」：位置那段也當成副本中清單的補充行（spot）
     if (st.dungeon && step.ph === "in" && step.t === "do" && !step.spot) step.spot = (tags.find((t) => /^位置[：:]/.test(t)) || "").replace(/^位置[：:]\s*/, "") || undefined;
@@ -1333,6 +1344,7 @@ const stepWhen = (w, sw) => {
   return Object.keys(out).length ? out : undefined;
 };
 const stepOut = (s, st) => ({
+  manualAccept: s.manualAccept,
   pickupItem: s.pickupItem,
   sameObjective: s.sameObjective, sameMapPreview: s.t === "travel" && s.sameMapPreview || undefined, reserveOnVisit: s.t === "accept" && s.reserveOnVisit || undefined, strictReady: s.t === "do" && s.strictReady || undefined,
   exitPriority: s.ph === "post" && ["accept", "do", "turnin"].includes(s.t) && s.exitPriority || undefined,
