@@ -609,7 +609,6 @@
 04-45到60級.md:822｜說明｜有接導引才在這裡交。｜Entrégala aquí solo si aceptaste la introducción.
 04-45到60級.md:823｜說明｜找薩納斯對話，請他把你傳送上懸崖找大法師克希雷姆。｜Habla con Sanath Lim-yo y pídele que te teletransporte al acantilado para buscar al archimago Xylem.
 04-45到60級.md:826｜說明｜塵埃在山下，回去同樣找薩納斯傳送上來。｜El polvo está al pie de la montaña; vuelve con Sanath Lim-yo del mismo modo para que te teletransporte arriba.
-04-45到60級.md:832｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項（需遊戲實測）。｜Morphaz está en el Templo de Atal'Hakkar. Para bajar del acantilado usa la piedra de hogar o busca la opción de teletransporte junto a Xylem (verificar en el juego).
 04-45到60級.md:499｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（37.04, 44.13）。｜Vincula tu piedra de hogar con la tabernera Shaussiy en la posada de Auberdine (37.04, 44.13).
 04-45到60級.md:683｜說明｜從死木蒸鍋往南走到刺枝林地飛行點（1448 62.49, 24.24）起飛，會經奧伯丁轉機。｜Desde la Caldera de Muertobosque, ve al sur hasta el punto de vuelo del Claro Ramaespolón (1448 62.49, 24.24) y despega desde allí; harás escala en Auberdine.
 04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜Ve a Villa del Lago solo si tienes Los verdaderos maestros (4186). Si no la tienes, sáltate los pasos 60-62 y vuela directamente de Ventormenta a la Vigilia de Morgan.
@@ -1149,7 +1148,6 @@
 04-45到60級.md:366｜說明｜還不到 51 級，就在營地東邊打翼手龍，或南邊焦油坑打焦油潛伏者補到 51。｜Si aún no eres nivel 51, sube al 51 matando pterrordáctilos al este del campamento, o Rondadores de alquitrán en las fosas de alquitrán del sur.
 04-45到60級.md:1261｜說明｜要接暴風城的導引才去：在鐵爐堡搭礦道地鐵到暴風城。｜Ve solo si quieres aceptar la introducción de Ventormenta: toma el Tranvía Subterráneo de Forjaz a Ventormenta.
 04-45到60級.md:1263｜說明｜從暴風城飛米奈希爾港，接回路線。｜Vuela de Ventormenta al Puerto de Menethil y retoma la ruta.
-04-45到60級.md:1279｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項。｜Morphaz está en el Templo de Atal'Hakkar. Para bajar del acantilado usa la piedra de hogar o busca la opción de teletransporte junto a Xylem.
 04-45到60級.md:1280｜說明｜回塔倫迪斯營地飛阿斯特蘭納，再沿大路往北進費伍德森林。｜Vuelve a Punta Talrendis y vuela a Astranaar; luego sigue el camino hacia el norte hasta entrar en Frondavil.
 04-45到60級.md:383｜說明｜東側的植物群，剛進環形山時打。｜Las plantas del lado este; mátalas en cuanto entres al cráter.
 04-45到60級.md:384｜說明｜東北猩猩洞外，和猩猩皮同一批。｜Afuera de la cueva de los gorilas, al noreste; los mismos enemigos que para las pieles de gorila.
@@ -1410,3 +1408,10 @@
 05-副本.md:476｜說明｜交過檔案管理員後，右鍵自己從巴納札爾拾取的頭顱接任。｜Tras entregar El archivista, haz clic derecho en la cabeza que hayas saqueado de Balnazzar para iniciar la misión.
 05-副本.md:488｜說明｜下次隊伍走亡靈區時再做。｜Hazlo la próxima vez que tu grupo vaya al ala de los no-muertos.
 06-路線外任務.md:884｜說明｜只在本來會去恐懼谷時向禮拜堂護理者奧林接，找伊根交件並接 5282。｜Si ya vas a pasar por el Valle del Terror, acepta la misión del cuidador Alen en la capilla. Entrégasela a Egan y acepta su continuación (5282).
+
+05-副本.md:387｜說明｜在水池打水占師維蕾薩，拾取皇冠。｜Derrota a la hidromántica Velratha junto al estanque y recoge su tiara.
+05-副本.md:388｜說明｜隊伍至少一人帶祖爾法拉克之槌，可在水池敲鑼召喚；首領已出現就直接打，拾鱗片。｜Un miembro del grupo necesita el Mazo de Zul’Farrak para invocar a Gahz’rilla con el gong de la poza. Si el jefe ya está presente, derrótenlo y recojan la escama.
+04-45到60級.md:1312｜說明｜經阿斯特蘭納前往費伍德森林。爐石綁在阿斯特蘭納且可用時，可直接回旅店。安全下崖並到平地後，在塔倫迪斯營地查飛行圖。能飛就飛阿斯特蘭納，否則沿梣谷東邊的大路向西回去。到阿斯特蘭納後，沿大路往北。｜Ve a Frondavil por Astranaar. Si tu piedra de hogar está vinculada a Astranaar y lista, úsala para volver a la posada. Una vez abajo y a salvo, consulta el mapa de vuelo de Punta Talrendis. Si puedes, vuela a Astranaar. Si no, toma el camino principal hacia el oeste por el este de Vallefresno. Desde Astranaar, toma el camino principal hacia el norte hasta Frondavil.
+
+06-路線外任務.md:1010｜說明｜順訪辛特蘭夏德拉洛時，38 級起可向西南側神殿岩臺上的阿塔萊流放者接取。已接任務且隊伍清東廊時，先打六個陽臺的守衛解除屏障，再擊敗迦瑪蘭拾頭顱。下次順訪向同一位流放者交件。｜Si ya pasas por Shadra’Alor, en Tierras del Interior, puedes tomar la misión a partir del nivel 38 con el Exiliado Atal’ai, en la cornisa junto al templo del suroeste. Si tienes la misión y tu grupo limpia el pasillo este, derrota a los seis guardias de los balcones para abrir la barrera. Luego derrota a Jammal’an y recoge su cabeza. Entrégasela al mismo exiliado en tu próxima visita.
+06-路線外任務.md:1768｜說明｜永恆版起任方式待確認。無須為此先去達納蘇斯。若確實接到任務，依遊戲內任務日誌回報。｜Aún no se ha confirmado cómo se inicia esta misión en WoW Forever. No hace falta ir antes a Darnassus. Si recibes la misión, sigue las indicaciones del registro de misiones para entregarla.

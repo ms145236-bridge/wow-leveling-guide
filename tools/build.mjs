@@ -643,8 +643,8 @@ for (const file of files.filter((f) => !sideFile(f))) {
       step.when.hubNpc = npcs[0];
     }
     if (tags.includes("手動順路補接")) {
-      if (step.t !== "accept" || !step.opt || !step.when?.nearPoint || (st.dungeon && step.ph !== "post")) {
-        throw new Error(step.where + " 手動順路補接需要可跳過、人在任務點附近的主線接取");
+      if (step.t !== "accept" || !step.opt || !step.when?.nearPoint || (st.dungeon && (!["pre", "post"].includes(step.ph) || !db.quest(step.id)?.startNpcs?.length))) {
+        throw new Error(step.where + " 手動順路補接需要可跳過、人在任務點附近的主線或副本外 NPC 接取");
       }
       step.when.manualPickup = st.dungeon ? "dungeon" : true;
     }
