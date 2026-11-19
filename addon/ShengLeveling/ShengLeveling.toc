@@ -7,7 +7,7 @@
 ## Notes-zhCN: 部落与联盟 1–60 练级路线：一次只显示一步，任务状态一变就自动对齐。/slv 开关、/slv probe 检查报告
 ## Author: ms145236-bridge
 ## IconTexture: Interface\AddOns\ShengLeveling\Media\Logo
-## Version: 1.13.30
+## Version: 1.13.32
 ## X-Series: Sheng
 ## OptionalDeps: WaypointUI, Questie
 ## SavedVariables: MetroGuideDB, MetroGuideRecDB

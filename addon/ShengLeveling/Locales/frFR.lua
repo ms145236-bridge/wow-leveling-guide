@@ -40,6 +40,7 @@ MG.Locales.frFR = {
   ["行"] = "Aller",
   ["需"] = "Requis",
   ["買"] = "Acheter",
+  ["撿"] = "Ramasser",
   ["打"] = "Tuer",
   ["打 "] = "Tuer ",
   ["去"] = "Aller",
