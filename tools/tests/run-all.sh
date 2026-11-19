@@ -24,6 +24,7 @@ lua5.1 tools/tests/merged-waypoints.lua
 lua5.1 tools/tests/portable-map-pin.lua
 lua5.1 tools/tests/thandol-chain.lua
 lua5.1 tools/tests/deadmines.lua
+lua5.1 tools/tests/dungeon-window.lua
 lua5.1 tools/tests/brd-prison-visit.lua Alliance
 lua5.1 tools/tests/brd-prison-visit.lua Horde
 lua5.1 tools/tests/stockades.lua
