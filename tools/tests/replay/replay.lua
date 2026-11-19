@@ -25,6 +25,8 @@ local collect = {[2521]=8244,[3501]=10593}
 -- beside the trainer, and the blade materials from the selected dungeons. Class lines then stay covered by
 -- the mandatory-step check in check.py. Scenario runs keep the explicit no-drop assumption.
 local standard = tonumber(arg[10]) == nil and arg[11] == nil
+-- Explicit successful Tooga escort scenario. The default route assumes no encounter.
+local toogaComplete = arg[22] == "tooga-complete"
 -- Provide cloth only in an explicitly supplied replay. The normal itinerary makes no drop assumption.
 local suppliedLinen = tonumber(arg[10]) or 0
 if suppliedLinen > 0 then drops[2589] = suppliedLinen end
@@ -160,6 +162,7 @@ local function run(st, isRun)
     peak = math.max(peak, open)
     log("accepted", {q=1938}, "optional trainer visit")
   end
+  local toogaX, toogaY
   refresh()
   for _,step in ipairs(st.list) do
     local s=step.s
@@ -168,7 +171,10 @@ local function run(st, isRun)
       db.auberdineChoice="coast";log("coast-branch",s);break
     end
     if s.opt and s.t=="accept" then refresh() end
-    if st.id == "02-19" or st.id == "03-22" then
+    if toogaComplete and q == 1560 then
+      toogaX, toogaY = s.x or toogaX, s.y or toogaY
+      visitMap, visitX, visitY = 1446, toogaX, toogaY
+    elseif st.id == "02-19" or st.id == "03-22" then
       -- Advance only at explicit itinerary legs; optional working rows do not change location.
       if s.t == "hearth" and s.bind == "暴風城" then visitMap, visitX, visitY = 1453, nil, nil
       elseif s.t == "fly" and s.to == "夜色鎮" then visitMap, visitX, visitY = 1431, nil, nil
@@ -191,12 +197,13 @@ local function run(st, isRun)
         if GetItemCount(need.item) < need.count then drops[need.item] = need.count; log("material",s,need.item) end
       end
     end
-    if not E.Applies(s.when) then
+    local observedToogaPickup = q==1560 and s.t=="accept" and toogaComplete
+    if not observedToogaPickup and not E.Applies(s.when) then
       if s.when and s.when.class and E.Applies(s.when,true) and (s.t=="accept" or s.t=="travel") then log("class-low",s,s.when.lvMin)
       elseif s.t=="accept" and q then log("not-applicable",s) end -- Lets check.py tell another branch's prereq from a missing one.
     elseif collect[q] and not drops[collect[q]] then log("no-drop",s)
     elseif s.q==95042 and not have[95036] then log("missing-parent",s,95036)
-    elseif E.OptOut(s) and not (party and (isRun or classQuest[q] or (s.when and s.when.class and selectedWork[q]))) then
+    elseif not observedToogaPickup and E.OptOut(s) and not (party and (isRun or classQuest[q] or (s.when and s.when.class and selectedWork[q]))) then
       if s.t=="accept" and q then log("optional-off",s) end
     elseif s.t=="fp" and s.node then db.fpNodes[s.node]=true;log("learn-fp",s,s.node)
     elseif s.t=="boat" then log("boat",s,(s.from or "?").." → "..(s.to or "?"))
@@ -216,7 +223,7 @@ local function run(st, isRun)
     elseif s.t=="accept" and not have[q] and not turned[q] then
       local why,detail=unavailable(q,i)
       -- Explicit held-item conditions were already checked by E.Applies; other conditional entries stay unmodelled.
-      if not why and i.cond and not (s.when and s.when.bag) then why="conditional" end
+      if not why and i.cond and not (s.when and s.when.bag) and not observedToogaPickup then why="conditional" end
       if not why and level<math.max(i.min or 0,s.pickLv or 0) then why,detail="low",math.max(i.min or 0,s.pickLv or 0) end
       if not why and open>=40 then why="full" end
       if why then log(why,s,detail);if stats[why] then stats[why]=stats[why]+1 end
@@ -229,7 +236,7 @@ local function run(st, isRun)
         if q==94 or q==248 then
           drops[1083] = glyphFlag(q,glyphScenario) and 1 or nil
         elseif i.providedVisit then
-          -- Accepting a courier quest supplies its parcel. It is not a world drop.
+          -- The quest giver supplies this item when the quest is accepted.
           drops[i.providedVisit] = 1
         end
         if q==95036 and weaponLoot[267454] then drops[267454]=1;log("material",s,267454) end

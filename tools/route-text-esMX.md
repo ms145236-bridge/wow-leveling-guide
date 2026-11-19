@@ -14779,3 +14779,6 @@
 05-副本.md:1145｜說明｜已選祖爾法拉克且正好在莫高雷天空觀測高臺時才接。｜Acepta la misión en la meseta de los Vigías del Cielo de Mulgore si elegiste Zul'Farrak.
 05-副本.md:1159｜說明｜過塞卡甲蟲房後，在墓地擊敗巫醫祖穆拉恩並拾取頭顱。｜Después de la sala de escarabajos de Theka, derrota al médico brujo Zum'rah en el cementerio y recoge su cabeza.
 05-副本.md:1168｜說明｜下次順訪高臺再交。｜Entrega la misión la próxima vez que pases por la meseta.
+
+04-45到60級.md:264｜說明｜護送圖加抵達熱砂港的托爾塔身邊，等任務日誌確認可以回報。｜Escolta a Tooga hasta Torta en Puerto Bonvapor y espera a que el registro indique que ya puedes entregar la misión.
+04-45到60級.md:265｜說明｜回加基森交任務，再順路接好味道和昆蟲研究。｜Regresa a Gadgetzan para entregar tus misiones y toma Buen gusto y Análisis de partes de insectos.
