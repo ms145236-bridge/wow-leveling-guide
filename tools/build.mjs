@@ -91,7 +91,7 @@ const VERB = { 接: "accept", 做: "do", 交: "turnin", 到: "goto", 鳥: "fp", 
 const COND_TAG = /^(掉落才接|有掉落才做|掉落時才做|掉落觸發|巡邏掉落觸發|有遇到才做|已遇到才做|見到獵物才接|撿到水球才接|材料齊才做|頁數齊才做|看得到才接)$/;
 // 必做任務的可跳過前置，帶這些理由的不升成必做：精英、怪比你高 3 級、要另外繞路、條件入口
 const KEEP_TAG = /^(有隊伍再做|能打高階怪再做|路過才做)$/;
-const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|舊鍵[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|目標完成才交[：:]|任務未?失敗[：:]|原生可交|到[：:])/;
+const HIDDEN_TAG = /^(QuestieDB|補充|所在[：:]|影片|有前置|僅|非|說明|\d+\s*級起|接取等級|建議等級|可共享|不可共享|共享|前置[：:]|★|掉率|位置|副本前置[：:]|副本座標|順序|部落可接|需遊戲實測|已開鳥點|未開鳥點|黑海岸分流|排除起點：|種族或起點：|排除種族與起點：|(?:持有|缺少)材料[：:]|舊鍵[：:]|已接任一[：:]|銀幣至少[：:]|副本內接取|出本優先回報|本外完成|當地補接種族[：:]|本次做完後回報|限用路線座標|計數擊殺[：:]|收取任務物品[：:]|取得後繼續路線|攜物尋訪[：:]|在地辦理[：:]|人在任務點附近|順訪不追回|前任已交[：:]|裂隙捕捉|就地採集[：:]|自備材料[：:]|交回物品[：:]|副本材料怪[：:]|本內亦可取得[：:]|出本後才提示交件|戰鬥武器[：:]|持有或裝備[：:]|日誌確認互動|目標完成才交[：:]|任務未?失敗[：:]|原生可交|到[：:]|手動順路補接|徽章偵察[：:]|永恆接取等級|到站再預留|背包物品接取[：:]|怪物[：:]|自行選點補級|原進度文字[：:]|隨同交件[：:]|尚可接取[：:]|同一步座標|護送完成才勾|同圖才預覽下一點|安戈洛離站[：:])/;
 // 【★獎勵：物品名（職業／職業…）】→ { item, class[] }；「全職業」或沒寫＝不限
 const starOf = (tags) => {
   for (const t of tags) {
@@ -119,7 +119,8 @@ const dungeonTags = (tags) => {
 const db = openQuestieDB();
 // 路線明確安排採買的任務物品，不把商人列入擊殺目標。
 const boughtForQuest = new Map();
-const routeMobs = (id) => db.questMobs(id, boughtForQuest.get(id));
+const localDrops = new Map();
+const routeMobs = (id) => db.questMobs(id, boughtForQuest.get(id), localDrops.get(id));
 // 沿用永恆版 TOC 的順序，後載入的永恆實測值覆蓋初始表。
 const XP = new Map();
 const xpDir = join(ADDONS, "QuestieDB/support/Forever/QuestXP");
@@ -203,6 +204,7 @@ for (const [, id, numericArea, namedArea] of readFileSync(join(ZONES, "instanceI
 // 數量從目標文字依序抓「N個／只／根…」；抓到的比目標少時，其餘當 1（多半是指名的首領），完全沒數字用 1。
 // 每個目標的怪物名稱（和 mob 同順序；選取目標／標記用）
 const targetsOf = (q) => {
+  if (ALLY && q.id === 7701) return [["工頭瑪托留斯"]]; // Forever zhTW, NPC 14621
   const per = routeMobs(q.id).map((m) => (m && m.names ? [...new Set(m.names.filter(Boolean).map(cleanName))] : []));
   for (const m of routeMobs(q.id)) if (m && m.names && m.zhMissing) nameIssues.push(`- 任務 ${q.id}：目標怪 QuestieDB 沒有繁中名（${m.names.join("、")}）`);
   return per.some((n) => n.length) ? per : undefined;
@@ -263,10 +265,25 @@ const parseWhen = (tags) => {
     // 【持有材料：2592×60】只計身上可直接交付的數量。
     const handIn = tag.match(/^目標完成才交[：:]\s*(\d+)$/);
     if (handIn) when.readyQuest = +handIn[1];
+    const worn = tag.match(/^持有或裝備[：:]\s*(\d+)$/);
+    if (worn) when.bagOrWorn = +worn[1];
+    const anchor = tag.match(/^隨同交件[：:]\s*(\d+)$/);
+    if (anchor) when.withTurnin = +anchor[1];
+    const unstarted = tag.match(/^尚可接取[：:]\s*(\d+)$/);
+    if (unstarted) when.canStart = +unstarted[1];
     const money = tag.match(/^銀幣至少[：:]\s*(\d+)$/);
     if (money) when.money = +money[1] * 100;
     const bag = tag.match(/^(持有|缺少)材料[：:]\s*(\d+)\s*×\s*(\d+)$/);
-    if (bag) when[bag[1] === "持有" ? "bag" : "missingBag"] = { item: +bag[2], count: +bag[3] };
+    if (bag) {
+      const required = { item: +bag[2], count: +bag[3] };
+      if (bag[1] === "缺少") when.missingBag = required;
+      else if (when.bag) (when.additionalBags ||= []).push(required);
+      else when.bag = required;
+    }
+    const localMap = tag.match(/^在地辦理[：:](\d+)$/);
+    if (localMap) when.workMap = Number(localMap[1]);
+    const parent = tag.match(/^前任已交[：:](\d+)$/);
+    if (parent) when.turnedQuest = Number(parent[1]);
     // 【任務失敗：648】只在日誌回報失敗時適用；【任務未失敗：648】反之
     const failed = tag.match(/^任務(未?)失敗[：:]\s*(\d+)$/);
     if (failed) when[failed[1] ? "notFailedQuest" : "failedQuest"] = +failed[2];
@@ -382,7 +399,7 @@ for (const file of files.filter((f) => !sideFile(f))) {
       const f = gr[1].replace(/【[^】]*】/g, "").split("｜").map((x) => x.trim());
       const lv = (f[1] || "").match(/(\d+)\s*[-–~－]\s*(\d+)/);
       const c = parseCoord(f[2]);
-      if (lv && c) (st.grind ||= []).push({ mob: f[0], lv: [+lv[1], +lv[2]], map: c.map || st.map, x: c.x, y: c.y, note: f[3], where });
+      if (lv && c) (st.grind ||= []).push({ mob: f[0], npcId: Number(gr[1].match(/怪物[：:](\d+)/)?.[1]) || undefined, lv: [+lv[1], +lv[2]], map: c.map || st.map, x: c.x, y: c.y, note: f[3], where });
       else warn(where, "練怪格式看不懂：" + gr[1].slice(0, 40));
       return;
     }
@@ -414,9 +431,10 @@ for (const file of files.filter((f) => !sideFile(f))) {
     const tags = [...rest0.matchAll(/【([^】]*)】/g)].map((m) => m[1]);
     const body = rest0.replace(/【[^】]*】/g, "").trim();
     const keep = /★/.test(body);
+    const exitLeg = tags.find(t => t.startsWith("安戈洛離站："))?.slice("安戈洛離站：".length);
     const f = body.replace(/★/g, "").split("｜").map((s) => s.trim());
     // no、raw：職業任務段落的插入點用（#K、「動詞｜文字」）
-    const step = { verb, t: VERB[verb], exitPriority: tags.includes("出本優先回報") || undefined, instancePickup: tags.includes("副本內接取") || undefined, outsideObjective: tags.includes("本外完成") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
+    const step = { surveyTag: tags.find(t => /^徽章偵察[：:]/.test(t)), verb, ungoroExit: ({東岸:"east", 北營:"camp", 北線船:"ship", 奧伯丁:"port", 確認位置:"wait", 島內傳送門:"islandPortal", 東渡北營:"eastCamp", 東渡碼頭:"eastPort", 暴風回程:"stormReturn", 東渡待確認:"eastWait", 暴風靠岸:"stormDock", 另一位發任人:"teacher", 鐵堡回程:"ironReturn"})[exitLeg], t: VERB[verb], authoredPoints: tags.includes("限用路線座標"), sameObjective: tags.includes("同一步座標") || undefined, sameMapPreview: tags.includes("同圖才預覽下一點") || undefined, reserveOnVisit: tags.includes("到站再預留") || undefined, strictReady: tags.includes("護送完成才勾") || undefined, exitPriority: tags.includes("出本優先回報") || undefined, instancePickup: tags.includes("副本內接取") || undefined, outsideObjective: tags.includes("本外完成") || undefined, no: no ? +no : undefined, raw: verb + "｜" + body, where, when: parseWhen(tags), keep, video: tags.includes("影片") || undefined,
       tag: tags.filter((t) => !HIDDEN_TAG.test(t)).join("・") || undefined, opt: tags.includes("可跳過") || undefined, hold: (VERB[verb] !== "accept" && tags.includes("材料齊才做")) || undefined, native: (VERB[verb] === "do" && tags.includes("原生可交")) || undefined, cond: (VERB[verb] === "accept" && tags.includes("可跳過") && (f.slice(1, 3).some((x) => /^物品\s/.test(x)) || tags.some((t) => COND_TAG.test(t)))) || undefined, keepOpt: tags.some((t) => KEEP_TAG.test(t)) || undefined, hard: (tags.includes("可跳過") && tags.includes("能打高階怪再做")) || undefined, anyRace: tags.includes("部落可接") || undefined,
       desc: [...tags.filter((t) => /^說明[：:]/.test(t)).map((t) => t.replace(/^說明[：:]\s*/, "")),
         ...tags.filter((t) => /^(位置|順序)[：:]/.test(t)).map((t) => t.replace(/^(位置|順序)[：:]\s*/, "$1："))].join("；") || undefined,
@@ -440,6 +458,43 @@ for (const file of files.filter((f) => !sideFile(f))) {
         return;
       }
       if (step.t === "do") {
+        const source = tags.find(t => t.startsWith("副本材料怪："))?.match(/^副本材料怪：(\d+) (.+)$/);
+        if (source) {
+          step.componentNpcId = Number(source[1]);
+          step.componentNpc = source[2];
+        }
+        const alternative = tags.join(" ").match(/本內亦可取得[：:](\d+)/);
+        if (alternative) step.instanceMaterial = Number(alternative[1]);
+        const items = tags.join(" ").match(/交回物品[：:]([0-9,]+)/);
+        if (items) step.requiredItems = items[1].split(",").map(Number);
+        const weapon = tags.join(" ").match(/戰鬥武器[：:](\d+)/);
+        if (weapon) step.combatWeapon = Number(weapon[1]);
+        const farm = tags.find(t => t.startsWith("就地採集："))?.match(/^就地採集：(\d+)×(\d+)／([\d,]+)$/);
+        if (farm) {
+          const item = Number(farm[1]), count = Number(farm[2]), mobs = farm[3].split(",").map(Number);
+          if (count < 1 || !mobs.every(id => db.field("Item", item, 2)?.includes(id))) throw new Error(step.where + " 採集來源不符");
+          step.farmMaterial = {item, count};
+          localDrops.set(step.id, new Map([[item, mobs]]));
+        }
+        if (tags.includes("裂隙捕捉")) {
+          const map = parseCoord(rest[1])?.map;
+          const toolPoint = id => {
+            const p = db.object(id)?.spawns.find(p => p.map === map);
+            if (!p) throw new Error(where + " 缺少裂隙工具位置");
+            return [p.map, p.x, p.y];
+          };
+          step.riftTools = { scroll: toolPoint(105175), chest: toolPoint(105174) };
+          step.componentNpcId = 6492;
+          step.componentNpc = "裂隙怒靈";
+          step.confirmInteraction = true;
+        }
+        const material = tags.join(" ").match(/自備材料[：:](\d+)×(\d+)/);
+        if (material) {
+          step.supply = { item: +material[1], count: +material[2] };
+          if (!boughtForQuest.has(step.id)) boughtForQuest.set(step.id, new Set());
+          boughtForQuest.get(step.id).add(step.supply.item);
+        }
+        if (tags.includes("日誌確認互動")) step.confirmInteraction = true;
         step.hint = rest[0];
         step.coord = parseCoord(rest[1]);
         step.more = String(rest[1] || "").split("／").slice(1).map(parseCoord).filter(Boolean); // 其他怪點
@@ -461,10 +516,16 @@ for (const file of files.filter((f) => !sideFile(f))) {
     else if (step.t === "fly") step.to = f[0];
     // 船｜目的地｜出發地｜碼頭座標（「／」接別的上船處）：箭頭指去碼頭，搭上船才算完成
     else if (step.t === "boat") { step.to = f[0]; step.from = f[1]; step.coord = parseCoord(f[2]); step.more = String(f[2] || "").split("／").slice(1).map(parseCoord).filter(Boolean); }
-    else if (step.t === "level") step.lv = +f[0];
+    else if (step.t === "level") {
+      step.lv = +f[0];
+      step.chooseGrindSpot = tags.includes("自行選點補級") || undefined;
+    }
     else if (step.t === "note") step.text = f[0];
     else if (step.t === "travel") {
       step.text = f.join("｜");
+      // 既有交通步驟改寫時，可明列已發行繁中資料的文字，以保留玩家的進度鍵。
+      const progressText = tags.find((tag) => /^原進度文字[：:]/.test(tag));
+      if (progressText) step.key0 = progressText.replace(/^原進度文字[：:]\s*/, "") || undefined;
       // 綁爐石：交通改成「綁」（地點在全部檔讀完後才認，見下方）；座標取離「綁爐石」最近的那個（旅店老闆）
       const bindAt = step.text.replace(/約/g, "").indexOf("綁爐石");
       const pts = parseCoords(step.text);
@@ -484,8 +545,77 @@ for (const file of files.filter((f) => !sideFile(f))) {
       step.pts = pts; // 地圖 ID 檢查（E4）用
     }
     if (st.dungeon) Object.assign(step, { ph: st.phase }, dungeonTags(tags));
+    if (step.t === "turnin" && tags.includes("本次做完後回報")) step.afterWork = true;
+    const kills = tags.join(" ").match(/計數擊殺[：:](\d+)×(\d+)/);
+    if (kills) {
+      const [npc, count] = kills.slice(1).map(Number);
+      const quest = db.quest(step.id);
+      if (step.t !== "do" || !db.field("Quest", step.id, 10)?.[0]?.some(([id]) => id === npc) ||
+          mobsOf(quest)?.[0]?.[1] !== count) throw new Error(where + " 擊殺目標或數量不符");
+      step.killCount = count;
+      step.confirmInteraction = true;
+    }
+    const loot = tags.join(" ").match(/收取任務物品[：:](\d+)(?:×(\d+))?/);
+    if (loot) {
+      const item = Number(loot[1]);
+      const count = Number(loot[2] || 1);
+      const objectives = db.field("Quest", step.id, 10)?.get(3) || [];
+      if (step.t !== "do" || !objectives.some(([id]) => id === item) || (count > 1 && mobsOf(db.quest(step.id))?.[0]?.[1] !== count))
+        throw new Error(where + " 指定戰利品與任務目標不符");
+      step.requiredLoot = item;
+      step.lootFinishesWork = tags.includes("取得後繼續路線");
+      if (count > 1) step.lootCount = count;
+    }
+    const provided = tags.join(" ").match(/攜物尋訪[：:](\d+)/);
+    if (provided) {
+      const item = Number(provided[1]);
+      if (!["do", "turnin"].includes(step.t) || db.quest(step.id)?.sourceItem !== item) throw new Error(where + " 配發物品不符");
+      step.providedVisit = item;
+      step.confirmInteraction = true;
+    }
+    const fallback = tags.find(t => t.startsWith("當地補接種族："));
+    if (fallback) {
+      if (step.t !== "accept" || !step.coord?.map || !step.when?.race) throw new Error(where + " 當地補接需要原種族與發任點");
+      const races = fallback.slice(fallback.indexOf("：") + 1).split("／").map(raceToken);
+      step.when.localRaces = races;
+      step.when.race.push(...races);
+      step.when.nearPoint = [step.coord.map, step.coord.x, step.coord.y];
+      step.when.localVisit = true;
+    }
+    if (tags.includes("出本後才提示交件")) {
+      if ((st.dungeon && step.ph !== "post") || step.t !== "turnin" || !step.coord) throw new Error(step.where + " 需要本外回報座標");
+      step.outsideHandoff = true;
+    }
+    const liveMinimum = tags.find(t => /^永恆接取等級 /.test(t));
+    if (liveMinimum) {
+      const match = liveMinimum.match(/^永恆接取等級 (\d+)$/);
+      if (step.t !== "accept" || !match) throw new Error(step.where + " 永恆接取等級需要接任務及等級");
+      step.verifiedMin = step.pickLv = Number(match[1]);
+    }
+    if (step.t === "do" && tags.includes("日誌確認互動")) step.confirmInteraction = true;
+    const itemPickup = tags.find(t => /^背包物品接取[：:]/.test(t));
+    if (itemPickup) {
+      const item = Number(itemPickup.split(/[：:]/)[1]);
+      if (step.t !== "accept" || !step.coord || !db.quest(step.id)?.startItems.includes(item)) {
+        throw new Error(step.where + " 背包物品接取需要拾取座標及 QuestieDB 的任務起始物品");
+      }
+      step.pickupItem = item;
+    }
     // 副本內的「做」：位置那段也當成副本中清單的補充行（spot）
     if (st.dungeon && step.ph === "in" && step.t === "do" && !step.spot) step.spot = (tags.find((t) => /^位置[：:]/.test(t)) || "").replace(/^位置[：:]\s*/, "") || undefined;
+    if (tags.includes("人在任務點附近")) {
+      if (!step.coord?.map || !["accept", "turnin"].includes(step.t)) {
+        throw new Error(step.where + " 「人在任務點附近」需要接交步驟及完整世界座標");
+      }
+      (step.when ||= {}).nearPoint = [step.coord.map, step.coord.x, step.coord.y];
+      if (tags.includes("順訪不追回") && !st.dungeon) step.when.localVisit = true;
+    }
+    if (tags.includes("手動順路補接")) {
+      if (step.t !== "accept" || !step.opt || !step.when?.nearPoint || st.dungeon) {
+        throw new Error(step.where + " 手動順路補接需要可跳過、人在任務點附近的主線接取");
+      }
+      step.when.manualPickup = true;
+    }
     st.steps.push(step);
   });
 }
@@ -658,7 +788,23 @@ for (const st of stations) {
     }
     for (const p of step.more || []) p.map ||= st.map;
     // 「做」的多個點：路線寫的點＋這一步要找的目標實體點，按「目標＋地圖」各自 8 格內併成一群，地圖上一群一個點
-    if (step.t === "do" && (step.more?.length || OBJ.has(step.id))) {
+    // Multisite component lists and unlocated instance objects do not share the outdoor quest giver's pin.
+    const localComponent = step.ph === "in" && step.when?.missingBag;
+    // 三枚不同的徽章各有自己的遺體；這些手寫點不能像一般怪群取平均。
+    const survey = step.t === "do" && step.surveyTag;
+    if (survey) {
+      const [items, site] = survey.slice(5).split("／");
+      const ids = items.split("、").map(Number);
+      const points = [step.coord, ...step.more];
+      const event = parseCoord(site);
+      if (step.id !== 6185 || ids.length !== points.length || points.some(p => !p) || !event?.map)
+        throw new Error(`${step.where} 徽章、遺體與偵察座標不一致`);
+      step.survey = {
+        badges: ids.map((id, i) => [id, points[i].map || st.map, points[i].x, points[i].y]),
+        event: [event.map, event.x, event.y],
+        labels: JSON.parse(readFileSync(join(ROOT, "tools/quest-6185-objectives.json"), "utf8")),
+      };
+    } else if (step.t === "do" && !step.authoredPoints && !step.supply && !step.farmMaterial && !step.requiredItems && !step.riftTools && !localComponent && (step.more?.length || OBJ.has(step.id))) {
       const own = [step.coord, ...(step.more || [])].filter(Boolean).map((p) => ({ map: p.map || st.map, x: p.x, y: p.y }));
       // 只加這一步要找的實體：說明寫到名字的、離路線點 8 格內的；都沒有才用路線點同地圖的（交物品、用物品的步驟不用）。
       // 路線沒寫點：寫到名字的實體，沒寫到就全部（跨地圖的點留著，執行時按玩家所在地圖挑）
@@ -767,6 +913,27 @@ for (const st of stations) {
       if (MD_QUEST.has(id) && q.en && MD_QUEST.get(id) !== q.en) enDiff.quest++;
       e.en = { n: MD_QUEST.get(id) || step.en || q.en, d: objEn.join("\n") || undefined, gen: objEn.length ? undefined : gen(), tgo: tgo && tgo.some((n) => n.length) ? tgo : undefined, objs: objs && objs.length ? objs : undefined, mk: { kill, drop, objsEn } };
     } else if (!q && !quests.get(id).en) quests.get(id).en = { n: MD_QUEST.get(id) || step.en || undefined };
+    if (step.t === "turnin" && step.when?.readyQuest === id && step.when.additionalBags) {
+      quests.get(id).deliveryItems = [step.when.bag, ...step.when.additionalBags];
+      quests.get(id).confirmInteraction = true;
+    }
+    if (step.when?.localRaces) quests.get(id).localPickupRaces = step.when.localRaces;
+    else if (step.when?.localVisit) quests.get(id).localVisit = true;
+    if (step.requiredLoot) {
+      quests.get(id).requiredLoot = step.requiredLoot;
+      if (step.lootFinishesWork) quests.get(id).lootFinishesWork = true;
+    }
+    if (step.lootCount) quests.get(id).lootCount = step.lootCount;
+    if (step.killCount) quests.get(id).killCount = step.killCount;
+    if (step.providedVisit) quests.get(id).providedVisit = step.providedVisit;
+    if (step.riftTools) quests.get(id).riftTools = step.riftTools;
+    if (step.farmMaterial) quests.get(id).farmMaterial = step.farmMaterial;
+    if (step.requiredItems) quests.get(id).requiredItems = step.requiredItems;
+    if (step.combatWeapon) quests.get(id).combatWeapon = step.combatWeapon;
+    if (step.supply) quests.get(id).supply = step.supply;
+    if (step.confirmInteraction) quests.get(id).confirmInteraction = true;
+    if (step.survey) quests.get(id).survey = step.survey;
+    if (step.verifiedMin) quests.get(id).min = step.verifiedMin;
     if (step.keep) quests.get(id).keep = true;
     // 【部落可接】：實測部落能接，但 QuestieDB 的種族遮罩寫成聯盟限定
     if (anyRace) quests.get(id).races = undefined;
@@ -1169,11 +1336,16 @@ const stepWhen = (w, sw) => {
   return Object.keys(out).length ? out : undefined;
 };
 const stepOut = (s, st) => ({
+  pickupItem: s.pickupItem,
+  sameObjective: s.sameObjective, sameMapPreview: s.t === "travel" && s.sameMapPreview || undefined, reserveOnVisit: s.t === "accept" && s.reserveOnVisit || undefined, strictReady: s.t === "do" && s.strictReady || undefined,
   exitPriority: s.ph === "post" && ["accept", "do", "turnin"].includes(s.t) && s.exitPriority || undefined,
-  outsideObjective: s.ph === "in" && s.t === "accept" && s.outsideObjective || undefined,
+  chooseGrindSpot: s.chooseGrindSpot, ungoroExit: s.ungoroExit,
+  outsideHandoff: s.outsideHandoff || undefined,
+  afterWork: s.afterWork, providedVisit: s.providedVisit, instanceMaterial: s.instanceMaterial || undefined, componentNpc: s.componentNpc,
+  outsideObjective: s.ph && s.outsideObjective || undefined,
   star: s.star, t: s.t, any: s.any, instancePickup: s.ph === "in" && s.t === "accept" && s.instancePickup || undefined, q: s.t === "need" || s.t === "accept" || s.t === "do" || s.t === "turnin" ? s.id : undefined, ph: s.ph, pickLv: s.pickLv, recLv: s.recLv, share: s.share, preText: s.preText, opt: s.opt,
   // 說明段用「；」接起來：句號結尾的段後面不再補「；」，完全相同的段只留一次（翻譯照原本的「；」切段，不受影響）
-  desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
+  desc: s.desc && [...new Set(s.desc.split("；").map((x) => x.trim()).filter(Boolean))].reduce((a, x) => (a ? a + (/[。！？]$/.test(a) ? "" : "；") : "") + x, ""), spot: s.spot, tag: s.tag, npc: s.npc, tgt: s.tgt, hint: s.hint, text: s.text, key0: s.key0, item: s.item, n: s.n, fq: s.fq, node: s.node, bind: s.bind, to: s.to, from: s.from, lv: s.lv,
   map: s.coord?.map, x: s.coord?.x, y: s.coord?.y, more: s.more?.length ? s.more.map((p) => [p.map, p.x, p.y]) : undefined, via: s.via?.length ? s.via.map((p) => [p.map, p.x, p.y]) : undefined, skey: s.oldKeys?.length ? s.oldKeys.at(-1).at(-1) : undefined, akeys: s.oldKeys?.at(-1)?.length > 1 ? s.oldKeys.at(-1).slice(0, -1) : undefined, vkeys: s.oldKeys?.length > 1 ? s.oldKeys.slice(0, -1) : undefined, r: s.r, back: s.back, hm: s.hm, when: stepWhen(s.when, st.when), video: s.video, roam: s.roam, hold: s.hold, native: s.native,
 });
 // 打怪經驗估算的上限：每個目標最多算 KILL_CAP 隻（掉落目標＝數量 ÷ 掉率，沒寫掉率時和 Engine.lua 的 DROP_RATE 一樣用 0.4）
@@ -1200,6 +1372,13 @@ for (const s of stations) {
     if (parts.length > 1) short = short.slice(0, sp + 1) + parts[0] + "等";
   }
   out += `    { id=${lua(s.id)}, start=${lua(start)}, name=${lua(s.name)}, short=${lua(short !== full ? short : undefined)}, visit=${lua(visit > 1 ? visit : undefined)}, map=${lua(s.map)}, lv=${lua(s.lv)}, video=${lua(s.video)}, test=${lua(s.test || undefined)}, alt=${lua(s.alt)}, when=${lua(s.when)}, tips=${lua(s.tips.map((t) => ({ k: t.k, text: t.text, s: sentences(t.raw ?? t.text) })))}, dungeon=${lua(s.dungeon)}, grind=${lua(s.grind && s.grind.length ? s.grind.map((g) => ({ mob: g.mob, lv: g.lv, map: g.map, x: g.x, y: g.y, note: g.note })) : undefined)}, after=${lua(s.after)}, entrance=${lua(s.entrance?.text)}, pickup=${lua(s.pickup)}, pickupS=${lua(s.pickupRaw ? sentences(s.pickupRaw) : undefined)}, pickAt=${lua(s.pickAt)}, inst=${lua(s.inst)}, dq=${lua(s.dq)}, supply=${lua(s.supply)}, danger=${lua(s.danger)},\n      steps = {\n`;
+  for (const [i, step] of s.steps.entries()) {
+    if (!step.sameObjective) continue;
+    const previous = s.steps[i - 1];
+    if (step.t !== "do" || !step.when || !step.id || previous?.t !== "do" || previous.id !== step.id || previous.ph !== step.ph) {
+      hard(step.where, "同一步座標必須是有條件的做，緊接同任務、同階段的做");
+    }
+  }
   for (const step of s.steps) if (step.t !== "accept" && step.t !== "do" && step.t !== "turnin" || step.id) { refSteps = s.steps.filter((x) => x.cls === step.cls); out += `        ${lua(stepOut(step, s))},\n`; }
   out += `      } },\n`;
 }
@@ -1231,8 +1410,18 @@ for (const file of files.filter((f) => /^08-/.test(f))) {
   readFileSync(join(ROUTE, file), "utf8").split(/\r?\n/).forEach((line, li) => {
     const f = line.replace(/^\s*-\s*/, "").split("｜").map((x) => x.trim());
     if (f.length < 4 || !/^\d+$/.test(f[1])) return;
-    const q = [...f[3].matchAll(/\d{2,6}/g)].map((m) => +m[0]).find((n) => quests.has(n));
-    keep.set(+f[1], { n: f[0], use: f[3].replace(/【[^】]*】/g, "").trim(), q });
+    const use = f[3].replace(/【[^】]*】/g, "").trim();
+    const legacyQuest = [...f[3].matchAll(/\d{2,6}/g)].map((m) => +m[0]).find((n) => quests.has(n));
+    const uses = [];
+    for (const part of f[3].split("；")) {
+      const id = Number(part.match(/[（(](\d{2,6})[）)]/)?.[1]);
+      if (!quests.has(id)) continue;
+      const tags = [...part.matchAll(/【([^】]*)】/g)].map((m) => m[1]);
+      const count = Number(tags.find((tag) => /^保留數量[：:]\d+$/.test(tag))?.slice(5)) || undefined;
+      uses.push({ q: id, when: parseWhen(tags), count });
+    }
+    const scoped = uses.some((v) => v.when || v.count);
+    keep.set(+f[1], scoped ? { n: f[0], use, q: uses[0].q, uses } : { n: f[0], use, q: legacyQuest });
     keepAt.set(+f[1], `${file}:${li + 1}`);
   });
 }
@@ -1404,13 +1593,18 @@ const emitRoute = (X) => {
       cov.steps++;
       const e = {};
       const q = step.id && quests.get(step.id);
+      if (step.componentNpcId) {
+        // The Forever esES name differs from the Questie translation and from esMX.
+        const nativeName = step.componentNpcId === 641 && loc === "esES" ? "Tallamadera goblin" : undefined;
+        e.componentNpc = nativeName || db.l10nName("Npc", step.componentNpcId, loc) || db.npc(step.componentNpcId)?.en;
+      }
       if (step.t === "accept" || step.t === "turnin") {
         e.npc = N(step.npcEn || mdEnt(step.id, step.npc)); e.tgt = N(step.tgtEn || (step.tgt && mdEnt(step.id, step.tgt))); e.npcObj = step.npcObj || (/^(物件|物品)/.test(step.npc || "") || undefined);
         cov.npcNeed++; if (e.npc) cov.npc++; else missNpc.push(`${step.id} ${step.npc}`);
         if (step.tgt) { cov.tgtNeed++; if (e.tgt) cov.tgt++; }
       } else if (step.t === "do") {
         cov.hint++;
-        e.hint = X.hint(q, step.id);
+        e.hint = (step.providedVisit || step.farmMaterial || step.riftTools || (step.requiredItems && step.when?.workMap)) ? T(step.where, step.hint) : X.hint(q, step.id);
         if (!q?.en?.d && q?.en?.gen) cov.hintGen++;
         if (!e.hint) { cov.hint--; e.hint = F.complete; }
       } else if (step.t === "need") e.text = F.prereq + (X.qn(step.id) || F.quest + step.id);
@@ -1469,6 +1663,7 @@ const emitRoute = (X) => {
       if (step.spot) {
         cov.zhOnly.desc++;
         e.spot = T(step.where, step.spot);
+        if (step.ph === "in" && step.when?.missingBag && e.spot) e.hint = e.spot;
         if (!e.spot) { left.desc++; leftAt.push(step.where + "｜所在｜" + step.spot); }
       }
       if (step.preText) { const ids = [...step.preText.matchAll(/\d{2,6}/g)].map((m) => +m[0]).filter((x) => db.quest(x)); e.preText = ids.length ? ids.map(X.qn).join(F.sep) : undefined; }
@@ -1498,12 +1693,17 @@ const emitRoute = (X) => {
     const entrance = s.entrance && T(s.entrance.where, s.entrance.raw);
     if (s.entrance && !entrance) left.entrance++;
     const danger = {}; (s.danger || []).forEach((d, i) => { danger[i + 1] = T(s.dangerAt[i], d.text); if (!danger[i + 1]) left.danger++; });
-    const grind = {}; (s.grind || []).forEach((g, i) => { const note = g.note && T(g.where, g.note); if (g.note && !note) left.grindNote++; grind[i + 1] = { mob: N(npcEn(g.mob)), note }; });
+    const grind = {}; (s.grind || []).forEach((g, i) => { const note = g.note && T(g.where, g.note); if (g.note && !note) left.grindNote++; grind[i + 1] = { mob: N(g.npcId ? db.npc(g.npcId)?.en : npcEn(g.mob)), note }; });
     const supply = {}; (s.supply || []).forEach((x, i) => { supply[i + 1] = { npc: x.npc && N(npcEn(x.npc)) }; });
     en += `    [${JSON.stringify(s.id)}] = ${plain({ name, nameA: nm.nameA, short: nm.short, shortA: nm.shortA, entrance, pickup, pickupS: pickup && enSents(s.pickupRaw, pickup, false, X.split), tips, danger, grind, supply, steps })},\n`;
   }
   refSteps = [];
   en += `  },\n  quests = {\n`;
+  // Verified Forever display names for the chosen Ambermill NPCs in this gathering route.
+  const farmNames = {
+    "Dalaran Apprentice": { esES:"Aprendiz Dalaran", frFR:"Apprenti de Dalaran", koKR:"달라란 수습마법사", ruRU:"Даларанский ученик" },
+    "Dalaran Protector": { ruRU:"Даларанский заступник" },
+  };
   for (const [id, q] of [...quests.entries()].sort((a, b) => a[0] - b[0])) {
     cov.quests++;
     const e = q.en || {};
@@ -1511,7 +1711,8 @@ const emitRoute = (X) => {
     if (e.d) cov.qObj++;
     let star;
     if (q.star) { const n = X.item(db.enByZh("Item", q.star[0])) || T("", q.star[0]); star = n ? [n, ...q.star.slice(1)] : undefined; }
-    en += `    [${id}] = ${plain({ n: X.qName(id, e), d: X.qd(id, e), tgo: e.tgo && e.tgo.map((l) => l.map(N)), objs: e.objs && e.objs.map(N), star })},\n`;
+    const tgo = e.tgo?.map(group => group.map(name => (q.farmMaterial && farmNames[name]?.[loc]) || N(name)));
+    en += `    [${id}] = ${plain({ n: X.qName(id, e), d: X.qd(id, e), tgo, objs: e.objs && e.objs.map(N), star })},\n`;
   }
   en += `  },\n`;
   const keepEn = (id, k) => { if (k.q) return undefined; const x = T(keepAt.get(id), k.use); if (!x) left.keepUse++; return x || F.later; };

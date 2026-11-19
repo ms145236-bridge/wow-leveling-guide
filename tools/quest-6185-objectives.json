@@ -1,0 +1,12 @@
+{
+  "enUS": {"badges": ["SI:7 Insignia (Rutger)", "SI:7 Insignia (Fredo)", "SI:7 Insignia (Turyen)"], "event": "The Blightcaller Uncovered"},
+  "koKR": {"badges": ["SI:7 표장 (루트거)", "SI:7 표장 (프레도)", "SI:7 표장 (투르옌)"], "event": "블라이트콜러 발견"},
+  "frFR": {"badges": ["Insigne du SI:7 (Rutger)", "Insigne du SI:7 (Fredo)", "Insigne du SI:7 (Turyen)"], "event": "Le Flétrisseur découvert"},
+  "deDE": {"badges": ["SI:7-Insignie (Rutger)", "SI:7-Insignie (Fredo)", "SI:7-Insignie (Turyen)"], "event": "Blightcaller wird enttarnt"},
+  "zhCN": {"badges": ["军情七处徽章（拉戈尔）", "军情七处徽章（弗雷多）", "军情七处徽章（特伊恩）"], "event": "找到凋零者"},
+  "esES": {"badges": ["Insignia IS:7 (Rutger)", "Insignia IS:7 (Fredo)", "Insignia IS:7 (Tucentenon)"], "event": "Clamorinfecto descubierto"},
+  "esMX": {"badges": ["Insignia IV:7 (Rutger)", "Insignia IV:7 (Fredo)", "Insignia IV:7 (Turyen)"], "event": "Clamañublo descubierto"},
+  "ruRU": {"badges": ["Знак отличия ШРУ (Рутгер)", "Знак отличия ШРУ (Фредо)", "Знак отличия ШРУ (Турьен)"], "event": "Гнилостень выведен на чистую воду"},
+  "ptBR": {"badges": ["Insígnia SI:7 (Rutger)", "Insígnia SI:7 (Fredo)", "Insígnia SI:7 (Turyen)"], "event": "O Arauto da Praga descoberto"},
+  "zhTW": {"badges": ["軍情七處徽章（拉戈爾）", "軍情七處徽章（弗雷多）", "軍情七處徽章（特伊恩）"], "event": "找到凋零者"}
+}

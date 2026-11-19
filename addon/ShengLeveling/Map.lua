@@ -203,6 +203,10 @@ function P.Update(st, force)
   for i, step in ipairs(st.steps) do
     if not st.done[i] and not st.na[i] then
       parts[#parts + 1] = i
+      if step.s.riftPhase then parts[#parts + 1] = step.s.riftPhase end
+      if step.s.missingWeapon or step.s.farmDone then parts[#parts + 1] = "noLocation" end
+      if step.s.surveyState then parts[#parts + 1] = step.s.surveyState end
+      if step.s.pickupItem then parts[#parts + 1] = step.s.x and "pickup" or "bag" end
       if step.s.roam and i ~= st.cur then local p = roamPt(step.s); parts[#parts + 1] = p and (p[2] .. ":" .. p[3]) or "-" end -- 走進／走出順路點範圍：重畫
     end
   end
