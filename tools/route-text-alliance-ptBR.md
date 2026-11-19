@@ -1,6 +1,6 @@
 # 阿聖練等幫手 ptBR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **386** 列。
+- 只收聯盟路線獨有的說明列，共 **397** 列。
 
 檔名:行號｜類型｜中文原文｜ptBR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Clique com o botão direito em Livro Mordiscado na bolsa para iniciar a missão.
@@ -336,7 +336,7 @@
 02-12到30級.md:893｜說明｜暴風城接，到鐵爐堡交，學防護恐懼結界。｜Aceite em Ventobravo, entregue em Altaforja e aprenda Proteção contra Medo.
 02-12到30級.md:898｜說明｜暴風城接，到丹莫洛交。｜Aceite em Ventobravo e entregue em Dun Morogh.
 02-12到30級.md:905｜說明｜藍色隱士酒吧在暴風城法師區。｜A taverna Recôndito Azulego fica no Distrito dos Magos de Ventobravo.
-02-12到30級.md:908｜說明｜交 10 塊亞麻布和 6 顆充能裂隙寶石，寶石可在拍賣場買。｜Entregue 10 Linhos e 6 Gemas Energizadas da Fenda. As gemas podem ser compradas na Casa de Leilões.
+02-12到30級.md:935｜說明｜需帶亞麻布 ×10 和充能裂隙寶石 ×6。若順路回洛克莫丹，可從銀泉礦坑北口（約 35.9,18.2）進洞開礦工聯盟的木箱。缺材料先走主線；材料齊且日誌可交時，到暴風城找威恩。｜Separe 10 × Linho e 6 × Gema Energizada da Fenda. Quando voltar a Loch Modan, entre na mina pelo norte (perto de 35.9,18.2) e abra os caixotes dos mineradores. Siga a rota enquanto faltar material. Procure Wynne em Ventobravo quando o registro confirmar a entrega.
 02-12到30級.md:910｜說明｜獎勵法紋長袍。｜Recompensa: Veste de fios de mana.
 02-12到30級.md:921｜說明｜在梣谷擊殺薩特取得同心樹。｜Mate sátiros no Vale Gris para pegar o Palocórdio.
 02-12到30級.md:925｜說明｜在加科因旁的召喚法陣使用，擊敗召喚出的魅魔。｜Use no círculo de evocação ao lado de Gakin, o Neromante, e derrote a súcubo evocada.
@@ -405,7 +405,6 @@
 02-12到30級.md:300｜說明｜從暴風城沿艾爾文森林大路往東進赤脊山，順大路到湖畔鎮。｜De Ventobravo, siga a estrada da Floresta de Elwynn para leste até Cristarrubra e continue pela estrada até Vila Plácida.
 02-12到30級.md:303｜說明｜第2站沒開湖畔鎮飛行點，就從暴風城沿艾爾文森林大路往東走到湖畔鎮。｜Se você não liberou o ponto de voo de Vila Plácida na parada 2, vá a pé de Ventobravo para leste pela estrada da Floresta de Elwynn até Vila Plácida.
 02-12到30級.md:400｜說明｜從黑海岸南邊沿大路往南進梣谷，先到邁斯特拉崗哨。｜Do sul da Costa Negra, siga a estrada para o sul até o Vale Gris e vá primeiro ao Posto de Maestra.
-02-12到30級.md:431｜說明｜這班船中途停南海鎮，到米奈希爾港再下船。｜Este barco faz parada em Costa Sul. Desça em Porto de Menethil.
 02-12到30級.md:502｜說明｜已開夜色鎮飛行點就直接飛夜色鎮。沒開就飛湖畔鎮，落地後沿大路往西到赤脊山西邊的路口，再往南進暮色森林到夜色鎮。｜Se você já liberou o ponto de voo de Vila Sombria, voe direto para Vila Sombria. Se não, voe até Vila Plácida, siga a estrada para oeste até o cruzamento no lado oeste de Cristarrubra e vá para o sul pela Floresta do Crepúsculo até Vila Sombria.
 03-30到45級.md:190｜說明｜在米奈希爾港北邊碼頭搭往奧伯丁的船，中途在南海鎮下船。｜Pegue o barco para Auberdine no cais norte de Porto de Menethil e desça em Costa Sul no meio do caminho.
 03-30到45級.md:270｜說明｜從暮色森林西邊沿大路往南進荊棘谷，先到反抗軍營地。｜Do oeste da Floresta do Crepúsculo, siga a estrada para o sul até a Selva do Espinhaço e vá primeiro ao Acampamento Rebelde.
@@ -437,7 +436,6 @@
 04-45到60級.md:217｜說明｜守望堡沒開就飛夜色鎮，往東過逆風小徑進悲傷沼澤，再往南進詛咒之地到守望堡。｜Se a Bastilha de Etergarde não estiver liberada, voe até Vila Sombria, vá para leste pela Trilha do Vento Morto até o Pântano das Mágoas e depois para o sul, pela Barreira do Inferno, até a Bastilha de Etergarde.
 04-45到60級.md:229｜說明｜悲傷沼澤沒有聯盟飛行點：往西過逆風小徑走回夜色鎮再飛。｜O Pântano das Mágoas não tem ponto de voo da Aliança: vá para oeste pela Trilha do Vento Morto de volta a Vila Sombria e voe de lá.
 04-45到60級.md:285｜說明｜從塔納利斯西邊的山路走坡道下安戈洛環形山，托爾瓦·尋路者就在坡道底的入口旁。｜Pela estrada de montanha a oeste de Tanaris, desça a rampa até a Cratera Un'Goro. Torwa Mateiro está bem ao lado da entrada, no fim da rampa.
-04-45到60級.md:354｜說明｜牧師要在鐵爐堡接「塞納裏奧議會的求助」，請等爐石冷卻。其餘角色若爐石還在冷卻，可從馬紹爾營地飛奧伯丁，接往魯瑟蘭村的行程。｜Sacerdotes que quiserem pegar a missão do Círculo Cenariano em Altaforja devem esperar a Pedra de Regresso recarregar. Nos demais casos, se a pedra ainda estiver em recarga, voe do Refúgio do Marshal até Auberdine e siga para a Vila de Rut’theran.
 04-45到60級.md:365｜說明｜從阿斯特蘭納沿大路往北進費伍德森林。｜De Astranaar, siga a estrada para o norte até a Selva Maleva.
 04-45到60級.md:392｜說明｜從這裡進木喉要塞的山洞，穿過去就是冬泉谷。｜Entre aqui na caverna do Domínio dos Presamatos e atravesse-a para chegar a Hibérnia.
 04-45到60級.md:429｜說明｜爐石還在冷卻就從羽月要塞飛阿斯特蘭納（經奧伯丁），再往北走進費伍德。｜Se a pedra de regresso estiver em recarga, voe do Domínio de Plumaluna até Astranaar (com conexão em Auberdine) e depois vá a pé para o norte até a Selva Maleva.
@@ -456,8 +454,6 @@
 04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機；飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Você fará uma conexão no Acampamento Ventogelante ou no Ninho da Águia; se Costa Sul não estiver no seu mapa de voo, voe para Ventobravo como de costume e pegue o barco para Auberdine no porto.
 04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機｜Você fará uma conexão no Acampamento Ventogelante ou no Ninho da Águia
 04-45到60級.md:665｜說明｜飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Se Costa Sul não estiver no seu mapa de voo, voe para Ventobravo como de costume e pegue o barco para Auberdine no porto.
-04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快；改飛暴風城的話在暴風城港口上船。｜No cais de Costa Sul há um barco direto para Auberdine, mais rápido do que voar para Ventobravo e trocar de barco. Se voar para Ventobravo, embarque no porto de Ventobravo.
-04-45到60級.md:666｜說明｜南海鎮碼頭就有往奧伯丁的船，比飛暴風城轉船快｜No cais de Costa Sul há um barco direto para Auberdine, mais rápido do que voar para Ventobravo e trocar de barco
 04-45到60級.md:666｜說明｜改飛暴風城的話在暴風城港口上船。｜Se voar para Ventobravo, embarque no porto de Ventobravo.
 04-45到60級.md:716｜說明｜爐石還在冷卻就走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Se a pedra de regresso estiver em recarga, entre no portal de volta à Vila de Rut'theran, voe até Auberdine, pegue o barco para Porto de Menethil, desça em Costa Sul e depois voe até o Acampamento Ventogelante.
 04-45到60級.md:717｜說明｜飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜Se o Acampamento Ventogelante não estiver no seu mapa de voo, siga a trilha da montanha para o norte a partir do Ninho da Águia até as Terras Pestilentas Ocidentais e corra para oeste até o Acampamento Ventogelante.
@@ -488,7 +484,6 @@
 02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城；爐石在冷卻就往北回奧伯丁搭船到暴風城。｜Ao terminar Vale Gris, use a pedra de regresso para voltar a Ventobravo. Se a pedra de regresso estiver em recarga, volte ao norte até Auberdine e pegue o barco para Ventobravo.
 02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城｜Ao terminar Vale Gris, use a pedra de regresso para voltar a Ventobravo
 02-12到30級.md:901｜說明｜爐石在冷卻就往北回奧伯丁搭船到暴風城。｜Se a pedra de regresso estiver em recarga, volte ao norte até Auberdine e pegue o barco para Ventobravo.
-05-副本.md:40｜說明｜遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭往米奈希爾港的船在南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 02-第14站。｜Opcional e distante: a entrada fica nas Ruínas de Lordaeron, acima da Cidade Baixa, e é preciso atravessar território da Horda. Pegue o barco de Auberdine para o Porto de Menethil, desça na Costa Sul e descubra o ponto de voo; depois vá para o norte pelo Contraforte de Eira dos Montes e pela Floresta de Pinhaprata até as Clareiras de Tirisfal. Ao sair da masmorra, use a pedra de regresso para voltar a Ventobravo e retome a 02-parada 14.
 02-12到30級.md:992｜說明｜從永夜港找希爾瓦·菲納雯斯搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。｜Procure Silva Fil'naveth em Refúgio Noturno para pegar o voo exclusivo de druidas até a Vila de Rut'theran e use o portal da vila para entrar em Darnassus.
 02-12到30級.md:1009｜說明｜米奈希爾港北碼頭搭船到奧伯丁（中途停南海鎮不用下船），飛阿斯特蘭納取水；回程飛奧伯丁搭船回米奈希爾港，再走回赫妲娜的洞穴。｜Pegue o barco do cais norte do Porto de Menethil até Auberdine (ele para na Costa Sul; não precisa descer) e voe para Astranaar para pegar a água. Na volta, voe para Auberdine, pegue o barco para o Porto de Menethil e caminhe de volta até a caverna de Hervdana.
 02-12到30級.md:1009｜說明｜米奈希爾港北碼頭搭船到奧伯丁（中途停南海鎮不用下船），飛阿斯特蘭納取水｜Pegue o barco do cais norte do Porto de Menethil até Auberdine (ele para na Costa Sul; não precisa descer) e voe para Astranaar para pegar a água
@@ -615,7 +610,6 @@
 04-45到60級.md:823｜說明｜找薩納斯對話，請他把你傳送上懸崖找大法師克希雷姆。｜Fale com Sanath Lim-yo e peça que ele o teleporte ao alto do penhasco para encontrar o Arquimago Tauriel.
 04-45到60級.md:826｜說明｜塵埃在山下，回去同樣找薩納斯傳送上來。｜A poeira fica ao pé da montanha; volte a Sanath Lim-yo do mesmo modo para ser teleportado para cima.
 04-45到60級.md:832｜說明｜摩弗拉斯在阿塔哈卡神廟。下懸崖用爐石，或找克希雷姆身邊的傳送選項（需遊戲實測）。｜Morphaz fica no Templo de Atal'Hakkar. Para descer o penhasco, use a pedra de regresso ou procure a opção de teleporte ao lado de Xylem (verificar no jogo).
-04-45到60級.md:492｜說明｜托爾瓦旁沒有飛行點：從他身後的坡道出安戈洛環形山進塔納利斯，往東北跑到加基森。｜Não há ponto de voo perto de Torwa: saia da Cratera Un'Goro pela rampa atrás dele para Tanaris e corra para o nordeste até Geringontzan.
 04-45到60級.md:499｜說明｜在奧伯丁旅店找旅店老闆莎希因綁爐石（37.04, 44.13）。｜Vincule sua pedra de regresso com a estalajadeira Shaussiy na estalagem de Auberdine (37.04, 44.13).
 04-45到60級.md:683｜說明｜從死木蒸鍋往南走到刺枝林地飛行點（1448 62.49, 24.24）起飛，會經奧伯丁轉機。｜Do Caldeirão de Lenha Morta, vá para o sul até o ponto de voo de Clareira da Galhaça (1448 62.49, 24.24) e decole de lá; você faz escala em Auberdine.
 04-45到60級.md:777｜說明｜身上有真正的主人（4186）才去湖畔鎮；沒有就跳過第 60–62 步，從暴風城直飛摩根的崗哨。｜Só vá a Vila Plácida se tiver Os verdadeiros mestres (4186). Se não tiver, pule os passos 60-62 e voe direto de Ventobravo para a Vigia de Morgan.
@@ -897,9 +891,7 @@
 04-45到60級.md:1062｜說明｜解放樹根下原本就在的小精靈，不是在空地用道具召出來；和阿克蒙德之赦同一趟做。｜Liberte o fogo-fátuo que já está sob as raízes, em vez de invocá-lo com um item na clareira. Faça na mesma viagem de O Perdão de Archimonde.
 04-45到60級.md:1062｜說明｜解放樹根下原本就在的小精靈，不是在空地用道具召出來｜Liberte o fogo-fátuo que já está sob as raízes, em vez de invocá-lo com um item na clareira.
 04-45到60級.md:1062｜說明｜和阿克蒙德之赦同一趟做。｜Faça na mesma viagem de O Perdão de Archimonde.
-04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石；否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Só use a Pedra de Regresso se ainda estiver vinculada a Ninho da Águia e disponível. Caso contrário, use a rota de barco como alternativa: volte pelo portal a Aldeia Rut'theran, voe para Auberdine, pegue o barco para o Porto de Menethil, desembarque em Costa Sul e voe para o Acampamento Chillwind.
 04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石｜Só use a Pedra de Regresso se ainda estiver vinculada a Ninho da Águia e disponível.
-04-45到60級.md:1092｜說明｜否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Caso contrário, use a rota de barco como alternativa: volte pelo portal a Aldeia Rut'theran, voe para Auberdine, pegue o barco para o Porto de Menethil, desembarque em Costa Sul e voe para o Acampamento Chillwind.
 04-45到60級.md:1093｜說明｜已到冰風崗就跳過。飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜Pule se já estiver no Acampamento Chillwind. Se o mapa de voo não listar o Acampamento Chillwind, vá ao norte pela estrada da montanha de Ninho da Águia até as Terras Pestilentas Ocidentais e depois a oeste até o Acampamento Chillwind.
 04-45到60級.md:1140｜說明｜座標是大致位置；入口和塔旁有血色十字軍守衛，一次只拉一隻。｜As coordenadas são aproximadas. Há guardas da Cruzada Escarlate na entrada e ao lado da torre; puxe um de cada vez.
 04-45到60級.md:1140｜說明｜座標是大致位置｜As coordenadas são aproximadas.
@@ -1328,6 +1320,49 @@
 05-副本.md:445｜說明｜要向西瘟疫凱爾達隆的畫家接「愛與家庭」，可先飛冰風崗。已接畫作或只想在禮拜堂接任務，直接和隊友會合。｜Voe até o Acampamento Ventogelante se precisar visitar a pintora em Caer Darrow, nas Terras Pestilentas Ocidentais, para pegar Do Amor e da Família. Se já tiver a missão ou só quiser as da capela, encontre o grupo diretamente.
 05-副本.md:451｜說明｜從聖光之願禮拜堂隨隊前往斯坦索姆。入口標記是血色正門，去市場或血色堡壘走這裡；只打亡靈區，和能開側門的隊友在東邊的側門會合。｜Da Capela Esperança da Luz, siga com o grupo para Stratholme. O marcador indica o portão principal escarlate para o mercado e o Bastião Escarlate. Se visitar apenas a ala dos mortos-vivos, encontre alguém do grupo que possa abrir a entrada de serviço a leste.
 05-副本.md:440｜說明｜東瘟疫之地 1423 26.52, 10.36（血色正門；亡靈側門在 43.50, 19.40）｜Terras Pestilentas Orientais 26.52, 10.36 (portão principal escarlate; entrada de serviço dos mortos-vivos em 43.50, 19.40)
+02-12到30級.md:933｜步驟目標｜到暴風城法師區的藍色隱士旅店，用卷軸顯形。打到裂隙怒靈昏迷，再用封靈箱，拾取地上的裝滿的箱子；共需三個。｜Use o encantamento na taverna do Recôndito Azulego, no Distrito dos Magos de Ventobravo. Enfraqueça a criatura da fenda até atordoá-la, use o baú e saqueie o cofre no chão. Recolha três.
+02-12到30級.md:643｜說明｜沿赤脊山伊爾加拉之塔的樓梯上樓，從書架取書。塔內有守衛和精英；太危險可稍後再來。｜Suba as escadas da Torre de Ilgalar, nas Montanhas Cristarrubra, e pegue o livro na estante. Cuidado com os guardas e o inimigo de elite. Volte depois se for perigoso demais.
+02-12到30級.md:643｜說明｜沿赤脊山伊爾加拉之塔的樓梯上樓，從書架取書。塔內有守衛和精英｜Suba as escadas da Torre de Ilgalar, nas Montanhas Cristarrubra, e pegue o livro na estante. Cuidado com os guardas e o inimigo de elite.
+02-12到30級.md:643｜說明｜太危險可稍後再來。｜Volte depois se for perigoso demais.
+02-12到30級.md:670｜說明｜收集 8 份任務蜘蛛絲。夜色鎮東南有小型黑寡婦蜘蛛；西側烏鴉嶺地表也有小型黑寡婦蜘蛛和食腐獨行蛛。｜Consiga 8 sedas da missão. A sudeste de Vila Sombria, procure Filhote de Viúva Negra. Na superfície da Colina do Corvo, a oeste, tanto Filhote de Viúva Negra quanto Reclusa Carniceira podem deixar a seda.
+02-12到30級.md:1094｜說明｜接下任務後，順路經過暮色森林時收集蜘蛛絲。下一次在烏鴉嶺做「懲罰圖騰」也會經過掉落地。｜Após aceitar, recolha a seda na próxima passagem pela Floresta do Crepúsculo. A missão do totem leva às mesmas aranhas a oeste.
+02-12到30級.md:635｜說明｜到伊爾加拉之塔東側，在塔外找石獅子放置飾品。｜Procure a estátua de leão do lado de fora, a leste da Torre de Ilgalar, e coloque o glifo ali.
+02-12到30級.md:636｜說明｜若找不到任務配發的飾品，先檢查背包、銀行和任務日誌。｜Se não encontrar o glifo recebido, confira suas bolsas, seu banco e seu registro de missões.
+02-12到30級.md:637｜說明｜從石獅子往西，到石望要塞旁的完整哨塔。沿塔內坡道上到塔頂，找桶上的空瓶子。留意精英守衛。｜Partindo do leão, vá para oeste até a torre de vigia intacta junto à Bastilha de Vigil. Suba a rampa até o telhado e procure o jarro vazio em cima dos barris. Cuidado com os guardas de elite.
+02-12到30級.md:644｜說明｜從南側沿谷地東側向北找范高雷中尉。在營地外先清附近的暗皮豺狼人，再靠近他；仍缺墜飾可沿路收。｜Siga para o norte pelo lado leste do vale para encontrar o Tenente Mordente. Elimine os gnolls próximos a partir da borda do acampamento antes de se aproximar. Recolha pelo caminho os pingentes que ainda faltarem.
+02-12到30級.md:642｜說明｜沿谷地東側往北營地前進，沿途擊殺暗皮豺狼人收墜飾。也可在谷地外圍找較低等的豺狼人。｜Siga para o norte pelo lado leste do vale e recolha os pingentes dos gnolls pelo caminho até o acampamento do norte. Também há gnolls de nível mais baixo na borda do vale.
+02-12到30級.md:646｜說明｜沿通往燃燒平原的道路到西側營地。先在洞口附近找黑石勇士，擊殺數未滿再往洞內找。以任務日誌為準。｜Siga pela estrada para as Estepes Ardentes até o acampamento no lado oeste. Procure os campeões Rocha Negra primeiro perto da entrada da caverna. Entre se ainda faltarem mortes no registro de missões.
+04-45到60級.md:724｜說明｜從三具遺體各取一枚徽章。帶齊後核對日誌的偵察項目；若仍未完成，到調查點附近偵察，避開精英。｜Pegue uma insígnia de cada um dos três corpos. Com as três na bolsa, confira o objetivo de reconhecimento no registro. Se ainda estiver pendente, examine os arredores do ponto marcado e mantenha distância do inimigo de elite.
+03-30到45級.md:157｜說明｜從濕地側找東側橋體內的樓梯，下樓找伊貝尼瑟。交件後在同一具屍體接下一段，再沿原樓梯返回丹莫德。附近有精英，單人可等空檔或找人同行。｜Pelo lado do Pantanal, procure a escada dentro da ponte leste e desça até Ebenezer. Entregue a missão e aceite a próxima no mesmo cadáver. Suba as mesmas escadas e volte a Dun Modr. Há inimigos de elite por perto. Se estiver só, espere uma abertura ou procure ajuda.
+03-30到45級.md:161｜說明｜從丹莫德向北走完整的大石橋。到阿拉希高地的橋頭右轉，過小吊橋進黑鐵營地，摧毀車上的炸藥。｜De Dun Modr, siga para o norte pela grande ponte de pedra intacta. Na saída da ponte, já no Planalto Arathi, vire à direita e atravesse a pequena ponte suspensa até o acampamento dos Ferro Negro. Destrua os explosivos na carroça.
+03-30到45級.md:162｜說明｜回丹莫德途中取信。先認清可以原路返回的河岸，再下水。潛到斷橋下方的河底，在碎石壓住的矮人手邊拾取浸水的信封，右鍵信封接任務。沿下水處返回岸上，再回濕地的拉格。｜Pegue a carta no caminho de volta a Dun Modr. Antes de entrar na água, procure um trecho da margem por onde consiga voltar a subir. Mergulhe até o leito do rio sob a ponte destruída. Pegue o envelope encharcado junto à mão do anão preso nos escombros. Clique com o botão direito no envelope para aceitar a missão. Saia pela margem onde entrou e volte até Rhag no Pantanal.
+03-30到45級.md:169｜說明｜在鐵爐堡把接任務時取得的信交給薩拉。浸水的信封是用來開始任務的。｜Entregue a Sara, em Altaforja, a carta recebida ao aceitar a missão. O envelope encharcado serve para iniciar a missão.
+04-45到60級.md:192｜說明｜還差經驗時，可留在剛打燻火龍的礦坑，沿已清過的通道逐隻打普通燻火龍補到 48。洞內沒有安全的目標，再沿原路退出，到大熔爐外圍打黑鐵工頭或奴隸販子。｜Se ainda faltar experiência para o nível 48, continue na mina e atraia os incendossauros normais um de cada vez pelo corredor já limpo. Se não houver alvos seguros, saia pelo mesmo caminho e termine o nível nos feitores ou escravistas Ferro Negro nos arredores da Caldeira.
+04-45到60級.md:195｜說明｜上層平台可能有精英工頭瑪托留斯或黑鐵斥候守著。單人先觀察桌子附近，安全時再拿圖紙。懸賞才需要擊殺工頭。｜O feitor Maltorius ou uma sentinela de elite pode guardar a plataforma superior. Se estiver só, veja se o caminho até a mesa está livre. Só a missão de recompensa exige matar o feitor.
+04-45到60級.md:195｜說明｜從東側圖紙路線過橋進大廳後左轉。圖紙在上層平台、工頭身後的桌上。精英守著時可先略過，有安全空檔或隊伍再恢復。｜No acesso leste aos planos, atravesse a ponte e vire à esquerda no salão. Os planos ficam na plataforma superior, sobre a mesa atrás do feitor. Se houver elites de guarda, pule esta etapa e retome quando estiver livre ou com um grupo.
+04-45到60級.md:191｜說明｜從東側有礦工的入口進入時，向右沿下層岩漿旁的通道走到燻火龍洞。｜Da entrada leste onde ficam os mineiros, vire à direita e siga pelo corredor inferior à margem da lava até a caverna dos incendossauros.
+02-12到30級.md:453｜說明｜在奧伯丁搭往米奈希爾港的船，下一站就是米奈希爾港。｜Em Auberdine, pegue o barco para o Porto de Menethil e desça na próxima parada.
+04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁；改飛暴風城的話在暴風城港口上船。｜Pegue o barco para Auberdine no cais de Costa Sul. Se voar para Ventobravo, embarque no porto de Ventobravo.
+04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁｜Pegue o barco para Auberdine no cais de Costa Sul
+05-副本.md:40｜說明｜遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭船先到米奈希爾港，再循北線到南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 02-第14站。｜Opcional e distante: a entrada fica nas Ruínas de Lordaeron, acima da Cidade Baixa, e é preciso atravessar território da Horda. De Auberdine, vá primeiro de barco ao Porto de Menethil e siga pela rota marítima do norte até Costa Sul. Desça ali e descubra o ponto de voo; depois vá para o norte pelo Contraforte de Eira dos Montes e pela Floresta de Pinhaprata até as Clareiras de Tirisfal. Ao sair da masmorra, use a pedra de regresso para voltar a Ventobravo e retome a 02-parada 14.
+04-45到60級.md:558｜說明｜仍在北側且沒有要找托爾瓦的任務，就到馬紹爾營地看飛行圖，能選加基森就飛。要交尤爾查的毛皮，或要辦托爾瓦的德魯伊任務，先去東南找他。在托爾瓦旁或不能飛時，走東南坡進塔納利斯，再往東北到加基森。｜Se ainda estiver no norte e não tiver nada a fazer com Torwa, consulte o mapa de voo no Refúgio do Marshal e voe para Geringontzan se o destino estiver disponível. Para entregar a pele de U'cha ou fazer as missões de druida de Torwa, visite-o primeiro no sudeste. De Torwa, ou se não puder voar, suba a rampa a sudeste até Tanaris e siga para nordeste até Geringontzan.
+04-45到60級.md:1092｜說明｜仍綁鷹巢山且爐石可用才爐石；否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭船先到米奈希爾港，再循北線到南海鎮下船，再飛冰風崗。｜Só use a Pedra de Regresso se ainda estiver vinculada a Ninho da Águia e disponível. Caso contrário, use a rota de barco como alternativa: volte pelo portal a Aldeia Rut'theran, voe para Auberdine, vá primeiro de barco ao Porto de Menethil e siga pela rota marítima do norte até Costa Sul, desembarque ali e voe para o Acampamento Chillwind.
+04-45到60級.md:1092｜說明｜否則走船線備案：走傳送門回魯瑟蘭村，飛奧伯丁，搭船先到米奈希爾港，再循北線到南海鎮下船，再飛冰風崗。｜Caso contrário, use a rota de barco como alternativa: volte pelo portal a Aldeia Rut'theran, voe para Auberdine, vá primeiro de barco ao Porto de Menethil e siga pela rota marítima do norte até Costa Sul, desembarque ali e voe para o Acampamento Chillwind.
+04-45到60級.md:323｜說明｜先用背包裡的水晶灌注鱗片接微晶污染，再向托爾瓦交這兩件任務。｜Use a Escama Infusa com Cristal na bolsa para iniciar Contaminação microcristalina. Depois, entregue as duas missões a Torwa.
+04-45到60級.md:334｜說明｜沿路撿四色能量水晶。第一次見科琳時，四色各有七塊就當面交，還缺就留到下次。｜Colete cristais de poder pelo caminho. Se já tiver sete de cada cor ao encontrar J.D. Neri pela primeira vez, entregue-os na hora. Se faltarem cristais, conclua na próxima visita.
+04-45到60級.md:365｜說明｜在馬紹爾營地查看航班，能到奧伯丁或魯瑟蘭村才搭。沒有合適航班，可沿東南坡回塔納利斯，到加基森再查。｜Confira o mapa de voos no Refúgio do Marshal. Voe para Auberdine ou para a Vila de Rut'theran se houver um voo disponível. Caso contrário, volte a Tanaris pela rampa a sudeste e confira os voos em Geringontzan.
+04-45到60級.md:367｜說明｜在奧伯丁轉往魯瑟蘭村。若仍在船上，靠岸後下船；可選航班就飛，否則到北碼頭（33.3，39.8）搭船。｜Faça a conexão em Auberdine para a Vila de Rut'theran. Se estiver a bordo, desembarque quando o navio atracar. Pegue um voo disponível ou o navio no píer norte (33.3, 39.8).
+04-45到60級.md:378｜說明｜先確認所在位置。若在船上，等目的港靠岸再下船；在奧伯丁轉往魯瑟蘭村，已在魯瑟蘭村岸上就去交件。｜Confira sua localização. Se estiver a bordo, espere o navio atracar no seu destino antes de desembarcar. Em Auberdine, faça a conexão para a Vila de Rut'theran. Em terra na vila, entregue suas missões.
+04-45到60級.md:364｜說明｜若爐石綁在鐵爐堡，等可用時回城。牧師可向高階牧師洛漢接「幫助塞納里奧」；法師想接「法師公會」可找丁克。｜Se sua Pedra de Regresso estiver vinculada a Altaforja, espere até poder usá-la para voltar à cidade. Sacerdotes podem aceitar «Ajuda aos cenarianos» com o Sumo Sacerdote Rohan. Magos que quiserem aceitar «Magiaria» podem procurar Dink.
+04-45到60級.md:379｜說明｜去東部接職業任務前，先在馬紹爾營地查往奧伯丁的航班。沒有合適航班，可沿東南坡回塔納利斯到加基森再查；抵達奧伯丁後搭暴風城直船。｜Antes de ir aos Reinos do Leste para aceitar uma missão de classe, confira no Refúgio do Marshal se há um voo para Auberdine. Caso não haja voo disponível, volte a Tanaris pela rampa a sudeste e confira os voos em Geringontzan. Ao chegar a Auberdine, pegue o barco direto para Ventobravo.
+04-45到60級.md:380｜說明｜從奧伯丁搭暴風城直船。若還在船上，靠穩後下船，去暴風城棧橋（30.5，40.9）等船。｜Em Auberdine, pegue o barco direto para Ventobravo. Se ainda estiver a bordo, espere o barco atracar antes de desembarcar e vá esperar no píer de embarque para Ventobravo (30.5, 40.9).
+04-45到60級.md:381｜說明｜從暴風港搭船回奧伯丁。到往奧伯丁的棧橋（21.8，56.9）等船，靠岸後接回卡林多路線。｜No Porto de Ventobravo, espere o barco de volta para Auberdine no píer (21.8, 56.9). Ao desembarcar em Auberdine, retome a rota em Kalimdor.
+04-45到60級.md:382｜說明｜先確認位置與日誌空格。若要到東部接職業任務，請先留一格；若仍在船上，等目的港靠穩再下船。｜Confira primeiro sua localização e o espaço no registro de missões. Se for aos Reinos do Leste para aceitar uma missão de classe, deixe uma vaga livre. Se ainda estiver a bordo, espere o barco atracar no porto de destino antes de desembarcar.
+04-45到60級.md:383｜說明｜在暴風港靠穩後下船，再到城內找職業任務的發任人。若還在海上，先留在船上。｜Desembarque quando o barco atracar no Porto de Ventobravo e procure na cidade o NPC que oferece sua missão de classe. Se ainda estiver em alto-mar, permaneça a bordo.
+04-45到60級.md:386｜說明｜先到鐵爐堡飛行管理員查看米奈希爾港的航班。若不能搭，可改搭礦道地鐵到暴風城，再從暴風港搭船去奧伯丁。｜Consulte o mestre de voo de Altaforja para ver se há um voo para o Porto de Menethil. Se não houver, pegue o Metrô Correfundo até Ventobravo e embarque no porto para Auberdine.
+04-45到60級.md:527｜說明｜沿山徑上火羽山測溫。若已接火元素的灰燼任務就順手收集，測好溫度後沿山徑去找林格；開始護送後直接往北回馬紹爾營地。｜Suba pela trilha da Serra do Penacho de Fogo para medir a temperatura. Se tiver a missão das cinzas, recolha-as no caminho. Depois de medir a temperatura, siga a trilha até Ringo. Depois de iniciar a escolta, siga direto para o norte até o Refúgio do Marshal.
+04-45到60級.md:547｜說明｜在南部蟲巢一帶找格里什異種蠍或工蠍取得訊息素，沿途從土堆補足五份泥土。單人可挑落單的蟲，毋須深入找蜂后。｜Procure vespas ou operários Gorishi na colmeia ao sul para obter a glândula. Recolha cinco porções de terra dos montes que encontrar. Se estiver só, atraia insetos isolados sem avançar à procura da rainha.
+05-副本.md:436｜說明｜聽卡蘭說完他的故事。｜Ouça toda a história de Kharan.
 03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta falhou: abandone a missão no registro e aceite-a de novo com o robô.
 04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta falhou: abandone a missão no registro e aceite-a de novo com o robô.
 04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta falhou: abandone a missão no registro e aceite-a de novo com o robô.

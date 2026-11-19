@@ -1486,7 +1486,7 @@
 | NPC／怪物 | 11044 | Doctor Martin Felben | 马丁·费尔本 | [本機 QuestieDB Forever zhCN](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |
 | NPC／怪物 | 11055 | Shadow Priestess Vandis | 暗影牧师范蒂丝 | [本機 QuestieDB Forever zhCN](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |
 | NPC／怪物 | 11057 | Apothecary Dithers | 药剂师迪瑟斯 | [本機 QuestieDB Forever zhCN](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |
-| NPC／怪物 | 11058 | Ezra Grimm | 弗拉斯·希亚比 | [Wowhead Forever zhCN](https://nether.wowhead.com/forever/tooltip/npc/11058?locale=4) · [本機 QuestieDB Forever zhCN](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) · 【另見】艾兹拉·格里姆（同 ID，可能為性別詞形或來源版本差異） |
+| NPC／怪物 | 11058 | Ezra Grimm | 艾兹拉·格里姆 | [Wowhead Forever zhCN](https://nether.wowhead.com/forever/tooltip/npc/11058?locale=4) · [本機 QuestieDB Forever zhCN](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) · 已與永恆版任務 5214 及煙草 13172 核對 |
 | NPC／怪物 | 11063 | Carlin Redpath | 卡林·雷德帕斯 | [本機 QuestieDB Forever zhCN](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |
 | NPC／怪物 | 11064 | Darrowshire Spirit | 达隆郡居民的灵魂 | [本機 QuestieDB Forever zhCN](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |
 | NPC／怪物 | 11075 | Cauldron Lord Bilemaw | 护锅者拜尔摩 | [本機 QuestieDB Forever zhCN](https://github.com/Questie/QuestieDB/tree/master/l10n/Forever) |

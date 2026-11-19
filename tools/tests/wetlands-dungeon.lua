@@ -90,6 +90,29 @@ local function offer(state, q)
     if wrapper.s.t == "accept" and wrapper.s.q == q then return i end
   end
 end
+-- Unstarted Un'Goro collection tasks reserve a slot on their actual pickup
+-- visit. Quests already held still consume a real journal slot at Menethil.
+do
+  turned[275], turned[484] = true, true
+  for held = 0, 2 do
+    local log = {}
+    for i = 1, held do
+      local q = ({4301,4496})[i]
+      active[q], log[i] = true, q
+    end
+    ns.C.LogQuestIDs = function() return log end
+    for i = 0, 4 do
+      if i > 0 then log[#log + 1] = 900000 + i end
+      local state = E.Locate(a21)
+      for _, q in ipairs({95646,98815}) do
+        assert((not state.na[assert(offer(state, q))]) == (#log < 4))
+      end
+    end
+    active[4301],active[4496] = nil,nil
+  end
+  turned[275],turned[484] = nil,nil
+  ns.C.LogQuestIDs = function() return {} end
+end
 for _, case in ipairs({{95646,275,270180,1},{98815,484,284845,4}}) do
   local q, pre, item, needed = unpack(case)
   turned[pre] = true

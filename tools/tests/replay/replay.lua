@@ -11,7 +11,7 @@ local party=(mode=="party" or mode=="early" or allDungeons)
 local instanceFraction=tonumber(arg[5] or 0)
 assert(instanceFraction>=0 and instanceFraction<=1)
 local selected = alliance and {3,4,5,7,8,9,10,11,13,14} or {1,3,5,6,8,11,14,17,18,21,23,24,33}
-local chosen,ran,materials,picked={},{},{},{}
+local chosen,ran,picked={},{},{}
 for _,n in ipairs(selected) do chosen["05-d"..n]=true end
 local classQuest={[95036]=true,[95042]=true,[95111]=true,[95125]=true,[95126]=true,[8257]=true,[93030]=true,[99187]=true}
 local events = assert(io.open(arg[3], "w"))
@@ -20,6 +20,44 @@ local drops = arg[9] == "both" and {[8244]=1,[10593]=1} or {}
 -- "items:8623,8704" supplies held world drops so explicit held-item entries can be checked.
 for id in (arg[9] or ""):match("^items:(.*)$") and arg[9]:sub(7):gmatch("%d+") or function() end do drops[tonumber(id)]=1 end
 local collect = {[2521]=8244,[3501]=10593}
+-- Provide cloth only in an explicitly supplied replay. The normal itinerary makes no drop assumption.
+local suppliedLinen = tonumber(arg[10]) or 0
+if suppliedLinen > 0 then drops[2589] = suppliedLinen end
+-- Optional explicit successful interactions/drop scenarios. Simply visiting a dungeon supplies nothing.
+local weaponLoot = {}
+for id in (arg[11] or ""):gmatch("%d+") do weaponLoot[tonumber(id)] = true end
+if party and weaponLoot[268484] then classQuest[95140] = true end
+local bladeItems = {267454,6994,267361,272448}
+local function hasBladeItems()
+  for _, id in ipairs(bladeItems) do if not drops[id] then return false end end
+  return true
+end
+-- Optional observed capture result, encoded as scroll count/chest count/filled coffers looted.
+local riftScroll, riftChest, riftFilled = (arg[13] or ""):match("^(%d+)/(%d+)/(%d+)$")
+if riftScroll then
+  drops[7308], drops[7247], drops[7292] = tonumber(riftScroll), tonumber(riftChest), tonumber(riftFilled)
+end
+local chargedGems = tonumber(arg[14]) or 0
+if chargedGems > 0 then drops[7249] = chargedGems end
+-- Optional observed book and silk; the standard route assumes neither source was looted.
+local book, silk = (arg[16] or ""):match("^(%d+)/(%d+)$")
+book, silk = tonumber(book), tonumber(silk)
+-- 94 and its follow-up issue their own glyph. Optional loss/unsynced scenarios are per issuance.
+local glyphScenario = tonumber(arg[18]) or 3
+local glyphReady = tonumber(arg[19]) or 3
+-- Successful named kills normally include looting the quest trophy. Pass a list to model lost or omitted loot.
+local trophy = {[34]=3631,[126]=3614,[180]=3632}
+local pendants, champions = (arg[21] or "10/15"):match("^(%d+)/(%d+)$")
+pendants, champions = math.min(10,assert(tonumber(pendants))),math.min(15,assert(tonumber(champions)))
+local championKills = 0
+local trophyDrops = {}
+for id in (arg[20] or "3631,3614,3632"):gmatch("%d+") do trophyDrops[tonumber(id)] = true end
+local function glyphFlag(q,mask)
+  return math.floor(mask / (q == 94 and 1 or 2)) % 2 == 1
+end
+local visitMap, visitX, visitY
+local manaGems = tonumber(arg[12]) or 0
+if manaGems > 0 then drops[7293] = manaGems end
 function GetItemCount(id) return drops[id] or 0 end
 local level, bar, open, bind = 1, 0, 0, initialBind
 local have, turned, worked, maxXP = {}, {}, {}, {}
@@ -38,10 +76,25 @@ local db={skip={},drop={},fpNodes={},notNow={},pin={},mark={},latch={},carry={},
 local ns={db=db, L=setmetatable({}, {__index=function(_,k) return k end}), UI={Get=function(key) return arg[10]=="optional" and key=="optional" end}, C={}}
 function ns.C.IsTurnedIn(q) return turned[q] end
 function ns.C.IsOnQuest(q) return have[q] end
--- Quests with no objective step anywhere on the route (deliveries such as 5083) are ready once accepted.
-local hasDo={}
-function ns.C.IsReady(q) return worked[q] or (have[q] and not hasDo[q]) or false end
-function ns.C.Objectives() end
+-- Quests with no objective step anywhere on the route are ready once accepted.
+local hasDo = {}
+function ns.C.Position() return visitMap, visitX, visitY end
+function ns.C.IsReady(q)
+  if q == 91 then return have[q] and GetItemCount(1075) >= 10 end
+  if q == 128 then return have[q] and championKills >= 15 end
+  if q == 94 or q == 248 then return have[q] and glyphFlag(q,glyphReady) end
+  if q == 1938 or q == 1940 then return have[q] and arg[17] == "ready" end
+  if q == 1921 then return have[q] and arg[15] == "ready" end
+  return worked[q] or (have[q] and not hasDo[q]) or false
+end
+function ns.C.Objectives(q)
+  if q==128 and have[q] then return {{have=championKills,need=15,done=championKills>=15}} end
+end
+function ns.C.LogQuestIDs()
+  local ids = {}
+  for q, on in pairs(have) do if on then ids[#ids+1] = q end end
+  return ids
+end
 function ns.C.XPBuff() return false end
 local data=alliance and "Data/RouteA.lua" or "Data/Route.lua"
 for _,file in ipairs({data, "Engine.lua"}) do assert(loadfile("addon/ShengLeveling/"..file))("",ns) end
@@ -94,6 +147,13 @@ local function run(st, isRun)
       if bar==maxXP[level] then level,bar=level+1,0;log("level",s,k);refresh() end
     end
   end
+  -- This optional scenario starts with a real trainer visit and native acceptance during A18.
+  if st.id == "02-18" and book and level >= 26 and class == "MAGE" and (race == "Human" or race == "Gnome") and open < 40 then
+    have[1938] = true
+    open = open + 1
+    peak = math.max(peak, open)
+    log("accepted", {q=1938}, "optional trainer visit")
+  end
   refresh()
   for _,step in ipairs(st.list) do
     local s=step.s
@@ -102,6 +162,21 @@ local function run(st, isRun)
       db.auberdineChoice="coast";log("coast-branch",s);break
     end
     if s.opt and s.t=="accept" then refresh() end
+    if st.id == "02-19" or st.id == "03-22" then
+      -- Advance only at explicit itinerary legs; optional working rows do not change location.
+      if s.t == "hearth" and s.bind == "暴風城" then visitMap, visitX, visitY = 1453, nil, nil
+      elseif s.t == "fly" and s.to == "夜色鎮" then visitMap, visitX, visitY = 1431, nil, nil
+      elseif not s.when and s.map then visitMap, visitX, visitY = s.map, s.x, s.y end
+      -- A positive fixture explicitly follows the city hand-off at its authored recipient.
+      if book and s.when and s.when.workMap == 1453 and visitMap == 1453 and s.x then
+        visitX, visitY = s.x, s.y
+      end
+    else visitMap, visitX, visitY = nil, nil, nil end
+    if book and have[q] and s.t == "do" and s.map == visitMap then
+      -- Supplied observations, never an automatic drop merely for arriving at the map.
+      if q == 1938 and book > 0 then drops[7266] = book end
+      if q == 1940 and silk > 0 then drops[7267] = silk end
+    end
     if not E.Applies(s.when) then
       if s.when and s.when.class and E.Applies(s.when,true) and (s.t=="accept" or s.t=="travel") then log("class-low",s,s.when.lvMin) end
     elseif collect[q] and not drops[collect[q]] then log("no-drop",s)
@@ -130,23 +205,63 @@ local function run(st, isRun)
       if not why and level<math.max(i.min or 0,s.pickLv or 0) then why,detail="low",math.max(i.min or 0,s.pickLv or 0) end
       if not why and open>=40 then why="full" end
       if why then log(why,s,detail);if stats[why] then stats[why]=stats[why]+1 end
-      else have[q]=true;open=open+1;peak=math.max(peak,open);log("accepted",s) end
+      else
+        have[q]=true;open=open+1;peak=math.max(peak,open);log("accepted",s)
+        if q==94 or q==248 then
+          drops[1083] = glyphFlag(q,glyphScenario) and 1 or nil
+        end
+        if q==95036 and weaponLoot[267454] then drops[267454]=1;log("material",s,267454) end
+        -- The authored pickup opens the fixed underwater container. Opening its envelope accepts
+        -- 637 and the game issues the letter for delivery. A skipped or failed pickup issues nothing.
+        if q==637 and s.pickupItem==4433 then drops[4432]=1; worked[q]=true end
+      end
     elseif s.t=="do" and have[q] and not worked[q] then
       -- These two quests explicitly require instance materials or a boss for these roles.
-      if q==95036 and (st.id=="05-d5" or st.id=="05-d6") then
-        materials[st.id]=true;log("material",s,st.name)
-      elseif q==95036 and not (materials["05-d5"] and materials["05-d6"] and turned[95042]) then log("pending-material",s)
+      if q==1938 and GetItemCount(7266)<1 then log("missing-material",s,7266)
+      elseif i.riftTools and E.RiftPhase() ~= "journal" then log("missing-capture",s,E.RiftPhase())
+      elseif i.supply and GetItemCount(i.supply.item) < i.supply.count then log("missing-material",s,i.supply.item)
+      elseif i.farmMaterial and GetItemCount(i.farmMaterial.item) < i.farmMaterial.count then log("missing-material",s,i.farmMaterial.item)
+      elseif q==95036 and (st.id=="05-d5" or st.id=="05-d6") then
+        local item = st.id=="05-d5" and 6994 or 267361
+        if isRun and weaponLoot[item] and (item~=6994 or drops[267454]) then
+          drops[item]=1;log("material",s,item)
+        else log("pending-material",s,item) end
+      elseif q==95036 and not hasBladeItems() then log("pending-material",s)
+      elseif q==95042 and not weaponLoot[6995] then log("pending-material",s,6995)
+      elseif q==95140 and not drops[268484] then log("pending-material",s,268484)
       elseif q==templeQuest and st.id~=templeStation then log("await-temple",s)
       elseif instanceWork[q] and not isRun and q~=95036 and q~=95042 then log("await-instance",s)
       elseif q==99187 and st.id~="05-d33" then log("await-instance",s)
       else
         if (i.hard or 0)>=level+3 or i.soloElite then stats.hard=stats.hard+1;log("difficulty",s,(i.hard or 0)..(i.soloElite and " elite" or "")) end
         local xp=(s.ph=="in" or st.temple) and 0 or E.KillXP(q,level)*factor
+        if i.farmMaterial then xp=0 end -- Already-held supplies do not grant simulated kill XP.
         if s.ph=="in" and instanceObjects[q] then drops[instanceObjects[q]]=1 end
+        if q==95042 then drops[6995]=1;log("material",s,6995) end
+        if q==91 then drops[1075]=pendants end
+        if q==128 then xp=xp*champions/15;championKills=champions end
+        if trophyDrops[trophy[q]] then drops[trophy[q]] = 1 end
+        if i.requiredLoot and q ~= 91 and not trophy[q] then drops[i.requiredLoot] = 1 end
         worked[q]=true;log("worked",s,math.floor(xp));grant("combat",xp,s)
       end
-    elseif s.t=="turnin" and have[q] and (not s.hold or worked[q]) and (not (q==95036 or q==templeQuest or q==99187 or instanceWork[q]) or worked[q]) then
+    elseif s.t=="turnin" and have[q] and (not s.hold or worked[q]) and (not (q==95036 or q==95042 or q==templeQuest or q==99187 or instanceWork[q]) or worked[q]) then
       local xp=E.QuestXP(q,level)
+      if q==94 or q==248 then drops[1083]=nil end
+      if i.requiredLoot then drops[i.requiredLoot]=nil end
+      if q==1938 then drops[7266]=nil end
+      if q==95036 then for _, item in ipairs(bladeItems) do drops[item]=nil end end
+      if q==95042 and drops[6995] then drops[6995]=nil; drops[272448]=1 end
+      if i.deliveryItems then
+        for _, need in ipairs(i.deliveryItems) do drops[need.item] = drops[need.item] - need.count end
+      end
+      if i.riftTools then
+        drops[7292] = drops[7292] - 3; drops[7308] = drops[7308] - 1; drops[7247] = drops[7247] - 1
+      end
+      if i.farmMaterial then drops[i.farmMaterial.item]=drops[i.farmMaterial.item]-i.farmMaterial.count end
+      if i.supply then drops[i.supply.item] = drops[i.supply.item] - i.supply.count end
+      if q == 95126 then drops[268484] = 1 end
+      if q == 95140 then drops[268484] = nil end
+      if q==637 then drops[4432]=nil end
       if collect[q] then drops[collect[q]]=nil end
       for _,item in ipairs(picked[q] or {}) do drops[item]=nil end
       picked[q]=nil
