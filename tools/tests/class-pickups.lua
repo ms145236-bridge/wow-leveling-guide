@@ -80,6 +80,25 @@ for _, case in ipairs({ { "02-12", 15882, 1421, 29.56, 29.2 }, { "02-14", 15883,
   assert(state.na[i], case[1] .. "：沒接 30 不顯示")
 end
 
+
+-- 舊存檔：同站其他任務幾乎都交了、30 還在日誌但缺半片 → 撿墜飾仍是目前步驟，不被當成漏掉
+local function turnAllBut(station, keep)
+  for _, step in ipairs(E.byId[station].list) do
+    local q = step.s.q
+    if q and q ~= keep then env.turned[q] = true end
+  end
+end
+for _, case in ipairs({ { "02-12", 15882 }, { "02-14", 15883 } }) do
+  reset(27, { [30] = true })
+  turnAllBut(case[1], 30)
+  local state, i = pickOf(case[1], case[2])
+  assert(not state.done[i] and state.auto == i, case[1] .. "：其他任務已交、仍缺半片時，撿墜飾是目前步驟")
+  ns.db.skip[state.steps[i].key] = true
+  state, i = pickOf(case[1], case[2])
+  assert(state.done[i] and state.auto ~= i, case[1] .. "：手動略過照舊")
+  ns.db.skip[state.steps[i].key] = nil
+end
+
 -- ── 術士地獄獵犬 ──
 class, race, raceID = "WARLOCK", "Orc", 2
 E.Build()
@@ -109,6 +128,28 @@ reset(47, { [1805] = true })
 assert(not E.Applies(tn1805.when), "04-34：1805 未完成不催交")
 reset(47, { [1805] = true }, {}, { [1805] = true })
 assert(E.Applies(tn1805.when), "04-34：1805 可交")
+
+
+-- 第24站：已有手稿、缺書時不再指去千針石林；兩樣都在才輪到原生的「做」
+reset(39, { [1803] = true }, { [6997] = 1 })
+local state24, iPick = pickOf("03-24", 6997)
+assert(state24.done[iPick], "03-24：已有手稿，撿手稿算完成")
+local _, iDo, do1803 = find("03-24", function(s) return s.t == "do" and s.q == 1803 end)
+assert(not E.Applies(do1803.when), "03-24：缺書時不顯示千針石林的做")
+reset(39, { [1803] = true }, { [6997] = 1, [6931] = 1 })
+assert(E.Applies(do1803.when), "03-24：書和手稿都在才顯示")
+-- 第25站：缺書時給希爾斯布萊德撿書，已有就略過
+reset(41, { [1803] = true }, { [6997] = 1 })
+turnAllBut("03-25", 1803)
+ns.db.fpNodes["卡加斯"] = true -- 卡加斯的鳥點已開（第25站前半已走完）
+local state25, iBook = pickOf("03-25", 6931)
+assert(not state25.done[iBook] and state25.auto == iBook, "03-25：缺書時目前步驟是撿書")
+reset(41, { [1803] = true }, { [6997] = 1, [6931] = 1 })
+state25, iBook = pickOf("03-25", 6931)
+assert(state25.done[iBook], "03-25：已有書就略過")
+ns.db.fpNodes["卡加斯"] = nil
+local _, _, toWet = find("03-25", function(s) return s.t == "travel" and s.when and s.when.onQuestAny and s.when.onQuestAny[1] == 1805 and not s.x end)
+assert(toWet.text:find("還在卡加斯就從卡加斯起飛", 1, true), "03-25：去濕地的交通分清幽暗城與卡加斯出發")
 
 -- ── 盜賊 80411 ──
 class, race, raceID = "ROGUE", "Orc", 2

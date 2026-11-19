@@ -2,7 +2,7 @@ if UnitFactionGroup("player") == "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route/*.md
 local _, MG = ...
 MG.Route = {
-  built = "60b1305c",
+  built = "ccd49177",
   stations = {
     { id="01-1", start="Orc/Troll", name="試煉谷", short=nil, visit=nil, map=1411, lv={1, 6}, video="03:16", test=nil, alt=nil, when={race={"Orc", "Troll"}}, tips={{k="交通", text="跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克。", s={{"跨族起點由杜洛塔大道南行，從試煉谷東口進谷找卡爾圖克"}}}, {k="取捨", text="失而復得的武器（Wayward Weapons）、懶惰的苦工（Lazy Peons）和火刃洞穴兩件可以併成兩趟。", s={{"失而復得的武器（Wayward Weapons）、懶惰的苦工（Lazy Peons）和火刃洞穴兩件可以併成兩趟"}}}, {k="取捨", text="先完成邪靈劣魔的小鬼任務，再找同一位祖雷薩接燃刃勳章（Burning Blade Medallion）。", s={{"先完成邪靈劣魔的小鬼任務，再找同一位祖雷薩接燃刃勳章（Burning Blade Medallion）", {class={"WARLOCK"}}}}}, {k="提醒", text="不足 6 級就沿路打雜斑野豬、工蠍或邪靈劣魔，再前往森金村。", s={{"不足 6 級就沿路打雜斑野豬、工蠍或邪靈劣魔，再前往森金村"}}}}, dungeon=nil, grind={{mob="雜斑野豬", lv={1, 2}, map=1411, x=44.49, y=65.1, note="密集／一般怪／多為中立，可逐隻開怪／試煉谷北側空地，1-2 級接續小試身手"}, {mob="工蠍", lv={3, 3}, map=1411, x=41.37, y=63.37, note="密集／一般怪／多為中立，可逐隻開怪／大獸穴西北方，做工蠍的尾巴時順打"}, {mob="邪靈劣魔", lv={3, 4}, map=1411, x=44.24, y=55.26, note="密集／一般怪／洞口易多拉，先打外圍／火刃洞穴一帶，離谷前補到 6 級"}}, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="拉克", map=1411, x=40.48, y=67.82}, {k="食物飲料", npc="茲拉克", map=1411, x=42.64, y=67.19}, {k="彈藥", npc="多克納", map=1411, x=42.59, y=67.34, c={"WARRIOR", "HUNTER", "ROGUE"}}}, danger={{text="火刃洞穴轉角會疊到劣魔刷新點。拿鎬前先清入口，留出退路。", map=1411, x=44.24, y=55.26}},
       steps = {
@@ -3344,7 +3344,8 @@ MG.Route = {
         {t="do", q=4490, desc="先交所在地的導引，再向斯坦哈德接取。", hint="與棘齒城的斯坦哈德·法爾杉談一談，學習召喚地獄戰馬的能力。", map=1413, x=62.63, y=35.5, when={lvMin=40, class={"WARLOCK"}}},
         {t="turnin", q=4490, desc="先交所在地的導引，再向斯坦哈德接取。", npc="斯坦哈德·法爾杉", tgt="斯坦哈德·法爾杉", map=1413, x=62.63, y=35.5, when={lvMin=40, class={"WARLOCK"}}},
         {t="travel", opt=true, tag="可跳過", text="術士地獄獵犬：從棘齒城飛亂風崗，下台地到半人馬洞取破損的手稿。", when={lvMin=30, class={"WARLOCK"}, onQuestAny={1803}, missingBag={item=6997, count=1}}},
-        {t="do", q=1803, opt=true, desc="希爾斯布萊德西南岸拾書籍；千針石林南部半人馬洞裡拾手稿。", tag="可跳過", hint="在千針石林的半人馬洞裡撿破損的手稿；發黴的書籍已在希爾斯布萊德撿到。", map=1441, x=43.44, y=32.69, more={{1424, 27.7, 72.8}}, when={lvMin=30, class={"WARLOCK"}}},
+        {t="buy", opt=true, tag="可跳過", text="破損的手稿", item=6997, n=1, fq=1803, pick=true, map=1441, x=43.44, y=32.69, when={lvMin=30, class={"WARLOCK"}, onQuestAny={1803}}},
+        {t="do", q=1803, opt=true, desc="希爾斯布萊德西南岸拾書籍；千針石林南部半人馬洞裡拾手稿。", tag="可跳過", hint="在千針石林的半人馬洞裡撿破損的手稿；發黴的書籍已在希爾斯布萊德撿到。", map=1441, x=43.44, y=32.69, more={{1424, 27.7, 72.8}}, when={lvMin=30, class={"WARLOCK"}, bag={item=6997, count=1}, additionalBags={{item=6931, count=1}}}},
         {t="travel", text="往塔納利斯：剛在千針石林取完手稿的人，從亂風崗經閃光平原南坡走進塔納利斯，已開加基森就直接飛；仍在棘齒城就直飛加基森，加基森沒開就飛亂風崗再走閃光平原南坡。接回往大河林地的船。", when={lvMin=30, class={"WARLOCK"}}},
         {t="travel", tag="提醒：去大河林地前，可以先在拍賣場買（或請分身寄來）10 塊大塊野豬肉（收集白牙豬肉用）和 10 個重平衡石（第二步：更多石頭用）。", text="已開羅格瑪就從落錘鎮直飛。沒開就照多數玩家的走法搭船：落錘鎮飛幽暗城，到布瑞爾南方飛艇塔搭往奧格瑪的飛艇；在奧格瑪飛亂風崗，經閃光平原南坡進塔納利斯，到加基森先開點（已開加基森就直接飛）。人在卡林多就直接去塔納利斯。直飛抵達羅格瑪的，略過加基森和火線港的搭船步驟。"},
         {t="accept", q=95144, opt=true, desc="搭船才接，在加基森旅店接，到火線港交。", tag="可跳過", npc="旅店老闆菲茲格瑞博", tgt="旅店老闆菲茲格瑞博", map=1446, x=52.51, y=27.91},
@@ -3531,10 +3532,11 @@ MG.Route = {
         {t="accept", q=94971, desc="交 向丹妮莎報告 後接。若打算騎職業戰馬，先完成這條再決定是否要另外購買坐騎。", npc="丹妮莎‧莫爾", tgt="丹妮莎‧莫爾", map=1420, x=22.09, y=44.66, when={race={"Scourge"}, class={"PALADIN"}, lvMin=40}},
         {t="do", q=94971, desc="交 向丹妮莎報告 後接。若打算騎職業戰馬，先完成這條再決定是否要另外購買坐騎。", hint="與丹妮莎‧莫爾對話，完成召喚戰馬（Summon Warhorse）的職業訓練。", map=1420, x=22.09, y=44.66, when={race={"Scourge"}, class={"PALADIN"}, lvMin=40}},
         {t="turnin", q=94971, desc="交 向丹妮莎報告 後接。若打算騎職業戰馬，先完成這條再決定是否要另外購買坐騎。", npc="丹妮莎‧莫爾", tgt="丹妮莎‧莫爾", map=1420, x=22.09, y=44.66, when={race={"Scourge"}, class={"PALADIN"}, lvMin=40}},
-        {t="travel", opt=true, tag="可跳過", text="術士地獄獵犬：從卡加斯飛幽暗城交陰謀之書。", when={lvMin=30, class={"WARLOCK"}, onQuestAny={1803}, readyQuest=1803}},
+        {t="buy", opt=true, desc="術士地獄獵犬：書還沒撿到的，先從卡加斯飛塔倫米爾，往西南到希爾斯布萊德西南岸撿書，再照下一步飛幽暗城。", tag="可跳過", text="發黴的書籍", item=6931, n=1, fq=1803, pick=true, map=1424, x=27.78, y=72.79, when={lvMin=30, class={"WARLOCK"}, onQuestAny={1803}}},
+        {t="travel", opt=true, tag="可跳過", text="術士地獄獵犬：書和手稿都齊了，飛幽暗城交陰謀之書（從卡加斯或塔倫米爾起飛）。", when={lvMin=30, class={"WARLOCK"}, onQuestAny={1803}, readyQuest=1803}},
         {t="turnin", q=1803, opt=true, desc="希爾斯布萊德西南岸拾書籍；千針石林南部半人馬洞裡拾手稿。", tag="可跳過", npc="約拉·安尼森", tgt="約拉·安尼森", map=1458, x=75.92, y=37.89, when={lvMin=30, class={"WARLOCK"}, readyQuest=1803}},
         {t="accept", q=1805, opt=true, desc="在濕地擊殺龍喉骸骨守衛或龍喉暗影守衛，拿導能魔棒 ×3。書和魔棒帶回棘齒城。", tag="可跳過", npc="約拉·安尼森", tgt="約拉·安尼森", map=1458, x=75.92, y=37.89, when={lvMin=30, class={"WARLOCK"}}},
-        {t="travel", opt=true, tag="可跳過", text="術士地獄獵犬：從幽暗城飛落錘鎮，往南過索拉丁大橋進濕地，到東邊龍喉骸骨守衛出沒的山區打導能魔棒。", when={lvMin=30, class={"WARLOCK"}, onQuestAny={1805}}},
+        {t="travel", opt=true, tag="可跳過", text="術士地獄獵犬：飛落錘鎮（剛在幽暗城交完書就從幽暗城起飛，還在卡加斯就從卡加斯起飛），往南過索拉丁大橋進濕地，到東邊龍喉骸骨守衛出沒的山區打導能魔棒。", when={lvMin=30, class={"WARLOCK"}, onQuestAny={1805}}},
         {t="do", q=1805, opt=true, desc="在濕地擊殺龍喉骸骨守衛或龍喉暗影守衛，拿導能魔棒 ×3。書和魔棒帶回棘齒城。", tag="可跳過", hint="在濕地擊殺龍喉骸骨守衛或龍喉暗影守衛，拿導能魔棒 ×3；書和魔棒帶回棘齒城。", map=1437, x=49.63, y=46.43, more={{1437, 53.7, 54.36}}, when={lvMin=30, class={"WARLOCK"}}},
         {t="travel", opt=true, tag="可跳過", text="術士地獄獵犬：魔棒拿齊後回落錘鎮飛卡加斯，接回往荊棘谷的路。", map=1418, x=3.99, y=44.78, when={lvMin=30, class={"WARLOCK"}, onQuestAny={1805}}},
         {t="travel", text="已學騎術就從卡加斯出發往荊棘谷。尚未學時依種族前往騎術訓練師：不死族從卡加斯飛幽暗城，走到布瑞爾；獸人／食人妖飛格羅姆高，搭飛艇回奧格瑪（食人妖再到森金村）；牛頭人和部落天裔也照這樣到奧格瑪再飛雷霆崖，牛頭人下到血蹄村，部落天裔走到天空守望者高原碼頭搭割天者號。", video=true},
