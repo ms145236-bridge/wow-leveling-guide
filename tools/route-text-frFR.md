@@ -14511,3 +14511,4 @@
 06-路線外任務.md:658｜路線外理由｜聯盟任務，部落接不到。部落在黑澗深淵內直接向塞爾瑞德接「黑暗深淵中的邪惡」。｜Quête de l’Alliance ; la Horde ne peut pas la prendre. La Horde accepte « L'infamie de Brassenoire » auprès du Garde d’argent Thaelrid dans les profondeurs de Brassenoire.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Suis Tooga à pied.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜L’escorte de Tooga a échoué. Tu peux poursuivre la route principale. Pour réessayer, abandonne la quête et retrouve Tooga.
+06-路線外任務.md:1731｜路線外理由｜若本來就安排厄運之槌北區貢品，且克羅卡斯確實提供這個任務，才選接。跨翼取物與回報請依遊戲內任務日誌。｜Accepte cette quête seulement si tu as déjà prévu une tournée de tribut dans l’aile nord d’Hache-Tripes et que le capitaine Kromcrush te la propose. Suis le journal de quêtes en jeu pour récupérer l’objet et rendre la quête d’une aile à l’autre.

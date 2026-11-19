@@ -14242,3 +14242,4 @@
 06-路線外任務.md:658｜路線外理由｜聯盟任務，部落接不到。部落在黑澗深淵內直接向塞爾瑞德接「黑暗深淵中的邪惡」。｜Alliance quest; the Horde cannot take it. Horde players accept Blackfathom Villainy from Argent Guard Thaelrid inside Blackfathom Deeps.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Follow Tooga on foot.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜Tooga’s escort failed. Continue with the main route, or abandon the quest and find Tooga again if you want to retry.
+06-路線外任務.md:1731｜路線外理由｜若本來就安排厄運之槌北區貢品，且克羅卡斯確實提供這個任務，才選接。跨翼取物與回報請依遊戲內任務日誌。｜Only pick up this quest if you already plan to run Dire Maul North for tribute and Captain Kromcrush offers it. Follow the in-game quest log for collecting the item and turning it in across wings.

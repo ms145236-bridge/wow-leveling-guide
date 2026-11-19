@@ -14621,3 +14621,4 @@
 06-路線外任務.md:658｜路線外理由｜聯盟任務，部落接不到。部落在黑澗深淵內直接向塞爾瑞德接「黑暗深淵中的邪惡」。｜Missão da Aliança; a Horda não pode aceitá-la. A Horda aceita "Vilania das Profundezas" com Guarda Argênteo Thaelrid dentro das Profundezas Negras.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Siga Tooga a pé.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜A escolta de Tooga falhou. Você pode continuar pela rota principal. Para tentar de novo, abandone a missão e procure Tooga outra vez.
+06-路線外任務.md:1731｜路線外理由｜若本來就安排厄運之槌北區貢品，且克羅卡斯確實提供這個任務，才選接。跨翼取物與回報請依遊戲內任務日誌。｜Só aceite esta missão se já estiver planejando uma incursão de tributo na ala norte do Gládio Cruel e o capitão Kebrapaw a oferecer. Siga o registro de missões do jogo para pegar o item e entregar a missão entre as alas.

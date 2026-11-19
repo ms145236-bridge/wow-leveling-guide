@@ -14398,3 +14398,4 @@
 06-路線外任務.md:658｜路線外理由｜聯盟任務，部落接不到。部落在黑澗深淵內直接向塞爾瑞德接「黑暗深淵中的邪惡」。｜Allianz-Quest; die Horde kann sie nicht annehmen. Hordenspieler nehmen „Blackfathom-Schurkerei“ direkt in der Tiefschwarzen Grotte bei Argentumwache Thaelrid an.
 04-45到60級.md:264｜說明｜跟著圖加步行。｜Folge Tooga zu Fuß.
 04-45到60級.md:266｜說明｜圖加護送失敗。可以繼續主線；想重試再放棄任務並找圖加。｜Toogas Eskorte ist fehlgeschlagen. Du kannst der Hauptroute folgen. Für einen neuen Versuch brich die Quest ab und suche Tooga erneut.
+06-路線外任務.md:1731｜路線外理由｜若本來就安排厄運之槌北區貢品，且克羅卡斯確實提供這個任務，才選接。跨翼取物與回報請依遊戲內任務日誌。｜Nimm die Quest nur an, wenn ohnehin ein Tributlauf im Nordflügel von Düsterbruch geplant ist und Captain Kromcrush sie dir anbietet. Folge beim Sammeln und Abgeben über die Flügel hinweg deinem Questlog im Spiel.
