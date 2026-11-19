@@ -123,6 +123,9 @@ local questSt = {} -- 任務 → 有它步驟的站（主線站與副本，Build
 local anyQ = {} -- 任一組（s.any）裡的任務：沒接的不算站的進度（Build 時建）
 local dunQ = {} -- 副本站裡有步驟的任務（副本前置、副本任務；Build 時建）
 local mainKeyLast = {} -- 主線步驟鍵 → 最後出現的站序（Build 時建）
+local mainKeyAt = {} -- 主線步驟鍵 → 出現的 { 站序, 步驟 }（Build 時建）
+local mainTurnin = {} -- 任務 → 主線上第一個交它的站（Build 時建）
+local preTurnin = {} -- 排副本前置時：任務 → 這本前置裡交它的步驟
 E.QUEST, E.SOFT = QUEST, SOFT
 
 -- 鳥點名 → 該鳥點的地圖與座標（搭船、飛行的目的地判斷用）
@@ -416,7 +419,7 @@ function E.Build()
   me.sky = (me.race and me.race:find("Sky") or me.raceL and me.raceL:find("天裔", 1, true)) and true or false
   if me.sky then me.bit = UnitFactionGroup("player") == "Alliance" and 33 or 34 end
   me.class = select(2, UnitClass("player"))
-  wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt); wipe(localVisitFrom); wipe(dunQ); wipe(mainKeyLast); wipe(anyQ)
+  wipe(E.stations); wipe(E.byId); wipe(E.dungeons); wipe(questSt); wipe(localVisitFrom); wipe(dunQ); wipe(mainKeyLast); wipe(mainKeyAt); wipe(mainTurnin); wipe(anyQ)
   local startKey = E.StartKey()
   wipe(me.originRaces)
   for race in (startKey or ""):gmatch("[^/]+") do me.originRaces[race] = true end
@@ -524,7 +527,12 @@ function E.Build()
       else
         st.index = #E.stations + 1
         E.stations[st.index] = st
-        for _, w in ipairs(st.list) do mainKeyLast[w.key] = st.index end
+        for _, w in ipairs(st.list) do
+          mainKeyLast[w.key] = st.index
+          mainKeyAt[w.key] = mainKeyAt[w.key] or {}
+          table.insert(mainKeyAt[w.key], { st.index, w.s })
+          if w.s.t == "turnin" and w.s.q and not mainTurnin[w.s.q] then mainTurnin[w.s.q] = st end
+        end
         for _, w in ipairs(st.list) do
           local s = w.s
           if s.q and s.opt and s.when and s.when.localVisit and not localVisitFrom[s.q] then
@@ -1089,28 +1097,8 @@ local function stepsOf(st)
   local list = st.list
   local cut = #list
   while cut > 0 and SOFT[list[cut].s.t] do cut = cut - 1 end
-  -- 副本前置排在本站同一張地圖上最近的那個主線步驟後面（本角色會走到的才算）；本站不到那張地圖的不排，留在副本頁進本前再接。
-  -- 同一個副本的前置不往回排；前置鏈（接／做／交）有一步排不進來就整件不排
-  local place, drop = {}, {}
-  local last, lastD = 1, nil
-  for k, step in ipairs(pre or {}) do
-    local s = step.s
-    if step.dungeon ~= lastD then last, lastD = 1, step.dungeon end
-    local best, bd
-    for i = last, s.x and cut or 0 do
-      local m = list[i].s
-      if m.x and m.map == s.map and E.Applies(m.when) and not optOut(m) then
-        local d = (m.x - s.x) ^ 2 + (m.y - s.y) ^ 2
-        if (CITY[s.map] or d <= 225) and (not bd or d <= bd) then best, bd = i, d end -- 野外超過 15 格不算順路；主城內不限
-      end
-    end
-    if best then last, place[k] = best, best elseif s.q and s.tag == "副本前置鏈" then drop[s.q] = true end
-  end
   local after = {}
-  for k, step in ipairs(pre or {}) do
-    local i = place[k]
-    if i and not (step.s.tag == "副本前置鏈" and drop[step.s.q]) then after[i] = after[i] or {}; after[i][#after[i] + 1] = step end
-  end
+  for _, step in ipairs(pre or {}) do after[step.at] = after[step.at] or {}; table.insert(after[step.at], step) end
   for i = 1, cut do
     out[#out + 1] = list[i]
     for _, step in ipairs(after[i] or {}) do out[#out + 1] = step end
@@ -2420,23 +2408,116 @@ function E.DungeonStatus(d)
   return L["前置 "] .. tg .. "/" .. tt, "chain"
 end
 
--- 插進主線站的副本前置步驟
+-- 插進主線站的副本前置步驟。從接取錨點站（pickAt）到副本插入站（after），每一步排進第一個順路的主線站：
+-- 排在那站同一張地圖上最近的主線步驟後面（本角色會走到的才算；野外 15 格內，主城不限）。都不順路的留在副本頁進本前再接。
+-- 同一件任務的步驟不往回排；接取排在它的前置任務交了之後（主線或副本前置裡的「交」）；前置鏈有一步排不進來，整件不在那站排。
+-- hold：不插的步驟（主線進本前本來就會帶的、要打精英的「做」），同一件任務後面的步驟也等它；early：主線在接取錨點站之前已帶過的步驟，排不進來不擋後面。回傳本站要插的步驟，at＝排在本站第幾步之後
+local function placePre(st, pre, gone, hold, early)
+  local list = st.list
+  local cut = #list
+  while cut > 0 and SOFT[list[cut].s.t] do cut = cut - 1 end
+  local placed, drop = {}, {}
+  local lastQ, wait, here, noDo = {}, {}, {}, {}
+  for k, step in ipairs(pre) do
+    local s = step.s
+    local q = s.q
+    local first = q and lastQ[q] or 1
+    local blocked = (q and (wait[q] or (noDo[q] and not (s.when and s.when.bag)))) or hold[step]
+    local gate -- 前置在本站交的那一步：它的條件（例如身上有物品）這時不一定成立，照樣可以排在它後面
+    if s.t == "accept" and q and not blocked then
+      local info = R.quests[q] or {}
+      for _, list2 in ipairs({info.ps or {}, info.pg or {}}) do
+        for _, p in ipairs(list2) do
+          local main, prep = mainTurnin[p], preTurnin[p]
+          if prep and here[prep] then first = math.max(first, here[prep])
+          elseif (prep and gone[prep] and gone[prep] ~= st) or (main and main.index < st.index) then -- 前面的站已交
+          elseif main == st or (prep and gone[prep] == st) then -- 本站主線交：排在交的那步後面
+            for i = 1, cut do if list[i].s.t == "turnin" and list[i].s.q == p and i > first then first, gate = i, i end end
+          elseif main or prep then blocked = true -- 之後的站才交
+          end
+        end
+      end
+    end
+    local best, bd
+    for i = first, (s.x and not blocked and not (early[step] and s.t == "do")) and cut or 0 do -- 主線之前已交的任務，「做」不再補插
+      local m = list[i].s
+      if m.x and m.map == s.map and (i == gate or (E.Applies(m.when) and not optOut(m))) then
+        local d = (m.x - s.x) ^ 2 + (m.y - s.y) ^ 2
+        if (CITY[s.map] or d <= 225) and (not bd or d <= bd) then best, bd = i, d end -- 野外超過 15 格不算順路；主城內不限
+      end
+    end
+    if best then
+      placed[k], here[step] = best, best
+      if q then lastQ[q] = best end
+    elseif q then
+      if (s.x or hold[step]) and not early[step] then wait[q] = true -- 有座標卻排不進來：這件後面的步驟也等之後的站
+      elseif s.t == "do" and not early[step] then noDo[q] = true end -- 「做」沒座標（在別處做）：只排得進「身上有材料才顯示」的交
+      if s.tag == "副本前置鏈" then drop[q] = true end
+    end
+  end
+  return placed, drop
+end
 function dungeonPreSteps(st)
-  if not MG.UI.Get("dPre") then return nil end
+  if not MG.UI.Get("dPre") or not st.index then return nil end
   local out
   local lv = UnitLevel("player") or 1
-  local have = {}
-  for _, step in ipairs(st.list) do have[step.key] = true end -- 主線本來就有的步驟不重複插
   local room
   for _, d in ipairs(E.dungeons) do
-    if d.pickAt == st.id and not MG.db.dNo[d.id] then
-      if room == nil then room = E.PreRoom(st) end
+    local from, to = d.pickAt and E.byId[d.pickAt], d.after and E.byId[d.after]
+    from = (from and from.index) or (to and to.index) -- 接取錨點站不在本角色路線上（別的種族的新手區）：只排插入站
+    local last = from and math.max(from, to and to.index or from)
+    if from and st.index >= from and st.index <= last and not MG.db.dNo[d.id] then
+      local seen, pre = {}, {}
       for _, step in ipairs(d.list) do
         local s = step.s
-        if s.ph == "pre" and s.t ~= "travel" and s.t ~= "need" and not have[step.key] and (not s.pickLv or lv >= s.pickLv) then
-          have[step.key] = true
-          out = out or {}
-          out[#out + 1] = { s = s, key = step.key, st = d, dungeon = d, defer = not room and s.t == "accept" and not C.IsOnQuest(s.q) and not turned(s.q) or nil }
+        if s.ph == "pre" and s.t ~= "travel" and s.t ~= "need" and not seen[step.key] and (not s.pickLv or lv >= s.pickLv) then
+          seen[step.key] = true
+          pre[#pre + 1] = step
+        end
+      end
+      preTurnin = {}
+      for _, step in ipairs(pre) do if step.s.t == "turnin" and step.s.q then preTurnin[step.s.q] = step end end
+      local gone = {} -- 已排進前面站（或那站主線本來就有）的步驟 → 站
+      -- mainAt：本角色主線第一次帶到這步的站序（不適用的、沒開可跳過的不算）。「做」看主線交這件的站：主線進本前會交，做也由主線帶
+      -- group：要打精英的「做」，留給有隊伍的人進本前做
+      local mainAt, group = {}, {}
+      for _, step in ipairs(pre) do
+        local s = step.s
+        if s.t == "do" then
+          for _, m in ipairs((R.quests[s.q or 0] or {}).mob or {}) do if m[4] == 1 then group[step] = true end end
+        end
+        for _, key in ipairs(s.t == "do" and s.q and { step.key, "t:" .. s.q } or { step.key }) do
+          for _, at in ipairs(mainKeyAt[key] or {}) do
+            if E.Applies(at[2].when) and not optOut(at[2]) then
+              if key == step.key or at[1] >= from then mainAt[step] = math.min(mainAt[step] or at[1], at[1]) end
+              break
+            end
+          end
+        end
+      end
+      for i = from, st.index do
+        local station = E.stations[i]
+        local have, left, hold, early = {}, {}, {}, {}
+        for _, step in ipairs(station.list) do have[step.key] = true end -- 主線本來就有的步驟不重複插
+        for _, step in ipairs(pre) do
+          if not gone[step] and have[step.key] then gone[step] = station
+          elseif not gone[step] then
+            left[#left + 1] = step
+            if (mainAt[step] or from) < from then early[step] = true -- 接取錨點站之前主線已帶過：排得進來照樣排（給當時沒做的人），排不進來也不擋同一件後面的步驟
+            elseif group[step] or (mainAt[step] or math.huge) <= last then hold[step] = true end -- 進本前主線本來就會帶，不提早插
+          end
+        end
+        local placed, drop = placePre(station, left, gone, hold, early)
+        for k, step in ipairs(left) do
+          if placed[k] and not (step.s.tag == "副本前置鏈" and drop[step.s.q]) then
+            gone[step] = station
+            if i == st.index then
+              local s = step.s
+              if room == nil then room = E.PreRoom(st) end
+              out = out or {}
+              out[#out + 1] = { s = s, key = step.key, st = d, dungeon = d, at = placed[k], defer = not room and s.t == "accept" and not C.IsOnQuest(s.q) and not turned(s.q) or nil }
+            end
+          end
         end
       end
     end
