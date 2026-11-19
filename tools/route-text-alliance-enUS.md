@@ -1438,3 +1438,15 @@
 06-路線外任務.md:1704｜說明｜48 級起，原定跟隊去黑鐵酒吧且順訪燃燒平原烈焰峰時，可向尤卡接取。和雷布里交談後擊敗他，拾取首級。持首級且日誌可交時，下次順訪烈焰峰向尤卡回報。｜At level 48 or higher, accept from Yuka when passing through Flame Crest in the Burning Steppes if your group plans to visit the Grim Guzzler. Speak to Ribbly, defeat him, and loot his head. Once you have the head and the quest log says it is ready, turn in to Yuka on your next visit to Flame Crest.
 04-45到60級.md:264｜說明｜禿鷲或蜥蜴被搶時，留下沒做完的 2601 或 2603，照原路往北去悲傷沼澤。｜If the vultures or basilisks are heavily contested, leave 2601 or 2603 unfinished and head north to Swamp of Sorrows as planned.
 04-45到60級.md:294｜說明｜還不到 49 級，就到普巴爾公主那座小島打藍鬃猩猩、叢林獵豹補到 49。｜If you're not level 49 yet, go to Princess Poobah's island and kill Skymane Gorillas and Jaguero Stalkers until 49.
+03-30到45級.md:364｜說明｜帶到淒涼之地尼耶爾前哨站交。｜Take it to Nijel's Point in Desolace.
+03-30到45級.md:472｜說明｜沿北邊大路往西，箱子在路邊翻倒的馬車旁。｜Follow the northern road west; the chest is beside the overturned wagon by the road.
+03-30到45級.md:479｜說明｜沿北邊大路往西到艾瑟雷索塔，再下坡到西岸的沉船，最後往東回雷斧堡壘。｜Follow the northern road west to Ethel Rethor, go down to the shipwreck on the west coast, then head back east to Thunder Axe Fortress.
+03-30到45級.md:492｜說明｜從尼耶爾前哨站沿東邊大路往南，到科卡爾半人馬的山谷。｜From Nijel's Point, follow the eastern road south to the Kolkar centaur valley.
+03-30到45級.md:502｜說明｜從科多獸墳場沿大路往南到白骨之地，大路東邊的瑪諾洛克集會所是一群惡魔，不要靠近。｜From the Kodo Graveyard, follow the road south to the Valley of Bones. The demon camp east of the road is Mannoroc Coven; keep away from it.
+03-30到45級.md:512｜說明｜沿北邊大路往西回艾瑟雷索塔交聖光節杖，再往北到海岸打滑刃納迦。｜Follow the northern road back west to Ethel Rethor to turn in the Sceptre of Light, then go north to the coast and kill Slitherblade naga.
+03-30到45級.md:516｜說明｜背包留到荒蕪之地之後回鐵爐堡交。｜Keep the satchel and turn it in at Ironforge after the Badlands.
+03-30到45級.md:519｜說明｜1440 回覆瓦拉里爾要護送黛琳達穿過堡壘門口的伏兵，上古之書 6027、尋物公司 1466 要打精英或成群惡魔，單人都不接。｜1440 needs you to escort Dalinda through the ambush at the fortress gate, and 6027 and 1466 need elites or packs of demons, so skip them solo.
+03-30到45級.md:522｜說明｜東邊山谷，做懸賞時順便補。｜East valley; top up while doing the bounty.
+03-30到45級.md:523｜說明｜雷斧堡壘外圍，普通怪。｜Outside Thunder Axe Fortress; normal mobs.
+03-30到45級.md:1459｜說明｜風之圖騰在淒涼之地的瑪洛迪半人馬身上，淒涼之地已經走過，要另外跑一趟；水之圖騰在塵泥沼澤北邊的黑鰭魚人、火焰圖騰在荒蕪之地的石窟食人魔、大地圖騰在悲傷沼澤的失落者身上，經過時順手收。｜The Wind Totem comes from the Maraudine centaurs in Desolace; you have already been through Desolace, so it takes a separate trip. The Water Totem comes from the Mirefin murlocs in northern Dustwallow Marsh, the Fire Totem from the Stonevault troggs in the Badlands, and the Earth Totem from the Lost Ones in the Swamp of Sorrows. Collect them as you pass through.
+03-30到45級.md:1459｜說明｜風之圖騰在淒涼之地的瑪洛迪半人馬身上，淒涼之地已經走過，要另外跑一趟｜The Wind Totem comes from the Maraudine centaurs in Desolace; you have already been through Desolace, so it takes a separate trip

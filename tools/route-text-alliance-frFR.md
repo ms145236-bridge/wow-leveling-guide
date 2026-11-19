@@ -1438,3 +1438,15 @@
 06-路線外任務.md:1704｜說明｜48 級起，原定跟隊去黑鐵酒吧且順訪燃燒平原烈焰峰時，可向尤卡接取。和雷布里交談後擊敗他，拾取首級。持首級且日誌可交時，下次順訪烈焰峰向尤卡回報。｜À partir du niveau 48, acceptez la quête de Yuka si vous passez par la Crête de Feu dans les Steppes ardentes et que votre groupe prévoit le Sinistre écluseur. Parlez à Ribbly, battez-le et récupérez sa tête. Si vous avez la tête et que le journal indique que la quête est prête, rendez-la à Yuka au prochain passage.
 04-45到60級.md:264｜說明｜禿鷲或蜥蜴被搶時，留下沒做完的 2601 或 2603，照原路往北去悲傷沼澤。｜Si les vautours ou les basilics sont très disputés, laisse 2601 ou 2603 inachevée et continue comme prévu vers le nord jusqu'au Marais des Chagrins.
 04-45到60級.md:294｜說明｜還不到 49 級，就到普巴爾公主那座小島打藍鬃猩猩、叢林獵豹補到 49。｜Si tu n'es pas encore niveau 49, va sur l'île de la princesse Poobah et monte au niveau 49 en tuant des Gorilles Crins-de-ciel et des Traqueurs jagueros.
+03-30到45級.md:364｜說明｜帶到淒涼之地尼耶爾前哨站交。｜Apporte-la à la Pointe de Nijel, en Désolace.
+03-30到45級.md:472｜說明｜沿北邊大路往西，箱子在路邊翻倒的馬車旁。｜Suis la route du nord vers l'ouest ; le coffre est à côté du chariot renversé au bord de la route.
+03-30到45級.md:479｜說明｜沿北邊大路往西到艾瑟雷索塔，再下坡到西岸的沉船，最後往東回雷斧堡壘。｜Suis la route du nord vers l'ouest jusqu'à Ethel Rethor, descends à l'épave sur la côte ouest, puis reviens vers l'est à la forteresse de Hache-tonnerre.
+03-30到45級.md:492｜說明｜從尼耶爾前哨站沿東邊大路往南，到科卡爾半人馬的山谷。｜Depuis la Pointe de Nijel, suis la route de l'est vers le sud jusqu'à la vallée des centaures Kolkar.
+03-30到45級.md:502｜說明｜從科多獸墳場沿大路往南到白骨之地，大路東邊的瑪諾洛克集會所是一群惡魔，不要靠近。｜Depuis le Cimetière des kodos, suis la route vers le sud jusqu'à la Vallée des Ossements. Le camp de démons à l'est de la route est le Convent de Mannoroc : reste à distance.
+03-30到45級.md:512｜說明｜沿北邊大路往西回艾瑟雷索塔交聖光節杖，再往北到海岸打滑刃納迦。｜Reprends la route du nord vers l'ouest jusqu'à Ethel Rethor pour rendre le Sceptre de lumière, puis monte au nord sur la côte tuer des nagas Ondulame.
+03-30到45級.md:516｜說明｜背包留到荒蕪之地之後回鐵爐堡交。｜Garde la besace et rends-la à Forgefer après les Terres ingrates.
+03-30到45級.md:519｜說明｜1440 回覆瓦拉里爾要護送黛琳達穿過堡壘門口的伏兵，上古之書 6027、尋物公司 1466 要打精英或成群惡魔，單人都不接。｜1440 demande d'escorter Dalinda à travers l'embuscade de la porte de la forteresse, et 6027 et 1466 demandent des élites ou des groupes de démons : en solo, ne les prends pas.
+03-30到45級.md:522｜說明｜東邊山谷，做懸賞時順便補。｜Vallée de l'est ; complète en faisant la prime.
+03-30到45級.md:523｜說明｜雷斧堡壘外圍，普通怪。｜Aux abords de la forteresse de Hache-tonnerre ; monstres normaux.
+03-30到45級.md:1459｜說明｜風之圖騰在淒涼之地的瑪洛迪半人馬身上，淒涼之地已經走過，要另外跑一趟；水之圖騰在塵泥沼澤北邊的黑鰭魚人、火焰圖騰在荒蕪之地的石窟食人魔、大地圖騰在悲傷沼澤的失落者身上，經過時順手收。｜Le totem d'air est sur les centaures maraudines de Désolace ; tu as déjà quitté Désolace, il faut donc y retourner exprès. Le totem d'eau sur les murlocs Aileron boueux du nord du Marécage d'Âprefange, le totem de feu sur les troggs Cavepierre des Terres ingrates et le totem de terre sur les Perdus du Marais des Chagrins : ramasse-les au passage.
+03-30到45級.md:1459｜說明｜風之圖騰在淒涼之地的瑪洛迪半人馬身上，淒涼之地已經走過，要另外跑一趟｜Le totem d'air est sur les centaures maraudines de Désolace ; tu as déjà quitté Désolace, il faut donc y retourner exprès

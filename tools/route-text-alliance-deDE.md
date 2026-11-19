@@ -1438,3 +1438,15 @@
 06-路線外任務.md:1704｜說明｜48 級起，原定跟隊去黑鐵酒吧且順訪燃燒平原烈焰峰時，可向尤卡接取。和雷布里交談後擊敗他，拾取首級。持首級且日誌可交時，下次順訪烈焰峰向尤卡回報。｜Ab Stufe 48 kannst du die Quest bei Yuka an der Flammenkuppe in der Brennenden Steppe annehmen, wenn deine Gruppe den Grimmigen Säufer einplant. Sprich mit Ribbly, besiege ihn und plündere seinen Kopf. Hast du den Kopf und ist die Quest laut Questlog abgabebereit, gib sie beim nächsten Besuch bei Yuka ab.
 04-45到60級.md:264｜說明｜禿鷲或蜥蜴被搶時，留下沒做完的 2601 或 2603，照原路往北去悲傷沼澤。｜Sind Geier oder Basilisken stark umkämpft, lass 2601 oder 2603 unvollendet und geh wie geplant nach Norden in die Sümpfe des Elends.
 04-45到60級.md:294｜說明｜還不到 49 級，就到普巴爾公主那座小島打藍鬃猩猩、叢林獵豹補到 49。｜Hast du noch nicht Stufe 49, geh auf die Insel von Prinzessin Poobah und farme Blaumähnengorillas und Jagueropirscher bis Stufe 49.
+03-30到45級.md:364｜說明｜帶到淒涼之地尼耶爾前哨站交。｜Bring sie zur Nijelspitze in Desolace.
+03-30到45級.md:472｜說明｜沿北邊大路往西，箱子在路邊翻倒的馬車旁。｜Folge der nördlichen Straße nach Westen; die Truhe steht neben dem umgekippten Wagen am Straßenrand.
+03-30到45級.md:479｜說明｜沿北邊大路往西到艾瑟雷索塔，再下坡到西岸的沉船，最後往東回雷斧堡壘。｜Folge der nördlichen Straße nach Westen bis Ethel Rethor, geh hinunter zum Schiffswrack an der Westküste und dann zurück nach Osten zur Festung Donneraxt.
+03-30到45級.md:492｜說明｜從尼耶爾前哨站沿東邊大路往南，到科卡爾半人馬的山谷。｜Folge von der Nijelspitze der östlichen Straße nach Süden ins Tal der Kolkar-Zentauren.
+03-30到45級.md:502｜說明｜從科多獸墳場沿大路往南到白骨之地，大路東邊的瑪諾洛克集會所是一群惡魔，不要靠近。｜Folge vom Kodofriedhof der Straße nach Süden ins Tal der Knochen. Das Dämonenlager östlich der Straße ist Mannorocs Zirkel; halte Abstand.
+03-30到45級.md:512｜說明｜沿北邊大路往西回艾瑟雷索塔交聖光節杖，再往北到海岸打滑刃納迦。｜Folge der nördlichen Straße zurück nach Westen bis Ethel Rethor, gib das Zepter des Lichts ab und geh dann nach Norden an die Küste zu den Schlangenzungen-Naga.
+03-30到45級.md:516｜說明｜背包留到荒蕪之地之後回鐵爐堡交。｜Behalte die Tasche und gib sie nach dem Ödland in Eisenschmiede ab.
+03-30到45級.md:519｜說明｜1440 回覆瓦拉里爾要護送黛琳達穿過堡壘門口的伏兵，上古之書 6027、尋物公司 1466 要打精英或成群惡魔，單人都不接。｜Für 1440 musst du Dalinda durch den Hinterhalt am Festungstor eskortieren, 6027 und 1466 brauchen Elitegegner oder Dämonengruppen; allein nimmst du sie nicht an.
+03-30到45級.md:522｜說明｜東邊山谷，做懸賞時順便補。｜Östliches Tal; nebenbei beim Kopfgeld auffüllen.
+03-30到45級.md:523｜說明｜雷斧堡壘外圍，普通怪。｜Vor der Festung Donneraxt; normale Gegner.
+03-30到45級.md:1459｜說明｜風之圖騰在淒涼之地的瑪洛迪半人馬身上，淒涼之地已經走過，要另外跑一趟；水之圖騰在塵泥沼澤北邊的黑鰭魚人、火焰圖騰在荒蕪之地的石窟食人魔、大地圖騰在悲傷沼澤的失落者身上，經過時順手收。｜Das Lufttotem droppt von den Zentauren der Maraudine in Desolace; Desolace liegt schon hinter dir, dafür brauchst du einen eigenen Abstecher. Das Wassertotem droppt von den Murlocs der Schlammflossen im Norden der Marschen von Dustwallow, das Feuertotem von den Steingrufttroggs im Ödland und das Erdtotem von den Verirrten in den Sümpfen des Elends; sammle sie ein, wenn du dort vorbeikommst.
+03-30到45級.md:1459｜說明｜風之圖騰在淒涼之地的瑪洛迪半人馬身上，淒涼之地已經走過，要另外跑一趟｜Das Lufttotem droppt von den Zentauren der Maraudine in Desolace; Desolace liegt schon hinter dir, dafür brauchst du einen eigenen Abstecher

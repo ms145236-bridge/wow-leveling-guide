@@ -1438,3 +1438,15 @@
 06-路線外任務.md:1704｜說明｜48 級起，原定跟隊去黑鐵酒吧且順訪燃燒平原烈焰峰時，可向尤卡接取。和雷布里交談後擊敗他，拾取首級。持首級且日誌可交時，下次順訪烈焰峰向尤卡回報。｜Desde el nivel 48, acepta la misión de Yuka al pasar por Peñasco Llamarada, en Las Estepas Ardientes, si tu grupo planea ir al Tragapenas. Habla con Ribbly, derrótalo y recoge su cabeza. Cuando la tengas y el registro indique que puedes entregar la misión, vuelve con Yuka en tu próxima visita.
 04-45到60級.md:264｜說明｜禿鷲或蜥蜴被搶時，留下沒做完的 2601 或 2603，照原路往北去悲傷沼澤。｜Si hay mucha competencia por los buitres o los basiliscos, deja sin terminar 2601 o 2603 y sigue al norte hacia el Pantano de las Penas, como estaba previsto.
 04-45到60級.md:294｜說明｜還不到 49 級，就到普巴爾公主那座小島打藍鬃猩猩、叢林獵豹補到 49。｜Si aún no eres nivel 49, ve a la isla de la princesa Poobah y sube al 49 matando Gorilas Cieloleno y Acechadores Jaguero.
+03-30到45級.md:364｜說明｜帶到淒涼之地尼耶爾前哨站交。｜Llévala a Punta de Nijel, en Desolace.
+03-30到45級.md:472｜說明｜沿北邊大路往西，箱子在路邊翻倒的馬車旁。｜Sigue el camino del norte hacia el oeste; el cofre está junto a la carreta volcada a la orilla del camino.
+03-30到45級.md:479｜說明｜沿北邊大路往西到艾瑟雷索塔，再下坡到西岸的沉船，最後往東回雷斧堡壘。｜Sigue el camino del norte hacia el oeste hasta Ethel Rethor, baja al naufragio de la costa oeste y regresa al este a la Fortaleza Hacha de Trueno.
+03-30到45級.md:492｜說明｜從尼耶爾前哨站沿東邊大路往南，到科卡爾半人馬的山谷。｜Desde Punta de Nijel, sigue el camino del este hacia el sur hasta el valle de los centauros Kolkar.
+03-30到45級.md:502｜說明｜從科多獸墳場沿大路往南到白骨之地，大路東邊的瑪諾洛克集會所是一群惡魔，不要靠近。｜Desde el Cementerio de Kodos, sigue el camino hacia el sur hasta el Valle de los Huesos. El campamento de demonios al este del camino es el Aquelarre Mannoroc; no te acerques.
+03-30到45級.md:512｜說明｜沿北邊大路往西回艾瑟雷索塔交聖光節杖，再往北到海岸打滑刃納迦。｜Regresa al oeste por el camino del norte hasta Ethel Rethor para entregar el Cetro de Luz y luego ve al norte a la costa a matar nagas Filozante.
+03-30到45級.md:516｜說明｜背包留到荒蕪之地之後回鐵爐堡交。｜Guarda la bolsa y entrégala en Forjaz después de las Tierras Inhóspitas.
+03-30到45級.md:519｜說明｜1440 回覆瓦拉里爾要護送黛琳達穿過堡壘門口的伏兵，上古之書 6027、尋物公司 1466 要打精英或成群惡魔，單人都不接。｜1440 pide escoltar a Dalinda a través de la emboscada de la puerta de la fortaleza, y 6027 y 1466 piden élites o grupos de demonios; si vas solo, no las aceptes.
+03-30到45級.md:522｜說明｜東邊山谷，做懸賞時順便補。｜Valle del este; sube de nivel mientras haces la recompensa.
+03-30到45級.md:523｜說明｜雷斧堡壘外圍，普通怪。｜Afuera de la Fortaleza Hacha de Trueno; enemigos normales.
+03-30到45級.md:1459｜說明｜風之圖騰在淒涼之地的瑪洛迪半人馬身上，淒涼之地已經走過，要另外跑一趟；水之圖騰在塵泥沼澤北邊的黑鰭魚人、火焰圖騰在荒蕪之地的石窟食人魔、大地圖騰在悲傷沼澤的失落者身上，經過時順手收。｜El tótem de aire lo sueltan los centauros Maraudine de Desolace; ya pasaste por Desolace, así que hace falta un viaje aparte. El tótem de agua, los múrlocs Ancalodo del norte de Marjal Revolcafango; el tótem de fuego, los troggs Grutacanto de las Tierras Inhóspitas; y el tótem de tierra, los Perdidos del Pantano de las Penas. Recógelos de paso cuando andes por ahí.
+03-30到45級.md:1459｜說明｜風之圖騰在淒涼之地的瑪洛迪半人馬身上，淒涼之地已經走過，要另外跑一趟｜El tótem de aire lo sueltan los centauros Maraudine de Desolace; ya pasaste por Desolace, así que hace falta un viaje aparte

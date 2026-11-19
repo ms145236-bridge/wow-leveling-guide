@@ -1438,3 +1438,15 @@
 06-路線外任務.md:1704｜說明｜48 級起，原定跟隊去黑鐵酒吧且順訪燃燒平原烈焰峰時，可向尤卡接取。和雷布里交談後擊敗他，拾取首級。持首級且日誌可交時，下次順訪烈焰峰向尤卡回報。｜A partir do nível 48, aceite a missão de Yuka ao passar pela Cornija Flamejante nas Estepes Ardentes se o grupo planeja visitar o Glutão Implacável. Fale com Ribbly, derrote-o e pegue a cabeça. Com a cabeça e a missão pronta no registro, entregue a Yuka na próxima visita.
 04-45到60級.md:264｜說明｜禿鷲或蜥蜴被搶時，留下沒做完的 2601 或 2603，照原路往北去悲傷沼澤。｜Se houver muita disputa pelos urubus ou pelos basiliscos, deixe 2601 ou 2603 inacabada e siga para o norte até o Pântano das Mágoas, como planejado.
 04-45到60級.md:294｜說明｜還不到 49 級，就到普巴爾公主那座小島打藍鬃猩猩、叢林獵豹補到 49。｜Se ainda não estiver no nível 49, vá para a ilha da Princesa Poobah e mate Gorilas Grenhacéu e Jaguero Stalkers até o 49.
+03-30到45級.md:364｜說明｜帶到淒涼之地尼耶爾前哨站交。｜Leve até a Ponta de Nijel, em Desolação.
+03-30到45級.md:472｜說明｜沿北邊大路往西，箱子在路邊翻倒的馬車旁。｜Siga a estrada do norte para o oeste; o baú fica ao lado da carroça tombada na beira da estrada.
+03-30到45級.md:479｜說明｜沿北邊大路往西到艾瑟雷索塔，再下坡到西岸的沉船，最後往東回雷斧堡壘。｜Siga a estrada do norte para o oeste até Ethel Rethor, desça até o naufrágio na costa oeste e volte para o leste até a Fortaleza Machado do Trovão.
+03-30到45級.md:492｜說明｜從尼耶爾前哨站沿東邊大路往南，到科卡爾半人馬的山谷。｜Da Ponta de Nijel, siga a estrada do leste para o sul até o vale dos centauros Kolkar.
+03-30到45級.md:502｜說明｜從科多獸墳場沿大路往南到白骨之地，大路東邊的瑪諾洛克集會所是一群惡魔，不要靠近。｜Do Cemitério de Kodos, siga a estrada para o sul até o Vale dos Ossos. O acampamento de demônios a leste da estrada é o Conciliábulo de Mannoroc; fique longe dele.
+03-30到45級.md:512｜說明｜沿北邊大路往西回艾瑟雷索塔交聖光節杖，再往北到海岸打滑刃納迦。｜Volte para o oeste pela estrada do norte até Ethel Rethor para entregar o Cetro da Luz e depois siga para o norte até a costa para matar nagas Lâmina Sinuosa.
+03-30到45級.md:516｜說明｜背包留到荒蕪之地之後回鐵爐堡交。｜Guarde a bolsa e entregue em Altaforja depois dos Ermos.
+03-30到45級.md:519｜說明｜1440 回覆瓦拉里爾要護送黛琳達穿過堡壘門口的伏兵，上古之書 6027、尋物公司 1466 要打精英或成群惡魔，單人都不接。｜1440 exige escoltar Dalinda pela emboscada no portão da fortaleza, e 6027 e 1466 exigem elites ou grupos de demônios; sozinho, não pegue.
+03-30到45級.md:522｜說明｜東邊山谷，做懸賞時順便補。｜Vale do leste; complete o nível enquanto faz a recompensa.
+03-30到45級.md:523｜說明｜雷斧堡壘外圍，普通怪。｜Fora da Fortaleza Machado do Trovão; inimigos normais.
+03-30到45級.md:1459｜說明｜風之圖騰在淒涼之地的瑪洛迪半人馬身上，淒涼之地已經走過，要另外跑一趟；水之圖騰在塵泥沼澤北邊的黑鰭魚人、火焰圖騰在荒蕪之地的石窟食人魔、大地圖騰在悲傷沼澤的失落者身上，經過時順手收。｜O totem do vento vem dos centauros Maraudinos de Desolação; você já passou por Desolação, então é preciso uma viagem à parte. O totem da água vem dos murlocs Lamapina no norte do Pântano Vadeoso, o totem do fogo, dos troggs da Abóbada de Pedra em Ermos, e o totem da terra, dos Perdidos no Pântano das Mágoas; colete-os ao passar por lá.
+03-30到45級.md:1459｜說明｜風之圖騰在淒涼之地的瑪洛迪半人馬身上，淒涼之地已經走過，要另外跑一趟｜O totem do vento vem dos centauros Maraudinos de Desolação; você já passou por Desolação, então é preciso uma viagem à parte
