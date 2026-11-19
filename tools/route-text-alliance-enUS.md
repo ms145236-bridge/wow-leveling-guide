@@ -1328,3 +1328,6 @@
 05-副本.md:445｜說明｜要向西瘟疫凱爾達隆的畫家接「愛與家庭」，可先飛冰風崗。已接畫作或只想在禮拜堂接任務，直接和隊友會合。｜Fly to Chillwind Camp if you need to see the painter on Caer Darrow in the Western Plaguelands for Of Love and Family. If you already have the quest or only need the chapel pickups, meet your group directly.
 05-副本.md:451｜說明｜從聖光之願禮拜堂隨隊前往斯坦索姆。入口標記是血色正門，去市場或血色堡壘走這裡；只打亡靈區，和能開側門的隊友在東邊的側門會合。｜From Light's Hope Chapel, join your group for Stratholme. The entrance pin marks the Scarlet main gate for the market and Scarlet Bastion. For an undead-only run, meet a party member who can open the eastern service entrance.
 05-副本.md:440｜說明｜東瘟疫之地 1423 26.52, 10.36（血色正門；亡靈側門在 43.50, 19.40）｜Eastern Plaguelands 26.52, 10.36 (Scarlet main gate; undead service entrance at 43.50, 19.40)
+03-30到45級.md:1193｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escort failed: abandon the quest in your quest log, then accept it again from the robot.
+04-45到60級.md:57｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escort failed: abandon the quest in your quest log, then accept it again from the robot.
+04-45到60級.md:122｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escort failed: abandon the quest in your quest log, then accept it again from the robot.

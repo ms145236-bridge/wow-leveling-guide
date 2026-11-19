@@ -38,13 +38,16 @@ local db={skip={},drop={},fpNodes={},notNow={},pin={},mark={},latch={},carry={},
 local ns={db=db, L=setmetatable({}, {__index=function(_,k) return k end}), UI={Get=function(key) return arg[10]=="optional" and key=="optional" end}, C={}}
 function ns.C.IsTurnedIn(q) return turned[q] end
 function ns.C.IsOnQuest(q) return have[q] end
-function ns.C.IsReady(q) return worked[q] end
+-- Quests with no objective step anywhere on the route (deliveries such as 5083) are ready once accepted.
+local hasDo={}
+function ns.C.IsReady(q) return worked[q] or (have[q] and not hasDo[q]) or false end
 function ns.C.Objectives() end
 function ns.C.XPBuff() return false end
 local data=alliance and "Data/RouteA.lua" or "Data/Route.lua"
 for _,file in ipairs({data, "Engine.lua"}) do assert(loadfile("addon/ShengLeveling/"..file))("",ns) end
 local E=ns.E
 E.Build()
+for _,group in ipairs({E.stations,E.dungeons}) do for _,st in ipairs(group) do for _,step in ipairs(st.list) do if step.s.t=="do" and step.s.q then hasDo[step.s.q]=true end end end end
 local instanceWork,selectedWork={},{}
 for _,d in ipairs(E.dungeons) do
   if allDungeons then chosen[d.id]=true end

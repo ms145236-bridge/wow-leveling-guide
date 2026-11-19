@@ -121,7 +121,8 @@ export function openQuestieDB() {
   };
 
   // 任務目標數量更正（QuestieDB 和遊戲不符）：任務 ID → [原字, 更正]，套在繁中 obj、英文 objEn、其他語系 l10nObj 三處
-  const OBJ_FIX = { 5212: [["10", "20"]], 96063: [["5", "8"], ["пять", "восемь"]] }; // 氣態黃金：遊戲內要 8 瓶
+  // 4145：QuestieDB 11/19 版繁中短文只寫兩種各 10；永恆版任務要求是四種各 5（https://nether.wowhead.com/forever/tooltip/quest/4145?locale=10）
+  const OBJ_FIX = { 5212: [["10", "20"]], 96063: [["5", "8"], ["пять", "восемь"]], 4145: [["殺掉10個血瓣花鞭笞者和10個血瓣花捕獸者", "殺掉5個血瓣花鞭笞者、5個血瓣花捕獸者、5個血瓣花掠奪者和5個血瓣花猛擊者"]] }; // 氣態黃金：遊戲內要 8 瓶
   const fixObj = (id, l) => OBJ_FIX[id] ? l.map((t) => typeof t === "string" ? OBJ_FIX[id].reduce((s, [a, b]) => s.split(a).join(b), t) : t) : l;
 
   const quest = (id) => {

@@ -175,7 +175,10 @@ function E.Applies(when, anyLv) -- anyLv：不看等級條件（往後預估用�
   if when.notRace and raceMatch(when.notRace) then return false end
   if when.coastal ~= nil and when.coastal ~= (MG.db.auberdineChoice == "coast") then return false end
   if when.dungeonPrep and (not MG.UI.Get("dPre") or not MG.UI.Get("optional") or MG.db.dNo[when.dungeonPrep]) then return false end
-  if when.readyQuest and not C.IsReady(when.readyQuest) then return false end
+  -- 往後預估（anyLv）不看日誌當下的可交／失敗：之後會交的照樣算交掉
+  if when.readyQuest and not anyLv and not C.IsReady(when.readyQuest) then return false end
+  if when.failedQuest and not anyLv and not (C.IsFailed and C.IsFailed(when.failedQuest)) then return false end
+  if when.notFailedQuest and not anyLv and C.IsFailed and C.IsFailed(when.notFailedQuest) then return false end
   if when.money and (GetMoney and GetMoney() or 0) < when.money then return false end
   if when.bag and E.ItemCount(when.bag.item) < when.bag.count then return false end
   if when.missingBag and E.ItemCount(when.missingBag.item) >= when.missingBag.count then return false end
@@ -287,6 +290,7 @@ E.Turned = turned
 -- 目標全部完成；日誌查不到目標（對話型任務）視為完成
 local function ready(q)
   if C.IsReady(q) then return true end
+  if C.IsFailed and C.IsFailed(q) then return false end -- 護送失敗：目標清單可能是空的，不能當成做完
   local obj = C.Objectives(q)
   if not obj then return false end
   if #obj == 0 then return true end
@@ -606,7 +610,7 @@ local function stepDone(step, map, x, y)
   if MG.db.latch[step.key] then return true end
   local t, q = s.t, s.q
   if t == "accept" or t == "need" then return C.IsOnQuest(q) or turned(q)
-  elseif t == "do" then return turned(q) or (C.IsOnQuest(q) and ready(q))
+  elseif t == "do" then return turned(q) or (C.IsOnQuest(q) and (s.native and C.IsReady(q) or not s.native and ready(q))) -- native：護送等只認日誌的完成旗標
   elseif t == "turnin" then return turned(q)
   elseif t == "buy" then return E.ItemCount(s.item) >= (s.n or 1) or (s.fq ~= nil and (turned(s.fq) or (C.IsOnQuest(s.fq) and ready(s.fq))))
   elseif t == "level" then return (UnitLevel("player") or 0) >= (s.lv or 0)

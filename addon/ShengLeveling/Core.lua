@@ -354,11 +354,12 @@ local function notOffered(event)
   end
   -- 任一組：NPC 給了組裡任何一個，整組的「接不到」就收回（不必是目前步驟；含 1.13.15 只認剝皮時留下的 a:97924）
   for _, id in ipairs(ids) do if anyG[id] then MG.db.notNow["a:" .. anyG[id]] = nil end end
-  -- NPC 現在給了：之前自動記下的「接不到」收回（手動略過記在 skip，不動）
+  -- NPC 現在給了：之前自動記下的「接不到」收回，不論記在哪一站、鍵有沒有 ~2 後綴（手動略過記在 skip，不動）
   local offered = {}
   for _, id in ipairs(ids) do offered[id] = true end
-  for _, step in ipairs(lastState and lastState.steps or {}) do
-    if step.s.t == "accept" and step.s.q and offered[step.s.q] then MG.db.notNow[step.key] = nil end
+  for key in pairs(MG.db.notNow) do
+    local q = tonumber(tostring(key):match("^a:(%d+)"))
+    if q and offered[q] then MG.db.notNow[key] = nil end
   end
   local cur = lastState and lastState.cur and lastState.steps[lastState.cur]
   local s = cur and cur.s

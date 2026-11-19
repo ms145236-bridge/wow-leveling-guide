@@ -191,4 +191,11 @@ avail = { 61 }
 fire("GOSSIP_SHOW")
 assert(not db.notNow["a:61"], "NPC 給了 61，舊的自動接不到要收回")
 assert(db.skip["a:60"], "手動略過不動")
+-- 別站、帶 ~2 後綴的舊自動紀錄也依 NPC 列出的任務 ID 收回；沒列出的任務留著
+db.notNow["a:2842"], db.notNow["a:2842~2"], db.notNow["a:7777"] = true, true, true
+now = now + 10
+avail = { 2842 }
+fire("GOSSIP_SHOW")
+assert(not db.notNow["a:2842"] and not db.notNow["a:2842~2"], "NPC 列出 2842：不論在哪一站、有沒有後綴都收回")
+assert(db.notNow["a:7777"] and db.skip["a:60"], "沒列出的任務與手動略過不動")
 print("Gossip-first NPC: no false not-offered mark, old automatic mark released when offered")

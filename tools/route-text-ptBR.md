@@ -14571,3 +14571,4 @@
 05-副本.md:1470｜說明｜正門進市場，開煙草店的箱子後擊敗艾茲拉‧格里姆。｜Do portão principal, vá ao mercado. Abra o caixote da tabacaria e derrote Ezra Carranca.
 03-30到45級.md:287｜說明｜索維克要先點對話選項，才會列出任務。｜Escolha primeiro a opção de diálogo de Sovik; depois a missão aparece.
 05-副本.md:738｜說明｜索維克要先點對話選項，才會列出任務。｜Escolha primeiro a opção de diálogo de Sovik; depois a missão aparece.
+04-45到60級.md:134｜說明｜護送失敗：在任務日誌放棄這個任務，再找機器人重接。｜Escolta falhou: abandone a missão no registro e aceite-a de novo com o robô.
