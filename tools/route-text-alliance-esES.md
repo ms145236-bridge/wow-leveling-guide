@@ -1404,3 +1404,9 @@
 06-路線外任務.md:1782｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Desde el 16/11, las entregas repetidas ya no dan experiencia, solo reputación. La primera, 1707, sigue dando experiencia.
 03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Mata vociferadoras del valle en la costa de la Isla del Terror, en Feralas. Usa la zarza de Yeh'kinya en cada cadáver y habla con el espíritu que aparezca hasta que el registro de misiones cuente tres.
 03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Costa de la Isla del Terror: usa la zarza en el cadáver y habla con el espíritu.
+05-副本.md:477｜說明｜亡靈區三座通靈塔逐座搜，找到資料小箱後自己拾取。｜Busca el cofre pequeño en cada uno de los tres zigurats del ala de los no-muertos y recoge tú mismo los datos.
+05-副本.md:479｜說明｜沿斯坦索姆街道找幽靈居民，先用伊根的爆破槍，再對現身的靈魂用一次，共釋放十五個。｜Busca ciudadanos fantasmales por las calles de Stratholme. Usa el bláster de Egan sobre un ciudadano y luego sobre el alma que aparezca. Libera quince almas.
+05-副本.md:478｜說明｜亡靈區經屠宰場，擊敗瑞文戴爾男爵後自己拾取頭顱。｜Atraviesa el Matadero en el ala de los no-muertos, derrota al barón Osahendido y recoge tú mismo su cabeza.
+05-副本.md:476｜說明｜交過檔案管理員後，右鍵自己從巴納札爾拾取的頭顱接任。｜Tras entregar El archivero, haz clic derecho en la cabeza que hayas saqueado de Balnazzar para iniciar la misión.
+05-副本.md:488｜說明｜下次隊伍走亡靈區時再做。｜Hazlo la próxima vez que tu grupo vaya al ala de los no-muertos.
+06-路線外任務.md:884｜說明｜只在本來會去恐懼谷時向禮拜堂護理者奧林接，找伊根交件並接 5282。｜Si ya vas a pasar por el Valle del Terror, acepta la misión del cuidador Alen en la capilla. Entrégasela a Egan y acepta su continuación (5282).

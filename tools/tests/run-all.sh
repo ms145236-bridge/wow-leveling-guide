@@ -32,6 +32,7 @@ lua5.1 tools/tests/wetlands-relic.lua
 lua5.1 tools/tests/gnomeregan.lua
 lua5.1 tools/tests/gnomeregan-ring-return.lua
 lua5.1 tools/tests/stratholme.lua
+lua5.1 tools/tests/stratholme-alliance-followups.lua
 lua5.1 tools/tests/stratholme-target.lua
 lua5.1 tools/tests/post-turnin-detour.lua
 lua5.1 tools/tests/scarlet-library.lua

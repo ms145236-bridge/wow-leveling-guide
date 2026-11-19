@@ -1404,3 +1404,9 @@
 06-路線外任務.md:1782｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Desde 16/11, as entregas repetidas não dão mais experiência, só reputação. A primeira, 1707, continua dando experiência.
 03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Mate gritadores do vale na costa da Ilha do Medo, em Feralas. Use a Morácea de Yeh'Kinya em cada cadáver e fale com o espírito que aparecer, até o registro de missões contar três.
 03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Costa da Ilha do Medo: use a morácea no cadáver e fale com o espírito.
+05-副本.md:477｜說明｜亡靈區三座通靈塔逐座搜，找到資料小箱後自己拾取。｜Procure o baú pequeno nos três zigurates da ala dos mortos-vivos e recolha os dados você mesmo.
+05-副本.md:479｜說明｜沿斯坦索姆街道找幽靈居民，先用伊根的爆破槍，再對現身的靈魂用一次，共釋放十五個。｜Procure cidadãos fantasmagóricos pelas ruas de Stratholme. Use o disparador de Egan em um cidadão e depois na alma que aparecer. Liberte quinze almas.
+05-副本.md:478｜說明｜亡靈區經屠宰場，擊敗瑞文戴爾男爵後自己拾取頭顱。｜Atravesse o Matadouro na ala dos mortos-vivos, derrote o Barão Rivendare e saqueie pessoalmente a cabeça dele.
+05-副本.md:476｜說明｜交過檔案管理員後，右鍵自己從巴納札爾拾取的頭顱接任。｜Depois de entregar O Arquivista, clique com o botão direito na cabeça que você saqueou de Balnazzar para iniciar a missão.
+05-副本.md:488｜說明｜下次隊伍走亡靈區時再做。｜Faça na próxima vez que o grupo for à ala dos mortos-vivos.
+06-路線外任務.md:884｜說明｜只在本來會去恐懼谷時向禮拜堂護理者奧林接，找伊根交件並接 5282。｜Se já for passar pelo Vale do Terror, aceite a missão com o zelador Alen na capela. Entregue-a a Egan e aceite a continuação (5282).

@@ -1404,3 +1404,9 @@
 06-路線外任務.md:1782｜路線外理由｜11/16 起重複交不再給經驗，只換聲望；第一次的 1707 照常給經驗。｜Depuis le 16/11, les remises répétées ne donnent plus d'expérience, seulement de la réputation. La première remise, 1707, en donne toujours.
 03-30到45級.md:1159｜說明｜在菲拉斯恐怖之島海岸擊殺山谷尖嘯者（Vale Screamer）。每次對屍體使用葉基亞的樹枝，再和出現的靈魂交談，直到任務記錄有三個。｜Tuez des crieurs des vallées sur le littoral de l'île de l'Effroi, en Féralas. Utilisez la ronce de Yeh'kinya sur chaque cadavre puis parlez à l'esprit qui apparaît, jusqu'à ce que le journal en compte trois.
 03-30到45級.md:1160｜說明｜恐怖之島海岸：對屍體用樹枝，再與靈魂交談。｜Côte de l'île de l'Effroi : utilisez la ronce sur le cadavre puis parlez à l'esprit.
+05-副本.md:477｜說明｜亡靈區三座通靈塔逐座搜，找到資料小箱後自己拾取。｜Fouillez chacun des trois ziggourats de l’aile des morts-vivants. Récupérez vous-même les données dans le petit coffre.
+05-副本.md:479｜說明｜沿斯坦索姆街道找幽靈居民，先用伊根的爆破槍，再對現身的靈魂用一次，共釋放十五個。｜Cherchez des citoyens fantomatiques dans les rues de Stratholme. Utilisez le blaster d’Egan sur un citoyen, puis sur l’âme qui apparaît. Libérez quinze âmes.
+05-副本.md:478｜說明｜亡靈區經屠宰場，擊敗瑞文戴爾男爵後自己拾取頭顱。｜Traversez l’abattoir de l’aile des morts-vivants, terrassez le baron Vaillefendre et récupérez vous-même sa tête.
+05-副本.md:476｜說明｜交過檔案管理員後，右鍵自己從巴納札爾拾取的頭顱接任。｜Après avoir rendu L’archiviste, faites un clic droit sur la tête que vous avez récupérée sur Balnazzar pour lancer la quête.
+05-副本.md:488｜說明｜下次隊伍走亡靈區時再做。｜Faites-la la prochaine fois que votre groupe parcourt l’aile des morts-vivants.
+06-路線外任務.md:884｜說明｜只在本來會去恐懼谷時向禮拜堂護理者奧林接，找伊根交件並接 5282。｜Si vous passez déjà par le val de la Terreur, prenez la quête auprès du gardien Alen à la chapelle. Rendez-la à Egan et acceptez la suite (5282).
