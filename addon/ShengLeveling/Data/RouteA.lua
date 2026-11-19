@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "b998442d",
+  built = "9e11b001",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -776,7 +776,7 @@ MG.Route = {
         {t="turnin", q=92849, npc="菲利安‧焰風", tgt="菲利安‧焰風", map=2521, x=52.09, y=69.39},
         {t="accept", q=92850, npc="菲利安‧焰風", tgt="菲利安‧焰風", map=2521, x=52.09, y=69.39},
         {t="do", q=92679, hint="聽聽亞瓦里安‧荒原有什麼話要說，然後到荒原果園找阿梅莉雅‧荒原。", map=2521, x=46.7, y=82, more={{2521, 62.1, 73.3}}},
-        {t="turnin", q=92679, npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
+        {t="turnin", q=92679, desc="阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。", npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
         {t="accept", q=92682, npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
         {t="accept", q=92684, npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},
         {t="accept", q=92683, npc="阿梅莉雅‧荒原", tgt="阿梅莉雅‧荒原", map=2521, x=46.7, y=81.95},

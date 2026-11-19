@@ -147,21 +147,26 @@ for (const e of Object.values(seenQ)) {
     const want = routeSteps[e.id]?.[t] || [];
     if (!got.length || !want.length) continue;
     const g = got[0];
-    for (const w of want) {
-      const where = `${w.station} ${t === "accept" ? "接" : "交"} ${e.id} ${q.n}`;
-      if (g.npc && w.npc && !w.npc.startsWith("物品") && g.npc !== w.npc.replace(/^物件 /, "")) {
-        issues.push(`- ${where}：NPC 路線「${w.npc}」→ 實測「${g.npc}」（${g.kind || "?"} ${g.npcId}）`);
-        patches.push(`- ${where}：NPC 改「${g.npc}」`);
-      }
-      if (g.x && w.x != null) {
-        if (w.map !== g.map) issues.push(`- ${where}：地圖 路線 ${w.map} → 實測 ${g.map}（${g.x}, ${g.y}）`);
-        else if (Math.hypot(w.x - g.x, w.y - g.y) > 2) {
-          issues.push(`- ${where}：座標 路線 ${w.x}, ${w.y} → 實測 ${g.x}, ${g.y}（差 ${Math.hypot(w.x - g.x, w.y - g.y).toFixed(1)}%）`);
-          patches.push(`- ${where}：座標改 ${g.map} ${g.x}, ${g.y}`);
-        }
-      } else if (g.x && w.x == null) {
-        patches.push(`- ${where}：路線沒有座標，實測 ${g.map} ${g.x}, ${g.y}`);
-      }
+    // 記錄沒有陣營：只跟同一張地圖上最近的路線步驟比，太遠或不同地圖就只列觀察（可能是另一陣營或另一個接交人），不給修改建議
+    const near = want.filter((w) => w.x != null && w.map === g.map && g.x)
+      .map((w) => ({ w, d: Math.hypot(w.x - g.x, w.y - g.y) })).sort((p, q) => p.d - q.d)[0];
+    if (!near) {
+      if (g.x && !want.some((w) => w.map === g.map)) issues.push(`- 觀察：${t === "accept" ? "接" : "交"} ${e.id} ${q.n} 在 ${g.map} ${g.x}, ${g.y}（${g.npc || "沒記到 NPC"}）；路線這一步在別張地圖，可能是另一陣營或另一個接交人`);
+      continue;
+    }
+    const { w, d } = near;
+    const where = `${w.station} ${t === "accept" ? "接" : "交"} ${e.id} ${q.n}`;
+    if (d > 10) {
+      issues.push(`- 觀察：${where}：路線 ${w.x}, ${w.y}，實測在 ${g.x}, ${g.y}（${g.npc || "沒記到 NPC"}，差 ${d.toFixed(1)}%，可能是別的接交人）`);
+      continue;
+    }
+    if (g.npc && w.npc && !w.npc.startsWith("物品") && g.npc !== w.npc.replace(/^物件 /, "")) {
+      issues.push(`- ${where}：NPC 路線「${w.npc}」→ 實測「${g.npc}」（${g.kind || "?"} ${g.npcId}）`);
+      patches.push(`- ${where}：NPC 改「${g.npc}」`);
+    }
+    if (d > 2) {
+      issues.push(`- ${where}：座標 路線 ${w.x}, ${w.y} → 實測 ${g.x}, ${g.y}（差 ${d.toFixed(1)}%）`);
+      patches.push(`- ${where}：座標改 ${g.map} ${g.x}, ${g.y}`);
     }
   }
 }
@@ -257,8 +262,8 @@ const show = (r) => {
   if (r.kind === "offer") return `${when(r)}｜${r.x[0] || r.k[0]}（${r.k[0]}）列出：${r.k[1] ? r.k[1].split(";").map((id) => `${id} ${quests[id]?.n || ""}`.trim()).join("、") : "沒有可接任務"}｜${r.x[2]} ${r.x[3]}, ${r.x[4]}`;
   if (r.kind === "loot") return `${when(r)}｜撿到物品 ${r.k[0]}（任務 ${r.x[0]}）：${r.k[1] || "沒選目標"} 第 ${r.k[2]} 次撿屍｜${r.k[3]} ${r.x[1]}, ${r.x[2]}`;
   if (r.kind === "board") return `${when(r)}｜上船／飛艇前站的點：${r.k[0]} ${r.x[0]}, ${r.x[1]}`;
-  if (r.kind === "stop") return `${when(r)}｜船／飛艇停下的點：${r.k[0]} ${r.x[0]}, ${r.x[1]}`;
-  if (r.kind === "load") return `${when(r)}｜換地圖：${r.k[0]} ${r.x[0]}, ${r.x[1]} → ${r.k[3]} ${r.x[2]}, ${r.x[3]}`;
+  if (r.kind === "stop") return `${when(r)}｜船／飛艇停下的點${r.x[2] === "1" ? "（候選：航行中自己走動過，可能是走上岸後停下）" : ""}：${r.k[0]} ${r.x[0]}, ${r.x[1]}`;
+  if (r.kind === "load") return `${when(r)}｜參考，不是上下船點｜換地圖：${r.k[0]} ${r.x[0]}, ${r.x[1]} → ${r.k[3]} ${r.x[2]}, ${r.x[3]}`;
   if (r.kind === "obj") return `${when(r)}｜${r.k[0]} ${quests[r.k[0]]?.n || ""} 目標 ${r.k[1]}：${r.k[2]}/${r.x[0]} ${r.x[1]}｜${r.k[3]} ${r.x[2]}, ${r.x[3]}`;
   return `${when(r)}｜${r.kind} ${r.k.join(" ")}`;
 };
@@ -292,16 +297,15 @@ for (const c of CHECKS) {
     (r.kind === "loot" && items.has(r.k[0])) ||
     (c.transport && ["board", "stop", "load"].includes(r.kind)) ||
     (c.obj && r.kind === "obj" && qs.has(r.k[0])));
+  if (c.transport) hits.sort((a, b) => (a.kind === "load") - (b.kind === "load")); // 確認的上下船點在前，讀取畫面位置只是參考
   out.push(`### ${c.id} ${c.what}`, ``);
+  // 前置只列觀察，不下結論：記錄不分角色（帳號共用、記錄可中途開關），沒看到交件不代表這個角色沒交過
   for (const [q, pre] of c.pre || []) {
     const seen = rows.find((r) => ((r.kind === "detail" || r.kind === "accept") && r.k[0] === String(q)) || (r.kind === "offer" && r.k[1].split(";").includes(String(q))));
     const done = rows.find((r) => r.kind === "turnin" && r.k[0] === String(pre));
-    if (seen && (!done || seen.ts < done.ts)) out.push(`- 結論：${q} 在交 ${pre} 之前就出現了，前置不成立。`);
-    else if (seen) out.push(`- ${q} 在交 ${pre} 之後才看到（還要看交前 NPC 有沒有列出它）。`);
-    const giver = rows.find((r) => r.kind === "accept" && r.k[0] === String(q) && /^\d+$/.test(r.k[1]))?.k[1];
-    const before = giver && done && rows.find((r) => r.kind === "offer" && r.k[0] === giver && r.ts < done.ts && !r.k[1].split(";").includes(String(q)));
-    if (before) out.push(`- 結論：交 ${pre} 之前，${before.x[0] || giver} 沒有列出 ${q}，前置成立。`);
+    if (seen || done) out.push(`- 觀察（${q}／前置 ${pre}）：第一次看到 ${q} ${seen ? when(seen) : "沒有記錄"}；第一次交 ${pre} ${done ? when(done) : "沒有記錄"}。要人工確認是不是同一個角色。`);
   }
+
   if (!hits.length) out.push(`- 還沒有記錄`);
   for (const r of hits.slice(0, 40)) out.push(`- ${show(r)}`);
   if (hits.length > 40) out.push(`- 另有 ${hits.length - 40} 筆`);

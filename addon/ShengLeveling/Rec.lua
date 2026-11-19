@@ -171,7 +171,7 @@ end
 
 local function xp() add("xp", { UnitLevel("player"), UnitXPMax("player") }) end
 
--- NPC 這次列出哪些可接任務（沒列也記一次）：前置、種族職業限制是不是真的
+-- NPC 這次列出哪些可接任務（沒列也記一次）：前置、種族職業限制是不是真的。讀到秘密值就整筆不記
 local function offers(event)
   local who = npc()
   local list = {}
@@ -183,14 +183,19 @@ local function offers(event)
     end
     table.sort(list)
   else -- QUEST_GREETING 只給標題
-    for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do list[#list + 1] = field(GetAvailableTitle(i)) end
+    for i = 1, (GetNumAvailableQuests and GetNumAvailableQuests() or 0) do
+      local title = GetAvailableTitle(i)
+      if title == nil or secret(title) then return end
+      list[#list + 1] = field(title)
+    end
   end
   local map, x, y = pos()
   add("offer", { who.id ~= "" and who.id or who.name, table.concat(list, ";") }, who.name, who.kind, map, x, y)
 end
 
--- 路線用「背包有某物品」判斷的物品：第一次進背包時記哪隻怪（目標）撿第幾次拿到、在哪裡
-local watch, had, loots, lastLoot = nil, {}, {}, ""
+-- 路線用「背包有某物品」判斷的物品：從屍體撿到、第一次進背包時，記是哪種怪、這種怪撿到第幾隻才拿到、在哪裡。
+-- 只認這次撿屍視窗裡真的有這件物品；背包基準在登入、開啟記錄時先對齊，之前就有的不算
+local watch, had, loots, window = nil, nil, {}, nil
 local function watchItems()
   if watch then return watch end
   watch = {}
@@ -204,42 +209,61 @@ local function watchItems()
   end
   return watch
 end
+local function bagBase()
+  had = {}
+  for id in pairs(watchItems()) do had[id] = MG.E.ItemCount(id) end
+end
 local function looted()
   local name = UnitExists and UnitExists("target") and UnitIsDead and UnitIsDead("target") and UnitName("target")
-  lastLoot = name and not secret(name) and field(name) or ""
-  loots[lastLoot] = (loots[lastLoot] or 0) + 1
-end
-local function bagItems()
-  local first = not next(had)
-  for id, q in pairs(watchItems()) do
-    local n = MG.E.ItemCount(id)
-    if n > 0 and had[id] == 0 and not first then
-      local map, x, y = pos()
-      add("loot", { id, lastLoot, loots[lastLoot] or 0, map, x ~= "" and math.floor(tonumber(x)) or "", y ~= "" and math.floor(tonumber(y)) or "" }, q, x, y)
-      wipe(loots)
-    end
-    had[id] = n
+  if not name or secret(name) then window = nil; return end -- 不知道是哪隻怪（箱子、採集、沒選目標）：不算
+  local mob = field(name)
+  loots[mob] = (loots[mob] or 0) + 1
+  window = { mob = mob, items = {} }
+  for i = 1, (GetNumLootItems and GetNumLootItems() or 0) do
+    local link = GetLootSlotLink and GetLootSlotLink(i)
+    local id = link and not secret(link) and tonumber(link:match("item:(%d+)"))
+    if id then window.items[id] = true end
   end
 end
+local function bagItems()
+  if not had then bagBase(); return end
+  local got = {}
+  for id, q in pairs(watchItems()) do
+    local n = MG.E.ItemCount(id)
+    if n > had[id] and had[id] == 0 and window and window.items[id] then got[#got + 1] = { id = id, q = q } end
+    had[id] = n
+  end
+  if #got == 0 then return end
+  local map, x, y = pos()
+  for _, g in ipairs(got) do
+    add("loot", { g.id, window.mob, loots[window.mob], map, x ~= "" and math.floor(tonumber(x)) or "", y ~= "" and math.floor(tonumber(y)) or "" }, g.q, x, y)
+  end
+  loots[window.mob] = 0
+  window = nil
+end
 
--- 船、飛艇、電梯：自己沒在走、也不在鳥上，位置卻在變＝被載著走。記上船前站的點與停下來的點；換地圖時記讀取畫面前後的位置
-local last, anchor, carried, ride, from = nil, nil, 0, false, nil
+-- 船、飛艇、電梯：自己沒在走、也不在鳥上，位置卻在變＝被載著走。記上船前站的點與停下來的點；換地圖時記讀取畫面前後的位置。
+-- 航行中跳下（掉落）就作廢這一趟；航行中自己走動過，停下的點只算候選（可能是走上岸後停下）
+local last, anchor, carried, ride, from = nil, nil, 0, nil, nil
 local function sample()
   local map, x, y = C.Position()
   if not x then last = nil; return end
   local d = last and last.map == map and math.sqrt((x - last.x) ^ 2 + (y - last.y) ^ 2)
-  local still = not (IsPlayerMoving and IsPlayerMoving()) and not (UnitOnTaxi and UnitOnTaxi("player")) and not (IsFalling and IsFalling())
+  local moving, falling = IsPlayerMoving and IsPlayerMoving(), IsFalling and IsFalling()
+  local still = not moving and not falling and not (UnitOnTaxi and UnitOnTaxi("player"))
+  if falling and ride then ride = nil end
   if d and d > 0.15 and still then
     carried = carried + 1
     if carried == 2 and not ride and anchor then
-      ride = true
+      ride = { walked = false }
       add("board", { anchor.map, math.floor(anchor.x), math.floor(anchor.y) }, num(anchor.x), num(anchor.y))
     end
   else
     carried = 0
+    if ride and moving then ride.walked = true end
     if ride and d and d < 0.02 and still then
-      ride = false
-      add("stop", { map, math.floor(x), math.floor(y) }, num(x), num(y))
+      add("stop", { map, math.floor(x), math.floor(y) }, num(x), num(y), ride.walked and 1 or 0)
+      ride = nil
     end
     anchor = { map = map, x = x, y = y }
   end
@@ -264,7 +288,8 @@ f:SetScript("OnEvent", function(_, event, ...)
       C_Timer.NewTicker(2, function() if on() then MG.try("記錄", sample) end end)
     end
   end
-  if not on() then return end
+  if not on() then had, window, ride = nil, nil, nil; return end -- 關著時背包、船上的事都不知道：重開時重新對齊
+  if not had then bagBase() end
   if event == "GROUP_ROSTER_UPDATE" then
     if IsInGroup and IsInGroup() then
       for _, start in pairs(starts) do start.grouped = true end
