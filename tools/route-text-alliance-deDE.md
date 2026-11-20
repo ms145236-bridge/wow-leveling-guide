@@ -1,6 +1,6 @@
 # 阿聖練等幫手 deDE 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **440** 列。
+- 只收聯盟路線獨有的說明列，共 **1583** 列。
 
 檔名:行號｜類型｜中文原文｜deDE
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Rechtsklicke Angeknabbertes Buch im Rucksack, um die Quest anzunehmen.
@@ -1509,3 +1509,88 @@
 05-副本.md:819｜說明｜擊敗尾王後找旁邊上鐐銬的囚犯接｜Sprich nach dem Endboss mit dem gefesselten Gefangenen daneben
 05-副本.md:819｜說明｜審問者要還活著才拿得到鑰匙。｜Der Befrager muss noch leben, damit du den Schlüssel bekommst.
 05-副本.md:821｜說明｜尾王旁，上鐐銬的囚犯｜Neben dem Endboss, der gefesselte Gefangene
+
+05-副本.md:905｜說明｜過芬古斯庭院，找諾特旁的陷阱。｜Hinter Fengus’ Hof findest du die Falle bei Knot.
+05-副本.md:915｜說明｜完成貢品路線後，找仍活著的克羅卡斯。｜Sprich nach dem Tributlauf mit Captain Kromcrush, wenn er noch lebt.
+05-副本.md:916｜說明｜下次打完北區貢品，保留克羅卡斯回報。｜Melde dich nach deinem nächsten Tributlauf im Nordflügel bei Captain Kromcrush.
+05-副本.md:917｜說明｜首領或書堆掉落，撿到自己職業的書再右鍵接。｜Bosse und Bücherstapel liefern die Bücher. Starte die Quest per Rechtsklick auf das Buch deiner Klasse.
+05-副本.md:918｜說明｜從北區入口庭院的側門進圖書館。｜Nimm vom Eingangshof des Nordflügels die Seitentür zur Bibliothek.
+05-副本.md:896｜說明｜北門→芬古斯庭院→諾特與陷阱→克羅卡斯→戈多克大王。貢品隊留守衛活著，打完大王再找克雷格和克羅卡斯。｜Nordtor → Fengus’ Hof → Knot und die Falle → Captain Kromcrush → König Gordok. Lass beim Tributlauf die Wachen am Leben und sprich nach dem König mit Kreeg und Kromcrush.
+05-副本.md:947｜說明｜未達成貢品條件或克羅卡斯已死就略過 7703。職業書與聖典在圖書館交。｜Überspring Quest 7703, wenn der Tributlauf gescheitert ist oder Kromcrush tot ist. Klassenbücher und Buchbände gibst du in der Bibliothek ab.
+05-副本.md:900｜說明｜從羽月要塞到菲拉斯北區，先確認隊伍有月牙鑰匙。打貢品可先備霜油、瑟銀零件、符文布卷、硬甲皮和符文線。｜Geh von der Festung Feathermoon in den Norden von Feralas. Prüfe, ob jemand den Mondsichelschlüssel hat. Für den Tributlauf kannst du Frostöl, einen Thoriumapparat, Runenstoffballen, Unverwüstliches Leder und Runenfaden mitbringen.
+05-副本.md:886｜說明｜西區圖書館，王子後方。｜In der Bibliothek des Westflügels, hinter dem Prinzen.
+05-副本.md:867｜說明｜西門→特迪斯·扭木→上層找辛德拉古靈→清五座水晶塔→伊莫塔爾→圖書館打托塞德林。｜Westtor → Tendris Wucherborke → Uralte Shen’dralar im Obergeschoss → fünf Kristallpylonen → Immol’thar → Prinz Tortheldrin in der Bibliothek.
+05-副本.md:892｜說明｜圖書館可交職業書。打算跑北區貢品任務時，先向克羅卡斯接任務再來開王子的箱子。｜Gib die Klassenbücher in der Bibliothek ab. Für die Quest aus dem Nord-Tributlauf sprich zuerst mit Kromcrush und öffne dann die Truhe des Prinzen.
+05-副本.md:871｜說明｜在羽月要塞向學者盧索恩·紋角接精靈的傳說，滿 54 級才接得到。西、北區需要月牙鑰匙，由東區普希林掉落。｜Nimm auf Stufe 54 „Elfische Legenden“ bei der Gelehrten Runethorn in der Festung Feathermoon an. Den Mondsichelschlüssel für den West- und Nordflügel lässt Pusillin im Ostflügel fallen.
+05-副本.md:853｜說明｜奧茲恩房間。｜In Alzzins Raum.
+05-副本.md:833｜說明｜東門→追普希林拿鑰匙→蕾瑟塔蒂絲→奧茲恩。法師有造水任務時走水道打海多斯博恩。｜Osttor → verfolge Pusillin für den Schlüssel → Lethtendris → Alzzin. Als Magier mit der Wasserquest gehst du durch den Wasserlauf zu Hydrobrut.
+05-副本.md:863｜說明｜東門不用鑰匙。淨化之匣跨區，已有進度再做。西、北區需要月牙鑰匙，由東區普希林掉落。｜Das Osttor ist ohne Schlüssel zugänglich. Mach „Ein Reliquiar der Reinheit“ nur, wenn du die gebietsübergreifende Kette schon angefangen hast. Pusillin im Ostflügel lässt den Mondsichelschlüssel für den West- und Nordflügel fallen.
+05-副本.md:837｜說明｜羽月要塞滿 54 級時先找拉托尼庫斯。去東門前順路到拉瑞斯小亭找埃斯托爾迪。沒到等級，組隊前再補接。｜Sprich ab Stufe 54 mit Latronicus Moonspear in der Festung Feathermoon. Besuche Azj’Tordin bei Lariss’ Pavillon auf dem Weg zum Osttor. Hol die Quests vor dem Gruppenlauf nach, falls deine Stufe noch zu niedrig ist.
+05-副本.md:835｜說明｜菲拉斯 1444 64.80, 30.20（競技場東牆傳送門）｜Feralas 1444 64.80, 30.20 (Portal in der Ostmauer der Arena)
+05-副本.md:963｜說明｜已走武器鍛造、想專精斧類再接。｜Nimm sie als Waffenschmied an, wenn du dich auf Äxte spezialisieren willst.
+05-副本.md:969｜說明｜入口右側下坡，從碎石坡到側室找維埃蘭。｜Geh am Eingang rechts hinab. Über die Schuttrampe erreichst du Vaelan in einer Seitenkammer.
+05-副本.md:970｜說明｜下層入口後過第一座橋。｜Überquere hinter dem Eingang zur unteren Spitze die erste Brücke.
+05-副本.md:972｜說明｜沃什加斯與沃恩附近各一塊。｜Je eine Tafel bei Vosh’gajin und bei Voone.
+05-副本.md:973｜說明｜沃什加斯附近沿斜坡找比修。｜Folg bei Vosh’gajin der Rampe zu Bijou.
+05-副本.md:974｜說明｜下層獸人往蜘蛛區的通道。｜Im Gang zwischen den Orcs und dem Spinnenbereich in der unteren Spitze.
+05-副本.md:975｜說明｜沃什加斯附近斜坡上的比修｜Bijou auf der Rampe bei Vosh’gajin.
+05-副本.md:977｜說明｜蛛后附近，留意孵化的小蜘蛛。｜Pass bei Mutter Glimmernetz auf die schlüpfenden Spinnen auf.
+05-副本.md:978｜說明｜蜘蛛區深處。｜Tief im Spinnenbereich.
+05-副本.md:979｜說明｜座狼區，不要殺幼崽。｜Lass die Welpen im Worgbereich am Leben.
+05-副本.md:980｜說明｜下層座狼區。｜Im Worgbereich der unteren Spitze.
+05-副本.md:981｜說明｜維姆薩拉克前的貢品堆。｜Beim Tributhaufen vor Wyrmthalak.
+05-副本.md:982｜說明｜入口橋後的瓦羅什｜Warosh hinter der Eingangsbrücke.
+05-副本.md:983｜說明｜全清下層三名首領。｜Töte alle drei Anführer der unteren Spitze.
+05-副本.md:984｜說明｜維姆薩拉克掉落命令，拾到後右鍵接。｜Plündere Wyrmthalaks Befehle und starte die Quest per Rechtsklick.
+05-副本.md:991｜說明｜中毒後盡快找約翰。｜Geh nach der Vergiftung so schnell wie möglich zu Struppiger John.
+05-副本.md:999｜說明｜要再跑一趟。｜Plane einen zweiten Durchlauf ein.
+05-副本.md:951｜說明｜共用傳送門→右側下坡→歐莫克→沃什加斯和比修→沃恩→蛛后→哈雷肯→維姆薩拉克。｜Gemeinsames Portal → rechts hinab → Omokk → Vosh’gajin und Bijou → Voone → Mutter Glimmernetz → Halycon → Wyrmthalak.
+05-副本.md:1004｜說明｜比修的消息先交麥克斯韋爾，三王任務留下一趟。上層鑰匙只需隊伍一人持有。｜Bring erst Bijous Nachricht zu Marshal Maxwell. Heb dir seine drei Bosse für den nächsten Lauf auf. Ein Schlüssel für die obere Spitze pro Gruppe reicht.
+05-副本.md:955｜說明｜走聯盟燃燒平原路線時，在摩根的崗哨與烈焰峰先接。低於任務接取等級就組隊前再補接。武器鍛造師可在冬泉谷永望鎮接沃什加斯的菊石。｜Hol die Quests in Morgans Wacht und am Flammenkamm. Fehlt dir die Stufe, hol sie vor dem Lauf nach. Waffenschmiede bekommen Vosh’gajins Schlangenstein in Ewige Warte.
+05-副本.md:953｜說明｜燃燒平原 1428 29.40, 38.30（黑石山南入口）｜Brennende Steppe 1428 29.40, 38.30 (Südeingang zum Blackrock)
+05-副本.md:1175｜說明｜木喉聲望達中立再接。｜Nimm die Quest erst an, wenn dein Ruf bei der Holzschlundfeste neutral ist.
+05-副本.md:1176｜說明｜只在已經要做木喉長鏈時接。｜Nimm die Quest nur an, wenn du die lange Questreihe der Holzschlundfeste ohnehin machst.
+05-副本.md:1180｜說明｜外側林地和地道。｜In den äußeren Wäldern und im Tunnel.
+05-副本.md:1181｜說明｜沿路的熊怪營地。｜In den Furbolglagern am Weg.
+05-副本.md:1182｜說明｜進本後查看兩側岔路的圖騰。｜Sieh im Dungeon in beiden Abzweigungen nach den Totems.
+05-副本.md:1183｜說明｜兩條岔路各打一隻。｜Töte in jeder Abzweigung ein Ziel.
+05-副本.md:1184｜說明｜熊怪區的薩滿長老。｜Schamanenältester Bloodmane im Furbolgbereich.
+05-副本.md:1185｜說明｜拾到項鍊再右鍵接。｜Starte die Quest per Rechtsklick, sobald du die Halskette erbeutet hast.
+05-副本.md:1186｜說明｜尾王平台。｜Auf der Plattform des Endbosses.
+05-副本.md:1161｜說明｜地道→下層收根冠、袋子、圖騰→兩條岔路打枯萎喉與骨鼻→薩滿長老→尾王瓦洛仕。｜Tunnel → unten Wurzelkappen, Beutel und Totems sammeln → beide Abzweigungen für Welkschlund und Knochenschnauze den Ungebrochenen → Schamanenältester Bloodmane → Endboss Varrox Bleakhoof.
+05-副本.md:1198｜說明｜雙子熊神與尾王任務需木喉中立。尾王前置從艾卡爾的雷加斯威脅開始，依序聯絡暴吼、庫爾薩和獨眼高恩，擊殺野外的哈拉諾斯親王並交任務後才接副本續篇。撿到魔能污染血肉可換種子莢，在薩滿長老後方找食肉鞭笞者交吃飯時間。｜Für die Zwillingsbären und die Endbossquest brauchst du neutralen Ruf bei der Holzschlundfeste. Starte „Die Bedrohung durch die Legashi“ bei Ekkal, dann sprich mit Torhüter Donnerschrei, Korsa und Gorn Einauge. Besiege Prinz Halanox draußen und gib das Außenquest ab, um die Dungeonfortsetzung freizuschalten. Tausch gefundenes Teufelsbesudeltes Fleisch gegen Samenkapseln und gib „Fütterungszeit!“ beim Fleischfressenden Peitscher hinter Schamanenältestem Bloodmane ab.
+05-副本.md:1165｜說明｜第一次經過塔倫迪斯營地接諾達希爾之下，下次到達納蘇斯交並接續篇。組隊後從塔倫迪斯往東北走艾薩拉地道。大法師泰彌亞在南海鎮往達拉然城的路上，沒順路可先略。｜Nimm „Unter Nordrassil“ beim ersten Besuch an der Talrendisspitze an. Gib die Quest in Darnassus ab, wenn du wieder dort bist, und nimm die Folgequest an. Geh mit der Gruppe nordöstlich der Talrendisspitze zum Tunnel in Azshara. Erzmagier Timear steht an der Straße von Süderstade nach Dalaran. Lass ihn aus, wenn er nicht auf deinem Weg liegt.
+05-副本.md:1163｜說明｜艾薩拉 1447 38.70, 33.40（地道外口，走進地道到傳送門）｜Azshara 1447 38.70, 33.40 (Tunneleingang, folg dem Tunnel zum Portal)
+05-副本.md:1146｜說明｜進本後在第一個水池旁的營地點日記。｜Klick nach dem Betreten das Tagebuch im Lager am ersten Becken an.
+05-副本.md:1147｜說明｜和暴掠龍擊殺任務同路。｜Auf demselben Weg wie die Jagdquest für Ravasaurier.
+05-副本.md:1148｜說明｜龍群沿路分布。｜Die Ravasaurier stehen entlang des Weges.
+05-副本.md:1149｜說明｜沿路五個地標各使用一次製圖工具。｜Benutz das Kartierungswerkzeug an jeder der fünf Landmarken einmal.
+05-副本.md:1133｜說明｜入口水池取日記→沿路測繪與殺暴掠龍→擊殺毒脊→檢查地標與書頁。｜Tagebuch am Eingangsbecken → unterwegs kartieren und Ravasaurier töten → Giftkamm → Landmarken und Seiten prüfen.
+05-副本.md:1157｜說明｜三件可在同一趟完成。只有隊伍想打額外首領時才準備動力水晶。｜Alle drei Quests passen in einen Lauf. Bring Machtkristalle nur mit, wenn die Gruppe zusätzliche Bosse machen will.
+05-副本.md:1137｜說明｜滿 55 級在鐵爐堡探險者大廳找索里奧斯。安戈洛那趟離開前回鐵爐堡時還未達 55，就等後段回城再接。跨洲搭船，從馬紹爾避難所往北上坡進本。｜Sprich ab Stufe 55 mit Thorius in der Halle der Forscher in Eisenschmiede. Bist du nach Un’Goro noch nicht 55, warte bis zum nächsten Stadtbesuch. Nimm das Schiff auf den anderen Kontinent und geh von Marshals Zuflucht nach Norden bergauf zur Instanz.
+05-副本.md:1135｜說明｜安戈洛環形山 1449 48.10, 6.10（泰坦建築外側路標）｜Un’Goro-Krater 1449 48.10, 6.10 (Wegmarke außen am Titanenbau)
+05-副本.md:1107｜說明｜各房的桌上或長凳。｜Auf den Tischen oder Bänken in den Räumen.
+05-副本.md:1108｜說明｜門廊後經召喚廳到幼龍房。｜Geh von der Veranda durch die Beschwörungskammer zu den Welpen.
+05-副本.md:1110｜說明｜首廳下方的沉沒墓穴。｜In der versunkenen Gruft unter der ersten Halle.
+05-副本.md:1111｜說明｜副本門廊。｜Auf der Veranda des Dungeons.
+05-副本.md:1112｜說明｜打血骨傀儡拿鑰匙後回觀察室。｜Töte Blutrippe für den Schlüssel und kehre in den Beobachtungsraum zurück.
+05-副本.md:1113｜說明｜最後六室前的鍊金實驗室。｜Im Alchemielabor vor den letzten sechs Räumen.
+05-副本.md:1114｜說明｜教授房內可找到兩具遺骸。｜Im Raum des Doktors liegen beide sterblichen Überreste.
+05-副本.md:1119｜說明｜下一趟打詹迪斯。｜Töte Jandice beim nächsten Durchlauf.
+05-副本.md:1121｜說明｜有同一隊續打再回門廊召喚。｜Kehre zum Beschwören zur Veranda zurück, wenn dieselbe Gruppe weitermacht.
+05-副本.md:1123｜說明｜裝上鬼靈精華才看得到鎮長。｜Leg die Spektralessenz an, damit du den Magistrat sehen kannst.
+05-副本.md:1069｜說明｜門廊→首廳拿地契→幼龍房→血骨傀儡→萊斯·霜語→下層六室→黑暗院長加丁。｜Veranda → Urkunden in der ersten Halle → Welpenraum → Blutrippe → Ras Frostraunen → sechs untere Räume → Dunkelmeister Gandling.
+05-副本.md:1129｜說明｜隊中一人有骸骨鑰匙即可開門。自備鑰匙才做加基森與火羽山前置。第一次可先做地契、幼龍和教授。黎明先鋒要完成兩趟黑石塔上層的龍蛋任務。霜語的長鏈還要到激流堡與斯坦索姆亡靈區。｜Ein Skelettschlüssel für die Gruppe reicht. Mach die Vorquests in Gadgetzan und am Feuerfedergrat nur für einen eigenen Schlüssel. Beim ersten Lauf bieten sich die Urkunden, die Welpen und der Doktor an. Für „Dämmerungstrickfalle“ brauchst du beide Eierquests in der oberen Blackrockspitze. Ras’ lange Questreihe führt auch nach Stromgarde und in Stratholmes Untotenflügel.
+05-副本.md:1073｜說明｜冰風崗找維爾頓，聖光之願禮拜堂找貝蒂娜，進本前再找凱爾達隆橋頭的艾瓦。已離開西瘟疫之地就飛回冰風崗。｜Sprich mit Weldon im Zugwindlager und mit Betina an der Kapelle des hoffnungsvollen Lichts. Geh vor dem Dungeon zu Eva an der Brücke von Caer Darrow. Hast du die Westlichen Pestländer schon verlassen, flieg zum Zugwindlager zurück.
+05-副本.md:1071｜說明｜西瘟疫之地 1422 68.90, 72.80（凱爾達隆地下入口）｜Westliche Pestländer 1422 68.90, 72.80 (unterirdischer Eingang von Caer Darrow)
+05-副本.md:1032｜說明｜鍛造師才需要。｜Nur für Schmiede relevant.
+05-副本.md:1035｜說明｜有做奧妮克希亞門任務再帶進本。｜Nimm die Quest mit in den Dungeon, wenn du Onyxias Zutrittsreihe machst.
+05-副本.md:1039｜說明｜過艾博希爾後，在孵化間找箱子。｜Such nach der Feuerwache Glutseher im Krähenhorst nach der Kiste.
+05-副本.md:1040｜說明｜上層孵化間。｜Im Krähenhorst der oberen Spitze.
+05-副本.md:1042｜說明｜上層熔爐。｜Im Schmelzofen der oberen Spitze.
+05-副本.md:1043｜說明｜競技場事件結束後找皮普。｜Such Pip nach dem Arenaereignis.
+05-副本.md:1044｜說明｜競技場後的上層陽台找奧比。｜Such Awbee nach der Arena auf dem oberen Balkon.
+05-副本.md:1045｜說明｜上層尾王房間。｜Im Raum des Endbosses der oberen Spitze.
+05-副本.md:1008｜說明｜共用傳送門→左側上坡與門鎖→艾博希爾→孵化間→競技場→達基薩斯。｜Gemeinsames Portal → links hinauf zur verschlossenen Tür → Feuerwache Glutseher → Krähenhorst → Arena → Drakkisath.
+05-副本.md:1065｜說明｜和下層共用入口。開上層門要有人持晉升印章。兩個龍蛋任務分兩趟，後續帶去通靈學院。｜Gleicher Eingang wie zur unteren Spitze. Jemand in der Gruppe braucht das Siegel des Aufstiegs für die Tür. Erledige die beiden Eierquests in zwei Läufen; die Folgequest führt nach Scholomance.
+05-副本.md:1012｜說明｜走聯盟燃燒平原路線時，在摩根的崗哨與烈焰峰先接。低於任務接取等級就組隊前再補接。做過下層後，到摩根的崗哨交達基薩斯將軍的命令，再接上層尾王。｜Nimm auf der Allianzroute durch die Brennende Steppe die Quests in Morgans Wacht und am Flammenkamm an. Fehlt dir eine Stufe, hol sie vor dem Gruppenlauf nach. Gib nach der unteren Spitze „General Drakkisaths Befehl“ in Morgans Wacht ab und nimm die Quest für den Endboss der oberen Spitze an.

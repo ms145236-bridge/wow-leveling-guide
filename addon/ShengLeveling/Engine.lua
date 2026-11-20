@@ -7,6 +7,15 @@ local R = MG.Route or { stations = {}, quests = {} }
 local E = {}
 MG.E = E
 
+-- Wings.lua keys refer to the shared client labels, not the ordinal Alliance card.
+local wingKeys = {
+  ["黑石塔下層"] = "05-d25", ["黑石塔上層"] = "05-d34",
+  ["厄運之槌 東區"] = "05-d28", ["厄運之槌 西區"] = "05-d29", ["厄運之槌 北區"] = "05-d30",
+}
+for _, st in ipairs(R.stations) do
+  if st.dungeon then st.wingKey = wingKeys[st.name] end
+end
+
 -- 路線資料換語言（ADDON_LOADED 時呼叫一次，語言設定讀到之後）。Route.lua 是中文底稿；Data\Route_<locale>.lua 依站 ID＋步驟序號、任務 ID 對上。
 -- 顯示用欄位跟介面語言；選取目標（tgt、tgo、objs）和要跟遊戲文字比對的名字（nG、npcG、mobG）跟客戶端語言。
 -- 說明文字（desc、站的提醒、練怪說明、危險說明…）用翻譯；沒有翻譯的非中文介面拿掉不顯示。
@@ -2620,7 +2629,7 @@ function E.DungeonByInstance(id)
     local texts, loc = instanceZone()
     local pick
     for k, d in ipairs(all) do
-      if inNamedWing(d.id, texts, loc) then pick = k; break end
+      if inNamedWing(d.wingKey or d.id, texts, loc) then pick = k; break end
     end
     -- 對照表沒有時退回比對路線站名的最後一個詞（例如「血色修道院 墓地」的「墓地」）
     if not pick then
@@ -2654,15 +2663,20 @@ end
 function E.InstanceState(d, all)
   local steps, seen, inTurn, inDo, outsideObjective = {}, {}, {}, {}, {}
   local wing, otherWing = stratholmeWing(d), {}
+  local namedWing
+  if d.wingKey and all then
+    local texts, loc = instanceZone()
+    if inNamedWing(d.wingKey, texts, loc) then namedWing = d end
+  end
   for _, x in ipairs(all or { d }) do
     for _, step in ipairs(x.list or {}) do
       if step.s.outsideObjective then outsideObjective[step.s.q] = true end
       if step.s.instanceMaterial then inDo[step.s.q] = instanceMaterialAction(step.s) end
       -- 有地圖座標的是在本外交（路線放在副本內段落而已）
-      if step.s.ph == "in" and step.s.t == "turnin" and step.s.q and not step.s.map then inTurn[step.s.q] = step.s end
+      if step.s.ph == "in" and step.s.t == "turnin" and step.s.q and not step.s.map and (not namedWing or x == namedWing) then inTurn[step.s.q] = step.s end
       if step.s.ph == "in" and step.s.t == "do" and step.s.q then
         local q, wanted = step.s.q, step.s.wing
-        if wing and wanted and wanted ~= "either" and wanted ~= wing then otherWing[q] = true
+        if (namedWing and x ~= namedWing) or (wing and wanted and wanted ~= "either" and wanted ~= wing) then otherWing[q] = true
         else inDo[q] = inDo[q] or step.s end
       end
     end
@@ -2697,6 +2711,7 @@ function E.InstanceState(d, all)
     for _, step in ipairs(x.list or {}) do
       local s, q = step.s, step.s.q
       if q and s.ph == "in" and s.t == "accept" and not seen[q] and inPickup(s) and E.Applies(s.when)
+          and (not namedWing or x == namedWing or (s.when and s.when.bag))
           and not E.QuickDone(step) and not MG.db.skip[step.key]
           and (not s.manualAccept or (not MG.db.dNo[x.id] and not optOut(s) and not E.LogFull())) and not instanceOptOut(s)
           and (UnitLevel("player") or 1) >= math.max(s.pickLv or 0, (R.quests[q] or {}).min or 0)

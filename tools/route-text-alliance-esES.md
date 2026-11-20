@@ -1,6 +1,6 @@
 # 阿聖練等幫手 esES 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **440** 列。
+- 只收聯盟路線獨有的說明列，共 **1583** 列。
 
 檔名:行號｜類型｜中文原文｜esES
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Haz clic derecho en Libro mordisqueado en tu bolsa para empezar la misión.
@@ -1509,3 +1509,88 @@
 05-副本.md:819｜說明｜擊敗尾王後找旁邊上鐐銬的囚犯接｜Tras el jefe final, habla con el prisionero encadenado que hay al lado
 05-副本.md:819｜說明｜審問者要還活著才拿得到鑰匙。｜El interrogador debe seguir vivo para que consigas la llave.
 05-副本.md:821｜說明｜尾王旁，上鐐銬的囚犯｜Junto al jefe final, el prisionero encadenado
+
+05-副本.md:905｜說明｜過芬古斯庭院，找諾特旁的陷阱。｜Cruza el patio de Fengus y busca la trampa junto a Knot Llavededo.
+05-副本.md:915｜說明｜完成貢品路線後，找仍活著的克羅卡斯。｜Tras completar el recorrido de tributo, habla con Kromcrush si sigue vivo.
+05-副本.md:916｜說明｜下次打完北區貢品，保留克羅卡斯回報。｜Tras tu próximo recorrido de tributo por el ala norte, deja vivo a Kromcrush para entregarle la misión.
+05-副本.md:917｜說明｜首領或書堆掉落，撿到自己職業的書再右鍵接。｜Los jefes y los montones de libros pueden soltarlo. Haz clic derecho en el libro de tu clase para aceptar la misión.
+05-副本.md:918｜說明｜從北區入口庭院的側門進圖書館。｜Entra en la biblioteca por la puerta lateral del patio de entrada del ala norte.
+05-副本.md:896｜說明｜北門→芬古斯庭院→諾特與陷阱→克羅卡斯→戈多克大王。貢品隊留守衛活著，打完大王再找克雷格和克羅卡斯。｜Puerta norte → patio de Fengus → Knot y la trampa → Kromcrush → Rey Gordok. Para el tributo, deja vivos a los guardias y habla con Kreeg y Kromcrush tras derrotar al rey.
+05-副本.md:947｜說明｜未達成貢品條件或克羅卡斯已死就略過 7703。職業書與聖典在圖書館交。｜Omite 7703 si no se cumplen las condiciones del tributo o Kromcrush ha muerto. Entrega los libros de clase y los tratados en la biblioteca.
+05-副本.md:900｜說明｜從羽月要塞到菲拉斯北區，先確認隊伍有月牙鑰匙。打貢品可先備霜油、瑟銀零件、符文布卷、硬甲皮和符文線。｜Ve del Bastión Plumaluna al norte de Feralas y confirma que alguien lleve la Llave creciente. Para el tributo, puedes preparar Aceite escarchado, un trasto de torio, madejas de paño rúnico, cuero basto e hilo rúnico.
+05-副本.md:886｜說明｜西區圖書館，王子後方。｜Biblioteca del ala oeste, detrás del príncipe.
+05-副本.md:867｜說明｜西門→特迪斯·扭木→上層找辛德拉古靈→清五座水晶塔→伊莫塔爾→圖書館打托塞德林。｜Puerta oeste → Tendris Alabeo → Anciano Shen'dralar en el piso superior → limpia los cinco pilones → Immol'thar → Tortheldrin en la biblioteca.
+05-副本.md:892｜說明｜圖書館可交職業書。打算跑北區貢品任務時，先向克羅卡斯接任務再來開王子的箱子。｜Entrega los libros de clase en la biblioteca. Si vas a hacer la misión del tributo del ala norte, acéptala de Kromcrush antes de abrir el cofre del príncipe.
+05-副本.md:871｜說明｜在羽月要塞向學者盧索恩·紋角接精靈的傳說，滿 54 級才接得到。西、北區需要月牙鑰匙，由東區普希林掉落。｜A partir del nivel 54, acepta Leyendas élficas del Erudito Runaespina en el Bastión Plumaluna. Para el oeste y el norte necesitas la Llave creciente que suelta Pusillín en el ala este.
+05-副本.md:853｜說明｜奧茲恩房間。｜Sala de Alzzin.
+05-副本.md:833｜說明｜東門→追普希林拿鑰匙→蕾瑟塔蒂絲→奧茲恩。法師有造水任務時走水道打海多斯博恩。｜Puerta este → persigue a Pusillín para conseguir la llave → Lethtendris → Alzzin. Si eres mago y tienes la misión del agua, sigue el canal para derrotar a Hidromilecio.
+05-副本.md:863｜說明｜東門不用鑰匙。淨化之匣跨區，已有進度再做。西、北區需要月牙鑰匙，由東區普希林掉落。｜No hace falta llave para la puerta este. Un relicario de pureza lleva a otras zonas; hazla si ya la tienes avanzada. Para el oeste y el norte necesitas la Llave creciente que suelta Pusillín en el ala este.
+05-副本.md:837｜說明｜羽月要塞滿 54 級時先找拉托尼庫斯。去東門前順路到拉瑞斯小亭找埃斯托爾迪。沒到等級，組隊前再補接。｜Al llegar al nivel 54, habla con Latronicus Lanzaluna en el Bastión Plumaluna. De camino a la puerta este, visita a Azj'Tordin en el Pabellón de Lariss. Si te falta nivel, acepta las misiones antes de reunirte con el grupo.
+05-副本.md:835｜說明｜菲拉斯 1444 64.80, 30.20（競技場東牆傳送門）｜Feralas 1444 64.80, 30.20 (portal en el muro este de la arena).
+05-副本.md:963｜說明｜已走武器鍛造、想專精斧類再接。｜Acéptala si eres forjador de armas y quieres especializarte en hachas.
+05-副本.md:969｜說明｜入口右側下坡，從碎石坡到側室找維埃蘭。｜Baja por la derecha de la entrada y cruza la ladera de escombros hasta la sala lateral de Vaelan.
+05-副本.md:970｜說明｜下層入口後過第一座橋。｜Cruza el primer puente tras la entrada de la parte inferior.
+05-副本.md:972｜說明｜沃什加斯與沃恩附近各一塊。｜Una tablilla junto a Vosh’gajin y otra junto a Voone.
+05-副本.md:973｜說明｜沃什加斯附近沿斜坡找比修。｜Busca a Bijou en la rampa cerca de Vosh'gajin.
+05-副本.md:974｜說明｜下層獸人往蜘蛛區的通道。｜Pasadizo que lleva de los orcos de la parte inferior a la zona de arañas.
+05-副本.md:975｜說明｜沃什加斯附近斜坡上的比修｜Bijou, en la rampa cerca de Vosh'gajin.
+05-副本.md:977｜說明｜蛛后附近，留意孵化的小蜘蛛。｜Cerca de Madre Telabrasada. Vigila las crías que salen de los huevos.
+05-副本.md:978｜說明｜蜘蛛區深處。｜Al fondo de la zona de arañas.
+05-副本.md:979｜說明｜座狼區，不要殺幼崽。｜Zona de huargos. Deja vivos a los cachorros.
+05-副本.md:980｜說明｜下層座狼區。｜Zona de huargos de la parte inferior.
+05-副本.md:981｜說明｜維姆薩拉克前的貢品堆。｜Montón de tributos antes de Wyrmthalak.
+05-副本.md:982｜說明｜入口橋後的瓦羅什｜Warosh, pasado el puente de entrada.
+05-副本.md:983｜說明｜全清下層三名首領。｜Derrota a los tres jefes de la parte inferior.
+05-副本.md:984｜說明｜維姆薩拉克掉落命令，拾到後右鍵接。｜Saquea las órdenes de Wyrmthalak y haz clic derecho para aceptar la misión.
+05-副本.md:991｜說明｜中毒後盡快找約翰。｜Busca a John Andrajoso cuanto antes tras envenenarte.
+05-副本.md:999｜說明｜要再跑一趟。｜Requiere otra visita.
+05-副本.md:951｜說明｜共用傳送門→右側下坡→歐莫克→沃什加斯和比修→沃恩→蛛后→哈雷肯→維姆薩拉克。｜Portal compartido → bajada a la derecha → Omokk → Vosh'gajin y Bijou → Voone → Madre Telabrasada → Halycon → Wyrmthalak.
+05-副本.md:1004｜說明｜比修的消息先交麥克斯韋爾，三王任務留下一趟。上層鑰匙只需隊伍一人持有。｜Entrega primero el mensaje de Bijou al Alguacil Maxwell. Deja la misión de los tres jefes para la próxima visita. Basta con que alguien tenga la llave de la parte superior.
+05-副本.md:955｜說明｜走聯盟燃燒平原路線時，在摩根的崗哨與烈焰峰先接。低於任務接取等級就組隊前再補接。武器鍛造師可在冬泉谷永望鎮接沃什加斯的菊石。｜Recoge las misiones en Vigilia de Morgan y Cresta de la Llama. Si te falta nivel, vuelve antes de entrar. Los forjadores de armas pueden tomar en Vista Eterna la misión de Vosh’gajin.
+05-副本.md:953｜說明｜燃燒平原 1428 29.40, 38.30（黑石山南入口）｜Las Estepas Ardientes 1428 29.40, 38.30 (entrada sur a la Montaña Roca Negra).
+05-副本.md:1175｜說明｜木喉聲望達中立再接。｜Acepta la misión al alcanzar la reputación Neutral con Fauces de Madera.
+05-副本.md:1176｜說明｜只在已經要做木喉長鏈時接。｜Acéptala solo si ya vas a hacer la cadena larga de Fauces de Madera.
+05-副本.md:1180｜說明｜外側林地和地道。｜Arboleda exterior y túneles.
+05-副本.md:1181｜說明｜沿路的熊怪營地。｜Campamentos de fúrbolgs por el camino.
+05-副本.md:1182｜說明｜進本後查看兩側岔路的圖騰。｜Tras entrar, busca los tótems en los dos ramales.
+05-副本.md:1183｜說明｜兩條岔路各打一隻。｜Derrota a uno en cada ramal.
+05-副本.md:1184｜說明｜熊怪區的薩滿長老。｜Chamán anciano en la zona de fúrbolgs.
+05-副本.md:1185｜說明｜拾到項鍊再右鍵接。｜Saquea el collar y haz clic derecho para aceptar la misión.
+05-副本.md:1186｜說明｜尾王平台。｜Plataforma del jefe final.
+05-副本.md:1161｜說明｜地道→下層收根冠、袋子、圖騰→兩條岔路打枯萎喉與骨鼻→薩滿長老→尾王瓦洛仕。｜Túnel → recoge los brotes de raíz, las bolsas y los tótems en la parte inferior → derrota a Withermaw y Bonesnout en los dos ramales → chamán anciano → Varrox.
+05-副本.md:1198｜說明｜雙子熊神與尾王任務需木喉中立。尾王前置從艾卡爾的雷加斯威脅開始，依序聯絡暴吼、庫爾薩和獨眼高恩，擊殺野外的哈拉諾斯親王並交任務後才接副本續篇。撿到魔能污染血肉可換種子莢，在薩滿長老後方找食肉鞭笞者交吃飯時間。｜Para la misión de los dos osos y la del jefe final necesitas reputación Neutral con Fauces de Madera. Para la del jefe final, empieza por La amenaza Legashi de Ekkal y habla por orden con Gatekeeper Rageroar, Korsa y Monóculo de Gorn. Derrota al príncipe Halanox fuera y entrega la misión para desbloquear la continuación de la mazmorra. Puedes canjear la carne vil que recojas por vainas: entrega Feeding Time! a Carnivorous Lasher, detrás del chamán anciano.
+05-副本.md:1165｜說明｜第一次經過塔倫迪斯營地接諾達希爾之下，下次到達納蘇斯交並接續篇。組隊後從塔倫迪斯往東北走艾薩拉地道。大法師泰彌亞在南海鎮往達拉然城的路上，沒順路可先略。｜Acepta Bajo Nordrassil la primera vez que pases por Punta Talrendis. Entrégala en tu próxima visita a Darnassus y acepta la continuación. Reúne al grupo y sigue hacia el noreste desde Punta Talrendis hasta el túnel de Azshara. El Archimago Tiemporeja está en el camino de Costasur a Dalaran; puedes saltártelo si no pasas por allí.
+05-副本.md:1163｜說明｜艾薩拉 1447 38.70, 33.40（地道外口，走進地道到傳送門）｜Azshara 1447 38.70, 33.40 (boca del túnel; síguelo hasta el portal).
+05-副本.md:1146｜說明｜進本後在第一個水池旁的營地點日記。｜Tras entrar, abre el diario en el campamento junto a la primera poza.
+05-副本.md:1147｜說明｜和暴掠龍擊殺任務同路。｜Hazlo de camino mientras matas ravasaurios para la otra misión.
+05-副本.md:1148｜說明｜龍群沿路分布。｜Encontrarás ravasaurios por todo el recorrido.
+05-副本.md:1149｜說明｜沿路五個地標各使用一次製圖工具。｜Usa la herramienta de cartografía una vez en cada uno de los cinco puntos del camino.
+05-副本.md:1133｜說明｜入口水池取日記→沿路測繪與殺暴掠龍→擊殺毒脊→檢查地標與書頁。｜Recoge el diario junto a la poza de la entrada → cartografía y mata ravasaurios por el camino → derrota a Venomspine → revisa los puntos de referencia y las páginas del diario.
+05-副本.md:1157｜說明｜三件可在同一趟完成。只有隊伍想打額外首領時才準備動力水晶。｜Puedes hacer las tres misiones en una sola visita. Prepara cristales de poder solo si el grupo quiere enfrentarse a los jefes opcionales.
+05-副本.md:1137｜說明｜滿 55 級在鐵爐堡探險者大廳找索里奧斯。安戈洛那趟離開前回鐵爐堡時還未達 55，就等後段回城再接。跨洲搭船，從馬紹爾避難所往北上坡進本。｜A partir del nivel 55, busca al Conservador Thorius en la Sala de Expedicionarios de Forjaz. Si sigues por debajo del 55 al volver a Forjaz antes de partir de Un'Goro, acepta las misiones cuando vuelvas a la ciudad más adelante. Cruza de continente en barco y sube al norte desde el Refugio de Marshal hasta la entrada.
+05-副本.md:1135｜說明｜安戈洛環形山 1449 48.10, 6.10（泰坦建築外側路標）｜Cráter de Un'Goro 1449 48.10, 6.10 (punto de referencia fuera de la estructura titánica).
+05-副本.md:1107｜說明｜各房的桌上或長凳。｜Revisa las mesas y los bancos de las salas.
+05-副本.md:1108｜說明｜門廊後經召喚廳到幼龍房。｜Pasa el porche y la Cámara de Invocación para llegar a la sala de las crías.
+05-副本.md:1110｜說明｜首廳下方的沉沒墓穴。｜Cripta hundida bajo el primer salón.
+05-副本.md:1111｜說明｜副本門廊。｜Porche de la mazmorra.
+05-副本.md:1112｜說明｜打血骨傀儡拿鑰匙後回觀察室。｜Derrota a Traquesangre, recoge la llave y vuelve a la sala de observación.
+05-副本.md:1113｜說明｜最後六室前的鍊金實驗室。｜Laboratorio de alquimia antes de las seis últimas salas.
+05-副本.md:1114｜說明｜教授房內可找到兩具遺骸。｜Encontrarás los dos restos en la sala del profesor.
+05-副本.md:1119｜說明｜下一趟打詹迪斯。｜Derrota a Jandice en la próxima visita.
+05-副本.md:1121｜說明｜有同一隊續打再回門廊召喚。｜Si el mismo grupo sigue, vuelve al porche e invócalo.
+05-副本.md:1123｜說明｜裝上鬼靈精華才看得到鎮長。｜Equípate con la Esencia espectral para ver al magistrado.
+05-副本.md:1069｜說明｜門廊→首廳拿地契→幼龍房→血骨傀儡→萊斯·霜語→下層六室→黑暗院長加丁。｜Porche → recoge la escritura en el primer salón → sala de las crías → Traquesangre → Ras Murmuhielo → seis salas inferiores → Maestro oscuro Gandling.
+05-副本.md:1129｜說明｜隊中一人有骸骨鑰匙即可開門。自備鑰匙才做加基森與火羽山前置。第一次可先做地契、幼龍和教授。黎明先鋒要完成兩趟黑石塔上層的龍蛋任務。霜語的長鏈還要到激流堡與斯坦索姆亡靈區。｜Una Llave esqueleto basta para todo el grupo. Haz las misiones de Gadgetzan y la Cresta del Penacho en Llamas solo si quieres tu propia llave. En la primera visita, haz las escrituras, las crías y el profesor. Gambito del Alba requiere dos visitas a la parte superior de Cumbre de Roca Negra para las misiones de los huevos. La cadena de Ras también pasa por Stromgarde y el ala de no-muertos de Stratholme.
+05-副本.md:1073｜說明｜冰風崗找維爾頓，聖光之願禮拜堂找貝蒂娜，進本前再找凱爾達隆橋頭的艾瓦。已離開西瘟疫之地就飛回冰風崗。｜Busca a Weldon en el Campamento del Orvallo, a Betina en la Capilla de la Esperanza de la Luz y a Eva junto al puente de Castel Darrow antes de entrar. Si ya saliste de las Tierras de la Peste del Oeste, vuela de vuelta al Campamento del Orvallo.
+05-副本.md:1071｜說明｜西瘟疫之地 1422 68.90, 72.80（凱爾達隆地下入口）｜Tierras de la Peste del Oeste 1422 68.90, 72.80 (entrada subterránea de Castel Darrow).
+05-副本.md:1032｜說明｜鍛造師才需要。｜Solo para herreros.
+05-副本.md:1035｜說明｜有做奧妮克希亞門任務再帶進本。｜Llévalo solo si estás haciendo la cadena de acceso a Onyxia.
+05-副本.md:1039｜說明｜過艾博希爾後，在孵化間找箱子。｜Tras Brasadivino, busca el cofre en la incubadora.
+05-副本.md:1040｜說明｜上層孵化間。｜Incubadora de la parte superior.
+05-副本.md:1042｜說明｜上層熔爐。｜Forja de la parte superior.
+05-副本.md:1043｜說明｜競技場事件結束後找皮普。｜Busca a Pip Perspicaz tras el evento de la arena.
+05-副本.md:1044｜說明｜競技場後的上層陽台找奧比。｜Busca a Awbee en el balcón superior después de la arena.
+05-副本.md:1045｜說明｜上層尾王房間。｜Sala del jefe final de la parte superior.
+05-副本.md:1008｜說明｜共用傳送門→左側上坡與門鎖→艾博希爾→孵化間→競技場→達基薩斯。｜Portal compartido → subida y cerradura a la izquierda → Piroguardián Brasadivino → incubadora → arena → Drakkisath.
+05-副本.md:1065｜說明｜和下層共用入口。開上層門要有人持晉升印章。兩個龍蛋任務分兩趟，後續帶去通靈學院。｜La entrada es la misma que la de la parte inferior. Alguien debe llevar el Lacre de Ascensión para abrir la puerta superior. Haz las dos misiones de huevos en visitas separadas y lleva la continuación a Scholomance.
+05-副本.md:1012｜說明｜走聯盟燃燒平原路線時，在摩根的崗哨與烈焰峰先接。低於任務接取等級就組隊前再補接。做過下層後，到摩根的崗哨交達基薩斯將軍的命令，再接上層尾王。｜En el recorrido de la Alianza por Las Estepas Ardientes, acepta las misiones en la Vigilia de Morgan y Peñasco Llamarada. Si te falta nivel, acéptalas antes de reunirte con el grupo. Tras completar la parte inferior, entrega las Órdenes del general Drakkisath en la Vigilia de Morgan y acepta la misión del jefe final de la parte superior.
