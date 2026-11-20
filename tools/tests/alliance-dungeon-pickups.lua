@@ -80,7 +80,20 @@ end
 turned[95262] = true
 assert(accepts(alcaz)[95263], "Somber News picked up from the note inside")
 turned[95262] = nil
--- 被鐵鍊束縛的男人：本內接、拿鑰匙後在本內交（選做打開）
+-- 被鐵鍊束縛的男人（可跳過）：選做關閉時不列接取；已接的交件照樣顯示
+level, optionalOn = 53, false
+assert(not accepts(alcaz)[96335], "optional Iron Chains pickup hidden with optional off")
+instance = 2994
+for _, inside in ipairs({true, false}) do
+  local nxt = E.DungeonNext(alcaz, inside)
+  local ns_ = nxt and nxt.step and nxt.step.s
+  assert(not (ns_ and ns_.q == 96335 and ns_.t == "accept"), "card does not point at the optional pickup")
+end
+instance = nil
+active[96335], ready[96335] = true, true
+assert(rows(alcaz)["turnin:96335"], "accepted Iron Chains still hands in with optional off")
+active[96335], ready[96335] = nil, nil
+-- 選做打開：本內接、拿鑰匙後在本內交
 optionalOn = true
 assert(accepts(alcaz)[96335], "Iron Chains pickup inside")
 active[96335], ready[96335] = true, true
