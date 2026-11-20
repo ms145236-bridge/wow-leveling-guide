@@ -1,6 +1,6 @@
 # 阿聖練等幫手 deDE 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **417** 列。
+- 只收聯盟路線獨有的說明列，共 **432** 列。
 
 檔名:行號｜類型｜中文原文｜deDE
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Rechtsklicke Angeknabbertes Buch im Rucksack, um die Quest anzunehmen.
@@ -1484,5 +1484,20 @@
 05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Optional: Geh von Gadgetzan nach Norden zurück zur Schimmernden Ebene, fahr mit dem Großen Aufzug hinauf ins Brachland und folge dem westlichen Dorntunnel zum Dungeonportal. Steig nach dem Dungeon bei 03-Station 38 wieder ein.
 05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜Die Sterblichkeit schwindet wird in Darnassus abgegeben. Wenn du keinen Extraweg willst, gib sie beim nächsten Besuch in Darnassus ab.
 05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜Wenn du beim ersten Besuch in Tausend Nadeln nach Ratchet fliegst, nimm bei Mebok Mizzyrix Blaulaubknollen an und nimm die Kiste, den Kommandostab und das Handbuch neben ihm mit. Heb am Fuß des Großen Aufzugs Henrik Lonebrows Tagebuch auf, gib es Falfindel Waywarder in Thalanaar und nimm dann Die Greisin des Krals an.
+05-副本.md:669｜說明｜39 級後經過暴風城時接，沒接到就略過。｜Nimm sie an, wenn du ab Stufe 39 durch Sturmwind kommst; verpasst du sie, lass sie aus.
+05-副本.md:670｜說明｜選做：從塞拉摩飛薩蘭納爾，往東走到大升降梯搭上貧瘠之地，沿東側荊棘路找副本門；出本後飛回塞拉摩，接回 03-第33站。｜Optional: Flieg von Theramore nach Thalanaar, geh nach Osten zum Großen Aufzug, fahr hinauf ins Brachland und folge dem östlichen Dornenpfad zum Dungeonportal. Flieg nach dem Dungeon zurück nach Theramore und steig bei 03-Station 33 wieder ein.
+05-副本.md:689｜說明｜寒冰使者之眼要到奧特蘭克山脈接，聯盟路線不經過，不排。｜Das Auge des Kältebringers wird im Alteracgebirge angenommen, das die Allianzroute nicht berührt, deshalb fehlt es hier.
+05-副本.md:690｜說明｜五人隊，無鑰匙。門口在大升降梯北側的東路，與西側剃刀沼澤不同。｜Gruppe mit fünf Spielern, kein Schlüssel nötig. Der Eingang liegt am östlichen Weg nördlich des Großen Aufzugs, getrennt vom Kral von Razorfen im Westen.
+05-副本.md:647｜說明｜選做：在第34站飛暴風城前打最順。從藏寶海灣沿西岸往北，過格羅姆高到暗礁海西側，潛進水下洞窟找副本門；出本後回藏寶海灣交件，接回 03-第35站。｜Optional: Am besten vor dem Flug nach Sturmwind an Station 34. Folge von Booty Bay der Westküste nach Norden an Grom'gol vorbei bis zur Westseite des Riffs und tauch in die Unterwasserhöhle zum Portal. Gib nach dem Dungeon in Booty Bay ab und steig bei 03-Station 35 wieder ein.
+05-副本.md:659｜說明｜南海鎮迪布斯的拓印和神像任務，要先做完反抗軍營地的庫爾森的秘密和食人妖巫術，路線沒排，不列。｜Die Abdruck- und Götzenquests von Gelehrtem Dibbs in Southshore setzen Das Geheimnis um Kurzen und Troll-Hexerei aus dem Rebellenlager voraus. Die Route enthält diese nicht, deshalb fehlen sie hier.
+05-副本.md:641｜說明｜荊棘谷第二次到藏寶海灣找克拉茲克交車手的傳聞時，同一位接被陰的鹽占海盜和鹽占船長。｜Wenn du beim zweiten Besuch im Schlingendorntal Der Gerüchteverbreiter bei Krazek in Booty Bay abgibst, nimm bei ihm auch Zwielichtige Salzseher und Der Kapitän der Salzseher an.
+05-副本.md:703｜說明｜選做：在第37站飛暴風城前打最順，入口在陽光林地正北；已經離開就飛遠境堡（經湖畔鎮）再過去。出本後在遠境堡交件，接回 03-第39站。｜Optional: Am besten vor dem Flug nach Sturmwind an Station 37. Der Eingang liegt genau nördlich von Sonnengrund; bist du schon weg, flieg zuerst nach Burg Farholde (über Seenhain). Gib nach dem Dungeon in Burg Farholde ab und steig bei 03-Station 39 wieder ein.
+05-副本.md:734｜說明｜選做：從羽月要塞飛尼耶爾前哨站接任務，再往南找維洛和半人馬賤民，最後到西南的瑪拉頓洞口；出本後飛魯瑟蘭村，接回 04-第42站。｜Optional: Flieg von Festung Feathermoon nach Nijelspitze für die Quests, geh dann nach Süden zu Willow und dem Zentaurenpariah und zuletzt zur Höhle von Maraudon im Südwesten. Flieg nach dem Dungeon nach Rut'theran und steig bei 04-Station 42 wieder ein.
+05-副本.md:729｜說明｜塵泥沼澤時滿 39 級就在塞拉摩向大法師特沃許接暗影殘片；其餘到淒涼之地再接：尼耶爾前哨站的塔琳德莉亞和守護者瑪蘭迪斯、維洛、半人馬賤民，最後是洞口的凱雯德拉。｜Bist du in den Düstermarschen schon Stufe 39, nimm in Theramore bei Erzmagier Tervosh die Schattensplitter-Quest an. Den Rest gibt es in Desolace: Talendria und Bewahrer Marandis an der Nijelspitze, Willow, der Zentaurenpariah und zuletzt Cavindra am Höhleneingang.
+05-副本.md:813｜說明｜選做：從塞拉摩沿東岸往北到塵泥沼澤東北海岸，游到奧卡茲島，副本門在島塔地下走廊；出本後回塞拉摩交件，接回 04-第47站。｜Optional: Folge von Theramore der Ostküste nach Norden bis zum Nordostufer der Düstermarschen und schwimm zur Insel Alcaz; das Dungeonportal liegt im Gang unter dem Inselturm. Gib nach dem Dungeon in Theramore ab und steig bei 04-Station 47 wieder ein.
+05-副本.md:828｜說明｜之後經過暴風城再交。｜Gib sie beim nächsten Besuch in Sturmwind ab.
+05-副本.md:800｜說明｜第46站在夜色鎮飛藏寶海灣前，滿 48 級就先飛暴風城向馬迪亞斯·肖爾接塞拉摩的眼線；第46站最後飛到塞拉摩時找蘇利‧麥拉利接後續。｜Flieg an Station 46 vor dem Flug von Dunkelhain nach Booty Bay zuerst nach Sturmwind, wenn du Stufe 48 bist, und nimm bei Meister Mathias Shaw Der Spitzel von Theramore an. Wenn Station 46 mit dem Flug nach Theramore endet, such Sully McCleary für die Folgequests auf.
+05-副本.md:720｜說明｜暮光紀念物要先打完 46 級精英霸主基爾加（主線可跳過），不排。｜Twilight-Andenken setzt voraus, dass der Stufe-46-Elite Oberanführer Kilgar tot ist (auf der Hauptroute optional), deshalb fehlt sie hier.
+05-副本.md:696｜說明｜大河林地第二次在遠境堡向戴瑪‧布蘭特接馬戈之眼，交幫個小忙後再向艾希‧安珀荷接暮光典籍。｜Nimm beim zweiten Besuch in Burg Farholde bei Demar Brant Auge von Mugg an und nach Ein kleiner Gefallen bei Ashe Amberhall Twilightfoliant.
 05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Hinter dem Endboss, neben Willix
 05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Sobald du die Quest hast, können Stacheleber und Bosse im Dungeon den Anhänger fallen lassen.

@@ -65,6 +65,11 @@ assert(at["05-d16:accept:92432"] and at["05-d16:accept:92432"].st == "03-24", "9
 local s29 = rows["03-29"]
 assert(at["05-d17:accept:1100"] and at["05-d17:accept:1100"].st == "03-29", "Lonebrow's Journal at the Great Lift")
 assert(index(s29, "accept", 1101, "05-d17") > index(s29, "turnin", 1100, "05-d17"), "1101 after handing in 1100 at Thalanaar")
+-- 沉沒之城、克羅多克、瑪拉頓（1.13.53）：藏寶海灣克拉茲克、遠境堡、塞拉摩順接
+assert(at["05-d18:accept:95789"] and at["05-d18:accept:95789"].st == "03-34", "Saltseer quests join the Booty Bay visit")
+local s37 = rows["03-37"]
+assert(index(s37, "accept", 94984, "05-d20") > index(s37, "turnin", 94907), "Tome of Twilight after A Small Favor")
+assert(at["05-d21:accept:7070"] and at["05-d21:accept:7070"].st == "03-33", "Shadowshard Fragments in Theramore")
 
 -- 部落
 rows, at = load("Horde", "Orc")

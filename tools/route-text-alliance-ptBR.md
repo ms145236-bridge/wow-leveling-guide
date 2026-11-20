@@ -1,6 +1,6 @@
 # 阿聖練等幫手 ptBR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **417** 列。
+- 只收聯盟路線獨有的說明列，共 **432** 列。
 
 檔名:行號｜類型｜中文原文｜ptBR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Clique com o botão direito em Livro Mordiscado na bolsa para iniciar a missão.
@@ -1484,5 +1484,20 @@
 05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Opcional: de Geringontzan volte para o norte até a Chapada Cintilante, suba pelo Grande Elevador até os Sertões e siga o túnel de espinhos a oeste até o portal da masmorra. Ao sair, retome a 03-parada 38.
 05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜A mortalidade se esvanece é entregue em Darnassus. Se não quiser ir só para isso, entregue na próxima vez que passar por Darnassus.
 05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜Ao voar para Vila Catraca na primeira ida às Mil Agulhas, pegue Tubérculos Folhazul com Cáliper Porcatraca e apanhe a caixa, o bastão de comando e o manual ao lado dele. No pé do Grande Elevador, pegue o Diário de Henrig Monocelha, entregue a Falfindel Trilhemas em Thalanaar e depois pegue A bruxa má do Urzal.
+05-副本.md:669｜說明｜39 級後經過暴風城時接，沒接到就略過。｜Pegue ao passar por Ventobravo a partir do nível 39; se não pegar, pule.
+05-副本.md:670｜說明｜選做：從塞拉摩飛薩蘭納爾，往東走到大升降梯搭上貧瘠之地，沿東側荊棘路找副本門；出本後飛回塞拉摩，接回 03-第33站。｜Opcional: voe de Theramore para Thalanaar, ande para o leste até o Grande Elevador, suba até os Sertões e siga o caminho de espinhos a leste até o portal da masmorra. Ao sair, voe de volta a Theramore e retome a 03-parada 33.
+05-副本.md:689｜說明｜寒冰使者之眼要到奧特蘭克山脈接，聯盟路線不經過，不排。｜O Olho do Frigífero é pego nas Montanhas de Alterac, por onde a rota da Aliança não passa, então não está na lista.
+05-副本.md:690｜說明｜五人隊，無鑰匙。門口在大升降梯北側的東路，與西側剃刀沼澤不同。｜Grupo de cinco, sem chave. A entrada fica no caminho leste ao norte do Grande Elevador, diferente do Urzal dos Tuscos, a oeste.
+05-副本.md:647｜說明｜選做：在第34站飛暴風城前打最順。從藏寶海灣沿西岸往北，過格羅姆高到暗礁海西側，潛進水下洞窟找副本門；出本後回藏寶海灣交件，接回 03-第35站。｜Opcional: encaixa melhor antes do voo para Ventobravo na parada 34. De Angra do Butim, siga a costa oeste para o norte passando por Grom'gol até o lado oeste do recife e mergulhe na caverna submersa até o portal. Ao sair, entregue em Angra do Butim e retome a 03-parada 35.
+05-副本.md:659｜說明｜南海鎮迪布斯的拓印和神像任務，要先做完反抗軍營地的庫爾森的秘密和食人妖巫術，路線沒排，不列。｜As missões de decalques e ídolos de Dibbs em Costa Sul exigem antes O mistério de Kurzen e Bruxaria trólica do Acampamento Rebelde. A rota não as inclui, então não estão na lista.
+05-副本.md:641｜說明｜荊棘谷第二次到藏寶海灣找克拉茲克交車手的傳聞時，同一位接被陰的鹽占海盜和鹽占船長。｜Na segunda ida a Selva do Espinhaço, ao entregar O boateiro a Krazek em Angra do Butim, pegue também Divinassais escusos e O capitão dos Divinassais.
+05-副本.md:703｜說明｜選做：在第37站飛暴風城前打最順，入口在陽光林地正北；已經離開就飛遠境堡（經湖畔鎮）再過去。出本後在遠境堡交件，接回 03-第39站。｜Opcional: encaixa melhor antes do voo para Ventobravo na parada 37. A entrada fica bem ao norte de Solclaro; se já saiu, voe antes para a Bastilha de Ermoforte (via Vila Plácida). Ao sair, entregue na Bastilha de Ermoforte e retome a 03-parada 39.
+05-副本.md:734｜說明｜選做：從羽月要塞飛尼耶爾前哨站接任務，再往南找維洛和半人馬賤民，最後到西南的瑪拉頓洞口；出本後飛魯瑟蘭村，接回 04-第42站。｜Opcional: voe do Domínio de Plumaluna para o Posto do Nijel para pegar as missões, depois vá ao sul atrás de Faia e do Centauro Pária e, por fim, à caverna de Maraudon, a sudoeste. Ao sair, voe para a Vila de Rut'theran e retome a 04-parada 42.
+05-副本.md:729｜說明｜塵泥沼澤時滿 39 級就在塞拉摩向大法師特沃許接暗影殘片；其餘到淒涼之地再接：尼耶爾前哨站的塔琳德莉亞和守護者瑪蘭迪斯、維洛、半人馬賤民，最後是洞口的凱雯德拉。｜Se já estiver no nível 39 no Pântano Vadeoso, pegue a missão dos fragmentos sombrios com o Arquimago Tervosh em Theramore. O resto se pega em Desolação: Talendria e o Guardião Marandis no Posto do Nijel, Faia, o Centauro Pária e, por fim, Cavindra na entrada da caverna.
+05-副本.md:813｜說明｜選做：從塞拉摩沿東岸往北到塵泥沼澤東北海岸，游到奧卡茲島，副本門在島塔地下走廊；出本後回塞拉摩交件，接回 04-第47站。｜Opcional: de Theramore, siga a costa leste para o norte até a margem nordeste do Pântano Vadeoso e nade até a Ilha de Alcaz; o portal fica no corredor sob a torre da ilha. Ao sair, entregue em Theramore e retome a 04-parada 47.
+05-副本.md:828｜說明｜之後經過暴風城再交。｜Entregue na próxima vez que passar por Ventobravo.
+05-副本.md:800｜說明｜第46站在夜色鎮飛藏寶海灣前，滿 48 級就先飛暴風城向馬迪亞斯·肖爾接塞拉摩的眼線；第46站最後飛到塞拉摩時找蘇利‧麥拉利接後續。｜Na parada 46, antes de voar de Vila Sombria para Angra do Butim, voe primeiro a Ventobravo se estiver no nível 48 e pegue a missão com o Mestre Mathias Shaw. Quando a parada 46 terminar com o voo para Theramore, procure Saulo Maclério para continuar.
+05-副本.md:720｜說明｜暮光紀念物要先打完 46 級精英霸主基爾加（主線可跳過），不排。｜Lembranças do Crepúsculo exige matar antes o elite de nível 46 Lorde Supremo Kilgar (opcional na rota principal), então não está na lista.
+05-副本.md:696｜說明｜大河林地第二次在遠境堡向戴瑪‧布蘭特接馬戈之眼，交幫個小忙後再向艾希‧安珀荷接暮光典籍。｜Na segunda ida à Bastilha de Ermoforte, pegue Olho de Mugg com Demar Brant e, depois de entregar Um favorzinho, Tomo do Crepúsculo com Ashe Larambar.
 05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Atrás do chefe final, ao lado de Willix
 05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Com a missão aceita, tanto os javatuscos quanto os chefes da masmorra podem derrubar o pingente.

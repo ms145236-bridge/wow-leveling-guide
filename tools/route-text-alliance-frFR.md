@@ -1,6 +1,6 @@
 # 阿聖練等幫手 frFR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **417** 列。
+- 只收聯盟路線獨有的說明列，共 **432** 列。
 
 檔名:行號｜類型｜中文原文｜frFR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Fais un clic droit sur Livre grignoté dans ton sac pour lancer la quête.
@@ -1484,5 +1484,20 @@
 05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Optionnel : depuis Gadgetzan, remonte au nord jusqu'aux Salines, prends la Grande élévation jusqu'aux Tarides et suis le tunnel d'épines ouest jusqu'au portail du donjon. Après le donjon, reprends à 03-étape 38.
 05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜Le déclin et la mort se rend à Darnassus. Si tu ne veux pas y aller exprès, rends-la lors de ton prochain passage à Darnassus.
 05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜Quand tu voles à Cabestan lors de ta première visite aux Mille pointes, prends Racines de Feuillebleue auprès de Mebok Mizzyrix et récupère la caisse, le bâton de commandement et le manuel à côté de lui. Au pied de la Grande élévation, ramasse le Journal d'Henrig Lonebrow, remets-le à Falfindel Waywarder à Thalanaar, puis prends La mégère du Kraal.
+05-副本.md:669｜說明｜39 級後經過暴風城時接，沒接到就略過。｜Prends-la en passant à Hurlevent à partir du niveau 39 ; si tu la rates, laisse tomber.
+05-副本.md:670｜說明｜選做：從塞拉摩飛薩蘭納爾，往東走到大升降梯搭上貧瘠之地，沿東側荊棘路找副本門；出本後飛回塞拉摩，接回 03-第33站。｜Optionnel : vole de Theramore à Thalanaar, marche vers l'est jusqu'à la Grande élévation, monte aux Tarides et suis le chemin d'épines est jusqu'au portail du donjon. Après le donjon, revole à Theramore et reprends à 03-étape 33.
+05-副本.md:689｜說明｜寒冰使者之眼要到奧特蘭克山脈接，聯盟路線不經過，不排。｜L'œil du Porte-froid se prend dans les Montagnes d'Alterac, où la route de l'Alliance ne passe pas ; elle n'est donc pas listée.
+05-副本.md:690｜說明｜五人隊，無鑰匙。門口在大升降梯北側的東路，與西側剃刀沼澤不同。｜Groupe de cinq, pas de clé. L'entrée est sur le chemin est au nord de la Grande élévation, distincte du Kraal de Tranchebauge à l'ouest.
+05-副本.md:647｜說明｜選做：在第34站飛暴風城前打最順。從藏寶海灣沿西岸往北，過格羅姆高到暗礁海西側，潛進水下洞窟找副本門；出本後回藏寶海灣交件，接回 03-第35站。｜Optionnel : idéal avant le vol pour Hurlevent à l'étape 34. Depuis Baie-du-Butin, longe la côte ouest vers le nord après Grom'gol jusqu'au côté ouest du récif et plonge dans la grotte sous-marine jusqu'au portail. Après le donjon, rends les quêtes à Baie-du-Butin et reprends à 03-étape 35.
+05-副本.md:659｜說明｜南海鎮迪布斯的拓印和神像任務，要先做完反抗軍營地的庫爾森的秘密和食人妖巫術，路線沒排，不列。｜Les quêtes d'estampes et d'idoles de Dibbs à Austrivage demandent d'abord Le mystère de Kurzen et Sorcellerie troll au camp des rebelles. La route ne les inclut pas, elles ne sont donc pas listées.
+05-副本.md:641｜說明｜荊棘谷第二次到藏寶海灣找克拉茲克交車手的傳聞時，同一位接被陰的鹽占海盜和鹽占船長。｜Lors de ta deuxième visite à Strangleronce, quand tu rends Le marchand de rumeurs à Krazek à Baie-du-Butin, prends aussi Sel-augures véreux et Le capitaine sel-augure.
+05-副本.md:703｜說明｜選做：在第37站飛暴風城前打最順，入口在陽光林地正北；已經離開就飛遠境堡（經湖畔鎮）再過去。出本後在遠境堡交件，接回 03-第39站。｜Optionnel : idéal avant le vol pour Hurlevent à l'étape 37. L'entrée est plein nord de Clairsoleil ; si tu es déjà parti, vole d'abord à Fort-Lointain (via Comté-du-Lac). Après le donjon, rends les quêtes à Fort-Lointain et reprends à 03-étape 39.
+05-副本.md:734｜說明｜選做：從羽月要塞飛尼耶爾前哨站接任務，再往南找維洛和半人馬賤民，最後到西南的瑪拉頓洞口；出本後飛魯瑟蘭村，接回 04-第42站。｜Optionnel : vole du Bastion de Pennelune à la Combe de Nijel pour les quêtes, puis va au sud voir Saule et le Paria centaure, et enfin la grotte de Maraudon au sud-ouest. Après le donjon, vole à Rut'theran et reprends à 04-étape 42.
+05-副本.md:729｜說明｜塵泥沼澤時滿 39 級就在塞拉摩向大法師特沃許接暗影殘片；其餘到淒涼之地再接：尼耶爾前哨站的塔琳德莉亞和守護者瑪蘭迪斯、維洛、半人馬賤民，最後是洞口的凱雯德拉。｜Si tu es niveau 39 au Marécage d'Âprefange, prends la quête des fragments d'ombre auprès de l'archimage Tervosh à Theramore. Le reste se prend en Désolace : Talendria et le gardien Marandis à la Combe de Nijel, Saule, le Paria centaure, et enfin Cavindra à l'entrée de la grotte.
+05-副本.md:813｜說明｜選做：從塞拉摩沿東岸往北到塵泥沼澤東北海岸，游到奧卡茲島，副本門在島塔地下走廊；出本後回塞拉摩交件，接回 04-第47站。｜Optionnel : depuis Theramore, longe la côte est vers le nord jusqu'au rivage nord-est du Marécage d'Âprefange et nage jusqu'à l'île d'Alcaz ; le portail est dans le couloir sous la tour de l'île. Après le donjon, rends les quêtes à Theramore et reprends à 04-étape 47.
+05-副本.md:828｜說明｜之後經過暴風城再交。｜Rends-la lors de ton prochain passage à Hurlevent.
+05-副本.md:800｜說明｜第46站在夜色鎮飛藏寶海灣前，滿 48 級就先飛暴風城向馬迪亞斯·肖爾接塞拉摩的眼線；第46站最後飛到塞拉摩時找蘇利‧麥拉利接後續。｜À l'étape 46, avant de voler de Sombre-comté à Baie-du-Butin, vole d'abord à Hurlevent si tu es niveau 48 et prends Notre homme se trouve à Theramore auprès de maître Mathias Shaw. Quand l'étape 46 se termine par le vol pour Theramore, va voir Sully McLeary pour la suite.
+05-副本.md:720｜說明｜暮光紀念物要先打完 46 級精英霸主基爾加（主線可跳過），不排。｜Souvenirs du Crépuscule demande d'avoir tué l'élite niveau 46 seigneur Kilgar (optionnel sur la route principale) ; elle n'est donc pas listée.
+05-副本.md:696｜說明｜大河林地第二次在遠境堡向戴瑪‧布蘭特接馬戈之眼，交幫個小忙後再向艾希‧安珀荷接暮光典籍。｜Lors de ta deuxième visite à Fort-Lointain, prends L'œil de Mugg auprès de Demar Brant, puis, après avoir rendu Un petit service, Tome du Crépuscule auprès d'Ashe Ambrehall.
 05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Derrière le dernier boss, à côté de Willix
 05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Une fois la quête prise, les huranes et les boss du donjon peuvent tous lâcher le pendentif.
