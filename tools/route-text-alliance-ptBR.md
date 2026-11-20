@@ -1,6 +1,6 @@
 # 阿聖練等幫手 ptBR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **416** 列。
+- 只收聯盟路線獨有的說明列，共 **417** 列。
 
 檔名:行號｜類型｜中文原文｜ptBR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Clique com o botão direito em Livro Mordiscado na bolsa para iniciar a missão.
@@ -1482,6 +1482,7 @@
 05-副本.md:573｜說明｜第一次到暴風城時接綠色樣本和壓倒性的力量；到希爾斯布萊德丘陵滿 30 級，在南海鎮找大使賈克斯接令人擔憂的請求。｜Na primeira visita a Ventobravo, pegue Uma amostra verde e Poder esmagador. Ao chegar ao nível 30 no Contraforte de Eira dos Montes, pegue Um pedido alarmante com o Emissário Jacques em Costa Sul.
 05-副本.md:613｜說明｜大升降梯底下撿起亨里格·獨眉的日記，右鍵接任務。｜Pegue o Diário de Henrig Monocelha no pé do Grande Elevador e clique com o botão direito nele para iniciar a missão.
 05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Opcional: de Geringontzan volte para o norte até a Chapada Cintilante, suba pelo Grande Elevador até os Sertões e siga o túnel de espinhos a oeste até o portal da masmorra. Ao sair, retome a 03-parada 38.
-05-副本.md:622｜說明｜墜飾由本內首領隨機掉落，沿路首領都要打。｜O pingente cai aleatoriamente dos chefes da masmorra, então derrote todos os chefes do caminho.
 05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜A mortalidade se esvanece é entregue em Darnassus. Se não quiser ir só para isso, entregue na próxima vez que passar por Darnassus.
 05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜Ao voar para Vila Catraca na primeira ida às Mil Agulhas, pegue Tubérculos Folhazul com Cáliper Porcatraca e apanhe a caixa, o bastão de comando e o manual ao lado dele. No pé do Grande Elevador, pegue o Diário de Henrig Monocelha, entregue a Falfindel Trilhemas em Thalanaar e depois pegue A bruxa má do Urzal.
+05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Atrás do chefe final, ao lado de Willix
+05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Com a missão aceita, tanto os javatuscos quanto os chefes da masmorra podem derrubar o pingente.

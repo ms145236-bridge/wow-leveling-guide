@@ -1,6 +1,6 @@
 # 阿聖練等幫手 deDE 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **416** 列。
+- 只收聯盟路線獨有的說明列，共 **417** 列。
 
 檔名:行號｜類型｜中文原文｜deDE
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Rechtsklicke Angeknabbertes Buch im Rucksack, um die Quest anzunehmen.
@@ -1482,6 +1482,7 @@
 05-副本.md:573｜說明｜第一次到暴風城時接綠色樣本和壓倒性的力量；到希爾斯布萊德丘陵滿 30 級，在南海鎮找大使賈克斯接令人擔憂的請求。｜Nimm beim ersten Besuch in Sturmwind Eine grüne Probe und Überwältigende Macht an. Hol dir ab Stufe 30 im Vorgebirge von Hillsbrad in Southshore Eine alarmierende Bitte bei Abgesandter Jacques.
 05-副本.md:613｜說明｜大升降梯底下撿起亨里格·獨眉的日記，右鍵接任務。｜Heb am Fuß des Großen Aufzugs Henrik Lonebrows Tagebuch auf und rechtsklicke es, um die Quest anzunehmen.
 05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Optional: Geh von Gadgetzan nach Norden zurück zur Schimmernden Ebene, fahr mit dem Großen Aufzug hinauf ins Brachland und folge dem westlichen Dorntunnel zum Dungeonportal. Steig nach dem Dungeon bei 03-Station 38 wieder ein.
-05-副本.md:622｜說明｜墜飾由本內首領隨機掉落，沿路首領都要打。｜Der Anhänger fällt zufällig bei den Bossen des Dungeons, töte also jeden Boss auf dem Weg.
 05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜Die Sterblichkeit schwindet wird in Darnassus abgegeben. Wenn du keinen Extraweg willst, gib sie beim nächsten Besuch in Darnassus ab.
 05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜Wenn du beim ersten Besuch in Tausend Nadeln nach Ratchet fliegst, nimm bei Mebok Mizzyrix Blaulaubknollen an und nimm die Kiste, den Kommandostab und das Handbuch neben ihm mit. Heb am Fuß des Großen Aufzugs Henrik Lonebrows Tagebuch auf, gib es Falfindel Waywarder in Thalanaar und nimm dann Die Greisin des Krals an.
+05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Hinter dem Endboss, neben Willix
+05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Sobald du die Quest hast, können Stacheleber und Bosse im Dungeon den Anhänger fallen lassen.

@@ -1,6 +1,6 @@
 # 阿聖練等幫手 enUS 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **416** 列。
+- 只收聯盟路線獨有的說明列，共 **417** 列。
 
 檔名:行號｜類型｜中文原文｜enUS
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Right-click Nibbled-On Book in your bags to start the quest.
@@ -1482,6 +1482,7 @@
 05-副本.md:573｜說明｜第一次到暴風城時接綠色樣本和壓倒性的力量；到希爾斯布萊德丘陵滿 30 級，在南海鎮找大使賈克斯接令人擔憂的請求。｜On your first Stormwind visit, pick up A Green Sample and Power Overwhelming. Once you're level 30 in Hillsbrad Foothills, get An Alarming Request from Emissary Jacques in Southshore.
 05-副本.md:613｜說明｜大升降梯底下撿起亨里格·獨眉的日記，右鍵接任務。｜Pick up Henrig Lonebrow's Journal at the bottom of the Great Lift and right-click it to start the quest.
 05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Optional: from Gadgetzan go north back to the Shimmering Flats, ride the Great Lift up to the Barrens and follow the west thorn tunnel to the dungeon portal. After the dungeon, rejoin 03-Stop 38.
-05-副本.md:622｜說明｜墜飾由本內首領隨機掉落，沿路首領都要打。｜The pendant is a random drop from the dungeon's bosses, so kill every boss along the way.
 05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜Mortality Wanes is turned in at Darnassus. If you don't want a special trip, hand it in the next time you pass through Darnassus.
 05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜When you fly to Ratchet on your first Thousand Needles trip, get Blueleaf Tubers from Mebok Mizzyrix and pick up the crate, command stick and manual next to him. At the bottom of the Great Lift, pick up Henrig Lonebrow's Journal, hand it to Falfindel Waywarder in Thalanaar, then take The Crone of the Kraul.
+05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Behind the last boss, next to Willix
+05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Once you have the quest, quilboar and bosses in the dungeon can all drop the pendant.

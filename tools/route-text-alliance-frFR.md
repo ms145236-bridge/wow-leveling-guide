@@ -1,6 +1,6 @@
 # 阿聖練等幫手 frFR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **416** 列。
+- 只收聯盟路線獨有的說明列，共 **417** 列。
 
 檔名:行號｜類型｜中文原文｜frFR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Fais un clic droit sur Livre grignoté dans ton sac pour lancer la quête.
@@ -1482,6 +1482,7 @@
 05-副本.md:573｜說明｜第一次到暴風城時接綠色樣本和壓倒性的力量；到希爾斯布萊德丘陵滿 30 級，在南海鎮找大使賈克斯接令人擔憂的請求。｜Lors de ta première visite à Hurlevent, prends Un échantillon vert et Puissance accablante. Une fois niveau 30 dans les Contreforts de Hautebrande, prends Une requête alarmante auprès de l'Emissaire Jacques à Austrivage.
 05-副本.md:613｜說明｜大升降梯底下撿起亨里格·獨眉的日記，右鍵接任務。｜Ramasse le Journal d'Henrig Lonebrow au pied de la Grande élévation et fais un clic droit dessus pour lancer la quête.
 05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Optionnel : depuis Gadgetzan, remonte au nord jusqu'aux Salines, prends la Grande élévation jusqu'aux Tarides et suis le tunnel d'épines ouest jusqu'au portail du donjon. Après le donjon, reprends à 03-étape 38.
-05-副本.md:622｜說明｜墜飾由本內首領隨機掉落，沿路首領都要打。｜Le pendentif tombe au hasard sur les boss du donjon : tue tous ceux que tu croises.
 05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜Le déclin et la mort se rend à Darnassus. Si tu ne veux pas y aller exprès, rends-la lors de ton prochain passage à Darnassus.
 05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜Quand tu voles à Cabestan lors de ta première visite aux Mille pointes, prends Racines de Feuillebleue auprès de Mebok Mizzyrix et récupère la caisse, le bâton de commandement et le manuel à côté de lui. Au pied de la Grande élévation, ramasse le Journal d'Henrig Lonebrow, remets-le à Falfindel Waywarder à Thalanaar, puis prends La mégère du Kraal.
+05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Derrière le dernier boss, à côté de Willix
+05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Une fois la quête prise, les huranes et les boss du donjon peuvent tous lâcher le pendentif.

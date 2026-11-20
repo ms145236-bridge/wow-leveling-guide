@@ -2,7 +2,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 -- 由 tools/build.mjs 產生，勿手改。來源：route-alliance/*.md
 local _, MG = ...
 MG.Route = {
-  built = "f31aaafd",
+  built = "13779387",
   stations = {
     { id="01-1", start="Human", name="北郡山谷", short=nil, visit=nil, map=1429, lv={1, 6}, video=nil, test=nil, alt=nil, when={race={"Human"}}, tips={{k="交通", text="人類出生地。別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長。", s={{"人類出生地", {race={"Human"}}}, {"別族要來，從閃金鎮沿大路往北進北郡山谷，找修道院前的維里副隊長"}}}}, dungeon=nil, grind=nil, after=nil, entrance=nil, pickup=nil, pickupS=nil, pickAt=nil, inst=nil, dq=nil, supply={{k="修理", npc="丹尼爾修士", map=1429, x=47.5, y=41.6}}, danger=nil,
       steps = {
@@ -2481,7 +2481,7 @@ MG.Route = {
         {t="turnin", q=92457, ph="post", npc="大法師莫德菈的影像", tgt="大法師莫德菈的影像", map=1421, x=68.6, y=45.1},
         {t="turnin", q=92458, ph="post", npc="大法師莫德菈的影像", tgt="大法師莫德菈的影像", map=1421, x=68.6, y=45.1},
         {t="accept", q=92459, ph="post", pickLv=24, recLv=33, npc="大法師莫德菈的影像", tgt="大法師莫德菈的影像", map=1421, x=68.6, y=45.1},
-        {t="turnin", q=92459, ph="post", npc="大法師瑟琳卓", tgt="大法師瑟琳卓", map=1416, x=14.15, y=60.05},
+        {t="turnin", q=92459, ph="post", npc="大法師瑟琳卓", tgt="大法師瑟琳卓", map=1416, x=14.1, y=60},
         {t="hearth", ph="post", bind="暴風城", hm=1453},
         {t="turnin", q=92456, ph="post", npc="莎拉米爾", tgt="莎拉米爾", map=1453, x=31.5, y=62.61},
         {t="turnin", q=92489, ph="post", npc="高階巫師安多瑪斯", tgt="高階巫師安多瑪斯", map=1453, x=48.71, y=87.62},
@@ -2702,10 +2702,10 @@ MG.Route = {
         {t="travel", ph="pre", opt=true, tag="可跳過", text="選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 「淒涼之地」。"},
         {t="travel", text="前往 剃刀沼澤 入口", map=1413, x=42.3, y=89.9},
         {t="do", q=1221, ph="in", desc="位置：荊棘道沿途挖薯，威利克斯回程也可挖。", spot="荊棘道沿途挖薯，威利克斯回程也可挖。", hint="用開孔箱子叫地鼠，再用指揮棒讓地鼠搜尋，拿藍葉薯 ×6。", map=1413, x=62.4, y=37.65},
-        {t="accept", q=1142, ph="in", pickLv=25, recLv=30, npc="赫爾拉斯·靜水", tgt="赫爾拉斯·靜水"},
-        {t="do", q=1142, ph="in", desc="墜飾由本內首領隨機掉落，沿路首領都要打。", hint="沿路打首領，拾塔莎拉的墜飾 ×1。"},
+        {t="accept", instancePickup=true, q=1142, ph="in", pickLv=25, recLv=30, spot="尾王後方，威利克斯旁", npc="赫爾拉斯·靜水", tgt="赫爾拉斯·靜水"},
+        {t="do", q=1142, ph="in", desc="接任務後，本內野豬人與首領都可能掉墜飾。", hint="接任務後留意本內野豬人的掉落，拾塔莎拉的墜飾 ×1。"},
         {t="do", q=1101, ph="in", desc="位置：出蝙蝠洞上平台，到尾端小屋打卡爾加。", spot="出蝙蝠洞上平台，到尾端小屋打卡爾加。", hint="擊殺卡爾加·刺肋，拾卡爾加·刺肋的大獎章 ×1。"},
-        {t="accept", q=1144, ph="in", pickLv=23, recLv=30, share=0, desc="護送從尾王旁營帳開始；先清回入口的路再接。", npc="進口商威利克斯", tgt="進口商威利克斯"},
+        {t="accept", instancePickup=true, q=1144, ph="in", pickLv=23, recLv=30, share=0, desc="護送從尾王旁營帳開始；先清回入口的路再接。", npc="進口商威利克斯", tgt="進口商威利克斯"},
         {t="do", q=1144, ph="in", desc="先清回入口的路，再接威利克斯護送；保護他走回入口。位置：尾王旁營帳出發，跟威利克斯走回入口。", spot="尾王旁營帳出發，跟威利克斯走回入口。", hint="先清回程路，再護送進口商威利克斯往入口，抵達後在副本內找他交。"},
         {t="turnin", q=1144, ph="in", desc="護送從副本內 NPC 開始。", spot="副本入口處，護送終點", npc="進口商威利克斯", tgt="進口商威利克斯"},
         {t="turnin", q=1221, ph="post", npc="麥伯克·米希瑞克斯", tgt="麥伯克·米希瑞克斯", map=1413, x=62.37, y=37.62},

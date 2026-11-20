@@ -1,6 +1,6 @@
 # 阿聖練等幫手 esMX 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **416** 列。
+- 只收聯盟路線獨有的說明列，共 **417** 列。
 
 檔名:行號｜類型｜中文原文｜esMX
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Haz clic derecho en Libro mordisqueado en tu bolsa para empezar la misión.
@@ -1482,6 +1482,7 @@
 05-副本.md:573｜說明｜第一次到暴風城時接綠色樣本和壓倒性的力量；到希爾斯布萊德丘陵滿 30 級，在南海鎮找大使賈克斯接令人擔憂的請求。｜En tu primera visita a Ventormenta, acepta Una buena muestra y Poder sobrecogedor. Cuando seas nivel 30 en las Laderas de Trabalomas, acepta Un pedido alarmante del Emisario Jacques en Costasur.
 05-副本.md:613｜說明｜大升降梯底下撿起亨里格·獨眉的日記，右鍵接任務。｜Recoge el Diario de Henrig Soliceja al pie del Gran Elevador y haz clic derecho sobre él para empezar la misión.
 05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Opcional: desde Gadgetzan regresa al norte a El Desierto de Sal, sube por el Gran Elevador a Los Baldíos y sigue el túnel de espinas del oeste hasta el portal del calabozo. Al salir, retoma la 03-parada 38.
-05-副本.md:622｜說明｜墜飾由本內首領隨機掉落，沿路首領都要打。｜El colgante cae al azar de los jefes del calabozo, así que mata a todos los jefes del camino.
 05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜Decaída mortal se entrega en Darnassus. Si no quieres hacer el viaje solo para eso, entrégala la próxima vez que pases por Darnassus.
 05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜Cuando vueles a Trinquete en tu primera visita a Las Mil Agujas, acepta Los tubérculos hojazul de Mebok Mizzyrix y recoge la caja, la vara de mando y el manual que hay a su lado. Al pie del Gran Elevador, recoge el Diario de Henrig Soliceja, entrégaselo a Díscolo Falfindel en Thalanaar y acepta La bruja del Horado.
+05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Detrás del jefe final, junto a Willix
+05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Con la misión aceptada, tanto los jabaespines como los jefes del calabozo pueden soltar el colgante.
