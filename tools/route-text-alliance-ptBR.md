@@ -1,6 +1,6 @@
 # 阿聖練等幫手 ptBR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **406** 列。
+- 只收聯盟路線獨有的說明列，共 **416** 列。
 
 檔名:行號｜類型｜中文原文｜ptBR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Clique com o botão direito em Livro Mordiscado na bolsa para iniciar a missão.
@@ -1475,3 +1475,13 @@
 05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜Na primeira visita às Montanhas Cristarrubra, depois de entregar a escolta de volta em Cerro Oeste, pegue a Irmandade Défias e as bandanas de seda vermelha no Morro da Sentinela. Na última volta a Ventobravo, pegue as três missões da cidade, para não fazer uma viagem especial antes da masmorra.
 02-12到30級.md:116｜說明｜和月溪鎮諜戰同一趟，在月溪鎮打迪菲亞。｜Na mesma viagem da espionagem de Arroio da Lua: derrote os Défias em Arroio da Lua.
 02-12到30級.md:341｜說明｜西部荒野沒接到的，去追信差前在哨兵嶺補接。｜Se você não a pegou em Cerro Oeste, pegue-a no Morro da Sentinela antes de perseguir o mensageiro.
+05-副本.md:552｜說明｜遠程選做：在奧伯丁上船前先飛回阿斯特蘭納，沿大路往東，從梣谷東側大道往南越過莫爾杉壁壘進貧瘠之地，順北路往南，到十字路口西南的綠洲找洞口；沿路是部落地區。出本後回阿斯特蘭納飛奧伯丁，搭船到米奈希爾港，接回 02-第21站。｜Opcional e distante: antes de embarcar em Auberdine, voe de volta a Astranaar. Siga a estrada para o leste, pegue a estrada leste de Vale Gris para o sul passando pela Muralha de Mor'shan até os Sertões e siga a estrada norte para o sul até o oásis a sudoeste da Encruzilhada, onde fica a entrada da caverna. Todo o caminho é território da Horda. Ao sair da masmorra, volte a Astranaar, voe para Auberdine, pegue o barco para o Porto de Menethil e retome a 02-parada 21.
+05-副本.md:566｜說明｜發光的碎片、港口的麻煩和智慧飲料都要跑棘齒城，聯盟這時還沒開棘齒城，不排。｜A lasca faiscante, Encrencas nas docas e Bebidas inteligentes exigem ir a Vila Catraca. A Aliança ainda não desbloqueou Vila Catraca neste ponto, então não estão na lista.
+05-副本.md:580｜說明｜選做：從暴風城飛南海鎮，沿希爾斯布萊德丘陵往北進奧特蘭克山脈，繞洛丹米爾湖北岸往西，到達拉然城下水道外側找大法師莫德菈的影像。出本後用爐石回暴風城，接回 03-第25站。｜Opcional: voe de Ventobravo para Costa Sul, siga para o norte pelo Contraforte de Eira dos Montes até as Montanhas de Alterac, contorne a margem norte do Espelho de Lordaeron para o oeste e procure a Imagem da Arquimaga Modera do lado de fora do esgoto de Dalaran. Ao sair da masmorra, use a pedra de regresso para voltar a Ventobravo e retome a 03-parada 25.
+05-副本.md:587｜說明｜下水道與上街沿路清，三種怪都會遇到｜Limpe o esgoto e as ruas pelo caminho; você encontrará os três tipos
+05-副本.md:573｜說明｜第一次到暴風城時接綠色樣本和壓倒性的力量；到希爾斯布萊德丘陵滿 30 級，在南海鎮找大使賈克斯接令人擔憂的請求。｜Na primeira visita a Ventobravo, pegue Uma amostra verde e Poder esmagador. Ao chegar ao nível 30 no Contraforte de Eira dos Montes, pegue Um pedido alarmante com o Emissário Jacques em Costa Sul.
+05-副本.md:613｜說明｜大升降梯底下撿起亨里格·獨眉的日記，右鍵接任務。｜Pegue o Diário de Henrig Monocelha no pé do Grande Elevador e clique com o botão direito nele para iniciar a missão.
+05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Opcional: de Geringontzan volte para o norte até a Chapada Cintilante, suba pelo Grande Elevador até os Sertões e siga o túnel de espinhos a oeste até o portal da masmorra. Ao sair, retome a 03-parada 38.
+05-副本.md:622｜說明｜墜飾由本內首領隨機掉落，沿路首領都要打。｜O pingente cai aleatoriamente dos chefes da masmorra, então derrote todos os chefes do caminho.
+05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜A mortalidade se esvanece é entregue em Darnassus. Se não quiser ir só para isso, entregue na próxima vez que passar por Darnassus.
+05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜Ao voar para Vila Catraca na primeira ida às Mil Agulhas, pegue Tubérculos Folhazul com Cáliper Porcatraca e apanhe a caixa, o bastão de comando e o manual ao lado dele. No pé do Grande Elevador, pegue o Diário de Henrig Monocelha, entregue a Falfindel Trilhemas em Thalanaar e depois pegue A bruxa má do Urzal.

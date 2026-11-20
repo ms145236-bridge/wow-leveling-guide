@@ -57,6 +57,14 @@ assert(not at["05-d5:accept:971"], "971 stays on the dungeon card")
 -- 死亡礦坑（1.13.49）照舊：交 155 後接 166、214
 local s14 = rows["02-14"]
 assert(index(s14, "accept", 166, "05-d3") > index(s14, "turnin", 155))
+-- 達拉然城（1.13.52）：第一次到暴風城接 92456／92489，第24站在南海鎮接 92432
+assert(at["05-d16:accept:92456"] and at["05-d16:accept:92456"].st == "02-18", "Dalaran Stormwind pickups join the first Stormwind visit")
+assert(at["05-d16:accept:92489"] and at["05-d16:accept:92489"].st == "02-18")
+assert(at["05-d16:accept:92432"] and at["05-d16:accept:92432"].st == "03-24", "92432 joins the Southshore visit")
+-- 剃刀沼澤：大升降梯底下撿日記 1100，薩蘭納爾交 1100 後接 1101
+local s29 = rows["03-29"]
+assert(at["05-d17:accept:1100"] and at["05-d17:accept:1100"].st == "03-29", "Lonebrow's Journal at the Great Lift")
+assert(index(s29, "accept", 1101, "05-d17") > index(s29, "turnin", 1100, "05-d17"), "1101 after handing in 1100 at Thalanaar")
 
 -- 部落
 rows, at = load("Horde", "Orc")

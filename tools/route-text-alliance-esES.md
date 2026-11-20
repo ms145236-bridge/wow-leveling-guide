@@ -1,6 +1,6 @@
 # 阿聖練等幫手 esES 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **406** 列。
+- 只收聯盟路線獨有的說明列，共 **416** 列。
 
 檔名:行號｜類型｜中文原文｜esES
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Haz clic derecho en Libro mordisqueado en tu bolsa para empezar la misión.
@@ -1475,3 +1475,13 @@
 05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜En tu primera visita a las Montañas Crestagrana, tras entregar la escolta de vuelta en los Páramos de Poniente, acepta la Hermandad Defias y los pañuelos de seda roja en la Colina del Centinela. Al volver por última vez a Ventormenta, acepta las tres misiones de la ciudad, para no hacer un viaje especial antes de la mazmorra.
 02-12到30級.md:116｜說明｜和月溪鎮諜戰同一趟，在月溪鎮打迪菲亞。｜En el mismo viaje que el espionaje de Arroyo de la Luna: mata a los Defias de Arroyo de la Luna.
 02-12到30級.md:341｜說明｜西部荒野沒接到的，去追信差前在哨兵嶺補接。｜Si no la aceptaste en los Páramos de Poniente, acéptala en la Colina del Centinela antes de perseguir al mensajero.
+05-副本.md:552｜說明｜遠程選做：在奧伯丁上船前先飛回阿斯特蘭納，沿大路往東，從梣谷東側大道往南越過莫爾杉壁壘進貧瘠之地，順北路往南，到十字路口西南的綠洲找洞口；沿路是部落地區。出本後回阿斯特蘭納飛奧伯丁，搭船到米奈希爾港，接回 02-第21站。｜Opcional y lejana: antes de embarcar en Auberdine, vuela de vuelta a Astranaar. Sigue el camino hacia el este, toma el camino oriental de Vallefresno hacia el sur pasando la Empalizada de Mor'shan hasta Los Baldíos y sigue el camino del norte hacia el sur hasta el oasis al suroeste de El Cruce, donde está la entrada de la cueva. Todo el trayecto es territorio de la Horda. Al salir de la mazmorra, vuelve a Astranaar, vuela a Auberdine, toma el barco a Puerto de Menethil y retoma la 02-parada 21.
+05-副本.md:566｜說明｜發光的碎片、港口的麻煩和智慧飲料都要跑棘齒城，聯盟這時還沒開棘齒城，不排。｜El fragmento brillante, ¡A por la botella! y Las bebidas astutas requieren ir a Trinquete. La Alianza aún no ha abierto Trinquete en este punto, así que no se incluyen.
+05-副本.md:580｜說明｜選做：從暴風城飛南海鎮，沿希爾斯布萊德丘陵往北進奧特蘭克山脈，繞洛丹米爾湖北岸往西，到達拉然城下水道外側找大法師莫德菈的影像。出本後用爐石回暴風城，接回 03-第25站。｜Opcional: vuela de Ventormenta a Costasur, ve al norte por las Laderas de Trabalomas hasta las Montañas de Alterac, sigue la orilla norte del lago Lordamere hacia el oeste y busca la Imagen de la archimaga Modera junto a las cloacas de Dalaran. Al salir de la mazmorra, usa la piedra de hogar para volver a Ventormenta y retoma la 03-parada 25.
+05-副本.md:587｜說明｜下水道與上街沿路清，三種怪都會遇到｜Limpia las cloacas y las calles; encontrarás los tres tipos
+05-副本.md:573｜說明｜第一次到暴風城時接綠色樣本和壓倒性的力量；到希爾斯布萊德丘陵滿 30 級，在南海鎮找大使賈克斯接令人擔憂的請求。｜En tu primera visita a Ventormenta, acepta Una muestra verde y Poder sobrecogedor. Cuando seas nivel 30 en las Laderas de Trabalomas, acepta Una petición alarmante del Emisario Jacques en Costasur.
+05-副本.md:613｜說明｜大升降梯底下撿起亨里格·獨眉的日記，右鍵接任務。｜Recoge el Diario de Henrig Soliceja al pie del Gran Elevador y haz clic derecho sobre él para empezar la misión.
+05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Opcional: desde Gadgetzan vuelve al norte al Desierto de Sal, sube por el Gran Elevador a Los Baldíos y sigue el túnel de espinas del oeste hasta el portal de la mazmorra. Al salir, retoma la 03-parada 38.
+05-副本.md:622｜說明｜墜飾由本內首領隨機掉落，沿路首領都要打。｜El colgante cae al azar de los jefes de la mazmorra, así que mata a todos los jefes del camino.
+05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜Decaída mortal se entrega en Darnassus. Si no quieres hacer el viaje solo para eso, entrégala la próxima vez que pases por Darnassus.
+05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜Cuando vueles a Trinquete en tu primera visita a Las Mil Agujas, acepta Los tubérculos hojazul de Mebok Mizzyrix y recoge la caja, la vara de mando y el manual que hay a su lado. Al pie del Gran Elevador, recoge el Diario de Henrig Soliceja, entrégaselo a Díscolo Falfildel en Thalanaar y acepta La bruja del Horado.
