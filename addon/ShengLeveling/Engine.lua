@@ -604,6 +604,10 @@ local function optOut(s)
   return s.opt and not MG.UI.Get("optional") and not (s.q and (C.IsOnQuest(s.q) or fill[s.q])) or false
 end
 E.OptOut = optOut
+-- 【副本內接取】的可跳過任務（本內找 NPC 起頭）照選做設定；「有隊伍再做」（進本就有隊伍）、背包起始物品、本內交完前置的後續照舊顯示
+local function instanceOptOut(s)
+  return s.instancePickup and not (s.when and s.when.bag) and not (s.tag or ""):find("有隊伍再做", 1, true) and optOut(s)
+end
 
 -- 任一組的接（s.any，例如紮營入門指南任選專業）：s.q 換成玩家日誌裡的那個，其次已交的，都沒有就用第一個還能接的。
 -- 接取步因此照一般任務判斷完成；交的那幾步各自是一般的交，沒接的不適用（本站的 acc 不算任一組）
@@ -2694,7 +2698,7 @@ function E.InstanceState(d, all)
       local s, q = step.s, step.s.q
       if q and s.ph == "in" and s.t == "accept" and not seen[q] and inPickup(s) and E.Applies(s.when)
           and not E.QuickDone(step) and not MG.db.skip[step.key]
-          and (not s.manualAccept or (not MG.db.dNo[x.id] and not optOut(s) and not E.LogFull()))
+          and (not s.manualAccept or (not MG.db.dNo[x.id] and not optOut(s) and not E.LogFull())) and not instanceOptOut(s)
           and (UnitLevel("player") or 1) >= math.max(s.pickLv or 0, (R.quests[q] or {}).min or 0)
           and raceOK(q) and available(q) and not excluded(q) and not superseded(q) then
         seen[q] = true
@@ -2788,7 +2792,7 @@ function E.DungeonNext(d, inside)
     if not q then return true end
     if not raceOK(q) then return false end
     if s.t == "accept" then
-      return (not s.manualAccept or (not optOut(s) and not E.LogFull())) and lv >= math.max(s.pickLv or 0, (R.quests[q] or {}).min or 0)
+      return (not s.manualAccept or (not optOut(s) and not E.LogFull())) and not instanceOptOut(s) and lv >= math.max(s.pickLv or 0, (R.quests[q] or {}).min or 0)
         and available(q) and not excluded(q) and not superseded(q)
     end
     if s.t == "turnin" then return C.IsOnQuest(q) and ready(q) end

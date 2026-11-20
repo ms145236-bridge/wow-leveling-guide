@@ -1,6 +1,6 @@
 # 阿聖練等幫手 esMX 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **417** 列。
+- 只收聯盟路線獨有的說明列，共 **440** 列。
 
 檔名:行號｜類型｜中文原文｜esMX
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Haz clic derecho en Libro mordisqueado en tu bolsa para empezar la misión.
@@ -1484,5 +1484,28 @@
 05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Opcional: desde Gadgetzan regresa al norte a El Desierto de Sal, sube por el Gran Elevador a Los Baldíos y sigue el túnel de espinas del oeste hasta el portal del calabozo. Al salir, retoma la 03-parada 38.
 05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜Decaída mortal se entrega en Darnassus. Si no quieres hacer el viaje solo para eso, entrégala la próxima vez que pases por Darnassus.
 05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜Cuando vueles a Trinquete en tu primera visita a Las Mil Agujas, acepta Los tubérculos hojazul de Mebok Mizzyrix y recoge la caja, la vara de mando y el manual que hay a su lado. Al pie del Gran Elevador, recoge el Diario de Henrig Soliceja, entrégaselo a Díscolo Falfindel en Thalanaar y acepta La bruja del Horado.
+05-副本.md:669｜說明｜39 級後經過暴風城時接，沒接到就略過。｜Acéptala cuando pases por Ventormenta a nivel 39 o más; si no la consigues, sáltala.
+05-副本.md:670｜說明｜選做：從塞拉摩飛薩蘭納爾，往東走到大升降梯搭上貧瘠之地，沿東側荊棘路找副本門；出本後飛回塞拉摩，接回 03-第33站。｜Opcional: vuela de Theramore a Thalanaar, camina al este hasta el Gran Elevador, sube a Los Baldíos y sigue el camino de espinas del este hasta el portal del calabozo. Al salir, vuela de regreso a Theramore y retoma la 03-parada 33.
+05-副本.md:689｜說明｜寒冰使者之眼要到奧特蘭克山脈接，聯盟路線不經過，不排。｜Ojo del Gélido se acepta en las Montañas de Alterac, por donde no pasa la ruta de la Alianza, así que no se incluye.
+05-副本.md:690｜說明｜五人隊，無鑰匙。門口在大升降梯北側的東路，與西側剃刀沼澤不同。｜Grupo de cinco, sin llave. La entrada está en el camino oriental al norte del Gran Elevador, distinta de Horado Rajacieno, al oeste.
+05-副本.md:647｜說明｜選做：在第34站飛暴風城前打最順。從藏寶海灣沿西岸往北，過格羅姆高到暗礁海西側，潛進水下洞窟找副本門；出本後回藏寶海灣交件，接回 03-第35站。｜Opcional: encaja mejor antes del vuelo a Ventormenta en la parada 34. Desde Bahía del Botín, sigue la costa oeste hacia el norte pasando Grom'gol hasta el lado oeste del arrecife y bucea en la cueva submarina hasta el portal. Al salir, entrega en Bahía del Botín y retoma la 03-parada 35.
+05-副本.md:659｜說明｜南海鎮迪布斯的拓印和神像任務，要先做完反抗軍營地的庫爾森的秘密和食人妖巫術，路線沒排，不列。｜Las misiones de calcos e ídolos de Dibbs en Costasur requieren antes El misterio de Kurzen y Brujería trol del Campamento Rebelde. La ruta no las incluye, así que no aparecen.
+05-副本.md:641｜說明｜荊棘谷第二次到藏寶海灣找克拉茲克交車手的傳聞時，同一位接被陰的鹽占海盜和鹽占船長。｜En tu segunda visita a la Vega de Tuercespina, al entregar Rumores a Krazek en Bahía del Botín, acepta también Salvidentes sospechosos y El capitán salvidente.
+05-副本.md:734｜說明｜選做：從羽月要塞飛尼耶爾前哨站接任務，再往南找維洛和半人馬賤民，最後到西南的瑪拉頓洞口；出本後飛魯瑟蘭村，接回 04-第42站。｜Opcional: vuela del Bastión Plumaluna a Punta de Nijel para las misiones, luego ve al sur a por Willow y el Paria Centauro y por último a la cueva de Maraudon, al suroeste. Al salir, vuela a Aldea Rut'theran y retoma la 04-parada 42.
+05-副本.md:729｜說明｜塵泥沼澤時滿 39 級就在塞拉摩向大法師特沃許接暗影殘片；其餘到淒涼之地再接：尼耶爾前哨站的塔琳德莉亞和守護者瑪蘭迪斯、維洛、半人馬賤民，最後是洞口的凱雯德拉。｜Si ya eres nivel 39 en el Marjal Revolcafango, acepta la misión de fragmentos de sombra del Archimago Tervosh en Theramore. El resto se acepta en Desolace: Talendria y el Vigilante Marandis en Punta de Nijel, Willow, el Paria Centauro y, por último, Cavindra en la entrada de la cueva.
+05-副本.md:813｜說明｜選做：從塞拉摩沿東岸往北到塵泥沼澤東北海岸，游到奧卡茲島，副本門在島塔地下走廊；出本後回塞拉摩交件，接回 04-第47站。｜Opcional: desde Theramore, sigue la costa este hacia el norte hasta la orilla noreste del Marjal Revolcafango y nada hasta la isla de Alcaz; el portal está en el pasillo bajo la torre de la isla. Al salir, entrega en Theramore y retoma la 04-parada 47.
+05-副本.md:828｜說明｜之後經過暴風城再交。｜Entrégala la próxima vez que pases por Ventormenta.
+05-副本.md:800｜說明｜第46站在夜色鎮飛藏寶海灣前，滿 48 級就先飛暴風城向馬迪亞斯·肖爾接塞拉摩的眼線；第46站最後飛到塞拉摩時找蘇利‧麥拉利接後續。｜En la parada 46, antes de volar de Villa Oscura a Bahía del Botín, vuela primero a Ventormenta si eres nivel 48 y acepta la misión del Maestro Mathias Shaw. Cuando la parada 46 termine con el vuelo a Theramore, busca a Sully McCleary para continuar.
+05-副本.md:720｜說明｜暮光紀念物要先打完 46 級精英霸主基爾加（主線可跳過），不排。｜Recuerdos crepusculares requiere matar antes al élite de nivel 46 Señor Supremo Kilgar (opcional en la ruta principal), así que no se incluye.
+05-副本.md:696｜說明｜大河林地第二次在遠境堡向戴瑪‧布蘭特接馬戈之眼，交幫個小忙後再向艾希‧安珀荷接暮光典籍。｜En tu segunda visita al Castillo de Farholde, acepta Ojo de Mugg de Demar Brant y, tras entregar Un pequeño favor, Tomo del Crepúsculo de Ashe Salámbar.
 05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Detrás del jefe final, junto a Willix
 05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Con la misión aceptada, tanto los jabaespines como los jefes del calabozo pueden soltar el colgante.
+05-副本.md:702｜說明｜選做：在第37站飛暴風城前打最順；已經離開就飛遠境堡（經湖畔鎮）再過去，傳送門在 2548 37.50, 37.90。出本後在遠境堡交件，接回 03-第39站。｜Opcional: encaja mejor antes del vuelo a Ventormenta en la parada 37. Si ya te fuiste, vuela primero al Castillo de Farholde (vía Villa del Lago); el portal está en 2548 37.50, 37.90. Al salir, entrega en el Castillo de Farholde y retoma la 03-parada 39.
+05-副本.md:721｜說明｜傳送門在 2548 37.50, 37.90，集合石在旁邊的 39.10, 38.80；要塞外圍的大門不是入口。｜El portal está en 2548 37.50, 37.90 y la piedra de encuentro, al lado, en 39.10, 38.80. La puerta exterior de la fortaleza no es la entrada.
+05-副本.md:694｜說明｜大河林地 2548 37.50, 37.90｜Claros del Río 2548 37.50, 37.90
+05-副本.md:775｜說明｜洛特格里普在水池巡游；小噴泉在同一水池水面。；位置：公主洞下方跳入洛特格里普水池，找水面噴泉。；順序：先在水面操作噴泉，再下潛｜Escamapodrida patrulla la charca; la pequeña fuente está en la superficie del agua. Salta a la poza de Rotgrip, bajo la cueva de la Princesa, y busca el manantial en la superficie del agua. Usa primero la fuente en la superficie y luego bucea.
+05-副本.md:775｜說明｜先在水面操作噴泉，再下潛｜Usa primero la fuente en la superficie y luego bucea
+05-副本.md:819｜說明｜擊敗尾王後找旁邊上鐐銬的囚犯接；審問者要還活著才拿得到鑰匙。｜Tras el jefe final, habla con el prisionero encadenado que hay al lado. El interrogador debe seguir vivo para que consigas la llave.
+05-副本.md:819｜說明｜擊敗尾王後找旁邊上鐐銬的囚犯接｜Tras el jefe final, habla con el prisionero encadenado que hay al lado
+05-副本.md:819｜說明｜審問者要還活著才拿得到鑰匙。｜El interrogador debe seguir vivo para que consigas la llave.
+05-副本.md:821｜說明｜尾王旁，上鐐銬的囚犯｜Junto al jefe final, el prisionero encadenado
