@@ -1,6 +1,6 @@
 # 阿聖練等幫手 enUS 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **440** 列。
+- 只收聯盟路線獨有的說明列，共 **1583** 列。
 
 檔名:行號｜類型｜中文原文｜enUS
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Right-click Nibbled-On Book in your bags to start the quest.
@@ -1509,3 +1509,88 @@
 05-副本.md:819｜說明｜擊敗尾王後找旁邊上鐐銬的囚犯接｜After the last boss, talk to the shackled prisoner next to it
 05-副本.md:819｜說明｜審問者要還活著才拿得到鑰匙。｜The interrogator must still be alive for you to get the key.
 05-副本.md:821｜說明｜尾王旁，上鐐銬的囚犯｜Next to the last boss, the shackled prisoner
+
+05-副本.md:905｜說明｜過芬古斯庭院，找諾特旁的陷阱。｜Past Fengus's courtyard, find the trap by Knot.
+05-副本.md:915｜說明｜完成貢品路線後，找仍活著的克羅卡斯。｜After a tribute run, talk to Kromcrush while he is still alive.
+05-副本.md:916｜說明｜下次打完北區貢品，保留克羅卡斯回報。｜Keep Kromcrush alive on your next tribute run and turn it in to him.
+05-副本.md:917｜說明｜首領或書堆掉落，撿到自己職業的書再右鍵接。｜Loot your class book from a boss or tome and right-click it to start.
+05-副本.md:918｜說明｜從北區入口庭院的側門進圖書館。｜Take the side door off the north entrance courtyard to the library.
+05-副本.md:896｜說明｜北門→芬古斯庭院→諾特與陷阱→克羅卡斯→戈多克大王。貢品隊留守衛活著，打完大王再找克雷格和克羅卡斯。｜North gate → Fengus's courtyard → Knot and the trap → Kromcrush → King Gordok. For tribute, spare the guards and see Kreeg and Kromcrush after the king.
+05-副本.md:947｜說明｜未達成貢品條件或克羅卡斯已死就略過 7703。職業書與聖典在圖書館交。｜Skip 7703 if the tribute conditions were missed or Kromcrush is dead. Turn in class books and librams in the library.
+05-副本.md:900｜說明｜從羽月要塞到菲拉斯北區，先確認隊伍有月牙鑰匙。打貢品可先備霜油、瑟銀零件、符文布卷、硬甲皮和符文線。｜From Feathermoon Stronghold, head to the north wing in Feralas. Bring a Crescent Key. For tribute, bring Frost Oil, a Thorium Widget, Bolts of Runecloth, Rugged Leather and Rune Thread.
+05-副本.md:886｜說明｜西區圖書館，王子後方。｜Behind the prince in the west wing library.
+05-副本.md:867｜說明｜西門→特迪斯·扭木→上層找辛德拉古靈→清五座水晶塔→伊莫塔爾→圖書館打托塞德林。｜West gate → Tendris Warpwood → Shen'dralar Ancient upstairs → clear five pylons → Immol'thar → Prince Tortheldrin in the library.
+05-副本.md:892｜說明｜圖書館可交職業書。打算跑北區貢品任務時，先向克羅卡斯接任務再來開王子的箱子。｜Turn in class books at the library. For the north tribute quest, take it from Kromcrush before opening the prince's chest.
+05-副本.md:871｜說明｜在羽月要塞向學者盧索恩·紋角接精靈的傳說，滿 54 級才接得到。西、北區需要月牙鑰匙，由東區普希林掉落。｜At 54, take Elven Legends from Scholar Runethorn in Feathermoon Stronghold. West and North need the Crescent Key from Pusillin in East.
+05-副本.md:853｜說明｜奧茲恩房間。｜Alzzin's room.
+05-副本.md:833｜說明｜東門→追普希林拿鑰匙→蕾瑟塔蒂絲→奧茲恩。法師有造水任務時走水道打海多斯博恩。｜East gate → chase Pusillin for the key → Lethtendris → Alzzin. For the mage water quest, follow the waterway to Hydrospawn.
+05-副本.md:863｜說明｜東門不用鑰匙。淨化之匣跨區，已有進度再做。西、北區需要月牙鑰匙，由東區普希林掉落。｜East needs no key. The reliquary crosses zones, so do it if you're already on the chain. Pusillin drops the Crescent Key for West and North.
+05-副本.md:837｜說明｜羽月要塞滿 54 級時先找拉托尼庫斯。去東門前順路到拉瑞斯小亭找埃斯托爾迪。沒到等級，組隊前再補接。｜At 54, see Latronicus in Feathermoon Stronghold. Before entering East, stop at the Lariss Pavilion for Azj'Tordin. If you're under level, pick up the quests before grouping.
+05-副本.md:835｜說明｜菲拉斯 1444 64.80, 30.20（競技場東牆傳送門）｜Feralas 64.80, 30.20 (east-wall portal at the arena).
+05-副本.md:963｜說明｜已走武器鍛造、想專精斧類再接。｜Take this only if you are a Weaponsmith going for Axesmithing.
+05-副本.md:969｜說明｜入口右側下坡，從碎石坡到側室找維埃蘭。｜Take the ramp down on the right, then climb the rubble to Vaelan's side room.
+05-副本.md:970｜說明｜下層入口後過第一座橋。｜Across the first bridge from the lower entrance.
+05-副本.md:972｜說明｜沃什加斯與沃恩附近各一塊。｜One near Vosh'gajin and one near Voone.
+05-副本.md:973｜說明｜沃什加斯附近沿斜坡找比修。｜Follow the ramp near Vosh'gajin to Bijou.
+05-副本.md:974｜說明｜下層獸人往蜘蛛區的通道。｜The passage from the lower orc area to the spiders.
+05-副本.md:975｜說明｜沃什加斯附近斜坡上的比修｜Bijou, on the ramp near Vosh'gajin
+05-副本.md:977｜說明｜蛛后附近，留意孵化的小蜘蛛。｜Near Mother Smolderweb. Watch for hatching spiders.
+05-副本.md:978｜說明｜蜘蛛區深處。｜Deep in the spider area.
+05-副本.md:979｜說明｜座狼區，不要殺幼崽。｜In the worg area. Don't kill the pup.
+05-副本.md:980｜說明｜下層座狼區。｜The worg area in the lower spire.
+05-副本.md:981｜說明｜維姆薩拉克前的貢品堆。｜The tribute pile before Wyrmthalak.
+05-副本.md:982｜說明｜入口橋後的瓦羅什｜Warosh, just past the entrance bridge
+05-副本.md:983｜說明｜全清下層三名首領。｜Kill all three lower spire bosses.
+05-副本.md:984｜說明｜維姆薩拉克掉落命令，拾到後右鍵接。｜Loot Wyrmthalak's orders and right-click them to start.
+05-副本.md:991｜說明｜中毒後盡快找約翰。｜Get back to John quickly while still poisoned.
+05-副本.md:999｜說明｜要再跑一趟。｜Do this on a later run.
+05-副本.md:951｜說明｜共用傳送門→右側下坡→歐莫克→沃什加斯和比修→沃恩→蛛后→哈雷肯→維姆薩拉克。｜Shared portal → down the right ramp → Omokk → Vosh'gajin and Bijou → Voone → Mother Smolderweb → Halycon → Wyrmthalak.
+05-副本.md:1004｜說明｜比修的消息先交麥克斯韋爾，三王任務留下一趟。上層鑰匙只需隊伍一人持有。｜Take Bijou's message to Maxwell first. Save the three bosses for your next run. One party member with the upper spire key is enough.
+05-副本.md:955｜說明｜走聯盟燃燒平原路線時，在摩根的崗哨與烈焰峰先接。低於任務接取等級就組隊前再補接。武器鍛造師可在冬泉谷永望鎮接沃什加斯的菊石。｜Pick up quests at Morgan's Vigil and Flame Crest in Burning Steppes. If you're under level, pick them up before grouping. Weaponsmiths can get Snakestone of the Shadow Huntress in Everlook.
+05-副本.md:953｜說明｜燃燒平原 1428 29.40, 38.30（黑石山南入口）｜Burning Steppes 29.40, 38.30 (southern entrance to Blackrock Mountain).
+05-副本.md:1175｜說明｜木喉聲望達中立再接。｜Requires Neutral with Timbermaw Hold.
+05-副本.md:1176｜說明｜只在已經要做木喉長鏈時接。｜Take this if you're already doing the Timbermaw quest chain.
+05-副本.md:1180｜說明｜外側林地和地道。｜The outer grove and tunnel.
+05-副本.md:1181｜說明｜沿路的熊怪營地。｜Furbolg camps along the route.
+05-副本.md:1182｜說明｜進本後查看兩側岔路的圖騰。｜Look for the totems down the two branches after entering.
+05-副本.md:1183｜說明｜兩條岔路各打一隻。｜One in each branch.
+05-副本.md:1184｜說明｜熊怪區的薩滿長老。｜The elder shaman in the furbolg area.
+05-副本.md:1185｜說明｜拾到項鍊再右鍵接。｜Right-click the necklace after looting it.
+05-副本.md:1186｜說明｜尾王平台。｜The final boss platform.
+05-副本.md:1161｜說明｜地道→下層收根冠、袋子、圖騰→兩條岔路打枯萎喉與骨鼻→薩滿長老→尾王瓦洛仕。｜Tunnel → gather root caps, pouches and totems below → take the two branches for Withermaw and Bonesnout → elder shaman → Varrox.
+05-副本.md:1198｜說明｜雙子熊神與尾王任務需木喉中立。尾王前置從艾卡爾的雷加斯威脅開始，依序聯絡暴吼、庫爾薩和獨眼高恩，擊殺野外的哈拉諾斯親王並交任務後才接副本續篇。撿到魔能污染血肉可換種子莢，在薩滿長老後方找食肉鞭笞者交吃飯時間。｜The Twin Bears and the final boss quest require Neutral with Timbermaw Hold. Start with Ekkal's Legashi Threat, then see Rageroar, Korsa and Gorn One Eye. Defeat Prince Halanox outdoors and turn in the quest to unlock the dungeon follow-up. Loot Fel-Tainted Flesh for a seed pod: turn it in to the Flesh-Eating Lasher past the elder shaman.
+05-副本.md:1165｜說明｜第一次經過塔倫迪斯營地接諾達希爾之下，下次到達納蘇斯交並接續篇。組隊後從塔倫迪斯往東北走艾薩拉地道。大法師泰彌亞在南海鎮往達拉然城的路上，沒順路可先略。｜Take Beneath Nordrassil on your first pass through Talrendis Point. Turn it in on your next visit to Darnassus and take the follow-up. From Talrendis, head northeast to the Azshara tunnel. Visit Archmage Timear only if you're already headed from Southshore to Dalaran.
+05-副本.md:1163｜說明｜艾薩拉 1447 38.70, 33.40（地道外口，走進地道到傳送門）｜Azshara 38.70, 33.40 (tunnel mouth). Follow the tunnel to the portal.
+05-副本.md:1146｜說明｜進本後在第一個水池旁的營地點日記。｜Click the journal at the camp by the first pool.
+05-副本.md:1147｜說明｜和暴掠龍擊殺任務同路。｜On the same path as the ravasaur kill quest.
+05-副本.md:1148｜說明｜龍群沿路分布。｜Ravasaur packs along the route.
+05-副本.md:1149｜說明｜沿路五個地標各使用一次製圖工具。｜Use the cartographer's kit at each of the five landmarks.
+05-副本.md:1133｜說明｜入口水池取日記→沿路測繪與殺暴掠龍→擊殺毒脊→檢查地標與書頁。｜Loot the journal by the first pool → map landmarks and kill ravasaurs → kill Venomridge → check landmarks and pages.
+05-副本.md:1157｜說明｜三件可在同一趟完成。只有隊伍想打額外首領時才準備動力水晶。｜All three quests fit in one run. Bring power crystals only if your party plans the extra boss.
+05-副本.md:1137｜說明｜滿 55 級在鐵爐堡探險者大廳找索里奧斯。安戈洛那趟離開前回鐵爐堡時還未達 55，就等後段回城再接。跨洲搭船，從馬紹爾避難所往北上坡進本。｜At 55, see Curator Thorius in the Hall of Explorers in Ironforge. If you're under level on the return from Un'Goro, pick up the quests on a later city visit. Take a boat across continents, then head uphill north from Marshall's Refuge.
+05-副本.md:1135｜說明｜安戈洛環形山 1449 48.10, 6.10（泰坦建築外側路標）｜Un'Goro Crater 48.10, 6.10 (outside the titan building).
+05-副本.md:1107｜說明｜各房的桌上或長凳。｜On tables or benches in the four rooms.
+05-副本.md:1108｜說明｜門廊後經召喚廳到幼龍房。｜From the porch, pass the summoning hall to the hatchery.
+05-副本.md:1110｜說明｜首廳下方的沉沒墓穴。｜The Sunken Crypt below the first hall.
+05-副本.md:1111｜說明｜副本門廊。｜The instance porch.
+05-副本.md:1112｜說明｜打血骨傀儡拿鑰匙後回觀察室。｜Get the key from Rattlegore, then return to the Viewing Room.
+05-副本.md:1113｜說明｜最後六室前的鍊金實驗室。｜The alchemy lab before the last six rooms.
+05-副本.md:1114｜說明｜教授房內可找到兩具遺骸。｜Both sets of remains are in the doctor's room.
+05-副本.md:1119｜說明｜下一趟打詹迪斯。｜Kill Jandice on your next run.
+05-副本.md:1121｜說明｜有同一隊續打再回門廊召喚。｜If the party is staying together, go back to the porch to summon him.
+05-副本.md:1123｜說明｜裝上鬼靈精華才看得到鎮長。｜Equip Spectral Essence to see the magistrate.
+05-副本.md:1069｜說明｜門廊→首廳拿地契→幼龍房→血骨傀儡→萊斯·霜語→下層六室→黑暗院長加丁。｜Porch → first hall for the deed → hatchery → Rattlegore → Ras Frostwhisper → six lower rooms → Darkmaster Gandling.
+05-副本.md:1129｜說明｜隊中一人有骸骨鑰匙即可開門。自備鑰匙才做加基森與火羽山前置。第一次可先做地契、幼龍和教授。黎明先鋒要完成兩趟黑石塔上層的龍蛋任務。霜語的長鏈還要到激流堡與斯坦索姆亡靈區。｜One party member with the Skeleton Key can open the door. Do the Gadgetzan and Fire Plume Ridge chain only for your own key. On the first run, get the deeds, hatchlings and doctor. Dawn's Gambit takes two Upper Blackrock Spire egg runs. The Ras Frostwhisper chain goes through Stromgarde and the undead wing of Stratholme.
+05-副本.md:1073｜說明｜冰風崗找維爾頓，聖光之願禮拜堂找貝蒂娜，進本前再找凱爾達隆橋頭的艾瓦。已離開西瘟疫之地就飛回冰風崗。｜See Weldon at Chillwind Camp, Betina at Light's Hope Chapel and Eva by the bridge to Caer Darrow before entering. If you've left Western Plaguelands, fly back to Chillwind Camp.
+05-副本.md:1071｜說明｜西瘟疫之地 1422 68.90, 72.80（凱爾達隆地下入口）｜Western Plaguelands 68.90, 72.80 (underground portal at Caer Darrow).
+05-副本.md:1032｜說明｜鍛造師才需要。｜Blacksmiths only.
+05-副本.md:1035｜說明｜有做奧妮克希亞門任務再帶進本。｜Bring this if you're doing Onyxia attunement.
+05-副本.md:1039｜說明｜過艾博希爾後，在孵化間找箱子。｜Look for the chest in the Rookery after Emberseer.
+05-副本.md:1040｜說明｜上層孵化間。｜The upper spire Rookery.
+05-副本.md:1042｜說明｜上層熔爐。｜The upper spire forge.
+05-副本.md:1043｜說明｜競技場事件結束後找皮普。｜Find Pip after the arena event.
+05-副本.md:1044｜說明｜競技場後的上層陽台找奧比。｜Find Awbee on the upper balcony after the arena.
+05-副本.md:1045｜說明｜上層尾王房間。｜The final boss room in the upper spire.
+05-副本.md:1008｜說明｜共用傳送門→左側上坡與門鎖→艾博希爾→孵化間→競技場→達基薩斯。｜Shared portal → upper ramp and locked door on the left → Emberseer → Rookery → arena → Drakkisath.
+05-副本.md:1065｜說明｜和下層共用入口。開上層門要有人持晉升印章。兩個龍蛋任務分兩趟，後續帶去通靈學院。｜Shares an entrance with Lower. Bring one Seal of Ascension to open the upper door. The two egg quests take separate runs and lead to Scholomance.
+05-副本.md:1012｜說明｜走聯盟燃燒平原路線時，在摩根的崗哨與烈焰峰先接。低於任務接取等級就組隊前再補接。做過下層後，到摩根的崗哨交達基薩斯將軍的命令，再接上層尾王。｜Pick up quests at Morgan's Vigil and Flame Crest while crossing Burning Steppes. If you're under level, pick them up before grouping. After Lower, turn in General Drakkisath's Command at Morgan's Vigil and take the upper spire follow-up.

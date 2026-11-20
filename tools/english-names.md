@@ -4289,3 +4289,11 @@ QuestieDB Forever 的 NPC 262465 名為 Daewyn Songblade，任務 95772 的台�
 |---|---|---|---|---|---|
 | 95772 | 尋找桑布雷德 | Songblade Search | 戴文‧桑布雷德 | Daewyn Songblade | npc |
 | 95795 | 死於沼地 | Fallen in the Fen | 戴文‧桑布雷德 | Daewyn Songblade | npc |
+
+## 聯盟高等副本補充
+
+| 任務ID | 中文名 | 英文名 | NPC中文 | NPC英文 | 來源 |
+|---:|---|---|---|---|---|
+| 92065 | 黑喉反擊 | Blackmaw Reclamation | 守門者暴吼 | Gatekeeper Rageroar | [台服交件紀錄](https://wowamobi.com/quests/92065) · [NPC 236573](https://www.wowhead.com/forever/npc=236573) |
+| 92070 | 遺失的紀念物 | A Lost Memento | 物品 羽飾符咒項鍊 | Feathered Charm Necklace | [永恆版起任物品 249698](https://www.wowhead.com/forever/item=249698) |
+| 95790 | 易懂的研究 | Digestible Research | 物件 部分消化的日記 | Partially Digested Journal | [永恆版玩家起任紀錄](https://www.wowhead.com/forever/quest=95790) · [台服任務紀錄](https://wowamobi.com/quests/95790) |
