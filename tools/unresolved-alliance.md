@@ -1,4 +1,4 @@
-# 建置報告（資料版本 4870b54b）
+# 建置報告（資料版本 57ee236e）
 
 來源：01-第一段-1到12級.md、02-12到30級.md、03-30到45級.md、04-45到60級.md、05-副本.md、06-路線外任務.md、07-訓練師.md、08-保留物品.md、xp-table.md
 站數：82　任務數：1711
@@ -7,7 +7,7 @@
 
 無
 
-## 提醒（87）
+## 提醒（89）
 
 - 01-4 丹莫洛・卡拉諾斯：1 個「做」步驟沒有座標（不會出現箭頭）
 - 01-6 泰達希爾・多蘭納爾：1 個「做」步驟沒有座標（不會出現箭頭）
@@ -71,8 +71,10 @@
 - 05-d21 瑪拉頓：5 個「做」步驟沒有座標（不會出現箭頭）
 - 04-45到60級.md:54 接｜圖加的任務：座標 31.8,74.15 與 QuestieDB（29.8,65.2）差距大
 - 04-43 塔納利斯・第二次：1 個「做」步驟沒有座標（不會出現箭頭）
-- 05-副本.md:817 交｜：缺座標（QuestieDB 也沒有）
-- 05-副本.md:818 接｜：缺座標（QuestieDB 也沒有）
+- 05-副本.md:817 交｜秘密監獄：缺座標（QuestieDB 也沒有）
+- 05-副本.md:818 接｜噩耗：缺座標（QuestieDB 也沒有）
+- 05-副本.md:819 接｜被鐵鍊束縛的男人：缺座標（QuestieDB 也沒有）
+- 05-副本.md:821 交｜被鐵鍊束縛的男人：缺座標（QuestieDB 也沒有）
 - 05-d22 奧卡茲監獄：4 個「做」步驟沒有座標（不會出現箭頭）
 - 04-48 安戈洛環形山・第一次：2 個「做」步驟沒有座標（不會出現箭頭）
 - 04-49 費伍德森林・第一次：1 個「做」步驟沒有座標（不會出現箭頭）
@@ -187,11 +189,11 @@
 - 05-副本.md:805 交｜：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
 - 05-副本.md:806 接｜：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
 - 05-副本.md:808 交｜：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
-- 05-副本.md:809 接｜：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
+- 05-副本.md:809 接｜秘密監獄：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
 - 05-副本.md:810 接｜：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
-- 05-副本.md:823 交｜：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
-- 05-副本.md:824 交｜：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
-- 05-副本.md:825 接｜：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
+- 05-副本.md:825 交｜：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
+- 05-副本.md:826 交｜噩耗：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
+- 05-副本.md:827 接｜：QuestieDB 沒有繁中名（Sully McCleary），用「Sully McCleary」
 - 任務 4289：目標怪 QuestieDB 沒有繁中名（安戈洛猩猩、Un'Goro Gorilla）
 - 任務 8251：目標怪 QuestieDB 沒有繁中名（血精靈勘測員、血精靈搜尋者、血精靈防衛者、Blood Elf Arcanist、伊文‧修密特、露蜜娜‧風詠）
 - 任務 8422：目標怪 QuestieDB 沒有繁中名（加什爾、祖羅爾、Gasher、Zul'Lor）

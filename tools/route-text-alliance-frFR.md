@@ -1,6 +1,6 @@
 # 阿聖練等幫手 frFR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **432** 列。
+- 只收聯盟路線獨有的說明列，共 **440** 列。
 
 檔名:行號｜類型｜中文原文｜frFR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Fais un clic droit sur Livre grignoté dans ton sac pour lancer la quête.
@@ -1491,7 +1491,6 @@
 05-副本.md:647｜說明｜選做：在第34站飛暴風城前打最順。從藏寶海灣沿西岸往北，過格羅姆高到暗礁海西側，潛進水下洞窟找副本門；出本後回藏寶海灣交件，接回 03-第35站。｜Optionnel : idéal avant le vol pour Hurlevent à l'étape 34. Depuis Baie-du-Butin, longe la côte ouest vers le nord après Grom'gol jusqu'au côté ouest du récif et plonge dans la grotte sous-marine jusqu'au portail. Après le donjon, rends les quêtes à Baie-du-Butin et reprends à 03-étape 35.
 05-副本.md:659｜說明｜南海鎮迪布斯的拓印和神像任務，要先做完反抗軍營地的庫爾森的秘密和食人妖巫術，路線沒排，不列。｜Les quêtes d'estampes et d'idoles de Dibbs à Austrivage demandent d'abord Le mystère de Kurzen et Sorcellerie troll au camp des rebelles. La route ne les inclut pas, elles ne sont donc pas listées.
 05-副本.md:641｜說明｜荊棘谷第二次到藏寶海灣找克拉茲克交車手的傳聞時，同一位接被陰的鹽占海盜和鹽占船長。｜Lors de ta deuxième visite à Strangleronce, quand tu rends Le marchand de rumeurs à Krazek à Baie-du-Butin, prends aussi Sel-augures véreux et Le capitaine sel-augure.
-05-副本.md:703｜說明｜選做：在第37站飛暴風城前打最順，入口在陽光林地正北；已經離開就飛遠境堡（經湖畔鎮）再過去。出本後在遠境堡交件，接回 03-第39站。｜Optionnel : idéal avant le vol pour Hurlevent à l'étape 37. L'entrée est plein nord de Clairsoleil ; si tu es déjà parti, vole d'abord à Fort-Lointain (via Comté-du-Lac). Après le donjon, rends les quêtes à Fort-Lointain et reprends à 03-étape 39.
 05-副本.md:734｜說明｜選做：從羽月要塞飛尼耶爾前哨站接任務，再往南找維洛和半人馬賤民，最後到西南的瑪拉頓洞口；出本後飛魯瑟蘭村，接回 04-第42站。｜Optionnel : vole du Bastion de Pennelune à la Combe de Nijel pour les quêtes, puis va au sud voir Saule et le Paria centaure, et enfin la grotte de Maraudon au sud-ouest. Après le donjon, vole à Rut'theran et reprends à 04-étape 42.
 05-副本.md:729｜說明｜塵泥沼澤時滿 39 級就在塞拉摩向大法師特沃許接暗影殘片；其餘到淒涼之地再接：尼耶爾前哨站的塔琳德莉亞和守護者瑪蘭迪斯、維洛、半人馬賤民，最後是洞口的凱雯德拉。｜Si tu es niveau 39 au Marécage d'Âprefange, prends la quête des fragments d'ombre auprès de l'archimage Tervosh à Theramore. Le reste se prend en Désolace : Talendria et le gardien Marandis à la Combe de Nijel, Saule, le Paria centaure, et enfin Cavindra à l'entrée de la grotte.
 05-副本.md:813｜說明｜選做：從塞拉摩沿東岸往北到塵泥沼澤東北海岸，游到奧卡茲島，副本門在島塔地下走廊；出本後回塞拉摩交件，接回 04-第47站。｜Optionnel : depuis Theramore, longe la côte est vers le nord jusqu'au rivage nord-est du Marécage d'Âprefange et nage jusqu'à l'île d'Alcaz ; le portail est dans le couloir sous la tour de l'île. Après le donjon, rends les quêtes à Theramore et reprends à 04-étape 47.
@@ -1501,3 +1500,12 @@
 05-副本.md:696｜說明｜大河林地第二次在遠境堡向戴瑪‧布蘭特接馬戈之眼，交幫個小忙後再向艾希‧安珀荷接暮光典籍。｜Lors de ta deuxième visite à Fort-Lointain, prends L'œil de Mugg auprès de Demar Brant, puis, après avoir rendu Un petit service, Tome du Crépuscule auprès d'Ashe Ambrehall.
 05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Derrière le dernier boss, à côté de Willix
 05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Une fois la quête prise, les huranes et les boss du donjon peuvent tous lâcher le pendentif.
+05-副本.md:702｜說明｜選做：在第37站飛暴風城前打最順；已經離開就飛遠境堡（經湖畔鎮）再過去，傳送門在 2548 37.50, 37.90。出本後在遠境堡交件，接回 03-第39站。｜Optionnel : idéal avant le vol pour Hurlevent à l'étape 37. Si tu es déjà parti, vole d'abord à Fort-Lointain (via Comté-du-Lac) ; le portail est en 2548 37.50, 37.90. Après le donjon, rends les quêtes à Fort-Lointain et reprends à 03-étape 39.
+05-副本.md:721｜說明｜傳送門在 2548 37.50, 37.90，集合石在旁邊的 39.10, 38.80；要塞外圍的大門不是入口。｜Le portail est en 2548 37.50, 37.90 et la pierre de rencontre juste à côté, en 39.10, 38.80. La porte extérieure de la forteresse n'est pas l'entrée.
+05-副本.md:694｜說明｜大河林地 2548 37.50, 37.90｜Rives Claires 2548 37.50, 37.90
+05-副本.md:775｜說明｜洛特格里普在水池巡游；小噴泉在同一水池水面。；位置：公主洞下方跳入洛特格里普水池，找水面噴泉。；順序：先在水面操作噴泉，再下潛｜Grippe-charogne patrouille dans le bassin ; la petite fontaine se trouve à la surface de l'eau. Saute dans le bassin de Grippe-charogne sous la grotte de la princesse et cherche la source à la surface. Utilise d'abord la fontaine en surface, puis plonge.
+05-副本.md:775｜說明｜先在水面操作噴泉，再下潛｜Utilise d'abord la fontaine en surface, puis plonge
+05-副本.md:819｜說明｜擊敗尾王後找旁邊上鐐銬的囚犯接；審問者要還活著才拿得到鑰匙。｜Après le dernier boss, parle au prisonnier enchaîné à côté. L'interrogateur doit encore être en vie pour que tu obtiennes la clé.
+05-副本.md:819｜說明｜擊敗尾王後找旁邊上鐐銬的囚犯接｜Après le dernier boss, parle au prisonnier enchaîné à côté
+05-副本.md:819｜說明｜審問者要還活著才拿得到鑰匙。｜L'interrogateur doit encore être en vie pour que tu obtiennes la clé.
+05-副本.md:821｜說明｜尾王旁，上鐐銬的囚犯｜À côté du dernier boss, le prisonnier enchaîné

@@ -1,6 +1,6 @@
 # 阿聖練等幫手 ptBR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **432** 列。
+- 只收聯盟路線獨有的說明列，共 **440** 列。
 
 檔名:行號｜類型｜中文原文｜ptBR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Clique com o botão direito em Livro Mordiscado na bolsa para iniciar a missão.
@@ -1491,7 +1491,6 @@
 05-副本.md:647｜說明｜選做：在第34站飛暴風城前打最順。從藏寶海灣沿西岸往北，過格羅姆高到暗礁海西側，潛進水下洞窟找副本門；出本後回藏寶海灣交件，接回 03-第35站。｜Opcional: encaixa melhor antes do voo para Ventobravo na parada 34. De Angra do Butim, siga a costa oeste para o norte passando por Grom'gol até o lado oeste do recife e mergulhe na caverna submersa até o portal. Ao sair, entregue em Angra do Butim e retome a 03-parada 35.
 05-副本.md:659｜說明｜南海鎮迪布斯的拓印和神像任務，要先做完反抗軍營地的庫爾森的秘密和食人妖巫術，路線沒排，不列。｜As missões de decalques e ídolos de Dibbs em Costa Sul exigem antes O mistério de Kurzen e Bruxaria trólica do Acampamento Rebelde. A rota não as inclui, então não estão na lista.
 05-副本.md:641｜說明｜荊棘谷第二次到藏寶海灣找克拉茲克交車手的傳聞時，同一位接被陰的鹽占海盜和鹽占船長。｜Na segunda ida a Selva do Espinhaço, ao entregar O boateiro a Krazek em Angra do Butim, pegue também Divinassais escusos e O capitão dos Divinassais.
-05-副本.md:703｜說明｜選做：在第37站飛暴風城前打最順，入口在陽光林地正北；已經離開就飛遠境堡（經湖畔鎮）再過去。出本後在遠境堡交件，接回 03-第39站。｜Opcional: encaixa melhor antes do voo para Ventobravo na parada 37. A entrada fica bem ao norte de Solclaro; se já saiu, voe antes para a Bastilha de Ermoforte (via Vila Plácida). Ao sair, entregue na Bastilha de Ermoforte e retome a 03-parada 39.
 05-副本.md:734｜說明｜選做：從羽月要塞飛尼耶爾前哨站接任務，再往南找維洛和半人馬賤民，最後到西南的瑪拉頓洞口；出本後飛魯瑟蘭村，接回 04-第42站。｜Opcional: voe do Domínio de Plumaluna para o Posto do Nijel para pegar as missões, depois vá ao sul atrás de Faia e do Centauro Pária e, por fim, à caverna de Maraudon, a sudoeste. Ao sair, voe para a Vila de Rut'theran e retome a 04-parada 42.
 05-副本.md:729｜說明｜塵泥沼澤時滿 39 級就在塞拉摩向大法師特沃許接暗影殘片；其餘到淒涼之地再接：尼耶爾前哨站的塔琳德莉亞和守護者瑪蘭迪斯、維洛、半人馬賤民，最後是洞口的凱雯德拉。｜Se já estiver no nível 39 no Pântano Vadeoso, pegue a missão dos fragmentos sombrios com o Arquimago Tervosh em Theramore. O resto se pega em Desolação: Talendria e o Guardião Marandis no Posto do Nijel, Faia, o Centauro Pária e, por fim, Cavindra na entrada da caverna.
 05-副本.md:813｜說明｜選做：從塞拉摩沿東岸往北到塵泥沼澤東北海岸，游到奧卡茲島，副本門在島塔地下走廊；出本後回塞拉摩交件，接回 04-第47站。｜Opcional: de Theramore, siga a costa leste para o norte até a margem nordeste do Pântano Vadeoso e nade até a Ilha de Alcaz; o portal fica no corredor sob a torre da ilha. Ao sair, entregue em Theramore e retome a 04-parada 47.
@@ -1501,3 +1500,12 @@
 05-副本.md:696｜說明｜大河林地第二次在遠境堡向戴瑪‧布蘭特接馬戈之眼，交幫個小忙後再向艾希‧安珀荷接暮光典籍。｜Na segunda ida à Bastilha de Ermoforte, pegue Olho de Mugg com Demar Brant e, depois de entregar Um favorzinho, Tomo do Crepúsculo com Ashe Larambar.
 05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Atrás do chefe final, ao lado de Willix
 05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Com a missão aceita, tanto os javatuscos quanto os chefes da masmorra podem derrubar o pingente.
+05-副本.md:702｜說明｜選做：在第37站飛暴風城前打最順；已經離開就飛遠境堡（經湖畔鎮）再過去，傳送門在 2548 37.50, 37.90。出本後在遠境堡交件，接回 03-第39站。｜Opcional: encaixa melhor antes do voo para Ventobravo na parada 37. Se já saiu, voe antes para a Bastilha de Ermoforte (via Vila Plácida); o portal fica em 2548 37.50, 37.90. Ao sair, entregue na Bastilha de Ermoforte e retome a 03-parada 39.
+05-副本.md:721｜說明｜傳送門在 2548 37.50, 37.90，集合石在旁邊的 39.10, 38.80；要塞外圍的大門不是入口。｜O portal fica em 2548 37.50, 37.90 e a pedra de encontro ao lado, em 39.10, 38.80. O portão externo da fortaleza não é a entrada.
+05-副本.md:694｜說明｜大河林地 2548 37.50, 37.90｜Sendas do Rio 2548 37.50, 37.90
+05-副本.md:775｜說明｜洛特格里普在水池巡游；小噴泉在同一水池水面。；位置：公主洞下方跳入洛特格里普水池，找水面噴泉。；順序：先在水面操作噴泉，再下潛｜Putrigarra patrulha o poço; a pequena fonte fica na superfície da água. Pule na piscina de Putrigarra, abaixo da caverna da Princesa. Encontre a fonte na superfície da água. Use primeiro a fonte na superfície e depois mergulhe.
+05-副本.md:775｜說明｜先在水面操作噴泉，再下潛｜Use primeiro a fonte na superfície e depois mergulhe
+05-副本.md:819｜說明｜擊敗尾王後找旁邊上鐐銬的囚犯接；審問者要還活著才拿得到鑰匙。｜Depois do chefe final, fale com o prisioneiro acorrentado ao lado. O interrogador precisa estar vivo para você conseguir a chave.
+05-副本.md:819｜說明｜擊敗尾王後找旁邊上鐐銬的囚犯接｜Depois do chefe final, fale com o prisioneiro acorrentado ao lado
+05-副本.md:819｜說明｜審問者要還活著才拿得到鑰匙。｜O interrogador precisa estar vivo para você conseguir a chave.
+05-副本.md:821｜說明｜尾王旁，上鐐銬的囚犯｜Ao lado do chefe final, o prisioneiro acorrentado

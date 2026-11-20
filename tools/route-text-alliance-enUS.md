@@ -1,6 +1,6 @@
 # 阿聖練等幫手 enUS 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **432** 列。
+- 只收聯盟路線獨有的說明列，共 **440** 列。
 
 檔名:行號｜類型｜中文原文｜enUS
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Right-click Nibbled-On Book in your bags to start the quest.
@@ -1491,7 +1491,6 @@
 05-副本.md:647｜說明｜選做：在第34站飛暴風城前打最順。從藏寶海灣沿西岸往北，過格羅姆高到暗礁海西側，潛進水下洞窟找副本門；出本後回藏寶海灣交件，接回 03-第35站。｜Optional: it fits best before the Stormwind flight at stop 34. From Booty Bay, follow the west coast north past Grom'gol to the west side of the reef and dive into the underwater cave to find the portal. After the dungeon, hand in at Booty Bay and rejoin 03-Stop 35.
 05-副本.md:659｜說明｜南海鎮迪布斯的拓印和神像任務，要先做完反抗軍營地的庫爾森的秘密和食人妖巫術，路線沒排，不列。｜Loremaster Dibbs's rubbing and idol quests in Southshore need Kurzen's Mystery and Troll Witchery from the Rebel Camp first. The route doesn't include those, so they're not listed.
 05-副本.md:641｜說明｜荊棘谷第二次到藏寶海灣找克拉茲克交車手的傳聞時，同一位接被陰的鹽占海盜和鹽占船長。｜On your second Stranglethorn visit, when you hand in The Rumormonger to Krazek in Booty Bay, take Shady Saltseers and The Saltseer Captain from him too.
-05-副本.md:703｜說明｜選做：在第37站飛暴風城前打最順，入口在陽光林地正北；已經離開就飛遠境堡（經湖畔鎮）再過去。出本後在遠境堡交件，接回 03-第39站。｜Optional: it fits best before the Stormwind flight at stop 37. The entrance is due north of Sunnyglade; if you've already left, fly to Farholde Keep (via Lakeshire) first. After the dungeon, hand in at Farholde Keep and rejoin 03-Stop 39.
 05-副本.md:734｜說明｜選做：從羽月要塞飛尼耶爾前哨站接任務，再往南找維洛和半人馬賤民，最後到西南的瑪拉頓洞口；出本後飛魯瑟蘭村，接回 04-第42站。｜Optional: fly from Feathermoon Stronghold to Nijel's Point for the quests, then head south for Willow and the Centaur Pariah, and finally to the Maraudon cave in the southwest. After the dungeon, fly to Rut'theran Village and rejoin 04-Stop 42.
 05-副本.md:729｜說明｜塵泥沼澤時滿 39 級就在塞拉摩向大法師特沃許接暗影殘片；其餘到淒涼之地再接：尼耶爾前哨站的塔琳德莉亞和守護者瑪蘭迪斯、維洛、半人馬賤民，最後是洞口的凱雯德拉。｜If you're level 39 during the Dustwallow Marsh stop, take Shadowshard Fragments from Archmage Tervosh in Theramore. Pick up the rest in Desolace: Talendria and Keeper Marandis at Nijel's Point, Willow, the Centaur Pariah, and finally Cavindra at the cave mouth.
 05-副本.md:813｜說明｜選做：從塞拉摩沿東岸往北到塵泥沼澤東北海岸，游到奧卡茲島，副本門在島塔地下走廊；出本後回塞拉摩交件，接回 04-第47站。｜Optional: from Theramore, follow the east coast north to the northeastern shore of Dustwallow Marsh and swim to Alcaz Island; the dungeon portal is in the corridor under the island tower. After the dungeon, hand in at Theramore and rejoin 04-Stop 47.
@@ -1501,3 +1500,12 @@
 05-副本.md:696｜說明｜大河林地第二次在遠境堡向戴瑪‧布蘭特接馬戈之眼，交幫個小忙後再向艾希‧安珀荷接暮光典籍。｜On your second visit to Farholde Keep, take Eye of Mugg from Demar Brant, and after handing in A Small Favor, take Tome of Twilight from Ashe Amberhall.
 05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Behind the last boss, next to Willix
 05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Once you have the quest, quilboar and bosses in the dungeon can all drop the pendant.
+05-副本.md:702｜說明｜選做：在第37站飛暴風城前打最順；已經離開就飛遠境堡（經湖畔鎮）再過去，傳送門在 2548 37.50, 37.90。出本後在遠境堡交件，接回 03-第39站。｜Optional: it fits best before the Stormwind flight at stop 37. If you've already left, fly to Farholde Keep (via Lakeshire) first; the portal is at 2548 37.50, 37.90. After the dungeon, hand in at Farholde Keep and rejoin 03-Stop 39.
+05-副本.md:721｜說明｜傳送門在 2548 37.50, 37.90，集合石在旁邊的 39.10, 38.80；要塞外圍的大門不是入口。｜The portal is at 2548 37.50, 37.90 and the meeting stone is nearby at 39.10, 38.80. The fortress's outer gate is not the entrance.
+05-副本.md:694｜說明｜大河林地 2548 37.50, 37.90｜Riverglades 2548 37.50, 37.90
+05-副本.md:775｜說明｜洛特格里普在水池巡游；小噴泉在同一水池水面。；位置：公主洞下方跳入洛特格里普水池，找水面噴泉。；順序：先在水面操作噴泉，再下潛｜Rotgrip patrols the pool; the small fountain is on the pool's surface. Drop into Rotgrip's pool below the Princess. Find the spring at the surface. Use the fountain on the surface first, then dive.
+05-副本.md:775｜說明｜先在水面操作噴泉，再下潛｜Use the fountain on the surface first, then dive
+05-副本.md:819｜說明｜擊敗尾王後找旁邊上鐐銬的囚犯接；審問者要還活著才拿得到鑰匙。｜After the last boss, talk to the shackled prisoner next to it. The interrogator must still be alive for you to get the key.
+05-副本.md:819｜說明｜擊敗尾王後找旁邊上鐐銬的囚犯接｜After the last boss, talk to the shackled prisoner next to it
+05-副本.md:819｜說明｜審問者要還活著才拿得到鑰匙。｜The interrogator must still be alive for you to get the key.
+05-副本.md:821｜說明｜尾王旁，上鐐銬的囚犯｜Next to the last boss, the shackled prisoner
