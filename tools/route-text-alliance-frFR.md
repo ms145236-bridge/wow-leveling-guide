@@ -1,6 +1,6 @@
 # 阿聖練等幫手 frFR 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **406** 列。
+- 只收聯盟路線獨有的說明列，共 **417** 列。
 
 檔名:行號｜類型｜中文原文｜frFR
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Fais un clic droit sur Livre grignoté dans ton sac pour lancer la quête.
@@ -1475,3 +1475,14 @@
 05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜Lors de ta première visite aux Carmines, après avoir rendu l'escorte en Marche de l'Ouest, prends la Confrérie défias et les bandanas en soie rouge à la colline des Sentinelles. Au dernier retour à Hurlevent, prends les trois quêtes de la ville, pour ne pas faire de trajet spécial avant le donjon.
 02-12到30級.md:116｜說明｜和月溪鎮諜戰同一趟，在月溪鎮打迪菲亞。｜Même trajet que l'espionnage de Ruisselune : tue les Défias à Ruisselune.
 02-12到30級.md:341｜說明｜西部荒野沒接到的，去追信差前在哨兵嶺補接。｜Si tu ne l'as pas prise en Marche de l'Ouest, prends-la à la colline des Sentinelles avant de poursuivre le messager.
+05-副本.md:552｜說明｜遠程選做：在奧伯丁上船前先飛回阿斯特蘭納，沿大路往東，從梣谷東側大道往南越過莫爾杉壁壘進貧瘠之地，順北路往南，到十字路口西南的綠洲找洞口；沿路是部落地區。出本後回阿斯特蘭納飛奧伯丁，搭船到米奈希爾港，接回 02-第21站。｜Optionnel et éloigné : avant de prendre le bateau à Auberdine, revole à Astranaar. Suis la route vers l'est, prends la route est d'Orneval vers le sud via le Rempart de Mor'shan jusqu'aux Tarides, puis suis la route nord vers le sud jusqu'à l'oasis au sud-ouest de La Croisée, où se trouve l'entrée de la grotte. Tout le trajet est en territoire de la Horde. Après le donjon, retourne à Astranaar, vole jusqu'à Auberdine, prends le bateau pour le port de Menethil et reprends à 02-étape 21.
+05-副本.md:566｜說明｜發光的碎片、港口的麻煩和智慧飲料都要跑棘齒城，聯盟這時還沒開棘齒城，不排。｜L'Eclat luminescent, Fuite de porto aux docks et Les potions d'intelligence demandent tous un passage à Cabestan. L'Alliance n'a pas encore débloqué Cabestan à ce stade, ils ne sont donc pas listés.
+05-副本.md:580｜說明｜選做：從暴風城飛南海鎮，沿希爾斯布萊德丘陵往北進奧特蘭克山脈，繞洛丹米爾湖北岸往西，到達拉然城下水道外側找大法師莫德菈的影像。出本後用爐石回暴風城，接回 03-第25站。｜Optionnel : vole de Hurlevent à Austrivage, va vers le nord par les Contreforts de Hautebrande jusqu'aux Montagnes d'Alterac, longe la rive nord du Lac Lordamere vers l'ouest et trouve l'Image de l'archimage Modera devant les égouts de Dalaran. Après le donjon, utilise ta pierre de foyer pour retourner à Hurlevent et reprends à 03-étape 25.
+05-副本.md:587｜說明｜下水道與上街沿路清，三種怪都會遇到｜Nettoie les égouts et les rues : tu croiseras les trois types
+05-副本.md:573｜說明｜第一次到暴風城時接綠色樣本和壓倒性的力量；到希爾斯布萊德丘陵滿 30 級，在南海鎮找大使賈克斯接令人擔憂的請求。｜Lors de ta première visite à Hurlevent, prends Un échantillon vert et Puissance accablante. Une fois niveau 30 dans les Contreforts de Hautebrande, prends Une requête alarmante auprès de l'Emissaire Jacques à Austrivage.
+05-副本.md:613｜說明｜大升降梯底下撿起亨里格·獨眉的日記，右鍵接任務。｜Ramasse le Journal d'Henrig Lonebrow au pied de la Grande élévation et fais un clic droit dessus pour lancer la quête.
+05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Optionnel : depuis Gadgetzan, remonte au nord jusqu'aux Salines, prends la Grande élévation jusqu'aux Tarides et suis le tunnel d'épines ouest jusqu'au portail du donjon. Après le donjon, reprends à 03-étape 38.
+05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜Le déclin et la mort se rend à Darnassus. Si tu ne veux pas y aller exprès, rends-la lors de ton prochain passage à Darnassus.
+05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜Quand tu voles à Cabestan lors de ta première visite aux Mille pointes, prends Racines de Feuillebleue auprès de Mebok Mizzyrix et récupère la caisse, le bâton de commandement et le manuel à côté de lui. Au pied de la Grande élévation, ramasse le Journal d'Henrig Lonebrow, remets-le à Falfindel Waywarder à Thalanaar, puis prends La mégère du Kraal.
+05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Derrière le dernier boss, à côté de Willix
+05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Une fois la quête prise, les huranes et les boss du donjon peuvent tous lâcher le pendentif.

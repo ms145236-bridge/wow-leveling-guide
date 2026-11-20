@@ -1,6 +1,6 @@
 # 阿聖練等幫手 enUS 聯盟路線說明
 
-- 只收聯盟路線獨有的說明列，共 **406** 列。
+- 只收聯盟路線獨有的說明列，共 **417** 列。
 
 檔名:行號｜類型｜中文原文｜enUS
 01-第一段-1到12級.md:22｜說明｜右鍵背包裡的被啃過的書接任務。｜Right-click Nibbled-On Book in your bags to start the quest.
@@ -1475,3 +1475,14 @@
 05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜On your first Redridge visit, after you hand in the escort back in Westfall, pick up The Defias Brotherhood and Red Silk Bandanas at Sentinel Hill. On your last return to Stormwind, pick up Underground Assault, Oh Brother. . . and Collecting Memories, so you don't need a special trip before the dungeon.
 02-12到30級.md:116｜說明｜和月溪鎮諜戰同一趟，在月溪鎮打迪菲亞。｜Same trip as Moonbrook Espionage: kill the Defias in Moonbrook.
 02-12到30級.md:341｜說明｜西部荒野沒接到的，去追信差前在哨兵嶺補接。｜If you didn't take it in Westfall, pick it up at Sentinel Hill before chasing the courier.
+05-副本.md:552｜說明｜遠程選做：在奧伯丁上船前先飛回阿斯特蘭納，沿大路往東，從梣谷東側大道往南越過莫爾杉壁壘進貧瘠之地，順北路往南，到十字路口西南的綠洲找洞口；沿路是部落地區。出本後回阿斯特蘭納飛奧伯丁，搭船到米奈希爾港，接回 02-第21站。｜Optional, far-off dungeon: before boarding the boat in Auberdine, fly back to Astranaar. Follow the road east, take the eastern Ashenvale road south past Mor'shan Rampart into the Barrens, then follow the north road south to the oasis southwest of the Crossroads to find the cave mouth. The whole way is Horde territory. After the dungeon, return to Astranaar, fly to Auberdine, take the boat to Menethil Harbor and rejoin 02-Stop 21.
+05-副本.md:566｜說明｜發光的碎片、港口的麻煩和智慧飲料都要跑棘齒城，聯盟這時還沒開棘齒城，不排。｜The Glowing Shard, Trouble at the Docks and Smart Drinks all need trips to Ratchet. Alliance hasn't unlocked Ratchet yet at this point, so they're not listed.
+05-副本.md:580｜說明｜選做：從暴風城飛南海鎮，沿希爾斯布萊德丘陵往北進奧特蘭克山脈，繞洛丹米爾湖北岸往西，到達拉然城下水道外側找大法師莫德菈的影像。出本後用爐石回暴風城，接回 03-第25站。｜Optional: fly from Stormwind to Southshore, go north through Hillsbrad Foothills into the Alterac Mountains, follow the north shore of Lordamere Lake west, and find the Image of Archmage Modera outside the Dalaran sewers. After the dungeon, hearth back to Stormwind and rejoin 03-Stop 25.
+05-副本.md:587｜說明｜下水道與上街沿路清，三種怪都會遇到｜Clear along the sewers and the streets; you'll meet all three kinds
+05-副本.md:573｜說明｜第一次到暴風城時接綠色樣本和壓倒性的力量；到希爾斯布萊德丘陵滿 30 級，在南海鎮找大使賈克斯接令人擔憂的請求。｜On your first Stormwind visit, pick up A Green Sample and Power Overwhelming. Once you're level 30 in Hillsbrad Foothills, get An Alarming Request from Emissary Jacques in Southshore.
+05-副本.md:613｜說明｜大升降梯底下撿起亨里格·獨眉的日記，右鍵接任務。｜Pick up Henrig Lonebrow's Journal at the bottom of the Great Lift and right-click it to start the quest.
+05-副本.md:616｜說明｜選做：從加基森往北回閃光平原，搭大升降梯上貧瘠之地，沿西側荊棘隧道找副本門；出本後接回 03-第38站。｜Optional: from Gadgetzan go north back to the Shimmering Flats, ride the Great Lift up to the Barrens and follow the west thorn tunnel to the dungeon portal. After the dungeon, rejoin 03-Stop 38.
+05-副本.md:634｜說明｜臨終遺言在達納蘇斯交，不想專程就等之後經過達納蘇斯再交。｜Mortality Wanes is turned in at Darnassus. If you don't want a special trip, hand it in the next time you pass through Darnassus.
+05-副本.md:608｜說明｜千針石林第一次飛到棘齒城時，先向麥伯克接藍葉薯，並在他旁邊拿箱子、指揮棒和手冊；搭大升降梯下到底時撿亨里格·獨眉的日記，到薩蘭納爾交給法芬德爾，再接剃刀沼澤的乾癟老太婆。｜When you fly to Ratchet on your first Thousand Needles trip, get Blueleaf Tubers from Mebok Mizzyrix and pick up the crate, command stick and manual next to him. At the bottom of the Great Lift, pick up Henrig Lonebrow's Journal, hand it to Falfindel Waywarder in Thalanaar, then take The Crone of the Kraul.
+05-副本.md:621｜說明｜尾王後方，威利克斯旁｜Behind the last boss, next to Willix
+05-副本.md:622｜說明｜接任務後，本內野豬人與首領都可能掉墜飾。｜Once you have the quest, quilboar and bosses in the dungeon can all drop the pendant.
