@@ -61,6 +61,13 @@ active[377] = true
 state = E.Locate(st)
 check(state.cur == fly and not state.done[fly], "早先接了罪與罰：還是先飛夜色鎮，不跳過")
 
+-- 已接罪與罰、飛到夜色鎮鳥點、還沒交 148：人到了就算飛過了
+pos[1], pos[2], pos[3] = 1431, 77.49, 44.29
+state = E.Locate(st)
+check(state.done[fly] and state.cur > fly, "早接罪與罰、人到夜色鎮：飛這步算到了")
+pos[1], pos[2], pos[3] = 1436, 41.5, 66.7
+wipe(db.latch)
+
 -- 交了下一步的任務（人已經飛過去做事了）：飛這步照舊算過了
 turnedQ[148], active[148] = true, nil
 state = E.Locate(st)
