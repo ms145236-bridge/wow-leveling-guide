@@ -1592,7 +1592,9 @@ function E.Locate(st)
         if not done[j] and not SOFT[steps[j].s.t] and not na[j] then later = true end
         if steps[j].s.q and not na[j] and not (step.s.localTransfer or step.s.classTransfer) then
           later = true
-          if step.s.t ~= "fp" and done[j] and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
+          -- 插在站尾的副本前置常在別處先接好：它打勾不代表人已經走過這段交通
+          local prep = steps[j].dungeon and not st.dungeon
+          if step.s.t ~= "fp" and done[j] and not prep and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
         end
       end
       softLater[i] = not (step.s.localTransfer or step.s.classTransfer) and not done[i] and later and (not step.s.x or step.s.t == "boat") and map ~= nil and x ~= nil and y ~= nil -- 沒座標的交通（船的座標是碼頭）：輪到它時才看人到了沒（見下面）
