@@ -45,7 +45,7 @@ local rows, at = load("Alliance", "Human")
 -- 領主大廳：01-9 錨點不在人類路線，第11站回鐵爐堡時接 96394、96403
 assert(at["05-d1:accept:96394"] and at["05-d1:accept:96394"].st == "02-11", "Hall of Thanes 96394 joins the Ironforge visit")
 assert(at["05-d1:accept:96403"] and at["05-d1:accept:96403"].st == "02-11")
--- 諾莫瑞根：03-23 到鐵爐堡時接 2924
+-- 諾姆瑞根：03-23 到鐵爐堡時接 2924
 assert(at["05-d7:accept:2924"] and at["05-d7:accept:2924"].st == "03-23", "Gnomeregan 2924 joins the Ironforge visit")
 -- 同站主線交前置：704 排在主線交 739 之後
 local s35 = rows["03-35"]

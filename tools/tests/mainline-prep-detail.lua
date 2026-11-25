@@ -1,5 +1,5 @@
 -- From the project root: lua5.1 tools/tests/mainline-prep-detail.lua
--- 主線上的副本前置接取（1.13.36：奧格瑪 Nogg 的設備之戰 2841，05-d15 諾莫瑞根）：
+-- 主線上的副本前置接取（1.13.36：奧格瑪 Nogg 的設備之戰 2841，05-d15 諾姆瑞根）：
 -- 主卡還沒刷新時，NPC 直接跳出任務內容（QUEST_DETAIL）也要用存檔的站算預留；選「不打」不接。
 local quest, prep = 2841, "05-d15"
 local active, log = {}, {}
@@ -73,7 +73,7 @@ ns.db.dNo[prep] = true
 assert(not tryAccept(), "選「不打」不接")
 ns.db.dNo[prep] = nil
 assert(tryAccept(), "空日誌、沒選不打才接")
--- 主卡刷新成副本卡（設諾莫瑞根為目標）時，用出發的主線站算預留；回到主線後用主線卡
+-- 主卡刷新成副本卡（設諾姆瑞根為目標）時，用出發的主線站算預留；回到主線後用主線卡
 local upvalue
 for i = 1, math.huge do
   local key = debug.getupvalue(handlers.OnUpdate, i)
