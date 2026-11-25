@@ -8500,7 +8500,7 @@
 06-路線外任務.md:269｜路線外判定｜之後順路｜Hazlo cuando te pille de paso
 06-路線外任務.md:269｜路線外理由｜此步可接同名後續，等主線走到接取或交件區再一併做。｜Desbloquea una misión del mismo nombre. Hazla cuando la ruta principal pase por la zona de inicio o entrega.
 06-路線外任務.md:270｜路線外判定｜之後順路｜Hazlo cuando te pille de paso
-06-路線外任務.md:270｜路線外理由｜此步可接「收集蜜糖」，等主線走到接取或交件區再一併做。｜Desbloquea «Recolectar miel». Haz la misión cuando pases por el punto donde se acepta o se entrega.
+06-路線外任務.md:270｜路線外理由｜此步可接「黏著的情況」，等主線走到接取或交件區再一併做。｜Desbloquea «Recolectar miel». Haz la misión cuando pases por el punto donde se acepta o se entrega.
 06-路線外任務.md:271｜路線外判定｜之後順路｜Hazlo cuando te pille de paso
 06-路線外任務.md:271｜路線外理由｜此步可接「安戈洛的泥土」，等主線走到接取或交件區再一併做。｜Desbloquea «Tierra de Un'Goro». Haz la misión cuando pases por el punto donde se acepta o se entrega.
 06-路線外任務.md:272｜路線外判定｜值得做｜Vale la pena
@@ -9482,7 +9482,7 @@
 06-路線外任務.md:817｜路線外判定｜之後順路｜Hazlo cuando te pille de paso
 06-路線外任務.md:817｜路線外理由｜在千針石林清主線時若剛好到目標區就做，無須專程折返。｜Haz la misión si la ruta principal te lleva cerca del objetivo en Las Mil Agujas. Evita el desvío.
 06-路線外任務.md:818｜路線外判定｜之後順路｜Hazlo cuando te pille de paso
-06-路線外任務.md:818｜路線外理由｜此步可接「通過試煉」，等主線走到接取或交件區再一併做。｜Desbloquea «La recta final». Haz la misión cuando pases por el punto donde se acepta o se entrega.
+06-路線外任務.md:818｜路線外理由｜此步可接「最後的旅程」，等主線走到接取或交件區再一併做。｜Desbloquea «La recta final». Haz la misión cuando pases por el punto donde se acepta o se entrega.
 06-路線外任務.md:819｜路線外判定｜值得做｜Vale la pena
 06-路線外任務.md:819｜路線外理由｜接取點靠近主線，適等交件約有 3450 經驗。｜Acéptala cerca de la ruta principal. Si la entregas al nivel adecuado, da unos 3450 EXP.
 06-路線外任務.md:820｜路線外判定｜之後順路｜Hazlo cuando te pille de paso
@@ -14165,7 +14165,7 @@
 06-路線外任務.md:229｜說明｜經過「心急的伍特」的接交地點時一併做，不必專程折返。｜Haz «Elaboración a fuego lento» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
 06-路線外任務.md:230｜說明｜經過「最喜歡的食物」的接交地點時一併做，不必專程折返。｜Haz «Comida favorita» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
 06-路線外任務.md:231｜說明｜經過「歇腳石」的接交地點時一併做，不必專程折返。｜Haz «Descanso rocoso» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
-06-路線外任務.md:261｜說明｜經過「收集蜜糖」的接交地點時一併做，不必專程折返。｜Haz «Una situación peliaguda» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
+06-路線外任務.md:261｜說明｜經過「黏著的情況」的接交地點時一併做，不必專程折返。｜Haz «Una situación peliaguda» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
 06-路線外任務.md:276｜說明｜經過「部落的勇士」的接交地點時一併做，不必專程折返。｜Haz «El Campeón de la Horda» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
 06-路線外任務.md:277｜說明｜經過「雷克薩的證明」的接交地點時一併做，不必專程折返。｜Haz «El testamento de Rexxar» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
 06-路線外任務.md:286｜說明｜經過「壹切才剛剛開始」的接交地點時一併做，不必專程折返。｜Haz «El viaje acaba de empezar» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
@@ -14223,7 +14223,7 @@
 06-路線外任務.md:732｜說明｜經過「破碎之淚」的接交地點時一併做，不必專程折返。｜Haz «Lágrimas rotas» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
 06-路線外任務.md:738｜說明｜經過 Molkar 附近時再接，回城或交件時順手完成。｜Acéptala cuando pases cerca de Molkar; termínala al volver a la ciudad o al entregar misiones.
 06-路線外任務.md:762｜說明｜經過「黑龍幻象」的接交地點時一併做，不必專程折返。｜Haz «Ilusiones oculares» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
-06-路線外任務.md:809｜說明｜經過「通過試煉」的接交地點時一併做，不必專程折返。｜Haz «La recta final» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
+06-路線外任務.md:809｜說明｜經過「最後的旅程」的接交地點時一併做，不必專程折返。｜Haz «La recta final» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
 06-路線外任務.md:812｜說明｜經過「返回藏寶海灣」的接交地點時一併做，不必專程折返。｜Haz «De vuelta a Bahía del Botín» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
 06-路線外任務.md:815｜說明｜經過「跟上節奏」的接交地點時一併做，不必專程折返。｜Haz «Mantener la velocidad» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.
 06-路線外任務.md:817｜說明｜經過「安全第壹」的接交地點時一併做，不必專程折返。｜Haz «La seguridad primero» cuando pases por donde se acepta o se entrega; no hace falta volver expresamente.

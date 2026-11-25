@@ -8503,7 +8503,7 @@
 06-路線外任務.md:269｜路線外判定｜之後順路｜Later, en route
 06-路線外任務.md:269｜路線外理由｜此步可接同名後續，等主線走到接取或交件區再一併做。｜Unlocks a follow-up with the same name. Do it when the route reaches the pickup or turn-in.
 06-路線外任務.md:270｜路線外判定｜之後順路｜Later, en route
-06-路線外任務.md:270｜路線外理由｜此步可接「收集蜜糖」，等主線走到接取或交件區再一併做。｜Unlocks A Sticky Situation. Do it when the route reaches the pickup or turn-in.
+06-路線外任務.md:270｜路線外理由｜此步可接「黏著的情況」，等主線走到接取或交件區再一併做。｜Unlocks A Sticky Situation. Do it when the route reaches the pickup or turn-in.
 06-路線外任務.md:271｜路線外判定｜之後順路｜Later, en route
 06-路線外任務.md:271｜路線外理由｜此步可接「安戈洛的泥土」，等主線走到接取或交件區再一併做。｜Unlocks Un'Goro Soil. Do it when the route reaches the pickup or turn-in.
 06-路線外任務.md:272｜路線外判定｜值得做｜Worth doing: Unlock 479 and Forever quest 95981, then do both in Ambermill on one loop. Turn in 479 before killing the mages for 480.
@@ -9485,7 +9485,7 @@
 06-路線外任務.md:817｜路線外判定｜之後順路｜Later, en route
 06-路線外任務.md:817｜路線外理由｜在千針石林清主線時若剛好到目標區就做，無須專程折返。｜Do it if the main route takes you past the objective in Thousand Needles. Skip the detour.
 06-路線外任務.md:818｜路線外判定｜之後順路｜Later, en route
-06-路線外任務.md:818｜路線外理由｜此步可接「通過試煉」，等主線走到接取或交件區再一併做。｜Unlocks Final Passage. Do it when the route reaches the pickup or turn-in.
+06-路線外任務.md:818｜路線外理由｜此步可接「最後的旅程」，等主線走到接取或交件區再一併做。｜Unlocks Final Passage. Do it when the route reaches the pickup or turn-in.
 06-路線外任務.md:819｜路線外判定｜值得做｜Worth doing: Unlock 479 and Forever quest 95981, then do both in Ambermill on one loop. Turn in 479 before killing the mages for 480.
 06-路線外任務.md:819｜路線外理由｜接取點靠近主線，適等交件約有 3450 經驗。｜Pick up along the route for about 3,450 XP at the intended level.
 06-路線外任務.md:820｜路線外判定｜之後順路｜Later, en route
@@ -13622,7 +13622,7 @@
 06-路線外任務.md:229｜說明｜經過「心急的伍特」的接交地點時一併做，不必專程折返。｜Do “Whuut's the Rush” when you pass its quest giver or turn-in point; no need to backtrack for it.
 06-路線外任務.md:230｜說明｜經過「最喜歡的食物」的接交地點時一併做，不必專程折返。｜Do “Favorite Food” when you pass its quest giver or turn-in point; no need to backtrack for it.
 06-路線外任務.md:231｜說明｜經過「歇腳石」的接交地點時一併做，不必專程折返。｜Do “Rocks to Rests” when you pass its quest giver or turn-in point; no need to backtrack for it.
-06-路線外任務.md:261｜說明｜經過「收集蜜糖」的接交地點時一併做，不必專程折返。｜Do “A Sticky Situation” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:261｜說明｜經過「黏著的情況」的接交地點時一併做，不必專程折返。｜Do “A Sticky Situation” when you pass its quest giver or turn-in point; no need to backtrack for it.
 06-路線外任務.md:276｜說明｜經過「部落的勇士」的接交地點時一併做，不必專程折返。｜Do “The Champion of the Horde” when you pass its quest giver or turn-in point; no need to backtrack for it.
 06-路線外任務.md:277｜說明｜經過「雷克薩的證明」的接交地點時一併做，不必專程折返。｜Do “The Testament of Rexxar” when you pass its quest giver or turn-in point; no need to backtrack for it.
 06-路線外任務.md:286｜說明｜經過「壹切才剛剛開始」的接交地點時一併做，不必專程折返。｜Do “The Journey Has Just Begun” when you pass its quest giver or turn-in point; no need to backtrack for it.
@@ -13680,7 +13680,7 @@
 06-路線外任務.md:732｜說明｜經過「破碎之淚」的接交地點時一併做，不必專程折返。｜Do “Broken Tears” when you pass its quest giver or turn-in point; no need to backtrack for it.
 06-路線外任務.md:738｜說明｜經過 Molkar 附近時再接，回城或交件時順手完成。｜Accept this when you pass near Molkar; finish it when you return to town or turn in quests.
 06-路線外任務.md:762｜說明｜經過「黑龍幻象」的接交地點時一併做，不必專程折返。｜Do “Oculus Illusions” when you pass its quest giver or turn-in point; no need to backtrack for it.
-06-路線外任務.md:809｜說明｜經過「通過試煉」的接交地點時一併做，不必專程折返。｜Do “Final Passage” when you pass its quest giver or turn-in point; no need to backtrack for it.
+06-路線外任務.md:809｜說明｜經過「最後的旅程」的接交地點時一併做，不必專程折返。｜Do “Final Passage” when you pass its quest giver or turn-in point; no need to backtrack for it.
 06-路線外任務.md:812｜說明｜經過「返回藏寶海灣」的接交地點時一併做，不必專程折返。｜Do “Back to Booty Bay” when you pass its quest giver or turn-in point; no need to backtrack for it.
 06-路線外任務.md:815｜說明｜經過「跟上節奏」的接交地點時一併做，不必專程折返。｜Do “Keeping Pace” when you pass its quest giver or turn-in point; no need to backtrack for it.
 06-路線外任務.md:817｜說明｜經過「安全第壹」的接交地點時一併做，不必專程折返。｜Do “Safety First” when you pass its quest giver or turn-in point; no need to backtrack for it.

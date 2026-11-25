@@ -8500,7 +8500,7 @@
 06-路線外任務.md:269｜路線外判定｜之後順路｜Später unterwegs erledigen
 06-路線外任務.md:269｜路線外理由｜此步可接同名後續，等主線走到接取或交件區再一併做。｜Schaltet eine gleichnamige Folgequest frei. Mach sie, wenn du auf der Hauptroute am Annahme- oder Abgabeort vorbeikommst.
 06-路線外任務.md:270｜路線外判定｜之後順路｜Später unterwegs erledigen
-06-路線外任務.md:270｜路線外理由｜此步可接「收集蜜糖」，等主線走到接取或交件區再一併做。｜Schaltet „Honig sammeln“ frei. Erledige die Quest, wenn du an der Annahme- oder Abgabestelle vorbeikommst.
+06-路線外任務.md:270｜路線外理由｜此步可接「黏著的情況」，等主線走到接取或交件區再一併做。｜Schaltet „Honig sammeln“ frei. Erledige die Quest, wenn du an der Annahme- oder Abgabestelle vorbeikommst.
 06-路線外任務.md:271｜路線外判定｜之後順路｜Später unterwegs erledigen
 06-路線外任務.md:271｜路線外理由｜此步可接「安戈洛的泥土」，等主線走到接取或交件區再一併做。｜Schaltet „Un'Goro-Erde“ frei. Erledige die Quest, wenn du an der Annahme- oder Abgabestelle vorbeikommst.
 06-路線外任務.md:272｜路線外判定｜值得做｜Lohnt sich
@@ -9482,7 +9482,7 @@
 06-路線外任務.md:817｜路線外判定｜之後順路｜Später unterwegs erledigen
 06-路線外任務.md:817｜路線外理由｜在千針石林清主線時若剛好到目標區就做，無須專程折返。｜Erledige die Quest, wenn dich die Hauptroute am Ziel in Tausend Nadeln vorbeiführt. Spar dir den Umweg.
 06-路線外任務.md:818｜路線外判定｜之後順路｜Später unterwegs erledigen
-06-路線外任務.md:818｜路線外理由｜此步可接「通過試煉」，等主線走到接取或交件區再一併做。｜Schaltet „Letzte Überfahrt“ frei. Erledige die Quest, wenn du an der Annahme- oder Abgabestelle vorbeikommst.
+06-路線外任務.md:818｜路線外理由｜此步可接「最後的旅程」，等主線走到接取或交件區再一併做。｜Schaltet „Letzte Überfahrt“ frei. Erledige die Quest, wenn du an der Annahme- oder Abgabestelle vorbeikommst.
 06-路線外任務.md:819｜路線外判定｜值得做｜Lohnt sich
 06-路線外任務.md:819｜路線外理由｜接取點靠近主線，適等交件約有 3450 經驗。｜Nahe der Hauptroute annehmen. Auf passender Stufe bringt die Abgabe etwa 3450 EP.
 06-路線外任務.md:820｜路線外判定｜之後順路｜Später unterwegs erledigen
@@ -13777,7 +13777,7 @@
 06-路線外任務.md:229｜說明｜經過「心急的伍特」的接交地點時一併做，不必專程折返。｜Erledige „Whuut Ding will Weile haben“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
 06-路線外任務.md:230｜說明｜經過「最喜歡的食物」的接交地點時一併做，不必專程折返。｜Erledige „Lieblingsessen“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
 06-路線外任務.md:231｜說明｜經過「歇腳石」的接交地點時一併做，不必專程折返。｜Erledige „Felsen zum Faulenzen“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
-06-路線外任務.md:261｜說明｜經過「收集蜜糖」的接交地點時一併做，不必專程折返。｜Erledige „Eine schwierige Situation“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
+06-路線外任務.md:261｜說明｜經過「黏著的情況」的接交地點時一併做，不必專程折返。｜Erledige „Eine schwierige Situation“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
 06-路線外任務.md:276｜說明｜經過「部落的勇士」的接交地點時一併做，不必專程折返。｜Erledige „Der Champion der Horde“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
 06-路線外任務.md:277｜說明｜經過「雷克薩的證明」的接交地點時一併做，不必專程折返。｜Erledige „Nachricht von Rexxar“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
 06-路線外任務.md:286｜說明｜經過「壹切才剛剛開始」的接交地點時一併做，不必專程折返。｜Erledige „Die Reise beginnt erst“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
@@ -13835,7 +13835,7 @@
 06-路線外任務.md:732｜說明｜經過「破碎之淚」的接交地點時一併做，不必專程折返。｜Erledige „Zerbrochene Tränen“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
 06-路線外任務.md:738｜說明｜經過 Molkar 附近時再接，回城或交件時順手完成。｜Nimm das an, wenn du in der Nähe von Molkar vorbeikommst; schließe es ab, wenn du in die Stadt zurückkehrst oder Quests abgibst.
 06-路線外任務.md:762｜說明｜經過「黑龍幻象」的接交地點時一併做，不必專程折返。｜Erledige „Oculus-Illusionen“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
-06-路線外任務.md:809｜說明｜經過「通過試煉」的接交地點時一併做，不必專程折返。｜Erledige „Letzte Überfahrt“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
+06-路線外任務.md:809｜說明｜經過「最後的旅程」的接交地點時一併做，不必專程折返。｜Erledige „Letzte Überfahrt“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
 06-路線外任務.md:812｜說明｜經過「返回藏寶海灣」的接交地點時一併做，不必專程折返。｜Erledige „Zurück nach Booty Bay“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
 06-路線外任務.md:815｜說明｜經過「跟上節奏」的接交地點時一併做，不必專程折返。｜Erledige „Tempo halten“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.
 06-路線外任務.md:817｜說明｜經過「安全第壹」的接交地點時一併做，不必專程折返。｜Erledige „Sicherheit zuerst“, wenn du an der Annahme- oder Abgabestelle vorbeikommst; ein extra Umweg lohnt sich nicht.

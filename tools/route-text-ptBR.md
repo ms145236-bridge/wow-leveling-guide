@@ -8500,7 +8500,7 @@
 06-路線外任務.md:269｜路線外判定｜之後順路｜Faça depois, quando passar por lá
 06-路線外任務.md:269｜路線外理由｜此步可接同名後續，等主線走到接取或交件區再一併做。｜Libera a próxima missão de mesmo nome. Faça quando a rota principal passar pela área de início ou entrega.
 06-路線外任務.md:270｜路線外判定｜之後順路｜Faça depois, quando passar por lá
-06-路線外任務.md:270｜路線外理由｜此步可接「收集蜜糖」，等主線走到接取或交件區再一併做。｜Desbloqueia “Pega a joça!”. Faça a missão quando passar pelo ponto de início ou de entrega.
+06-路線外任務.md:270｜路線外理由｜此步可接「黏著的情況」，等主線走到接取或交件區再一併做。｜Desbloqueia “Pega a joça!”. Faça a missão quando passar pelo ponto de início ou de entrega.
 06-路線外任務.md:271｜路線外判定｜之後順路｜Faça depois, quando passar por lá
 06-路線外任務.md:271｜路線外理由｜此步可接「安戈洛的泥土」，等主線走到接取或交件區再一併做。｜Desbloqueia “Solo de Un'Goro”. Faça a missão quando passar pelo ponto de início ou de entrega.
 06-路線外任務.md:272｜路線外判定｜值得做｜Vale a pena fazer
@@ -9482,7 +9482,7 @@
 06-路線外任務.md:817｜路線外判定｜之後順路｜Faça depois, quando passar por lá
 06-路線外任務.md:817｜路線外理由｜在千針石林清主線時若剛好到目標區就做，無須專程折返。｜Faça a missão se a rota principal passar perto do objetivo em Mil Agulhas. Evite o desvio.
 06-路線外任務.md:818｜路線外判定｜之後順路｜Faça depois, quando passar por lá
-06-路線外任務.md:818｜路線外理由｜此步可接「通過試煉」，等主線走到接取或交件區再一併做。｜Desbloqueia “Passagem final”. Faça a missão quando passar pelo ponto de início ou de entrega.
+06-路線外任務.md:818｜路線外理由｜此步可接「最後的旅程」，等主線走到接取或交件區再一併做。｜Desbloqueia “Passagem final”. Faça a missão quando passar pelo ponto de início ou de entrega.
 06-路線外任務.md:819｜路線外判定｜值得做｜Vale a pena fazer
 06-路線外任務.md:819｜路線外理由｜接取點靠近主線，適等交件約有 3450 經驗。｜Aceite perto da rota principal. Entregue no nível adequado para ganhar cerca de 3450 XP.
 06-路線外任務.md:820｜路線外判定｜之後順路｜Faça depois, quando passar por lá
@@ -14000,7 +14000,7 @@
 06-路線外任務.md:229｜說明｜經過「心急的伍特」的接交地點時一併做，不必專程折返。｜Faça “Por Uqueê a pressa?” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
 06-路線外任務.md:230｜說明｜經過「最喜歡的食物」的接交地點時一併做，不必專程折返。｜Faça “Comida preferida” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
 06-路線外任務.md:231｜說明｜經過「歇腳石」的接交地點時一併做，不必專程折返。｜Faça “Pedra pra sentar” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
-06-路線外任務.md:261｜說明｜經過「收集蜜糖」的接交地點時一併做，不必專程折返。｜Faça “Pega a joça!” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:261｜說明｜經過「黏著的情況」的接交地點時一併做，不必專程折返。｜Faça “Pega a joça!” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
 06-路線外任務.md:276｜說明｜經過「部落的勇士」的接交地點時一併做，不必專程折返。｜Faça “O campeão da Horda” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
 06-路線外任務.md:277｜說明｜經過「雷克薩的證明」的接交地點時一併做，不必專程折返。｜Faça “O testamento de Rexxar” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
 06-路線外任務.md:286｜說明｜經過「壹切才剛剛開始」的接交地點時一併做，不必專程折返。｜Faça “A jornada está apenas começando” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
@@ -14058,7 +14058,7 @@
 06-路線外任務.md:732｜說明｜經過「破碎之淚」的接交地點時一併做，不必專程折返。｜Faça “Lágrimas partidas” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
 06-路線外任務.md:738｜說明｜經過 Molkar 附近時再接，回城或交件時順手完成。｜Aceite ao passar perto de Molkar; conclua ao voltar à cidade ou ao entregar missões.
 06-路線外任務.md:762｜說明｜經過「黑龍幻象」的接交地點時一併做，不必專程折返。｜Faça “Ilusões ópticas” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
-06-路線外任務.md:809｜說明｜經過「通過試煉」的接交地點時一併做，不必專程折返。｜Faça “Passagem final” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
+06-路線外任務.md:809｜說明｜經過「最後的旅程」的接交地點時一併做，不必專程折返。｜Faça “Passagem final” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
 06-路線外任務.md:812｜說明｜經過「返回藏寶海灣」的接交地點時一併做，不必專程折返。｜Faça “De volta à Angra do Butim” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
 06-路線外任務.md:815｜說明｜經過「跟上節奏」的接交地點時一併做，不必專程折返。｜Faça “Tirando o atraso” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.
 06-路線外任務.md:817｜說明｜經過「安全第壹」的接交地點時一併做，不必專程折返。｜Faça “Segurança em primeiro lugar” ao passar pelo local de aceitação ou entrega; não é preciso voltar só para isso.

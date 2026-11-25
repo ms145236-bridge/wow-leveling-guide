@@ -8500,7 +8500,7 @@
 06-路線外任務.md:269｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:269｜路線外理由｜此步可接同名後續，等主線走到接取或交件區再一併做。｜Débloque la suite du même nom. Fais-la quand le trajet principal passe près du départ ou du retour.
 06-路線外任務.md:270｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:270｜路線外理由｜此步可接「收集蜜糖」，等主線走到接取或交件區再一併做。｜Débloque « Une situation délicate ». Fais la quête quand tu passes au point de départ ou de retour.
+06-路線外任務.md:270｜路線外理由｜此步可接「黏著的情況」，等主線走到接取或交件區再一併做。｜Débloque « Une situation délicate ». Fais la quête quand tu passes au point de départ ou de retour.
 06-路線外任務.md:271｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:271｜路線外理由｜此步可接「安戈洛的泥土」，等主線走到接取或交件區再一併做。｜Débloque « La terre d'Un'Goro ». Fais la quête quand tu passes au point de départ ou de retour.
 06-路線外任務.md:272｜路線外判定｜值得做｜Ça vaut le coup
@@ -9482,7 +9482,7 @@
 06-路線外任務.md:817｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:817｜路線外理由｜在千針石林清主線時若剛好到目標區就做，無須專程折返。｜Fais la quête si l’itinéraire principal passe près de l’objectif à Mille pointes. Évite le détour.
 06-路線外任務.md:818｜路線外判定｜之後順路｜À faire plus tard en passant
-06-路線外任務.md:818｜路線外理由｜此步可接「通過試煉」，等主線走到接取或交件區再一併做。｜Débloque « Le dernier voyage ». Fais la quête quand tu passes au point de départ ou de retour.
+06-路線外任務.md:818｜路線外理由｜此步可接「最後的旅程」，等主線走到接取或交件區再一併做。｜Débloque « Le dernier voyage ». Fais la quête quand tu passes au point de départ ou de retour.
 06-路線外任務.md:819｜路線外判定｜值得做｜Ça vaut le coup
 06-路線外任務.md:819｜路線外理由｜接取點靠近主線，適等交件約有 3450 經驗。｜La quête se prend près du trajet principal. Rends-la au niveau adapté pour environ 3450 XP.
 06-路線外任務.md:820｜路線外判定｜之後順路｜À faire plus tard en passant
@@ -13890,7 +13890,7 @@
 06-路線外任務.md:229｜說明｜經過「心急的伍特」的接交地點時一併做，不必專程折返。｜Faites « Droit au Whuut » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:230｜說明｜經過「最喜歡的食物」的接交地點時一併做，不必專程折返。｜Faites « Son plat préféré » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:231｜說明｜經過「歇腳石」的接交地點時一併做，不必專程折返。｜Faites « Ameublement rocheux » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
-06-路線外任務.md:261｜說明｜經過「收集蜜糖」的接交地點時一併做，不必專程折返。｜Faites « Une situation délicate » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
+06-路線外任務.md:261｜說明｜經過「黏著的情況」的接交地點時一併做，不必專程折返。｜Faites « Une situation délicate » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:276｜說明｜經過「部落的勇士」的接交地點時一併做，不必專程折返。｜Faites « Le Champion de la Horde » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:277｜說明｜經過「雷克薩的證明」的接交地點時一併做，不必專程折返。｜Faites « Le testament de Rexxar » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:286｜說明｜經過「壹切才剛剛開始」的接交地點時一併做，不必專程折返。｜Faites « Le voyage commence à peine » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
@@ -13948,7 +13948,7 @@
 06-路線外任務.md:732｜說明｜經過「破碎之淚」的接交地點時一併做，不必專程折返。｜Faites « Larmes brisées » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:738｜說明｜經過 Molkar 附近時再接，回城或交件時順手完成。｜Prends-la en passant près de Molkar ; termine-la en revenant en ville ou en rendant des quêtes.
 06-路線外任務.md:762｜說明｜經過「黑龍幻象」的接交地點時一併做，不必專程折返。｜Faites « Illusions d'Occulus » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
-06-路線外任務.md:809｜說明｜經過「通過試煉」的接交地點時一併做，不必專程折返。｜Faites « Le dernier voyage » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
+06-路線外任務.md:809｜說明｜經過「最後的旅程」的接交地點時一併做，不必專程折返。｜Faites « Le dernier voyage » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:812｜說明｜經過「返回藏寶海灣」的接交地點時一併做，不必專程折返。｜Faites « Retour à Baie-du-Butin » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:815｜說明｜經過「跟上節奏」的接交地點時一併做，不必專程折返。｜Faites « Rester dans la course » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
 06-路線外任務.md:817｜說明｜經過「安全第壹」的接交地點時一併做，不必專程折返。｜Faites « La sécurité d'abord » en passant par son lieu d'obtention ou de remise ; inutile de faire un détour exprès.
