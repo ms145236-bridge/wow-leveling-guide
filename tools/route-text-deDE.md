@@ -10415,7 +10415,8 @@
 06-路線外任務.md:1346｜路線外判定｜值得做｜Lohnt sich
 06-路線外任務.md:1346｜路線外理由｜限術士，交件後可接「克索諾斯恐懼戰馬」，可同一趟處理。｜Nur Hexenmeister. Gib ab, um „Schreckensross von Xoroth“ freizuschalten. Mach beides auf derselben Reise.
 06-路線外任務.md:1347｜路線外判定｜可放掉｜Überspringen
-06-路線外任務.md:1347｜路線外理由｜限術士，史詩坐騎鏈要材料及組隊，滿級再處理。｜Nur Hexenmeister. Die Questreihe für das epische Reittier erfordert Materialien und eine Gruppe. Heb sie für die Höchststufe auf.
+06-路線外任務.md:1253｜路線外理由｜限術士，完成即學會中級騎術（找奧格瑪暗影裂口的澤弗洛斯特），省訓練費；要材料及組隊，滿級再做。｜Nur Hexenmeister. Nach Abschluss lernst du kostenlos Reiten (Geselle) beim Hexenmeisterlehrer in Orgrimmar. Braucht Materialien und eine Gruppe, also auf Höchststufe erledigen.
+06-路線外任務.md:1525｜路線外理由｜官方確認不開放重複交件，不用做。｜Blizzard hat bestätigt, dass die wiederholbare Abgabe nicht verfügbar ist. Auslassen.
 06-路線外任務.md:1348｜路線外判定｜之後順路｜Später unterwegs erledigen
 06-路線外任務.md:1348｜路線外理由｜節慶開放且剛好路過時再做，練級途中可先放著。｜Erledige die Quest, wenn das Ereignis läuft und du ohnehin vorbeikommst.
 06-路線外任務.md:1349｜路線外判定｜之後順路｜Später unterwegs erledigen

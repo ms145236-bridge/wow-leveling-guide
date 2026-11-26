@@ -10415,7 +10415,8 @@
 06-路線外任務.md:1346｜路線外判定｜值得做｜Vale a pena fazer
 06-路線外任務.md:1346｜路線外理由｜限術士，交件後可接「克索諾斯恐懼戰馬」，可同一趟處理。｜Somente Bruxo. Entregue para desbloquear “Corcel Medonho de Zoroth”. Faça as duas coisas na mesma viagem.
 06-路線外任務.md:1347｜路線外判定｜可放掉｜Pode abandonar
-06-路線外任務.md:1347｜路線外理由｜限術士，史詩坐騎鏈要材料及組隊，滿級再處理。｜Somente Bruxo. A cadeia de montarias épica leva materiais e um grupo. Salve-o para o nível máximo.
+06-路線外任務.md:1253｜路線外理由｜限術士，完成即學會中級騎術（找奧格瑪暗影裂口的澤弗洛斯特），省訓練費；要材料及組隊，滿級再做。｜Só bruxos. Ao concluir, aprende Montaria de Artífice de graça com o instrutor de bruxos de Orgrimmar. Exige materiais e grupo; faça no nível máximo.
+06-路線外任務.md:1525｜路線外理由｜官方確認不開放重複交件，不用做。｜A Blizzard confirmou que a entrega repetível não está disponível. Pule.
 06-路線外任務.md:1348｜路線外判定｜之後順路｜Faça depois, quando passar por lá
 06-路線外任務.md:1348｜路線外理由｜節慶開放且剛好路過時再做，練級途中可先放著。｜Faça a missão se passar por lá enquanto o evento estiver ativo.
 06-路線外任務.md:1349｜路線外判定｜之後順路｜Faça depois, quando passar por lá
