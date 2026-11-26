@@ -12595,11 +12595,11 @@
 08-保留物品.md:217｜保留物品用途｜上古之神的仆從（6564），梣谷左拉姆加前哨站｜Treue zu den Alten Göttern (6564) — Zoram'gar-Außenposten, Ashenvale.
 08-保留物品.md:218｜保留物品用途｜阿奎尼斯男爵（6922），梣谷左拉姆加前哨站｜Baron Aquanis (6922) — Zoram'gar-Außenposten, Ashenvale.
 08-保留物品.md:219｜保留物品用途｜邪惡的盟友（6522），幽暗城｜Eine unheilige Allianz (6522) — Undercity.
-08-保留物品.md:220｜保留物品用途｜臟兮兮的戒指（2945），諾莫瑞根清潔器｜Schmutzverkrusteter Ring (2945) – Sparklematic 5200 in Gnomeregan.
+08-保留物品.md:220｜保留物品用途｜臟兮兮的戒指（2945），諾姆瑞根清潔器｜Schmutzverkrusteter Ring (2945) – Sparklematic 5200 in Gnomeregan.
 08-保留物品.md:221｜保留物品用途｜克羅多克模具（94973），大河林地羅格瑪｜Abguss von Krol'Dok (94973) — Rog'mar, Flusslande.
 08-保留物品.md:222｜保留物品用途｜伊蘭尼庫斯精華（3373），沉沒的神廟同區精華之泉｜Die Essenz des Eranikus (3373) – der Essenzbrunnen in der Nähe im Versunkenen Tempel.
 08-保留物品.md:223｜保留物品用途｜黑手的命令（7761），黑石塔上層，需點擊達基薩斯身後的寶珠｜Klicke für „Blackhands Befehl“ (7761) in der Oberen Blackrockspitze auf die Kugel hinter General Drakkisath.
-08-保留物品.md:224｜保留物品用途｜諾莫瑞根，使用藏寶海灣的傳送器進本｜Benutze den Teleporter in Booty Bay, um Gnomeregan zu betreten.
+08-保留物品.md:224｜保留物品用途｜諾姆瑞根，使用藏寶海灣的傳送器進本｜Benutze den Teleporter in Booty Bay, um Gnomeregan zu betreten.
 08-保留物品.md:225｜保留物品用途｜瑪拉頓的傳說（7044），瑪拉頓塞雷布拉斯｜Legenden von Maraudon (7044) – Celebras in Maraudon.
 08-保留物品.md:226｜保留物品用途｜瑪拉頓的傳說（7044），瑪拉頓塞雷布拉斯｜Legenden von Maraudon (7044) – Celebras in Maraudon.
 08-保留物品.md:227｜保留物品用途｜瑪拉頓，之後可由入口附近啟用傳送點｜Benutze es, um später den Teleportpunkt in der Nähe des Eingangs von Maraudon zu aktivieren.
@@ -14407,3 +14407,6 @@
 04-45到60級.md:1005｜說明｜奧格瑪接，並在安戈洛環形山 馬紹爾營地打齊白色暴掠龍爪。｜In Orgrimmar annehmen und die weißen Ravasaurierklauen bei Marshals Zuflucht im Krater von Un'Goro sammeln.
 01-第一段-1到12級.md:884｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Windfield läuft im Obstgarten zwei, drei Schritte nach Norden. Ist sie nicht hier, sucht im Norden.
 01-第一段-1到12級.md:886｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Windfield läuft im Obstgarten zwei, drei Schritte nach Norden. Ist sie nicht hier, sucht im Norden.
+06-路線外任務.md:19｜路線外理由｜最低接取等級高於路線經過這裡時的等級，等級到了再接。｜Die Mindeststufe liegt über deiner Stufe, wenn die Route hier vorbeiführt. Nimm sie an, sobald du die Stufe erreichst.
+06-路線外任務.md:19｜路線外理由｜60 級才能換坐騎，練級時不用管。｜Reittiertausch gibt es ab Stufe 60. Beim Leveln ignorieren.
+06-路線外任務.md:19｜路線外理由｜限人類，40 級才接得到；之後經過南海鎮時再接。｜Nur Menschen, ab Stufe 40. Nimm sie an, wenn du das nächste Mal durch Southshore kommst.

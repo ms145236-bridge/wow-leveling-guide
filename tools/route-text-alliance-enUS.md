@@ -1040,14 +1040,14 @@
 02-12到30級.md:627｜說明｜空瓶子在哨塔頂；後續 249 不排。｜The empty jar is at the top of the watchtower; the follow-up 249 isn't on the route.
 02-12到30級.md:627｜說明｜空瓶子在哨塔頂｜The empty jar is at the top of the watchtower
 02-12到30級.md:627｜說明｜後續 249 不排。｜The follow-up 249 isn't on the route.
-03-30到45級.md:99｜說明｜諾莫瑞根副本任務，要打諾莫瑞根才接。｜A Gnomeregan dungeon quest; accept it only if you're going to run Gnomeregan.
+03-30到45級.md:99｜說明｜諾姆瑞根副本任務，要打諾姆瑞根才接。｜A Gnomeregan dungeon quest; accept it only if you're going to run Gnomeregan.
 03-30到45級.md:118｜說明｜哈林多爾船長在擱淺的無畏號上，先殺他拿鑰匙，再開船上的保險箱。｜Captain Halyndor is on the beached Intrepid; kill him for the key, then open the strongbox on the ship.
 03-30到45級.md:135｜說明｜送貨任務，回米奈希爾港時交給詹姆士·哈洛倫。｜A delivery quest; hand it to James Halloran when you return to Menethil Harbor.
 03-30到45級.md:137｜說明｜怒牙營地裡的書，撿起來帶回米奈希爾港。｜A book in the Angerfang Encampment; pick it up and bring it back to Menethil Harbor.
 03-30到45級.md:183｜說明｜去投石車的路上交給霍文‧輕羽。｜Hand it to Howin Kindfeather on the way to the catapults.
-05-副本.md:181｜說明｜從米奈希爾港飛鐵爐堡，出城門沿丹莫洛大路往西到諾莫瑞根。｜Fly from Menethil Harbor to Ironforge, leave through the city gates and follow the Dun Morogh road west to Gnomeregan.
+05-副本.md:181｜說明｜從米奈希爾港飛鐵爐堡，出城門沿丹莫洛大路往西到諾姆瑞根。｜Fly from Menethil Harbor to Ironforge, leave through the city gates and follow the Dun Morogh road west to Gnomeregan.
 05-副本.md:185｜說明｜機械怪身上掉，回暴風城時交。｜Drops from the mechanical mobs; turn in when you return to Stormwind.
-03-30到45級.md:248｜說明｜打過諾莫瑞根、拿齊機械內膽的才交。｜Turn in only if you've run Gnomeregan and collected all the Robo-mechanical Guts.
+03-30到45級.md:248｜說明｜打過諾姆瑞根、拿齊機械內膽的才交。｜Turn in only if you've run Gnomeregan and collected all the Robo-mechanical Guts.
 03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務；沒遇到就跳過。｜He patrols the road and only gives the quest if you save him when he's ambushed; skip it if you don't run into him.
 03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務｜He patrols the road and only gives the quest if you save him when he's ambushed
 03-30到45級.md:281｜說明｜沒遇到就跳過。｜Skip it if you don't run into him.
@@ -1594,3 +1594,11 @@
 05-副本.md:1008｜說明｜共用傳送門→左側上坡與門鎖→艾博希爾→孵化間→競技場→達基薩斯。｜Shared portal → upper ramp and locked door on the left → Emberseer → Rookery → arena → Drakkisath.
 05-副本.md:1065｜說明｜和下層共用入口。開上層門要有人持晉升印章。兩個龍蛋任務分兩趟，後續帶去通靈學院。｜Shares an entrance with Lower. Bring one Seal of Ascension to open the upper door. The two egg quests take separate runs and lead to Scholomance.
 05-副本.md:1012｜說明｜走聯盟燃燒平原路線時，在摩根的崗哨與烈焰峰先接。低於任務接取等級就組隊前再補接。做過下層後，到摩根的崗哨交達基薩斯將軍的命令，再接上層尾王。｜Pick up quests at Morgan's Vigil and Flame Crest while crossing Burning Steppes. If you're under level, pick them up before grouping. After Lower, turn in General Drakkisath's Command at Morgan's Vigil and take the upper spire follow-up.
+03-30到45級.md:830｜說明｜跟著吉米克斯走出廢墟，路上的怪會打他要保護；日誌顯示完成再去獵虎。｜Follow Zimmix out of the ruins and protect him from attackers; go hunt the tiger only after your quest log shows it complete.
+03-30到45級.md:830｜說明｜跟著吉米克斯走出廢墟，路上的怪會打他要保護｜Follow Zimmix out of the ruins and protect him from attackers
+03-30到45級.md:830｜說明｜日誌顯示完成再去獵虎。｜Go hunt the tiger only after your quest log shows it complete.
+04-45到60級.md:160｜說明｜跟著杜里奧斯往北走；遇伏後日誌顯示完成，再撿原地燒焦的信件交。｜Follow Dorius north; after the ambush, once your quest log shows it complete, pick up the charred letter on the spot and turn it in.
+04-45到60級.md:160｜說明｜跟著杜里奧斯往北走｜Follow Dorius north
+04-45到60級.md:160｜說明｜遇伏後日誌顯示完成，再撿原地燒焦的信件交。｜After the ambush, once your quest log shows it complete, pick up the charred letter on the spot and turn it in.
+03-30到45級.md:949｜說明｜送貨任務，下一站到遠境堡交給戴瑪‧布蘭特。｜A delivery quest; turn it in to Dyma Brant at Farwatch Keep at the next stop.
+04-45到60級.md:464｜說明｜穿過木喉要塞到冬泉谷時交給薩爾法。｜Turn it in to Salfa when you come through Timbermaw Hold into Winterspring.

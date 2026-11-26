@@ -1040,14 +1040,14 @@
 02-12到30級.md:627｜說明｜空瓶子在哨塔頂；後續 249 不排。｜Der leere Krug steht oben auf dem Wachturm; die Folgequest 249 ist nicht in der Route.
 02-12到30級.md:627｜說明｜空瓶子在哨塔頂｜Der leere Krug steht oben auf dem Wachturm
 02-12到30級.md:627｜說明｜後續 249 不排。｜Die Folgequest 249 ist nicht in der Route.
-03-30到45級.md:99｜說明｜諾莫瑞根副本任務，要打諾莫瑞根才接。｜Dungeonquest für Gnomeregan; nimm sie nur an, wenn du Gnomeregan machst.
+03-30到45級.md:99｜說明｜諾姆瑞根副本任務，要打諾姆瑞根才接。｜Dungeonquest für Gnomeregan; nimm sie nur an, wenn du Gnomeregan machst.
 03-30到45級.md:118｜說明｜哈林多爾船長在擱淺的無畏號上，先殺他拿鑰匙，再開船上的保險箱。｜Kapitän Halyndor ist auf der gestrandeten INTREPID; töte ihn zuerst für den Schlüssel und öffne dann die Geldkassette auf dem Schiff.
 03-30到45級.md:135｜說明｜送貨任務，回米奈希爾港時交給詹姆士·哈洛倫。｜Lieferquest; gib sie bei James Halloran ab, wenn du zum Hafen von Menethil zurückkehrst.
 03-30到45級.md:137｜說明｜怒牙營地裡的書，撿起來帶回米奈希爾港。｜Ein Buch im Angerfang-Lager; heb es auf und bring es zurück zum Hafen von Menethil.
 03-30到45級.md:183｜說明｜去投石車的路上交給霍文‧輕羽。｜Gib sie auf dem Weg zu den Katapulten bei Howin Kindfeather ab.
-05-副本.md:181｜說明｜從米奈希爾港飛鐵爐堡，出城門沿丹莫洛大路往西到諾莫瑞根。｜Flieg vom Hafen von Menethil nach Ironforge, verlass die Stadt durch das Tor und folge der Straße durch Dun Morogh nach Westen bis Gnomeregan.
+05-副本.md:181｜說明｜從米奈希爾港飛鐵爐堡，出城門沿丹莫洛大路往西到諾姆瑞根。｜Flieg vom Hafen von Menethil nach Ironforge, verlass die Stadt durch das Tor und folge der Straße durch Dun Morogh nach Westen bis Gnomeregan.
 05-副本.md:185｜說明｜機械怪身上掉，回暴風城時交。｜Droppt von den mechanischen Gegnern; gib ab, wenn du nach Sturmwind zurückkehrst.
-03-30到45級.md:248｜說明｜打過諾莫瑞根、拿齊機械內膽的才交。｜Gib nur ab, wenn du Gnomeregan gemacht und alle Robomechanischen Gedärme beisammen hast.
+03-30到45級.md:248｜說明｜打過諾姆瑞根、拿齊機械內膽的才交。｜Gib nur ab, wenn du Gnomeregan gemacht und alle Robomechanischen Gedärme beisammen hast.
 03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務；沒遇到就跳過。｜Er patrouilliert auf der Straße und gibt die Quest nur, wenn du ihn rettest, sobald er in einen Hinterhalt gerät; triffst du ihn nicht, lass sie aus.
 03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務｜Er patrouilliert auf der Straße und gibt die Quest nur, wenn du ihn rettest, sobald er in einen Hinterhalt gerät
 03-30到45級.md:281｜說明｜沒遇到就跳過。｜Triffst du ihn nicht, lass sie aus.
@@ -1594,3 +1594,11 @@
 05-副本.md:1008｜說明｜共用傳送門→左側上坡與門鎖→艾博希爾→孵化間→競技場→達基薩斯。｜Gemeinsames Portal → links hinauf zur verschlossenen Tür → Feuerwache Glutseher → Krähenhorst → Arena → Drakkisath.
 05-副本.md:1065｜說明｜和下層共用入口。開上層門要有人持晉升印章。兩個龍蛋任務分兩趟，後續帶去通靈學院。｜Gleicher Eingang wie zur unteren Spitze. Jemand in der Gruppe braucht das Siegel des Aufstiegs für die Tür. Erledige die beiden Eierquests in zwei Läufen; die Folgequest führt nach Scholomance.
 05-副本.md:1012｜說明｜走聯盟燃燒平原路線時，在摩根的崗哨與烈焰峰先接。低於任務接取等級就組隊前再補接。做過下層後，到摩根的崗哨交達基薩斯將軍的命令，再接上層尾王。｜Nimm auf der Allianzroute durch die Brennende Steppe die Quests in Morgans Wacht und am Flammenkamm an. Fehlt dir eine Stufe, hol sie vor dem Gruppenlauf nach. Gib nach der unteren Spitze „General Drakkisaths Befehl“ in Morgans Wacht ab und nimm die Quest für den Endboss der oberen Spitze an.
+03-30到45級.md:830｜說明｜跟著吉米克斯走出廢墟，路上的怪會打他要保護；日誌顯示完成再去獵虎。｜Folge Zimmix aus den Ruinen und beschütze ihn vor Angreifern; geh erst auf Tigerjagd, wenn das Questlog die Quest als abgeschlossen zeigt.
+03-30到45級.md:830｜說明｜跟著吉米克斯走出廢墟，路上的怪會打他要保護｜Folge Zimmix aus den Ruinen und beschütze ihn vor Angreifern
+03-30到45級.md:830｜說明｜日誌顯示完成再去獵虎。｜Geh erst auf Tigerjagd, wenn das Questlog die Quest als abgeschlossen zeigt.
+04-45到60級.md:160｜說明｜跟著杜里奧斯往北走；遇伏後日誌顯示完成，再撿原地燒焦的信件交。｜Folge Dorius nach Norden; nach dem Hinterhalt, sobald das Questlog sie als abgeschlossen zeigt, heb den verkohlten Brief an Ort und Stelle auf und gib ihn ab.
+04-45到60級.md:160｜說明｜跟著杜里奧斯往北走｜Folge Dorius nach Norden
+04-45到60級.md:160｜說明｜遇伏後日誌顯示完成，再撿原地燒焦的信件交。｜Nach dem Hinterhalt, sobald das Questlog sie als abgeschlossen zeigt, heb den verkohlten Brief an Ort und Stelle auf und gib ihn ab.
+03-30到45級.md:949｜說明｜送貨任務，下一站到遠境堡交給戴瑪‧布蘭特。｜Lieferquest; gib sie beim nächsten Halt in der Fernwacht bei Dyma Brant ab.
+04-45到60級.md:464｜說明｜穿過木喉要塞到冬泉谷時交給薩爾法。｜Gib sie bei Salfa ab, wenn du durch die Holzschlundfeste nach Winterquell kommst.

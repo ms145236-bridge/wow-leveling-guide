@@ -1040,14 +1040,14 @@
 02-12到30級.md:627｜說明｜空瓶子在哨塔頂；後續 249 不排。｜La jarra vacía está en lo alto de la torre de vigilancia; la continuación 249 no está en la ruta.
 02-12到30級.md:627｜說明｜空瓶子在哨塔頂｜La jarra vacía está en lo alto de la torre de vigilancia
 02-12到30級.md:627｜說明｜後續 249 不排。｜La continuación 249 no está en la ruta.
-03-30到45級.md:99｜說明｜諾莫瑞根副本任務，要打諾莫瑞根才接。｜Misión de la mazmorra de Gnomeregan; acéptala solo si vas a hacer Gnomeregan.
+03-30到45級.md:99｜說明｜諾姆瑞根副本任務，要打諾姆瑞根才接。｜Misión de la mazmorra de Gnomeregan; acéptala solo si vas a hacer Gnomeregan.
 03-30到45級.md:118｜說明｜哈林多爾船長在擱淺的無畏號上，先殺他拿鑰匙，再開船上的保險箱。｜El Capitán Halyndor está a bordo del Intrepid, que está varado; mátalo primero para conseguir la llave y luego abre la caja fuerte del barco.
 03-30到45級.md:135｜說明｜送貨任務，回米奈希爾港時交給詹姆士·哈洛倫。｜Misión de entrega; dásela a James Halloran cuando vuelvas a Puerto de Menethil.
 03-30到45級.md:137｜說明｜怒牙營地裡的書，撿起來帶回米奈希爾港。｜Un libro que está en el Campamento Dentellada; recógelo y llévalo a Puerto de Menethil.
 03-30到45級.md:183｜說明｜去投石車的路上交給霍文‧輕羽。｜Entrégasela a Howin Plumamable de camino a las catapultas.
-05-副本.md:181｜說明｜從米奈希爾港飛鐵爐堡，出城門沿丹莫洛大路往西到諾莫瑞根。｜Vuela de Puerto de Menethil a Forjaz, sal por las puertas de la ciudad y sigue el camino de Dun Morogh hacia el oeste hasta Gnomeregan.
+05-副本.md:181｜說明｜從米奈希爾港飛鐵爐堡，出城門沿丹莫洛大路往西到諾姆瑞根。｜Vuela de Puerto de Menethil a Forjaz, sal por las puertas de la ciudad y sigue el camino de Dun Morogh hacia el oeste hasta Gnomeregan.
 05-副本.md:185｜說明｜機械怪身上掉，回暴風城時交。｜Lo sueltan los enemigos mecánicos; entrégala cuando vuelvas a Ventormenta.
-03-30到45級.md:248｜說明｜打過諾莫瑞根、拿齊機械內膽的才交。｜Entrégala solo si has hecho Gnomeregan y has reunido todas las entrañas robomecánicas.
+03-30到45級.md:248｜說明｜打過諾姆瑞根、拿齊機械內膽的才交。｜Entrégala solo si has hecho Gnomeregan y has reunido todas las entrañas robomecánicas.
 03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務；沒遇到就跳過。｜Patrulla por el camino y solo te da la misión si lo salvas cuando le tienden una emboscada; si no te lo encuentras, sáltatela.
 03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務｜Patrulla por el camino y solo te da la misión si lo salvas cuando le tienden una emboscada
 03-30到45級.md:281｜說明｜沒遇到就跳過。｜Si no te lo encuentras, sáltatela.
@@ -1594,3 +1594,11 @@
 05-副本.md:1008｜說明｜共用傳送門→左側上坡與門鎖→艾博希爾→孵化間→競技場→達基薩斯。｜Portal compartido → subida y cerradura a la izquierda → Piroguardián Brasadivino → incubadora → arena → Drakkisath.
 05-副本.md:1065｜說明｜和下層共用入口。開上層門要有人持晉升印章。兩個龍蛋任務分兩趟，後續帶去通靈學院。｜La entrada es la misma que la de la parte inferior. Alguien debe llevar el Lacre de Ascensión para abrir la puerta superior. Haz las dos misiones de huevos en visitas separadas y lleva la continuación a Scholomance.
 05-副本.md:1012｜說明｜走聯盟燃燒平原路線時，在摩根的崗哨與烈焰峰先接。低於任務接取等級就組隊前再補接。做過下層後，到摩根的崗哨交達基薩斯將軍的命令，再接上層尾王。｜En el recorrido de la Alianza por Las Estepas Ardientes, acepta las misiones en la Vigilia de Morgan y Peñasco Llamarada. Si te falta nivel, acéptalas antes de reunirte con el grupo. Tras completar la parte inferior, entrega las Órdenes del general Drakkisath en la Vigilia de Morgan y acepta la misión del jefe final de la parte superior.
+03-30到45級.md:830｜說明｜跟著吉米克斯走出廢墟，路上的怪會打他要保護；日誌顯示完成再去獵虎。｜Sigue a Zimmix fuera de las ruinas y protégelo de los atacantes; ve a cazar el tigre solo cuando el registro marque la misión como completada.
+03-30到45級.md:830｜說明｜跟著吉米克斯走出廢墟，路上的怪會打他要保護｜Sigue a Zimmix fuera de las ruinas y protégelo de los atacantes
+03-30到45級.md:830｜說明｜日誌顯示完成再去獵虎。｜Ve a cazar el tigre solo cuando el registro marque la misión como completada.
+04-45到60級.md:160｜說明｜跟著杜里奧斯往北走；遇伏後日誌顯示完成，再撿原地燒焦的信件交。｜Sigue a Dorius hacia el norte; tras la emboscada, cuando el registro la marque como completada, recoge allí mismo la carta chamuscada y entrégala.
+04-45到60級.md:160｜說明｜跟著杜里奧斯往北走｜Sigue a Dorius hacia el norte
+04-45到60級.md:160｜說明｜遇伏後日誌顯示完成，再撿原地燒焦的信件交。｜Tras la emboscada, cuando el registro la marque como completada, recoge allí mismo la carta chamuscada y entrégala.
+03-30到45級.md:949｜說明｜送貨任務，下一站到遠境堡交給戴瑪‧布蘭特。｜Misión de entrega; entrégasela a Dyma Brant en el Bastión Vigía Lejana en la siguiente parada.
+04-45到60級.md:464｜說明｜穿過木喉要塞到冬泉谷時交給薩爾法。｜Entrégasela a Salfa al cruzar el Bastión Fauces de Madera hacia Cuna del Invierno.

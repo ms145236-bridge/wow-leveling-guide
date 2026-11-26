@@ -12595,11 +12595,11 @@
 08-保留物品.md:217｜保留物品用途｜上古之神的仆從（6564），梣谷左拉姆加前哨站｜Lealdade aos Deuses Antigos (6564) — Assentamento Zoram'gar, Vale Gris.
 08-保留物品.md:218｜保留物品用途｜阿奎尼斯男爵（6922），梣谷左拉姆加前哨站｜O Barão Aquanis (6922) — Assentamento Zoram'gar, Vale Gris
 08-保留物品.md:219｜保留物品用途｜邪惡的盟友（6522），幽暗城｜Uma aliança profana (6522) — Cidade Baixa.
-08-保留物品.md:220｜保留物品用途｜臟兮兮的戒指（2945），諾莫瑞根清潔器｜Anel Encardido (2945) — o Sparklematic 5200 em Gnomeregan.
+08-保留物品.md:220｜保留物品用途｜臟兮兮的戒指（2945），諾姆瑞根清潔器｜Anel Encardido (2945) — o Sparklematic 5200 em Gnomeregan.
 08-保留物品.md:221｜保留物品用途｜克羅多克模具（94973），大河林地羅格瑪｜Krol'dok Moulding (94973) — Rog'mar, Sendas do Rio
 08-保留物品.md:222｜保留物品用途｜伊蘭尼庫斯精華（3373），沉沒的神廟同區精華之泉｜A Essência de Erânicos (3373) — fonte de essência do Templo Submerso
 08-保留物品.md:223｜保留物品用途｜黑手的命令（7761），黑石塔上層，需點擊達基薩斯身後的寶珠｜Comando do Mão Negra (7761) — clique no orbe atrás do General Drakkisath em Pico da Rocha Negra Superior
-08-保留物品.md:224｜保留物品用途｜諾莫瑞根，使用藏寶海灣的傳送器進本｜Use o teletransportador em Angra do Butim para entrar em Gnomeregan.
+08-保留物品.md:224｜保留物品用途｜諾姆瑞根，使用藏寶海灣的傳送器進本｜Use o teletransportador em Angra do Butim para entrar em Gnomeregan.
 08-保留物品.md:225｜保留物品用途｜瑪拉頓的傳說（7044），瑪拉頓塞雷布拉斯｜Lendas de Maraudon (7044) — Celebras em Maraudon
 08-保留物品.md:226｜保留物品用途｜瑪拉頓的傳說（7044），瑪拉頓塞雷布拉斯｜Lendas de Maraudon (7044) — Celebras em Maraudon
 08-保留物品.md:227｜保留物品用途｜瑪拉頓，之後可由入口附近啟用傳送點｜Use-o para ativar o portal próximo à entrada de Maraudon mais tarde.
@@ -14630,3 +14630,6 @@
 04-45到60級.md:1005｜說明｜奧格瑪接，並在安戈洛環形山 馬紹爾營地打齊白色暴掠龍爪。｜Pegue em Orgrimmar e colete as Garras de Ravassauro Branco no Refúgio de Marshal, na Cratera Un'Goro.
 01-第一段-1到12級.md:884｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campo de Vento anda alguns passos para o norte no pomar. Se não estiver aqui, procure ao norte.
 01-第一段-1到12級.md:886｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campo de Vento anda alguns passos para o norte no pomar. Se não estiver aqui, procure ao norte.
+06-路線外任務.md:19｜路線外理由｜最低接取等級高於路線經過這裡時的等級，等級到了再接。｜O nível mínimo é maior que o seu quando a rota passa por aqui. Pegue quando chegar a esse nível.
+06-路線外任務.md:19｜路線外理由｜60 級才能換坐騎，練級時不用管。｜Trocas de montaria abrem no nível 60. Ignore enquanto evolui.
+06-路線外任務.md:19｜路線外理由｜限人類，40 級才接得到；之後經過南海鎮時再接。｜Só humanos, a partir do nível 40. Pegue na próxima vez que passar por Costa Sul.

@@ -185,7 +185,9 @@ end
 for _, k in ipairs(OLD_KEYS) do assert(known[k], "old save key not carried over: " .. k) end
 for _, s0 in pairs(E.byId) do
   for _, step in ipairs(s0.list) do
-    if step.s.skey then assert(step.key == s0.id .. "#" .. step.s.skey, step.key) end
+    -- 任務步驟的 skey 接在任務鍵後面（同一任務分站做的步驟各自一個鍵）
+    local quest = step.s.t == "accept" or step.s.t == "do" or step.s.t == "turnin"
+    if step.s.skey then assert(step.key == (quest and (step.s.t:sub(1, 1) .. ":" .. step.s.q .. "#") or (s0.id .. "#")) .. step.s.skey, step.key) end
   end
 end
 -- 黑海岸瀑布（02-13）兩個舊點合成一點：任一個舊點有勾都算到

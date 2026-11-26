@@ -1464,7 +1464,8 @@ for (const file of files.filter((f) => /^08-/.test(f))) {
     const f = line.replace(/^\s*-\s*/, "").split("｜").map((x) => x.trim());
     if (f.length < 4 || !/^\d+$/.test(f[1])) return;
     const use = f[3].replace(/【[^】]*】/g, "").trim();
-    const legacyQuest = [...f[3].matchAll(/\d{2,6}/g)].map((m) => +m[0]).find((n) => quests.has(n));
+    // 只認括號裡的任務 ID：物品名裡的型號（OOX-17、OOX-09）不是任務
+    const legacyQuest = [...f[3].matchAll(/[（(](\d{2,6})[）)]/g)].map((m) => +m[1]).find((n) => quests.has(n));
     const uses = [];
     for (const part of f[3].split("；")) {
       const id = Number(part.match(/[（(](\d{2,6})[）)]/)?.[1]);

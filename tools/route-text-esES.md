@@ -12595,11 +12595,11 @@
 08-保留物品.md:217｜保留物品用途｜上古之神的仆從（6564），梣谷左拉姆加前哨站｜Lealtad a los dioses antiguos (6564) — Avanzada de Zoram'gar, Vallefresno.
 08-保留物品.md:218｜保留物品用途｜阿奎尼斯男爵（6922），梣谷左拉姆加前哨站｜Barón Aquanis (6922) — Avanzada de Zoram'gar, Vallefresno.
 08-保留物品.md:219｜保留物品用途｜邪惡的盟友（6522），幽暗城｜Una alianza nefasta (6522) — Entrañas.
-08-保留物品.md:220｜保留物品用途｜臟兮兮的戒指（2945），諾莫瑞根清潔器｜Un anillo sucio (2945) — Sparklematic 5200, en Gnomeregan.
+08-保留物品.md:220｜保留物品用途｜臟兮兮的戒指（2945），諾姆瑞根清潔器｜Un anillo sucio (2945) — Sparklematic 5200, en Gnomeregan.
 08-保留物品.md:221｜保留物品用途｜克羅多克模具（94973），大河林地羅格瑪｜La moldura Krol'Dok (94973) — Rog'mar, Clarofluvial.
 08-保留物品.md:222｜保留物品用途｜伊蘭尼庫斯精華（3373），沉沒的神廟同區精華之泉｜La esencia de Eranikus (3373) — fuente de esencia cercana, en el Templo Sumergido.
 08-保留物品.md:223｜保留物品用途｜黑手的命令（7761），黑石塔上層，需點擊達基薩斯身後的寶珠｜La orden de Puño Negro (7761) — haz clic en el orbe detrás del General Drakkisath, en Cumbre de Roca Negra Superior.
-08-保留物品.md:224｜保留物品用途｜諾莫瑞根，使用藏寶海灣的傳送器進本｜Usa el teletransportador de Bahía del Botín para entrar en Gnomeregan.
+08-保留物品.md:224｜保留物品用途｜諾姆瑞根，使用藏寶海灣的傳送器進本｜Usa el teletransportador de Bahía del Botín para entrar en Gnomeregan.
 08-保留物品.md:225｜保留物品用途｜瑪拉頓的傳說（7044），瑪拉頓塞雷布拉斯｜Leyendas de Maraudón (7044) — Celebras, en Maraudon.
 08-保留物品.md:226｜保留物品用途｜瑪拉頓的傳說（7044），瑪拉頓塞雷布拉斯｜Leyendas de Maraudón (7044) — Celebras, en Maraudon.
 08-保留物品.md:227｜保留物品用途｜瑪拉頓，之後可由入口附近啟用傳送點｜Maraudon: más adelante sirve para activar el punto de teletransporte cerca de la entrada.
@@ -14795,3 +14795,6 @@
 04-45到60級.md:1005｜說明｜奧格瑪接，並在安戈洛環形山 馬紹爾營地打齊白色暴掠龍爪。｜Acéptala en Orgrimmar y consigue las garras de ravasaurio blanco en el Refugio de Marshal, en el Cráter de Un'Goro.
 01-第一段-1到12級.md:884｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campovento se mueve un par de pasos al norte por el huerto. Si no está aquí, búscala al norte.
 01-第一段-1到12級.md:886｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Campovento se mueve un par de pasos al norte por el huerto. Si no está aquí, búscala al norte.
+06-路線外任務.md:19｜路線外理由｜最低接取等級高於路線經過這裡時的等級，等級到了再接。｜Su nivel mínimo es superior al tuyo cuando la ruta pasa por aquí. Recógela cuando alcances ese nivel.
+06-路線外任務.md:19｜路線外理由｜60 級才能換坐騎，練級時不用管。｜Los cambios de montura se abren a nivel 60. Ignóralos mientras subes de nivel.
+06-路線外任務.md:19｜路線外理由｜限人類，40 級才接得到；之後經過南海鎮時再接。｜Solo humanos, desde nivel 40. Recógela la próxima vez que pases por Costasur.
