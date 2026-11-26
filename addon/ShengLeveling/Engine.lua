@@ -478,7 +478,8 @@ function E.Build()
         elseif s.ungoroExit ~= "teacher" then -- alternate trainers use the original accept key
           -- 鍵用內容：路線重建後存檔裡的勾選／略過／釘選不會跑到別步；同站重複的加 ~2、~3
           -- 改寫、合併過的步驟寫了舊鍵（skey）就沿用；船的座標是碼頭，加上去前的存檔沒有，不放進鍵
-          local base = QUEST[s.t] and (s.t:sub(1, 1) .. ":" .. (s.any and s.any[1] or s.q)) -- 任一組的接：s.q 執行時會換成玩家接的那個，鍵固定用第一個
+          -- 同一任務分站做的步驟（例如名釀先拿花、再採根）寫了 skey 就各用自己的鍵，勾一站不會連帶勾掉另一站
+          local base = QUEST[s.t] and (s.t:sub(1, 1) .. ":" .. (s.any and s.any[1] or s.q) .. (s.skey and ("#" .. s.skey) or "")) -- 任一組的接：s.q 執行時會換成玩家接的那個，鍵固定用第一個
             or (s.skey and (st.id .. "#" .. s.skey))
             or (st.id .. "#" .. s.t .. ":" .. (s.key0 or tostring(s.node or s.bind or s.to or s.text or s.lv or "")) .. (s.x and s.t ~= "boat" and string.format("@%.0f,%.0f", s.x, s.y) or ""))
           local key, k = base, 2
@@ -1593,7 +1594,7 @@ function E.Locate(st)
         if steps[j].s.q and not na[j] and not (step.s.localTransfer or step.s.classTransfer) then
           later = true
           -- 插在站尾的副本前置常在別處先接好：它打勾不代表人已經走過這段交通
-          local prep = steps[j].dungeon and not st.dungeon
+          local prep = (steps[j].dungeon or (steps[j].s.when and steps[j].s.when.dungeonPrep)) and not st.dungeon
           if step.s.t ~= "fp" and done[j] and not prep and (steps[j].s.t == "turnin" or here[steps[j].s.q]) then done[i] = true; passed[i] = true; break end
         end
       end

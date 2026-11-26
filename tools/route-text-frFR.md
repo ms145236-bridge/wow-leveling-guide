@@ -12595,11 +12595,11 @@
 08-保留物品.md:217｜保留物品用途｜上古之神的仆從（6564），梣谷左拉姆加前哨站｜Allégeance aux Dieux très anciens (6564) — Avant-poste de Zoram'gar, Orneval.
 08-保留物品.md:218｜保留物品用途｜阿奎尼斯男爵（6922），梣谷左拉姆加前哨站｜Baron Aquanis (6922) — Avant-poste de Zoram'gar, Orneval.
 08-保留物品.md:219｜保留物品用途｜邪惡的盟友（6522），幽暗城｜Une alliance impie (6522) — Fossoyeuse.
-08-保留物品.md:220｜保留物品用途｜臟兮兮的戒指（2945），諾莫瑞根清潔器｜Anneau sali (2945) — le Sparklematic 5200 dans Gnomeregan.
+08-保留物品.md:220｜保留物品用途｜臟兮兮的戒指（2945），諾姆瑞根清潔器｜Anneau sali (2945) — le Sparklematic 5200 dans Gnomeregan.
 08-保留物品.md:221｜保留物品用途｜克羅多克模具（94973），大河林地羅格瑪｜Moulage krol’dok (94973) — Rog’mar, Rives Claires.
 08-保留物品.md:222｜保留物品用途｜伊蘭尼庫斯精華（3373），沉沒的神廟同區精華之泉｜L'Essence d'Eranikus (3373) — la source d'essence voisine dans le Temple englouti.
 08-保留物品.md:223｜保留物品用途｜黑手的命令（7761），黑石塔上層，需點擊達基薩斯身後的寶珠｜Clique sur l'orbe derrière Général Drakkisath, dans Pic Rochenoire supérieur, pour « Les ordres de Blackhand » (7761).
-08-保留物品.md:224｜保留物品用途｜諾莫瑞根，使用藏寶海灣的傳送器進本｜Utilise le téléporteur de la Baie-du-Butin pour entrer dans Gnomeregan.
+08-保留物品.md:224｜保留物品用途｜諾姆瑞根，使用藏寶海灣的傳送器進本｜Utilise le téléporteur de la Baie-du-Butin pour entrer dans Gnomeregan.
 08-保留物品.md:225｜保留物品用途｜瑪拉頓的傳說（7044），瑪拉頓塞雷布拉斯｜Légendes de Maraudon (7044) — Celebras, dans Maraudon.
 08-保留物品.md:226｜保留物品用途｜瑪拉頓的傳說（7044），瑪拉頓塞雷布拉斯｜Légendes de Maraudon (7044) — Celebras, dans Maraudon.
 08-保留物品.md:227｜保留物品用途｜瑪拉頓，之後可由入口附近啟用傳送點｜Utilise-le plus tard pour activer le point de téléportation près de l'entrée de Maraudon.
@@ -14520,3 +14520,6 @@
 04-45到60級.md:1005｜說明｜奧格瑪接，並在安戈洛環形山 馬紹爾營地打齊白色暴掠龍爪。｜À prendre à Orgrimmar ; récupère les griffes de ravasaure blanc au Refuge des Marshal, dans le cratère d'Un'Goro.
 01-第一段-1到12級.md:884｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Champ-des-Vents se déplace de quelques pas vers le nord dans le verger. Si elle n'est pas ici, cherchez au nord.
 01-第一段-1到12級.md:886｜說明｜阿梅莉雅‧荒原會在果園往北走動兩三格，不在這點就往北找。｜Aamelia Champ-des-Vents se déplace de quelques pas vers le nord dans le verger. Si elle n'est pas ici, cherchez au nord.
+06-路線外任務.md:19｜路線外理由｜最低接取等級高於路線經過這裡時的等級，等級到了再接。｜Son niveau minimum dépasse le tien quand l'itinéraire passe ici. Prends-la une fois ce niveau atteint.
+06-路線外任務.md:19｜路線外理由｜60 級才能換坐騎，練級時不用管。｜Les échanges de monture s'ouvrent au niveau 60. À ignorer pendant la progression.
+06-路線外任務.md:19｜路線外理由｜限人類，40 級才接得到；之後經過南海鎮時再接。｜Humains uniquement, dès le niveau 40. Prends-la la prochaine fois que tu passes à Austrivage.

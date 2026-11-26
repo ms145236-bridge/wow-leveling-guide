@@ -1040,14 +1040,14 @@
 02-12到30級.md:627｜說明｜空瓶子在哨塔頂；後續 249 不排。｜La jarre vide est en haut de la tour de guet ; la suite 249 n'est pas dans l'itinéraire.
 02-12到30級.md:627｜說明｜空瓶子在哨塔頂｜La jarre vide est en haut de la tour de guet
 02-12到30級.md:627｜說明｜後續 249 不排。｜La suite 249 n'est pas dans l'itinéraire.
-03-30到45級.md:99｜說明｜諾莫瑞根副本任務，要打諾莫瑞根才接。｜Quête de donjon de Gnomeregan ; ne la prends que si tu comptes faire Gnomeregan.
+03-30到45級.md:99｜說明｜諾姆瑞根副本任務，要打諾姆瑞根才接。｜Quête de donjon de Gnomeregan ; ne la prends que si tu comptes faire Gnomeregan.
 03-30到45級.md:118｜說明｜哈林多爾船長在擱淺的無畏號上，先殺他拿鑰匙，再開船上的保險箱。｜Le capitaine Halyndor est sur l'Intrépide échoué ; tue-le d'abord pour prendre la clé, puis ouvre le coffre-fort à bord du navire.
 03-30到45級.md:135｜說明｜送貨任務，回米奈希爾港時交給詹姆士·哈洛倫。｜Quête de livraison ; remets-la à James Halloran quand tu reviens au Port de Menethil.
 03-30到45級.md:137｜說明｜怒牙營地裡的書，撿起來帶回米奈希爾港。｜Un livre dans le Campement de Hargnecroc ; ramasse-le et rapporte-le au Port de Menethil.
 03-30到45級.md:183｜說明｜去投石車的路上交給霍文‧輕羽。｜Remets-la à Howin Genteplume en allant aux catapultes.
-05-副本.md:181｜說明｜從米奈希爾港飛鐵爐堡，出城門沿丹莫洛大路往西到諾莫瑞根。｜Vole du Port de Menethil à Forgefer, sors par les portes de la ville et suis la route de Dun Morogh vers l'ouest jusqu'à Gnomeregan.
+05-副本.md:181｜說明｜從米奈希爾港飛鐵爐堡，出城門沿丹莫洛大路往西到諾姆瑞根。｜Vole du Port de Menethil à Forgefer, sors par les portes de la ville et suis la route de Dun Morogh vers l'ouest jusqu'à Gnomeregan.
 05-副本.md:185｜說明｜機械怪身上掉，回暴風城時交。｜Tombe sur les monstres mécaniques ; rends-la à ton retour à Hurlevent.
-03-30到45級.md:248｜說明｜打過諾莫瑞根、拿齊機械內膽的才交。｜Ne la rends que si tu as fait Gnomeregan et réuni toutes les Entrailles mécaniques de robot.
+03-30到45級.md:248｜說明｜打過諾姆瑞根、拿齊機械內膽的才交。｜Ne la rends que si tu as fait Gnomeregan et réuni toutes les Entrailles mécaniques de robot.
 03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務；沒遇到就跳過。｜Il patrouille sur la route et ne donne la quête que si tu le sauves quand il tombe dans une embuscade ; si tu ne le croises pas, passe-la.
 03-30到45級.md:281｜說明｜他在路上巡邏，被伏擊時救下他才給任務｜Il patrouille sur la route et ne donne la quête que si tu le sauves quand il tombe dans une embuscade
 03-30到45級.md:281｜說明｜沒遇到就跳過。｜Si tu ne le croises pas, passe-la.
@@ -1594,3 +1594,11 @@
 05-副本.md:1008｜說明｜共用傳送門→左側上坡與門鎖→艾博希爾→孵化間→競技場→達基薩斯。｜Portail commun → rampe de gauche et porte verrouillée → Prophète ardent → nurserie → arène → Drakkisath.
 05-副本.md:1065｜說明｜和下層共用入口。開上層門要有人持晉升印章。兩個龍蛋任務分兩趟，後續帶去通靈學院。｜Même entrée que la partie inférieure. Un membre du groupe doit avoir le sceau de l’ascension pour ouvrir la porte. Fais les deux quêtes des œufs en deux passages, puis poursuis la chaîne à Scholomance.
 05-副本.md:1012｜說明｜走聯盟燃燒平原路線時，在摩根的崗哨與烈焰峰先接。低於任務接取等級就組隊前再補接。做過下層後，到摩根的崗哨交達基薩斯將軍的命令，再接上層尾王。｜En suivant la route de l’Alliance dans les Steppes ardentes, prends les quêtes à la Veille de Morgan et à la Corniche des flammes. Si ton niveau est trop bas, repasse avant de rejoindre le groupe. Après la partie inférieure, rends « Ordres du général Drakkisath » à la Veille de Morgan et prends la quête du dernier boss de la partie supérieure.
+03-30到45級.md:830｜說明｜跟著吉米克斯走出廢墟，路上的怪會打他要保護；日誌顯示完成再去獵虎。｜Suis Zimmix hors des ruines et protège-le des attaquants ; ne va chasser le tigre qu'une fois la quête terminée dans le journal.
+03-30到45級.md:830｜說明｜跟著吉米克斯走出廢墟，路上的怪會打他要保護｜Suis Zimmix hors des ruines et protège-le des attaquants
+03-30到45級.md:830｜說明｜日誌顯示完成再去獵虎。｜Ne va chasser le tigre qu'une fois la quête terminée dans le journal.
+04-45到60級.md:160｜說明｜跟著杜里奧斯往北走；遇伏後日誌顯示完成，再撿原地燒焦的信件交。｜Suis Dorius vers le nord ; après l'embuscade, une fois la quête terminée dans le journal, ramasse sur place la lettre calcinée et rends-la.
+04-45到60級.md:160｜說明｜跟著杜里奧斯往北走｜Suis Dorius vers le nord
+04-45到60級.md:160｜說明｜遇伏後日誌顯示完成，再撿原地燒焦的信件交。｜Après l'embuscade, une fois la quête terminée dans le journal, ramasse sur place la lettre calcinée et rends-la.
+03-30到45級.md:949｜說明｜送貨任務，下一站到遠境堡交給戴瑪‧布蘭特。｜Quête de livraison ; rends-la à Dyma Brant au donjon de Guetlointain à l'étape suivante.
+04-45到60級.md:464｜說明｜穿過木喉要塞到冬泉谷時交給薩爾法。｜Rends-la à Salfa en traversant le repaire des Grumegueules vers Berceau-de-l'Hiver.
