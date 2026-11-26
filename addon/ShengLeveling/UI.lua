@@ -1070,7 +1070,10 @@ local function fillRow(row, it)
     row.name:SetText(s.q and E.Title({ q = s.q, t = "accept" }) or (s.text or s.hint or "")); paint(row.name, cur and TEXT or FAINT)
     if s.q and C.IsOnQuest(s.q) then
       local obj = C.Objectives(s.q) or {}
-      for _, o in ipairs(obj) do if o.need then row.prog:SetText((o.have or 0) .. "/" .. o.need); break end end
+      local o = nil
+      for _, x in ipairs(obj) do if x.need and not x.done then o = x; break end end -- 先顯示未完成的那項
+      o = o or obj[1]
+      if o and o.need then row.prog:SetText((o.have or 0) .. "/" .. o.need) end
     end
   elseif it.kind == "dent" then
     local ent = UI.Entrance(it.d)
@@ -2414,10 +2417,11 @@ function UI.Render(S)
     if s.t == "do" and s.q then
       local one, _, lines, num = objectiveLines(s.q)
       if lines then
-        -- 多目標：只寫各項數字（2/8 · 0/5，未完成在前）
-        local nums = {}
-        for j, o in ipairs(lines) do nums[j] = o.num or (o.done and "√" or "-") end
-        line(table.concat(nums, " · "), DIM)
+        -- 多目標：每項一行「名稱 數字」（未完成在前），最多 3 行，多的收成「…還有 n 項」
+        for j, o in ipairs(lines) do
+          if #lines > 3 and j == 3 then line(L["…還有 %d 項"]:format(#lines - 2), DIM); break end
+          line(o.text, DIM, o.num)
+        end
       elseif one or s.hint then
         line(one or s.hint, DIM, one and num)
       end
