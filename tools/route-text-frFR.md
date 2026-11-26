@@ -10415,7 +10415,8 @@
 06-路線外任務.md:1346｜路線外判定｜值得做｜Ça vaut le coup
 06-路線外任務.md:1346｜路線外理由｜限術士，交件後可接「克索諾斯恐懼戰馬」，可同一趟處理。｜Démoniste uniquement. Rends la quête pour débloquer Le destrier de l'effroi de Xoroth. Fais les deux en un passage.
 06-路線外任務.md:1347｜路線外判定｜可放掉｜À abandonner
-06-路線外任務.md:1347｜路線外理由｜限術士，史詩坐騎鏈要材料及組隊，滿級再處理。｜Démoniste uniquement. La chaîne de monture épique nécessite des matériaux et un groupe. Enregistre-le pour le niveau maximum.
+06-路線外任務.md:1253｜路線外理由｜限術士，完成即學會中級騎術（找奧格瑪暗影裂口的澤弗洛斯特），省訓練費；要材料及組隊，滿級再做。｜Démonistes uniquement. La terminer apprend gratuitement la monte d'artisan auprès du maître des démonistes d'Orgrimmar. Demande des matériaux et un groupe : à faire au niveau maximum.
+06-路線外任務.md:1525｜路線外理由｜官方確認不開放重複交件，不用做。｜Blizzard a confirmé que la remise répétable n'est pas disponible. À passer.
 06-路線外任務.md:1348｜路線外判定｜之後順路｜À faire plus tard en passant
 06-路線外任務.md:1348｜路線外理由｜節慶開放且剛好路過時再做，練級途中可先放著。｜Fais la quête quand l’événement est actif et que tu passes par là.
 06-路線外任務.md:1349｜路線外判定｜之後順路｜À faire plus tard en passant

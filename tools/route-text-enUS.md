@@ -10418,7 +10418,8 @@
 06-路線外任務.md:1346｜路線外判定｜值得做｜Worth doing: Unlock 479 and Forever quest 95981, then do both in Ambermill on one loop. Turn in 479 before killing the mages for 480.
 06-路線外任務.md:1346｜路線外理由｜限術士，交件後可接「克索諾斯恐懼戰馬」，可同一趟處理。｜Warlock only. Turn in to unlock Dreadsteed of Xoroth. Do both on the same trip.
 06-路線外任務.md:1347｜路線外判定｜可放掉｜Safe to abandon
-06-路線外任務.md:1347｜路線外理由｜限術士，史詩坐騎鏈要材料及組隊，滿級再處理。｜Warlock only. The epic mount chain takes materials and a group. Save it for max level.
+06-路線外任務.md:1253｜路線外理由｜限術士，完成即學會中級騎術（找奧格瑪暗影裂口的澤弗洛斯特），省訓練費；要材料及組隊，滿級再做。｜Warlock only. Finishing it teaches Journeyman Riding for free (talk to Zevrost in Orgrimmar's Cleft of Shadow). Needs materials and a group, so do it at max level.
+06-路線外任務.md:1525｜路線外理由｜官方確認不開放重複交件，不用做。｜Blizzard confirmed the repeatable turn-in is not available. Skip it.
 06-路線外任務.md:1348｜路線外判定｜之後順路｜Later, en route
 06-路線外任務.md:1348｜路線外理由｜節慶開放且剛好路過時再做，練級途中可先放著。｜Save it for when the event is active and you pass through.
 06-路線外任務.md:1349｜路線外判定｜之後順路｜Later, en route
