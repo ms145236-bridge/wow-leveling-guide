@@ -196,7 +196,7 @@
 04-45到60級.md:443｜說明｜喝下維德雷藥劑後保持死亡狀態，以靈魂找任務 NPC。｜Tras beber el Elixir de Videre, sigue muerto y busca al PNJ de la misión en forma de espíritu.
 04-45到60級.md:446｜說明｜回屍體復活。｜Vuelve a tu cadáver y resucita.
 04-45到60級.md:488｜說明｜在奧伯丁旅店綁爐石（37.00, 40.00）。｜Vincula tu piedra de hogar en la posada de Auberdine (37.00, 40.00).
-04-45到60級.md:512｜說明｜右鍵背包裡的空的火酒瓶接任務。｜Haz clic derecho en Frasco vacío de piroagua en tu bolsa para empezar la misión.
+04-45到60級.md:512｜說明｜右鍵背包裡的空的火水瓶接任務。｜Haz clic derecho en Frasco vacío de piroagua en tu bolsa para empezar la misión.
 04-45到60級.md:760｜說明｜還沒到 60 級就把冬泉谷任務做完，或打一趟黑石深淵；還不夠再刷斯坦索姆或通靈學院。｜Si aún no eres nivel 60, termina las misiones de Cuna del Invierno o haz una vez las Profundidades de Roca Negra. Si aún no basta, haz Stratholme o Scholomance.
 05-副本.md:309｜說明｜東瘟疫之地 1423 26.52, 10.36｜Tierras de la Peste del Este 1423 26.52, 10.36
 06-路線外任務.md:9｜說明｜千針石林・第一次（第29站）經過時，有空再接。｜Acéptala si tienes tiempo al pasar por Las Mil Agujas (1.ª visita, parada 29).
@@ -356,7 +356,7 @@
 03-30到45級.md:924｜說明｜召喚地獄戰馬，到棘齒城交給斯坦哈德·法爾杉。｜Invocar corcel vil: entrégala a Strahad Farsan en Trinquete.
 03-30到45級.md:982｜說明｜導引可略過，直接找暴風城的達索瑞恩·拉爾接 1661。｜La misión de introducción es opcional: ve directamente a Duthorian Rall en Ventormenta y acepta 1661.
 03-30到45級.md:851｜說明｜在菲拉斯島的競技場連續擊敗四波對手。｜Derrota cuatro oleadas de rivales seguidas en la arena.
-03-30到45級.md:878｜說明｜要一件奧法之袍，可請裁縫做或在拍賣場買。｜Necesitas unas Togas de Arcana. Pídeselas a un sastre o cómpralas en la casa de subastas.
+03-30到45級.md:878｜說明｜要一件秘法之袍，可請裁縫做或在拍賣場買。｜Necesitas unas Togas de Arcana. Pídeselas a un sastre o cómpralas en la casa de subastas.
 03-30到45級.md:893｜說明｜獎勵魔化金線血袍。｜Recompensa: Toga de sangre dorada encantada.
 03-30到45級.md:904｜說明｜地獄犬碎片，和 4963 二選一。｜Fragmento de manáfago. Elige esta o la 4963.
 03-30到45級.md:907｜說明｜地獄火碎片，和 4962 二選一。｜Fragmento de infernal. Elige esta o la 4962.
@@ -410,7 +410,7 @@
 03-30到45級.md:270｜說明｜從暮色森林西邊沿大路往南進荊棘谷，先到反抗軍營地。｜Desde el oeste del Bosque del Ocaso, sigue el camino al sur hasta Vega de Tuercespina y ve primero al Campamento Rebelde.
 03-30到45級.md:298｜說明｜沿荊棘谷大路一路往南到藏寶海灣，經過格羅姆高附近時離部落營地遠一點。｜Sigue el camino de Vega de Tuercespina todo el rato al sur hasta Bahía del Botín y mantente lejos del campamento de la Horda al pasar cerca de Grom'gol.
 03-30到45級.md:331｜說明｜這班船中途停南海鎮，到奧伯丁再下船。｜Este barco hace escala en Costasur. Baja en Auberdine.
-03-30到45級.md:377｜說明｜從魯瑟蘭村或阿斯特蘭納飛棘齒城（經塔倫迪斯營地），沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走莫爾杉壁壘。｜Vuela desde Aldea Rut'theran o Astranaar a Trinquete (con escala en Punta Talrendis), sigue el camino principal al sur, rodea el Campamento Taurajo y baja en el Gran Elevador a Las Mil Agujas. Usa la ruta por la Muralla de Mor'shan solo si no tienes ninguno de los dos puntos.
+03-30到45級.md:377｜說明｜從魯瑟蘭村或阿斯特蘭納飛棘齒城（經塔倫迪斯營地），沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走摩爾沙農場。｜Vuela desde Aldea Rut'theran o Astranaar a Trinquete (con escala en Punta Talrendis), sigue el camino principal al sur, rodea el Campamento Taurajo y baja en el Gran Elevador a Las Mil Agujas. Usa la ruta por la Muralla de Mor'shan solo si no tienes ninguno de los dos puntos.
 03-30到45級.md:398｜說明｜從閃光平原沿大路往南進塔納利斯，到加基森開飛行點再爐石。｜Desde El Desierto de Sal, sigue el camino al sur hasta Tanaris, abre el punto de vuelo de Gadgetzan y luego usa la piedra de hogar.
 03-30到45級.md:399｜說明｜加基森｜Gadgetzan
 03-30到45級.md:408｜說明｜避難谷地沒開就飛米奈希爾港，沿濕地大路往東北，過薩多爾大橋進阿拉希高地，再沿大路到避難谷地。｜Si no tienes Refugio de la Zaga, vuela a Puerto de Menethil, sigue el camino al noreste por Los Humedales, cruza el Puente Thandol hasta las Tierras Altas de Arathi y sigue la carretera hasta Refugio de la Zaga.
@@ -454,7 +454,7 @@
 04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機；飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Harás escala en el Campamento del Orvallo o en el Pico Nidal; si Costasur no está en tu mapa de vuelos, vuela a Ventormenta como siempre y toma el barco a Auberdine en el puerto.
 04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機｜Harás escala en el Campamento del Orvallo o en el Pico Nidal
 04-45到60級.md:665｜說明｜飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜Si Costasur no está en tu mapa de vuelos, vuela a Ventormenta como siempre y toma el barco a Auberdine en el puerto.
-04-45到60級.md:666｜說明｜改飛暴風城的話在暴風城港口上船。｜Si vuelas a Ventormenta, embarca en el puerto de Ventormenta.
+04-45到60級.md:666｜說明｜改飛暴風城的話在暴風港上船。｜Si vuelas a Ventormenta, embarca en el puerto de Ventormenta.
 04-45到60級.md:716｜說明｜爐石還在冷卻就走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜Si tu piedra de hogar está en reutilización, cruza el portal de vuelta a Aldea Rut'theran, vuela a Auberdine, toma el barco a Puerto de Menethil, baja en Costasur y luego vuela al Campamento del Orvallo.
 04-45到60級.md:717｜說明｜飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜Si el Campamento del Orvallo no está en tu mapa de vuelos, toma el camino de montaña al norte desde el Pico Nidal hasta las Tierras de la Peste del Oeste y corre al oeste hasta el Campamento del Orvallo.
 04-45到60級.md:732｜說明｜安多哈爾沒有飛行點，先往南走回冰風崗再飛。｜Andorhal no tiene punto de vuelo. Primero camina de vuelta al sur hasta el Campamento del Orvallo y vuela desde allí.
@@ -478,8 +478,8 @@
 02-12到30級.md:828｜說明｜再從奧伯丁搭船到暴風城，飛哨兵嶺，往西北到海岸外游下去開另一個帶鎖箱。｜Después toma el barco de Auberdine a Ventormenta, vuela a la Colina del Centinela y ve al noroeste hasta la costa para sumergirte y abrir el otro cofre cerrado.
 02-12到30級.md:829｜說明｜集齊兩半後用傳送：月光林地回去，在雷姆洛斯神殿附近把墜飾合成一個。｜Cuando tengas las dos mitades, usa Teletransporte: Claro de la Luna para volver y juntar las mitades del colgante cerca del Santuario de Remulos.
 02-12到30級.md:832｜說明｜交任務學水棲形態。從永夜港搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。｜Entrega la misión para aprender Forma acuática. Toma el vuelo exclusivo de druidas de Amparo de la Noche a Aldea Rut'theran y usa el portal de la aldea para entrar en Darnassus.
-02-12到30級.md:896｜說明｜暴風城港口搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊莫爾杉壁壘進貧瘠之地往南找塔卡爾；十字路口和陶拉祖營地是部落據點，要繞開。｜Toma el barco del puerto de Ventormenta a Auberdine, sigue la costa de Costa Oscura hacia el sur hasta Vallefresno, entra en Los Baldíos desde el este por la Empalizada de Mor'shan y ve al sur a buscar a Takar. El Cruce y el Campamento Taurajo son bastiones de la Horda; rodéalos.
-02-12到30級.md:896｜說明｜暴風城港口搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊莫爾杉壁壘進貧瘠之地往南找塔卡爾｜Toma el barco del puerto de Ventormenta a Auberdine, sigue la costa de Costa Oscura hacia el sur hasta Vallefresno, entra en Los Baldíos desde el este por la Empalizada de Mor'shan y ve al sur a buscar a Takar
+02-12到30級.md:896｜說明｜暴風港搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊摩爾沙農場進貧瘠之地往南找塔卡爾；十字路口和陶拉祖營地是部落據點，要繞開。｜Toma el barco del puerto de Ventormenta a Auberdine, sigue la costa de Costa Oscura hacia el sur hasta Vallefresno, entra en Los Baldíos desde el este por la Empalizada de Mor'shan y ve al sur a buscar a Takar. El Cruce y el Campamento Taurajo son bastiones de la Horda; rodéalos.
+02-12到30級.md:896｜說明｜暴風港搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊摩爾沙農場進貧瘠之地往南找塔卡爾｜Toma el barco del puerto de Ventormenta a Auberdine, sigue la costa de Costa Oscura hacia el sur hasta Vallefresno, entra en Los Baldíos desde el este por la Empalizada de Mor'shan y ve al sur a buscar a Takar
 02-12到30級.md:896｜說明｜十字路口和陶拉祖營地是部落據點，要繞開。｜El Cruce y el Campamento Taurajo son bastiones de la Horda; rodéalos.
 02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城；爐石在冷卻就往北回奧伯丁搭船到暴風城。｜Al terminar en Vallefresno, usa la piedra de hogar para volver a Ventormenta. Si la piedra de hogar está en enfriamiento, vuelve al norte hasta Auberdine y toma el barco a Ventormenta.
 02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城｜Al terminar en Vallefresno, usa la piedra de hogar para volver a Ventormenta
@@ -518,7 +518,7 @@
 03-30到45級.md:1154｜說明｜米奈希爾港南碼頭搭船到塞拉摩，開飛行點後飛棘齒城；或從米奈希爾港飛藏寶海灣（經鐵爐堡、暴風城）再搭船。｜Toma el barco del muelle sur de Puerto de Menethil a Theramore, descubre su punto de vuelo y vuela a Trinquete. O vuela de Puerto de Menethil a Bahía del Botín (con escalas en Forjaz y Ventormenta) y toma el barco desde allí.
 03-30到45級.md:1154｜說明｜米奈希爾港南碼頭搭船到塞拉摩，開飛行點後飛棘齒城｜Toma el barco del muelle sur de Puerto de Menethil a Theramore, descubre su punto de vuelo y vuela a Trinquete
 03-30到45級.md:1154｜說明｜或從米奈希爾港飛藏寶海灣（經鐵爐堡、暴風城）再搭船。｜O vuela de Puerto de Menethil a Bahía del Botín (con escalas en Forjaz y Ventormenta) y toma el barco desde allí.
-03-30到45級.md:379｜說明｜做了達納蘇斯選做的從魯瑟蘭村飛棘齒城（經奧伯丁、塔倫迪斯營地），跳過的從阿斯特蘭納飛（經塔倫迪斯營地）；沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走莫爾杉壁壘。｜Si hiciste las misiones opcionales de Darnassus, vuela de Aldea Rut'theran a Trinquete (con escalas en Auberdine y Punta Talrendis); si las saltaste, vuela desde Astranaar (con escala en Punta Talrendis). Sigue el camino principal hacia el sur, rodea el Campamento Taurajo y baja a Las Mil Agujas por el Gran Elevador. Usa la Empalizada de Mor'shan solo si no has descubierto ninguno de los dos puntos.
+03-30到45級.md:379｜說明｜做了達納蘇斯選做的從魯瑟蘭村飛棘齒城（經奧伯丁、塔倫迪斯營地），跳過的從阿斯特蘭納飛（經塔倫迪斯營地）；沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走摩爾沙農場。｜Si hiciste las misiones opcionales de Darnassus, vuela de Aldea Rut'theran a Trinquete (con escalas en Auberdine y Punta Talrendis); si las saltaste, vuela desde Astranaar (con escala en Punta Talrendis). Sigue el camino principal hacia el sur, rodea el Campamento Taurajo y baja a Las Mil Agujas por el Gran Elevador. Usa la Empalizada de Mor'shan solo si no has descubierto ninguno de los dos puntos.
 03-30到45級.md:412｜說明｜交件在大河林地遠境堡的戴瑪‧布蘭特，下一站會去。｜Entrega a Demar Brant en el Castillo de Farholde, en Clarofluvial; irás allí en la próxima parada.
 03-30到45級.md:465｜說明｜遠境堡還沒開飛行點，第一次要從湖畔鎮沿大路往東走進大河林地西口。｜El Castillo de Farholde aún no tiene punto de vuelo, así que la primera vez ve al este por el camino desde Villa del Lago hasta la entrada occidental de Clarofluvial.
 03-30到45級.md:466｜說明｜過了赤脊山東邊的入口就是鬃丘，入口一帶的豺狼人 36–38 級，打起來痛。｜Tras la entrada al este de las Montañas Crestagrana están las Colinas Erizadas; los gnolls de nivel 36-38 de la entrada golpean fuerte.
@@ -1014,7 +1014,7 @@
 01-第一段-1到12級.md:678｜說明｜學了剝皮才交。｜Entrégala solo cuando hayas aprendido Desuello.
 01-第一段-1到12級.md:765｜說明｜暴躁的逐風者在瓦拉納爾西邊的風莓低地，就是剛才收逐風者腰肉的地方。｜Los zancavendavales malhumorados están en las Tierras Bajas de los Soplabayas, al oeste de Valanaar, justo donde acabas de conseguir los solomillos de zancavendavales.
 01-第一段-1到12級.md:1066｜說明｜回瓦拉納爾旅店（62.20, 72.60），還不到 12 級就在附近練到 12 再搭船去達拉然。｜Vuelve a la posada de Valanaar (62.20, 72.60); si aún no eres nivel 12, sube hasta el 12 por los alrededores antes de tomar el barco a Dalaran.
-01-第一段-1到12級.md:1094｜說明｜回暴風城港口搭船去奧伯丁。爐石在冷卻就找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再到碼頭搭船去奧伯丁。｜Vuelve al Puerto de Ventormenta y toma el barco a Auberdine. Si la piedra de hogar está en reutilización, habla con Silva Fil'naveth en Amparo de la Noche (1450 44.15, 45.23) para tomar el vuelo exclusivo de los druidas hasta la Aldea Rut'theran y luego toma el barco a Auberdine en el muelle.
+01-第一段-1到12級.md:1094｜說明｜回暴風港搭船去奧伯丁。爐石在冷卻就找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再到碼頭搭船去奧伯丁。｜Vuelve al Puerto de Ventormenta y toma el barco a Auberdine. Si la piedra de hogar está en reutilización, habla con Silva Fil'naveth en Amparo de la Noche (1450 44.15, 45.23) para tomar el vuelo exclusivo de los druidas hasta la Aldea Rut'theran y luego toma el barco a Auberdine en el muelle.
 01-第一段-1到12級.md:877｜說明｜瓦拉納爾西邊草地，數量多，搭船前補到 12 級。｜La pradera al oeste de Valanaar; hay muchos enemigos. Sube hasta el nivel 12 antes de tomar el barco.
 01-第一段-1到12級.md:1143｜說明｜交了這個導引才接得到國王的財寶。｜Solo podrás aceptar Un simple subterfugio después de entregar esta introducción.
 02-12到30級.md:734｜說明｜從東谷伐木場沿艾爾文森林大路往西，經閃金鎮過橋進西部荒野。｜Desde el Aserradero de la Vega del Este sigue el camino del Bosque de Elwynn hacia el oeste, pasa por Villadorada y cruza el puente para entrar en los Páramos de Poniente.
@@ -1206,8 +1206,8 @@
 03-30到45級.md:420｜說明｜離開閃光平原前還不到 35 級，就在賽道南邊打鹽石凝視者、鹽石水晶蜥蜴補到 35。｜Si aún no eres nivel 35 antes de irte de El Desierto de Sal, sube hasta el 35 matando observadores Gapo Salino y vitropieles Gapo Salino al sur del circuito.
 03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，在廢墟裡沿路找；找不齊就略過。｜Tienes que recuperar 8 mercancías robadas en las Ruinas de Zul'Kunda; búscalas por el camino dentro de las ruinas; si no las encuentras todas, sáltatela.
 03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，在廢墟裡沿路找｜Tienes que recuperar 8 mercancías robadas en las Ruinas de Zul'Kunda; búscalas por el camino dentro de las ruinas
-04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火酒瓶，撿到後右鍵接任務；還沒掉就繼續打熊怪。｜Los fúrbolgs Nevada sueltan el Frasco vacío de piroagua; cuando lo consigas, haz clic derecho para aceptar la misión; si aún no ha caído, sigue matando fúrbolgs.
-04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火酒瓶，撿到後右鍵接任務｜Los fúrbolgs Nevada sueltan el Frasco vacío de piroagua; cuando lo consigas, haz clic derecho para aceptar la misión
+04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火水瓶，撿到後右鍵接任務；還沒掉就繼續打熊怪。｜Los fúrbolgs Nevada sueltan el Frasco vacío de piroagua; cuando lo consigas, haz clic derecho para aceptar la misión; si aún no ha caído, sigue matando fúrbolgs.
+04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火水瓶，撿到後右鍵接任務｜Los fúrbolgs Nevada sueltan el Frasco vacío de piroagua; cuando lo consigas, haz clic derecho para aceptar la misión
 04-45到60級.md:731｜說明｜還沒掉就繼續打熊怪。｜Si aún no ha caído, sigue matando fúrbolgs.
 04-45到60級.md:1089｜說明｜郵件散在永望鎮外的山丘上，照任務日誌的提示找；找不到可先略過。｜El correo está esparcido por las colinas de las afueras de Vista Eterna; búscalo siguiendo las pistas del registro de misiones; si no lo encuentras, puedes saltártela por ahora.
 04-45到60級.md:1089｜說明｜郵件散在永望鎮外的山丘上，照任務日誌的提示找｜El correo está esparcido por las colinas de las afueras de Vista Eterna; búscalo siguiendo las pistas del registro de misiones
@@ -1323,10 +1323,10 @@
 04-45到60級.md:340｜說明｜要進蟲巢採樣：往西南走到洞口再往裡走（50.40, 78.80 → 48.70, 85.20）。｜Para la muestra hay que entrar en la colmena: ve al suroeste hasta la entrada de la cueva y adéntrate (50.40, 78.80 → 48.70, 85.20).
 04-45到60級.md:676｜說明｜往東南走，從這裡的山路進辛特蘭。｜Ve al sureste y toma aquí el sendero de montaña hacia Tierras del Interior.
 01-第一段-1到12級.md:59｜說明｜打算練剝皮再選剝皮卡。｜Elige la carta de Desuello solo si piensas desollar.
-01-第一段-1到12級.md:881｜說明｜到暴風城港口的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Ve al muelle del puerto de Ventormenta y toma el barco a Auberdine (1453 21.80, 56.80).
+01-第一段-1到12級.md:881｜說明｜到暴風港的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Ve al muelle del puerto de Ventormenta y toma el barco a Auberdine (1453 21.80, 56.80).
 03-30到45級.md:715｜說明｜到棘齒城碼頭，搭往藏寶海灣的船（1413 63.35, 38.45）。｜Ve al muelle de Trinquete y toma el barco a Bahía del Botín (1413 63.35, 38.45).
 04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Ve al muelle de Costasur y toma el barco a Auberdine (1424 50.70, 70.50).
-01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Embarca en el muelle del puerto de Ventormenta.
+01-第一段-1到12級.md:881｜說明｜在暴風港的碼頭上船。｜Embarca en el muelle del puerto de Ventormenta.
 03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Embarca en el muelle de Trinquete.
 02-12到30級.md:620｜說明｜若先打過濕地挖掘場，在湖畔鎮接下這個任務，留到下次組隊進本找戴文。｜Si ya completaste el Sitio de Excavación de Los Humedales, acepta esta misión en Villa del Lago y busca a Daewyn la próxima vez que entres con un grupo.
 05-副本.md:204｜說明｜再經湖畔鎮時，向多林回報弟弟的下落。｜La próxima vez que pases por Villa del Lago, cuéntale a Dorin qué le ocurrió a su hermano.
@@ -1369,7 +1369,7 @@
 04-45到60級.md:195｜說明｜從東側圖紙路線過橋進大廳後左轉。圖紙在上層平台、工頭身後的桌上。精英守著時可先略過，有安全空檔或隊伍再恢復。｜Si vas a por los planos desde el este, cruza el puente y gira a la izquierda en la gran sala. Los planos están en la mesa detrás del sobrestante, en la plataforma superior. Si hay élites vigilando, omite el paso y retómalo cuando esté despejado o vayas en grupo.
 04-45到60級.md:191｜說明｜從東側有礦工的入口進入時，向右沿下層岩漿旁的通道走到燻火龍洞。｜Desde la entrada este con los mineros, gira a la derecha y sigue el pasaje inferior junto a la lava hasta la caverna de los incendosaurios.
 02-12到30級.md:453｜說明｜在奧伯丁搭往米奈希爾港的船，下一站就是米奈希爾港。｜En Auberdine, toma el barco a Puerto de Menethil y baja en la siguiente parada.
-04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁；改飛暴風城的話在暴風城港口上船。｜Toma el barco a Auberdine en el muelle de Costasur. Si vuelas a Ventormenta, embarca en el puerto de Ventormenta.
+04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁；改飛暴風城的話在暴風港上船。｜Toma el barco a Auberdine en el muelle de Costasur. Si vuelas a Ventormenta, embarca en el puerto de Ventormenta.
 04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁｜Toma el barco a Auberdine en el muelle de Costasur
 05-副本.md:40｜說明｜遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭船先到米奈希爾港，再循北線到南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 02-第14站。｜Opcional y lejana: la entrada está en las Ruinas de Lordaeron, sobre Entrañas, así que hay que cruzar territorio de la Horda. Desde Auberdine, ve primero en barco a Puerto de Menethil y sigue la ruta marítima del norte hasta Costasur. Baja allí y descubre su punto de vuelo; luego ve al norte por las Laderas de Trabalomas y el Bosque de Argénteos hasta los Claros de Tirisfal. Al salir de la mazmorra, usa la piedra de hogar para volver a Ventormenta y retoma la 02-parada 14.
 04-45到60級.md:558｜說明｜仍在北側且沒有要找托爾瓦的任務，就到馬紹爾營地看飛行圖，能選加基森就飛。要交尤爾查的毛皮，或要辦托爾瓦的德魯伊任務，先去東南找他。在托爾瓦旁或不能飛時，走東南坡進塔納利斯，再往東北到加基森。｜Si sigues en el norte y no tienes nada pendiente con Torwa, consulta el mapa de vuelo en el Refugio de Marshal y vuela a Gadgetzan si aparece como destino. Si vas a entregar la piel de U'cha o a hacer las misiones de druida de Torwa, visítalo primero en el sureste. Desde Torwa, o si no puedes volar, sube por la rampa del sureste hasta Tanaris y ve al noreste hacia Gadgetzan.
@@ -1475,7 +1475,7 @@
 05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜En tu primera visita a las Montañas Crestagrana, tras entregar la escolta de vuelta en los Páramos de Poniente, acepta la Hermandad Defias y los pañuelos de seda roja en la Colina del Centinela. Al volver por última vez a Ventormenta, acepta las tres misiones de la ciudad, para no hacer un viaje especial antes de la mazmorra.
 02-12到30級.md:116｜說明｜和月溪鎮諜戰同一趟，在月溪鎮打迪菲亞。｜En el mismo viaje que el espionaje de Arroyo de la Luna: mata a los Defias de Arroyo de la Luna.
 02-12到30級.md:341｜說明｜西部荒野沒接到的，去追信差前在哨兵嶺補接。｜Si no la aceptaste en los Páramos de Poniente, acéptala en la Colina del Centinela antes de perseguir al mensajero.
-05-副本.md:552｜說明｜遠程選做：在奧伯丁上船前先飛回阿斯特蘭納，沿大路往東，從梣谷東側大道往南越過莫爾杉壁壘進貧瘠之地，順北路往南，到十字路口西南的綠洲找洞口；沿路是部落地區。出本後回阿斯特蘭納飛奧伯丁，搭船到米奈希爾港，接回 02-第21站。｜Opcional y lejana: antes de embarcar en Auberdine, vuela de vuelta a Astranaar. Sigue el camino hacia el este, toma el camino oriental de Vallefresno hacia el sur pasando la Empalizada de Mor'shan hasta Los Baldíos y sigue el camino del norte hacia el sur hasta el oasis al suroeste de El Cruce, donde está la entrada de la cueva. Todo el trayecto es territorio de la Horda. Al salir de la mazmorra, vuelve a Astranaar, vuela a Auberdine, toma el barco a Puerto de Menethil y retoma la 02-parada 21.
+05-副本.md:552｜說明｜遠程選做：在奧伯丁上船前先飛回阿斯特蘭納，沿大路往東，從梣谷東側大道往南越過摩爾沙農場進貧瘠之地，順北路往南，到十字路口西南的綠洲找洞口；沿路是部落地區。出本後回阿斯特蘭納飛奧伯丁，搭船到米奈希爾港，接回 02-第21站。｜Opcional y lejana: antes de embarcar en Auberdine, vuela de vuelta a Astranaar. Sigue el camino hacia el este, toma el camino oriental de Vallefresno hacia el sur pasando la Empalizada de Mor'shan hasta Los Baldíos y sigue el camino del norte hacia el sur hasta el oasis al suroeste de El Cruce, donde está la entrada de la cueva. Todo el trayecto es territorio de la Horda. Al salir de la mazmorra, vuelve a Astranaar, vuela a Auberdine, toma el barco a Puerto de Menethil y retoma la 02-parada 21.
 05-副本.md:566｜說明｜發光的碎片、港口的麻煩和智慧飲料都要跑棘齒城，聯盟這時還沒開棘齒城，不排。｜El fragmento brillante, ¡A por la botella! y Las bebidas astutas requieren ir a Trinquete. La Alianza aún no ha abierto Trinquete en este punto, así que no se incluyen.
 05-副本.md:580｜說明｜選做：從暴風城飛南海鎮，沿希爾斯布萊德丘陵往北進奧特蘭克山脈，繞洛丹米爾湖北岸往西，到達拉然城下水道外側找大法師莫德菈的影像。出本後用爐石回暴風城，接回 03-第25站。｜Opcional: vuela de Ventormenta a Costasur, ve al norte por las Laderas de Trabalomas hasta las Montañas de Alterac, sigue la orilla norte del lago Lordamere hacia el oeste y busca la Imagen de la archimaga Modera junto a las cloacas de Dalaran. Al salir de la mazmorra, usa la piedra de hogar para volver a Ventormenta y retoma la 03-parada 25.
 05-副本.md:587｜說明｜下水道與上街沿路清，三種怪都會遇到｜Limpia las cloacas y las calles; encontrarás los tres tipos

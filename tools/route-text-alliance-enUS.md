@@ -196,7 +196,7 @@
 04-45到60級.md:443｜說明｜喝下維德雷藥劑後保持死亡狀態，以靈魂找任務 NPC。｜After drinking the Videre Elixir, stay dead and find the quest NPC as a ghost.
 04-45到60級.md:446｜說明｜回屍體復活。｜Return to your corpse and resurrect.
 04-45到60級.md:488｜說明｜在奧伯丁旅店綁爐石（37.00, 40.00）。｜Set your hearthstone at the inn in Auberdine (37.00, 40.00).
-04-45到60級.md:512｜說明｜右鍵背包裡的空的火酒瓶接任務。｜Right-click Empty Firewater Flask in your bags to start the quest.
+04-45到60級.md:512｜說明｜右鍵背包裡的空的火水瓶接任務。｜Right-click Empty Firewater Flask in your bags to start the quest.
 04-45到60級.md:760｜說明｜還沒到 60 級就把冬泉谷任務做完，或打一趟黑石深淵；還不夠再刷斯坦索姆或通靈學院。｜If you're not 60 yet, finish the Winterspring quests or run Blackrock Depths once. If that's still not enough, run Stratholme or Scholomance.
 05-副本.md:309｜說明｜東瘟疫之地 1423 26.52, 10.36｜Eastern Plaguelands 1423 26.52, 10.36
 06-路線外任務.md:9｜說明｜千針石林・第一次（第29站）經過時，有空再接。｜Pick this up if you have time when you pass through Thousand Needles (1st visit, stop 29).
@@ -356,7 +356,7 @@
 03-30到45級.md:924｜說明｜召喚地獄戰馬，到棘齒城交給斯坦哈德·法爾杉。｜Summon Felsteed: turn it in to Strahad Farsan in Ratchet.
 03-30到45級.md:982｜說明｜導引可略過，直接找暴風城的達索瑞恩·拉爾接 1661。｜The intro quest is optional: go straight to Duthorian Rall in Stormwind and accept 1661.
 03-30到45級.md:851｜說明｜在菲拉斯島的競技場連續擊敗四波對手。｜Defeat four waves of opponents in a row at the arena.
-03-30到45級.md:878｜說明｜要一件奧法之袍，可請裁縫做或在拍賣場買。｜You need Robes of Arcana. Ask a tailor to make them or buy them at the Auction House.
+03-30到45級.md:878｜說明｜要一件秘法之袍，可請裁縫做或在拍賣場買。｜You need Robes of Arcana. Ask a tailor to make them or buy them at the Auction House.
 03-30到45級.md:893｜說明｜獎勵魔化金線血袍。｜Rewards Enchanted Gold Bloodrobe.
 03-30到45級.md:904｜說明｜地獄犬碎片，和 4963 二選一。｜Felhound shard. Choose either this or 4963.
 03-30到45級.md:907｜說明｜地獄火碎片，和 4962 二選一。｜Infernal shard. Choose either this or 4962.
@@ -410,7 +410,7 @@
 03-30到45級.md:270｜說明｜從暮色森林西邊沿大路往南進荊棘谷，先到反抗軍營地。｜From the west side of Duskwood, follow the road south into Stranglethorn Vale and go to Rebel Camp first.
 03-30到45級.md:298｜說明｜沿荊棘谷大路一路往南到藏寶海灣，經過格羅姆高附近時離部落營地遠一點。｜Follow the Stranglethorn Vale road all the way south to Booty Bay and keep well clear of the Horde camp when you pass near Grom'gol.
 03-30到45級.md:331｜說明｜這班船中途停南海鎮，到奧伯丁再下船。｜This boat stops at Southshore on the way. Don't get off until Auberdine.
-03-30到45級.md:377｜說明｜從魯瑟蘭村或阿斯特蘭納飛棘齒城（經塔倫迪斯營地），沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走莫爾杉壁壘。｜Fly to Ratchet from Rut'theran Village or Astranaar (stopping at Talrendis Point), follow the main road south, steer clear of Camp Taurajo and take the Great Lift down into Thousand Needles. Take the Mor'shan Rampart route only if neither point is unlocked.
+03-30到45級.md:377｜說明｜從魯瑟蘭村或阿斯特蘭納飛棘齒城（經塔倫迪斯營地），沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走摩爾沙農場。｜Fly to Ratchet from Rut'theran Village or Astranaar (stopping at Talrendis Point), follow the main road south, steer clear of Camp Taurajo and take the Great Lift down into Thousand Needles. Take the Mor'shan Rampart route only if neither point is unlocked.
 03-30到45級.md:398｜說明｜從閃光平原沿大路往南進塔納利斯，到加基森開飛行點再爐石。｜From Shimmering Flats, follow the road south into Tanaris, unlock the flight point at Gadgetzan and then hearth.
 03-30到45級.md:399｜說明｜加基森｜Gadgetzan
 03-30到45級.md:408｜說明｜避難谷地沒開就飛米奈希爾港，沿濕地大路往東北，過薩多爾大橋進阿拉希高地，再沿大路到避難谷地。｜If Refuge Pointe isn't unlocked, fly to Menethil Harbor, follow the road northeast through the Wetlands, cross Thandol Span into Arathi Highlands and then follow the road to Refuge Pointe.
@@ -454,7 +454,7 @@
 04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機；飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜You'll connect through Chillwind Camp or Aerie Peak; if Southshore isn't on your flight map, fly to Stormwind as usual and take the boat to Auberdine from the harbor.
 04-45到60級.md:665｜說明｜會經冰風崗或鷹巢山轉機｜You'll connect through Chillwind Camp or Aerie Peak
 04-45到60級.md:665｜說明｜飛行地圖沒有南海鎮就照舊飛暴風城，到港口搭船去奧伯丁。｜If Southshore isn't on your flight map, fly to Stormwind as usual and take the boat to Auberdine from the harbor.
-04-45到60級.md:666｜說明｜改飛暴風城的話在暴風城港口上船。｜If you fly to Stormwind instead, board at the Stormwind harbor.
+04-45到60級.md:666｜說明｜改飛暴風城的話在暴風港上船。｜If you fly to Stormwind instead, board at the Stormwind harbor.
 04-45到60級.md:716｜說明｜爐石還在冷卻就走傳送門回魯瑟蘭村，飛奧伯丁，搭往米奈希爾港的船在南海鎮下船，再飛冰風崗。｜If your hearthstone is on cooldown, take the portal back to Rut'theran Village, fly to Auberdine, board the boat to Menethil Harbor, get off at Southshore and then fly to Chillwind Camp.
 04-45到60級.md:717｜說明｜飛行地圖沒有冰風崗就從鷹巢山往北走山路進西瘟疫之地，再往西跑到冰風崗。｜If Chillwind Camp isn't on your flight map, take the mountain road north from Aerie Peak into the Western Plaguelands, then run west to Chillwind Camp.
 04-45到60級.md:732｜說明｜安多哈爾沒有飛行點，先往南走回冰風崗再飛。｜Andorhal has no flight point. Walk back south to Chillwind Camp first and fly from there.
@@ -478,8 +478,8 @@
 02-12到30級.md:828｜說明｜再從奧伯丁搭船到暴風城，飛哨兵嶺，往西北到海岸外游下去開另一個帶鎖箱。｜Then take the boat from Auberdine to Stormwind, fly to Sentinel Hill, and head northwest to the coast and dive in to open the other locked chest.
 02-12到30級.md:829｜說明｜集齊兩半後用傳送：月光林地回去，在雷姆洛斯神殿附近把墜飾合成一個。｜Once you have both halves, use Teleport: Moonglade to go back and combine the pendant halves near the Shrine of Remulos.
 02-12到30級.md:832｜說明｜交任務學水棲形態。從永夜港搭德魯伊專用的鳥到魯瑟蘭村，走村內傳送門進達納蘇斯。｜Turn in the quest to learn Aquatic Form. Take the druid-only flight from Nighthaven to Rut'theran Village, then use the portal in the village to enter Darnassus.
-02-12到30級.md:896｜說明｜暴風城港口搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊莫爾杉壁壘進貧瘠之地往南找塔卡爾；十字路口和陶拉祖營地是部落據點，要繞開。｜Take the boat from Stormwind harbor to Auberdine, follow the Darkshore coast south into Ashenvale, then enter the Barrens from the east through Mor'shan Rampart and head south to find Takar. The Crossroads and Camp Taurajo are Horde strongholds; go around them.
-02-12到30級.md:896｜說明｜暴風城港口搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊莫爾杉壁壘進貧瘠之地往南找塔卡爾｜Take the boat from Stormwind harbor to Auberdine, follow the Darkshore coast south into Ashenvale, then enter the Barrens from the east through Mor'shan Rampart and head south to find Takar
+02-12到30級.md:896｜說明｜暴風港搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊摩爾沙農場進貧瘠之地往南找塔卡爾；十字路口和陶拉祖營地是部落據點，要繞開。｜Take the boat from Stormwind harbor to Auberdine, follow the Darkshore coast south into Ashenvale, then enter the Barrens from the east through Mor'shan Rampart and head south to find Takar. The Crossroads and Camp Taurajo are Horde strongholds; go around them.
+02-12到30級.md:896｜說明｜暴風港搭船到奧伯丁，沿黑海岸往南進梣谷，從東邊摩爾沙農場進貧瘠之地往南找塔卡爾｜Take the boat from Stormwind harbor to Auberdine, follow the Darkshore coast south into Ashenvale, then enter the Barrens from the east through Mor'shan Rampart and head south to find Takar
 02-12到30級.md:896｜說明｜十字路口和陶拉祖營地是部落據點，要繞開。｜The Crossroads and Camp Taurajo are Horde strongholds; go around them.
 02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城；爐石在冷卻就往北回奧伯丁搭船到暴風城。｜After finishing Ashenvale, hearth back to Stormwind. If your Hearthstone is on cooldown, head north back to Auberdine and take the boat to Stormwind.
 02-12到30級.md:901｜說明｜梣谷做完用爐石回暴風城｜After finishing Ashenvale, hearth back to Stormwind
@@ -518,7 +518,7 @@
 03-30到45級.md:1154｜說明｜米奈希爾港南碼頭搭船到塞拉摩，開飛行點後飛棘齒城；或從米奈希爾港飛藏寶海灣（經鐵爐堡、暴風城）再搭船。｜Take the boat from the south dock at Menethil Harbor to Theramore, unlock its flight point, then fly to Ratchet. Or fly from Menethil Harbor to Booty Bay (changing at Ironforge and Stormwind) and take the boat from there.
 03-30到45級.md:1154｜說明｜米奈希爾港南碼頭搭船到塞拉摩，開飛行點後飛棘齒城｜Take the boat from the south dock at Menethil Harbor to Theramore, unlock its flight point, then fly to Ratchet
 03-30到45級.md:1154｜說明｜或從米奈希爾港飛藏寶海灣（經鐵爐堡、暴風城）再搭船。｜Or fly from Menethil Harbor to Booty Bay (changing at Ironforge and Stormwind) and take the boat from there.
-03-30到45級.md:379｜說明｜做了達納蘇斯選做的從魯瑟蘭村飛棘齒城（經奧伯丁、塔倫迪斯營地），跳過的從阿斯特蘭納飛（經塔倫迪斯營地）；沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走莫爾杉壁壘。｜If you did the optional Darnassus quests, fly from Rut'theran Village to Ratchet (changing at Auberdine and Talrendis Point); if you skipped them, fly from Astranaar (changing at Talrendis Point). Follow the main road south, avoid Camp Taurajo, and take the Great Lift down into Thousand Needles. Only use Mor'shan Rampart if neither point is unlocked.
+03-30到45級.md:379｜說明｜做了達納蘇斯選做的從魯瑟蘭村飛棘齒城（經奧伯丁、塔倫迪斯營地），跳過的從阿斯特蘭納飛（經塔倫迪斯營地）；沿主路往南，繞開陶拉祖營地，搭大升降梯下千針石林。兩點沒開才走摩爾沙農場。｜If you did the optional Darnassus quests, fly from Rut'theran Village to Ratchet (changing at Auberdine and Talrendis Point); if you skipped them, fly from Astranaar (changing at Talrendis Point). Follow the main road south, avoid Camp Taurajo, and take the Great Lift down into Thousand Needles. Only use Mor'shan Rampart if neither point is unlocked.
 03-30到45級.md:412｜說明｜交件在大河林地遠境堡的戴瑪‧布蘭特，下一站會去。｜Turn in to Demar Brant at Farholde Keep in the Riverglades; you'll go there at the next stop.
 03-30到45級.md:465｜說明｜遠境堡還沒開飛行點，第一次要從湖畔鎮沿大路往東走進大河林地西口。｜Farholde Keep has no flight point yet, so on your first visit walk east along the main road from Lakeshire into the western entrance of the Riverglades.
 03-30到45級.md:466｜說明｜過了赤脊山東邊的入口就是鬃丘，入口一帶的豺狼人 36–38 級，打起來痛。｜The entrance east of Redridge Mountains leads into Bristle Hills; the level 36-38 gnolls around the entrance hit hard.
@@ -1014,7 +1014,7 @@
 01-第一段-1到12級.md:678｜說明｜學了剝皮才交。｜Turn in only after you've learned Skinning.
 01-第一段-1到12級.md:765｜說明｜暴躁的逐風者在瓦拉納爾西邊的風莓低地，就是剛才收逐風者腰肉的地方。｜Ornery Galestriders are in the Gustberry Lowlands west of Valanaar, right where you just collected the galestrider loins.
 01-第一段-1到12級.md:1066｜說明｜回瓦拉納爾旅店（62.20, 72.60），還不到 12 級就在附近練到 12 再搭船去達拉然。｜Return to the Valanaar inn (62.20, 72.60); if you're not level 12 yet, grind nearby to 12 before taking the boat to Dalaran.
-01-第一段-1到12級.md:1094｜說明｜回暴風城港口搭船去奧伯丁。爐石在冷卻就找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再到碼頭搭船去奧伯丁。｜Return to Stormwind Harbor and take the boat to Auberdine. If your Hearthstone is on cooldown, see Silva Fil'naveth in Nighthaven (1450 44.15, 45.23) for the druid-only flight to Rut'theran Village, then take the boat to Auberdine from the dock.
+01-第一段-1到12級.md:1094｜說明｜回暴風港搭船去奧伯丁。爐石在冷卻就找永夜港的希爾瓦·菲納雯斯（1450 44.15, 45.23）搭德魯伊專用的鳥到魯瑟蘭村，再到碼頭搭船去奧伯丁。｜Return to Stormwind Harbor and take the boat to Auberdine. If your Hearthstone is on cooldown, see Silva Fil'naveth in Nighthaven (1450 44.15, 45.23) for the druid-only flight to Rut'theran Village, then take the boat to Auberdine from the dock.
 01-第一段-1到12級.md:877｜說明｜瓦拉納爾西邊草地，數量多，搭船前補到 12 級。｜Grassland west of Valanaar; lots of mobs. Grind to level 12 before taking the boat.
 01-第一段-1到12級.md:1143｜說明｜交了這個導引才接得到國王的財寶。｜You can only accept Simple Subterfugin' after turning in this breadcrumb.
 02-12到30級.md:734｜說明｜從東谷伐木場沿艾爾文森林大路往西，經閃金鎮過橋進西部荒野。｜From Eastvale Logging Camp, follow the Elwynn Forest road west, pass Goldshire and cross the bridge into Westfall.
@@ -1206,8 +1206,8 @@
 03-30到45級.md:420｜說明｜離開閃光平原前還不到 35 級，就在賽道南邊打鹽石凝視者、鹽石水晶蜥蜴補到 35。｜If you're not level 35 before leaving the Shimmering Flats, grind Saltstone Gazers and Saltstone Crystalhides south of the racetrack to 35.
 03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，在廢墟裡沿路找；找不齊就略過。｜You have to recover 8 stolen goods in the Ruins of Zul'Kunda; look for them along the way through the ruins; skip it if you can't find them all.
 03-30到45級.md:731｜說明｜要在祖昆達廢墟找回 8 個遭竊的貨物，在廢墟裡沿路找｜You have to recover 8 stolen goods in the Ruins of Zul'Kunda; look for them along the way through the ruins
-04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火酒瓶，撿到後右鍵接任務；還沒掉就繼續打熊怪。｜Winterfall furbolgs drop the Empty Firewater Flask; once you loot it, right-click it to accept the quest; if it hasn't dropped yet, keep killing furbolgs.
-04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火酒瓶，撿到後右鍵接任務｜Winterfall furbolgs drop the Empty Firewater Flask; once you loot it, right-click it to accept the quest
+04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火水瓶，撿到後右鍵接任務；還沒掉就繼續打熊怪。｜Winterfall furbolgs drop the Empty Firewater Flask; once you loot it, right-click it to accept the quest; if it hasn't dropped yet, keep killing furbolgs.
+04-45到60級.md:731｜說明｜冬泉熊怪會掉空的火水瓶，撿到後右鍵接任務｜Winterfall furbolgs drop the Empty Firewater Flask; once you loot it, right-click it to accept the quest
 04-45到60級.md:731｜說明｜還沒掉就繼續打熊怪。｜If it hasn't dropped yet, keep killing furbolgs.
 04-45到60級.md:1089｜說明｜郵件散在永望鎮外的山丘上，照任務日誌的提示找；找不到可先略過。｜The mail is scattered over the hills outside Everlook; follow the hints in the quest log to find it; if you can't find it, skip it for now.
 04-45到60級.md:1089｜說明｜郵件散在永望鎮外的山丘上，照任務日誌的提示找｜The mail is scattered over the hills outside Everlook; follow the hints in the quest log to find it
@@ -1323,10 +1323,10 @@
 04-45到60級.md:340｜說明｜要進蟲巢採樣：往西南走到洞口再往裡走（50.40, 78.80 → 48.70, 85.20）。｜Into the hive for the sample: head southwest to the cave entrance and go inside (50.40, 78.80 → 48.70, 85.20).
 04-45到60級.md:676｜說明｜往東南走，從這裡的山路進辛特蘭。｜Head southeast and take the mountain path here into the Hinterlands.
 01-第一段-1到12級.md:59｜說明｜打算練剝皮再選剝皮卡。｜Pick the Skinning card only if you plan to skin.
-01-第一段-1到12級.md:881｜說明｜到暴風城港口的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Go to the Stormwind Harbor pier and take the boat to Auberdine (1453 21.80, 56.80).
+01-第一段-1到12級.md:881｜說明｜到暴風港的碼頭，搭往奧伯丁的船（1453 21.80, 56.80）。｜Go to the Stormwind Harbor pier and take the boat to Auberdine (1453 21.80, 56.80).
 03-30到45級.md:715｜說明｜到棘齒城碼頭，搭往藏寶海灣的船（1413 63.35, 38.45）。｜Go to the Ratchet dock and take the boat to Booty Bay (1413 63.35, 38.45).
 04-45到60級.md:729｜說明｜到南海鎮碼頭，搭往奧伯丁的船（1424 50.70, 70.50）。｜Go to the Southshore dock and take the boat to Auberdine (1424 50.70, 70.50).
-01-第一段-1到12級.md:881｜說明｜在暴風城港口的碼頭上船。｜Board at the pier in Stormwind Harbor.
+01-第一段-1到12級.md:881｜說明｜在暴風港的碼頭上船。｜Board at the pier in Stormwind Harbor.
 03-30到45級.md:715｜說明｜在棘齒城碼頭上船。｜Board at the Ratchet dock.
 02-12到30級.md:620｜說明｜若先打過濕地挖掘場，在湖畔鎮接下這個任務，留到下次組隊進本找戴文。｜If you have already cleared the Wetlands Excavation Site, pick this up in Lakeshire and look for Daewyn on your next group run.
 05-副本.md:204｜說明｜再經湖畔鎮時，向多林回報弟弟的下落。｜Tell Dorin what happened to his brother the next time you visit Lakeshire.
@@ -1369,7 +1369,7 @@
 04-45到60級.md:195｜說明｜從東側圖紙路線過橋進大廳後左轉。圖紙在上層平台、工頭身後的桌上。精英守著時可先略過，有安全空檔或隊伍再恢復。｜On the eastern approach to the plans, cross the bridge into the large room and turn left. The plans are on the upper platform, on the table behind the overseer. If elites guard it, skip this step and restore it when clear or with a group.
 04-45到60級.md:191｜說明｜從東側有礦工的入口進入時，向右沿下層岩漿旁的通道走到燻火龍洞。｜From the eastern entrance with the miners, turn right and follow the lower passage beside the lava to the Incendosaur cavern.
 02-12到30級.md:453｜說明｜在奧伯丁搭往米奈希爾港的船，下一站就是米奈希爾港。｜In Auberdine, board the boat to Menethil Harbor. Get off at the next stop.
-04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁；改飛暴風城的話在暴風城港口上船。｜Board the boat to Auberdine at the Southshore dock. If you fly to Stormwind instead, board at the Stormwind harbor.
+04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁；改飛暴風城的話在暴風港上船。｜Board the boat to Auberdine at the Southshore dock. If you fly to Stormwind instead, board at the Stormwind harbor.
 04-45到60級.md:666｜說明｜從南海鎮碼頭搭船去奧伯丁｜Board the boat to Auberdine at the Southshore dock
 05-副本.md:40｜說明｜遠程選做：入口在幽暗城上方的羅德隆廢墟，要穿過部落地區。從奧伯丁搭船先到米奈希爾港，再循北線到南海鎮下船並開飛行點，往北經希爾斯布萊德丘陵、銀松森林走到提里斯法林地；出本後用爐石回暴風城，接回 02-第14站。｜Optional, far-off quest: the entrance is in the Ruins of Lordaeron above Undercity, which means crossing Horde territory. From Auberdine, sail first to Menethil Harbor, then take the northern boat route to Southshore. Get off there and unlock its flight point, then go north through Hillsbrad Foothills and Silverpine Forest to Tirisfal Glades. After the dungeon, hearth back to Stormwind and rejoin 02-Stop 14.
 04-45到60級.md:558｜說明｜仍在北側且沒有要找托爾瓦的任務，就到馬紹爾營地看飛行圖，能選加基森就飛。要交尤爾查的毛皮，或要辦托爾瓦的德魯伊任務，先去東南找他。在托爾瓦旁或不能飛時，走東南坡進塔納利斯，再往東北到加基森。｜If you're still in the north and have no business with Torwa, check the flight map at Marshal's Refuge and fly to Gadgetzan if it's available. If you have U'cha's Pelt to deliver or want to do Torwa's druid quests, visit him in the southeast first. From Torwa, or if you can't fly, take the southeastern ramp into Tanaris and head northeast to Gadgetzan.
@@ -1475,7 +1475,7 @@
 05-副本.md:62｜說明｜赤脊山第一次回西部荒野交完護送，就在哨兵嶺接迪菲亞兄弟會和紅色絲質面罩；最後回暴風城時接地底突襲、我的兄弟…、收集記憶，進本前不必專程回頭。｜On your first Redridge visit, after you hand in the escort back in Westfall, pick up The Defias Brotherhood and Red Silk Bandanas at Sentinel Hill. On your last return to Stormwind, pick up Underground Assault, Oh Brother. . . and Collecting Memories, so you don't need a special trip before the dungeon.
 02-12到30級.md:116｜說明｜和月溪鎮諜戰同一趟，在月溪鎮打迪菲亞。｜Same trip as Moonbrook Espionage: kill the Defias in Moonbrook.
 02-12到30級.md:341｜說明｜西部荒野沒接到的，去追信差前在哨兵嶺補接。｜If you didn't take it in Westfall, pick it up at Sentinel Hill before chasing the courier.
-05-副本.md:552｜說明｜遠程選做：在奧伯丁上船前先飛回阿斯特蘭納，沿大路往東，從梣谷東側大道往南越過莫爾杉壁壘進貧瘠之地，順北路往南，到十字路口西南的綠洲找洞口；沿路是部落地區。出本後回阿斯特蘭納飛奧伯丁，搭船到米奈希爾港，接回 02-第21站。｜Optional, far-off dungeon: before boarding the boat in Auberdine, fly back to Astranaar. Follow the road east, take the eastern Ashenvale road south past Mor'shan Rampart into the Barrens, then follow the north road south to the oasis southwest of the Crossroads to find the cave mouth. The whole way is Horde territory. After the dungeon, return to Astranaar, fly to Auberdine, take the boat to Menethil Harbor and rejoin 02-Stop 21.
+05-副本.md:552｜說明｜遠程選做：在奧伯丁上船前先飛回阿斯特蘭納，沿大路往東，從梣谷東側大道往南越過摩爾沙農場進貧瘠之地，順北路往南，到十字路口西南的綠洲找洞口；沿路是部落地區。出本後回阿斯特蘭納飛奧伯丁，搭船到米奈希爾港，接回 02-第21站。｜Optional, far-off dungeon: before boarding the boat in Auberdine, fly back to Astranaar. Follow the road east, take the eastern Ashenvale road south past Mor'shan Rampart into the Barrens, then follow the north road south to the oasis southwest of the Crossroads to find the cave mouth. The whole way is Horde territory. After the dungeon, return to Astranaar, fly to Auberdine, take the boat to Menethil Harbor and rejoin 02-Stop 21.
 05-副本.md:566｜說明｜發光的碎片、港口的麻煩和智慧飲料都要跑棘齒城，聯盟這時還沒開棘齒城，不排。｜The Glowing Shard, Trouble at the Docks and Smart Drinks all need trips to Ratchet. Alliance hasn't unlocked Ratchet yet at this point, so they're not listed.
 05-副本.md:580｜說明｜選做：從暴風城飛南海鎮，沿希爾斯布萊德丘陵往北進奧特蘭克山脈，繞洛丹米爾湖北岸往西，到達拉然城下水道外側找大法師莫德菈的影像。出本後用爐石回暴風城，接回 03-第25站。｜Optional: fly from Stormwind to Southshore, go north through Hillsbrad Foothills into the Alterac Mountains, follow the north shore of Lordamere Lake west, and find the Image of Archmage Modera outside the Dalaran sewers. After the dungeon, hearth back to Stormwind and rejoin 03-Stop 25.
 05-副本.md:587｜說明｜下水道與上街沿路清，三種怪都會遇到｜Clear along the sewers and the streets; you'll meet all three kinds
