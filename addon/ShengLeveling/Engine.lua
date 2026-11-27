@@ -2068,7 +2068,13 @@ end
 function E.QuestNote(q)
   for _, o in ipairs(questSt[q] or {}) do
     for i, step in ipairs(o.list) do
-      if step.s.q == q then return o.dungeon and (L["路線："] .. L["%s 副本"]:format(o.name)) or (L["路線："] .. L["%s 第 %d 步"]:format(MG.UI.StName(o), i)) end
+      if step.s.q == q then
+        local where = o.dungeon and (L["路線："] .. L["%s 副本"]:format(o.name)) or (L["路線："] .. L["%s 第 %d 步"]:format(MG.UI.StName(o), i))
+        -- 這站這個任務有任何一步被手動略過：一併標出
+        local skipped = MG.db.skip["a:" .. q]
+        for _, x in ipairs(o.list) do if x.s.q == q and MG.db.skip[x.key] then skipped = true end end
+        return skipped and (where .. " · " .. L["略過"]) or where
+      end
     end
   end
   local off = R.offroute and R.offroute[q]

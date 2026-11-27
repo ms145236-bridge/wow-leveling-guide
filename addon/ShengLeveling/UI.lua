@@ -1070,7 +1070,10 @@ local function fillRow(row, it)
     row.name:SetText(s.q and E.Title({ q = s.q, t = "accept" }) or (s.text or s.hint or "")); paint(row.name, cur and TEXT or FAINT)
     if s.q and C.IsOnQuest(s.q) then
       local obj = C.Objectives(s.q) or {}
-      for _, o in ipairs(obj) do if o.need then row.prog:SetText((o.have or 0) .. "/" .. o.need); break end end
+      local o = nil
+      for _, x in ipairs(obj) do if x.need and not x.done then o = x; break end end -- 先顯示未完成的那項
+      o = o or obj[1]
+      if o and o.need then row.prog:SetText((o.have or 0) .. "/" .. o.need) end
     end
   elseif it.kind == "dent" then
     local ent = UI.Entrance(it.d)
@@ -2390,15 +2393,17 @@ function UI.Render(S)
   end
   -- 附近可一起做的步驟：每步只給標題＋一行（分隔線＋動詞任務名＋目標）；完整內容在步驟列的滑鼠提示
   local used = 0
-  local function line(t, color, num)
+  -- wrap：最多換成幾行（副本位置、說明這類長句要整句看得到）；沒給就單行截斷
+  local function line(t, color, num, wrap)
     used = used + 1
     local f, nf = bar.extra[used], bar.extraN[used]
     if not f then return end
     f:SetFont(FONT, fsz - 2, ""); nf:SetFont(FONT, fsz - 2, "")
+    if wrap then wrapLines(f, wrap) else f:SetWordWrap(false); if f.SetMaxLines then f:SetMaxLines(1) end end
     place(f, nf, x0, avail, t, num)
     paint(f, color); paint(nf, color)
     f:Show()
-    y = y - lh
+    y = y - (wrap and math.max(lh, math.ceil(f:GetStringHeight() or 0) + 5) or lh)
   end
   for k, i in ipairs(state and state.group or {}) do
     local s = state.steps[i].s
@@ -2414,17 +2419,18 @@ function UI.Render(S)
     if s.t == "do" and s.q then
       local one, _, lines, num = objectiveLines(s.q)
       if lines then
-        -- 多目標：只寫各項數字（2/8 · 0/5，未完成在前）
-        local nums = {}
-        for j, o in ipairs(lines) do nums[j] = o.num or (o.done and "√" or "-") end
-        line(table.concat(nums, " · "), DIM)
+        -- 多目標：每項一行「名稱 數字」（未完成在前），最多 3 行，多的收成「…還有 n 項」
+        for j, o in ipairs(lines) do
+          if #lines > 3 and j == 3 then line(L["…還有 %d 項"]:format(#lines - 2), DIM); break end
+          line(o.text, DIM, o.num)
+        end
       elseif one or s.hint then
-        line(one or s.hint, DIM, one and num)
+        line(one or s.hint, DIM, one and num, not one and 2 or nil)
       end
     elseif s.npc then
       line(s.npc, DIM)
     end
-    if state.instance and s.spot then line(s.spot, GOLD) end -- 副本中：在副本哪裡（和主步驟第三行同色）
+    if state.instance and s.spot then line(s.spot, GOLD, nil, 4) end -- 副本中：在副本哪裡（和主步驟第三行同色）
   end
   for k = used + 1, #bar.extra do bar.extra[k]:Hide(); bar.extraN[k]:Hide() end
   for k = #(state and state.group or {}) + 1, #bar.divs do bar.divs[k]:Hide() end
