@@ -2393,15 +2393,17 @@ function UI.Render(S)
   end
   -- 附近可一起做的步驟：每步只給標題＋一行（分隔線＋動詞任務名＋目標）；完整內容在步驟列的滑鼠提示
   local used = 0
-  local function line(t, color, num)
+  -- wrap：最多換成幾行（副本位置、說明這類長句要整句看得到）；沒給就單行截斷
+  local function line(t, color, num, wrap)
     used = used + 1
     local f, nf = bar.extra[used], bar.extraN[used]
     if not f then return end
     f:SetFont(FONT, fsz - 2, ""); nf:SetFont(FONT, fsz - 2, "")
+    if wrap then wrapLines(f, wrap) else f:SetWordWrap(false); if f.SetMaxLines then f:SetMaxLines(1) end end
     place(f, nf, x0, avail, t, num)
     paint(f, color); paint(nf, color)
     f:Show()
-    y = y - lh
+    y = y - (wrap and math.max(lh, math.ceil(f:GetStringHeight() or 0) + 5) or lh)
   end
   for k, i in ipairs(state and state.group or {}) do
     local s = state.steps[i].s
@@ -2423,12 +2425,12 @@ function UI.Render(S)
           line(o.text, DIM, o.num)
         end
       elseif one or s.hint then
-        line(one or s.hint, DIM, one and num)
+        line(one or s.hint, DIM, one and num, not one and 2 or nil)
       end
     elseif s.npc then
       line(s.npc, DIM)
     end
-    if state.instance and s.spot then line(s.spot, GOLD) end -- 副本中：在副本哪裡（和主步驟第三行同色）
+    if state.instance and s.spot then line(s.spot, GOLD, nil, 4) end -- 副本中：在副本哪裡（和主步驟第三行同色）
   end
   for k = used + 1, #bar.extra do bar.extra[k]:Hide(); bar.extraN[k]:Hide() end
   for k = #(state and state.group or {}) + 1, #bar.divs do bar.divs[k]:Hide() end
