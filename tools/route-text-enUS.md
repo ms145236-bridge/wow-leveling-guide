@@ -13237,7 +13237,9 @@
 04-45到60級.md:1503｜說明｜魔拂就在工作站這座營地，順路交。｜Felflick is right here at the workstation camp; turn in on the way.
 04-45到60級.md:1508｜說明｜交古野村的澤特甘，下一站到。｜Turn in to Zet'gan in Elderwild; you'll be there at the next stop.
 04-45到60級.md:1510｜說明｜沿大路騎回東邊的隱士洞。｜Ride back east along the road to the Hermit's Cave.
-04-45到60級.md:1512｜說明｜從污化丘陵（2482 54.98, 82.82）飛永望鎮。｜Fly from the Tainted Foothills (2482 54.98, 82.82) to Everlook.
+04-45到60級.md:1512｜說明｜爐石可用就在隱士洞直接爐回永望鎮；冷卻才騎回污化丘陵（2482 54.98, 82.82）飛永望鎮。｜If your hearthstone is ready, hearth straight to Everlook from the Hermit's Cave. Only if it's on cooldown, ride back to the Tainted Foothills (2482 54.98, 82.82) and fly to Everlook.
+04-45到60級.md:1512｜說明｜爐石可用就在隱士洞直接爐回永望鎮｜If your hearthstone is ready, hearth straight to Everlook from the Hermit's Cave.
+04-45到60級.md:1512｜說明｜冷卻才騎回污化丘陵（2482 54.98, 82.82）飛永望鎮。｜Only if it's on cooldown, ride back to the Tainted Foothills (2482 54.98, 82.82) and fly to Everlook.
 04-45到60級.md:1513｜說明｜後續的木箱有時限，等月光林地回來再接。｜The follow-up crate is time-limited, so pick it up after you're back from Moonglade.
 04-45到60級.md:1514｜說明｜在永望鎮轉飛月光林地（1450 32.09, 66.61），沿路往東北走到永夜港。月光林地飛行點在第52站開過。｜At Everlook, switch to a flight to Moonglade (1450 32.09, 66.61), then follow the road northeast to Nighthaven. The Moonglade flight path is unlocked at stop 52.
 04-45到60級.md:1522｜說明｜在月光林地飛行點找法斯托恩（1450 32.09, 66.61）飛永望鎮。｜At the Moonglade flight point, find Faustron (1450 32.09, 66.61) to fly to Everlook.
@@ -13291,7 +13293,9 @@
 04-45到60級.md:1638｜說明｜安戈洛環形山 馬紹爾營地帶來的｜Brought from Un'Goro Crater, Marshal's Refuge.
 04-45到60級.md:1639｜說明｜郵包下一趟下山時送到永望鎮。｜Deliver the mail pouch to Everlook on your next trip down the mountain.
 04-45到60級.md:1640｜說明｜從永恆山峰飛污化丘陵，騎去東邊的隱士洞交三件、拿山脈法杖。沒拿到骨灰就不用去隱士洞，92317、92500 留到第 127 步離開時一起交。｜Fly from the Summit of Eternity to the Tainted Foothills, ride east to the Hermit's Cave to turn in three quests and take the Staff of the Mountain. If you didn't get the ashes, skip the Hermit's Cave; turn in 92317 and 92500 together when you leave at step 127.
-04-45到60級.md:1645｜說明｜回污化丘陵飛永望鎮送郵包；郵件這串要上山交，做完直接從永望鎮飛回永恆山峰（經污化丘陵轉機）。｜Fly back to Everlook from the Tainted Foothills to deliver the mail pouch; the mail chain has to be turned in up the mountain, so afterward fly straight from Everlook back to the Summit of Eternity (connecting via the Tainted Foothills).
+04-45到60級.md:1645｜說明｜爐石可用就在隱士洞直接爐回永望鎮送郵包，冷卻才回污化丘陵飛；郵件這串要上山交，做完直接從永望鎮飛回永恆山峰（經污化丘陵轉機）。｜If your hearthstone is ready, hearth straight to Everlook from the Hermit's Cave to deliver the mail pouch; if it's on cooldown, go back to the Tainted Foothills and fly. The mail chain has to be turned in up the mountain, so afterward fly straight from Everlook back to the Summit of Eternity (connecting via the Tainted Foothills).
+04-45到60級.md:1645｜說明｜爐石可用就在隱士洞直接爐回永望鎮送郵包，冷卻才回污化丘陵飛｜If your hearthstone is ready, hearth straight to Everlook from the Hermit's Cave to deliver the mail pouch; if it's on cooldown, go back to the Tainted Foothills and fly.
+04-45到60級.md:1645｜說明｜郵件這串要上山交，做完直接從永望鎮飛回永恆山峰（經污化丘陵轉機）。｜The mail chain has to be turned in up the mountain, so afterward fly straight from Everlook back to the Summit of Eternity (connecting via the Tainted Foothills).
 04-45到60級.md:1647｜說明｜交完恢復通訊才有；後續巔峰郵遞送回永恆山峰的塞貝莉雅。｜Only available after turning in Restoring Communications. The follow-up, Peak Post, goes back to Sebelia at the Summit of Eternity.
 04-45到60級.md:1647｜說明｜交完恢復通訊才有｜Only available after turning in Restoring Communications.
 04-45到60級.md:1647｜說明｜後續巔峰郵遞送回永恆山峰的塞貝莉雅。｜The follow-up, Peak Post, goes back to Sebelia at the Summit of Eternity.
@@ -13310,7 +13314,9 @@
 04-45到60級.md:1684｜說明｜維漢‧爪握是 60 級精英。｜Ve'han Talongrasp is a level 60 elite.
 04-45到60級.md:1687｜說明｜離開時在污化丘陵下機，騎去隱士洞交。｜When you leave, get off at the Tainted Foothills and ride to the Hermit's Cave to turn in.
 04-45到60級.md:1688｜說明｜從永恆山峰飛污化丘陵。有 93848，或 92317、92500 還沒交，就騎去東邊的隱士洞交。｜Fly from the Summit of Eternity to the Tainted Foothills. If you have 93848, or 92317 and 92500 are still not turned in, ride east to the Hermit's Cave to turn them in.
-04-45到60級.md:1690｜說明｜從污化丘陵飛永望鎮。｜Fly from the Tainted Foothills to Everlook.
+04-45到60級.md:1690｜說明｜爐石可用就在隱士洞直接爐回永望鎮；冷卻才騎回污化丘陵飛永望鎮。｜If your hearthstone is ready, hearth straight to Everlook from the Hermit's Cave. Only if it's on cooldown, ride back to the Tainted Foothills and fly to Everlook.
+04-45到60級.md:1690｜說明｜爐石可用就在隱士洞直接爐回永望鎮｜If your hearthstone is ready, hearth straight to Everlook from the Hermit's Cave.
+04-45到60級.md:1690｜說明｜冷卻才騎回污化丘陵飛永望鎮。｜Only if it's on cooldown, ride back to the Tainted Foothills and fly to Everlook.
 04-45到60級.md:1693｜說明｜第 75 步開永恆山峰飛行點；第 79 步飛污化丘陵交山脈法杖的三個前置，第 84 步再轉永望鎮送郵包、做郵件這串後飛回山上；第 127 步經污化丘陵飛永望鎮，末步依是否要繞菲拉斯 亂羽高地選航線。｜Step 75: unlock the Summit of Eternity flight path; step 79: fly to the Tainted Foothills to turn in the three prerequisites for the Staff of the Mountain; step 84: transfer to Everlook to deliver the mail pouch, do the mail chain, then fly back up; step 127: fly to Everlook via the Tainted Foothills; last step: pick the route depending on whether you'll detour to Feralas, Frayfeather Highlands.
 04-45到60級.md:1694｜說明｜值得做｜古野村、哀悼之眠與祥和育所的任務都在大路兩側，殺怪和撿東西可一起做。｜Worth doing: the quests in Elderwild, Mourning's Rest and the Cradle of Tranquility all sit on both sides of the road, so you can kill and loot together.
 04-45到60級.md:1695｜說明｜值得做｜93197→93406→93269 這串郵件趁拿法杖下山時一起跑，獎勵據玩家攻略是背包和速度飾品；郵件位置與獎勵還沒實測。｜Worth doing: run the 93197 > 93406 > 93269 mail chain when you come down the mountain with the staff; per a player guide the rewards are a bag and a speed trinket; the mail locations and rewards aren't tested yet.
@@ -14018,7 +14024,9 @@
 04-45到60級.md:1560｜說明｜92009 的木箱約兩小時失效，所以月光林地回來才接，下飛行點直接送。後續 92011 要到古野村再往上的部落營地遺跡拾荒，物品位置不明；92328、92329 跟著略過，92329 還要引 60 級奇美拉剛蘇羅克。｜The crate for 92009 expires after about two hours, so accept it only after coming back from Moonglade and deliver it as soon as you get off the flight. The follow-up 92011 has you scavenge the ruined Horde camp up beyond Elderwild, and the item locations are unknown; skip 92328 and 92329 with it. 92329 also has you lure the level 60 chimaera Ghansurok.
 04-45到60級.md:1592｜說明｜未滿 57 級先做村裡其他任務，升到 57 再回來接；任務給的倖存者火炬要帶著。｜If you're under level 57, do the other quests in the village first and come back for this at 57; keep the Survivor's Torch the quest gives you.
 04-45到60級.md:1592｜說明｜未滿 57 級先做村裡其他任務，升到 57 再回來接｜If you're under level 57, do the other quests in the village first and come back for this at 57
-04-45到60級.md:1710｜說明｜從永恆山峰飛污化丘陵。手上有提雅拉的後續任務才騎去東邊的隱士洞交。｜Fly from the Summit of Eternity to the Tainted Foothills. Ride to the Hermit's Cave in the east to turn in only if you have Tiala's follow-up quest.
+04-45到60級.md:1710｜說明｜手上有提雅拉的後續任務，就從永恆山峰飛污化丘陵，騎去東邊的隱士洞交；沒有的話，爐石可用就直接爐回永望鎮，冷卻才飛污化丘陵轉永望鎮。｜If you have Tiala's follow-up quest, fly from the Summit of Eternity to the Tainted Foothills and ride east to the Hermit's Cave to turn it in. If not, hearth straight to Everlook if your hearthstone is ready; only if it's on cooldown, fly to the Tainted Foothills and on to Everlook.
+04-45到60級.md:1710｜說明｜手上有提雅拉的後續任務，就從永恆山峰飛污化丘陵，騎去東邊的隱士洞交｜If you have Tiala's follow-up quest, fly from the Summit of Eternity to the Tainted Foothills and ride east to the Hermit's Cave to turn it in.
+04-45到60級.md:1710｜說明｜沒有的話，爐石可用就直接爐回永望鎮，冷卻才飛污化丘陵轉永望鎮。｜If not, hearth straight to Everlook if your hearthstone is ready; only if it's on cooldown, fly to the Tainted Foothills and on to Everlook.
 04-45到60級.md:1718｜說明｜92335 的骨灰在戴根廢墟中央，旁邊有精英末日守衛；單人拿不到就略過山脈法杖與其後續（92335、90647、92169、92833、93848）；92317、92500 照樣回隱士洞交，郵件這串和 93127、93407、93547、93584、92533、92017 不需要法杖，照做。｜The ashes for 92335 are in the middle of the Dae'gun ruins, next to an elite doomguard; if you can't get them solo, skip the Staff of the Mountain and its follow-ups (92335, 90647, 92169, 92833, 93848); 92317 and 92500 are still turned in at the Hermit's Cave, and the mail chain plus 93127, 93407, 93547, 93584, 92533 and 92017 don't need the staff, so do them as usual.
 04-45到60級.md:1719｜說明｜92833 打 60 級精英維漢‧爪握，93848 跟著它；單人略過。93422 要殺 60 級精英黑荊信差，93444 要殺精英夜刃豹守護者再引剛蘇羅克，路線都不接。｜92833 has you fight the level 60 elite Ve'han Talongrasp, and 93848 follows it; skip them solo. 93422 has you kill a level 60 elite Blackthorne courier, and 93444 has you kill an elite nightsaber guardian and then lure Ghansurok; the route takes neither.
 04-45到60級.md:1720｜說明｜92446 刨顱者是 60 級精英（約 35, 71）；91794 的徽記要到戴根廢墟打、再回古野村交；96998、96999 要回古野村再送森金村，都不在順路上。｜92446's skull-crusher is a level 60 elite (around 35, 71); the insignia for 91794 has to be farmed at the Dae'gun ruins and turned in back at Elderwild; 96998 and 96999 go back to Elderwild and then on to Sen'jin Village; none of them are on the way.
