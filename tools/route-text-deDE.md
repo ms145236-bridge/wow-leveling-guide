@@ -14410,3 +14410,5 @@
 06-路線外任務.md:19｜路線外理由｜最低接取等級高於路線經過這裡時的等級，等級到了再接。｜Die Mindeststufe liegt über deiner Stufe, wenn die Route hier vorbeiführt. Nimm sie an, sobald du die Stufe erreichst.
 06-路線外任務.md:19｜路線外理由｜60 級才能換坐騎，練級時不用管。｜Reittiertausch gibt es ab Stufe 60. Beim Leveln ignorieren.
 06-路線外任務.md:19｜路線外理由｜限人類，40 級才接得到；之後經過南海鎮時再接。｜Nur Menschen, ab Stufe 40. Nimm sie an, wenn du das nächste Mal durch Southshore kommst.
+04-45到60級.md:121｜說明｜日誌裡有「塔貝薩的任務」時哈杜肯不給這件，先放棄它再接。｜Hadoken bietet diese Quest nicht an, solange Tabethas Aufgabe im Questlog steht; brich sie zuerst ab.
+06-路線外任務.md:907｜說明｜「深淵皇冠」不用它也接得到；日誌有它時接不到「毒刺鞭笞者」。｜Die Tiara der Tiefen gibt es auch ohne sie; solange sie im Questlog steht, bekommst du Stachelpeitscher nicht.

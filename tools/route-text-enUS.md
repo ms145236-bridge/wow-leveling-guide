@@ -14254,3 +14254,5 @@
 06-路線外任務.md:19｜路線外理由｜最低接取等級高於路線經過這裡時的等級，等級到了再接。｜Its minimum level is higher than yours when the route passes here. Pick it up once you reach that level.
 06-路線外任務.md:19｜路線外理由｜60 級才能換坐騎，練級時不用管。｜Mount swaps open at level 60. Ignore them while leveling.
 06-路線外任務.md:19｜路線外理由｜限人類，40 級才接得到；之後經過南海鎮時再接。｜Humans only, from level 40. Pick it up the next time you pass Southshore.
+04-45到60級.md:121｜說明｜日誌裡有「塔貝薩的任務」時哈杜肯不給這件，先放棄它再接。｜Hadoken won't offer this while Tabetha's Task is in your quest log; abandon it first.
+06-路線外任務.md:907｜說明｜「深淵皇冠」不用它也接得到；日誌有它時接不到「毒刺鞭笞者」。｜Tiara of the Deep is available without it; while it's in your log you can't get Stinglasher.

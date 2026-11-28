@@ -14633,3 +14633,5 @@
 06-路線外任務.md:19｜路線外理由｜最低接取等級高於路線經過這裡時的等級，等級到了再接。｜O nível mínimo é maior que o seu quando a rota passa por aqui. Pegue quando chegar a esse nível.
 06-路線外任務.md:19｜路線外理由｜60 級才能換坐騎，練級時不用管。｜Trocas de montaria abrem no nível 60. Ignore enquanto evolui.
 06-路線外任務.md:19｜路線外理由｜限人類，40 級才接得到；之後經過南海鎮時再接。｜Só humanos, a partir do nível 40. Pegue na próxima vez que passar por Costa Sul.
+04-45到60級.md:121｜說明｜日誌裡有「塔貝薩的任務」時哈杜肯不給這件，先放棄它再接。｜Hadoken não oferece esta enquanto A Tarefa de Tabetha estiver no registro; abandone-a primeiro.
+06-路線外任務.md:907｜說明｜「深淵皇冠」不用它也接得到；日誌有它時接不到「毒刺鞭笞者」。｜A Tiara das Profundezas sai sem ela; enquanto estiver no registro, você não consegue pegar Ferroada.

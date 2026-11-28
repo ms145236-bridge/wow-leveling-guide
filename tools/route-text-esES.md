@@ -14798,3 +14798,5 @@
 06-路線外任務.md:19｜路線外理由｜最低接取等級高於路線經過這裡時的等級，等級到了再接。｜Su nivel mínimo es superior al tuyo cuando la ruta pasa por aquí. Recógela cuando alcances ese nivel.
 06-路線外任務.md:19｜路線外理由｜60 級才能換坐騎，練級時不用管。｜Los cambios de montura se abren a nivel 60. Ignóralos mientras subes de nivel.
 06-路線外任務.md:19｜路線外理由｜限人類，40 級才接得到；之後經過南海鎮時再接。｜Solo humanos, desde nivel 40. Recógela la próxima vez que pases por Costasur.
+04-45到60級.md:121｜說明｜日誌裡有「塔貝薩的任務」時哈杜肯不給這件，先放棄它再接。｜Hadoken no la ofrece mientras tengas La tarea de Tabetha en el registro; abandónala primero.
+06-路線外任務.md:907｜說明｜「深淵皇冠」不用它也接得到；日誌有它時接不到「毒刺鞭笞者」。｜La Tiara de las profundidades está disponible sin ella; mientras la tengas en el registro no podrás obtener Azotaguijón.
