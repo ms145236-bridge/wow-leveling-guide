@@ -14523,3 +14523,5 @@
 06-路線外任務.md:19｜路線外理由｜最低接取等級高於路線經過這裡時的等級，等級到了再接。｜Son niveau minimum dépasse le tien quand l'itinéraire passe ici. Prends-la une fois ce niveau atteint.
 06-路線外任務.md:19｜路線外理由｜60 級才能換坐騎，練級時不用管。｜Les échanges de monture s'ouvrent au niveau 60. À ignorer pendant la progression.
 06-路線外任務.md:19｜路線外理由｜限人類，40 級才接得到；之後經過南海鎮時再接。｜Humains uniquement, dès le niveau 40. Prends-la la prochaine fois que tu passes à Austrivage.
+04-45到60級.md:121｜說明｜日誌裡有「塔貝薩的任務」時哈杜肯不給這件，先放棄它再接。｜Hadoken ne la propose pas tant que La tâche de Tabetha est dans ton journal ; abandonne-la d'abord.
+06-路線外任務.md:907｜說明｜「深淵皇冠」不用它也接得到；日誌有它時接不到「毒刺鞭笞者」。｜La Tiare des profondeurs s'obtient sans elle ; tant qu'elle est dans ton journal, tu ne peux pas obtenir Fouette-dard.
